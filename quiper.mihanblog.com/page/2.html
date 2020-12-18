@@ -1,0 +1,964 @@
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" /><link rel="EditURI" type="application/rsd+xml" title="RSD" href="../xmlrpc@rsd" />
+<script type="text/javascript" src="../../static.mihanblog.com/public/scripts/run/g.other.v3.js"></script>
+<script>
+
+	function c_$(id){
+        return document.getElementById(id);
+    }
+    
+			//if (parent.frames.length) top.location.href= document.location;
+		
+	setTodayDate = function(){
+		document.write('شنبه 22 آذر 1399');
+		/*1138844*/	}
+
+</script>
+
+
+
+        <script type="text/javascript">
+            (function(){
+            var now = new Date();
+            var head = document.getElementsByTagName('head')[0];
+            var script = document.createElement('script');
+            script.async = true;
+            var script_address = 'https://cdn.yektanet.com/js/mihanblog.com/native-mihanblog.com-6531.js';
+            script.src = script_address + '?v=' + now.getFullYear().toString() + '0' + now.getMonth() + '0' + now.getDate() + '0' + now.getHours();
+            head.appendChild(script);
+            })();
+        </script>
+
+        <!--<script type="text/javascript">
+            var head = document.getElementsByTagName("head")[0];
+            var script = document.createElement("script");
+            script.type = "text/javascript";
+            script.async=1;
+            script.src = "https://s1.mediaad.org/serve/mihanblog.com/loader.js" ;
+            head.appendChild(script);
+        </script>-->
+        
+        <script>
+            var sabaVisionWebsiteID = "9bab9dac-041d-4bdb-b39a-1ed789f65eed"; var sabaVisionWebsitePage = "ALL"
+        </script>
+        <link rel="stylesheet" href="https://plus.sabavision.com/dox/dox.min.css">
+        <script src="https://plus.sabavision.com/dox/dox.min.js"></script>
+        
+        <script>
+	linkdailyForm = function(){
+		try{
+			window.open('/linkdaily/new','linkdaily','status=yes,scrollbars=yes,toolbar=no,menubar=no,location=no ,width=500px,height=460px');
+		} catch(e){}
+	}
+</script><script>
+
+	statInfo = new Array();
+	setStatVar = function(index,value){
+		statInfo[index] = value;
+	}
+	getStatVar = function(index){
+		if(statInfo[index]) document.write(statInfo[index]);
+	}
+	
+	setStatVar('total_post','168');
+	setStatVar('total_author','0');
+	setStatVar('modify_date','یکشنبه 9 شهریور 1399');
+	
+	setStatVar('today_view','3');
+	setStatVar('yesterday_view','2');
+	
+	setStatVar('this_month_view','293');
+	setStatVar('last_month_view','335');
+
+	setStatVar('total_view','160061');
+	setStatVar('last_view_date','شنبه 22 آذر 1399 (13:31)');
+
+
+
+    
+    function setStatFromClient()
+    {
+        var url = 'http://quiper.mihanblog.com/statupdate/?data[refereruri]=http://quiper.mihanblog.com/&data[postid]=&data[requesturi]=/page/2&data[sdate]=1607768167&data[hash]=e40a2d527f573cc09e0127f69647a56a&data[resolution]='+screen.width+' X '+screen.height;
+
+//        alert(url);
+//        var newjs = document.createElement("SCRIPT");
+//        newjs.type = 'text/javascript';
+//        newjs.src = url;
+//
+//        var newdiv = document.createElement("DIV");
+//        newdiv.setAttribute("style","display:none");
+
+        document.write(unescape('%3Cscript src="'+url+'" type="text/javascript"%3E%3C/script%3E'));
+//        newdiv.appendChild (newjs);
+//        document.write(newjs);
+//        document.write(appendChild (newdiv);
+
+    };
+    setStatFromClient();
+        
+</script><script>
+	messageForm = function(post_id){
+		try{
+			window.open('/message','message','status=yes,scrollbars=yes,toolbar=no,menubar=no,location=no ,width=480px,height=550px');
+		} catch(e){}
+	}
+</script><script>
+	try{
+		var commentCnt = new Array();
+		commentCnt[309]='5';commentCnt[310]='8';commentCnt[311]='7';commentCnt[312]='14';commentCnt[313]='11';commentCnt[314]='9';commentCnt[315]='3';commentCnt[316]='15';commentCnt[318]='5';commentCnt[319]='11';	} catch(e){}
+	
+	newComment = function(post_id){
+		try{
+			window.open('/post/comment/'+post_id,'comment','status=yes,scrollbars=yes,toolbar=no,menubar=no,location=no ,width=480px,height=540px');
+		} catch(e){}
+	}
+	setCommentCnt = function(post_id){
+		try{
+			if(commentCnt[post_id]){
+				document.write(commentCnt[post_id]);
+			} else {
+				document.write(0);
+			}
+		} catch(e){}
+	}
+</script><script>
+
+
+	mihanblogUpdateLike = function(postid,type){
+		var url = '/post/like/'+postid+'/'+type;
+		mihanblogGetAjax(url,function(){});
+	};
+	try{
+        mihanblogGetAjax = function (url,callback) {
+    		var req;
+			if (window.XMLHttpRequest)
+            {
+                // code for IE7+, Firefox, Chrome, Opera, Safari
+			  	req = new XMLHttpRequest();
+			}else{	// code for IE6, IE5
+			  	req = new ActiveXObject("Microsoft.XMLHTTP");
+		  	}
+		    req.open("GET", url, 1);
+		    req.onreadystatechange = function () {
+		        if (req.readyState == 4) {
+		            if (req.status == 200) {
+		            	var response = eval(req.responseText);
+		            	callback();
+		            }else{
+	            		return ;
+		            }
+		        }else{
+					return ;
+		        }
+		    }
+		    req.send(null);
+		}
+	}catch(e){}
+
+	try{
+		var mihanblogLikeArrCnt = new Array();
+		var mihanblogDisLikeArrCnt = new Array();
+
+		mihanblogLikeArrCnt[309]='0';
+mihanblogDisLikeArrCnt[309]='0';
+mihanblogLikeArrCnt[310]='0';
+mihanblogDisLikeArrCnt[310]='0';
+mihanblogLikeArrCnt[311]='0';
+mihanblogDisLikeArrCnt[311]='0';
+mihanblogLikeArrCnt[312]='0';
+mihanblogDisLikeArrCnt[312]='0';
+mihanblogLikeArrCnt[313]='0';
+mihanblogDisLikeArrCnt[313]='0';
+mihanblogLikeArrCnt[314]='0';
+mihanblogDisLikeArrCnt[314]='0';
+mihanblogLikeArrCnt[315]='0';
+mihanblogDisLikeArrCnt[315]='0';
+mihanblogLikeArrCnt[316]='0';
+mihanblogDisLikeArrCnt[316]='0';
+mihanblogLikeArrCnt[318]='0';
+mihanblogDisLikeArrCnt[318]='0';
+mihanblogLikeArrCnt[319]='0';
+mihanblogDisLikeArrCnt[319]='0';
+	} catch(e){}
+
+
+
+    mihanblogPostLike = function(post_id){
+
+        mihanblogLikeCnt = (mihanblogLikeArrCnt[post_id]? mihanblogLikeArrCnt[post_id] : 0);
+        mihanblogDisLikeCnt = (mihanblogDisLikeArrCnt[post_id]? mihanblogDisLikeArrCnt[post_id] : 0);
+        mihanblogLikeCnt = parseInt(mihanblogLikeCnt);
+        mihanblogDisLikeCnt = parseInt(mihanblogDisLikeCnt);
+
+        document.write(
+                '<div class="mihanblog_like_wrapper ">'+
+                       '<div id="dislikeBar_'+post_id+'" onclick="mihanblogUpdateLike('+post_id+',\'dislike\')"   class="mihanblog_like_bar mihanblog_like_dislikeBar mihanblog_like_show_help ">-<div class="mihanblog_like_Cnt" id="disLikeCnt_'+post_id+'">'+mihanblogDisLikeCnt+'</div>'+
+                            '<span  class="mihanblog_like_v2_help mihanblog_like_v2_help_dislike clearfix"> '+
+                                '<span class="mihanblog_like_help_arrow mihanblog_like_help_arrow_dislike clearfix"></span>'+
+                                '<span class="mihanblog_like_help_text">نمی پسندم</span>'+
+                            '</span>'+
+                        '</div>'+
+                       '<div id="Like_'+post_id+'" class="mihanblog_like_border"></div>'+
+                       '<div id="likeBar_'+post_id+'" onclick="mihanblogUpdateLike('+post_id+',\'like\')"  class="mihanblog_like_bar mihanblog_like_likeBar mihanblog_like_show_help" >+<div class="mihanblog_like_Cnt" id="likeCnt_'+post_id+'">'+mihanblogLikeCnt+'</div>'+
+                            '<span  class="mihanblog_like_v2_help mihanblog_like_v2_help_like clearfix"> '+
+                                '<span class="mihanblog_like_help_arrow mihanblog_like_help_arrow_like clearfix"></span>'+
+                                '<span class="mihanblog_like_help_text">می پسندم</span>'+
+                            '</span>'+
+                        '</div>'+
+
+                '</div>'
+        );
+
+
+
+        mihanblogDisplayeLike(post_id);
+    }
+
+
+    mihanblogDisplayeLike = function(post_id){
+
+        mihanblogLikeCnt = (mihanblogLikeArrCnt[post_id]? mihanblogLikeArrCnt[post_id] : 0);
+        mihanblogDisLikeCnt = (mihanblogDisLikeArrCnt[post_id]? mihanblogDisLikeArrCnt[post_id] : 0);
+        mihanblogLikeCnt = parseInt(mihanblogLikeCnt);
+        mihanblogDisLikeCnt = parseInt(mihanblogDisLikeCnt);
+
+
+
+        sum = mihanblogLikeCnt - mihanblogDisLikeCnt;
+        backgroundBorder =  document.getElementById('Like_'+post_id);
+        var likeObj = document.getElementById('likeCnt_'+post_id);
+        var disLikeObj = document.getElementById('disLikeCnt_'+post_id);
+
+
+
+
+
+        likeObj.innerHTML =  mihanblogLikeCnt ;
+        disLikeObj.innerHTML =  mihanblogDisLikeCnt;
+
+        if(sum == 0){
+            backgroundBorder.style.backgroundImage = "url('/public/public/images/icons/like_likedislike.png')";
+            document.getElementById('dislikeBar_'+post_id).style.width = '19px';
+            document.getElementById('likeBar_'+post_id).style.width = '19px';
+        }else{
+             if(sum > 0){
+                 backgroundBorder.style.backgroundImage = "url('/public/public/images/icons/like_like.png')";
+                 document.getElementById('likeBar_'+post_id).style.width = '23px';
+                 document.getElementById('dislikeBar_'+post_id).style.width = '15px';
+             }else{
+                 backgroundBorder.style.backgroundImage = "url('/public/public/images/icons/like_dislike.png')";
+                 document.getElementById('likeBar_'+post_id).style.width = '15px';
+                 document.getElementById('dislikeBar_'+post_id).style.width = '23px';
+             }
+        }
+
+    }
+
+
+
+
+</script>
+
+<style type="text/css">
+
+
+    .clearfix {display: inline-block;}
+    .clearfix:after {
+        content: ".";
+        display: block;
+        height: 0;
+        clear: both;
+        visibility: hidden;
+    }
+
+    .mihanblog_like_wrapper {
+        color: #ffffff;
+        direction: ltr;
+        position: relative;
+    }
+    .mihanblog_like_wrapper span{
+        display: none;
+    }
+    .mihanblog_like_bar {
+        color: #FFFFFF;
+        cursor: pointer;
+        float: left;
+        font-size: 10px;
+        height: 20px;
+        line-height: 19px;
+        margin: 5px 0;
+    }
+    .mihanblog_like_likeBar {
+        background-color: #88B131;
+        padding-right: 5px;
+        border-top-right-radius: 2px;
+        border-bottom-right-radius: 2px;
+        text-align: right;
+    }
+    .mihanblog_like_likeBar:hover{
+        background-color: #699017;
+    }
+    .mihanblog_like_border {
+        background-color: #666666;
+        border: 1px solid #666666;
+        float: left;
+        font-size: 12px;
+        height: 20px;
+        margin-top: 2px;
+        width: 25px;
+        padding: 3px 5px 2px 0;
+        text-align: center;
+        border-radius: 2px;
+        color: #ffffff;
+        direction: ltr;
+        background-repeat: no-repeat ;
+        background-position: 4px center;
+    }
+    .mihanblog_like_border img {
+        margin-left: 2px;
+        margin-top: 2px;
+        width: 22px;
+    }
+    .mihanblog_like_dislikeBar {
+        background-color: #FF6F31;
+        padding-left: 5px;
+        border-top-left-radius: 2px;
+        border-bottom-left-radius: 2px;
+        text-align:left ;
+    }
+    .mihanblog_like_dislikeBar:hover{
+        background-color: #D54B10;
+    }
+
+
+
+    .mihanblog_like_show_help {
+        position: relative;
+    }
+    .mihanblog_like_show_help:hover span {
+        display: block;
+    }
+    .mihanblog_like_help_text {
+        background-color: white;
+        border: 1px solid #555555;
+        border-radius: 3px 3px 3px 3px;
+        color: #303030;
+        float: left;
+        font-size: 11px;
+        font-weight: normal;
+        padding: 5px 10px;
+    }
+
+    .mihanblog_like_help_arrow_dislike {
+        background: url("http://quiper.mihanblog.com/public/public/images/icons/like_hover_top.png") no-repeat scroll 16px 0 transparent;
+        left: 0;
+        top: -4px;
+    }
+
+    .mihanblog_like_help_arrow_like {
+        background: url("http://quiper.mihanblog.com/public/public/images/icons/like_hover_top _2.png") no-repeat scroll 16px 0 transparent;
+        left: -10px;
+        top: 29px;
+    }
+
+    .mihanblog_like_help_arrow{
+        height: 6px;
+        position: absolute;
+        width: 100px;
+
+    }
+
+    .mihanblog_like_v2_help_dislike {
+        left: -15px;
+        top: 24px;
+    }
+    .mihanblog_like_v2_help_like {
+        left: 0;
+        top: -35px;
+
+    }
+    .mihanblog_like_v2_help{
+        display: none;
+        position: absolute;
+        white-space: nowrap;
+        z-index: 1;
+    }
+
+    .mihanblog_like_Cnt{
+        display: inline;
+        color: #ffffff;
+    }
+
+</style>
+    <style>
+        @font-face {
+            font-family: 'Mihan-Iransans';
+            src: url('http://quiper.mihanblog.com/public/public/fonts/Iransans.eot');
+            src: url('http://quiper.mihanblog.com/public/public/fonts/Iransans.eot?') format('embedded-opentype'),
+            url('http://quiper.mihanblog.com/public/public/fonts/Iransans.woff2') format('woff2'),
+            url('http://quiper.mihanblog.com/public/public/fonts/Iransans.woff') format('woff'),
+            url('http://quiper.mihanblog.com/public/public/fonts/Iransans.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+        @font-face {
+            font-family: 'Mihan-IransansBold';
+            src: url('http://quiper.mihanblog.com/public/public/fonts/Iransans-Black.eot');
+            src: url('http://quiper.mihanblog.com/public/public/fonts/Iransans-Black.eot?') format('embedded-opentype'),
+            url('http://quiper.mihanblog.com/public/public/fonts/Iransans-Black.woff2') format('woff2'),
+            url('http://quiper.mihanblog.com/public/public/fonts/Iransans-Black.woff') format('woff'),
+            url('http://quiper.mihanblog.com/public/public/fonts/Iransans-Black.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+        @font-face {
+            font-family: 'Mihan-IransansLight';
+            src: url('http://quiper.mihanblog.com/public/public/fonts/Iransans-UltraLight.eot');
+            src: url('http://quiper.mihanblog.com/public/public/fonts/Iransans-UltraLight.eot?') format('embedded-opentype'),
+            url('http://quiper.mihanblog.com/public/public/fonts/Iransans-UltraLight.woff2') format('woff2'),
+            url('http://quiper.mihanblog.com/public/public/fonts/Iransans-UltraLight.woff') format('woff'),
+            url('http://quiper.mihanblog.com/public/public/fonts/Iransans-UltraLight.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+        @font-face {
+            font-family: 'Mihan-Nassim';
+            src: url('http://quiper.mihanblog.com/public/public/fonts/Nassim.eot');
+            src: url('http://quiper.mihanblog.com/public/public/fonts/Nassim.eot?') format('embedded-opentype'),
+            url('http://quiper.mihanblog.com/public/public/fonts/Nassim.woff2') format('woff2'),
+            url('http://quiper.mihanblog.com/public/public/fonts/Nassim.woff') format('woff'),
+            url('http://quiper.mihanblog.com/public/public/fonts/Nassim.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+        @font-face {
+            font-family: 'Mihan-Koodak';
+            src: url('http://quiper.mihanblog.com/public/public/fonts/Koodak.eot');
+            src: url('http://quiper.mihanblog.com/public/public/fonts/Koodak.eot?') format('embedded-opentype'),
+            url('http://quiper.mihanblog.com/public/public/fonts/Koodak.woff2') format('woff2'),
+            url('http://quiper.mihanblog.com/public/public/fonts/Koodak.woff') format('woff'),
+            url('http://quiper.mihanblog.com/public/public/fonts/Koodak.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+        @font-face {
+            font-family: 'Mihan-Yekan';
+            src: url('http://quiper.mihanblog.com/public/public/fonts/Yekan.eot');
+            src: url('http://quiper.mihanblog.com/public/public/fonts/Yekan.eot?') format('embedded-opentype'),
+            url('http://quiper.mihanblog.com/public/public/fonts/Yekan.woff2') format('woff2'),
+            url('http://quiper.mihanblog.com/public/public/fonts/Yekan.woff') format('woff'),
+            url('http://quiper.mihanblog.com/public/public/fonts/Yekan.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+        @font-face {
+            font-family: 'FontAwesome';
+            src: url('http://quiper.mihanblog.com/public/public/fonts/fontawesome_webfont.eot');
+            src: url('http://quiper.mihanblog.com/public/public/fonts/fontawesome_webfont.eot?') format('embedded-opentype'),
+            url('http://quiper.mihanblog.com/public/public/fonts/fontawesome_webfont.woff2') format('woff2'),
+            url('http://quiper.mihanblog.com/public/public/fonts/fontawesome_webfont.woff') format('woff'),
+            url('http://quiper.mihanblog.com/public/public/fonts/fontawesome_webfont.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+
+
+        
+
+        /* Smartphones (portrait and landscape) ----------- */
+
+        /*
+        @media only screen and (max-width : 480px) and (min-width : 320px) {
+            .sabaClick_advert__wrapper{
+                display:block;
+            }
+            .sabaClick_advert__inner{
+                max-width: 90%;
+                margin: 0 5%;
+            }
+        }
+        */
+
+    </style>
+
+
+
+
+
+
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<META NAME="description" CONTENT="">
+<META NAME="keywords" CONTENT="کوئیپر">
+<META NAME="DesignerUrl" CONTENT="http://Avazak.ir">
+<META NAME="Designer" CONTENT="AVAZAK">
+<link rel="alternate" type="application/rss+xml" title="کوئیپر" href="../post/rss/index.html" />
+<title>کوئیپر</title>
+<style>
+
+body {text-align:Center;color:#116d8d;font-family: Tahoma; font-size: 8pt;margin:0px 0px 20px}
+body {background: #FFFFFF url('http://axgig.com/images/89372301896876181710.jpg') no-repeat Top Center; }
+A, A:visited{color:#69aac0;text-decoration: none}A:hover{color:#116d8d;text-decoration: none;font-size: 9pt}
+.page{float:Center;margin:0px auto;padding:0px;width:535px}img{border:none}
+.Avazak {margin:0;padding:0;text-align:center;background-repeat:repeat-x; background-position-y:top}
+.space{padding:0px 0px}
+.header{padding:0;margin:0;position:relative;height:80px;width:535px}
+.header .title{position:relative;font-family: Arial;font-size:15pt;font-weight:bold;color:#727877;text-align:Right;margin:320px 0px 10px}
+.header .subtitle {font-family: Tahoma; font-size: 8pt;color:#999999;text-align:Right;margin:0px 0px 30px;line-height:1.5em}
+.sidebar{float: Center;width:515px;font-family: Tahoma; font-size: 8pt;text-align:Right;line-height:2.5em;padding:5px;Border:#e0e3ec 2px Solid;background:#f7f8fa;margin:0px}
+.sidebar  h1{margin:30px 0px 7px;font-family: Tahoma; font-size: 8pt;text-align:Right;color:#116d8d;line-height:2em;Border-Top:#e0e3ec 2px Dotted;}
+.About{width:515px;color:#69aac0;line-height:2.5em;}
+.About img{text-align:Right;Padding-Top:3px;}
+.bodyposts{float: Center;text-align: right;width:535px;margin:0px;overflow:hidden}
+.post{width:535px;margin:0px;text-align:right;background:url('http://Avazak.ir/Theme/pic/272-2.jpg') repeat-Y Top Center;}
+.post .Title{height:40px;font-size: 9pt;font-family: Tahoma;font-weight:bold;color:#000000;Padding:10px 10px 0px;background:url('http://Avazak.ir/Theme/pic/272-1.jpg') no-repeat Top Center;}
+.post .Content{font-family: Tahoma;color:#000000; font-size: 8pt;line-height:1.5em;padding:0px 5px 0px 5px;direction:rtl;}
+.post .date{font-family: Tahoma; color:#116d8d;Padding:20px 5px 50px;font-size: 8pt;background:url('http://Avazak.ir/Theme/pic/272-3.jpg') no-repeat Bottom Center;}
+.custom{color:#116d8d;margin:10px 0;text-align:center;direction:rtl}
+
+</style>
+</head>
+
+<body>
+<!--Design By : Avazak.ir-->
+<div class=Top>
+<div class=Avazak>
+<div align =center>
+<div class="page" dir="rtl" >
+<div  class ="header" >
+<p class="title">کوئیپر</p>
+<p class="subtitle"></p></div>
+	<!-- end header -->
+<!--Design By : Avazak.ir-->
+<div class="bodyposts">
+<div class="space"></div>
+		<div id="MihanblogShopAds" style="display:block;height:0px;width:100%;border:0px"></div>
+		<div class="post">
+<a name="319"></a>
+<h2 class="Title">معتادیم به خوندن روزانه ی اخبار؟</a></h2>
+<div class="Content"><div id="InPost_MihanblogShopAds" style="display:block;height:0px;width:100%;border:0px"></div>
+<span style="font-family: Tahoma, Verdana, &quot;Times New Roman&quot;, serif; font-size: 12px;">من هرچندوقت فکر میکنم از همه کانالای خبری - الانم زیاد نیستن البته- لیو بدم. خبر خوشی که در نمیاد از این کانالا برای ما. همه اش مایه ی نقصان اعصاب. مخصوصا وقتی به این فکر میکنی که خبر برای یه فرد عادی -مثل اکثر ماها- یه چیزیه فقط در حد دوز روزانه ی مشغولیت ذهنی. حقیقت اینه بدترین و بهترین اخبار هرکدوم عمری حداکثر در حد چندهفته دارن تو زندگی ماها، اونم تازه حداکثر، وگرنه که اغلب چیزایی که میخونیم و میشنویم از اخبار حقیقتا کارکردی جز یکی دو روزی - یا یکی دو ساعتی - ناراحت کردن یا خوشحال کردن ما رو ندارن. و وقتی مشخصا تعداد خبرهای بد و ناراحت کننده بسیار بیشتر از خبرای خوبه، حالت منطقی اش اینه ادم بیخیال قضیه بشه به کل. اما خب احساس میکنم یه قسمت بزرگ از مشغولیت های روزانه ام رو از دست میدم اینطوری. اینه که فعلا بیخیال خبرها شدن رو گذاشته ام برا بعد. شاید برا وقتی که ذهنمشغولی بهتر یا ضروری تری داشته باشم برا پر کردن روزم.</span><div style="font-family: Tahoma, Verdana, &quot;Times New Roman&quot;, serif; font-size: 12px;">نمیدونم فلسفه اش چه جوریه واقعا ، شاید واقعا فقط معتادیم به پیگیر خبر بودن، روز به روز بیشترشو میخوایم با وجودی که نه خوبه و نه خوشی برامون داره، شاید این حرص خوردن، این غصه خوردن، این شریک شدن احساسات اینطوری با یه جمع چندمیلیونی - یه جامعه - ضروریه برا ذهن و روانمون. شاید فقط یه ترس کلی از بی خبر بودن - یه غریزه ی منحرف شده به دونستن همه چیزه. یادگاری از زمانی که نیاکانمون هرچی بیشتر از اوضاع دور و برشون میدونستن بیشتر شانس زنده موندن داشتن و حالا این اون ژن های اوناس تو سر و بدن ما. شاید هم فقط از سر عادت باشه. همینقد ساده.</div><div style=""><span style="font-family: Tahoma, Verdana, &quot;Times New Roman&quot;, serif; font-size: 12px;">خلاصه که ادم وقتی از دور بهش نگاه میکنه هیچ منطقی نیس، حتی احمقانه اس که ادم یه دوز روزانه ی غصه خوری رو عامدانه و راضی به خورد خودش بده هرروز ، اما از اونطرف هم به همین راحتی نیس بیخیال همه چیز دور و بر شدن. نه فقط چون مستقیما توش زندگی میکنیم و مستقیما رو زندگی هامون موثره ، بلکه شاید بیشتر به این خاطر که نمیدونیم بدون این خبرها با زندگی هامون چه کنیم؟!</span><br><br><br><font style="" face="Mihan-Yekan" size="1">+ یاسی سلام :/ والا وسطای نوشتن اون کامنت واسه تو بودم دیدم طولانی شد گفتم کاش همینو سر و سامون میدادم، منظم تر حرفمو میگفتم میذاشتم بلاگ. بعد میدونی چی شد؟ نوشتم و نوشتم بعد گفتم نههه، کامنت مردمو نمیشه خورد که.حق مردمه. اینه که کامنتش کردم اونجا برای شما. اما خب از طرفی دیدم حالا که تا شروع نکنم به نوشتن نمیتونم بنویسم (جمله درسته) و خب نظر به اینکه دیدم این بیانات به قدری مهم و راهگشاست که واقعا حق خوانندگان فخیم این بلاگ هست که ازش مطلع بشن ، فوقع ما وقع.<br></font><font size="1" style="font-family: Tahoma, Verdana, &quot;Times New Roman&quot;, serif;">+واقعا باید فکری به حال این شکل طولانی و بی سر و ته نوشتن جمله هام بکنم :/ چندوقتیه اینطوری شده. اولاش به نظرم یه ذره خوشمزگی داشت، الان نمیتونم عین بچه آدم بنویسم :/<br>+ حالا میدونی جمله هات عملا داغونن بعضیاش، چرا اصلاحشون نمیکنی؟ - بابا معنی که دارن دیگه. کیییی حالا انقد درگیر ظواهره. والله هیچکس :/</font></div>
+
+
+
+
+<br><br></p>
+</div>
+<div class ="date">[ یکشنبه 28 آبان 1396 ]  [ 02:20 ]  [ کوئیپر  ]
+<span dir="rtl" > <a target="_self" href="javascript:newComment(319)">[ نظرات(<script>setCommentCnt(319)</script>) ]</a>
+</div></div>
+<br>
+<div class="post">
+<a name="318"></a>
+<h2 class="Title">وضعیت</a></h2>
+<div class="Content">
+<font size="2">آخه بیا بنویس دیگه مرد .</font><div><font size="2">+ میام حالا</font></div><div><font size="2">د کی میای پس حالا . همه اش همینو میگی که</font></div><div><font size="2">+ سکوت</font></div><div><font size="2">کشتی منو تو که. اینم آخه زندگیه تو درست کردی. مردم هم بلاگ نویس دارن ما هم ....</font></div><div><font size="2">+ اوووووه باشه بابا گفتم که مینویسم. چیکار کنم خب. چی بگم</font></div><div><font size="2">از من میپرسی چی بگی؟ مگه موقعی که ....</font></div><div><font size="2">+ بااااز شروع شد</font></div><div><font size="2">هااا بپر وسط حرفم ، نذار حرف بزنم. کاری غیر اینم بلدی مگه؟ تا میام یه چیزی بگم میگی الان نه، بعدا . میگم از فلان چیز بنویس میگی جاش نیس. میگم چرا از فلان چیز نمیگی میگی تو حسش نیستم ، بعدا ، همه اش هی پاس میدی به بعدا هزارتا موضوع فقط تو دفتر یادداشت گوشیت اینور اونور میبری هرروز ، بعد من یه روز بهت میگم بیا بنویس هی بهونه میاری . ای خدا . این چه زندگیه آخه . مگه من چه گناهی کردم</font></div><div><font size="2">+ سکوت</font></div><div><font size="2">سکوت</font></div><div><font size="2">+ سکوت</font></div><div><font size="2">کجایی؟ هستی؟ گوش میدی اصلا چی میگم؟! برا دیوار صحبت میکنم انگار</font></div><div><font size="2">+ داشتم گوش میدادم خب خودت گفتی وسط حرفم نپر</font></div><div><font size="2">اینطوری؟ به خدا میذارم میرم.&nbsp;</font></div><div><font size="2">+ چی گفتم مگه من؟</font></div><div><font size="2">چی گفتی؟ چرا اینطوری رو مخ من راه میری؟ میدونی این کارا رو میکنی عصبانی میشم، باز هر بار تکرار میکنی.</font></div><div><font size="2">+ ببخشید</font></div><div><font size="2">بیا. با یه ببخشید هم حتما قراره دیگه ساکت شم هیچی نگم.</font></div><div><font size="2">+ من نمیخوام تو ساکت شی عزیزم. حرف بزن.</font></div><div><font size="2">نمیخوام.</font></div><div><font size="2">+ ای بابا.</font></div><div><font size="2">ای بابا و زهر مار.&nbsp;</font></div><div><font size="2">+ سکوت</font></div><div><font size="2">اصلا داری چیکار میکنی تو اونجا؟ حواست با من هست؟</font></div><div><font size="2">+ دارم مینویسم.</font></div><div><font size="2">مینویسی؟!! چه عجب! واقعا چه عجب! چشمم روشن! خب خداروشکر. آخر یه چیزی پیدا کردی انگار.&nbsp;</font></div><div><font size="2">+ اهوم</font></div><div><font size="2">چی داری مینویسی حالا؟</font></div><div><font size="2">+ حرفای تو رو .</font></div><div><font size="2">چییی؟ رسول به خدا اگه....</font></div><div><font size="2">+ تموم شد.</font></div><div><font size="2">نفرستی ها. ارسال نکنی ها...</font></div><div><font size="2">+ میکنم.</font></div><div><font size="2">به خدا اگه بفرستی دیگه ....</font></div><div><font size="2">■</font></div>
+
+<br><br></p>
+</div>
+<div class ="date">[ سه شنبه 9 آبان 1396 ]  [ 21:50 ]  [ کوئیپر  ]
+<span dir="rtl" > <a target="_self" href="javascript:newComment(318)">[ نظرات(<script>setCommentCnt(318)</script>) ]</a>
+</div></div>
+<br>
+<div class="post">
+<a name="316"></a>
+<h2 class="Title">سوسک</a></h2>
+<div class="Content">
+<p>جمعه، روز اول، ماه پنجم
+</p>
+<p>صبح با احساس ناراحتی در چشمم از خواب برخاستم. قصد داشتم برای ناهار بیرون بروم، اما وضعیت چشمم تا ظهر بدتر شده بود. چشم راستم قرمز و ملتهب بود وانگار چیزی زیر پلکم بود، اما هرچه توی آینه نگاه کردم و هرچه چشمم را مالیدم چیزی توی چشمم نبود. کارهای روزمره را انجام دادم و تا شب توی اتاقم ماندم.
+</p>
+<p>شنبه، روز دوم، ماه پنجم
+</p>
+<p>وضعیت چشم راستم بدتر شده است. تمام طول روز احساس کردم چیزی زیر پلکم تکان میخورد. اگر ممکن بود حاضر بودم چشم راستم را دربیاورم و پیش شیطان(سگ همسایه) بیندازم. آقای (م) ظهر پرسید مشکل چشمم چیست و چرا به وضعیت ساکن اتاق 6 رسیدگی نکرده ام. گفتم خوب است و احتمالا چیزی زیر پلکم گیر کرده و الساعه ملافه های اتاق 6 را عوض خواهم کرد.
+</p>
+<p>از ساکن اتاق 6 متنفرم. از روزی که اینجاست دائما در حال این خرده فرمایش هاست. هنگام تحویل دادن ملافه های کاملا تمیزش، به من گفت که اگر بیشتر به بهداشت محیطم اهمیت بدهم مطمئنا سالم تر خواهم ماند و بعد با لبخند زشتی ادامه داد و احتمالا چیزهای کمتری هم به چشمم وارد خواهد شد. پیش از آنکه دوباره مشغول سخنرانی درباره اهمیت بهداشت و نظافت شود، او را ترک کردم. این مرد غیرقابل تحمل است.
+</p>
+<p>یکشنبه، روز سوم، ماه پنجم
+</p>
+<p>صبح هنگام آب دادن به گلدان ها متوجه شدم یکی از گیاهان دارای غنچه ی زیبایی شده است. اسمش را نمیدانم، اما بی صبرانه منتظر گل دادنش هستم. گلدان را بین بقیه گلدان ها (دقیقا وسط) گذاشتم.
+</p>
+<p>صبح چشمم بهتر بود. حدس زدم ذره ی مزاحم از چشمم خارج شده. روز خلوتی بود و هیچکس برای گرفتن اتاق مراجعه نکرد. تمام طول روز کتاب خواندم.
+</p>
+<p>دوشنبه، روز چهارم، ماه پنجم
+</p>
+<p>با درد چشم شب از خواب پریدم. احساس کردم حشره کثیفی پشت پلک هایم دست و پا میزند. وحشت کرده بودم. یک نفر در زد. با یک دست روی چشم به سمت در دویدم و در را باز کردم. آقای اتاق شماره ی 6 بود. ملافه ی سفیدی روی دستش داشت. به طرف من گرفت و با لحنی پرخاشگرانه گفت از دیروز عوض نشده است. ملافه را از دستش گرفتم. زیر ملافه، دست آقای شماره ی 6، دست زشتِ یک حشره بود. سوسک. سوسک! بعد سرم را بالا بردم و به صورتش نگاه کردم. سر یک سوسک گنده از یقه ی کتش بیرون زده بود. با شاخک های دراز. با فریاد از خواب پریدم.
+</p>
+<p>سه شنبه، روز پنجم، ماه پنجم
+</p>
+<p>آقای اتاق 12 صبح هنگام بیرون رفتن با ناراحتی غر زد که کولر اتاقش نیاز به سرویس دارد و تمام شب از گرما خوابش نبرده. چشم هایش قرمز، اما صورت و ظاهرش مرتب بود. ظهر به آقای(م) گفتم. ناراحت شد و به بخت بد و هرچه دیگر دم دستش بود لعنت فرستاد. از بی پولی و توقع زیاد ساکنان می نالید. گفت این تابستان لعنتی تقصیر من نیست. گرم است. لعنتی. مثل جهنم گرم است. تقصیر من نیست.
+</p>
+<p>سر ماه،موقع گرفتن اجاره ها همیشه خوش اخلاق بود. با من و با همه. اما امروز نه. آخر از بد و بیراه گفتن خسته شد و داخل آشپزخانه رفت و کمی بعد از آشپزخانه صدای فریادهایش می آمد.
+</p>
+<p>چهارشنبه، روز ششم، ماه پنجم
+</p>
+<p>خانواده ساکن اتاق 8، اتاقشان را تحویل دادند و رفتند. تمام طول روز همه جا ساکت و آرام بود. ظهر بیرون رفتم و روزنامه گرفتم. هوا به طرز وحشتناکی گرم بود و خیابان های خلوت به شهر چهره ی ترسناک و مرموزی داده بود.
+</p>
+<p>موقع شام پیرمرد ساکن اتاق 2 که همیشه پایین توی غذاخوری شام میخورد گفت دلش برای سر و صدای آن دو برادر کوچولو تنگ شده است. بچه های اتاق 8 منظورش بود. گفتم بقیه آن سر و صداها را دوست نداشتند. گفت: من هم همینطور.
+</p>
+<p>پنجشنبه، روز هفتم، ماه پنجم
+</p>
+<p>صبح خیلی زود، آقای اتاق 12 آمد و با ناراحتی داد زد که کولرش کلا خراب شده و ادامه این وضع دیگر قابل تحمل نیست. گفت میخواهد شخصا با آقای(م) صحبت کند. گفت آقای(م) آدم فهمیم و درستکاری است و پرسید آیا فراموش کرده ام مسئله را به او بگویم؟ گفتم بله و معذرت خواهی کردم. بعد گفتم آقای(م) تا ظهر نخواهد آمد و اطمینان دادم این دفعه حتما مشکل ایشان را به آقای(م) اطلاع خواهم داد. تهدید کرد اگر ایندفعه فراموش کنم حتما مقدمات اخراج مرا پیش آقای(م) فراهم خواهد کرد.
+</p>
+<p>هنگام غروب یادم آمد مشکل امروز صبح، با آقای اتاق 12 را به آقای(م) اطلاع نداده ام. سراسیمه به سمت طبقه سوم اتاق آقای(م) دویدم. روی پله ی پاگرد طبقه ی دوم پایم لیز خورد و زمین خوردم. زانوی راستم به لبه ی پله خورد و همینطور مچ دست راستم موقع افتادن آسیب دید. به آقای(م) قضیه را گفتم. یک جلیقه ی عجیب پوشیده بود که شکم گرد و بزرگش را بزرگتر نشان میداد. با خونسردی کتش را روی آن پوشید و بعد از من پرسید ظاهرش چطور است؟ ظاهرش چاق و خپل و کوتاه و نامرتب بود. اما گفتم خوب است. گفت برای شام با خانم زیبایی قرار دارد. و از من خواست موقع صرف شام حواسم به آشپزخانه باشد. بعد بی هیچ توضیحی به اتاقی دیگر رفت و پنکه ی گرد و خاک گرفته ای تحویل من داد و خواست برای اتاق 12 ببرم. گفت فردا کولر را تعمیر خواهد کرد. خوش اخلاق بود.
+</p>
+<p>جمعه، روز هشتم، ماه پنجم
+</p>
+<p>صبح. گلدانی که توی اتاقم گل داده بود، خشک شده. یکی دیگر از گلدان ها هم. دوتا از پنج تا. دیشب هر پنج گلدان سالم و شاداب بود. برای صرف صبحانه به آشپزخانه رفتم. جمعه ها آشپز نبود. کتری بزرگ را روی اجاق گذاشتم و در سکوت به اتاقم برگشتم. دوباره چیزی توی چشمم اذیت میکرد. از پشت در شنیدم که درب اتاقی در سمت چپ باز و بسته شد و بعد صدای قدم هایی آمد که به آهستگی توی راهرو از مقابل اتاق من گذشت. اتاق سمت چپ من انباری بود. چند ثانیه بعد، احتمالا جلوی پله ها، صدای برخورد شیئی فلزی به زمین شنیده شد و بعد شنیدم که آقای(م) شروع به فحش دادن کرد. صدای قدم ها دوباره توی راهرو برگشت و دوباره توی اتاق انباری سمت چپ گم شد. فکر کردم باید به کمک احتیاج داشته باشد. بلند شدم و به سمت انباری رفتم. در را باز کردم. غافلگیر شد. داشت گریه میکرد. سراسیمه معذرت خواستم و بیرون آمدم. با خودم حدس زدم باید چیزی در مورد زن زیبای دیشب باشد.
+</p>
+<p>شنبه، روز نهم، ماه پنجم
+</p>
+<p>آه چشم لعنتی. با درد چشم از خواب برخاستم. هردو چشم.
+</p>
+<p>امروز آقای اتاق 6 از صبح از اتاقش بیرون نیامد و سر کار نرفت. دیروز هم برای ناهار و شام پایین نیامد. از ندیدنش خوشحال بودم، اما احساس کردم دیر یا زود برای گرفتن ملافه تازه یا آب جوش یا ایراد گرفتن از وضع تهویه اتاق ها یا نظافت راهروها خواهد آمد. تا غروب از اتاقش بیرون نیامد. آقای (م) از من خواست به بهانه تعویض ملافه ها از وضعیتش سرکشی کنم. میگفت شاید اتفاقی افتاده باشد. چند ملافه تمیز برداشتم و پشت در اتاق 6 ایستادم. از داخل اتاق صدایی نمی آمد. در زدم. دوباره سکوت. باز در زدم. صدایی مثل صدای کشیده شدن صندلی آمد و چند ثانیه بعد کسی آرام از پشت در پرسید چکار دارم. صدایش عجیب بود. گفتم ملافه تازه آورده ام. و به کنایه حرف های خودش را تکرار کردم؛ هوا گرم است. ملافه های روتختی را باید هر روز تعویض کرد. دوباره سکوت شد. گفت لازم نیست. بفرمایید و صدایش از همیشه عجیب تر بود. بعد صدای چرخیدن کلید توی قفل آمد، در را از پشت قفل کرد و کلید را کشید.
+</p>
+<p>ادامه داد : حالا بروید.
+</p>
+<p>از توی سوراخ کلید یک لحظه دزدانه داخل اتاقش را نگاه کردم. بعد وحشت زده و هراسان سرم را عقب کشیدم. عرق سرد روی صورتم نشست. باور کردنی نبود. مردی که توی لباس های آقای شماره 6 داشت آرام آرام از در اتاق دور میشد، یک سوسک عظیم الجثه بود.
+</p>
+<p><br></p><p><br></p><p><br></p><p>============================================
+</p>
+<p><br></p><p>+ آآآآره ! الان دیدم چقد طولانی شده :/ دی:</p><p><br></p>
+
+<br><br></p>
+</div>
+<div class ="date">[ جمعه 31 شهریور 1396 ]  [ 21:19 ]  [ کوئیپر  ]
+<span dir="rtl" > <a target="_self" href="javascript:newComment(316)">[ نظرات(<script>setCommentCnt(316)</script>) ]</a>
+</div></div>
+<br>
+<div class="post">
+<a name="315"></a>
+<h2 class="Title">برای مریم</a></h2>
+<div class="Content"><p>دیشب از ته دل خوشحال بودم. یک خوشحالی کاملا مخصوص. دیدنت توی اون لباس زیبای عروس، برای من نه فقط شرکت توی یک جشن معمولی، که یک اتفاق قشنگ چندین ساله بود. از اولین روزهای آشنایی مجازی، چیزی حدود شیش سال پیش، تا همین امروز ، همه ی این دوره ی دوستی از نظرم گذشت. انقدر که اگه همونجا میشد، احتمالا ساعتها میتونستم در موردش بنویسم. از اتفاقی آشنا شدن، دوستی ها، پیدا کردن دوستای تازه، شب نشینی های بلاگی، خاطره سازی ها، همراهی های مجازی، قرار وبلاگی نمایشگاه کتاب، دورهمی ها، و همه چیز همینقدر ساده و داستان وار، تا روزی که رو به روت توی مجلس صمیمی عقدت نشسته ام و هنوز حضور خودم رو اونجا، به سختی باور میکنم.
+</p>
+<p>من هیچوقت فکر نکردم که دنیای مجازی جای عجیبی باشه، هیچوقت فکر نکردم که دنیای مجازی چیزی جدای از زندگی واقعی ماست، اما با این وجود هم همیشه و هنوز، هروقت تاثیر این چندسال زندگی مجازیم رو روی زندگی واقعی میبینم، از ته دل ذوق میکنم. وقتی تو و فاطمه رو انقدر شاد و خوشحال توی بغل هم دیدم - و هربار که میبینم - از اینکه چطور دوتا دوست هم لینکی بلاگ من باهم دوست میشن - همینقدر ساده - و این دوستی انقدر و تا این جاهای خوب، ادامه پیدا میکنه، از اینکه روزی جزئی از این مسیر بوده ام، با تمام وجود خوشحال میشم.
+</p>
+<p>کاش بلد بودم بیشتر از اینها بنویسم، بهتر از اینها بنویسم، چرا که حق این دوستی خیلی بیشتر از اینهاست، اما خب... باز میدونم که همه ی این دوستی ها ، بیشتر از اینکه بر اساس  نوشته ها و حرف ها باشه، همیشه بر اساس حس های ما بوده.
+</p>
+<p>برات همیشه آرزوی خوشحالی کرده ام و همیشه خواهم کرد. هر روز زندگیت پر از خوشی و خوشبختی، مریم! :)
+</p><br><br></p>
+</div>
+<div class ="date">[ دوشنبه 27 شهریور 1396 ]  [ 10:11 ]  [ کوئیپر  ]
+<span dir="rtl" > <a target="_self" href="javascript:newComment(315)">[ نظرات(<script>setCommentCnt(315)</script>) ]</a>
+</div></div>
+<br>
+<div class="post">
+<a name="314"></a>
+<h2 class="Title">صدا کن مرا. صدای تو...</a></h2>
+<div class="Content"><p>هیسسس... خوب گوش کن ..... هییسسس . آروووم... میشنوی؟! این صدای حنجره های پاره از فریاده... باید خیلی خوب گوش بدی... چند لحظه ندو . چند لحظه وایستا. چند لحظه هیچی نگو.... هیچی نشنو ... چشماتو ببند ... به هیچی فکر نکن ... حالا تصور کن... سری رو که رو به آسمونه ... دهنی رو که تا سر حد پاره شدن به حال فریاده ... و تو هیچی نمیبینی. هیچی نمیشنوی. فقط اون صورت . و اون دهن واکشیده . و سکوتی که همه جا رو گرفته . انگار .... داره.... سکوت رو فریاد میزنه.
+</p>
+<p>تو هوا گرد سکوت میپاشه.
+</p>
+<p>میدوه. میبینیش. میدوه . دست میندازی که از پشت شونه شو بگیری... نمیتونی. میدوه . دنبالش میدوی. دوباره دست میندازی. دوباره هوا به چنگت میاد . اسمشو صدا میزنی . صدای نفس هات . میدوی. اسمشو بلند ... قطعه قطعه ... میون نفس هات... صدا میزنی . داد میزنی. و تازه میفهمی...که هیچ صدایی ازت در نمیاد. داد میزنی. گلوت شروع میکنه به سوزش. ازت دور میشه. بهش نمیرسی. قدم هات کند میشن. آروم آروم. دیگه فقط رد پاهاشو جلوت میبینی. نفست میبره. وایمیستی. نفس نفس میزنی. خم میشی. دست هاتو میذاری رو زانوهات. بهشون تکیه میدی. صدای نفس هات. صدای موج ها . آروم و بی توقف. سرت رو بالا میاری . نفس میگیری و رو به آسمون اسمشو داد میزنی ... با همه ی نفست. با تموم سلول هات. با همه ی وجودت ... و هیچ صدایی نمیاد. داری سکوت رو فریاد میزنی.
+</p>
+<p>صدای موج ها میاد.
+</p>
+<p>زانوهات شل میشن. دست هات. میخوای وایستی. نمیشه. دست هاتو میاری جلو. تکون نمیخورن. مثل دوتا زنجیر، آویخته به شونه هات. با صورت میخوری زمین. روی ماسه ها. افتاده به پهلو. رو به دریا. و غروب. و خورشید، آروم آروم... گرم و... قرمزرنگ و.... زیبا... گونه هاتو نوازش میکنه... قطره ی اشکی از گوشه ی چشمت سر میخوره. چشم هاتو میبندی. صدای موج ها. قرمزی غروب پشت پلک های بسته ات. دستی که روی گونه ات میشینه. به گرمای خورشید. طلوع یک خورشید، توی قفسه ی سینه ات. و گرمایی که میپیچه توی رگ هات. دست ها. پاها. سرت. و پشت پلک ها. چشم هاتو به آرومی باز میکنی. و خیره میشی به چشم هاش... و حرکات ظریف لب هاش... و صدای آرومش... و صدای موج ها... و صدای پرنده های مهاجر... و همه ی صداهای خوب دنیا... که داره باهاش اسمت رو صدا میزنه .
+</p><br><br></p>
+</div>
+<div class ="date">[ یکشنبه 12 شهریور 1396 ]  [ 22:00 ]  [ کوئیپر  ]
+<span dir="rtl" > <a target="_self" href="javascript:newComment(314)">[ نظرات(<script>setCommentCnt(314)</script>) ]</a>
+</div></div>
+<br>
+<div class="post">
+<a name="313"></a>
+<h2 class="Title">گمشده.</a></h2>
+<div class="Content">
+<p>....
+</p>
+<p>+ پس چی میخوای؟
+</p>
+<p>- {با بغض} فقط اجازه بدی از اینجا برم.
+</p>
+<p>+ کجا میخوای بری؟
+</p>
+<p>- پیش X (کاراکتر بد داستان)
+</p>
+<p>+ چرا؟!
+</p>
+<p>- {با گریه} : چون تنها کسیه که منو میخواد!
+</p>
+<p>....
+</p>
+<p><br>
+</p>
+<p><br>
+</p>
+<p>+ دیالوگ نوشت <br>
+</p>
+<p><br>
+</p>
+<p><br>
+</p>
+<p>----------
+</p>
+<p><br>
+</p>
+<p>+ با چاقو یه کم پنیر برداشتم گذاشتم رو نون. دیدم انگار کنار پنیره قهوه ایه. ثانیه ی اول فکر کردم پنیر خراب شده، بعد یادم اومد که از همون چاقو قبلا برای هم زدن قهوه استفاده کرده بودم. خنده ام گرفت و بلند بلند خندیدم. احساس کردم دنیا باید همچین جایی میبود. راحت و آزاد و بی دغدغه. جایی که بشه با یک چاقو قهوه هم زد و بعد با همون چاقو پنیر برداشت و احتمالا شام هم باهاش پیاز خرد کرد، بدون اینکه لازم باشه به کسی بابت نشستن اون چاقو جواب پس داد. و احساس سرخوشی کردم!
+</p><p><br></p><p><br></p><p style="text-align: left; direction: ltr;">+&nbsp;<span style="background-color: rgb(255, 255, 204); text-align: right;">If some one wishes expert view on the topic of blogging and site-building afterward i recommend him/her to pay a quick visit this website, Keepup the nice job.</span></p><div style="text-align: left;"><span style="background-color: rgb(255, 255, 204); text-align: right; direction: rtl;">+ بله، متن خارجکی بالا کامنتی (تنها یکی از صدها کامنتی ) است که هواداران و خوانندگان محترم خارجکی این بلاگ در مورد این بلاگ برای ما ارسال کردن. خود این کامنت از<a href="../post/comment/203.html" target="_blank" title="وبلاگ بین المللی کوئیپر"> اینجا</a>&nbsp;قابل مشاهده است . دیگه در مورد بین المللی بودن بلاگ توضیح ندم.</span></div><div class="clearfix" style="margin: 0px; padding: 0px; text-align: right; background-color: rgb(255, 255, 204);"></div>
+
+<br><br></p>
+</div>
+<div class ="date">[ پنجشنبه 2 شهریور 1396 ]  [ 09:02 ]  [ کوئیپر  ]
+<span dir="rtl" > <a target="_self" href="javascript:newComment(313)">[ نظرات(<script>setCommentCnt(313)</script>) ]</a>
+</div></div>
+<br>
+<div class="post">
+<a name="312"></a>
+<h2 class="Title">PinkFloyd - Comfortably Numb </a></h2>
+<div class="Content"><p>چقدر چقدر چقدر! حس خوب و دلچسبیه، یه کالکشن آهنگ های مورد علاقه ات رو پلی کنی، و بشینی از پشت گوشی به صحبت و بگو بخند با دوستات. به وبگردی. همینقد ساده و آسوده و دست یافتنی!
+</p>
+<p>احتمالا از لذت های ناب قرن بیست و یکمی! :)))
+</p>
+<p>.........
+</p>
+<p>+ اهم اهم. به نظرم اومد با این دو پست اخیر ممکنه طاعنان مجال وقیعت یابند که آقا چرا هی میگی قرن بیست و یک؟ چرا انقد غربی؟ چرا مثلا قرن 14 ه.ش یا ه.ق نه؟! و با لبخند ظفرمندانه ی یه وری بنگرند ما رو. در پاسخ عرض کنم که به دو دلیل. اول اینکه همونطور که بسیاری از دوستان من خبر دارند، بنده یک انسان از بیخ و بن غرب زده ام. اینم که دیگه کاریه که شده. دوما هم اینکه از اونجایی که این بلاگ یک وبلاگ جهانیه و ما طبق آمار موثق (سازمان بین المللی آمار موثق - 2017) روزانه هزاران و بلکه خیلی بازدید کننده از اقصی نقاط جهان داریم. خب همین موضوع میطلبه به زبان جهانی تری سخن بگوییم اینجا. دلیل سوم هم اینکه خیلی از موضوع پرت شدیم آقا، برگردیم به همون موضوع اصلی امشبمون که همانا درود بر پینک فلوید و موسیقی پروگرسیو و هرچی هست! ❤
+</p>
+<p><span style="background-color: rgb(255, 0, 0);">+</span> در راستای اون قضیه که گفتم از کشورهای خارجی هم بازدیدکننده داریم اینجا ، آخرین کامنت <a target="_blank" title="وبلاگ بین المللی کوئیپر" data-href="http://quiper.mihanblog.com/post/203">این پست</a> رو چک کنید. مال همین چند روز پیشه. دی:
+</p>
+<p><br>
+</p>
+<p><br>
+</p>
+<p>+ طاقت بیار مرد! فردا زیر کولر میخوابی :/ :(<br>
+</p><br><br></p>
+</div>
+<div class ="date">[ دوشنبه 9 مرداد 1396 ]  [ 21:09 ]  [ کوئیپر  ]
+<span dir="rtl" > <a target="_self" href="javascript:newComment(312)">[ نظرات(<script>setCommentCnt(312)</script>) ]</a>
+</div></div>
+<br>
+<div class="post">
+<a name="311"></a>
+<h2 class="Title">Archive - Controlling Crowds</a></h2>
+<div class="Content">
+<p><font size="2">دغدغه های از روی شکم سیری قرن بیست و یکمی. واقعا که کلام شما رو باید طلا گرفت اوستا قربان. که «آدمیزاد همیشه چیزی برای غصه خوردن پیدا میکنه». آب و نونت رو خوردی، رو مبل راحت دراز کشیدی، آهنگ مورد علاقه ات رو گوش میدی، آخر هم شاکی! از چی؟ ... پاک شد...
+</font></p>
+<p><font size="2">گاهی دغدغه ها - اگه اسم هر ناراحتی لحظه ای رو بشه دغدغه گذاشت حالا - که نمیشه - تا وقتی توی سرمون اند، توی لحظه، همچین به چشم آدم میان که اوووه! حالا انگار چی شده. بعد میای بنویسیش، مینویسی ، پاک میکنی، مینویسی، میبینی نه واقعا انگار همینه! :/ میگی همین؟! :/ انصافا همینقد بیمزه و الکی؟! برو بابا.
+</font></p>
+<p><font size="2">خلاصه که عزیزان من، ماها قرن بیست و یکمی ها، انصافا، انصافا خیلی وقتها به طرز مهوعی ( چرا حالا مهوع رو به کار بردم آخه؟ :/ نمیدونم احساس کردم تلفظ مهوع خودش حال به هم زن تر از مثلا معادلش «حال به هم زنه» ) به طرز مهوعی زیادی - واقعا زیادی! قشنگ بی مورد! قشنگ اصلا همون مهوع - ناراحتی ها و خواسته های برآورده نشده ی لحظه ای مون رو بزرگ و مهم! و با ارزش در نظر میگیریم. به نظر من که به راحتی میشه اسم نصف دغدغه های روزانه زندگی عادی بشر امروزی رو دغدغه های شکم سیری گذاشت. :/ وگرنه دغدغه واقعی چیه؟ دغدغه این پشه هه که الان چندمین باره بالای سر من میچرخه و چندمین باره که شانس میاره و از لای پنجه های من که تو هوا بهش حمله میکنن فرار میکنه. دغدغه ی واقعی دغدغه ی این پشه اس که حتی نمیفهمه چرا بهش حمله میشه و بودن یا نبودن زندگیش داستان چند سانتی متر اینطرف یا اون طرف پریدن، یا چند ثانیه دیرتر یا زودتره.
+</font></p>
+<p><font size="2">بازم البته اگه دوباره بیاد حتما میکشمش ایشونو. و احساس خوبی هم ندارم از این که باید بکشمش، اما با همه این فلسفه بافی ها هم ، باز تحمل یک شب نخوابیدن - بدخوابیدن - از نیش پشه رو ندارم.
+</font></p>
+<p><font size="2">خیلی - خیلی - از این ‌شاخه به اون شاخه پریدم. الان تو ذهنم اومد شبیه میمون کوچولوی زیبایی - این صفت ها رو بهش نسبت دادم چون در مورد خودم داشتم مثال رو به کار میبردم دیدم چه مثالیه آخه میمون؟! :/ - میمون کوچولوی زیبایی که در جستجوی پیدا کردن چیزی برای خوردن -در  اینجا چیزی برای نوشتن- از این شاخه به شاخه ی دیگه ای میپره، بلکه اونجا چیز به درد بخوری باشه، که نیست و همین ته مونده های فکرهای روزانه و غیر روزانه است فقط انگار.
+</font></p>
+<p><font size="2">تا یادم نرفته اینم به خودم یادآوری کنم که این پست رو کاش هرگز هیچ استاد زبان فارسی ای نخونه جایی. به قدری که توش غلط ها و اشتباهات نگارشی به کار بردم. از حشو و استفاده زیییییاد و بی مورد و بد مورد این جملات توی خط فاصله - این جملات اینطوری - (اسمش چی بود یادم رفت؟) بگیر تا جملات الکی طولانی و به کار بردن صفات و ترکیبات وصفی و اضافی به طرز فوق‌العاده ناگیرا و نامفهوم و کلا تصدیق میکنم که نمیدونم چرا انقد اینطوری شد این متن، اما خب هیچ سعی هم نکردم برای درست تر نوشتن خلاصه. احتمالا باید از اثرات جانبی همون از شاخه به شاخه پریدن باشه.
+</font></p>
+<p><font size="2">جدا از همه اینها، عنوان بالای این پست، آهنگی از گروه Archive از آلبوم سال 2009  - که من به طرز بیهوده ای روی تلفظ صحیحش «آرکایو» هم حساسم. دی: این هم احتمالا چون خودم اوایل آرشیو میخوندمش. خلاصه که حسم حس این آهنگ بود فی الحال. و همه اینها که نوشتم، از این بود. دیگه اینطوری.
+</font></p>
+<p><font size="2"><br>
+</font></p>
+<p><font size="2">ها از این کلمه ی «شکم سیری» هم بدم میاد. نمیدونم چرا. اما خب معادل بهتری هم به ذهنم نیومد جایگزین کنم. بعدم که گفتم بابا راحت باش. پاهاتو دراز کن. آهاااا.  والا.
+</font></p>
+<p><font size="2"><br>
+</font></p>
+<p><font size="2">یه کمی بعدانوشت : خخخخخ. تازه جمله اول بند بالا رو خوندم.  «بنده از این کلمه برند هم خیلی بدم میاد» . =)))) هعی خدا بگم چیکارت کنه آقا که حتی اینجا هم دست از سر ما برنمیداری. =))
+</font></p>
+<p><font size="2">+چنددقیقه بعدتر نوشت : اها راستی اسم اون جمله ای که تو خط فاصله میذاریم - اینطوری - رو یادم اومد. جمله معترضه. نگم دیگه کجا رفتم یادم اومد :/
+</font></p>
+
+<br><br></p>
+</div>
+<div class ="date">[ جمعه 6 مرداد 1396 ]  [ 23:29 ]  [ کوئیپر  ]
+<span dir="rtl" > <a target="_self" href="javascript:newComment(311)">[ نظرات(<script>setCommentCnt(311)</script>) ]</a>
+</div></div>
+<br>
+<div class="post">
+<a name="310"></a>
+<h2 class="Title">قاصد روزای ابری کوشی؟ </a></h2>
+<div class="Content">
+<p><font size="2">......... اینجا هم یه چیزایی نوشته بودم که از بس به ادامه پست بی ربط بود، پاک شد. لازم به گفتن اینم نبود حالا. اما دیدم یهو جمله بعدی از  « راستی حرف محسن....» شروع میشه دیگه دیدم چه وضعیه آخه؟ 
+</font></p>
+<p><font size="2">راستی حرف محسن هم درسته به نظرم. البته حرف خودش که نبود، نقل کرد، اما تهش این بود که اینطوری نیس که نویسنده های بزرگ بشینن یه گوشه تا بهشون الهامی بشه برای نوشتن. مینویسن، مینویسن، مینویسن و به سختی تلاش میکنن تا چیزی داشته باشن برای نوشتن!
+</font></p>
+<p><font size="2">اما خب مارو چه به نویسندگان بزرگ! ما بلاگ نویسان کوچک همینطوری منتظر میشینیم یه گوشه، تا چیزی پیدا بشه برای نوشتن. اینا رو که به محسن نگفتم البته. همین مونده به فامیل بگیم ما بلاگی داریم و جایی خلوتی و گاهی اونجا چیزهایی ذکر میکنیم. یا خدا. حتی تصورش هم وحشتناکه! :/
+</font></p>
+<p><font size="2">+ اگر فرض رو بر این بگیریم که معمولا آشفتگی فکری بیشتر از هر چیزی منو تحریک میکنه به نوشتن، آیا درست است که اینطور برداشت کنیم که پس یعنی الان ذهنم آزادتر از خیلی اوقات دیگه اس؟
+</font></p>
+<p><font size="2">زززززینگ.
+</font></p>
+<p><font size="2">بله شرکت کننده شماره یک، بفرمایید.
+</font></p>
+<p><font size="2">بله. انگار که!+
+</font></p>
+<p><font size="2"> اهوم. اما چرا آخه؟! :/
+</font></p>
+<p><font size="2"><br>
+</font></p>
+<p><font size="2"><br>
+</font></p>
+<p><font size="2">++ اه! بیا اصلا پاک کنیم این پستو. :/ 
+</font></p>
+<p><font size="2">+ انقد ایده آلیست الکی نباش بچه :/
+</font></p>
+<p><font size="2"><br>
+</font></p>
+<p><font size="2"><br>
+</font></p>
+<p><font size="2"><br>
+</font></p>
+<p><font size="2">=======
+</font></p>
+<p><font size="2">+ بعدانوشت : مثل اینکه تولستوی، نویسنده بزرگ روسی، روزی، جایی، گفته که  « بدترین و خطرناک ترین کلمات اینست : همه این جورند! » پایین صفحه سالنامه روی میزم میگه اینو. صفحه ی سه شنبه، سیزده بهمن 94. 
+</font></p>
+<p><font size="2">غرض خاصی هم نداشتم از گفتن این موضوع حالا! :/ :دی
+</font></p>
+<p><font size="2">اما ضمن موافقت با کلیات صحبت دوست خوبم لئو تولستوی، اضافه کنم از نظر من خطرناک ترین کلمات اینست  « بکشیدشون - یا مثلا تیربارانشون کنید» یا از این دست کلمات. خلاصه که اینطوری. </font>
+</p>
+
+<br><br></p>
+</div>
+<div class ="date">[ چهارشنبه 28 تیر 1396 ]  [ 10:40 ]  [ کوئیپر  ]
+<span dir="rtl" > <a target="_self" href="javascript:newComment(310)">[ نظرات(<script>setCommentCnt(310)</script>) ]</a>
+</div></div>
+<br>
+<div class="post">
+<a name="309"></a>
+<h2 class="Title">روزهای جالبی نبود </a></h2>
+<div class="Content">
+<p>یکهویی خیلی اتفاقات بد افتاد. غصه ی رفتن آتنا. غصه برای همه ی دردهای خاموش کشور. قربانیان تجاوز. سوال های بی جواب. نوشتم و پاک کردم. اما چی بگه آدم وقتی دردی انقدر سنگین و غیرقابل هضمه؟
+</p>
+<p>غصه ی درگذشت مریم میرزاخانی. جزء اندک ستاره های درخشان این دوره ی تاریک و کم ستاره ی آسمون علمی این ملت.
+</p>
+<p><br>
+</p>
+<p>از همه چیز بگذریم. اما یک چیز رو نباید بهش بی توجه باشیم. آزارهای جنسی توی این جامعه، در سایه بی فرهنگی و نبود آموزش و نقص قوانین اند که همچنان فرصت جولان دادن دارن. غصه ناکه که زورمون فعلا به اصلاح قوانین نمیرسه. اما تو بخش فرهنگ و آموزش، همه ی ما میتونیم مفید باشیم. به فکر "آموزش مراقبت از بدن" به کودکان نزدیکتون باشید. این دردهای خاموش گاهی به زندگی ما خیلی نزدیک تر از اون هستند که تصور میکنیم. مخصوصا وقتی متوجه میشیم طبق آمار، اکثر آزارهای جنسی نسبت به کودکان توسط نزدیکان و آشناهای فرد اتفاق میفته. مراقب خودتون و مراقب کوچکترهای دور و برتون باشید. این درد، دردیه که به دست خود ما و با یادگیری و آموزش خود ما درمان خواهد شد.
+</p>
+<p>همه چیز این موضوع انقدر سخت هست که دلم میخواد دوباره پاک کنم همه این متنو و از کنارش بگذرم برم. همونطور که این چند وقت هی از کنار خبرها و داستان های مختلف در مورد این موضوع گذشتم. اما من باید بگذارم چیزی از این درد بمونه اینجا. اگرچه سخت و آزاردهنده و نخوندنی باشه. برای خودم.
+</p><p><br></p>
+
+<br><br></p>
+</div>
+<div class ="date">[ یکشنبه 25 تیر 1396 ]  [ 10:11 ]  [ کوئیپر  ]
+<span dir="rtl" > <a target="_self" href="javascript:newComment(309)">[ نظرات(<script>setCommentCnt(309)</script>) ]</a>
+</div></div>
+<br>
+<p align="center"><font face="Tahoma" style="font-size: 9pt">
+.: تعداد کل صفحات 17 :. <a href="1.html"> [  <span>1</span>  ]</a> <a href="2.html"> [  <b>2</b>  ]</a> <a href="3.html"> [  <span>3</span>  ]</a> <a href="4.html"> [  <span>4</span>  ]</a> <a href="5.html"> [  <span>5</span>  ]</a> <a href="6.html"> [  <span>6</span>  ]</a> <a href="7.html"> [  <span>7</span>  ]</a> <a href="8.html"> [  <i>...</i>  ]</a> <br>
+</p>	<!-- end post -->
+<!--Design By : Avazak.ir-->
+</div><div class="sidebar">
+<!--Design By : Avazak.ir-->
+<h1>من</h1>
+<div class="About">
+<div align=Right >   </div>
+آشتی خواهم داد / آشنا خواهم کرد / راه خواهم رفت / نور خواهم خورد / دوست خواهم داشت...<br />
+« سهراب »</div>  
+<!--Design By : Avazak.ir-->
+<h1>کوئیپر</h1>
+<a href="../index.html">صفحه اصلی وبلاگ</a> |
+<a href="mailto:">ایمیل نویسنده</a> |
+<a href="javascript:messageForm()">تماس با مدیر</a> |
+<a href="http://www.Avazak.ir/">طراح قالب</a> |
+<!--Design By : Avazak.ir-->
+<h1>توسط</h1>
+<a href="../post/author/435127.html">کوئیپر </a> |
+<br>
+<!--Design By : Avazak.ir-->
+<!--Design By : Avazak.ir-->
+<h1>صفحات جانبی</h1>
+<span dir="ltr">
+<a href="../extrapage/111.html">.</a> |
+<!--Design By : Avazak.ir-->
+<h1>آرشیو مطالب</h1>
+<span dir="ltr">
+<a href="../post/archive/1399/6.html"> شهریور 1399</a> |
+<a href="../post/archive/1399/5.html"> مرداد 1399</a> |
+<a href="../post/archive/1398/12.html"> اسفند 1398</a> |
+<a href="../post/archive/1398/8.html"> آبان 1398</a> |
+<a href="../post/archive/1397/8.html"> آبان 1397</a> |
+<a href="../post/archive/1397/2.html"> اردیبهشت 1397</a> |
+<a href="../post/archive/1396/11.html"> بهمن 1396</a> |
+<a href="../post/archive/1396/9.html"> آذر 1396</a> |
+<a href="../post/archive/1396/8.html"> آبان 1396</a> |
+<a href="../post/archive/1396/6.html"> شهریور 1396</a> |
+<a href="../post/archive/1396/5.html"> مرداد 1396</a> |
+<a href="../post/archive/1396/4.html"> تیر 1396</a> |
+<a href="../post/archive/1396/3.html"> خرداد 1396</a> |
+<a href="../post/archive/1396/2.html"> اردیبهشت 1396</a> |
+<a href="../post/archive/1396/1.html"> فروردین 1396</a> |
+<a href="../post/archive/1395/12.html"> اسفند 1395</a> |
+<a href="../post/archive/1395/11.html"> بهمن 1395</a> |
+<a href="../post/archive/1395/10.html"> دی 1395</a> |
+<a href="../post/archive/1395/7.html"> مهر 1395</a> |
+<a href="../post/archive/1395/6.html"> شهریور 1395</a> |
+<a href="../post/archive/1395/5.html"> مرداد 1395</a> |
+<a href="../post/archive/1395/4.html"> تیر 1395</a> |
+<a href="../post/archive/1395/3.html"> خرداد 1395</a> |
+<a href="../post/archive/1395/2.html"> اردیبهشت 1395</a> |
+<a href="../post/archive/1395/1.html"> فروردین 1395</a> |
+<a href="../post/archive/1394/12.html"> اسفند 1394</a> |
+<a href="../post/archive/1394/11.html"> بهمن 1394</a> |
+<a href="../post/archive/1394/10.html"> دی 1394</a> |
+<a href="../post/archive/1394/9.html"> آذر 1394</a> |
+<a href="../post/archive/1394/8.html"> آبان 1394</a> |
+<a href="../post/archive/1394/5.html"> مرداد 1394</a> |
+<a href="../post/archive/1394/3.html"> خرداد 1394</a> |
+<a href="../post/archive/1394/1.html"> فروردین 1394</a> |
+<a href="../post/archive/1393/12.html"> اسفند 1393</a> |
+<a href="../post/archive/1393/11.html"> بهمن 1393</a> |
+<a href="../post/archive/1393/10.html"> دی 1393</a> |
+<a href="../post/archive/1393/9.html"> آذر 1393</a> |
+<a href="../post/archive/1393/8.html"> آبان 1393</a> |
+<a href="../post/archive/1393/7.html"> مهر 1393</a> |
+<a href="../post/archive/1393/6.html"> شهریور 1393</a> |
+<a href="../post/archive/1393/5.html"> مرداد 1393</a> |
+<a href="../post/archive/1393/4.html"> تیر 1393</a> |
+<a href="../post/archive/1393/3.html"> خرداد 1393</a> |
+<a href="../post/archive/1393/2.html"> اردیبهشت 1393</a> |
+<a href="../post/archive/1393/1.html"> فروردین 1393</a> |
+<a href="../post/archive/1392/12.html"> اسفند 1392</a> |
+<a href="../post/archive/1392/11.html"> بهمن 1392</a> |
+<a href="../post/archive/1392/10.html"> دی 1392</a> |
+<a href="../post/archive/1392/9.html"> آذر 1392</a> |
+<a href="../post/archive.html">لیست آرشیوها</a> |
+<!--Design By : Avazak.ir-->
+	
+<!--Design By : Avazak.ir-->
+<!--Design By : Avazak.ir-->
+
+		<!--Design By : Avazak.ir-->
+<div class="custom">
+<h1>دیگر امکانات</h1>
+<div align="center"><!-- Begin WebGozar.com Counter code -->
+<script type="text/javascript" language="javascript" src="http://www.webgozar.ir/c.aspx?Code=2821131&amp;t=counter" ></script>
+<noscript><a href="http://www.webgozar.com/counter/stats.aspx?code=2821131" target="_blank">&#1570;&#1605;&#1575;&#1585;</a></noscript>
+<!-- End WebGozar.com Counter code --></div>
+<!--Design By : Avazak.ir-->
+	<!-- end sidebar -->
+<!--Design By : Avazak.ir-->
+</div></body>
+
+</html><script>
+//    setTimeout(function () {
+//        GetMihanBlogShowAds();
+//    }, 1000);
+</script>
+<!--NEW SERVER-->
+
+<!--SabaVision Ads Handler--><!--<script type="text/javascript">(function (d) {var url =   location.protocol+'//api.sabavision.com/pox/poxjs.js';d.write('<script type="text/javascript" src="' + url + '" async></scri' + 'pt>');})(document);</script>-->
+
+
+<script type="text/javascript">
+
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-153829-9']);
+    _gaq.push(['_setDomainName', 'quiper.mihanblog.com']);
+    _gaq.push(['_trackPageview']);
+
+    (function() {
+        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+
+</script>
+
+
+<div id='mediaad-Kvcm'></div>
+<meta name="sabavision_zone" content="2500-Z499" />
+<center>
+    <div style="background-color:white;width:90%;padding:20px;margin-top:50px;margin-bottom:50px;">
+        <a href="https://www.cloob.com">شبکه اجتماعی فارسی کلوب</a> | <a href="https://www.seo25.com/product/buy-mobile-traffic-and-get-cheap-targeted-mobile-traffic/" target="_blank">Buy Mobile Traffic</a> | <a href="https://www.soalaat.com">سایت سوالات</a>
+    </div>
+</center>

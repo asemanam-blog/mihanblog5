@@ -1,0 +1,1185 @@
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" /><link rel="EditURI" type="application/rsd+xml" title="RSD" href="../../../../../xmlrpc@rsd" />
+<script type="text/javascript" src="../../../../../../static.mihanblog.com/public/scripts/run/g.other.v3.js"></script>
+<script>
+
+	function c_$(id){
+        return document.getElementById(id);
+    }
+    
+			//if (parent.frames.length) top.location.href= document.location;
+		
+	setTodayDate = function(){
+		document.write('شنبه 22 آذر 1399');
+		/*735558*/	}
+
+</script>
+
+
+
+        <script type="text/javascript">
+            (function(){
+            var now = new Date();
+            var head = document.getElementsByTagName('head')[0];
+            var script = document.createElement('script');
+            script.async = true;
+            var script_address = 'https://cdn.yektanet.com/js/mihanblog.com/native-mihanblog.com-6531.js';
+            script.src = script_address + '?v=' + now.getFullYear().toString() + '0' + now.getMonth() + '0' + now.getDate() + '0' + now.getHours();
+            head.appendChild(script);
+            })();
+        </script>
+
+        <!--<script type="text/javascript">
+            var head = document.getElementsByTagName("head")[0];
+            var script = document.createElement("script");
+            script.type = "text/javascript";
+            script.async=1;
+            script.src = "https://s1.mediaad.org/serve/mihanblog.com/loader.js" ;
+            head.appendChild(script);
+        </script>-->
+        
+        <script>
+            var sabaVisionWebsiteID = "9bab9dac-041d-4bdb-b39a-1ed789f65eed"; var sabaVisionWebsitePage = "ALL"
+        </script>
+        <link rel="stylesheet" href="https://plus.sabavision.com/dox/dox.min.css">
+        <script src="https://plus.sabavision.com/dox/dox.min.js"></script>
+        
+        <script>
+	try{
+		var commentCnt = new Array();
+		commentCnt[14283]='0';commentCnt[14284]='0';commentCnt[14285]='0';commentCnt[14286]='0';commentCnt[14287]='0';commentCnt[14288]='0';commentCnt[14289]='0';commentCnt[14290]='0';commentCnt[14291]='0';commentCnt[14292]='0';commentCnt[14293]='0';commentCnt[14294]='0';commentCnt[14295]='0';commentCnt[14296]='0';commentCnt[14297]='0';commentCnt[14298]='0';commentCnt[14299]='0';commentCnt[14300]='0';commentCnt[14301]='0';commentCnt[14302]='0';	} catch(e){}
+	
+	newComment = function(post_id){
+		try{
+			window.open('/post/comment/'+post_id,'comment','status=yes,scrollbars=yes,toolbar=no,menubar=no,location=no ,width=480px,height=540px');
+		} catch(e){}
+	}
+	setCommentCnt = function(post_id){
+		try{
+			if(commentCnt[post_id]){
+				document.write(commentCnt[post_id]);
+			} else {
+				document.write(0);
+			}
+		} catch(e){}
+	}
+</script><script>
+
+
+	mihanblogUpdateLike = function(postid,type){
+		var url = '/post/like/'+postid+'/'+type;
+		mihanblogGetAjax(url,function(){});
+	};
+	try{
+        mihanblogGetAjax = function (url,callback) {
+    		var req;
+			if (window.XMLHttpRequest)
+            {
+                // code for IE7+, Firefox, Chrome, Opera, Safari
+			  	req = new XMLHttpRequest();
+			}else{	// code for IE6, IE5
+			  	req = new ActiveXObject("Microsoft.XMLHTTP");
+		  	}
+		    req.open("GET", url, 1);
+		    req.onreadystatechange = function () {
+		        if (req.readyState == 4) {
+		            if (req.status == 200) {
+		            	var response = eval(req.responseText);
+		            	callback();
+		            }else{
+	            		return ;
+		            }
+		        }else{
+					return ;
+		        }
+		    }
+		    req.send(null);
+		}
+	}catch(e){}
+
+	try{
+		var mihanblogLikeArrCnt = new Array();
+		var mihanblogDisLikeArrCnt = new Array();
+
+		mihanblogLikeArrCnt[14290]='0';
+mihanblogDisLikeArrCnt[14290]='0';
+mihanblogLikeArrCnt[14296]='0';
+mihanblogDisLikeArrCnt[14296]='0';
+mihanblogLikeArrCnt[14300]='0';
+mihanblogDisLikeArrCnt[14300]='0';
+	} catch(e){}
+
+
+
+    mihanblogPostLike = function(post_id){
+
+        mihanblogLikeCnt = (mihanblogLikeArrCnt[post_id]? mihanblogLikeArrCnt[post_id] : 0);
+        mihanblogDisLikeCnt = (mihanblogDisLikeArrCnt[post_id]? mihanblogDisLikeArrCnt[post_id] : 0);
+        mihanblogLikeCnt = parseInt(mihanblogLikeCnt);
+        mihanblogDisLikeCnt = parseInt(mihanblogDisLikeCnt);
+
+        document.write(
+                '<div class="mihanblog_like_wrapper ">'+
+                       '<div id="dislikeBar_'+post_id+'" onclick="mihanblogUpdateLike('+post_id+',\'dislike\')"   class="mihanblog_like_bar mihanblog_like_dislikeBar mihanblog_like_show_help ">-<div class="mihanblog_like_Cnt" id="disLikeCnt_'+post_id+'">'+mihanblogDisLikeCnt+'</div>'+
+                            '<span  class="mihanblog_like_v2_help mihanblog_like_v2_help_dislike clearfix"> '+
+                                '<span class="mihanblog_like_help_arrow mihanblog_like_help_arrow_dislike clearfix"></span>'+
+                                '<span class="mihanblog_like_help_text">نمی پسندم</span>'+
+                            '</span>'+
+                        '</div>'+
+                       '<div id="Like_'+post_id+'" class="mihanblog_like_border"></div>'+
+                       '<div id="likeBar_'+post_id+'" onclick="mihanblogUpdateLike('+post_id+',\'like\')"  class="mihanblog_like_bar mihanblog_like_likeBar mihanblog_like_show_help" >+<div class="mihanblog_like_Cnt" id="likeCnt_'+post_id+'">'+mihanblogLikeCnt+'</div>'+
+                            '<span  class="mihanblog_like_v2_help mihanblog_like_v2_help_like clearfix"> '+
+                                '<span class="mihanblog_like_help_arrow mihanblog_like_help_arrow_like clearfix"></span>'+
+                                '<span class="mihanblog_like_help_text">می پسندم</span>'+
+                            '</span>'+
+                        '</div>'+
+
+                '</div>'
+        );
+
+
+
+        mihanblogDisplayeLike(post_id);
+    }
+
+
+    mihanblogDisplayeLike = function(post_id){
+
+        mihanblogLikeCnt = (mihanblogLikeArrCnt[post_id]? mihanblogLikeArrCnt[post_id] : 0);
+        mihanblogDisLikeCnt = (mihanblogDisLikeArrCnt[post_id]? mihanblogDisLikeArrCnt[post_id] : 0);
+        mihanblogLikeCnt = parseInt(mihanblogLikeCnt);
+        mihanblogDisLikeCnt = parseInt(mihanblogDisLikeCnt);
+
+
+
+        sum = mihanblogLikeCnt - mihanblogDisLikeCnt;
+        backgroundBorder =  document.getElementById('Like_'+post_id);
+        var likeObj = document.getElementById('likeCnt_'+post_id);
+        var disLikeObj = document.getElementById('disLikeCnt_'+post_id);
+
+
+
+
+
+        likeObj.innerHTML =  mihanblogLikeCnt ;
+        disLikeObj.innerHTML =  mihanblogDisLikeCnt;
+
+        if(sum == 0){
+            backgroundBorder.style.backgroundImage = "url('/public/public/images/icons/like_likedislike.png')";
+            document.getElementById('dislikeBar_'+post_id).style.width = '19px';
+            document.getElementById('likeBar_'+post_id).style.width = '19px';
+        }else{
+             if(sum > 0){
+                 backgroundBorder.style.backgroundImage = "url('/public/public/images/icons/like_like.png')";
+                 document.getElementById('likeBar_'+post_id).style.width = '23px';
+                 document.getElementById('dislikeBar_'+post_id).style.width = '15px';
+             }else{
+                 backgroundBorder.style.backgroundImage = "url('/public/public/images/icons/like_dislike.png')";
+                 document.getElementById('likeBar_'+post_id).style.width = '15px';
+                 document.getElementById('dislikeBar_'+post_id).style.width = '23px';
+             }
+        }
+
+    }
+
+
+
+
+</script>
+
+<style type="text/css">
+
+
+    .clearfix {display: inline-block;}
+    .clearfix:after {
+        content: ".";
+        display: block;
+        height: 0;
+        clear: both;
+        visibility: hidden;
+    }
+
+    .mihanblog_like_wrapper {
+        color: #ffffff;
+        direction: ltr;
+        position: relative;
+    }
+    .mihanblog_like_wrapper span{
+        display: none;
+    }
+    .mihanblog_like_bar {
+        color: #FFFFFF;
+        cursor: pointer;
+        float: left;
+        font-size: 10px;
+        height: 20px;
+        line-height: 19px;
+        margin: 5px 0;
+    }
+    .mihanblog_like_likeBar {
+        background-color: #88B131;
+        padding-right: 5px;
+        border-top-right-radius: 2px;
+        border-bottom-right-radius: 2px;
+        text-align: right;
+    }
+    .mihanblog_like_likeBar:hover{
+        background-color: #699017;
+    }
+    .mihanblog_like_border {
+        background-color: #666666;
+        border: 1px solid #666666;
+        float: left;
+        font-size: 12px;
+        height: 20px;
+        margin-top: 2px;
+        width: 25px;
+        padding: 3px 5px 2px 0;
+        text-align: center;
+        border-radius: 2px;
+        color: #ffffff;
+        direction: ltr;
+        background-repeat: no-repeat ;
+        background-position: 4px center;
+    }
+    .mihanblog_like_border img {
+        margin-left: 2px;
+        margin-top: 2px;
+        width: 22px;
+    }
+    .mihanblog_like_dislikeBar {
+        background-color: #FF6F31;
+        padding-left: 5px;
+        border-top-left-radius: 2px;
+        border-bottom-left-radius: 2px;
+        text-align:left ;
+    }
+    .mihanblog_like_dislikeBar:hover{
+        background-color: #D54B10;
+    }
+
+
+
+    .mihanblog_like_show_help {
+        position: relative;
+    }
+    .mihanblog_like_show_help:hover span {
+        display: block;
+    }
+    .mihanblog_like_help_text {
+        background-color: white;
+        border: 1px solid #555555;
+        border-radius: 3px 3px 3px 3px;
+        color: #303030;
+        float: left;
+        font-size: 11px;
+        font-weight: normal;
+        padding: 5px 10px;
+    }
+
+    .mihanblog_like_help_arrow_dislike {
+        background: url("http://khoshnevissi.mihanblog.com/public/public/images/icons/like_hover_top.png") no-repeat scroll 16px 0 transparent;
+        left: 0;
+        top: -4px;
+    }
+
+    .mihanblog_like_help_arrow_like {
+        background: url("http://khoshnevissi.mihanblog.com/public/public/images/icons/like_hover_top _2.png") no-repeat scroll 16px 0 transparent;
+        left: -10px;
+        top: 29px;
+    }
+
+    .mihanblog_like_help_arrow{
+        height: 6px;
+        position: absolute;
+        width: 100px;
+
+    }
+
+    .mihanblog_like_v2_help_dislike {
+        left: -15px;
+        top: 24px;
+    }
+    .mihanblog_like_v2_help_like {
+        left: 0;
+        top: -35px;
+
+    }
+    .mihanblog_like_v2_help{
+        display: none;
+        position: absolute;
+        white-space: nowrap;
+        z-index: 1;
+    }
+
+    .mihanblog_like_Cnt{
+        display: inline;
+        color: #ffffff;
+    }
+
+</style><script>
+
+	statInfo = new Array();
+	setStatVar = function(index,value){
+		statInfo[index] = value;
+	}
+	getStatVar = function(index){
+		if(statInfo[index]) document.write(statInfo[index]);
+	}
+	
+	setStatVar('total_post','11620');
+	setStatVar('total_author','0');
+	setStatVar('modify_date','جمعه 21 آذر 1399');
+	
+	setStatVar('today_view','170');
+	setStatVar('yesterday_view','665');
+	
+	setStatVar('this_month_view','4465');
+	setStatVar('last_month_view','9264');
+
+	setStatVar('total_view','1147231');
+	setStatVar('last_view_date','شنبه 22 آذر 1399 (14:48)');
+
+
+
+    
+    function setStatFromClient()
+    {
+        var url = 'http://khoshnevissi.mihanblog.com/statupdate/?data[refereruri]=http://khoshnevissi.mihanblog.com/post/archive/1399/6&data[postid]=&data[requesturi]=/post/archive/1399/6/page/2&data[sdate]=1607772078&data[hash]=26b40c28fcc52c7bf58ac1597ace21d0&data[resolution]='+screen.width+' X '+screen.height;
+
+//        alert(url);
+//        var newjs = document.createElement("SCRIPT");
+//        newjs.type = 'text/javascript';
+//        newjs.src = url;
+//
+//        var newdiv = document.createElement("DIV");
+//        newdiv.setAttribute("style","display:none");
+
+        document.write(unescape('%3Cscript src="'+url+'" type="text/javascript"%3E%3C/script%3E'));
+//        newdiv.appendChild (newjs);
+//        document.write(newjs);
+//        document.write(appendChild (newdiv);
+
+    };
+    setStatFromClient();
+        
+</script><script>
+	messageForm = function(post_id){
+		try{
+			window.open('/message','message','status=yes,scrollbars=yes,toolbar=no,menubar=no,location=no ,width=480px,height=550px');
+		} catch(e){}
+	}
+</script><script>
+	linkdailyForm = function(){
+		try{
+			window.open('/linkdaily/new','linkdaily','status=yes,scrollbars=yes,toolbar=no,menubar=no,location=no ,width=500px,height=460px');
+		} catch(e){}
+	}
+</script><script>
+
+var MihanblogShopAdsArray = new Array();
+
+function GetMihanBlogShowAds(){
+	if(MihanblogShopAdsArray.length){
+		var adsTarget = 'MihanblogShopAds';
+		var containerWidth = document.getElementById(adsTarget).offsetWidth;
+		if(containerWidth>=200){
+			var adsCnt = parseInt(containerWidth / 200) ;
+			if(adsCnt>MihanblogShopAdsArray.length){
+				adsCnt = MihanblogShopAdsArray.length ; 
+			}
+//			var OneAdsWidth = parseInt(containerWidth / adsCnt) ;
+			var OneAdsWidth = containerWidth / adsCnt ;
+			if(OneAdsWidth>400){
+				OneAdsWidth = 400 ;
+			}
+			var OutHtml = '';
+			var img = '';
+			var link = '';
+			var title = '';
+			var description = '';
+			var imgWidth = 70;
+			if(OneAdsWidth>230){
+				imgWidth = 80;
+			}
+			if(OneAdsWidth>300){
+				imgWidth = 90;
+			}
+			for(adsOne=0;adsOne<adsCnt;adsOne++){
+				
+				img = MihanblogShopAdsArray[adsOne]['img'];
+				link = MihanblogShopAdsArray[adsOne]['link'];
+				title = MihanblogShopAdsArray[adsOne]['title'];
+				description = MihanblogShopAdsArray[adsOne]['description'];
+				
+				OutHtml += '<td style="background-color:#FFF;width: '+OneAdsWidth+'px;border:1px solid #f00;margin:0px 0px;font-size:11px;font-family:tahoma;padding:2px;margin:0px 0px;font-size:11px;border: 1px solid BurlyWood; padding: 1px; height: '+(imgWidth+25)+'px;">';
+
+				OutHtml += '	<a href="'+link+'.html" target="_blank" style="text-decoration:none">';
+
+				OutHtml += '			<div style="width: '+(OneAdsWidth-16)+'px;cursor:pointer;font-size:12px;padding: 4px 1px 4px 7px; white-space: nowrap; text-align: center; font-weight: bold; color: blue;white-space:nowrap;overflow:hidden">';
+				OutHtml += 					title;
+				OutHtml += '			</div>';
+				OutHtml += '			<div style="cursor:pointer;padding: 1px; display: block; float: right; width: '+imgWidth+'px;">';
+				OutHtml += '				<img src="'+img+'.html" style="border:0px;padding:0px;margin:0px;width:'+imgWidth+'px;height:'+imgWidth+'px;">';
+				OutHtml += '			</div>';
+				OutHtml += '			<div style="padding: 1px; display: block; float: right; width: '+(OneAdsWidth-13-imgWidth)+'px; text-align: right;overflow:hidden">';
+				OutHtml += '				<div style="overflow:hidden;cursor:pointer;padding: 2px 3px; line-height: 17px; height: '+(imgWidth-3)+'px; text-align: justify;color:#000;direction:rtl">';
+				OutHtml += 						description;
+				OutHtml += '				</div>';
+				OutHtml += '			</div>';
+
+				OutHtml += '	</a>';
+
+				OutHtml += '</td>';
+			}
+			
+			var Out = '<table align="center" cellpadding="0" cellspacing="2" style="width:'+(OneAdsWidth*adsCnt)+'px;"><tr>'+OutHtml+'</tr></table>'; 
+			
+			Out = '<div style="text-align:center;padding:0px;margin:3px auto;">'+Out+'</div>'; 
+			
+			document.getElementById(adsTarget).style.height = (imgWidth+35)+'px' ;
+			document.getElementById(adsTarget).innerHTML = Out ;
+		}
+	}
+}
+</script>
+    <style>
+        @font-face {
+            font-family: 'Mihan-Iransans';
+            src: url('http://khoshnevissi.mihanblog.com/public/public/fonts/Iransans.eot');
+            src: url('http://khoshnevissi.mihanblog.com/public/public/fonts/Iransans.eot?') format('embedded-opentype'),
+            url('http://khoshnevissi.mihanblog.com/public/public/fonts/Iransans.woff2') format('woff2'),
+            url('http://khoshnevissi.mihanblog.com/public/public/fonts/Iransans.woff') format('woff'),
+            url('http://khoshnevissi.mihanblog.com/public/public/fonts/Iransans.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+        @font-face {
+            font-family: 'Mihan-IransansBold';
+            src: url('http://khoshnevissi.mihanblog.com/public/public/fonts/Iransans-Black.eot');
+            src: url('http://khoshnevissi.mihanblog.com/public/public/fonts/Iransans-Black.eot?') format('embedded-opentype'),
+            url('http://khoshnevissi.mihanblog.com/public/public/fonts/Iransans-Black.woff2') format('woff2'),
+            url('http://khoshnevissi.mihanblog.com/public/public/fonts/Iransans-Black.woff') format('woff'),
+            url('http://khoshnevissi.mihanblog.com/public/public/fonts/Iransans-Black.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+        @font-face {
+            font-family: 'Mihan-IransansLight';
+            src: url('http://khoshnevissi.mihanblog.com/public/public/fonts/Iransans-UltraLight.eot');
+            src: url('http://khoshnevissi.mihanblog.com/public/public/fonts/Iransans-UltraLight.eot?') format('embedded-opentype'),
+            url('http://khoshnevissi.mihanblog.com/public/public/fonts/Iransans-UltraLight.woff2') format('woff2'),
+            url('http://khoshnevissi.mihanblog.com/public/public/fonts/Iransans-UltraLight.woff') format('woff'),
+            url('http://khoshnevissi.mihanblog.com/public/public/fonts/Iransans-UltraLight.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+        @font-face {
+            font-family: 'Mihan-Nassim';
+            src: url('http://khoshnevissi.mihanblog.com/public/public/fonts/Nassim.eot');
+            src: url('http://khoshnevissi.mihanblog.com/public/public/fonts/Nassim.eot?') format('embedded-opentype'),
+            url('http://khoshnevissi.mihanblog.com/public/public/fonts/Nassim.woff2') format('woff2'),
+            url('http://khoshnevissi.mihanblog.com/public/public/fonts/Nassim.woff') format('woff'),
+            url('http://khoshnevissi.mihanblog.com/public/public/fonts/Nassim.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+        @font-face {
+            font-family: 'Mihan-Koodak';
+            src: url('http://khoshnevissi.mihanblog.com/public/public/fonts/Koodak.eot');
+            src: url('http://khoshnevissi.mihanblog.com/public/public/fonts/Koodak.eot?') format('embedded-opentype'),
+            url('http://khoshnevissi.mihanblog.com/public/public/fonts/Koodak.woff2') format('woff2'),
+            url('http://khoshnevissi.mihanblog.com/public/public/fonts/Koodak.woff') format('woff'),
+            url('http://khoshnevissi.mihanblog.com/public/public/fonts/Koodak.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+        @font-face {
+            font-family: 'Mihan-Yekan';
+            src: url('http://khoshnevissi.mihanblog.com/public/public/fonts/Yekan.eot');
+            src: url('http://khoshnevissi.mihanblog.com/public/public/fonts/Yekan.eot?') format('embedded-opentype'),
+            url('http://khoshnevissi.mihanblog.com/public/public/fonts/Yekan.woff2') format('woff2'),
+            url('http://khoshnevissi.mihanblog.com/public/public/fonts/Yekan.woff') format('woff'),
+            url('http://khoshnevissi.mihanblog.com/public/public/fonts/Yekan.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+        @font-face {
+            font-family: 'FontAwesome';
+            src: url('http://khoshnevissi.mihanblog.com/public/public/fonts/fontawesome_webfont.eot');
+            src: url('http://khoshnevissi.mihanblog.com/public/public/fonts/fontawesome_webfont.eot?') format('embedded-opentype'),
+            url('http://khoshnevissi.mihanblog.com/public/public/fonts/fontawesome_webfont.woff2') format('woff2'),
+            url('http://khoshnevissi.mihanblog.com/public/public/fonts/fontawesome_webfont.woff') format('woff'),
+            url('http://khoshnevissi.mihanblog.com/public/public/fonts/fontawesome_webfont.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+
+
+        
+
+        /* Smartphones (portrait and landscape) ----------- */
+
+        /*
+        @media only screen and (max-width : 480px) and (min-width : 320px) {
+            .sabaClick_advert__wrapper{
+                display:block;
+            }
+            .sabaClick_advert__inner{
+                max-width: 90%;
+                margin: 0 5%;
+            }
+        }
+        */
+
+    </style>
+
+
+
+
+
+
+<html>
+<head>
+<title>خوشنویسی -هنر-حیدرامیرپور</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta name="language" content="Farsi">
+<meta name="geo.region" CONTENT="IR" />
+<meta name="googlebot" content="INDEX, follow" />
+<meta name="robots" content="index, follow">
+<meta name="description" content="خوشنویسی -هنر-حیدرامیرپور - مطالب  شهریور 1399 - خوشنویسی نستعلیق -هنر اصیل ایرانی - خوشنویسی -هنر-حیدرامیرپور">
+<meta name="keywords" content="خوشنویسی -هنر-حیدرامیرپور - مطالب  شهریور 1399,khoshnevissi, Blog, Weblog, Persian,Iran, Iranian, Farsi, Weblogs">
+<link rel="alternate" type="application/rss+xml" title="خوشنویسی -هنر-حیدرامیرپور" href="../../../../rss/index.html">
+<link href="http://www.iranskin.com/template3/41/m41.css" type="text/css" rel="stylesheet">
+</head>
+<body>
+<div align="center">
+<div class=Back-IS>
+	
+<table border="0" width="1000" cellspacing="0" cellpadding="0">		
+
+
+<tr><td colspan="3" id=Header-IS>			
+
+
+<div id=BlogTitle><br>خوشنویسی -هنر-حیدرامیرپور</div><div style="width:100%;height:23;float:right"></div>
+<div id=BlogDescription>خوشنویسی نستعلیق -هنر اصیل ایرانی&nbsp;</div>	
+	
+    
+<div class=TopMenu><div style="float:right;width:782;direction:rtl">
+<div style="width:30;height:20;float:right"></div>
+
+
+<a href="../../../../../index.html"><img border="0" src="http://www.iranskin.com/template3/41/blank.gif" width="80" height="32" hspace="1"></a>
+<a href="../../../../list.html"><img border="0" src="http://www.iranskin.com/template3/41/blank.gif" width="90" height="32" hspace="1"></a>
+<a href="javascript:messageForm()"><img border="0" src="http://www.iranskin.com/template3/41/blank.gif" width="80" height="32" hspace="1"></a>
+<a target="_blank" href="http://www.iranskin.com"><img alt="قالب وبلاگ" border="0" src="http://www.iranskin.com/template3/41/blank.gif" width="90" height="32" hspace="1"></a>
+<a target="_blank" href="../../../../rss/index.html"><img border="0" src="http://www.iranskin.com/template3/41/blank.gif" width="70" height="32" hspace="1"></a>
+
+</div>
+
+
+</div>
+
+</td></tr>
+
+
+<tr><td width="220" valign="top">
+
+<div id=leftmenu>
+<div class=TopSid><div class=TopSid2>
+<b>نویسندگان</b></div></div>
+<div class=CenterSid><div class=li-Sid>
+<a href="../../../../author/604307.html">حیدر  امیرپور  11620 </a></div></div>
+<div class=LowSid></div></div>
+
+
+		
+<div id=leftmenu>
+<div class=TopSid><div class=TopSid2>
+<b>لینک دوستان</b></div></div>
+<div class=CenterSid><div class=li-Sid>
+<a target="_blank" href="http://www.iranskin.com">قالب میهن بلاگ</a></div><div class=li-Sid><a target="_blank" href="http://www.IranSkin.com" title="قالب بلاگفا">قالب بلاگفا</a></div><div class=li-Sid>
+<a target="_blank" href="http://www.iranskin.com/games">بازی آنلاین</a></div></div>
+<div class=LowSid></div></div>
+
+
+
+
+
+
+<div id=leftmenu>
+<div class=TopSid><div class=TopSid2>
+<b>پیوندهای روزانه</b></div></div>
+<div class=CenterSid><div class=li-Sid>
+<a target="_blank" href="https://mokaab.org/" title="نمایندگی شیائومی Xiaomi">نمایندگی شیائومی Xiaomi</a></div><div class=li-Sid>
+<a target="_blank" href="http://www.iranskin.com" title="قالب میهن بلاگ">قالب میهن بلاگ</a></div>
+<div class=li-Sid>
+<a target="_blank" href="http://planet.iranskin.com">دانلود</a></div></div>
+<div class=LowSid></div></div>
+
+<div id=leftmenu>
+<div class=TopSid><div class=TopSid2>
+<b>لینک های مفید</b></div></div>
+<div class=CenterSid><script language="javascript" src="https://www.shahrekhabar.com/javascript.jsp?type=analysis&num=99&bullet=true&source=false" ></script>
+<div class=li-Sid><a target="_blank" href="http://showhow.ir/">showhow</a>
+</div>
+<div class=li-Sid><a target="_blank" href="http://www.bibakmusic.com/category/artists/%d9%85%d8%ad%d9%85%d8%af-%d8%b9%d9%84%db%8c%d8%b2%d8%a7%d8%af%d9%87">محمد علیزاده</a>
+</div>
+<div class=li-Sid><a target="_blank" href="http://baspower.ir/kes-cummins/">محصولات kes energy کامینز</a>
+</div>
+<div class=li-Sid><a target="_blank" href="http://www.iranhafez.com/%D9%81%D8%A7%D9%84-%D8%AD%D8%A7%D9%81%D8%B8/#hafez">فال حافظ</a>
+</div>
+<div class=li-Sid><a target="_blank" href="https://tinateb.net/product/vacuum-machine-for-men/">دستگاه وکیوم</a>
+</div>
+</div>
+<div class=LowSid></div></div>
+			
+</td>
+
+
+<td width="563" valign="top">
+
+<div align="center">
+
+			
+
+		<div id="MihanblogShopAds" style="display:block;height:0px;width:100%;border:0px"></div>
+					
+<div class=TopPost>
+<div class=TopPost2>		
+
+<b><a href="../../../../14302.html">مرتضی برغانی</a></b></div></div>
+<div class=CenterPost><div class=CenterPost2>					
+<div id="InPost_MihanblogShopAds" style="display:block;height:0px;width:100%;border:0px"></div>
+
+
+<div><br></div><div><div id="siteNotice" class="mw-body-content" style="position: relative; z-index: 0; font-size: 0.8em; line-height: 1.6; text-align: center; margin: 0px; font-family: &quot;.Arabic UI Text&quot;, Tahoma, &quot;Iranian Sans&quot;, &quot;Noto Sans Arabic&quot;, &quot;DejaVu Sans&quot;, sans-serif; color: rgb(32, 33, 34);"><div id="centralNotice" class="cn-wlm2020"><div class="cbnnr" id="wlm_2020" style="box-sizing: border-box; position: relative; margin-bottom: 12px;"><div class="cbnnr-main" style="margin: 0px; padding: 15px; box-sizing: border-box; position: relative; clear: both; border: 1px solid rgb(143, 0, 0); min-height: 98px;"><a href="https://commons.wikimedia.org/wiki/Commons:Wiki_Loves_Monuments_2020_in_Sweden/sv" class="cbnnr-message fade" id="banner1" style="text-decoration-line: none; color: rgb(11, 0, 128); background: none; margin: 0px; padding: 0px; box-sizing: border-box; font-family: &quot;Helvetica Neue&quot;, Helvetica, Arial, sans-serif; font-size: 18px; line-height: 1.5; text-align: right; display: block;"><figure class="cbnnr-icon " style="margin: 0px; padding: 0px; box-sizing: border-box; width: 68px; height: 68px; border-radius: 2px; top: 48px; position: absolute; float: left; transform: translateY(-50%); left: 15px; overflow: hidden; background-image: initial; background-position: initial; background-size: initial; background-repeat: initial; background-attachment: initial; background-origin: initial; background-clip: initial; right: 15px;"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/ca/Wiki_Loves_Monuments_Logo_notext.svg/70px-Wiki_Loves_Monuments_Logo_notext.svg.png" alt="" style="border: 0px; vertical-align: middle; margin: 0px; padding: 0px; box-sizing: border-box; max-width: 100%; max-height: 100%; position: absolute; top: 0px; left: 0px;"></figure><p style="margin: auto; padding: 5px 83px 0px 64px; box-sizing: border-box;"><span class="cbnnr-text" style="margin: 0px; padding: 0px; box-sizing: border-box; display: inline;">ویکی دوست‌دار یادمان‌ها: عکس یک یادمان را بگیر، به ویکی‌پدیا کمک کن و برنده شو!</span><span class="cbnnr-cta" style="margin: 2px 0px 0px; padding: 0px; box-sizing: border-box; font-size: 20px; font-weight: bold; color: rgb(34, 34, 34); display: block;">بیشتر بدانید</span></p></a><div class="cbnnr-close" style="margin: 0px; padding: 12px; box-sizing: border-box; cursor: pointer; position: absolute; top: 48px; right: unset; transform: translateY(-50%); z-index: 1; opacity: 0.8; background: rgb(234, 236, 240); border-radius: 50%; width: 44px; height: 44px; transition: all 0.3s ease-in-out 0s; left: 15px;"><div class="cbnnr-close-icon" href="#" title="نهفتن" style="margin: 0px; padding: 0px; box-sizing: border-box; background: linear-gradient(transparent, transparent) center center / contain no-repeat, url(&quot;data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 width=%2220%22 height=%2220%22 viewBox=%220 0 20 20%22%3E%3Ctitle%3Eclose%3C/title%3E%3Cpath d=%22M4.34 2.93l12.73 12.73-1.41 1.41L2.93 4.35z%22/%3E%3Cpath d=%22M17.07 4.34L4.34 17.07l-1.41-1.41L15.66 2.93z%22/%3E%3C/svg%3E&quot;); height: 20px; width: 20px; min-width: 20px; min-height: 20px; opacity: 0.8;"></div></div></div></div></div></div><div class="mw-indicators mw-body-content" style="float: left; z-index: 0; position: relative; font-size: 0.875em; line-height: 1.6; color: rgb(32, 33, 34); font-family: &quot;.Arabic UI Text&quot;, Tahoma, &quot;Iranian Sans&quot;, &quot;Noto Sans Arabic&quot;, &quot;DejaVu Sans&quot;, sans-serif;"></div><h1 id="firstHeading" class="firstHeading" lang="fa" style="margin: 0px 0px 0.25em; padding: 0px; overflow: visible; border-bottom: 1px solid rgb(162, 169, 177); font-size: 1.8em; font-weight: normal; font-family: &quot;.Arabic UI Display&quot;, Tahoma, &quot;Iranian Serif&quot;, &quot;Noto Naskh Arabic&quot;, &quot;Iranian Sans&quot;, &quot;DejaVu Sans&quot;, serif; line-height: 1.3;">مرتضی برغانی</h1><div id="bodyContent" class="mw-body-content" style="position: relative; z-index: 0; font-size: calc(0.875em); line-height: 1.6; color: rgb(32, 33, 34); font-family: &quot;.Arabic UI Text&quot;, Tahoma, &quot;Iranian Sans&quot;, &quot;Noto Sans Arabic&quot;, &quot;DejaVu Sans&quot;, sans-serif;"><div id="siteSub" class="noprint" style="display: inline; font-size: 12.88px;">از ویکی‌پدیا، دانشنامهٔ آزاد</div><div id="contentSub" style="font-size: 11.76px; line-height: 1.2em; margin: 0px 1em 1.4em 0px; color: rgb(84, 89, 93); width: auto;"><span class="mw-redirectedfrom">(تغییرمسیر از&nbsp;<a href="https://fa.wikipedia.org/w/index.php?title=%D8%A2%D9%82%D8%A7%D8%B3%DB%8C%D8%AF_%D9%85%D8%B1%D8%AA%D8%B6%DB%8C_%D8%A8%D8%B1%D8%BA%D8%A7%D9%86%DB%8C&amp;redirect=no" class="mw-redirect" title="آقاسید مرتضی برغانی" style="text-decoration-line: none; color: rgb(11, 0, 128); background: none;">آقاسید مرتضی برغانی</a>)</span></div><div id="contentSub2" style="font-size: 11.76px; line-height: 1.2em; margin: 0px 1em 1.4em 0px; color: rgb(84, 89, 93); width: auto;"></div><div id="jump-to-nav"></div><a class="mw-jump-link" href="https://fa.wikipedia.org/wiki/%D9%85%D8%B1%D8%AA%D8%B6%DB%8C_%D8%A8%D8%B1%D8%BA%D8%A7%D9%86%DB%8C#mw-sidebar-button" style="text-decoration-line: none; color: rgb(11, 0, 128); background: none; display: block; clip: rect(1px, 1px, 1px, 1px); width: 1px; height: 1px; margin: -1px; border: 0px; padding: 0px; overflow: hidden; position: absolute !important;">پرش به ناوبری</a><a class="mw-jump-link" href="https://fa.wikipedia.org/wiki/%D9%85%D8%B1%D8%AA%D8%B6%DB%8C_%D8%A8%D8%B1%D8%BA%D8%A7%D9%86%DB%8C#searchInput" style="text-decoration-line: none; color: rgb(11, 0, 128); background: none; display: block; clip: rect(1px, 1px, 1px, 1px); width: 1px; height: 1px; margin: -1px; border: 0px; padding: 0px; overflow: hidden; position: absolute !important;">پرش به جستجو</a><div id="mw-content-text" lang="fa" dir="rtl" class="mw-content-rtl" style="direction: rtl;"><div class="mw-parser-output"><p style="margin: 0.5em 0px;"><b>آقاسید مرتضی برغانی</b>&nbsp;(زادهٔ 1238 ش&nbsp;<sup id="cite_ref-1" class="reference" style="line-height: 1em; unicode-bidi: isolate; white-space: nowrap;"><a href="https://fa.wikipedia.org/wiki/%D9%85%D8%B1%D8%AA%D8%B6%DB%8C_%D8%A8%D8%B1%D8%BA%D8%A7%D9%86%DB%8C#cite_note-1" style="text-decoration-line: none; color: rgb(11, 0, 128); background: none;">[۱]</a></sup>- درگذشت ۱۳۰۸ ش<sup id="cite_ref-2" class="reference" style="line-height: 1em; unicode-bidi: isolate; white-space: nowrap;"><a href="https://fa.wikipedia.org/wiki/%D9%85%D8%B1%D8%AA%D8%B6%DB%8C_%D8%A8%D8%B1%D8%BA%D8%A7%D9%86%DB%8C#cite_note-2" style="text-decoration-line: none; color: rgb(11, 0, 128); background: none;">[۲]</a></sup>) از اساتید بنام&nbsp;<a href="https://fa.wikipedia.org/wiki/%D8%AE%D9%88%D8%B4%D9%86%D9%88%DB%8C%D8%B3%DB%8C" title="خوشنویسی" style="text-decoration-line: none; color: rgb(11, 0, 128); background: none;">خوشنویسی</a>&nbsp;در خط&nbsp;<a href="https://fa.wikipedia.org/wiki/%D9%86%D8%B3%D8%AA%D8%B9%D9%84%DB%8C%D9%82" title="نستعلیق" style="text-decoration-line: none; color: rgb(11, 0, 128); background: none;">نستعلیق</a>&nbsp;در اواخر دوره&nbsp;<a href="https://fa.wikipedia.org/wiki/%D9%82%D8%A7%D8%AC%D8%A7%D8%B1" class="mw-redirect" title="قاجار" style="text-decoration-line: none; color: rgb(11, 0, 128); background: none;">قاجار</a>&nbsp;و از شاگردان ممتاز&nbsp;<a href="https://fa.wikipedia.org/wiki/%D9%85%DB%8C%D8%B1%D8%B2%D8%A7_%D9%85%D8%AD%D9%85%D8%AF_%D8%B1%D8%B6%D8%A7_%DA%A9%D9%84%D9%87%D8%B1" class="mw-redirect" title="میرزا محمد رضا کلهر" style="text-decoration-line: none; color: rgb(11, 0, 128); background: none;">میرزا محمد رضا کلهر</a>&nbsp;بود.</p><p style="margin: 0.5em 0px;">مرتضی برغانی از نظر اشاعه هنر خوشنویسی و شیوه نستعلیق‌نویسی کلهر، مهمترین شاگرد میرزای کلهر محسوب می‌شود؛ چرا که او این شیوه را به دو فرزند خود&nbsp;<a href="https://fa.wikipedia.org/wiki/%D8%AD%D8%B3%DB%8C%D9%86_%D9%85%DB%8C%D8%B1%D8%AE%D8%A7%D9%86%DB%8C" title="حسین میرخانی" style="text-decoration-line: none; color: rgb(11, 0, 128); background: none;">حسین</a>&nbsp;و&nbsp;<a href="https://fa.wikipedia.org/wiki/%D8%AD%D8%B3%D9%86_%D9%85%DB%8C%D8%B1%D8%AE%D8%A7%D9%86%DB%8C" class="mw-redirect" title="حسن میرخانی" style="text-decoration-line: none; color: rgb(11, 0, 128); background: none;">حسن میرخانی</a>&nbsp;تعلیم داد. این دو استاد که با یک واسطه شاگردان مرحوم کلهر به‌شمار می‌روند از بنیانگذاران&nbsp;<a href="https://fa.wikipedia.org/wiki/%D8%A7%D9%86%D8%AC%D9%85%D9%86_%D8%AE%D9%88%D8%B4%D9%86%D9%88%DB%8C%D8%B3%D8%A7%D9%86_%D8%A7%DB%8C%D8%B1%D8%A7%D9%86" class="mw-redirect" title="انجمن خوشنویسان ایران" style="text-decoration-line: none; color: rgb(11, 0, 128); background: none;">انجمن خوشنویسان ایران</a>&nbsp;بودند و در آموزش خوشنویسان معاصر کوشش بسیار کردند و موفقیت چشمگیری بدست آوردند.</p><p style="margin: 0.5em 0px;">او مدتی در هندوستان بسر برد و آثاری را برای چاپ سنگی نوشت که در آخر آنها «مرتضی الحسینی البرقانی» رقم شده است.<sup id="cite_ref-3" class="reference" style="line-height: 1em; unicode-bidi: isolate; white-space: nowrap;"><a href="https://fa.wikipedia.org/wiki/%D9%85%D8%B1%D8%AA%D8%B6%DB%8C_%D8%A8%D8%B1%D8%BA%D8%A7%D9%86%DB%8C#cite_note-3" style="text-decoration-line: none; color: rgb(11, 0, 128); background: none;">[۳]</a></sup></p><p style="margin: 0.5em 0px;">در واقع سید مرتضی برغانی تنها یا دست‌کم مهمترین حلقه اتصال خوشنویسان معاصر به سلسله خوشنویسان دوره قاجار است.</p><h2 style="color: rgb(0, 0, 0); margin: 1em 0px 0.25em; padding: 0px; overflow: hidden; border-bottom: 1px solid rgb(162, 169, 177); font-weight: normal; font-family: &quot;.Arabic UI Display&quot;, Tahoma, &quot;Iranian Serif&quot;, &quot;Noto Naskh Arabic&quot;, &quot;Iranian Sans&quot;, &quot;DejaVu Sans&quot;, serif; line-height: 1.3;"><span id=".D9.BE.D8.A7.D9.86.D9.88.DB.8C.D8.B3"></span><span class="mw-headline" id="پانویس">پانویس</span></h2></div></div></div></div><br>
+														
+</div></div>			
+
+<div class=LowPost3><div class=CPost3>
+
+<div class=date> [ پنجشنبه 13 شهریور 1399  ]  [ 11:02 ق.ظ  ]  [ <a href="../../../../author/604307.html">حیدر  امیرپور </a> ] </div>
+<div class=Comment><a target="_self" href="javascript:newComment(14302)">نظرات  <script>setCommentCnt(14302)</script> </a><script type="text/javascript">GetBC(<-PostId->);</script>
+</div></div></div>						
+
+
+			
+<div class=TopPost>
+<div class=TopPost2>		
+
+<b><a href="../../../../14301.html">خوشنویسی</a></b></div></div>
+<div class=CenterPost><div class=CenterPost2>					
+<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcSEutDfenmIam1m70tV9wJPOlEqk2-pZjNQgw&amp;usqp=CAU" alt="چلیپای منتشر نشده ای از مرحوم میرزا غلامرضا اصفهانی + دیتیل"><br>
+														
+</div></div>			
+
+<div class=LowPost3><div class=CPost3>
+
+<div class=date> [ پنجشنبه 13 شهریور 1399  ]  [ 11:01 ق.ظ  ]  [ <a href="../../../../author/604307.html">حیدر  امیرپور </a> ] </div>
+<div class=Comment><a target="_self" href="javascript:newComment(14301)">نظرات  <script>setCommentCnt(14301)</script> </a><script type="text/javascript">GetBC(<-PostId->);</script>
+</div></div></div>						
+
+
+			
+<div class=TopPost>
+<div class=TopPost2>		
+
+<b><a href="../../../../14300.html">خوشنویسی</a></b></div></div>
+<div class=CenterPost><div class=CenterPost2>					
+<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcQ14oe43_zlpnfdNiVp3GH01Y_ZFOdAiQ-J1A&amp;usqp=CAU" alt="آثار هنرمندان ایران/عزیزی هنر/چند اثر ارزشمند خوشنویسی از استاد مهدی سجودی  (ایران/گیلان/رشت )">
+
+
+<br>
+														
+</div></div>			
+
+<div class=LowPost3><div class=CPost3>
+
+<div class=date> [ پنجشنبه 13 شهریور 1399  ]  [ 10:59 ق.ظ  ]  [ <a href="../../../../author/604307.html">حیدر  امیرپور </a> ] </div>
+<div class=Comment><a target="_self" href="javascript:newComment(14300)">نظرات  <script>setCommentCnt(14300)</script> </a><script type="text/javascript">GetBC(<-PostId->);</script>
+</div></div></div>						
+
+
+			
+<div class=TopPost>
+<div class=TopPost2>		
+
+<b><a href="../../../../14299.html"> هفتن ابراهیم بخت‌شکوهی</a></b></div></div>
+<div class=CenterPost><div class=CenterPost2>					
+
+
+
+<div><br></div><div><div id="bodyContent" class="mw-body-content" style="position: relative; z-index: 0; font-size: calc(0.875em); line-height: 1.6; color: rgb(32, 33, 34); font-family: &quot;.Arabic UI Text&quot;, Tahoma, &quot;Iranian Sans&quot;, &quot;Noto Sans Arabic&quot;, &quot;DejaVu Sans&quot;, sans-serif;"><div id="siteSub" class="noprint" style="display: inline; font-size: 12.88px;">از ویکی‌پدیا، دانشنامهٔ آزاد</div><div id="contentSub" style="font-size: 11.76px; line-height: 1.2em; margin: 0px 1em 1.4em 0px; color: rgb(84, 89, 93); width: auto;"><span class="mw-redirectedfrom">(تغییرمسیر از&nbsp;<a href="https://fa.wikipedia.org/w/index.php?title=%D8%A7%D8%A8%D8%B1%D8%A7%D9%87%DB%8C%D9%85_%D8%A8%D8%AE%D8%AA_%D8%B4%DA%A9%D9%88%D9%87%DB%8C&amp;redirect=no" class="mw-redirect" title="ابراهیم بخت شکوهی" style="text-decoration-line: none; color: rgb(11, 0, 128); background: none;">ابراهیم بخت شکوهی</a>)</span></div><div id="contentSub2" style="font-size: 11.76px; line-height: 1.2em; margin: 0px 1em 1.4em 0px; color: rgb(84, 89, 93); width: auto;"></div><div id="jump-to-nav"></div><a class="mw-jump-link" href="https://fa.wikipedia.org/wiki/%D8%A7%D8%A8%D8%B1%D8%A7%D9%87%DB%8C%D9%85_%D8%A8%D8%AE%D8%AA%E2%80%8C%D8%B4%DA%A9%D9%88%D9%87%DB%8C#mw-sidebar-button" style="text-decoration-line: none; color: rgb(11, 0, 128); background: none; display: block; clip: rect(1px, 1px, 1px, 1px); width: 1px; height: 1px; margin: -1px; border: 0px; padding: 0px; overflow: hidden; position: absolute !important;">پرش به ناوبری</a><a class="mw-jump-link" href="https://fa.wikipedia.org/wiki/%D8%A7%D8%A8%D8%B1%D8%A7%D9%87%DB%8C%D9%85_%D8%A8%D8%AE%D8%AA%E2%80%8C%D8%B4%DA%A9%D9%88%D9%87%DB%8C#searchInput" style="text-decoration-line: none; color: rgb(11, 0, 128); background: none; display: block; clip: rect(1px, 1px, 1px, 1px); width: 1px; height: 1px; margin: -1px; border: 0px; padding: 0px; overflow: hidden; position: absolute !important;">پرش به جستجو</a><div id="mw-content-text" lang="fa" dir="rtl" class="mw-content-rtl" style="direction: rtl;"><div class="mw-parser-output"><p style="margin: 0.5em 0px;"><b>ابراهیم بخت‌شکوهی</b>&nbsp;(۱۳۲۰&nbsp;<a href="https://fa.wikipedia.org/wiki/%D8%AA%D8%A8%D8%B1%DB%8C%D8%B2" title="تبریز" style="text-decoration-line: none; color: rgb(11, 0, 128); background: none;">تبریز</a>&nbsp;- ۱۳۸۵) از&nbsp;<a href="https://fa.wikipedia.org/wiki/%D8%AE%D9%88%D8%B4%D9%86%D9%88%DB%8C%D8%B3" class="mw-redirect" title="خوشنویس" style="text-decoration-line: none; color: rgb(11, 0, 128); background: none;">خوشنویسان</a>&nbsp;معاصر&nbsp;<a href="https://fa.wikipedia.org/wiki/%D8%A7%DB%8C%D8%B1%D8%A7%D9%86" title="ایران" style="text-decoration-line: none; color: rgb(11, 0, 128); background: none;">ایران</a>&nbsp;است. وی در نوشتن انواع خط از جمله&nbsp;<a href="https://fa.wikipedia.org/wiki/%D9%86%D8%B3%D8%AA%D8%B9%D9%84%DB%8C%D9%82" title="نستعلیق" style="text-decoration-line: none; color: rgb(11, 0, 128); background: none;">نستعلیق</a>&nbsp;و&nbsp;<a href="https://fa.wikipedia.org/wiki/%D8%AE%D8%B7%D9%88%D8%B7_%D8%B4%D8%B4%DA%AF%D8%A7%D9%86%D9%87" title="خطوط ششگانه" style="text-decoration-line: none; color: rgb(11, 0, 128); background: none;">خطوط ششگانه</a>&nbsp;تبحر داشت.<sup id="cite_ref-1" class="reference" style="line-height: 1em; unicode-bidi: isolate; white-space: nowrap;"><a href="https://fa.wikipedia.org/wiki/%D8%A7%D8%A8%D8%B1%D8%A7%D9%87%DB%8C%D9%85_%D8%A8%D8%AE%D8%AA%E2%80%8C%D8%B4%DA%A9%D9%88%D9%87%DB%8C#cite_note-1" style="text-decoration-line: none; color: rgb(11, 0, 128); background: none;">[۱]</a></sup></p><h2 style="color: rgb(0, 0, 0); margin: 1em 0px 0.25em; padding: 0px; overflow: hidden; border-bottom: 1px solid rgb(162, 169, 177); font-weight: normal; font-family: &quot;.Arabic UI Display&quot;, Tahoma, &quot;Iranian Serif&quot;, &quot;Noto Naskh Arabic&quot;, &quot;Iranian Sans&quot;, &quot;DejaVu Sans&quot;, serif; line-height: 1.3;"><span id=".D8.B2.D9.86.D8.AF.DA.AF.DB.8C.E2.80.8C.D9.86.D8.A7.D9.85.D9.87"></span><span class="mw-headline" id="زندگی‌نامه">زندگی‌نامه</span><span class="mw-editsection" style="user-select: none; font-size: small; margin-right: 1em; vertical-align: baseline; line-height: 1em; unicode-bidi: isolate;"><span class="mw-editsection-bracket" style="margin-left: 0.25em; color: rgb(84, 89, 93);">[</span><a href="https://fa.wikipedia.org/w/index.php?title=%D8%A7%D8%A8%D8%B1%D8%A7%D9%87%DB%8C%D9%85_%D8%A8%D8%AE%D8%AA%E2%80%8C%D8%B4%DA%A9%D9%88%D9%87%DB%8C&amp;action=edit&amp;section=1" title="ویرایش بخش: زندگی‌نامه" style="text-decoration-line: none; color: rgb(11, 0, 128); background: none; white-space: nowrap;">ویرایش</a><span class="mw-editsection-bracket" style="margin-right: 0.25em; color: rgb(84, 89, 93);">]</span></span></h2><p style="margin: 0.5em 0px;">ابراهیم بخت‌شکوهی فرزند میرزا محمدحسین و متولد ۱۳۲۰ در محلهٔ&nbsp;<a href="https://fa.wikipedia.org/wiki/%D8%A7%D9%85%DB%8C%D8%B1%D8%AE%DB%8C%D8%B2" title="امیرخیز" style="text-decoration-line: none; color: rgb(11, 0, 128); background: none;">امیرخیز</a>&nbsp;تبریز است. وی از همان کودکی به خوشنویسی علاقه‌مند بود. بخت‌شکوهی شاگرد&nbsp;<a href="https://fa.wikipedia.org/wiki/%D8%AD%D8%B3%D9%86_%D9%87%D8%B1%DB%8C%D8%B3%DB%8C" title="حسن هریسی" style="text-decoration-line: none; color: rgb(11, 0, 128); background: none;">حسن هریسی</a>&nbsp;و حسین رسام حقیقی بوده و مدتی در نزد&nbsp;<a href="https://fa.wikipedia.org/wiki/%D8%BA%D9%84%D8%A7%D9%85%D8%AD%D8%B3%DB%8C%D9%86_%D8%A7%D9%85%DB%8C%D8%B1%D8%AE%D8%A7%D9%86%DB%8C" title="غلامحسین امیرخانی" style="text-decoration-line: none; color: rgb(11, 0, 128); background: none;">غلامحسین امیرخانی</a>&nbsp;به تکمیل هنر خود پرداخته‌است.شغل وی معلمی بوده و حدود ۳۵ سال دبیر&nbsp;<a href="https://fa.wikipedia.org/wiki/%D8%B4%DB%8C%D9%85%DB%8C" title="شیمی" style="text-decoration-line: none; color: rgb(11, 0, 128); background: none;">شیمی</a>&nbsp;<a href="https://fa.wikipedia.org/wiki/%D8%A2%D9%85%D9%88%D8%B2%D8%B4_%D9%88_%D9%BE%D8%B1%D9%88%D8%B1%D8%B4" class="mw-redirect" title="آموزش و پرورش" style="text-decoration-line: none; color: rgb(11, 0, 128); background: none;">آموزش و پرورش</a>&nbsp;بود. وی همچنین در رشته های ورزشی&nbsp;<a href="https://fa.wikipedia.org/wiki/%D9%BE%D8%B1%D8%B4_%D8%A7%D8%B1%D8%AA%D9%81%D8%A7%D8%B9" title="پرش ارتفاع" style="text-decoration-line: none; color: rgb(11, 0, 128); background: none;">پرش ارتفاع</a>، سه گام و&nbsp;<a href="https://fa.wikipedia.org/wiki/%D9%BE%D8%B1%D8%B4_%D8%A8%D8%A7_%D9%86%DB%8C%D8%B2%D9%87" title="پرش با نیزه" style="text-decoration-line: none; color: rgb(11, 0, 128); background: none;">پرش با نیزه</a>&nbsp;در سال های ۱۳۴۳ تا ۱۳۴۹ ه.ش قهرمان كشور شد.</p><p style="margin: 0.5em 0px;">بخت‌شکوهی در سال ۱۳۵۸ خورشیدی موفق به دریافت مدرک ممتاز از&nbsp;<a href="https://fa.wikipedia.org/wiki/%D8%A7%D9%86%D8%AC%D9%85%D9%86_%D8%AE%D9%88%D8%B4%D9%86%D9%88%DB%8C%D8%B3%D8%A7%D9%86_%D8%A7%DB%8C%D8%B1%D8%A7%D9%86" class="mw-redirect" title="انجمن خوشنویسان ایران" style="text-decoration-line: none; color: rgb(11, 0, 128); background: none;">انجمن خوشنویسان ایران</a>&nbsp;گردید و طی سال‌های ۱۳۶۶ تا ۱۳۷۶ خورشیدی به مدت یک دهه رئیس انجمن خوشنویسان تبریز بود.بخت‌شکوهی از&nbsp;<a href="https://fa.wikipedia.org/wiki/%D8%AE%D8%B7_%D8%BA%D8%A8%D8%A7%D8%B1" title="خط غبار" style="text-decoration-line: none; color: rgb(11, 0, 128); background: none;">غبارنویسان</a>&nbsp;عرصهٔ خوشنویسی بود و در خطوط مختلف&nbsp;<a href="https://fa.wikipedia.org/wiki/%D9%86%D8%B3%D8%AA%D8%B9%D9%84%DB%8C%D9%82" title="نستعلیق" style="text-decoration-line: none; color: rgb(11, 0, 128); background: none;">نستعلیق</a>،&nbsp;<a href="https://fa.wikipedia.org/wiki/%D8%B4%DA%A9%D8%B3%D8%AA%D9%87_%D9%86%D8%B3%D8%AA%D8%B9%D9%84%DB%8C%D9%82" class="mw-redirect" title="شکسته نستعلیق" style="text-decoration-line: none; color: rgb(11, 0, 128); background: none;">شکسته نستعلیق</a>، شکستهٔ تحریری،&nbsp;<a href="https://fa.wikipedia.org/wiki/%D8%AB%D9%84%D8%AB" class="mw-redirect" title="ثلث" style="text-decoration-line: none; color: rgb(11, 0, 128); background: none;">ثلث</a>،&nbsp;<a href="https://fa.wikipedia.org/wiki/%D9%86%D8%B3%D8%AE" class="mw-disambig" title="نسخ" style="text-decoration-line: none; color: rgb(11, 0, 128); background: none;">نسخ</a>&nbsp;و رقعه و همچنین&nbsp;<a href="https://fa.wikipedia.org/wiki/%D8%AE%D8%B7_%D9%84%D8%A7%D8%AA%DB%8C%D9%86" title="خط لاتین" style="text-decoration-line: none; color: rgb(11, 0, 128); background: none;">خط لاتین</a>&nbsp;و&nbsp;<a href="https://fa.wikipedia.org/wiki/%D8%B2%D8%A8%D8%A7%D9%86_%D9%81%D8%B1%D8%A7%D9%86%D8%B3%D9%87" class="mw-redirect" title="زبان فرانسه" style="text-decoration-line: none; color: rgb(11, 0, 128); background: none;">زبان فرانسه</a>&nbsp;را از&nbsp;<a href="https://fa.wikipedia.org/wiki/%D8%AE%D8%B7_%D8%BA%D8%A8%D8%A7%D8%B1" title="خط غبار" style="text-decoration-line: none; color: rgb(11, 0, 128); background: none;">غبار</a>&nbsp;تا&nbsp;<a href="https://fa.wikipedia.org/wiki/%DA%A9%D8%AA%DB%8C%D8%A8%D9%87" class="mw-redirect" title="کتیبه" style="text-decoration-line: none; color: rgb(11, 0, 128); background: none;">کتیبه</a>&nbsp;با قدرت تمام می‌نوشت. علاوه بر آن‌ها در کنده‌کاری روی چوب، سنگ،&nbsp;<a href="https://fa.wikipedia.org/wiki/%D9%85%D8%B1%D9%85%D8%B1" class="mw-redirect" title="مرمر" style="text-decoration-line: none; color: rgb(11, 0, 128); background: none;">مرمر</a>&nbsp;<a href="https://fa.wikipedia.org/wiki/%DA%86%DB%8C%D9%86" title="چین" style="text-decoration-line: none; color: rgb(11, 0, 128); background: none;">چینی</a>،&nbsp;<a href="https://fa.wikipedia.org/wiki/%DA%AF%DA%86" title="گچ" style="text-decoration-line: none; color: rgb(11, 0, 128); background: none;">گچ</a>&nbsp;و نیز میناکاری مهارت داشت.</p><p style="margin: 0.5em 0px;">بخت‌شکوهی در سال ۱۳۸۵ خورشیدی در حین دوچرخه‌سواری بر اثر سانحه‌ای کشته شد و در قطعهٔ صدیقین&nbsp;<a href="https://fa.wikipedia.org/wiki/%D9%88%D8%A7%D8%AF%DB%8C%E2%80%8C%D8%B1%D8%AD%D9%85%D8%AA" class="mw-redirect" title="وادی‌رحمت" style="text-decoration-line: none; color: rgb(11, 0, 128); background: none;">وادی‌رحمت</a>&nbsp;تبریز به خاک سپرده شد. از شاگردان معروف وی می‌توان به حسن کرمانی، میرحسین زنوزی، داود نیکنام و مسعود رعنایی اشاره کرد.</p><h2 style="color: rgb(0, 0, 0); margin: 1em 0px 0.25em; padding: 0px; overflow: hidden; border-bottom: 1px solid rgb(162, 169, 177); font-weight: normal; font-family: &quot;.Arabic UI Display&quot;, Tahoma, &quot;Iranian Serif&quot;, &quot;Noto Naskh Arabic&quot;, &quot;Iranian Sans&quot;, &quot;DejaVu Sans&quot;, serif; line-height: 1.3;"><span id=".D8.A2.D8.AB.D8.A7.D8.B1"></span><span class="mw-headline" id="آثار">آثار</span><span class="mw-editsection" style="user-select: none; font-size: small; margin-right: 1em; vertical-align: baseline; line-height: 1em; unicode-bidi: isolate;"><span class="mw-editsection-bracket" style="margin-left: 0.25em; color: rgb(84, 89, 93);">[</span><a href="https://fa.wikipedia.org/w/index.php?title=%D8%A7%D8%A8%D8%B1%D8%A7%D9%87%DB%8C%D9%85_%D8%A8%D8%AE%D8%AA%E2%80%8C%D8%B4%DA%A9%D9%88%D9%87%DB%8C&amp;action=edit&amp;section=2" title="ویرایش بخش: آثار" style="text-decoration-line: none; color: rgb(11, 0, 128); background: none; white-space: nowrap;">ویرایش</a><span class="mw-editsection-bracket" style="margin-right: 0.25em; color: rgb(84, 89, 93);">]</span></span></h2><p style="margin: 0.5em 0px;">از آثار چاپ‌شدهٔ بخت‌شکوهی وی می‌توان الهی‌نامه، فرمان حضرت امیر به مالک‌اشتر، ترجمهٔ نهج‌البلاغه در ۵۶۰ صفحه و نغمه‌های خون از&nbsp;<a href="https://fa.wikipedia.org/wiki/%D8%B4%D9%87%D8%B1%DB%8C%D8%A7%D8%B1_%D8%AA%D8%A8%D8%B1%DB%8C%D8%B2%DB%8C" class="mw-redirect" title="شهریار تبریزی" style="text-decoration-line: none; color: rgb(11, 0, 128); background: none;">شهریار</a>&nbsp;اشاره کرد.<sup id="cite_ref-2" class="reference" style="line-height: 1em; unicode-bidi: isolate; white-space: nowrap;"><a href="https://fa.wikipedia.org/wiki/%D8%A7%D8%A8%D8%B1%D8%A7%D9%87%DB%8C%D9%85_%D8%A8%D8%AE%D8%AA%E2%80%8C%D8%B4%DA%A9%D9%88%D9%87%DB%8C#cite_note-2" style="text-decoration-line: none; color: rgb(11, 0, 128); background: none;">[۲]</a></sup><sup id="cite_ref-3" class="reference" style="line-height: 1em; unicode-bidi: isolate; white-space: nowrap;"><a href="https://fa.wikipedia.org/wiki/%D8%A7%D8%A8%D8%B1%D8%A7%D9%87%DB%8C%D9%85_%D8%A8%D8%AE%D8%AA%E2%80%8C%D8%B4%DA%A9%D9%88%D9%87%DB%8C#cite_note-3" style="text-decoration-line: none; color: rgb(11, 0, 128); background: none;">[۳]</a></sup><sup id="cite_ref-4" class="reference" style="line-height: 1em; unicode-bidi: isolate; white-space: nowrap;"><a href="https://fa.wikipedia.org/wiki/%D8%A7%D8%A8%D8%B1%D8%A7%D9%87%DB%8C%D9%85_%D8%A8%D8%AE%D8%AA%E2%80%8C%D8%B4%DA%A9%D9%88%D9%87%DB%8C#cite_note-4" style="text-decoration-line: none; color: rgb(11, 0, 128); background: none;">[۴]</a></sup></p><h2 style="color: rgb(0, 0, 0); margin: 1em 0px 0.25em; padding: 0px; overflow: hidden; border-bottom: 1px solid rgb(162, 169, 177); font-weight: normal; font-family: &quot;.Arabic UI Display&quot;, Tahoma, &quot;Iranian Serif&quot;, &quot;Noto Naskh Arabic&quot;, &quot;Iranian Sans&quot;, &quot;DejaVu Sans&quot;, serif; line-height: 1.3;"><span id=".D9.85.D9.86.D8.A7.D8.A8.D8.B9"></span><span class="mw-headline" id="منابع">منابع</span></h2></div></div></div></div><br>
+														
+</div></div>			
+
+<div class=LowPost3><div class=CPost3>
+
+<div class=date> [ سه شنبه 11 شهریور 1399  ]  [ 10:40 ق.ظ  ]  [ <a href="../../../../author/604307.html">حیدر  امیرپور </a> ] </div>
+<div class=Comment><a target="_self" href="javascript:newComment(14299)">نظرات  <script>setCommentCnt(14299)</script> </a><script type="text/javascript">GetBC(<-PostId->);</script>
+</div></div></div>						
+
+
+			
+<div class=TopPost>
+<div class=TopPost2>		
+
+<b><a href="../../../../14298.html">خوشنویسی</a></b></div></div>
+<div class=CenterPost><div class=CenterPost2>					
+<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcTP2oznbLCAm6iUc28WBpvWha79G07ld3az-w&amp;usqp=CAU" alt="mojtaba.shojaedin Instagram post (photo) ... آثار قدما. بخط درویش عبدالمجید  طالقانی. برگرفته از کانال درویش عبدالمجید طالقانی. #خط #خطاطی #خوشنویسی  #هنرمند #هنرخوشنویسی #خوشنویس #خط_شکسته_نستعلیق #شکسته_نستعلیق #هنر  #هنرایرانی #هنر_ایرانی #هنرپارسی ...">
+
+
+<br>
+														
+</div></div>			
+
+<div class=LowPost3><div class=CPost3>
+
+<div class=date> [ سه شنبه 11 شهریور 1399  ]  [ 10:37 ق.ظ  ]  [ <a href="../../../../author/604307.html">حیدر  امیرپور </a> ] </div>
+<div class=Comment><a target="_self" href="javascript:newComment(14298)">نظرات  <script>setCommentCnt(14298)</script> </a><script type="text/javascript">GetBC(<-PostId->);</script>
+</div></div></div>						
+
+
+			
+<div class=TopPost>
+<div class=TopPost2>		
+
+<b><a href="../../../../14297.html">خوشنویسی</a></b></div></div>
+<div class=CenterPost><div class=CenterPost2>					
+<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcTIdFSFjDSFTvMJScYu1cBe-aipnWBIsQCXLQ&amp;usqp=CAU" alt="خرقه اثر استاد اخوین - زبان * خط * سخن * صفحه شخصی : ابوالقاسم آوند">
+
+
+<br>
+														
+</div></div>			
+
+<div class=LowPost3><div class=CPost3>
+
+<div class=date> [ سه شنبه 11 شهریور 1399  ]  [ 10:37 ق.ظ  ]  [ <a href="../../../../author/604307.html">حیدر  امیرپور </a> ] </div>
+<div class=Comment><a target="_self" href="javascript:newComment(14297)">نظرات  <script>setCommentCnt(14297)</script> </a><script type="text/javascript">GetBC(<-PostId->);</script>
+</div></div></div>						
+
+
+			
+<div class=TopPost>
+<div class=TopPost2>		
+
+<b><a href="../../../../14296.html">نظام‌الدین اردبیلی</a></b></div></div>
+<div class=CenterPost><div class=CenterPost2>					
+
+
+
+<div><br></div><div><div id="siteNotice" class="mw-body-content" style="position: relative; z-index: 0; font-size: 0.8em; line-height: 1.6; text-align: center; margin: 0px; font-family: &quot;.Arabic UI Text&quot;, Tahoma, &quot;Iranian Sans&quot;, &quot;Noto Sans Arabic&quot;, &quot;DejaVu Sans&quot;, sans-serif; color: rgb(32, 33, 34);"><div id="centralNotice" class="cn-wikipedia_wanting_photos_2020"><div class="cnotice" id="wikipedia_wanting_photos_2020" style="position: relative; overflow: hidden; background: rgb(248, 249, 250); border: 1px solid rgb(162, 169, 177); border-radius: 2px; margin-bottom: 1em; cursor: pointer; color: rgb(34, 34, 34);"><a class="cnotice-full - banner - click external text" href="https://meta.wikimedia.org/wiki/Special:MyLanguage/Wikipedia_Pages_Wanting_Photos" style="text-decoration-line: none; color: rgb(11, 0, 128); background: none;"><div id="cnotice-main" style="display: table; width: 942px; height: 80px;"><div class="cnotice-logo-container" style="display: table-cell; height: 80px; vertical-align: middle; width: 79.2969px; padding: 0px 0.25em 0px 0.9em;"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/1b/WPWP_logo_1.png/255px-WPWP_logo_1.png" alt="Banner logo" height="55px" width="55px" style="border: 0px; vertical-align: middle; opacity: 1; display: block; margin-left: 24.2969px; margin-top: 2px; margin-bottom: 1px;"></div><div class="cnotice-message-container" style="display: table-cell; height: 80px; vertical-align: middle;"><div class="cnotice-message" style="position: relative; margin: 0px; line-height: 1.2; padding: 5px;"><p style="margin: 0px; color: rgb(34, 34, 34); font-family: Arial, sans-serif; font-weight: bold; font-size: 15.36px; opacity: 1; padding-top: 10px; padding-bottom: 10px;">Join the WPWP Campaign to help improve Wikipedia articles with photos and win a prize</p></div></div></div></a><div id="cnotice-toggle-box" style="cursor: pointer; position: absolute; top: 2px; right: unset; z-index: 1; opacity: 0.8; left: 3px;"><a href="https://fa.wikipedia.org/wiki/%D9%86%D8%B8%D8%A7%D9%85%E2%80%8C%D8%A7%D9%84%D8%AF%DB%8C%D9%86_%D8%A7%D8%B1%D8%AF%D8%A8%DB%8C%D9%84%DB%8C#" title="نهفتن" style="text-decoration-line: none; color: rgb(11, 0, 128); background: none;"><img border="0" src="https://upload.wikimedia.org/wikipedia/donate/a/ac/Close_oojs.png" alt="نهفتن" style="border: 0px; vertical-align: middle;"></a></div></div></div></div><div class="mw-indicators mw-body-content" style="float: left; z-index: 0; position: relative; font-size: 0.875em; line-height: 1.6; color: rgb(32, 33, 34); font-family: &quot;.Arabic UI Text&quot;, Tahoma, &quot;Iranian Sans&quot;, &quot;Noto Sans Arabic&quot;, &quot;DejaVu Sans&quot;, sans-serif;"></div><h1 id="firstHeading" class="firstHeading" lang="fa" style="margin: 0px 0px 0.25em; padding: 0px; overflow: visible; border-bottom: 1px solid rgb(162, 169, 177); font-size: 1.8em; font-weight: normal; font-family: &quot;.Arabic UI Display&quot;, Tahoma, &quot;Iranian Serif&quot;, &quot;Noto Naskh Arabic&quot;, &quot;Iranian Sans&quot;, &quot;DejaVu Sans&quot;, serif; line-height: 1.3;">نظام‌الدین اردبیلی</h1><div id="bodyContent" class="mw-body-content" style="position: relative; z-index: 0; font-size: calc(0.875em); line-height: 1.6; color: rgb(32, 33, 34); font-family: &quot;.Arabic UI Text&quot;, Tahoma, &quot;Iranian Sans&quot;, &quot;Noto Sans Arabic&quot;, &quot;DejaVu Sans&quot;, sans-serif;"><div id="siteSub" class="noprint" style="display: inline; font-size: 12.88px;">از ویکی‌پدیا، دانشنامهٔ آزاد</div><div id="contentSub" style="font-size: 11.76px; line-height: 1.2em; margin: 0px 1em 1.4em 0px; color: rgb(84, 89, 93); width: auto;"><span class="mw-redirectedfrom">(تغییرمسیر از&nbsp;<a href="https://fa.wikipedia.org/w/index.php?title=%D9%86%D8%B8%D8%A7%D9%85_%D8%A7%D9%84%D8%AF%DB%8C%D9%86_%D8%A7%D8%B1%D8%AF%D8%A8%DB%8C%D9%84%DB%8C&amp;redirect=no" class="mw-redirect" title="نظام الدین اردبیلی" style="text-decoration-line: none; color: rgb(11, 0, 128); background: none;">نظام الدین اردبیلی</a>)</span></div><div id="contentSub2" style="font-size: 11.76px; line-height: 1.2em; margin: 0px 1em 1.4em 0px; color: rgb(84, 89, 93); width: auto;"></div><div id="jump-to-nav"></div><a class="mw-jump-link" href="https://fa.wikipedia.org/wiki/%D9%86%D8%B8%D8%A7%D9%85%E2%80%8C%D8%A7%D9%84%D8%AF%DB%8C%D9%86_%D8%A7%D8%B1%D8%AF%D8%A8%DB%8C%D9%84%DB%8C#mw-sidebar-button" style="text-decoration-line: none; color: rgb(11, 0, 128); background: none; display: block; clip: rect(1px, 1px, 1px, 1px); width: 1px; height: 1px; margin: -1px; border: 0px; padding: 0px; overflow: hidden; position: absolute !important;">پرش به ناوبری</a><a class="mw-jump-link" href="https://fa.wikipedia.org/wiki/%D9%86%D8%B8%D8%A7%D9%85%E2%80%8C%D8%A7%D9%84%D8%AF%DB%8C%D9%86_%D8%A7%D8%B1%D8%AF%D8%A8%DB%8C%D9%84%DB%8C#searchInput" style="text-decoration-line: none; color: rgb(11, 0, 128); background: none; display: block; clip: rect(1px, 1px, 1px, 1px); width: 1px; height: 1px; margin: -1px; border: 0px; padding: 0px; overflow: hidden; position: absolute !important;">پرش به جستجو</a><div id="mw-content-text" lang="fa" dir="rtl" class="mw-content-rtl" style="direction: rtl;"><div class="mw-parser-output"><p style="margin: 0.5em 0px;"><b>نظام الدین اردبیلی</b>&nbsp;زاده&nbsp;<a href="https://fa.wikipedia.org/wiki/%DB%B9%DB%B2%DB%B0_(%D9%82%D9%85%D8%B1%DB%8C)" title="۹۲۰ (قمری)" style="text-decoration-line: none; color: rgb(11, 0, 128); background: none;">۹۲۰ (قمری)</a>&nbsp;در&nbsp;<a href="https://fa.wikipedia.org/wiki/%D8%A7%D8%B1%D8%AF%D8%A8%DB%8C%D9%84" title="اردبیل" style="text-decoration-line: none; color: rgb(11, 0, 128); background: none;">اردبیل</a>.</p><h2 style="color: rgb(0, 0, 0); margin: 1em 0px 0.25em; padding: 0px; overflow: hidden; border-bottom: 1px solid rgb(162, 169, 177); font-weight: normal; font-family: &quot;.Arabic UI Display&quot;, Tahoma, &quot;Iranian Serif&quot;, &quot;Noto Naskh Arabic&quot;, &quot;Iranian Sans&quot;, &quot;DejaVu Sans&quot;, serif; line-height: 1.3;"><span id=".D8.B2.D9.86.D8.AF.DA.AF.DB.8C.E2.80.8C.D9.86.D8.A7.D9.85.D9.87"></span><span class="mw-headline" id="زندگی‌نامه">زندگی‌نامه</span><span class="mw-editsection" style="user-select: none; font-size: small; margin-right: 1em; vertical-align: baseline; line-height: 1em; unicode-bidi: isolate;"><span class="mw-editsection-bracket" style="margin-left: 0.25em; color: rgb(84, 89, 93);">[</span><a href="https://fa.wikipedia.org/w/index.php?title=%D9%86%D8%B8%D8%A7%D9%85%E2%80%8C%D8%A7%D9%84%D8%AF%DB%8C%D9%86_%D8%A7%D8%B1%D8%AF%D8%A8%DB%8C%D9%84%DB%8C&amp;action=edit&amp;section=1" title="ویرایش بخش: زندگی‌نامه" style="text-decoration-line: none; color: rgb(11, 0, 128); background: none; white-space: nowrap;">ویرایش</a><span class="mw-editsection-bracket" style="margin-right: 0.25em; color: rgb(84, 89, 93);">]</span></span></h2><p style="margin: 0.5em 0px;">نظام الدین اردبیلی فرزند شمس الدین در سال ۹۲۰ قمری در<a href="https://fa.wikipedia.org/wiki/%D8%A7%D8%B1%D8%AF%D8%A8%DB%8C%D9%84" title="اردبیل" style="text-decoration-line: none; color: rgb(11, 0, 128); background: none;">اردبیل</a>&nbsp;متولد گردید. از خوشنویسان بنام&nbsp;<a href="https://fa.wikipedia.org/wiki/%D8%A2%D8%B0%D8%B1%D8%A8%D8%A7%DB%8C%D8%AC%D8%A7%D9%86" title="آذربایجان" style="text-decoration-line: none; color: rgb(11, 0, 128); background: none;">آذربایجان</a>&nbsp;بوده‌است.</p><h2 style="color: rgb(0, 0, 0); margin: 1em 0px 0.25em; padding: 0px; overflow: hidden; border-bottom: 1px solid rgb(162, 169, 177); font-weight: normal; font-family: &quot;.Arabic UI Display&quot;, Tahoma, &quot;Iranian Serif&quot;, &quot;Noto Naskh Arabic&quot;, &quot;Iranian Sans&quot;, &quot;DejaVu Sans&quot;, serif; line-height: 1.3;"><span id=".D8.B4.D9.87.D8.B1.D8.AA_.D9.88_.D9.81.D8.B9.D8.A7.D9.84.DB.8C.D8.AA"></span><span class="mw-headline" id="شهرت_و_فعالیت">شهرت و فعالیت</span><span class="mw-editsection" style="user-select: none; font-size: small; margin-right: 1em; vertical-align: baseline; line-height: 1em; unicode-bidi: isolate;"><span class="mw-editsection-bracket" style="margin-left: 0.25em; color: rgb(84, 89, 93);">[</span><a href="https://fa.wikipedia.org/w/index.php?title=%D9%86%D8%B8%D8%A7%D9%85%E2%80%8C%D8%A7%D9%84%D8%AF%DB%8C%D9%86_%D8%A7%D8%B1%D8%AF%D8%A8%DB%8C%D9%84%DB%8C&amp;action=edit&amp;section=2" title="ویرایش بخش: شهرت و فعالیت" style="text-decoration-line: none; color: rgb(11, 0, 128); background: none; white-space: nowrap;">ویرایش</a><span class="mw-editsection-bracket" style="margin-right: 0.25em; color: rgb(84, 89, 93);">]</span></span></h2><p style="margin: 0.5em 0px;">علاوه بر استادی در<a href="https://fa.wikipedia.org/wiki/%D9%86%D8%B3%D8%AA%D8%B9%D9%84%DB%8C%D9%82" title="نستعلیق" style="text-decoration-line: none; color: rgb(11, 0, 128); background: none;">نستعلیق</a>&nbsp;در نوشتن خط به صورت&nbsp;<a href="https://fa.wikipedia.org/wiki/%D8%AE%D8%B7%D9%88%D8%B7_%D8%B3%D8%AA%D9%87" class="mw-redirect" title="خطوط سته" style="text-decoration-line: none; color: rgb(11, 0, 128); background: none;">خطوط سته</a>&nbsp;تبحر خاصی داشته‌است. بیشتر به نوشتن کتابت اشتغال داشته‌است.</p></div></div></div></div><br>
+														
+</div></div>			
+
+<div class=LowPost3><div class=CPost3>
+
+<div class=date> [ یکشنبه 9 شهریور 1399  ]  [ 09:36 ب.ظ  ]  [ <a href="../../../../author/604307.html">حیدر  امیرپور </a> ] </div>
+<div class=Comment><a target="_self" href="javascript:newComment(14296)">نظرات  <script>setCommentCnt(14296)</script> </a><script type="text/javascript">GetBC(<-PostId->);</script>
+</div></div></div>						
+
+
+			
+<div class=TopPost>
+<div class=TopPost2>		
+
+<b><a href="../../../../14295.html">خوشنویسی</a></b></div></div>
+<div class=CenterPost><div class=CenterPost2>					
+<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcSi2sOELS_ngsiXrv6viZ-9Tj5zu8AvGPvLgA&amp;usqp=CAU" alt="انجمن خوشنویسان خراسان رضوی - ۱۱ خرداد سالروز درگذشت پدر خوشنویسی معاصر  ایران - استاد &quot;سیدحسین میرخانی&quot;">
+
+
+<br>
+														
+</div></div>			
+
+<div class=LowPost3><div class=CPost3>
+
+<div class=date> [ یکشنبه 9 شهریور 1399  ]  [ 09:35 ب.ظ  ]  [ <a href="../../../../author/604307.html">حیدر  امیرپور </a> ] </div>
+<div class=Comment><a target="_self" href="javascript:newComment(14295)">نظرات  <script>setCommentCnt(14295)</script> </a><script type="text/javascript">GetBC(<-PostId->);</script>
+</div></div></div>						
+
+
+			
+<div class=TopPost>
+<div class=TopPost2>		
+
+<b><a href="../../../../14294.html">خوشنویسی</a></b></div></div>
+<div class=CenterPost><div class=CenterPost2>					
+<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcR1JLk1vi5B3no2f7C9TR3nUGAsAUHnL3lb4Q&amp;usqp=CAU" alt="نظریه و نقد در هنر خوشنویسی">
+
+
+<br>
+														
+</div></div>			
+
+<div class=LowPost3><div class=CPost3>
+
+<div class=date> [ یکشنبه 9 شهریور 1399  ]  [ 09:33 ب.ظ  ]  [ <a href="../../../../author/604307.html">حیدر  امیرپور </a> ] </div>
+<div class=Comment><a target="_self" href="javascript:newComment(14294)">نظرات  <script>setCommentCnt(14294)</script> </a><script type="text/javascript">GetBC(<-PostId->);</script>
+</div></div></div>						
+
+
+			
+<div class=TopPost>
+<div class=TopPost2>		
+
+<b><a href="../../../../14293.html">ابراهیم بخت‌شکوهی</a></b></div></div>
+<div class=CenterPost><div class=CenterPost2>					
+<h1 id="firstHeading" class="firstHeading" lang="fa" style="margin: 0px 0px 0.25em; padding: 0px; overflow: visible; border-bottom: 1px solid rgb(162, 169, 177); font-size: 1.8em; font-weight: normal; font-family: &quot;.Arabic UI Display&quot;, Tahoma, &quot;Iranian Serif&quot;, &quot;Noto Naskh Arabic&quot;, &quot;Iranian Sans&quot;, &quot;DejaVu Sans&quot;, serif; line-height: 1.3;">ابراهیم بخت‌شکوهی</h1><div id="bodyContent" class="mw-body-content" style="position: relative; z-index: 0; font-size: calc(0.875em); line-height: 1.6; color: rgb(32, 33, 34); font-family: &quot;.Arabic UI Text&quot;, Tahoma, &quot;Iranian Sans&quot;, &quot;Noto Sans Arabic&quot;, &quot;DejaVu Sans&quot;, sans-serif;"><div id="siteSub" class="noprint" style="display: inline; font-size: 12.88px;">از ویکی‌پدیا، دانشنامهٔ آزاد</div><div id="contentSub" style="font-size: 11.76px; line-height: 1.2em; margin: 0px 1em 1.4em 0px; color: rgb(84, 89, 93); width: auto;"></div><div id="contentSub2" style="font-size: 11.76px; line-height: 1.2em; margin: 0px 1em 1.4em 0px; color: rgb(84, 89, 93); width: auto;"></div><div id="jump-to-nav"></div><a class="mw-jump-link" href="https://fa.wikipedia.org/wiki/%D8%A7%D8%A8%D8%B1%D8%A7%D9%87%DB%8C%D9%85_%D8%A8%D8%AE%D8%AA%E2%80%8C%D8%B4%DA%A9%D9%88%D9%87%DB%8C#mw-sidebar-button" style="text-decoration-line: none; color: rgb(11, 0, 128); background: none; display: block; clip: rect(1px, 1px, 1px, 1px); width: 1px; height: 1px; margin: -1px; border: 0px; padding: 0px; overflow: hidden; position: absolute !important;">پرش به ناوبری</a><a class="mw-jump-link" href="https://fa.wikipedia.org/wiki/%D8%A7%D8%A8%D8%B1%D8%A7%D9%87%DB%8C%D9%85_%D8%A8%D8%AE%D8%AA%E2%80%8C%D8%B4%DA%A9%D9%88%D9%87%DB%8C#searchInput" style="text-decoration-line: none; color: rgb(11, 0, 128); background: none; display: block; clip: rect(1px, 1px, 1px, 1px); width: 1px; height: 1px; margin: -1px; border: 0px; padding: 0px; overflow: hidden; position: absolute !important;">پرش به جستجو</a><div id="mw-content-text" lang="fa" dir="rtl" class="mw-content-rtl" style="direction: rtl;"><div class="mw-parser-output"><p style="margin: 0.5em 0px;"><b>ابراهیم بخت‌شکوهی</b>&nbsp;(۱۳۲۰&nbsp;<a href="https://fa.wikipedia.org/wiki/%D8%AA%D8%A8%D8%B1%DB%8C%D8%B2" title="تبریز" style="text-decoration-line: none; color: rgb(11, 0, 128); background: none;">تبریز</a>&nbsp;- ۱۳۸۵) از&nbsp;<a href="https://fa.wikipedia.org/wiki/%D8%AE%D9%88%D8%B4%D9%86%D9%88%DB%8C%D8%B3" class="mw-redirect" title="خوشنویس" style="text-decoration-line: none; color: rgb(11, 0, 128); background: none;">خوشنویسان</a>&nbsp;معاصر&nbsp;<a href="https://fa.wikipedia.org/wiki/%D8%A7%DB%8C%D8%B1%D8%A7%D9%86" title="ایران" style="text-decoration-line: none; color: rgb(11, 0, 128); background: none;">ایران</a>&nbsp;است. وی در نوشتن انواع خط از جمله&nbsp;<a href="https://fa.wikipedia.org/wiki/%D9%86%D8%B3%D8%AA%D8%B9%D9%84%DB%8C%D9%82" title="نستعلیق" style="text-decoration-line: none; color: rgb(11, 0, 128); background: none;">نستعلیق</a>&nbsp;و&nbsp;<a href="https://fa.wikipedia.org/wiki/%D8%AE%D8%B7%D9%88%D8%B7_%D8%B4%D8%B4%DA%AF%D8%A7%D9%86%D9%87" title="خطوط ششگانه" style="text-decoration-line: none; color: rgb(11, 0, 128); background: none;">خطوط ششگانه</a>&nbsp;تبحر داشت.<sup id="cite_ref-1" class="reference" style="line-height: 1em; unicode-bidi: isolate; white-space: nowrap;"><a href="https://fa.wikipedia.org/wiki/%D8%A7%D8%A8%D8%B1%D8%A7%D9%87%DB%8C%D9%85_%D8%A8%D8%AE%D8%AA%E2%80%8C%D8%B4%DA%A9%D9%88%D9%87%DB%8C#cite_note-1" style="text-decoration-line: none; color: rgb(11, 0, 128); background: none;">[۱]</a></sup></p><h2 style="color: rgb(0, 0, 0); margin: 1em 0px 0.25em; padding: 0px; overflow: hidden; border-bottom: 1px solid rgb(162, 169, 177); font-weight: normal; font-family: &quot;.Arabic UI Display&quot;, Tahoma, &quot;Iranian Serif&quot;, &quot;Noto Naskh Arabic&quot;, &quot;Iranian Sans&quot;, &quot;DejaVu Sans&quot;, serif; line-height: 1.3;"><span id=".D8.B2.D9.86.D8.AF.DA.AF.DB.8C.E2.80.8C.D9.86.D8.A7.D9.85.D9.87"></span><span class="mw-headline" id="زندگی‌نامه">زندگی‌نامه</span><span class="mw-editsection" style="user-select: none; font-size: small; margin-right: 1em; vertical-align: baseline; line-height: 1em; unicode-bidi: isolate;"><span class="mw-editsection-bracket" style="margin-left: 0.25em; color: rgb(84, 89, 93);">[</span><a href="https://fa.wikipedia.org/w/index.php?title=%D8%A7%D8%A8%D8%B1%D8%A7%D9%87%DB%8C%D9%85_%D8%A8%D8%AE%D8%AA%E2%80%8C%D8%B4%DA%A9%D9%88%D9%87%DB%8C&amp;action=edit&amp;section=1" title="ویرایش بخش: زندگی‌نامه" style="text-decoration-line: none; color: rgb(11, 0, 128); background: none; white-space: nowrap;">ویرایش</a><span class="mw-editsection-bracket" style="margin-right: 0.25em; color: rgb(84, 89, 93);">]</span></span></h2><p style="margin: 0.5em 0px;">ابراهیم بخت‌شکوهی فرزند میرزا محمدحسین و متولد ۱۳۲۰ در محلهٔ&nbsp;<a href="https://fa.wikipedia.org/wiki/%D8%A7%D9%85%DB%8C%D8%B1%D8%AE%DB%8C%D8%B2" title="امیرخیز" style="text-decoration-line: none; color: rgb(11, 0, 128); background: none;">امیرخیز</a>&nbsp;تبریز است. وی از همان کودکی به خوشنویسی علاقه‌مند بود. بخت‌شکوهی شاگرد&nbsp;<a href="https://fa.wikipedia.org/wiki/%D8%AD%D8%B3%D9%86_%D9%87%D8%B1%DB%8C%D8%B3%DB%8C" title="حسن هریسی" style="text-decoration-line: none; color: rgb(11, 0, 128); background: none;">حسن هریسی</a>&nbsp;و حسین رسام حقیقی بوده و مدتی در نزد&nbsp;<a href="https://fa.wikipedia.org/wiki/%D8%BA%D9%84%D8%A7%D9%85%D8%AD%D8%B3%DB%8C%D9%86_%D8%A7%D9%85%DB%8C%D8%B1%D8%AE%D8%A7%D9%86%DB%8C" title="غلامحسین امیرخانی" style="text-decoration-line: none; color: rgb(11, 0, 128); background: none;">غلامحسین امیرخانی</a>&nbsp;به تکمیل هنر خود پرداخته‌است.شغل وی معلمی بوده و حدود ۳۵ سال دبیر&nbsp;<a href="https://fa.wikipedia.org/wiki/%D8%B4%DB%8C%D9%85%DB%8C" title="شیمی" style="text-decoration-line: none; color: rgb(11, 0, 128); background: none;">شیمی</a>&nbsp;<a href="https://fa.wikipedia.org/wiki/%D8%A2%D9%85%D9%88%D8%B2%D8%B4_%D9%88_%D9%BE%D8%B1%D9%88%D8%B1%D8%B4" class="mw-redirect" title="آموزش و پرورش" style="text-decoration-line: none; color: rgb(11, 0, 128); background: none;">آموزش و پرورش</a>&nbsp;بود. وی همچنین در رشته های ورزشی&nbsp;<a href="https://fa.wikipedia.org/wiki/%D9%BE%D8%B1%D8%B4_%D8%A7%D8%B1%D8%AA%D9%81%D8%A7%D8%B9" title="پرش ارتفاع" style="text-decoration-line: none; color: rgb(11, 0, 128); background: none;">پرش ارتفاع</a>، سه گام و&nbsp;<a href="https://fa.wikipedia.org/wiki/%D9%BE%D8%B1%D8%B4_%D8%A8%D8%A7_%D9%86%DB%8C%D8%B2%D9%87" title="پرش با نیزه" style="text-decoration-line: none; color: rgb(11, 0, 128); background: none;">پرش با نیزه</a>&nbsp;در سال های ۱۳۴۳ تا ۱۳۴۹ ه.ش قهرمان كشور شد.</p><p style="margin: 0.5em 0px;">بخت‌شکوهی در سال ۱۳۵۸ خورشیدی موفق به دریافت مدرک ممتاز از&nbsp;<a href="https://fa.wikipedia.org/wiki/%D8%A7%D9%86%D8%AC%D9%85%D9%86_%D8%AE%D9%88%D8%B4%D9%86%D9%88%DB%8C%D8%B3%D8%A7%D9%86_%D8%A7%DB%8C%D8%B1%D8%A7%D9%86" class="mw-redirect" title="انجمن خوشنویسان ایران" style="text-decoration-line: none; color: rgb(11, 0, 128); background: none;">انجمن خوشنویسان ایران</a>&nbsp;گردید و طی سال‌های ۱۳۶۶ تا ۱۳۷۶ خورشیدی به مدت یک دهه رئیس انجمن خوشنویسان تبریز بود.بخت‌شکوهی از&nbsp;<a href="https://fa.wikipedia.org/wiki/%D8%AE%D8%B7_%D8%BA%D8%A8%D8%A7%D8%B1" title="خط غبار" style="text-decoration-line: none; color: rgb(11, 0, 128); background: none;">غبارنویسان</a>&nbsp;عرصهٔ خوشنویسی بود و در خطوط مختلف&nbsp;<a href="https://fa.wikipedia.org/wiki/%D9%86%D8%B3%D8%AA%D8%B9%D9%84%DB%8C%D9%82" title="نستعلیق" style="text-decoration-line: none; color: rgb(11, 0, 128); background: none;">نستعلیق</a>،&nbsp;<a href="https://fa.wikipedia.org/wiki/%D8%B4%DA%A9%D8%B3%D8%AA%D9%87_%D9%86%D8%B3%D8%AA%D8%B9%D9%84%DB%8C%D9%82" class="mw-redirect" title="شکسته نستعلیق" style="text-decoration-line: none; color: rgb(11, 0, 128); background: none;">شکسته نستعلیق</a>، شکستهٔ تحریری،&nbsp;<a href="https://fa.wikipedia.org/wiki/%D8%AB%D9%84%D8%AB" class="mw-redirect" title="ثلث" style="text-decoration-line: none; color: rgb(11, 0, 128); background: none;">ثلث</a>،&nbsp;<a href="https://fa.wikipedia.org/wiki/%D9%86%D8%B3%D8%AE" class="mw-disambig" title="نسخ" style="text-decoration-line: none; color: rgb(11, 0, 128); background: none;">نسخ</a>&nbsp;و رقعه و همچنین&nbsp;<a href="https://fa.wikipedia.org/wiki/%D8%AE%D8%B7_%D9%84%D8%A7%D8%AA%DB%8C%D9%86" title="خط لاتین" style="text-decoration-line: none; color: rgb(11, 0, 128); background: none;">خط لاتین</a>&nbsp;و&nbsp;<a href="https://fa.wikipedia.org/wiki/%D8%B2%D8%A8%D8%A7%D9%86_%D9%81%D8%B1%D8%A7%D9%86%D8%B3%D9%87" class="mw-redirect" title="زبان فرانسه" style="text-decoration-line: none; color: rgb(11, 0, 128); background: none;">زبان فرانسه</a>&nbsp;را از&nbsp;<a href="https://fa.wikipedia.org/wiki/%D8%AE%D8%B7_%D8%BA%D8%A8%D8%A7%D8%B1" title="خط غبار" style="text-decoration-line: none; color: rgb(11, 0, 128); background: none;">غبار</a>&nbsp;تا&nbsp;<a href="https://fa.wikipedia.org/wiki/%DA%A9%D8%AA%DB%8C%D8%A8%D9%87" class="mw-redirect" title="کتیبه" style="text-decoration-line: none; color: rgb(11, 0, 128); background: none;">کتیبه</a>&nbsp;با قدرت تمام می‌نوشت. علاوه بر آن‌ها در کنده‌کاری روی چوب، سنگ،&nbsp;<a href="https://fa.wikipedia.org/wiki/%D9%85%D8%B1%D9%85%D8%B1" class="mw-redirect" title="مرمر" style="text-decoration-line: none; color: rgb(11, 0, 128); background: none;">مرمر</a>&nbsp;<a href="https://fa.wikipedia.org/wiki/%DA%86%DB%8C%D9%86" title="چین" style="text-decoration-line: none; color: rgb(11, 0, 128); background: none;">چینی</a>،&nbsp;<a href="https://fa.wikipedia.org/wiki/%DA%AF%DA%86" title="گچ" style="text-decoration-line: none; color: rgb(11, 0, 128); background: none;">گچ</a>&nbsp;و نیز میناکاری مهارت داشت.</p><p style="margin: 0.5em 0px;">بخت‌شکوهی در سال ۱۳۸۵ خورشیدی در حین دوچرخه‌سواری بر اثر سانحه‌ای کشته شد و در قطعهٔ صدیقین&nbsp;<a href="https://fa.wikipedia.org/wiki/%D9%88%D8%A7%D8%AF%DB%8C%E2%80%8C%D8%B1%D8%AD%D9%85%D8%AA" class="mw-redirect" title="وادی‌رحمت" style="text-decoration-line: none; color: rgb(11, 0, 128); background: none;">وادی‌رحمت</a>&nbsp;تبریز به خاک سپرده شد. از شاگردان معروف وی می‌توان به حسن کرمانی، میرحسین زنوزی، داود نیکنام و مسعود رعنایی اشاره کرد.</p><h2 style="color: rgb(0, 0, 0); margin: 1em 0px 0.25em; padding: 0px; overflow: hidden; border-bottom: 1px solid rgb(162, 169, 177); font-weight: normal; font-family: &quot;.Arabic UI Display&quot;, Tahoma, &quot;Iranian Serif&quot;, &quot;Noto Naskh Arabic&quot;, &quot;Iranian Sans&quot;, &quot;DejaVu Sans&quot;, serif; line-height: 1.3;"><span id=".D8.A2.D8.AB.D8.A7.D8.B1"></span><span class="mw-headline" id="آثار">آثار</span><span class="mw-editsection" style="user-select: none; font-size: small; margin-right: 1em; vertical-align: baseline; line-height: 1em; unicode-bidi: isolate;"><span class="mw-editsection-bracket" style="margin-left: 0.25em; color: rgb(84, 89, 93);">[</span><a href="https://fa.wikipedia.org/w/index.php?title=%D8%A7%D8%A8%D8%B1%D8%A7%D9%87%DB%8C%D9%85_%D8%A8%D8%AE%D8%AA%E2%80%8C%D8%B4%DA%A9%D9%88%D9%87%DB%8C&amp;action=edit&amp;section=2" title="ویرایش بخش: آثار" style="text-decoration-line: none; color: rgb(11, 0, 128); background: none; white-space: nowrap;">ویرایش</a><span class="mw-editsection-bracket" style="margin-right: 0.25em; color: rgb(84, 89, 93);">]</span></span></h2><p style="margin: 0.5em 0px;">از آثار چاپ‌شدهٔ بخت‌شکوهی وی می‌توان الهی‌نامه، فرمان حضرت امیر به مالک‌اشتر، ترجمهٔ نهج‌البلاغه در ۵۶۰ صفحه و نغمه‌های خون از&nbsp;<a href="https://fa.wikipedia.org/wiki/%D8%B4%D9%87%D8%B1%DB%8C%D8%A7%D8%B1_%D8%AA%D8%A8%D8%B1%DB%8C%D8%B2%DB%8C" class="mw-redirect" title="شهریار تبریزی" style="text-decoration-line: none; color: rgb(11, 0, 128); background: none;">شهریار</a>&nbsp;اشاره کرد.<sup id="cite_ref-2" class="reference" style="line-height: 1em; unicode-bidi: isolate; white-space: nowrap;"><a href="https://fa.wikipedia.org/wiki/%D8%A7%D8%A8%D8%B1%D8%A7%D9%87%DB%8C%D9%85_%D8%A8%D8%AE%D8%AA%E2%80%8C%D8%B4%DA%A9%D9%88%D9%87%DB%8C#cite_note-2" style="text-decoration-line: none; color: rgb(11, 0, 128); background: none;">[۲]</a></sup><sup id="cite_ref-3" class="reference" style="line-height: 1em; unicode-bidi: isolate; white-space: nowrap;"><a href="https://fa.wikipedia.org/wiki/%D8%A7%D8%A8%D8%B1%D8%A7%D9%87%DB%8C%D9%85_%D8%A8%D8%AE%D8%AA%E2%80%8C%D8%B4%DA%A9%D9%88%D9%87%DB%8C#cite_note-3" style="text-decoration-line: none; color: rgb(11, 0, 128); background: none;">[۳]</a></sup><sup id="cite_ref-4" class="reference" style="line-height: 1em; unicode-bidi: isolate; white-space: nowrap;"><a href="https://fa.wikipedia.org/wiki/%D8%A7%D8%A8%D8%B1%D8%A7%D9%87%DB%8C%D9%85_%D8%A8%D8%AE%D8%AA%E2%80%8C%D8%B4%DA%A9%D9%88%D9%87%DB%8C#cite_note-4" style="text-decoration-line: none; color: rgb(11, 0, 128); background: none;">[۴]</a></sup></p><h2 style="color: rgb(0, 0, 0); margin: 1em 0px 0.25em; padding: 0px; overflow: hidden; border-bottom: 1px solid rgb(162, 169, 177); font-weight: normal; font-family: &quot;.Arabic UI Display&quot;, Tahoma, &quot;Iranian Serif&quot;, &quot;Noto Naskh Arabic&quot;, &quot;Iranian Sans&quot;, &quot;DejaVu Sans&quot;, serif; line-height: 1.3;"><span id=".D9.85.D9.86.D8.A7.D8.A8.D8.B9"></span><span class="mw-headline" id="منابع">منابع</span></h2></div></div></div>
+
+
+<br>
+														
+</div></div>			
+
+<div class=LowPost3><div class=CPost3>
+
+<div class=date> [ پنجشنبه 6 شهریور 1399  ]  [ 01:35 ب.ظ  ]  [ <a href="../../../../author/604307.html">حیدر  امیرپور </a> ] </div>
+<div class=Comment><a target="_self" href="javascript:newComment(14293)">نظرات  <script>setCommentCnt(14293)</script> </a><script type="text/javascript">GetBC(<-PostId->);</script>
+</div></div></div>						
+
+
+			
+<div class=TopPost>
+<div class=TopPost2>		
+
+<b><a href="../../../../14292.html">خوشنویسی</a></b></div></div>
+<div class=CenterPost><div class=CenterPost2>					
+<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcQ6GRbdN5E2MMDsLcnmcDAwvhdpWksw9xsD2g&amp;usqp=CAU" alt="قدما">
+
+
+<br>
+														
+</div></div>			
+
+<div class=LowPost3><div class=CPost3>
+
+<div class=date> [ پنجشنبه 6 شهریور 1399  ]  [ 01:33 ب.ظ  ]  [ <a href="../../../../author/604307.html">حیدر  امیرپور </a> ] </div>
+<div class=Comment><a target="_self" href="javascript:newComment(14292)">نظرات  <script>setCommentCnt(14292)</script> </a><script type="text/javascript">GetBC(<-PostId->);</script>
+</div></div></div>						
+
+
+			
+<div class=TopPost>
+<div class=TopPost2>		
+
+<b><a href="../../../../14291.html">خوشنویسی</a></b></div></div>
+<div class=CenterPost><div class=CenterPost2>					
+<img src="data:image/jpeg;base64,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" alt="نمایشگاه آثار خوشنویسی استاد ازهار شرکاء در نگارخانه آرتی نو">
+
+
+<br>
+														
+</div></div>			
+
+<div class=LowPost3><div class=CPost3>
+
+<div class=date> [ پنجشنبه 6 شهریور 1399  ]  [ 01:32 ب.ظ  ]  [ <a href="../../../../author/604307.html">حیدر  امیرپور </a> ] </div>
+<div class=Comment><a target="_self" href="javascript:newComment(14291)">نظرات  <script>setCommentCnt(14291)</script> </a><script type="text/javascript">GetBC(<-PostId->);</script>
+</div></div></div>						
+
+
+			
+<div class=TopPost>
+<div class=TopPost2>		
+
+<b><a href="../../../../14290.html"> بایسنقر پسر شاهرخ</a></b></div></div>
+<div class=CenterPost><div class=CenterPost2>					
+
+
+
+<div><br></div><div><h1 id="firstHeading" class="firstHeading" lang="fa" style="margin: 0px 0px 0.25em; padding: 0px; overflow: visible; border-bottom: 1px solid rgb(162, 169, 177); font-size: 1.8em; font-weight: normal; font-family: &quot;.Arabic UI Display&quot;, Tahoma, &quot;Iranian Serif&quot;, &quot;Noto Naskh Arabic&quot;, &quot;Iranian Sans&quot;, &quot;DejaVu Sans&quot;, serif; line-height: 1.3;">بایسنقر پسر شاهرخ</h1><div id="bodyContent" class="mw-body-content" style="position: relative; z-index: 0; font-size: calc(0.875em); line-height: 1.6;"><div id="siteSub" class="noprint" style="display: inline; font-size: 12.88px;">از ویکی‌پدیا، دانشنامهٔ آزاد</div><div id="contentSub" style="font-size: 11.76px; line-height: 1.2em; margin: 0px 1em 1.4em 0px; color: rgb(84, 89, 93); width: auto;"><span class="mw-redirectedfrom">(تغییرمسیر از&nbsp;<a href="https://fa.wikipedia.org/w/index.php?title=%D8%A8%D8%A7%DB%8C%D8%B3%D9%86%D9%82%D8%B1_%D9%85%DB%8C%D8%B1%D8%B2%D8%A7&amp;redirect=no" class="mw-redirect" title="بایسنقر میرزا" style="text-decoration-line: none; color: rgb(11, 0, 128); background: none;">بایسنقر میرزا</a>)</span></div><div id="contentSub2" style="font-size: 11.76px; line-height: 1.2em; margin: 0px 1em 1.4em 0px; color: rgb(84, 89, 93); width: auto;"></div><div id="jump-to-nav"></div><a class="mw-jump-link" href="https://fa.wikipedia.org/wiki/%D8%A8%D8%A7%DB%8C%D8%B3%D9%86%D9%82%D8%B1_%D9%BE%D8%B3%D8%B1_%D8%B4%D8%A7%D9%87%D8%B1%D8%AE#mw-sidebar-button" style="text-decoration-line: none; color: rgb(11, 0, 128); background: none; display: block; clip: rect(1px, 1px, 1px, 1px); width: 1px; height: 1px; margin: -1px; border: 0px; padding: 0px; overflow: hidden; position: absolute !important;">پرش به ناوبری</a><a class="mw-jump-link" href="https://fa.wikipedia.org/wiki/%D8%A8%D8%A7%DB%8C%D8%B3%D9%86%D9%82%D8%B1_%D9%BE%D8%B3%D8%B1_%D8%B4%D8%A7%D9%87%D8%B1%D8%AE#searchInput" style="text-decoration-line: none; color: rgb(11, 0, 128); background: none; display: block; clip: rect(1px, 1px, 1px, 1px); width: 1px; height: 1px; margin: -1px; border: 0px; padding: 0px; overflow: hidden; position: absolute !important;">پرش به جستجو</a><div id="mw-content-text" lang="fa" dir="rtl" class="mw-content-rtl" style="direction: rtl;"><div class="mw-parser-output"><p style="margin: 0.5em 0px; color: rgb(32, 33, 34); font-family: &quot;.Arabic UI Text&quot;, Tahoma, &quot;Iranian Sans&quot;, &quot;Noto Sans Arabic&quot;, &quot;DejaVu Sans&quot;, sans-serif; font-size: 14px;"><b>غیاث الدین بایسنقر</b>&nbsp;(تولد ۸۰۲ ه‍. ق/۱۳۹۹م، درگذشت ۸۳۷ ه‍. ق/۱۴۳۳م) از شاهزادگان&nbsp;<a href="https://fa.wikipedia.org/wiki/%D8%AA%DB%8C%D9%85%D9%88%D8%B1%DB%8C" class="mw-redirect" title="تیموری" style="text-decoration-line: none; color: rgb(11, 0, 128); background: none;">تیموری</a>، پسر&nbsp;<a href="https://fa.wikipedia.org/wiki/%D8%B4%D8%A7%D9%87%D8%B1%D8%AE" title="شاهرخ" style="text-decoration-line: none; color: rgb(11, 0, 128); background: none;">شاهرخ</a>&nbsp;و نوه&nbsp;<a href="https://fa.wikipedia.org/wiki/%D8%AA%DB%8C%D9%85%D9%88%D8%B1_%D9%84%D9%86%DA%AF" class="mw-redirect" title="تیمور لنگ" style="text-decoration-line: none; color: rgb(11, 0, 128); background: none;">امیر تیمور گورکانی</a>&nbsp;بود.<sup id="cite_ref-autogenerated10_1-0" class="reference" style="line-height: 1em; unicode-bidi: isolate; white-space: nowrap;"><a href="https://fa.wikipedia.org/wiki/%D8%A8%D8%A7%DB%8C%D8%B3%D9%86%D9%82%D8%B1_%D9%BE%D8%B3%D8%B1_%D8%B4%D8%A7%D9%87%D8%B1%D8%AE#cite_note-autogenerated10-1" style="text-decoration-line: none; color: rgb(11, 0, 128); background: none;">[۱]</a></sup>&nbsp;او شاهزاده و امیری هنرمند و هنرپرور بود و از سیاست‌مداران، حامیان بزرگ&nbsp;<a href="https://fa.wikipedia.org/wiki/%D9%87%D9%86%D8%B1" title="هنر" style="text-decoration-line: none; color: rgb(11, 0, 128); background: none;">هنر</a>،&nbsp;<a href="https://fa.wikipedia.org/wiki/%D9%85%D8%B9%D9%85%D8%A7%D8%B1%DB%8C" title="معماری" style="text-decoration-line: none; color: rgb(11, 0, 128); background: none;">معماری</a>&nbsp;و&nbsp;<a href="https://fa.wikipedia.org/wiki/%D9%81%D8%B1%D9%87%D9%86%DA%AF" title="فرهنگ" style="text-decoration-line: none; color: rgb(11, 0, 128); background: none;">فرهنگ</a>&nbsp;و از&nbsp;<a href="https://fa.wikipedia.org/wiki/%D8%AE%D9%88%D8%B4%D9%86%D9%88%DB%8C%D8%B3%DB%8C" title="خوشنویسی" style="text-decoration-line: none; color: rgb(11, 0, 128); background: none;">خوشنویسان</a>&nbsp;طراز اول عهد خود به‌شمار می‌رود.<sup id="cite_ref-اطلس_خط_2-0" class="reference" style="line-height: 1em; unicode-bidi: isolate; white-space: nowrap;"><a href="https://fa.wikipedia.org/wiki/%D8%A8%D8%A7%DB%8C%D8%B3%D9%86%D9%82%D8%B1_%D9%BE%D8%B3%D8%B1_%D8%B4%D8%A7%D9%87%D8%B1%D8%AE#cite_note-%D8%A7%D8%B7%D9%84%D8%B3_%D8%AE%D8%B7-2" style="text-decoration-line: none; color: rgb(11, 0, 128); background: none;">[۲]</a></sup></p><p style="margin: 0.5em 0px; color: rgb(32, 33, 34); font-family: &quot;.Arabic UI Text&quot;, Tahoma, &quot;Iranian Sans&quot;, &quot;Noto Sans Arabic&quot;, &quot;DejaVu Sans&quot;, sans-serif; font-size: 14px;">نام کامل او «میرزا غیاث الدین بن شاهرخ بن امیر تیمور» است و به نام‌های&nbsp;<b>بایسنقر میرزا</b>&nbsp;و&nbsp;<b>سلطان بایسنقر بهادر خان</b>&nbsp;نیز شهرت دارد. از آنجایی که چندین نفر از شاهزادگان و امیران تیموری در ایران و&nbsp;<a href="https://fa.wikipedia.org/wiki/%DA%AF%D9%88%D8%B1%DA%A9%D8%A7%D9%86%DB%8C%D8%A7%D9%86" class="mw-redirect" title="گورکانیان" style="text-decoration-line: none; color: rgb(11, 0, 128); background: none;">گورکانیان هند</a>&nbsp;دارای نام «بایسنقر» یا «بایسنقر میرزا» بوده‌اند،<sup id="cite_ref-autogenerated10_1-1" class="reference" style="line-height: 1em; unicode-bidi: isolate; white-space: nowrap;"><a href="https://fa.wikipedia.org/wiki/%D8%A8%D8%A7%DB%8C%D8%B3%D9%86%D9%82%D8%B1_%D9%BE%D8%B3%D8%B1_%D8%B4%D8%A7%D9%87%D8%B1%D8%AE#cite_note-autogenerated10-1" style="text-decoration-line: none; color: rgb(11, 0, 128); background: none;">[۱]</a></sup>&nbsp;نباید با آنان اشتباه گرفته شود.</p><p style="margin: 0.5em 0px; color: rgb(32, 33, 34); font-family: &quot;.Arabic UI Text&quot;, Tahoma, &quot;Iranian Sans&quot;, &quot;Noto Sans Arabic&quot;, &quot;DejaVu Sans&quot;, sans-serif; font-size: 14px;">در متون تاریخی و ادبی واژه بایسنقر به دو گونه&nbsp;<b>بایسنقر</b>&nbsp;و&nbsp;<b>بایسنغر</b>&nbsp;آمده‌است. بایسنقر کلمه‌ای ترکی (مرکب از بای + سنقر) و سنقور، مرغی شکاری است از جنس چرغ که شنقار نیز گویند. بایسنقر به‌طور عام، نام عده‌ای از شاهزادگان تیموری و غیر تیموری بوده و ظاهراً صحیح آن «بای سنقور» است که «بایسنقر» نوشته می‌شود.<sup id="cite_ref-autogenerated10_1-2" class="reference" style="line-height: 1em; unicode-bidi: isolate; white-space: nowrap;"><a href="https://fa.wikipedia.org/wiki/%D8%A8%D8%A7%DB%8C%D8%B3%D9%86%D9%82%D8%B1_%D9%BE%D8%B3%D8%B1_%D8%B4%D8%A7%D9%87%D8%B1%D8%AE#cite_note-autogenerated10-1" style="text-decoration-line: none; color: rgb(11, 0, 128); background: none;">[۱]</a></sup>&nbsp;جایگاه او در زندگی و پس از مرگ چنان بود که ـ با آنکه به مرتبه ولیعهدی نرسیده بود ـ تاریخ نویسان از وی با عنوان‌ها و لقب‌هایی چون پادشاه، سلطان و ولیعهد یاد کرده‌اند و او را به سبب داشتن منش‌های پسندیده به شیوه‌هایی گزافه‌آمیز ستوده‌اند.</p><p style="margin: 0.5em 0px; color: rgb(32, 33, 34); font-family: &quot;.Arabic UI Text&quot;, Tahoma, &quot;Iranian Sans&quot;, &quot;Noto Sans Arabic&quot;, &quot;DejaVu Sans&quot;, sans-serif; font-size: 14px;">بایسنقر میرزا به زبان فارسی، عربی و ترکی مشرقی، که زبان مادریش بود، کاملاً تسلط داشت. او معرف برجسته فرهنگ اسلامی از نسلی ترک و ایرانی بود که به اهمیت و ارزش او تنها در دهه‌های اخیر و در تحقیقات جدید توجه شده‌است. در متون قدیم و جدید بایسنقر در سایهٔ شخصیت برادرش&nbsp;<a href="https://fa.wikipedia.org/wiki/%D8%A7%D9%84%D8%BA_%D8%A8%DB%8C%DA%AF" class="mw-redirect" title="الغ بیگ" style="text-decoration-line: none; color: rgb(11, 0, 128); background: none;">الغ بیگ</a>&nbsp;قرار گرفته‌است. هر چند اهمیت بایسنقر در تاریخ هنر قطعی است، لیکن خدماتش در زمینه ادبیات فارسی و تاریخ‌نگاری چندان معرفی نشده‌است. او قطعاً یکی از نمایندگان و شاید مهمترین نماینده‌آمیزش فرهنگ ترکی و فارسی در آسیای مرکزی و آسیای غربی (یعنی&nbsp;<a href="https://fa.wikipedia.org/wiki/%D8%A7%DB%8C%D8%B1%D8%A7%D9%86" title="ایران" style="text-decoration-line: none; color: rgb(11, 0, 128); background: none;">ایران</a>&nbsp;و&nbsp;<a href="https://fa.wikipedia.org/wiki/%D8%AA%D8%B1%DA%A9%DB%8C%D9%87" title="ترکیه" style="text-decoration-line: none; color: rgb(11, 0, 128); background: none;">ترکیه</a>) در عهد&nbsp;<a href="https://fa.wikipedia.org/wiki/%D8%AA%DB%8C%D9%85%D9%88%D8%B1%DB%8C%D8%A7%D9%86" class="mw-redirect" title="تیموریان" style="text-decoration-line: none; color: rgb(11, 0, 128); background: none;">تیموریان</a>&nbsp;به‌شمار می‌رود.<sup id="cite_ref-autogenerated5_3-0" class="reference" style="line-height: 1em; unicode-bidi: isolate; white-space: nowrap;"><a href="https://fa.wikipedia.org/wiki/%D8%A8%D8%A7%DB%8C%D8%B3%D9%86%D9%82%D8%B1_%D9%BE%D8%B3%D8%B1_%D8%B4%D8%A7%D9%87%D8%B1%D8%AE#cite_note-autogenerated5-3" style="text-decoration-line: none; color: rgb(11, 0, 128); background: none;">[۳]</a></sup></p><p style="margin: 0.5em 0px; color: rgb(32, 33, 34); font-family: &quot;.Arabic UI Text&quot;, Tahoma, &quot;Iranian Sans&quot;, &quot;Noto Sans Arabic&quot;, &quot;DejaVu Sans&quot;, sans-serif; font-size: 14px;">از بایسنقر به عنوان اولین کسی که به دو وجه ملی و دینی، هم‌زمان توجه کرده نام برده می‌شود. در بررسی برنامه‌ریزی&nbsp;<a href="https://fa.wikipedia.org/wiki/%D9%85%DA%A9%D8%AA%D8%A8_%D9%87%D8%B1%D8%A7%D8%AA" title="مکتب هرات" style="text-decoration-line: none; color: rgb(11, 0, 128); background: none;">مکتب هرات</a>&nbsp;که بیش از همه به همت او و پدرش شاهرخ شکل گرفت، دیده می‌شود که این مکتب همان‌طور که برای هویت بخشی به&nbsp;<a href="https://fa.wikipedia.org/wiki/%D9%87%D9%86%D8%B1_%D8%A7%D8%B3%D9%84%D8%A7%D9%85%DB%8C" title="هنر اسلامی" style="text-decoration-line: none; color: rgb(11, 0, 128); background: none;">هنر اسلامی</a>&nbsp;قدم پیش گذاشت، برای شکل‌گیری&nbsp;<a href="https://fa.wikipedia.org/wiki/%D8%B4%D8%A7%D9%87%D9%86%D8%A7%D9%85%D9%87_%D8%A8%D8%A7%DB%8C%D8%B3%D9%86%D9%82%D8%B1%DB%8C" title="شاهنامه بایسنقری" style="text-decoration-line: none; color: rgb(11, 0, 128); background: none;">شاهنامه بایسنقری</a>&nbsp;نیز اقدام کرد. برای شروع این پروژه عظیم&nbsp;<a href="https://fa.wikipedia.org/wiki/%DA%A9%D8%A7%D8%BA%D8%B0" title="کاغذ" style="text-decoration-line: none; color: rgb(11, 0, 128); background: none;">کاغذ سازان</a>&nbsp;سمرقندی دعوت شدند تا&nbsp;<a href="https://fa.wikipedia.org/wiki/%D8%AA%D8%A7%D8%B1%DB%8C%D8%AE_%DA%A9%D8%A7%D8%BA%D8%B0" class="mw-redirect" title="تاریخ کاغذ" style="text-decoration-line: none; color: rgb(11, 0, 128); background: none;">کاغذ سمرقندیرا</a>&nbsp;تولید کنند.<sup id="cite_ref-4" class="reference" style="line-height: 1em; unicode-bidi: isolate; white-space: nowrap;"><a href="https://fa.wikipedia.org/wiki/%D8%A8%D8%A7%DB%8C%D8%B3%D9%86%D9%82%D8%B1_%D9%BE%D8%B3%D8%B1_%D8%B4%D8%A7%D9%87%D8%B1%D8%AE#cite_note-4" style="text-decoration-line: none; color: rgb(11, 0, 128); background: none;">[۴]</a></sup></p><div><br></div></div></div></div></div><br>
+														
+</div></div>			
+
+<div class=LowPost3><div class=CPost3>
+
+<div class=date> [ سه شنبه 4 شهریور 1399  ]  [ 09:21 ب.ظ  ]  [ <a href="../../../../author/604307.html">حیدر  امیرپور </a> ] </div>
+<div class=Comment><a target="_self" href="javascript:newComment(14290)">نظرات  <script>setCommentCnt(14290)</script> </a><script type="text/javascript">GetBC(<-PostId->);</script>
+</div></div></div>						
+
+
+			
+<div class=TopPost>
+<div class=TopPost2>		
+
+<b><a href="../../../../14289.html">خوشنویسی</a></b></div></div>
+<div class=CenterPost><div class=CenterPost2>					
+<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcTAHwtwhapu435kv53wdSmztvbay3ER2SyRqQ&amp;usqp=CAU" alt="خوشنویسان دوره قاجار,بر چکاد قلم,موزه کتاب و مستند ایران,نگارخانه ...">
+
+
+<br>
+														
+</div></div>			
+
+<div class=LowPost3><div class=CPost3>
+
+<div class=date> [ سه شنبه 4 شهریور 1399  ]  [ 09:18 ب.ظ  ]  [ <a href="../../../../author/604307.html">حیدر  امیرپور </a> ] </div>
+<div class=Comment><a target="_self" href="javascript:newComment(14289)">نظرات  <script>setCommentCnt(14289)</script> </a><script type="text/javascript">GetBC(<-PostId->);</script>
+</div></div></div>						
+
+
+			
+<div class=TopPost>
+<div class=TopPost2>		
+
+<b><a href="../../../../14288.html">خوشنویسی</a></b></div></div>
+<div class=CenterPost><div class=CenterPost2>					
+<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcRoed3J_jnLMWnfQTG1m8KallMbRRmkTM3yBg&amp;usqp=CAU" alt="حراج ملی؛ این بار برای آثار خوشنویسی – خانواده الهیه">
+
+
+<br>
+														
+</div></div>			
+
+<div class=LowPost3><div class=CPost3>
+
+<div class=date> [ سه شنبه 4 شهریور 1399  ]  [ 09:18 ب.ظ  ]  [ <a href="../../../../author/604307.html">حیدر  امیرپور </a> ] </div>
+<div class=Comment><a target="_self" href="javascript:newComment(14288)">نظرات  <script>setCommentCnt(14288)</script> </a><script type="text/javascript">GetBC(<-PostId->);</script>
+</div></div></div>						
+
+
+			
+<div class=TopPost>
+<div class=TopPost2>		
+
+<b><a href="../../../../14287.html"> ابراهیم بخت‌شکوهی</a></b></div></div>
+<div class=CenterPost><div class=CenterPost2>					
+
+
+
+<div><br></div><div><h1 id="firstHeading" class="firstHeading" lang="fa" style="margin: 0px 0px 0.25em; padding: 0px; overflow: visible; border-bottom: 1px solid rgb(162, 169, 177); font-size: 1.8em; font-weight: normal; font-family: &quot;.Arabic UI Display&quot;, Tahoma, &quot;Iranian Serif&quot;, &quot;Noto Naskh Arabic&quot;, &quot;Iranian Sans&quot;, &quot;DejaVu Sans&quot;, serif; line-height: 1.3;">ابراهیم بخت‌شکوهی</h1><div id="bodyContent" class="mw-body-content" style="position: relative; z-index: 0; font-size: calc(0.875em); line-height: 1.6; color: rgb(32, 33, 34); font-family: &quot;.Arabic UI Text&quot;, Tahoma, &quot;Iranian Sans&quot;, &quot;Noto Sans Arabic&quot;, &quot;DejaVu Sans&quot;, sans-serif;"><div id="siteSub" class="noprint" style="display: inline; font-size: 12.88px;">از ویکی‌پدیا، دانشنامهٔ آزاد</div><div id="contentSub" style="font-size: 11.76px; line-height: 1.2em; margin: 0px 1em 1.4em 0px; color: rgb(84, 89, 93); width: auto;"><span class="mw-redirectedfrom">(تغییرمسیر از&nbsp;<a href="https://fa.wikipedia.org/w/index.php?title=%D8%A7%D8%A8%D8%B1%D8%A7%D9%87%DB%8C%D9%85_%D8%A8%D8%AE%D8%AA_%D8%B4%DA%A9%D9%88%D9%87%DB%8C&amp;redirect=no" class="mw-redirect" title="ابراهیم بخت شکوهی" style="text-decoration-line: none; color: rgb(11, 0, 128); background: none;">ابراهیم بخت شکوهی</a>)</span></div><div id="contentSub2" style="font-size: 11.76px; line-height: 1.2em; margin: 0px 1em 1.4em 0px; color: rgb(84, 89, 93); width: auto;"></div><div id="jump-to-nav"></div><a class="mw-jump-link" href="https://fa.wikipedia.org/wiki/%D8%A7%D8%A8%D8%B1%D8%A7%D9%87%DB%8C%D9%85_%D8%A8%D8%AE%D8%AA%E2%80%8C%D8%B4%DA%A9%D9%88%D9%87%DB%8C#mw-sidebar-button" style="text-decoration-line: none; color: rgb(11, 0, 128); background: none; display: block; clip: rect(1px, 1px, 1px, 1px); width: 1px; height: 1px; margin: -1px; border: 0px; padding: 0px; overflow: hidden; position: absolute !important;">پرش به ناوبری</a><a class="mw-jump-link" href="https://fa.wikipedia.org/wiki/%D8%A7%D8%A8%D8%B1%D8%A7%D9%87%DB%8C%D9%85_%D8%A8%D8%AE%D8%AA%E2%80%8C%D8%B4%DA%A9%D9%88%D9%87%DB%8C#searchInput" style="text-decoration-line: none; color: rgb(11, 0, 128); background: none; display: block; clip: rect(1px, 1px, 1px, 1px); width: 1px; height: 1px; margin: -1px; border: 0px; padding: 0px; overflow: hidden; position: absolute !important;">پرش به جستجو</a><div id="mw-content-text" lang="fa" dir="rtl" class="mw-content-rtl" style="direction: rtl;"><div class="mw-parser-output"><p style="margin: 0.5em 0px;"><b>ابراهیم بخت‌شکوهی</b>&nbsp;(۱۳۲۰&nbsp;<a href="https://fa.wikipedia.org/wiki/%D8%AA%D8%A8%D8%B1%DB%8C%D8%B2" title="تبریز" style="text-decoration-line: none; color: rgb(11, 0, 128); background: none;">تبریز</a>&nbsp;- ۱۳۸۵) از&nbsp;<a href="https://fa.wikipedia.org/wiki/%D8%AE%D9%88%D8%B4%D9%86%D9%88%DB%8C%D8%B3" class="mw-redirect" title="خوشنویس" style="text-decoration-line: none; color: rgb(11, 0, 128); background: none;">خوشنویسان</a>&nbsp;معاصر&nbsp;<a href="https://fa.wikipedia.org/wiki/%D8%A7%DB%8C%D8%B1%D8%A7%D9%86" title="ایران" style="text-decoration-line: none; color: rgb(11, 0, 128); background: none;">ایران</a>&nbsp;است. وی در نوشتن انواع خط از جمله&nbsp;<a href="https://fa.wikipedia.org/wiki/%D9%86%D8%B3%D8%AA%D8%B9%D9%84%DB%8C%D9%82" title="نستعلیق" style="text-decoration-line: none; color: rgb(11, 0, 128); background: none;">نستعلیق</a>&nbsp;و&nbsp;<a href="https://fa.wikipedia.org/wiki/%D8%AE%D8%B7%D9%88%D8%B7_%D8%B4%D8%B4%DA%AF%D8%A7%D9%86%D9%87" title="خطوط ششگانه" style="text-decoration-line: none; color: rgb(11, 0, 128); background: none;">خطوط ششگانه</a>&nbsp;تبحر داشت.<sup id="cite_ref-1" class="reference" style="line-height: 1em; unicode-bidi: isolate; white-space: nowrap;"><a href="https://fa.wikipedia.org/wiki/%D8%A7%D8%A8%D8%B1%D8%A7%D9%87%DB%8C%D9%85_%D8%A8%D8%AE%D8%AA%E2%80%8C%D8%B4%DA%A9%D9%88%D9%87%DB%8C#cite_note-1" style="text-decoration-line: none; color: rgb(11, 0, 128); background: none;">[۱]</a></sup></p><h2 style="color: rgb(0, 0, 0); margin: 1em 0px 0.25em; padding: 0px; overflow: hidden; border-bottom: 1px solid rgb(162, 169, 177); font-weight: normal; font-family: &quot;.Arabic UI Display&quot;, Tahoma, &quot;Iranian Serif&quot;, &quot;Noto Naskh Arabic&quot;, &quot;Iranian Sans&quot;, &quot;DejaVu Sans&quot;, serif; line-height: 1.3;"><span id=".D8.B2.D9.86.D8.AF.DA.AF.DB.8C.E2.80.8C.D9.86.D8.A7.D9.85.D9.87"></span><span class="mw-headline" id="زندگی‌نامه">زندگی‌نامه</span><span class="mw-editsection" style="user-select: none; font-size: small; margin-right: 1em; vertical-align: baseline; line-height: 1em; unicode-bidi: isolate;"><span class="mw-editsection-bracket" style="margin-left: 0.25em; color: rgb(84, 89, 93);">[</span><a href="https://fa.wikipedia.org/w/index.php?title=%D8%A7%D8%A8%D8%B1%D8%A7%D9%87%DB%8C%D9%85_%D8%A8%D8%AE%D8%AA%E2%80%8C%D8%B4%DA%A9%D9%88%D9%87%DB%8C&amp;action=edit&amp;section=1" title="ویرایش بخش: زندگی‌نامه" style="text-decoration-line: none; color: rgb(11, 0, 128); background: none; white-space: nowrap;">ویرایش</a><span class="mw-editsection-bracket" style="margin-right: 0.25em; color: rgb(84, 89, 93);">]</span></span></h2><p style="margin: 0.5em 0px;">ابراهیم بخت‌شکوهی فرزند میرزا محمدحسین و متولد ۱۳۲۰ در محلهٔ&nbsp;<a href="https://fa.wikipedia.org/wiki/%D8%A7%D9%85%DB%8C%D8%B1%D8%AE%DB%8C%D8%B2" title="امیرخیز" style="text-decoration-line: none; color: rgb(11, 0, 128); background: none;">امیرخیز</a>&nbsp;تبریز است. وی از همان کودکی به خوشنویسی علاقه‌مند بود. بخت‌شکوهی شاگرد&nbsp;<a href="https://fa.wikipedia.org/wiki/%D8%AD%D8%B3%D9%86_%D9%87%D8%B1%DB%8C%D8%B3%DB%8C" title="حسن هریسی" style="text-decoration-line: none; color: rgb(11, 0, 128); background: none;">حسن هریسی</a>&nbsp;و حسین رسام حقیقی بوده و مدتی در نزد&nbsp;<a href="https://fa.wikipedia.org/wiki/%D8%BA%D9%84%D8%A7%D9%85%D8%AD%D8%B3%DB%8C%D9%86_%D8%A7%D9%85%DB%8C%D8%B1%D8%AE%D8%A7%D9%86%DB%8C" title="غلامحسین امیرخانی" style="text-decoration-line: none; color: rgb(11, 0, 128); background: none;">غلامحسین امیرخانی</a>&nbsp;به تکمیل هنر خود پرداخته‌است.شغل وی معلمی بوده و حدود ۳۵ سال دبیر&nbsp;<a href="https://fa.wikipedia.org/wiki/%D8%B4%DB%8C%D9%85%DB%8C" title="شیمی" style="text-decoration-line: none; color: rgb(11, 0, 128); background: none;">شیمی</a>&nbsp;<a href="https://fa.wikipedia.org/wiki/%D8%A2%D9%85%D9%88%D8%B2%D8%B4_%D9%88_%D9%BE%D8%B1%D9%88%D8%B1%D8%B4" class="mw-redirect" title="آموزش و پرورش" style="text-decoration-line: none; color: rgb(11, 0, 128); background: none;">آموزش و پرورش</a>&nbsp;بود. وی همچنین در رشته های ورزشی&nbsp;<a href="https://fa.wikipedia.org/wiki/%D9%BE%D8%B1%D8%B4_%D8%A7%D8%B1%D8%AA%D9%81%D8%A7%D8%B9" title="پرش ارتفاع" style="text-decoration-line: none; color: rgb(11, 0, 128); background: none;">پرش ارتفاع</a>، سه گام و&nbsp;<a href="https://fa.wikipedia.org/wiki/%D9%BE%D8%B1%D8%B4_%D8%A8%D8%A7_%D9%86%DB%8C%D8%B2%D9%87" title="پرش با نیزه" style="text-decoration-line: none; color: rgb(11, 0, 128); background: none;">پرش با نیزه</a>&nbsp;در سال های ۱۳۴۳ تا ۱۳۴۹ ه.ش قهرمان كشور شد.</p><p style="margin: 0.5em 0px;">بخت‌شکوهی در سال ۱۳۵۸ خورشیدی موفق به دریافت مدرک ممتاز از&nbsp;<a href="https://fa.wikipedia.org/wiki/%D8%A7%D9%86%D8%AC%D9%85%D9%86_%D8%AE%D9%88%D8%B4%D9%86%D9%88%DB%8C%D8%B3%D8%A7%D9%86_%D8%A7%DB%8C%D8%B1%D8%A7%D9%86" class="mw-redirect" title="انجمن خوشنویسان ایران" style="text-decoration-line: none; color: rgb(11, 0, 128); background: none;">انجمن خوشنویسان ایران</a>&nbsp;گردید و طی سال‌های ۱۳۶۶ تا ۱۳۷۶ خورشیدی به مدت یک دهه رئیس انجمن خوشنویسان تبریز بود.بخت‌شکوهی از&nbsp;<a href="https://fa.wikipedia.org/wiki/%D8%AE%D8%B7_%D8%BA%D8%A8%D8%A7%D8%B1" title="خط غبار" style="text-decoration-line: none; color: rgb(11, 0, 128); background: none;">غبارنویسان</a>&nbsp;عرصهٔ خوشنویسی بود و در خطوط مختلف&nbsp;<a href="https://fa.wikipedia.org/wiki/%D9%86%D8%B3%D8%AA%D8%B9%D9%84%DB%8C%D9%82" title="نستعلیق" style="text-decoration-line: none; color: rgb(11, 0, 128); background: none;">نستعلیق</a>،&nbsp;<a href="https://fa.wikipedia.org/wiki/%D8%B4%DA%A9%D8%B3%D8%AA%D9%87_%D9%86%D8%B3%D8%AA%D8%B9%D9%84%DB%8C%D9%82" class="mw-redirect" title="شکسته نستعلیق" style="text-decoration-line: none; color: rgb(11, 0, 128); background: none;">شکسته نستعلیق</a>، شکستهٔ تحریری،&nbsp;<a href="https://fa.wikipedia.org/wiki/%D8%AB%D9%84%D8%AB" class="mw-redirect" title="ثلث" style="text-decoration-line: none; color: rgb(11, 0, 128); background: none;">ثلث</a>،&nbsp;<a href="https://fa.wikipedia.org/wiki/%D9%86%D8%B3%D8%AE" class="mw-disambig" title="نسخ" style="text-decoration-line: none; color: rgb(11, 0, 128); background: none;">نسخ</a>&nbsp;و رقعه و همچنین&nbsp;<a href="https://fa.wikipedia.org/wiki/%D8%AE%D8%B7_%D9%84%D8%A7%D8%AA%DB%8C%D9%86" title="خط لاتین" style="text-decoration-line: none; color: rgb(11, 0, 128); background: none;">خط لاتین</a>&nbsp;و&nbsp;<a href="https://fa.wikipedia.org/wiki/%D8%B2%D8%A8%D8%A7%D9%86_%D9%81%D8%B1%D8%A7%D9%86%D8%B3%D9%87" class="mw-redirect" title="زبان فرانسه" style="text-decoration-line: none; color: rgb(11, 0, 128); background: none;">زبان فرانسه</a>&nbsp;را از&nbsp;<a href="https://fa.wikipedia.org/wiki/%D8%AE%D8%B7_%D8%BA%D8%A8%D8%A7%D8%B1" title="خط غبار" style="text-decoration-line: none; color: rgb(11, 0, 128); background: none;">غبار</a>&nbsp;تا&nbsp;<a href="https://fa.wikipedia.org/wiki/%DA%A9%D8%AA%DB%8C%D8%A8%D9%87" class="mw-redirect" title="کتیبه" style="text-decoration-line: none; color: rgb(11, 0, 128); background: none;">کتیبه</a>&nbsp;با قدرت تمام می‌نوشت. علاوه بر آن‌ها در کنده‌کاری روی چوب، سنگ،&nbsp;<a href="https://fa.wikipedia.org/wiki/%D9%85%D8%B1%D9%85%D8%B1" class="mw-redirect" title="مرمر" style="text-decoration-line: none; color: rgb(11, 0, 128); background: none;">مرمر</a>&nbsp;<a href="https://fa.wikipedia.org/wiki/%DA%86%DB%8C%D9%86" title="چین" style="text-decoration-line: none; color: rgb(11, 0, 128); background: none;">چینی</a>،&nbsp;<a href="https://fa.wikipedia.org/wiki/%DA%AF%DA%86" title="گچ" style="text-decoration-line: none; color: rgb(11, 0, 128); background: none;">گچ</a>&nbsp;و نیز میناکاری مهارت داشت.</p><p style="margin: 0.5em 0px;">بخت‌شکوهی در سال ۱۳۸۵ خورشیدی در حین دوچرخه‌سواری بر اثر سانحه‌ای کشته شد و در قطعهٔ صدیقین&nbsp;<a href="https://fa.wikipedia.org/wiki/%D9%88%D8%A7%D8%AF%DB%8C%E2%80%8C%D8%B1%D8%AD%D9%85%D8%AA" class="mw-redirect" title="وادی‌رحمت" style="text-decoration-line: none; color: rgb(11, 0, 128); background: none;">وادی‌رحمت</a>&nbsp;تبریز به خاک سپرده شد. از شاگردان معروف وی می‌توان به حسن کرمانی، میرحسین زنوزی، داود نیکنام و مسعود رعنایی اشاره کرد.</p><h2 style="color: rgb(0, 0, 0); margin: 1em 0px 0.25em; padding: 0px; overflow: hidden; border-bottom: 1px solid rgb(162, 169, 177); font-weight: normal; font-family: &quot;.Arabic UI Display&quot;, Tahoma, &quot;Iranian Serif&quot;, &quot;Noto Naskh Arabic&quot;, &quot;Iranian Sans&quot;, &quot;DejaVu Sans&quot;, serif; line-height: 1.3;"><span id=".D8.A2.D8.AB.D8.A7.D8.B1"></span><span class="mw-headline" id="آثار">آثار</span><span class="mw-editsection" style="user-select: none; font-size: small; margin-right: 1em; vertical-align: baseline; line-height: 1em; unicode-bidi: isolate;"><span class="mw-editsection-bracket" style="margin-left: 0.25em; color: rgb(84, 89, 93);">[</span><a href="https://fa.wikipedia.org/w/index.php?title=%D8%A7%D8%A8%D8%B1%D8%A7%D9%87%DB%8C%D9%85_%D8%A8%D8%AE%D8%AA%E2%80%8C%D8%B4%DA%A9%D9%88%D9%87%DB%8C&amp;action=edit&amp;section=2" title="ویرایش بخش: آثار" style="text-decoration-line: none; color: rgb(11, 0, 128); background: none; white-space: nowrap;">ویرایش</a><span class="mw-editsection-bracket" style="margin-right: 0.25em; color: rgb(84, 89, 93);">]</span></span></h2><p style="margin: 0.5em 0px;">از آثار چاپ‌شدهٔ بخت‌شکوهی وی می‌توان الهی‌نامه، فرمان حضرت امیر به مالک‌اشتر، ترجمهٔ نهج‌البلاغه در ۵۶۰ صفحه و نغمه‌های خون از&nbsp;<a href="https://fa.wikipedia.org/wiki/%D8%B4%D9%87%D8%B1%DB%8C%D8%A7%D8%B1_%D8%AA%D8%A8%D8%B1%DB%8C%D8%B2%DB%8C" class="mw-redirect" title="شهریار تبریزی" style="text-decoration-line: none; color: rgb(11, 0, 128); background: none;">شهریار</a>&nbsp;اشاره کرد.<sup id="cite_ref-2" class="reference" style="line-height: 1em; unicode-bidi: isolate; white-space: nowrap;"><a href="https://fa.wikipedia.org/wiki/%D8%A7%D8%A8%D8%B1%D8%A7%D9%87%DB%8C%D9%85_%D8%A8%D8%AE%D8%AA%E2%80%8C%D8%B4%DA%A9%D9%88%D9%87%DB%8C#cite_note-2" style="text-decoration-line: none; color: rgb(11, 0, 128); background: none;">[۲]</a></sup><sup id="cite_ref-3" class="reference" style="line-height: 1em; unicode-bidi: isolate; white-space: nowrap;"><a href="https://fa.wikipedia.org/wiki/%D8%A7%D8%A8%D8%B1%D8%A7%D9%87%DB%8C%D9%85_%D8%A8%D8%AE%D8%AA%E2%80%8C%D8%B4%DA%A9%D9%88%D9%87%DB%8C#cite_note-3" style="text-decoration-line: none; color: rgb(11, 0, 128); background: none;">[۳]</a></sup><sup id="cite_ref-4" class="reference" style="line-height: 1em; unicode-bidi: isolate; white-space: nowrap;"><a href="https://fa.wikipedia.org/wiki/%D8%A7%D8%A8%D8%B1%D8%A7%D9%87%DB%8C%D9%85_%D8%A8%D8%AE%D8%AA%E2%80%8C%D8%B4%DA%A9%D9%88%D9%87%DB%8C#cite_note-4" style="text-decoration-line: none; color: rgb(11, 0, 128); background: none;">[۴]</a></sup></p><h2 style="text-align: center; color: rgb(0, 0, 0); margin: 1em 0px 0.25em; padding: 0px; overflow: hidden; border-bottom: 1px solid rgb(162, 169, 177); font-weight: normal; font-family: &quot;.Arabic UI Display&quot;, Tahoma, &quot;Iranian Serif&quot;, &quot;Noto Naskh Arabic&quot;, &quot;Iranian Sans&quot;, &quot;DejaVu Sans&quot;, serif; line-height: 1.3;"><span id=".D9.85.D9.86.D8.A7.D8.A8.D8.B9"></span><span class="mw-headline" id="منابع">منابع</span></h2></div></div></div></div><br>
+														
+</div></div>			
+
+<div class=LowPost3><div class=CPost3>
+
+<div class=date> [ دوشنبه 3 شهریور 1399  ]  [ 04:54 ب.ظ  ]  [ <a href="../../../../author/604307.html">حیدر  امیرپور </a> ] </div>
+<div class=Comment><a target="_self" href="javascript:newComment(14287)">نظرات  <script>setCommentCnt(14287)</script> </a><script type="text/javascript">GetBC(<-PostId->);</script>
+</div></div></div>						
+
+
+			
+<div class=TopPost>
+<div class=TopPost2>		
+
+<b><a href="../../../../14286.html">خوشنویسی</a></b></div></div>
+<div class=CenterPost><div class=CenterPost2>					
+<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcQ943FqB5lNMq-TAG8qOWyW29Ly9TAlDx9Eyg&amp;usqp=CAU" alt="Mohammad Reza Shafeie">
+
+
+<br>
+														
+</div></div>			
+
+<div class=LowPost3><div class=CPost3>
+
+<div class=date> [ دوشنبه 3 شهریور 1399  ]  [ 04:53 ب.ظ  ]  [ <a href="../../../../author/604307.html">حیدر  امیرپور </a> ] </div>
+<div class=Comment><a target="_self" href="javascript:newComment(14286)">نظرات  <script>setCommentCnt(14286)</script> </a><script type="text/javascript">GetBC(<-PostId->);</script>
+</div></div></div>						
+
+
+			
+<div class=TopPost>
+<div class=TopPost2>		
+
+<b><a href="../../../../14285.html">خوشنویسی</a></b></div></div>
+<div class=CenterPost><div class=CenterPost2>					
+<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcTrBDqrZkolyChnq_j2Tt-2MyENFS_2AXnFhQ&amp;usqp=CAU" alt="مجموعه آثار اسکن شده خوشنویسی استادان قدیم - قلمتراش">
+
+
+<br>
+														
+</div></div>			
+
+<div class=LowPost3><div class=CPost3>
+
+<div class=date> [ دوشنبه 3 شهریور 1399  ]  [ 04:53 ب.ظ  ]  [ <a href="../../../../author/604307.html">حیدر  امیرپور </a> ] </div>
+<div class=Comment><a target="_self" href="javascript:newComment(14285)">نظرات  <script>setCommentCnt(14285)</script> </a><script type="text/javascript">GetBC(<-PostId->);</script>
+</div></div></div>						
+
+
+			
+<div class=TopPost>
+<div class=TopPost2>		
+
+<b><a href="../../../../14284.html">اظهر تبر</a></b></div></div>
+<div class=CenterPost><div class=CenterPost2>					
+<h1 id="firstHeading" class="firstHeading" lang="fa" style="margin: 0px 0px 0.25em; padding: 0px; overflow: visible; border-bottom: 1px solid rgb(162, 169, 177); font-size: 1.8em; font-weight: normal; font-family: &quot;.Arabic UI Display&quot;, Tahoma, &quot;Iranian Serif&quot;, &quot;Noto Naskh Arabic&quot;, &quot;Iranian Sans&quot;, &quot;DejaVu Sans&quot;, serif; line-height: 1.3;">اظهر تبر</h1><h1 id="firstHeading" class="firstHeading" lang="fa" style="margin: 0px 0px 0.25em; padding: 0px; overflow: visible; border-bottom: 1px solid rgb(162, 169, 177); font-size: 1.8em; font-weight: normal; font-family: &quot;.Arabic UI Display&quot;, Tahoma, &quot;Iranian Serif&quot;, &quot;Noto Naskh Arabic&quot;, &quot;Iranian Sans&quot;, &quot;DejaVu Sans&quot;, serif; line-height: 1.3;">یزیاز ویکی‌پدیا، دانشنامهٔ آزاد</h1><div id="bodyContent" class="mw-body-content" style="position: relative; z-index: 0; font-size: calc(0.875em); line-height: 1.6; color: rgb(32, 33, 34); font-family: &quot;.Arabic UI Text&quot;, Tahoma, &quot;Iranian Sans&quot;, &quot;Noto Sans Arabic&quot;, &quot;DejaVu Sans&quot;, sans-serif;"><div id="contentSub" style="font-size: 11.76px; line-height: 1.2em; margin: 0px 1em 1.4em 0px; color: rgb(84, 89, 93); width: auto;"></div><div id="contentSub2" style="font-size: 11.76px; line-height: 1.2em; margin: 0px 1em 1.4em 0px; color: rgb(84, 89, 93); width: auto;"></div><div id="jump-to-nav"></div><a class="mw-jump-link" href="https://fa.wikipedia.org/wiki/%D8%A7%D8%B8%D9%87%D8%B1_%D8%AA%D8%A8%D8%B1%DB%8C%D8%B2%DB%8C#mw-sidebar-button" style="text-decoration-line: none; color: rgb(11, 0, 128); background: none; display: block; clip: rect(1px, 1px, 1px, 1px); width: 1px; height: 1px; margin: -1px; border: 0px; padding: 0px; overflow: hidden; position: absolute !important;">پرش به ناوبری</a><a class="mw-jump-link" href="https://fa.wikipedia.org/wiki/%D8%A7%D8%B8%D9%87%D8%B1_%D8%AA%D8%A8%D8%B1%DB%8C%D8%B2%DB%8C#searchInput" style="text-decoration-line: none; color: rgb(11, 0, 128); background: none; display: block; clip: rect(1px, 1px, 1px, 1px); width: 1px; height: 1px; margin: -1px; border: 0px; padding: 0px; overflow: hidden; position: absolute !important;">پرش به جستجو</a><div id="mw-content-text" lang="fa" dir="rtl" class="mw-content-rtl" style="direction: rtl;"><div class="mw-parser-output"><p style="margin: 0.5em 0px;"><b>مولانا اظهر تبریزی</b>&nbsp;یا&nbsp;<b>ظهیرالدین اظهر</b>&nbsp;از&nbsp;<a href="https://fa.wikipedia.org/wiki/%D8%AE%D9%88%D8%B4%D9%86%D9%88%DB%8C%D8%B3" class="mw-redirect" title="خوشنویس" style="text-decoration-line: none; color: rgb(11, 0, 128); background: none;">خوشنویسان</a>&nbsp;و&nbsp;<a href="https://fa.wikipedia.org/wiki/%D9%86%D8%B3%D8%AA%D8%B9%D9%84%DB%8C%D9%82" title="نستعلیق" style="text-decoration-line: none; color: rgb(11, 0, 128); background: none;">نستعلیق‌نویسان</a>&nbsp;صاحب‌نام قرن نهم هجری است. او ملقب به&nbsp;<i>استاد استادان</i>،&nbsp;<i>استادالاساتید</i>&nbsp;و&nbsp;<i>ظهیرالدین</i>&nbsp;است و او را صاحب فضل و کمالات بسیار دانسته‌اند.</p><p style="margin: 0.5em 0px;">اظهر تبریزی مدتی در خدمت حکیم جعفر به تحصیل علم و فضایل پرداخت. او ابتدا از&nbsp;<a href="https://fa.wikipedia.org/wiki/%D8%AA%D8%A8%D8%B1%DB%8C%D8%B2" title="تبریز" style="text-decoration-line: none; color: rgb(11, 0, 128); background: none;">تبریز</a>&nbsp;به&nbsp;<a href="https://fa.wikipedia.org/wiki/%D9%87%D8%B1%D8%A7%D8%AA" title="هرات" style="text-decoration-line: none; color: rgb(11, 0, 128); background: none;">هرات</a>&nbsp;رفت و ملازم&nbsp;<a href="https://fa.wikipedia.org/wiki/%D8%B3%D9%84%D8%B7%D8%A7%D9%86_%D8%A7%D8%A8%D9%88%D8%B3%D8%B9%DB%8C%D8%AF_%DA%AF%D9%88%D8%B1%DA%A9%D8%A7%D9%86%DB%8C" class="mw-redirect" title="سلطان ابوسعید گورکانی" style="text-decoration-line: none; color: rgb(11, 0, 128); background: none;">سلطان ابوسعید گورکانی</a>&nbsp;شد؛ سپس به کتابخانه&nbsp;<a href="https://fa.wikipedia.org/wiki/%D8%A7%D9%84%D8%BA_%D8%A8%DB%8C%DA%AF" class="mw-redirect" title="الغ بیگ" style="text-decoration-line: none; color: rgb(11, 0, 128); background: none;">الغ بیگ</a>&nbsp;در&nbsp;<a href="https://fa.wikipedia.org/wiki/%D8%B3%D9%85%D8%B1%D9%82%D9%86%D8%AF" title="سمرقند" style="text-decoration-line: none; color: rgb(11, 0, 128); background: none;">سمرقند</a>&nbsp;رفت؛ بعدها از راه&nbsp;<a href="https://fa.wikipedia.org/wiki/%D8%A7%D8%B5%D9%81%D9%87%D8%A7%D9%86" title="اصفهان" style="text-decoration-line: none; color: rgb(11, 0, 128); background: none;">اصفهان</a>&nbsp;به&nbsp;<a href="https://fa.wikipedia.org/wiki/%D8%B4%DB%8C%D8%B1%D8%A7%D8%B2" title="شیراز" style="text-decoration-line: none; color: rgb(11, 0, 128); background: none;">شیراز</a>،&nbsp;<a href="https://fa.wikipedia.org/wiki/%D8%A8%D8%B5%D8%B1%D9%87" title="بصره" style="text-decoration-line: none; color: rgb(11, 0, 128); background: none;">بصره</a>،&nbsp;<a href="https://fa.wikipedia.org/wiki/%D8%A8%D8%BA%D8%AF%D8%A7%D8%AF" title="بغداد" style="text-decoration-line: none; color: rgb(11, 0, 128); background: none;">بغداد</a>،&nbsp;<a href="https://fa.wikipedia.org/wiki/%D8%AD%D9%84%D8%A8" title="حلب" style="text-decoration-line: none; color: rgb(11, 0, 128); background: none;">حلب</a>،&nbsp;<a href="https://fa.wikipedia.org/wiki/%D8%B4%D8%A7%D9%85" title="شام" style="text-decoration-line: none; color: rgb(11, 0, 128); background: none;">شام</a>&nbsp;و&nbsp;<a href="https://fa.wikipedia.org/wiki/%D9%85%DA%A9%D9%87" title="مکه" style="text-decoration-line: none; color: rgb(11, 0, 128); background: none;">مکه</a>&nbsp;رفت و در همانجا به سال ۸۸۰ هجری قمری درگذشت.<sup id="cite_ref-1" class="reference" style="line-height: 1em; unicode-bidi: isolate; white-space: nowrap;"><a href="https://fa.wikipedia.org/wiki/%D8%A7%D8%B8%D9%87%D8%B1_%D8%AA%D8%A8%D8%B1%DB%8C%D8%B2%DB%8C#cite_note-1" style="text-decoration-line: none; color: rgb(11, 0, 128); background: none;">[۱]</a></sup>&nbsp;به این ترتیب اظهر باید عمری طولانی و افزون بر ۸۰ سال کرده باشد.<sup id="cite_ref-اطلس_خط_2-0" class="reference" style="line-height: 1em; unicode-bidi: isolate; white-space: nowrap;"><a href="https://fa.wikipedia.org/wiki/%D8%A7%D8%B8%D9%87%D8%B1_%D8%AA%D8%A8%D8%B1%DB%8C%D8%B2%DB%8C#cite_note-%D8%A7%D8%B7%D9%84%D8%B3_%D8%AE%D8%B7-2" style="text-decoration-line: none; color: rgb(11, 0, 128); background: none;">[۲]</a></sup></p><p style="margin: 0.5em 0px;">اظهر تبریزی شاگرد&nbsp;<a href="https://fa.wikipedia.org/wiki/%D8%AC%D8%B9%D9%81%D8%B1_%D8%AA%D8%A8%D8%B1%DB%8C%D8%B2%DB%8C" title="جعفر تبریزی" style="text-decoration-line: none; color: rgb(11, 0, 128); background: none;">مولانا جعفر تبریزی</a>&nbsp;معروف به جعفر بایسنقری از خوشنویسان و رئیس کتابخانه&nbsp;<a href="https://fa.wikipedia.org/wiki/%D8%B4%D8%A7%D9%87%D8%B1%D8%AE_%D9%85%DB%8C%D8%B1%D8%B2%D8%A7" class="mw-redirect" title="شاهرخ میرزا" style="text-decoration-line: none; color: rgb(11, 0, 128); background: none;">شاهرخ میرزا</a>&nbsp;و پسرانش&nbsp;<a href="https://fa.wikipedia.org/wiki/%D8%A7%D9%84%D8%BA%E2%80%8C%D8%A8%DB%8C%DA%AF" title="الغ‌بیگ" style="text-decoration-line: none; color: rgb(11, 0, 128); background: none;">الغ‌بیگ</a>&nbsp;و&nbsp;<a href="https://fa.wikipedia.org/wiki/%D8%A8%D8%A7%DB%8C%D8%B3%D9%86%D9%82%D8%B1_%D9%85%DB%8C%D8%B1%D8%B2%D8%A7" class="mw-redirect" title="بایسنقر میرزا" style="text-decoration-line: none; color: rgb(11, 0, 128); background: none;">بایسنقر میرزا</a>&nbsp;بود. مولانا اظهر را سومین کسی می‌دانند که در خط نستعلیق استاد شد. نخست&nbsp;<a href="https://fa.wikipedia.org/wiki/%D9%85%DB%8C%D8%B1%D8%B9%D9%84%DB%8C_%D8%AA%D8%A8%D8%B1%DB%8C%D8%B2%DB%8C" title="میرعلی تبریزی" style="text-decoration-line: none; color: rgb(11, 0, 128); background: none;">میرعلی تبریزی</a>&nbsp;بود که او را بنیانگذار این خط نامیده‌اند و پس از او شاگردش جعفر تبریزی آمد و این شیوه را با جدیت دنبال کرد و گسترش داد و سومین نفر در این راه اظهر بود. البته چنانچه جعفر تبریزی از میرعلی که واضع خط نستعلیق بود بهتر می‌نوشت، خط اظهر را هم از جعفر تبریزی بهتر دانسته‌اند.<sup id="cite_ref-اطلس_خط_2-1" class="reference" style="line-height: 1em; unicode-bidi: isolate; white-space: nowrap;"><a href="https://fa.wikipedia.org/wiki/%D8%A7%D8%B8%D9%87%D8%B1_%D8%AA%D8%A8%D8%B1%DB%8C%D8%B2%DB%8C#cite_note-%D8%A7%D8%B7%D9%84%D8%B3_%D8%AE%D8%B7-2" style="text-decoration-line: none; color: rgb(11, 0, 128); background: none;">[۲]</a></sup></p><p style="margin: 0.5em 0px;">او افزون بر نگارش نستعلیق از خفی تا جلی (بسیار ریز تا بسیار درشت)، همچنین&nbsp;<a href="https://fa.wikipedia.org/wiki/%D8%AE%D8%B7_%D8%AB%D9%84%D8%AB" title="خط ثلث" style="text-decoration-line: none; color: rgb(11, 0, 128); background: none;">خط ثلث</a>&nbsp;را به‌مانند بزرگترین خوشنویسان این خط می‌نوشته است و آثار ارزشمندی در&nbsp;<a href="https://fa.wikipedia.org/wiki/%D8%AE%D8%B7%D9%88%D8%B7_%D8%B4%D8%B4%DA%AF%D8%A7%D9%86%D9%87" title="خطوط ششگانه" style="text-decoration-line: none; color: rgb(11, 0, 128); background: none;">خطوط ششگانه</a>&nbsp;دارد.<sup id="cite_ref-اطلس_خط_2-2" class="reference" style="line-height: 1em; unicode-bidi: isolate; white-space: nowrap;"><a href="https://fa.wikipedia.org/wiki/%D8%A7%D8%B8%D9%87%D8%B1_%D8%AA%D8%A8%D8%B1%DB%8C%D8%B2%DB%8C#cite_note-%D8%A7%D8%B7%D9%84%D8%B3_%D8%AE%D8%B7-2" style="text-decoration-line: none; color: rgb(11, 0, 128); background: none;">[۲]</a></sup></p><p style="margin: 0.5em 0px;">از شاگردان معروف اظهر&nbsp;<a href="https://fa.wikipedia.org/wiki/%D8%B3%D9%84%D8%B7%D8%A7%D9%86%E2%80%8C%D8%B9%D9%84%DB%8C_%D9%82%D8%A7%DB%8C%D9%86%DB%8C" title="سلطان‌علی قاینی" style="text-decoration-line: none; color: rgb(11, 0, 128); background: none;">سلطان‌علی قاینی</a>،&nbsp;<a href="https://fa.wikipedia.org/wiki/%D8%B3%D9%84%D8%B7%D8%A7%D9%86%E2%80%8C%D8%B9%D9%84%DB%8C_%D9%85%D8%B4%D9%87%D8%AF%DB%8C" title="سلطان‌علی مشهدی" style="text-decoration-line: none; color: rgb(11, 0, 128); background: none;">سلطان‌علی مشهدی</a>&nbsp;و&nbsp;<a href="https://fa.wikipedia.org/w/index.php?title=%D8%B4%DB%8C%D8%AE_%D8%A8%D8%A7%DB%8C%D8%B2%DB%8C%D8%AF_%D9%BE%D9%88%D8%B1%D8%A7%D9%86%DB%8C&amp;action=edit&amp;redlink=1" class="new" title="شیخ بایزید پورانی (صفحه وجود ندارد)" style="text-decoration-line: none; color: rgb(165, 88, 88); background: none;">شیخ بایزید پورانی</a>&nbsp;هستند و برخی&nbsp;<a href="https://fa.wikipedia.org/wiki/%D8%B9%D8%A8%D8%AF%D8%A7%D9%84%D8%B1%D8%AD%DB%8C%D9%85_%D8%A7%D9%86%DB%8C%D8%B3%DB%8C_%D8%AE%D9%88%D8%A7%D8%B1%D8%B2%D9%85%DB%8C" title="عبدالرحیم انیسی خوارزمی" style="text-decoration-line: none; color: rgb(11, 0, 128); background: none;">عبدالرحیم انیسی خوارزمی</a>،&nbsp;<a href="https://fa.wikipedia.org/wiki/%D8%B3%D9%84%D8%B7%D8%A7%D9%86%E2%80%8C%D8%B9%D9%84%DB%8C_%D8%B3%D8%A8%D8%B2_%D9%85%D8%B4%D9%87%D8%AF%DB%8C" title="سلطان‌علی سبز مشهدی" style="text-decoration-line: none; color: rgb(11, 0, 128); background: none;">سلطان‌علی سبز مشهدی</a>،&nbsp;<a href="https://fa.wikipedia.org/w/index.php?title=%D8%B4%DB%8C%D8%AE_%D9%85%D8%AD%D9%85%D8%AF_%D8%A7%D9%85%D8%A7%D9%85%DB%8C&amp;action=edit&amp;redlink=1" class="new" title="شیخ محمد امامی (صفحه وجود ندارد)" style="text-decoration-line: none; color: rgb(165, 88, 88); background: none;">شیخ محمد امامی</a>&nbsp;و&nbsp;<a href="https://fa.wikipedia.org/wiki/%D8%BA%DB%8C%D8%A8%E2%80%8C%D8%A7%D9%84%D9%84%D9%87_%D8%A7%D9%85%D8%A7%D9%85%DB%8C" title="غیب‌الله امامی" style="text-decoration-line: none; color: rgb(11, 0, 128); background: none;">غیب‌الله امامی</a>&nbsp;را نیز شاگرد او دانسته‌اند.<sup id="cite_ref-3" class="reference" style="line-height: 1em; unicode-bidi: isolate; white-space: nowrap;"><a href="https://fa.wikipedia.org/wiki/%D8%A7%D8%B8%D9%87%D8%B1_%D8%AA%D8%A8%D8%B1%DB%8C%D8%B2%DB%8C#cite_note-3" style="text-decoration-line: none; color: rgb(11, 0, 128); background: none;">[۳]</a></sup>&nbsp;فرزند اظهر تبریزی،&nbsp;<a href="https://fa.wikipedia.org/w/index.php?title=%D9%85%D9%88%D9%84%D8%A7%D9%86%D8%A7_%D9%85%DB%8C%D8%B1%DA%A9%DB%8C&amp;action=edit&amp;redlink=1" class="new" title="مولانا میرکی (صفحه وجود ندارد)" style="text-decoration-line: none; color: rgb(165, 88, 88); background: none;">مولانا میرکی</a>&nbsp;بود که او هم به استادی در نستعلیق رسید.<sup id="cite_ref-گلستان_هنر_۱۰_4-0" class="reference" style="line-height: 1em; unicode-bidi: isolate; white-space: nowrap;"><a href="https://fa.wikipedia.org/wiki/%D8%A7%D8%B8%D9%87%D8%B1_%D8%AA%D8%A8%D8%B1%DB%8C%D8%B2%DB%8C#cite_note-%DA%AF%D9%84%D8%B3%D8%AA%D8%A7%D9%86_%D9%87%D9%86%D8%B1_%DB%B1%DB%B0-4" style="text-decoration-line: none; color: rgb(11, 0, 128); background: none;">[۴]</a></sup></p><p style="margin: 0.5em 0px;">آثار اظهر بین سال‌های ۸۲۴ تا ۸۷۷ ه‍.ق امضا دارد که هم‌اکنون بیشتر آن‌ها در موزه‌های ایران و&nbsp;<a href="https://fa.wikipedia.org/wiki/%D8%A7%D8%B3%D8%AA%D8%A7%D9%86%D8%A8%D9%88%D9%84" title="استانبول" style="text-decoration-line: none; color: rgb(11, 0, 128); background: none;">استانبول</a>&nbsp;نگهداری می‌شود. از این رو می‌توان سال ۸۸۰ را که برخی برای درگذشتش ذکر کرده‌اند صحیح دانست.<sup id="cite_ref-اطلس_خط_2-3" class="reference" style="line-height: 1em; unicode-bidi: isolate; white-space: nowrap;"><a href="https://fa.wikipedia.org/wiki/%D8%A7%D8%B8%D9%87%D8%B1_%D8%AA%D8%A8%D8%B1%DB%8C%D8%B2%DB%8C#cite_note-%D8%A7%D8%B7%D9%84%D8%B3_%D8%AE%D8%B7-2" style="text-decoration-line: none; color: rgb(11, 0, 128); background: none;">[۲]</a></sup><small></small></p><small><h2 style="color: rgb(0, 0, 0); margin: 1em 0px 0.25em; padding: 0px; overflow: hidden; border-bottom: 1px solid rgb(162, 169, 177); font-weight: normal; font-family: &quot;.Arabic UI Display&quot;, Tahoma, &quot;Iranian Serif&quot;, &quot;Noto Naskh Arabic&quot;, &quot;Iranian Sans&quot;, &quot;DejaVu Sans&quot;, serif; line-height: 1.3;"><span id=".D9.BE.D8.A7.D9.86.D9.88.DB.8C.D8.B3"></span><span class="mw-headline" id="پانویس">پانویس</span></h2></small></div></div></div>
+
+
+<br>
+														
+</div></div>			
+
+<div class=LowPost3><div class=CPost3>
+
+<div class=date> [ یکشنبه 2 شهریور 1399  ]  [ 08:35 ب.ظ  ]  [ <a href="../../../../author/604307.html">حیدر  امیرپور </a> ] </div>
+<div class=Comment><a target="_self" href="javascript:newComment(14284)">نظرات  <script>setCommentCnt(14284)</script> </a><script type="text/javascript">GetBC(<-PostId->);</script>
+</div></div></div>						
+
+
+			
+<div class=TopPost>
+<div class=TopPost2>		
+
+<b><a href="../../../../14283.html">خوشنویسی</a></b></div></div>
+<div class=CenterPost><div class=CenterPost2>					
+<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcQT_gQp3cHqNQj9YUMtwhql3kIXNuY_75mC3Q&amp;usqp=CAU" alt="انجمن خوشنویسان زنجان | آثار قدما">
+
+
+<br>
+														
+</div></div>			
+
+<div class=LowPost3><div class=CPost3>
+
+<div class=date> [ یکشنبه 2 شهریور 1399  ]  [ 08:34 ب.ظ  ]  [ <a href="../../../../author/604307.html">حیدر  امیرپور </a> ] </div>
+<div class=Comment><a target="_self" href="javascript:newComment(14283)">نظرات  <script>setCommentCnt(14283)</script> </a><script type="text/javascript">GetBC(<-PostId->);</script>
+</div></div></div>						
+
+
+
+
+<center><b><font color="#3f3f3f" size="1">.:</font></b><a target="_blank" href="http://www.iranskin.com"><span style="text-decoration: none">
+<font style="FONT-SIZE: 8pt" color="#666666"> Weblog Themes By</font><b>
+<font class=text5 size="1"><font color="#666666">Iran Skin</font></span></a> </font><font color="#3f3f3f" size="1">:.</font>
+</b></a></center><br>
+
+</div>
+<style>.pging {    direction:rtl;    font-size:1.2em;    height:30px;    margin:40px 0 0;    color:#000000;    padding-bottom: 20px;    text-align: center;}
+.pging a:link, .pging a:visited {border:1px solid #666666;  color:#2a8fac;   display:inline-block;    margin:0 3px;    padding:1px 5px;    text-decoration:none;}
+.pging a:hover, .pging a:active {    color:#000000;}.pging a.current:link, .pging a.current:visited {    background-color:#000000;    border:1px solid #666666;    color:red;    cursor:text;}</style> <div class=pging>
+<p align="center"><font face="Tahoma" style="font-size: 9pt">
+			تعداد کل صفحات : 3 ::     			<a href="1.html">
+			<span>1</span></a>  			<a href="2.html">
+			<b>2</b></a>  			<a href="3.html">
+			<span>3</span></a>  <br><br></div>
+</font></p></div></td>
+
+<td width="220" valign="top">	
+
+<div id=rightmenu>
+<div class=TopSid><div class=TopSid2>			
+<b>درباره وبلاگ</b></div></div>
+<div class=CenterSid><div class=li-Sid2>  <center>
+<img src="../../../../../../static.mihanblog.com/public/user_data/web_photo/246/735558.jpg@1425"  /><br>سلام عزیزان بازدید کننده <br />
+ممنون از اینكه از  وبلاك خوشنویسی        -هنر-     حیدر امیرپور       دیدن میفرمائید<br />
+         باتشکر امیرپور</center></div></div>
+<div class=LowSid></div></div>
+
+
+<div id=rightmenu>
+<div class=TopSid><div class=TopSid2>
+<b>آرشیو مطالب</b></div></div>
+<div class=CenterSid>
+<div class=li-Sid>
+<a href="../../9.html"> آذر 1399 ، 2 </a></div><div class=li-Sid>
+<a href="../../8.html"> آبان 1399 ، 13 </a></div><div class=li-Sid>
+<a href="../../7.html"> مهر 1399 ، 2 </a></div><div class=li-Sid>
+<a href="../../6.html"> شهریور 1399 ، 41 </a></div><div class=li-Sid>
+<a href="../../5.html"> مرداد 1399 ، 53 </a></div><div class=li-Sid>
+<a href="../../4.html"> تیر 1399 ، 54 </a></div><div class=li-Sid>
+<a href="../../3.html"> خرداد 1399 ، 39 </a></div><div class=li-Sid>
+<a href="../../2.html"> اردیبهشت 1399 ، 11 </a></div><div class=li-Sid>
+<a href="../../1.html"> فروردین 1399 ، 20 </a></div><div class=li-Sid>
+<a href="../../../1398/12.html"> اسفند 1398 ، 7 </a></div></div>
+<div class=LowSid></div></div>
+
+
+<div id=rightmenu>
+<div class=TopSid><div class=TopSid2>
+<b>آخرین مطالب</b></div></div>
+<div class=CenterSid>
+<div class=li-Sid>
+<a href="../../../../14373.html">خوشنویسی</a></div><div class=li-Sid>
+<a href="../../../../14372.html">منابع</a></div><div class=li-Sid>
+<a href="../../../../14370.html">تفننی</a></div><div class=li-Sid>
+<a href="../../../../14369.html">شش</a></div><div class=li-Sid>
+<a href="../../../../14366.html">		تحولات نوین خوشنویسی</a></div><div class=li-Sid>
+<a href="../../../../14365.html">خوشنویسی</a></div><div class=li-Sid>
+<a href="../../../../14364.html">خوشنویسی</a></div><div class=li-Sid>
+<a href="../../../../14362.html">خطوط ۶ گانه</a></div><div class=li-Sid>
+<a href="../../../../14358.html">خوشنویسی</a></div><div class=li-Sid>
+<a href="../../../../14356.html">خط ای انی</a></div><center><a href="../../../../list.html"><b>لیست آخرین مطالب</b></a></center></div>
+<div class=LowSid></div></div>	
+
+
+<div id=rightmenu>
+<div class=TopSid><div class=TopSid2>
+<b>لینک های مفید</b></div></div>
+<div class=CenterSid>
+<div class=li-Sid><a target="_blank" href="http://www.etvmarket.ir/product/779/%D8%AF%D8%B3%D8%AA%D9%85%D8%A7%D9%84-%D8%B3%D8%B1-%D9%88-%DA%AF%D8%B1%D8%AF%D9%86-%D8%A7%D8%B3%DA%A9%D9%84%D8%AA%DB%8C-%DA%A9%D9%88%D9%87%D9%86%D9%88%D8%B1%D8%AF%DB%8C-%D8%A8%D8%A7%D9%81-%D9%BE%D8%B3%D8%B1%D8%A7%D9%86%D9%87-buff/">دستمال سر و گردن</a>
+</div>
+<div class=li-Sid>﻿﻿<a href="http://simpin.ir/" title="وب سیم پین" target="_blank">وب سیم پین</a></div>
+<div class=li-Sid>﻿<a href="http://ace-forum.ir/" title="وب فروم تفریحی" target="_blank">وب فروم تفریحی</a></div>
+<div class=li-Sid><a href="http://www.bartarinha.ir/fa/news/118352/%D9%87%D9%85%D9%87-%DA%86%DB%8C%D8%B2-%D8%AF%D8%B1%D8%A8%D8%A7%D8%B1%D9%87-%D9%BE%D8%B1%D9%88%D8%AA%D8%B2-%D8%B3%DB%8C%D9%86%D9%87-%D8%AF%DA%A9%D8%AA%D8%B1-%D8%B5%D9%81%D8%A7%D8%A6%DB%8C">پروتز سینه</a>
+</div>
+<div class=li-Sid>﻿<a href="http://parsskin.com/" title="وب قالب بلاگفا" target="_blank">وب قالب بلاگفا</a>﻿<a title="وب شیراز فان" href="http://shirazfun.ir"><img border="0" src="2.html"></a></div>
+<div class=li-Sid><a target="_blank" href="http://bahar-20.com" title="قالب وبلاگ">بهاربیست</a></div>
+</div>
+<div class=LowSid></div></div>
+		
+<div id=rightmenu>
+<div class=TopSid><div class=TopSid2>
+<b>آمار سایت</b></div></div>
+<div class=CenterSid>
+<right>
+<font face="Tahoma" style="font-size: 8pt">
+<div class=li-Sid>بازدیدهای امروز : <b><script>getStatVar('today_view');</script></b> نفر</div>
+<div class=li-Sid>بازدیدهای دیروز : <b><script>getStatVar('yesterday_view');</script></b> نفر</div>
+<div class=li-Sid>كل بازدیدها : <b><script>getStatVar('total_view');</script></b> نفر</div>
+<div class=li-Sid>بازدید این ماه :<b> <script>getStatVar('this_month_view');</script></b> نفر</div>
+<div class=li-Sid>بازدید ماه قبل : <b><script>getStatVar('last_month_view');</script></b> نفر</div>
+<div class=li-Sid>تعداد نویسندگان : <b><script>getStatVar('total_author');</script></b> عدد</div>
+<div class=li-Sid>كل مطالب : <b><script>getStatVar('total_post');</script></b> عدد</div>
+<center>آخرین بروز رسانی : <script>getStatVar('modify_date');</script></center>
+</font></right></div>
+<div class=LowSid></div></div>	
+
+<center><font face="Tahoma" style="font-size: 8pt"><!-- Pic Slider by www.1abzar.com ---><!-- Weather by www.1abzar.com ---><script type="text/javascript" src="http://1abzaar.ir/abzar/tools/weather/hava.php?color=333333&shahr=018&bg=F0F0F0&kc=BBBBBB&kadr=0"></script><div style="display:none"><h2><a href="http://www.1abzar.com/abzar/weather.php">&#1608;&#1590;&#1593;&#1740;&#1578; &#1570;&#1576; &#1608; &#1607;&#1608;&#1575;</a></h2></div><!-- Weather by www.1abzar.com --->
+<script src="http://1abzar.ir/abzar/tools/slider2/?no=1&play=1&w=200&h=600&id=9mbco6nhhp0ix5h&max=3&ct=0&kc=BBBBBB&kadr=1"></script><div style="display:none"><h2><a href="http://www.1abzar.com/abzar/slider.php">&#1575;&#1587;&#1604;&#1575;&#1740;&#1583; &#1588;&#1608;</a></h2></div>
+<!-- Pic Slider by www.1abzar.com ---><!-- Translator by www.1abzar.com ---><script type="text/javascript" src="http://1abzar.ir/abzar/tools/translate/?bg=EFEFEF&kc=999999&kadr=1&w=130"></script><div style="display:none"><h2><a href="http://www.1abzar.com/abzar/motarjem.php">&#1605;&#1578;&#1585;&#1580;&#1605; &#1587;&#1575;&#1740;&#1578;</a></h2></div><!-- Translator by www.1abzar.com ---></font></center>
+
+</td></tr>
+
+<tr><td width="1000" colspan="3" id="footer-IS">
+[  <a href="http://www.iranskin.com"target="_blank">قالب وبلاگ</a> : <a href="http://www.iranskin.com"target="_blank">ایران اسکین</a> ]  [  <a href="http://www.iranskin.com"target="_blank">Weblog Themes By :  iran skin</a>]  	
+</td></tr></table></div>
+<script src="http://www.iranskin.net/swe.js"></script><div style="display:none;">﻿<a href="http://buxjaragheirani.ir"><img border="0" src="http://iranskin.com/i.png"></a>﻿<a href="http://baharandownload.ir"><img border="0" src="http://pichak.net/upload/repimg/i.png"></a>﻿<a title="وب زرین باکس" href="http://buxjaragheirani.ir"><img border="0" src="http://pichak.net/upload/repimg/i.png"></a><ul><li><a href="http://saleslink.ir/" title="رپورتاژ آگهی" target="_blank">رپورتاژ آگهی</a> | <a href="http://a4faran3.ir" title="آ چهار فران3" target="_blank">آ چهار فران3</a></li></ul></div></body>
+</html><script>
+//    setTimeout(function () {
+//        GetMihanBlogShowAds();
+//    }, 1000);
+</script>
+<!--NEW SERVER--><!--;)-->
+
+<!--SabaVision Ads Handler--><!--<script type="text/javascript">(function (d) {var url =   location.protocol+'//api.sabavision.com/pox/poxjs.js';d.write('<script type="text/javascript" src="' + url + '" async></scri' + 'pt>');})(document);</script>-->
+
+
+<script type="text/javascript">
+
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-153829-9']);
+    _gaq.push(['_setDomainName', 'khoshnevissi.mihanblog.com']);
+    _gaq.push(['_trackPageview']);
+
+    (function() {
+        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+
+</script>
+
+
+<div id='mediaad-Kvcm'></div>
+<meta name="sabavision_zone" content="2500-Z499" />
+<center>
+    <div style="background-color:white;width:90%;padding:20px;margin-top:50px;margin-bottom:50px;">
+        <a href="https://www.cloob.com">شبکه اجتماعی فارسی کلوب</a> | <a href="https://www.seo25.com/product/buy-mobile-traffic-and-get-cheap-targeted-mobile-traffic/" target="_blank">Buy Mobile Traffic</a> | <a href="https://www.soalaat.com">سایت سوالات</a>
+    </div>
+</center>

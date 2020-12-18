@@ -1,0 +1,1241 @@
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" /><link rel="EditURI" type="application/rsd+xml" title="RSD" href="../xmlrpc%3Frsd.html" />
+<script type="text/javascript" src="http://static.mihanblog.com//public/scripts/run/g.other.v3.js"></script>
+<script>
+
+	function c_$(id){
+        return document.getElementById(id);
+    }
+    
+			//if (parent.frames.length) top.location.href= document.location;
+		
+	setTodayDate = function(){
+		document.write('پنجشنبه 27 آذر 1399');
+		/*364531*/	}
+
+</script>
+
+
+
+        <script type="text/javascript">
+            (function(){
+            var now = new Date();
+            var head = document.getElementsByTagName('head')[0];
+            var script = document.createElement('script');
+            script.async = true;
+            var script_address = 'https://cdn.yektanet.com/js/mihanblog.com/native-mihanblog.com-6531.js';
+            script.src = script_address + '?v=' + now.getFullYear().toString() + '0' + now.getMonth() + '0' + now.getDate() + '0' + now.getHours();
+            head.appendChild(script);
+            })();
+        </script>
+
+        <!--<script type="text/javascript">
+            var head = document.getElementsByTagName("head")[0];
+            var script = document.createElement("script");
+            script.type = "text/javascript";
+            script.async=1;
+            script.src = "https://s1.mediaad.org/serve/mihanblog.com/loader.js" ;
+            head.appendChild(script);
+        </script>-->
+        
+        <script>
+            var sabaVisionWebsiteID = "9bab9dac-041d-4bdb-b39a-1ed789f65eed"; var sabaVisionWebsitePage = "ALL"
+        </script>
+        <link rel="stylesheet" href="https://plus.sabavision.com/dox/dox.min.css">
+        <script src="https://plus.sabavision.com/dox/dox.min.js"></script>
+        
+        <script>
+	linkdailyForm = function(){
+		try{
+			window.open('/linkdaily/new','linkdaily','status=yes,scrollbars=yes,toolbar=no,menubar=no,location=no ,width=500px,height=460px');
+		} catch(e){}
+	}
+</script><script>
+
+	statInfo = new Array();
+	setStatVar = function(index,value){
+		statInfo[index] = value;
+	}
+	getStatVar = function(index){
+		if(statInfo[index]) document.write(statInfo[index]);
+	}
+	
+	setStatVar('total_post','1437');
+	setStatVar('total_author','6');
+	setStatVar('modify_date','شنبه 6 تیر 1394');
+	
+	setStatVar('today_view','34');
+	setStatVar('yesterday_view','57');
+	
+	setStatVar('this_month_view','2059');
+	setStatVar('last_month_view','9868');
+
+	setStatVar('total_view','2090559');
+	setStatVar('last_view_date','پنجشنبه 27 آذر 1399 (18:01)');
+
+
+
+    
+    function setStatFromClient()
+    {
+        var url = 'http://kanoonequran.mihanblog.com/statupdate/?data[refereruri]=http://kanoonequran.mihanblog.com/post/category/2&data[postid]=1024&data[requesturi]=/post/1024&data[sdate]=1608218251&data[hash]=622e06f3cb86ce051b1d55d78041d8ce&data[resolution]='+screen.width+' X '+screen.height;
+
+//        alert(url);
+//        var newjs = document.createElement("SCRIPT");
+//        newjs.type = 'text/javascript';
+//        newjs.src = url;
+//
+//        var newdiv = document.createElement("DIV");
+//        newdiv.setAttribute("style","display:none");
+
+        document.write(unescape('%3Cscript src="'+url+'" type="text/javascript"%3E%3C/script%3E'));
+//        newdiv.appendChild (newjs);
+//        document.write(newjs);
+//        document.write(appendChild (newdiv);
+
+    };
+    setStatFromClient();
+        
+</script><script>
+	messageForm = function(post_id){
+		try{
+			window.open('/message','message','status=yes,scrollbars=yes,toolbar=no,menubar=no,location=no ,width=480px,height=550px');
+		} catch(e){}
+	}
+</script><script>
+	try{
+		var commentCnt = new Array();
+		commentCnt[1024]='0';	} catch(e){}
+	
+	newComment = function(post_id){
+		try{
+			window.open('/post/comment/'+post_id,'comment','status=yes,scrollbars=yes,toolbar=no,menubar=no,location=no ,width=480px,height=540px');
+		} catch(e){}
+	}
+	setCommentCnt = function(post_id){
+		try{
+			if(commentCnt[post_id]){
+				document.write(commentCnt[post_id]);
+			} else {
+				document.write(0);
+			}
+		} catch(e){}
+	}
+</script><script>
+
+
+	mihanblogUpdateLike = function(postid,type){
+		var url = '/post/like/'+postid+'/'+type;
+		mihanblogGetAjax(url,function(){});
+	};
+	try{
+        mihanblogGetAjax = function (url,callback) {
+    		var req;
+			if (window.XMLHttpRequest)
+            {
+                // code for IE7+, Firefox, Chrome, Opera, Safari
+			  	req = new XMLHttpRequest();
+			}else{	// code for IE6, IE5
+			  	req = new ActiveXObject("Microsoft.XMLHTTP");
+		  	}
+		    req.open("GET", url, 1);
+		    req.onreadystatechange = function () {
+		        if (req.readyState == 4) {
+		            if (req.status == 200) {
+		            	var response = eval(req.responseText);
+		            	callback();
+		            }else{
+	            		return ;
+		            }
+		        }else{
+					return ;
+		        }
+		    }
+		    req.send(null);
+		}
+	}catch(e){}
+
+	try{
+		var mihanblogLikeArrCnt = new Array();
+		var mihanblogDisLikeArrCnt = new Array();
+
+		mihanblogLikeArrCnt[1024]='0';
+mihanblogDisLikeArrCnt[1024]='0';
+	} catch(e){}
+
+
+
+    mihanblogPostLike = function(post_id){
+
+        mihanblogLikeCnt = (mihanblogLikeArrCnt[post_id]? mihanblogLikeArrCnt[post_id] : 0);
+        mihanblogDisLikeCnt = (mihanblogDisLikeArrCnt[post_id]? mihanblogDisLikeArrCnt[post_id] : 0);
+        mihanblogLikeCnt = parseInt(mihanblogLikeCnt);
+        mihanblogDisLikeCnt = parseInt(mihanblogDisLikeCnt);
+
+        document.write(
+                '<div class="mihanblog_like_wrapper ">'+
+                       '<div id="dislikeBar_'+post_id+'" onclick="mihanblogUpdateLike('+post_id+',\'dislike\')"   class="mihanblog_like_bar mihanblog_like_dislikeBar mihanblog_like_show_help ">-<div class="mihanblog_like_Cnt" id="disLikeCnt_'+post_id+'">'+mihanblogDisLikeCnt+'</div>'+
+                            '<span  class="mihanblog_like_v2_help mihanblog_like_v2_help_dislike clearfix"> '+
+                                '<span class="mihanblog_like_help_arrow mihanblog_like_help_arrow_dislike clearfix"></span>'+
+                                '<span class="mihanblog_like_help_text">نمی پسندم</span>'+
+                            '</span>'+
+                        '</div>'+
+                       '<div id="Like_'+post_id+'" class="mihanblog_like_border"></div>'+
+                       '<div id="likeBar_'+post_id+'" onclick="mihanblogUpdateLike('+post_id+',\'like\')"  class="mihanblog_like_bar mihanblog_like_likeBar mihanblog_like_show_help" >+<div class="mihanblog_like_Cnt" id="likeCnt_'+post_id+'">'+mihanblogLikeCnt+'</div>'+
+                            '<span  class="mihanblog_like_v2_help mihanblog_like_v2_help_like clearfix"> '+
+                                '<span class="mihanblog_like_help_arrow mihanblog_like_help_arrow_like clearfix"></span>'+
+                                '<span class="mihanblog_like_help_text">می پسندم</span>'+
+                            '</span>'+
+                        '</div>'+
+
+                '</div>'
+        );
+
+
+
+        mihanblogDisplayeLike(post_id);
+    }
+
+
+    mihanblogDisplayeLike = function(post_id){
+
+        mihanblogLikeCnt = (mihanblogLikeArrCnt[post_id]? mihanblogLikeArrCnt[post_id] : 0);
+        mihanblogDisLikeCnt = (mihanblogDisLikeArrCnt[post_id]? mihanblogDisLikeArrCnt[post_id] : 0);
+        mihanblogLikeCnt = parseInt(mihanblogLikeCnt);
+        mihanblogDisLikeCnt = parseInt(mihanblogDisLikeCnt);
+
+
+
+        sum = mihanblogLikeCnt - mihanblogDisLikeCnt;
+        backgroundBorder =  document.getElementById('Like_'+post_id);
+        var likeObj = document.getElementById('likeCnt_'+post_id);
+        var disLikeObj = document.getElementById('disLikeCnt_'+post_id);
+
+
+
+
+
+        likeObj.innerHTML =  mihanblogLikeCnt ;
+        disLikeObj.innerHTML =  mihanblogDisLikeCnt;
+
+        if(sum == 0){
+            backgroundBorder.style.backgroundImage = "url('/public/public/images/icons/like_likedislike.png')";
+            document.getElementById('dislikeBar_'+post_id).style.width = '19px';
+            document.getElementById('likeBar_'+post_id).style.width = '19px';
+        }else{
+             if(sum > 0){
+                 backgroundBorder.style.backgroundImage = "url('/public/public/images/icons/like_like.png')";
+                 document.getElementById('likeBar_'+post_id).style.width = '23px';
+                 document.getElementById('dislikeBar_'+post_id).style.width = '15px';
+             }else{
+                 backgroundBorder.style.backgroundImage = "url('/public/public/images/icons/like_dislike.png')";
+                 document.getElementById('likeBar_'+post_id).style.width = '15px';
+                 document.getElementById('dislikeBar_'+post_id).style.width = '23px';
+             }
+        }
+
+    }
+
+
+
+
+</script>
+
+<style type="text/css">
+
+
+    .clearfix {display: inline-block;}
+    .clearfix:after {
+        content: ".";
+        display: block;
+        height: 0;
+        clear: both;
+        visibility: hidden;
+    }
+
+    .mihanblog_like_wrapper {
+        color: #ffffff;
+        direction: ltr;
+        position: relative;
+    }
+    .mihanblog_like_wrapper span{
+        display: none;
+    }
+    .mihanblog_like_bar {
+        color: #FFFFFF;
+        cursor: pointer;
+        float: left;
+        font-size: 10px;
+        height: 20px;
+        line-height: 19px;
+        margin: 5px 0;
+    }
+    .mihanblog_like_likeBar {
+        background-color: #88B131;
+        padding-right: 5px;
+        border-top-right-radius: 2px;
+        border-bottom-right-radius: 2px;
+        text-align: right;
+    }
+    .mihanblog_like_likeBar:hover{
+        background-color: #699017;
+    }
+    .mihanblog_like_border {
+        background-color: #666666;
+        border: 1px solid #666666;
+        float: left;
+        font-size: 12px;
+        height: 20px;
+        margin-top: 2px;
+        width: 25px;
+        padding: 3px 5px 2px 0;
+        text-align: center;
+        border-radius: 2px;
+        color: #ffffff;
+        direction: ltr;
+        background-repeat: no-repeat ;
+        background-position: 4px center;
+    }
+    .mihanblog_like_border img {
+        margin-left: 2px;
+        margin-top: 2px;
+        width: 22px;
+    }
+    .mihanblog_like_dislikeBar {
+        background-color: #FF6F31;
+        padding-left: 5px;
+        border-top-left-radius: 2px;
+        border-bottom-left-radius: 2px;
+        text-align:left ;
+    }
+    .mihanblog_like_dislikeBar:hover{
+        background-color: #D54B10;
+    }
+
+
+
+    .mihanblog_like_show_help {
+        position: relative;
+    }
+    .mihanblog_like_show_help:hover span {
+        display: block;
+    }
+    .mihanblog_like_help_text {
+        background-color: white;
+        border: 1px solid #555555;
+        border-radius: 3px 3px 3px 3px;
+        color: #303030;
+        float: left;
+        font-size: 11px;
+        font-weight: normal;
+        padding: 5px 10px;
+    }
+
+    .mihanblog_like_help_arrow_dislike {
+        background: url("http://kanoonequran.mihanblog.com/public/public/images/icons/like_hover_top.png") no-repeat scroll 16px 0 transparent;
+        left: 0;
+        top: -4px;
+    }
+
+    .mihanblog_like_help_arrow_like {
+        background: url("http://kanoonequran.mihanblog.com/public/public/images/icons/like_hover_top _2.png") no-repeat scroll 16px 0 transparent;
+        left: -10px;
+        top: 29px;
+    }
+
+    .mihanblog_like_help_arrow{
+        height: 6px;
+        position: absolute;
+        width: 100px;
+
+    }
+
+    .mihanblog_like_v2_help_dislike {
+        left: -15px;
+        top: 24px;
+    }
+    .mihanblog_like_v2_help_like {
+        left: 0;
+        top: -35px;
+
+    }
+    .mihanblog_like_v2_help{
+        display: none;
+        position: absolute;
+        white-space: nowrap;
+        z-index: 1;
+    }
+
+    .mihanblog_like_Cnt{
+        display: inline;
+        color: #ffffff;
+    }
+
+</style>
+    <style>
+        @font-face {
+            font-family: 'Mihan-Iransans';
+            src: url('http://kanoonequran.mihanblog.com/public/public/fonts/Iransans.eot');
+            src: url('http://kanoonequran.mihanblog.com/public/public/fonts/Iransans.eot?') format('embedded-opentype'),
+            url('http://kanoonequran.mihanblog.com/public/public/fonts/Iransans.woff2') format('woff2'),
+            url('http://kanoonequran.mihanblog.com/public/public/fonts/Iransans.woff') format('woff'),
+            url('http://kanoonequran.mihanblog.com/public/public/fonts/Iransans.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+        @font-face {
+            font-family: 'Mihan-IransansBold';
+            src: url('http://kanoonequran.mihanblog.com/public/public/fonts/Iransans-Black.eot');
+            src: url('http://kanoonequran.mihanblog.com/public/public/fonts/Iransans-Black.eot?') format('embedded-opentype'),
+            url('http://kanoonequran.mihanblog.com/public/public/fonts/Iransans-Black.woff2') format('woff2'),
+            url('http://kanoonequran.mihanblog.com/public/public/fonts/Iransans-Black.woff') format('woff'),
+            url('http://kanoonequran.mihanblog.com/public/public/fonts/Iransans-Black.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+        @font-face {
+            font-family: 'Mihan-IransansLight';
+            src: url('http://kanoonequran.mihanblog.com/public/public/fonts/Iransans-UltraLight.eot');
+            src: url('http://kanoonequran.mihanblog.com/public/public/fonts/Iransans-UltraLight.eot?') format('embedded-opentype'),
+            url('http://kanoonequran.mihanblog.com/public/public/fonts/Iransans-UltraLight.woff2') format('woff2'),
+            url('http://kanoonequran.mihanblog.com/public/public/fonts/Iransans-UltraLight.woff') format('woff'),
+            url('http://kanoonequran.mihanblog.com/public/public/fonts/Iransans-UltraLight.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+        @font-face {
+            font-family: 'Mihan-Nassim';
+            src: url('http://kanoonequran.mihanblog.com/public/public/fonts/Nassim.eot');
+            src: url('http://kanoonequran.mihanblog.com/public/public/fonts/Nassim.eot?') format('embedded-opentype'),
+            url('http://kanoonequran.mihanblog.com/public/public/fonts/Nassim.woff2') format('woff2'),
+            url('http://kanoonequran.mihanblog.com/public/public/fonts/Nassim.woff') format('woff'),
+            url('http://kanoonequran.mihanblog.com/public/public/fonts/Nassim.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+        @font-face {
+            font-family: 'Mihan-Koodak';
+            src: url('http://kanoonequran.mihanblog.com/public/public/fonts/Koodak.eot');
+            src: url('http://kanoonequran.mihanblog.com/public/public/fonts/Koodak.eot?') format('embedded-opentype'),
+            url('http://kanoonequran.mihanblog.com/public/public/fonts/Koodak.woff2') format('woff2'),
+            url('http://kanoonequran.mihanblog.com/public/public/fonts/Koodak.woff') format('woff'),
+            url('http://kanoonequran.mihanblog.com/public/public/fonts/Koodak.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+        @font-face {
+            font-family: 'Mihan-Yekan';
+            src: url('http://kanoonequran.mihanblog.com/public/public/fonts/Yekan.eot');
+            src: url('http://kanoonequran.mihanblog.com/public/public/fonts/Yekan.eot?') format('embedded-opentype'),
+            url('http://kanoonequran.mihanblog.com/public/public/fonts/Yekan.woff2') format('woff2'),
+            url('http://kanoonequran.mihanblog.com/public/public/fonts/Yekan.woff') format('woff'),
+            url('http://kanoonequran.mihanblog.com/public/public/fonts/Yekan.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+        @font-face {
+            font-family: 'FontAwesome';
+            src: url('http://kanoonequran.mihanblog.com/public/public/fonts/fontawesome_webfont.eot');
+            src: url('http://kanoonequran.mihanblog.com/public/public/fonts/fontawesome_webfont.eot?') format('embedded-opentype'),
+            url('http://kanoonequran.mihanblog.com/public/public/fonts/fontawesome_webfont.woff2') format('woff2'),
+            url('http://kanoonequran.mihanblog.com/public/public/fonts/fontawesome_webfont.woff') format('woff'),
+            url('http://kanoonequran.mihanblog.com/public/public/fonts/fontawesome_webfont.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+
+
+        
+
+        /* Smartphones (portrait and landscape) ----------- */
+
+        /*
+        @media only screen and (max-width : 480px) and (min-width : 320px) {
+            .sabaClick_advert__wrapper{
+                display:block;
+            }
+            .sabaClick_advert__inner{
+                max-width: 90%;
+                margin: 0 5%;
+            }
+        }
+        */
+
+    </style>
+
+
+
+
+
+
+<html>
+<head>
+
+<link href="http://mohammadrezaesmaili.persiangig.com/atrequran/image/favicon.jpg" rel="shortcut icon">
+
+
+
+
+<title>عطرقرآن - ماجرای شام خوردن آیت الله مرعشی نجفی با امام زمان(عج)</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta name="designer" content="Blog Skin">
+<meta name="author" content="محمدرضا اسماعیلی">
+<meta name="language" content="Farsi">
+<meta name="designerUrl" content="http://www.blogskin.ir/">
+<script src="http://www.blogskin.ir/blog.js" language="javascript"></script>
+<script src="http://ashoora.biz/weblog/41/blogskin.js" language="javascript"></script>
+<meta name="description" content="عطرقرآن -  - عطرقرآن">
+<meta name="keywords" content="عطرقرآن,kanoonequran,ماجرای شام خوردن آیت الله مرعشی نجفی با امام زمان(عج), Blog, Weblog, Persian,Iran, Farsi, Weblogs, Blogskin">
+<link rel="alternate" type="application/rss+xml" title="عطرقرآن" href="rss/index.html" />
+<link rel="alternate" type="application/atom+xml" title="عطرقرآن" href="atom/index.html" />
+<link href="http://ashoora.biz/weblog/41/style.css" type="text/css" rel="stylesheet">
+<style>
+.top{background:url(http://mahmoodabbasi.persiangig.com/image/tir91-2_1.jpg) no-repeat top right;height:234;width:100%}
+</style>
+</head>
+          
+ 
+  
+<body>
+
+  <div align=center><div style="width:1003;overflow:hidden">
+<div class=blogskin-bg><div class=blogskin-back>
+<div class=blogskin>
+<div class=top2>
+<div class=top-blogskin>
+<div style="float:right;width:670;margin-right:30">
+<a href="../index.html">صفحه اول</a>
+<a href="list.html">آرشیو مطالب</a>
+<a href="mailto:mresmaili@yahoo.com">پست الكترونیك</a></div>
+
+
+
+<form method="Get" action="http://google.com/search" class=sch><input name="sitesearch" value="kanoonequran.mihanblog.com" type="hidden">
+<input type="submit" value=" " class=but>&nbsp;&nbsp;
+<input type="text" name="q" size="21" style="border:0;background:#767676;color:white;height:20">
+</form>
+
+
+</div>
+<div class=top>
+</div>
+<marquee direction="right">". بهجت عارفان: "هیچ ذکری بالاتر از ذکر عملی نیست؛ هیچ ذکر عملی بالاتر از ترک معصیت  در اعتقادیّات و عملیّات نیست و ظاهر این است که ترک معصیت به قول مطلق(پرهیز از تمام گناهان) بدون مراقبه دائمیّه صورت نمی گیرد</marquee>
+<div class=mainbg>
+
+<div class=mainr>
+  
+<div class=menu><br>
+
+
+<div class=multi><div class=multi2><a href="rss/index.html" title="RSS">
+
+ 
+
+	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</a></div></div>
+<div class=xmulti>
+<div class="TabView" id="TabView">
+<div class="Tabs">
+<a title="آخرین مطالب"></a>
+<a title="آرشیو مطالب"></a>
+<a title="موضوعات مطالب"></a>
+<a title="دوستان"></a>
+</div>
+
+ 
+
+
+<div class="Pages">
+
+
+<div class="Page">	<div class=xpage><a href="1583.html">
+		علاقه ات را حتما ابراز کن(سبک زندگی)</a></div>	<div class=xpage><a href="1582.html">
+		 حدیثی که شیخ مرتضی زاهد را پریشان کرد!</a></div>	<div class=xpage><a href="1579.html">
+		تکلیف!!!</a></div>	<div class=xpage><a href="1577.html">
+		✜✜✜ تقویم شمیم یار 94 ✜✜✜</a></div>	<div class=xpage><a href="1576.html">
+		حرف حساب</a></div>	<div class=xpage><a href="1575.html">
+		خواب استاد رائفی پور</a></div>	<div class=xpage><a href="1574.html">
+		با این دستور العمل محتاج دیگران نمی‌شوید</a></div>	<div class=xpage><a href="1573.html">
+		مجردها حتما بخوانید</a></div>	<div class=xpage><a href="1571.html">
+		مذاکرات هسته ای</a></div>	<div class=xpage><a href="1568.html">
+		پهلوانی که مقید به نماز اول وقت بود</a></div>	<div class=xpage><a href="1567.html">
+		بابا دلت پاک باشد،کافی است!</a></div>	<div class=xpage><a href="1566.html">
+		سفارش اهل بیت در مورد اهل سنت+فیلم</a></div>	<div class=xpage><a href="1564.html">
+		شعر مولوی در بوته نقد امام خمینی(ره) </a></div>	<div class=xpage><a href="1563.html">
+		تواضع‏ امام</a></div>	<div class=xpage><a href="1562.html">
+		بهشتی یا جهنمی</a></div>		</div>
+
+<div class="Page"><div class=xpage><a href="archive/1394/4.html">
+		 تیر 1394</a></div><div class=xpage><a href="archive/1394/2.html">
+		 اردیبهشت 1394</a></div><div class=xpage><a href="archive/1394/1.html">
+		 فروردین 1394</a></div><div class=xpage><a href="archive/1393/12.html">
+		 اسفند 1393</a></div><div class=xpage><a href="archive/1393/11.html">
+		 بهمن 1393</a></div><div class=xpage><a href="archive/1393/10.html">
+		 دی 1393</a></div><div class=xpage><a href="archive/1393/9.html">
+		 آذر 1393</a></div><div class=xpage><a href="archive/1393/8.html">
+		 آبان 1393</a></div><div class=xpage><a href="archive/1393/7.html">
+		 مهر 1393</a></div><div class=xpage><a href="archive/1393/6.html">
+		 شهریور 1393</a></div><div class=xpage><a href="archive/1393/5.html">
+		 مرداد 1393</a></div></div>
+
+<div class="Page"><div class=xpage><a href="category/20.html">
+		داستان جنگ (14)</a></div>	<div class=xpage><a href="category/19.html">
+		درس اخلاق حضرت آیت الله دکتر قرهی (3)</a></div>	<div class=xpage><a href="category/18.html">
+		سیاسی (53)</a></div>	<div class=xpage><a href="category/17.html">
+		کلیپ (116)</a></div>	<div class=xpage><a href="category/16.html">
+		جبهه وجنگ (85)</a></div>	<div class=xpage><a href="category/15.html">
+		مولودی (25)</a></div>	<div class=xpage><a href="category/14.html">
+		مداحی (146)</a></div>	<div class=xpage><a href="category/13.html">
+		نرم افزار کامپیوتر (11)</a></div>	<div class=xpage><a href="category/12.html">
+		برنامه ی موبایل (30)</a></div>	<div class=xpage><a href="category/11.html">
+		ویژه نامه ایام (144)</a></div>	<div class=xpage><a href="category/10.html">
+		بررسی شبهات (5)</a></div>	<div class=xpage><a href="category/6.html">
+		طنز (15)</a></div>	<div class=xpage><a href="category/3.html">
+		شعر (105)</a></div>	<div class=xpage><a href="category/8.html">
+		عکس (93)</a></div>	<div class=xpage><a href="category/5.html">
+		دانلود (199)</a></div>	<div class=xpage><a href="category/4.html">
+		داستان (59)</a></div>	<div class=xpage><a href="category/2.html">
+		مقالات (193)</a></div>	<div class=xpage><a href="category/7.html">
+		جلوه های اعجاز قرآن (16)</a></div>	<div class=xpage><a href="category/9.html">
+		فضایل و برکات سوره های قرآن (54)</a></div>	</div>
+
+<div class="Page">
+<div class=xpage><a target="_blank" href="http://jahanseyr.mihanblog.com/" title="">
+	مهدویت</a></div><div class=xpage><a target="_blank" href="http://www.parsquran.com/" title="">
+	قرآن</a></div><div class=xpage><a target="_blank" href="http://duelfa.com/" title="">
+	دوئل</a></div><div class=xpage><a target="_blank" href="http://9day.mihanblog.com/" title="">
+	9 دی</a></div><div class=xpage><a target="_blank" href="http://amoozesh-quran.blogfa.com/" title="">
+	والضحی</a></div><div class=xpage><a target="_blank" href="http://reg.pnu.ac.ir" title="">
+	گلستان</a></div><div class=xpage><a target="_blank" href="http://hiatbaner.mihanblog.com/" title="">
+	هیئت بنر</a></div><div class=xpage><a target="_blank" href="http://ghadiany.com/" title="">
+	قطعه 26</a></div><div class=xpage><a target="_blank" href="http://quranpajhooh.blogfa.com/" title="">
+	قرآن پژوه</a></div><div class=xpage><a target="_blank" href="http://manekhaki.blogfa.com/" title="">
+	من خاكی</a></div><div class=xpage><a target="_blank" href="http://nojavan15.mihanblog.com/" title="">
+	نوجوان 15</a></div><div class=xpage><a target="_blank" href="http://www.qurannama.ir/" title="">
+	قرآن مبین</a></div><div class=xpage><a target="_blank" href="http://www.faryba.blogfa.com/" title="">
+	ترانه شب</a></div><div class=xpage><a target="_blank" href="http://www.rayeheyenoor.blogfa.com/" title="">
+	رایحه ی نور</a></div><div class=xpage><a target="_blank" href="http://www.islamlink.ir/?page=customer_signup&amp;refer=bWFobW9vZDI=" title="">
+	اسلام لینک</a></div><div class=xpage><a target="_blank" href="http://anasr121.mihanblog.com" title="">
+	بچه شمرون</a></div><div class=xpage><a target="_blank" href="http://talateadineh.mihanblog.com " title="">
+	طلعت آدینه</a></div><div class=xpage><a target="_blank" href="http://yamolahossion.blogfa.com/" title="">
+	یامولاحسین</a></div><div class=xpage><a target="_blank" href="http://ramzeshahadat.mihanblog.com/" title="">
+	رمز شهادت</a></div><div class=xpage><a target="_blank" href="http://www.mobarezblog.mihanblog.com/" title="">
+	سنگر مجازی</a></div><div class=xpage><a target="_blank" href="http://www.abasaleh68.mihanblog.com/" title="">
+	مهدی یاوران</a></div><div class=xpage><a target="_blank" href="http://ghalamshekasteh.blogfa.com/" title="">
+	قلم شکسته</a></div><div class=xpage><a target="_blank" href="http://pelake-asheghi.blog.ir/" title="">
+	پلاک عاشقی</a></div><div class=xpage><a target="_blank" href="http://fatemeh-db.blogfa.com/" title="">
+	دختر بسیجی</a></div><div class=xpage><a target="_blank" href="http://anti-dajjal-mason.mihanblog.com " title="">
+	یالثارات الحسین</a></div><div class=xpage><a target="_blank" href="http://nasime-del.mihanblog.com/" title="">
+	امتداد راه شهدا</a></div><div class=xpage><a target="_blank" href="http://mazhabi-farhangi.mihanblog.com/" title="">
+	مذهبی فرهنگی</a></div><div class=xpage><a target="_blank" href="http://parmoon.parsiblog.com/" title="">
+	اندیشه های من</a></div><div class=xpage><a target="_blank" href="http://vebnevesht.blogfa.com/" title="">
+	دانشجو مسلمان</a></div><div class=xpage><a target="_blank" href="http://delsukhtehgan.ir/" title="">
+	خیمه دلسوختگان</a></div><div class=xpage><a target="_blank" href="http://razavi57.mihanblog.com/" title="">
+	نغمه ی موزون دل</a></div><div class=xpage><a target="_blank" href="http://www.besuyrastgary91.blogfa.com/" title="">
+	به سوی رستگاری</a></div><div class=xpage><a target="_blank" href="http://b-pnu-astara.blogfa.com/" title="">
+	دانشجوی بسیجی</a></div><div class=xpage><a target="_blank" href="http://www.basijion.tk/" title="">
+	گروه سایبری مالک</a></div><div class=xpage><a target="_blank" href="http://yaaghubi.blogfa.com/" title="">
+	پایگاه اینترنتی کمیل</a></div><div class=xpage><a href="../link/index.html"><b>همه پیوندها</b></a></div>
+</div>
+
+</div>
+</div></div>
+
+<div class=tmenu><div class=tmenu2>معرفی سایت</div></div>
+<div class=xmenu>
+<div class=xmenu2>
+<div style="text-align:center;"><img src="http://static.mihanblog.com//public/user_data/web_photo/122/364531.jpg?8753"  /></div>
+<br>
+<br></div>
+<div class=xmenu1>
+<a href="mailto:mresmaili@yahoo.com" title="ارسال ایمیل">
+		پست الکترونیک</a></div>
+		<div class=xmenu1>
+		<a href="javascript:messageForm()" title="تماس با مدیران وبلاگ">
+		  تماس با مدیر سایت</a></div>
+		</div>
+<div class=bmenu></div>
+
+
+		
+<div class=tmenu><div class=tmenu2>نویسندگان</div></div>
+<div class=xmenu>
+<div class=xmenu1><a href="author/255521.html"></a> <a href="author/255521.html">
+	محمدرضا اسماعیلی</a></div><div class=xmenu1><a href="author/255530.html"></a> <a href="author/255530.html">
+	محمود عباسی</a></div><div class=xmenu1><a href="author/373919.html"></a> <a href="author/373919.html">
+	احسان سنائی راد</a></div><div class=xmenu1><a href="author/1031683.html"></a> <a href="author/1031683.html">
+	سبط  الشیخ</a></div><div class=xmenu1><a href="author/1101946.html"></a> <a href="author/1101946.html">
+	مجید  ثنایی</a></div><div class=xmenu1><a href="author/1311736.html"></a> <a href="author/1311736.html">
+	حمیدرضا عرب</a></div></div>
+<div class=bmenu></div>
+
+
+
+
+<div>
+<div class=tmenu><div class=tmenu2>همراه با قرآن</div></div>
+<div class=xmenu>
+<style type="text/css">//Ashoora.ir|Random-Verse Begins</style><script type="text/javascript" src="http://www.ashoora.biz/mazhabi-projects/random_verse/png.js"></script><script type="text/javascript" src="http://www.ashoora.biz/mazhabi-projects/random_verse/random_verse.php?mod=1&color3=F30A36&color2=F30A36&color1=000000&width=200"></script><style type="text/css">//Ashoora.ir|Random-Verse Ends</style>
+
+
+</div>
+<div class=bmenu></div></div>
+
+
+
+<div class=tmenu><div class=tmenu2>صفحات جانبی</div></div>
+<div class=xmenu>
+<a href="http://forms.freepersian.com/action/19458"
+ title=""
+ target="_blank">
+فرم ثبت نام نویسندگی در عطر قرآن
+</a>
+
+<div class=xmenu1><a href="../extrapage/ertebat.html">ارتباط باما</a></div>
+</div>
+
+<div class=bmenu></div>
+
+<div class=tmenu><div class=tmenu2>ابر برچسب ها</div></div>
+<div class=xmenu>
+<div class=xmenu2><a href="tag/محرم+92.html" style="font-size:1em">
+		محرم 92</a> <a href="tag/امام+خامنه+ای.html" style="font-size:1.74em">
+		امام خامنه ای</a> <a href="tag/کریمی.html" style="font-size:2em">
+		کریمی</a> <a href="tag/حاج+محمود+کریمی.html" style="font-size:1.34em">
+		حاج محمود کریمی</a> <a href="tag/محمود+کریمی.html" style="font-size:2em">
+		محمود کریمی</a> <a href="tag/مسجد+الهادی.html" style="font-size:1.2em">
+		مسجد الهادی</a> <a href="tag/هیئت+ثارالله.html" style="font-size:1em">
+		هیئت ثارالله</a> </div>
+</div>
+<div class=bmenu></div>
+
+<div class=tmenu><div class=tmenu2>آمار سایت</div></div>
+<div class=xmenu>
+<div class=xmenu2>
+			بازدیدهای امروز سایت : <span class=a><script>getStatVar('today_view');</script></span> نفر<br>
+			بازدیدهای دیروز سایت : <span class=a><script>getStatVar('yesterday_view');</script></span> 
+			نفر<br>
+			كل بازدیدهای سایت : <span class=a><script>getStatVar('total_view');</script></span> نفر<br>
+			بازدید این ماه سایت :<span class=a> <script>getStatVar('this_month_view');</script></span> 
+			نفر<br>
+			بازدید ماه قبل سایت : <span class=a><script>getStatVar('last_month_view');</script></span> 
+			نفر<br>
+			تعداد نویسندگان سایت : <span class=a><script>getStatVar('total_author');</script></span> 
+			عدد<br>
+			كل مطالب ارسال شده: <span class=a><script>getStatVar('total_post');</script></span> عدد<br>
+			آخرین بازدید : <span class=a><script>getStatVar('last_view_date');</script></span><br>
+			آخرین بروز رسانی : <span class=a><script>getStatVar('modify_date');</script></span>
+</div>
+</div>
+<div class=bmenu></div>
+<div class=tmenu><div class=tmenu2>امکانات جانبی</div></div>
+<div class=xmenu>
+<div class=xmenu2>
+
+
+
+<center><div id="aparat13540882194239684"></div><script type="text/JavaScript" src="http://www.aparat.com/video/video/scr/type/user/username/mahmood00/cnt/5/bg/FFFFFF/height/300/width/140/id/aparat13540882194239684"></script><center>
+
+
+
+<center><td> <li><a target="_blank" href="http://www.aparat.com/mahmood00" title="">عطر قرآن در آپارات</a></li>  <a href="http://www.aparat.com/mahmood00" target="_blank"> <img src="http://www.img.ir/rdj.png"/>     </a>    </td>          
+        <td>   &nbsp    </td><center>
+
+ 
+
+<script language="javascript">    //*start of ashoora.ir grank*    </script><center><script language=javascript src="http://www.ashoora.biz/mazhabi-projects/grank/png.js"></script>  <script language="javascript" src="http://www.ashoora.biz/mazhabi-projects/grank/check.php?url=http://kanoonequran.mihanblog.com/&img=20"></script></center> <script language="javascript">    //*END of ashoora.ir grank*    </script>
+
+
+<div id="14132154962100937"><script type="text/JavaScript" src="http://www.aparat.com/embed/vkAOF?data[rnddiv]=14132154962100937&data[w]=270"></script></div>
+
+</div>
+</div>
+<div class=bmenu></div></cb:block_stat>
+
+
+<div class=tmenu><div class=tmenu2>لگوی دوستان</div></div>
+<div class=xmenu>
+<div class=xmenu2>
+
+
+<div id="c" style="text-align:center">
+<br>
+<a href="http://ashoora.ir/" target="_blank"><img border="0" src="http://www.ashoora.biz/weblog/41/3.jpg"></a>
+
+
+
+
+</body>
+</html>
+
+
+</div>
+</div>
+</div>
+
+
+<div class=bmenu></div>
+
+
+<script src="http://www.ashoora.biz/weblog/41/code.js" language="javascript"></script>
+
+		<div id="MihanblogShopAds" style="display:block;height:0px;width:100%;border:0px"></div>
+		<div class=tpost><a href="1024.html">ماجرای شام خوردن آیت الله مرعشی نجفی با امام زمان(عج)</a>
+</div>
+
+<div class=date>ارسال در تاریخ پنجشنبه 4 اسفند 1390 توسط محمود عباسی</div>
+ 		
+<div class=xpost><div style="float:right"></div> 
+	<div id="InPost_MihanblogShopAds" style="display:block;height:0px;width:100%;border:0px"></div><div style="font-family: Tahoma; line-height: 16px; text-align: center; "><span style="background-color: rgb(255, 255, 255); "><font size="2"><img src="http://bitatarahan.com/imamhazer/16.png" alt="امام زمان و آیت الله مرعشی نجفی " border="0" hspace="0" vspace="0" align="bottom"></font></span></div><p class="MsoNormal" dir="RTL" style="text-align: justify; "><p class="MsoNormal" dir="RTL" style="line-height: 12pt; direction: rtl; unicode-bidi: embed; "><font size="2"><span lang="FA" style="font-family: Tahoma, sans-serif; ">ماجرای شام خوردن آیت الله مرعشی نجفی با
+امام زمان(عج) و رازهای مسجد سهله :&nbsp;</span><span dir="LTR" style="font-family: Tahoma, sans-serif; "><o:p></o:p></span></font></p>
+
+<p class="MsoNormal" dir="RTL" style="margin-bottom: 0.0001pt; line-height: 12pt; direction: rtl; unicode-bidi: embed; "><span lang="FA" style="font-family: Tahoma, sans-serif; "><font size="2">در ایام تحصیل علوم دینی و فقه اهل بیت
+(ع) در نجف اشرف، شوق زیاد جهت دیدار جمال مولایمان بقیة الله الاعظم(عجل الله
+فرجه الشریف) داشتم، با خود عهد کردم که چهل شب چهارشنبه پیاده به مسجد سهله بروم؛
+به این نیت که جمال آقا صاحب الامر علیه السلام را زیارت و به این فوز بزرگ نائل
+شوم...(برای مشاهده به ادامه مطلب مراجعه کنید</font></span></p></p>
+
+
+<p class="MsoNormal" dir="RTL" style="margin-bottom: 0.0001pt; text-align: right; direction: rtl; unicode-bidi: embed; "><font size="2"><span style="background-color: rgb(255, 255, 255);"><span lang="FA" style="font-family: Tahoma, sans-serif; background-image: initial; background-attachment: initial; background-origin: initial; background-clip: initial; background-position: initial initial; background-repeat: initial initial; ">تا 35 یا 36 شب
+چهارشنبه ادامه دادم، تصادفاً در این شب، رفتنم از نجف تأخیر افتاد و هوا ابری و
+بارانی بود. نزدیک مسجد سهله خندقی بود، هنگامی که به آنجا رسیدم بر اثر تاریکی شب
+وحشت و ترس وجود مرا فراگرفت مخصوصاً از زیادی قطاع الطریق و دزدها؛ ناگهان صدای
+پایی را از دنبال سر شنیدم که ببیشتر موجب ترس و وحشتم گردید</span><span dir="LTR"></span><span dir="LTR"></span><span dir="LTR" style="font-family: Tahoma, sans-serif; background-image: initial; background-attachment: initial; background-origin: initial; background-clip: initial; background-position: initial initial; background-repeat: initial initial; "><span dir="LTR"></span><span dir="LTR"></span>.</span></span><span dir="LTR" style="font-family: 'Times New Roman', serif; "><o:p></o:p></span></font></p>
+
+<p class="MsoNormal" dir="RTL" style="mso-margin-top-alt:auto;mso-margin-bottom-alt:
+auto;text-align:justify;line-height:12.0pt;direction:rtl;unicode-bidi:embed"><font size="2"><span dir="RTL"></span><span dir="RTL"></span><span lang="FA" style="font-family: Tahoma, sans-serif; "><span dir="RTL"></span><span dir="RTL"></span>&nbsp;</span><span dir="LTR" style="font-family: Tahoma, sans-serif; "><o:p></o:p></span></font></p>
+
+<p class="MsoNormal" dir="RTL" style="mso-margin-top-alt:auto;mso-margin-bottom-alt:
+auto;text-align:justify;line-height:12.0pt;direction:rtl;unicode-bidi:embed"><font size="2"><span lang="FA" style="font-family: Tahoma, sans-serif; ">برگشتم به عقب، سید عربی را با لباس اهل
+بادیه دیدم، نزدیک من آمد و با زبان فصیح گفت: « ای سید! سلام علیکم ».</span><span lang="AR-SA" style="font-family: Tahoma, sans-serif; "><o:p></o:p></span></font></p>
+
+<p class="MsoNormal" dir="RTL" style="mso-margin-top-alt:auto;mso-margin-bottom-alt:
+auto;text-align:justify;line-height:12.0pt;direction:rtl;unicode-bidi:embed"><font size="2"><span lang="FA" style="font-family: Tahoma, sans-serif; ">&nbsp;</span><span lang="AR-SA" style="font-family: Tahoma, sans-serif; "><o:p></o:p></span></font></p>
+
+<p class="MsoNormal" dir="RTL" style="mso-margin-top-alt:auto;mso-margin-bottom-alt:
+auto;text-align:justify;line-height:12.0pt;direction:rtl;unicode-bidi:embed"><font size="2"><span lang="FA" style="font-family: Tahoma, sans-serif; ">ترس و وحشت به کلی از وجودم رفت و
+اطمینان و سکون نفس پیدا کردم و تعجب آور بود که چگونه این شخص در تاریکی شدید،
+متوجه سیادت من شد و در آن حال من از این مطلب غافل بودم.</span><span lang="AR-SA" style="font-family: Tahoma, sans-serif; "><o:p></o:p></span></font></p>
+
+<p class="MsoNormal" dir="RTL" style="mso-margin-top-alt:auto;mso-margin-bottom-alt:
+auto;text-align:justify;line-height:12.0pt;direction:rtl;unicode-bidi:embed"><font size="2"><span lang="FA" style="font-family: Tahoma, sans-serif; ">&nbsp;</span><span lang="AR-SA" style="font-family: Tahoma, sans-serif; "><o:p></o:p></span></font></p>
+
+<p class="MsoNormal" dir="RTL" style="mso-margin-top-alt:auto;mso-margin-bottom-alt:
+auto;text-align:justify;line-height:12.0pt;direction:rtl;unicode-bidi:embed"><font size="2"><span lang="FA" style="font-family: Tahoma, sans-serif; ">به هر حال سخن می گفتیم و می رفتیم از من
+سوال کرد:</span><span lang="AR-SA" style="font-family: Tahoma, sans-serif; "><o:p></o:p></span></font></p>
+
+<p class="MsoNormal" dir="RTL" style="mso-margin-top-alt:auto;mso-margin-bottom-alt:
+auto;text-align:justify;line-height:12.0pt;direction:rtl;unicode-bidi:embed"><font size="2"><span lang="FA" style="font-family: Tahoma, sans-serif; ">&nbsp;</span><span lang="AR-SA" style="font-family: Tahoma, sans-serif; "><o:p></o:p></span></font></p>
+
+<p class="MsoNormal" dir="RTL" style="mso-margin-top-alt:auto;mso-margin-bottom-alt:
+auto;text-align:justify;line-height:12.0pt;direction:rtl;unicode-bidi:embed"><font size="2"><span lang="FA" style="font-family: Tahoma, sans-serif; ">« کجا قصد داری؟ »</span><span lang="AR-SA" style="font-family: Tahoma, sans-serif; "><o:p></o:p></span></font></p>
+
+<p class="MsoNormal" dir="RTL" style="mso-margin-top-alt:auto;mso-margin-bottom-alt:
+auto;text-align:justify;line-height:12.0pt;direction:rtl;unicode-bidi:embed"><font size="2"><span lang="FA" style="font-family: Tahoma, sans-serif; ">&nbsp;</span><span lang="AR-SA" style="font-family: Tahoma, sans-serif; "><o:p></o:p></span></font></p>
+
+<p class="MsoNormal" dir="RTL" style="mso-margin-top-alt:auto;mso-margin-bottom-alt:
+auto;text-align:justify;line-height:12.0pt;direction:rtl;unicode-bidi:embed"><font size="2"><span lang="FA" style="font-family: Tahoma, sans-serif; ">گفتم: « مسجد سهله »</span><span lang="AR-SA" style="font-family: Tahoma, sans-serif; "><o:p></o:p></span></font></p>
+
+<p class="MsoNormal" dir="RTL" style="mso-margin-top-alt:auto;mso-margin-bottom-alt:
+auto;text-align:justify;line-height:12.0pt;direction:rtl;unicode-bidi:embed"><font size="2"><span lang="FA" style="font-family: Tahoma, sans-serif; ">&nbsp;</span><span lang="AR-SA" style="font-family: Tahoma, sans-serif; "><o:p></o:p></span></font></p>
+
+<p class="MsoNormal" dir="RTL" style="mso-margin-top-alt:auto;mso-margin-bottom-alt:
+auto;text-align:justify;line-height:12.0pt;direction:rtl;unicode-bidi:embed"><font size="2"><span lang="FA" style="font-family: Tahoma, sans-serif; ">فرمود: « به چه جهت؟ »</span><span lang="AR-SA" style="font-family: Tahoma, sans-serif; "><o:p></o:p></span></font></p>
+
+<p class="MsoNormal" dir="RTL" style="mso-margin-top-alt:auto;mso-margin-bottom-alt:
+auto;text-align:justify;line-height:12.0pt;direction:rtl;unicode-bidi:embed"><font size="2"><span lang="FA" style="font-family: Tahoma, sans-serif; ">&nbsp;</span><span lang="AR-SA" style="font-family: Tahoma, sans-serif; "><o:p></o:p></span></font></p>
+
+<p class="MsoNormal" dir="RTL" style="mso-margin-top-alt:auto;mso-margin-bottom-alt:
+auto;text-align:justify;line-height:12.0pt;direction:rtl;unicode-bidi:embed"><font size="2"><span lang="FA" style="font-family: Tahoma, sans-serif; ">گفتم: « به قصد تشرف زیارت ولی عصر علیه
+السلام ».</span><span lang="AR-SA" style="font-family: Tahoma, sans-serif; "><o:p></o:p></span></font></p>
+
+<p class="MsoNormal" dir="RTL" style="mso-margin-top-alt:auto;mso-margin-bottom-alt:
+auto;text-align:justify;line-height:12.0pt;direction:rtl;unicode-bidi:embed"><font size="2"><span lang="FA" style="font-family: Tahoma, sans-serif; ">&nbsp;</span><span lang="AR-SA" style="font-family: Tahoma, sans-serif; "><o:p></o:p></span></font></p>
+
+<p class="MsoNormal" dir="RTL" style="mso-margin-top-alt:auto;mso-margin-bottom-alt:
+auto;text-align:justify;line-height:12.0pt;direction:rtl;unicode-bidi:embed"><font size="2"><span lang="FA" style="font-family: Tahoma, sans-serif; ">مقداری که رفتیم به مسجد زید بن صوحان (
+مسجد کوچکی است نزدیک مسجد سهله) رسیدیم،</span><span lang="AR-SA" style="font-family: Tahoma, sans-serif; "><o:p></o:p></span></font></p>
+
+<p class="MsoNormal" dir="RTL" style="mso-margin-top-alt:auto;mso-margin-bottom-alt:
+auto;text-align:justify;line-height:12.0pt;direction:rtl;unicode-bidi:embed"><font size="2"><span lang="FA" style="font-family: Tahoma, sans-serif; ">داخل مسجد شده و نماز خواندیم و بعد از
+دعایی که سید خواند که کأنّ با او دیوار و سنگها آن دعا را می‌خواندند، احساس
+انقلابی عجیب در خود نمودم که از وصف آن عاجزم.</span><span lang="AR-SA" style="font-family: Tahoma, sans-serif; "><o:p></o:p></span></font></p>
+
+<p class="MsoNormal" dir="RTL" style="mso-margin-top-alt:auto;mso-margin-bottom-alt:
+auto;text-align:justify;line-height:12.0pt;direction:rtl;unicode-bidi:embed"><font size="2"><span lang="FA" style="font-family: Tahoma, sans-serif; ">&nbsp;</span><span lang="AR-SA" style="font-family: Tahoma, sans-serif; "><o:p></o:p></span></font></p>
+
+<p class="MsoNormal" dir="RTL" style="mso-margin-top-alt:auto;mso-margin-bottom-alt:
+auto;text-align:justify;line-height:12.0pt;direction:rtl;unicode-bidi:embed"><font size="2"><span lang="FA" style="font-family: Tahoma, sans-serif; ">بعد از دعا سید فرمود:</span><span lang="AR-SA" style="font-family: Tahoma, sans-serif; "><o:p></o:p></span></font></p>
+
+<p class="MsoNormal" dir="RTL" style="mso-margin-top-alt:auto;mso-margin-bottom-alt:
+auto;text-align:justify;line-height:12.0pt;direction:rtl;unicode-bidi:embed"><font size="2"><span lang="FA" style="font-family: Tahoma, sans-serif; ">&nbsp;</span><span lang="AR-SA" style="font-family: Tahoma, sans-serif; "><o:p></o:p></span></font></p>
+
+<p class="MsoNormal" dir="RTL" style="mso-margin-top-alt:auto;mso-margin-bottom-alt:
+auto;text-align:justify;line-height:12.0pt;direction:rtl;unicode-bidi:embed"><font size="2"><span lang="FA" style="font-family: Tahoma, sans-serif; ">« سید تو گرسنه ای، چه خوبست شام بخوری
+».</span><span lang="AR-SA" style="font-family: Tahoma, sans-serif; "><o:p></o:p></span></font></p>
+
+<p class="MsoNormal" dir="RTL" style="mso-margin-top-alt:auto;mso-margin-bottom-alt:
+auto;text-align:justify;line-height:12.0pt;direction:rtl;unicode-bidi:embed"><font size="2"><span lang="FA" style="font-family: Tahoma, sans-serif; ">&nbsp;</span><span lang="AR-SA" style="font-family: Tahoma, sans-serif; "><o:p></o:p></span></font></p>
+
+<p class="MsoNormal" dir="RTL" style="mso-margin-top-alt:auto;mso-margin-bottom-alt:
+auto;text-align:justify;line-height:12.0pt;direction:rtl;unicode-bidi:embed"><font size="2"><span lang="FA" style="font-family: Tahoma, sans-serif; ">پس سفره ای را که زیر عبا داشت بیرون
+آورده و در آن مثل اینکه سه قرص نان و دو یا سه خیار سبز تازه بود. مثل اینکه تازه
+از باغ چیده و آن وقت چهله زمستان، و سرمای زننده ای بود و من متوجه این معنا نشدم
+که این آقا این خیار تازه سبز را در این فصل زمستان از کجا آورده؟</span><span lang="AR-SA" style="font-family: Tahoma, sans-serif; "><o:p></o:p></span></font></p>
+
+<p class="MsoNormal" dir="RTL" style="mso-margin-top-alt:auto;mso-margin-bottom-alt:
+auto;text-align:justify;line-height:12.0pt;direction:rtl;unicode-bidi:embed"><font size="2"><span lang="FA" style="font-family: Tahoma, sans-serif; ">&nbsp;</span><span lang="AR-SA" style="font-family: Tahoma, sans-serif; "><o:p></o:p></span></font></p>
+
+<p class="MsoNormal" dir="RTL" style="mso-margin-top-alt:auto;mso-margin-bottom-alt:
+auto;text-align:justify;line-height:12.0pt;direction:rtl;unicode-bidi:embed"><font size="2"><span lang="FA" style="font-family: Tahoma, sans-serif; ">طبق دستور آقا، شام خوردم.</span><span lang="AR-SA" style="font-family: Tahoma, sans-serif; "><o:p></o:p></span></font></p>
+
+<p class="MsoNormal" dir="RTL" style="mso-margin-top-alt:auto;mso-margin-bottom-alt:
+auto;text-align:justify;line-height:12.0pt;direction:rtl;unicode-bidi:embed"><font size="2"><span lang="FA" style="font-family: Tahoma, sans-serif; ">&nbsp;</span><span lang="AR-SA" style="font-family: Tahoma, sans-serif; "><o:p></o:p></span></font></p>
+
+<p class="MsoNormal" dir="RTL" style="mso-margin-top-alt:auto;mso-margin-bottom-alt:
+auto;text-align:justify;line-height:12.0pt;direction:rtl;unicode-bidi:embed"><font size="2"><span lang="FA" style="font-family: Tahoma, sans-serif; ">سپس فرمود: « بلند شو تا به مسجد سهله
+برویم »</span><span lang="AR-SA" style="font-family: Tahoma, sans-serif; "><o:p></o:p></span></font></p>
+
+<p class="MsoNormal" dir="RTL" style="mso-margin-top-alt:auto;mso-margin-bottom-alt:
+auto;text-align:justify;line-height:12.0pt;direction:rtl;unicode-bidi:embed"><font size="2"><span lang="FA" style="font-family: Tahoma, sans-serif; ">&nbsp;</span><span lang="AR-SA" style="font-family: Tahoma, sans-serif; "><o:p></o:p></span></font></p>
+
+<p class="MsoNormal" dir="RTL" style="mso-margin-top-alt:auto;mso-margin-bottom-alt:
+auto;text-align:justify;line-height:12.0pt;direction:rtl;unicode-bidi:embed"><font size="2"><span lang="FA" style="font-family: Tahoma, sans-serif; ">داخل مسجد شدیم آقا مشغول اعمال وارده در
+مقامات شد و من هم به متابعت آن حضرت انجام وظیفه می‌کردم و بدون اختیار نماز مغرب
+و عشا را به آقا اقتدا کردم و متوجه نبودم که این آقا کیست.</span><span lang="AR-SA" style="font-family: Tahoma, sans-serif; "><o:p></o:p></span></font></p>
+
+<p class="MsoNormal" dir="RTL" style="mso-margin-top-alt:auto;mso-margin-bottom-alt:
+auto;text-align:justify;line-height:12.0pt;direction:rtl;unicode-bidi:embed"><font size="2"><span lang="FA" style="font-family: Tahoma, sans-serif; ">&nbsp;</span><span lang="AR-SA" style="font-family: Tahoma, sans-serif; "><o:p></o:p></span></font></p>
+
+<p class="MsoNormal" dir="RTL" style="mso-margin-top-alt:auto;mso-margin-bottom-alt:
+auto;text-align:justify;line-height:12.0pt;direction:rtl;unicode-bidi:embed"><font size="2"><span lang="FA" style="font-family: Tahoma, sans-serif; ">بعد از آنکه اعمال تمام شد، آن بزرگوار
+فرمود:</span><span lang="AR-SA" style="font-family: Tahoma, sans-serif; "><o:p></o:p></span></font></p>
+
+<p class="MsoNormal" dir="RTL" style="mso-margin-top-alt:auto;mso-margin-bottom-alt:
+auto;text-align:justify;line-height:12.0pt;direction:rtl;unicode-bidi:embed"><font size="2"><span lang="FA" style="font-family: Tahoma, sans-serif; ">&nbsp;</span><span lang="AR-SA" style="font-family: Tahoma, sans-serif; "><o:p></o:p></span></font></p>
+
+<p class="MsoNormal" dir="RTL" style="mso-margin-top-alt:auto;mso-margin-bottom-alt:
+auto;text-align:justify;line-height:12.0pt;direction:rtl;unicode-bidi:embed"><font size="2"><span lang="FA" style="font-family: Tahoma, sans-serif; ">« ای سید آیا مثل دیگران بعد از اعمال
+مسجد سهله به مسجد کوفه می‌روی یا در همین جا می‌مانی؟ »</span><span lang="AR-SA" style="font-family: Tahoma, sans-serif; "><o:p></o:p></span></font></p>
+
+<p class="MsoNormal" dir="RTL" style="mso-margin-top-alt:auto;mso-margin-bottom-alt:
+auto;text-align:justify;line-height:12.0pt;direction:rtl;unicode-bidi:embed"><font size="2"><span lang="FA" style="font-family: Tahoma, sans-serif; ">&nbsp;</span><span lang="AR-SA" style="font-family: Tahoma, sans-serif; "><o:p></o:p></span></font></p>
+
+<p class="MsoNormal" dir="RTL" style="mso-margin-top-alt:auto;mso-margin-bottom-alt:
+auto;text-align:justify;line-height:12.0pt;direction:rtl;unicode-bidi:embed"><font size="2"><span lang="FA" style="font-family: Tahoma, sans-serif; ">گفتم: « می‌مانم ».</span><span lang="AR-SA" style="font-family: Tahoma, sans-serif; "><o:p></o:p></span></font></p>
+
+<p class="MsoNormal" dir="RTL" style="mso-margin-top-alt:auto;mso-margin-bottom-alt:
+auto;text-align:justify;line-height:12.0pt;direction:rtl;unicode-bidi:embed"><font size="2"><span lang="FA" style="font-family: Tahoma, sans-serif; ">&nbsp;</span><span lang="AR-SA" style="font-family: Tahoma, sans-serif; "><o:p></o:p></span></font></p>
+
+<p class="MsoNormal" dir="RTL" style="mso-margin-top-alt:auto;mso-margin-bottom-alt:
+auto;text-align:justify;line-height:12.0pt;direction:rtl;unicode-bidi:embed"><font size="2"><span lang="FA" style="font-family: Tahoma, sans-serif; ">در وسط مسجد در مقام امام صادق(ع) نشستم
+به ایشان گفتم:آیا چای یا قهوه یا دخانیات میل داری آماده کنم؟</span><span lang="AR-SA" style="font-family: Tahoma, sans-serif; "><o:p></o:p></span></font></p>
+
+<p class="MsoNormal" dir="RTL" style="mso-margin-top-alt:auto;mso-margin-bottom-alt:
+auto;text-align:justify;line-height:12.0pt;direction:rtl;unicode-bidi:embed"><font size="2"><span lang="FA" style="font-family: Tahoma, sans-serif; ">&nbsp;</span><span lang="AR-SA" style="font-family: Tahoma, sans-serif; "><o:p></o:p></span></font></p>
+
+<p class="MsoNormal" dir="RTL" style="mso-margin-top-alt:auto;mso-margin-bottom-alt:
+auto;text-align:justify;line-height:12.0pt;direction:rtl;unicode-bidi:embed"><font size="2"><span lang="FA" style="font-family: Tahoma, sans-serif; ">در جواب، کلام جامعی را فرمود: این امور
+از فضول زندگیست و ما از این فضول دوریم.</span><span lang="AR-SA" style="font-family: Tahoma, sans-serif; "><o:p></o:p></span></font></p>
+
+<p class="MsoNormal" dir="RTL" style="mso-margin-top-alt:auto;mso-margin-bottom-alt:
+auto;text-align:justify;line-height:12.0pt;direction:rtl;unicode-bidi:embed"><font size="2"><span lang="FA" style="font-family: Tahoma, sans-serif; ">&nbsp;</span><span lang="AR-SA" style="font-family: Tahoma, sans-serif; "><o:p></o:p></span></font></p>
+
+<p class="MsoNormal" dir="RTL" style="mso-margin-top-alt:auto;mso-margin-bottom-alt:
+auto;text-align:justify;line-height:12.0pt;direction:rtl;unicode-bidi:embed"><font size="2"><span lang="FA" style="font-family: Tahoma, sans-serif; ">این کلام در اعماق وجودم اثر گذاشت به
+نحوی که هرگاه یادم می‌آید ارکان وجودم می‌لرزد.</span><span lang="AR-SA" style="font-family: Tahoma, sans-serif; "><o:p></o:p></span></font></p>
+
+<p class="MsoNormal" dir="RTL" style="mso-margin-top-alt:auto;mso-margin-bottom-alt:
+auto;text-align:justify;line-height:12.0pt;direction:rtl;unicode-bidi:embed"><font size="2"><span lang="FA" style="font-family: Tahoma, sans-serif; ">&nbsp;</span><span lang="AR-SA" style="font-family: Tahoma, sans-serif; "><o:p></o:p></span></font></p>
+
+<p class="MsoNormal" dir="RTL" style="mso-margin-top-alt:auto;mso-margin-bottom-alt:
+auto;text-align:justify;line-height:12.0pt;direction:rtl;unicode-bidi:embed"><font size="2"><span lang="FA" style="font-family: Tahoma, sans-serif; ">به هر حال مجلس نزدیک دو ساعت طول کشید و
+در این مدت مطالبی رد و بدل شد که به بعض آنها اشاره می‌کنم.</span><span lang="AR-SA" style="font-family: Tahoma, sans-serif; "><o:p></o:p></span></font></p>
+
+<p class="MsoNormal" dir="RTL" style="mso-margin-top-alt:auto;mso-margin-bottom-alt:
+auto;text-align:justify;line-height:12.0pt;direction:rtl;unicode-bidi:embed"><font size="2"><span lang="FA" style="font-family: Tahoma, sans-serif; ">&nbsp;</span><span lang="AR-SA" style="font-family: Tahoma, sans-serif; "><o:p></o:p></span></font></p>
+
+<p class="MsoNormal" dir="RTL" style="mso-margin-top-alt:auto;mso-margin-bottom-alt:
+auto;text-align:justify;line-height:12.0pt;direction:rtl;unicode-bidi:embed"><font size="2"><span lang="FA" style="font-family: Tahoma, sans-serif; ">در رابطه با استخاره سخن به میان آمد،
+سید عرب فرمود:ای سید با تسبیح به چه نحو استخاره می کنی؟</span><span lang="AR-SA" style="font-family: Tahoma, sans-serif; "><o:p></o:p></span></font></p>
+
+<p class="MsoNormal" dir="RTL" style="mso-margin-top-alt:auto;mso-margin-bottom-alt:
+auto;text-align:justify;line-height:12.0pt;direction:rtl;unicode-bidi:embed"><font size="2"><span lang="FA" style="font-family: Tahoma, sans-serif; ">&nbsp;</span><span lang="AR-SA" style="font-family: Tahoma, sans-serif; "><o:p></o:p></span></font></p>
+
+<p class="MsoNormal" dir="RTL" style="mso-margin-top-alt:auto;mso-margin-bottom-alt:
+auto;text-align:justify;line-height:12.0pt;direction:rtl;unicode-bidi:embed"><font size="2"><span lang="FA" style="font-family: Tahoma, sans-serif; ">گفتم: سه مرتبه صلوات می فرستم و سه
+مرتبه می گویم « استخیرالله برحمته خیرة فی عافیه » پس قبضه ای از تسبیح را گرفته
+و می شمارم، اگر دو تا ماند بد است و اگر یکی ماند خوب است.</span><span lang="AR-SA" style="font-family: Tahoma, sans-serif; "><o:p></o:p></span></font></p>
+
+<p class="MsoNormal" dir="RTL" style="mso-margin-top-alt:auto;mso-margin-bottom-alt:
+auto;text-align:justify;line-height:12.0pt;direction:rtl;unicode-bidi:embed"><font size="2"><span lang="FA" style="font-family: Tahoma, sans-serif; ">&nbsp;</span><span lang="AR-SA" style="font-family: Tahoma, sans-serif; "><o:p></o:p></span></font></p>
+
+<p class="MsoNormal" dir="RTL" style="mso-margin-top-alt:auto;mso-margin-bottom-alt:
+auto;text-align:justify;line-height:12.0pt;direction:rtl;unicode-bidi:embed"><font size="2"><span lang="FA" style="font-family: Tahoma, sans-serif; ">فرمود: برای این استخاره، باقی مانده‌ای
+است که به شما نرسیده و آن این است که هرگاه یکی باقی ماند فوراً حکم به خوبی
+استخاره نکنید؛ بلکه توقف کنید و دوباره بر ترک عمل استخاره کنید اگر زوج آمد کشف
+می‌شود که استخاره اول خوب است اما اگر یکی آمد کشف می‌شود که استخاره اول میانه
+است. »</span><span lang="AR-SA" style="font-family: Tahoma, sans-serif; "><o:p></o:p></span></font></p>
+
+<p class="MsoNormal" dir="RTL" style="mso-margin-top-alt:auto;mso-margin-bottom-alt:
+auto;text-align:justify;line-height:12.0pt;direction:rtl;unicode-bidi:embed"><font size="2"><span lang="FA" style="font-family: Tahoma, sans-serif; ">&nbsp;</span><span lang="AR-SA" style="font-family: Tahoma, sans-serif; "><o:p></o:p></span></font></p>
+
+<p class="MsoNormal" dir="RTL" style="mso-margin-top-alt:auto;mso-margin-bottom-alt:
+auto;text-align:justify;line-height:12.0pt;direction:rtl;unicode-bidi:embed"><font size="2"><span lang="FA" style="font-family: Tahoma, sans-serif; ">به حسب قواعد علمیه می‌بایست دلیل بخواهم
+و آقا جواب دهد به جای دقیق و باریکی رسیدیم پس به مجرد این قول تسلیم و منقاد شدم
+و در عین حال متوجه نیستم که این آقا کیست.</span><span lang="AR-SA" style="font-family: Tahoma, sans-serif; "><o:p></o:p></span></font></p>
+
+<p class="MsoNormal" dir="RTL" style="mso-margin-top-alt:auto;mso-margin-bottom-alt:
+auto;text-align:justify;line-height:12.0pt;direction:rtl;unicode-bidi:embed"><font size="2"><span lang="FA" style="font-family: Tahoma, sans-serif; ">&nbsp;</span><span lang="AR-SA" style="font-family: Tahoma, sans-serif; "><o:p></o:p></span></font></p>
+
+<p class="MsoNormal" dir="RTL" style="mso-margin-top-alt:auto;mso-margin-bottom-alt:
+auto;text-align:justify;line-height:12.0pt;direction:rtl;unicode-bidi:embed"><font size="2"><span lang="FA" style="font-family: Tahoma, sans-serif; ">از جمله مطالب در این جلسه، تأکید سید
+عرب بر تلاوت و قرائت این سوره‌ها بعد از نمازهای واجب بود: بعد از نماز صبح سوره
+یس، بعد از نماز ظهر سوره عمّ، بعد از نماز عصر سوره نوح، بعد از مغرب سوره
+الواقعه و بعد از نماز عشاء سوره ملک.</span><span lang="AR-SA" style="font-family: Tahoma, sans-serif; "><o:p></o:p></span></font></p>
+
+<p class="MsoNormal" dir="RTL" style="mso-margin-top-alt:auto;mso-margin-bottom-alt:
+auto;text-align:justify;line-height:12.0pt;direction:rtl;unicode-bidi:embed"><font size="2"><span lang="FA" style="font-family: Tahoma, sans-serif; ">&nbsp;</span><span lang="AR-SA" style="font-family: Tahoma, sans-serif; "><o:p></o:p></span></font></p>
+
+<p class="MsoNormal" dir="RTL" style="mso-margin-top-alt:auto;mso-margin-bottom-alt:
+auto;text-align:justify;line-height:12.0pt;direction:rtl;unicode-bidi:embed"><font size="2"><span lang="FA" style="font-family: Tahoma, sans-serif; ">دیگر اینکه تأکید فرمودند، بر دو رکعت
+نماز بین مغرب و عشاء که در رکعت اول بعد از حمد هر سوره ای خواستی می خوانی و در
+رکعت دوم بعد از حمد سوره واقعه را می خوانی و فرمود: کفایت می کند این از خواندن
+سوره واقعه بعد از نماز مغرب، چنانکه گذشت.</span><span lang="AR-SA" style="font-family: Tahoma, sans-serif; "><o:p></o:p></span></font></p>
+
+<p class="MsoNormal" dir="RTL" style="mso-margin-top-alt:auto;mso-margin-bottom-alt:
+auto;text-align:justify;line-height:12.0pt;direction:rtl;unicode-bidi:embed"><font size="2"><span lang="FA" style="font-family: Tahoma, sans-serif; ">&nbsp;</span><span lang="AR-SA" style="font-family: Tahoma, sans-serif; "><o:p></o:p></span></font></p>
+
+<p class="MsoNormal" dir="RTL" style="mso-margin-top-alt:auto;mso-margin-bottom-alt:
+auto;text-align:justify;line-height:12.0pt;direction:rtl;unicode-bidi:embed"><font size="2"><span lang="FA" style="font-family: Tahoma, sans-serif; ">تأکید فرمود که:بعد از نمازهای پنجگانه
+این دعا را بخوان.</span><span lang="AR-SA" style="font-family: Tahoma, sans-serif; "><o:p></o:p></span></font></p>
+
+<p class="MsoNormal" dir="RTL" style="mso-margin-top-alt:auto;mso-margin-bottom-alt:
+auto;text-align:justify;line-height:12.0pt;direction:rtl;unicode-bidi:embed"><font size="2"><span lang="FA" style="font-family: Tahoma, sans-serif; ">&nbsp;</span><span lang="AR-SA" style="font-family: Tahoma, sans-serif; "><o:p></o:p></span></font></p>
+
+<p class="MsoNormal" dir="RTL" style="mso-margin-top-alt:auto;mso-margin-bottom-alt:
+auto;text-align:justify;line-height:12.0pt;direction:rtl;unicode-bidi:embed"><font size="2"><span lang="FA" style="font-family: Tahoma, sans-serif; ">« اللهم سّرحنی عن الهموم والغموم و وحشة
+الصدر و وسوسة الشیطان برحمتک یا ارحم الراحمین ».</span><span lang="AR-SA" style="font-family: Tahoma, sans-serif; "><o:p></o:p></span></font></p>
+
+<p class="MsoNormal" dir="RTL" style="mso-margin-top-alt:auto;mso-margin-bottom-alt:
+auto;text-align:justify;line-height:12.0pt;direction:rtl;unicode-bidi:embed"><font size="2"><span lang="FA" style="font-family: Tahoma, sans-serif; ">&nbsp;</span><span lang="AR-SA" style="font-family: Tahoma, sans-serif; "><o:p></o:p></span></font></p>
+
+<p class="MsoNormal" dir="RTL" style="mso-margin-top-alt:auto;mso-margin-bottom-alt:
+auto;text-align:justify;line-height:12.0pt;direction:rtl;unicode-bidi:embed"><font size="2"><span lang="FA" style="font-family: Tahoma, sans-serif; ">و دیگر تأکید بر خواندن این دعا بعد از
+ذکر رکوع در نمازهای یومیه خصوصاً رکعت آخر.</span><span lang="AR-SA" style="font-family: Tahoma, sans-serif; "><o:p></o:p></span></font></p>
+
+<p class="MsoNormal" dir="RTL" style="mso-margin-top-alt:auto;mso-margin-bottom-alt:
+auto;text-align:justify;line-height:12.0pt;direction:rtl;unicode-bidi:embed"><font size="2"><span lang="FA" style="font-family: Tahoma, sans-serif; ">&nbsp;</span><span lang="AR-SA" style="font-family: Tahoma, sans-serif; "><o:p></o:p></span></font></p>
+
+<p class="MsoNormal" dir="RTL" style="mso-margin-top-alt:auto;mso-margin-bottom-alt:
+auto;text-align:justify;line-height:12.0pt;direction:rtl;unicode-bidi:embed"><font size="2"><span lang="FA" style="font-family: Tahoma, sans-serif; ">« اللّهم صل علی محمّد و آل محمّد و
+ترحّم علی عجزنا و أغثنا بحقهم. »</span><span lang="AR-SA" style="font-family: Tahoma, sans-serif; "><o:p></o:p></span></font></p>
+
+<p class="MsoNormal" dir="RTL" style="mso-margin-top-alt:auto;mso-margin-bottom-alt:
+auto;text-align:justify;line-height:12.0pt;direction:rtl;unicode-bidi:embed"><font size="2"><span lang="FA" style="font-family: Tahoma, sans-serif; ">&nbsp;</span><span lang="AR-SA" style="font-family: Tahoma, sans-serif; "><o:p></o:p></span></font></p>
+
+<p class="MsoNormal" dir="RTL" style="mso-margin-top-alt:auto;mso-margin-bottom-alt:
+auto;text-align:justify;line-height:12.0pt;direction:rtl;unicode-bidi:embed"><font size="2"><span lang="FA" style="font-family: Tahoma, sans-serif; ">در تعریف و تمجید از کتاب شریف شرایع
+الاسلام مرحوم محقق علامه حلی فرمود:</span><span lang="AR-SA" style="font-family: Tahoma, sans-serif; "><o:p></o:p></span></font></p>
+
+<p class="MsoNormal" dir="RTL" style="mso-margin-top-alt:auto;mso-margin-bottom-alt:
+auto;text-align:justify;line-height:12.0pt;direction:rtl;unicode-bidi:embed"><font size="2"><span lang="FA" style="font-family: Tahoma, sans-serif; ">« تمام آن مطابق با واقع است مگر کمی از
+مسائل آن. »</span><span lang="AR-SA" style="font-family: Tahoma, sans-serif; "><o:p></o:p></span></font></p>
+
+<p class="MsoNormal" dir="RTL" style="mso-margin-top-alt:auto;mso-margin-bottom-alt:
+auto;text-align:justify;line-height:12.0pt;direction:rtl;unicode-bidi:embed"><font size="2"><span lang="FA" style="font-family: Tahoma, sans-serif; ">&nbsp;</span><span lang="AR-SA" style="font-family: Tahoma, sans-serif; "><o:p></o:p></span></font></p>
+
+<p class="MsoNormal" dir="RTL" style="mso-margin-top-alt:auto;mso-margin-bottom-alt:
+auto;text-align:justify;line-height:12.0pt;direction:rtl;unicode-bidi:embed"><font size="2"><span lang="FA" style="font-family: Tahoma, sans-serif; ">تأکید بر خواندن قرآن و هدیه کردن ثواب
+آن، برای شیعیانی که وارثانی ندارند، و یا دارند ولکن یادی از آنها نمی کنند.</span><span lang="AR-SA" style="font-family: Tahoma, sans-serif; "><o:p></o:p></span></font></p>
+
+<p class="MsoNormal" dir="RTL" style="mso-margin-top-alt:auto;mso-margin-bottom-alt:
+auto;text-align:justify;line-height:12.0pt;direction:rtl;unicode-bidi:embed"><font size="2"><span lang="FA" style="font-family: Tahoma, sans-serif; ">&nbsp;</span><span lang="AR-SA" style="font-family: Tahoma, sans-serif; "><o:p></o:p></span></font></p>
+
+<p class="MsoNormal" dir="RTL" style="mso-margin-top-alt:auto;mso-margin-bottom-alt:
+auto;text-align:justify;line-height:12.0pt;direction:rtl;unicode-bidi:embed"><font size="2"><span lang="FA" style="font-family: Tahoma, sans-serif; ">تحت الحنک را از زیر حنک دور دادن و سر
+آن را در عمامه قرار دادن. چنانکه علمای عرب به همین نحو عمل می کنند و فرمود: در
+شرع این چنین رسیده است.</span><span lang="AR-SA" style="font-family: Tahoma, sans-serif; "><o:p></o:p></span></font></p>
+
+<p class="MsoNormal" dir="RTL" style="mso-margin-top-alt:auto;mso-margin-bottom-alt:
+auto;text-align:justify;line-height:12.0pt;direction:rtl;unicode-bidi:embed"><font size="2"><span lang="FA" style="font-family: Tahoma, sans-serif; ">&nbsp;</span><span lang="AR-SA" style="font-family: Tahoma, sans-serif; "><o:p></o:p></span></font></p>
+
+<p class="MsoNormal" dir="RTL" style="mso-margin-top-alt:auto;mso-margin-bottom-alt:
+auto;text-align:justify;line-height:12.0pt;direction:rtl;unicode-bidi:embed"><font size="2"><span lang="FA" style="font-family: Tahoma, sans-serif; ">تأکید بر زیارت سیدالشهداء علیه السلام.</span><span lang="AR-SA" style="font-family: Tahoma, sans-serif; "><o:p></o:p></span></font></p>
+
+<p class="MsoNormal" dir="RTL" style="mso-margin-top-alt:auto;mso-margin-bottom-alt:
+auto;text-align:justify;line-height:12.0pt;direction:rtl;unicode-bidi:embed"><font size="2"><span lang="FA" style="font-family: Tahoma, sans-serif; ">&nbsp;</span><span lang="AR-SA" style="font-family: Tahoma, sans-serif; "><o:p></o:p></span></font></p>
+
+<p class="MsoNormal" dir="RTL" style="mso-margin-top-alt:auto;mso-margin-bottom-alt:
+auto;text-align:justify;line-height:12.0pt;direction:rtl;unicode-bidi:embed"><font size="2"><span lang="FA" style="font-family: Tahoma, sans-serif; ">دعا در حق من و فرمود: « قرار دهد خدا تو
+را از خدمتگزاران شرع. »</span><span lang="AR-SA" style="font-family: Tahoma, sans-serif; "><o:p></o:p></span></font></p>
+
+<p class="MsoNormal" dir="RTL" style="mso-margin-top-alt:auto;mso-margin-bottom-alt:
+auto;text-align:justify;line-height:12.0pt;direction:rtl;unicode-bidi:embed"><font size="2"><span lang="FA" style="font-family: Tahoma, sans-serif; ">&nbsp;</span><span lang="AR-SA" style="font-family: Tahoma, sans-serif; "><o:p></o:p></span></font></p>
+
+<p class="MsoNormal" dir="RTL" style="mso-margin-top-alt:auto;mso-margin-bottom-alt:
+auto;text-align:justify;line-height:12.0pt;direction:rtl;unicode-bidi:embed"><font size="2"><span lang="FA" style="font-family: Tahoma, sans-serif; ">پرسیدم: « نمی دانم آیا عاقبت کارم خیر
+است و آیا من نزد صاحب شرع مقدس روسفیدم؟ »</span><span lang="AR-SA" style="font-family: Tahoma, sans-serif; "><o:p></o:p></span></font></p>
+
+<p class="MsoNormal" dir="RTL" style="mso-margin-top-alt:auto;mso-margin-bottom-alt:
+auto;text-align:justify;line-height:12.0pt;direction:rtl;unicode-bidi:embed"><font size="2"><span lang="FA" style="font-family: Tahoma, sans-serif; ">&nbsp;</span><span lang="AR-SA" style="font-family: Tahoma, sans-serif; "><o:p></o:p></span></font></p>
+
+<p class="MsoNormal" dir="RTL" style="mso-margin-top-alt:auto;mso-margin-bottom-alt:
+auto;text-align:justify;line-height:12.0pt;direction:rtl;unicode-bidi:embed"><font size="2"><span lang="FA" style="font-family: Tahoma, sans-serif; ">فرمود: « عاقبت تو خیر و سعیت مشکور و
+روسفیدی ».</span><span lang="AR-SA" style="font-family: Tahoma, sans-serif; "><o:p></o:p></span></font></p>
+
+<p class="MsoNormal" dir="RTL" style="mso-margin-top-alt:auto;mso-margin-bottom-alt:
+auto;text-align:justify;line-height:12.0pt;direction:rtl;unicode-bidi:embed"><font size="2"><span lang="FA" style="font-family: Tahoma, sans-serif; ">&nbsp;</span><span lang="AR-SA" style="font-family: Tahoma, sans-serif; "><o:p></o:p></span></font></p>
+
+<p class="MsoNormal" dir="RTL" style="mso-margin-top-alt:auto;mso-margin-bottom-alt:
+auto;text-align:justify;line-height:12.0pt;direction:rtl;unicode-bidi:embed"><font size="2"><span lang="FA" style="font-family: Tahoma, sans-serif; ">گفتم: « نمی دانم آیا پدر و مادر و
+اساتید و ذوی الحقوق از من راضی هستند یا نه؟»</span><span lang="AR-SA" style="font-family: Tahoma, sans-serif; "><o:p></o:p></span></font></p>
+
+<p class="MsoNormal" dir="RTL" style="mso-margin-top-alt:auto;mso-margin-bottom-alt:
+auto;text-align:justify;line-height:12.0pt;direction:rtl;unicode-bidi:embed"><font size="2"><span lang="FA" style="font-family: Tahoma, sans-serif; ">&nbsp;</span><span lang="AR-SA" style="font-family: Tahoma, sans-serif; "><o:p></o:p></span></font></p>
+
+<p class="MsoNormal" dir="RTL" style="mso-margin-top-alt:auto;mso-margin-bottom-alt:
+auto;text-align:justify;line-height:12.0pt;direction:rtl;unicode-bidi:embed"><font size="2"><span lang="FA" style="font-family: Tahoma, sans-serif; ">فرمود: « تمام آنها از تو راضی اند و
+درباره ات دعا می کنند ».</span><span lang="AR-SA" style="font-family: Tahoma, sans-serif; "><o:p></o:p></span></font></p>
+
+<p class="MsoNormal" dir="RTL" style="mso-margin-top-alt:auto;mso-margin-bottom-alt:
+auto;text-align:justify;line-height:12.0pt;direction:rtl;unicode-bidi:embed"><font size="2"><span lang="FA" style="font-family: Tahoma, sans-serif; ">&nbsp;</span><span lang="AR-SA" style="font-family: Tahoma, sans-serif; "><o:p></o:p></span></font></p>
+
+<p class="MsoNormal" dir="RTL" style="mso-margin-top-alt:auto;mso-margin-bottom-alt:
+auto;text-align:justify;line-height:12.0pt;direction:rtl;unicode-bidi:embed"><font size="2"><span lang="FA" style="font-family: Tahoma, sans-serif; ">استدعای دعا کردم برای خودم که موفق باشم
+برای تالیف و تصنیف.</span><span lang="AR-SA" style="font-family: Tahoma, sans-serif; "><o:p></o:p></span></font></p>
+
+<p class="MsoNormal" dir="RTL" style="mso-margin-top-alt:auto;mso-margin-bottom-alt:
+auto;text-align:justify;line-height:12.0pt;direction:rtl;unicode-bidi:embed"><font size="2"><span lang="FA" style="font-family: Tahoma, sans-serif; ">&nbsp;</span><span lang="AR-SA" style="font-family: Tahoma, sans-serif; "><o:p></o:p></span></font></p>
+
+<p class="MsoNormal" dir="RTL" style="mso-margin-top-alt:auto;mso-margin-bottom-alt:
+auto;text-align:justify;line-height:12.0pt;direction:rtl;unicode-bidi:embed"><font size="2"><span lang="FA" style="font-family: Tahoma, sans-serif; ">دعا فرمودند.</span><span lang="AR-SA" style="font-family: Tahoma, sans-serif; "><o:p></o:p></span></font></p>
+
+<p class="MsoNormal" dir="RTL" style="mso-margin-top-alt:auto;mso-margin-bottom-alt:
+auto;text-align:justify;line-height:12.0pt;direction:rtl;unicode-bidi:embed"><font size="2"><span lang="FA" style="font-family: Tahoma, sans-serif; ">&nbsp;</span><span lang="AR-SA" style="font-family: Tahoma, sans-serif; "><o:p></o:p></span></font></p>
+
+<p class="MsoNormal" dir="RTL" style="mso-margin-top-alt:auto;mso-margin-bottom-alt:
+auto;text-align:justify;line-height:12.0pt;direction:rtl;unicode-bidi:embed"><font size="2"><span lang="FA" style="font-family: Tahoma, sans-serif; ">در اینجا مطالب دیگری است که مجال تفصیل
+و بیان آن نیست.</span><span lang="AR-SA" style="font-family: Tahoma, sans-serif; "><o:p></o:p></span></font></p>
+
+<p class="MsoNormal" dir="RTL" style="mso-margin-top-alt:auto;mso-margin-bottom-alt:
+auto;text-align:justify;line-height:12.0pt;direction:rtl;unicode-bidi:embed"><font size="2"><span lang="FA" style="font-family: Tahoma, sans-serif; ">&nbsp;</span><span lang="AR-SA" style="font-family: Tahoma, sans-serif; "><o:p></o:p></span></font></p>
+
+<p class="MsoNormal" dir="RTL" style="mso-margin-top-alt:auto;mso-margin-bottom-alt:
+auto;text-align:justify;line-height:12.0pt;direction:rtl;unicode-bidi:embed"><font size="2"><span lang="FA" style="font-family: Tahoma, sans-serif; ">پس خواستم که از مسجد بیرون روم به خاطر
+حاجتی، آمدم نزد حوض که در وسط راه قبل از خارج شدن از مسجد قرار دارد.&nbsp;</span><span lang="AR-SA" style="font-family: Tahoma, sans-serif; "><o:p></o:p></span></font></p>
+
+<p class="MsoNormal" dir="RTL" style="mso-margin-top-alt:auto;mso-margin-bottom-alt:
+auto;text-align:justify;line-height:12.0pt;direction:rtl;unicode-bidi:embed"><font size="2"><span lang="FA" style="font-family: Tahoma, sans-serif; ">به ذهنم رسید چه شبی بود و این سید عرب
+کیست که این همه بافضیلت است؟ شاید همان مقصود و معشوقم باشد تا به ذهنم این معنی
+خطور کرد، مضطرب برگشتم و آن آقا را ندیدم و کسی هم در مسجد نبود.</span><span lang="AR-SA" style="font-family: Tahoma, sans-serif; "><o:p></o:p></span></font></p>
+
+<p class="MsoNormal" dir="RTL" style="mso-margin-top-alt:auto;mso-margin-bottom-alt:
+auto;text-align:justify;line-height:12.0pt;direction:rtl;unicode-bidi:embed"><font size="2"><span lang="FA" style="font-family: Tahoma, sans-serif; ">یقین پیدا کردم که آقا را زیارت کردم و
+غافل بودم، مشغول گریه شدم و همچون دیوانه اطراف مسجد گردش می کردم، تا صبح شد چون
+عاشقی که بعد از وصال مبتلا به هجران شود.</span><span lang="AR-SA" style="font-family: Tahoma, sans-serif; "><o:p></o:p></span></font></p>
+
+<p class="MsoNormal" dir="RTL" style="mso-margin-top-alt:auto;mso-margin-bottom-alt:
+auto;text-align:justify;line-height:12.0pt;direction:rtl;unicode-bidi:embed"><font size="2"><span lang="FA" style="font-family: Tahoma, sans-serif; ">این بود اجمالی از تفصیل که هر وقت آن شب
+یادم می آید، بهت زده می شوم.</span><span lang="AR-SA" style="font-family: Tahoma, sans-serif; "><o:p></o:p></span></font></p>
+
+<p class="MsoNormal" dir="RTL" style="mso-margin-top-alt:auto;mso-margin-bottom-alt:
+auto;text-align:justify;line-height:12.0pt;direction:rtl;unicode-bidi:embed"><font size="2"><span lang="FA" style="font-family: Tahoma, sans-serif; ">&nbsp;</span><span lang="AR-SA" style="font-family: Tahoma, sans-serif; "><o:p></o:p></span></font></p>
+
+<p class="MsoNormal" dir="RTL" style="mso-margin-top-alt:auto;mso-margin-bottom-alt:
+auto;text-align:justify;line-height:12.0pt;direction:rtl;unicode-bidi:embed"><span lang="FA" style="font-family: Tahoma, sans-serif; "><font size="2">منبع : کتاب شیفتگان حضرت مهدی(عج)-وب
+سایت امام حاضر(عج)</font></span><span lang="AR-SA" style="font-size:8.5pt;font-family:
+&quot;Tahoma&quot;,&quot;sans-serif&quot;;mso-fareast-font-family:&quot;Times New Roman&quot;"><o:p></o:p></span></p>
+
+
+				<br><br><b></b>
+				<font style="font-size:8pt;"><br>
+			طبقه بندی: <a href="category/2.html">
+			مقالات</a>،&nbsp;				<br>
+						برچسب ها:
+													<a href="tag/ماجرای&#32;شام&#32;خوردن&#32;آیت&#32;الله&#32;مرعشی&#32;نجفی&#32;با&#32;امام&#32;زمان(عج).html" >ماجرای شام خوردن آیت الله مرعشی نجفی با امام زمان(عج)</a>، 
+													<a href="tag/آیت&#32;الله&#32;مرعشی.html" >آیت الله مرعشی</a>، 
+																</font>
+
+</div>
+<div class=bpost><div class=nzs><script>setCommentCnt(1024)</script></div><div class=nz><a target="_self" href="javascript:newComment(1024)" >
+	نظرات شما</a></div></div>
+
+<script>mihanblogPostLike('1024','like')</script>
+
+	
+		
+</div>
+</div>
+
+</div>
+
+
+</div></div>
+</div>
+<div class=footer>
+<div class=ft>
+<a href="../index.html">صفحه اول</a>
+<a href="list.html">آرشیو مطالب</a>
+<a href="mailto:mresmaili@yahoo.com">پست الكترونیك</a>
+
+<br>
+تمام حقوق این وبلاگ و مطالب آن متعلق به عطر قرآن می باشد.</div>
+</div>
+</div>
+
+<div style="display:none">
+<a href="http://www.blogskin.ir">
+قالب وبلاگ</a><a href="http://www.bloghelp.ir">
+مرجع راهنمای وبلاگ نویسان</a></div>
+<script type="text/javascript">
+    tabview_initialize('TabView');
+</script>
+</body>
+</html>
+
+<!-- Begin WebGozar.com Counter code -->
+<script type="text/javascript" language="javascript" src="http://www.webgozar.ir/c.aspx?Code=2257348&amp;t=counter" ></script>
+<noscript><a href="http://www.webgozar.com/counter/stats.aspx?code=2257348" target="_blank">&#1570;&#1605;&#1575;&#1585;</a></noscript>
+<!-- End WebGozar.com Counter code -->
+
+<a target='_blank' href='http://www.iranskin.com/online'><span style='text-decoration: none'>Online</span></a>
+<script type='text/JavaScript'>
+var oulb= 'http://www.iranskin.com/online/';
+function CheckBrowser(){
+if(navigator.appName == "Microsoft Internet Explorer")	{
+document.write('<scrip'+'t src="'+oulb+'js/jquery.min.js"></s'+'cript><scrip'+'t src="'+oulb+'js/js.php?c=1&t=3"></s'+'cript>');return true;}document.write('<scrip'+'t src="'+oulb+'cod.php?c=1&t=3"></s'+'cript>');
+return false; }</script>
+<script type='text/JavaScript'>CheckBrowser()</script>
+<a target='_blank' href='http://www.iranskin.com'><span style='text-decoration: none'>User</span></a><script>
+//    setTimeout(function () {
+//        GetMihanBlogShowAds();
+//    }, 1000);
+</script>
+<!--NEW SERVER-->
+
+<!--SabaVision Ads Handler--><!--<script type="text/javascript">(function (d) {var url =   location.protocol+'//api.sabavision.com/pox/poxjs.js';d.write('<script type="text/javascript" src="' + url + '" async></scri' + 'pt>');})(document);</script>-->
+
+
+<script type="text/javascript">
+
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-153829-9']);
+    _gaq.push(['_setDomainName', 'kanoonequran.mihanblog.com']);
+    _gaq.push(['_trackPageview']);
+
+    (function() {
+        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+
+</script>
+
+
+<div id='mediaad-Kvcm'></div>
+<meta name="sabavision_zone" content="2500-Z499" />
+<center>
+    <div style="background-color:white;width:90%;padding:20px;margin-top:50px;margin-bottom:50px;">
+        <a href="https://www.cloob.com">شبکه اجتماعی فارسی کلوب</a> | <a href="https://www.targetedwebtraffic.com" target="_blank">Buy Website Traffic</a> | <a href="https://www.seo25.com" target="_blank">Buy Targeted Website Traffic</a>
+    </div>
+</center>

@@ -1,0 +1,925 @@
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" /><link rel="EditURI" type="application/rsd+xml" title="RSD" href="../../../xmlrpc@rsd" />
+<script type="text/javascript" src="../../../../static.mihanblog.com/public/scripts/run/g.other.v3.js"></script>
+<script>
+
+	function c_$(id){
+        return document.getElementById(id);
+    }
+    
+			//if (parent.frames.length) top.location.href= document.location;
+		
+	setTodayDate = function(){
+		document.write('شنبه 22 آذر 1399');
+		/*735558*/	}
+
+</script>
+
+
+
+        <script type="text/javascript">
+            (function(){
+            var now = new Date();
+            var head = document.getElementsByTagName('head')[0];
+            var script = document.createElement('script');
+            script.async = true;
+            var script_address = 'https://cdn.yektanet.com/js/mihanblog.com/native-mihanblog.com-6531.js';
+            script.src = script_address + '?v=' + now.getFullYear().toString() + '0' + now.getMonth() + '0' + now.getDate() + '0' + now.getHours();
+            head.appendChild(script);
+            })();
+        </script>
+
+        <!--<script type="text/javascript">
+            var head = document.getElementsByTagName("head")[0];
+            var script = document.createElement("script");
+            script.type = "text/javascript";
+            script.async=1;
+            script.src = "https://s1.mediaad.org/serve/mihanblog.com/loader.js" ;
+            head.appendChild(script);
+        </script>-->
+        
+        <script>
+            var sabaVisionWebsiteID = "9bab9dac-041d-4bdb-b39a-1ed789f65eed"; var sabaVisionWebsitePage = "ALL"
+        </script>
+        <link rel="stylesheet" href="https://plus.sabavision.com/dox/dox.min.css">
+        <script src="https://plus.sabavision.com/dox/dox.min.js"></script>
+        
+        <script>
+	try{
+		var commentCnt = new Array();
+		commentCnt[13969]='0';commentCnt[13973]='0';commentCnt[13974]='0';commentCnt[13975]='0';commentCnt[13976]='0';commentCnt[13977]='0';commentCnt[13978]='0';	} catch(e){}
+	
+	newComment = function(post_id){
+		try{
+			window.open('/post/comment/'+post_id,'comment','status=yes,scrollbars=yes,toolbar=no,menubar=no,location=no ,width=480px,height=540px');
+		} catch(e){}
+	}
+	setCommentCnt = function(post_id){
+		try{
+			if(commentCnt[post_id]){
+				document.write(commentCnt[post_id]);
+			} else {
+				document.write(0);
+			}
+		} catch(e){}
+	}
+</script><script>
+
+
+	mihanblogUpdateLike = function(postid,type){
+		var url = '/post/like/'+postid+'/'+type;
+		mihanblogGetAjax(url,function(){});
+	};
+	try{
+        mihanblogGetAjax = function (url,callback) {
+    		var req;
+			if (window.XMLHttpRequest)
+            {
+                // code for IE7+, Firefox, Chrome, Opera, Safari
+			  	req = new XMLHttpRequest();
+			}else{	// code for IE6, IE5
+			  	req = new ActiveXObject("Microsoft.XMLHTTP");
+		  	}
+		    req.open("GET", url, 1);
+		    req.onreadystatechange = function () {
+		        if (req.readyState == 4) {
+		            if (req.status == 200) {
+		            	var response = eval(req.responseText);
+		            	callback();
+		            }else{
+	            		return ;
+		            }
+		        }else{
+					return ;
+		        }
+		    }
+		    req.send(null);
+		}
+	}catch(e){}
+
+	try{
+		var mihanblogLikeArrCnt = new Array();
+		var mihanblogDisLikeArrCnt = new Array();
+
+		mihanblogLikeArrCnt[13969]='0';
+mihanblogDisLikeArrCnt[13969]='0';
+mihanblogLikeArrCnt[13973]='0';
+mihanblogDisLikeArrCnt[13973]='0';
+mihanblogLikeArrCnt[13974]='0';
+mihanblogDisLikeArrCnt[13974]='0';
+mihanblogLikeArrCnt[13975]='0';
+mihanblogDisLikeArrCnt[13975]='0';
+	} catch(e){}
+
+
+
+    mihanblogPostLike = function(post_id){
+
+        mihanblogLikeCnt = (mihanblogLikeArrCnt[post_id]? mihanblogLikeArrCnt[post_id] : 0);
+        mihanblogDisLikeCnt = (mihanblogDisLikeArrCnt[post_id]? mihanblogDisLikeArrCnt[post_id] : 0);
+        mihanblogLikeCnt = parseInt(mihanblogLikeCnt);
+        mihanblogDisLikeCnt = parseInt(mihanblogDisLikeCnt);
+
+        document.write(
+                '<div class="mihanblog_like_wrapper ">'+
+                       '<div id="dislikeBar_'+post_id+'" onclick="mihanblogUpdateLike('+post_id+',\'dislike\')"   class="mihanblog_like_bar mihanblog_like_dislikeBar mihanblog_like_show_help ">-<div class="mihanblog_like_Cnt" id="disLikeCnt_'+post_id+'">'+mihanblogDisLikeCnt+'</div>'+
+                            '<span  class="mihanblog_like_v2_help mihanblog_like_v2_help_dislike clearfix"> '+
+                                '<span class="mihanblog_like_help_arrow mihanblog_like_help_arrow_dislike clearfix"></span>'+
+                                '<span class="mihanblog_like_help_text">نمی پسندم</span>'+
+                            '</span>'+
+                        '</div>'+
+                       '<div id="Like_'+post_id+'" class="mihanblog_like_border"></div>'+
+                       '<div id="likeBar_'+post_id+'" onclick="mihanblogUpdateLike('+post_id+',\'like\')"  class="mihanblog_like_bar mihanblog_like_likeBar mihanblog_like_show_help" >+<div class="mihanblog_like_Cnt" id="likeCnt_'+post_id+'">'+mihanblogLikeCnt+'</div>'+
+                            '<span  class="mihanblog_like_v2_help mihanblog_like_v2_help_like clearfix"> '+
+                                '<span class="mihanblog_like_help_arrow mihanblog_like_help_arrow_like clearfix"></span>'+
+                                '<span class="mihanblog_like_help_text">می پسندم</span>'+
+                            '</span>'+
+                        '</div>'+
+
+                '</div>'
+        );
+
+
+
+        mihanblogDisplayeLike(post_id);
+    }
+
+
+    mihanblogDisplayeLike = function(post_id){
+
+        mihanblogLikeCnt = (mihanblogLikeArrCnt[post_id]? mihanblogLikeArrCnt[post_id] : 0);
+        mihanblogDisLikeCnt = (mihanblogDisLikeArrCnt[post_id]? mihanblogDisLikeArrCnt[post_id] : 0);
+        mihanblogLikeCnt = parseInt(mihanblogLikeCnt);
+        mihanblogDisLikeCnt = parseInt(mihanblogDisLikeCnt);
+
+
+
+        sum = mihanblogLikeCnt - mihanblogDisLikeCnt;
+        backgroundBorder =  document.getElementById('Like_'+post_id);
+        var likeObj = document.getElementById('likeCnt_'+post_id);
+        var disLikeObj = document.getElementById('disLikeCnt_'+post_id);
+
+
+
+
+
+        likeObj.innerHTML =  mihanblogLikeCnt ;
+        disLikeObj.innerHTML =  mihanblogDisLikeCnt;
+
+        if(sum == 0){
+            backgroundBorder.style.backgroundImage = "url('/public/public/images/icons/like_likedislike.png')";
+            document.getElementById('dislikeBar_'+post_id).style.width = '19px';
+            document.getElementById('likeBar_'+post_id).style.width = '19px';
+        }else{
+             if(sum > 0){
+                 backgroundBorder.style.backgroundImage = "url('/public/public/images/icons/like_like.png')";
+                 document.getElementById('likeBar_'+post_id).style.width = '23px';
+                 document.getElementById('dislikeBar_'+post_id).style.width = '15px';
+             }else{
+                 backgroundBorder.style.backgroundImage = "url('/public/public/images/icons/like_dislike.png')";
+                 document.getElementById('likeBar_'+post_id).style.width = '15px';
+                 document.getElementById('dislikeBar_'+post_id).style.width = '23px';
+             }
+        }
+
+    }
+
+
+
+
+</script>
+
+<style type="text/css">
+
+
+    .clearfix {display: inline-block;}
+    .clearfix:after {
+        content: ".";
+        display: block;
+        height: 0;
+        clear: both;
+        visibility: hidden;
+    }
+
+    .mihanblog_like_wrapper {
+        color: #ffffff;
+        direction: ltr;
+        position: relative;
+    }
+    .mihanblog_like_wrapper span{
+        display: none;
+    }
+    .mihanblog_like_bar {
+        color: #FFFFFF;
+        cursor: pointer;
+        float: left;
+        font-size: 10px;
+        height: 20px;
+        line-height: 19px;
+        margin: 5px 0;
+    }
+    .mihanblog_like_likeBar {
+        background-color: #88B131;
+        padding-right: 5px;
+        border-top-right-radius: 2px;
+        border-bottom-right-radius: 2px;
+        text-align: right;
+    }
+    .mihanblog_like_likeBar:hover{
+        background-color: #699017;
+    }
+    .mihanblog_like_border {
+        background-color: #666666;
+        border: 1px solid #666666;
+        float: left;
+        font-size: 12px;
+        height: 20px;
+        margin-top: 2px;
+        width: 25px;
+        padding: 3px 5px 2px 0;
+        text-align: center;
+        border-radius: 2px;
+        color: #ffffff;
+        direction: ltr;
+        background-repeat: no-repeat ;
+        background-position: 4px center;
+    }
+    .mihanblog_like_border img {
+        margin-left: 2px;
+        margin-top: 2px;
+        width: 22px;
+    }
+    .mihanblog_like_dislikeBar {
+        background-color: #FF6F31;
+        padding-left: 5px;
+        border-top-left-radius: 2px;
+        border-bottom-left-radius: 2px;
+        text-align:left ;
+    }
+    .mihanblog_like_dislikeBar:hover{
+        background-color: #D54B10;
+    }
+
+
+
+    .mihanblog_like_show_help {
+        position: relative;
+    }
+    .mihanblog_like_show_help:hover span {
+        display: block;
+    }
+    .mihanblog_like_help_text {
+        background-color: white;
+        border: 1px solid #555555;
+        border-radius: 3px 3px 3px 3px;
+        color: #303030;
+        float: left;
+        font-size: 11px;
+        font-weight: normal;
+        padding: 5px 10px;
+    }
+
+    .mihanblog_like_help_arrow_dislike {
+        background: url("http://khoshnevissi.mihanblog.com/public/public/images/icons/like_hover_top.png") no-repeat scroll 16px 0 transparent;
+        left: 0;
+        top: -4px;
+    }
+
+    .mihanblog_like_help_arrow_like {
+        background: url("http://khoshnevissi.mihanblog.com/public/public/images/icons/like_hover_top _2.png") no-repeat scroll 16px 0 transparent;
+        left: -10px;
+        top: 29px;
+    }
+
+    .mihanblog_like_help_arrow{
+        height: 6px;
+        position: absolute;
+        width: 100px;
+
+    }
+
+    .mihanblog_like_v2_help_dislike {
+        left: -15px;
+        top: 24px;
+    }
+    .mihanblog_like_v2_help_like {
+        left: 0;
+        top: -35px;
+
+    }
+    .mihanblog_like_v2_help{
+        display: none;
+        position: absolute;
+        white-space: nowrap;
+        z-index: 1;
+    }
+
+    .mihanblog_like_Cnt{
+        display: inline;
+        color: #ffffff;
+    }
+
+</style><script>
+
+	statInfo = new Array();
+	setStatVar = function(index,value){
+		statInfo[index] = value;
+	}
+	getStatVar = function(index){
+		if(statInfo[index]) document.write(statInfo[index]);
+	}
+	
+	setStatVar('total_post','11620');
+	setStatVar('total_author','0');
+	setStatVar('modify_date','جمعه 21 آذر 1399');
+	
+	setStatVar('today_view','114');
+	setStatVar('yesterday_view','665');
+	
+	setStatVar('this_month_view','4409');
+	setStatVar('last_month_view','9264');
+
+	setStatVar('total_view','1147175');
+	setStatVar('last_view_date','شنبه 22 آذر 1399 (13:29)');
+
+
+
+    
+    function setStatFromClient()
+    {
+        var url = 'http://khoshnevissi.mihanblog.com/statupdate/?data[refereruri]=http://khoshnevissi.mihanblog.com/&data[postid]=&data[requesturi]=/post/archive/1398/12&data[sdate]=1607767647&data[hash]=192cd89cf2bd033157cffd66ddfa86f9&data[resolution]='+screen.width+' X '+screen.height;
+
+//        alert(url);
+//        var newjs = document.createElement("SCRIPT");
+//        newjs.type = 'text/javascript';
+//        newjs.src = url;
+//
+//        var newdiv = document.createElement("DIV");
+//        newdiv.setAttribute("style","display:none");
+
+        document.write(unescape('%3Cscript src="'+url+'" type="text/javascript"%3E%3C/script%3E'));
+//        newdiv.appendChild (newjs);
+//        document.write(newjs);
+//        document.write(appendChild (newdiv);
+
+    };
+    setStatFromClient();
+        
+</script><script>
+	messageForm = function(post_id){
+		try{
+			window.open('/message','message','status=yes,scrollbars=yes,toolbar=no,menubar=no,location=no ,width=480px,height=550px');
+		} catch(e){}
+	}
+</script><script>
+	linkdailyForm = function(){
+		try{
+			window.open('/linkdaily/new','linkdaily','status=yes,scrollbars=yes,toolbar=no,menubar=no,location=no ,width=500px,height=460px');
+		} catch(e){}
+	}
+</script><script>
+
+var MihanblogShopAdsArray = new Array();
+
+function GetMihanBlogShowAds(){
+	if(MihanblogShopAdsArray.length){
+		var adsTarget = 'MihanblogShopAds';
+		var containerWidth = document.getElementById(adsTarget).offsetWidth;
+		if(containerWidth>=200){
+			var adsCnt = parseInt(containerWidth / 200) ;
+			if(adsCnt>MihanblogShopAdsArray.length){
+				adsCnt = MihanblogShopAdsArray.length ; 
+			}
+//			var OneAdsWidth = parseInt(containerWidth / adsCnt) ;
+			var OneAdsWidth = containerWidth / adsCnt ;
+			if(OneAdsWidth>400){
+				OneAdsWidth = 400 ;
+			}
+			var OutHtml = '';
+			var img = '';
+			var link = '';
+			var title = '';
+			var description = '';
+			var imgWidth = 70;
+			if(OneAdsWidth>230){
+				imgWidth = 80;
+			}
+			if(OneAdsWidth>300){
+				imgWidth = 90;
+			}
+			for(adsOne=0;adsOne<adsCnt;adsOne++){
+				
+				img = MihanblogShopAdsArray[adsOne]['img'];
+				link = MihanblogShopAdsArray[adsOne]['link'];
+				title = MihanblogShopAdsArray[adsOne]['title'];
+				description = MihanblogShopAdsArray[adsOne]['description'];
+				
+				OutHtml += '<td style="background-color:#FFF;width: '+OneAdsWidth+'px;border:1px solid #f00;margin:0px 0px;font-size:11px;font-family:tahoma;padding:2px;margin:0px 0px;font-size:11px;border: 1px solid BurlyWood; padding: 1px; height: '+(imgWidth+25)+'px;">';
+
+				OutHtml += '	<a href="'+link+'.html" target="_blank" style="text-decoration:none">';
+
+				OutHtml += '			<div style="width: '+(OneAdsWidth-16)+'px;cursor:pointer;font-size:12px;padding: 4px 1px 4px 7px; white-space: nowrap; text-align: center; font-weight: bold; color: blue;white-space:nowrap;overflow:hidden">';
+				OutHtml += 					title;
+				OutHtml += '			</div>';
+				OutHtml += '			<div style="cursor:pointer;padding: 1px; display: block; float: right; width: '+imgWidth+'px;">';
+				OutHtml += '				<img src="'+img+'.html" style="border:0px;padding:0px;margin:0px;width:'+imgWidth+'px;height:'+imgWidth+'px;">';
+				OutHtml += '			</div>';
+				OutHtml += '			<div style="padding: 1px; display: block; float: right; width: '+(OneAdsWidth-13-imgWidth)+'px; text-align: right;overflow:hidden">';
+				OutHtml += '				<div style="overflow:hidden;cursor:pointer;padding: 2px 3px; line-height: 17px; height: '+(imgWidth-3)+'px; text-align: justify;color:#000;direction:rtl">';
+				OutHtml += 						description;
+				OutHtml += '				</div>';
+				OutHtml += '			</div>';
+
+				OutHtml += '	</a>';
+
+				OutHtml += '</td>';
+			}
+			
+			var Out = '<table align="center" cellpadding="0" cellspacing="2" style="width:'+(OneAdsWidth*adsCnt)+'px;"><tr>'+OutHtml+'</tr></table>'; 
+			
+			Out = '<div style="text-align:center;padding:0px;margin:3px auto;">'+Out+'</div>'; 
+			
+			document.getElementById(adsTarget).style.height = (imgWidth+35)+'px' ;
+			document.getElementById(adsTarget).innerHTML = Out ;
+		}
+	}
+}
+</script>
+    <style>
+        @font-face {
+            font-family: 'Mihan-Iransans';
+            src: url('http://khoshnevissi.mihanblog.com/public/public/fonts/Iransans.eot');
+            src: url('http://khoshnevissi.mihanblog.com/public/public/fonts/Iransans.eot?') format('embedded-opentype'),
+            url('http://khoshnevissi.mihanblog.com/public/public/fonts/Iransans.woff2') format('woff2'),
+            url('http://khoshnevissi.mihanblog.com/public/public/fonts/Iransans.woff') format('woff'),
+            url('http://khoshnevissi.mihanblog.com/public/public/fonts/Iransans.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+        @font-face {
+            font-family: 'Mihan-IransansBold';
+            src: url('http://khoshnevissi.mihanblog.com/public/public/fonts/Iransans-Black.eot');
+            src: url('http://khoshnevissi.mihanblog.com/public/public/fonts/Iransans-Black.eot?') format('embedded-opentype'),
+            url('http://khoshnevissi.mihanblog.com/public/public/fonts/Iransans-Black.woff2') format('woff2'),
+            url('http://khoshnevissi.mihanblog.com/public/public/fonts/Iransans-Black.woff') format('woff'),
+            url('http://khoshnevissi.mihanblog.com/public/public/fonts/Iransans-Black.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+        @font-face {
+            font-family: 'Mihan-IransansLight';
+            src: url('http://khoshnevissi.mihanblog.com/public/public/fonts/Iransans-UltraLight.eot');
+            src: url('http://khoshnevissi.mihanblog.com/public/public/fonts/Iransans-UltraLight.eot?') format('embedded-opentype'),
+            url('http://khoshnevissi.mihanblog.com/public/public/fonts/Iransans-UltraLight.woff2') format('woff2'),
+            url('http://khoshnevissi.mihanblog.com/public/public/fonts/Iransans-UltraLight.woff') format('woff'),
+            url('http://khoshnevissi.mihanblog.com/public/public/fonts/Iransans-UltraLight.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+        @font-face {
+            font-family: 'Mihan-Nassim';
+            src: url('http://khoshnevissi.mihanblog.com/public/public/fonts/Nassim.eot');
+            src: url('http://khoshnevissi.mihanblog.com/public/public/fonts/Nassim.eot?') format('embedded-opentype'),
+            url('http://khoshnevissi.mihanblog.com/public/public/fonts/Nassim.woff2') format('woff2'),
+            url('http://khoshnevissi.mihanblog.com/public/public/fonts/Nassim.woff') format('woff'),
+            url('http://khoshnevissi.mihanblog.com/public/public/fonts/Nassim.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+        @font-face {
+            font-family: 'Mihan-Koodak';
+            src: url('http://khoshnevissi.mihanblog.com/public/public/fonts/Koodak.eot');
+            src: url('http://khoshnevissi.mihanblog.com/public/public/fonts/Koodak.eot?') format('embedded-opentype'),
+            url('http://khoshnevissi.mihanblog.com/public/public/fonts/Koodak.woff2') format('woff2'),
+            url('http://khoshnevissi.mihanblog.com/public/public/fonts/Koodak.woff') format('woff'),
+            url('http://khoshnevissi.mihanblog.com/public/public/fonts/Koodak.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+        @font-face {
+            font-family: 'Mihan-Yekan';
+            src: url('http://khoshnevissi.mihanblog.com/public/public/fonts/Yekan.eot');
+            src: url('http://khoshnevissi.mihanblog.com/public/public/fonts/Yekan.eot?') format('embedded-opentype'),
+            url('http://khoshnevissi.mihanblog.com/public/public/fonts/Yekan.woff2') format('woff2'),
+            url('http://khoshnevissi.mihanblog.com/public/public/fonts/Yekan.woff') format('woff'),
+            url('http://khoshnevissi.mihanblog.com/public/public/fonts/Yekan.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+        @font-face {
+            font-family: 'FontAwesome';
+            src: url('http://khoshnevissi.mihanblog.com/public/public/fonts/fontawesome_webfont.eot');
+            src: url('http://khoshnevissi.mihanblog.com/public/public/fonts/fontawesome_webfont.eot?') format('embedded-opentype'),
+            url('http://khoshnevissi.mihanblog.com/public/public/fonts/fontawesome_webfont.woff2') format('woff2'),
+            url('http://khoshnevissi.mihanblog.com/public/public/fonts/fontawesome_webfont.woff') format('woff'),
+            url('http://khoshnevissi.mihanblog.com/public/public/fonts/fontawesome_webfont.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+
+
+        
+
+        /* Smartphones (portrait and landscape) ----------- */
+
+        /*
+        @media only screen and (max-width : 480px) and (min-width : 320px) {
+            .sabaClick_advert__wrapper{
+                display:block;
+            }
+            .sabaClick_advert__inner{
+                max-width: 90%;
+                margin: 0 5%;
+            }
+        }
+        */
+
+    </style>
+
+
+
+
+
+
+<html>
+<head>
+<title>خوشنویسی -هنر-حیدرامیرپور</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta name="language" content="Farsi">
+<meta name="geo.region" CONTENT="IR" />
+<meta name="googlebot" content="INDEX, follow" />
+<meta name="robots" content="index, follow">
+<meta name="description" content="خوشنویسی -هنر-حیدرامیرپور - مطالب  اسفند 1398 - خوشنویسی نستعلیق -هنر اصیل ایرانی - خوشنویسی -هنر-حیدرامیرپور">
+<meta name="keywords" content="خوشنویسی -هنر-حیدرامیرپور - مطالب  اسفند 1398,khoshnevissi, Blog, Weblog, Persian,Iran, Iranian, Farsi, Weblogs">
+<link rel="alternate" type="application/rss+xml" title="خوشنویسی -هنر-حیدرامیرپور" href="../../rss/index.html">
+<link href="http://www.iranskin.com/template3/41/m41.css" type="text/css" rel="stylesheet">
+</head>
+<body>
+<div align="center">
+<div class=Back-IS>
+	
+<table border="0" width="1000" cellspacing="0" cellpadding="0">		
+
+
+<tr><td colspan="3" id=Header-IS>			
+
+
+<div id=BlogTitle><br>خوشنویسی -هنر-حیدرامیرپور</div><div style="width:100%;height:23;float:right"></div>
+<div id=BlogDescription>خوشنویسی نستعلیق -هنر اصیل ایرانی&nbsp;</div>	
+	
+    
+<div class=TopMenu><div style="float:right;width:782;direction:rtl">
+<div style="width:30;height:20;float:right"></div>
+
+
+<a href="../../../index.html"><img border="0" src="http://www.iranskin.com/template3/41/blank.gif" width="80" height="32" hspace="1"></a>
+<a href="../../list.html"><img border="0" src="http://www.iranskin.com/template3/41/blank.gif" width="90" height="32" hspace="1"></a>
+<a href="javascript:messageForm()"><img border="0" src="http://www.iranskin.com/template3/41/blank.gif" width="80" height="32" hspace="1"></a>
+<a target="_blank" href="http://www.iranskin.com"><img alt="قالب وبلاگ" border="0" src="http://www.iranskin.com/template3/41/blank.gif" width="90" height="32" hspace="1"></a>
+<a target="_blank" href="../../rss/index.html"><img border="0" src="http://www.iranskin.com/template3/41/blank.gif" width="70" height="32" hspace="1"></a>
+
+</div>
+
+
+</div>
+
+</td></tr>
+
+
+<tr><td width="220" valign="top">
+
+<div id=leftmenu>
+<div class=TopSid><div class=TopSid2>
+<b>نویسندگان</b></div></div>
+<div class=CenterSid><div class=li-Sid>
+<a href="../../author/604307.html">حیدر  امیرپور  11620 </a></div></div>
+<div class=LowSid></div></div>
+
+
+		
+<div id=leftmenu>
+<div class=TopSid><div class=TopSid2>
+<b>لینک دوستان</b></div></div>
+<div class=CenterSid><div class=li-Sid>
+<a target="_blank" href="http://www.iranskin.com">قالب میهن بلاگ</a></div><div class=li-Sid><a target="_blank" href="http://www.IranSkin.com" title="قالب بلاگفا">قالب بلاگفا</a></div><div class=li-Sid>
+<a target="_blank" href="http://www.iranskin.com/games">بازی آنلاین</a></div></div>
+<div class=LowSid></div></div>
+
+
+
+
+
+
+<div id=leftmenu>
+<div class=TopSid><div class=TopSid2>
+<b>پیوندهای روزانه</b></div></div>
+<div class=CenterSid><div class=li-Sid>
+<a target="_blank" href="https://mokaab.org/" title="نمایندگی شیائومی Xiaomi">نمایندگی شیائومی Xiaomi</a></div><div class=li-Sid>
+<a target="_blank" href="http://www.iranskin.com" title="قالب میهن بلاگ">قالب میهن بلاگ</a></div>
+<div class=li-Sid>
+<a target="_blank" href="http://planet.iranskin.com">دانلود</a></div></div>
+<div class=LowSid></div></div>
+
+<div id=leftmenu>
+<div class=TopSid><div class=TopSid2>
+<b>لینک های مفید</b></div></div>
+<div class=CenterSid><script language="javascript" src="https://www.shahrekhabar.com/javascript.jsp?type=analysis&num=99&bullet=true&source=false" ></script>
+<div class=li-Sid><a target="_blank" href="http://showhow.ir/">showhow</a>
+</div>
+<div class=li-Sid><a target="_blank" href="http://www.bibakmusic.com/category/artists/%d9%85%d8%ad%d9%85%d8%af-%d8%b9%d9%84%db%8c%d8%b2%d8%a7%d8%af%d9%87">محمد علیزاده</a>
+</div>
+<div class=li-Sid><a target="_blank" href="http://baspower.ir/kes-cummins/">محصولات kes energy کامینز</a>
+</div>
+<div class=li-Sid><a target="_blank" href="http://www.iranhafez.com/%D9%81%D8%A7%D9%84-%D8%AD%D8%A7%D9%81%D8%B8/#hafez">فال حافظ</a>
+</div>
+<div class=li-Sid><a target="_blank" href="https://tinateb.net/product/vacuum-machine-for-men/">دستگاه وکیوم</a>
+</div>
+</div>
+<div class=LowSid></div></div>
+			
+</td>
+
+
+<td width="563" valign="top">
+
+<div align="center">
+
+			
+
+		<div id="MihanblogShopAds" style="display:block;height:0px;width:100%;border:0px"></div>
+					
+<div class=TopPost>
+<div class=TopPost2>		
+
+<b><a href="../../13978.html">خوشنویسی</a></b></div></div>
+<div class=CenterPost><div class=CenterPost2>					
+<div id="InPost_MihanblogShopAds" style="display:block;height:0px;width:100%;border:0px"></div><img src="data:image/jpeg;base64,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" alt="نتیجه تصویری برای خوشنویسی قدما">
+
+
+<br>
+														
+</div></div>			
+
+<div class=LowPost3><div class=CPost3>
+
+<div class=date> [ دوشنبه 26 اسفند 1398  ]  [ 01:27 ب.ظ  ]  [ <a href="../../author/604307.html">حیدر  امیرپور </a> ] </div>
+<div class=Comment><a target="_self" href="javascript:newComment(13978)">نظرات  <script>setCommentCnt(13978)</script> </a><script type="text/javascript">GetBC(<-PostId->);</script>
+</div></div></div>						
+
+
+			
+<div class=TopPost>
+<div class=TopPost2>		
+
+<b><a href="../../13977.html">خوشنویسی</a></b></div></div>
+<div class=CenterPost><div class=CenterPost2>					
+<img src="data:image/jpeg;base64,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" alt="نتیجه تصویری برای خوشنویسی قدما">
+
+
+<br>
+														
+</div></div>			
+
+<div class=LowPost3><div class=CPost3>
+
+<div class=date> [ دوشنبه 26 اسفند 1398  ]  [ 01:26 ب.ظ  ]  [ <a href="../../author/604307.html">حیدر  امیرپور </a> ] </div>
+<div class=Comment><a target="_self" href="javascript:newComment(13977)">نظرات  <script>setCommentCnt(13977)</script> </a><script type="text/javascript">GetBC(<-PostId->);</script>
+</div></div></div>						
+
+
+			
+<div class=TopPost>
+<div class=TopPost2>		
+
+<b><a href="../../13976.html">داریوش اقبالی و بهروز وثوقی در کنار همسرانشون</a></b></div></div>
+<div class=CenterPost><div class=CenterPost2>					
+<ul class="breadcrumb" style="box-sizing: border-box; padding: 10px 16px; list-style: none; background-color: rgb(245, 249, 250); border-radius: 6px; font-family: iransans-light, tahoma; font-size: 16px;"><li style="box-sizing: border-box; display: inline; font-size: 13px; color: rgb(168, 186, 190);">نشون</li></ul><div class="col-lg-12 doctor600" style="box-sizing: border-box; position: relative; min-height: 1px; padding-right: 12px; padding-left: 12px; float: left; width: 850.047px; direction: rtl; font-family: iransans-light, tahoma; font-size: 16px;"><div class="col-lg-4 doctor600" style="box-sizing: border-box; position: relative; min-height: 1px; padding-right: 12px; padding-left: 12px; float: left; width: 275.344px; direction: rtl;"><div class="subm2" style="box-sizing: border-box; margin-top: 5px; border-bottom: 1px solid rgb(245, 67, 117); direction: rtl; color: rgb(66, 66, 66);">در ارتباط با همین مطلب بخوانید</div><a class="doctors500" href="https://www.padra.info/resource/artists/%D8%B9%DA%A9%D8%B3%DB%8C-%D8%A7%D8%B2-%D8%A7%D8%B3%D8%AA%D8%A7%DB%8C%D9%84-%D8%A7%D8%B1%D9%88%D9%BE%D8%A7%DB%8C%DB%8C-%D8%AA%D8%B1%D9%84%D8%A7%D9%86-%D9%BE%D8%B1%D9%88%D8%A7%D9%86%D9%87" target="_blank" style="box-sizing: border-box; color: rgb(33, 33, 33); text-decoration-line: none; height: 15px; font-size: 9pt;">» استایل اروپایی ترلان پروانه + عکس</a><hr class="index5" style="box-sizing: border-box; height: 1px; border-right: 0px; border-bottom: 0px; border-left: 0px; border-image: initial; border-top-style: solid; border-top-color: rgb(228, 228, 228);"><a class="doctors500" href="https://www.padra.info/resource/artists/%D8%B9%DA%A9%D8%B3%E2%80%8C%D9%87%D8%A7%DB%8C-%D8%A7%D8%AD%D8%B3%D8%A7%D9%86-%D8%B9%D9%84%DB%8C%D8%AE%D8%A7%D9%86%DB%8C" target="_blank" style="box-sizing: border-box; color: rgb(33, 33, 33); text-decoration-line: none; height: 15px; font-size: 9pt;">» عکس‌های احسان علیخانی قبل از کاشت مو لو رفت! +تصاویر</a><hr class="index5" style="box-sizing: border-box; height: 1px; border-right: 0px; border-bottom: 0px; border-left: 0px; border-image: initial; border-top-style: solid; border-top-color: rgb(228, 228, 228);"><a class="doctors500" href="https://www.padra.info/resource/artists/%D8%A2%D8%B1%D8%A7%DB%8C%D8%B4-%D8%B2%D9%86%D8%A7%D9%86%D9%87-%D8%A7%DA%A9%D8%A8%D8%B1-%D8%B9%D8%A8%D8%AF%DB%8C" target="_blank" style="box-sizing: border-box; color: rgb(33, 33, 33); text-decoration-line: none; height: 15px; font-size: 9pt;">» آرایش زنانه اکبر عبدی در جنس لطیف +عکس</a><hr class="index5" style="box-sizing: border-box; height: 1px; border-right: 0px; border-bottom: 0px; border-left: 0px; border-image: initial; border-top-style: solid; border-top-color: rgb(228, 228, 228);"><a class="doctors500" href="https://www.padra.info/resource/artists/%D8%B9%DA%A9%D8%B3-%D9%85%D9%87%D9%86%D8%A7%D8%B2-%D8%A7%D9%81%D8%B4%D8%A7%D8%B1-%D9%88-%D9%85%D8%A7%D9%85%D8%A7%D9%86-%D8%AF%D9%88%D9%85%D8%B4" target="_blank" style="box-sizing: border-box; color: rgb(33, 33, 33); text-decoration-line: none; height: 15px; font-size: 9pt;">» عکس مهناز افشار و مامان دومش!</a><hr class="index5" style="box-sizing: border-box; height: 1px; border-right: 0px; border-bottom: 0px; border-left: 0px; border-image: initial; border-top-style: solid; border-top-color: rgb(228, 228, 228);"><a class="doctors500" href="https://www.padra.info/resource/artists/%D8%A7%D9%88%D9%84%DB%8C%D9%86-%D8%AA%D8%B5%D9%88%DB%8C%D8%B1-%D8%A7%D8%B2-%D8%AF%D8%AE%D8%AA%D8%B1-%DA%A9%D8%A7%D9%86%D8%A7%D8%AF%D8%A7%DB%8C%DB%8C-%D8%B1%D8%A7%D9%85%D8%A8%D8%AF-%D8%AC%D9%88%D8%A7%D9%86" target="_blank" style="box-sizing: border-box; color: rgb(33, 33, 33); text-decoration-line: none; height: 15px; font-size: 9pt;">» اولین تصویر از دختر کانادایی رامبد جوان</a><hr class="index5" style="box-sizing: border-box; height: 1px; border-right: 0px; border-bottom: 0px; border-left: 0px; border-image: initial; border-top-style: solid; border-top-color: rgb(228, 228, 228);"><a class="doctors500" href="https://www.padra.info/resource/artists/%D9%85%D8%A7%D8%B4%DB%8C%D9%86-%D9%84%D8%A7%DA%A9%DA%86%D8%B1%DB%8C-%D9%85%D9%87%D8%B1%D8%A7%D9%86-%D9%85%D8%AF%DB%8C%D8%B1%DB%8C" target="_blank" style="box-sizing: border-box; color: rgb(33, 33, 33); text-decoration-line: none; height: 15px; font-size: 9pt;">» ماشین لاکچری مهران مدیری + عکس</a><hr class="index5" style="box-sizing: border-box; height: 1px; border-right: 0px; border-bottom: 0px; border-left: 0px; border-image: initial; border-top-style: solid; border-top-color: rgb(228, 228, 228);"></div><div class="col-lg-8 doctor600" style="box-sizing: border-box; position: relative; min-height: 1px; padding-right: 12px; padding-left: 12px; float: left; width: 512.141px; direction: rtl;"><img src="https://www.padra.info/filedrug/farhangi/15.jpg" width="350" height="166" class="TTRD" alt="داریوش اقبالی | عکسی فوق العاده از داریوش اقبالی و بهروز وثوقی در کنار همسرانشون" style="box-sizing: border-box; width: 350px; height: auto; border-radius: 15px;"><br style="box-sizing: border-box;"><br style="box-sizing: border-box;"></div><div class="bltext" style="box-sizing: border-box; font-size: 9pt; vertical-align: top; display: table-cell; direction: rtl; text-align: justify; margin-right: 5px; color: rgb(97, 97, 97); margin-top: -15px;"><h1 class="c100c3" style="box-sizing: border-box; font-variant-numeric: normal; font-variant-east-asian: normal; font-weight: normal; font-stretch: normal; font-size: 22px; line-height: 1.8; font-family: iransans-bold; padding: 0px; color: rgb(103, 103, 103); margin-bottom: 25px;">عکسی فوق العاده از داریوش اقبالی و بهروز وثوقی در کنار همسرانشون</h1><br style="box-sizing: border-box;"><div class="date doctor800" style="box-sizing: border-box; font-size: 11pt; color: rgb(64, 86, 96); margin-left: 15px; font-family: iransans-light; margin-right: 10px;">تاریخ :یکشنبه,۲۵ اسفند ۱۳۹۸<div class="viwe doctor700" style="box-sizing: border-box; font-size: 11pt; color: rgb(63, 81, 181); margin-right: 10px; direction: rtl; display: inline-block;">تعداد بازدید :750</div></div><br style="box-sizing: border-box;"><br style="box-sizing: border-box;"></div><div style="box-sizing: border-box;"><a href="https://www.padra.info/resource/artists/%D8%AF%D8%A7%D8%B1%DB%8C%D9%88%D8%B4-%D8%A7%D9%82%D8%A8%D8%A7%D9%84%DB%8C#" class="love" id="4222" style="box-sizing: border-box; color: rgb(102, 102, 102); text-decoration-line: none;"><div class="on_img33 love2 rrttrrdd" style="box-sizing: border-box; color: rgb(233, 30, 99); font-size: 11pt; margin-right: 10px; margin-left: -5px;">3نفر پسندیده</div></a></div><div class="drugss" style="box-sizing: border-box; font-size: 11pt; line-height: 27px; color: rgb(33, 33, 33); direction: rtl; text-align: justify; font-family: iransans-light;"><p style="box-sizing: border-box;">بهروز وثوقی که محبوبیتی افسانه ای بین مردم و سینما دوستان دارد، همواره یکی از محبوب ترین چهره های&nbsp;<span class="abor" style="box-sizing: border-box;"><a href="https://www.padra.info/tagr/%D8%B3%DB%8C%D9%86%D9%85%D8%A7%DB%8C-%D8%A7%DB%8C%D8%B1%D8%A7%D9%86" target="_blank" style="box-sizing: border-box; color: rgb(33, 33, 33); text-decoration-line: none;"><span class="abor" style="box-sizing: border-box; background-color: transparent; border-bottom: 3px solid rgb(239, 83, 80); box-shadow: rgb(239, 83, 80) 0px -4px 0px inset; word-break: break-word; overflow-wrap: break-word; transition: all 0.5s ease 0s; padding-left: 3px; padding-right: 3px; color: rgb(0, 172, 193); font-weight: bold;">سینمای ایران</span></a></span>&nbsp;بوده است.</p><p style="box-sizing: border-box;"><strong style="box-sizing: border-box;">داریوش اقبالی</strong>&nbsp;(زادهٔ&nbsp;۱۵ بهمن&nbsp;۱۳۲۹&nbsp;تهران) معروف به&nbsp;<strong style="box-sizing: border-box;">داریوش</strong>،&nbsp;خواننده،&nbsp;بازیگر&nbsp;و&nbsp;فعال اجتماعی&nbsp;ایرانی&nbsp;است، که در زمینه&nbsp;موسیقی راک&nbsp;و&nbsp;پاپ ایرانی&nbsp;فعالیت می‌کند. جنس صدای وی&nbsp;باس&nbsp;می‌باشد. داریوش عضو&nbsp;سازمان عفو بین‌الملل&nbsp;است.</p><p style="box-sizing: border-box;"><img src="https://www.padra.info/filedrug/%D8%AF%D8%A7%D8%B1%DB%8C%D9%88%D8%B4-%D8%A7%D9%82%D8%A8%D8%A7%D9%84%DB%8C.jpg" alt="داریوش اقبالی" width="600" height="593" style="box-sizing: border-box; max-width: 100%; height: auto; display: block; margin-left: auto; margin-right: auto;"></p><br style="box-sizing: border-box;">منبع:مجله اینترنتی پادرا</div></div>
+
+
+<br>
+														
+</div></div>			
+
+<div class=LowPost3><div class=CPost3>
+
+<div class=date> [ دوشنبه 26 اسفند 1398  ]  [ 01:25 ب.ظ  ]  [ <a href="../../author/604307.html">حیدر  امیرپور </a> ] </div>
+<div class=Comment><a target="_self" href="javascript:newComment(13976)">نظرات  <script>setCommentCnt(13976)</script> </a><script type="text/javascript">GetBC(<-PostId->);</script>
+</div></div></div>						
+
+
+			
+<div class=TopPost>
+<div class=TopPost2>		
+
+<b><a href="../../13975.html"> اشعار پروین اعتصامی/ مست و هشیار مجموعه: شعر و ترانه</a></b></div></div>
+<div class=CenterPost><div class=CenterPost2>					
+
+
+
+<div><br></div><div><article class="item-page" style="color: rgb(31, 31, 31); font-family: Tahoma, Geneva, sans-serif; font-size: 13px;"><h2 style="margin: 0px; font-size: 12px; line-height: 24px; text-transform: uppercase; color: rgb(68, 68, 68);"><a href="https://www.beytoote.com/art/song/parvinetesami-poems02-vigilant.html" style="text-decoration-line: none; color: rgb(124, 94, 58);">اشعار پروین اعتصامی/ مست و هشیار</a></h2><dl class="article-info" style="margin: 0px; padding-left: 0px; padding-right: 0px; font-size: 10px;"><dt></dt><dd class="category-name" style="margin-left: 0px; margin-right: 0px;">مجموعه:&nbsp;<a href="https://www.beytoote.com/art/song.html" style="text-decoration-line: none; color: rgb(124, 94, 58); font-size: 11px;">شعر و ترانه</a></dd></dl><div class="logoContent" style="background: url(&quot%3Bdata%253Aimage/png%3Bbase64,iVBORw0KGgoAAAANSUhEUgAAADsAAAA8CAMAAADv/jI5AAAC91BMVEUAAACzhVK2hEq0gUeidD+idUC2hEuidD+idD+kdT+idT+leESidD6yhFKidD+idT+idD7/+idD+idD+nekX/+3hUuidD+idD+idT/+idD/+.html) center center no-repeat; width: 59px; height: 60px; position: relative; float: left; padding-left: 30px; margin-top: -10px;"></div><br><br><div class="imgarticle" style="text-align: center;"><a title="اشعار پروین اعتصامی ، شعر و ترانه " href="https://www.beytoote.com/art/song/parvinetesami-poems02-vigilant.html" target="_blank" style="text-decoration-line: none; color: rgb(124, 94, 58);"><img title="اشعار زیبای پروین اعتصامی" alt=" پروین اعتصامی, پروین اعتصامی زندگینامه" class="" src="https://www.beytoote.com/images/stories/art/parvinetesami-poems02-2.jpg" style="border: 1px solid rgb(229, 229, 229); border-radius: 3px; display: block; margin: 15px auto; padding: 5px; width: 450px; height: 439px;"></a><p style="margin: 0px; font-size: 8pt; color: rgb(255, 102, 0);">اشعار زیبای پروین اعتصامی</p></div><div class="box-note" style="margin: 15px 0px; padding: 10px; text-align: justify; background: rgb(250, 250, 250); border: 1px solid rgb(226, 226, 226); border-radius: 10px; box-shadow: rgb(31, 31, 153) 0px 1px 5px;">رخشندهٔ اعتصامی معروف به پروین اعتصامی در ۲۵ اسفند ۱۲۸۵ خورشیدی در شهر تبریز به دنیا آمد. پدرش یوسف اعتصامی آشتیانی (اعتصام الملک) از رجال نامی و نویسندگان و مترجمان مشهور اواخر دورهٔ قاجار بود. در کودکی با خانواده به تهران آمد. دیوان اشعار وی بالغ بر ۲۵۰۰ بیت است. وی در فروردین ۱۳۲۰ شمسی به علت ابتلا به حصبه درگذشت و در قم به خاک سپرده شد.</div><div style="width: 420px; margin-right: 50px;"><p class="style6" style="margin: 0px; height: 25px; text-align: center;">&nbsp;</p><p class="style6" style="margin: 0px; height: 25px; text-align: center;"><strong><span style="color: rgb(128, 0, 0);">فلسفه</span></strong></p><p class="style6" style="margin: 0px; height: 35px; text-align: right;"><span style="color: rgb(153, 51, 0);"><strong>نخودی گفت لوبیائی را</strong></span></p><p class="style6" style="margin: 0px; height: 25px;"><span style="color: rgb(153, 51, 0);"><strong>کز چه من گردم این چنین، تو دراز</strong></span></p><p class="style6" style="margin: 0px; height: 35px; text-align: right;"><strong>گفت، ما هر دو را بباید پخت</strong></p><p class="style6" style="margin: 0px; height: 35px;"><strong>چاره‌ای نیست، با زمانه بساز</strong></p><p class="style6" style="margin: 0px; height: 35px; text-align: right;"><span style="color: rgb(153, 51, 0);"><strong>رمز خلقت، بما نگفت کسی</strong></span></p><p class="style6" style="margin: 0px; height: 35px;"><span style="color: rgb(153, 51, 0);"><strong>این حقیقت، مپرس ز اهل مجاز</strong></span></p><p class="style6" style="margin: 0px; height: 35px; text-align: right;"><strong>کس، بدین رزمگه ندارد راه</strong></p><p class="style6" style="margin: 0px; height: 25px;"><strong>کس، درین پرده نیست محرم راز</strong></p><p class="style6" style="margin: 0px; height: 25px; text-align: right;"><span style="color: rgb(153, 51, 0);"><strong>بدرازی و گردی من و تو</strong></span></p><p class="style6" style="margin: 0px; height: 25px;"><span style="color: rgb(153, 51, 0);"><strong>ننهد قدر، چرخ شعبده‌باز</strong></span></p><p class="style6" style="margin: 0px; height: 25px; text-align: right;"><strong>هر دو، روزی در اوفتیم بدیگ</strong></p><p style="margin: 0px;"><strong>هر دو گردیم جفت سوز و گداز</strong></p><p class="style6" style="margin: 0px; height: 25px; text-align: right;"><span style="color: rgb(153, 51, 0);"><strong>نتوان بود با فلک گستاخ</strong></span></p><p class="style6" style="margin: 0px; height: 25px;"><span style="color: rgb(153, 51, 0);"><strong>نتوان کرد بهر گیتی ناز</strong></span></p><p class="style6" style="margin: 0px; height: 25px; text-align: right;"><strong>سوی مخزن رویم زین مطبخ</strong></p><p class="style6" style="margin: 0px; height: 25px;"><strong>سر این کیسه، گردد آخر باز</strong></p><p class="style6" style="margin: 0px; height: 25px; text-align: right;"><span style="color: rgb(153, 51, 0);"><strong>برویم از میان و دم نزنیم</strong></span></p><p class="style6" style="margin: 0px; height: 25px;"><span style="color: rgb(153, 51, 0);"><strong>بخروشیم، لیک بی آواز</strong></span></p><p class="style6" style="margin: 0px; height: 25px; text-align: right;"><strong>این چه خامی است، چون در آخر کار</strong></p><p class="style6" style="margin: 0px; height: 25px;"><strong>آتش آمد من و تو را دمساز</strong></p><p class="style6" style="margin: 0px; height: 25px; text-align: right;"><span style="color: rgb(153, 51, 0);"><strong>گر چه در زحمتیم، باز خوشیم</strong></span></p><p class="style6" style="margin: 0px; height: 25px;"><span style="color: rgb(153, 51, 0);"><strong>که بما نیز، خلق راست نیاز</strong></span></p><p class="style6" style="margin: 0px; height: 25px; text-align: right;"><strong>دهر، بر کار کس نپردازد</strong></p><p class="style6" style="margin: 0px; height: 25px;"><strong>هم تو، بر کار خویشتن پرداز</strong></p><p class="style6" style="margin: 0px; height: 25px; text-align: right;"><span style="color: rgb(153, 51, 0);"><strong>چون تن و پیرهن نخواهد ماند</strong></span></p><p class="style6" style="margin: 0px; height: 25px;"><span style="color: rgb(153, 51, 0);"><strong>چه پلاس و چه جامهٔ ممتاز</strong></span></p><p class="style6" style="margin: 0px; height: 25px; text-align: right;"><strong>ما کز انجام کار بی‌خبریم</strong></p><p class="style6" style="margin: 0px; height: 25px;"><strong>چه توانیم گفتن از آغاز</strong></p><p class="style6" style="margin: 0px; height: 25px; text-align: center;"><strong style="color: rgb(153, 51, 0); text-align: left;"><span style="color: rgb(128, 128, 128); text-align: center; font-weight: normal;">پروین اعتصامی</span>&nbsp;</strong></p><p class="style6" style="margin: 0px; height: 25px; text-align: right;">&nbsp;</p><p class="style6" style="margin: 0px; height: 25px; text-align: right;">&nbsp;</p></div><div class="imgarticle" style="text-align: center;"><a title="اشعار پروین اعتصامی ، شعر و ترانه " href="https://www.beytoote.com/art/song/parvinetesami-poems02-vigilant.html" target="_blank" style="text-decoration-line: none; color: rgb(124, 94, 58);"><img title="اشعار زیبای پروین اعتصامی" alt=" پروین اعتصامی, پروین اعتصامی زندگینامه" class="" src="https://www.beytoote.com/images/stories/art/parvinetesami-poems02-1.jpg" style="border: 1px solid rgb(229, 229, 229); border-radius: 3px; display: block; margin: 15px auto; padding: 5px; width: 450px; height: 391px;"></a><p style="margin: 0px; font-size: 8pt; color: rgb(255, 102, 0);">شعر آئین آینه پروین اعتصامی</p></div><p style="margin: 0px; text-align: center;">&nbsp;</p><div style="width: 420px; margin-right: 50px;"><p class="style6" style="margin: 0px; height: 35px; text-align: center;"><strong><span style="color: rgb(128, 0, 0);">آئین آینه</span></strong></p><p class="style6" style="margin: 0px; height: 35px; text-align: right;"><span style="color: rgb(153, 51, 0);"><strong>وقت سحر، به آینه‌ای گفت شانه‌ای</strong></span></p><p class="style6" style="margin: 0px; height: 35px;"><span style="color: rgb(153, 51, 0);"><strong>کاوخ! فلک چه کجرو و گیتی چه تند خوست</strong></span></p><p class="style6" style="margin: 0px; height: 35px; text-align: right;"><strong>ما را زمانه رنجکش و تیره روز کرد</strong></p><p class="style6" style="margin: 0px; height: 35px;"><strong>خرم کسیکه همچو تواش طالعی نکوست</strong></p><p class="style6" style="margin: 0px; height: 35px; text-align: right;"><span style="color: rgb(153, 51, 0);"><strong>هرگز تو بار زحمت مردم نمیکشی</strong></span></p><p class="style6" style="margin: 0px; height: 35px;"><span style="color: rgb(153, 51, 0);"><strong>ما شانه می‌کشیم بهر جا که تار موست</strong></span></p><p class="style6" style="margin: 0px; height: 35px; text-align: right;"><strong>از تیرگی و پیچ و خم راههای ما</strong></p><p class="style6" style="margin: 0px; height: 35px;"><strong>در تاب و حلقه و سر هر زلف گفتگوست</strong></p><p class="style6" style="margin: 0px; height: 35px; text-align: right;"><span style="color: rgb(153, 51, 0);"><strong>با آنکه ما جفای بتان بیشتر بریم</strong></span></p><p class="style6" style="margin: 0px; height: 35px;"><span style="color: rgb(153, 51, 0);"><strong>مشتاق روی تست هر آنکسی که خوبروست</strong></span></p><p class="style6" style="margin: 0px; height: 35px; text-align: right;"><strong>گفتا هر آنکه عیب کسی در قفا شمرد</strong></p><p class="style6" style="margin: 0px; height: 35px;"><strong>هر چند دل فریبد و رو خوش کند عدوست</strong></p><p class="style6" style="margin: 0px; height: 35px; text-align: right;"><span style="color: rgb(153, 51, 0);"><strong>در پیش روی خلق بما جا دهند از انک</strong></span></p><p class="style6" style="margin: 0px; height: 35px;"><span style="color: rgb(153, 51, 0);"><strong>ما را هر آنچه از بد و نیکست روبروست</strong></span></p><p class="style6" style="margin: 0px; height: 35px; text-align: right;"><strong>خاری بطعنه گفت چه حاصل ز بو و رنگ</strong></p><p class="style6" style="margin: 0px; height: 35px;"><strong>خندید گل که هرچه مرا هست رنگ و بوست</strong></p><p class="style6" style="margin: 0px; height: 35px; text-align: right;"><span style="color: rgb(153, 51, 0);"><strong>چون شانه، عیب خلق مکن موبمو عیان</strong></span></p><p class="style6" style="margin: 0px; height: 35px;"><span style="color: rgb(153, 51, 0);"><strong>در پشت سر نهند کسی را که عیبجوست</strong></span></p><p class="style6" style="margin: 0px; height: 35px; text-align: right;"><strong>زانکس که نام خلق بگفتار زشت کشت</strong></p><p class="style6" style="margin: 0px; height: 35px;"><strong>دوری گزین که از همه بدنامتر هموست</strong></p><p class="style6" style="margin: 0px; height: 35px; text-align: right;"><span style="color: rgb(153, 51, 0);"><strong>ز انگشت آز، دامن تقوی سیه مکن</strong></span></p><p class="style6" style="margin: 0px; height: 35px;"><span style="color: rgb(153, 51, 0);"><strong>این جامه چون درید، نه شایستهٔ رفوست</strong></span></p><p class="style6" style="margin: 0px; height: 35px; text-align: right;"><strong>از مهر دوستان ریاکار خوشتر است</strong></p><p class="style6" style="margin: 0px; height: 35px;"><strong>دشنام دشمنی که چو آئینه راستگوست</strong></p><p class="style6" style="margin: 0px; height: 35px; text-align: right;"><span style="color: rgb(153, 51, 0);"><strong>آن کیمیا که میطلبی، یار یکدل است</strong></span></p><p class="style6" style="margin: 0px; height: 35px;"><span style="color: rgb(153, 51, 0);"><strong>دردا که هیچگه نتوان یافت، آرزوست</strong></span></p><p class="style6" style="margin: 0px; height: 35px; text-align: right;"><strong>پروین، نشان دوست درستی و راستی است</strong></p><p class="style6" style="margin: 0px; height: 35px;"><strong>هرگز نیازموده، کسی را مدار دوست</strong></p><p class="style6" style="margin: 0px; height: 35px; text-align: center;"><span style="color: rgb(128, 128, 128);">پروین اعتصامی</span></p></div><p style="margin: 0px;">&nbsp;</p><div class="imgarticle" style="text-align: center;"><img title="شعر پروین اعتصامی, شعر مست و هشیار پروین اعتصامی" alt="شعر پروین اعتصامی, شعر مست و هشیار پروین اعتصامی" class="" src="https://www.beytoote.com/images/stories/fun/ff27.gif" style="border: 0px rgb(255, 255, 255); border-radius: 3px; display: block; margin: 15px auto; padding: 5px;"></div><p style="margin: 0px;">&nbsp;</p><div style="width: 420px; margin-right: 50px;"><p style="margin: 0px; text-align: center;"><span style="color: rgb(128, 0, 0);"><strong>مست و هشیار</strong></span></p><p class="style6" style="margin: 0px; height: 35px; text-align: right;"><span style="color: rgb(153, 51, 0);"><strong>محتسب، مستی به ره دید و گریبانش گرفت</strong></span></p><p class="style6" style="margin: 0px; height: 35px;"><span style="color: rgb(153, 51, 0);"><strong>مست گفت ای دوست، این پیراهن است، افسار نیست</strong></span></p><p class="style6" style="margin: 0px; height: 35px; text-align: right;"><strong>گفت: مستی، زان سبب افتان و خیزان میروی</strong></p><p class="style6" style="margin: 0px; height: 35px;"><strong>&nbsp;گفت: جرم راه رفتن نیست، ره هموار نیست</strong></p><p class="style6" style="margin: 0px; height: 35px; text-align: right;"><span style="color: rgb(153, 51, 0);"><strong>گفت: میباید تو را تا خانهٔ قاضی برم</strong></span></p><p class="style6" style="margin: 0px; height: 35px;"><span style="color: rgb(153, 51, 0);"><strong>&nbsp;گفت: رو صبح آی، قاضی نیمه‌شب بیدار نیست</strong></span></p><p class="style6" style="margin: 0px; height: 35px; text-align: right;"><strong>گفت: نزدیک است والی را سرای، آنجا شویم</strong></p><p class="style6" style="margin: 0px; height: 35px;"><strong>گفت: والی از کجا در خانهٔ خمار نیست</strong></p><p class="style6" style="margin: 0px; height: 35px; text-align: right;"><span style="color: rgb(153, 51, 0);"><strong>گفت: تا داروغه را گوئیم، در مسجد بخواب</strong></span></p><p class="style6" style="margin: 0px; height: 35px;"><span style="color: rgb(153, 51, 0);"><strong>گفت: مسجد خوابگاه مردم بدکار نیست</strong></span></p><p class="style6" style="margin: 0px; height: 35px; text-align: right;"><strong>گفت: دیناری بده پنهان و خود را وارهان</strong></p><p class="style6" style="margin: 0px; height: 35px;"><strong>گفت: کار شرع، کار درهم و دینار نیست</strong></p><p class="style6" style="margin: 0px; height: 35px; text-align: right;"><span style="color: rgb(153, 51, 0);"><strong>گفت: از بهر غرامت، جامه‌ات بیرون کنم</strong></span></p><p class="style6" style="margin: 0px; height: 35px;"><span style="color: rgb(153, 51, 0);"><strong>گفت: پوسیدست، جز نقشی ز پود و تار نیست</strong></span></p><p class="style6" style="margin: 0px; height: 35px; text-align: right;"><strong>گفت: آگه نیستی کز سر در افتادت کلاه</strong></p><p class="style6" style="margin: 0px; height: 35px;"><strong>گفت: در سر عقل باید، بی کلاهی عار نیست</strong></p><p class="style6" style="margin: 0px; height: 35px; text-align: right;"><span style="color: rgb(153, 51, 0);"><strong>گفت: می بسیار خوردی، زان چنین بیخود شدی</strong></span></p><p class="style6" style="margin: 0px; height: 35px;"><span style="color: rgb(153, 51, 0);"><strong>گفت: ای بیهوده‌گو، حرف کم و بسیار نیست</strong></span></p><p class="style6" style="margin: 0px; height: 35px; text-align: right;"><strong>گفت: باید حد زند هشیار مردم، مست را</strong></p><p class="style6" style="margin: 0px; height: 35px;"><strong>گفت: هشیاری بیار، اینجا کسی هشیار نیست</strong></p><p class="style6" style="margin: 0px; height: 35px; text-align: center;"><strong>&nbsp;</strong><span style="color: rgb(128, 128, 128);">&nbsp;پروین اعتصامی</span></p><p style="margin: 0px;">&nbsp;</p><p style="margin: 0px;">&nbsp;</p></div><p style="margin: 0px;"><strong><span style="font-size: 8pt;">گردآوری:<span style="color: rgb(0, 0, 255);">بخش فرهنگ و هنر بیتوته</span></span></strong></p></article><div style="color: rgb(31, 31, 31); font-family: Tahoma, Geneva, sans-serif; font-size: 13px;"><div id="text_place"></div>﻿<p class="namemod" style="margin: 0px; font-weight: bold; color: rgb(186, 0, 0);">گلچینی از شعر و ترانه ها</p><ul class="relateditem" style="margin: 0px 51.8906px 0px 0px; padding-left: 30px; font-size: 12px; line-height: 22px; list-style-image: url(&quot%3Bdata%253Aimage/gif%3Bbase64,R0lGODlhDQAHAJEAANTU1NQAAP/wAAACH5BAAAAAAALAAAAAANAAcAAAIXlGMJeYEGYnJUxCuovlgjvjSPJTEjlBQAOw==&quot%3B.html);"><li><a href="https://www.beytoote.com/art/song/intrigue-bnyadt2-parvin.html" target="_blank" class="fj_relatedplus" style="text-decoration-line: none; color: rgb(124, 94, 58);">ای کنده سیل فتنه ز بنیادت (پروین اعتصامی)</a></li><li><a href="https://www.beytoote.com/art/song/collapse-parvin2-etesami.html" target="_blank" class="fj_relatedplus" style="text-decoration-line: none; color: rgb(124, 94, 58);">تا چشم بهم بر زنی خرابست (پروین اعتصامی)</a></li><li><a href="https://www.beytoote.com/art/song/tomorrow-parvin2-etesami.html" target="_blank" class="fj_relatedplus" style="text-decoration-line: none; color: rgb(124, 94, 58);">فکرت مکن نیامده فردا را (پروین اعتصامی)</a></li><li><a href="https://www.beytoote.com/art/song/song-etesamy2-chic.html" target="_blank" class="fj_relatedplus" style="text-decoration-line: none; color: rgb(124, 94, 58);">اشعار زیبای پروین اعتصامی</a></li><li><a href="https://www.beytoote.com/art/song/thanksgiving-parvin2-etesami.html" target="_blank" class="fj_relatedplus" style="text-decoration-line: none; color: rgb(124, 94, 58);">لطف حق (پروین اعتصامی)</a></li><li><a href="https://www.beytoote.com/art/song/curtain-curtains-mynagvn.html" target="_blank" class="fj_relatedplus" style="text-decoration-line: none; color: rgb(124, 94, 58);">پردهٔ کس نشد این پردهٔ میناگون (پروین اعتصامی)</a></li></ul></div></div><br>
+														
+</div></div>			
+
+<div class=LowPost3><div class=CPost3>
+
+<div class=date> [ پنجشنبه 22 اسفند 1398  ]  [ 05:59 ب.ظ  ]  [ <a href="../../author/604307.html">حیدر  امیرپور </a> ] </div>
+<div class=Comment><a target="_self" href="javascript:newComment(13975)">نظرات  <script>setCommentCnt(13975)</script> </a><script type="text/javascript">GetBC(<-PostId->);</script>
+</div></div></div>						
+
+
+			
+<div class=TopPost>
+<div class=TopPost2>		
+
+<b><a href="../../13974.html">آخرین وضعیت جسمانی محمدرضا شجریان</a></b></div></div>
+<div class=CenterPost><div class=CenterPost2>					
+<div class="title" style="box-sizing: border-box; font-variant-numeric: normal; font-variant-east-asian: normal; font-weight: bold; font-stretch: normal; font-size: 16px; line-height: 25px; color: rgb(154, 16, 16); text-align: center; margin-bottom: 10px; padding-top: 4px; font-family: shabnam-regular !important;"><h1 class="title" style="box-sizing: border-box; line-height: 25px; font-variant-numeric: normal; font-variant-east-asian: normal; font-stretch: normal; font-size: 16px; padding: 0px; margin: 0px;"><a href="https://www.asriran.com/fa/news/716945/%D8%A2%D8%AE%D8%B1%DB%8C%D9%86-%D9%88%D8%B6%D8%B9%DB%8C%D8%AA-%D8%AC%D8%B3%D9%85%D8%A7%D9%86%DB%8C-%D9%85%D8%AD%D9%85%D8%AF%D8%B1%D8%B6%D8%A7-%D8%B4%D8%AC%D8%B1%DB%8C%D8%A7%D9%86" target="_blank" style="box-sizing: border-box; background: transparent; color: rgb(24, 9, 166); text-decoration-line: none; outline: none;">آخرین وضعیت جسمانی محمدرضا شجریان</a></h1></div><div class="body" style="box-sizing: border-box; font-variant-numeric: normal; font-variant-east-asian: normal; font-stretch: normal; font-size: 10pt; line-height: 23.3333px; font-family: shabnam-regular; margin-top: 10px; text-align: justify; direction: rtl; padding: 10px;"><p style="box-sizing: border-box; margin: 0px 0px 10px;"><img class="image_btn img-responsive" title="آخرین وضعیت جسمانی محمدرضا شجریان" src="https://cdn.asriran.com/files/fa/news/1398/12/13/1076151_156.jpg" alt="آخرین وضعیت جسمانی محمدرضا شجریان" width="250" height="167" align="left" style="box-sizing: border-box; border: 0px; vertical-align: middle; display: block; max-width: 100%; height: auto; margin: 14px;">بیمارستان جم، همچون روزهای گذشته در اطلاعیه‌ای به شرح شرایط جسمی محمدرضا شجریان پرداخت.</p><p style="box-sizing: border-box; margin: 0px 0px 10px;">به گزارش ایسنا در این اطلاعیه آمده است: «در راستای اطلاع‌رسانی به مردم هنردوست و هم‌میهنان عزیز، به استحضار می‌رساند وضعیت ایشان در حال حاضر از نظر قلبی، عروقی و کلیوی پایدار است. ولی نسبت به چند روز گذشته مختصر دچار کم‌خونی شده‌اند که در حال بررسی و درمان هستند. درکل شرایط پایداری دارند و جهت مراقبت بهتر و بیشتر نیازمند ادامه بستری در بخش مراقبت‌های ویژه هستند.»</p></div>
+
+
+<br>
+														
+</div></div>			
+
+<div class=LowPost3><div class=CPost3>
+
+<div class=date> [ سه شنبه 13 اسفند 1398  ]  [ 04:53 ب.ظ  ]  [ <a href="../../author/604307.html">حیدر  امیرپور </a> ] </div>
+<div class=Comment><a target="_self" href="javascript:newComment(13974)">نظرات  <script>setCommentCnt(13974)</script> </a><script type="text/javascript">GetBC(<-PostId->);</script>
+</div></div></div>						
+
+
+			
+<div class=TopPost>
+<div class=TopPost2>		
+
+<b><a href="../../13973.html">آخرین اخبار از وضعیت جسمی استاد شجریان</a></b></div></div>
+<div class=CenterPost><div class=CenterPost2>					
+<article class="content-details" style="box-sizing: border-box; margin: 0px; padding: 15px; border: 0px; vertical-align: baseline; border-radius: 5px; box-shadow: rgba(0, 0, 0, 0.05) 0px 4px 10px 0px; font-family: Yekan, Yekan_Bakh, Tahoma;"><div class="header-details" data-v-62958297="" style="box-sizing: border-box; margin: 0px; padding: 0px 15px; border: 0px; vertical-align: baseline; display: flex; align-items: center; height: 38px; border-radius: 19px; background-color: rgb(242, 242, 242);"><div class="header-details-item" data-v-62958297="" style="box-sizing: border-box; margin: 0px 0px 0px 15px; padding: 0px; border: 0px; vertical-align: baseline; display: flex; align-items: center;"><img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAxNyAxNyI+CiAgPGRlZnM+CiAgICA8c3R5bGU+CiAgICAgIC5jbHMtMSB7CiAgICAgICAgZmlsbDogbm9uZTsKICAgICAgICBzdHJva2U6ICM1YTVhNWE7CiAgICAgICAgc3Ryb2tlLWxpbmVjYXA6IHJvdW5kOwogICAgICAgIHN0cm9rZS1saW5lam9pbjogcm91bmQ7CiAgICAgICAgc3Ryb2tlLW1pdGVybGltaXQ6IDEwOwogICAgICB9CiAgICA8L3N0eWxlPgogIDwvZGVmcz4KICA8ZyBpZD0iaWNfbmV3c1RpbWUiIHRyYW5zZm9ybT0idHJhbnNsYXRlKC0wLjUgLTAuNSkiPgogICAgPGNpcmNsZSBpZD0iRWxsaXBzZV8zOSIgZGF0YS1uYW1lPSJFbGxpcHNlIDM5IiBjbGFzcz0iY2xzLTEiIGN4PSI4IiBjeT0iOCIgcj0iOCIgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoMSAxKSIvPgogICAgPHBhdGggaWQ9IlBhdGhfNTgiIGRhdGEtbmFtZT0iUGF0aCA1OCIgY2xhc3M9ImNscy0xIiBkPSJNMTIsNnY0LjM2NGg0LjM2NCIgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoLTMgLTEuMzY0KSIvPgogIDwvZz4KPC9zdmc+Cg==" alt="16:24" class="header-details-icon-svg" data-v-62958297="" style="border: 0px; box-sizing: border-box; margin: 0px; padding: 0px; vertical-align: baseline; width: 16px;"><span data-v-62958297="" style="box-sizing: border-box; margin: 0px 10px 0px 0px; padding: 0px; border: 0px; vertical-align: baseline; align-self: flex-end; color: rgb(90, 90, 90); letter-spacing: 0.7px; font-weight: 700; font-size: 12px; font-family: Yekan_Bakh, Yekan, Tahoma;">16:24</span></div></div><div class="header-title" data-v-46157642="" style="box-sizing: border-box; margin: 0px; padding: 0px; border: 0px; vertical-align: baseline;"><header data-v-46157642="" style="box-sizing: border-box; margin: 15px 0px 0px; padding: 15px; border: 0px; vertical-align: baseline;"><span data-v-46157642="" style="box-sizing: border-box; margin: 0px; padding: 5px 0px 0px; border: 0px; vertical-align: baseline; overflow: hidden; color: rgb(119, 119, 119); text-align: justify; font-size: 18px; line-height: 1;"></span><h1 data-v-46157642="" style="font-size: 28px; margin: 0px 0px 15px; box-sizing: border-box; padding: 0px; border: 0px; vertical-align: baseline; color: rgb(47, 47, 47); letter-spacing: 0.5px; font-family: Yekan_Bakh, Yekan, Tahoma; line-height: 1.43;">آخرین اخبار از وضعیت جسمی استاد شجریان</h1></header><div class="header-title-short-news" data-v-46157642="" style="box-sizing: border-box; margin: 0px; padding: 15px; border: 0px; vertical-align: baseline; background-color: rgb(242, 242, 242); color: rgb(90, 90, 90); font-size: 14px; border-radius: 5px; line-height: 1.71;"><p style="box-sizing: border-box; margin: 0px; padding: 0px; border: 0px; vertical-align: baseline;">بیمارستان جم با انتشار اطلاعیه‌ای اعلام کرد که شرایط بالینی محمدرضا شجریان درحال حاضر پایدار بوده و شرایط ریوی و قلبی ایشان رو به بهبود است.</p></div></div><section class="detail" style="box-sizing: border-box; margin: 0px; padding: 15px 0px; border: 0px; vertical-align: baseline;"><section class="table-wrapper" style="box-sizing: border-box; margin: 0px; padding: 0px; border: 0px; vertical-align: baseline;"><article style="box-sizing: border-box; margin: 0px; padding: 0px; border: 0px; vertical-align: baseline;"><section style="box-sizing: border-box; margin: 0px; padding: 0px; border: 0px; vertical-align: baseline;"><img alt="شرایط بالینی محمدرضا شجریان پایدار است/ دستگاه‌های کمک تنفسی جدا شد" src="https://cdn.salameno.ir/media/news-images/2020-02-24/cultural-42906694-0-cXj.png" class="img-responsive" style="border: 0px; box-sizing: border-box; margin: 30px auto; padding: 0px; vertical-align: middle; display: flex; justify-content: center; max-width: 100%; border-radius: 5px; box-shadow: rgba(0, 0, 0, 0.28) 0px 0px 4px 0px; text-align: center;"><p style="box-sizing: border-box; margin: 0px 0px 15px; padding: 0px 30px; border: 0px; vertical-align: baseline; color: rgb(10, 10, 10); text-align: justify; font-size: 16px; line-height: 1.71;"><span style="box-sizing: border-box; margin: 0px; padding: 0px; border: 0px; vertical-align: baseline;">به گزارش سلام نو، هیئت مدیره بیمارستان «جم» درباره وضعیت فعلی محمدرضا شجریان اطلاعیه‌ای صادر کرده است.</span></p><p style="box-sizing: border-box; margin: 0px 0px 15px; padding: 0px 30px; border: 0px; vertical-align: baseline; color: rgb(10, 10, 10); text-align: justify; font-size: 16px; line-height: 1.71;"><span style="box-sizing: border-box; margin: 0px; padding: 0px; border: 0px; vertical-align: baseline;">در اطلاعیه شماره چهار بیمارستان «جم» آمده است: در راستای اطلاع‌رسانی به مردم هنردوست و هم‌میهنان عزیز به استحضار می‌رساند،‌ شرایط بالینی ایشان درحال حاضر پایدار بوده و باتوجه به بهتر شدن شرایط ریوی و قلبی، فعلا از دستگاه ونتیلاتور (کمک تنفسی) جدا شده و تنفس خود به خودی داشته و فقط توسط ماسک اکسیژن دریافت می‌نمایند ولی جهت مراقبت بهتر و بیشتر نیازمند ادامه بستری در بخش مراقبت‌های ویژه می‌باشد.</span></p><p style="box-sizing: border-box; margin: 0px 0px 15px; padding: 0px 30px; border: 0px; vertical-align: baseline; color: rgb(10, 10, 10); text-align: justify; font-size: 16px; line-height: 1.71;"><span style="box-sizing: border-box; margin: 0px; padding: 0px; border: 0px; vertical-align: baseline;">محمدرضا شجریان، خواننده پیشکسوت موسیقی ایرانی که سالهاست درگیر بیماری است، طی روزهای گذشته به دلیل وخامت حالش در بیمارستان «جم» بستری شده بود که این اتفاق دوست‌داران و هواداران او را نگران کرد./ایلنا</span></p></section></article></section></section><div class="footer-details" data-v-76f8b230="" style="box-sizing: border-box; margin: 0px; padding: 15px 0px; border-width: 1px 0px 0px; border-top-style: solid; border-right-style: initial; border-bottom-style: initial; border-left-style: initial; border-top-color: rgb(207, 207, 207); border-right-color: initial; border-bottom-color: initial; border-left-color: initial; border-image: initial; vertical-align: baseline; background-image: initial; background-position: initial; background-size: initial; background-repeat: initial; background-attachment: initial; background-origin: initial; background-clip: initial;"><div class="footer-details-mobile-top" data-v-76f8b230="" style="box-sizing: border-box; margin: 0px; padding: 0px; border: 0px; vertical-align: baseline;"><a href="https://salameno.ir/tags/%D9%85%D8%AD%D9%85%D8%AF%D8%B1%D8%B6%D8%A7%20%D8%B4%D8%AC%D8%B1%DB%8C%D8%A7%D9%86" class="footer-tag" data-v-4388a571="" data-v-76f8b230="" style="background-color: rgb(228, 228, 228); box-sizing: border-box; margin: 0px 0px 10px 5px; padding: 10px 7px; border: 0px; vertical-align: baseline; font-size: 14px; text-decoration-line: none; display: inline-block; color: rgb(175, 175, 175); border-radius: 5px;">محمدرضا شجریان</a><a href="https://salameno.ir/tags/%D8%A8%DB%8C%D9%85%D8%A7%D8%B1%D8%B3%D8%AA%D8%A7%D9%86%20%D8%AC%D9%85" class="footer-tag" data-v-4388a571="" data-v-76f8b230="" style="background-color: rgb(228, 228, 228); box-sizing: border-box; margin: 0px 0px 10px 5px; padding: 10px 7px; border: 0px; vertical-align: baseline; font-size: 14px; text-decoration-line: none; display: inline-block; color: rgb(175, 175, 175); border-radius: 5px;">بیمارستان جم</a></div></div></article><div class="m-t-20" style="box-sizing: border-box; margin: 20px 0px 0px; padding: 0px; border: 0px; vertical-align: baseline;"><div data-v-4c4508db="" style="box-sizing: border-box; margin: 0px; padding: 0px; border: 0px; vertical-align: baseline;"><div class="panel-type shadow" data-v-4c4508db="" style="box-sizing: border-box; margin: 0px; padding: 15px 0px 0px; border: 0px; vertical-align: baseline; display: flex; flex-direction: column; overflow: hidden; width: 865px; border-radius: 5px; font-size: 1rem; justify-content: space-between; box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 10px 0px;"><header class="p-x-15" style="box-sizing: border-box; margin: 0px; padding: 0px 15px 15px; border: 0px; vertical-align: baseline; font-family: &quot;Times New Roman&quot;;"><a href="https://salameno.ir/detail/42906694#" target="_blank" class="title-bar" data-v-00b5db26="" data-v-4c4508db="" style="background-color: transparent; box-sizing: border-box; margin: 0px; padding: 0px; border: 0px; vertical-align: baseline; font-size: 1rem; font-family: Yekan_Bakh, Yekan, Tahoma; text-decoration-line: none;"><div class="title-bar-box green" data-v-00b5db26="" style="box-sizing: border-box; margin: 0px; padding: 0.6em; border: 0px; vertical-align: baseline; position: relative; display: flex; justify-content: space-between; align-items: center; border-radius: 8px 0px 8px 8px; box-shadow: rgba(115, 18, 11, 0.25) 0px 4px 10px 0px; color: rgb(255, 255, 255); background-color: rgb(0, 51, 102);"><div class="title-bar--title" data-v-00b5db26="" style="box-sizing: border-box; margin: 0px; padding: 0px; border: 0px; vertical-align: baseline;"><h3 class="title-bar--title-text" data-v-00b5db26="" style="box-sizing: border-box; margin: 0px; padding: 0px; border: 0px; vertical-align: baseline; letter-spacing: 1.4px; font-size: 1em;">اخبار مرتبط</h3></div><div class="title-bar--icon" data-v-00b5db26="" style="box-sizing: border-box; margin: 0px; padding: 0px; border: 0px; vertical-align: baseline;"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAGNJREFUOBFj+P///yQgJhdMYoDqFGIgEQD1CYH0gg0gUS9cOcgAFjgPygCbii6IxGcEAiQuA4YB6AqQFWNjM2ETJEUMwwWjXmBgGKmxAIx7sjITKMGBEtJkIH4LNATEJxVMBgDymXBfbeSbZwAAAABJRU5ErkJggg==" alt="icon news" data-v-00b5db26="" style="border: 0px; box-sizing: border-box; margin: 0px; padding: 0px; vertical-align: middle;"></div></div></a></header><main style="min-height: 130px; font-family: &quot;Times New Roman&quot;;"><div class="p-x-15" data-v-4c4508db="" style="box-sizing: border-box; margin: 0px; padding: 0px 15px; border: 0px; vertical-align: baseline;"><div class="row" data-v-4c4508db="" style="box-sizing: border-box; margin: 0px; padding: 0px; border: 0px; vertical-align: baseline; display: flex; flex-wrap: wrap;"><div class="col col-6" data-v-4c4508db="" style="box-sizing: border-box; margin: 0px; padding: 10px; border: 0px; vertical-align: baseline; max-width: 50%; flex-basis: 50%;"><div class="type-a" data-v-e9e5352c="" data-v-4c4508db="" style="box-sizing: border-box; margin: 0px; padding: 0px; border: 0px; vertical-align: baseline; display: flex; height: 88px; font-size: 1rem; font-family: Yekan, Yekan_Bakh, Tahoma;"><a href="https://salameno.ir/detail/42874707" target="_blank" class="type-a-img" data-v-e9e5352c="" style="background-color: transparent; box-sizing: border-box; margin: 0px 0px 0px 14px; padding: 0px; border: 0px; vertical-align: baseline; position: relative; display: block; overflow: hidden; min-width: 130px; height: 73px; border-radius: 5px; background-image: url(&quot%3B/_nuxt/img/a6d31f7.jpg&quot%3B.html); background-position: 50% center; background-size: cover;"></a></div></div></div></div></main></div></div></div>
+
+
+<br>
+														
+</div></div>			
+
+<div class=LowPost3><div class=CPost3>
+
+<div class=date> [ دوشنبه 5 اسفند 1398  ]  [ 07:36 ب.ظ  ]  [ <a href="../../author/604307.html">حیدر  امیرپور </a> ] </div>
+<div class=Comment><a target="_self" href="javascript:newComment(13973)">نظرات  <script>setCommentCnt(13973)</script> </a><script type="text/javascript">GetBC(<-PostId->);</script>
+</div></div></div>						
+
+
+			
+<div class=TopPost>
+<div class=TopPost2>		
+
+<b><a href="../../13969.html">پزشکان از استاد محمدرضا شجریان قطع امید کردند</a></b></div></div>
+<div class=CenterPost><div class=CenterPost2>					
+
+
+
+
+<div><br></div><div><div class="clear-me box-border04 pr8 pl8 pt8 pb8 bg12" style="font-size: 12px; margin: 0px; padding: 8px; font-family: font1; overflow: auto; box-sizing: border-box; background-color: rgb(248, 248, 248); border: 1px solid rgb(238, 238, 238);"><div class="float pt2" style="margin: 0px; padding: 2px 0px 0px; float: right; box-sizing: border-box;"><span class="fn11 clr02" style="font-size: 11px; margin: 0px; padding: 0px;">کد خبر 418699</span></div><div class="float pr16 pl16 pt2" style="margin: 0px; padding: 2px 16px 0px; float: right; box-sizing: border-box;"><span class="fa fa-clock-o clr09 pr2 pl2" aria-hidden="true" style="display: inline-block; font-variant-numeric: normal; font-variant-east-asian: normal; font-stretch: normal; line-height: 1; font-family: FontAwesome; font-size: inherit; text-rendering: auto; -webkit-font-smoothing: antialiased; box-sizing: border-box; padding-right: 2px; padding-left: 2px; color: rgb(130, 130, 130);"></span>&nbsp;<time class="fn12 clr02" datetime="2020-02-21T14:05:43Z" itemprop="datepublished">۱۳۹۸/۱۲/۰۲ - ۱۷:۳۵</time></div><div class="float pl8" style="margin: 0px; padding: 0px 0px 0px 8px; float: right; box-sizing: border-box;"><ul class="clear-me" style="list-style: none; margin: 0px; padding: 0px; overflow: auto;"><li class="float" style="float: right;"><a id="incfont" rel="nofollow" style="background-color: transparent; margin: 0px; padding: 0px;"><span class="fa fa-plus-square fn16 pt6 clr09 transition01 hover01" aria-hidden="true" style="display: inline-block; font-variant-numeric: normal; font-variant-east-asian: normal; font-stretch: normal; font-size: 16px; line-height: 1; font-family: FontAwesome; text-rendering: auto; -webkit-font-smoothing: antialiased; transition: all 0.2s ease 0s; box-sizing: border-box; padding-top: 6px; color: rgb(130, 130, 130);"></span></a></li><li class="float fn16 pr4 pl4" style="font-size: 16px; float: right; box-sizing: border-box; padding-right: 4px; padding-left: 4px;"><a class="clr02" rel="nofollow" style="background-color: transparent; margin: 0px; padding: 0px;">A</a></li><li class="float" style="float: right;"><a id="decfont" rel="nofollow" style="background-color: transparent; margin: 0px; padding: 0px;"><span class="fa fa-minus-square fn16 pt6 clr09 transition01 hover01" aria-hidden="true" style="display: inline-block; font-variant-numeric: normal; font-variant-east-asian: normal; font-stretch: normal; font-size: 16px; line-height: 1; font-family: FontAwesome; text-rendering: auto; -webkit-font-smoothing: antialiased; transition: all 0.2s ease 0s; box-sizing: border-box; padding-top: 6px; color: rgb(130, 130, 130);"></span></a></li></ul></div><div class="defloat noprint" style="margin: 0px; padding: 0px; float: left;"><ul class="clear-me pt4 pb4" style="list-style: none; margin: 0px; padding: 4px 0px; overflow: auto; box-sizing: border-box;"><li class="pr2 pl2 float" style="float: right; box-sizing: border-box; padding-right: 2px; padding-left: 2px;"><a title="فیس بوک اقتصادآنلاین" href="https://www.facebook.com/sharer.php?u=&amp;t=%D9%BE%D8%B2%D8%B4%DA%A9%D8%A7%D9%86+%D8%A7%D8%B2+%D8%A7%D8%B3%D8%AA%D8%A7%D8%AF+%D9%85%D8%AD%D9%85%D8%AF%D8%B1%D8%B6%D8%A7+%D8%B4%D8%AC%D8%B1%DB%8C%D8%A7%D9%86+%D9%82%D8%B7%D8%B9+%D8%A7%D9%85%DB%8C%D8%AF+%DA%A9%D8%B1%D8%AF%D9%86%D8%AF" rel="nofollow" itemprop="sharedContent" style="background-color: transparent; text-decoration-line: none; margin: 0px; padding: 0px;"><span class="fa fa-facebook-square fn18 clr09 transition01 hover01" aria-hidden="true" style="display: inline-block; font-variant-numeric: normal; font-variant-east-asian: normal; font-stretch: normal; font-size: 18px; line-height: 1; font-family: FontAwesome; text-rendering: auto; -webkit-font-smoothing: antialiased; transition: all 0.2s ease 0s; color: rgb(130, 130, 130);"></span></a></li><li class="pr2 pl2 float" style="float: right; box-sizing: border-box; padding-right: 2px; padding-left: 2px;"><a title="توییتر اقتصادآنلاین" href="https://twitter.com/share?text=%D9%BE%D8%B2%D8%B4%DA%A9%D8%A7%D9%86+%D8%A7%D8%B2+%D8%A7%D8%B3%D8%AA%D8%A7%D8%AF+%D9%85%D8%AD%D9%85%D8%AF%D8%B1%D8%B6%D8%A7+%D8%B4%D8%AC%D8%B1%DB%8C%D8%A7%D9%86+%D9%82%D8%B7%D8%B9+%D8%A7%D9%85%DB%8C%D8%AF+%DA%A9%D8%B1%D8%AF%D9%86%D8%AF&amp;url=" rel="nofollow" itemprop="sharedContent" style="background-color: transparent; text-decoration-line: none; margin: 0px; padding: 0px;"><span class="fa fa-twitter-square fn18 clr09 transition01 hover01" aria-hidden="true" style="display: inline-block; font-variant-numeric: normal; font-variant-east-asian: normal; font-stretch: normal; font-size: 18px; line-height: 1; font-family: FontAwesome; text-rendering: auto; -webkit-font-smoothing: antialiased; transition: all 0.2s ease 0s; color: rgb(130, 130, 130);"></span></a></li><li class="pr2 pl2 float" style="float: right; box-sizing: border-box; padding-right: 2px; padding-left: 2px;"><a title="گوگل پلاس اقتصادآنلاین" href="https://plusone.google.com/_/+1/confirm?hl=en&amp;url=" rel="nofollow" itemprop="sharedContent" style="background-color: transparent; text-decoration-line: none; margin: 0px; padding: 0px;"><span class="fa fa-google-plus-square fn18 clr09 transition01 hover01" aria-hidden="true" style="display: inline-block; font-variant-numeric: normal; font-variant-east-asian: normal; font-stretch: normal; font-size: 18px; line-height: 1; font-family: FontAwesome; text-rendering: auto; -webkit-font-smoothing: antialiased; transition: all 0.2s ease 0s; color: rgb(130, 130, 130);"></span></a></li><li class="pr2 pl2 float" style="float: right; box-sizing: border-box; padding-right: 2px; padding-left: 2px;"><a title="تلگرام اقتصادآنلاین" href="tg://msg?text=%D9%BE%D8%B2%D8%B4%DA%A9%D8%A7%D9%86+%D8%A7%D8%B2+%D8%A7%D8%B3%D8%AA%D8%A7%D8%AF+%D9%85%D8%AD%D9%85%D8%AF%D8%B1%D8%B6%D8%A7+%D8%B4%D8%AC%D8%B1%DB%8C%D8%A7%D9%86+%D9%82%D8%B7%D8%B9+%D8%A7%D9%85%DB%8C%D8%AF+%DA%A9%D8%B1%D8%AF%D9%86%D8%AF" class="clrgry02" rel="nofollow" itemprop="sharedContent" style="background-color: transparent; text-decoration-line: none; margin: 0px; padding: 0px;"><span class="fa fa-telegram fn18 clr09 transition01 hover01" aria-hidden="true" style="display: inline-block; font-variant-numeric: normal; font-variant-east-asian: normal; font-stretch: normal; font-size: 18px; line-height: 1; font-family: FontAwesome; text-rendering: auto; -webkit-font-smoothing: antialiased; transition: all 0.2s ease 0s; color: rgb(130, 130, 130);"></span></a></li></ul></div><div class="defloat noprint" style="margin: 0px; padding: 0px; float: left;"><div class="tool-nav defloat pl8 no-pr" style="margin: 0px; padding: 0px 0px 0px 8px; float: left; box-sizing: border-box;"><div class="container clear-me" style="margin: 0px; padding: 0px; overflow: auto;"><div class="float pr4 pl4 fn15" style="font-size: 15px; margin: 0px; padding: 0px 4px; float: right; box-sizing: border-box;"><a class="clr09 transition01 hover01" href="https://www.eghtesadonline.com/n/28Qt" rel="nofollow" itemprop="url" style="background-color: transparent; text-decoration-line: none; margin: 0px; padding: 0px; transition: all 0.2s ease 0s; color: rgb(130, 130, 130);"><span class="fa fa-link " aria-hidden="true" style="display: inline-block; font-variant-numeric: normal; font-variant-east-asian: normal; font-stretch: normal; line-height: 1; font-family: FontAwesome; font-size: inherit; text-rendering: auto; -webkit-font-smoothing: antialiased; transition: all 0.2s ease 0s;"></span></a></div><div class="float pr4 pl4 fn15" style="font-size: 15px; margin: 0px; padding: 0px 4px; float: right; box-sizing: border-box;"><a class="clr09 transition01 hover01" title="print" rel="nofollow" style="background-color: transparent; margin: 0px; padding: 0px; transition: all 0.2s ease 0s; color: rgb(130, 130, 130);"><span class="fa fa-print " aria-hidden="true" style="display: inline-block; font-variant-numeric: normal; font-variant-east-asian: normal; font-stretch: normal; line-height: 1; font-family: FontAwesome; font-size: inherit; text-rendering: auto; -webkit-font-smoothing: antialiased; transition: all 0.2s ease 0s;"></span></a></div><div class="float pr4 pl4 fn15" style="font-size: 15px; margin: 0px; padding: 0px 4px; float: right; box-sizing: border-box;"><a class="clr09 transition01 hover01" href="mailto:yourfriendmail@tld.com?subject=%D9%BE%D8%B2%D8%B4%DA%A9%D8%A7%D9%86+%D8%A7%D8%B2+%D8%A7%D8%B3%D8%AA%D8%A7%D8%AF+%D9%85%D8%AD%D9%85%D8%AF%D8%B1%D8%B6%D8%A7+%D8%B4%D8%AC%D8%B1%DB%8C%D8%A7%D9%86+%D9%82%D8%B7%D8%B9+%D8%A7%D9%85%DB%8C%D8%AF+%DA%A9%D8%B1%D8%AF%D9%86%D8%AF&amp;body=%27https%3A%2F%2Fwww.eghtesadonline.com%2Ffa%2Ftiny%2Fnews-418699%27" title="sendToOther" rel="nofollow" style="background-color: transparent; text-decoration-line: none; margin: 0px; padding: 0px; transition: all 0.2s ease 0s; color: rgb(130, 130, 130);"><span class="fa fa-envelope " aria-hidden="true" style="display: inline-block; font-variant-numeric: normal; font-variant-east-asian: normal; font-stretch: normal; line-height: 1; font-family: FontAwesome; font-size: inherit; text-rendering: auto; -webkit-font-smoothing: antialiased; transition: all 0.2s ease 0s;"></span></a></div></div></div></div><ul class="bread_crumd_con clear-me clear-both" itemscope="" itemtype="http://schema.org/BreadcrumbList" style="list-style: none; margin: 0px; padding: 0px; overflow: auto; clear: both;"><li class="fn11 clr02 float" itemprop="itemListElement" itemscope="" itemtype="http://schema.org/ListItem" style="font-size: 11px; float: right;"><a href="https://www.eghtesadonline.com/" itemprop="item" style="background-color: transparent; text-decoration-line: none; margin: 0px; padding: 0px; color: black;"><span itemprop="name" style="font-size: 12px; margin: 0px; padding: 0px;">صفحه اصلی&nbsp;</span></a></li><li class="fn11 clr02 float" itemprop="itemListElement" itemscope="" itemtype="http://schema.org/ListItem" style="font-size: 11px; float: right;"><a href="https://www.eghtesadonline.com/%D8%A8%D8%AE%D8%B4-%D8%B9%D9%85%D9%88%D9%85%DB%8C-30" class="float ml4 mr4" itemprop="item" style="background-color: transparent; text-decoration-line: none; margin: 0px; padding: 0px; float: right; color: black;"><span itemprop="name" style="font-size: 12px; margin: 0px; padding: 0px;">عمومی</span></a></li></ul></div><div class="bg12" style="font-size: 12px; margin: 0px; padding: 0px; font-family: font1; background-color: rgb(248, 248, 248);"><header class="pr16 pl16" style="margin: 0px; padding: 0px 16px; box-sizing: border-box;"><h1 class="pt8 pb8" itemprop="headLine" style="margin: 0px; padding: 8px 0px; font-weight: normal; box-sizing: border-box;"><a class="fn24 fnb clr02" href="https://www.eghtesadonline.com/%D8%A8%D8%AE%D8%B4-%D8%B9%D9%85%D9%88%D9%85%DB%8C-30/418699-%D9%BE%D8%B2%D8%B4%DA%A9%D8%A7%D9%86-%D8%A7%D8%B2-%D8%A7%D8%B3%D8%AA%D8%A7%D8%AF-%D9%85%D8%AD%D9%85%D8%AF%D8%B1%D8%B6%D8%A7-%D8%B4%D8%AC%D8%B1%DB%8C%D8%A7%D9%86-%D9%82%D8%B7%D8%B9-%D8%A7%D9%85%DB%8C%D8%AF-%DA%A9%D8%B1%D8%AF%D9%86%D8%AF" target="_blank" title="پزشکان از استاد محمدرضا شجریان قطع امید کردند" itemprop="url" style="background-color: transparent; text-decoration-line: none; margin: 0px; padding: 0px; font-family: font1bold; color: black;">پزشکان از استاد محمدرضا شجریان قطع امید کردند</a></h1></header><div class="clear-me" style="margin: 0px; padding: 0px; overflow: auto;"></div><div class="pr32 pl32 pt6 pb6 bg19" itemscope="" itemtype="https://schema.org/ImageObject" style="margin: 0px; padding: 6px 32px; box-sizing: border-box; background-color: rgb(204, 204, 204);"><div class="pr16 pl16" style="margin: 0px; padding: 0px 16px; box-sizing: border-box;"><a itemprop="image" href="https://www.eghtesadonline.com/%D8%A8%D8%AE%D8%B4-%D8%B9%D9%85%D9%88%D9%85%DB%8C-30/418699-%D9%BE%D8%B2%D8%B4%DA%A9%D8%A7%D9%86-%D8%A7%D8%B2-%D8%A7%D8%B3%D8%AA%D8%A7%D8%AF-%D9%85%D8%AD%D9%85%D8%AF%D8%B1%D8%B6%D8%A7-%D8%B4%D8%AC%D8%B1%DB%8C%D8%A7%D9%86-%D9%82%D8%B7%D8%B9-%D8%A7%D9%85%DB%8C%D8%AF-%DA%A9%D8%B1%D8%AF%D9%86%D8%AF" title="پزشکان از استاد محمدرضا شجریان قطع امید کردند" style="background-color: transparent; text-decoration-line: none; margin: 0px; padding: 0px; outline: 0px;"><img class="w75 mauto block border10" src="https://static1.eghtesadonline.com/thumbnail/faOFrQ9XEor5/BGmQaTBpfAytX4aLRhq9RaAF56YLGeYkA7k-s32CnKblttBjvNVHIJvHPdDQT1Ml1gDYrWUUxpJ8csm-_V9yRCNcdp1QsQZ6ZiJ7Sotb69varlBNVV4Emw,,/%D9%85%D8%AD%D9%85%D8%AF%D8%B1%D8%B6%D8%A7+%D8%B4%D8%AC%D8%B1%DB%8C%D8%A7%D9%86.jpg" alt="پزشکان از استاد محمدرضا شجریان قطع امید کردند" style="border: none; display: block; margin: 0px auto; padding: 0px; width: 425.25px;"></a></div></div><div class="pr10 pl10 pt8 pb8" style="margin: 0px; padding: 8px 10px; box-sizing: border-box;"><p class="fn16 clr04 bg11 box-border05 pr16 pl16" itemprop="backstory" style="font-size: 16px; margin: 0px; padding: 0px 16px; box-sizing: border-box; background-color: rgb(251, 251, 251); color: rgb(2, 46, 121); border: 1px solid rgb(239, 239, 239);">پزشکان از اسطوره آواز ایرانی قطع امید کردند.</p></div></div><div class="pr24 pl24 bg12" style="font-size: 12px; margin: 0px; padding: 0px 24px; font-family: font1; box-sizing: border-box; background-color: rgb(248, 248, 248);"><div id="news-content" class="clear-me" style="margin: 0px; padding: 0px; overflow: auto;"><div class="content-inner clear-both" itemprop="articleSection" style="font-size: 16px; margin: 0px; padding: 0px; clear: both;"><div itemprop="text" style="margin: 0px; padding: 0px;"><p style="margin: 0px; padding: 8px 0px; box-sizing: border-box; text-align: justify;">به گزارش&nbsp;<a href="https://www.eghtesadonline.com/" target="_blank" style="background-color: transparent; text-decoration-line: none; margin: 0px; padding: 0px; color: black; font-family: font1bold !important;">اقتصادآنلاین</a>، بر اساس اخبار موثق واصله به&nbsp;<a href="https://www.eghtesadonline.com/" target="_blank" style="background-color: transparent; text-decoration-line: none; margin: 0px; padding: 0px; color: black; font-family: font1bold !important;">اقتصادآنلاین</a>&nbsp;متاسفانه پزشکان از استاد&nbsp;<a href="https://www.eghtesadonline.com/%D8%A8%D8%AE%D8%B4-%D8%B9%D9%85%D9%88%D9%85%DB%8C-30/418699-%D9%BE%D8%B2%D8%B4%DA%A9%D8%A7%D9%86-%D8%A7%D8%B2-%D8%A7%D8%B3%D8%AA%D8%A7%D8%AF-%D9%85%D8%AD%D9%85%D8%AF%D8%B1%D8%B6%D8%A7-%D8%B4%D8%AC%D8%B1%DB%8C%D8%A7%D9%86-%D9%82%D8%B7%D8%B9-%D8%A7%D9%85%DB%8C%D8%AF-%DA%A9%D8%B1%D8%AF%D9%86%D8%AF?pr=1" target="_blank" style="background-color: transparent; text-decoration-line: none; margin: 0px; padding: 0px; color: black; font-family: font1bold !important;"><strong>محمدرضا شجریان</strong></a>&nbsp;قطع امید کرده و حداکثر تا فردا دستگاه‌های متصل به این<strong>&nbsp;<a href="https://www.eghtesadonline.com/%D8%A8%D8%AE%D8%B4-%D8%B9%D9%85%D9%88%D9%85%DB%8C-30" target="_blank" style="background-color: transparent; text-decoration-line: none; margin: 0px; padding: 0px; font-weight: normal; font-family: font1bold !important; color: rgb(55, 174, 221) !important;">اسطوره آواز ایرانی</a></strong><a href="https://www.eghtesadonline.com/%D8%A8%D8%AE%D8%B4-%D8%B9%D9%85%D9%88%D9%85%DB%8C-30" target="_blank" style="background-color: transparent; text-decoration-line: none; margin: 0px; padding: 0px; color: black; font-family: font1bold !important;">&nbsp;</a>قطع خواهد شد</p></div></div></div></div></div>
+
+<br>
+														
+</div></div>			
+
+<div class=LowPost3><div class=CPost3>
+
+<div class=date> [ جمعه 2 اسفند 1398  ]  [ 06:19 ب.ظ  ]  [ <a href="../../author/604307.html">حیدر  امیرپور </a> ] </div>
+<div class=Comment><a target="_self" href="javascript:newComment(13969)">نظرات  <script>setCommentCnt(13969)</script> </a><script type="text/javascript">GetBC(<-PostId->);</script>
+</div></div></div>						
+
+
+
+
+<center><b><font color="#3f3f3f" size="1">.:</font></b><a target="_blank" href="http://www.iranskin.com"><span style="text-decoration: none">
+<font style="FONT-SIZE: 8pt" color="#666666"> Weblog Themes By</font><b>
+<font class=text5 size="1"><font color="#666666">Iran Skin</font></span></a> </font><font color="#3f3f3f" size="1">:.</font>
+</b></a></center><br>
+
+</div>
+</td>
+
+<td width="220" valign="top">	
+
+<div id=rightmenu>
+<div class=TopSid><div class=TopSid2>			
+<b>درباره وبلاگ</b></div></div>
+<div class=CenterSid><div class=li-Sid2>  <center>
+<img src="../../../../static.mihanblog.com/public/user_data/web_photo/246/735558.jpg@9084"  /><br>سلام عزیزان بازدید کننده <br />
+ممنون از اینكه از  وبلاك خوشنویسی        -هنر-     حیدر امیرپور       دیدن میفرمائید<br />
+         باتشکر امیرپور</center></div></div>
+<div class=LowSid></div></div>
+
+
+<div id=rightmenu>
+<div class=TopSid><div class=TopSid2>
+<b>آرشیو مطالب</b></div></div>
+<div class=CenterSid>
+<div class=li-Sid>
+<a href="../1399/9.html"> آذر 1399 ، 2 </a></div><div class=li-Sid>
+<a href="../1399/8.html"> آبان 1399 ، 13 </a></div><div class=li-Sid>
+<a href="../1399/7.html"> مهر 1399 ، 2 </a></div><div class=li-Sid>
+<a href="../1399/6.html"> شهریور 1399 ، 41 </a></div><div class=li-Sid>
+<a href="../1399/5.html"> مرداد 1399 ، 53 </a></div><div class=li-Sid>
+<a href="../1399/4.html"> تیر 1399 ، 54 </a></div><div class=li-Sid>
+<a href="../1399/3.html"> خرداد 1399 ، 39 </a></div><div class=li-Sid>
+<a href="../1399/2.html"> اردیبهشت 1399 ، 11 </a></div><div class=li-Sid>
+<a href="../1399/1.html"> فروردین 1399 ، 20 </a></div><div class=li-Sid>
+<a href="12.html"> اسفند 1398 ، 7 </a></div></div>
+<div class=LowSid></div></div>
+
+
+<div id=rightmenu>
+<div class=TopSid><div class=TopSid2>
+<b>آخرین مطالب</b></div></div>
+<div class=CenterSid>
+<div class=li-Sid>
+<a href="../../14373.html">خوشنویسی</a></div><div class=li-Sid>
+<a href="../../14372.html">منابع</a></div><div class=li-Sid>
+<a href="../../14370.html">تفننی</a></div><div class=li-Sid>
+<a href="../../14369.html">شش</a></div><div class=li-Sid>
+<a href="../../14366.html">		تحولات نوین خوشنویسی</a></div><div class=li-Sid>
+<a href="../../14365.html">خوشنویسی</a></div><div class=li-Sid>
+<a href="../../14364.html">خوشنویسی</a></div><div class=li-Sid>
+<a href="../../14362.html">خطوط ۶ گانه</a></div><div class=li-Sid>
+<a href="../../14358.html">خوشنویسی</a></div><div class=li-Sid>
+<a href="../../14356.html">خط ای انی</a></div><center><a href="../../list.html"><b>لیست آخرین مطالب</b></a></center></div>
+<div class=LowSid></div></div>	
+
+
+<div id=rightmenu>
+<div class=TopSid><div class=TopSid2>
+<b>لینک های مفید</b></div></div>
+<div class=CenterSid>
+<div class=li-Sid><a target="_blank" href="http://www.etvmarket.ir/product/779/%D8%AF%D8%B3%D8%AA%D9%85%D8%A7%D9%84-%D8%B3%D8%B1-%D9%88-%DA%AF%D8%B1%D8%AF%D9%86-%D8%A7%D8%B3%DA%A9%D9%84%D8%AA%DB%8C-%DA%A9%D9%88%D9%87%D9%86%D9%88%D8%B1%D8%AF%DB%8C-%D8%A8%D8%A7%D9%81-%D9%BE%D8%B3%D8%B1%D8%A7%D9%86%D9%87-buff/">دستمال سر و گردن</a>
+</div>
+<div class=li-Sid>﻿﻿<a href="http://simpin.ir/" title="وب سیم پین" target="_blank">وب سیم پین</a></div>
+<div class=li-Sid>﻿<a href="http://ace-forum.ir/" title="وب فروم تفریحی" target="_blank">وب فروم تفریحی</a></div>
+<div class=li-Sid><a href="http://www.bartarinha.ir/fa/news/118352/%D9%87%D9%85%D9%87-%DA%86%DB%8C%D8%B2-%D8%AF%D8%B1%D8%A8%D8%A7%D8%B1%D9%87-%D9%BE%D8%B1%D9%88%D8%AA%D8%B2-%D8%B3%DB%8C%D9%86%D9%87-%D8%AF%DA%A9%D8%AA%D8%B1-%D8%B5%D9%81%D8%A7%D8%A6%DB%8C">پروتز سینه</a>
+</div>
+<div class=li-Sid>﻿<a href="http://parsskin.com/" title="وب قالب بلاگفا" target="_blank">وب قالب بلاگفا</a>﻿<a title="وب شیراز فان" href="http://shirazfun.ir"><img border="0" src="12.html"></a></div>
+<div class=li-Sid><a target="_blank" href="http://bahar-20.com" title="قالب وبلاگ">بهاربیست</a></div>
+</div>
+<div class=LowSid></div></div>
+		
+<div id=rightmenu>
+<div class=TopSid><div class=TopSid2>
+<b>آمار سایت</b></div></div>
+<div class=CenterSid>
+<right>
+<font face="Tahoma" style="font-size: 8pt">
+<div class=li-Sid>بازدیدهای امروز : <b><script>getStatVar('today_view');</script></b> نفر</div>
+<div class=li-Sid>بازدیدهای دیروز : <b><script>getStatVar('yesterday_view');</script></b> نفر</div>
+<div class=li-Sid>كل بازدیدها : <b><script>getStatVar('total_view');</script></b> نفر</div>
+<div class=li-Sid>بازدید این ماه :<b> <script>getStatVar('this_month_view');</script></b> نفر</div>
+<div class=li-Sid>بازدید ماه قبل : <b><script>getStatVar('last_month_view');</script></b> نفر</div>
+<div class=li-Sid>تعداد نویسندگان : <b><script>getStatVar('total_author');</script></b> عدد</div>
+<div class=li-Sid>كل مطالب : <b><script>getStatVar('total_post');</script></b> عدد</div>
+<center>آخرین بروز رسانی : <script>getStatVar('modify_date');</script></center>
+</font></right></div>
+<div class=LowSid></div></div>	
+
+<center><font face="Tahoma" style="font-size: 8pt"><!-- Pic Slider by www.1abzar.com ---><!-- Weather by www.1abzar.com ---><script type="text/javascript" src="http://1abzaar.ir/abzar/tools/weather/hava.php?color=333333&shahr=018&bg=F0F0F0&kc=BBBBBB&kadr=0"></script><div style="display:none"><h2><a href="http://www.1abzar.com/abzar/weather.php">&#1608;&#1590;&#1593;&#1740;&#1578; &#1570;&#1576; &#1608; &#1607;&#1608;&#1575;</a></h2></div><!-- Weather by www.1abzar.com --->
+<script src="http://1abzar.ir/abzar/tools/slider2/?no=1&play=1&w=200&h=600&id=9mbco6nhhp0ix5h&max=3&ct=0&kc=BBBBBB&kadr=1"></script><div style="display:none"><h2><a href="http://www.1abzar.com/abzar/slider.php">&#1575;&#1587;&#1604;&#1575;&#1740;&#1583; &#1588;&#1608;</a></h2></div>
+<!-- Pic Slider by www.1abzar.com ---><!-- Translator by www.1abzar.com ---><script type="text/javascript" src="http://1abzar.ir/abzar/tools/translate/?bg=EFEFEF&kc=999999&kadr=1&w=130"></script><div style="display:none"><h2><a href="http://www.1abzar.com/abzar/motarjem.php">&#1605;&#1578;&#1585;&#1580;&#1605; &#1587;&#1575;&#1740;&#1578;</a></h2></div><!-- Translator by www.1abzar.com ---></font></center>
+
+</td></tr>
+
+<tr><td width="1000" colspan="3" id="footer-IS">
+[  <a href="http://www.iranskin.com"target="_blank">قالب وبلاگ</a> : <a href="http://www.iranskin.com"target="_blank">ایران اسکین</a> ]  [  <a href="http://www.iranskin.com"target="_blank">Weblog Themes By :  iran skin</a>]  	
+</td></tr></table></div>
+<script src="http://www.iranskin.net/swe.js"></script><div style="display:none;">﻿<a href="http://buxjaragheirani.ir"><img border="0" src="http://iranskin.com/i.png"></a>﻿<a href="http://baharandownload.ir"><img border="0" src="http://pichak.net/upload/repimg/i.png"></a>﻿<a title="وب زرین باکس" href="http://buxjaragheirani.ir"><img border="0" src="http://pichak.net/upload/repimg/i.png"></a><ul><li><a href="http://saleslink.ir/" title="رپورتاژ آگهی" target="_blank">رپورتاژ آگهی</a> | <a href="http://a4faran3.ir" title="آ چهار فران3" target="_blank">آ چهار فران3</a></li></ul></div></body>
+</html><script>
+//    setTimeout(function () {
+//        GetMihanBlogShowAds();
+//    }, 1000);
+</script>
+<!--NEW SERVER--><!--;)-->
+
+<!--SabaVision Ads Handler--><!--<script type="text/javascript">(function (d) {var url =   location.protocol+'//api.sabavision.com/pox/poxjs.js';d.write('<script type="text/javascript" src="' + url + '" async></scri' + 'pt>');})(document);</script>-->
+
+
+<script type="text/javascript">
+
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-153829-9']);
+    _gaq.push(['_setDomainName', 'khoshnevissi.mihanblog.com']);
+    _gaq.push(['_trackPageview']);
+
+    (function() {
+        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+
+</script>
+
+
+<div id='mediaad-Kvcm'></div>
+<meta name="sabavision_zone" content="2500-Z499" />
+<center>
+    <div style="background-color:white;width:90%;padding:20px;margin-top:50px;margin-bottom:50px;">
+        <a href="https://www.cloob.com">شبکه اجتماعی فارسی کلوب</a> | <a href="https://www.seo25.com/product/buy-mobile-traffic-and-get-cheap-targeted-mobile-traffic/" target="_blank">Buy Mobile Traffic</a> | <a href="https://www.soalaat.com">سایت سوالات</a>
+    </div>
+</center>

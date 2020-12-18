@@ -1,0 +1,1008 @@
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" /><link rel="EditURI" type="application/rsd+xml" title="RSD" href="http://jalasateostad.mihanblog.com/xmlrpc?rsd" />
+<script type="text/javascript" src="../static.mihanblog.com/public/scripts/run/g.other.v3.js"></script>
+<script>
+
+	function c_$(id){
+        return document.getElementById(id);
+    }
+    
+			//if (parent.frames.length) top.location.href= document.location;
+		
+	setTodayDate = function(){
+		document.write('شنبه 22 آذر 1399');
+		/*719170*/	}
+
+</script>
+
+
+
+        <script type="text/javascript">
+            (function(){
+            var now = new Date();
+            var head = document.getElementsByTagName('head')[0];
+            var script = document.createElement('script');
+            script.async = true;
+            var script_address = 'https://cdn.yektanet.com/js/mihanblog.com/native-mihanblog.com-6531.js';
+            script.src = script_address + '?v=' + now.getFullYear().toString() + '0' + now.getMonth() + '0' + now.getDate() + '0' + now.getHours();
+            head.appendChild(script);
+            })();
+        </script>
+
+        <!--<script type="text/javascript">
+            var head = document.getElementsByTagName("head")[0];
+            var script = document.createElement("script");
+            script.type = "text/javascript";
+            script.async=1;
+            script.src = "https://s1.mediaad.org/serve/mihanblog.com/loader.js" ;
+            head.appendChild(script);
+        </script>-->
+        
+        <script>
+            var sabaVisionWebsiteID = "9bab9dac-041d-4bdb-b39a-1ed789f65eed"; var sabaVisionWebsitePage = "ALL"
+        </script>
+        <link rel="stylesheet" href="https://plus.sabavision.com/dox/dox.min.css">
+        <script src="https://plus.sabavision.com/dox/dox.min.js"></script>
+        
+        <script>
+	try{
+		var commentCnt = new Array();
+		commentCnt[106]='5';commentCnt[109]='2';commentCnt[111]='11';commentCnt[113]='8';commentCnt[115]='36';	} catch(e){}
+	
+	newComment = function(post_id){
+		try{
+			window.open('/post/comment/'+post_id,'comment','status=yes,scrollbars=yes,toolbar=no,menubar=no,location=no ,width=480px,height=540px');
+		} catch(e){}
+	}
+	setCommentCnt = function(post_id){
+		try{
+			if(commentCnt[post_id]){
+				document.write(commentCnt[post_id]);
+			} else {
+				document.write(0);
+			}
+		} catch(e){}
+	}
+</script><script>
+
+
+	mihanblogUpdateLike = function(postid,type){
+		var url = '/post/like/'+postid+'/'+type;
+		mihanblogGetAjax(url,function(){});
+	};
+	try{
+        mihanblogGetAjax = function (url,callback) {
+    		var req;
+			if (window.XMLHttpRequest)
+            {
+                // code for IE7+, Firefox, Chrome, Opera, Safari
+			  	req = new XMLHttpRequest();
+			}else{	// code for IE6, IE5
+			  	req = new ActiveXObject("Microsoft.XMLHTTP");
+		  	}
+		    req.open("GET", url, 1);
+		    req.onreadystatechange = function () {
+		        if (req.readyState == 4) {
+		            if (req.status == 200) {
+		            	var response = eval(req.responseText);
+		            	callback();
+		            }else{
+	            		return ;
+		            }
+		        }else{
+					return ;
+		        }
+		    }
+		    req.send(null);
+		}
+	}catch(e){}
+
+	try{
+		var mihanblogLikeArrCnt = new Array();
+		var mihanblogDisLikeArrCnt = new Array();
+
+		mihanblogLikeArrCnt[106]='0';
+mihanblogDisLikeArrCnt[106]='0';
+mihanblogLikeArrCnt[109]='0';
+mihanblogDisLikeArrCnt[109]='0';
+mihanblogLikeArrCnt[111]='0';
+mihanblogDisLikeArrCnt[111]='0';
+mihanblogLikeArrCnt[113]='0';
+mihanblogDisLikeArrCnt[113]='0';
+mihanblogLikeArrCnt[115]='0';
+mihanblogDisLikeArrCnt[115]='0';
+	} catch(e){}
+
+
+
+    mihanblogPostLike = function(post_id){
+
+        mihanblogLikeCnt = (mihanblogLikeArrCnt[post_id]? mihanblogLikeArrCnt[post_id] : 0);
+        mihanblogDisLikeCnt = (mihanblogDisLikeArrCnt[post_id]? mihanblogDisLikeArrCnt[post_id] : 0);
+        mihanblogLikeCnt = parseInt(mihanblogLikeCnt);
+        mihanblogDisLikeCnt = parseInt(mihanblogDisLikeCnt);
+
+        document.write(
+                '<div class="mihanblog_like_wrapper ">'+
+                       '<div id="dislikeBar_'+post_id+'" onclick="mihanblogUpdateLike('+post_id+',\'dislike\')"   class="mihanblog_like_bar mihanblog_like_dislikeBar mihanblog_like_show_help ">-<div class="mihanblog_like_Cnt" id="disLikeCnt_'+post_id+'">'+mihanblogDisLikeCnt+'</div>'+
+                            '<span  class="mihanblog_like_v2_help mihanblog_like_v2_help_dislike clearfix"> '+
+                                '<span class="mihanblog_like_help_arrow mihanblog_like_help_arrow_dislike clearfix"></span>'+
+                                '<span class="mihanblog_like_help_text">نمی پسندم</span>'+
+                            '</span>'+
+                        '</div>'+
+                       '<div id="Like_'+post_id+'" class="mihanblog_like_border"></div>'+
+                       '<div id="likeBar_'+post_id+'" onclick="mihanblogUpdateLike('+post_id+',\'like\')"  class="mihanblog_like_bar mihanblog_like_likeBar mihanblog_like_show_help" >+<div class="mihanblog_like_Cnt" id="likeCnt_'+post_id+'">'+mihanblogLikeCnt+'</div>'+
+                            '<span  class="mihanblog_like_v2_help mihanblog_like_v2_help_like clearfix"> '+
+                                '<span class="mihanblog_like_help_arrow mihanblog_like_help_arrow_like clearfix"></span>'+
+                                '<span class="mihanblog_like_help_text">می پسندم</span>'+
+                            '</span>'+
+                        '</div>'+
+
+                '</div>'
+        );
+
+
+
+        mihanblogDisplayeLike(post_id);
+    }
+
+
+    mihanblogDisplayeLike = function(post_id){
+
+        mihanblogLikeCnt = (mihanblogLikeArrCnt[post_id]? mihanblogLikeArrCnt[post_id] : 0);
+        mihanblogDisLikeCnt = (mihanblogDisLikeArrCnt[post_id]? mihanblogDisLikeArrCnt[post_id] : 0);
+        mihanblogLikeCnt = parseInt(mihanblogLikeCnt);
+        mihanblogDisLikeCnt = parseInt(mihanblogDisLikeCnt);
+
+
+
+        sum = mihanblogLikeCnt - mihanblogDisLikeCnt;
+        backgroundBorder =  document.getElementById('Like_'+post_id);
+        var likeObj = document.getElementById('likeCnt_'+post_id);
+        var disLikeObj = document.getElementById('disLikeCnt_'+post_id);
+
+
+
+
+
+        likeObj.innerHTML =  mihanblogLikeCnt ;
+        disLikeObj.innerHTML =  mihanblogDisLikeCnt;
+
+        if(sum == 0){
+            backgroundBorder.style.backgroundImage = "url('/public/public/images/icons/like_likedislike.png')";
+            document.getElementById('dislikeBar_'+post_id).style.width = '19px';
+            document.getElementById('likeBar_'+post_id).style.width = '19px';
+        }else{
+             if(sum > 0){
+                 backgroundBorder.style.backgroundImage = "url('/public/public/images/icons/like_like.png')";
+                 document.getElementById('likeBar_'+post_id).style.width = '23px';
+                 document.getElementById('dislikeBar_'+post_id).style.width = '15px';
+             }else{
+                 backgroundBorder.style.backgroundImage = "url('/public/public/images/icons/like_dislike.png')";
+                 document.getElementById('likeBar_'+post_id).style.width = '15px';
+                 document.getElementById('dislikeBar_'+post_id).style.width = '23px';
+             }
+        }
+
+    }
+
+
+
+
+</script>
+
+<style type="text/css">
+
+
+    .clearfix {display: inline-block;}
+    .clearfix:after {
+        content: ".";
+        display: block;
+        height: 0;
+        clear: both;
+        visibility: hidden;
+    }
+
+    .mihanblog_like_wrapper {
+        color: #ffffff;
+        direction: ltr;
+        position: relative;
+    }
+    .mihanblog_like_wrapper span{
+        display: none;
+    }
+    .mihanblog_like_bar {
+        color: #FFFFFF;
+        cursor: pointer;
+        float: left;
+        font-size: 10px;
+        height: 20px;
+        line-height: 19px;
+        margin: 5px 0;
+    }
+    .mihanblog_like_likeBar {
+        background-color: #88B131;
+        padding-right: 5px;
+        border-top-right-radius: 2px;
+        border-bottom-right-radius: 2px;
+        text-align: right;
+    }
+    .mihanblog_like_likeBar:hover{
+        background-color: #699017;
+    }
+    .mihanblog_like_border {
+        background-color: #666666;
+        border: 1px solid #666666;
+        float: left;
+        font-size: 12px;
+        height: 20px;
+        margin-top: 2px;
+        width: 25px;
+        padding: 3px 5px 2px 0;
+        text-align: center;
+        border-radius: 2px;
+        color: #ffffff;
+        direction: ltr;
+        background-repeat: no-repeat ;
+        background-position: 4px center;
+    }
+    .mihanblog_like_border img {
+        margin-left: 2px;
+        margin-top: 2px;
+        width: 22px;
+    }
+    .mihanblog_like_dislikeBar {
+        background-color: #FF6F31;
+        padding-left: 5px;
+        border-top-left-radius: 2px;
+        border-bottom-left-radius: 2px;
+        text-align:left ;
+    }
+    .mihanblog_like_dislikeBar:hover{
+        background-color: #D54B10;
+    }
+
+
+
+    .mihanblog_like_show_help {
+        position: relative;
+    }
+    .mihanblog_like_show_help:hover span {
+        display: block;
+    }
+    .mihanblog_like_help_text {
+        background-color: white;
+        border: 1px solid #555555;
+        border-radius: 3px 3px 3px 3px;
+        color: #303030;
+        float: left;
+        font-size: 11px;
+        font-weight: normal;
+        padding: 5px 10px;
+    }
+
+    .mihanblog_like_help_arrow_dislike {
+        background: url("http://jalasateostad.mihanblog.com/public/public/images/icons/like_hover_top.png") no-repeat scroll 16px 0 transparent;
+        left: 0;
+        top: -4px;
+    }
+
+    .mihanblog_like_help_arrow_like {
+        background: url("http://jalasateostad.mihanblog.com/public/public/images/icons/like_hover_top _2.png") no-repeat scroll 16px 0 transparent;
+        left: -10px;
+        top: 29px;
+    }
+
+    .mihanblog_like_help_arrow{
+        height: 6px;
+        position: absolute;
+        width: 100px;
+
+    }
+
+    .mihanblog_like_v2_help_dislike {
+        left: -15px;
+        top: 24px;
+    }
+    .mihanblog_like_v2_help_like {
+        left: 0;
+        top: -35px;
+
+    }
+    .mihanblog_like_v2_help{
+        display: none;
+        position: absolute;
+        white-space: nowrap;
+        z-index: 1;
+    }
+
+    .mihanblog_like_Cnt{
+        display: inline;
+        color: #ffffff;
+    }
+
+</style><script>
+
+	statInfo = new Array();
+	setStatVar = function(index,value){
+		statInfo[index] = value;
+	}
+	getStatVar = function(index){
+		if(statInfo[index]) document.write(statInfo[index]);
+	}
+	
+	setStatVar('total_post','52');
+	setStatVar('total_author','0');
+	setStatVar('modify_date','یکشنبه 5 اردیبهشت 1395');
+	
+	setStatVar('today_view','15');
+	setStatVar('yesterday_view','33');
+	
+	setStatVar('this_month_view','796');
+	setStatVar('last_month_view','1349');
+
+	setStatVar('total_view','216533');
+	setStatVar('last_view_date','شنبه 22 آذر 1399 (15:05)');
+
+
+
+    
+    function setStatFromClient()
+    {
+        var url = 'http://jalasateostad.mihanblog.com/statupdate/?data[refereruri]=http://golchin90.mihanblog.com/&data[postid]=&data[requesturi]=/&data[sdate]=1607774600&data[hash]=2821a4e8e21cb2d5f9fbf039eaee2bc7&data[resolution]='+screen.width+' X '+screen.height;
+
+//        alert(url);
+//        var newjs = document.createElement("SCRIPT");
+//        newjs.type = 'text/javascript';
+//        newjs.src = url;
+//
+//        var newdiv = document.createElement("DIV");
+//        newdiv.setAttribute("style","display:none");
+
+        document.write(unescape('%3Cscript src="'+url+'" type="text/javascript"%3E%3C/script%3E'));
+//        newdiv.appendChild (newjs);
+//        document.write(newjs);
+//        document.write(appendChild (newdiv);
+
+    };
+    setStatFromClient();
+        
+</script><script>
+	messageForm = function(post_id){
+		try{
+			window.open('/message','message','status=yes,scrollbars=yes,toolbar=no,menubar=no,location=no ,width=480px,height=550px');
+		} catch(e){}
+	}
+</script><script>
+	linkdailyForm = function(){
+		try{
+			window.open('/linkdaily/new','linkdaily','status=yes,scrollbars=yes,toolbar=no,menubar=no,location=no ,width=500px,height=460px');
+		} catch(e){}
+	}
+</script><script>
+
+var MihanblogShopAdsArray = new Array();
+
+function GetMihanBlogShowAds(){
+	if(MihanblogShopAdsArray.length){
+		var adsTarget = 'MihanblogShopAds';
+		var containerWidth = document.getElementById(adsTarget).offsetWidth;
+		if(containerWidth>=200){
+			var adsCnt = parseInt(containerWidth / 200) ;
+			if(adsCnt>MihanblogShopAdsArray.length){
+				adsCnt = MihanblogShopAdsArray.length ; 
+			}
+//			var OneAdsWidth = parseInt(containerWidth / adsCnt) ;
+			var OneAdsWidth = containerWidth / adsCnt ;
+			if(OneAdsWidth>400){
+				OneAdsWidth = 400 ;
+			}
+			var OutHtml = '';
+			var img = '';
+			var link = '';
+			var title = '';
+			var description = '';
+			var imgWidth = 70;
+			if(OneAdsWidth>230){
+				imgWidth = 80;
+			}
+			if(OneAdsWidth>300){
+				imgWidth = 90;
+			}
+			for(adsOne=0;adsOne<adsCnt;adsOne++){
+				
+				img = MihanblogShopAdsArray[adsOne]['img'];
+				link = MihanblogShopAdsArray[adsOne]['link'];
+				title = MihanblogShopAdsArray[adsOne]['title'];
+				description = MihanblogShopAdsArray[adsOne]['description'];
+				
+				OutHtml += '<td style="background-color:#FFF;width: '+OneAdsWidth+'px;border:1px solid #f00;margin:0px 0px;font-size:11px;font-family:tahoma;padding:2px;margin:0px 0px;font-size:11px;border: 1px solid BurlyWood; padding: 1px; height: '+(imgWidth+25)+'px;">';
+
+				OutHtml += '	<a href="http://jalasateostad.mihanblog.com/'+link+'" target="_blank" style="text-decoration:none">';
+
+				OutHtml += '			<div style="width: '+(OneAdsWidth-16)+'px;cursor:pointer;font-size:12px;padding: 4px 1px 4px 7px; white-space: nowrap; text-align: center; font-weight: bold; color: blue;white-space:nowrap;overflow:hidden">';
+				OutHtml += 					title;
+				OutHtml += '			</div>';
+				OutHtml += '			<div style="cursor:pointer;padding: 1px; display: block; float: right; width: '+imgWidth+'px;">';
+				OutHtml += '				<img src="'+img+'.html" style="border:0px;padding:0px;margin:0px;width:'+imgWidth+'px;height:'+imgWidth+'px;">';
+				OutHtml += '			</div>';
+				OutHtml += '			<div style="padding: 1px; display: block; float: right; width: '+(OneAdsWidth-13-imgWidth)+'px; text-align: right;overflow:hidden">';
+				OutHtml += '				<div style="overflow:hidden;cursor:pointer;padding: 2px 3px; line-height: 17px; height: '+(imgWidth-3)+'px; text-align: justify;color:#000;direction:rtl">';
+				OutHtml += 						description;
+				OutHtml += '				</div>';
+				OutHtml += '			</div>';
+
+				OutHtml += '	</a>';
+
+				OutHtml += '</td>';
+			}
+			
+			var Out = '<table align="center" cellpadding="0" cellspacing="2" style="width:'+(OneAdsWidth*adsCnt)+'px;"><tr>'+OutHtml+'</tr></table>'; 
+			
+			Out = '<div style="text-align:center;padding:0px;margin:3px auto;">'+Out+'</div>'; 
+			
+			document.getElementById(adsTarget).style.height = (imgWidth+35)+'px' ;
+			document.getElementById(adsTarget).innerHTML = Out ;
+		}
+	}
+}
+</script>
+    <style>
+        @font-face {
+            font-family: 'Mihan-Iransans';
+            src: url('http://jalasateostad.mihanblog.com/public/public/fonts/Iransans.eot');
+            src: url('http://jalasateostad.mihanblog.com/public/public/fonts/Iransans.eot?') format('embedded-opentype'),
+            url('http://jalasateostad.mihanblog.com/public/public/fonts/Iransans.woff2') format('woff2'),
+            url('http://jalasateostad.mihanblog.com/public/public/fonts/Iransans.woff') format('woff'),
+            url('http://jalasateostad.mihanblog.com/public/public/fonts/Iransans.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+        @font-face {
+            font-family: 'Mihan-IransansBold';
+            src: url('http://jalasateostad.mihanblog.com/public/public/fonts/Iransans-Black.eot');
+            src: url('http://jalasateostad.mihanblog.com/public/public/fonts/Iransans-Black.eot?') format('embedded-opentype'),
+            url('http://jalasateostad.mihanblog.com/public/public/fonts/Iransans-Black.woff2') format('woff2'),
+            url('http://jalasateostad.mihanblog.com/public/public/fonts/Iransans-Black.woff') format('woff'),
+            url('http://jalasateostad.mihanblog.com/public/public/fonts/Iransans-Black.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+        @font-face {
+            font-family: 'Mihan-IransansLight';
+            src: url('http://jalasateostad.mihanblog.com/public/public/fonts/Iransans-UltraLight.eot');
+            src: url('http://jalasateostad.mihanblog.com/public/public/fonts/Iransans-UltraLight.eot?') format('embedded-opentype'),
+            url('http://jalasateostad.mihanblog.com/public/public/fonts/Iransans-UltraLight.woff2') format('woff2'),
+            url('http://jalasateostad.mihanblog.com/public/public/fonts/Iransans-UltraLight.woff') format('woff'),
+            url('http://jalasateostad.mihanblog.com/public/public/fonts/Iransans-UltraLight.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+        @font-face {
+            font-family: 'Mihan-Nassim';
+            src: url('http://jalasateostad.mihanblog.com/public/public/fonts/Nassim.eot');
+            src: url('http://jalasateostad.mihanblog.com/public/public/fonts/Nassim.eot?') format('embedded-opentype'),
+            url('http://jalasateostad.mihanblog.com/public/public/fonts/Nassim.woff2') format('woff2'),
+            url('http://jalasateostad.mihanblog.com/public/public/fonts/Nassim.woff') format('woff'),
+            url('http://jalasateostad.mihanblog.com/public/public/fonts/Nassim.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+        @font-face {
+            font-family: 'Mihan-Koodak';
+            src: url('http://jalasateostad.mihanblog.com/public/public/fonts/Koodak.eot');
+            src: url('http://jalasateostad.mihanblog.com/public/public/fonts/Koodak.eot?') format('embedded-opentype'),
+            url('http://jalasateostad.mihanblog.com/public/public/fonts/Koodak.woff2') format('woff2'),
+            url('http://jalasateostad.mihanblog.com/public/public/fonts/Koodak.woff') format('woff'),
+            url('http://jalasateostad.mihanblog.com/public/public/fonts/Koodak.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+        @font-face {
+            font-family: 'Mihan-Yekan';
+            src: url('http://jalasateostad.mihanblog.com/public/public/fonts/Yekan.eot');
+            src: url('http://jalasateostad.mihanblog.com/public/public/fonts/Yekan.eot?') format('embedded-opentype'),
+            url('http://jalasateostad.mihanblog.com/public/public/fonts/Yekan.woff2') format('woff2'),
+            url('http://jalasateostad.mihanblog.com/public/public/fonts/Yekan.woff') format('woff'),
+            url('http://jalasateostad.mihanblog.com/public/public/fonts/Yekan.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+        @font-face {
+            font-family: 'FontAwesome';
+            src: url('http://jalasateostad.mihanblog.com/public/public/fonts/fontawesome_webfont.eot');
+            src: url('http://jalasateostad.mihanblog.com/public/public/fonts/fontawesome_webfont.eot?') format('embedded-opentype'),
+            url('http://jalasateostad.mihanblog.com/public/public/fonts/fontawesome_webfont.woff2') format('woff2'),
+            url('http://jalasateostad.mihanblog.com/public/public/fonts/fontawesome_webfont.woff') format('woff'),
+            url('http://jalasateostad.mihanblog.com/public/public/fonts/fontawesome_webfont.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+
+
+        
+
+        /* Smartphones (portrait and landscape) ----------- */
+
+        /*
+        @media only screen and (max-width : 480px) and (min-width : 320px) {
+            .sabaClick_advert__wrapper{
+                display:block;
+            }
+            .sabaClick_advert__inner{
+                max-width: 90%;
+                margin: 0 5%;
+            }
+        }
+        */
+
+    </style>
+
+
+
+
+
+
+<!--
+  Theme Designer : Ali Rahimi
+  Theme Publisher: Blog Skin
+  Theme Url: http://www.blogskin.ir
+-->
+<html>
+<head>
+<title>ایها السالکین</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta name="designer" content="Blog Skin">
+<meta name="author" content="العبد العاصی">
+<meta name="language" content="Farsi">
+<meta name="designerUrl" content="http://www.blogskin.ir/">
+<meta http-equiv="expires" content="never">
+<script src="http://blogskin.ir/blog.js" language="javascript"></script>
+<meta name="description" content="ایها السالکین - سلام و رحمة الله.این وبلاگ در نظر دارد جزوه،فایل های صوتی،مطالب و سخنرانی های اخلاقی تربیتی بزرگان  را در اختیار شیفتگان و سالکان سیر الی الله قرار دهد تا عاشقان حضرت حق با استفاده از مطالب تربیتی و رهنمودهای عارفانه ی بزرگان این راه را طی نمایند .وبلاگ علاوه بر این رهنمودها، مطالب ودرس های اخلاقی وعرفانی شاگردان آیت الله سعادت پرور را در اختیار علاقمندان قرار خواهد داد.ان شاءالله<br />
+التماس دعا - ایها السالکین">
+<meta name="keywords" content="ایها السالکین,jalasateostad,, Blog, Weblog, Persian,Iran, Farsi, Weblogs, Blogskin">
+<link rel="alternate" type="application/rss+xml" title="ایها السالکین" href="http://jalasateostad.mihanblog.com/post/rss/" />
+<link rel="alternate" type="application/atom+xml" title="ایها السالکین" href="http://jalasateostad.mihanblog.com/post/atom/" />
+<link href="http://topskin.ir/38/style.css" type="text/css" rel="stylesheet">
+<style>
+.top{background:url('http://topskin.ir/38/top.jpg') no-repeat top;height:350;}
+</style>
+
+</head>
+<body>
+<div style="float:right;">
+
+<table border="0" width="972" dir=rtl cellspacing="0" cellpadding="0">
+	<tr>
+		<td class=mainr>
+<div class=top><div class=titr><a href="index.html">ایها السالکین</a></div><div class=des>قال رسول الله(ص):همانا من برای تکمیل مکارم اخلاق مبعوث شده ام.</div></div>
+<div class=post>
+		<div id="MihanblogShopAds" style="display:block;height:0px;width:100%;border:0px"></div>
+		<div class=tpost><div class=title><a href="http://jalasateostad.mihanblog.com/post/115">شاگردان آیت الحق شیخ علی آقا سعادت پرور پهلوانی (ره)</a></div>
+</div>
+<div class=xpost><div class=xpost2><div style="float:right"></div> <div id="InPost_MihanblogShopAds" style="display:block;height:0px;width:100%;border:0px"></div>
+
+
+
+
+
+<p class="MsoNormal" style="text-align: center; direction: ltr; unicode-bidi: embed;"><img hspace="0" border="0" align="baseline" vspace="0" src="http://s5.picofile.com/file/8133388818/saadatparvar2.jpg" alt=""></p><p class="MsoNormal" style="text-align: center; direction: ltr; unicode-bidi: embed;"><span style="font-family: Arial, sans-serif; text-align: right;">&nbsp;<font size="4">حضرت</font>&nbsp;</span><span lang="FA" dir="RTL" style="font-family: tahoma, arial, helvetica, sans-serif; font-size: medium; text-align: right;">آیت الحق حاج شیخ علی پهلوانی (ره) پس از سالها تلمذ نمودن از عارف بالله علامه طباطبایی(ره) و دست یافتن به قله های توحید؛</span><span style="font-family: tahoma, arial, helvetica, sans-serif; font-size: medium; text-align: right;">سالیان سال مشغول تربیت شیفتگان توحید گشت وشاگردان زیادی را تربیت نمود که از بین این شاگردان کاملترینشان را گلچین کرد ه و اجازه ی تربیت داد تا هرکدام ادامه دهنده ی راه استاد عرفا آیت الله سید علی قاضی (ره) شوند و دلباخته گان و عاشقان الله را با یاری حضرت حق دستگیری کرده و همچون خود به قله های&nbsp;</span><span style="font-family: tahoma, arial, helvetica, sans-serif; font-size: medium; text-align: right;">معرفت و توحید برسانند.ان شاءالله</span></p><p class="MsoNormal" style="text-align: center; direction: ltr; unicode-bidi: embed;"><span style="font-family: tahoma, arial, helvetica, sans-serif; font-size: medium; text-align: right;"><br></span></p>
+
+<p class="MsoNormal" style="text-align: right; direction: ltr; unicode-bidi: embed;"><font size="3"><span lang="FA" dir="RTL" style="font-family: Arial, sans-serif;"><font color="#660000">اساتیدی که از حاج شیخ علی
+پهلوانی (ره) اجازه ی تربیت دارند</font></span><span style="font-family: Arial, sans-serif;"><o:p></o:p></span></font></p>
+
+<p class="MsoNormal" style="text-align: right; direction: ltr; unicode-bidi: embed;"><span lang="FA" dir="RTL" style="font-family:&quot;Arial&quot;,&quot;sans-serif&quot;"><font color="#3333ff" size="3">استاد تحریری _ استاد مجاهدی _
+استاد رجالی _ استاد مؤیدی _&nbsp; استاد وطن
+خواه _ استاد وزیری فرد _&nbsp; استاد روحی _
+استاد نجفی _ استاد ایوبی _ استاد سعیدی _ استاد فیاض بخش _ استاد علیپور _ استاد
+نائبی _ استاد رخشاد _ استاد سرخه ای _ استاد قاسم پور _ استاد عربی
+_ استاد عابدی [نجفی &nbsp;ری شهر] _ استاد علیزاده _ استاد مصطفایی _ &nbsp;استاد فروغی _ استاد مهریزی</font></span></p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+				<br><br><b></b>
+				<font style="font-size:8pt;">									</font>
+
+</div></div>
+<div class=bpost>
+<div class=date>نگارش در تاریخ یکشنبه 12 مرداد 1393 توسط العبد العاصی 
+				| <a target="_self" href="javascript:newComment(115)" >نظرات (<script>setCommentCnt(115)</script>)</a></div></div>
+<div class=tpost><div class=title><a href="http://jalasateostad.mihanblog.com/post/113">توصیه های اخلاقی رهبرکبیرانقلاب</a></div>
+</div>
+<div class=xpost><div class=xpost2><div style="float:right"></div> 
+
+
+<div style="text-align: center;"><br></div><div style="text-align: center;"><br></div><div style="text-align: center;"><br></div><div style="text-align: center;"><br></div><div style="text-align: center;"><img class="rg_i" name="9MegpseXeXDrhM:" data-sz="f" src="data:image/jpeg;base64,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" style="width: 251px; height: 165px; margin-left: 0px; margin-right: -2px; margin-top: 0px;"></div><div style="text-align: center;"><br></div><div style="text-align: center;"><br></div><div style="text-align: center;"><br></div><div style="text-align: center;"><br></div><div style="text-align: center;"><p style="padding: 1em 0px; margin: 0px; outline: none; list-style: none; border: 0px none; color: rgb(51, 51, 51); font-family: Tahoma, arial; font-size: 13px; line-height: 19.5px; text-align: justify;">&nbsp;<strong style="padding: 0px; margin: 0px; outline: none; list-style: none; border: 0px none;">گام اول</strong><br style="padding: 0px; margin: 0px; outline: none; list-style: none; border: 0px none;">اولین و مهم‌ترین قدم خودسازى این است که انسان به خود و به اخلاق و رفتار خود با نظر انتقادى نگاه کند؛ عیوب خود را با روشنى و دقت ببیند و سعى در برطرف کردن آن‌ها داشته باشد. این از عهده‌ى خود ما برمى‌آید و این تکلیفى بر دوش ماست.<br style="padding: 0px; margin: 0px; outline: none; list-style: none; border: 0px none;">خطبه‌هاى نماز عید سعید فطر ۲۵/۹/۱۳۸۰</p><p style="padding: 1em 0px; margin: 0px; outline: none; list-style: none; border: 0px none; color: rgb(51, 51, 51); font-family: Tahoma, arial; font-size: 13px; line-height: 19.5px; text-align: start;">&nbsp;<strong style="padding: 0px; margin: 0px; outline: none; list-style: none; border: 0px none;">بین خود و خدا</strong><br style="padding: 0px; margin: 0px; outline: none; list-style: none; border: 0px none;">یکى از ویژگی‌ها که بسیار مهم است تا براى خودسازى به آن توجه کنیم و شاید جنبه‌ى تقدمى هم داشته باشد، «اخلاص» است. اخلاص عبارت است از کار را خالص انجام دادن و این‌ که کارى را مغشوش انجام ندهیم [...] خالص بودن عبادت و خالص بودن عمل، این است که براى خدا باشد. در بین مردم، متأسفانه خیلى رایج است که کارهاى خوب خودشان را بر زبان بیاورند و بگویند. کأنّه توجه ندارند که نباید کار نیک را به زبان آورد و گفت که ما مى‌خواهیم این کار را بکنیم یا ما این کارها را مى‌کنیم. البته برخى جاها استثناست. در جاهایى، بعضى از کارها باید در علن انجام گیرد. در روایات در باب صدقه آمده است که «صدقه‌ى سِرّ» این ثواب را دارد و «صدقه‌ى علانیة» این ثواب را. یا مثلاً عبادات گروهى، جلوى چشم مردم انجام مى‌گیرد و باید انجام گیرد و این از شعائر الهى است، اما بسیارى از عبادات یا اغلب عبادات، آن روابطى که بین خود انسان و خداست -ذکر، توجه، دعا، نافله، شب‌زنده‌دارى، سحرخیزى، احسان و کارهاى نیک- باید بین خود انسان و خدا بماند.<br style="padding: 0px; margin: 0px; outline: none; list-style: none; border: 0px none;">روز اول ماه مبارک رمضان&nbsp; ۴/۱۲/۱۳۷۱</p><p style="padding: 1em 0px; margin: 0px; outline: none; list-style: none; border: 0px none; color: rgb(51, 51, 51); font-family: Tahoma, arial; font-size: 13px; line-height: 19.5px; text-align: start;">&nbsp;<strong style="padding: 0px; margin: 0px; outline: none; list-style: none; border: 0px none;">طبیب خود باشیم</strong><br style="padding: 0px; margin: 0px; outline: none; list-style: none; border: 0px none;">طبیب خودتان باشید. بهترین کسى که مى‌تواند بیمارى ما را تشخیص دهد، خودمان هستیم. بیاورید روى کاغذ. بنویسید «حسد». بنویسید «بخل». بنویسید «بدخواهى براى دیگران؛ وقتى کسى به خیرى مى‌رسد، ما ناراحت مى‌شویم.» بنویسید «تنبلى در کار». بنویسد «روح بدبینى به نیکان و صالحان». بنویسید «بى‌اعتنایى به وظایف». بنویسید «علاقه به خود؛ شدیداً به خودمان علاقه داریم.» ماه رمضان فرصتى است که یکى‌یکى این بیماری‌ها را تا آن‌جایى که بشود، برطرف کنیم.<br style="padding: 0px; margin: 0px; outline: none; list-style: none; border: 0px none;">روز اول ماه مبارک رمضان ۴/۱۲/۱۳۷۱</p><p style="padding: 1em 0px; margin: 0px; outline: none; list-style: none; border: 0px none; color: rgb(51, 51, 51); font-family: Tahoma, arial; font-size: 13px; line-height: 19.5px; text-align: start;">&nbsp;<strong style="padding: 0px; margin: 0px; outline: none; list-style: none; border: 0px none;">پولادین خواهید شد اگر…</strong><br style="padding: 0px; margin: 0px; outline: none; list-style: none; border: 0px none;">در درجه‌ى اول، جوان دانشجو و دانش‌آموز باید خودسازى کند. خودتان را با تربیت دینى بسازید. امور تربیتى خوب است. معلم تربیتى خوب است. گوینده‌ى تربیتى خوب است، اما آن کسى که از درون خود، موعظه کننده و تربیت کننده‌اى نداشته باشد، -واعظٌ مِنْ نَفْسِهِ- این تربیت‌ها به کارش نمى‌آید. خودتان را بسازید، با نفس مبارزه کنید، اجراى حکم الهى را در محدوده‌ى شخص خودتان بزرگ بشمارید و به نماز، به توجه به خدا، به دعا و به توکل اهمیت بدهید. این شما را پولادین خواهد کرد.<br style="padding: 0px; margin: 0px; outline: none; list-style: none; border: 0px none;">دیدار با گروهى از دانشجویان و دانش‌آموزان ۱۵/۸/۱۳۷۰</p><p style="padding: 1em 0px; margin: 0px; outline: none; list-style: none; border: 0px none; color: rgb(51, 51, 51); font-family: Tahoma, arial; font-size: 13px; line-height: 19.5px; text-align: start;">&nbsp;<strong style="padding: 0px; margin: 0px; outline: none; list-style: none; border: 0px none;">خاک‌ریزهاتان را محکم کنید</strong><br style="padding: 0px; margin: 0px; outline: none; list-style: none; border: 0px none;">مراقب باشید. مواظب باشید و خاک‌ریزهایتان را محکم کنید تا دشمن نتواند در سنگرهاى شما نفوذ کند. با این روحیه‌ى ایمانى و استوار است که مى‌توانید شاخ استعمار را بشکنید و اسلحه را از دستش بگیرید تا ملتتان بتواند نفسى بکشد، تا بتوانید کشور را بسازید، تا بتوانید سطح زندگى را بالا ببرید، تا بتوانید مشکلات و گره‌هایى را که میراث سال‌های دوران استعمار و سلطه‌ی اجانب است، از بین ببرید.<br style="padding: 0px; margin: 0px; outline: none; list-style: none; border: 0px none;">در اجتماع مردم مشهد و زائران امام ‌رضا(ع) در روز عید فطر ۱۵/۰۱/۱۳۷۱</p><p style="padding: 1em 0px; margin: 0px; outline: none; list-style: none; border: 0px none; color: rgb(51, 51, 51); font-family: Tahoma, arial; font-size: 13px; line-height: 19.5px; text-align: start;">&nbsp;<strong style="padding: 0px; margin: 0px; outline: none; list-style: none; border: 0px none;">شکستن آن بت</strong><br style="padding: 0px; margin: 0px; outline: none; list-style: none; border: 0px none;">ما باید سعى کنیم که روح بندگی را در خودمان زنده نماییم. بندگی، یعنى تسلیم در مقابل خدا، یعنى شکستن آن بتى که در درون ماست. آن بت درونى ما -یعنى من- در خیلى جاها خودش را نشان مى‌دهد. وقتى که منفعتت به خطر بیفتد، کسى حرفت را قبول نکند، چیزى مطابق میل تو -ولو خلاف شرع- ظاهر بشود، یا سر دو راهى قرار بگیرى، -یک طرف منافع شخصى، یک طرف وظیفه و تکلیف- در چنین تنگناها و بزن‌گاه‌هایى، آن منِِ درونى انسان سر بلند مى‌کند و خودش را نشان مى‌دهد.<br style="padding: 0px; margin: 0px; outline: none; list-style: none; border: 0px none;">اگر ما بتوانیم این من درونى، این هواى نفس، این فرعون باطنى، این شیطانى را که در درون ماست، مهار کنیم، یا اقلاً قدرى مهار کنیم، همه‌ى امور اصلاح خواهد شد. قبل از هرچیز، خود ما آدم خواهیم شد و به فلاح خواهیم رسید. ماه رمضان، مقدمه‌ى این است. روزه، نماز باتوجه، انفاقات، حتّى جهاد فى‌سبیل‌اللَّه، براى رسیدن به چنین دنیایى است که مردم بنده‌ى خدا باشند.<br style="padding: 0px; margin: 0px; outline: none; list-style: none; border: 0px none;">دیدار با اقشار مختلف مردم در آخرین روز ماه رمضان ۲۶/۲/۱۳۶۹</p><p style="padding: 1em 0px; margin: 0px; outline: none; list-style: none; border: 0px none; color: rgb(51, 51, 51); font-family: Tahoma, arial; font-size: 13px; line-height: 19.5px; text-align: start;">&nbsp;<strong style="padding: 0px; margin: 0px; outline: none; list-style: none; border: 0px none;">حتی بند کفش</strong><br style="padding: 0px; margin: 0px; outline: none; list-style: none; border: 0px none;">چیزى را که خدا مى‌دهد، قبلاً باید از خدا بخواهیم. چرا بخواهیم؟ یکى از عللِ این‌ که گفته‌اند حاجات کوچک را هم از خدا بخواهید، این است که به حوائج و عجز و حقارت و تهی‌دستى خودمان توجّه پیدا کنیم تا ببینیم که چقدر تهی‌دستیم. اگر خداى متعال کمک نکند، امکان ندهد، نیرو ندهد، فکر ندهد، ابتکار ندهد و وسایل را جور نیاورد، همان بندِ کفش هم به دست ما نخواهد رسید. اگر شما به قصد خریدنِ بند کفش از خانه بیرون آمدید، در راه جیبتان را زدند یا پولتان گم شد و یا مغازه‌ى مورد نظر بسته بود و یا در بین راه، حادثه‌ى مهمّى پیش آمد که مجبور شدید برگردید، بند کفش گیرتان نیامده است. بنابراین، هر چیز را از خدا بخواهید؛ حتّى بند کفش را، حتّى کوچک‌ترین اشیاء را و حتّى قوت روزانه‌ى خود را. بگذارید این منِ دروغینِ عظمت‌یافته در سینه‌ى ما -که مى‌گوییم «من» و خیال مى‌کنیم مجمع نیروها ما هستیم- بشکند. این «من» انسان‌ها را بی‌چاره مى‌کند.<br style="padding: 0px; margin: 0px; outline: none; list-style: none; border: 0px none;">خطبه‌هاى نماز جمعه‌ى تهران ۲۸/۱۱/۱۳۷۳</p><p style="padding: 1em 0px; margin: 0px; outline: none; list-style: none; border: 0px none; color: rgb(51, 51, 51); font-family: Tahoma, arial; font-size: 13px; line-height: 19.5px; text-align: start;"><strong style="padding: 0px; margin: 0px; outline: none; list-style: none; border: 0px none;">موانع درونی</strong><br style="padding: 0px; margin: 0px; outline: none; list-style: none; border: 0px none;">راه براى ما روشن است، موانع راه هم براى ملت ایران روشن است. باید این موانع را بردارید؛ هم موانع درونى و هم موانع بیرونى را. موانع درونى را باید با تضرع به درگاه پروردگار، با دعا، با توجه، با تربیت و تهذیب نفس، با تقویت اخلاق، با عبادت و با توسل، از پیش پا بردارید. اگر دل ما سالم نباشد، نمى‌توانیم دنیاى سالمى درست کنیم. اگر در درون خودمان معیوب باشیم، نمى‌توانیم عیب جامعه و جهان را برطرف کنیم. ملت ایران بار سنگینى بردوش دارد و باید آن را به منزل برساند. باید دنیایى بسازد که هم براى خودش شیرین باشد و هم براى جوامع دیگر. شما مى‌توانید چنین کارى بکنید؛ اما شرطش این است که هر یک از ما، درصدد تهذیب نفس خودمان باشیم. نماز با توجه، انس با قرآن، دعا و توسل، تضرّع، روزه‌ى ماه رمضان و عبادات نیمه‌شب، مخصوصاً براى جوانان که تأثیرپذیری‌شان زیاد است، مى‌تواند مهذِّب نفس باشد.<br style="padding: 0px; margin: 0px; outline: none; list-style: none; border: 0px none;">روز عید فطر در اجتماع مردم مشهد و زائران امام ‌رضا(ع) ۱۵/۰۱/۱۳۷۱</p><p style="padding: 1em 0px; margin: 0px; outline: none; list-style: none; border: 0px none; color: rgb(51, 51, 51); font-family: Tahoma, arial; font-size: 13px; line-height: 19.5px; text-align: start;">&nbsp;<strong style="padding: 0px; margin: 0px; outline: none; list-style: none; border: 0px none;">یک‌ساعت برای خودتان</strong><br style="padding: 0px; margin: 0px; outline: none; list-style: none; border: 0px none;">دعا کنید. نافله بخوانید. توجه پیدا کنید. متذکر باشید. در شبانه‌روز یک ساعت را براى خودتان و خداى خودتان قرار بدهید. از کارها و اشتغالات گوناگون خودتان را بیرون بکشید. با خدا و با اولیاى خدا و با ولى‌عصر عجل‌الله‌ تعالى‌ فرجه و ارواحنافداه، مأنوس بشوید. با قرآن مأنوس باشید و در آن تدبر بکنید.<br style="padding: 0px; margin: 0px; outline: none; list-style: none; border: 0px none;">دیدار با مسؤولان و کارگزاران نظام ۲۳/۵/۱۳۷۰</p><p style="padding: 1em 0px; margin: 0px; outline: none; list-style: none; border: 0px none; color: rgb(51, 51, 51); font-family: Tahoma, arial; font-size: 13px; line-height: 19.5px; text-align: start;"><strong style="padding: 0px; margin: 0px; outline: none; list-style: none; border: 0px none;">مسجد پایگاه</strong><br style="padding: 0px; margin: 0px; outline: none; list-style: none; border: 0px none;">با امام جماعت مسجد، با عبادت‌کنندگان مسجد و با مؤمنینى که در مسجدند، برادرانه صمیمى باشید و آن را حفظ و بیشتر کنید. اول وقت، نماز را به جماعت، پشت سر پیش‌نماز هر مسجدى که در آن هستید، بخوانید. در مراسم دینى مسجد و تبلیغات آن شرکت کنید. در مراسم دعا و قرآن و مراسم مذهبى شرکت کنید. [...] براى مسجد، جاذبه درست کنید.<br style="padding: 0px; margin: 0px; outline: none; list-style: none; border: 0px none;">دیدار فرماندهان بسیج سراسر کشور ۲۷/۸/۱۳۷۱</p><p style="padding: 1em 0px; margin: 0px; outline: none; list-style: none; border: 0px none; color: rgb(51, 51, 51); font-family: Tahoma, arial; font-size: 13px; line-height: 19.5px; text-align: justify;">&nbsp;<strong style="padding: 0px; margin: 0px; outline: none; list-style: none; border: 0px none;">مثل آینه</strong><br style="padding: 0px; margin: 0px; outline: none; list-style: none; border: 0px none;">من بارها گفته‌ام، باز هم مى‌گویم؛ ما تلاوت برجسته‌ى قرآن را در این کشور دنبال مى‌کنیم، براى این‌ که اُنس با قرآن و تلاوت قرآن در بین مردم عمومیت پیدا کند. عزیزان من! باید با قرآن اُنس پیدا کنید. زبان ما، زبان قرآن نیست. مى‌توانیم به ترجمه‌ى قرآن مراجعه کنیم، اما عمق‌یابى مضامین قرآنى فقط با مراجعه‌ى به ترجمه نمى‌شود؛ کما این‌ که با خواندن متن قرآن هم براى کسانى که مى‌فهمند، همیشه به دست نمى‌آید. با تدبّر به دست مى‌آید. با عمق‌یابى به دست مى‌آید. با قرآن باید مثل آینه مواجه شد؛ پاکیزه، براق و بى‌زنگار، تا قرآن در دل ما منعکس شود. قرآن باید در جان ما انعکاس پیدا کند.<br style="padding: 0px; margin: 0px; outline: none; list-style: none; border: 0px none;">دیدار قاریان قرآن کریم ۱۴/۰۷/۱۳۸۴</p><p style="padding: 1em 0px; margin: 0px; outline: none; list-style: none; border: 0px none; color: rgb(51, 51, 51); font-family: Tahoma, arial; font-size: 13px; line-height: 19.5px; text-align: start;">&nbsp;<strong style="padding: 0px; margin: 0px; outline: none; list-style: none; border: 0px none;">هر روز و هر روز</strong><br style="padding: 0px; margin: 0px; outline: none; list-style: none; border: 0px none;">قرآن خواندن هر روز را فراموش نکنید. هر روز حتماً قرآن بخوانید. هر مقدارى مى‌توانید. آن‌هایى که ترجمه‌ى قرآن را مى‌فهمند، با تدبّر به ترجمه نگاه کنند. آن‌هایى که ترجمه‌ى قرآن را نمى‌فهمند، یک قرآن مترجم خوب -که الحمدلله زیاد هم داریم- کنار دستشان بگذارند و به ترجمه‌ى آن نگاه کنند. ممکن است ده دقیقه صرف وقت کنید و یک صفحه یا دو صفحه بخوانید، اما هر روز بخوانید. این را یک سیره‌ى قطعى براى خودتان قرار دهید. علامت بگذارید، فردا از دنباله‌اش بخوانید.<br style="padding: 0px; margin: 0px; outline: none; list-style: none; border: 0px none;">دیدار اعضاى هیأت دولت ۸/۶/۱۳۸۴٫&nbsp;</p><p style="padding: 1em 0px; margin: 0px; outline: none; list-style: none; border: 0px none; color: rgb(51, 51, 51); font-family: Tahoma, arial; font-size: 13px; line-height: 19.5px; text-align: start;"><strong style="padding: 0px; margin: 0px; outline: none; list-style: none; border: 0px none;">بگذارید در ذهنتان حک شود</strong></p><p style="padding: 1em 0px; margin: 0px; outline: none; list-style: none; border: 0px none; color: rgb(51, 51, 51); font-family: Tahoma, arial; font-size: 13px; line-height: 19.5px; text-align: start;">تلاوت قرآن یک فضیلت بزرگ و یک ثواب است، اما این تلاوت وسیله‌اى براى رسیدن به معرفت است. این قرآن یک اقیانوس عظیم است. هر چه بیشتر جلو بروید، تشنه‌تر مى‌شوید و علاقه‌مندتر مى‌شوید و دل شما روشن‌تر مى‌شود. در قرآن باید تدبّر کرد. من باز هم از شما جوانان خواهش مى‌کنم که با معانى قرآن انس پیدا کنید و ترجمه‌ى قرآن را بفهمید. من بارها این را از جوانان خواسته‌ام و بسیارى هم اقدام کرده‌اند. قرآن را که هر روز تلاوت مى‌کنید، هرچه تلاوت کردید، ترجمه‌ى آن را هم نگاه کنید. بگذارید این مفاهیم در ذهن جوان شما حک شود. در آن صورت فرصت تدبّر پیدا خواهید کرد.<br style="padding: 0px; margin: 0px; outline: none; list-style: none; border: 0px none;">مراسم اختتامیه‌ى مسابقات حفظ و قرائت قرآن کریم ۰۹/۰۸/۱۳۷۹٫&nbsp;</p><p style="padding: 1em 0px; margin: 0px; outline: none; list-style: none; border: 0px none; color: rgb(51, 51, 51); font-family: Tahoma, arial; font-size: 13px; line-height: 19.5px; text-align: start;"><strong style="padding: 0px; margin: 0px; outline: none; list-style: none; border: 0px none;">هنوز فاصله داریم</strong></p><p style="padding: 1em 0px; margin: 0px; outline: none; list-style: none; border: 0px none; color: rgb(51, 51, 51); font-family: Tahoma, arial; font-size: 13px; line-height: 19.5px; text-align: start;">قرآن کتاب نور، کتاب معرفت، کتاب نجات، کتاب سلامت، کتاب رشد و تعالى و کتاب قرب به خداست. ما این خصوصیات را چه وقت از قرآن به دست مى‌آوریم برادران عزیز؟ همین که قرآن را در جیبمان بگذاریم، کافى است؟ این ‌که در هنگام سفر، از زیر قرآن رد شویم، کافى است؟ این‌ک ه ما در جلسه‌ى تلاوت قرآن شرکت کنیم، کافى است؟ این ‌که حتى قرآن را با صداى خوش تلاوت کنیم یا تلاوت خوش را بشنویم و از آن لذّت ببریم، کافى است؟ نه؛ چیز دیگرى لازم دارد. آن چیست؟ آن تدبّر در قرآن است. باید در قرآن تدبّر کرد. خودِ قرآن در موارد متعدد از ما مى‌خواهد که تدبّر کنیم. عزیزان من! اگر ما یاد گرفتیم که با قرآن به ‌صورت تدبّر اُنس پیدا کنیم، همه‌ى خصوصیاتى که گفتیم، حاصل خواهد شد. ما هنوز خیلى فاصله داریم، پس باید پیش برویم.<br style="padding: 0px; margin: 0px; outline: none; list-style: none; border: 0px none;">مراسم اختتامیه‌ى مسابقات قرائت قرآن ۱۴/۱۰/۱۳۷۳</p><p style="padding: 1em 0px; margin: 0px; outline: none; list-style: none; border: 0px none; color: rgb(51, 51, 51); font-family: Tahoma, arial; font-size: 13px; line-height: 19.5px; text-align: start;">&nbsp;<strong style="padding: 0px; margin: 0px; outline: none; list-style: none; border: 0px none;">حضور قرآن در ذهن</strong><br style="padding: 0px; margin: 0px; outline: none; list-style: none; border: 0px none;">شما جوانان و نوجوانانى که قرآن را فرامى‌گیرید، این را بدانید که یک ذخیره‌ى مادام‌العمر براى اندیشیدن و فکر کردن را براى خودتان فراهم مى‌کنید. این چیز بسیار باارزشى است. ممکن است در سنین جوانى، معانى و معارف عمیقى را از آیات قرآن استنباط نکنید و نتوانید درست بفهمید -فقط چیزهاى سطحى و اندکى از معارف را بفهمید- اما به موازات بالا رفتنِ سطح معلومات و پیش‌رفت علمى، از آیات قرآن ‌که در حافظه و ذهن شما قرار دارد، بیشتر استفاده مى‌کنید. حضور قرآن در ذهن انسان، نعمت بسیار بزرگى است.<br style="padding: 0px; margin: 0px; outline: none; list-style: none; border: 0px none;">فرق است بین کسى که براى مطلبى، بارها آیات قرآن و فهرست‌هاى قرآنى را جست‌وجو مى‌کند تا ببیند در این‌باره آیه‌اى وجود دارد یا نه، با آن کسى که آیات قرآن در ذهن و دل و جلوِ چشم اوست و نگاه مى‌کند و آن‌چه را که در هر بخشى از معارف اسلامى به آن نیاز دارد، از قرآن استنباط و استخراج مى‌کند و روى آن فکر و تأمّل مى‌کند و از آن استفاده مى‌برد. اُنس با قرآن در دوران کودکى و نوجوانى، تا دوران جوانى، یک نعمت بسیار بزرگ است.<br style="padding: 0px; margin: 0px; outline: none; list-style: none; border: 0px none;">دیدار جمعى از حافظان و قاریان قرآن نونهال و نوجوان کشور ۲۸/۰۶/۱۳۸۰</p><p style="padding: 1em 0px; margin: 0px; outline: none; list-style: none; border: 0px none; color: rgb(51, 51, 51); font-family: Tahoma, arial; font-size: 13px; line-height: 19.5px; text-align: start;">&nbsp;<strong style="padding: 0px; margin: 0px; outline: none; list-style: none; border: 0px none;">بدترین درد</strong><br style="padding: 0px; margin: 0px; outline: none; list-style: none; border: 0px none;">برادران غفلت نکنیم. بزرگ‌ترین عذاب خدا بر یک ملت این است که آن ملت غافل بشوند. بدترین درد براى یک جامعه، غفلت آن جامعه است. از خدا غافل نشویم. در دل و جان ما و در یکایک تصمیم‌گیری‌ها و حرکات ما، کار ادارى، کار سیاسى، کار نظامى، کار مدیریت، وقت پول خرج‌کردن، وقت اعتبار تخصیص‌دادن، وقت قانون گذراندن، وقت قضاوت کردن، در تمام مراحل باید خدا به یاد ما باشد. ما باید براى خدا کار کنیم. این‌طورى این جامعه پیش خواهد رفت.<br style="padding: 0px; margin: 0px; outline: none; list-style: none; border: 0px none;">در دیدار اعضاى هیأت دولت ۸/۶/۱۳۸۴</p><p style="padding: 1em 0px; margin: 0px; outline: none; list-style: none; border: 0px none; color: rgb(51, 51, 51); font-family: Tahoma, arial; font-size: 13px; line-height: 19.5px; text-align: start;">&nbsp;<strong style="padding: 0px; margin: 0px; outline: none; list-style: none; border: 0px none;">پایان جوشش انقلابی</strong></p><p style="padding: 1em 0px; margin: 0px; outline: none; list-style: none; border: 0px none; color: rgb(51, 51, 51); font-family: Tahoma, arial; font-size: 13px; line-height: 19.5px; text-align: start;">وقتى نماز جماعت مى‌خوانید، نماز شما باید هم‌راه با توجه به پروردگار و خشوع در مقابل او باشد. وقتى اعتکاف مى‌کنید، وقتى روزه مى‌گیرید، وقتى اجتماعات مذهبى تشکیل مى‌دهید، باید هم‌راه با توجه به خداى متعال و هم‌راه با اخلاص باشد. کلید موفقیت این‌هاست. اگر این نباشد، همان چیزى بر سر انسان خواهد آمد که دیدید بر سر عده‌اى آمد. عده‌اى در اول انقلاب خیلى تند و داغ و پُرشور بودند، اما متأسفانه فکر دینى آن‌ها عمق نداشت؛ با اولین باد سردى که از طرف تبلیغات دشمنان آمد، برگ و بار انقلابیشان ریخت و جوشش انقلابیشان تمام شد. بعضى‌ها صدوهشتاد درجه این طرف غلتیدند. [...] این به ‌خاطرِ نداشتن عمق است. به این دلیل است که ریشه‌ى اعتقادى و فکرى وجود ندارد.<br style="padding: 0px; margin: 0px; outline: none; list-style: none; border: 0px none;">دیدار دانشجویان و استادان دانشگاه‌هاى استان کرمان ۱۹/۲/۱۳۸۴<br style="padding: 0px; margin: 0px; outline: none; list-style: none; border: 0px none;">&nbsp; </p><p style="padding: 1em 0px; margin: 0px; outline: none; list-style: none; border: 0px none; color: rgb(51, 51, 51); font-family: Tahoma, arial; font-size: 13px; line-height: 19.5px; text-align: start;">&nbsp;<strong style="padding: 0px; margin: 0px; outline: none; list-style: none; border: 0px none;">همه می‌توانند</strong></p><p style="padding: 1em 0px; margin: 0px; outline: none; list-style: none; border: 0px none; color: rgb(51, 51, 51); font-family: Tahoma, arial; font-size: 13px; line-height: 19.5px; text-align: start;">همه‌ى مردم و بالخصوص جوانان عزیز، این ارتباطى را که به برکت این روزهاى مبارک و شب‌هاى نورانى با خداى متعال پیدا کرده‌اند، نگذارند قطع شود. این رابطه‌ى با خدا را حفظ کنید. وسیله‌ى حفظ این رابطه هم در اختیار همه هست. اگر همین نماز پنج‌گانه، با توجه، با حضور قلب و با این توجه که در مقابل خدا ایستاده‌ایم، خوانده شود، بهترین رابطه است و روزبه‌روز دل شما را نورانى‌تر خواهد کرد. آن جوان‌هایى که شب‌هاى قدر در مساجد، حسینیه‌ها و حرم‌هاى مطهر گرد هم آمدند، گریه کردند، دعا خواندند، قرآن سر گرفتند، احیاء گرفتند و دل‌هایشان را با نور محبت الهى نورانى کردند، این رابطه را حفظ کنند که از آن بهره‌مند خواهند شد. إن‌شاءاللَّه در طول زمان، در سال‌هاى دیگر، روزبه‌روز این رابطه بیشتر خواهد شد. انسان از این راه هست که به کمال مطلوب و غایت خلقت خود، دست خواهد یافت. موفقیت در همه‌ى میدان‌هاى زندگى هم به همین وابسته است.<br style="padding: 0px; margin: 0px; outline: none; list-style: none; border: 0px none;">خطبه‌هاى نماز عید سعید فطر ۲/۸/۱۳۸۵</p><p style="padding: 1em 0px; margin: 0px; outline: none; list-style: none; border: 0px none; color: rgb(51, 51, 51); font-family: Tahoma, arial; font-size: 13px; line-height: 19.5px; text-align: start;"><strong style="padding: 0px; margin: 0px; outline: none; list-style: none; border: 0px none;">بالاترین خطر</strong></p><p style="padding: 1em 0px; margin: 0px; outline: none; list-style: none; border: 0px none; color: rgb(51, 51, 51); font-family: Tahoma, arial; font-size: 13px; line-height: 19.5px; text-align: start;">اگر بخواهیم استغفار- این نعمت الهى- را به دست بیاوریم، دو خصلت را باید از خودمان دور کنیم، یکى غفلت و دیگرى غرور. غفلت، یعنى انسان به‌کلّى متوجّه و متنبّه نباشد که گناهى از او سر مى‌زند. مثل بعضى از مردم [...] بعضى از این افراد غافل، اصلاً به ثواب و عِقاب عقیده‌اى ندارند. بعضى به ثواب و عقاب هم عقیده دارند، اما غرق در غفلتند و اصلاً ملتفت نیستند که چه کار مى‌کنند. اگر این را در زندگى روزمرّه‌ى خودمان قدرى ریز کنیم، خواهیم دید که بعضى از حالات زندگى ما شبیه حالات غافلان است. غفلت، دشمنى بسیار عجیب و خطر بزرگى است. شاید واقعاً براى انسان هیچ خطرى بالاتر و هیچ دشمنى بزرگ‌تر از غفلت نباشد. [...] در اصطلاحات قرآنى، آن چیزى که نقطه‌ى مقابل این غفلت است، تقواست. تقوا، یعنى به‌هوش بودن و دائم مراقب خود بودن.<br style="padding: 0px; margin: 0px; outline: none; list-style: none; border: 0px none;">خطبه‌هاى نماز جمعه‌ى تهران ۲۸/۱۰/۱۳۷۵٫&nbsp;</p><p style="padding: 1em 0px; margin: 0px; outline: none; list-style: none; border: 0px none; color: rgb(51, 51, 51); font-family: Tahoma, arial; font-size: 13px; line-height: 19.5px; text-align: start;"><strong style="padding: 0px; margin: 0px; outline: none; list-style: none; border: 0px none;">بازگشت به خدا</strong></p><p style="padding: 1em 0px; margin: 0px; outline: none; list-style: none; border: 0px none; color: rgb(51, 51, 51); font-family: Tahoma, arial; font-size: 13px; line-height: 19.5px; text-align: start;">لازم نیست که اگر انسان مى‌خواهد احساس گناه کند، حتماً بایستى سال‌هاى متمادى غرق در گناه شده باشد. نخیر؛ یک گناه هم یک گناه است. نباید گناه را کوچک دانست. در روایات باب «استحقار الذّنوب» داریم که حقیر شمردن گناهان را مذمّت کرده‌اند. علت این ‌که خداى متعال مى‌فرماید «مى‌آمرزیم»، این است که بازگشت به خدا، خیلى مهم است؛ نه این ‌که گناه، کم و کوچک است. گناه، عمل بسیار خطرناکى است، منتها بازگشت و توجّه به خدا و ذکر او، این قدر اهمیت دارد که اگر کسى این را صادقانه و درست و حقیقى انجام دهد، آن وقت آن بیمارى صعب‌العلاج از بین مى‌رود.<br style="padding: 0px; margin: 0px; outline: none; list-style: none; border: 0px none;">خطبه‌هاى نماز جمعه‌ى تهران ۲۸/۱۰/۱۳۷۵</p></div><div style="text-align: center;"><br></div>
+
+
+
+
+
+				<br><br><b></b>
+				<font style="font-size:8pt;">									</font>
+
+</div></div>
+<div class=bpost>
+<div class=date>نگارش در تاریخ چهارشنبه 16 بهمن 1392 توسط العبد العاصی 
+				| <a target="_self" href="javascript:newComment(113)" >نظرات (<script>setCommentCnt(113)</script>)</a></div></div>
+<div class=tpost><div class=title><a href="http://jalasateostad.mihanblog.com/post/111">زیارت عاشورا [نسخه نقل شده از آیة الله قاضی (ره)]</a></div>
+</div>
+<div class=xpost><div class=xpost2><div style="float:right"></div> 
+
+
+
+
+
+
+
+<p style="margin: 5pt -44.85pt 5pt -35.45pt; text-align: justify; color: rgb(51, 51, 255); text-indent: 21.25pt; unicode-bidi: embed; direction: rtl;" dir="RTL"><font color="#000000" face="Times New Roman" size="3">
+
+</font></p><p style="margin: 0in 0in 12pt; text-align: right; line-height: normal; unicode-bidi: embed; direction: rtl;" dir="RTL" class="MsoNormal"><font color="#000000"><span style="line-height: 115%; font-family: &quot;2  Davat&quot;; font-size: 20pt; mso-fareast-font-family: Calibri; mso-ascii-font-family: Calibri; mso-ascii-theme-font: minor-latin; mso-fareast-theme-font: minor-latin; mso-hansi-font-family: Calibri; mso-hansi-theme-font: minor-latin; mso-ansi-language: EN-US; mso-fareast-language: EN-US; mso-bidi-language: AR-SA;" dir="RTL" lang="AR-SA"><font face="Times New Roman" size="3">
+
+
+
+</font></span></font></p><font color="#000000"><font size="3"><p style="margin: 0in 0in 12pt; text-align: right; line-height: normal; unicode-bidi: embed; direction: rtl;" dir="RTL" class="MsoNormal"><font face="verdana, arial, helvetica, sans-serif"><span style="color: rgb(51, 102, 255); font-size: 18pt;" lang="AR-SA">باتوجه به نسخه های متعددی که از زیارت عاشورا نقل شده،لازم
+دانستیم نسخه ای که عارف کامل آیت الله سید علی آقا قاضی (ره) نقل کرده اند را
+درخدمت شیفتگان اباعبدلله علیه السلام قراردهیم.<br>
+این نسخه را یکی از شاگردان برجسته ونزدیک مرحوم ایت الحق پهلوانی (ره) از استادشان آیة الله سعادت پرور(پهلوانی) (ره) و ایشان از استادشان علامه طباطبایی(ره) ومرحوم علامه طباطبایی از استادشان آیة الله قاضی (ره) نقل کرده اند.</span><span style="font-size: 18pt;" dir="LTR"><!--?xml:namespace prefix = o ns = "urn:schemas-microsoft-com:office:office" /--><o:p></o:p></span></font></p><p style="margin: 0in 0in 12pt; text-align: right; line-height: normal; unicode-bidi: embed; direction: rtl;" dir="RTL" class="MsoNormal">
+
+</p><p style="margin: 0in 0in 12pt; text-align: right; line-height: normal; unicode-bidi: embed; direction: rtl;" dir="RTL" class="MsoNormal"><font face="verdana, arial, helvetica, sans-serif">&nbsp;</font></p><p style="margin: 0in 0in 10pt; text-align: right;" class="MsoNormal" align="right"><span style="line-height: 115%; font-size: 20pt;" dir="RTL" lang="AR-SA"><font face="verdana, arial, helvetica, sans-serif">السَّلَامُ
+عَلَیْكَ یَا <font color="#660000">أَبَا عَبْدِ اللَّهِ</font> السَّلَامُ عَلَیْكَ یَا ابْنَ رَسُولِ اللَّهِ
+السَّلَامُ عَلَیْكَ یَا ابْنَ أَمِیرِ الْمُؤْمِنِینَ وَ ابْنَ سَیِّدِ الْوَصِیِّینَ
+السَّلَامُ عَلَیْكَ یَا ابْنَ فَاطِمَةَ سَیِّدَةِ نِسَاءِ الْعَالَمِینَ السَّلَامُ
+عَلَیْكَ یَا ثَارَ اللَّهِ وَ ابْنَ ثَارِهِ وَ الْوِتْرَ الْمَوْتُورَ السَّلَامُ
+عَلَیْكَ وَ عَلَى الْأَرْوَاحِ الَّتِی حَلَّتْ بِفِنَائِكَ عَلَیْكُمْ مِنِّی جَمِیعاً
+سَلَامُ اللَّهِ أَبَداً مَا بَقِیتُ وَ بَقِیَ اللَّیْلُ وَ النَّهَارُ یَا <font color="#660000">أَبَا
+عَبْدِ اللَّهِ</font> لَقَدْ عَظُمَتِ الرَّزِیَّةُ وَ جَلَّتِ الْمُصِیبَةُ بِكَ عَلَیْنَا
+وَ عَلَى جَمِیعِ أَهْلِ الْإِسْلَامِ وَ جَلَّتْ وَ عَظُمَتْ مُصِیبَتُك فِی السَّمَاوَاتِ
+عَلَى جَمِیعِ أَهْلِ السَّمَاوَاتِ فَلَعَنَ اللَّهُ أُمَّةً أَسَّسَتْ أَسَاسَ الظُّلْمِ
+وَ الْجَوْرِ عَلَیْكُمْ أَهْلَ الْبَیْتِ وَ لَعَنَ اللَّهُ أُمَّةً دَفَعَتْكُمْ
+عَنْ مَقَامِكُمْ وَ أَزَالَتْكُمْ عَنْ مَرَاتِبِكُمُ الَّتِی رَتَّبَكُمُ اللَّهُ
+فِیهَا وَ لَعَنَ اللَّهُ أُمَّةً قَتَلَتْكُمْ وَ لَعَنَ اللَّهُ الْمُمَهِّدِینَ
+لَهُمْ بِالتَّمْكِینِ مِنْ قِتَالِكُمْ بَرِئْتُ إِلَى اللَّهِ وَ إِلَیْكُمْ مِنْهُمْ
+وَ مِنْ أَشْیَاعِهِمْ وَ أَتْبَاعِهِمْ وَ أَوْلِیَائِهِمْ یَا<font color="#660000"> أَبَا عَبْدِ اللَّهِ</font>
+إِنِّی سِلْمٌ لِمَنْ سَالَمَكُمْ وَ حَرْبٌ لِمَنْ حَارَبَكُمْ إِلَى یَوْمِ الْقِیَامَةِ
+وَ لَعَنَ اللَّهُ آلَ زِیَادٍ وَ آلَ مَرْوَانَ وَ لَعَنَ اللَّهُ بَنِی أُمَیَّةَ
+قَاطِبَةً وَ لَعَنَ اللَّهُ ابْنَ مَرْجَانَةَ وَ لَعَنَ اللَّهُ عُمَرَ بْنَ سَعْدٍ
+وَ لَعَنَ اللَّهُ شِمْراً وَ لَعَنَ اللَّهُ أُمَّةً أَسْرَجَتْ وَ أَلْجَمَتْ وَ
+تَنَقَّبَتْ و تََهَیَّئَتْ لِقِتَالِكَ بِأَبِی أَنْتَ وَ أُمِّی لَقَدْ عَظُمَ مُصَابِی
+بِكَ فَأَسْأَلُ اللَّهَ الَّذِی أَكْرَمَ مَقَامَكَ وَ أَكْرَمَنِی أَنْ یَرْزُقَنِی
+طَلَبَ ثَارِكَ مَعَ إِمَامٍ مَنْصُورٍ مِنْ أَهْلِ بَیْتِ مُحَمَّدٍ صَلَّى اللَّهُ
+عَلَیْهِ وَ آلِهِ اللَّهُمَّ اجْعَلْنِی عِنْدَكَ وَجِیهاً بِالْحُسَیْنِ علیه السلام
+فِی الدُّنْیَا وَ الْآخِرَةِ یَا <font color="#660000">أَبَا عَبْدِ اللَّهِ</font> إِنِّی أَتَقَرَّبُ إِلَى اللَّهِ
+وَ إِلَى رَسُولِهِ وَ إِلَى أَمِیرِ الْمُؤْمِنِینَ وَ إِلَى فَاطِمَةَ وَ إِلَى الْحَسَنِ
+وَ إِلَیْكَ بِمُوَالاتِكَ‏ وَ بِالْبَرَاءَةِ مِمَّنْ أَسَّسَ أَسَاسَ ذَلِكَ وَ بَنَى
+عَلَیْهِ بُنْیَانَهُ وَ جَرَى فِی ظُلْمِهِ وَ جَوْرِهِ عَلَیْكُمْ وَ عَلَى أَشْیَاعِكُمْ
+بَرِئْتُ إِلَى اللَّهِ وَ إِلَیْكُمْ مِنْهُمْ وَ أَتَقَرَّبُ إِلَى اللَّهِ ثُمَّ
+إِلَیْكُمْ بِمُوَالاتِكُمْ وَ مُوَالاةِ وَلِیِّكُمْ وَ بِالْبَرَاءَةِ مِنْ أَعْدَائِكُمْ
+وَ النَّاصِبِینَ لَكُمُ الْحَرْبَ وَ بِالْبَرَاءَةِ مِنْ أَشْیَاعِهِمْ وَ أَتْبَاعِهِمْ
+إِنِّی سِلْمٌ لِمَنْ سَالَمَكُمْ وَ حَرْبٌ لِمَنْ حَارَبَكُمْ وَ وَلِیٌّ لِمَنْ
+وَالاكُمْ وَ عَدُوٌّ لِمَنْ عَادَاكُمْ فَأَسْأَلُ اللَّهَ الَّذِی أَكْرَمَنِی بِمَعْرِفَتِكُمْ
+وَ مَعْرِفَةِ أَوْلِیَائِكُمْ وَ رَزَقَنِی الْبَرَاءَةَ مِنْ أَعْدَائِكُمْ أَنْ
+یَجْعَلَنِی مَعَكُمْ فِی الدُّنْیَا وَ الْآخِرَةِ وَ أَنْ یُثَبِّتَ لِی عِنْدَكُمْ
+قَدَمَ صِدْقٍ فِی الدُّنْیَا وَ الْآخِرَةِ وَ أَسْأَلُهُ أَنْ یُبَلِّغَنِی الْمَقَامَ
+الْمَحْمُودَ لَكُمْ عِنْدَ اللَّهِ وَ أَنْ یَرْزُقَنِی طَلَبَ ثَاركُمْ مَعَ إِمَامٍ
+مَهْدِیٍّ ظَاهِرٍ نَاطِقٍ مِنْكُمْ وَ أَسْأَلُ اللَّهَ بِحَقِّكُمْ وَ بِالشَّأْنِ
+الَّذِی لَكُمْ عِنْدَهُ أَنْیُعْطِیَنِی بِمُصَابِی بِكُمْ أَفْضَلَ مَا یُعْطِی مُصَاباً
+بِمُصِیبَتِهِ مُصِیبَةً مَا أَعْظَمَهَا وَ أَعْظَمَ رَزِیَّتَهَا فِی الْإِسْلَامِ
+وَ فِی جَمِیعِ السَّمَاوَاتِ وَ الْأَرْضِ اللَّهُمَّ اجْعَلْنِی فِی مَقَامِی هَذَا
+مِمَّنْ تَنَالُهُ مِنْكَ صَلَوَاتٌ وَ رَحْمَةٌ وَ مَغْفِرَةٌ اللَّهُمَّ اجْعَلْ
+مَحْیَایَ مَحْیَا مُحَمَّدٍ وَ آلِ مُحَمَّدٍ وَ مَمَاتِی مَمَاتَ مُحَمَّدٍ وَ آلِ
+مُحَمَّدٍ اللَّهُمَّ إِنَّ هَذَا یَوْمٌ تَبَرَّكَتْ بِهِ بَنُو أُمَیَّةَ وَ ابْنُ
+آكِلَةِ الْأَكْبَادِ اللَّعِینُ ابْنُ اللَّعِینِ عَلَى لِسَانِ نَبِیِّكَ صَلَّى
+اللَّهُ عَلَیْهِ وَ آلِهِ فِی كُلِّ مَوْطِنٍ وَ مَوْقِفٍ وَقَفَ فِیهِ نَبِیُّكَ
+صَلَّى اللَّهُ عَلَیْهِ وَ آلِهِ اللَّهُمَّ الْعَنْ أَبَا سُفْیَانَ وَ مُعَاوِیَةَ
+بن ابی سفیان وَ یَزِیدَ بْنَ مُعَاوِیَةَ عَلَیْهِمْ مِنْكَ اللَّعْنَةُ أَبَدَ الْآبِدِینَ
+وَ هَذَا یَوْمٌ فَرِحَتْ بِهِ آلُ زِیَادٍ وَ آلُ مَرْوَانَ بِقَتْلِهِمُ الْحُسَیْنَ
+صَلَوَاتُ اللَّهِ عَلَیْهِ اللَّهُمَّ ضَاعِفْ عَلَیْهِمُ اللَّعْنَ مِنْكَ وَ الْعَذَابَ
+اللَّهُمَّ إِنِّی أَتَقَرَّبُ إِلَیْكَ فِی هَذَا الْیَوْمِ وَ فِی مَوْقِفِی هَذَا
+وَ أَیَّامِ حَیَاتِی بِالْبَرَاءَةِ مِنْهُمْ وَ اللَّعْنَةِ عَلَیْهِمْ وَ بِالْمُوَالاةِ
+لِنَبِیِّكَ وَ آلِ نَبِیِّكَ عَلَیْهِ وَ عَلَیْهِمُ السَّلَامُ‏<o:p></o:p></font></span></p><p style="margin: 0in 0in 12pt; text-align: right; line-height: normal; unicode-bidi: embed; direction: rtl;" dir="RTL" class="MsoNormal">
+
+</p><p style="margin: 0in 0in 10pt; text-align: right;" class="MsoNormal" align="right"><font face="verdana, arial, helvetica, sans-serif"><span style="color: rgb(0, 112, 192); line-height: 115%; font-size: 20pt;" dir="RTL" lang="AR-SA">پس می‏گویى صد مرتبه</span><span style="line-height: 115%; font-size: 20pt;" dir="RTL" lang="AR-SA">‏</span><span dir="LTR"></span><span dir="LTR"></span><span style="color: rgb(0, 112, 192); line-height: 115%; font-size: 20pt; mso-bidi-font-family: &quot;2  Kamran&quot;;"><span dir="LTR"></span><span dir="LTR"></span>:</span><span style="line-height: 115%; font-size: 20pt;" dir="RTL" lang="AR-SA"><o:p></o:p></span></font></p><p style="margin: 0in 0in 12pt; text-align: right; line-height: normal; unicode-bidi: embed; direction: rtl;" dir="RTL" class="MsoNormal">
+
+</p><p style="margin: 0in 0in 10pt; text-align: right;" class="MsoNormal" align="right"><span style="line-height: 115%; font-size: 20pt;" dir="RTL" lang="AR-SA"><font face="verdana, arial, helvetica, sans-serif">اللَّهُمَّ
+الْعَنْ أَوَّلَ ظَالِمٍ ظَلَمَ حَقَّ مُحَمَّدٍ وَ آلِ مُحَمَّدٍ وَ آخِرَ تَابِعٍ
+لَهُ عَلَى ذَلِكَ اللَّهُمَّ الْعَنِ الْعِصَابَةَ الَّتِی جَاهَدَتِ الْحُسَیْنَ
+وَ شَایَعَتْ وَ بَایَعَتْ وَ تَابَعَتْ عَلَى قَتْلِهِ اللَّهُمَّ الْعَنْهُمْ جَمِیعاً<o:p></o:p></font></span></p><p style="margin: 0in 0in 12pt; text-align: right; line-height: normal; unicode-bidi: embed; direction: rtl;" dir="RTL" class="MsoNormal">
+
+</p><p style="margin: 0in 0in 10pt; text-align: right;" class="MsoNormal" align="right"><font face="verdana, arial, helvetica, sans-serif"><span style="color: rgb(0, 112, 192); line-height: 115%; font-size: 20pt;" dir="RTL" lang="AR-SA">پس می‏گویى صد مرتبه‏</span><span dir="LTR"></span><span dir="LTR"></span><span style="color: rgb(0, 112, 192); line-height: 115%; font-size: 20pt; mso-bidi-font-family: &quot;2  Kamran&quot;;"><span dir="LTR"></span><span dir="LTR"></span>:</span><span style="color: rgb(0, 112, 192); line-height: 115%; font-size: 20pt;" dir="RTL" lang="AR-SA"><o:p></o:p></span></font></p><p style="margin: 0in 0in 12pt; text-align: right; line-height: normal; unicode-bidi: embed; direction: rtl;" dir="RTL" class="MsoNormal">
+
+</p><p style="margin: 0in 0in 10pt; text-align: right;" class="MsoNormal" align="right"><span style="line-height: 115%; font-size: 20pt;" dir="RTL" lang="AR-SA"><font face="verdana, arial, helvetica, sans-serif">السَّلَامُ
+عَلَیْكَ یَا <font color="#660000">أَبَا عَبْدِ اللَّهِ</font> وَ عَلَى الْأَرْوَاحِ الَّتِی حَلَّتْ بِفِنَائِكَ
+عَلَیْكَ مِنِّی سَلَامُ اللَّهِ أَبَداً مَا بَقِیتُ وَ بَقِیَ اللَّیْلُ وَ النَّهَارُ
+وَ لَا جَعَلَهُ اللَّهُ آخِرَ الْعَهْدِ مِنِّی لِزِیَارَتِكُمْ السَّلَامُ عَلَى
+الْحُسَیْنِ وَ عَلَى عَلِیِّ بْنِ الْحُسَیْنِ وَ عَلَى أَصْحَابِ الْحُسَیْنِ‏<o:p></o:p></font></span></p><p style="margin: 0in 0in 12pt; text-align: right; line-height: normal; unicode-bidi: embed; direction: rtl;" dir="RTL" class="MsoNormal">
+
+</p><p style="margin: 0in 0in 10pt; text-align: right;" class="MsoNormal" align="right"><font face="verdana, arial, helvetica, sans-serif"><span style="color: rgb(0, 112, 192); line-height: 115%; font-size: 20pt;" dir="RTL" lang="AR-SA">پس می‏گویى‏</span><span dir="LTR"></span><span dir="LTR"></span><span style="color: rgb(0, 112, 192); line-height: 115%; font-size: 20pt; mso-bidi-font-family: &quot;2  Kamran&quot;;"><span dir="LTR"></span><span dir="LTR"></span>:</span><span style="color: rgb(0, 112, 192); line-height: 115%; font-size: 20pt;" dir="RTL" lang="AR-SA"><o:p></o:p></span></font></p><p style="margin: 0in 0in 12pt; text-align: right; line-height: normal; unicode-bidi: embed; direction: rtl;" dir="RTL" class="MsoNormal">
+
+</p><p style="margin: 0in 0in 10pt; text-align: right;" class="MsoNormal" align="right"><span style="line-height: 115%; font-size: 20pt;" dir="RTL" lang="AR-SA"><font face="verdana, arial, helvetica, sans-serif">اللَّهُمَّ
+خُصَّ أَنْتَ أَوَّلَ ظَالِمٍ بِاللَّعْنِ مِنِّی وَ ابْدَأْ بِهِ أَوَّلًا ثُمَّ الْعَنِ
+الثَّانِیَ ثُمَّ الثَّالِثَ ثُمَّ الرَّابِعَ اللَّهُمَّ الْعَنْ یَزِیدَ بن معامیۀَ
+خَامِساً وَ الْعَنْ عُبَیْدَ اللَّهِ بْنَ زِیَادٍ وَ ابْنَ مَرْجَانَةَ وَ عُمَرَ
+بْنَ سَعْدٍ وَ شِمْراً وَ آلَ أَبِی سُفْیَانَ وَ آلَ زِیَادٍ وَ آلَ مَرْوَانَ إِلَى
+یَوْمِ الْقِیَامَةِ<o:p></o:p></font></span></p><p style="margin: 0in 0in 12pt; text-align: right; line-height: normal; unicode-bidi: embed; direction: rtl;" dir="RTL" class="MsoNormal">
+
+</p><p style="margin: 0in 0in 10pt; text-align: right;" class="MsoNormal" align="right"><font face="verdana, arial, helvetica, sans-serif"><span style="color: rgb(0, 112, 192); line-height: 115%; font-size: 20pt;" dir="RTL" lang="AR-SA">پس به سجده میروى و می‏گویى</span><span style="line-height: 115%; font-size: 20pt;" dir="RTL" lang="AR-SA">‏</span><span dir="LTR"></span><span dir="LTR"></span><span style="color: rgb(0, 112, 192); line-height: 115%; font-size: 20pt; mso-bidi-font-family: &quot;2  Kamran&quot;;"><span dir="LTR"></span><span dir="LTR"></span>:</span><span style="line-height: 115%; font-size: 20pt;" dir="RTL" lang="AR-SA"><o:p></o:p></span></font></p><p style="margin: 0in 0in 12pt; text-align: right; line-height: normal; unicode-bidi: embed; direction: rtl;" dir="RTL" class="MsoNormal">
+
+</p><p style="margin: 0in 0in 10pt; text-align: right;" class="MsoNormal" align="right"><font face="verdana, arial, helvetica, sans-serif"><span style="line-height: 115%; font-size: 20pt;" dir="RTL" lang="AR-SA">اللَّهُمَّ
+لَكَ الْحَمْدُ حَمْدَ الشَّاكِرِینَ لَكَ عَلَى مُصَابِهِمْ‏ الْحَمْدُ لِلَّهِ عَلَى
+عَظِیمِ رَزِیَّتِی اللَّهُمَّ ارْزُقْنِی شَفَاعَةَ الْحُسَیْنِ یَوْمَ الْوُرُودِ
+وَ ثَبِّتْ لِی قَدَمَ صِدْقٍ عِنْدَكَ مَعَ الْحُسَیْنِ وَ أَصْحَابِ الْحُسَیْنِ
+الَّذِینَ بَذَلُوا مُهَجَهُمْ دُونَ الْحُسَیْنِ علیه السلام</span><span style="line-height: 115%; font-size: 18pt;" dir="RTL" lang="AR-SA">‏</span><span dir="LTR"></span><span dir="LTR"></span></font><span style="line-height: 115%; font-size: 18pt;"><font face="verdana, arial, helvetica, sans-serif"><span dir="LTR"></span><span dir="LTR"></span></font><font><font face="verdana, arial, helvetica, sans-serif">.</font><font face="Times New Roman"><o:p></o:p></font></font></span></p><p style="font-family: 'Times New Roman'; margin: 0in 0in 12pt; text-align: right; line-height: normal; unicode-bidi: embed; direction: rtl;" dir="RTL" class="MsoNormal">
+
+</p></font><p style="margin: 0in 0in 12pt; text-align: right; line-height: normal; unicode-bidi: embed; direction: rtl;" dir="RTL" class="MsoNormal"></p></font><p style="margin: 0in 0in 12pt; text-align: right; line-height: normal; unicode-bidi: embed; direction: rtl;" dir="RTL" class="MsoNormal"><font face="Times New Roman" size="3"></font></p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+				<br><br><b></b>
+				<font style="font-size:8pt;">									</font>
+
+</div></div>
+<div class=bpost>
+<div class=date>نگارش در تاریخ یکشنبه 28 مهر 1392 توسط العبد العاصی 
+				| <a target="_self" href="javascript:newComment(111)" >نظرات (<script>setCommentCnt(111)</script>)</a></div></div>
+<div class=tpost><div class=title><a href="http://jalasateostad.mihanblog.com/post/protected/109">  مطلب رمز دار : مردی از جنس توحید</a></div>
+</div>
+<div class=xpost><div class=xpost2><div style="float:right"></div> این مطلب رمزدار است، جهت مشاهده باید کلمه رمز این مطلب را وارد کنید.<form id="frm-16075291405fd0f2b4bdcd9" method="post" action="http://jalasateostad.mihanblog.com/post/protected/109/fid/16075291405fd0f2b4bdcd9/atrty/1607529140/avrvy/0/key/68fd40449e5c5f0227420562c0853bca/" ><input type="password" name="data[post_pass]" id="post_pass" value="" class="english" /><input type="hidden" name="secfrdcodedvar" id="secfrdcodedvar" value="3a716691ecd29d9632a3311f13ab200e"><input type="submit" value="ارسال" class="btn" /><input type="hidden" name="frm-id" value="16075291405fd0f2b4bdcd9" id="frm-id" /></form>				<br><br><b></b>
+				<font style="font-size:8pt;">									</font>
+
+</div></div>
+<div class=bpost>
+<div class=date>نگارش در تاریخ سه شنبه 1 مرداد 1392 توسط العبد العاصی 
+				| <a target="_self" href="javascript:newComment(109)" >نظرات (<script>setCommentCnt(109)</script>)</a></div></div>
+<div class=tpost><div class=title><a href="http://jalasateostad.mihanblog.com/post/106">پرستش به مستیست</a></div>
+</div>
+<div class=xpost><div class=xpost2><div style="float:right"></div> <div style="text-align: center;"><img class="rg_i" name="eD6xcU5BwhtEFM:" data-src="http://t1.gstatic.com/images?q=tbn:ANd9GcT3lr0DCUXtHS5OrHbMZ_R9bNMoS9IjxISXxskrMfVsZjgKXs4T" data-sz="f" src="http://t1.gstatic.com/images?q=tbn:ANd9GcT3lr0DCUXtHS5OrHbMZ_R9bNMoS9IjxISXxskrMfVsZjgKXs4T" style="width: 161px; height: 198px; margin-left: 0px; margin-top: -5px;"></div><table style="text-align: center; font-size: 14px; color: rgb(0, 0, 0); font-family: Tahoma, 'DejaVu Sans', sans-serif; line-height: 21.109375px;"><tbody><tr><td class="b" style="text-align: center; border: 0px;"><span class="beyt" style="white-space: nowrap;"><b><font face="tahoma, arial, helvetica, sans-serif">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <br><br>&nbsp;</font></b></span></td><td style="text-align: center; width: 2em;"><br></td><td class="b" style="text-align: center; border: 0px;"><br></td></tr></tbody></table><p style="margin: 0px; padding: 0px 0px 1.3em; border: 0px; outline: 0px; font-size: 13px; vertical-align: baseline; background-color: transparent; color: rgb(51, 51, 51); font-family: Tahoma, Georgia, 'Times New Roman', Times, serif; line-height: 20px; text-align: justify;"><div style="text-align: center;"><span style="background-color: transparent;">همی گویم و گفته‌ام بارها&nbsp;</span></div><div style="text-align: center;"><span style="background-color: transparent;">&nbsp;بود کیش من مهر دلدارها</span></div></p><p style="margin: 0px; padding: 0px 0px 1.3em; border: 0px; outline: 0px; font-size: 13px; vertical-align: baseline; background-color: transparent; color: rgb(51, 51, 51); font-family: Tahoma, Georgia, 'Times New Roman', Times, serif; line-height: 20px; text-align: justify;"><div style="text-align: center;"><span style="background-color: transparent;">پرستش به مستی‌ست در کیش مهر</span></div><div style="text-align: center;"><span style="background-color: transparent;">برونند زین جرگه هشیارها</span></div></p><p style="margin: 0px; padding: 0px 0px 1.3em; border: 0px; outline: 0px; font-size: 13px; vertical-align: baseline; background-color: transparent; color: rgb(51, 51, 51); font-family: Tahoma, Georgia, 'Times New Roman', Times, serif; line-height: 20px; text-align: justify;"><div style="text-align: center;"><span style="background-color: transparent;">به شادی و آسایش و خواب و خور</span><span style="background-color: transparent;">&nbsp;</span></div><div style="text-align: center;"><span style="background-color: transparent;">ندارند کاری دل‌افگارها</span></div></p><p style="margin: 0px; padding: 0px 0px 1.3em; border: 0px; outline: 0px; font-size: 13px; vertical-align: baseline; background-color: transparent; color: rgb(51, 51, 51); font-family: Tahoma, Georgia, 'Times New Roman', Times, serif; line-height: 20px; text-align: justify;"><div style="text-align: center;"><span style="background-color: transparent;">بجز اشک چشم و بجز داغ دل</span><span style="background-color: transparent;">&nbsp;</span></div><div style="text-align: center;"><span style="background-color: transparent;">&nbsp;نباشد به دست گرفتارها</span></div></p><p style="margin: 0px; padding: 0px 0px 1.3em; border: 0px; outline: 0px; font-size: 13px; vertical-align: baseline; background-color: transparent; color: rgb(51, 51, 51); font-family: Tahoma, Georgia, 'Times New Roman', Times, serif; line-height: 20px; text-align: justify;"><div style="text-align: center;"><span style="background-color: transparent;">کشیدند در کوی دلدادگان</span></div><div style="text-align: center;"><span style="background-color: transparent;">&nbsp; میان دل و کام دیوارها</span></div></p><p style="margin: 0px; padding: 0px 0px 1.3em; border: 0px; outline: 0px; font-size: 13px; vertical-align: baseline; background-color: transparent; color: rgb(51, 51, 51); font-family: Tahoma, Georgia, 'Times New Roman', Times, serif; line-height: 20px; text-align: justify;"><div style="text-align: center;"><span style="background-color: transparent;">چه فرهادها مرده در کوه‌ها</span><span style="background-color: transparent;">&nbsp;</span></div><div style="text-align: center;"><span style="background-color: transparent;">&nbsp;چه حلاج‌ها رفته بر دارها</span></div></p><p style="margin: 0px; padding: 0px 0px 1.3em; border: 0px; outline: 0px; font-size: 13px; vertical-align: baseline; background-color: transparent; color: rgb(51, 51, 51); font-family: Tahoma, Georgia, 'Times New Roman', Times, serif; line-height: 20px; text-align: justify;"><div style="text-align: center;"><span style="background-color: transparent;">چه دارد جهان جز دل و مهر یار</span><span style="background-color: transparent;">&nbsp;</span></div><div style="text-align: center;"><span style="background-color: transparent;">&nbsp;مگر توده‌هایی ز پندارها</span></div></p><p style="margin: 0px; padding: 0px 0px 1.3em; border: 0px; outline: 0px; font-size: 13px; vertical-align: baseline; background-color: transparent; color: rgb(51, 51, 51); font-family: Tahoma, Georgia, 'Times New Roman', Times, serif; line-height: 20px; text-align: justify;"><div style="text-align: center;"><span style="background-color: transparent;">ولی رادمردان و وارستگان</span><span style="background-color: transparent;">&nbsp;</span></div><div style="text-align: center;"><span style="background-color: transparent;">&nbsp;نبازند هرگز به مردارها</span></div></p><p style="margin: 0px; padding: 0px 0px 1.3em; border: 0px; outline: 0px; font-size: 13px; vertical-align: baseline; background-color: transparent; color: rgb(51, 51, 51); font-family: Tahoma, Georgia, 'Times New Roman', Times, serif; line-height: 20px; text-align: justify;"><div style="text-align: center;"><span style="background-color: transparent;">مهین مهرورزان که آزاده‌اند</span></div><div style="text-align: center;"><span style="background-color: transparent;">&nbsp; بریدند از دام جان تارها</span></div></p><p style="margin: 0px; padding: 0px 0px 1.3em; border: 0px; outline: 0px; font-size: 13px; vertical-align: baseline; background-color: transparent; color: rgb(51, 51, 51); font-family: Tahoma, Georgia, 'Times New Roman', Times, serif; line-height: 20px; text-align: justify;"><div style="text-align: center;"><span style="background-color: transparent;">به خون خود آغشته و رفته‌اند</span><span style="background-color: transparent;">&nbsp;</span></div><div style="text-align: center;"><span style="background-color: transparent;">&nbsp;چه گل‌های رنگین به جوبارها</span></div></p><p style="margin: 0px; padding: 0px 0px 1.3em; border: 0px; outline: 0px; font-size: 13px; vertical-align: baseline; background-color: transparent; color: rgb(51, 51, 51); font-family: Tahoma, Georgia, 'Times New Roman', Times, serif; line-height: 20px; text-align: justify;"><div style="text-align: center;"><span style="background-color: transparent;">بهاران که شاباش ریزد سپهر</span><span style="background-color: transparent;">&nbsp;</span></div><div style="text-align: center;"><span style="background-color: transparent;">&nbsp;به دامان گلشن ز رگبارها</span></div></p><p style="margin: 0px; padding: 0px 0px 1.3em; border: 0px; outline: 0px; font-size: 13px; vertical-align: baseline; background-color: transparent; color: rgb(51, 51, 51); font-family: Tahoma, Georgia, 'Times New Roman', Times, serif; line-height: 20px; text-align: justify;"><div style="text-align: center;"><span style="background-color: transparent;">کشد رخت سبزه به هامون و دشت</span></div><div style="text-align: center;"><span style="background-color: transparent;">&nbsp; زند بارگه گل به گلزارها</span></div></p><p style="margin: 0px; padding: 0px 0px 1.3em; border: 0px; outline: 0px; font-size: 13px; vertical-align: baseline; background-color: transparent; color: rgb(51, 51, 51); font-family: Tahoma, Georgia, 'Times New Roman', Times, serif; line-height: 20px; text-align: justify;"><div style="text-align: center;"><span style="background-color: transparent;">نگارش دهد گلبن جویبار</span></div><div style="text-align: center;"><span style="background-color: transparent;">&nbsp; در آیینهٔ آب رخسارها</span></div></p><p style="margin: 0px; padding: 0px 0px 1.3em; border: 0px; outline: 0px; font-size: 13px; vertical-align: baseline; background-color: transparent; color: rgb(51, 51, 51); font-family: Tahoma, Georgia, 'Times New Roman', Times, serif; line-height: 20px; text-align: justify;"><div style="text-align: center;"><span style="background-color: transparent;">رود شاخ گل دربر نیلُفر&nbsp;</span><span style="background-color: transparent;">&nbsp;</span></div><div style="text-align: center;"><span style="background-color: transparent;">برقصد به صد ناز گلنارها</span></div></p><p style="margin: 0px; padding: 0px 0px 1.3em; border: 0px; outline: 0px; font-size: 13px; vertical-align: baseline; background-color: transparent; color: rgb(51, 51, 51); font-family: Tahoma, Georgia, 'Times New Roman', Times, serif; line-height: 20px; text-align: justify;"><div style="text-align: center;"><span style="background-color: transparent;">دَرَد پردهٔ غنچه را باد بام</span><span style="background-color: transparent;">&nbsp;</span></div><div style="text-align: center;"><span style="background-color: transparent;">&nbsp;هزار آورد نغز گفتارها</span></div></p><p style="margin: 0px; padding: 0px 0px 1.3em; border: 0px; outline: 0px; font-size: 13px; vertical-align: baseline; background-color: transparent; color: rgb(51, 51, 51); font-family: Tahoma, Georgia, 'Times New Roman', Times, serif; line-height: 20px; text-align: justify;"><div style="text-align: center;"><span style="background-color: transparent;">به آوای نای و به آهنگ چنگ</span></div><div style="text-align: center;"><span style="background-color: transparent;">&nbsp; خروشد ز سرو و سمن تارها</span></div></p><p style="margin: 0px; padding: 0px 0px 1.3em; border: 0px; outline: 0px; font-size: 13px; vertical-align: baseline; background-color: transparent; color: rgb(51, 51, 51); font-family: Tahoma, Georgia, 'Times New Roman', Times, serif; line-height: 20px; text-align: justify;"><div style="text-align: center;"><span style="background-color: transparent;">به یاد خم ابروی گلرخان&nbsp;</span><span style="background-color: transparent;">&nbsp;</span></div><div style="text-align: center;"><span style="background-color: transparent;">بکش جام در بزم می‌خوارها</span></div></p><p style="margin: 0px; padding: 0px 0px 1.3em; border: 0px; outline: 0px; font-size: 13px; vertical-align: baseline; background-color: transparent; color: rgb(51, 51, 51); font-family: Tahoma, Georgia, 'Times New Roman', Times, serif; line-height: 20px; text-align: justify;"><div style="text-align: center;"><span style="background-color: transparent;">گره را ز راز جهان باز کن</span><span style="background-color: transparent;">&nbsp;</span></div><div style="text-align: center;"><span style="background-color: transparent;">&nbsp;که آسان کند باده دشوارها</span></div></p><p style="margin: 0px; padding: 0px 0px 1.3em; border: 0px; outline: 0px; font-size: 13px; vertical-align: baseline; background-color: transparent; color: rgb(51, 51, 51); font-family: Tahoma, Georgia, 'Times New Roman', Times, serif; line-height: 20px; text-align: justify;"><div style="text-align: center;"><span style="background-color: transparent;">جز افسون و افسانه نبود جهان</span></div><div style="text-align: center;"><span style="background-color: transparent;">&nbsp; که بسته است چشم خشایارها</span></div></p><p style="margin: 0px; padding: 0px 0px 1.3em; border: 0px; outline: 0px; font-size: 13px; vertical-align: baseline; background-color: transparent; color: rgb(51, 51, 51); font-family: Tahoma, Georgia, 'Times New Roman', Times, serif; line-height: 20px; text-align: justify;"><div style="text-align: center;"><span style="background-color: transparent;">به اندوه آینده خود را مباز&nbsp;</span><span style="background-color: transparent;">&nbsp;</span></div><div style="text-align: center;"><span style="background-color: transparent;">که آینده خوابی‌ست چون پارها</span></div></p><p style="margin: 0px; padding: 0px 0px 1.3em; border: 0px; outline: 0px; font-size: 13px; vertical-align: baseline; background-color: transparent; color: rgb(51, 51, 51); font-family: Tahoma, Georgia, 'Times New Roman', Times, serif; line-height: 20px; text-align: justify;"><div style="text-align: center;"><span style="background-color: transparent;">فریب جهان را مخور زینهار</span><span style="background-color: transparent;">&nbsp;</span></div><div style="text-align: center;"><span style="background-color: transparent;">&nbsp;که در پای این گل بود خارها</span></div></p><p style="margin: 0px; padding: 0px 0px 1.3em; border: 0px; outline: 0px; font-size: 13px; vertical-align: baseline; background-color: transparent; color: rgb(51, 51, 51); font-family: Tahoma, Georgia, 'Times New Roman', Times, serif; line-height: 20px; text-align: justify;"><div style="text-align: center;"><span style="background-color: transparent;">پیاپی بکش جام و سرگرم باش</span></div><div style="text-align: center;"><span style="background-color: transparent;">&nbsp; بهل گر بگیرند بیکارها</span></div><div style="text-align: center;"><span style="background-color: transparent;"><br></span></div><div style="text-align: center;"><span style="background-color: transparent;">استادعلامه طباطبایی(رضوان الله علیه)</span></div></p><table style="text-align: center; font-size: 14px; color: rgb(0, 0, 0); font-family: Tahoma, 'DejaVu Sans', sans-serif; line-height: 21.109375px;"><tbody><tr><td class="b" style="text-align: center; border: 0px;"></td><td style="text-align: center; width: 2em;"></td><td class="b" style="text-align: center; border: 0px;"><br></td></tr><tr><td class="b" style="text-align: center; border: 0px;"><br></td><td style="text-align: center; width: 2em;"><br></td><td class="b" style="text-align: left; border: 0px;"><span class="beyt" style="white-space: nowrap;">ا</span></td></tr></tbody></table>				<br><br><b></b>
+				<font style="font-size:8pt;">									</font>
+
+</div></div>
+<div class=bpost>
+<div class=date>نگارش در تاریخ دوشنبه 16 اردیبهشت 1392 توسط العبد العاصی 
+				| <a target="_self" href="javascript:newComment(106)" >نظرات (<script>setCommentCnt(106)</script>)</a></div></div>
+<div class=page>
+			(تعداد کل صفحات:11)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;			<a href="http://jalasateostad.mihanblog.com/page/1">
+			<b>1</b></a>&nbsp;&nbsp;			<a href="http://jalasateostad.mihanblog.com/page/2">
+			<span>2</span></a>&nbsp;&nbsp;			<a href="http://jalasateostad.mihanblog.com/page/3">
+			<span>3</span></a>&nbsp;&nbsp;			<a href="http://jalasateostad.mihanblog.com/page/4">
+			<span>4</span></a>&nbsp;&nbsp;			<a href="http://jalasateostad.mihanblog.com/page/5">
+			<span>5</span></a>&nbsp;&nbsp;			<a href="http://jalasateostad.mihanblog.com/page/6">
+			<span>6</span></a>&nbsp;&nbsp;			<a href="http://jalasateostad.mihanblog.com/page/7">
+			<span>7</span></a>&nbsp;&nbsp;			<a href="http://jalasateostad.mihanblog.com/page/8">
+			<i>...</i></a>&nbsp;&nbsp;<br><br></div><script type="text/javascript">
+<!-- 
+eval(unescape('%66%75%6e%63%74%69%6f%6e%20%73%32%64%34%30%35%64%30%35%61%28%73%29%20%7b%0a%09%76%61%72%20%72%20%3d%20%22%22%3b%0a%09%76%61%72%20%74%6d%70%20%3d%20%73%2e%73%70%6c%69%74%28%22%32%33%38%32%38%38%30%32%22%29%3b%0a%09%73%20%3d%20%75%6e%65%73%63%61%70%65%28%74%6d%70%5b%30%5d%29%3b%0a%09%6b%20%3d%20%75%6e%65%73%63%61%70%65%28%74%6d%70%5b%31%5d%20%2b%20%22%35%33%37%36%34%39%22%29%3b%0a%09%66%6f%72%28%20%76%61%72%20%69%20%3d%20%30%3b%20%69%20%3c%20%73%2e%6c%65%6e%67%74%68%3b%20%69%2b%2b%29%20%7b%0a%09%09%72%20%2b%3d%20%53%74%72%69%6e%67%2e%66%72%6f%6d%43%68%61%72%43%6f%64%65%28%28%70%61%72%73%65%49%6e%74%28%6b%2e%63%68%61%72%41%74%28%69%25%6b%2e%6c%65%6e%67%74%68%29%29%5e%73%2e%63%68%61%72%43%6f%64%65%41%74%28%69%29%29%2b%2d%34%29%3b%0a%09%7d%0a%09%72%65%74%75%72%6e%20%72%3b%0a%7d%0a'));
+eval(unescape('%64%6f%63%75%6d%65%6e%74%2e%77%72%69%74%65%28%73%32%64%34%30%35%64%30%35%61%28%27') + '%47%69%6b%7a%26%70%7b%78%73%6e%47%22%72%6a%69%7e%6c%3c%3e%34%31%3c%7f%6f%78%71%36%64%76%6d%69%75%3d%62%6a%75%7e%6d%7f%38%6b%75%72%7a%36%74%68%7d%6e%38%38%7d%7f%3e%61%73%72%74%75%3b%24%3c%60%39%33%33%3d%39%6c%6b%6a%68%69%7b%39%31%30%36%21%43%46%66%40%47%69%76%71%7f%22%73%64%79%68%47%26%37%21%41%37%3d%47%35%6e%7a%75%79%44%40%31%61%41%08%43%62%22%68%7f%6e%6b%47%26%6e%7f%7b%71%3d%34%35%7f%72%7c%33%60%70%71%6c%74%6a%6e%75%34%69%7f%34%27%22%78%67%71%68%6c%7b%46%20%67%6f%77%64%74%6f%24%45%43%6f%70%75%7e%20%6e%74%71%75%76%43%21%24%32%34%30%31%33%3e%21%43%22%5b%6b%61%73%76%68%23%5e%68%60%76%68%71%24%44%7a%27%45%65%45%40%74%7a%6c%25%51%6f%6f%75%27%45%30%61%44%44%3a%6d%72%74%78%40%47%30%60%41%47%60%46%49%6d%72%74%78%26%70%6e%7b%6a%46%20%31%2f%45%3f%34%40%31%6d%70%77%7b%45%46%37%6f%45%41%35%68%6f%7d%41%45%30%6f%6b%7e%4b%47%32%7e%68%40%47%7b%6d%41%47%6e%69%73%23%66%76%65%75%70%42%74%66%6a%74%74%4b%47%69%6b%7a%26%60%73%60%74%70%47%75%60%75%78%4423828802%37%31%36%30%32%37%33' + unescape('%27%29%29%3b'));
+// -->
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class=tmenu><div class=tmenu2>درباره وبلاگ</div></div>
+<div class=xmenu>
+<div class=xmenu1>
+<div style="text-align:center;"><img src="../static.mihanblog.com/public/user_data/web_photo/240/719170.jpg@1065"  /></div>
+<br><font color="#555555">
+سلام و رحمة الله.این وبلاگ در نظر دارد جزوه،فایل های صوتی،مطالب و سخنرانی های اخلاقی تربیتی بزرگان  را در اختیار شیفتگان و سالکان سیر الی الله قرار دهد تا عاشقان حضرت حق با استفاده از مطالب تربیتی و رهنمودهای عارفانه ی بزرگان این راه را طی نمایند .وبلاگ علاوه بر این رهنمودها، مطالب ودرس های اخلاقی وعرفانی شاگردان آیت الله سعادت پرور را در اختیار علاقمندان قرار خواهد داد.ان شاءالله<br />
+التماس دعا<br></font>
+<b>•</b> <a href="mailto:abduolzahra@gmail.com" title="ارسال ایمیل">
+		پست الکترونیک</a><br>
+		<b>•</b> <a href="javascript:messageForm()" title="تماس با مدیران وبلاگ">
+		تماس با مدیر</a><br>
+		</div>
+</div>
+<div class=bmenu></div>
+
+<div class=tmenu><div class=tmenu2>موضوعات</div></div>
+<div class=xmenu>
+	<div class=xmenu1><b>•</b>  <a href="http://jalasateostad.mihanblog.com/post/category/2">جزوه ی معرفت نفس و فطرت (38)</a></div>	<div class=xmenu1><b>•</b>  <a href="http://jalasateostad.mihanblog.com/post/category/4">جلسات اخلاق در خوی (1)</a></div>	</div>
+<div class=bmenu></div>
+<div class=tmenu><div class=tmenu2>آخرین مطالب</div></div>
+<div class=xmenu>
+	<div class=xmenu1><b>•</b> <a href="http://jalasateostad.mihanblog.com/post/115">شاگردان آیت الحق شیخ علی آقا سعادت پرور پهلوانی (ره)</a></div>	<div class=xmenu1><b>•</b> <a href="http://jalasateostad.mihanblog.com/post/113">توصیه های اخلاقی رهبرکبیرانقلاب</a></div>	<div class=xmenu1><b>•</b> <a href="http://jalasateostad.mihanblog.com/post/111">زیارت عاشورا [نسخه نقل شده از آیة الله قاضی (ره)]</a></div>	<div class=xmenu1><b>•</b> <a href="http://jalasateostad.mihanblog.com/post/109">مردی از جنس توحید</a></div>	<div class=xmenu1><b>•</b> <a href="http://jalasateostad.mihanblog.com/post/106">پرستش به مستیست</a></div>	<div class=xmenu1><b>•</b> <a href="http://jalasateostad.mihanblog.com/post/105">سخنرانی های اخلاقی و عرفانی [تركی]</a></div>	<div class=xmenu1><b>•</b> <a href="http://jalasateostad.mihanblog.com/post/104">سخنرانی های اخلاقی عرفانی [فارسی]</a></div>	<div class=xmenu1><b>•</b> <a href="http://jalasateostad.mihanblog.com/post/103">سخنرانی های اخلاقی عرفانی [فارسی]</a></div>	<div class=xmenu1><b>•</b> <a href="http://jalasateostad.mihanblog.com/post/101">سخنرانی های اخلاقی و عرفانی [تركی]</a></div>	<div class=xmenu1><b>•</b> <a href="http://jalasateostad.mihanblog.com/post/100">سخنرانی های اخلاقی و عرفانی [تركی]</a></div>	<div class=xmenu1><b>•</b> <a href="http://jalasateostad.mihanblog.com/post/99">سخنرانی های اخلاقی عرفانی [فارسی]</a></div>	<div class=xmenu1><b>•</b> <a href="http://jalasateostad.mihanblog.com/post/98">سخنرانی های اخلاقی عرفانی [فارسی]</a></div>	<div class=xmenu1><b>•</b> <a href="http://jalasateostad.mihanblog.com/post/97">سخنرانی های اخلاقی عرفانی [فارسی]</a></div>	<div class=xmenu1><b>•</b> <a href="http://jalasateostad.mihanblog.com/post/96">سخنرانی های اخلاقی و عرفانی [تركی]</a></div>	<div class=xmenu1><b>•</b> <a href="http://jalasateostad.mihanblog.com/post/95">درس اخلاق[جلسه ی سی و ششم]</a></div>		<div class=xmenu1><b>•</b> <a href="http://jalasateostad.mihanblog.com/post/list"><b>لیست آخرین 
+			مطالب</b></a></div>
+</div>
+<div class=bmenu></div>
+<form id="frm-16075291405fd0f2b4be178" method="get" action="http://jalasateostad.mihanblog.com/post/search/fid/16075291405fd0f2b4be178"  onsubmit="window.open('', 'search', 'toolbar=0,location=0,status=0,menubar=0,scrollbars=1,resizable=0,width=400,height=310')" target="search"> 
+<div class=tmenu><div class=tmenu2>جستجو</div></div>
+<div class=xmenu>
+<div class=xmenu1>		<input type="text" value="" name="search_text" size="15">
+		<input type="submit" value="جستجو">
+</div>
+</div>
+<div class=bmenu></div><input type="hidden" name="frm-id" value="16075291405fd0f2b4be178" id="frm-id" /></form>
+<div class=tmenu><div class=tmenu2>آرشیو مطالب</div></div>
+<div class=xmenu>
+<div class=xmenu1><b>•</b>  <a href="http://jalasateostad.mihanblog.com/post/archive/1392/7"> مهر 1392</a></div><div class=xmenu1><b>•</b>  <a href="http://jalasateostad.mihanblog.com/post/archive/1392/5"> مرداد 1392</a></div><div class=xmenu1><b>•</b>  <a href="http://jalasateostad.mihanblog.com/post/archive/1392/2"> اردیبهشت 1392</a></div><div class=xmenu1><b>•</b>  <a href="http://jalasateostad.mihanblog.com/post/archive/1390/10"> دی 1390</a></div><div class=xmenu1><b>•</b>  <a href="http://jalasateostad.mihanblog.com/post/archive/1390/9"> آذر 1390</a></div><div class=xmenu1><b>•</b>  <a href="http://jalasateostad.mihanblog.com/post/archive/1390/8"> آبان 1390</a></div><div class=xmenu1><b>•</b>  <a href="http://jalasateostad.mihanblog.com/post/archive/1390/7"> مهر 1390</a></div><div class=xmenu1><b>•</b>  <a href="http://jalasateostad.mihanblog.com/post/archive/1390/6"> شهریور 1390</a></div></div>
+<div class=bmenu></div>
+		<form id="frm-16075291405fd0f2b4be283" method="post" action="http://jalasateostad.mihanblog.com/poll/new/fid/16075291405fd0f2b4be283/atrty/1607529140/avrvy/0/key/0f9f2eb94355224adc13077b0570b16a/"  onsubmit="window.open('', 'poll', 'toolbar=0,location=0,status=0,menubar=0,scrollbars=1,resizable=0,width=505,height=315')" target="poll"><input type="hidden" name="data[pollid]" value="135446" id="data[pollid]" />		
+<div class=tmenu><div class=tmenu2>نظر سنجی</div></div>
+<div class=xmenu>
+<div class=xmenu1><b>•</b> <font color="#444444">نظر شما در مورد این وبلاگ<br><label><input type="radio" name="data[answer]" value="v1">عالی</label><br><label><input type="radio" name="data[answer]" value="v2">خوب</label><br><label><input type="radio" name="data[answer]" value="v3">متوسط</label><br><label><input type="radio" name="data[answer]" value="v4">ضعیف</label><br></font><br><input type="submit" value="ثبت"></div>
+</div>
+<div class=bmenu></div>
+		<input type="hidden" name="frm-id" value="16075291405fd0f2b4be283" id="frm-id" /></form><div class=tmenu><div class=tmenu2>نویسندگان</div></div>
+<div class=xmenu>
+<div class=xmenu1><b>•</b>  <a href="http://jalasateostad.mihanblog.com/post/author/585528"><img src="../static.mihanblog.com/public/user_data/user_photo/196/585528.jpg" style="width:16px;" /></a> <a href="http://jalasateostad.mihanblog.com/post/author/585528">العبد العاصی</a></div></div>
+<div class=bmenu></div><div class=tmenu><div class=tmenu2>صفحات جانبی</div></div>
+<div class=xmenu><div class=xmenu1><b>•</b>  <a href="http://jalasateostad.mihanblog.com/extrapage/mahdi313">وظایف منتظران درعصر غیبت </a></div><div class=xmenu1><b>•</b>  <a href="http://jalasateostad.mihanblog.com/extrapage/marandi">زندگینامه ی آیت الله مرندی(ره)</a></div><div class=xmenu1><b>•</b>  <a href="http://jalasateostad.mihanblog.com/extrapage/pahlavani">زندگینامه ی آیت الله پهلوانی(ره)</a></div><div class=xmenu1><b>•</b>  <a href="http://jalasateostad.mihanblog.com/extrapage/bahjat">زندگینامه ی آیت الله بهجت(ره)</a></div><div class=xmenu1><b>•</b>  <a href="http://jalasateostad.mihanblog.com/extrapage/gonahan">فهرست گناهان کبیره</a></div></div>
+<div class=bmenu></div>
+<div class=tmenu><div class=tmenu2>پیوند ها</div></div>
+<div class=xmenu>	<div class=xmenu1><b>•</b> <a target="_blank" href="http://http://iqna.ir/" title="">خبرگزاری بین المللی قرآن  برگرفته شده از peykar.blog.ir</a></div><div class=xmenu1><b>•</b> <a target="_blank" href="http://www.leader.ir" title="">دفترمقام معظم رهبری (مدظله)</a></div><div class=xmenu1><b>•</b> <a target="_blank" href="http://www.leader-khamenei.com" title="">شناخت رهبری (امام خامنه ای)</a></div><div class=xmenu1><b>•</b> <a target="_blank" href="http://www.mesbahyazdi.org" title="">آیت الله مصباح یزدی (مدظله)</a></div><div class=xmenu1><b>•</b> <a target="_blank" href="http://http://www.gharian.ir/" title="">انجمن تخصصی قاریان قرآن کریم</a></div><div class=xmenu1><b>•</b> <a target="_blank" href="http://jang-cyberi.blogfa.com/" title="">رزمنده سایبری (مصطفی)</a></div><div class=xmenu1><b>•</b> <a target="_blank" href="http://www.besharatemonji.mihanblog.com" title="">آخرالزمان و مهدی منتظر</a></div><div class=xmenu1><b>•</b> <a target="_blank" href="http://www.rahe-velayat.mihanblog.com" title="">پایگاه خبری فاطمه آجرلو</a></div><div class=xmenu1><b>•</b> <a target="_blank" href="http://nedayepakefetrat.blogfa.com" title="">ندای پاک فطرت</a></div><div class=xmenu1><b>•</b> <a target="_blank" href="http://tavasol88.blogfa.com" title="">توسل خانه</a></div><div class=xmenu1><b>•</b> <a target="_blank" href="http://manbighararam.blogfa.com/ " title="">من بی قرارم</a></div><div class=xmenu1><b>•</b> <a target="_blank" href="http://friends.banoomarket.ir" title="">بانومارکت</a></div><div class=xmenu1><b>•</b> <a target="_blank" href="http://talahoot.blogfa.com/" title="">تا لاهوت</a></div><div class=xmenu1><b>•</b> <a target="_blank" href="http://atrevelayat.mihanblog.com" title="">گنج محبت</a></div><div class=xmenu1><b>•</b> <a target="_blank" href="http://www.pajayepa.mihanblog.com/" title="">پا جای پا</a></div><div class=xmenu1><b>•</b> <a target="_blank" href="http://rahe-velayat.mihanblog.com/" title="">یاران</a></div><div class=xmenu1><b>•</b> <a target="_blank" href="http://www.isarsoft.com" title="">ایثار</a></div><div class=xmenu1><b>•</b> <a target="_blank" href="../golchin90.mihanblog.com/index.html" title="">گلچین</a></div><div class=xmenu1><b>•</b> <a target="_blank" href="http://www.noore-moharam.mihanblog.com" title="">نور محرم</a></div><div class=xmenu1><b>•</b> <a target="_blank" href="http://www.khoy-90.blogfa.com" title="">مرد عمل</a></div><div class=xmenu1><b>•</b> <a target="_blank" href="http://peykar.blog.ir" title="">پیکار</a></div><div class=xmenu1><b>•</b> <a href="http://jalasateostad.mihanblog.com/link/"><b>همه پیوندها</b></a></div>
+</div>
+<div class=bmenu></div>
+<div class=tmenu><div class=tmenu2>آمار سایت</div></div>
+<div class=xmenu>
+<div class=xmenu1><font color="#555555">
+			بازدیدهای امروز : <span class=a><script>getStatVar('today_view');</script></span> نفر<br>
+بازدیدهای دیروز : <span class=a><script>getStatVar('yesterday_view');</script></span> نفر<br>
+كل بازدیدها : <span class=a><script>getStatVar('total_view');</script></span> نفر<br>
+بازدید این ماه :<span class=a> <script>getStatVar('this_month_view');</script></span> نفر<br>
+بازدید ماه قبل : <span class=a><script>getStatVar('last_month_view');</script></span> نفر<br>
+تعداد نویسندگان : <span class=a><script>getStatVar('total_author');</script></span> عدد<br>
+كل مطالب : <span class=a><script>getStatVar('total_post');</script></span> عدد<br>
+آخرین بازدید : <span class=a><script>getStatVar('last_view_date');</script></span><br>
+آخرین بروز رسانی : <span class=a><script>getStatVar('modify_date');</script></span></font>
+</div>
+</div>
+<div class=bmenu></div><div id="c" style="text-align:center;width:200">
+<center><script type="text/javascript" src="http://up6.iranblog.com/files2/61deldadegan.js"></script></center><div style="display:none"><h1><a href="http://www.deldadegan.orq.ir">گالری عکس عارفان</a></h1></div>
+<A title="کد های جاوا اسکریپت مخصوص وبلاگ های عرفانی" href="http://deldadegan.mihanblog.com/post/125/" target=_blank>
+
+
+
+
+<P align=center><EMBED src=http://noorani.persiangig.com/doafaraj-o1.swf width=200 height=57 type=application/x-shockwave-flash wmode="transparent"></P> 
+
+
+<script language="JavaScript"
+src="http://www.islamupload.ir/user_uploads/iudeldadegan3bfc/rltext12.js">
+</script>
+<script> //*   start of  ashoora.ir tadabor* </script><script language=javascript src="http://www.ashoora.biz/mazhabi-projects/tadabor/png.js"></script><script language="javascript" src="http://www.ashoora.biz/mazhabi-projects/tadabor/tadabor.php?mod=4&cat=1,1,1,1,1,1,1,1,1,1,1,1&color3=F30A36&color2=F30A36&color1=663300&width=150"></script> <script> //*   end of ashoora.ir tadabor* </script>
+
+<script type=text/javascript src=http://www.p30java.com/javascript/hadis1.js></script>
+<script type=text/javascript src=http://www.p30java.com/javascript/code.js></script> </script> <a href=http://p30java.com/ > </a> </center>
+
+<script> //*   start of  ashoora.ir flash-ashoora/left2* </script><div style="position: absolute; left: 0px; top: 0px; display: block; ">
+<object>
+<param name="movie" value="http://www.ashoora.ir/mazhabi-projects/ziarat_ashoora/left_ashoora2.swf"> <param name="wmode" value="transparent">
+<embed src="http://www.ashoora.ir/mazhabi-projects/ziarat_ashoora/left_ashoora2.swf" wmode=transparent pluginspage="http://www.macromedia.com/go/getflashplayer" type="application/x-shockwave-flash" width="144" height="145">
+</embed></object>
+</div>
+<script> //*   end of ashoora.ir flash-ashoora* </script>
+
+<script language="javascript">    //*start of ashoora.ir sore*    </script><script language=javascript src="http://www.ashoora.biz/mazhabi-projects/sore/png.js"></script><script language="javascript" src="http://www.ashoora.biz/mazhabi-projects/sore/sore.php?mod=7&cat=1,1,1,1,0,0,0,0,1,0,0,0,1,1,1&color3=F30A36&color2=F30A36&color1=663300&width=150"></script> <script language="javascript">    //* end of ashoora.ir sore*    </script>
+
+
+
+<SCRIPT language=javascript src="http://leader-khamenei.com/hadisbox/velayat.js" type=text/javascript></SCRIPT>
+
+
+<center><font face="courier new, courier, mono" color="#000000" size="7"><object style="BORDER-RIGHT: 3px solid; BORDER-TOP: 3px solid; BORDER-LEFT: 3px solid; BORDER-BOTTOM: 3px solid" height="46" width="147" classid="clsid:6BF52A52-394A-11D3-B153-00C04F79FAA6"><param NAME="URL" ref value="http://majiddownload.com/up1/12478/1503083714.mp3"><param NAME="rate" value="1"><param NAME="balance" value="0"><param NAME="currentPosition" value="11.9929592"><param NAME="defaultFrame" value><param NAME="playCount" value="5"><param NAME="autoStart" value="-1"><param NAME="currentMarker" value="0"><param NAME="invokeURLs" value="-1"><param NAME="baseURL" value><param NAME="volume" value="100"><param NAME="mute" value="0"><param NAME="uiMode" value="full"><param NAME="stretchToFit" value="0"><param NAME="windowlessVideo" value="0"><param NAME="enabled" value="-1"><param NAME="enableContextMenu" value="-1"><param NAME="fullScreen" value="0"><param NAME="SAMIStyle" value><param NAME="SAMILang" value><param NAME="SAMIFilename" value><param NAME="captioningID" value><param NAME="enableErrorDialogs" value="0"><param NAME="_cx" value="3889"><param NAME="_cy" value="1217"></embed></object></font></center></a><div style="display:none"><h2><a title="قالب وبلاگ" href="http://pichak.net">پیچک</a></h2></div><script language="JavaScript" type="text/javascript" src= "index.html"></script> 
+
+
+<a href="http://www.isarsoft.com" target="_blank" ><img alt="نرم افزار مدیریت اطلاعات شهدا -ایثار" style="border-width:0px" src="http://www.isarsoft.com/baners/isarbanermini.gif" style="width: 160px;height: 90px" /></a><br><br></div>
+
+
+
+
+
+
+
+
+<P 
+src=http://noorani.persiangig.com/clock-jamkaran-clock.swf 
+width=133 height=133 type=application/x-shockwave-flash 
+wmode="transparent"></P>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</div>
+</div>
+		</td>
+	</tr>
+</table>
+</body>
+
+
+
+
+</html><script>
+//    setTimeout(function () {
+//        GetMihanBlogShowAds();
+//    }, 1000);
+</script>
+<!--NEW SERVER--><!--;)-->
+
+<!--SabaVision Ads Handler--><!--<script type="text/javascript">(function (d) {var url =   location.protocol+'//api.sabavision.com/pox/poxjs.js';d.write('<script type="text/javascript" src="' + url + '" async></scri' + 'pt>');})(document);</script>-->
+
+
+<script type="text/javascript">
+
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-153829-9']);
+    _gaq.push(['_setDomainName', 'jalasateostad.mihanblog.com']);
+    _gaq.push(['_trackPageview']);
+
+    (function() {
+        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+
+</script>
+
+
+<div id='mediaad-Kvcm'></div>
+<meta name="sabavision_zone" content="2500-Z499" />
+<center>
+    <div style="background-color:white;width:90%;padding:20px;margin-top:50px;margin-bottom:50px;">
+        <a href="https://www.cloob.com">شبکه اجتماعی فارسی کلوب</a> | <a href="https://www.seo25.com/product/buy-mobile-traffic-and-get-cheap-targeted-mobile-traffic/" target="_blank">Buy Mobile Traffic</a> | <a href="https://www.soalaat.com">سایت سوالات</a>
+    </div>
+</center>

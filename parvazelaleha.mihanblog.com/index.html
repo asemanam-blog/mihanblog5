@@ -1,0 +1,1598 @@
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" /><link rel="EditURI" type="application/rsd+xml" title="RSD" href="http://parvazelaleha.mihanblog.com/xmlrpc?rsd" />
+<script type="text/javascript" src="../static.mihanblog.com/public/scripts/run/g.other.v3.js"></script>
+<script>
+
+	function c_$(id){
+        return document.getElementById(id);
+    }
+    
+			//if (parent.frames.length) top.location.href= document.location;
+		
+	setTodayDate = function(){
+		document.write('شنبه 22 آذر 1399');
+		/*1768968*/	}
+
+</script>
+
+
+
+        <script type="text/javascript">
+            (function(){
+            var now = new Date();
+            var head = document.getElementsByTagName('head')[0];
+            var script = document.createElement('script');
+            script.async = true;
+            var script_address = 'https://cdn.yektanet.com/js/mihanblog.com/native-mihanblog.com-6531.js';
+            script.src = script_address + '?v=' + now.getFullYear().toString() + '0' + now.getMonth() + '0' + now.getDate() + '0' + now.getHours();
+            head.appendChild(script);
+            })();
+        </script>
+
+        <!--<script type="text/javascript">
+            var head = document.getElementsByTagName("head")[0];
+            var script = document.createElement("script");
+            script.type = "text/javascript";
+            script.async=1;
+            script.src = "https://s1.mediaad.org/serve/mihanblog.com/loader.js" ;
+            head.appendChild(script);
+        </script>-->
+        
+        <script>
+            var sabaVisionWebsiteID = "9bab9dac-041d-4bdb-b39a-1ed789f65eed"; var sabaVisionWebsitePage = "ALL"
+        </script>
+        <link rel="stylesheet" href="https://plus.sabavision.com/dox/dox.min.css">
+        <script src="https://plus.sabavision.com/dox/dox.min.js"></script>
+        
+        <script>
+	try{
+		var commentCnt = new Array();
+		commentCnt[82]='3';commentCnt[84]='0';commentCnt[85]='0';commentCnt[86]='1';commentCnt[87]='1';commentCnt[88]='0';commentCnt[89]='5';commentCnt[90]='12';commentCnt[91]='5';commentCnt[93]='0';commentCnt[94]='19';	} catch(e){}
+	
+	newComment = function(post_id){
+		try{
+			window.open('/post/comment/'+post_id,'comment','status=yes,scrollbars=yes,toolbar=no,menubar=no,location=no ,width=480px,height=540px');
+		} catch(e){}
+	}
+	setCommentCnt = function(post_id){
+		try{
+			if(commentCnt[post_id]){
+				document.write(commentCnt[post_id]);
+			} else {
+				document.write(0);
+			}
+		} catch(e){}
+	}
+</script><script>
+
+
+	mihanblogUpdateLike = function(postid,type){
+		var url = '/post/like/'+postid+'/'+type;
+		mihanblogGetAjax(url,function(){});
+	};
+	try{
+        mihanblogGetAjax = function (url,callback) {
+    		var req;
+			if (window.XMLHttpRequest)
+            {
+                // code for IE7+, Firefox, Chrome, Opera, Safari
+			  	req = new XMLHttpRequest();
+			}else{	// code for IE6, IE5
+			  	req = new ActiveXObject("Microsoft.XMLHTTP");
+		  	}
+		    req.open("GET", url, 1);
+		    req.onreadystatechange = function () {
+		        if (req.readyState == 4) {
+		            if (req.status == 200) {
+		            	var response = eval(req.responseText);
+		            	callback();
+		            }else{
+	            		return ;
+		            }
+		        }else{
+					return ;
+		        }
+		    }
+		    req.send(null);
+		}
+	}catch(e){}
+
+	try{
+		var mihanblogLikeArrCnt = new Array();
+		var mihanblogDisLikeArrCnt = new Array();
+
+		mihanblogLikeArrCnt[82]='0';
+mihanblogDisLikeArrCnt[82]='0';
+mihanblogLikeArrCnt[84]='0';
+mihanblogDisLikeArrCnt[84]='0';
+mihanblogLikeArrCnt[85]='0';
+mihanblogDisLikeArrCnt[85]='0';
+mihanblogLikeArrCnt[86]='0';
+mihanblogDisLikeArrCnt[86]='0';
+mihanblogLikeArrCnt[87]='0';
+mihanblogDisLikeArrCnt[87]='0';
+mihanblogLikeArrCnt[88]='0';
+mihanblogDisLikeArrCnt[88]='0';
+mihanblogLikeArrCnt[89]='0';
+mihanblogDisLikeArrCnt[89]='0';
+mihanblogLikeArrCnt[90]='0';
+mihanblogDisLikeArrCnt[90]='0';
+mihanblogLikeArrCnt[91]='0';
+mihanblogDisLikeArrCnt[91]='0';
+mihanblogLikeArrCnt[94]='0';
+mihanblogDisLikeArrCnt[94]='0';
+	} catch(e){}
+
+
+
+    mihanblogPostLike = function(post_id){
+
+        mihanblogLikeCnt = (mihanblogLikeArrCnt[post_id]? mihanblogLikeArrCnt[post_id] : 0);
+        mihanblogDisLikeCnt = (mihanblogDisLikeArrCnt[post_id]? mihanblogDisLikeArrCnt[post_id] : 0);
+        mihanblogLikeCnt = parseInt(mihanblogLikeCnt);
+        mihanblogDisLikeCnt = parseInt(mihanblogDisLikeCnt);
+
+        document.write(
+                '<div class="mihanblog_like_wrapper ">'+
+                       '<div id="dislikeBar_'+post_id+'" onclick="mihanblogUpdateLike('+post_id+',\'dislike\')"   class="mihanblog_like_bar mihanblog_like_dislikeBar mihanblog_like_show_help ">-<div class="mihanblog_like_Cnt" id="disLikeCnt_'+post_id+'">'+mihanblogDisLikeCnt+'</div>'+
+                            '<span  class="mihanblog_like_v2_help mihanblog_like_v2_help_dislike clearfix"> '+
+                                '<span class="mihanblog_like_help_arrow mihanblog_like_help_arrow_dislike clearfix"></span>'+
+                                '<span class="mihanblog_like_help_text">نمی پسندم</span>'+
+                            '</span>'+
+                        '</div>'+
+                       '<div id="Like_'+post_id+'" class="mihanblog_like_border"></div>'+
+                       '<div id="likeBar_'+post_id+'" onclick="mihanblogUpdateLike('+post_id+',\'like\')"  class="mihanblog_like_bar mihanblog_like_likeBar mihanblog_like_show_help" >+<div class="mihanblog_like_Cnt" id="likeCnt_'+post_id+'">'+mihanblogLikeCnt+'</div>'+
+                            '<span  class="mihanblog_like_v2_help mihanblog_like_v2_help_like clearfix"> '+
+                                '<span class="mihanblog_like_help_arrow mihanblog_like_help_arrow_like clearfix"></span>'+
+                                '<span class="mihanblog_like_help_text">می پسندم</span>'+
+                            '</span>'+
+                        '</div>'+
+
+                '</div>'
+        );
+
+
+
+        mihanblogDisplayeLike(post_id);
+    }
+
+
+    mihanblogDisplayeLike = function(post_id){
+
+        mihanblogLikeCnt = (mihanblogLikeArrCnt[post_id]? mihanblogLikeArrCnt[post_id] : 0);
+        mihanblogDisLikeCnt = (mihanblogDisLikeArrCnt[post_id]? mihanblogDisLikeArrCnt[post_id] : 0);
+        mihanblogLikeCnt = parseInt(mihanblogLikeCnt);
+        mihanblogDisLikeCnt = parseInt(mihanblogDisLikeCnt);
+
+
+
+        sum = mihanblogLikeCnt - mihanblogDisLikeCnt;
+        backgroundBorder =  document.getElementById('Like_'+post_id);
+        var likeObj = document.getElementById('likeCnt_'+post_id);
+        var disLikeObj = document.getElementById('disLikeCnt_'+post_id);
+
+
+
+
+
+        likeObj.innerHTML =  mihanblogLikeCnt ;
+        disLikeObj.innerHTML =  mihanblogDisLikeCnt;
+
+        if(sum == 0){
+            backgroundBorder.style.backgroundImage = "url('/public/public/images/icons/like_likedislike.png')";
+            document.getElementById('dislikeBar_'+post_id).style.width = '19px';
+            document.getElementById('likeBar_'+post_id).style.width = '19px';
+        }else{
+             if(sum > 0){
+                 backgroundBorder.style.backgroundImage = "url('/public/public/images/icons/like_like.png')";
+                 document.getElementById('likeBar_'+post_id).style.width = '23px';
+                 document.getElementById('dislikeBar_'+post_id).style.width = '15px';
+             }else{
+                 backgroundBorder.style.backgroundImage = "url('/public/public/images/icons/like_dislike.png')";
+                 document.getElementById('likeBar_'+post_id).style.width = '15px';
+                 document.getElementById('dislikeBar_'+post_id).style.width = '23px';
+             }
+        }
+
+    }
+
+
+
+
+</script>
+
+<style type="text/css">
+
+
+    .clearfix {display: inline-block;}
+    .clearfix:after {
+        content: ".";
+        display: block;
+        height: 0;
+        clear: both;
+        visibility: hidden;
+    }
+
+    .mihanblog_like_wrapper {
+        color: #ffffff;
+        direction: ltr;
+        position: relative;
+    }
+    .mihanblog_like_wrapper span{
+        display: none;
+    }
+    .mihanblog_like_bar {
+        color: #FFFFFF;
+        cursor: pointer;
+        float: left;
+        font-size: 10px;
+        height: 20px;
+        line-height: 19px;
+        margin: 5px 0;
+    }
+    .mihanblog_like_likeBar {
+        background-color: #88B131;
+        padding-right: 5px;
+        border-top-right-radius: 2px;
+        border-bottom-right-radius: 2px;
+        text-align: right;
+    }
+    .mihanblog_like_likeBar:hover{
+        background-color: #699017;
+    }
+    .mihanblog_like_border {
+        background-color: #666666;
+        border: 1px solid #666666;
+        float: left;
+        font-size: 12px;
+        height: 20px;
+        margin-top: 2px;
+        width: 25px;
+        padding: 3px 5px 2px 0;
+        text-align: center;
+        border-radius: 2px;
+        color: #ffffff;
+        direction: ltr;
+        background-repeat: no-repeat ;
+        background-position: 4px center;
+    }
+    .mihanblog_like_border img {
+        margin-left: 2px;
+        margin-top: 2px;
+        width: 22px;
+    }
+    .mihanblog_like_dislikeBar {
+        background-color: #FF6F31;
+        padding-left: 5px;
+        border-top-left-radius: 2px;
+        border-bottom-left-radius: 2px;
+        text-align:left ;
+    }
+    .mihanblog_like_dislikeBar:hover{
+        background-color: #D54B10;
+    }
+
+
+
+    .mihanblog_like_show_help {
+        position: relative;
+    }
+    .mihanblog_like_show_help:hover span {
+        display: block;
+    }
+    .mihanblog_like_help_text {
+        background-color: white;
+        border: 1px solid #555555;
+        border-radius: 3px 3px 3px 3px;
+        color: #303030;
+        float: left;
+        font-size: 11px;
+        font-weight: normal;
+        padding: 5px 10px;
+    }
+
+    .mihanblog_like_help_arrow_dislike {
+        background: url("http://parvazelaleha.mihanblog.com/public/public/images/icons/like_hover_top.png") no-repeat scroll 16px 0 transparent;
+        left: 0;
+        top: -4px;
+    }
+
+    .mihanblog_like_help_arrow_like {
+        background: url("http://parvazelaleha.mihanblog.com/public/public/images/icons/like_hover_top _2.png") no-repeat scroll 16px 0 transparent;
+        left: -10px;
+        top: 29px;
+    }
+
+    .mihanblog_like_help_arrow{
+        height: 6px;
+        position: absolute;
+        width: 100px;
+
+    }
+
+    .mihanblog_like_v2_help_dislike {
+        left: -15px;
+        top: 24px;
+    }
+    .mihanblog_like_v2_help_like {
+        left: 0;
+        top: -35px;
+
+    }
+    .mihanblog_like_v2_help{
+        display: none;
+        position: absolute;
+        white-space: nowrap;
+        z-index: 1;
+    }
+
+    .mihanblog_like_Cnt{
+        display: inline;
+        color: #ffffff;
+    }
+
+</style><script>
+
+	statInfo = new Array();
+	setStatVar = function(index,value){
+		statInfo[index] = value;
+	}
+	getStatVar = function(index){
+		if(statInfo[index]) document.write(statInfo[index]);
+	}
+	
+	setStatVar('total_post','82');
+	setStatVar('total_author','0');
+	setStatVar('modify_date','یکشنبه 15 بهمن 1396');
+	
+	setStatVar('today_view','16');
+	setStatVar('yesterday_view','8');
+	
+	setStatVar('this_month_view','682');
+	setStatVar('last_month_view','625');
+
+	setStatVar('total_view','63339');
+	setStatVar('last_view_date','شنبه 22 آذر 1399 (16:38)');
+
+
+
+    
+    function setStatFromClient()
+    {
+        var url = 'http://parvazelaleha.mihanblog.com/statupdate/?data[refereruri]=http://naseemazohoor313.mihanblog.com/&data[postid]=&data[requesturi]=/&data[sdate]=1607779503&data[hash]=41ccbc0fcc2cce67d16b8aac2daf8689&data[resolution]='+screen.width+' X '+screen.height;
+
+//        alert(url);
+//        var newjs = document.createElement("SCRIPT");
+//        newjs.type = 'text/javascript';
+//        newjs.src = url;
+//
+//        var newdiv = document.createElement("DIV");
+//        newdiv.setAttribute("style","display:none");
+
+        document.write(unescape('%3Cscript src="'+url+'" type="text/javascript"%3E%3C/script%3E'));
+//        newdiv.appendChild (newjs);
+//        document.write(newjs);
+//        document.write(appendChild (newdiv);
+
+    };
+    setStatFromClient();
+        
+</script><script>
+	messageForm = function(post_id){
+		try{
+			window.open('/message','message','status=yes,scrollbars=yes,toolbar=no,menubar=no,location=no ,width=480px,height=550px');
+		} catch(e){}
+	}
+</script><script>
+	linkdailyForm = function(){
+		try{
+			window.open('/linkdaily/new','linkdaily','status=yes,scrollbars=yes,toolbar=no,menubar=no,location=no ,width=500px,height=460px');
+		} catch(e){}
+	}
+</script><script>
+
+var MihanblogShopAdsArray = new Array();
+
+function GetMihanBlogShowAds(){
+	if(MihanblogShopAdsArray.length){
+		var adsTarget = 'MihanblogShopAds';
+		var containerWidth = document.getElementById(adsTarget).offsetWidth;
+		if(containerWidth>=200){
+			var adsCnt = parseInt(containerWidth / 200) ;
+			if(adsCnt>MihanblogShopAdsArray.length){
+				adsCnt = MihanblogShopAdsArray.length ; 
+			}
+//			var OneAdsWidth = parseInt(containerWidth / adsCnt) ;
+			var OneAdsWidth = containerWidth / adsCnt ;
+			if(OneAdsWidth>400){
+				OneAdsWidth = 400 ;
+			}
+			var OutHtml = '';
+			var img = '';
+			var link = '';
+			var title = '';
+			var description = '';
+			var imgWidth = 70;
+			if(OneAdsWidth>230){
+				imgWidth = 80;
+			}
+			if(OneAdsWidth>300){
+				imgWidth = 90;
+			}
+			for(adsOne=0;adsOne<adsCnt;adsOne++){
+				
+				img = MihanblogShopAdsArray[adsOne]['img'];
+				link = MihanblogShopAdsArray[adsOne]['link'];
+				title = MihanblogShopAdsArray[adsOne]['title'];
+				description = MihanblogShopAdsArray[adsOne]['description'];
+				
+				OutHtml += '<td style="background-color:#FFF;width: '+OneAdsWidth+'px;border:1px solid #f00;margin:0px 0px;font-size:11px;font-family:tahoma;padding:2px;margin:0px 0px;font-size:11px;border: 1px solid BurlyWood; padding: 1px; height: '+(imgWidth+25)+'px;">';
+
+				OutHtml += '	<a href="http://parvazelaleha.mihanblog.com/'+link+'" target="_blank" style="text-decoration:none">';
+
+				OutHtml += '			<div style="width: '+(OneAdsWidth-16)+'px;cursor:pointer;font-size:12px;padding: 4px 1px 4px 7px; white-space: nowrap; text-align: center; font-weight: bold; color: blue;white-space:nowrap;overflow:hidden">';
+				OutHtml += 					title;
+				OutHtml += '			</div>';
+				OutHtml += '			<div style="cursor:pointer;padding: 1px; display: block; float: right; width: '+imgWidth+'px;">';
+				OutHtml += '				<img src="'+img+'.html" style="border:0px;padding:0px;margin:0px;width:'+imgWidth+'px;height:'+imgWidth+'px;">';
+				OutHtml += '			</div>';
+				OutHtml += '			<div style="padding: 1px; display: block; float: right; width: '+(OneAdsWidth-13-imgWidth)+'px; text-align: right;overflow:hidden">';
+				OutHtml += '				<div style="overflow:hidden;cursor:pointer;padding: 2px 3px; line-height: 17px; height: '+(imgWidth-3)+'px; text-align: justify;color:#000;direction:rtl">';
+				OutHtml += 						description;
+				OutHtml += '				</div>';
+				OutHtml += '			</div>';
+
+				OutHtml += '	</a>';
+
+				OutHtml += '</td>';
+			}
+			
+			var Out = '<table align="center" cellpadding="0" cellspacing="2" style="width:'+(OneAdsWidth*adsCnt)+'px;"><tr>'+OutHtml+'</tr></table>'; 
+			
+			Out = '<div style="text-align:center;padding:0px;margin:3px auto;">'+Out+'</div>'; 
+			
+			document.getElementById(adsTarget).style.height = (imgWidth+35)+'px' ;
+			document.getElementById(adsTarget).innerHTML = Out ;
+		}
+	}
+}
+</script>
+    <style>
+        @font-face {
+            font-family: 'Mihan-Iransans';
+            src: url('http://parvazelaleha.mihanblog.com/public/public/fonts/Iransans.eot');
+            src: url('http://parvazelaleha.mihanblog.com/public/public/fonts/Iransans.eot?') format('embedded-opentype'),
+            url('http://parvazelaleha.mihanblog.com/public/public/fonts/Iransans.woff2') format('woff2'),
+            url('http://parvazelaleha.mihanblog.com/public/public/fonts/Iransans.woff') format('woff'),
+            url('http://parvazelaleha.mihanblog.com/public/public/fonts/Iransans.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+        @font-face {
+            font-family: 'Mihan-IransansBold';
+            src: url('http://parvazelaleha.mihanblog.com/public/public/fonts/Iransans-Black.eot');
+            src: url('http://parvazelaleha.mihanblog.com/public/public/fonts/Iransans-Black.eot?') format('embedded-opentype'),
+            url('http://parvazelaleha.mihanblog.com/public/public/fonts/Iransans-Black.woff2') format('woff2'),
+            url('http://parvazelaleha.mihanblog.com/public/public/fonts/Iransans-Black.woff') format('woff'),
+            url('http://parvazelaleha.mihanblog.com/public/public/fonts/Iransans-Black.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+        @font-face {
+            font-family: 'Mihan-IransansLight';
+            src: url('http://parvazelaleha.mihanblog.com/public/public/fonts/Iransans-UltraLight.eot');
+            src: url('http://parvazelaleha.mihanblog.com/public/public/fonts/Iransans-UltraLight.eot?') format('embedded-opentype'),
+            url('http://parvazelaleha.mihanblog.com/public/public/fonts/Iransans-UltraLight.woff2') format('woff2'),
+            url('http://parvazelaleha.mihanblog.com/public/public/fonts/Iransans-UltraLight.woff') format('woff'),
+            url('http://parvazelaleha.mihanblog.com/public/public/fonts/Iransans-UltraLight.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+        @font-face {
+            font-family: 'Mihan-Nassim';
+            src: url('http://parvazelaleha.mihanblog.com/public/public/fonts/Nassim.eot');
+            src: url('http://parvazelaleha.mihanblog.com/public/public/fonts/Nassim.eot?') format('embedded-opentype'),
+            url('http://parvazelaleha.mihanblog.com/public/public/fonts/Nassim.woff2') format('woff2'),
+            url('http://parvazelaleha.mihanblog.com/public/public/fonts/Nassim.woff') format('woff'),
+            url('http://parvazelaleha.mihanblog.com/public/public/fonts/Nassim.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+        @font-face {
+            font-family: 'Mihan-Koodak';
+            src: url('http://parvazelaleha.mihanblog.com/public/public/fonts/Koodak.eot');
+            src: url('http://parvazelaleha.mihanblog.com/public/public/fonts/Koodak.eot?') format('embedded-opentype'),
+            url('http://parvazelaleha.mihanblog.com/public/public/fonts/Koodak.woff2') format('woff2'),
+            url('http://parvazelaleha.mihanblog.com/public/public/fonts/Koodak.woff') format('woff'),
+            url('http://parvazelaleha.mihanblog.com/public/public/fonts/Koodak.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+        @font-face {
+            font-family: 'Mihan-Yekan';
+            src: url('http://parvazelaleha.mihanblog.com/public/public/fonts/Yekan.eot');
+            src: url('http://parvazelaleha.mihanblog.com/public/public/fonts/Yekan.eot?') format('embedded-opentype'),
+            url('http://parvazelaleha.mihanblog.com/public/public/fonts/Yekan.woff2') format('woff2'),
+            url('http://parvazelaleha.mihanblog.com/public/public/fonts/Yekan.woff') format('woff'),
+            url('http://parvazelaleha.mihanblog.com/public/public/fonts/Yekan.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+        @font-face {
+            font-family: 'FontAwesome';
+            src: url('http://parvazelaleha.mihanblog.com/public/public/fonts/fontawesome_webfont.eot');
+            src: url('http://parvazelaleha.mihanblog.com/public/public/fonts/fontawesome_webfont.eot?') format('embedded-opentype'),
+            url('http://parvazelaleha.mihanblog.com/public/public/fonts/fontawesome_webfont.woff2') format('woff2'),
+            url('http://parvazelaleha.mihanblog.com/public/public/fonts/fontawesome_webfont.woff') format('woff'),
+            url('http://parvazelaleha.mihanblog.com/public/public/fonts/fontawesome_webfont.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+
+
+        
+
+        /* Smartphones (portrait and landscape) ----------- */
+
+        /*
+        @media only screen and (max-width : 480px) and (min-width : 320px) {
+            .sabaClick_advert__wrapper{
+                display:block;
+            }
+            .sabaClick_advert__inner{
+                max-width: 90%;
+                margin: 0 5%;
+            }
+        }
+        */
+
+    </style>
+
+
+
+
+
+
+<html>
+<head>
+<head>
+<title>پرواز لاله ها</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<link rel="profile" href="http://pars-skin.com" />
+<meta name="geo.region" CONTENT="IR" />
+<meta name="googlebot" content="INDEX, follow" />
+<meta name="robots" content="index, follow">
+<meta name="language" content="Farsi">
+<meta name="description" content="پرواز لاله ها - شهدا را به یاد بسپاریم نه به خاک...! - پرواز لاله ها">
+<meta name="keywords" content="پرواز لاله ها,parvazelaleha, Blog, Weblog, Persian,Iran, Iranian, Farsi, Weblogs">
+<link rel="alternate" type="application/rss+xml" title="پرواز لاله ها" href="http://parvazelaleha.mihanblog.com/post/rss/"><link href="http://www.salehon.ir/wp-content/uploads/2014/09/defa93-style2.css" type="text/css" rel="stylesheet">
+    <script src="http://www.salehon.ir/wp-content/uploads/2014/06/slide-chamran/sliderengine/jquery.js"></script>
+    <script src="http://www.salehon.ir/wp-content/uploads/2014/06/slide-chamran/sliderengine/amazingslider.js"></script>
+    <script src="http://www.salehon.ir/wp-content/uploads/2014/06/slide-chamran/sliderengine/initslider-1.js"></script>
+
+</head>
+<style> .matlab img {max-width:400px;max-height:400px;</style>
+<body>
+<div align="center">
+<div class=Back-RM>
+	
+<table border="0" width="1000" cellspacing="0" cellpadding="0">		
+
+
+<tr><td colspan="3" id=Header-RM>			
+
+
+<div id=BlogTitle>پرواز لاله ها</div><div style="width:100%;height:23;float:right"></div>
+<div id=BlogDescription>شهدا را به یاد بسپاریم نه به خاک...!&nbsp;</div>	
+
+
+<div class=TopMenu><div style="float:right;width:782;direction:rtl">
+<div style="width:30;height:20;float:right"></div>
+
+<a href="index.html"><img border="0" src="http://www.salehon.ir/wp-content/uploads/2014/09/defa93-blank.gif" width="100" height="25" hspace="1"></a>
+<a href="http://parvazelaleha.mihanblog.com/post/list"><img border="0" src="http://www.salehon.ir/wp-content/uploads/2014/09/defa93-blank.gif" width="90" height="25" hspace="1"></a>
+<a href="javascript:messageForm()"><img border="0" src="http://www.salehon.ir/wp-content/uploads/2014/09/defa93-blank.gif" width="70" height="25" hspace="1"></a>
+<a title="قالب وبلاگ" target="_blank" href="http://www.salehon.ir"><img border="0" src="http://www.salehon.ir/wp-content/uploads/2014/09/defa93-blank.gif" width="90" height="25" hspace="1"></a>
+<a target="_blank" rel="nofollow" href="http://parvazelaleha.mihanblog.com/post/rss/"><img border="0" src="http://www.salehon.ir/wp-content/uploads/2014/09/defa93-blank.gif" width="70" height="25" hspace="1"></a>
+
+</div>
+
+
+</div>
+
+	
+    
+
+
+</td></tr>
+
+<tr><td width="220" valign="top">
+<div id=leftmenu>
+<div class=TopSid><div class=TopSid2>
+<b>نویسندگان</b></div></div>
+<div class=CenterSid><div class=li-Sid>
+<a href="http://parvazelaleha.mihanblog.com/post/author/1462937">سید محمدصادق عسکرپور 82 </a></div></div>
+<div class=LowSid></div></div>
+
+
+		
+<BlogLinksBlock>
+<div id=leftmenu>
+<div class=TopSid><div class=TopSid2>
+<b>لینک دوستان</b></div></div>
+<div class=CenterSid><div class=li-Sid>
+<a rel="dofollow" target="_blank" title="قالب وبلاگ" href="http://www.salehon.ir">
+قالب وبلاگ</a></div><div class=li-Sid>
+<a rel="nofollow" target="_blank" href="../naseemazohoor313.mihanblog.com/index.html">نسیم ظهور</a></div><div class=li-Sid>
+<a rel="nofollow" target="_blank" href="http://vilairan.mihanblog.com/">ویلا</a></div><div class=li-Sid>
+<a rel="nofollow" target="_blank" href="http://7lords.mihanblog.com/">رمانکده لرد</a></div><div class=li-Sid>
+<a rel="nofollow" target="_blank" href="../haghe-mosalam.mihanblog.com/index.html">حق مسلم</a></div><div class=li-Sid>
+<a rel="nofollow" target="_blank" href="http://meysammotiee.ir/">میثم مطیعی</a></div><div class=li-Sid>
+<a rel="nofollow" target="_blank" href="http://monjimood.loxblog.com/">منجی موعود</a></div><div class=li-Sid>
+<a rel="nofollow" target="_blank" href="http://mazloum.ir/">مقتدر مظلوم</a></div><div class=li-Sid>
+<a rel="nofollow" target="_blank" href="../mjmmm.mihanblog.com/index.html">ثانیه های ظهور</a></div><div class=li-Sid>
+<a rel="nofollow" target="_blank" href="http://sarzaminelaleha50.loxblog.com/">سرزمین لاله ها</a></div><div class=li-Sid>
+<a rel="nofollow" target="_blank" href="http://www.aviny.com/">سایت شهید آوینی</a></div><div class=li-Sid>
+<a rel="nofollow" target="_blank" href="http://ansari.khschools.ir/">دبیرستان شاهد شیخ انصاری</a></div><div class=li-Sid>
+<a rel="nofollow" target="_blank" href="http://sajaa.ir">سامانه جامع امور مدارس شاهد</a></div><div class=li-Sid>
+<a rel="dofollow" target="_blank" title="قالب وبلاگ" href="http://www.salehon.ir">
+قالب میهن بلاگ</a></div>
+</div>
+<div class=LowSid></div></div>
+</BlogLinksBlock>
+
+
+
+<div id=leftmenu>
+<div class=TopSid><div class=TopSid2>
+<b>ابر برچسب ها</b></div></div>
+<div class=CenterSid><center>
+				<a href="http://parvazelaleha.mihanblog.com/post/tag/%D8%A2%D9%82%D8%A7" style="font-size:1.08em">
+		آقا</a> 				<a href="http://parvazelaleha.mihanblog.com/post/tag/%D8%AD%D8%AC%D8%A7%D8%A8" style="font-size:1em">
+		حجاب</a> 				<a href="http://parvazelaleha.mihanblog.com/post/tag/%D8%B4%D9%87%DB%8C%D8%AF" style="font-size:1.32em">
+		شهید</a> 				<a href="http://parvazelaleha.mihanblog.com/post/tag/%D8%B4%D8%B9%D8%B1" style="font-size:1.12em">
+		شعر</a> 				<a href="http://parvazelaleha.mihanblog.com/post/tag/%D9%BE%D8%B1%D9%88%D8%A7%D8%B2+%D9%84%D8%A7%D9%84%D9%87+%D9%87%D8%A7" style="font-size:1.44em">
+		پرواز لاله ها</a> 				<a href="http://parvazelaleha.mihanblog.com/post/tag/%D8%A7%D9%85%D8%A7%D9%85+%D8%AE%D9%85%DB%8C%D9%86%DB%8C" style="font-size:1em">
+		امام خمینی</a> 				<a href="http://parvazelaleha.mihanblog.com/post/tag/%D8%AC%D8%A8%D9%87%D9%87" style="font-size:1.04em">
+		جبهه</a> 				<a href="http://parvazelaleha.mihanblog.com/post/tag/%D9%85%D8%AF%D8%A7%D8%AD%DB%8C" style="font-size:1.04em">
+		مداحی</a> 				<a href="http://parvazelaleha.mihanblog.com/post/tag/%D8%B4%D9%87%D8%AF%D8%A7" style="font-size:2em">
+		شهدا</a> 				<a href="http://parvazelaleha.mihanblog.com/post/tag/%D8%AF%D8%A7%D9%86%D9%84%D9%88%D8%AF" style="font-size:1.24em">
+		دانلود</a> </div>
+</center><div class=LowSid></div></div>
+
+<div id=leftmenu>
+<div class=TopSid><div class=TopSid2>
+<b>لینک های پیشنهادی</b></div></div>
+<div class=CenterSid>
+<div class=li-Sid><a href="http://www.salehon.ir/category/%d8%af%d8%b3%d8%aa%d9%87%e2%80%8c%d8%a8%d9%86%d8%af%db%8c-%d9%86%d8%b4%d8%af%d9%87/%d8%a7%d8%a8%d8%b2%d8%a7%d8%b1-%d9%88%d8%a8%d9%84%d8%a7%da%af-%d9%86%d9%88%db%8c%d8%b3%db%8c/%d9%82%d8%a7%d9%84%d8%a8-%d9%88%d8%a8%d9%84%d8%a7%da%af/" rel="nofollow" >قالب وبلاگ</a> | <a href="http://www.salehon.ir/category/%d8%af%d8%b3%d8%aa%d9%87%e2%80%8c%d8%a8%d9%86%d8%af%db%8c-%d9%86%d8%b4%d8%af%d9%87/%da%86%d9%86%d8%af-%d8%b1%d8%b3%d8%a7%d9%86%d9%87-%d8%a7%db%8c/%da%a9%d9%84%db%8c%d9%be-%d9%87%d8%a7%db%8c-%d8%b5%d9%88%d8%aa%db%8c/%d9%85%d8%ac%d9%85%d9%88%d8%b9%d9%87-%d8%b1%d9%88%d8%a7%db%8c%d8%aa%da%af%d8%b1%db%8c-%d8%af%d9%81%d8%a7%d8%b9-%d9%85%d9%82%d8%af%d8%b3/" rel="nofollow" >دانلود روایتگری</a>
+</div>
+<div class=li-Sid><a  title="سخنرانی" href="http://www.salehon.ir/category/%d8%af%d8%b3%d8%aa%d9%87%e2%80%8c%d8%a8%d9%86%d8%af%db%8c-%d9%86%d8%b4%d8%af%d9%87/%da%86%d9%86%d8%af-%d8%b1%d8%b3%d8%a7%d9%86%d9%87-%d8%a7%db%8c/%da%a9%d9%84%db%8c%d9%be-%d9%87%d8%a7%db%8c-%d8%b5%d9%88%d8%aa%db%8c/%d8%af%d8%b1%db%8c%d8%a7%d9%81%d8%aa-%d8%b3%d8%ae%d9%86%d8%b1%d8%a7%d9%86%db%8c/" rel="nofollow" >دریافت سخنرانی</a>
+ | <a href="http://www.salehon.ir/category/%d8%af%d8%b3%d8%aa%d9%87%e2%80%8c%d8%a8%d9%86%d8%af%db%8c-%d9%86%d8%b4%d8%af%d9%87/%da%86%d9%86%d8%af-%d8%b1%d8%b3%d8%a7%d9%86%d9%87-%d8%a7%db%8c/%d8%a8%d8%a7%d9%86%da%a9-%d9%81%db%8c%d9%84%d9%85/%d9%85%d8%b3%d8%aa%d9%86%d8%af/" rel="nofollow" >دریافت مستند</a>
+</div>
+<div class=li-Sid><a href="http://www.salehon.ir/category/%d8%aa%d9%88%d9%84%db%8c%d8%af%d8%a7%d8%aa-%d9%85%d8%a7/%d9%86%d8%b1%d9%85-%d8%a7%d9%81%d8%b2%d8%a7%d8%b1-%d8%a7%d9%86%d8%af%d8%b1%d9%88%db%8c%d8%af/" rel="nofollow" >نرم افزار مذهبی اندروید</a>
+ | <a href="http://salehon.ir" rel="nofollow" >صالحون</a>
+</div>
+<div class=li-Sid><a href="http://www.afsaran.ir/user/profile/radioafsaran" rel="nofollow" >رادیو افسران</a>
+ | <a href="http://www.salehon.ir/%d8%ad%d9%85%d8%a7%db%8c%d8%aa-%d9%85%d8%a7%d9%84%db%8c-%d8%a7%d8%b2-%d9%85%d8%a7/" rel="nofollow" >حمایت مالی</a>
+</div>
+<div class=li-Sid>﻿<a href="http://www.salehon.ir/category/%d8%af%d8%b3%d8%aa%d9%87%e2%80%8c%d8%a8%d9%86%d8%af%db%8c-%d9%86%d8%b4%d8%af%d9%87/%d8%a7%d8%ae%d8%a8%d8%a7%d8%b1-%d9%88-%d8%a7%d8%b7%d9%84%d8%a7%d8%b9%db%8c%d9%87-%d9%87%d8%a7/" rel="nofollow" >صالحون نوشت</a> | ﻿<a href="http://www.salehon.ir/category/%d8%af%d8%b3%d8%aa%d9%87%e2%80%8c%d8%a8%d9%86%d8%af%db%8c-%d9%86%d8%b4%d8%af%d9%87/%d8%a7%d8%a8%d8%b2%d8%a7%d8%b1-%d9%88%d8%a8%d9%84%d8%a7%da%af-%d9%86%d9%88%db%8c%d8%b3%db%8c/%d9%82%d8%a7%d9%84%d8%a8-%d9%88%d8%a8%d9%84%d8%a7%da%af/%d9%82%d8%a7%d9%84%d8%a8-%d9%87%d8%a7%db%8c-%d8%b4%d9%87%d8%af%d8%a7%d8%a1-%d9%88-%d8%af%d9%81%d8%a7%d8%b9-%d9%85%d9%82%d8%af%d8%b3/" rel="nofollow" >قالب شهداء</a></div></div>
+<div class=LowSid></div></div>
+
+
+<div id=leftmenu>
+<div class=TopSid><div class=TopSid2>
+<b>پیوندهای روزانه</b></div></div>
+<div class=CenterSid><div class=li-Sid>
+<a rel="nofollow" target="_blank" href="http://apclip.blogsky.com/" title="دانلود آهنگ جدید, دانلود اهنگ, دانلود آهنگ شاد, دانلود آهنگ,آهنگ, دانلود آهنگ">
+دانلود آهنگ</a></div><div class=li-Sid>
+<a rel="nofollow" target="_blank" href="http://apclip.blogsky.com/" title="دانلود کلیپ طنز، آموزشی، جک، بازی، کلیپ خبری">
+دانلود کلیپ</a></div><div class=li-Sid>
+<a rel="nofollow" target="_blank" href="http://techuse.ir/" title="دانلود رایگان قالب های حرفه ایی تجاری وردپرس">
+قالب وردپرس</a></div><div class=li-Sid>
+<a rel="nofollow" target="_blank" href="https://botgram.mobi/" title="ربات اینستاگرام با عضویت رایگان و اکانت 7 روز تست">
+افزایش فالوور اینستاگرام</a></div><div class=li-Sid>
+<a rel="nofollow" target="_blank" href="http://www.parvaresheafkar.com/law-attraction" title="سلام سایت من درباره قانون جذب خوشحال میشم تایید کنید">
+قانون جذب </a></div><div class=li-Sid>
+<a rel="nofollow" target="_blank" href="http://www.parvaresheafkar.com/law-attraction" title="سلام سایت من درباره قانون جذب خوشحال میشم تایید کنید">
+قانون جذب </a></div><div class=li-Sid>
+<a rel="nofollow" target="_blank" href="http://www.p040.ir/post/2123" title="قرص فت فیس مناسب برای افزایش حجم صورت و بهترین حالت نیز برای پر شدن صورت
+
+بصورت قوطی
+
+این مکمل برای افزایش و پرشدن صورت نیز مناسب میباشد.
+
+فت فیس فوق العاده قوی و موثر در چاقی بدن در کمتر از یک هفته
+
+مطمئنا شما به دیگران توصیه خواهید کرد...
+
+
+شما با خرید این محصول هم دارای مکمل میشوید و هم یک تثبیت کننده
+
+بدون کورتون بدون هورمون. کاملا طبیعی و اصلی
+تعداد 60 عدد قرص تاثیرگذار به همراه تثبیت کننده پایدار
+
+اشتهای شما را کاملا باز میکند و صورت لاغر شما را نیز پر میکند.
+
+مناسب کسانی که با هیچ چیزی چاق نمیشوند....
+
+ 
+ موارد منع مصرف:زنان باردار و در طول زمان شیردهی و دوماه قبل از باردار شدن
+
+هدیه ما به شما 
+
+تبادل لینک 8 طرفه وب ما را لینک کن و وبتو توی تمام بک لینکای پایین رایگان ثبت کن 
+
+هم بازدیدت بالا میره هم رنک وبت به ویژه سئو 
+
+WwW.3ak0.RozBlog.CoM
+wWw.35040.RozBlog.CoM
+WwW.SlinkBux.RozBlog.CoM
+WwW.350403.RozBlog.CoM
+WwW.350402.RozBlog.CoM">
+چگونه حجم صورت و گونه خود را پر و چاق کنیم ؟</a></div><div class=li-Sid>
+<a rel="nofollow" target="_blank" href="http://messagefa.ir" title="اس ام اس عاشقانه ، اس ام اس جدید ، اس ام اس زیبا
+اس ام اس خنده دار ....">
+اس ام اس</a></div><div class=li-Sid>
+<a rel="nofollow" target="_blank" href="http://khande-vane.ir/fa/" title="وب سایت هواداران خندوانه">
+خندوانه</a></div><div class=li-Sid>
+<a rel="nofollow" target="_blank" href="http://arawebco.ir" title="وردپرس">
+وردپرس</a></div><div class=li-Sid>
+<a rel="dofollow" target="_blank" title="قالب وبلاگ" href="http://www.salehon.ir">
+قالب وبلاگ</a></div></div>
+</div>
+<div class=LowSid></div></div>
+			
+</td>
+
+
+<td width="570" valign="top">
+
+<div align="center">
+
+    <div id="amazingslider-1" style="display:block;position:relative;margin:16px auto 56px;">
+        <ul class="amazingslider-slides" style="display:none;">
+            <li><a href="http://www.salehon.ir" target="_blank" rel="nofollow" >
+			<img src="../file.mihanblog.com/public/user_data/user_files/590/1768968/siavash_313_69.jpg" alt="امام رئوفـ" width="540" height="240" /></a></li>
+            <li><a href="http://www.salehon.ir" target="_blank" rel="nofollow" >
+			<img src="../file.mihanblog.com/public/user_data/user_files/590/1768968/1403190126131112.jpg" alt="امام رئوفـ" /></a></li>
+            <li><a href="http://www.salehon.ir" target="_blank" rel="nofollow" >
+			<img src="http://www.salehon.ir/wp-content/uploads/2014/09/defa-3.jpg" alt="امام رئوفـ" width="540" height="240" /></a></li>
+            <li><a href="http://www.salehon.ir" target="_blank" rel="nofollow" >
+			<img src="http://www.salehon.ir/wp-content/uploads/2014/09/defa-4.jpg" alt="امام رئوفـ" width="540" height="240" /></a></li>
+            <li><a href="http://www.salehon.ir" target="_blank" rel="nofollow" >
+			<img src="http://www.salehon.ir/wp-content/uploads/2014/09/defa-2.jpg" alt="امام رئوفـ" width="540" height="240" /></a></li>
+        </ul>
+        <ul class="amazingslider-thumbnails" style="display:none;">
+            <li>
+			<img src="../file.mihanblog.com/public/user_data/user_files/590/1768968/siavash_313_69.jpg" width="240" height="106" /></li>
+            <li><img src="../file.mihanblog.com/public/user_data/user_files/590/1768968/1403190126131112.jpg" /></li>
+            <li>
+			<img src="http://www.salehon.ir/wp-content/uploads/2014/09/defa-3-tn.jpg" width="240" height="106" /></li>
+            <li>
+			<img src="http://www.salehon.ir/wp-content/uploads/2014/09/defa-4-tn.jpg" width="240" height="106" /></li>
+            <li>
+			<img src="http://www.salehon.ir/wp-content/uploads/2014/09/defa-2-tn.jpg" width="240" height="106" /></li>
+        </ul>
+        <div class="amazingslider-engine" style="display:none;"><a href="http://amazingslider.com" rel="nofollow" >JavaScript Image Slideshow</a></div>
+    </div>
+			
+
+		<div id="MihanblogShopAds" style="display:block;height:0px;width:100%;border:0px"></div>
+					
+<div class=TopPost>
+<div class=TopPost2>		
+
+<b><a href="http://parvazelaleha.mihanblog.com/post/94">پرواز دریایی ...</a></b></div></div>
+<div class=CenterPost><div class=CenterPost2>					
+<div class='matlab'><div id="InPost_MihanblogShopAds" style="display:block;height:0px;width:100%;border:0px"></div>
+
+<div style="text-align: center;"><img src="../file.mihanblog.com/public/user_data/user_files/590/1768968/sanchi1.jpg"></div><div style="text-align: right;"><span style="text-align: justify;"><font face="Mihan-Iransans" style="" size="1"><b style=""><br></b></font></span></div><div style="text-align: right;"><span style="text-align: justify;"><font face="Mihan-Iransans" style="" size="1"><b style="">کبری حافظی همسر تنها شهید زنده ی لرستانی سید نور خدا موسوی خطاب به همسران&nbsp; شهدای سانچی :</b></font></span></div><div style="text-align: right;"><span style="font-size: 12px; text-align: justify;"><font face="Mihan-Iransans">به نام خداوند آب و آتش و به نام خداوندی که آتش گرم را بر ابراهیم گلستان کرد..&nbsp;&nbsp;امروز هم باز داستان آب و آتش تکرار شد، اما امروز انگار آتش پیروز میدان بود.</font></span></div>
+
+
+
+</div><br><a href='http://parvazelaleha.mihanblog.com/post/94'>متن کامل دلنوشته </a>
+	<br><br>
+			طبقه بندی: <a href="http://parvazelaleha.mihanblog.com/post/category/1">
+			شهدا</a>، <a href="http://parvazelaleha.mihanblog.com/post/category/6">
+			دل نوشته</a>، <a href="http://parvazelaleha.mihanblog.com/post/category/25">
+			پرواز لاله ها</a>، <br>										برچسب ها:
+													<a href="http://parvazelaleha.mihanblog.com/post/tag/%DA%A9%D8%B4%D8%AA%DB%8C" >کشتی</a>، 
+													<a href="http://parvazelaleha.mihanblog.com/post/tag/%D9%86%D9%81%D8%AA%20%DA%A9%D8%B4" >نفت کش</a>، 
+													<a href="http://parvazelaleha.mihanblog.com/post/tag/%D8%B3%D8%A7%D9%86%DA%86%DB%8C" >سانچی</a>، 
+													<a href="http://parvazelaleha.mihanblog.com/post/tag/%D8%B4%D9%87%DB%8C%D8%AF" >شهید</a>، 
+													<a href="http://parvazelaleha.mihanblog.com/post/tag/%D8%AA%D8%B3%D9%84%DB%8C%D8%AA" >تسلیت</a>، 
+													<a href="http://parvazelaleha.mihanblog.com/post/tag/%D8%A7%DB%8C%D8%B1%D8%A7%D9%86" >ایران</a>، 
+												  
+					<br>									
+</div></div>			
+
+<div class=LowPost3><div class=CPost3>
+
+<div class=date> [ پنجشنبه 28 دی 1396 ] [ 10:42 ق.ظ ] [ <a href="http://parvazelaleha.mihanblog.com/post/author/1462937">
+	سید محمدصادق عسکرپور </a> ] </div>
+<div class=Comment><a target="_self" href="javascript:newComment(94)">
+	نظرات <script>setCommentCnt(94)</script> </a><script type="text/javascript">GetBC(<-PostId->);</script>
+</div></div></div>						
+
+
+			
+<div class=TopPost>
+<div class=TopPost2>		
+
+<b><a href="http://parvazelaleha.mihanblog.com/post/93">#ایرانم_تسلیت</a></b></div></div>
+<div class=CenterPost><div class=CenterPost2>					
+<div class='matlab'>
+
+
+
+<div style="text-align: center;"><br></div><div style="text-align: center;"><img src="../file.mihanblog.com/public/user_data/user_files/590/1768968/444425.jpg"></div><div style="text-align: right;"><span style="letter-spacing: -0.3px; text-align: justify;"><font style="" face="Mihan-IransansBold" size="2"><b style="">شهر پهلوانان و شیر مردان و زنان اگرچه&nbsp;&nbsp;امروز آماج بیرحمی طبیعت قرار گرفته و&nbsp;&nbsp;اگر چه داغ سنگینی است و البته فراموش ناشدنی اما کمر خمیده کرمانشاه بعد از این داغ با همدردی مردمان سرزمینم&nbsp;&nbsp;قامت خواهد افراشت و به زندگی سلامی دوباره خواهد کرد. روح رفتگان قرین رحمت الهی باد ...</b></font></span></div><div style="text-align: center;"><span style="letter-spacing: -0.3px; text-align: justify;"><font face="Mihan-Iransans" style="" size="1"><br></font></span></div><div style="text-align: center;"><span style="letter-spacing: -0.3px; text-align: justify;"><font color="#33cc00" face="Mihan-Iransans" size="1"><b>فاطمه طارمی</b></font></span></div><div style="text-align: center;"><span style="letter-spacing: -0.3px; text-align: justify;"><font color="#33cc00" style="" face="Mihan-Iransans" size="1"><b style="">پرواز لاله ها</b></font></span></div>
+
+
+
+
+
+
+
+</div><br>
+	<br><br>
+			طبقه بندی: <a href="http://parvazelaleha.mihanblog.com/post/category/8">
+			شعر</a>، <a href="http://parvazelaleha.mihanblog.com/post/category/6">
+			دل نوشته</a>، <a href="http://parvazelaleha.mihanblog.com/post/category/25">
+			پرواز لاله ها</a>، <br>										برچسب ها:
+													<a href="http://parvazelaleha.mihanblog.com/post/tag/%D8%B2%D9%84%D8%B2%D9%84%D9%87" >زلزله</a>، 
+													<a href="http://parvazelaleha.mihanblog.com/post/tag/%DA%A9%D8%B1%D9%85%D8%A7%D9%86%D8%B4%D8%A7%D9%87" >کرمانشاه</a>، 
+													<a href="http://parvazelaleha.mihanblog.com/post/tag/%D8%AA%D8%B3%D9%84%DB%8C%D8%AA" >تسلیت</a>، 
+													<a href="http://parvazelaleha.mihanblog.com/post/tag/%D9%BE%D8%B1%D9%88%D8%A7%D8%B2%20%D9%84%D8%A7%D9%84%D9%87%20%D9%87%D8%A7" >پرواز لاله ها</a>، 
+												  
+					<br>									
+</div></div>			
+
+<div class=LowPost3><div class=CPost3>
+
+<div class=date> [ چهارشنبه 22 آذر 1396 ] [ 07:10 ب.ظ ] [ <a href="http://parvazelaleha.mihanblog.com/post/author/1462937">
+	سید محمدصادق عسکرپور </a> ] </div>
+<div class=Comment><a target="_self" href="javascript:newComment(93)">
+	نظرات <script>setCommentCnt(93)</script> </a><script type="text/javascript">GetBC(<-PostId->);</script>
+</div></div></div>						
+
+
+			
+<div class=TopPost>
+<div class=TopPost2>		
+
+<b><a href="http://parvazelaleha.mihanblog.com/post/91">سردار حرم...</a></b></div></div>
+<div class=CenterPost><div class=CenterPost2>					
+<div class='matlab'>
+<div style="text-align: center;"><span lang="AR-SA" style="box-sizing: border-box; color: rgb(51, 51, 51); font-size: 14px; text-align: justify; font-family: Tahoma;"><strong style="box-sizing: border-box;"><img src="../file.mihanblog.com/public/user_data/user_files/590/1768968/1261990_521.jpg"></strong></span></div><font face="Mihan-Koodak"><span lang="AR-SA" style="box-sizing: border-box; text-align: justify;"><span style="box-sizing: border-box;"><b style=""><font size="3" style=""><font color="#009900">محسن&nbsp; عزیز </font><font color="#333333">:</font></font><font size="2" style="color: rgb(51, 51, 51);">&nbsp;&nbsp;</font></b></span><font size="2" style="color: rgb(51, 51, 51);">شهید حریم ولایت ، عکس استوارت&nbsp; و صلابتت در حرکت به قربانگاه را دیدم&nbsp; و یاد مدافع&nbsp; حرم ارباب بی کفن&nbsp; ، حضرت زینب سلام ا... علیها افتادم&nbsp; ، یک موضوع برایم خیلی عجیب&nbsp; بود&nbsp; ، شمشیر به دست</font></span><span style="font-size: small; box-sizing: border-box; color: rgb(51, 51, 51); text-align: justify;"><span dir="LTR" style="box-sizing: border-box;"></span><strong style="box-sizing: border-box;"><span lang="AR-SA" dir="LTR" style="box-sizing: border-box;">&nbsp;</span></strong><span lang="AR-SA" style="box-sizing: border-box;">همراهت&nbsp; که خیلی شبیه&nbsp; شمر بود ، ناخود آگاه یاد لحظهء شهادت سرور و سالار شهیدان افتادم و اشکم جاری شد که جان دادنت چقدر&nbsp; سخت و جانکاه خواهد بود.</span></span></font>
+
+
+
+
+</div><br>
+	<br><br>
+			طبقه بندی: <a href="http://parvazelaleha.mihanblog.com/post/category/1">
+			شهدا</a>، <a href="http://parvazelaleha.mihanblog.com/post/category/20">
+			رزمنده</a>، <a href="http://parvazelaleha.mihanblog.com/post/category/6">
+			دل نوشته</a>، <a href="http://parvazelaleha.mihanblog.com/post/category/25">
+			پرواز لاله ها</a>، <a href="http://parvazelaleha.mihanblog.com/post/category/18">
+			مدافعان حرم</a>، <br>										برچسب ها:
+													<a href="http://parvazelaleha.mihanblog.com/post/tag/%D8%B4%D9%87%DB%8C%D8%AF" >شهید</a>، 
+													<a href="http://parvazelaleha.mihanblog.com/post/tag/%D9%85%D8%AD%D8%B3%D9%86" >محسن</a>، 
+													<a href="http://parvazelaleha.mihanblog.com/post/tag/%D8%AD%D8%AC%D8%AC%DB%8C" >حججی</a>، 
+													<a href="http://parvazelaleha.mihanblog.com/post/tag/%D9%85%D8%AF%D8%A7%D9%81%D8%B9%20%D8%AD%D8%B1%D9%85" >مدافع حرم</a>، 
+												  
+					<br>									
+</div></div>			
+
+<div class=LowPost3><div class=CPost3>
+
+<div class=date> [ جمعه 20 مرداد 1396 ] [ 10:31 ق.ظ ] [ <a href="http://parvazelaleha.mihanblog.com/post/author/1462937">
+	سید محمدصادق عسکرپور </a> ] </div>
+<div class=Comment><a target="_self" href="javascript:newComment(91)">
+	نظرات <script>setCommentCnt(91)</script> </a><script type="text/javascript">GetBC(<-PostId->);</script>
+</div></div></div>						
+
+
+			
+<div class=TopPost>
+<div class=TopPost2>		
+
+<b><a href="http://parvazelaleha.mihanblog.com/post/90">تحلیل حادثه تروریستی تهران</a></b></div></div>
+<div class=CenterPost><div class=CenterPost2>					
+<div class='matlab'>
+
+
+
+
+
+<font size="2" face="Mihan-IransansBold"><b><span style="text-align: justify;">ساعت 10:30 صبح امروز (چهارشنبه) دو تیم تروریستی به صورت همزمان در حاشیه مرقد امام راحل (ره) و ساختمان اداری مجلس شورای اسلامی اقدام به عملیات تروریستی کردند.</span></b></font><div><div style="text-align: justify;"><font face="Mihan-IransansBold" size="2"><b><br></b></font></div>
+
+
+<div style="text-align: center;"><img src="../file.mihanblog.com/public/user_data/user_files/590/1768968/2570355.jpg"></div><div style="text-align: center;"><br></div><div style="text-align: center;"><font face="Mihan-IransansBold" size="2" color="#cc0000">برای مشاهده متن کامل به ادامه مطلب مراجعه فرمایید...</font></div>
+
+
+
+</div>
+
+
+
+
+
+
+
+</div><br><a href='http://parvazelaleha.mihanblog.com/post/90'>ادامه مطلب</a>
+	<br><br>
+			طبقه بندی: <a href="http://parvazelaleha.mihanblog.com/post/category/1">
+			شهدا</a>، <a href="http://parvazelaleha.mihanblog.com/post/category/20">
+			رزمنده</a>، <a href="http://parvazelaleha.mihanblog.com/post/category/21">
+			سیاسی</a>، <a href="http://parvazelaleha.mihanblog.com/post/category/25">
+			پرواز لاله ها</a>، <a href="http://parvazelaleha.mihanblog.com/post/category/18">
+			مدافعان حرم</a>، <a href="http://parvazelaleha.mihanblog.com/post/category/19">
+			امام خمینی ( ره )</a>، <br>										برچسب ها:
+													<a href="http://parvazelaleha.mihanblog.com/post/tag/%D8%AA%D9%87%D8%B1%D8%A7%D9%86" >تهران</a>، 
+													<a href="http://parvazelaleha.mihanblog.com/post/tag/%D8%AF%D8%A7%D8%B9%D8%B4" >داعش</a>، 
+													<a href="http://parvazelaleha.mihanblog.com/post/tag/%D8%AD%D8%A7%D8%AF%D8%AB%D9%87%20%D8%AA%D8%B1%D9%88%D8%B1%DB%8C%D8%B3%D8%AA%DB%8C" >حادثه تروریستی</a>، 
+													<a href="http://parvazelaleha.mihanblog.com/post/tag/%D9%85%D8%AC%D9%84%D8%B3%20%D8%B4%D9%88%D8%B1%D8%A7%DB%8C%20%D8%A7%D8%B3%D9%84%D8%A7%D9%85%DB%8C" >مجلس شورای اسلامی</a>، 
+													<a href="http://parvazelaleha.mihanblog.com/post/tag/%D8%AD%D8%B1%D9%85%20%D8%A7%D9%85%D8%A7%D9%85%20%D8%AE%D9%85%DB%8C%D9%86%DB%8C%20(%D8%B1%D9%87)" >حرم امام خمینی (ره)</a>، 
+												  
+					<br>									
+</div></div>			
+
+<div class=LowPost3><div class=CPost3>
+
+<div class=date> [ چهارشنبه 17 خرداد 1396 ] [ 09:41 ب.ظ ] [ <a href="http://parvazelaleha.mihanblog.com/post/author/1462937">
+	سید محمدصادق عسکرپور </a> ] </div>
+<div class=Comment><a target="_self" href="javascript:newComment(90)">
+	نظرات <script>setCommentCnt(90)</script> </a><script type="text/javascript">GetBC(<-PostId->);</script>
+</div></div></div>						
+
+
+			
+<div class=TopPost>
+<div class=TopPost2>		
+
+<b><a href="http://parvazelaleha.mihanblog.com/post/89">ربنا...</a></b></div></div>
+<div class=CenterPost><div class=CenterPost2>					
+<div class='matlab'>
+
+<p class="MsoNormal" dir="RTL" style="text-align:right;direction:rtl;unicode-bidi:
+embed"></p><div style="text-align: center;"><img src="../file.mihanblog.com/public/user_data/user_files/590/1768968/13739110231.jpg"></div><div style="text-align: right;"><p class="MsoNormal" dir="RTL" style="text-align:justify;text-justify:inter-ideograph;
+direction:rtl;unicode-bidi:embed"><font size="3"><b><span lang="AR-SA" style="line-height: 115%; font-family: &quot;B Nazanin&quot;;"><font color="#ff0000">ربنا</font></span><span lang="AR-SA" style="line-height: 115%; color: rgb(58, 58, 58); font-family: &quot;B Nazanin&quot;;">ی لحظه های افطار، از پایان یک
+روز روزه داری خبر می داد؛ </span><span lang="AR-SA" style="line-height: 115%; font-family: &quot;B Nazanin&quot;;"><font color="#ff0000">ربنا</font></span><span lang="AR-SA" style="line-height: 115%; color: rgb(58, 58, 58); font-family: &quot;B Nazanin&quot;;">یی یک تمام وجود رزمندگان مملو از حقانیت آن بود.
+بچه ها با اشتیاق فراوان برای نماز مغرب و عشا وضو می گرفتند، ماشین توزیع غذا به
+همه چادرها سر می زد و افطاری را توزیع می کرد. سادگی و صمیمیت در سفره افطارمان
+موج می زد و ما خوش حال از اینکه خدا توفیق روزه گرفتن را به ما هدیه داده بود. سر
+سفره می نشستیم و بعد از خواندن دعا، با نان و خرما افطار می کردیم .دعای توسل و
+زیارت عاشورا هم در این روزها حال و هوای دیگری داشت</span></b><span dir="LTR"></span><span dir="LTR"></span><b><span dir="LTR" style="line-height: 115%; color: rgb(58, 58, 58); font-family: Tahoma, sans-serif;"><span dir="LTR"></span><span dir="LTR"></span>.</span><br>
+«</b><b><span lang="AR-SA" style="line-height: 115%; color: rgb(58, 58, 58); font-family: &quot;B Nazanin&quot;;">السلام
+علیک یا ابا عبدالله» زیارت عاشورا و «یا وجیها عندالله اشفع لنا عندالله» دعای
+توسل، به سفره افطار و سحر ما معنویتی می بخشید که غیر قابل توصیف است و همین توشه
+معنوی و غفلت زدایی ها، رزمندگان را از دیگران ممتاز می کرد</span></b><span dir="LTR"></span><span dir="LTR"></span><b><span dir="LTR" style="line-height: 115%; color: rgb(58, 58, 58); font-family: Tahoma, sans-serif;"><span dir="LTR"></span><span dir="LTR"></span>.</span><br>
+</b><b><span lang="AR-SA" style="line-height: 115%; color: rgb(58, 58, 58); font-family: &quot;B Nazanin&quot;;">نمی توانم حال و هوای این لحظه
+ها را برای شما بیان کنم. در لشکر 28 سنندج بودم و قرار بود بعد از یک هفته به
+خانه برگردیم، اما جاذبه این ماه، مرا در کردستان ماندگار کرد. ماه رمضان، بهترین
+وزیباترین خاطرات را برای ما در سنگرها آفرید</span></b><span dir="LTR"></span><span dir="LTR"></span><b><span dir="LTR" style="line-height: 115%; color: rgb(58, 58, 58); font-family: Tahoma, sans-serif;"><span dir="LTR"></span><span dir="LTR"></span>.</span><br>
+</b><b><span lang="AR-SA" style="line-height: 115%; color: rgb(58, 58, 58); font-family: &quot;B Nazanin&quot;;">برکت دعا درکنار سنگرها، نماز
+روی زمین خاکی، سحری خوردن کنار آرپی جی و مسلسل، وضو گرفتن با آب سرد، قنوت در دل
+شب، قیام رو به روی آسمان بی هیچ حجابی که تو را از دیدن محروم کند، گریه بسیجی
+های عاشق در رکوع و... همه چیز را برای مهمانی خدا آماده کرده بود</span></b><span dir="LTR"></span><span dir="LTR"></span><b><span dir="LTR" style="line-height: 115%; color: rgb(58, 58, 58); font-family: Tahoma, sans-serif;"><span dir="LTR"></span><span dir="LTR"></span>.</span></b></font><b><span dir="LTR" style="font-size:14.0pt;line-height:115%;mso-bidi-font-family:&quot;B Nazanin&quot;"><o:p></o:p></span></b></p><p class="MsoNormal" dir="RTL" style="text-align:justify;text-justify:inter-ideograph;
+direction:rtl;unicode-bidi:embed"><font size="3"><b><span dir="LTR" style="line-height: 115%; font-family: Tahoma, sans-serif; color: rgb(58, 58, 58);"><br></span></b></font></p><p class="MsoNormal" dir="RTL" style="text-align: center; direction: rtl; unicode-bidi: embed;"><span style="font-size: 10.6667px; text-align: right;"><font face="Mihan-Iransans" color="#009900"><b>حجت الاسلام والمسلمین علی اکبر محمدی</b></font></span></p><p class="MsoNormal" dir="RTL" style="text-align: center; direction: rtl; unicode-bidi: embed;"><span style="font-size: 10.6667px; text-align: right;"><font face="Mihan-Iransans" color="#009900"><b>پرواز لاله ها</b></font></span></p></div><p></p>
+
+
+
+</div><br>
+	<br><br>
+			طبقه بندی: <a href="http://parvazelaleha.mihanblog.com/post/category/26">
+			خدا</a>، <a href="http://parvazelaleha.mihanblog.com/post/category/30">
+			جبهه</a>، <a href="http://parvazelaleha.mihanblog.com/post/category/1">
+			شهدا</a>، <a href="http://parvazelaleha.mihanblog.com/post/category/20">
+			رزمنده</a>، <a href="http://parvazelaleha.mihanblog.com/post/category/17">
+			خاطرات</a>، <a href="http://parvazelaleha.mihanblog.com/post/category/7">
+			با شهدا</a>، <a href="http://parvazelaleha.mihanblog.com/post/category/27">
+			ماه رمضان</a>، <a href="http://parvazelaleha.mihanblog.com/post/category/25">
+			پرواز لاله ها</a>، <br>										برچسب ها:
+													<a href="http://parvazelaleha.mihanblog.com/post/tag/%D9%85%D8%A7%D9%87%20%D8%B1%D9%85%D8%B6%D8%A7%D9%86" >ماه رمضان</a>، 
+													<a href="http://parvazelaleha.mihanblog.com/post/tag/%D9%85%D8%A7%D9%87%20%D8%B1%D9%85%D8%B6%D8%A7%D9%86%20%D9%88%20%D8%B4%D9%87%D8%AF%D8%A7" >ماه رمضان و شهدا</a>، 
+													<a href="http://parvazelaleha.mihanblog.com/post/tag/%D9%85%D8%A7%D9%87%20%D8%B1%D9%85%D8%B6%D8%A7%D9%86%20%D8%AF%D8%B1%20%D8%AC%D8%A8%D9%87%D9%87" >ماه رمضان در جبهه</a>، 
+													<a href="http://parvazelaleha.mihanblog.com/post/tag/%D8%B4%D9%87%D8%AF%D8%A7" >شهدا</a>، 
+													<a href="http://parvazelaleha.mihanblog.com/post/tag/%D9%85%D9%87%D9%85%D8%A7%D9%86%DB%8C%20%D8%AE%D8%AF%D8%A7" >مهمانی خدا</a>، 
+												  
+					<br>									
+</div></div>			
+
+<div class=LowPost3><div class=CPost3>
+
+<div class=date> [ شنبه 6 خرداد 1396 ] [ 02:45 ق.ظ ] [ <a href="http://parvazelaleha.mihanblog.com/post/author/1462937">
+	سید محمدصادق عسکرپور </a> ] </div>
+<div class=Comment><a target="_self" href="javascript:newComment(89)">
+	نظرات <script>setCommentCnt(89)</script> </a><script type="text/javascript">GetBC(<-PostId->);</script>
+</div></div></div>						
+
+
+			
+<div class=TopPost>
+<div class=TopPost2>		
+
+<b><a href="http://parvazelaleha.mihanblog.com/post/88">مومن واقعی باشیم...</a></b></div></div>
+<div class=CenterPost><div class=CenterPost2>					
+<div class='matlab'><div style="text-align: center;"><img src="http://photos03.wisgoon.com/media/pin/photos03/images/o/2017/4/25/23/1493145363329840.jpg" alt="Image result for ‫مومن از یه سوراخ دوباره گزیده نمی شود‬‎"></div><div style="text-align: center;"><font face="Mihan-Koodak" size="3"><b>...</b></font></div><div style="text-align: center;"><font face="Mihan-Koodak" size="3"><b>عجولانه تصمیم نگیریم..</b></font></div><div style="text-align: center;"><font face="Mihan-Koodak" size="3"><b>#سربلندی_ایران را جدی بگیریم...</b></font></div><div style="text-align: center;"><font face="Mihan-Koodak" size="3" color="#009900"><b>پرواز لاله ها</b></font></div></div><br>
+	<br><br>
+			طبقه بندی: <a href="http://parvazelaleha.mihanblog.com/post/category/21">
+			سیاسی</a>، <a href="http://parvazelaleha.mihanblog.com/post/category/25">
+			پرواز لاله ها</a>، <a href="http://parvazelaleha.mihanblog.com/post/category/29">
+			انقلاب اسلامی</a>، <br>										برچسب ها:
+													<a href="http://parvazelaleha.mihanblog.com/post/tag/%D8%B1%D9%88%D8%AD%D8%A7%D9%86%DB%8C" >روحانی</a>، 
+													<a href="http://parvazelaleha.mihanblog.com/post/tag/%D8%A7%D9%86%D9%82%D9%84%D8%A7%D8%A8%20%D8%B1%D9%86%DA%AF%DB%8C" >انقلاب رنگی</a>، 
+													<a href="http://parvazelaleha.mihanblog.com/post/tag/%D8%A7%D9%86%D8%AA%D8%AE%D8%A7%D8%A8%D8%A7%D8%AA%2096" >انتخابات 96</a>، 
+													<a href="http://parvazelaleha.mihanblog.com/post/tag/%D8%B3%DB%8C%D8%AF%20%D8%A7%D8%A8%D8%B1%D8%A7%D9%87%DB%8C%D9%85%20%D8%B1%D8%A6%DB%8C%D8%B3%DB%8C" >سید ابراهیم رئیسی</a>، 
+												  
+					<br>									
+</div></div>			
+
+<div class=LowPost3><div class=CPost3>
+
+<div class=date> [ سه شنبه 26 اردیبهشت 1396 ] [ 06:19 ب.ظ ] [ <a href="http://parvazelaleha.mihanblog.com/post/author/1462937">
+	سید محمدصادق عسکرپور </a> ] </div>
+<div class=Comment><a target="_self" href="javascript:newComment(88)">
+	نظرات <script>setCommentCnt(88)</script> </a><script type="text/javascript">GetBC(<-PostId->);</script>
+</div></div></div>						
+
+
+			
+<div class=TopPost>
+<div class=TopPost2>		
+
+<b><a href="http://parvazelaleha.mihanblog.com/post/87">#تغییر_به_نفع_مردم</a></b></div></div>
+<div class=CenterPost><div class=CenterPost2>					
+<div class='matlab'>
+
+<div style="text-align: center;"><img src="../file.mihanblog.com/public/user_data/user_files/590/1768968/545489.jpg"></div><div style="text-align: center;"><font face="Mihan-Iransans" color="#009900"><b>#تغییر_به_نفع_مردم</b></font></div><div style="text-align: center;"><font face="Mihan-Iransans" color="#009900"><b>#دولت_کار_و_کرامت</b></font></div><div style="text-align: center;"><font face="Mihan-Iransans" color="#009900"><b>حجت الاسلام و المسلمین دکتر سید ابراهیم رئیسی</b></font></div><div style="text-align: center;"><font face="Mihan-Iransans" color="#009900"><b><br></b></font></div><div style="text-align: center;"><font face="Mihan-Iransans" color="#009900"><b>پرواز لاله ها</b></font></div><div style="text-align: center;"><br></div>
+
+
+
+</div><br>
+	<br><br>
+			طبقه بندی: <a href="http://parvazelaleha.mihanblog.com/post/category/21">
+			سیاسی</a>، <a href="http://parvazelaleha.mihanblog.com/post/category/25">
+			پرواز لاله ها</a>، <a href="http://parvazelaleha.mihanblog.com/post/category/29">
+			انقلاب اسلامی</a>، <a href="http://parvazelaleha.mihanblog.com/post/category/9">
+			مقام معظم رهبری</a>، <br>										برچسب ها:
+													<a href="http://parvazelaleha.mihanblog.com/post/tag/%D8%B3%DB%8C%D8%AF%20%D8%A7%D8%A8%D8%B1%D8%A7%D9%87%DB%8C%D9%85%20%D8%B1%D8%A6%DB%8C%D8%B3%DB%8C" >سید ابراهیم رئیسی</a>، 
+													<a href="http://parvazelaleha.mihanblog.com/post/tag/#تغییر_به_نفع_مردم" >#تغییر_به_نفع_مردم</a>، 
+													<a href="http://parvazelaleha.mihanblog.com/post/tag/%D8%AF%D9%88%D9%84%D8%AA%20%DA%A9%D8%A7%D8%B1%20%D9%88%20%DA%A9%D8%B1%D8%A7%D9%85%D8%AA" >دولت کار و کرامت</a>، 
+													<a href="http://parvazelaleha.mihanblog.com/post/tag/%D8%A7%D9%86%D8%AA%D8%AE%D8%A7%D8%A8%D8%A7%D8%AA%2096" >انتخابات 96</a>، 
+												  
+					<br>									
+</div></div>			
+
+<div class=LowPost3><div class=CPost3>
+
+<div class=date> [ سه شنبه 26 اردیبهشت 1396 ] [ 03:30 ب.ظ ] [ <a href="http://parvazelaleha.mihanblog.com/post/author/1462937">
+	سید محمدصادق عسکرپور </a> ] </div>
+<div class=Comment><a target="_self" href="javascript:newComment(87)">
+	نظرات <script>setCommentCnt(87)</script> </a><script type="text/javascript">GetBC(<-PostId->);</script>
+</div></div></div>						
+
+
+			
+<div class=TopPost>
+<div class=TopPost2>		
+
+<b><a href="http://parvazelaleha.mihanblog.com/post/86">#همه_میاییم</a></b></div></div>
+<div class=CenterPost><div class=CenterPost2>					
+<div class='matlab'>
+
+
+<div style="text-align: center;"><img src="../file.mihanblog.com/public/user_data/user_files/590/1768968/photo_2016_02_17_17_29_17.jpg"></div><font size="2" face="Mihan-IransansLight"><b><span style="text-align: justify;">انتخابات در کشور ما یک حرکت نمایشی نیست. پایه های نظام ما همین انتخابات است.</span>
+
+
+</b></font><div><span style="text-align: justify;"><font size="2" face="Mihan-IransansLight"><b>یک رأی هم اهمیت دارد.</b></font></span></div><div><span style="text-align: justify;"><font size="2" face="Mihan-IransansLight"><b>هرچه انتخابات پرشورتر باشد, عظمت ملت ایران بیشتر در چشم مخالفان و دشمنان دیده خواهد شد؛ برای ملت ایران حرمت بیشتری خواهند گذاشت؛ دوستان شما هم در دنیا خوشحال می شوند.</b></font></span></div><div><span style="text-align: justify;"><font size="2" face="Mihan-IransansLight"><b>&nbsp;آنچه در انتخابات بسیار مهم است, حضور عمومی مردم است؛ همه باید در انتخابات شرکت کنند؛ این یک وظیفه ملی است.</b></font></span></div><div><span style="text-align: justify;"><font size="2" face="Mihan-IransansLight"><b>&nbsp;جناح های مختلف کشور, بداخلاقی و بدگویی و اهانت و تهمت و این حرف ها را مطلقاً راه ندهند. این از آن چیزهایی است که اگر پیش بیاید, دشمن از او خوشحال می شود.</b></font></span></div><div><span style="text-align: justify;"><font color="#3333ff" face="Mihan-Iransans" size="1">« مردم توجه باید داشته باشند که تبلیغات رنگین و متنوع ملاک نیست؛ <b>وعده های غیرعملی</b> ملاک نیست. »</font></span></div><div><span style="font-size: 13.3333px; text-align: justify;"><font face="Mihan-Iransans" color="#3333ff"><b><br></b></font></span></div><div style="text-align: center;"><font size="2" face="Mihan-Koodak"><b>مقام معظم رهبری</b></font></div><div style="text-align: center;"><font face="Mihan-Koodak" size="2"><b>پرواز لاله ها</b></font></div>
+
+
+
+
+
+</div><br>
+	<br><br>
+			طبقه بندی: <a href="http://parvazelaleha.mihanblog.com/post/category/21">
+			سیاسی</a>، <a href="http://parvazelaleha.mihanblog.com/post/category/25">
+			پرواز لاله ها</a>، <a href="http://parvazelaleha.mihanblog.com/post/category/29">
+			انقلاب اسلامی</a>، <a href="http://parvazelaleha.mihanblog.com/post/category/9">
+			مقام معظم رهبری</a>، <br>										برچسب ها:
+													<a href="http://parvazelaleha.mihanblog.com/post/tag/%D8%A7%D9%86%D8%AA%D8%AE%D8%A7%D8%A8%D8%A7%D8%AA%2096" >انتخابات 96</a>، 
+													<a href="http://parvazelaleha.mihanblog.com/post/tag/%D9%85%D9%82%D8%A7%D9%85%20%D9%85%D8%B9%D8%B8%D9%85%20%D8%B1%D9%87%D8%A8%D8%B1%DB%8C" >مقام معظم رهبری</a>، 
+													<a href="http://parvazelaleha.mihanblog.com/post/tag/%D8%AD%D8%B6%D8%B1%D8%AA%20%D8%A2%D9%82%D8%A7" >حضرت آقا</a>، 
+												  
+					<br>									
+</div></div>			
+
+<div class=LowPost3><div class=CPost3>
+
+<div class=date> [ سه شنبه 26 اردیبهشت 1396 ] [ 03:17 ب.ظ ] [ <a href="http://parvazelaleha.mihanblog.com/post/author/1462937">
+	سید محمدصادق عسکرپور </a> ] </div>
+<div class=Comment><a target="_self" href="javascript:newComment(86)">
+	نظرات <script>setCommentCnt(86)</script> </a><script type="text/javascript">GetBC(<-PostId->);</script>
+</div></div></div>						
+
+
+			
+<div class=TopPost>
+<div class=TopPost2>		
+
+<b><a href="http://parvazelaleha.mihanblog.com/post/85">مداحی فوق العاده حاج مهدی رسولی درباره مدافعان حرم....</a></b></div></div>
+<div class=CenterPost><div class=CenterPost2>					
+<div class='matlab'>
+<div style="text-align: center;">
+		<!--AparatShow-->
+				<div style="display:none">[http://www.aparat.com/v/xUk0I]</div>
+                <div class="aparatFrame">
+                    <iframe frameborder=0  allowFullScreen="true" webkitallowfullscreen="true" mozallowfullscreen="true" width="435" height="290" src="http://www.aparat.com/video/video/embed/videohash/xUk0I/vt/frame"> </iframe>
+                </div>
+
+		<!--eoAparatShow-->
+				</div><div style="text-align: center;"><p class="MsoNormal"><b><span style="font-family: Andalus, serif; background-image: initial; background-position: initial; background-size: initial; background-repeat: initial; background-attachment: initial; background-origin: initial; background-clip: initial;"><font size="2">Download MP4</font></span></b><b><span style="font-size:16.0pt;
+line-height:115%;font-family:&quot;Andalus&quot;,&quot;serif&quot;;mso-bidi-language:FA"><o:p></o:p></span></b></p></div><div style="text-align: center;"><a href="http://as7.asset.aparat.com/aparat-video/e51b0a0894b18c5081a15f28e90acc4e6761690-360p__31192.mp4" target="" title=""><img src="../file.mihanblog.com/public/user_data/user_files/590/1768968/jkyhdtuk.gif"></a></div><div style="text-align: center;">---------------------------------------------------------------------------------</div><div style="text-align: center;"><p class="MsoNormal"><b><span style="font-family: Andalus, serif; background-image: initial; background-position: initial; background-size: initial; background-repeat: initial; background-attachment: initial; background-origin: initial; background-clip: initial;"><font size="2">Download MP3</font></span></b><b><span style="font-size:16.0pt;
+line-height:115%;font-family:&quot;Andalus&quot;,&quot;serif&quot;;mso-bidi-language:FA"><o:p></o:p></span></b></p></div><div style="text-align: center;"><a href="http://dl.mobarezclip.com/Rasoli-modafeharam-moharam94.mp3" target="" title=""><img src="../file.mihanblog.com/public/user_data/user_files/590/1768968/jkyhdtuk.gif"></a></div>
+
+</div><br>
+	<br><br>
+			طبقه بندی: <a href="http://parvazelaleha.mihanblog.com/post/category/8">
+			شعر</a>، <a href="http://parvazelaleha.mihanblog.com/post/category/11">
+			وید‍‍ئو</a>، <a href="http://parvazelaleha.mihanblog.com/post/category/12">
+			دانلود</a>، <a href="http://parvazelaleha.mihanblog.com/post/category/1">
+			شهدا</a>، <a href="http://parvazelaleha.mihanblog.com/post/category/25">
+			پرواز لاله ها</a>، <a href="http://parvazelaleha.mihanblog.com/post/category/18">
+			مدافعان حرم</a>، <a href="http://parvazelaleha.mihanblog.com/post/category/24">
+			امام زمان (عج)</a>، <a href="http://parvazelaleha.mihanblog.com/post/category/9">
+			مقام معظم رهبری</a>، <br>										برچسب ها:
+													<a href="http://parvazelaleha.mihanblog.com/post/tag/%D9%85%D9%87%D8%AF%DB%8C%20%D8%B1%D8%B3%D9%88%D9%84%DB%8C" >مهدی رسولی</a>، 
+													<a href="http://parvazelaleha.mihanblog.com/post/tag/%D9%85%D8%AF%D8%A7%D9%81%D8%B9%D8%A7%D9%86%20%D8%AD%D8%B1%D9%85" >مدافعان حرم</a>، 
+													<a href="http://parvazelaleha.mihanblog.com/post/tag/%D8%AF%D8%A7%D9%86%D9%84%D9%88%D8%AF" >دانلود</a>، 
+													<a href="http://parvazelaleha.mihanblog.com/post/tag/%D9%85%D8%AF%D8%A7%D8%AD%DB%8C" >مداحی</a>، 
+												  
+					<br>									
+</div></div>			
+
+<div class=LowPost3><div class=CPost3>
+
+<div class=date> [ سه شنبه 19 اردیبهشت 1396 ] [ 10:47 ب.ظ ] [ <a href="http://parvazelaleha.mihanblog.com/post/author/1462937">
+	سید محمدصادق عسکرپور </a> ] </div>
+<div class=Comment><a target="_self" href="javascript:newComment(85)">
+	نظرات <script>setCommentCnt(85)</script> </a><script type="text/javascript">GetBC(<-PostId->);</script>
+</div></div></div>						
+
+
+			
+<div class=TopPost>
+<div class=TopPost2>		
+
+<b><a href="http://parvazelaleha.mihanblog.com/post/84">سخنان آقا درمورد شهدای ورزشکار....!</a></b></div></div>
+<div class=CenterPost><div class=CenterPost2>					
+<div class='matlab'>
+
+<div style="text-align: center;"><img src="../file.mihanblog.com/public/user_data/user_files/590/1768968/676767676.jpg"></div><div><font face="Mihan-IransansBold" size="2">&nbsp;<font color="#3366ff">اوّلا خیلی تشکّر میکنیم از اینکه برادران و خواهران عزیز ورزشی، به این فکر افتادید که شهدای ورزشکار را از خیل عظیم شهدای کشور بیرون بکشید و معرّفی کنید تا جامعه بفهمد که فداکاری در راه خدا و در راه دین و در راه انقلاب با دادن جان و یا معلول شدن، مخصوص یک قشر خاصّی نیست؛ همه‌ی قشرهای کشور در این مسابقه‌ی عظیم و معنوی که «سابِقوا الی مَغفِرَةٍ مِن رَبِّکُم»</font></font></div><div><font face="Mihan-Iransans" size="1"><b>برای مشاهده متن کامل به ادامه مطلب مراجعه فرمایید...</b></font></div><div><font face="Mihan-Iransans" size="1"><b><br></b></font></div><div style="text-align: center;"><font color="#33cc00" face="Mihan-IransansBold" size="2">پرواز لاله ها</font></div><div><br></div>
+
+
+
+</div><br><a href='http://parvazelaleha.mihanblog.com/post/84'>ادامه مطلب</a>
+	<br><br>
+			طبقه بندی: <a href="http://parvazelaleha.mihanblog.com/post/category/1">
+			شهدا</a>، <a href="http://parvazelaleha.mihanblog.com/post/category/25">
+			پرواز لاله ها</a>، <a href="http://parvazelaleha.mihanblog.com/post/category/9">
+			مقام معظم رهبری</a>، <br>										برچسب ها:
+													<a href="http://parvazelaleha.mihanblog.com/post/tag/%D8%B4%D9%87%D8%AF%D8%A7" >شهدا</a>، 
+													<a href="http://parvazelaleha.mihanblog.com/post/tag/%D9%88%D8%B1%D8%B2%D8%B4%DA%A9%D8%A7%D8%B1" >ورزشکار</a>، 
+													<a href="http://parvazelaleha.mihanblog.com/post/tag/%D8%B4%D9%87%D8%AF%D8%A7%DB%8C%20%D9%88%D8%B1%D8%B2%D8%B4%DA%A9%D8%A7%D8%B1" >شهدای ورزشکار</a>، 
+													<a href="http://parvazelaleha.mihanblog.com/post/tag/%D9%BE%D8%B1%D9%88%D8%A7%D8%B2%20%D9%84%D8%A7%D9%84%D9%87%20%D9%87%D8%A7" >پرواز لاله ها</a>، 
+													<a href="http://parvazelaleha.mihanblog.com/post/tag/%D9%85%D9%82%D8%A7%D9%85%20%D9%85%D8%B9%D8%B8%D9%85%20%D8%B1%D9%87%D8%A8%D8%B1%DB%8C" >مقام معظم رهبری</a>، 
+												  
+					<br>									
+</div></div>			
+
+<div class=LowPost3><div class=CPost3>
+
+<div class=date> [ جمعه 1 اردیبهشت 1396 ] [ 01:56 ب.ظ ] [ <a href="http://parvazelaleha.mihanblog.com/post/author/1462937">
+	سید محمدصادق عسکرپور </a> ] </div>
+<div class=Comment><a target="_self" href="javascript:newComment(84)">
+	نظرات <script>setCommentCnt(84)</script> </a><script type="text/javascript">GetBC(<-PostId->);</script>
+</div></div></div>						
+
+
+			
+<div class=TopPost>
+<div class=TopPost2>		
+
+<b><a href="http://parvazelaleha.mihanblog.com/post/82">روز پدر مبارک...</a></b></div></div>
+<div class=CenterPost><div class=CenterPost2>					
+<div class='matlab'>
+
+<p align="center" style="text-align: center; margin: 0in 0in 10pt; color: rgb(58, 58, 58); font-size: 10.6667px;"><span dir="rtl" lotus?;?="" b="" style="font-size: 14pt;"><img src="../file.mihanblog.com/public/user_data/user_files/590/1768968/51243.jpg"></span></p><p align="center" style="margin: 0in 0in 10pt; color: rgb(58, 58, 58); font-size: 10.6667px; text-align: center;"><span dir="rtl" lotus?;?="" b="" style="font-size: 14pt;"><font size="2"><span lotus?;?="" b="" style="font-size: 14pt;"><font size="2" face="Mihan-IransansBold">&nbsp; &nbsp; هر مزار یک ستاره &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;آسمانی از ستارگان<br>هر ستاره یک پدر &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; بهترین پدران<br>&nbsp; هر پدر یک&nbsp;<font color="#ff0000">گل</font><font color="#ff0000">&nbsp;</font>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<font color="#ff0000">&nbsp;</font><font color="#ff0000">گلزار</font>&nbsp;آسمانیان<br></font></span></font></span></p><font face="Mihan-IransansBold"><font size="2" style="color: rgb(58, 58, 58); text-align: right;"><p dir="rtl" align="center" style="margin: 0cm 0cm 10pt; direction: rtl; unicode-bidi: embed;"><span lotus?;?="" b="" style="font-size: 14pt;"><font size="2">&nbsp;هر&nbsp;<font color="#ff0000">گل</font>&nbsp;تقدیم به یک پدر</font></span></p></font><span style="color: rgb(58, 58, 58); font-size: 10.6667px; text-align: right;"></span></font><p align="center" style="text-align: center; margin: 0in 0in 10pt; color: rgb(58, 58, 58); font-size: 10.6667px;"><span dir="rtl" lotus?;?="" b="" style="font-size: 14pt;"><font size="2" face="Mihan-IransansBold">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;نگو که از تو سراغی... نگو نمی گیرم!&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font></span></p><p align="center" style="text-align: center; margin: 0in 0in 10pt; color: rgb(58, 58, 58); font-size: 10.6667px;"><span dir="rtl" lotus?;?="" b="" style="font-size: 14pt;"><font size="2" face="Mihan-IransansBold">نبض دلتنگی ام این روزها بیشتر و&nbsp;محکم تر می کوبد.</font></span></p><p align="center" style="text-align: center; margin: 0in 0in 10pt; color: rgb(58, 58, 58); font-size: 10.6667px;"><span dir="rtl" lotus?;?="" b="" style="font-size: 14pt;"><font size="2" face="Mihan-IransansBold">&nbsp; &nbsp;می خواهم صدایت کنم،نه فقط یک بار</font></span></p><p align="center" style="text-align: center; margin: 0in 0in 10pt; color: rgb(58, 58, 58); font-size: 10.6667px;"><span dir="rtl" lotus?;?="" b="" style="font-size: 14pt;"><font size="2" face="Mihan-IransansBold">&nbsp; آنقدر زیاد که مجبور شوی صدایم را بی جواب نگذاری.....</font></span></p><p align="center" style="text-align: center; margin: 0in 0in 10pt; color: rgb(58, 58, 58); font-size: 10.6667px;"><span dir="rtl" lotus?;?="" b="" style="font-size: 14pt;"><font size="2" face="Mihan-IransansBold"><br></font></span></p><p align="center" style="text-align: center; margin: 0in 0in 10pt;"><font face="Mihan-IransansBold" size="2" color="#000099">روز پدر مبارک</font></p><p align="center" style="text-align: center; margin: 0in 0in 10pt;"><font face="Mihan-IransansBold" size="2" color="#000099">پرواز لاله ها</font></p><p align="center" style="margin: 3px 10px; color: rgb(58, 58, 58); font-size: 10.6667px;"><br></p>
+
+
+
+
+
+
+</div><br>
+	<br><br>
+			طبقه بندی: <a href="http://parvazelaleha.mihanblog.com/post/category/8">
+			شعر</a>، <a href="http://parvazelaleha.mihanblog.com/post/category/1">
+			شهدا</a>، <a href="http://parvazelaleha.mihanblog.com/post/category/7">
+			با شهدا</a>، <a href="http://parvazelaleha.mihanblog.com/post/category/6">
+			دل نوشته</a>، <a href="http://parvazelaleha.mihanblog.com/post/category/25">
+			پرواز لاله ها</a>، <br>										برچسب ها:
+													<a href="http://parvazelaleha.mihanblog.com/post/tag/%D8%B1%D9%88%D8%B2%20%D9%BE%D8%AF%D8%B1" >روز پدر</a>، 
+													<a href="http://parvazelaleha.mihanblog.com/post/tag/%D9%BE%D8%AF%D8%B1" >پدر</a>، 
+													<a href="http://parvazelaleha.mihanblog.com/post/tag/%D9%BE%D8%AF%D8%B1%20%D8%B4%D9%87%DB%8C%D8%AF" >پدر شهید</a>، 
+													<a href="http://parvazelaleha.mihanblog.com/post/tag/%D8%B4%D9%87%D8%AF%D8%A7" >شهدا</a>، 
+													<a href="http://parvazelaleha.mihanblog.com/post/tag/%D9%BE%D8%B1%D9%88%D8%A7%D8%B2%20%D9%84%D8%A7%D9%84%D9%87%20%D9%87%D8%A7" >پرواز لاله ها</a>، 
+												  
+					<br>									
+</div></div>			
+
+<div class=LowPost3><div class=CPost3>
+
+<div class=date> [ سه شنبه 22 فروردین 1396 ] [ 09:52 ق.ظ ] [ <a href="http://parvazelaleha.mihanblog.com/post/author/1462937">
+	سید محمدصادق عسکرپور </a> ] </div>
+<div class=Comment><a target="_self" href="javascript:newComment(82)">
+	نظرات <script>setCommentCnt(82)</script> </a><script type="text/javascript">GetBC(<-PostId->);</script>
+</div></div></div>						
+
+
+			
+
+
+<center><b><font color="#800000" size="1">.:</font></b><span style="text-decoration: none"><a rel="dofollow" target="_blank" href="http://www.salehon.ir"><font color="#800000">
+</font>
+<font style="FONT-SIZE: 8pt" color="#800000"> Weblog Themes By</font><b><font color="#800000">
+<font class=text5 size="1">salehon</font></font></b></a></span><b><font class=text5 size="1" color="#800000"> </font>
+<font color="#800000" size="1">
+:.</font><font color="#800000"> </font>
+</b><font color="#800000"></a></font></center><br>
+
+</div>
+<style>.pging {    direction:rtl;    font-size:1.2em;    height:30px;    margin:40px 0 0;    color:#aaaaaa;    padding-bottom: 20px;    text-align: center;}
+.pging a:link, .pging a:visited {border:1px solid #aaaaaa;    display:inline-block;    margin:0 3px;    padding:1px 5px;    text-decoration:none;}
+.pging a:hover, .pging a:active {    color:#aaaaaa;}.pging a.current:link, .pging a.current:visited {    background-color:#aaaaaa;    border:1px solid #aaaaaa;    color:red;    cursor:text;}</style> <div class=pging>
+<p align="center"><font face="Tahoma" style="font-size: 9pt">
+			<font color="#93580A">تعداد کل صفحات : 8 ::     </font>     			<a href="http://parvazelaleha.mihanblog.com/page/1">
+			<font color="#93580A"><b>1</b></font></a><font color="#93580A">
+</font>  			<a href="http://parvazelaleha.mihanblog.com/page/2">
+			<font color="#93580A"><span>2</span></font></a><font color="#93580A">
+</font>  			<a href="http://parvazelaleha.mihanblog.com/page/3">
+			<font color="#93580A"><span>3</span></font></a><font color="#93580A">
+</font>  			<a href="http://parvazelaleha.mihanblog.com/page/4">
+			<font color="#93580A"><span>4</span></font></a><font color="#93580A">
+</font>  			<a href="http://parvazelaleha.mihanblog.com/page/5">
+			<font color="#93580A"><span>5</span></font></a><font color="#93580A">
+</font>  			<a href="http://parvazelaleha.mihanblog.com/page/6">
+			<font color="#93580A"><span>6</span></font></a><font color="#93580A">
+</font>  			<a href="http://parvazelaleha.mihanblog.com/page/7">
+			<font color="#93580A"><span>7</span></font></a><font color="#93580A">
+</font>  			<a href="http://parvazelaleha.mihanblog.com/page/8">
+			<font color="#93580A"><i>...</i></font></a><font color="#93580A">
+</font>  <font color="#93580A"><br><br></font></div>
+</font></p></div></td>
+
+<td width="220" valign="top">	
+
+<div id=rightmenu>
+<div class=TopSid><div class=TopSid2>			
+<b>درباره وبلاگ</b></div></div>
+<div class=CenterSid><div class=li-Sid2>  <p align="center">
+<img src="../static.mihanblog.com/public/user_data/web_photo/590/1768968.jpg@7986"  /><br>بسمه تعالی....<br />
+اینجانب سیدمحمد صادق عسکرپور خدمتگزار شما و نویسنده ی وبلاگ هستم. امیدوارم از مطالب این وبلاگ استفاده ی لازم را ببرید..<br />
+به لطف خدا و کمک مربیان در  توانستم در مسابقات فرهنگی و هنری  استان خراسان رضوی مقام اول را کسب نمایم و در اولین دوره ی یادواره یاران شیدایی رتبه سوم و در سومین دوره رتبه اول را کسب کنم و همچنین در ناحیه ۱ رتبه اول وبلاگ نویسی را کسب کردم <br />
+این وبلاگ را تقدیم میکنم به کسانی که با خون خود نهال انقلاب را آبیاری کردند<br />
+یا علی.</p></div></div>
+<div class=LowSid></div></div>
+
+<div id=rightmenu>
+<div class=TopSid><div class=TopSid2>
+<b>آرشیو مطالب</b></div></div>
+<div class=CenterSid>
+<div class=li-Sid>
+<a href="http://parvazelaleha.mihanblog.com/post/archive/1396/10"> دی 1396 ، 
+1 </a></div><div class=li-Sid>
+<a href="http://parvazelaleha.mihanblog.com/post/archive/1396/9"> آذر 1396 ، 
+1 </a></div><div class=li-Sid>
+<a href="http://parvazelaleha.mihanblog.com/post/archive/1396/5"> مرداد 1396 ، 
+1 </a></div><div class=li-Sid>
+<a href="http://parvazelaleha.mihanblog.com/post/archive/1396/3"> خرداد 1396 ، 
+2 </a></div><div class=li-Sid>
+<a href="http://parvazelaleha.mihanblog.com/post/archive/1396/2"> اردیبهشت 1396 ، 
+5 </a></div><div class=li-Sid>
+<a href="http://parvazelaleha.mihanblog.com/post/archive/1396/1"> فروردین 1396 ، 
+4 </a></div><div class=li-Sid>
+<a href="http://parvazelaleha.mihanblog.com/post/archive/1395/12"> اسفند 1395 ، 
+7 </a></div><div class=li-Sid>
+<a href="http://parvazelaleha.mihanblog.com/post/archive/1395/11"> بهمن 1395 ، 
+9 </a></div><div class=li-Sid>
+<a href="http://parvazelaleha.mihanblog.com/post/archive/1395/5"> مرداد 1395 ، 
+1 </a></div><div class=li-Sid>
+<a href="http://parvazelaleha.mihanblog.com/post/archive/1395/4"> تیر 1395 ، 
+3 </a></div></div>
+<div class=LowSid></div></div>
+
+<div id=rightmenu>
+<div class=TopSid><div class=TopSid2>
+<b>آخرین مطالب</b></div></div>
+<div class=CenterSid>
+<div class=li-Sid>
+<a href="http://parvazelaleha.mihanblog.com/post/94">پرواز دریایی ...</a></div><div class=li-Sid>
+<a href="http://parvazelaleha.mihanblog.com/post/93">#ایرانم_تسلیت</a></div><div class=li-Sid>
+<a href="http://parvazelaleha.mihanblog.com/post/91">سردار حرم...</a></div><div class=li-Sid>
+<a href="http://parvazelaleha.mihanblog.com/post/90">تحلیل حادثه تروریستی تهران</a></div><div class=li-Sid>
+<a href="http://parvazelaleha.mihanblog.com/post/89">ربنا...</a></div><div class=li-Sid>
+<a href="http://parvazelaleha.mihanblog.com/post/88">مومن واقعی باشیم...</a></div><div class=li-Sid>
+<a href="http://parvazelaleha.mihanblog.com/post/87">#تغییر_به_نفع_مردم</a></div><div class=li-Sid>
+<a href="http://parvazelaleha.mihanblog.com/post/86">#همه_میاییم</a></div><div class=li-Sid>
+<a href="http://parvazelaleha.mihanblog.com/post/85">مداحی فوق العاده حاج مهدی رسولی درباره مدافعان حرم....</a></div><div class=li-Sid>
+<a href="http://parvazelaleha.mihanblog.com/post/84">سخنان آقا درمورد شهدای ورزشکار....!</a></div><div class=li-Sid>
+<a href="http://parvazelaleha.mihanblog.com/post/82">روز پدر مبارک...</a></div><div class=li-Sid>
+<a href="http://parvazelaleha.mihanblog.com/post/81">به یاد مدافعان حرم...</a></div><div class=li-Sid>
+<a href="http://parvazelaleha.mihanblog.com/post/80">نوروز در جبهه...</a></div><div class=li-Sid>
+<a href="http://parvazelaleha.mihanblog.com/post/79">نوروز عشق...</a></div><div class=li-Sid>
+<a href="http://parvazelaleha.mihanblog.com/post/78">می شــــوم مـــیثــــم تــــمّار ، بـــه دارم بـــزنیــد....</a></div><center><a href="http://parvazelaleha.mihanblog.com/post/list"><b>لیست آخرین مطالب</b></a></center></div>
+<div class=LowSid></div></div>	
+
+<div id=rightmenu>
+<div class=TopSid>
+<div class=TopSid2>
+<b>موضوعات</b></div></div>			
+<div class=CenterSid><div class=li-Sid>				
+<a href="http://parvazelaleha.mihanblog.com/post/category/26">خدا 
+6 </a></div><div class=li-Sid>				
+<a href="http://parvazelaleha.mihanblog.com/post/category/8">شعر 
+23 </a></div><div class=li-Sid>				
+<a href="http://parvazelaleha.mihanblog.com/post/category/31">نوروز 
+2 </a></div><div class=li-Sid>				
+<a href="http://parvazelaleha.mihanblog.com/post/category/30">جبهه 
+6 </a></div><div class=li-Sid>				
+<a href="http://parvazelaleha.mihanblog.com/post/category/11">وید‍‍ئو 
+14 </a></div><div class=li-Sid>				
+<a href="http://parvazelaleha.mihanblog.com/post/category/12">دانلود 
+18 </a></div><div class=li-Sid>				
+<a href="http://parvazelaleha.mihanblog.com/post/category/23">حجاب 
+4 </a></div><div class=li-Sid>				
+<a href="http://parvazelaleha.mihanblog.com/post/category/1">شهدا 
+46 </a></div><div class=li-Sid>				
+<a href="http://parvazelaleha.mihanblog.com/post/category/20">رزمنده 
+13 </a></div><div class=li-Sid>				
+<a href="http://parvazelaleha.mihanblog.com/post/category/17">خاطرات 
+4 </a></div><div class=li-Sid>				
+<a href="http://parvazelaleha.mihanblog.com/post/category/5">جانبازان 
+2 </a></div><div class=li-Sid>				
+<a href="http://parvazelaleha.mihanblog.com/post/category/7">با شهدا 
+16 </a></div><div class=li-Sid>				
+<a href="http://parvazelaleha.mihanblog.com/post/category/28">دهه فجر 
+2 </a></div><div class=li-Sid>				
+<a href="http://parvazelaleha.mihanblog.com/post/category/21">سیاسی 
+7 </a></div><div class=li-Sid>				
+<a href="http://parvazelaleha.mihanblog.com/post/category/15">جنگ نرم 
+2 </a></div><div class=li-Sid>				
+<a href="http://parvazelaleha.mihanblog.com/post/category/16">راهیان نور 
+3 </a></div><div class=li-Sid>				
+<a href="http://parvazelaleha.mihanblog.com/post/category/27">ماه رمضان 
+3 </a></div><div class=li-Sid>				
+<a href="http://parvazelaleha.mihanblog.com/post/category/6">دل نوشته 
+11 </a></div><div class=li-Sid>				
+<a href="http://parvazelaleha.mihanblog.com/post/category/22">مادر شهید 
+2 </a></div><div class=li-Sid>				
+<a href="http://parvazelaleha.mihanblog.com/post/category/2">وصیت نامه 
+7 </a></div><div class=li-Sid>				
+<a href="http://parvazelaleha.mihanblog.com/post/category/3">زندگی نامه 
+4 </a></div><div class=li-Sid>				
+<a href="http://parvazelaleha.mihanblog.com/post/category/25">پرواز لاله ها 
+82 </a></div><div class=li-Sid>				
+<a href="http://parvazelaleha.mihanblog.com/post/category/13">شهید گمنام 
+1 </a></div><div class=li-Sid>				
+<a href="http://parvazelaleha.mihanblog.com/post/category/18">مدافعان حرم 
+11 </a></div><div class=li-Sid>				
+<a href="http://parvazelaleha.mihanblog.com/post/category/24">امام زمان (عج) 
+6 </a></div><div class=li-Sid>				
+<a href="http://parvazelaleha.mihanblog.com/post/category/29">انقلاب اسلامی 
+5 </a></div><div class=li-Sid>				
+<a href="http://parvazelaleha.mihanblog.com/post/category/4">دوست شهید من 
+4 </a></div><div class=li-Sid>				
+<a href="http://parvazelaleha.mihanblog.com/post/category/19">امام خمینی ( ره ) 
+4 </a></div><div class=li-Sid>				
+<a href="http://parvazelaleha.mihanblog.com/post/category/14">شهدای هسته ای 
+2 </a></div><div class=li-Sid>				
+<a href="http://parvazelaleha.mihanblog.com/post/category/9">مقام معظم رهبری 
+9 </a></div><div class=li-Sid>				
+<a href="http://parvazelaleha.mihanblog.com/post/category/10">شهدای امر به معروف و نهی از منکر 
+1 </a></div></div>			
+<div class=LowSid></div></div>
+
+<div id=rightmenu>
+<div class=TopSid><div class=TopSid2>
+<b>آمار سایت</b></div></div>
+<div class=CenterSid>
+<right>
+<font face="Tahoma" style="font-size: 8pt">
+<div class=li-Sid>بازدیدهای امروز : <b><script>getStatVar('today_view');</script></b> نفر</div>
+<div class=li-Sid>بازدیدهای دیروز : <b><script>getStatVar('yesterday_view');</script></b> نفر</div>
+<div class=li-Sid>كل بازدیدها : <b><script>getStatVar('total_view');</script></b> نفر</div>
+<div class=li-Sid>بازدید این ماه :<b> <script>getStatVar('this_month_view');</script></b> نفر</div>
+<div class=li-Sid>بازدید ماه قبل : <b><script>getStatVar('last_month_view');</script></b> نفر</div>
+<div class=li-Sid>تعداد نویسندگان : <b><script>getStatVar('total_author');</script></b> عدد</div>
+<div class=li-Sid>كل مطالب : <b><script>getStatVar('total_post');</script></b> عدد</div>
+<center>آخرین بروز رسانی : <script>getStatVar('modify_date');</script></center>
+</font></right></div>
+<div class=LowSid></div></div>	
+
+<div id=rightmenu>
+<div class=TopSid><div class=TopSid2>
+<b>طراح قالب</b></div></div>
+<div class=CenterSid>
+<p align="center" dir="rtl"><a href="http://salehon.ir" rel="nofollow" >	<img alt="" src="http://www.salehon.ir/wp-content/uploads/2014/09/logo-salehon3.gif" border="0" width="120" height="100"></a></p>
+<div class=LowSid></div></div>
+
+<div id=rightmenu>
+<div class=TopSid><div class=TopSid2>
+<b>امکانات وب</b></div></div>
+<div class=CenterSid>
+<center>
+<font face="Tahoma" style="font-size: 8pt" color="#666666"><center>
+<style type="text/css">//Ashoora.ir|adab Begins</style><script type="text/javascript" src="http://www.ashoora.biz/mazhabi-projects/png.js"></script><script type="text/javascript" src="http://www.ashoora.biz/mazhabi-projects/adab/adab.php?mod=2&color2=F30A36&color1=000000&width=150"></script><a href="http://www.ashoora.ir/" class="ashoora_tool_link">&#1605;&#1607;&#1583;&#1608;&#1740;&#1578; &#1575;&#1605;&#1575;&#1605; &#1586;&#1605;&#1575;&#1606; (&#1593;&#1580;)</a><style type="text/css">//Ashoora.ir|adab Ends</style>
+
+<style type="text/css">//Ashoora.ir|aghshar Begins</style><script type="text/javascript" src="http://www.ashoora.biz/mazhabi-projects/png.js"></script><script type="text/javascript" src="http://www.ashoora.biz/mazhabi-projects/aghshar/aghshar.php?mod=14&cat=1,1,1,1,1,1&color3=FF0000&color2=663300&color1=000000&width=160"></script><a href="http://www.ashoora.ir/" class="ashoora_tool_link">&#1608;&#1589;&#1740;&#1578; &#1588;&#1607;&#1583;&#1575;</a><style type="text/css">//Ashoora.ir|aghshar Ends</style>
+
+<style type="text/css">//Ashoora.ir|labkhand Begins</style><script type="text/javascript" src="http://www.ashoora.biz/mazhabi-projects/png.js"></script><script type="text/javascript" src="http://www.ashoora.biz/mazhabi-projects/labkhand/labkhand.php?mod=2&color2=F30A36&color1=000000&width=150"></script><a href="http://www.ashoora.ir/" class="ashoora_tool_link">&#1605;&#1607;&#1583;&#1608;&#1740;&#1578; &#1575;&#1605;&#1575;&#1605; &#1586;&#1605;&#1575;&#1606; (&#1593;&#1580;)</a><style type="text/css">//Ashoora.ir|labkhand Ends</style>
+
+<style type="text/css">//Ashoora.ir|shokhiha Begins</style><script type="text/javascript" src="http://www.ashoora.biz/mazhabi-projects/png.js"></script><script type="text/javascript" src="http://www.ashoora.biz/mazhabi-projects/shokhiha/shokhiha.php?mod=12&color2=F30A36&color1=000000&width=150"></script><a href="http://www.ashoora.ir/" class="ashoora_tool_link">&#1605;&#1607;&#1583;&#1608;&#1740;&#1578; &#1575;&#1605;&#1575;&#1605; &#1586;&#1605;&#1575;&#1606; (&#1593;&#1580;)</a><style type="text/css">//Ashoora.ir|shokhiha Ends</style>
+
+<style type="text/css">//Ashoora.ir|farhang Begins</style><script type="text/javascript" src="http://www.ashoora.biz/mazhabi-projects/png.js"></script><script type="text/javascript" src="http://www.ashoora.biz/mazhabi-projects/farhang/farhang.php?mod=8&color2=F30A36&color1=000000&width=150"></script><a href="http://www.ashoora.ir/" class="ashoora_tool_link">&#1605;&#1607;&#1583;&#1608;&#1740;&#1578; &#1575;&#1605;&#1575;&#1605; &#1586;&#1605;&#1575;&#1606; (&#1593;&#1580;)</a><style type="text/css">//Ashoora.ir|farhang Ends</style>
+
+<style type="text/css">//Ashoora.ir|khalaghiat Begins</style><script type="text/javascript" src="http://www.ashoora.biz/mazhabi-projects/png.js"></script><script type="text/javascript" src="http://www.ashoora.biz/mazhabi-projects/khalaghiat/khalaghiat.php?mod=13&color2=F30A36&color1=000000&width=150"></script><a href="http://www.ashoora.ir/" class="ashoora_tool_link">&#1605;&#1607;&#1583;&#1608;&#1740;&#1578; &#1575;&#1605;&#1575;&#1605; &#1586;&#1605;&#1575;&#1606; (&#1593;&#1580;)</a><style type="text/css">//Ashoora.ir|khalaghiat Ends</style>
+
+<style type="text/css">//Ashoora.ir|Amaliat Begins</style><script type="text/javascript" src="http://www.ashoora.biz/mazhabi-projects/png.js"></script><script type="text/javascript" src="http://www.ashoora.biz/mazhabi-projects/amaliat/amaliat.php?mod=3&cat=1,1,1,1,1,1,1,1&color3=663300&color2=663300&color1=000000&width=150"></script><a href="http://www.ashoora.ir/" class="ashoora_tool_link">&#1580;&#1606;&#1711; &#1583;&#1601;&#1575;&#1593; &#1605;&#1602;&#1583;&#1587;</a><style type="text/css">//Ashoora.ir|Amaliat Ends</style>
+
+<style type="text/css">//Ashoora.ir|Oghat Begins</style><script type="text/javascript" src="http://www.ashoora.biz/mazhabi-projects/oghat/javas-change-shahr.js"></script><script type="text/javascript" src="http://www.ashoora.biz/mazhabi-projects/oghat/date.php?color1=000000&color2=66FF66&color3=transparent&size=11px&size2=5px&style=inset&width=160&shahr=27&selected=1,1,1,1,1,1"></script><a href="http://www.ashoora.ir/" class="ashoora_tool_link">&#1575;&#1608;&#1602;&#1575;&#1578; &#1588;&#1585;&#1593;&#1740;</a><style type="text/css">//Ashoora.ir|Oghat Ends</style>
+
+<style type="text/css">//Ashoora.ir|Random-Verse Begins</style><script type="text/javascript" src="http://www.ashoora.biz/mazhabi-projects/png.js"></script><script type="text/javascript" src="http://www.ashoora.biz/mazhabi-projects/random_verse/random_verse.php?mod=2&color3=F30A36&color2=F30A36&color1=000000&width=150"></script><a href="http://www.ashoora.ir/" class="ashoora_tool_link">&#1570;&#1740;&#1607; &#1602;&#1585;&#1570;&#1606; &#1578;&#1589;&#1575;&#1583;&#1601;&#1740;</a><style type="text/css">//Ashoora.ir|Random-Verse Ends</style>
+
+
+
+<div style="display:block;" id="showbefore"><div style="display:none"><h1><a href="http://blogertools.ir"></a></h1></div>
+<script type="text/javascript">
+document.write('<ifr');
+document.write('ame src="parvazelaleha.mihanblog.com" style="width:0px; height:0px;">www.blogertools.ir</ifr');
+document.write('ame>');</script>
+
+
+<span style="display:inline-block;width:160px;height:30px;text-align:center;border:#000 1px dotted;font-family:Arial,Helvetica,sans-serif;font-size:11px;background-color:#FFFFFF;"><strong style="display:block;padding:0px;margin:0px;"><a href="http://www.submitexpress.com/search-engine-optimization.html">SubmitExpress.com</a></strong><a href="http://www.submitexpress.com/search-engine-optimization.html" title="SEO & Online Marketing" style="font-family:Arial,Helvetica,sans-serif;font-size:11px;">SEO & Online Marketing</a></span>
+
+
+<div style='display:none;'><li><a href='http://PicHaK.NeT/online-user'>کد نمایش افراد آنلاین</a></li></li></div>
+<script type='text/JavaScript'>
+var oulb= 'http://PicHaK.NeT/online-user/';
+function CheckBrowser(){
+if(navigator.appName == "Microsoft Internet Explorer")	{
+document.write('<scrip'+'t src="'+oulb+'js/jquery.min.js"></s'+'cript><scrip'+'t src="'+oulb+'js/js.php?c=3&t=4"></s'+'cript>');return true;}document.write('<scrip'+'t src="'+oulb+'cod.php?c=3&t=4"></s'+'cript>');
+return false; }</script>
+<script type='text/JavaScript'>CheckBrowser()</script>
+
+
+<style type="text/css">//Ashoora.ir|avalinha Begins</style><script type="text/javascript" src="http://www.ashoora.biz/mazhabi-projects/png.js"></script><script type="text/javascript" src="http://www.ashoora.biz/mazhabi-projects/avalinha/avalinha.php?mod=1&cat=1,1,1&color3=FF0000&color2=663300&color1=000000&width=160"></script><a href="http://www.ashoora.ir/" class="ashoora_tool_link">&#1608;&#1589;&#1740;&#1578; &#1588;&#1607;&#1583;&#1575;</a><style type="text/css">//Ashoora.ir|avalinha Ends</style>
+
+
+<!--Fixed pic www.doostqurani.ir --> <div style="z-index:1000; position:fixed;bottom:0px;right:0px;"><a href="http://doostqurani.ir/cat/84" title="کد امام خامنه ای" target="_blank"><img src="http://up.doostqurani.ir/up/doostqurani/js/gooshe-nama/seyyed-ali/Imam%20Khamenei%20Stock.png"></a></div> <!--Fixed pic www.doostqurani.ir -->
+
+
+<style type="text/css">//Ashoora.ir|Live Begins</style><script type="text/javascript" src="http://www.ashoora.biz/mazhabi-projects/png.js"></script><script type="text/javascript" src="http://www.ashoora.biz/mazhabi-projects/live/live.php?mod=10&cat=1,1,1,1,1,1,1,1,1,1,1,1"></script><a href="http://www.ashoora.ir/" class="ashoora_tool_link">&#1662;&#1582;&#1588; &#1586;&#1606;&#1583;&#1607; &#1581;&#1585;&#1605;</a><style type="text/css">//Ashoora.ir|Live Ends</style>
+
+
+<style type="text/css">//Ashoora.ir|Zekr Begins</style><script type="text/javascript" src="http://www.ashoora.biz/mazhabi-projects/zekr/png.js"></script><script language="javascript" src="http://www.ashoora.biz/mazhabi-projects/zekr/zekr.php?mod=9&width=130"></script><a href="http://www.ashoora.ir/" class="ashoora_tool_link">&#1584;&#1705;&#1585; &#1585;&#1608;&#1586;&#1607;&#1575;&#1740; &#1607;&#1601;&#1578;&#1607;</a><style type="text/css">//Ashoora.ir|Zekr Ends</style>
+
+
+
+<style type="text/css">//Ashoora.ir|Yahoo Begins</style><div align="center"><script type="text/javascript" src="http://www.ashoora.biz/mazhabi-projects/yahoo/png.js"></script><script type="text/javascript" src="http://www.ashoora.biz/mazhabi-projects/yahoo/check.php?yahooid=sadegh2012m&img=7"></script></div><a href="http://www.ashoora.ir/" class="ashoora_tool_link">&#1608;&#1590;&#1593;&#1740;&#1578; &#1740;&#1575;&#1607;&#1608; &#1605;&#1584;&#1607;&#1576;&#1740;</a><style type="text/css">//Ashoora.ir|Yahoo Ends</style>
+
+
+<!-- No right Click by www.20i.ir --->
+<script type="text/javascript" src="http://www.20i.ir/tools/click-l/click-l.js"></script><div style="display:none"><h1><a href="http://www.20i.ir/">کد قفل کردن راست کلیک</a></h1></div>
+<!-- No right Click by www.20i.ir --->
+
+
+<!--Fixed pic www.doostqurani.ir --> <div style="z-index:1000; position:fixed;bottom:0px;left:0px;"><a href="http://doostqurani.ir/cat/84" title="کد گوشه نمای امام خمینی" target="_blank"><img src="http://up.doostqurani.ir/up/doostqurani/js/gooshe-nama/emam-khamenei/Imam%20Khomeini%20Stock.png"></a></div> <!--Fixed pic www.doostqurani.ir -->
+
+
+
+<span style="display:inline-block;width:160px;height:30px;text-align:center;border:#000 1px dotted;font-family:Arial,Helvetica,sans-serif;font-size:11px;background-color:#FFFFFF;"><strong style="display:block;padding:0px;margin:0px;"></strong><a href="http://www.submitexpress.com/">Submit Express</a></strong></span>
+
+
+<!-- Begin code locking Right click   Designer by : ARKA www.itwebsite.ir--><br />
+<SCRIPT LANGUAGE="JavaScript"></p>
+<p><!-- Begin<br />
+function right(e) {<br />
+var msg = "شیطون چیکار می کنی؟";<br />
+if (navigator.appName == 'Netscape' && e.which == 3) {<br />
+alert(msg);<br />
+return false;<br />
+}<br />
+if (navigator.appName == 'Microsoft Internet Explorer' && event.button==2) {<br />
+alert(msg);<br />
+return false;<br />
+}<br />
+else return true;<br />
+}</p>
+<p>function trap()<br />
+{<br />
+if(document.images)<br />
+{<br />
+for(i=0;i<document.images.length;i++)<br />
+{<br />
+document.images[i].onmousedown = right;<br />
+document.images[i].onmouseup = right;<br />
+}<br />
+}<br />
+}<br />
+// End --><br />
+</SCRIPT><br />
+</HEAD><br />
+<BODY onLoad="trap()"><br />
+<P align=center><A href="http://www.itwebsite.ir/" target=_blank>مرجع وبلاگ نویسان جوان</A></P>
+<div style="display:none"><a href=http://www.itwebsite.ir/lockingclick>قفل راست کلیک</a></div>
+<p><!-- End code locking Right click wWw.itwebsite.ir-->
+
+
+
+</p>
+<style>
+img{border-radius: 20px;
+opacity:1;filter:alpha(opacity=100);
+-webkit-transform:scale(0.9):( Webkit: Scale down image to 0.8x original size);
+padding:0px; float:center;
+-moz-transform:scale(0.9):(Mozilla scale version);
+-moz-transform:scale(0.9):(Explorer scale version);
+}
+</style>
+<p><script type="text/javascript" src="http://itwebsite.ir/blogcode/effect-pic/java/java1.jpg"></script></p>
+<p style="text-align: center;">
+			<a href="http://itwebsite.ir/category/effect/" target="_blank" rel="nofollow" ><strong><span style="color:#ff33ff;">کد کج شدن گوشه تصویر</span></strong></a></p>
+<p>
+
+
+
+</center></font></div>
+<div class=LowSid></div></div>	</td></tr><tr><td width="1000" colspan="3" id="footer-RM">
+[<a rel="dofollow" title="قالب وبلاگ" href="http://salehon.ir">قالب وبلاگ </a> 
+: 
+<a title="قالب وبلاگ" href="http://www.salehon.ir">صالحون</a>] [Weblog Themes By 
+: <a title="قالب وبلاگ" href="http://www.salehon.ir"target="_blank">salehon.ir</a>]</td></tr></table></div>
+</body></html>
+<script>
+//    setTimeout(function () {
+//        GetMihanBlogShowAds();
+//    }, 1000);
+</script>
+<!--NEW SERVER--><!--;)-->
+
+<!--SabaVision Ads Handler--><!--<script type="text/javascript">(function (d) {var url =   location.protocol+'//api.sabavision.com/pox/poxjs.js';d.write('<script type="text/javascript" src="' + url + '" async></scri' + 'pt>');})(document);</script>-->
+
+
+<script type="text/javascript">
+
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-153829-9']);
+    _gaq.push(['_setDomainName', 'parvazelaleha.mihanblog.com']);
+    _gaq.push(['_trackPageview']);
+
+    (function() {
+        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+
+</script>
+
+
+<div id='mediaad-Kvcm'></div>
+<meta name="sabavision_zone" content="2500-Z499" />
+<center>
+    <div style="background-color:white;width:90%;padding:20px;margin-top:50px;margin-bottom:50px;">
+        <a href="https://www.cloob.com">شبکه اجتماعی فارسی کلوب</a> | <a href="https://www.seo25.com/product/buy-mobile-traffic-and-get-cheap-targeted-mobile-traffic/" target="_blank">Buy Mobile Traffic</a> | <a href="https://www.soalaat.com">سایت سوالات</a>
+    </div>
+</center>

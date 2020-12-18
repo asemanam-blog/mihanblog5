@@ -1,0 +1,851 @@
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" /><link rel="EditURI" type="application/rsd+xml" title="RSD" href="../xmlrpc@rsd" />
+<script type="text/javascript" src="../../static.mihanblog.com/public/scripts/run/g.other.v3.js"></script>
+<script>
+
+	function c_$(id){
+        return document.getElementById(id);
+    }
+    
+			//if (parent.frames.length) top.location.href= document.location;
+		
+	setTodayDate = function(){
+		document.write('شنبه 22 آذر 1399');
+		/*1138844*/	}
+
+</script>
+
+
+
+        <script type="text/javascript">
+            (function(){
+            var now = new Date();
+            var head = document.getElementsByTagName('head')[0];
+            var script = document.createElement('script');
+            script.async = true;
+            var script_address = 'https://cdn.yektanet.com/js/mihanblog.com/native-mihanblog.com-6531.js';
+            script.src = script_address + '?v=' + now.getFullYear().toString() + '0' + now.getMonth() + '0' + now.getDate() + '0' + now.getHours();
+            head.appendChild(script);
+            })();
+        </script>
+
+        <!--<script type="text/javascript">
+            var head = document.getElementsByTagName("head")[0];
+            var script = document.createElement("script");
+            script.type = "text/javascript";
+            script.async=1;
+            script.src = "https://s1.mediaad.org/serve/mihanblog.com/loader.js" ;
+            head.appendChild(script);
+        </script>-->
+        
+        <script>
+            var sabaVisionWebsiteID = "9bab9dac-041d-4bdb-b39a-1ed789f65eed"; var sabaVisionWebsitePage = "ALL"
+        </script>
+        <link rel="stylesheet" href="https://plus.sabavision.com/dox/dox.min.css">
+        <script src="https://plus.sabavision.com/dox/dox.min.js"></script>
+        
+        <script>
+	linkdailyForm = function(){
+		try{
+			window.open('/linkdaily/new','linkdaily','status=yes,scrollbars=yes,toolbar=no,menubar=no,location=no ,width=500px,height=460px');
+		} catch(e){}
+	}
+</script><script>
+
+	statInfo = new Array();
+	setStatVar = function(index,value){
+		statInfo[index] = value;
+	}
+	getStatVar = function(index){
+		if(statInfo[index]) document.write(statInfo[index]);
+	}
+	
+	setStatVar('total_post','168');
+	setStatVar('total_author','0');
+	setStatVar('modify_date','یکشنبه 9 شهریور 1399');
+	
+	setStatVar('today_view','67');
+	setStatVar('yesterday_view','2');
+	
+	setStatVar('this_month_view','357');
+	setStatVar('last_month_view','335');
+
+	setStatVar('total_view','160125');
+	setStatVar('last_view_date','شنبه 22 آذر 1399 (14:09)');
+
+
+
+    
+    function setStatFromClient()
+    {
+        var url = 'http://quiper.mihanblog.com/statupdate/?data[refereruri]=http://quiper.mihanblog.com/page/5&data[postid]=&data[requesturi]=/page/9&data[sdate]=1607772433&data[hash]=7d4e003966abb61c0154d2412d4b5f63&data[resolution]='+screen.width+' X '+screen.height;
+
+//        alert(url);
+//        var newjs = document.createElement("SCRIPT");
+//        newjs.type = 'text/javascript';
+//        newjs.src = url;
+//
+//        var newdiv = document.createElement("DIV");
+//        newdiv.setAttribute("style","display:none");
+
+        document.write(unescape('%3Cscript src="'+url+'" type="text/javascript"%3E%3C/script%3E'));
+//        newdiv.appendChild (newjs);
+//        document.write(newjs);
+//        document.write(appendChild (newdiv);
+
+    };
+    setStatFromClient();
+        
+</script><script>
+	messageForm = function(post_id){
+		try{
+			window.open('/message','message','status=yes,scrollbars=yes,toolbar=no,menubar=no,location=no ,width=480px,height=550px');
+		} catch(e){}
+	}
+</script><script>
+	try{
+		var commentCnt = new Array();
+		commentCnt[222]='16';commentCnt[223]='111';commentCnt[228]='72';commentCnt[229]='31';commentCnt[230]='13';commentCnt[233]='15';commentCnt[234]='80';commentCnt[235]='148';commentCnt[237]='34';commentCnt[239]='90';	} catch(e){}
+	
+	newComment = function(post_id){
+		try{
+			window.open('/post/comment/'+post_id,'comment','status=yes,scrollbars=yes,toolbar=no,menubar=no,location=no ,width=480px,height=540px');
+		} catch(e){}
+	}
+	setCommentCnt = function(post_id){
+		try{
+			if(commentCnt[post_id]){
+				document.write(commentCnt[post_id]);
+			} else {
+				document.write(0);
+			}
+		} catch(e){}
+	}
+</script><script>
+
+
+	mihanblogUpdateLike = function(postid,type){
+		var url = '/post/like/'+postid+'/'+type;
+		mihanblogGetAjax(url,function(){});
+	};
+	try{
+        mihanblogGetAjax = function (url,callback) {
+    		var req;
+			if (window.XMLHttpRequest)
+            {
+                // code for IE7+, Firefox, Chrome, Opera, Safari
+			  	req = new XMLHttpRequest();
+			}else{	// code for IE6, IE5
+			  	req = new ActiveXObject("Microsoft.XMLHTTP");
+		  	}
+		    req.open("GET", url, 1);
+		    req.onreadystatechange = function () {
+		        if (req.readyState == 4) {
+		            if (req.status == 200) {
+		            	var response = eval(req.responseText);
+		            	callback();
+		            }else{
+	            		return ;
+		            }
+		        }else{
+					return ;
+		        }
+		    }
+		    req.send(null);
+		}
+	}catch(e){}
+
+	try{
+		var mihanblogLikeArrCnt = new Array();
+		var mihanblogDisLikeArrCnt = new Array();
+
+		mihanblogLikeArrCnt[222]='0';
+mihanblogDisLikeArrCnt[222]='0';
+mihanblogLikeArrCnt[223]='0';
+mihanblogDisLikeArrCnt[223]='0';
+mihanblogLikeArrCnt[228]='0';
+mihanblogDisLikeArrCnt[228]='0';
+mihanblogLikeArrCnt[229]='0';
+mihanblogDisLikeArrCnt[229]='0';
+mihanblogLikeArrCnt[230]='0';
+mihanblogDisLikeArrCnt[230]='0';
+mihanblogLikeArrCnt[233]='0';
+mihanblogDisLikeArrCnt[233]='0';
+mihanblogLikeArrCnt[234]='0';
+mihanblogDisLikeArrCnt[234]='0';
+mihanblogLikeArrCnt[235]='0';
+mihanblogDisLikeArrCnt[235]='0';
+mihanblogLikeArrCnt[237]='0';
+mihanblogDisLikeArrCnt[237]='0';
+mihanblogLikeArrCnt[239]='0';
+mihanblogDisLikeArrCnt[239]='0';
+	} catch(e){}
+
+
+
+    mihanblogPostLike = function(post_id){
+
+        mihanblogLikeCnt = (mihanblogLikeArrCnt[post_id]? mihanblogLikeArrCnt[post_id] : 0);
+        mihanblogDisLikeCnt = (mihanblogDisLikeArrCnt[post_id]? mihanblogDisLikeArrCnt[post_id] : 0);
+        mihanblogLikeCnt = parseInt(mihanblogLikeCnt);
+        mihanblogDisLikeCnt = parseInt(mihanblogDisLikeCnt);
+
+        document.write(
+                '<div class="mihanblog_like_wrapper ">'+
+                       '<div id="dislikeBar_'+post_id+'" onclick="mihanblogUpdateLike('+post_id+',\'dislike\')"   class="mihanblog_like_bar mihanblog_like_dislikeBar mihanblog_like_show_help ">-<div class="mihanblog_like_Cnt" id="disLikeCnt_'+post_id+'">'+mihanblogDisLikeCnt+'</div>'+
+                            '<span  class="mihanblog_like_v2_help mihanblog_like_v2_help_dislike clearfix"> '+
+                                '<span class="mihanblog_like_help_arrow mihanblog_like_help_arrow_dislike clearfix"></span>'+
+                                '<span class="mihanblog_like_help_text">نمی پسندم</span>'+
+                            '</span>'+
+                        '</div>'+
+                       '<div id="Like_'+post_id+'" class="mihanblog_like_border"></div>'+
+                       '<div id="likeBar_'+post_id+'" onclick="mihanblogUpdateLike('+post_id+',\'like\')"  class="mihanblog_like_bar mihanblog_like_likeBar mihanblog_like_show_help" >+<div class="mihanblog_like_Cnt" id="likeCnt_'+post_id+'">'+mihanblogLikeCnt+'</div>'+
+                            '<span  class="mihanblog_like_v2_help mihanblog_like_v2_help_like clearfix"> '+
+                                '<span class="mihanblog_like_help_arrow mihanblog_like_help_arrow_like clearfix"></span>'+
+                                '<span class="mihanblog_like_help_text">می پسندم</span>'+
+                            '</span>'+
+                        '</div>'+
+
+                '</div>'
+        );
+
+
+
+        mihanblogDisplayeLike(post_id);
+    }
+
+
+    mihanblogDisplayeLike = function(post_id){
+
+        mihanblogLikeCnt = (mihanblogLikeArrCnt[post_id]? mihanblogLikeArrCnt[post_id] : 0);
+        mihanblogDisLikeCnt = (mihanblogDisLikeArrCnt[post_id]? mihanblogDisLikeArrCnt[post_id] : 0);
+        mihanblogLikeCnt = parseInt(mihanblogLikeCnt);
+        mihanblogDisLikeCnt = parseInt(mihanblogDisLikeCnt);
+
+
+
+        sum = mihanblogLikeCnt - mihanblogDisLikeCnt;
+        backgroundBorder =  document.getElementById('Like_'+post_id);
+        var likeObj = document.getElementById('likeCnt_'+post_id);
+        var disLikeObj = document.getElementById('disLikeCnt_'+post_id);
+
+
+
+
+
+        likeObj.innerHTML =  mihanblogLikeCnt ;
+        disLikeObj.innerHTML =  mihanblogDisLikeCnt;
+
+        if(sum == 0){
+            backgroundBorder.style.backgroundImage = "url('/public/public/images/icons/like_likedislike.png')";
+            document.getElementById('dislikeBar_'+post_id).style.width = '19px';
+            document.getElementById('likeBar_'+post_id).style.width = '19px';
+        }else{
+             if(sum > 0){
+                 backgroundBorder.style.backgroundImage = "url('/public/public/images/icons/like_like.png')";
+                 document.getElementById('likeBar_'+post_id).style.width = '23px';
+                 document.getElementById('dislikeBar_'+post_id).style.width = '15px';
+             }else{
+                 backgroundBorder.style.backgroundImage = "url('/public/public/images/icons/like_dislike.png')";
+                 document.getElementById('likeBar_'+post_id).style.width = '15px';
+                 document.getElementById('dislikeBar_'+post_id).style.width = '23px';
+             }
+        }
+
+    }
+
+
+
+
+</script>
+
+<style type="text/css">
+
+
+    .clearfix {display: inline-block;}
+    .clearfix:after {
+        content: ".";
+        display: block;
+        height: 0;
+        clear: both;
+        visibility: hidden;
+    }
+
+    .mihanblog_like_wrapper {
+        color: #ffffff;
+        direction: ltr;
+        position: relative;
+    }
+    .mihanblog_like_wrapper span{
+        display: none;
+    }
+    .mihanblog_like_bar {
+        color: #FFFFFF;
+        cursor: pointer;
+        float: left;
+        font-size: 10px;
+        height: 20px;
+        line-height: 19px;
+        margin: 5px 0;
+    }
+    .mihanblog_like_likeBar {
+        background-color: #88B131;
+        padding-right: 5px;
+        border-top-right-radius: 2px;
+        border-bottom-right-radius: 2px;
+        text-align: right;
+    }
+    .mihanblog_like_likeBar:hover{
+        background-color: #699017;
+    }
+    .mihanblog_like_border {
+        background-color: #666666;
+        border: 1px solid #666666;
+        float: left;
+        font-size: 12px;
+        height: 20px;
+        margin-top: 2px;
+        width: 25px;
+        padding: 3px 5px 2px 0;
+        text-align: center;
+        border-radius: 2px;
+        color: #ffffff;
+        direction: ltr;
+        background-repeat: no-repeat ;
+        background-position: 4px center;
+    }
+    .mihanblog_like_border img {
+        margin-left: 2px;
+        margin-top: 2px;
+        width: 22px;
+    }
+    .mihanblog_like_dislikeBar {
+        background-color: #FF6F31;
+        padding-left: 5px;
+        border-top-left-radius: 2px;
+        border-bottom-left-radius: 2px;
+        text-align:left ;
+    }
+    .mihanblog_like_dislikeBar:hover{
+        background-color: #D54B10;
+    }
+
+
+
+    .mihanblog_like_show_help {
+        position: relative;
+    }
+    .mihanblog_like_show_help:hover span {
+        display: block;
+    }
+    .mihanblog_like_help_text {
+        background-color: white;
+        border: 1px solid #555555;
+        border-radius: 3px 3px 3px 3px;
+        color: #303030;
+        float: left;
+        font-size: 11px;
+        font-weight: normal;
+        padding: 5px 10px;
+    }
+
+    .mihanblog_like_help_arrow_dislike {
+        background: url("http://quiper.mihanblog.com/public/public/images/icons/like_hover_top.png") no-repeat scroll 16px 0 transparent;
+        left: 0;
+        top: -4px;
+    }
+
+    .mihanblog_like_help_arrow_like {
+        background: url("http://quiper.mihanblog.com/public/public/images/icons/like_hover_top _2.png") no-repeat scroll 16px 0 transparent;
+        left: -10px;
+        top: 29px;
+    }
+
+    .mihanblog_like_help_arrow{
+        height: 6px;
+        position: absolute;
+        width: 100px;
+
+    }
+
+    .mihanblog_like_v2_help_dislike {
+        left: -15px;
+        top: 24px;
+    }
+    .mihanblog_like_v2_help_like {
+        left: 0;
+        top: -35px;
+
+    }
+    .mihanblog_like_v2_help{
+        display: none;
+        position: absolute;
+        white-space: nowrap;
+        z-index: 1;
+    }
+
+    .mihanblog_like_Cnt{
+        display: inline;
+        color: #ffffff;
+    }
+
+</style>
+    <style>
+        @font-face {
+            font-family: 'Mihan-Iransans';
+            src: url('http://quiper.mihanblog.com/public/public/fonts/Iransans.eot');
+            src: url('http://quiper.mihanblog.com/public/public/fonts/Iransans.eot?') format('embedded-opentype'),
+            url('http://quiper.mihanblog.com/public/public/fonts/Iransans.woff2') format('woff2'),
+            url('http://quiper.mihanblog.com/public/public/fonts/Iransans.woff') format('woff'),
+            url('http://quiper.mihanblog.com/public/public/fonts/Iransans.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+        @font-face {
+            font-family: 'Mihan-IransansBold';
+            src: url('http://quiper.mihanblog.com/public/public/fonts/Iransans-Black.eot');
+            src: url('http://quiper.mihanblog.com/public/public/fonts/Iransans-Black.eot?') format('embedded-opentype'),
+            url('http://quiper.mihanblog.com/public/public/fonts/Iransans-Black.woff2') format('woff2'),
+            url('http://quiper.mihanblog.com/public/public/fonts/Iransans-Black.woff') format('woff'),
+            url('http://quiper.mihanblog.com/public/public/fonts/Iransans-Black.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+        @font-face {
+            font-family: 'Mihan-IransansLight';
+            src: url('http://quiper.mihanblog.com/public/public/fonts/Iransans-UltraLight.eot');
+            src: url('http://quiper.mihanblog.com/public/public/fonts/Iransans-UltraLight.eot?') format('embedded-opentype'),
+            url('http://quiper.mihanblog.com/public/public/fonts/Iransans-UltraLight.woff2') format('woff2'),
+            url('http://quiper.mihanblog.com/public/public/fonts/Iransans-UltraLight.woff') format('woff'),
+            url('http://quiper.mihanblog.com/public/public/fonts/Iransans-UltraLight.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+        @font-face {
+            font-family: 'Mihan-Nassim';
+            src: url('http://quiper.mihanblog.com/public/public/fonts/Nassim.eot');
+            src: url('http://quiper.mihanblog.com/public/public/fonts/Nassim.eot?') format('embedded-opentype'),
+            url('http://quiper.mihanblog.com/public/public/fonts/Nassim.woff2') format('woff2'),
+            url('http://quiper.mihanblog.com/public/public/fonts/Nassim.woff') format('woff'),
+            url('http://quiper.mihanblog.com/public/public/fonts/Nassim.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+        @font-face {
+            font-family: 'Mihan-Koodak';
+            src: url('http://quiper.mihanblog.com/public/public/fonts/Koodak.eot');
+            src: url('http://quiper.mihanblog.com/public/public/fonts/Koodak.eot?') format('embedded-opentype'),
+            url('http://quiper.mihanblog.com/public/public/fonts/Koodak.woff2') format('woff2'),
+            url('http://quiper.mihanblog.com/public/public/fonts/Koodak.woff') format('woff'),
+            url('http://quiper.mihanblog.com/public/public/fonts/Koodak.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+        @font-face {
+            font-family: 'Mihan-Yekan';
+            src: url('http://quiper.mihanblog.com/public/public/fonts/Yekan.eot');
+            src: url('http://quiper.mihanblog.com/public/public/fonts/Yekan.eot?') format('embedded-opentype'),
+            url('http://quiper.mihanblog.com/public/public/fonts/Yekan.woff2') format('woff2'),
+            url('http://quiper.mihanblog.com/public/public/fonts/Yekan.woff') format('woff'),
+            url('http://quiper.mihanblog.com/public/public/fonts/Yekan.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+        @font-face {
+            font-family: 'FontAwesome';
+            src: url('http://quiper.mihanblog.com/public/public/fonts/fontawesome_webfont.eot');
+            src: url('http://quiper.mihanblog.com/public/public/fonts/fontawesome_webfont.eot?') format('embedded-opentype'),
+            url('http://quiper.mihanblog.com/public/public/fonts/fontawesome_webfont.woff2') format('woff2'),
+            url('http://quiper.mihanblog.com/public/public/fonts/fontawesome_webfont.woff') format('woff'),
+            url('http://quiper.mihanblog.com/public/public/fonts/fontawesome_webfont.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+
+
+        
+
+        /* Smartphones (portrait and landscape) ----------- */
+
+        /*
+        @media only screen and (max-width : 480px) and (min-width : 320px) {
+            .sabaClick_advert__wrapper{
+                display:block;
+            }
+            .sabaClick_advert__inner{
+                max-width: 90%;
+                margin: 0 5%;
+            }
+        }
+        */
+
+    </style>
+
+
+
+
+
+
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<META NAME="description" CONTENT="">
+<META NAME="keywords" CONTENT="کوئیپر">
+<META NAME="DesignerUrl" CONTENT="http://Avazak.ir">
+<META NAME="Designer" CONTENT="AVAZAK">
+<link rel="alternate" type="application/rss+xml" title="کوئیپر" href="../post/rss/index.html" />
+<title>کوئیپر</title>
+<style>
+
+body {text-align:Center;color:#116d8d;font-family: Tahoma; font-size: 8pt;margin:0px 0px 20px}
+body {background: #FFFFFF url('http://axgig.com/images/89372301896876181710.jpg') no-repeat Top Center; }
+A, A:visited{color:#69aac0;text-decoration: none}A:hover{color:#116d8d;text-decoration: none;font-size: 9pt}
+.page{float:Center;margin:0px auto;padding:0px;width:535px}img{border:none}
+.Avazak {margin:0;padding:0;text-align:center;background-repeat:repeat-x; background-position-y:top}
+.space{padding:0px 0px}
+.header{padding:0;margin:0;position:relative;height:80px;width:535px}
+.header .title{position:relative;font-family: Arial;font-size:15pt;font-weight:bold;color:#727877;text-align:Right;margin:320px 0px 10px}
+.header .subtitle {font-family: Tahoma; font-size: 8pt;color:#999999;text-align:Right;margin:0px 0px 30px;line-height:1.5em}
+.sidebar{float: Center;width:515px;font-family: Tahoma; font-size: 8pt;text-align:Right;line-height:2.5em;padding:5px;Border:#e0e3ec 2px Solid;background:#f7f8fa;margin:0px}
+.sidebar  h1{margin:30px 0px 7px;font-family: Tahoma; font-size: 8pt;text-align:Right;color:#116d8d;line-height:2em;Border-Top:#e0e3ec 2px Dotted;}
+.About{width:515px;color:#69aac0;line-height:2.5em;}
+.About img{text-align:Right;Padding-Top:3px;}
+.bodyposts{float: Center;text-align: right;width:535px;margin:0px;overflow:hidden}
+.post{width:535px;margin:0px;text-align:right;background:url('http://Avazak.ir/Theme/pic/272-2.jpg') repeat-Y Top Center;}
+.post .Title{height:40px;font-size: 9pt;font-family: Tahoma;font-weight:bold;color:#000000;Padding:10px 10px 0px;background:url('http://Avazak.ir/Theme/pic/272-1.jpg') no-repeat Top Center;}
+.post .Content{font-family: Tahoma;color:#000000; font-size: 8pt;line-height:1.5em;padding:0px 5px 0px 5px;direction:rtl;}
+.post .date{font-family: Tahoma; color:#116d8d;Padding:20px 5px 50px;font-size: 8pt;background:url('http://Avazak.ir/Theme/pic/272-3.jpg') no-repeat Bottom Center;}
+.custom{color:#116d8d;margin:10px 0;text-align:center;direction:rtl}
+
+</style>
+</head>
+
+<body>
+<!--Design By : Avazak.ir-->
+<div class=Top>
+<div class=Avazak>
+<div align =center>
+<div class="page" dir="rtl" >
+<div  class ="header" >
+<p class="title">کوئیپر</p>
+<p class="subtitle"></p></div>
+	<!-- end header -->
+<!--Design By : Avazak.ir-->
+<div class="bodyposts">
+<div class="space"></div>
+		<div id="MihanblogShopAds" style="display:block;height:0px;width:100%;border:0px"></div>
+		<div class="post">
+<a name="239"></a>
+<h2 class="Title">آه که میزند برون ...</a></h2>
+<div class="Content"><div id="InPost_MihanblogShopAds" style="display:block;height:0px;width:100%;border:0px"></div>
+ولی فکر میکنم هرچندوقت بد نباشه تو سرمای پاییز تنها بزنید به دل یه پارک !یه پارک بزرگ ! مخصوصا توصیه میشه سرد باشه هوا ! سرد ! بعد مثلا میتونید همینطور که مشغول نت گردی هستید بذارید آلبوم " سمفونی رومی،پروژه ناگفته" از "حافظ ناظری" برای بار چهارم پلی بشه تو گوشتون ! زندگی میکنید .
+
+<div><br></div><div><br></div><div><font size="1"><br></font></div><div><span style="line-height: 28.984167098999px; text-align: right; background-color: rgb(255, 255, 204);"><font size="1">+از خواننده های این پست خواهش دارم حتما از این پست نهایت استفاده را ببرن. /از کامنت علی آقا همتی / دی:&nbsp;</font></span></div><br><br></p>
+</div>
+<div class ="date">[ شنبه 8 آذر 1393 ]  [ 13:06 ]  [ کوئیپر  ]
+<span dir="rtl" > <a target="_self" href="javascript:newComment(239)">[ نظرات(<script>setCommentCnt(239)</script>) ]</a>
+</div></div>
+<br>
+<div class="post">
+<a name="237"></a>
+<h2 class="Title">ای بابا ! (آیکون خجالت)</a></h2>
+<div class="Content">+ روز تولد برای من خاص نبود . هیچوقت. شما خاصش کردین! از بودن همه تون تو زندگیم ممنونم :)<div>+ آدم میتونه یه ماه مونده به سربازیش بهترین شب تولد زندگیشو داشته باشه ! اگه ... مرسی بچه ها :)</div><br><br></p>
+</div>
+<div class ="date">[ جمعه 30 آبان 1393 ]  [ 00:56 ]  [ کوئیپر  ]
+<span dir="rtl" > <a target="_self" href="javascript:newComment(237)">[ نظرات(<script>setCommentCnt(237)</script>) ]</a>
+</div></div>
+<br>
+<div class="post">
+<a name="235"></a>
+<h2 class="Title">چطور شروع به بلاگ نویسی کردم !?</a></h2>
+<div class="Content">
+
++ در دست احداث<div><div><br></div><div>+ میگم خوبه شما هم هرکدوم داستان بلاگ نوشتن خودتونو بنویسین ! هوم ?!&nbsp;</div><div><br></div><div>+ واقعا تاریخ از اینجا باید به خاطر بسپره من اولین ساعات عمرم رو چطور و با چه هیولاهایی سپری کردم :/ دیی:&nbsp;</div>
+
+</div>
+
+<br><br></p>
+</div>
+<div class ="date">[ سه شنبه 27 آبان 1393 ]  [ 10:41 ]  [ کوئیپر  ]
+<span dir="rtl" > <a target="_self" href="javascript:newComment(235)">[ نظرات(<script>setCommentCnt(235)</script>) ]</a>
+</div></div>
+<br>
+<div class="post">
+<a name="234"></a>
+<h2 class="Title">خدایا ما که جدی نمیگفتیم !</a></h2>
+<div class="Content">
+<div><font size="2">ظهر عاشورا بود. هیئت از شلوغی در مرز انفجار بود . مداح پرشور میخواند و همه در شور عاشورایی غرق شده بودیم . یکی گریه میکرد، یکی بر سر و سینه میکوبید ، یکی فریاد دردش به آسمان میرسید . گریه،گریه،گریه . غوغایی بود .</font></div><div><font size="2">شور و حرارت حسینی مان به اوج رسیده بود که آمد . خودش بود . همه میدانستیم . همه ما دین دارها میدانیم که خدا هرکاری بخواهد، میتواند و این اصلا عجیب نبود. به محضی که آمد ، همه فهمیدند . مداح ایستاد . بلندگوهای اکو چهارطرف هیئت صدایی دادند و خاموش شدند . رفت بالای منبر . به همه سلام کرد . اول زمزمه ی آرامی از ناباوری و بعد کم کم بعضی آرام و بعضی بلند سلام کردند. دوباره جمع ساکت شد . صدایی از هیچکداممان در نمی آمد . بسم الله گفت و چند کلمه صحبت کرد. آخر پرسید آیا هیچکداممان یاری اش میکنیم ? در راه حق ? برای خدا ? تا حق مظلومی زیر بار حکومت ظلم پامال نشود ? حاضریم از جایگاهمان، پول و مقاممان در راه خدا ، در راه حق بگذریم ?</font></div><div><font size="2">دوباره سکوت شد . مداح بریده بریده خواست از لزوم حفظ هیئت و جلسات دینی در این شرایط بگوید . که شاید لازم باشد...شاید بهتر است... بماند . حرفش را نصفه خورد . نتوانست تمام کند . مردی از آخر مجلس، پلاستیک کفشش را ورداشت و آرام خارج شد . بعد دومی . بعد سومی و بعد که خجالتشان ریخت چندتا چندتا و بعد ... .</font></div><div><font size="2">همه میدانستند . همه میدانستیم که خود اوست و همه میدانستیم که چکار باید بکنیم . همه مان بارها توی همه ی این جلسات، حتی توی خلوت خودمان، سر نمازهای روزانه مان بارها با او بیعت کرده بودیم . بارها لبیک گفته بودیم . همه مان .</font></div><div><font size="2">علیه السلام وقتی آخر سر ، تنها ، هیئت را ترک میکرد ، زیر لب با خود گفت : خدایا شکرت. شاید هیئت بعدی...</font></div><div><font size="2"><br></font></div><div><font size="2"><br></font></div><div><br></div><div><span style="font-size: small;"><br></span></div><div><span style="font-size: small;">+ به اضافه خیلی حرف های نگفته و خیلی حرف های نگفتنی و خیلی حرف هایی که همه میدونیم و گفتنش هم فایده ای نداره.</span></div><div><font size="2"><br></font></div><div><font size="2"><br></font></div><div><font size="2"><span style="background-color: rgb(0, 0, 0);"><font color="#ffffff">+</font></span> مرتضی پاشایی ، خواننده ی خوبمون به آرامش رسید . روحش شاد .</font></div>
+
+
+
+
+<br><br></p>
+</div>
+<div class ="date">[ سه شنبه 13 آبان 1393 ]  [ 12:53 ]  [ کوئیپر  ]
+<span dir="rtl" > <a target="_self" href="javascript:newComment(234)">[ نظرات(<script>setCommentCnt(234)</script>) ]</a>
+</div></div>
+<br>
+<div class="post">
+<a name="233"></a>
+<h2 class="Title">کرگدن مهربانی که خانواده اش را دوست داشت ! </a></h2>
+<div class="Content">
+
+<div><font size="2">مرد درشت هیکل، ناچارانه و به سختی داشت جلوی خودش را میگرفت که از عصبانیت کله رئیسش را که همین الان با قد کوتاه و سر کچلش جلو میزش ایستاده بود و داشت توبیخش میکرد که چرا هنوز پرونده های ماه پیش را حساب رسی نکرده است، به میز نکوبد. هرچند توی ذهنش دقیقا همین کار را چند بار تکرار کرد و بعد پشت گردن رئیس را گرفت و او را با لگد از اتاقش پرت کرد بیرون . اما وقتی دوباره پشت میز شلوغ و به هم ریخته اش برگشت متوجه شد که آن کارها را فقط در خیالش انجام داده و در حقیقت رئیس هنوز دارد به تهدید و توبیخ ادامه میدهد . رئیس داشت همینطوری یک ریز داد میزد و مشکلات زمین و زمان را گردن کارمندان ناکارآمد و مفت خور شرکتش می انداخت.&nbsp;</font></div><div><font size="2">انگار یک سال گذشت تا بالاخره عصبانیت رئیس ته کشید و همینطور که هنوز زیر لب غر و لند میکرد در اتاق را محکم به هم کوبید و گورش را گم کرد .</font></div><div><font size="2">کارمند جزء درشت هیکل پشت میزش فرونشست. این یعنی این عید هم از مرخصی خبری نخواهد بود . خودکار را توی مشتش محکم فشار داد . انگار گردن رئیس را میفشارد.</font></div><div><font size="2">ساعت 8 شب، وقتی مدت ها بود بقیه کارمندها رفته بودند، بالاخره چراغ اتاق را خاموش کرد ، از نگهبان دم در خداحافظی کرد و از شرکت خارج شد.</font></div><div><font size="2">بیرون هوا سرد و سوزناک بود . کلاهش را از کیفش درآورد، زیپ کتش را تا بالا کشید و با کیف کهنه اش به سمت ایستگاه مترو راه افتاد. تا مترو راهی نبود . شاید بیست دقیقه . توی راه با خودش فکر کرد اگر شب ها کمی بیشتر کار کند، شاید هنوز بتواند قبل از عید کمی کارهایش را جلو بیندازد. شاید رئیس با یکی دو روز مرخصی موافقت کند . بعد یاد عصبانیت امروز رئیس افتاد و توی ذهنش با خودش تصور کرد که جلو حرف های رئیس وایستاده ! حتی چند جواب قاطع و دندان شکن هم داده و رئیس از خجالت مجبور به سکوت شده و احتمالا از او به خاطر رفتارش معذرت خواهی کرده است . یا اینکه دفترش را جلو رئیس روی میز کوبیده و بعد هم در میان ترس رئیس و بهت و حیرت بقیه کارمندها گردن رئیس را گرفته و تا حد مرگ فشار داده است . از این فکرها لحظه ای به خودش لرزید . بعد سعی کرد به چیزهای مثبت تری فکر کند . مثلا به زنی که با پلاستیک پر میوه در یک دست و یک موجود کوچک کاپشن پوش در دست دیگر، قدم زنان از رو به رویش می آمد. یا یک زن و مرد جوان که صحبت کنان رو به رویش وارد یک مغازه لباس فروشی شدند. پیاده رو نسبتا پر رفت و آمد بود . کمی بعد پیچید توی کوچه ای که همیشه از طریق آن به طرف مترو میرفت . توی کوچه ، پنجاه متر جلوتر مردی داشت ماشینش را کنار کوچه پارک میکرد . هنوز از ماشینش پیاده نشده بود که پشت سرش ماشین دیگری شروع کرد به بوق زدن. ماشینش رد نمیشد . بووووق. مرد از ماشین پارک شده اش پیاده شد . راننده ماشین عقبی یک زن جوان بود . مرد داد زد بیا رد میشی که ! زن دوباره بوق زد . حق داشت . مرد بدجایی پارک کرده بود . مرد راننده داد زد خب راننده نیستی بیخود میشینی پشت ماشین ! زنو چه به رانندگی اصلا ! اه</font></div><div><font size="2">زن دوباره بوق زد .</font></div><div><font size="2">مرد درشت هیکل مکالمه را شنیده بود . از ده قدمی با عصبانیت رو به مرد راننده داد زد خب راست میگه دیگه این چه جای پارک کردنه ? ورش دار!</font></div><div><font size="2">مرد راننده برگشت . رو به مرد درشت هیکل داد زد تو چیکاره ای این وسط ? به تو چه اصلا !</font></div><div><font size="2">به هم رسیده بودند . مرد درشت هیکل گفت من همه کاره ام اصلا ! زود ورش دار این لکنده تو از اینجا!</font></div><div><font size="2">مرد راننده به دعوا گفت نخوام وردارم کیو باید ببینم ?</font></div><div><font size="2">مرد درشت هیکل اعصابش ته کشیده بود. یقه مرد راننده را گرفت و پیش از آن که به او فرصت عکس العمل بدهد با مشت کوبید توی سرش . مرد راننده گیج شد . دنیا دور سرش چرخید . مرد درشت هیکل ولش کرد و راننده روی زمین پهن شد .</font></div><div><font size="2">زن راننده از دیدن این صحنه ترسیده بود . دستش را گذاشت پشت صندلی کناری، رویش را برگرداند عقب و با حداکثر سرعت دنده عقب گرفت و تا انتهای کوچه رفت . مرد درشت هیکل نمیدانست حالا باید چکار کند. چند قدم از مرد راننده که هنوز روی زمین داشت گیج میزد دور شد و همینطور که هرچند قدم نگاهی به پشت سرش می انداخت به راهش ادامه داد . به انتهای کوچه که رسید از دور متوجه شد مرد راننده بلند شده و دیگر توی کوچه نیست . بعد خیالش راحت شد و پنجاه متر بعد، آن طرف خیابان از پله های ایستگاه مترو پایین رفت و از نظر پنهان شد .</font></div><div><font size="2"><br></font></div><div><font size="2"><br></font></div><div><font size="2">+ نگین عنوان چه ربطی داشت ها! اصلا از یه زوایای به خصوصی اگه بهش نگاه بکنید خیلی هم ربط داره! والا ! دیگه چقد ربط آخه ?! دی:&nbsp;</font></div><div><font size="2">+ شب کارم تموم شده بود، داشتم میرفتم سمت مترو که برگردم خونه ! تو پیاده رو یه جوونه با موتور داشت تمرین تک چرخ میکرد :/ بعد من حالم خوب بودا ! همینطوری تو فکر و خیال بودم که مثلا یه مشت بزنم تو کله این بچه اخه !? دی: بعد همینطوری فکرم رفت و رفت و این داستانه شد واسه خودش ! دی: در اصل اون مشتی که مرد راننده خورد رو این اقا پسره باید میخورد ! دی: حالا همچین هم دارم توضیح میدم انگار صادق هدایت مثلا نحوه نوشتن "سه قطره خون" رو داره میگه ! یا جلال ال احمد "سه تار" رو ! والا ! دی:&nbsp;</font></div>
+
+
+
+
+
+
+<br><br></p>
+</div>
+<div class ="date">[ دوشنبه 12 آبان 1393 ]  [ 11:54 ]  [ کوئیپر  ]
+<span dir="rtl" > <a target="_self" href="javascript:newComment(233)">[ نظرات(<script>setCommentCnt(233)</script>) ]</a>
+</div></div>
+<br>
+<div class="post">
+<a name="230"></a>
+<h2 class="Title">نه شما بفرمایید :/</a></h2>
+<div class="Content">
+
+<font size="2">ولی دیگه کم کم دارم متقاعد میشم که تا قبل 40~50 سالگی بعیده بتونم با خیال آسوده و دل خوش رو صندلی های اتوبوس و مترو بشینم ! :/ دی:</font><div><font size="2">وقتی تو مترو وایستاده ام، همه اش فکرم اینه کاش این اقای جلویی من ایستگاه پیاده شه من بشینم، وقتی هم نشسته ام همه اش استرس دارم نکنه الان یه اقای مسنی بیاد وایسته کنارم ! :/ دی: مشکلات داریم ها ! دی:&nbsp;</font></div><div><font size="2"><br></font></div><div><br></div><div><font size="1">+ افراد مسن اصلا انگار میشناسن منو! اینطوری اینور اونورو نگاه میکنن، بعد یهو منو میبینن میگن اها ! رسول اینجاس! بریم جاش بشینیم! :/ دی:</font></div><div><font size="1">+ اه ! :/ متاسفانه الان فکر کردم خب با این حساب، بنده در دوران کهولت! هم همه اش استرس اینو خواهم داشت که ایا کسی بلند میشه من بشینم ! :/ دی:</font></div><div><font size="1">+ یه چیز دیگه هم بگم بهتون! [عینک افتابی] هیچوقت برای من با چایی ، جای قند، شیرینی و بیسکوئیت نیارین ! هیچوقت ! [ آیکون دون کورلئونه ]</font></div><div><font size="1">+ " کرگدنی که خانواده اش را دوست داشت ! " مطلب بعدی ! دی:&nbsp;</font></div><div><br></div>
+
+
+
+<br><br></p>
+</div>
+<div class ="date">[ چهارشنبه 7 آبان 1393 ]  [ 10:23 ]  [ کوئیپر  ]
+<span dir="rtl" > <a target="_self" href="javascript:newComment(230)">[ نظرات(<script>setCommentCnt(230)</script>) ]</a>
+</div></div>
+<br>
+<div class="post">
+<a name="222"></a>
+<h2 class="Title">غایب</a></h2>
+<div class="Content">
+
+
+
+<font face="tahoma, arial, helvetica, sans-serif" size="2">یک شب، وقتی بقیه دوستانش همگی مشغول صحبت و بگو بخند بودند، آرام از جایش بلند شد، کت و کیف سفری کهنه اش را برداشت و بی سر و صدا جمعشان را ترک کرد . در طول ساعتها و روزها و هفته های بعد هیچکدام از دوستانش متوجه غیبت او نشده بودند. ماه ها گذشت . یک روز، هنگامی که غریبه ای به جست و جوی پسرک آمده بود، دوستانش با کمی تاخیر پسرک را به یاد آوردند . آنگاه هرچه سعی کردند به خاطر بیاورند آخرین بار کی و کجا پسرک را دیده اند و آخرین خاطره ای که با او داشته اند چیست، موفق نشدند . مرد غریبه کمی دیگر هم در آن شهر ماند و بعد در جستجوی پسرک، آنجا را به مقصد شهر دیگری ترک کرد .</font>
+
+
+
+<div><font face="tahoma, arial, helvetica, sans-serif" size="2"><br></font></div><div><br></div><div><font face="tahoma, arial, helvetica, sans-serif" size="1">+ از سری حس های "یهویی"</font></div><div><font face="tahoma, arial, helvetica, sans-serif" size="1"><br></font></div><div><br></div><div><span style="font-family: tahoma, arial, helvetica, sans-serif;"><font size="1">+ میدونید همین الان تو تلویزیون مجری از مهمان برنامه اش در مورد موسیقی چی پرسید ? : " به نظرتون کسی هم که میجنگه، موسیقی گوش میده ?! " واو .&nbsp;</font></span></div>
+
+
+
+<br><br></p>
+</div>
+<div class ="date">[ دوشنبه 28 مهر 1393 ]  [ 09:52 ]  [ کوئیپر  ]
+<span dir="rtl" > <a target="_self" href="javascript:newComment(222)">[ نظرات(<script>setCommentCnt(222)</script>) ]</a>
+</div></div>
+<br>
+<div class="post">
+<a name="223"></a>
+<h2 class="Title">سگ دانا</a></h2>
+<div class="Content">
+
+
+
+
+
+
+
+
+
+<font face="tahoma, arial, helvetica, sans-serif" size="2"><span style="color: rgb(34, 34, 34);">روزی سگ دانایی از کنارِ یک دسته گربه میگذشت.</span><br style="color: rgb(34, 34, 34);"><span style="color: rgb(34, 34, 34);">هنگامی که نزدیک شد، متوجه شد که گربه ها سخت با خود سرگرم اند و اعتنایی به او ندارند .</span><br style="color: rgb(34, 34, 34);"><span style="color: rgb(34, 34, 34);">آنگاه از میان آن دسته ، یک گربه درشت و عبوس جلو آمد و گفت: «ای برادران دعا کنید؛ که هرگاه دعا کردید و باز هم دعا کردید و باز هم دعا کردید و کردید، آنگاه یقین بدانید که از آسمان برای شما باران موش خواهد بارید.»</span><br style="color: rgb(34, 34, 34);"><span style="color: rgb(34, 34, 34);">سگ چون این را شنید در دل خود خندید و از آنها روبرگرداند و گفت: « ای گربه های ابله، مگر ننوشته اند و مگر من و پدرانم پیش از من ندانسته ایم که آنچه در اثر دعا و ایمان و عبادت از آسمان میبارد موش نیست ، بلکه استخوان است! »</span></font><div><font face="tahoma, arial, helvetica, sans-serif" size="2"><span style="color: rgb(34, 34, 34);"><br></span></font></div><div><font face="tahoma, arial, helvetica, sans-serif" size="2"><span style="color: rgb(34, 34, 34);"><br></span></font></div><div><font face="tahoma, arial, helvetica, sans-serif" size="2"><span style="color: rgb(34, 34, 34);">+ جبران خلیل جبران</span></font></div><div><font face="tahoma, arial, helvetica, sans-serif" size="2"><span style="color: rgb(34, 34, 34);"><br></span></font></div><div><font face="tahoma, arial, helvetica, sans-serif" size="1"><span style="background-color: rgb(255, 153, 0);"><font color="#ffffff">+</font></span><font color="#222222"> فقط ما درست فکر میکنیم! مگه نه؟! ;)</font></font></div><div><font face="tahoma, arial, helvetica, sans-serif" size="1"><font color="#222222">+ تاریخ اعزام سربازیم هم مشخص شد ! یک دی ! کسی نمیاد? دی:</font></font></div><div><font face="tahoma, arial, helvetica, sans-serif" size="1"><font color="#222222">+ تو تقویم گوشی من زده بود امروز (شنبه) عید قربانه ! :/ بعد منم نرفتم سر کار ! بعد. الان منشیمون زنگ زد گفت فردا عیده ! :/ چه کنم الان من ?! :/ دی:</font></font></div><div><font face="tahoma, arial, helvetica, sans-serif" size="1"><font color="#222222">+ ولی انصافا ابهتو داشتین ?! یه کلام گفتم، چاوشی آلبومشو منتشر کرد ! :/ دی:</font></font></div><div><font face="tahoma, arial, helvetica, sans-serif" size="1"><font color="#222222">+ بچه ها ولی یادتون باشه من اگه گوشام بعدها آسیب ببینه تقصیر این چاوشی و رضا یزدانیه ! :/ دی:</font></font></div><div><font face="tahoma, arial, helvetica, sans-serif" size="1"><font color="#222222">+ اشتباهی جای پاک کردن لیست پخش،کل آهنگای رضا یزدانیو از گوشیم پاک کردم ! :/ تو این سه ساله نشده بود تو دوره ای اینقد بی رضا یزدانی باشم من ! :/ یکی به من رضا یزدانی برسووونهههه :/</font></font></div><div><font face="tahoma, arial, helvetica, sans-serif" size="1"><font color="#222222">+ ولی خب، جاده شمال و " ساعت فراموشی " و داااااد زدن با آهنگا ، تا وقتی گلوت بگیره ! حسابی چسبید ها ! :))</font></font></div><div><font face="tahoma, arial, helvetica, sans-serif" size="1"><font color="#222222">+ چون این پست خیییلی بار معنایی داشت گذاشتم اینقد بمونه ها ! اگه دیگه به اندازه کافی عبرت گرفتید که دیگه رد شیم کم کم ! :/ دی:&nbsp;</font></font></div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<br><br></p>
+</div>
+<div class ="date">[ چهارشنبه 9 مهر 1393 ]  [ 09:40 ]  [ کوئیپر  ]
+<span dir="rtl" > <a target="_self" href="javascript:newComment(223)">[ نظرات(<script>setCommentCnt(223)</script>) ]</a>
+</div></div>
+<br>
+<div class="post">
+<a name="229"></a>
+<h2 class="Title">بالاخره پس از 16 سال</a></h2>
+<div class="Content">
+
+
+<font size="2">
+فارغ التحصیل شدم! دی:</font><div><font size="2">:)</font></div><div><font size="2"><br></font></div><div><font size="2"><br></font></div><div><font size="2"><br></font></div><div><font size="1">+ پیش به سوی یه مرحله ی دیگه از زندگی...</font></div><div><font size="1">+ برای باران هم زندگی خوب و خوشی ارزو میکنم :)</font></div><div><font size="1"><br></font></div><div><font size="1"><span style="background-color: rgb(255, 102, 0);"><font color="#ffffff">+</font></span> بهتون گفتم هنوز خوابگاهم من؟! از بیستم به بعد رو قاچاقی خوابگاه موندم! فردا دیگه احتمالا میرم ولی! دی:</font></div>
+
+
+
+
+
+
+
+<br><br></p>
+</div>
+<div class ="date">[ سه شنبه 1 مهر 1393 ]  [ 23:26 ]  [ کوئیپر  ]
+<span dir="rtl" > <a target="_self" href="javascript:newComment(229)">[ نظرات(<script>setCommentCnt(229)</script>) ]</a>
+</div></div>
+<br>
+<div class="post">
+<a name="228"></a>
+<h2 class="Title">دو سکانس از یک زندگی</a></h2>
+<div class="Content">
+
+
+
+<font size="2">&nbsp;سال 1363 / مهد کودک</font><div><font size="2">- آفرین پسرم! چه نقاشی قشنگی! خودت کشیدی؟</font></div><div><font size="2"><br></font></div><div><font size="2">سال 1385 / زندان</font></div><div><font size="2">- چقد دیگه از حبست مونده؟</font></div><div><font size="2"><br></font></div><div><font size="2"><br></font></div><div><font size="2"><br></font></div><div><font size="1">+ /فلش فیکشن/</font></div><div><font size="1"><br></font></div><div><br></div>
+
+
+
+
+
+
+
+<br><br></p>
+</div>
+<div class ="date">[ پنجشنبه 20 شهریور 1393 ]  [ 22:43 ]  [ کوئیپر  ]
+<span dir="rtl" > <a target="_self" href="javascript:newComment(228)">[ نظرات(<script>setCommentCnt(228)</script>) ]</a>
+</div></div>
+<br>
+<p align="center"><font face="Tahoma" style="font-size: 9pt">
+.: تعداد کل صفحات 17 :. <a href="5.html"> [  <i>...</i>  ]</a> <a href="6.html"> [  <span>6</span>  ]</a> <a href="7.html"> [  <span>7</span>  ]</a> <a href="8.html"> [  <span>8</span>  ]</a> <a href="9.html"> [  <b>9</b>  ]</a> <a href="10.html"> [  <span>10</span>  ]</a> <a href="11.html"> [  <span>11</span>  ]</a> <a href="12.html"> [  <span>12</span>  ]</a> <a href="http://quiper.mihanblog.com/page/13"> [  <i>...</i>  ]</a> <br>
+</p>	<!-- end post -->
+<!--Design By : Avazak.ir-->
+</div><div class="sidebar">
+<!--Design By : Avazak.ir-->
+<h1>من</h1>
+<div class="About">
+<div align=Right >   </div>
+آشتی خواهم داد / آشنا خواهم کرد / راه خواهم رفت / نور خواهم خورد / دوست خواهم داشت...<br />
+« سهراب »</div>  
+<!--Design By : Avazak.ir-->
+<h1>کوئیپر</h1>
+<a href="../index.html">صفحه اصلی وبلاگ</a> |
+<a href="mailto:">ایمیل نویسنده</a> |
+<a href="javascript:messageForm()">تماس با مدیر</a> |
+<a href="http://www.Avazak.ir/">طراح قالب</a> |
+<!--Design By : Avazak.ir-->
+<h1>توسط</h1>
+<a href="../post/author/435127.html">کوئیپر </a> |
+<br>
+<!--Design By : Avazak.ir-->
+<!--Design By : Avazak.ir-->
+<h1>صفحات جانبی</h1>
+<span dir="ltr">
+<a href="../extrapage/111.html">.</a> |
+<!--Design By : Avazak.ir-->
+<h1>آرشیو مطالب</h1>
+<span dir="ltr">
+<a href="../post/archive/1399/6.html"> شهریور 1399</a> |
+<a href="../post/archive/1399/5.html"> مرداد 1399</a> |
+<a href="../post/archive/1398/12.html"> اسفند 1398</a> |
+<a href="../post/archive/1398/8.html"> آبان 1398</a> |
+<a href="../post/archive/1397/8.html"> آبان 1397</a> |
+<a href="../post/archive/1397/2.html"> اردیبهشت 1397</a> |
+<a href="../post/archive/1396/11.html"> بهمن 1396</a> |
+<a href="../post/archive/1396/9.html"> آذر 1396</a> |
+<a href="../post/archive/1396/8.html"> آبان 1396</a> |
+<a href="../post/archive/1396/6.html"> شهریور 1396</a> |
+<a href="../post/archive/1396/5.html"> مرداد 1396</a> |
+<a href="../post/archive/1396/4.html"> تیر 1396</a> |
+<a href="../post/archive/1396/3.html"> خرداد 1396</a> |
+<a href="../post/archive/1396/2.html"> اردیبهشت 1396</a> |
+<a href="../post/archive/1396/1.html"> فروردین 1396</a> |
+<a href="../post/archive/1395/12.html"> اسفند 1395</a> |
+<a href="../post/archive/1395/11.html"> بهمن 1395</a> |
+<a href="../post/archive/1395/10.html"> دی 1395</a> |
+<a href="../post/archive/1395/7.html"> مهر 1395</a> |
+<a href="../post/archive/1395/6.html"> شهریور 1395</a> |
+<a href="../post/archive/1395/5.html"> مرداد 1395</a> |
+<a href="../post/archive/1395/4.html"> تیر 1395</a> |
+<a href="../post/archive/1395/3.html"> خرداد 1395</a> |
+<a href="../post/archive/1395/2.html"> اردیبهشت 1395</a> |
+<a href="../post/archive/1395/1.html"> فروردین 1395</a> |
+<a href="../post/archive/1394/12.html"> اسفند 1394</a> |
+<a href="../post/archive/1394/11.html"> بهمن 1394</a> |
+<a href="../post/archive/1394/10.html"> دی 1394</a> |
+<a href="../post/archive/1394/9.html"> آذر 1394</a> |
+<a href="../post/archive/1394/8.html"> آبان 1394</a> |
+<a href="../post/archive/1394/5.html"> مرداد 1394</a> |
+<a href="../post/archive/1394/3.html"> خرداد 1394</a> |
+<a href="../post/archive/1394/1.html"> فروردین 1394</a> |
+<a href="../post/archive/1393/12.html"> اسفند 1393</a> |
+<a href="../post/archive/1393/11.html"> بهمن 1393</a> |
+<a href="../post/archive/1393/10.html"> دی 1393</a> |
+<a href="../post/archive/1393/9.html"> آذر 1393</a> |
+<a href="../post/archive/1393/8.html"> آبان 1393</a> |
+<a href="../post/archive/1393/7.html"> مهر 1393</a> |
+<a href="../post/archive/1393/6.html"> شهریور 1393</a> |
+<a href="../post/archive/1393/5.html"> مرداد 1393</a> |
+<a href="../post/archive/1393/4.html"> تیر 1393</a> |
+<a href="../post/archive/1393/3.html"> خرداد 1393</a> |
+<a href="../post/archive/1393/2.html"> اردیبهشت 1393</a> |
+<a href="../post/archive/1393/1.html"> فروردین 1393</a> |
+<a href="../post/archive/1392/12.html"> اسفند 1392</a> |
+<a href="../post/archive/1392/11.html"> بهمن 1392</a> |
+<a href="../post/archive/1392/10.html"> دی 1392</a> |
+<a href="../post/archive/1392/9.html"> آذر 1392</a> |
+<a href="../post/archive.html">لیست آرشیوها</a> |
+<!--Design By : Avazak.ir-->
+	
+<!--Design By : Avazak.ir-->
+<!--Design By : Avazak.ir-->
+
+		<!--Design By : Avazak.ir-->
+<div class="custom">
+<h1>دیگر امکانات</h1>
+<div align="center"><!-- Begin WebGozar.com Counter code -->
+<script type="text/javascript" language="javascript" src="http://www.webgozar.ir/c.aspx?Code=2821131&amp;t=counter" ></script>
+<noscript><a href="http://www.webgozar.com/counter/stats.aspx?code=2821131" target="_blank">&#1570;&#1605;&#1575;&#1585;</a></noscript>
+<!-- End WebGozar.com Counter code --></div>
+<!--Design By : Avazak.ir-->
+	<!-- end sidebar -->
+<!--Design By : Avazak.ir-->
+</div></body>
+
+</html><script>
+//    setTimeout(function () {
+//        GetMihanBlogShowAds();
+//    }, 1000);
+</script>
+<!--NEW SERVER-->
+
+<!--SabaVision Ads Handler--><!--<script type="text/javascript">(function (d) {var url =   location.protocol+'//api.sabavision.com/pox/poxjs.js';d.write('<script type="text/javascript" src="' + url + '" async></scri' + 'pt>');})(document);</script>-->
+
+
+<script type="text/javascript">
+
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-153829-9']);
+    _gaq.push(['_setDomainName', 'quiper.mihanblog.com']);
+    _gaq.push(['_trackPageview']);
+
+    (function() {
+        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+
+</script>
+
+
+<div id='mediaad-Kvcm'></div>
+<meta name="sabavision_zone" content="2500-Z499" />
+<center>
+    <div style="background-color:white;width:90%;padding:20px;margin-top:50px;margin-bottom:50px;">
+        <a href="https://www.cloob.com">شبکه اجتماعی فارسی کلوب</a> | <a href="https://www.seo25.com/product/buy-mobile-traffic-and-get-cheap-targeted-mobile-traffic/" target="_blank">Buy Mobile Traffic</a> | <a href="https://www.soalaat.com">سایت سوالات</a>
+    </div>
+</center>

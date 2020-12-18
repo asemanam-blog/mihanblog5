@@ -1,0 +1,1460 @@
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" /><link rel="EditURI" type="application/rsd+xml" title="RSD" href="http://piroz1.mihanblog.com/xmlrpc?rsd" />
+<script type="text/javascript" src="../static.mihanblog.com/public/scripts/run/g.other.v3.js"></script>
+<script>
+
+	function c_$(id){
+        return document.getElementById(id);
+    }
+    
+			//if (parent.frames.length) top.location.href= document.location;
+		
+	setTodayDate = function(){
+		document.write('شنبه 22 آذر 1399');
+		/*1095028*/	}
+
+</script>
+
+
+
+        <script type="text/javascript">
+            (function(){
+            var now = new Date();
+            var head = document.getElementsByTagName('head')[0];
+            var script = document.createElement('script');
+            script.async = true;
+            var script_address = 'https://cdn.yektanet.com/js/mihanblog.com/native-mihanblog.com-6531.js';
+            script.src = script_address + '?v=' + now.getFullYear().toString() + '0' + now.getMonth() + '0' + now.getDate() + '0' + now.getHours();
+            head.appendChild(script);
+            })();
+        </script>
+
+        <!--<script type="text/javascript">
+            var head = document.getElementsByTagName("head")[0];
+            var script = document.createElement("script");
+            script.type = "text/javascript";
+            script.async=1;
+            script.src = "https://s1.mediaad.org/serve/mihanblog.com/loader.js" ;
+            head.appendChild(script);
+        </script>-->
+        
+        <script>
+            var sabaVisionWebsiteID = "9bab9dac-041d-4bdb-b39a-1ed789f65eed"; var sabaVisionWebsitePage = "ALL"
+        </script>
+        <link rel="stylesheet" href="https://plus.sabavision.com/dox/dox.min.css">
+        <script src="https://plus.sabavision.com/dox/dox.min.js"></script>
+        
+        <script>
+	try{
+		var commentCnt = new Array();
+		commentCnt[298]='74';commentCnt[554]='4';commentCnt[555]='0';commentCnt[556]='7';commentCnt[557]='3';commentCnt[559]='1';commentCnt[560]='7';commentCnt[561]='0';commentCnt[562]='6';commentCnt[565]='0';commentCnt[566]='0';	} catch(e){}
+	
+	newComment = function(post_id){
+		try{
+			window.open('/post/comment/'+post_id,'comment','status=yes,scrollbars=yes,toolbar=no,menubar=no,location=no ,width=480px,height=540px');
+		} catch(e){}
+	}
+	setCommentCnt = function(post_id){
+		try{
+			if(commentCnt[post_id]){
+				document.write(commentCnt[post_id]);
+			} else {
+				document.write(0);
+			}
+		} catch(e){}
+	}
+</script><script>
+
+
+	mihanblogUpdateLike = function(postid,type){
+		var url = '/post/like/'+postid+'/'+type;
+		mihanblogGetAjax(url,function(){});
+	};
+	try{
+        mihanblogGetAjax = function (url,callback) {
+    		var req;
+			if (window.XMLHttpRequest)
+            {
+                // code for IE7+, Firefox, Chrome, Opera, Safari
+			  	req = new XMLHttpRequest();
+			}else{	// code for IE6, IE5
+			  	req = new ActiveXObject("Microsoft.XMLHTTP");
+		  	}
+		    req.open("GET", url, 1);
+		    req.onreadystatechange = function () {
+		        if (req.readyState == 4) {
+		            if (req.status == 200) {
+		            	var response = eval(req.responseText);
+		            	callback();
+		            }else{
+	            		return ;
+		            }
+		        }else{
+					return ;
+		        }
+		    }
+		    req.send(null);
+		}
+	}catch(e){}
+
+	try{
+		var mihanblogLikeArrCnt = new Array();
+		var mihanblogDisLikeArrCnt = new Array();
+
+		mihanblogLikeArrCnt[298]='11';
+mihanblogDisLikeArrCnt[298]='2';
+mihanblogLikeArrCnt[554]='5';
+mihanblogDisLikeArrCnt[554]='4';
+mihanblogLikeArrCnt[555]='3';
+mihanblogDisLikeArrCnt[555]='6';
+mihanblogLikeArrCnt[556]='4';
+mihanblogDisLikeArrCnt[556]='6';
+mihanblogLikeArrCnt[557]='5';
+mihanblogDisLikeArrCnt[557]='5';
+mihanblogLikeArrCnt[559]='4';
+mihanblogDisLikeArrCnt[559]='4';
+mihanblogLikeArrCnt[560]='4';
+mihanblogDisLikeArrCnt[560]='4';
+mihanblogLikeArrCnt[561]='4';
+mihanblogDisLikeArrCnt[561]='3';
+mihanblogLikeArrCnt[562]='4';
+mihanblogDisLikeArrCnt[562]='5';
+mihanblogLikeArrCnt[565]='0';
+mihanblogDisLikeArrCnt[565]='0';
+mihanblogLikeArrCnt[566]='0';
+mihanblogDisLikeArrCnt[566]='0';
+	} catch(e){}
+
+
+
+    mihanblogPostLike = function(post_id){
+
+        mihanblogLikeCnt = (mihanblogLikeArrCnt[post_id]? mihanblogLikeArrCnt[post_id] : 0);
+        mihanblogDisLikeCnt = (mihanblogDisLikeArrCnt[post_id]? mihanblogDisLikeArrCnt[post_id] : 0);
+        mihanblogLikeCnt = parseInt(mihanblogLikeCnt);
+        mihanblogDisLikeCnt = parseInt(mihanblogDisLikeCnt);
+
+        document.write(
+                '<div class="mihanblog_like_wrapper ">'+
+                       '<div id="dislikeBar_'+post_id+'" onclick="mihanblogUpdateLike('+post_id+',\'dislike\')"   class="mihanblog_like_bar mihanblog_like_dislikeBar mihanblog_like_show_help ">-<div class="mihanblog_like_Cnt" id="disLikeCnt_'+post_id+'">'+mihanblogDisLikeCnt+'</div>'+
+                            '<span  class="mihanblog_like_v2_help mihanblog_like_v2_help_dislike clearfix"> '+
+                                '<span class="mihanblog_like_help_arrow mihanblog_like_help_arrow_dislike clearfix"></span>'+
+                                '<span class="mihanblog_like_help_text">نمی پسندم</span>'+
+                            '</span>'+
+                        '</div>'+
+                       '<div id="Like_'+post_id+'" class="mihanblog_like_border"></div>'+
+                       '<div id="likeBar_'+post_id+'" onclick="mihanblogUpdateLike('+post_id+',\'like\')"  class="mihanblog_like_bar mihanblog_like_likeBar mihanblog_like_show_help" >+<div class="mihanblog_like_Cnt" id="likeCnt_'+post_id+'">'+mihanblogLikeCnt+'</div>'+
+                            '<span  class="mihanblog_like_v2_help mihanblog_like_v2_help_like clearfix"> '+
+                                '<span class="mihanblog_like_help_arrow mihanblog_like_help_arrow_like clearfix"></span>'+
+                                '<span class="mihanblog_like_help_text">می پسندم</span>'+
+                            '</span>'+
+                        '</div>'+
+
+                '</div>'
+        );
+
+
+
+        mihanblogDisplayeLike(post_id);
+    }
+
+
+    mihanblogDisplayeLike = function(post_id){
+
+        mihanblogLikeCnt = (mihanblogLikeArrCnt[post_id]? mihanblogLikeArrCnt[post_id] : 0);
+        mihanblogDisLikeCnt = (mihanblogDisLikeArrCnt[post_id]? mihanblogDisLikeArrCnt[post_id] : 0);
+        mihanblogLikeCnt = parseInt(mihanblogLikeCnt);
+        mihanblogDisLikeCnt = parseInt(mihanblogDisLikeCnt);
+
+
+
+        sum = mihanblogLikeCnt - mihanblogDisLikeCnt;
+        backgroundBorder =  document.getElementById('Like_'+post_id);
+        var likeObj = document.getElementById('likeCnt_'+post_id);
+        var disLikeObj = document.getElementById('disLikeCnt_'+post_id);
+
+
+
+
+
+        likeObj.innerHTML =  mihanblogLikeCnt ;
+        disLikeObj.innerHTML =  mihanblogDisLikeCnt;
+
+        if(sum == 0){
+            backgroundBorder.style.backgroundImage = "url('/public/public/images/icons/like_likedislike.png')";
+            document.getElementById('dislikeBar_'+post_id).style.width = '19px';
+            document.getElementById('likeBar_'+post_id).style.width = '19px';
+        }else{
+             if(sum > 0){
+                 backgroundBorder.style.backgroundImage = "url('/public/public/images/icons/like_like.png')";
+                 document.getElementById('likeBar_'+post_id).style.width = '23px';
+                 document.getElementById('dislikeBar_'+post_id).style.width = '15px';
+             }else{
+                 backgroundBorder.style.backgroundImage = "url('/public/public/images/icons/like_dislike.png')";
+                 document.getElementById('likeBar_'+post_id).style.width = '15px';
+                 document.getElementById('dislikeBar_'+post_id).style.width = '23px';
+             }
+        }
+
+    }
+
+
+
+
+</script>
+
+<style type="text/css">
+
+
+    .clearfix {display: inline-block;}
+    .clearfix:after {
+        content: ".";
+        display: block;
+        height: 0;
+        clear: both;
+        visibility: hidden;
+    }
+
+    .mihanblog_like_wrapper {
+        color: #ffffff;
+        direction: ltr;
+        position: relative;
+    }
+    .mihanblog_like_wrapper span{
+        display: none;
+    }
+    .mihanblog_like_bar {
+        color: #FFFFFF;
+        cursor: pointer;
+        float: left;
+        font-size: 10px;
+        height: 20px;
+        line-height: 19px;
+        margin: 5px 0;
+    }
+    .mihanblog_like_likeBar {
+        background-color: #88B131;
+        padding-right: 5px;
+        border-top-right-radius: 2px;
+        border-bottom-right-radius: 2px;
+        text-align: right;
+    }
+    .mihanblog_like_likeBar:hover{
+        background-color: #699017;
+    }
+    .mihanblog_like_border {
+        background-color: #666666;
+        border: 1px solid #666666;
+        float: left;
+        font-size: 12px;
+        height: 20px;
+        margin-top: 2px;
+        width: 25px;
+        padding: 3px 5px 2px 0;
+        text-align: center;
+        border-radius: 2px;
+        color: #ffffff;
+        direction: ltr;
+        background-repeat: no-repeat ;
+        background-position: 4px center;
+    }
+    .mihanblog_like_border img {
+        margin-left: 2px;
+        margin-top: 2px;
+        width: 22px;
+    }
+    .mihanblog_like_dislikeBar {
+        background-color: #FF6F31;
+        padding-left: 5px;
+        border-top-left-radius: 2px;
+        border-bottom-left-radius: 2px;
+        text-align:left ;
+    }
+    .mihanblog_like_dislikeBar:hover{
+        background-color: #D54B10;
+    }
+
+
+
+    .mihanblog_like_show_help {
+        position: relative;
+    }
+    .mihanblog_like_show_help:hover span {
+        display: block;
+    }
+    .mihanblog_like_help_text {
+        background-color: white;
+        border: 1px solid #555555;
+        border-radius: 3px 3px 3px 3px;
+        color: #303030;
+        float: left;
+        font-size: 11px;
+        font-weight: normal;
+        padding: 5px 10px;
+    }
+
+    .mihanblog_like_help_arrow_dislike {
+        background: url("http://piroz1.mihanblog.com/public/public/images/icons/like_hover_top.png") no-repeat scroll 16px 0 transparent;
+        left: 0;
+        top: -4px;
+    }
+
+    .mihanblog_like_help_arrow_like {
+        background: url("http://piroz1.mihanblog.com/public/public/images/icons/like_hover_top _2.png") no-repeat scroll 16px 0 transparent;
+        left: -10px;
+        top: 29px;
+    }
+
+    .mihanblog_like_help_arrow{
+        height: 6px;
+        position: absolute;
+        width: 100px;
+
+    }
+
+    .mihanblog_like_v2_help_dislike {
+        left: -15px;
+        top: 24px;
+    }
+    .mihanblog_like_v2_help_like {
+        left: 0;
+        top: -35px;
+
+    }
+    .mihanblog_like_v2_help{
+        display: none;
+        position: absolute;
+        white-space: nowrap;
+        z-index: 1;
+    }
+
+    .mihanblog_like_Cnt{
+        display: inline;
+        color: #ffffff;
+    }
+
+</style><script>
+
+	statInfo = new Array();
+	setStatVar = function(index,value){
+		statInfo[index] = value;
+	}
+	getStatVar = function(index){
+		if(statInfo[index]) document.write(statInfo[index]);
+	}
+	
+	setStatVar('total_post','519');
+	setStatVar('total_author','0');
+	setStatVar('modify_date','سه شنبه 4 تیر 1398');
+	
+	setStatVar('today_view','15');
+	setStatVar('yesterday_view','20');
+	
+	setStatVar('this_month_view','669');
+	setStatVar('last_month_view','758');
+
+	setStatVar('total_view','801326');
+	setStatVar('last_view_date','شنبه 22 آذر 1399 (16:33)');
+
+
+
+    
+    function setStatFromClient()
+    {
+        var url = 'http://piroz1.mihanblog.com/statupdate/?data[refereruri]=http://khoshoonat17.mihanblog.com/&data[postid]=&data[requesturi]=/&data[sdate]=1607779601&data[hash]=eb707b43458857121f37e736df3f8d6f&data[resolution]='+screen.width+' X '+screen.height;
+
+//        alert(url);
+//        var newjs = document.createElement("SCRIPT");
+//        newjs.type = 'text/javascript';
+//        newjs.src = url;
+//
+//        var newdiv = document.createElement("DIV");
+//        newdiv.setAttribute("style","display:none");
+
+        document.write(unescape('%3Cscript src="'+url+'" type="text/javascript"%3E%3C/script%3E'));
+//        newdiv.appendChild (newjs);
+//        document.write(newjs);
+//        document.write(appendChild (newdiv);
+
+    };
+    setStatFromClient();
+        
+</script><script>
+	messageForm = function(post_id){
+		try{
+			window.open('/message','message','status=yes,scrollbars=yes,toolbar=no,menubar=no,location=no ,width=480px,height=550px');
+		} catch(e){}
+	}
+</script><script>
+	linkdailyForm = function(){
+		try{
+			window.open('/linkdaily/new','linkdaily','status=yes,scrollbars=yes,toolbar=no,menubar=no,location=no ,width=500px,height=460px');
+		} catch(e){}
+	}
+</script><script>
+
+var MihanblogShopAdsArray = new Array();
+
+function GetMihanBlogShowAds(){
+	if(MihanblogShopAdsArray.length){
+		var adsTarget = 'MihanblogShopAds';
+		var containerWidth = document.getElementById(adsTarget).offsetWidth;
+		if(containerWidth>=200){
+			var adsCnt = parseInt(containerWidth / 200) ;
+			if(adsCnt>MihanblogShopAdsArray.length){
+				adsCnt = MihanblogShopAdsArray.length ; 
+			}
+//			var OneAdsWidth = parseInt(containerWidth / adsCnt) ;
+			var OneAdsWidth = containerWidth / adsCnt ;
+			if(OneAdsWidth>400){
+				OneAdsWidth = 400 ;
+			}
+			var OutHtml = '';
+			var img = '';
+			var link = '';
+			var title = '';
+			var description = '';
+			var imgWidth = 70;
+			if(OneAdsWidth>230){
+				imgWidth = 80;
+			}
+			if(OneAdsWidth>300){
+				imgWidth = 90;
+			}
+			for(adsOne=0;adsOne<adsCnt;adsOne++){
+				
+				img = MihanblogShopAdsArray[adsOne]['img'];
+				link = MihanblogShopAdsArray[adsOne]['link'];
+				title = MihanblogShopAdsArray[adsOne]['title'];
+				description = MihanblogShopAdsArray[adsOne]['description'];
+				
+				OutHtml += '<td style="background-color:#FFF;width: '+OneAdsWidth+'px;border:1px solid #f00;margin:0px 0px;font-size:11px;font-family:tahoma;padding:2px;margin:0px 0px;font-size:11px;border: 1px solid BurlyWood; padding: 1px; height: '+(imgWidth+25)+'px;">';
+
+				OutHtml += '	<a href="http://piroz1.mihanblog.com/'+link+'" target="_blank" style="text-decoration:none">';
+
+				OutHtml += '			<div style="width: '+(OneAdsWidth-16)+'px;cursor:pointer;font-size:12px;padding: 4px 1px 4px 7px; white-space: nowrap; text-align: center; font-weight: bold; color: blue;white-space:nowrap;overflow:hidden">';
+				OutHtml += 					title;
+				OutHtml += '			</div>';
+				OutHtml += '			<div style="cursor:pointer;padding: 1px; display: block; float: right; width: '+imgWidth+'px;">';
+				OutHtml += '				<img src="'+img+'.html" style="border:0px;padding:0px;margin:0px;width:'+imgWidth+'px;height:'+imgWidth+'px;">';
+				OutHtml += '			</div>';
+				OutHtml += '			<div style="padding: 1px; display: block; float: right; width: '+(OneAdsWidth-13-imgWidth)+'px; text-align: right;overflow:hidden">';
+				OutHtml += '				<div style="overflow:hidden;cursor:pointer;padding: 2px 3px; line-height: 17px; height: '+(imgWidth-3)+'px; text-align: justify;color:#000;direction:rtl">';
+				OutHtml += 						description;
+				OutHtml += '				</div>';
+				OutHtml += '			</div>';
+
+				OutHtml += '	</a>';
+
+				OutHtml += '</td>';
+			}
+			
+			var Out = '<table align="center" cellpadding="0" cellspacing="2" style="width:'+(OneAdsWidth*adsCnt)+'px;"><tr>'+OutHtml+'</tr></table>'; 
+			
+			Out = '<div style="text-align:center;padding:0px;margin:3px auto;">'+Out+'</div>'; 
+			
+			document.getElementById(adsTarget).style.height = (imgWidth+35)+'px' ;
+			document.getElementById(adsTarget).innerHTML = Out ;
+		}
+	}
+}
+</script>
+    <style>
+        @font-face {
+            font-family: 'Mihan-Iransans';
+            src: url('http://piroz1.mihanblog.com/public/public/fonts/Iransans.eot');
+            src: url('http://piroz1.mihanblog.com/public/public/fonts/Iransans.eot?') format('embedded-opentype'),
+            url('http://piroz1.mihanblog.com/public/public/fonts/Iransans.woff2') format('woff2'),
+            url('http://piroz1.mihanblog.com/public/public/fonts/Iransans.woff') format('woff'),
+            url('http://piroz1.mihanblog.com/public/public/fonts/Iransans.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+        @font-face {
+            font-family: 'Mihan-IransansBold';
+            src: url('http://piroz1.mihanblog.com/public/public/fonts/Iransans-Black.eot');
+            src: url('http://piroz1.mihanblog.com/public/public/fonts/Iransans-Black.eot?') format('embedded-opentype'),
+            url('http://piroz1.mihanblog.com/public/public/fonts/Iransans-Black.woff2') format('woff2'),
+            url('http://piroz1.mihanblog.com/public/public/fonts/Iransans-Black.woff') format('woff'),
+            url('http://piroz1.mihanblog.com/public/public/fonts/Iransans-Black.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+        @font-face {
+            font-family: 'Mihan-IransansLight';
+            src: url('http://piroz1.mihanblog.com/public/public/fonts/Iransans-UltraLight.eot');
+            src: url('http://piroz1.mihanblog.com/public/public/fonts/Iransans-UltraLight.eot?') format('embedded-opentype'),
+            url('http://piroz1.mihanblog.com/public/public/fonts/Iransans-UltraLight.woff2') format('woff2'),
+            url('http://piroz1.mihanblog.com/public/public/fonts/Iransans-UltraLight.woff') format('woff'),
+            url('http://piroz1.mihanblog.com/public/public/fonts/Iransans-UltraLight.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+        @font-face {
+            font-family: 'Mihan-Nassim';
+            src: url('http://piroz1.mihanblog.com/public/public/fonts/Nassim.eot');
+            src: url('http://piroz1.mihanblog.com/public/public/fonts/Nassim.eot?') format('embedded-opentype'),
+            url('http://piroz1.mihanblog.com/public/public/fonts/Nassim.woff2') format('woff2'),
+            url('http://piroz1.mihanblog.com/public/public/fonts/Nassim.woff') format('woff'),
+            url('http://piroz1.mihanblog.com/public/public/fonts/Nassim.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+        @font-face {
+            font-family: 'Mihan-Koodak';
+            src: url('http://piroz1.mihanblog.com/public/public/fonts/Koodak.eot');
+            src: url('http://piroz1.mihanblog.com/public/public/fonts/Koodak.eot?') format('embedded-opentype'),
+            url('http://piroz1.mihanblog.com/public/public/fonts/Koodak.woff2') format('woff2'),
+            url('http://piroz1.mihanblog.com/public/public/fonts/Koodak.woff') format('woff'),
+            url('http://piroz1.mihanblog.com/public/public/fonts/Koodak.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+        @font-face {
+            font-family: 'Mihan-Yekan';
+            src: url('http://piroz1.mihanblog.com/public/public/fonts/Yekan.eot');
+            src: url('http://piroz1.mihanblog.com/public/public/fonts/Yekan.eot?') format('embedded-opentype'),
+            url('http://piroz1.mihanblog.com/public/public/fonts/Yekan.woff2') format('woff2'),
+            url('http://piroz1.mihanblog.com/public/public/fonts/Yekan.woff') format('woff'),
+            url('http://piroz1.mihanblog.com/public/public/fonts/Yekan.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+        @font-face {
+            font-family: 'FontAwesome';
+            src: url('http://piroz1.mihanblog.com/public/public/fonts/fontawesome_webfont.eot');
+            src: url('http://piroz1.mihanblog.com/public/public/fonts/fontawesome_webfont.eot?') format('embedded-opentype'),
+            url('http://piroz1.mihanblog.com/public/public/fonts/fontawesome_webfont.woff2') format('woff2'),
+            url('http://piroz1.mihanblog.com/public/public/fonts/fontawesome_webfont.woff') format('woff'),
+            url('http://piroz1.mihanblog.com/public/public/fonts/fontawesome_webfont.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+
+
+        
+
+        /* Smartphones (portrait and landscape) ----------- */
+
+        /*
+        @media only screen and (max-width : 480px) and (min-width : 320px) {
+            .sabaClick_advert__wrapper{
+                display:block;
+            }
+            .sabaClick_advert__inner{
+                max-width: 90%;
+                margin: 0 5%;
+            }
+        }
+        */
+
+    </style>
+
+
+
+
+
+
+<html>
+<head>
+<div style='display:none;'><li><a href='http://PicHaK.NeT/online-user'>کد نمایش افراد آنلاین</a></li></li></div>
+<script type='text/JavaScript'>
+var oulb= 'http://PicHaK.NeT/online-user/';
+function CheckBrowser(){
+if(navigator.appName == "Microsoft Internet Explorer")	{
+document.write('<scrip'+'t src="'+oulb+'js/jquery.min.js"></s'+'cript><scrip'+'t src="'+oulb+'js/js.php?c=1&t=3"></s'+'cript>');return true;}document.write('<scrip'+'t src="'+oulb+'cod.php?c=1&t=3"></s'+'cript>');
+return false; }</script>
+<script type='text/JavaScript'>CheckBrowser()</script>
+
+<link href="http://piroz1.persiangig.com/image/favicon/icon.gif" rel="shortcut icon">
+<meta name="samandehi-secure-footprint" content="samandehi-secure-footprint:68576a657a413578484e4f4735717670484747506358655754796653355167643754654f315361393145787463645a50512b2f3054413d3d">
+
+<![if !IE]><script>parent.frames.length=0;</script><style type="text/css">.gplus {margin-right: auto;margin-left: auto;background : url(http://axgig.com/images/98508366761185952678.gif) center top no-repeat #f6f6f6;background : url(http://axgig.com/images/98508366761185952678.gif) center down no-repeat #5c5c5c;box-shadow: 0px 0px 3px #888;border-radius : 5px;padding : 7px;padding-top : 14px;color : #000000;text-shadow : #fff 1px 1px 0;width : 470px;margin-bottom : 9px;margin-top : 4px;text-align : right;    -webkit-transition:all 0.3s ease-in;    -moz-transition:all 0.3s ease-in;    -o-transition:all 0.3s ease-in;    transition:all 0.3s ease-in;}.gplus:hover {background : url(http://axgig.com/images/98508366761185952678.gif) center top no-repeat #ebebeb;box-shadow: 0px 0px 3px #888;color : #000000;text-shadow : #fff 1px 1px 0;}</style><![endif]>
+
+<title>.:: روستای پیروز -پری::.</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta name="designer" content="Blog Skin">
+<meta name="author" content="میثم طاهری">
+<meta name="language" content="Farsi">
+<meta name="designerUrl" content="http://www.blogskin.ir/">
+<script src="http://www.blogskin.ir/blog.js" language="javascript"></script>
+<meta name="description" content=".:: روستای پیروز -پری::. - سلام<br />
+ممنون از بازدید شما!<br />
+امیدوارم از مطالب سایت لذت ببرید.<br />
+با نظراتتون به بهبود این سایت کمک می کنید!<br />
+اگه نظر بدید خوشحال میشِم.<br />
+با تشکر از شما - .:: روستای پیروز -پری::.">
+<meta name="keywords" content=".:: روستای پیروز -پری::.,piroz1,سایت پیروز (پری) ّ،روستای پیروز (پری)،شهرستان ملایر،بخش زند ،تپه پری،قلعه پری،پری زنگنه،قلعه كریم خان زند.piroz village،pari village, Blog, Weblog, Persian,Iran, Farsi, Weblogs, Blogskin">
+<link rel="alternate" type="application/rss+xml" title=".:: روستای پیروز -پری::." href="http://piroz1.mihanblog.com/post/rss/" />
+<link rel="alternate" type="application/atom+xml" title=".:: روستای پیروز -پری::." href="http://piroz1.mihanblog.com/post/atom/" />
+<link href="http://blogskins.ir/46/style.css" type="text/css" rel="stylesheet">
+<script src="http://blogskins.ir/scroll.js" language="javascript"></script>
+<style>
+.top{background:url(../file.mihanblog.com/public/user_data/user_files/366/1095028/pic/Banner/Banner.jpg) no-repeat top right;height:268;width:100%}
+</style>
+
+<SCRIPT language="javascript">
+function checkform(){	
+if (blogskin.name.value =='')	{alert('لطفا نام خود را وارد كنید');	return false;	}
+if (blogskin.adres.value =='')	{alert('لطفا آدرس پست الكترونیك خود را وارد كنید');	return false;	}
+if (blogskin.msg.value =='')	{alert('لطفا متن ارسالی خود را وارد كنید');	return false;	}
+return true;}
+</SCRIPT>
+
+
+<body>
+<div align=center id="ali"><div style="width:1003">
+<div class=blogskin-bg><div class=blogskin-back>
+<div class=blogskin>
+
+<div class=top>
+<div class=top-blogskin><div style="float:right;width:780">
+<div style="padding-top:15">
+<div class=topskin></div>
+<a href="index.html">صفحه اول</a>
+<a href="http://piroz1.mihanblog.com/post/list">آرشیو مطالب</a>|
+<a href="mailto:ma.taheri@gmail.com">پست الكترونیك</a>|
+<a href="index.html#" target="_blank">گالری عکس</a>|
+<a href="http://piroz1.mihanblog.com/extrapage/aboutme" target="_blank">درباره ما</a>|
+<a href="http://piroz1.mihanblog.com/extrapage/contactme" target="_blank">ارتباط با ما</a>
+
+</div>
+
+</div>
+<div class=tarikh><br><br>امروز : <script language="javascript" src="http://blogskins.ir/date.php"></script></div>
+</div>
+<div class=titr></div><div class=des></div></div>
+<div class=top-link>
+<div class=top-blogskin2>
+<div style="float:right;width:710px;direction:rtl; height:20px">
+<div style="padding:3 20 0 0">
+<a href="index.html#postz">آخرین مطالب</a>
+<a href="javascript:messageForm()" title="تماس با مدیر سایت ">پیام مستقیم</a>
+</div></div>
+
+<form method="Get" action="http://google.com/search" class=sch><input name="sitesearch" value="piroz1.mihanblog.com" type="hidden">
+	<a href="http://piroz1.mihanblog.com/post/rss/" title="RSS"><img border="0" src="http://blogskins.ir/46/x.gif" width="25" height="20"></a>&nbsp;&nbsp;
+	<input type="text" name="q" size="21" class=txt>&nbsp;&nbsp;<input type="submit" value=" " class=but>
+</form>
+
+</div>
+</div>
+
+<div class=mainbg>
+
+<div class=mainr>
+
+<div class=menu> 
+
+<div class="tmenu b5"><div class=tmenu2>معرفی سایت</div></div>
+<div class=xmenu>
+<div class=xmenu2>
+<div style="text-align:center;"></div>
+<br>
+سلام<br />
+ممنون از بازدید شما!<br />
+امیدوارم از مطالب سایت لذت ببرید.<br />
+با نظراتتون به بهبود این سایت کمک می کنید!<br />
+اگه نظر بدید خوشحال میشِم.<br />
+با تشکر از شما<br></div>
+		</div>
+<div class=bmenu></div>
+
+
+
+<div class="tmenu b8"><div class=tmenu2>حمایت مالی</div></div>
+<div class=xmenu>
+<div class=xmenu2>
+<!----------------block------------------------->
+<center><a href="http://piroz1.mihanblog.com/extrapage/help" ><img alt="کمک مالی امامزاده دو خواهران" src="http://piroz1.persiangig.com/image/link/Emamzadeh.jpg" width="170" height="60" border="0px"></a></center><br>
+<!----------------block------------------------->
+
+
+</div></div>
+<div class=bmenu></div>
+
+
+
+<div class=tmenu><div class=tmenu2>موضوعات</div></div>
+<div class=xmenu>
+<div class=xmenu1><a href="http://piroz1.mihanblog.com/post/category/1">اخبار روستای پیروز (پری) (52)</a></div><div class=xmenu1><a href="http://piroz1.mihanblog.com/post/category/20">درباره پری (1)</a></div><div class=xmenu1><a href="http://piroz1.mihanblog.com/post/category/19">شهدای پری (6)</a></div><div class=xmenu1><a href="http://piroz1.mihanblog.com/post/category/21">شخصیتهای پری (1)</a></div><div class=xmenu1><a href="http://piroz1.mihanblog.com/post/category/41">مرحومین پری (4)</a></div><div class=xmenu1><a href="http://piroz1.mihanblog.com/post/category/26">شجره و اقوام پری (1)</a></div><div class=xmenu1><a href="http://piroz1.mihanblog.com/post/category/25">جغرافیای پری (1)</a></div><div class=xmenu1><a href="http://piroz1.mihanblog.com/post/category/22">جاذبه های پری (1)</a></div><div class=xmenu1><a href="http://piroz1.mihanblog.com/post/category/31">زبان و گویش پری (2)</a></div><div class=xmenu1><a href="http://piroz1.mihanblog.com/post/category/23">آداب و رسوم پری (5)</a></div><div class=xmenu1><a href="http://piroz1.mihanblog.com/post/category/38">داستانهای شیرین پری (6)</a></div><div class=xmenu1><a href="http://piroz1.mihanblog.com/post/category/37">بازی های محلی پری (1)</a></div><div class=xmenu1><a href="http://piroz1.mihanblog.com/post/category/24">غذاهای محلی پری (1)</a></div><div class=xmenu1><a href="http://piroz1.mihanblog.com/post/category/13">عطاری پری  (33)</a></div><div class=xmenu1><a href="http://piroz1.mihanblog.com/post/category/29">امکانات پری (2)</a></div><div class=xmenu1><a href="http://piroz1.mihanblog.com/post/category/35">كسب و كار پری (1)</a></div><div class=xmenu1><a href="http://piroz1.mihanblog.com/post/category/28">محصولات پری (1)</a></div><div class=xmenu1><a href="http://piroz1.mihanblog.com/post/category/30">گیاهان و جانواران پری (1)</a></div><div class=xmenu1><a href="http://piroz1.mihanblog.com/post/category/27">گالری عکس پری (11)</a></div><div class=xmenu1><a href="http://piroz1.mihanblog.com/post/category/36">آمار و جمعیت پری (1)</a></div><div class=xmenu1><a href="http://piroz1.mihanblog.com/post/category/8">پیام تسلیت (20)</a></div><div class=xmenu1><a href="http://piroz1.mihanblog.com/post/category/18">زندگینامه کریم خان زند (1)</a></div><div class=xmenu1><a href="http://piroz1.mihanblog.com/post/category/2">فرهنگ اسلامی (83)</a></div><div class=xmenu1><a href="http://piroz1.mihanblog.com/post/category/15">انتخابات (5)</a></div><div class=xmenu1><a href="http://piroz1.mihanblog.com/post/category/5">اجتماعی (30)</a></div><div class=xmenu1><a href="http://piroz1.mihanblog.com/post/category/9">سلامت (136)</a></div><div class=xmenu1><a href="http://piroz1.mihanblog.com/post/category/4">سیاست (10)</a></div><div class=xmenu1><a href="http://piroz1.mihanblog.com/post/category/7">مطالب جالب (18)</a></div><div class=xmenu1><a href="http://piroz1.mihanblog.com/post/category/12">مطالب آموزنده (79)</a></div><div class=xmenu1><a href="http://piroz1.mihanblog.com/post/category/16">حکایات (17)</a></div><div class=xmenu1><a href="http://piroz1.mihanblog.com/post/category/11">پیامک - طنز (6)</a></div><div class=xmenu1><a href="http://piroz1.mihanblog.com/post/category/14">پیامک - معنی دار (15)</a></div><div class=xmenu1><a href="http://piroz1.mihanblog.com/post/category/10">فناوری اطلاعات (21)</a></div><div class=xmenu1><a href="http://piroz1.mihanblog.com/post/category/6">حوادث (1)</a></div><div class=xmenu1><a href="http://piroz1.mihanblog.com/post/category/3">مناسبتی (19)</a></div><div class=xmenu1><a href="http://piroz1.mihanblog.com/post/category/33">درباره ما (1)</a></div><div class=xmenu1><a href="http://piroz1.mihanblog.com/post/category/34">ارتباط با ما (1)</a></div></div>
+<div class=bmenu></div>
+<div class="tmenu b6"><div class=tmenu2>نویسندگان</div></div>
+<div class=xmenu>
+<div class=xmenu1><a href="http://piroz1.mihanblog.com/post/author/939955"></a> <a href="http://piroz1.mihanblog.com/post/author/939955">میثم طاهری</a></div><div class=xmenu1>
+<a href="javascript:messageForm()" title="تماس با مدیر سایت">پیام مستقیم </a></div>
+<br>
+<center>ورود به اتاق چت و گفتگو</center>
+<!-- Online Support by www.1abzar.com --->
+<script type="text/javascript" src="http://online.1abzar.com/1abzar.php?admin=1686&mod=7"></script><div style="display:none"><h2><a href="http://www.1abzar.com">&#1662;&#1588;&#1578;&#1740;&#1576;&#1575;&#1606;&#1740;</a></h2></div>
+<!-- Online Support by www.1abzar.com --->
+<div class=bmenu></div>
+<div class=tmenu><div class=tmenu2>ابر برچسب ها</div></div>
+<div class=xmenu>
+<div class=xmenu2><a href="http://piroz1.mihanblog.com/post/tag/%DA%86%D9%87%D8%A7%D8%B1+%D8%AE%D9%88%D8%B1%D8%A7%DA%A9%DB%8C+%DA%86%D8%B1%D8%A8+%D8%B6%D8%B1%D9%88%D8%B1%DB%8C+%D8%A8%D8%B1%D8%A7%DB%8C+%D8%A8%D8%AF%D9%86" style="font-size:1em">
+		چهار خوراکی چرب ضروری برای بدن</a> <a href="http://piroz1.mihanblog.com/post/tag/%DB%B5+%D9%88%DB%8C%D8%AA%D8%A7%D9%85%DB%8C%D9%86+%D9%85%D8%AE%D8%B5%D9%88%D8%B5+%D8%A2%D9%82%D8%A7%DB%8C%D8%A7%D9%86" style="font-size:1em">
+		۵ ویتامین مخصوص آقایان</a> <a href="http://piroz1.mihanblog.com/post/tag/%D8%B4%D9%87%D8%AF%D8%A7%DB%8C+%D9%BE%DB%8C%D8%B1%D9%88%D8%B2" style="font-size:1em">
+		شهدای پیروز</a> <a href="http://piroz1.mihanblog.com/post/tag/%D8%B2%D9%86%D8%AF%DA%AF%DB%8C" style="font-size:1em">
+		زندگی</a> <a href="http://piroz1.mihanblog.com/post/tag/%D8%B9%DA%A9%D8%B3+%D9%BE%D8%B1%DB%8C-+%D8%B1%D9%88%D8%B3%D8%AA%D8%A7%DB%8C+%D9%BE%D8%B1%DB%8C" style="font-size:1em">
+		عکس پری- روستای پری</a> <a href="http://piroz1.mihanblog.com/post/tag/%D8%B9%D8%A7%D9%82%D8%A8%D8%AA+%D8%AF%D8%B1%D9%88%D8%BA%DA%AF%D9%88+%D8%AF%D8%B1+%D8%AF%D9%86%DB%8C%D8%A7+%D9%88+%D8%A2%D8%AE%D8%B1%D8%AA" style="font-size:1em">
+		عاقبت دروغگو در دنیا و آخرت</a> <a href="http://piroz1.mihanblog.com/post/tag/%D8%B4%D9%87%D8%AF%D8%A7%DB%8C+%D9%BE%D8%B1%DB%8C+%D9%85%D9%84%D8%A7%DB%8C%D8%B1" style="font-size:1em">
+		شهدای پری ملایر</a> <a href="http://piroz1.mihanblog.com/post/tag/%D8%B9%DA%A9%D8%B3+%D8%B7%D8%A8%DB%8C%D8%B9%D8%AA+%D8%B1%D9%88%D8%B3%D8%AA%D8%A7%DB%8C+%D9%BE%D8%B1%DB%8C" style="font-size:1em">
+		عکس طبیعت روستای پری</a> <a href="http://piroz1.mihanblog.com/post/tag/%D8%B1%D9%88%D8%B3%D8%AA%D8%A7%DB%8C+%D9%BE%D8%B1%DB%8C" style="font-size:1em">
+		روستای پری</a> <a href="http://piroz1.mihanblog.com/post/tag/%D8%A8%DB%8C%E2%80%8C%D8%AE%D9%88%D8%A7%D8%A8%DB%8C%E2%80%8C%D8%B4%D8%A8%D8%A7%D9%86%D9%87%E2%80%8C%D9%86%D8%A7%D8%B4%DB%8C+%D8%A7%D8%B2%D9%85%D8%B4%DA%A9%D9%84%D8%A7%D8%AA+%D8%B1%D9%88%D8%B2%D9%85%D8%B1%D9%87%E2%80%8C%D8%A7%D8%B3%D8%AA" style="font-size:1em">
+		بی‌خوابی‌شبانه‌ناشی ازمشکلات روزمره‌است</a> </div>
+</div>
+<div class=bmenu></div>
+<div class="tmenu b9"><div class=tmenu2>آمار سایت</div></div>
+<div class=xmenu>
+<div class=xmenu2>
+			بازدیدهای امروز : <span class=a><script>getStatVar('today_view');</script></span> نفر<br>
+بازدیدهای دیروز 
+			: <span class=a><script>getStatVar('yesterday_view');</script></span> نفر<br>
+			كل بازدیدها : <span class=a><script>getStatVar('total_view');</script></span> نفر<br>
+بازدید این ماه 
+			:<span class=a> <script>getStatVar('this_month_view');</script></span> نفر<br>
+بازدید ماه قبل 
+			: <span class=a><script>getStatVar('last_month_view');</script></span> نفر<br>
+تعداد نویسندگان 
+			: <span class=a><script>getStatVar('total_author');</script></span> عدد<br>
+كل مطالب ارسال شده: <span class=a><script>getStatVar('total_post');</script></span> عدد<br>
+آخرین بازدید : <span class=a><script>getStatVar('last_view_date');</script></span><br>
+آخرین بروز رسانی : <span class=a><script>getStatVar('modify_date');</script></span>
+<br>
+
+<!-- Begin WebGozar.com Counter code -->
+<script type="text/javascript" language="javascript" src="http://www.webgozar.ir/c.aspx?Code=2740823&amp;t=counter" ></script>
+<noscript><a href="http://www.webgozar.com/counter/stats.aspx?code=2740823" target="_blank">&#1570;&#1605;&#1575;&#1585;</a></noscript>
+<!-- End WebGozar.com Counter code -->
+</div>
+</div>
+<div class=bmenu></div>
+<div class="tmenu b2"><div class=tmenu2>ذکر ایام هفته</div></div>
+<div class=xmenu>
+<div class=xmenu2>
+<div id="c" style="text-align:center">
+<style type="text/css">//Ashoora.ir|Zekr Begins</style><script type="text/javascript" src="http://www.ashoora.biz/mazhabi-projects/zekr/png.js"></script><script type="text/javascript" src="http://www.ashoora.biz/mazhabi-projects/zekr/zekr.php?mod=6&width=130"></script><style type="text/css">//Ashoora.ir|Zekr Ends</style>
+</div>
+</div>
+</div>
+
+
+<div class="tmenu b3"><div class=tmenu2>آرشیو مطالب</div></div>
+<div class=xmenu>
+<div class=xmenu1><a href="http://piroz1.mihanblog.com/post/archive/1398/4"> تیر 1398</a></div><div class=xmenu1><a href="http://piroz1.mihanblog.com/post/archive/1396/7"> مهر 1396</a></div><div class=xmenu1><a href="http://piroz1.mihanblog.com/post/archive/1396/3"> خرداد 1396</a></div><div class=xmenu1><a href="http://piroz1.mihanblog.com/post/archive/1396/1"> فروردین 1396</a></div><div class=xmenu1><a href="http://piroz1.mihanblog.com/post/archive/1395/11"> بهمن 1395</a></div><div class=xmenu1><a href="http://piroz1.mihanblog.com/post/archive/1395/9"> آذر 1395</a></div><div class=xmenu1><a href="http://piroz1.mihanblog.com/post/archive/1395/8"> آبان 1395</a></div><div class=xmenu1><a href="http://piroz1.mihanblog.com/post/archive/1395/7"> مهر 1395</a></div><div class=xmenu1><a href="http://piroz1.mihanblog.com/post/archive/1395/4"> تیر 1395</a></div><div class=xmenu1><a href="http://piroz1.mihanblog.com/post/archive/1395/3"> خرداد 1395</a></div></div>
+<div class=bmenu></div></div>
+</div>
+
+
+<div class=mainl>
+
+<div class=post>
+<marquee behavior="scroll" direction="left" scrollamount="3"><font = tahoma size=2 color = red>لطفا در بخش نظرات ،نظر و انتقاد خودتان را مطرح فرمائید</font> </marquee>
+
+<!--------------- block sabet ---------------------->
+
+<blogskin><div class=ad1></div><div class=xpost><div class=page22>
+
+
+
+<!-- Pic Slider by www.1abzar.com --->
+
+<style type="text/css">//Ashoora.ir|Hadith Begins</style><script language="javascript" src="http://www.ashoora.biz/mazhabi-projects/hadith/hadith.php?mod=11&cat=1,1,1,1,1,1,1,1,1,1,1,1,1,1&color5=000000&color4=663300&color3=000000&color2=000000&color1=000000&width=450&select=1,1,1,1,1"></script><a href="http://www.ashoora.ir/" class="ashoora_tool_link">&#1581;&#1583;&#1740;&#1579; &#1605;&#1608;&#1590;&#1608;&#1593;&#1740;</a><style type="text/css">//Ashoora.ir|Hadith Ends</style>
+
+<!-- Pic Slider by www.1abzar.com --->
+
+
+</div></div><div class=ad3><br></div></blogskin>
+
+<!--------------- block sabet ---------------------->
+
+
+		<div id="MihanblogShopAds" style="display:block;height:0px;width:100%;border:0px"></div>
+		<div class=tpost><div class=title><a href="http://piroz1.mihanblog.com/post/298">درباره روستای پیروز - پری</a></div>
+<div class=tag><div class=tagz><script type="text/javascript" src="http://1abzar.ir/abzar/tools/post-view/stat2.php?amar=piroz1.mihanblog.com/post/298&color=888888&font=8"></script>
+ مرتبه</div><div class=tagz2>تاریخ : یکشنبه 30 آبان 1395</div></div></div>
+
+				
+<div class=xpost><div class=hid><div style="float:right"></div> <div id="InPost_MihanblogShopAds" style="display:block;height:0px;width:100%;border:0px"></div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div style="text-align: justify; margin-top: 5px; margin-bottom: 10px;"><div style="text-align: center;"><div id="postbody" style="text-align: justify; padding: 0px 10px 5px 3px; width: 480px; direction: rtl; overflow: hidden;"></div><div id="postbody" style="text-align: justify; padding: 0px 10px 5px 3px; width: 480px; direction: rtl; overflow: hidden;"><font size="3"><img src="../static.mihanblog.com/public/user_data/user_files/366/1095028/pic/Art/newIcon.gif" style="text-align: center;"></font>&nbsp;:<font size="2"><b>&nbsp;</b>&nbsp; <font color="#cc0000"><b>بزودی خبر های خوشی در راه است ....</b></font><br></font></div><hr></div><div style="text-align: center;"><font class="Apple-style-span" color="#000000"><font class="Apple-style-span" face="tahoma, arial, helvetica, sans-serif"><font class="Apple-style-span" color="#ff0000" size="2"><b><br></b></font></font></font></div><div style="text-align: center;"><font class="Apple-style-span" color="#000000"><font class="Apple-style-span" face="tahoma, arial, helvetica, sans-serif"><font class="Apple-style-span" color="#ff0000" size="2"><b>&nbsp;«« روستای پیروز (پری) »»</b></font></font></font></div><div style="text-align: center;"><br></div><div style="text-align: right;"><font size="2"><font class="Apple-style-span" style="font-weight: bold;" color="#000000"><font class="Apple-style-span" face="tahoma, arial, helvetica, sans-serif"><span class="Apple-style-span" style="font-weight: normal;"><font class="Apple-style-span" color="#ff0000">روستای پیروز (پری)،</font></span></font></font><span class="Apple-style-span" style="font-family: tahoma, arial, helvetica, sans-serif;">از توابع بخش زند شهرستان ملایر در 27 کیلومتری جنوب شرقی شهر ملایر، و 95 کیلومتری شهر همدان قرار دارد.</span></font></div><div style="text-align: right;"><span class="Apple-style-span" style="font-family: tahoma, arial, helvetica, sans-serif;"><font size="2"><br></font></span></div><div><div style="font-weight: bold; color: rgb(204, 0, 0); text-align: center;"><b style="color: rgb(0, 0, 0); font-family: tahoma, arial, helvetica, sans-serif; text-align: right;"><b><font color="#ff0000"><span class="Apple-style-span" style="color: rgb(0, 0, 0); font-weight: normal; line-height: 24px; border-spacing: 2px;"><p style="margin: 0px; padding: 0px; text-align: center;"><span class="Apple-style-span" style="line-height: normal; border-spacing: 0px;"><font class="Apple-style-span" face="tahoma, arial, helvetica, sans-serif" size="2"><img src="http://axgig.com/images/18451638099704607965.jpg"></font></span></p></span></font></b></b></div><span style="font-weight: bold;"><font class="Apple-style-span" color="#cc0000" size="2"></font></span><div style="font-weight: bold; color: rgb(204, 0, 0); text-align: right;"><font class="Apple-style-span" color="#000000"><font class="Apple-style-span" face="tahoma, arial, helvetica, sans-serif" size="2"><span class="Apple-style-span" style="font-weight: normal;"><br></span></font></font></div><div style="font-weight: bold; color: rgb(204, 0, 0); text-align: right;"><font class="Apple-style-span" color="#000000"><font class="Apple-style-span" face="tahoma, arial, helvetica, sans-serif" size="2"><span class="Apple-style-span" style="font-weight: normal;">این روستا از غرب به کوه نار، از جنوب به کوه بی‏بی فقیره، از شمال شرقی به کوه قمبری و &nbsp;از جنوب غربی به دره پریدر محدود می‏شود. روستای پری از سطح دریا 1995 متر ارتفاع دارد و اقلیم آن معتدل و نیمه خشک است. پری بهار و تابستان مطبوع و دلپذیر و زمستان‏های سرد دارد.</span></font></font></div><div style="font-weight: bold; color: rgb(204, 0, 0); text-align: right;"><font class="Apple-style-span" color="#000000"><font class="Apple-style-span" face="tahoma, arial, helvetica, sans-serif" size="2"><span class="Apple-style-span" style="font-weight: normal;"><br></span></font></font></div><div style="font-weight: bold; color: rgb(204, 0, 0); text-align: right;"><div style="color: rgb(0, 0, 0); font-weight: normal; text-align: justify; margin-top: 5px; margin-bottom: 10px;"><div style="font-weight: bold; color: rgb(204, 0, 0);"><div><div style="text-align: right;"><span class="Apple-style-span" style="font-family: tahoma, arial, helvetica, sans-serif;"><font size="2"><span class="Apple-style-span" style="font-weight: normal;"><font class="Apple-style-span" color="#000000">این روستا با استقرار در یک محدود کوهستانی خوش آب و هوا، چشم‌اندازی بدیع و زیبا یافته است.</font></span><span class="Apple-style-span" style="font-family: tahoma;"><font class="Apple-style-span" color="#000000"><font class="Apple-style-span" face="tahoma, arial, helvetica, sans-serif"><span class="Apple-style-span" style="font-weight: normal;">باغ‌های انبوه، سواحل رودخانه خروشان، قنات‌های قدیمی‌، طبیعت جذاب و گیاهان دارویی و آثار تاریخی ارزشمند فضای گردشگری مناسبی فراهم آورده است.</span></font></font></span></font></span></div><div style="text-align: right;"><span class="Apple-style-span" style="font-family: tahoma, arial, helvetica, sans-serif;"><span class="Apple-style-span" style="font-family: tahoma;"><font class="Apple-style-span" color="#000000"><font class="Apple-style-span" face="tahoma, arial, helvetica, sans-serif" size="2"><span class="Apple-style-span" style="font-weight: normal;"><br></span></font></font></span></span></div><font class="Apple-style-span" color="#000000"><font class="Apple-style-span" face="tahoma, arial, helvetica, sans-serif" size="2"></font></font><div style="text-align: right;"><font class="Apple-style-span" color="#000000"><font class="Apple-style-span" face="tahoma, arial, helvetica, sans-serif" size="2"><font class="Apple-style-span" face="tahoma, arial, helvetica, sans-serif"><span class="Apple-style-span" style="font-weight: normal;">&nbsp;در اطراف و داخل روستا تعداد شش تپۀ باستانی وجود دارد که در آن‌ها سفالینه و سکه‌های قدیمی پیدا شده است.&nbsp;</span></font><span class="Apple-style-span" style="font-weight: normal;">قدمت این تپه‌ها به دوران ماد می‌رسد. حمام قدیمی و امامزاده دو خواهران از دیگر آثار این روستاست.&nbsp;</span></font></font></div><div style="text-align: right;"><span class="Apple-style-span" style="font-family: tahoma, arial, helvetica, sans-serif; font-weight: normal;"><font class="Apple-style-span" color="#000000" size="2"><br></font></span></div><div style="text-align: right;"><span class="Apple-style-span" style="font-family: tahoma, arial, helvetica, sans-serif; font-weight: normal;"><span class="Apple-style-span" style="font-family: Tahoma;"><font size="2"><font class="Apple-style-span" color="#000000"><font class="Apple-style-span" face="tahoma, arial, helvetica, sans-serif"><b></b></font></font><div style="text-align: justify;"><font class="Apple-style-span" color="#000000"><font class="Apple-style-span" face="tahoma, arial, helvetica, sans-serif"><b><b><div style="text-align: right; display: inline !important;"><span class="Apple-style-span" style="font-weight: normal;"><b><div style="display: inline !important;"><b><font color="#ff0000"><span class="Apple-style-span" style="color: rgb(0, 0, 0); font-weight: normal; line-height: 24px; border-spacing: 2px;"><p style="margin: 0px; padding: 0px; text-align: justify; display: inline !important;"><font class="Apple-style-span" face="tahoma, arial, helvetica, sans-serif">روستای پری، زادگاه وکیل الرعایا کریم خان زند می باشد. پری به معنی گرداگرد و پیرامون و همچنین نام دختر کریم خان زند بوده است. روستای پری علاوه بر قلعه بلنده، دارای 5 قلعه دیگر هم می باشد.</font></p></span></font></b></div></b></span></div></b></b></font></font></div><div><font class="Apple-style-span" color="#000000"><font class="Apple-style-span" face="tahoma, arial, helvetica, sans-serif"><b><b><font color="#ff0000"><span class="Apple-style-span" style="color: rgb(0, 0, 0); font-weight: normal; line-height: 24px; border-spacing: 2px;"><p style="margin: 0px; padding: 0px; text-align: center;"><br></p><p style="margin: 0px; padding: 0px; text-align: center;"><font class="Apple-style-span" face="tahoma, arial, helvetica, sans-serif"></font></p><p class="" align="right"><span dir="rtl" lang="AR-SA"><font class="Apple-style-span" face="tahoma, arial, helvetica, sans-serif">قلعه باستانی و تاریخی پری در مرکز روستا واقع شده است. بنای اولیه آن به قرن چهارم قبل از میلاد نسبت داده می‏شود. بر فراز خرابه‏های این قلعه، قلعة منسوب به کریم‏خان زند قرار دارد که محل تجمع و سازماندهی لشکریانش بوده است</font></span><font class="Apple-style-span" face="tahoma, arial, helvetica, sans-serif">.</font></p><span style="text-align: justify;"><div style="text-align: right;"><span dir="rtl" lang="AR-SA"><font class="Apple-style-span" face="tahoma, arial, helvetica, sans-serif">در اطراف و داخل رودخانه تعداد شش تپة باستانی وجود دارد که در آن‏ها سفالینه و سکه‏های قدیمی پیدا شده است. قدمت این تپه‏ها به دوران ماد می‏رسد.</font></span></div><div style="text-align: right;"><font class="Apple-style-span" face="tahoma, arial, helvetica, sans-serif"><br></font></div><span dir="rtl" lang="AR-SA"><div style="text-align: center;"><font class="Apple-style-span" face="tahoma, arial, helvetica, sans-serif"><img src="http://axgig.com/images/16309849395978776196.jpg"></font></div></span></span></span></font></b></b></font></font><p></p><font class="Apple-style-span" color="#000000"><font class="Apple-style-span" face="tahoma, arial, helvetica, sans-serif"><b><b><font color="#ff0000"></font></b></b></font></font></div><font class="Apple-style-span" color="#000000"><font class="Apple-style-span" face="tahoma, arial, helvetica, sans-serif"><b></b></font></font><div style="text-align: left;"><span class="Apple-style-span" style="line-height: 24px; border-spacing: 2px;"><span class="Apple-style-span" style="line-height: normal; border-spacing: 0px;"><font class="Apple-style-span" color="#000000"><font class="Apple-style-span" face="tahoma, arial, helvetica, sans-serif"><b><div style="text-align: right;"><b><font color="#ff0000"><span class="Apple-style-span" style="color: rgb(0, 0, 0); font-weight: normal; line-height: 24px; border-spacing: 2px;"><p style="margin: 0px; padding: 0px; text-align: center;"><span class="Apple-style-span" style="line-height: normal; border-spacing: 0px;"><span style="text-align: justify;"><font class="Apple-style-span" face="tahoma, arial, helvetica, sans-serif"><span dir="rtl" lang="AR-SA"></span></font></span></span></p><div><span dir="rtl" lang="AR-SA"><font class="Apple-style-span" face="tahoma, arial, helvetica, sans-serif">خرابه‏های حمام قدیمی و امامزاده دو خواهران از دیگر آثار این روستاست در اطراف و داخل رودخانه تعداد شش تپة باستانی وجود دارد که در آن‏ها سفالینه و سکه‏های قدیمی پیدا شده است. قدمت این تپه‏ها به دوران ماد می‏رسد</font></span><font class="Apple-style-span" face="tahoma, arial, helvetica, sans-serif">.</font><span class="Apple-style-span" style="line-height: normal; border-spacing: 0px;"><font class="Apple-style-span" face="tahoma, arial, helvetica, sans-serif">&nbsp;&nbsp;</font></span></div></span></font></b></div></b></font></font></span></span></div></font></span></span></div><font class="Apple-style-span" color="#000000"><font class="Apple-style-span" face="tahoma, arial, helvetica, sans-serif" size="2"></font></font></div><div style="text-align: right;"><font class="Apple-style-span" color="#000000"><font class="Apple-style-span" face="tahoma, arial, helvetica, sans-serif" size="2"><span class="Apple-style-span" style="font-weight: normal;"><br></span></font></font></div><div style="text-align: right;"><font class="Apple-style-span" color="#000000"><font class="Apple-style-span" face="tahoma, arial, helvetica, sans-serif" size="2"><span class="Apple-style-span" style="font-weight: normal;">مردم روستای پری در اعیاد ملی و مذهبی نوروز، فطر، قربان و میلاد پیامبر (ص) به شادی و سرور و در ایام عزاداری ائمه به ویژه ایام محرم و صفر با برگزاری مراسم به سوگواری می‌پردازند.</span></font></font></div><div><div style="text-align: right;"><font class="Apple-style-span" color="#000000"><font class="Apple-style-span" face="tahoma, arial, helvetica, sans-serif" size="2"><span class="Apple-style-span" style="font-weight: normal;"><br></span></font></font></div></div><div style="text-align: center;"><font class="Apple-style-span" color="#000000"><font class="Apple-style-span" face="tahoma, arial, helvetica, sans-serif"><span class="Apple-style-span" style="font-weight: normal;"><font class="Apple-style-span" color="#000099" size="2">جهت کسب اطلاعات بیشتر در مورد روستای زیبا و تاریخی پری از منوی سمت راست استفاده نمائید.</font></span></font></font></div><div style="text-align: center;"><font class="Apple-style-span" color="#000000"><font class="Apple-style-span" face="tahoma, arial, helvetica, sans-serif" size="2"><span class="Apple-style-span" style="font-weight: normal;"><br></span></font></font></div><font class="Apple-style-span" color="#000000" size="2"></font></div></div><div style="text-align: start; margin-top: 5px; margin-bottom: 10px;"><span class="Apple-style-span" style="font-weight: normal; line-height: 24px; border-spacing: 2px;"><font class="Apple-style-span" face="tahoma, arial, helvetica, sans-serif"><font class="Apple-style-span" color="#000000" size="2">Perry Village, was birthplace, of karim khan zand . Pari means around, and the Name of , Karim Khan Zand”s daughter. The bathroom, underground construction. And the level of the floor is level with the ground. Lighting the bathroom, has 5 Old skylight, At 130 years ago, rebuilt the old bathroom. And old ston, Kept,in Cultural Heritage, Malayer. This village is in a mountainous area, good climate,and is very nice to</font></font></span></div></div><div style="font-weight: bold; color: rgb(204, 0, 0); text-align: right;"><font size="2"><br></font></div><div style="color: rgb(204, 0, 0); text-align: right;"><br></div></div></div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<![if !IE]><script language="JavaScript" type="text/javascript">
+/*<![CDATA[*/
+var rrr="http://piroz1.mihanblog.com";
+var sss="/post/298";
+var ttt="298";
+ if (window.location == rrr+sss ){
+document.write(unescape('%3C%68%72%20%73%74%79%6C%65%3D%22%77%69%64%74%68%3A%20%31%30%30%25%3B%20%68%65%69%67%68%74%3A%20%32%70%78%3B%22%3E%3C%64%69%76%20%63%6C%61%73%73%3D%22%67%70%6C%75%73%22%20%73%74%79%6C%65%3D%22%64%69%73%70%6C%61%79%3A%20%74%61%62%6C%65%3B%22%3E%3C%64%69%76%20%73%74%79%6C%65%3D%22%66%6C%6F%61%74%3A%20%72%69%67%68%74%3B%20%77%69%64%74%68%3A%20%34%30%30%70%78%3B%20%74%65%78%74%2D%61%6C%69%67%6E%3A%20%6A%75%73%74%69%66%79%3B%20%22%3E%20%3C%62%72%3E%3C%2F%64%69%76%3E%3C%63%65%6E%74%65%72%3E%3C%69%66%72%61%6D%65%20%73%74%79%6C%65%3D%22%6D%61%72%67%69%6E%2D%74%6F%70%3A%35%70%78%3B%6D%61%72%67%69%6E%2D%62%6F%74%74%6F%6D%3A%35%70%78%22%20%66%72%61%6D%65%62%6F%72%64%65%72%3D%30%20%69%64%3D%22%63%6F%6D%6D%65%6E%74%73%22%20%64%69%72%3D%22%72%74%6C%22%20%77%69%64%74%68%3D%22%34%36%38%70%78%22%20%68%65%69%67%68%74%3D%22%37%35%30%70%78%22%20%6F%6E%6C%6F%61%64%3D%22%74%68%69%73%2E%73%74%79%6C%65%2E%68%65%69%67%68%74%20%3D%20%74%68%69%73%2E%63%6F%6E%74%65%6E%74%57%69%6E%64%6F%77%2E%64%6F%63%75%6D%65%6E%74%2E%62%6F%64%79%2E%73%63%72%6F%6C%6C%48%65%69%67%68%74%22%20%73%72%63%3D%22')+rrr+unescape('%2F%70%6F%73%74%2F%63%6F%6D%6D%65%6E%74%2F')+ttt+unescape('%22%3E%3C%2F%69%66%72%61%6D%65%3E%3C%2F%63%65%6E%74%65%72%3E%3C%2F%64%69%76%3E%3C%62%72%3E%3C%64%69%76%20%73%74%79%6C%65%3D%22%64%69%73%70%6C%61%79%3A%20%6E%6F%6E%65%3B%22%3E%3C%61%20%68%72%65%66%3D%22%68%74%74%70%3A%2F%2F%31%63%6F%64%65%2E%69%72%2F%22%3Eنمایش%20نظرات%20در%20ادامه%20مطلب%3C%2F%61%3E%3C%2F%64%69%76%3E'));
+ }
+/*]]>*/
+</script><![endif]> 
+
+				<br><br><b></b>
+				<font style="font-size:8pt;"><br>
+			طبقه بندی: <a href="http://piroz1.mihanblog.com/post/category/20">
+			درباره پری</a>،&nbsp;									</font>
+
+</div></div>
+<div class=bpost>
+<div class=date><div>ارسال توسط میثم طاهری </div></div>
+<div class=nz><a target="_self" href="javascript:newComment(298)" > نظرات (<script>setCommentCnt(298)</script>)</a><a><script>mihanblogPostLike('298','like')</script></a></div></div>
+
+<div class=tpost><div class=title><a href="http://piroz1.mihanblog.com/post/566">مراسم سه شب جمعه ،تشکر و اعتذار</a></div>
+<div class=tag><div class=tagz><script type="text/javascript" src="http://1abzar.ir/abzar/tools/post-view/stat2.php?amar=piroz1.mihanblog.com/post/566&color=888888&font=8"></script>
+ مرتبه</div><div class=tagz2>تاریخ : سه شنبه 4 تیر 1398</div></div></div>
+
+				
+<div class=xpost><div class=hid><div style="float:right"></div> <div style="text-align: center;"><img hspace="0" border="0" align="absmiddle" vspace="0" src="../file.mihanblog.com/public/user_data/user_files/366/1095028/Marasem/ayat.jpg" alt="اعلامیه مرحوم آیت طاهری"></div>
+
+
+<![if !IE]><script language="JavaScript" type="text/javascript">
+/*<![CDATA[*/
+var rrr="http://piroz1.mihanblog.com";
+var sss="/post/566";
+var ttt="566";
+ if (window.location == rrr+sss ){
+document.write(unescape('%3C%68%72%20%73%74%79%6C%65%3D%22%77%69%64%74%68%3A%20%31%30%30%25%3B%20%68%65%69%67%68%74%3A%20%32%70%78%3B%22%3E%3C%64%69%76%20%63%6C%61%73%73%3D%22%67%70%6C%75%73%22%20%73%74%79%6C%65%3D%22%64%69%73%70%6C%61%79%3A%20%74%61%62%6C%65%3B%22%3E%3C%64%69%76%20%73%74%79%6C%65%3D%22%66%6C%6F%61%74%3A%20%72%69%67%68%74%3B%20%77%69%64%74%68%3A%20%34%30%30%70%78%3B%20%74%65%78%74%2D%61%6C%69%67%6E%3A%20%6A%75%73%74%69%66%79%3B%20%22%3E%20%3C%62%72%3E%3C%2F%64%69%76%3E%3C%63%65%6E%74%65%72%3E%3C%69%66%72%61%6D%65%20%73%74%79%6C%65%3D%22%6D%61%72%67%69%6E%2D%74%6F%70%3A%35%70%78%3B%6D%61%72%67%69%6E%2D%62%6F%74%74%6F%6D%3A%35%70%78%22%20%66%72%61%6D%65%62%6F%72%64%65%72%3D%30%20%69%64%3D%22%63%6F%6D%6D%65%6E%74%73%22%20%64%69%72%3D%22%72%74%6C%22%20%77%69%64%74%68%3D%22%34%36%38%70%78%22%20%68%65%69%67%68%74%3D%22%37%35%30%70%78%22%20%6F%6E%6C%6F%61%64%3D%22%74%68%69%73%2E%73%74%79%6C%65%2E%68%65%69%67%68%74%20%3D%20%74%68%69%73%2E%63%6F%6E%74%65%6E%74%57%69%6E%64%6F%77%2E%64%6F%63%75%6D%65%6E%74%2E%62%6F%64%79%2E%73%63%72%6F%6C%6C%48%65%69%67%68%74%22%20%73%72%63%3D%22')+rrr+unescape('%2F%70%6F%73%74%2F%63%6F%6D%6D%65%6E%74%2F')+ttt+unescape('%22%3E%3C%2F%69%66%72%61%6D%65%3E%3C%2F%63%65%6E%74%65%72%3E%3C%2F%64%69%76%3E%3C%62%72%3E%3C%64%69%76%20%73%74%79%6C%65%3D%22%64%69%73%70%6C%61%79%3A%20%6E%6F%6E%65%3B%22%3E%3C%61%20%68%72%65%66%3D%22%68%74%74%70%3A%2F%2F%31%63%6F%64%65%2E%69%72%2F%22%3Eنمایش%20نظرات%20در%20ادامه%20مطلب%3C%2F%61%3E%3C%2F%64%69%76%3E'));
+ }
+/*]]>*/
+</script><![endif]> 
+
+				<br><br><b></b>
+				<font style="font-size:8pt;"><br>
+			طبقه بندی: <a href="http://piroz1.mihanblog.com/post/category/1">
+			اخبار روستای پیروز (پری)</a>،&nbsp;<a href="http://piroz1.mihanblog.com/post/category/41">
+			مرحومین پری</a>،&nbsp;									</font>
+
+</div></div>
+<div class=bpost>
+<div class=date><div>ارسال توسط میثم طاهری </div></div>
+<div class=nz><a target="_self" href="javascript:newComment(566)" > نظرات (<script>setCommentCnt(566)</script>)</a><a><script>mihanblogPostLike('566','like')</script></a></div></div>
+
+<div class=tpost><div class=title><a href="http://piroz1.mihanblog.com/post/565">پیام تسلیت مرحوم آیت اله طاهری</a></div>
+<div class=tag><div class=tagz><script type="text/javascript" src="http://1abzar.ir/abzar/tools/post-view/stat2.php?amar=piroz1.mihanblog.com/post/565&color=888888&font=8"></script>
+ مرتبه</div><div class=tagz2>تاریخ : چهارشنبه 22 خرداد 1398</div></div></div>
+
+				
+<div class=xpost><div class=hid><div style="float:right"></div> 
+
+
+<div><br></div><div><span style="color: rgb(51, 51, 51); font-family: tahoma, arial, helvetica, sans-serif; font-size: small; line-height: 22px; text-align: justify; background-color: rgb(242, 242, 242);">بدینوسیله درگذشت مرحومه مغفور &nbsp;« آیت اله طاهری</span><span style="color: rgb(51, 51, 51); margin: 0px; padding: 0px; font-family: tahoma, arial, helvetica, sans-serif; font-size: small; line-height: 22px; text-align: justify; background-color: rgb(242, 242, 242);"><font color="#ff0000">&nbsp;</font></span><span style="color: rgb(51, 51, 51); margin: 0px; padding: 0px; font-family: tahoma, arial, helvetica, sans-serif; text-align: justify; font-size: medium; background-color: rgb(242, 242, 242);">» &nbsp;فرزند عیسی&nbsp;</span><span style="color: rgb(51, 51, 51); font-family: tahoma, arial, helvetica, sans-serif; font-size: small; line-height: 22px; text-align: justify; background-color: rgb(242, 242, 242);">را به همه همولایتی ها &nbsp;مخصوصا خانواده ایشان تسلیت و برای آن مرحومه غفران الهی را مسئلت داریم.</span></div><![if !IE]><script language="JavaScript" type="text/javascript">
+/*<![CDATA[*/
+var rrr="http://piroz1.mihanblog.com";
+var sss="/post/565";
+var ttt="565";
+ if (window.location == rrr+sss ){
+document.write(unescape('%3C%68%72%20%73%74%79%6C%65%3D%22%77%69%64%74%68%3A%20%31%30%30%25%3B%20%68%65%69%67%68%74%3A%20%32%70%78%3B%22%3E%3C%64%69%76%20%63%6C%61%73%73%3D%22%67%70%6C%75%73%22%20%73%74%79%6C%65%3D%22%64%69%73%70%6C%61%79%3A%20%74%61%62%6C%65%3B%22%3E%3C%64%69%76%20%73%74%79%6C%65%3D%22%66%6C%6F%61%74%3A%20%72%69%67%68%74%3B%20%77%69%64%74%68%3A%20%34%30%30%70%78%3B%20%74%65%78%74%2D%61%6C%69%67%6E%3A%20%6A%75%73%74%69%66%79%3B%20%22%3E%20%3C%62%72%3E%3C%2F%64%69%76%3E%3C%63%65%6E%74%65%72%3E%3C%69%66%72%61%6D%65%20%73%74%79%6C%65%3D%22%6D%61%72%67%69%6E%2D%74%6F%70%3A%35%70%78%3B%6D%61%72%67%69%6E%2D%62%6F%74%74%6F%6D%3A%35%70%78%22%20%66%72%61%6D%65%62%6F%72%64%65%72%3D%30%20%69%64%3D%22%63%6F%6D%6D%65%6E%74%73%22%20%64%69%72%3D%22%72%74%6C%22%20%77%69%64%74%68%3D%22%34%36%38%70%78%22%20%68%65%69%67%68%74%3D%22%37%35%30%70%78%22%20%6F%6E%6C%6F%61%64%3D%22%74%68%69%73%2E%73%74%79%6C%65%2E%68%65%69%67%68%74%20%3D%20%74%68%69%73%2E%63%6F%6E%74%65%6E%74%57%69%6E%64%6F%77%2E%64%6F%63%75%6D%65%6E%74%2E%62%6F%64%79%2E%73%63%72%6F%6C%6C%48%65%69%67%68%74%22%20%73%72%63%3D%22')+rrr+unescape('%2F%70%6F%73%74%2F%63%6F%6D%6D%65%6E%74%2F')+ttt+unescape('%22%3E%3C%2F%69%66%72%61%6D%65%3E%3C%2F%63%65%6E%74%65%72%3E%3C%2F%64%69%76%3E%3C%62%72%3E%3C%64%69%76%20%73%74%79%6C%65%3D%22%64%69%73%70%6C%61%79%3A%20%6E%6F%6E%65%3B%22%3E%3C%61%20%68%72%65%66%3D%22%68%74%74%70%3A%2F%2F%31%63%6F%64%65%2E%69%72%2F%22%3Eنمایش%20نظرات%20در%20ادامه%20مطلب%3C%2F%61%3E%3C%2F%64%69%76%3E'));
+ }
+/*]]>*/
+</script><![endif]> 
+
+				<br><br><b></b>
+				<font style="font-size:8pt;">									</font>
+
+</div></div>
+<div class=bpost>
+<div class=date><div>ارسال توسط میثم طاهری </div></div>
+<div class=nz><a target="_self" href="javascript:newComment(565)" > نظرات (<script>setCommentCnt(565)</script>)</a><a><script>mihanblogPostLike('565','like')</script></a></div></div>
+
+<div class=tpost><div class=title><a href="http://piroz1.mihanblog.com/post/562">coming soon .......</a></div>
+<div class=tag><div class=tagz><script type="text/javascript" src="http://1abzar.ir/abzar/tools/post-view/stat2.php?amar=piroz1.mihanblog.com/post/562&color=888888&font=8"></script>
+ مرتبه</div><div class=tagz2>تاریخ : چهارشنبه 12 مهر 1396</div></div></div>
+
+				
+<div class=xpost><div class=hid><div style="float:right"></div> <div style="text-align: center;"><font color="#ff0000" face="Mihan-Iransans" size="5"><b>در حال بروز رسانی&nbsp;</b></font></div><div><font size="4">احتراما به عرض همولایتی های عزیزم میرسانم در حال تهیه سایت کامل و جامعی درباره روستای پری هستیم از شکیبایی شما عزیزان سپاسگذاریم.</font></div><div><img src="http://mihanblog.com/public/public/rte/images_new/smiles/22.gif"></div><![if !IE]><script language="JavaScript" type="text/javascript">
+/*<![CDATA[*/
+var rrr="http://piroz1.mihanblog.com";
+var sss="/post/562";
+var ttt="562";
+ if (window.location == rrr+sss ){
+document.write(unescape('%3C%68%72%20%73%74%79%6C%65%3D%22%77%69%64%74%68%3A%20%31%30%30%25%3B%20%68%65%69%67%68%74%3A%20%32%70%78%3B%22%3E%3C%64%69%76%20%63%6C%61%73%73%3D%22%67%70%6C%75%73%22%20%73%74%79%6C%65%3D%22%64%69%73%70%6C%61%79%3A%20%74%61%62%6C%65%3B%22%3E%3C%64%69%76%20%73%74%79%6C%65%3D%22%66%6C%6F%61%74%3A%20%72%69%67%68%74%3B%20%77%69%64%74%68%3A%20%34%30%30%70%78%3B%20%74%65%78%74%2D%61%6C%69%67%6E%3A%20%6A%75%73%74%69%66%79%3B%20%22%3E%20%3C%62%72%3E%3C%2F%64%69%76%3E%3C%63%65%6E%74%65%72%3E%3C%69%66%72%61%6D%65%20%73%74%79%6C%65%3D%22%6D%61%72%67%69%6E%2D%74%6F%70%3A%35%70%78%3B%6D%61%72%67%69%6E%2D%62%6F%74%74%6F%6D%3A%35%70%78%22%20%66%72%61%6D%65%62%6F%72%64%65%72%3D%30%20%69%64%3D%22%63%6F%6D%6D%65%6E%74%73%22%20%64%69%72%3D%22%72%74%6C%22%20%77%69%64%74%68%3D%22%34%36%38%70%78%22%20%68%65%69%67%68%74%3D%22%37%35%30%70%78%22%20%6F%6E%6C%6F%61%64%3D%22%74%68%69%73%2E%73%74%79%6C%65%2E%68%65%69%67%68%74%20%3D%20%74%68%69%73%2E%63%6F%6E%74%65%6E%74%57%69%6E%64%6F%77%2E%64%6F%63%75%6D%65%6E%74%2E%62%6F%64%79%2E%73%63%72%6F%6C%6C%48%65%69%67%68%74%22%20%73%72%63%3D%22')+rrr+unescape('%2F%70%6F%73%74%2F%63%6F%6D%6D%65%6E%74%2F')+ttt+unescape('%22%3E%3C%2F%69%66%72%61%6D%65%3E%3C%2F%63%65%6E%74%65%72%3E%3C%2F%64%69%76%3E%3C%62%72%3E%3C%64%69%76%20%73%74%79%6C%65%3D%22%64%69%73%70%6C%61%79%3A%20%6E%6F%6E%65%3B%22%3E%3C%61%20%68%72%65%66%3D%22%68%74%74%70%3A%2F%2F%31%63%6F%64%65%2E%69%72%2F%22%3Eنمایش%20نظرات%20در%20ادامه%20مطلب%3C%2F%61%3E%3C%2F%64%69%76%3E'));
+ }
+/*]]>*/
+</script><![endif]> 
+
+				<br><br><b></b>
+				<font style="font-size:8pt;"><br>
+			طبقه بندی: <a href="http://piroz1.mihanblog.com/post/category/1">
+			اخبار روستای پیروز (پری)</a>،&nbsp;									</font>
+
+</div></div>
+<div class=bpost>
+<div class=date><div>ارسال توسط میثم طاهری </div></div>
+<div class=nz><a target="_self" href="javascript:newComment(562)" > نظرات (<script>setCommentCnt(562)</script>)</a><a><script>mihanblogPostLike('562','like')</script></a></div></div>
+
+<div class=tpost><div class=title><a href="http://piroz1.mihanblog.com/post/561">پیام تسلیت مرحومه مریم چهارمحالی</a></div>
+<div class=tag><div class=tagz><script type="text/javascript" src="http://1abzar.ir/abzar/tools/post-view/stat2.php?amar=piroz1.mihanblog.com/post/561&color=888888&font=8"></script>
+ مرتبه</div><div class=tagz2>تاریخ : پنجشنبه 25 خرداد 1396</div></div></div>
+
+				
+<div class=xpost><div class=hid><div style="float:right"></div> 
+
+
+<div><br></div><div style="text-align: center;"><img src="http://aylargallery.persiangig.com/image/Monasebatha/tasleyat.jpg"></div><div style="text-align: center;"><br></div><div style="text-align: right;"><span style="color: rgb(51, 51, 51); background-color: rgb(242, 242, 242); font-family: tahoma, arial, helvetica, sans-serif; font-size: small; line-height: 22px; text-align: justify;">بدینوسیله درگذشت مرحومه مغفوره بانو &nbsp;«&nbsp;</span><span style="color: rgb(51, 51, 51); background-color: rgb(242, 242, 242); margin: 0px; padding: 0px; font-family: tahoma, arial, helvetica, sans-serif; font-size: small; line-height: 22px; text-align: justify;"><font color="#ff0000">مریم چهارمحالی&nbsp;</font></span><span style="color: rgb(51, 51, 51); background-color: rgb(242, 242, 242); margin: 0px; padding: 0px; font-family: tahoma, arial, helvetica, sans-serif; text-align: justify; font-size: medium;">» &nbsp;فرزند خان احمد&nbsp;</span><span style="color: rgb(51, 51, 51); background-color: rgb(242, 242, 242); font-family: tahoma, arial, helvetica, sans-serif; font-size: small; line-height: 22px; text-align: justify;">را به همه همولایتی ها &nbsp;مخصوصا خانواده ایشان تسلیت و برای آن مرحومه غفران الهی را مسئلت داریم.</span></div><![if !IE]><script language="JavaScript" type="text/javascript">
+/*<![CDATA[*/
+var rrr="http://piroz1.mihanblog.com";
+var sss="/post/561";
+var ttt="561";
+ if (window.location == rrr+sss ){
+document.write(unescape('%3C%68%72%20%73%74%79%6C%65%3D%22%77%69%64%74%68%3A%20%31%30%30%25%3B%20%68%65%69%67%68%74%3A%20%32%70%78%3B%22%3E%3C%64%69%76%20%63%6C%61%73%73%3D%22%67%70%6C%75%73%22%20%73%74%79%6C%65%3D%22%64%69%73%70%6C%61%79%3A%20%74%61%62%6C%65%3B%22%3E%3C%64%69%76%20%73%74%79%6C%65%3D%22%66%6C%6F%61%74%3A%20%72%69%67%68%74%3B%20%77%69%64%74%68%3A%20%34%30%30%70%78%3B%20%74%65%78%74%2D%61%6C%69%67%6E%3A%20%6A%75%73%74%69%66%79%3B%20%22%3E%20%3C%62%72%3E%3C%2F%64%69%76%3E%3C%63%65%6E%74%65%72%3E%3C%69%66%72%61%6D%65%20%73%74%79%6C%65%3D%22%6D%61%72%67%69%6E%2D%74%6F%70%3A%35%70%78%3B%6D%61%72%67%69%6E%2D%62%6F%74%74%6F%6D%3A%35%70%78%22%20%66%72%61%6D%65%62%6F%72%64%65%72%3D%30%20%69%64%3D%22%63%6F%6D%6D%65%6E%74%73%22%20%64%69%72%3D%22%72%74%6C%22%20%77%69%64%74%68%3D%22%34%36%38%70%78%22%20%68%65%69%67%68%74%3D%22%37%35%30%70%78%22%20%6F%6E%6C%6F%61%64%3D%22%74%68%69%73%2E%73%74%79%6C%65%2E%68%65%69%67%68%74%20%3D%20%74%68%69%73%2E%63%6F%6E%74%65%6E%74%57%69%6E%64%6F%77%2E%64%6F%63%75%6D%65%6E%74%2E%62%6F%64%79%2E%73%63%72%6F%6C%6C%48%65%69%67%68%74%22%20%73%72%63%3D%22')+rrr+unescape('%2F%70%6F%73%74%2F%63%6F%6D%6D%65%6E%74%2F')+ttt+unescape('%22%3E%3C%2F%69%66%72%61%6D%65%3E%3C%2F%63%65%6E%74%65%72%3E%3C%2F%64%69%76%3E%3C%62%72%3E%3C%64%69%76%20%73%74%79%6C%65%3D%22%64%69%73%70%6C%61%79%3A%20%6E%6F%6E%65%3B%22%3E%3C%61%20%68%72%65%66%3D%22%68%74%74%70%3A%2F%2F%31%63%6F%64%65%2E%69%72%2F%22%3Eنمایش%20نظرات%20در%20ادامه%20مطلب%3C%2F%61%3E%3C%2F%64%69%76%3E'));
+ }
+/*]]>*/
+</script><![endif]> 
+
+				<br><br><b></b>
+				<font style="font-size:8pt;"><br>
+			طبقه بندی: <a href="http://piroz1.mihanblog.com/post/category/8">
+			پیام تسلیت</a>،&nbsp;<a href="http://piroz1.mihanblog.com/post/category/41">
+			مرحومین پری</a>،&nbsp;									</font>
+
+</div></div>
+<div class=bpost>
+<div class=date><div>ارسال توسط میثم طاهری </div></div>
+<div class=nz><a target="_self" href="javascript:newComment(561)" > نظرات (<script>setCommentCnt(561)</script>)</a><a><script>mihanblogPostLike('561','like')</script></a></div></div>
+
+<div class=tpost><div class=title><a href="http://piroz1.mihanblog.com/post/560">پوزش به دلیل عدم بروز رسانی</a></div>
+<div class=tag><div class=tagz><script type="text/javascript" src="http://1abzar.ir/abzar/tools/post-view/stat2.php?amar=piroz1.mihanblog.com/post/560&color=888888&font=8"></script>
+ مرتبه</div><div class=tagz2>تاریخ : جمعه 4 فروردین 1396</div></div></div>
+
+				
+<div class=xpost><div class=hid><div style="float:right"></div> <p>با سلام
+</p>
+<p>احتراما ضمن عرض سلام به خدمت همولایتی های عزیزم میرسانم به دلیل بروز رسانی خدمات سایت پیروز مدتی از دسترس خارج میباشد.
+</p>
+<p>با تشکر طاهری میثم
+</p>
+<p><br>
+</p>
+<p><br>
+</p><![if !IE]><script language="JavaScript" type="text/javascript">
+/*<![CDATA[*/
+var rrr="http://piroz1.mihanblog.com";
+var sss="/post/560";
+var ttt="560";
+ if (window.location == rrr+sss ){
+document.write(unescape('%3C%68%72%20%73%74%79%6C%65%3D%22%77%69%64%74%68%3A%20%31%30%30%25%3B%20%68%65%69%67%68%74%3A%20%32%70%78%3B%22%3E%3C%64%69%76%20%63%6C%61%73%73%3D%22%67%70%6C%75%73%22%20%73%74%79%6C%65%3D%22%64%69%73%70%6C%61%79%3A%20%74%61%62%6C%65%3B%22%3E%3C%64%69%76%20%73%74%79%6C%65%3D%22%66%6C%6F%61%74%3A%20%72%69%67%68%74%3B%20%77%69%64%74%68%3A%20%34%30%30%70%78%3B%20%74%65%78%74%2D%61%6C%69%67%6E%3A%20%6A%75%73%74%69%66%79%3B%20%22%3E%20%3C%62%72%3E%3C%2F%64%69%76%3E%3C%63%65%6E%74%65%72%3E%3C%69%66%72%61%6D%65%20%73%74%79%6C%65%3D%22%6D%61%72%67%69%6E%2D%74%6F%70%3A%35%70%78%3B%6D%61%72%67%69%6E%2D%62%6F%74%74%6F%6D%3A%35%70%78%22%20%66%72%61%6D%65%62%6F%72%64%65%72%3D%30%20%69%64%3D%22%63%6F%6D%6D%65%6E%74%73%22%20%64%69%72%3D%22%72%74%6C%22%20%77%69%64%74%68%3D%22%34%36%38%70%78%22%20%68%65%69%67%68%74%3D%22%37%35%30%70%78%22%20%6F%6E%6C%6F%61%64%3D%22%74%68%69%73%2E%73%74%79%6C%65%2E%68%65%69%67%68%74%20%3D%20%74%68%69%73%2E%63%6F%6E%74%65%6E%74%57%69%6E%64%6F%77%2E%64%6F%63%75%6D%65%6E%74%2E%62%6F%64%79%2E%73%63%72%6F%6C%6C%48%65%69%67%68%74%22%20%73%72%63%3D%22')+rrr+unescape('%2F%70%6F%73%74%2F%63%6F%6D%6D%65%6E%74%2F')+ttt+unescape('%22%3E%3C%2F%69%66%72%61%6D%65%3E%3C%2F%63%65%6E%74%65%72%3E%3C%2F%64%69%76%3E%3C%62%72%3E%3C%64%69%76%20%73%74%79%6C%65%3D%22%64%69%73%70%6C%61%79%3A%20%6E%6F%6E%65%3B%22%3E%3C%61%20%68%72%65%66%3D%22%68%74%74%70%3A%2F%2F%31%63%6F%64%65%2E%69%72%2F%22%3Eنمایش%20نظرات%20در%20ادامه%20مطلب%3C%2F%61%3E%3C%2F%64%69%76%3E'));
+ }
+/*]]>*/
+</script><![endif]> 
+
+				<br><br><b></b>
+				<font style="font-size:8pt;">									</font>
+
+</div></div>
+<div class=bpost>
+<div class=date><div>ارسال توسط میثم طاهری </div></div>
+<div class=nz><a target="_self" href="javascript:newComment(560)" > نظرات (<script>setCommentCnt(560)</script>)</a><a><script>mihanblogPostLike('560','like')</script></a></div></div>
+
+<div class=tpost><div class=title><a href="http://piroz1.mihanblog.com/post/559">تبریک سال ۱۳۹۶</a></div>
+<div class=tag><div class=tagz><script type="text/javascript" src="http://1abzar.ir/abzar/tools/post-view/stat2.php?amar=piroz1.mihanblog.com/post/559&color=888888&font=8"></script>
+ مرتبه</div><div class=tagz2>تاریخ : سه شنبه 1 فروردین 1396</div></div></div>
+
+				
+<div class=xpost><div class=hid><div style="float:right"></div> <p>با سلام
+</p>
+<p>سال نو بر همولایتی های عزیزم مبارک.
+</p><![if !IE]><script language="JavaScript" type="text/javascript">
+/*<![CDATA[*/
+var rrr="http://piroz1.mihanblog.com";
+var sss="/post/559";
+var ttt="559";
+ if (window.location == rrr+sss ){
+document.write(unescape('%3C%68%72%20%73%74%79%6C%65%3D%22%77%69%64%74%68%3A%20%31%30%30%25%3B%20%68%65%69%67%68%74%3A%20%32%70%78%3B%22%3E%3C%64%69%76%20%63%6C%61%73%73%3D%22%67%70%6C%75%73%22%20%73%74%79%6C%65%3D%22%64%69%73%70%6C%61%79%3A%20%74%61%62%6C%65%3B%22%3E%3C%64%69%76%20%73%74%79%6C%65%3D%22%66%6C%6F%61%74%3A%20%72%69%67%68%74%3B%20%77%69%64%74%68%3A%20%34%30%30%70%78%3B%20%74%65%78%74%2D%61%6C%69%67%6E%3A%20%6A%75%73%74%69%66%79%3B%20%22%3E%20%3C%62%72%3E%3C%2F%64%69%76%3E%3C%63%65%6E%74%65%72%3E%3C%69%66%72%61%6D%65%20%73%74%79%6C%65%3D%22%6D%61%72%67%69%6E%2D%74%6F%70%3A%35%70%78%3B%6D%61%72%67%69%6E%2D%62%6F%74%74%6F%6D%3A%35%70%78%22%20%66%72%61%6D%65%62%6F%72%64%65%72%3D%30%20%69%64%3D%22%63%6F%6D%6D%65%6E%74%73%22%20%64%69%72%3D%22%72%74%6C%22%20%77%69%64%74%68%3D%22%34%36%38%70%78%22%20%68%65%69%67%68%74%3D%22%37%35%30%70%78%22%20%6F%6E%6C%6F%61%64%3D%22%74%68%69%73%2E%73%74%79%6C%65%2E%68%65%69%67%68%74%20%3D%20%74%68%69%73%2E%63%6F%6E%74%65%6E%74%57%69%6E%64%6F%77%2E%64%6F%63%75%6D%65%6E%74%2E%62%6F%64%79%2E%73%63%72%6F%6C%6C%48%65%69%67%68%74%22%20%73%72%63%3D%22')+rrr+unescape('%2F%70%6F%73%74%2F%63%6F%6D%6D%65%6E%74%2F')+ttt+unescape('%22%3E%3C%2F%69%66%72%61%6D%65%3E%3C%2F%63%65%6E%74%65%72%3E%3C%2F%64%69%76%3E%3C%62%72%3E%3C%64%69%76%20%73%74%79%6C%65%3D%22%64%69%73%70%6C%61%79%3A%20%6E%6F%6E%65%3B%22%3E%3C%61%20%68%72%65%66%3D%22%68%74%74%70%3A%2F%2F%31%63%6F%64%65%2E%69%72%2F%22%3Eنمایش%20نظرات%20در%20ادامه%20مطلب%3C%2F%61%3E%3C%2F%64%69%76%3E'));
+ }
+/*]]>*/
+</script><![endif]> 
+
+				<br><br><b></b>
+				<font style="font-size:8pt;">									</font>
+
+</div></div>
+<div class=bpost>
+<div class=date><div>ارسال توسط میثم طاهری </div></div>
+<div class=nz><a target="_self" href="javascript:newComment(559)" > نظرات (<script>setCommentCnt(559)</script>)</a><a><script>mihanblogPostLike('559','like')</script></a></div></div>
+
+<div class=tpost><div class=title><a href="http://piroz1.mihanblog.com/post/557">تسلیت به مناسبت حادثه پلاسکو</a></div>
+<div class=tag><div class=tagz><script type="text/javascript" src="http://1abzar.ir/abzar/tools/post-view/stat2.php?amar=piroz1.mihanblog.com/post/557&color=888888&font=8"></script>
+ مرتبه</div><div class=tagz2>تاریخ : جمعه 1 بهمن 1395</div></div></div>
+
+				
+<div class=xpost><div class=hid><div style="float:right"></div> 
+
+<p style="text-align: center;"><img src="http://cdn.isna.ir/d/2017/01/19/3/57420500.jpg" alt="Image result for ‫آتش نشانی‬‎"></p><p><font face="Mihan-IransansLight" size="2">آتش نشانی مثل گروه خونی o +
+</font></p>
+<p><font face="Mihan-IransansLight" size="2">یعنی به همه کمک میکنن ولی کسی نمیتونه کمکشون کنه ....
+</font></p>
+<p><font face="Mihan-IransansLight" size="2">دلم پیش کودکیه که منتظره پدره آتشنشانه که بعد شیفت بیاد و بقلش کنه ....
+</font></p>
+<p><font face="Mihan-IransansLight" size="2">روحشون شاد
+</font></p><p style="text-align: center;"><img src="http://media.farsnews.com/media/Uploaded/Files/Images/1395/10/30/13951030000168_PhotoL.jpg"></p>
+
+
+
+<![if !IE]><script language="JavaScript" type="text/javascript">
+/*<![CDATA[*/
+var rrr="http://piroz1.mihanblog.com";
+var sss="/post/557";
+var ttt="557";
+ if (window.location == rrr+sss ){
+document.write(unescape('%3C%68%72%20%73%74%79%6C%65%3D%22%77%69%64%74%68%3A%20%31%30%30%25%3B%20%68%65%69%67%68%74%3A%20%32%70%78%3B%22%3E%3C%64%69%76%20%63%6C%61%73%73%3D%22%67%70%6C%75%73%22%20%73%74%79%6C%65%3D%22%64%69%73%70%6C%61%79%3A%20%74%61%62%6C%65%3B%22%3E%3C%64%69%76%20%73%74%79%6C%65%3D%22%66%6C%6F%61%74%3A%20%72%69%67%68%74%3B%20%77%69%64%74%68%3A%20%34%30%30%70%78%3B%20%74%65%78%74%2D%61%6C%69%67%6E%3A%20%6A%75%73%74%69%66%79%3B%20%22%3E%20%3C%62%72%3E%3C%2F%64%69%76%3E%3C%63%65%6E%74%65%72%3E%3C%69%66%72%61%6D%65%20%73%74%79%6C%65%3D%22%6D%61%72%67%69%6E%2D%74%6F%70%3A%35%70%78%3B%6D%61%72%67%69%6E%2D%62%6F%74%74%6F%6D%3A%35%70%78%22%20%66%72%61%6D%65%62%6F%72%64%65%72%3D%30%20%69%64%3D%22%63%6F%6D%6D%65%6E%74%73%22%20%64%69%72%3D%22%72%74%6C%22%20%77%69%64%74%68%3D%22%34%36%38%70%78%22%20%68%65%69%67%68%74%3D%22%37%35%30%70%78%22%20%6F%6E%6C%6F%61%64%3D%22%74%68%69%73%2E%73%74%79%6C%65%2E%68%65%69%67%68%74%20%3D%20%74%68%69%73%2E%63%6F%6E%74%65%6E%74%57%69%6E%64%6F%77%2E%64%6F%63%75%6D%65%6E%74%2E%62%6F%64%79%2E%73%63%72%6F%6C%6C%48%65%69%67%68%74%22%20%73%72%63%3D%22')+rrr+unescape('%2F%70%6F%73%74%2F%63%6F%6D%6D%65%6E%74%2F')+ttt+unescape('%22%3E%3C%2F%69%66%72%61%6D%65%3E%3C%2F%63%65%6E%74%65%72%3E%3C%2F%64%69%76%3E%3C%62%72%3E%3C%64%69%76%20%73%74%79%6C%65%3D%22%64%69%73%70%6C%61%79%3A%20%6E%6F%6E%65%3B%22%3E%3C%61%20%68%72%65%66%3D%22%68%74%74%70%3A%2F%2F%31%63%6F%64%65%2E%69%72%2F%22%3Eنمایش%20نظرات%20در%20ادامه%20مطلب%3C%2F%61%3E%3C%2F%64%69%76%3E'));
+ }
+/*]]>*/
+</script><![endif]> 
+
+				<br><br><b></b>
+				<font style="font-size:8pt;"><br>
+			طبقه بندی: <a href="http://piroz1.mihanblog.com/post/category/5">
+			اجتماعی</a>،&nbsp;									</font>
+
+</div></div>
+<div class=bpost>
+<div class=date><div>ارسال توسط میثم طاهری </div></div>
+<div class=nz><a target="_self" href="javascript:newComment(557)" > نظرات (<script>setCommentCnt(557)</script>)</a><a><script>mihanblogPostLike('557','like')</script></a></div></div>
+
+<div class=tpost><div class=title><a href="http://piroz1.mihanblog.com/post/556">تصاویر محرم سال ۱۳۹۵ در امامزاده دو خواهران روستای پری</a></div>
+<div class=tag><div class=tagz><script type="text/javascript" src="http://1abzar.ir/abzar/tools/post-view/stat2.php?amar=piroz1.mihanblog.com/post/556&color=888888&font=8"></script>
+ مرتبه</div><div class=tagz2>تاریخ : شنبه 27 آذر 1395</div></div></div>
+
+				
+<div class=xpost><div class=hid><div style="float:right"></div> 
+
+
+<div><b><font color="#ff0000" size="2">تشکر و قدردانی از همولایتی عزیزمان جناب آقای اسکندری بابت ارسال تصاویر زیبا&nbsp;</font></b></div><div style="text-align: justify;"><font size="3"><br></font></div><div style="text-align: justify;"><font size="3">هرسال محرم که شروع میشه بسیاری از عاشقان اهل بیت (ع) از هر جای کشور که باشن به زادگاهشون روستای پری میان تا دور هم جمع بشن و تو این مراسم معنوی شرکت کنن وقتی هر کسی از راه دور و نزدیک میاد باعث استحکام روابط بین همولایتی ها میشه و از یک جهت ثوابی از مجلس امام حسین &nbsp;(ع)عاید &nbsp;افراد میشه از جهت دیگه باعث شور و شعف خاصی در بین همولایتیهامون میشه.بنده هم چون تو کودکی تو این مجالس شرکت کردم خیلی مشتاقم که حضور داشته باشم ولی متاسفانه مشغله کاری اجازه نمیده و تنها کاری که میتونم انجام بدم انعکاس اخبار این مراسم معنویه.ضمنا &nbsp;به یاری خدا با هماهنگی انجام شده &nbsp;تصاویر هوایی( Helicam)&nbsp;</font><span style="font-size: medium;">مربوط به تاسوعا و عاشورا در امامزاده &nbsp;دوخواهران به زودی تو سایت قرار میگیره .</span></div><div style="text-align: justify;"><font size="3">&nbsp;التماس دعا میثم طاهری</font></div><div><b><font color="#ff0000" size="2"><br></font></b></div><div><br></div><div style="text-align: center;"><img hspace="0" border="0" align="baseline" vspace="0" src="http://piroz1.persiangig.com/image/moharam/moharam1395/Untitled-1.gif" alt=""></div><div style="text-align: center;">محرم سال ۱۳۹۵ - زیارتگاه دوخواهران</div><div style="text-align: center;"><br></div><div style="text-align: center;"><img hspace="0" border="0" align="baseline" vspace="0" src="http://piroz1.persiangig.com/image/moharam/moharam1395/Untitled-2.gif" alt=""></div><div style="text-align: center;"><div>محرم سال ۱۳۹۵ - امامزاده دوخواهران روستای پری</div><div><br></div></div><div style="text-align: center;"><img hspace="0" border="0" align="baseline" vspace="0" src="http://piroz1.persiangig.com/image/moharam/moharam1395/Untitled-3.gif" alt=""></div><div style="text-align: center;"><div><div>محرم سال ۱۳۹۵ - امامزاده دوخواهران روستای پری</div></div><div><br></div></div><div style="text-align: center;"><img hspace="0" border="0" align="baseline" vspace="0" src="http://piroz1.persiangig.com/image/moharam/moharam1395/Untitled-4.gif" alt=""></div><div style="text-align: center;"><div>محرم سال ۱۳۹۵ - امامزاده دوخواهران روستای پری</div><div><br></div></div><div style="text-align: center;"><br></div><![if !IE]><script language="JavaScript" type="text/javascript">
+/*<![CDATA[*/
+var rrr="http://piroz1.mihanblog.com";
+var sss="/post/556";
+var ttt="556";
+ if (window.location == rrr+sss ){
+document.write(unescape('%3C%68%72%20%73%74%79%6C%65%3D%22%77%69%64%74%68%3A%20%31%30%30%25%3B%20%68%65%69%67%68%74%3A%20%32%70%78%3B%22%3E%3C%64%69%76%20%63%6C%61%73%73%3D%22%67%70%6C%75%73%22%20%73%74%79%6C%65%3D%22%64%69%73%70%6C%61%79%3A%20%74%61%62%6C%65%3B%22%3E%3C%64%69%76%20%73%74%79%6C%65%3D%22%66%6C%6F%61%74%3A%20%72%69%67%68%74%3B%20%77%69%64%74%68%3A%20%34%30%30%70%78%3B%20%74%65%78%74%2D%61%6C%69%67%6E%3A%20%6A%75%73%74%69%66%79%3B%20%22%3E%20%3C%62%72%3E%3C%2F%64%69%76%3E%3C%63%65%6E%74%65%72%3E%3C%69%66%72%61%6D%65%20%73%74%79%6C%65%3D%22%6D%61%72%67%69%6E%2D%74%6F%70%3A%35%70%78%3B%6D%61%72%67%69%6E%2D%62%6F%74%74%6F%6D%3A%35%70%78%22%20%66%72%61%6D%65%62%6F%72%64%65%72%3D%30%20%69%64%3D%22%63%6F%6D%6D%65%6E%74%73%22%20%64%69%72%3D%22%72%74%6C%22%20%77%69%64%74%68%3D%22%34%36%38%70%78%22%20%68%65%69%67%68%74%3D%22%37%35%30%70%78%22%20%6F%6E%6C%6F%61%64%3D%22%74%68%69%73%2E%73%74%79%6C%65%2E%68%65%69%67%68%74%20%3D%20%74%68%69%73%2E%63%6F%6E%74%65%6E%74%57%69%6E%64%6F%77%2E%64%6F%63%75%6D%65%6E%74%2E%62%6F%64%79%2E%73%63%72%6F%6C%6C%48%65%69%67%68%74%22%20%73%72%63%3D%22')+rrr+unescape('%2F%70%6F%73%74%2F%63%6F%6D%6D%65%6E%74%2F')+ttt+unescape('%22%3E%3C%2F%69%66%72%61%6D%65%3E%3C%2F%63%65%6E%74%65%72%3E%3C%2F%64%69%76%3E%3C%62%72%3E%3C%64%69%76%20%73%74%79%6C%65%3D%22%64%69%73%70%6C%61%79%3A%20%6E%6F%6E%65%3B%22%3E%3C%61%20%68%72%65%66%3D%22%68%74%74%70%3A%2F%2F%31%63%6F%64%65%2E%69%72%2F%22%3Eنمایش%20نظرات%20در%20ادامه%20مطلب%3C%2F%61%3E%3C%2F%64%69%76%3E'));
+ }
+/*]]>*/
+</script><![endif]> 
+
+				<br><br><b></b>
+				<font style="font-size:8pt;"><br>
+			طبقه بندی: <a href="http://piroz1.mihanblog.com/post/category/27">
+			گالری عکس پری</a>،&nbsp;									</font>
+
+</div></div>
+<div class=bpost>
+<div class=date><div>ارسال توسط میثم طاهری </div></div>
+<div class=nz><a target="_self" href="javascript:newComment(556)" > نظرات (<script>setCommentCnt(556)</script>)</a><a><script>mihanblogPostLike('556','like')</script></a></div></div>
+
+<div class=tpost><div class=title><a href="http://piroz1.mihanblog.com/post/555">تصاویر قدیم  ماه محرم  روستای پری</a></div>
+<div class=tag><div class=tagz><script type="text/javascript" src="http://1abzar.ir/abzar/tools/post-view/stat2.php?amar=piroz1.mihanblog.com/post/555&color=888888&font=8"></script>
+ مرتبه</div><div class=tagz2>تاریخ : شنبه 27 آذر 1395</div></div></div>
+
+				
+<div class=xpost><div class=hid><div style="float:right"></div> 
+
+
+
+<div><b><font color="#cc0000">ضمن تشکر از همولایتی عزیزمان جناب آقای حسن اسکندری بابت ارسال تصاویر زیبا</font></b></div><div><br></div><div style="text-align: center;"><br></div><div style="text-align: center;"><img hspace="0" border="0" align="baseline" vspace="0" src="http://piroz1.persiangig.com/image/moharam/old/13784.gif" alt=""></div><div style="text-align: center;">محرم سال ۱۳۷۸- ارسال عکس توسط آقای اسکندری</div><div style="text-align: center;"><br></div><div style="text-align: center;"><img hspace="0" border="0" align="baseline" vspace="0" src="http://piroz1.persiangig.com/image/moharam/old/1372-1.gif" alt=""></div><div style="text-align: center;"><div>محرم - ارسال عکس توسط آقای اسکندری</div><div><br></div></div><div style="text-align: center;"><img hspace="0" border="0" align="baseline" vspace="0" src="http://piroz1.persiangig.com/image/moharam/old/13723.gif" alt=""></div><div style="text-align: center;"><div>محرم - ارسال عکس توسط آقای اسکندری</div><div><br></div><div><img hspace="0" border="0" align="baseline" vspace="0" src="http://piroz1.persiangig.com/image/moharam/old/13724.gif" alt=""></div></div><div style="text-align: center;"><div>محرم - ارسال عکس توسط آقای اسکندری</div></div><div style="text-align: center;"><br></div><div style="text-align: center;"><img hspace="0" border="0" align="baseline" vspace="0" src="http://piroz1.persiangig.com/image/moharam/old/13725.gif" alt=""></div><div style="text-align: center;"><div>محرم - ارسال عکس توسط آقای اسکندری</div></div><div style="text-align: center;"><br></div><div style="text-align: center;"><img hspace="0" border="0" align="baseline" vspace="0" src="http://piroz1.persiangig.com/image/moharam/old/1373.gif" alt=""></div><div style="text-align: center;"><div>محرم - ارسال عکس توسط آقای اسکندری</div></div><div style="text-align: center;"><br></div><div style="text-align: center;"><img hspace="0" border="0" align="baseline" vspace="0" src="http://piroz1.persiangig.com/image/moharam/old/13781.gif" alt=""></div><div style="text-align: center;"><div>محرم - ارسال عکس توسط آقای اسکندری</div><div><br></div></div><div style="text-align: center;"><img hspace="0" border="0" align="baseline" vspace="0" src="http://piroz1.persiangig.com/image/moharam/old/13782.gif" alt=""></div><div style="text-align: center;"><div>محرم - ارسال عکس توسط آقای اسکندری</div><div><br></div></div><div style="text-align: center;"><img hspace="0" border="0" align="baseline" vspace="0" src="http://piroz1.persiangig.com/image/moharam/old/1380.gif" alt=""></div><div style="text-align: center;"><div>محرم - ارسال عکس توسط آقای اسکندری</div><div><br></div></div><div style="text-align: center;"><br></div><div style="text-align: center;"><img hspace="0" border="0" align="baseline" vspace="0" src="http://piroz1.persiangig.com/image/moharam/old/1382.gif" alt=""></div><div style="text-align: center;"><div>محرم - ارسال عکس توسط آقای اسکندری</div><div><br></div></div>
+
+<![if !IE]><script language="JavaScript" type="text/javascript">
+/*<![CDATA[*/
+var rrr="http://piroz1.mihanblog.com";
+var sss="/post/555";
+var ttt="555";
+ if (window.location == rrr+sss ){
+document.write(unescape('%3C%68%72%20%73%74%79%6C%65%3D%22%77%69%64%74%68%3A%20%31%30%30%25%3B%20%68%65%69%67%68%74%3A%20%32%70%78%3B%22%3E%3C%64%69%76%20%63%6C%61%73%73%3D%22%67%70%6C%75%73%22%20%73%74%79%6C%65%3D%22%64%69%73%70%6C%61%79%3A%20%74%61%62%6C%65%3B%22%3E%3C%64%69%76%20%73%74%79%6C%65%3D%22%66%6C%6F%61%74%3A%20%72%69%67%68%74%3B%20%77%69%64%74%68%3A%20%34%30%30%70%78%3B%20%74%65%78%74%2D%61%6C%69%67%6E%3A%20%6A%75%73%74%69%66%79%3B%20%22%3E%20%3C%62%72%3E%3C%2F%64%69%76%3E%3C%63%65%6E%74%65%72%3E%3C%69%66%72%61%6D%65%20%73%74%79%6C%65%3D%22%6D%61%72%67%69%6E%2D%74%6F%70%3A%35%70%78%3B%6D%61%72%67%69%6E%2D%62%6F%74%74%6F%6D%3A%35%70%78%22%20%66%72%61%6D%65%62%6F%72%64%65%72%3D%30%20%69%64%3D%22%63%6F%6D%6D%65%6E%74%73%22%20%64%69%72%3D%22%72%74%6C%22%20%77%69%64%74%68%3D%22%34%36%38%70%78%22%20%68%65%69%67%68%74%3D%22%37%35%30%70%78%22%20%6F%6E%6C%6F%61%64%3D%22%74%68%69%73%2E%73%74%79%6C%65%2E%68%65%69%67%68%74%20%3D%20%74%68%69%73%2E%63%6F%6E%74%65%6E%74%57%69%6E%64%6F%77%2E%64%6F%63%75%6D%65%6E%74%2E%62%6F%64%79%2E%73%63%72%6F%6C%6C%48%65%69%67%68%74%22%20%73%72%63%3D%22')+rrr+unescape('%2F%70%6F%73%74%2F%63%6F%6D%6D%65%6E%74%2F')+ttt+unescape('%22%3E%3C%2F%69%66%72%61%6D%65%3E%3C%2F%63%65%6E%74%65%72%3E%3C%2F%64%69%76%3E%3C%62%72%3E%3C%64%69%76%20%73%74%79%6C%65%3D%22%64%69%73%70%6C%61%79%3A%20%6E%6F%6E%65%3B%22%3E%3C%61%20%68%72%65%66%3D%22%68%74%74%70%3A%2F%2F%31%63%6F%64%65%2E%69%72%2F%22%3Eنمایش%20نظرات%20در%20ادامه%20مطلب%3C%2F%61%3E%3C%2F%64%69%76%3E'));
+ }
+/*]]>*/
+</script><![endif]> 
+
+				<br><br><b></b>
+				<font style="font-size:8pt;"><br>
+			طبقه بندی: <a href="http://piroz1.mihanblog.com/post/category/27">
+			گالری عکس پری</a>،&nbsp;									</font>
+
+</div></div>
+<div class=bpost>
+<div class=date><div>ارسال توسط میثم طاهری </div></div>
+<div class=nz><a target="_self" href="javascript:newComment(555)" > نظرات (<script>setCommentCnt(555)</script>)</a><a><script>mihanblogPostLike('555','like')</script></a></div></div>
+
+<div class=tpost><div class=title><a href="http://piroz1.mihanblog.com/post/554">گفت‌وگو با خانواده پاسدار شهید &quot;حمید رفیعی پری&quot;</a></div>
+<div class=tag><div class=tagz><script type="text/javascript" src="http://1abzar.ir/abzar/tools/post-view/stat2.php?amar=piroz1.mihanblog.com/post/554&color=888888&font=8"></script>
+ مرتبه</div><div class=tagz2>تاریخ : چهارشنبه 10 آذر 1395</div></div></div>
+
+				
+<div class=xpost><div class=hid><div style="float:right"></div> 
+
+<h1 class="title" style="box-sizing: border-box; padding: 0px; margin: 0px; line-height: 28px; font-stretch: normal; "><font size="3">گفت‌وگو با خانواده پاسدار شهید "حمید رفیعی پری"</font></h1><div><br></div><h1 class="title" style="box-sizing: border-box; padding: 0px; margin: 0px; line-height: 28px; font-stretch: normal;"><div><span style="text-align: justify; font-weight: normal;"><font size="2">وقتی رفتم معراج شهدا، تابوتی را آوردند و گفتند: «این جنازه حمیده، ببینید می‌تونید شناسایی کنید؟» یک پلاک بود با چند تکه استخوان و یک جمجمه. پاهام لرزید. نتوانستم بایستم. نشستم کنار تابوت و خیره شدم به استخوان‌های حمید. استخوان‌ها را جفت و جور کرده و مرتب چیده بودند کنار هم. استخوان‌ها را که دیدم یاد انگشت حمید افتادم.</font></span></div><div style="text-align: center;"><img src="http://tehranpress.com/images/news/78845/thumbs/78845.jpg" alt="پسرم با لباس دامادی به جبهه رفت"></div><div><span style="text-align: justify; font-weight: normal;"><font size="2"><br></font></span></div><div><div id="cke_pastebin" style="box-sizing: border-box; "><font size="2" style="font-weight: normal;">به نقل از خبرنگار&nbsp;<a href="http://defapress.ir/Fa/Service/2" style="box-sizing: border-box; outline: none; "><span style="box-sizing: border-box; ">سرویس حماسه و جهاد دفاع پرس</span></a>، پاسدار شهید حمید رفیعی پری از شهدای خیبر است. هنوز 20 روز از عروسیاش نگذشته بود که با&nbsp;لباس دامادی رفت جبهه. حمید آرپی جی زن بود. در طلائیه تا آخرین نفس جنگید بعد جنازهاش دست عراقیها افتاد. مادرش سالها چشم انتظاری کشید و اشک ریخت تا اینکه بعد از 18 سال پلاک حمید پیدا شد تا مرهم شب گریهها و خون دل خوردنهای مادر بیقرارش باشد.</font></div><div id="cke_pastebin" style="box-sizing: border-box; "><font size="2" style="font-weight: normal;">خبرنگار به سراغ خانواده شهید رفیعی در غرب تهران رفته و با&nbsp;حاج اسماعیل رفیعی پری و خانم احترام اصلانی پری گفتوگو کرده و پای صحبتهای&nbsp;زن و شوهر سالخوردهای نشسته که چشم انتظاری 18 ساله فرزند تازه دامادشان، جوانی و شادابیشان را به یغما برده و اندوه فراق فرزند، پیر و زمین گیرشان کرده است.<br style="box-sizing: border-box; "><br style="box-sizing: border-box; "><span style="box-sizing: border-box; "><span style="box-sizing: border-box; ">کاکل زری</span></span><br style="box-sizing: border-box; ">صدای گریه نوزاد که پیچید توی خانه، پشت بندش صدای صلوات هم بلند شد. خانه کوچک مش اسماعیل پر جنب و جوش بود. گفتند: «مژدگونی بدین، بچه پسر است. یک پسر کاکل زری». قابله عرق پیشانی اش را گرفت و گفت: «بچه توی صورتش پرده داشت. یقین دارم بچه مومنی می شود». احترام خانم دستش را تکیه می دهد به تخت و آرام از جا بلند می شود و می گوید: «ببخشید تازه عمل جراحی کرده ام. حالم زیاد خوب نیست.» بعد می نشیند کنار حاج اسماعیل و ریز می خندد: «چهارده سالم بود که حمید به دنیا آمد. بچه اولم بود. آن موقع توی روستای "پری" زندگی می کردیم. اصالتاً ملایری هستیم. وقتی پسرم به دنیا آمد حسابی جشن گرفتیم. می خواستند اسمش را ایرج بگذارند اما پیشنهاد دادم که اسم پسرم رَا حمید بگذارین. از اسم حمید خیلی خوشم می آمد. خدا بیامرز مش رضا پدر بزرگش &nbsp;......&nbsp;</font></div></div></h1>
+
+
+
+
+
+
+<![if !IE]><script language="JavaScript" type="text/javascript">
+/*<![CDATA[*/
+var rrr="http://piroz1.mihanblog.com";
+var sss="/post/554";
+var ttt="554";
+ if (window.location == rrr+sss ){
+document.write(unescape('%3C%68%72%20%73%74%79%6C%65%3D%22%77%69%64%74%68%3A%20%31%30%30%25%3B%20%68%65%69%67%68%74%3A%20%32%70%78%3B%22%3E%3C%64%69%76%20%63%6C%61%73%73%3D%22%67%70%6C%75%73%22%20%73%74%79%6C%65%3D%22%64%69%73%70%6C%61%79%3A%20%74%61%62%6C%65%3B%22%3E%3C%64%69%76%20%73%74%79%6C%65%3D%22%66%6C%6F%61%74%3A%20%72%69%67%68%74%3B%20%77%69%64%74%68%3A%20%34%30%30%70%78%3B%20%74%65%78%74%2D%61%6C%69%67%6E%3A%20%6A%75%73%74%69%66%79%3B%20%22%3E%20%3C%62%72%3E%3C%2F%64%69%76%3E%3C%63%65%6E%74%65%72%3E%3C%69%66%72%61%6D%65%20%73%74%79%6C%65%3D%22%6D%61%72%67%69%6E%2D%74%6F%70%3A%35%70%78%3B%6D%61%72%67%69%6E%2D%62%6F%74%74%6F%6D%3A%35%70%78%22%20%66%72%61%6D%65%62%6F%72%64%65%72%3D%30%20%69%64%3D%22%63%6F%6D%6D%65%6E%74%73%22%20%64%69%72%3D%22%72%74%6C%22%20%77%69%64%74%68%3D%22%34%36%38%70%78%22%20%68%65%69%67%68%74%3D%22%37%35%30%70%78%22%20%6F%6E%6C%6F%61%64%3D%22%74%68%69%73%2E%73%74%79%6C%65%2E%68%65%69%67%68%74%20%3D%20%74%68%69%73%2E%63%6F%6E%74%65%6E%74%57%69%6E%64%6F%77%2E%64%6F%63%75%6D%65%6E%74%2E%62%6F%64%79%2E%73%63%72%6F%6C%6C%48%65%69%67%68%74%22%20%73%72%63%3D%22')+rrr+unescape('%2F%70%6F%73%74%2F%63%6F%6D%6D%65%6E%74%2F')+ttt+unescape('%22%3E%3C%2F%69%66%72%61%6D%65%3E%3C%2F%63%65%6E%74%65%72%3E%3C%2F%64%69%76%3E%3C%62%72%3E%3C%64%69%76%20%73%74%79%6C%65%3D%22%64%69%73%70%6C%61%79%3A%20%6E%6F%6E%65%3B%22%3E%3C%61%20%68%72%65%66%3D%22%68%74%74%70%3A%2F%2F%31%63%6F%64%65%2E%69%72%2F%22%3Eنمایش%20نظرات%20در%20ادامه%20مطلب%3C%2F%61%3E%3C%2F%64%69%76%3E'));
+ }
+/*]]>*/
+</script><![endif]> 
+
+				<br><br><b><a href='http://piroz1.mihanblog.com/post/554'>ادامه مطلب</a></b>
+				<font style="font-size:8pt;"><br>
+			طبقه بندی: <a href="http://piroz1.mihanblog.com/post/category/19">
+			شهدای پری</a>،&nbsp;									</font>
+
+</div></div>
+<div class=bpost>
+<div class=date><div>ارسال توسط میثم طاهری </div></div>
+<div class=nz><a target="_self" href="javascript:newComment(554)" > نظرات (<script>setCommentCnt(554)</script>)</a><a><script>mihanblogPostLike('554','like')</script></a></div></div>
+
+
+<div id="postz">
+<div class=tpost-x >آخرین مطالب</div>
+<div class=xpost><div class=xpost2><a href="http://piroz1.mihanblog.com/post/566">مراسم سه شب جمعه ،تشکر و اعتذار</a></div>
+<div class=xpost2><a href="http://piroz1.mihanblog.com/post/565">پیام تسلیت مرحوم آیت اله طاهری</a></div>
+<div class=xpost2><a href="http://piroz1.mihanblog.com/post/562">coming soon .......</a></div>
+<div class=xpost2><a href="http://piroz1.mihanblog.com/post/561">پیام تسلیت مرحومه مریم چهارمحالی</a></div>
+<div class=xpost2><a href="http://piroz1.mihanblog.com/post/560">پوزش به دلیل عدم بروز رسانی</a></div>
+<div class=xpost2><a href="http://piroz1.mihanblog.com/post/559">تبریک سال ۱۳۹۶</a></div>
+<div class=xpost2><a href="http://piroz1.mihanblog.com/post/557">تسلیت به مناسبت حادثه پلاسکو</a></div>
+<div class=xpost2><a href="http://piroz1.mihanblog.com/post/556">تصاویر محرم سال ۱۳۹۵ در امامزاده دو خواهران روستای پری</a></div>
+<div class=xpost2><a href="http://piroz1.mihanblog.com/post/555">تصاویر قدیم  ماه محرم  روستای پری</a></div>
+<div class=xpost2><a href="http://piroz1.mihanblog.com/post/554">گفت‌وگو با خانواده پاسدار شهید &quot;حمید رفیعی پری&quot;</a></div>
+<div class=xpost2><a href="http://piroz1.mihanblog.com/post/552">چقدر آخر این ماه صفر سخت و سنگین است.</a></div>
+<div class=xpost2><a href="http://piroz1.mihanblog.com/post/298">درباره روستای پیروز - پری</a></div>
+<div class=xpost2><a href="http://piroz1.mihanblog.com/post/550">نماینده مردم ملایر در مجلس شورای اسلامی خواستار شد</a></div>
+<div class=xpost2><a href="http://piroz1.mihanblog.com/post/549">شعر حافظ - واعظان کاین جلوه در محراب و منبر می‌کنند</a></div>
+<div class=xpost2><a href="http://piroz1.mihanblog.com/post/548">تبریک عید سعید فطر به همولایتی های عزیزم ...</a></div>
+</div><div class=bpost-x></div></div>
+
+
+<div class=ad1></div>
+<div class=xpost>
+<div class=page22>
+			(تعداد کل صفحات:52)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	<a href="http://piroz1.mihanblog.com/page/1">[<b>1</b>]</a>&nbsp;&nbsp;	<a href="http://piroz1.mihanblog.com/page/2">[<span>2</span>]</a>&nbsp;&nbsp;	<a href="http://piroz1.mihanblog.com/page/3">[<span>3</span>]</a>&nbsp;&nbsp;	<a href="http://piroz1.mihanblog.com/page/4">[<span>4</span>]</a>&nbsp;&nbsp;	<a href="http://piroz1.mihanblog.com/page/5">[<span>5</span>]</a>&nbsp;&nbsp;	<a href="http://piroz1.mihanblog.com/page/6">[<span>6</span>]</a>&nbsp;&nbsp;	<a href="http://piroz1.mihanblog.com/page/7">[<span>7</span>]</a>&nbsp;&nbsp;	<a href="http://piroz1.mihanblog.com/page/8">[<i>...</i>]</a>&nbsp;&nbsp;</div>
+			</div>
+<div class=ad3><br>
+<div style="width:100%;text-align:center;font-size:8pt;color:#b53224;height:25;"> 
+<b><font size="1">.:</font></b>	<a href="http://www.piroz.ir/" target="_blank"><font color="#444444"> Create By  <b> Meysam.Taheri </b></font></a><b><font size="1">:.</font></b> 
+</div> 
+</div>
+	
+<script src="http://blogskins.ir/46/code.js"></script>
+
+<!------------block ----------------------->
+
+		<form id="frm-16075447685fd12fc0c25fd" method="post" action="http://piroz1.mihanblog.com/poll/new/fid/16075447685fd12fc0c25fd/atrty/1607544768/avrvy/0/key/35315a4755062e7139e67fb3698afcd4/"  onsubmit="window.open('', 'poll', 'toolbar=0,location=0,status=0,menubar=0,scrollbars=1,resizable=0,width=505,height=315')" target="poll"><input type="hidden" name="data[pollid]" value="345055" id="data[pollid]" />		
+<div class="tmenu b7"><div class=tmenu2>نظر سنجی</div></div>
+<div class=xmenu>
+<div class=xmenu1>آیا از عملکرد مدیران و موقعیت شهر زنگنه راضی هستید ؟<br><label><input type="radio" name="data[answer]" value="v1">بله</label><br><label><input type="radio" name="data[answer]" value="v2">خیر</label><br><br><input type="submit" value="ثبت"></div>
+</div>
+<div class=bmenu></div>
+		<input type="hidden" name="frm-id" value="16075447685fd12fc0c25fd" id="frm-id" /></form><!------------block ----------------------->
+<!------------block ----------------------->
+<div class="tmenu b2"><div class=tmenu2>امکانات سایت</div></div>
+<div class=xmenu><div class=xmenu2>
+<center>
+<!-- Begin Susa Web Tools - Noroz92 Count Down -->
+
+<!-- End Susa Web Tools - Noroz92 Count Down -->
+<br><hr>
+<!-- Calendar by www.1abzar.com --->
+<script type="text/javascript" src="http://1abzar.ir/abzar/tools/taghvim/?mod=2&abzar=1&kadr=1&kc=7DBBB5"></script><div style="display:none"><h2><a href="http://www.1abzar.com">&#1578;&#1602;&#1608;&#1740;&#1605; &#1588;&#1605;&#1587;&#1740;</a></h2></div>
+<!-- Calendar by www.1abzar.com --->
+<br><hr>
+<!-- Begin ParsTOOLs.com Weather Code --><div  style="display:none;"><a href="http://parstools.com"><h1>وضعیت آب و هوا</h1></a></div><script language="javascript" src="http://www.ParstoolS.com/weather/code2/?city=IRXX0018&bgcolor=FFFFFF&textcolor=000000&width=180&height=200"></script><!-- End Weather code -->
+
+<br><hr>
+<!-- oghat sharee by www.1abzar.com --->
+<script type="text/javascript" src="http://1abzar.ir/abzar/tools/azan/v2/?mod=mod3&shahr=29-6"></script><div style="display:none"><h1><a href="http://www.1abzar.com">&#1575;&#1608;&#1602;&#1575;&#1578; &#1588;&#1585;&#1593;&#1740;</a></h1></div>
+<!-- oghat sharee by www.1abzar.com --->
+
+</center>
+</div></div><div class=bmenu></div>
+<!------------block ----------------------->
+<div class="tmenu b4"><div class=tmenu2>پیوند های روزانه</div></div>
+<div class=xmenu><div class=xmenu1><a target="_blank" href="https://www.flynic.ir" title="ثبت و تمدید دامنه ir">ثبت دامنه</a></div><div class=xmenu1><a target="_blank" href="http://melatblog.ir" title="سرویس وبلاگدهی ملت بلاگ برای ساخت وبلاگ رایگان فارسی برای حمایت از زبان شیرین پارسی در پهنای اینترنت پا به عرصه نهاد و امید بتوان گامی هر چند کوچک برای اثر بخشی زبان پارسی در جهانیان انجام داد.">ملت بلاگ</a></div><div class=xmenu1><a target="_blank" href="http://www.cafealone.com" title="شعر,مینیمال,جملات فلسفی,داستان کوتاه">کافه تنهایی</a></div><div class=xmenu1><a target="_blank" href="http://www.notesara.com" title="مرجع دانلود نت و آکورد">نت سرا</a></div><div class=xmenu1><a target="_blank" href="http://arawebco.ir" title="وردپرس">وردپرس</a></div><div class=xmenu1><a target="_blank" href="http://eheyat.com" title="مداحی صوتی">مداحی صوتی</a></div><div class=xmenu1><a target="_blank" href="http://amoozesh-pc.ir" title="با عرض سلام و ادب خدمت شما
+آموزش تصویری ساخت برنامه ای همانند تلگرام با قیمتی مناسب
+با این آموزش شما می توانید یک برنامه ای مثل تلگرام طراحی نموده و با اندکی تغییرات  آن را در مارکت های اندروید به فروش برسانید.
+سایت اینترنتی:amoozesh-pc.ir">خرید آموزش تصویری ساخت برنامه ای همانند تلگرام</a></div><div class=xmenu1><a target="_blank" href="../www.dadabeyglu.mihanblog.com/index.html" title="˙·٠•●♥زیبایی ها را ببینید و از زندگی لذت ببرید♥●•٠·˙
+
+سلام دوست من...
+وبلاگ خوبی داری...
+امیدوارم خوب باشی...
+
+روستای ما در دامنه سرسبز سبلان واقع شده...
+خوشحال میشیم به ما سر بزنی و نظرتو درباره روستای ما بگی...مایل باشی تبادل لینک کنیم؟؟؟؟؟؟؟
+منتظرت هستیم...
+یا علی...">»»یه وبلاگ روستایی««</a></div><div class=xmenu1><a target="_blank" href="../www.dadabeyglu.mihanblog.com/index.html" title="سلام دوست من...
+نماز و روزت قبول باشه...
+
+روستای ما در دامنه سرسبز سبلان واقع شده...
+خوشحال میشیم به ما سر بزنی و نظرتو درباره روستای ما بگی...
+منتظرت هستیم...
+یا علی...">یه وبلاگ روستایی</a></div><div class=xmenu1><a target="_blank" href="http://estekhdamiranian.com/" title="جدیدترین آگهی های استخدام ایران شامل استخدامهای دولتی-بانکها-بیمه ها-شرکتهای خصوصی/خارجی و.... را در استخدام ایرانیان مشاهده کنید.
+################
+سلام دوست عزیز اگر تمایل به تبادل لینک3طرفه داری لینک ما رو تایید کن و در قسمت تماس با ما وبسایت اطلاع بده تا ما لینک شما رو در اون یکی وبسایتمون (http://estekhdamiranian.ir/)
+که رنکش 2 هست قرار بدیم.با تشکر">استخدام ایرانیان</a></div><div class=xmenu1><a target="_blank" href="http://ahmadnia.org" title="سلام
+وبلاگ زیبا و جالبی دارید
+بدینوسیله از شما دعوت می کنیم که به وب سایت شخصی امیرحسین احمدنیا 
+مجری صحنه و خبرنگار و... سری بزنید و از مطالب متفاوت در زمینه  
+علمی،تاریخی،طنز،بصیرت،سیاسی،اقتصادی،پندواندرز و بسیاری دیگر از مطالب 
+جذاب و خواندنی،آخرین اخبار و بررسی ها از انتخابات ریاست جمهوری 92  و... 
+دیدن فرمایید
+ضمنا در صورتی که با تبادل لینک با وب سایت ما موافق بودید می توانید پس از 
+ثبت لینک ما از طریق سایت به ما اطلاع دهید تا ما نیز لینک شما را با آدرس 
+دلخواه شما ثبت نماییم.
+پیشاپیش از توجه شما متشکریم.">امیرحسین احمدنیا</a></div><div class=xmenu1><a target="_blank" href="https://apps.db.ripe.net/search/" title="">جستجوی Ip</a></div><div class=xmenu1><a target="_blank" href="http://www.ido.ir/myhtml/sazman/ostan.aspx?o=129" title="">سازمان تبلیغات اسلامی استان همدان</a></div><div class=xmenu1><a target="_blank" href="http://roosta.ir/" title="">بانک اطلاعات روستایی</a></div><div class=xmenu1><a target="_blank" href="http://www.vil.ir/" title="">بانک اطلاعات روستاهای ایران</a></div><div class=xmenu1><a target="_blank" href="http://www.amar.org.ir/Default.aspx?tabid=1015" title="">مرکز ملی آمار ایران</a></div><div class=xmenu1><a target="_blank" href="http://www.agri-bank.com/Static/OLB/Menu.asp" title="">بانک کشاورزی</a></div><div class=xmenu1><a target="_blank" href="http://www.en-bank.com/Site.aspx?ParTree=111612" title="">بانک اقتصاد نوین</a></div><div class=xmenu1><a target="_blank" href="https://www.bpi.ir/" title="">بانک پاسارگاد</a></div><div class=xmenu1><a target="_blank" href="http://www.parsian-bank.com/" title="">بانک پارسیان</a></div><div class=xmenu1><a target="_blank" href="https://www.esinabank.com/webbank/login/loginPage.action" title="">بانک سینا</a></div><div class=xmenu1><a target="_blank" href="http://www.tejaratbank.ir/portal/Default.aspx?tabid=1305" title="">بانک تجارت</a></div><div class=xmenu1><a target="_blank" href="http://bank-maskan.ir/Default.aspx?tabindex=581&amp;tabid=4889" title="">بانک مسکن</a></div><div class=xmenu1><a target="_blank" href="https://ebank.bmi.ir/mbsweb/bankmelli/login.aspx" title="">بانک ملی</a></div><div class=xmenu1><a target="_blank" href="https://www.ebanksepah.ir/" title="">بانک سپه</a></div><div class=xmenu1><a target="_blank" href="https://ebanking.bankmellat.ir/ebanking/" title="">بانک ملت</a></div><div class=xmenu1><a target="_blank" href="http://www.iran.ir" title="">ایمیل ملی</a></div><div class=xmenu1><a target="_blank" href="http://mail.post.ir/" title="">شرکت پست-پست الکترونیک</a></div><div class=xmenu1><a target="_blank" href="http://tntsearch.post.ir/" title="">شرکت پست-رهگیری مرسوله</a></div><div class=xmenu1><a target="_blank" href="http://postyafteh.post.ir/" title="">شرکت پست-مدارک گمشده</a></div><div class=xmenu1><a href="http://www.blogskin.ir" target="_blank">قالب وبلاگ</a></div>
+<div class=xmenu1><a href="http://piroz1.mihanblog.com/linkdaily/"><b>همه پیوندهای روزانه</b></a></div>
+<div class=xmenu1><a href="javascript:linkdailyForm()"><b>ارسال پیوند روزانه</b></a></div>
+</div>
+<div class=bmenu></div><!------------block ----------------------->
+<div class="tmenu b2"><div class=tmenu2>تبادل بنر</div></div>
+<div class=xmenu><div class=xmenu2>
+<center>
+<!----------------block------------------------->
+
+
+<!----------------block------------------------->
+<center><a href="http://www.khamenei.ir/" ><img alt="رهبری" src="http://www.shiaupload.ir/images/98813688917511882598.jpg" width="170" height="60" border="0px"></a></center><br>
+<!----------------block------------------------->
+<center><a href="http://president.ir/fa/" ><img alt="ریاست جمهوری" src="http://saamad.ir/Portal/Picture/ShowObjectPicture.aspx?Width=200&Height=170&ObjectType=WEBSITE&ObjectID=fbd11dd0-6e1f-4f67-ab3e-695f5f91c2e3" border="0px"></a></center><br>
+<!----------------block------------------------->
+<!----------------block------------------------->
+<center><a href="http://www.rajanews.com/" ><img alt="رجانیوز" src="http://www.shiaupload.ir/images/13338608025158038822.jpg" width="170" height="60" border="0px"></a></center><br>
+<!----------------block------------------------->
+<style type="text/css">//Ashoora.ir|Ashoora-Logo Begins</style>
+<center><a href="http://www.ashoora.ir" target=_blank><img src="http://www.ashoora.ir/images/logos/logo2.gif" style="-webkit-user-select: none"></a>
+<!----------------block------------------------->
+</center>
+<style type="text/css">//Ashoora.ir|Ashoora-Logo Ends</style>
+</center>
+</div></div><div class=bmenu></div>
+<!------------block ----------------------->
+
+<!------------block ----------------------->
+<div class="tmenu b2"><div class=tmenu2>دانشنامه قرانی</div></div>
+<div class=xmenu><div class=xmenu2>
+<center>
+<!----------------block------------------------->
+<style type="text/css">//Ashoora.ir|Sore Begins</style><script type="text/javascript" src="http://www.ashoora.biz/mazhabi-projects/sore/png.js"></script><script type="text/javascript" src="http://www.ashoora.biz/mazhabi-projects/sore/sore.php?mod=6&cat=1,1,1,1,1,1,1,1,1,1,1,1,1,1,1&color3=F30A36&color2=F30A36&color1=000000&width=150"></script><style type="text/css">//Ashoora.ir|Sore Ends</style>
+<!----------------block------------------------->
+</center>
+<style type="text/css">//Ashoora.ir|Ashoora-Logo Ends</style>
+</center>
+</div></div><div class=bmenu></div>
+<!------------block ----------------------->
+
+
+
+
+</div>
+</div>
+
+</div>
+
+<div class=footer>
+<div class=right>
+<div class=form>فرم تماس با ما</div>
+<div class=txt>
+<FORM METHOD="POST" ACTION="http://blogskins.ir/45/email.php" name="blogskin" onsubmit="return checkform()" target="_blank">
+
+<INPUT NAME="email" value="villagepari@gmail.com" style="display:none">
+
+<div>نام و نام خانوادگی: <INPUT NAME="name" class=ii autocomplete="off"></div>
+<div>پست الكترونیك : <INPUT NAME="adres" class=ii autocomplete="off"></div>
+<div>	<TEXTAREA onfocus="javascript:;if (this.value =='در این قسمت متن خود را بنویسید.'){ this.value = ''}" name="msg" class=ix>در این قسمت متن خود را بنویسید.</TEXTAREA></div>
+<div><center><INPUT TYPE="image" src="http://blogskins.ir/46/send.jpg"></center></div>
+</FORM></div>
+</div>
+<div class=left id="linkz">
+<div class=linkz>
+<div class=titrx>لینک دوستان</div>
+<div class=zz>
+<div><div><a href="http://piroz1.mihanblog.com/link/"><b>آرشیو پیوندها</b></a></div></div>
+<div><div><a target="_blank" href="http://www.naser-amiri.blogfa.com/" title="درباره شهید بزرگوار ناصر امیری پری">شهدای پیروز (پری)- نویسنده : محمد حسن امیری پری</a></div></div><div><div><a target="_blank" href="http://pirouz.blogfa.com/tag/??????-???" title="درباره روستای پری">روستای پیروز (پری) - نویسنده : میثم طاهری</a></div></div><div><div><a target="_blank" href="http://roostayepari.blogfa.com/" title="درباره روستای پری">روستای پیروز (پری) - نویسنده : سجاد ندری پری</a></div></div>
+</div>
+</div>
+<div class=rss><br><a href="index.html#ali" title="بالای صفحه"><img border="0" src="http://blogskins.ir/46/x.gif" width="70" height="60"></a></div>
+
+<div class=down><div class=ft>
+تمام حقوق این سایت و مطالب آن متعلق به 
+<a href="index.html">.:: روستای پیروز -پری::.</a> می باشد.</div>
+</div></div>
+
+
+</div>
+</div></div></div></div><div id="seo">
+<h1><a title="ابزار وبلاگ" href="http://www.1abzar.com">ابزار وبلاگ</a></h1><h2><a href="http://www.blogskin.ir" title="قالب وبلاگ">قالب وبلاگ</a></h2><h1><a  title="دانلود فیلم" href="http://www.magicp30.ir">دانلود فیلم</a></h1>
+
+
+
+</div>
+<script type=text/javascript>document.getElementById('s'+'e'+'o').style.display='none';</script> 
+</body></html><script>
+//    setTimeout(function () {
+//        GetMihanBlogShowAds();
+//    }, 1000);
+</script>
+<!--NEW SERVER--><!--;)-->
+
+<!--SabaVision Ads Handler--><!--<script type="text/javascript">(function (d) {var url =   location.protocol+'//api.sabavision.com/pox/poxjs.js';d.write('<script type="text/javascript" src="' + url + '" async></scri' + 'pt>');})(document);</script>-->
+
+
+<script type="text/javascript">
+
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-153829-9']);
+    _gaq.push(['_setDomainName', 'piroz1.mihanblog.com']);
+    _gaq.push(['_trackPageview']);
+
+    (function() {
+        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+
+</script>
+
+
+<div id='mediaad-Kvcm'></div>
+<meta name="sabavision_zone" content="2500-Z499" />
+<center>
+    <div style="background-color:white;width:90%;padding:20px;margin-top:50px;margin-bottom:50px;">
+        <a href="https://www.cloob.com">شبکه اجتماعی فارسی کلوب</a> | <a href="https://www.seo25.com/product/buy-mobile-traffic-and-get-cheap-targeted-mobile-traffic/" target="_blank">Buy Mobile Traffic</a> | <a href="https://www.soalaat.com">سایت سوالات</a>
+    </div>
+</center>

@@ -1,0 +1,1807 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+"http://www.w3.org/TR/html4/loose.dtd">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" /><link rel="EditURI" type="application/rsd+xml" title="RSD" href="../../../xmlrpc@rsd" />
+<script type="text/javascript" src="../../../../static.mihanblog.com/public/scripts/run/g.other.v3.js"></script>
+<script>
+
+	function c_$(id){
+        return document.getElementById(id);
+    }
+    
+			//if (parent.frames.length) top.location.href= document.location;
+		
+	setTodayDate = function(){
+		document.write('شنبه 22 آذر 1399');
+		/*1431964*/	}
+
+</script>
+
+
+
+        <script type="text/javascript">
+            (function(){
+            var now = new Date();
+            var head = document.getElementsByTagName('head')[0];
+            var script = document.createElement('script');
+            script.async = true;
+            var script_address = 'https://cdn.yektanet.com/js/mihanblog.com/native-mihanblog.com-6531.js';
+            script.src = script_address + '?v=' + now.getFullYear().toString() + '0' + now.getMonth() + '0' + now.getDate() + '0' + now.getHours();
+            head.appendChild(script);
+            })();
+        </script>
+
+        <!--<script type="text/javascript">
+            var head = document.getElementsByTagName("head")[0];
+            var script = document.createElement("script");
+            script.type = "text/javascript";
+            script.async=1;
+            script.src = "https://s1.mediaad.org/serve/mihanblog.com/loader.js" ;
+            head.appendChild(script);
+        </script>-->
+        
+        <script>
+            var sabaVisionWebsiteID = "9bab9dac-041d-4bdb-b39a-1ed789f65eed"; var sabaVisionWebsitePage = "ALL"
+        </script>
+        <link rel="stylesheet" href="https://plus.sabavision.com/dox/dox.min.css">
+        <script src="https://plus.sabavision.com/dox/dox.min.js"></script>
+        
+        <script>
+	try{
+		var commentCnt = new Array();
+		commentCnt[773]='3';commentCnt[774]='3';commentCnt[775]='1';commentCnt[777]='1';	} catch(e){}
+	
+	newComment = function(post_id){
+		try{
+			window.open('/post/comment/'+post_id,'comment','status=yes,scrollbars=yes,toolbar=no,menubar=no,location=no ,width=480px,height=540px');
+		} catch(e){}
+	}
+	setCommentCnt = function(post_id){
+		try{
+			if(commentCnt[post_id]){
+				document.write(commentCnt[post_id]);
+			} else {
+				document.write(0);
+			}
+		} catch(e){}
+	}
+</script><script>
+
+
+	mihanblogUpdateLike = function(postid,type){
+		var url = '/post/like/'+postid+'/'+type;
+		mihanblogGetAjax(url,function(){});
+	};
+	try{
+        mihanblogGetAjax = function (url,callback) {
+    		var req;
+			if (window.XMLHttpRequest)
+            {
+                // code for IE7+, Firefox, Chrome, Opera, Safari
+			  	req = new XMLHttpRequest();
+			}else{	// code for IE6, IE5
+			  	req = new ActiveXObject("Microsoft.XMLHTTP");
+		  	}
+		    req.open("GET", url, 1);
+		    req.onreadystatechange = function () {
+		        if (req.readyState == 4) {
+		            if (req.status == 200) {
+		            	var response = eval(req.responseText);
+		            	callback();
+		            }else{
+	            		return ;
+		            }
+		        }else{
+					return ;
+		        }
+		    }
+		    req.send(null);
+		}
+	}catch(e){}
+
+	try{
+		var mihanblogLikeArrCnt = new Array();
+		var mihanblogDisLikeArrCnt = new Array();
+
+		mihanblogLikeArrCnt[773]='38';
+mihanblogDisLikeArrCnt[773]='0';
+mihanblogLikeArrCnt[774]='40';
+mihanblogDisLikeArrCnt[774]='0';
+mihanblogLikeArrCnt[775]='38';
+mihanblogDisLikeArrCnt[775]='0';
+mihanblogLikeArrCnt[777]='30';
+mihanblogDisLikeArrCnt[777]='0';
+	} catch(e){}
+
+
+
+    mihanblogPostLike = function(post_id){
+
+        mihanblogLikeCnt = (mihanblogLikeArrCnt[post_id]? mihanblogLikeArrCnt[post_id] : 0);
+        mihanblogDisLikeCnt = (mihanblogDisLikeArrCnt[post_id]? mihanblogDisLikeArrCnt[post_id] : 0);
+        mihanblogLikeCnt = parseInt(mihanblogLikeCnt);
+        mihanblogDisLikeCnt = parseInt(mihanblogDisLikeCnt);
+
+        document.write(
+                '<div class="mihanblog_like_wrapper ">'+
+                       '<div id="dislikeBar_'+post_id+'" onclick="mihanblogUpdateLike('+post_id+',\'dislike\')"   class="mihanblog_like_bar mihanblog_like_dislikeBar mihanblog_like_show_help ">-<div class="mihanblog_like_Cnt" id="disLikeCnt_'+post_id+'">'+mihanblogDisLikeCnt+'</div>'+
+                            '<span  class="mihanblog_like_v2_help mihanblog_like_v2_help_dislike clearfix"> '+
+                                '<span class="mihanblog_like_help_arrow mihanblog_like_help_arrow_dislike clearfix"></span>'+
+                                '<span class="mihanblog_like_help_text">نمی پسندم</span>'+
+                            '</span>'+
+                        '</div>'+
+                       '<div id="Like_'+post_id+'" class="mihanblog_like_border"></div>'+
+                       '<div id="likeBar_'+post_id+'" onclick="mihanblogUpdateLike('+post_id+',\'like\')"  class="mihanblog_like_bar mihanblog_like_likeBar mihanblog_like_show_help" >+<div class="mihanblog_like_Cnt" id="likeCnt_'+post_id+'">'+mihanblogLikeCnt+'</div>'+
+                            '<span  class="mihanblog_like_v2_help mihanblog_like_v2_help_like clearfix"> '+
+                                '<span class="mihanblog_like_help_arrow mihanblog_like_help_arrow_like clearfix"></span>'+
+                                '<span class="mihanblog_like_help_text">می پسندم</span>'+
+                            '</span>'+
+                        '</div>'+
+
+                '</div>'
+        );
+
+
+
+        mihanblogDisplayeLike(post_id);
+    }
+
+
+    mihanblogDisplayeLike = function(post_id){
+
+        mihanblogLikeCnt = (mihanblogLikeArrCnt[post_id]? mihanblogLikeArrCnt[post_id] : 0);
+        mihanblogDisLikeCnt = (mihanblogDisLikeArrCnt[post_id]? mihanblogDisLikeArrCnt[post_id] : 0);
+        mihanblogLikeCnt = parseInt(mihanblogLikeCnt);
+        mihanblogDisLikeCnt = parseInt(mihanblogDisLikeCnt);
+
+
+
+        sum = mihanblogLikeCnt - mihanblogDisLikeCnt;
+        backgroundBorder =  document.getElementById('Like_'+post_id);
+        var likeObj = document.getElementById('likeCnt_'+post_id);
+        var disLikeObj = document.getElementById('disLikeCnt_'+post_id);
+
+
+
+
+
+        likeObj.innerHTML =  mihanblogLikeCnt ;
+        disLikeObj.innerHTML =  mihanblogDisLikeCnt;
+
+        if(sum == 0){
+            backgroundBorder.style.backgroundImage = "url('/public/public/images/icons/like_likedislike.png')";
+            document.getElementById('dislikeBar_'+post_id).style.width = '19px';
+            document.getElementById('likeBar_'+post_id).style.width = '19px';
+        }else{
+             if(sum > 0){
+                 backgroundBorder.style.backgroundImage = "url('/public/public/images/icons/like_like.png')";
+                 document.getElementById('likeBar_'+post_id).style.width = '23px';
+                 document.getElementById('dislikeBar_'+post_id).style.width = '15px';
+             }else{
+                 backgroundBorder.style.backgroundImage = "url('/public/public/images/icons/like_dislike.png')";
+                 document.getElementById('likeBar_'+post_id).style.width = '15px';
+                 document.getElementById('dislikeBar_'+post_id).style.width = '23px';
+             }
+        }
+
+    }
+
+
+
+
+</script>
+
+<style type="text/css">
+
+
+    .clearfix {display: inline-block;}
+    .clearfix:after {
+        content: ".";
+        display: block;
+        height: 0;
+        clear: both;
+        visibility: hidden;
+    }
+
+    .mihanblog_like_wrapper {
+        color: #ffffff;
+        direction: ltr;
+        position: relative;
+    }
+    .mihanblog_like_wrapper span{
+        display: none;
+    }
+    .mihanblog_like_bar {
+        color: #FFFFFF;
+        cursor: pointer;
+        float: left;
+        font-size: 10px;
+        height: 20px;
+        line-height: 19px;
+        margin: 5px 0;
+    }
+    .mihanblog_like_likeBar {
+        background-color: #88B131;
+        padding-right: 5px;
+        border-top-right-radius: 2px;
+        border-bottom-right-radius: 2px;
+        text-align: right;
+    }
+    .mihanblog_like_likeBar:hover{
+        background-color: #699017;
+    }
+    .mihanblog_like_border {
+        background-color: #666666;
+        border: 1px solid #666666;
+        float: left;
+        font-size: 12px;
+        height: 20px;
+        margin-top: 2px;
+        width: 25px;
+        padding: 3px 5px 2px 0;
+        text-align: center;
+        border-radius: 2px;
+        color: #ffffff;
+        direction: ltr;
+        background-repeat: no-repeat ;
+        background-position: 4px center;
+    }
+    .mihanblog_like_border img {
+        margin-left: 2px;
+        margin-top: 2px;
+        width: 22px;
+    }
+    .mihanblog_like_dislikeBar {
+        background-color: #FF6F31;
+        padding-left: 5px;
+        border-top-left-radius: 2px;
+        border-bottom-left-radius: 2px;
+        text-align:left ;
+    }
+    .mihanblog_like_dislikeBar:hover{
+        background-color: #D54B10;
+    }
+
+
+
+    .mihanblog_like_show_help {
+        position: relative;
+    }
+    .mihanblog_like_show_help:hover span {
+        display: block;
+    }
+    .mihanblog_like_help_text {
+        background-color: white;
+        border: 1px solid #555555;
+        border-radius: 3px 3px 3px 3px;
+        color: #303030;
+        float: left;
+        font-size: 11px;
+        font-weight: normal;
+        padding: 5px 10px;
+    }
+
+    .mihanblog_like_help_arrow_dislike {
+        background: url("http://rajer2014.mihanblog.com/public/public/images/icons/like_hover_top.png") no-repeat scroll 16px 0 transparent;
+        left: 0;
+        top: -4px;
+    }
+
+    .mihanblog_like_help_arrow_like {
+        background: url("http://rajer2014.mihanblog.com/public/public/images/icons/like_hover_top _2.png") no-repeat scroll 16px 0 transparent;
+        left: -10px;
+        top: 29px;
+    }
+
+    .mihanblog_like_help_arrow{
+        height: 6px;
+        position: absolute;
+        width: 100px;
+
+    }
+
+    .mihanblog_like_v2_help_dislike {
+        left: -15px;
+        top: 24px;
+    }
+    .mihanblog_like_v2_help_like {
+        left: 0;
+        top: -35px;
+
+    }
+    .mihanblog_like_v2_help{
+        display: none;
+        position: absolute;
+        white-space: nowrap;
+        z-index: 1;
+    }
+
+    .mihanblog_like_Cnt{
+        display: inline;
+        color: #ffffff;
+    }
+
+</style><script>
+
+	statInfo = new Array();
+	setStatVar = function(index,value){
+		statInfo[index] = value;
+	}
+	getStatVar = function(index){
+		if(statInfo[index]) document.write(statInfo[index]);
+	}
+	
+	setStatVar('total_post','683');
+	setStatVar('total_author','0');
+	setStatVar('modify_date','سه شنبه 18 آذر 1399');
+	
+	setStatVar('today_view','144');
+	setStatVar('yesterday_view','131');
+	
+	setStatVar('this_month_view','3353');
+	setStatVar('last_month_view','5830');
+
+	setStatVar('total_view','291830');
+	setStatVar('last_view_date','شنبه 22 آذر 1399 (17:29)');
+
+
+
+    
+    function setStatFromClient()
+    {
+        var url = 'http://rajer2014.mihanblog.com/statupdate/?data[refereruri]=http://rajer2014.mihanblog.com/post/archive&data[postid]=&data[requesturi]=/post/archive/1397/11&data[sdate]=1607782320&data[hash]=f438c423acd4912ef659d45c32404564&data[resolution]='+screen.width+' X '+screen.height;
+
+//        alert(url);
+//        var newjs = document.createElement("SCRIPT");
+//        newjs.type = 'text/javascript';
+//        newjs.src = url;
+//
+//        var newdiv = document.createElement("DIV");
+//        newdiv.setAttribute("style","display:none");
+
+        document.write(unescape('%3Cscript src="'+url+'" type="text/javascript"%3E%3C/script%3E'));
+//        newdiv.appendChild (newjs);
+//        document.write(newjs);
+//        document.write(appendChild (newdiv);
+
+    };
+    setStatFromClient();
+        
+</script><script>
+	messageForm = function(post_id){
+		try{
+			window.open('/message','message','status=yes,scrollbars=yes,toolbar=no,menubar=no,location=no ,width=480px,height=550px');
+		} catch(e){}
+	}
+</script><script>
+	linkdailyForm = function(){
+		try{
+			window.open('/linkdaily/new','linkdaily','status=yes,scrollbars=yes,toolbar=no,menubar=no,location=no ,width=500px,height=460px');
+		} catch(e){}
+	}
+</script><script>
+
+var MihanblogShopAdsArray = new Array();
+
+function GetMihanBlogShowAds(){
+	if(MihanblogShopAdsArray.length){
+		var adsTarget = 'MihanblogShopAds';
+		var containerWidth = document.getElementById(adsTarget).offsetWidth;
+		if(containerWidth>=200){
+			var adsCnt = parseInt(containerWidth / 200) ;
+			if(adsCnt>MihanblogShopAdsArray.length){
+				adsCnt = MihanblogShopAdsArray.length ; 
+			}
+//			var OneAdsWidth = parseInt(containerWidth / adsCnt) ;
+			var OneAdsWidth = containerWidth / adsCnt ;
+			if(OneAdsWidth>400){
+				OneAdsWidth = 400 ;
+			}
+			var OutHtml = '';
+			var img = '';
+			var link = '';
+			var title = '';
+			var description = '';
+			var imgWidth = 70;
+			if(OneAdsWidth>230){
+				imgWidth = 80;
+			}
+			if(OneAdsWidth>300){
+				imgWidth = 90;
+			}
+			for(adsOne=0;adsOne<adsCnt;adsOne++){
+				
+				img = MihanblogShopAdsArray[adsOne]['img'];
+				link = MihanblogShopAdsArray[adsOne]['link'];
+				title = MihanblogShopAdsArray[adsOne]['title'];
+				description = MihanblogShopAdsArray[adsOne]['description'];
+				
+				OutHtml += '<td style="background-color:#FFF;width: '+OneAdsWidth+'px;border:1px solid #f00;margin:0px 0px;font-size:11px;font-family:tahoma;padding:2px;margin:0px 0px;font-size:11px;border: 1px solid BurlyWood; padding: 1px; height: '+(imgWidth+25)+'px;">';
+
+				OutHtml += '	<a href="http://rajer2014.mihanblog.com/post/archive/1397/'+link+'" target="_blank" style="text-decoration:none">';
+
+				OutHtml += '			<div style="width: '+(OneAdsWidth-16)+'px;cursor:pointer;font-size:12px;padding: 4px 1px 4px 7px; white-space: nowrap; text-align: center; font-weight: bold; color: blue;white-space:nowrap;overflow:hidden">';
+				OutHtml += 					title;
+				OutHtml += '			</div>';
+				OutHtml += '			<div style="cursor:pointer;padding: 1px; display: block; float: right; width: '+imgWidth+'px;">';
+				OutHtml += '				<img src="'+img+'.html" style="border:0px;padding:0px;margin:0px;width:'+imgWidth+'px;height:'+imgWidth+'px;">';
+				OutHtml += '			</div>';
+				OutHtml += '			<div style="padding: 1px; display: block; float: right; width: '+(OneAdsWidth-13-imgWidth)+'px; text-align: right;overflow:hidden">';
+				OutHtml += '				<div style="overflow:hidden;cursor:pointer;padding: 2px 3px; line-height: 17px; height: '+(imgWidth-3)+'px; text-align: justify;color:#000;direction:rtl">';
+				OutHtml += 						description;
+				OutHtml += '				</div>';
+				OutHtml += '			</div>';
+
+				OutHtml += '	</a>';
+
+				OutHtml += '</td>';
+			}
+			
+			var Out = '<table align="center" cellpadding="0" cellspacing="2" style="width:'+(OneAdsWidth*adsCnt)+'px;"><tr>'+OutHtml+'</tr></table>'; 
+			
+			Out = '<div style="text-align:center;padding:0px;margin:3px auto;">'+Out+'</div>'; 
+			
+			document.getElementById(adsTarget).style.height = (imgWidth+35)+'px' ;
+			document.getElementById(adsTarget).innerHTML = Out ;
+		}
+	}
+}
+</script>
+    <style>
+        @font-face {
+            font-family: 'Mihan-Iransans';
+            src: url('http://rajer2014.mihanblog.com/public/public/fonts/Iransans.eot');
+            src: url('http://rajer2014.mihanblog.com/public/public/fonts/Iransans.eot?') format('embedded-opentype'),
+            url('http://rajer2014.mihanblog.com/public/public/fonts/Iransans.woff2') format('woff2'),
+            url('http://rajer2014.mihanblog.com/public/public/fonts/Iransans.woff') format('woff'),
+            url('http://rajer2014.mihanblog.com/public/public/fonts/Iransans.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+        @font-face {
+            font-family: 'Mihan-IransansBold';
+            src: url('http://rajer2014.mihanblog.com/public/public/fonts/Iransans-Black.eot');
+            src: url('http://rajer2014.mihanblog.com/public/public/fonts/Iransans-Black.eot?') format('embedded-opentype'),
+            url('http://rajer2014.mihanblog.com/public/public/fonts/Iransans-Black.woff2') format('woff2'),
+            url('http://rajer2014.mihanblog.com/public/public/fonts/Iransans-Black.woff') format('woff'),
+            url('http://rajer2014.mihanblog.com/public/public/fonts/Iransans-Black.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+        @font-face {
+            font-family: 'Mihan-IransansLight';
+            src: url('http://rajer2014.mihanblog.com/public/public/fonts/Iransans-UltraLight.eot');
+            src: url('http://rajer2014.mihanblog.com/public/public/fonts/Iransans-UltraLight.eot?') format('embedded-opentype'),
+            url('http://rajer2014.mihanblog.com/public/public/fonts/Iransans-UltraLight.woff2') format('woff2'),
+            url('http://rajer2014.mihanblog.com/public/public/fonts/Iransans-UltraLight.woff') format('woff'),
+            url('http://rajer2014.mihanblog.com/public/public/fonts/Iransans-UltraLight.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+        @font-face {
+            font-family: 'Mihan-Nassim';
+            src: url('http://rajer2014.mihanblog.com/public/public/fonts/Nassim.eot');
+            src: url('http://rajer2014.mihanblog.com/public/public/fonts/Nassim.eot?') format('embedded-opentype'),
+            url('http://rajer2014.mihanblog.com/public/public/fonts/Nassim.woff2') format('woff2'),
+            url('http://rajer2014.mihanblog.com/public/public/fonts/Nassim.woff') format('woff'),
+            url('http://rajer2014.mihanblog.com/public/public/fonts/Nassim.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+        @font-face {
+            font-family: 'Mihan-Koodak';
+            src: url('http://rajer2014.mihanblog.com/public/public/fonts/Koodak.eot');
+            src: url('http://rajer2014.mihanblog.com/public/public/fonts/Koodak.eot?') format('embedded-opentype'),
+            url('http://rajer2014.mihanblog.com/public/public/fonts/Koodak.woff2') format('woff2'),
+            url('http://rajer2014.mihanblog.com/public/public/fonts/Koodak.woff') format('woff'),
+            url('http://rajer2014.mihanblog.com/public/public/fonts/Koodak.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+        @font-face {
+            font-family: 'Mihan-Yekan';
+            src: url('http://rajer2014.mihanblog.com/public/public/fonts/Yekan.eot');
+            src: url('http://rajer2014.mihanblog.com/public/public/fonts/Yekan.eot?') format('embedded-opentype'),
+            url('http://rajer2014.mihanblog.com/public/public/fonts/Yekan.woff2') format('woff2'),
+            url('http://rajer2014.mihanblog.com/public/public/fonts/Yekan.woff') format('woff'),
+            url('http://rajer2014.mihanblog.com/public/public/fonts/Yekan.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+        @font-face {
+            font-family: 'FontAwesome';
+            src: url('http://rajer2014.mihanblog.com/public/public/fonts/fontawesome_webfont.eot');
+            src: url('http://rajer2014.mihanblog.com/public/public/fonts/fontawesome_webfont.eot?') format('embedded-opentype'),
+            url('http://rajer2014.mihanblog.com/public/public/fonts/fontawesome_webfont.woff2') format('woff2'),
+            url('http://rajer2014.mihanblog.com/public/public/fonts/fontawesome_webfont.woff') format('woff'),
+            url('http://rajer2014.mihanblog.com/public/public/fonts/fontawesome_webfont.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+
+
+        
+
+        /* Smartphones (portrait and landscape) ----------- */
+
+        /*
+        @media only screen and (max-width : 480px) and (min-width : 320px) {
+            .sabaClick_advert__wrapper{
+                display:block;
+            }
+            .sabaClick_advert__inner{
+                max-width: 90%;
+                margin: 0 5%;
+            }
+        }
+        */
+
+    </style>
+
+
+
+
+
+
+
+<html>
+
+<head>
+    <meta http-equiv="Content-Language" content="en-us">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta name="Theme-Designer" content="www.MyTheme.ir">
+
+    <meta name="description" content=""/>
+    <meta name="keywords" content=""/>
+    <link rel="alternate" type="application/rss+xml" title="دوربین کانن" href="../../rss/index.html" />
+    <link rel="alternate" type="application/atom+xml" title="دوربین کانن" href="../../atom/index.html" />
+    <link href="http://mihanblog.com/public/public/user_data/template/2099991/style.css" type="text/css" rel="stylesheet">
+
+    <link rel="stylesheet" href="http://mihanblog.com/public/public/user_data/template/2099991/nivo-slider.css" type="text/css">
+
+    <script type="text/javascript" src="http://mihanblog.com/public/public/user_data/template/2099991/jquery-1.4.3.min.js"></script>
+    <script type="text/javascript" src="http://mihanblog.com/public/public/user_data/template/2099991/jquery.nivo.slider.pack.js"></script>
+    <script type="text/javascript">
+        var jq=jQuery.noConflict();
+        jq(window).load(function() {
+            jq('#slider').nivoSlider();
+        });
+    </script>
+
+    <title>دوربین کانن - مطالب  بهمن 1397</title>
+</head>
+
+<body>
+<div align="center">
+<table border="0" width="100%" height="100%" cellspacing="0" cellpadding="0">
+<tr>
+<td class=div2>
+<div class=div00>
+
+<div class=div60>
+    <div class=div101>
+        <div class=div10><font class=title>دوربین کانن</font></div></div>
+    <div class=div11>
+        <div class=div12><font class=des></font></div></div>
+</div>
+
+<div class=ss>
+    <div class=s1><form id="frm-16076849585fd3535edc606" method="get" action="http://rajer2014.mihanblog.com/post/search/fid/16076849585fd3535edc606"  onsubmit="window.open('', 'search', 'toolbar=0,location=0,status=0,menubar=0,scrollbars=1,resizable=0,width=400,height=310')" target="search"> 
+        <div class=s2>
+            <input type="text" name="search_text" size="21" style="border: 0px none; color:#fff; background: none; font-family:Tahoma; font-size:9pt; direction:ltr"></div>
+        <div class=s3><input type="image" src="http://mihanblog.com/public/public/user_data/template/2099991/blank.gif" width=30 height=30 value="جستجو"></div>
+    <input type="hidden" name="frm-id" value="16076849585fd3535edc606" id="frm-id" /></form></div>
+
+    <div class=s5><font class=text10><a href="../../../index.html">صفحه نخست</a>&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;
+        <a href="mailto:">پست الکترونیک</a>&nbsp; &nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <a href="javascript:messageForm()">تماس با ما</a>&nbsp; &nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <a href="../../atom/index.html">ATOM</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <a href="http://www.mytheme.ir" target="_blank">طراح قالب</a>
+    </font></div>
+
+    <div class="mytheme">
+        <div class="mytheme4">
+            <g:plusone size="medium"></g:plusone>
+            <script type="text/javascript">
+                window.___gcfg = {lang: 'fa'};
+                (function() {
+                    var po = document.createElement('script'); po.type = 'text/javascript'; po.async = true;
+                    po.src = 'https://apis.google.com/js/plusone.js';
+                    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(po, s);
+                })();
+            </script></div>
+    </div>
+
+</div>
+
+<div id="wrapper">
+    <div id="slider-wrapper">
+        <div id="slider" class="nivoSlider">
+
+            <!--- Start Slide Images -->
+
+            <img src="http://mihanblog.com/public/public/user_data/template/2099991/pic1.jpg" alt="گروه طراحی قالب من" width="960" height="320" border="0">
+            <img src="http://mihanblog.com/public/public/user_data/template/2099991/pic2.jpg" alt="گروه طراحی قالب من" width="960" height="320" border="0">
+            <img src="http://mihanblog.com/public/public/user_data/template/2099991/pic3.jpg" alt="گروه طراحی قالب من" width="960" height="320" border="0">
+            <img src="http://mihanblog.com/public/public/user_data/template/2099991/pic1.jpg" alt="گروه طراحی قالب من" width="960" height="320" border="0">
+            <img src="http://mihanblog.com/public/public/user_data/template/2099991/pic2.jpg" alt="گروه طراحی قالب من" width="960" height="320" border="0">
+
+            <!-- End Slide Images s-->
+
+        </div>
+    </div>
+</div>
+
+<div class=div170>
+    <div class=mdiv170>
+
+        <div class=div24>
+            <div class=div35>
+                <div class=div25><font class=text5>درباره وبلاگ</font></div></div>
+            <div class=div341>
+                <div class=sm></div>
+                <div class=div32><font class=text1><center><br><br>
+                    </center><br>
+                    <b>مدیر وبلاگ :</b><a href="../../author/1208568.html">محمد نریموسی</a></font></div>
+            </div><div class=div30></div>
+        </div>
+
+        <div class=div24>
+            <div class=div35>
+                <div class=div25><font class=text5>مطالب اخیر</font></div></div>
+            <div class=div341><font class=text1><ul>
+                <li><h2><a href="../../905.html">نکاتی برای عکاسی از زاویه دید گسترده</a></h2></li><li><h2><a href="../../904.html">قرار گرفتن در معرض &quot;صحیح&quot;</a></h2></li><li><h2><a href="../../903.html">چگونه به تعادل می رسید</a></h2></li><li><h2><a href="../../902.html">عکس ونورنرم</a></h2></li><li><h2><a href="../../901.html">عکس ونور نرم</a></h2></li><li><h2><a href="../../900.html">ضد لرزش (تثبیت کننده تصویر)</a></h2></li><li><h2><a href="../../898.html">بررسی سیگما 18-35mm F1.8 DC HSM</a></h2></li><li><h2><a href="../../897.html">نویز در عکس دیجیتال چیست</a></h2></li><li><h2><a href="../../896.html">JPEG در برابر HEIF: چه تفاوتی دارد و کدام یک بهتر است</a></h2></li><li><h2><a href="../../895.html">باندینگ چیست</a></h2></li><li><h2><a href="../../894.html">پس از تبدیل فضای رنگ</a></h2></li><li><h2><a href="../../893.html">ظرفیت کم فتوسیت</a></h2></li><li><h2><a href="../../885.html">دلایل برای نیاز به لنز 50 میلیمتری</a></h2></li><li><h2><a href="../../884.html">استفاده از عمق میدان کم برای جداسازی سوژه</a></h2></li><li><h2><a href="../../880.html">چگونه اعداد اول می تواند عکاسی شما را بهبود بخشد</a></h2></li>            </ul></font></div><div class=div30></div>
+        </div>
+        <div class=div24>
+            <div class=div35>
+                <div class=div25><font class=text5>آرشیو وبلاگ</font></div></div>
+            <div class=div341><font class=text1><ul>
+                <li><a href="../1399/9.html"> آذر 1399</a></li><li><a href="../1399/8.html"> آبان 1399</a></li><li><a href="../1399/7.html"> مهر 1399</a></li><li><a href="../1399/6.html"> شهریور 1399</a></li><li><a href="../1399/5.html"> مرداد 1399</a></li><li><a href="../1399/4.html"> تیر 1399</a></li><li><a href="../1399/3.html"> خرداد 1399</a></li><li><a href="../1399/2.html"> اردیبهشت 1399</a></li><li><a href="../1399/1.html"> فروردین 1399</a></li><li><a href="../1398/12.html"> اسفند 1398</a></li><li><a href="../1398/11.html"> بهمن 1398</a></li><li><a href="../1398/10.html"> دی 1398</a></li>                <li><b><a href="../../archive.html">آرشیو كل مطالب</a></b></li>
+            </ul></font></div><div class=div30></div>
+        </div>
+        <div class=div24>
+            <div class=div35>
+                <div class=div25><font class=text5>نویسندگان</font></div></div>
+            <div class=div341><font class=text1><ul>
+                <li><a href="../../author/1208568.html">محمد نریموسی (683)</a></li>            </ul></font></div><div class=div30></div>
+        </div>
+        
+		
+        
+    </div>
+</div>
+
+<div class=div200>
+    <div class=div20>
+
+        		<div id="MihanblogShopAds" style="display:block;height:0px;width:100%;border:0px"></div>
+		<div class=div54>
+            <div class=div15>
+                <div class=div015></div>
+                <div class=div18><font class=text6><h2><a href="http://rajer2014.mihanblog.com/post/777">ایجادترکیب عکس</a></h2></font></div>
+            </div>
+            <div class=div21>
+                <div class=div55></div>
+                <div class=div56><font class=text4><div id="InPost_MihanblogShopAds" style="display:block;height:0px;width:100%;border:0px"></div>
+
+
+
+
+
+
+
+<div><img class="irc_mi" src="http://www.expertphotography.com/wp-content/uploads/2011/08/Triangles-102092.jpg" alt="Image result for Creating Photographic Composition" style="margin-top: 41px;" width="478" height="271"></div><div><span class="tlid-translation translation">ترکیب
+ یکی از مهمترین جنبه های عکاسی است. مهم نیست که چرا روشنایی شما بسیار 
+زیبا باشد یا اینکه موضوع شما منحصر به فرد شما است یا اینکه ممکن است که 
+قرار گرفتن در معرض آن باشد، یا اینکه دوربین و لنز شما چقدر عالی است، اگر
+ تصویر ضعیف باشد، به شدت رنج می برید.</span><span class="tlid-translation translation">رکیب تصویر شما چیزی است که می تواند یاد گرفته شود و به طور قابل توجهی با زمان و تجربه بهبود یافته است </span><span class="tlid-translation translation"><span class="tlid-translation translation">یکی از راه های این است که ترکیب را که قبلا وجود دارد تشکیل دهد. راه دوم این است که ترکیب خود را از ابتدا ایجاد کنید. انفجار</span></span></div><div><div align="right"><img class="irc_mi" src="https://mymodernmet.com/wp/wp-content/uploads/2018/08/anton-gorlin-radial-composition-landscape.jpg" style="margin-top: 0px;" alt="Image result for Creating Photographic Composition" width="265" height="353"><br></div><span class="tlid-translation translation"><span class="tlid-translation translation"><span class="tlid-translation translation">دوربین
+ خود را روی سه پایه قرار دهید و ترکیب خود را از ابتدا بسازید. این تکنیک 
+نه تنها به دقت و با دقت مشاهده می شود، بلکه به شما کمک می کند تا ببینید 
+که چطور شکل ها، خطوط، ارزش و فضای منفی یکدیگر را متعادل می کنند. هنگامی 
+که شما در حال ساخت ترکیب خود هستید، دیگر ناظر نیستید، بلکه یک خالق است. 
+ایجاد ترکیب خود یک تجربه عالی است <br></span></span></span></div><div><img class="irc_mut" style="margin-top: 85px;" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSDxGqJHCUZ7tBQGpttNX5cMY7yOsbN5ZWy0C2tpwUcN-IZVy_Y" alt="Image result for gastroenterologist composition Girl" width="275" height="183"><br><span class="tlid-translation translation"><span class="tlid-translation translation"><span class="tlid-translation translation"><span class="tlid-translation translation">
+ یکی دیگر از تکنیک های ترکیبی مفید همپوشانی است، جایی که عمدا به طور 
+عمدی یک شی را با دیگری مخفی می کنید. چشم انسان به طور طبیعی این لایه ها 
+را تشخیص می دهد و به لحاظ ذهنی آنها را جدا می کند و یک تصویر با عمق 
+بیشتری ایجاد می کند.</span></span></span></span><span class="tlid-translation translation"><span class="tlid-translation translation"><span class="tlid-translation translation"><span class="tlid-translation translation"><span class="tlid-translation translation">نکته
+ کلیدی این است که بدانیم که چگونه همه تصمیماتی که در مورد ترکیب می 
+گیرید، می تواند بر شیوه شبیه سازی عکس و نحوه عکس گرفتن افراد تاثیر 
+بگذارد. نحوه شبیه سازی یک عکس، یک فاصله کانونی یا موقعیتی را انتخاب کنید
+ که فرد بتواند تمام تفاوت ها را ایجاد کند.</span></span></span></span></span></div><div><br><span class="tlid-translation translation"><span class="tlid-translation translation"><span class="tlid-translation translation"><span class="tlid-translation translation"><span class="tlid-translation translation"><img class="irc_mi" src="https://www.photographymad.com/files/images/tree-golden-field.jpg" style="margin-top: 0px;" alt="Image result for Creating Photographic Composition" width="471" height="353"></span></span></span></span></span></div>
+
+
+
+                    <BlogExtendedPost><br><br><b></b></BlogExtendedPost>
+                    <br><br><font color="#9a3b02">نوع مطلب :</font>
+                                        <br><font color="#9a3b02">برچسب ها :</font>
+                                        <br><font color="#9a3b02">لینک های مرتبط :</font>
+                                    </font>
+
+
+
+
+
+
+
+
+
+                </div></div>
+            <div class=div26>
+                <div class=div27><font class=text8><a href="http://rajer2014.mihanblog.com/post/777#commentlist">نظرات (<script>setCommentCnt(777)</script>)</a></font></div>
+                <div class=div270>
+                    <a href="http://www.linkedin.com/shareArticle?mini=true&url=http://rajer2014.mihanblog.com/post/777&title=ایجادترکیب عکس" target="_blank"><img src="http://mihanblog.com/public/public/user_data/template/2099991/blank.gif" width="25" height="25" border="0" alt="" title="این مطلب را به اشتراک بگذارید"></a>&nbsp;
+                    <a href="http://www.stumbleupon.com/refer.php?url=http://rajer2014.mihanblog.com/post/777&title=ایجادترکیب عکس" target="_blank"><img src="http://mihanblog.com/public/public/user_data/template/2099991/blank.gif" width="25" height="25" border="0" alt="" title="این مطلب را به اشتراک بگذارید"></a>&nbsp;
+                    <a href="http://www.youtube.com/?url=http://rajer2014.mihanblog.com/post/777&title=ایجادترکیب عکس" target="_blank"><img src="http://mihanblog.com/public/public/user_data/template/2099991/blank.gif" width="25" height="25" border="0" alt="" title="این مطلب را به اشتراک بگذارید"></a>&nbsp;&nbsp;
+                    <a href="http://www.facebook.com/share.php?u=http://rajer2014.mihanblog.com/post/777&t=ایجادترکیب عکس" target="_blank"><img src="http://mihanblog.com/public/public/user_data/template/2099991/blank.gif" width="25" height="25" border="0" alt="" title="این مطلب را به اشتراک بگذارید"></a>&nbsp;
+                    <a href="http://twitter.com/home?status=Reading+this:+http://rajer2014.mihanblog.com/post/777&title=ایجادترکیب عکس" target="_blank"><img src="http://mihanblog.com/public/public/user_data/template/2099991/blank.gif" width="25" height="25" border="0" alt="" title="این مطلب را به اشتراک بگذارید"></a>&nbsp;
+                    <a href="http://del.icio.us/post?&url=http://rajer2014.mihanblog.com/post/777&title=ایجادترکیب عکس" target="_blank"><img src="http://mihanblog.com/public/public/user_data/template/2099991/blank.gif" width="25" height="25" border="0" alt="" title="این مطلب را به اشتراک بگذارید"></a>
+                </div>
+                <div class=div58><font class=text7><a href="../../author/1208568.html">محمد نریموسی</a></font></div>
+                <div class=div581 style="padding-top: 10px;">
+
+                    <div style="float: left; margin-left: 50px;margin-top:-4px;"><script>mihanblogPostLike('777','like')</script></div>
+
+                    <font class=text7>سه شنبه 23 بهمن 1397</font></div>
+            </div>
+
+            <div class=div54 style="background:#badb44;">
+                <style>
+
+
+
+
+                    .clearfix {display: inline-block;}
+                    .clearfix:after {
+                        content: ".";
+                        display: block;
+                        height: 0;
+                        clear: both;
+                        visibility: hidden;
+                    }
+
+
+
+
+                    .cblike{
+                        margin:4px 15px;
+                        float: left;
+                    }
+                    .cblike a {
+                        float:left;
+                        padding:3px;
+                        text-align:center;
+                        font-size:12px;
+                        color:#FFF;
+                        display:block;
+                        line-height:15px;
+                        text-decoration: none;
+                    }
+
+
+
+
+                    .cblike a.clike_plus {
+                        background-color:#009900 ; /*green #039B03*/
+
+                        border-radius: 5px ;
+
+                        border-top-right-radius: 0px;
+                        border-bottom-right-radius: 0px;
+
+                        /*border:1px solid green;
+                  border-right:0px;*/
+                    }
+                    .cblike a.clike_minus {
+                        background-color:#CC0000;
+                        border-radius: 5px ;
+                        border-top-left-radius: 0px;
+                        border-bottom-left-radius: 0px;
+
+                        /*border:1px solid red;
+                  border-left:0px;*/
+                    }
+                    .cblike a.clike_minus:hover {
+                        background-color:red;
+                        text-decoration: none;
+                    }
+                    .cblike a.clike_plus:hover {
+                        background-color:green;
+                        text-decoration: none;
+                    }
+                    .cblike a span{
+                        font-weight:bold;
+                        font-size:13px;
+
+                        color:#fff;
+                    }
+
+
+
+
+                    .text100 , .text100 a{color:#FFF; font-size:8pt;-moz-text-shadow: #444 1px 1px 0px;-webkit-text-shadow: #444 1px 1px 0px;text-shadow: #444 1px 1px 0px;}
+                    .text101 , .text101 a{color:#444444; font-size:8pt;-moz-text-shadow: #fff 1px 1px 0px;-webkit-text-shadow: #fff 1px 1px 0px;text-shadow: #fff 1px 1px 0px;}
+                    .text102 , .text102 a{color:#000; font-size:8pt;-moz-text-shadow: #fff 1px 1px 0px;-webkit-text-shadow: #fff 1px 1px 0px;text-shadow: #fff 1px 1px 0px;}
+
+                    .com{ width:535px; float:left; background:#d4f16c; -webkit-border-radius: 5px;-moz-border-radius: 5px;border-radius: 5px; margin: 0px 7px 0px 15px; padding:0 0 10px 0;}
+                    .com1{ width:517px; float:left; background:#709415; -webkit-border-radius: 5px;-moz-border-radius: 5px;border-radius: 5px; margin: 10px 20px 0 10px; padding:0 0 3px 0;}
+                    .com3{ width:290px; float:left; text-align:right; direction:rtl; line-height:27px;}
+                    .com2{ width:190px; float:left; height:30px; text-align:left; direction:rtl; line-height:27px; padding-left:10px; opacity:0.6;}
+                    .com4{ width:497px; float:left; background:#FFF; -webkit-border-radius: 5px;-moz-border-radius: 5px;border-radius: 5px; margin: 3px 3px 0 3px; padding: 7px; direction:rtl; text-align:right; -moz-box-shadow: inset #444 0px 0px 5px;-webkit-box-shadow:inset  #444 0px 0px 5px;box-shadow: inset #444 0px 0px 5px;}
+                    .com5{ width:497px; float:left; background:#cfcfcf; -webkit-border-radius: 5px;-moz-border-radius: 5px;border-radius: 5px; margin:  3px 3px 0 3px; padding: 7px; direction:rtl; text-align:right; -moz-box-shadow:inset  #444 0px 0px 5px;-webkit-box-shadow: inset #444 0px 0px 5px;box-shadow: inset #444 0px 0px 5px;}
+                    .com6{ width:507px; float:left; background:#fff; -webkit-border-radius: 5px;-moz-border-radius: 5px;border-radius: 5px; margin: 5px 20px 0 10px; padding: 5px 5px 5px 5px; direction:rtl; }
+                    .com7{width:25px; padding:5px 0 0 0; float:right; text-align:center;}
+                </style>
+                            </div>
+
+        </div><div class=div54>
+            <div class=div15>
+                <div class=div015></div>
+                <div class=div18><font class=text6><h2><a href="http://rajer2014.mihanblog.com/post/775"> (AF) در صفحه نمایشگر</a></h2></font></div>
+            </div>
+            <div class=div21>
+                <div class=div55></div>
+                <div class=div56><font class=text4>
+
+
+<div><img class="irc_mut" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTtsGJKVo7Tlivkp1lW4U1AjSixrIxovUu_0N3sfGtlGvBx2Ye_yw" alt="Image result for Autofocus in DSLR photography" style="margin-top: 4px;" width="478" height="346"></div><div><span class="tlid-translation translation">هنگام استفاده از دوربین خود در حالت فوکوس اتوماتیک، نقاط فوکوس اتوماتیک به شما کمک می کنند تا فوکوس را به یک مکان خاص در کادر هدایت کنید. این بسیار راحت است زیرا تمرکز عکس شما ممکن است همیشه در همان مرکز باشد که دوربین به طور سنتی دوست دارد تمرکز و اندازه گیری کند</span><span class="tlid-translation translation">معرفی نقاط AF به عکاسان اجازه داد تا بیشتر به تمرکز بر برخی موضوعات در عکس برسند. این آزادی تمرکز دستی را در حالی که به شما عمل صاف و سریع فوکوس اتوماتیک می دهد تقلید می کند</span><span class="tlid-translation translation">هیچ حالت فوکوس خودکار وجود ندارد که به طور خودکار بهتر از دیگری باشد. </span></div><div><img class="irc_mi" src="https://www.nationaljewish.org/getattachment/Specialties-Conditions/Gastroenterology/Gastroenterology-HTLP.jpg.aspx?lang=en-US" style="margin-top: 55px;" alt="Image result for Gastroenterologist Focus" width="428" height="244"><br><span class="tlid-translation translation"><span class="tlid-translation translation">امتیازات خودکار فوکوس نیز می تواند به سیستم اندازه گیری دوربین در بسیاری از مدل ها متصل شود. این به این معنی است که دوربین براساس نقطه انتخاب خودکار فوکوس، که معمولا موضوع اصلی عکس است، دوربین را انتخاب می کند.تعداد نقاط فوکوس خودکار ممکن است به دوربین بستگی دارد. بعضی از دوربین ها یک سیستم 9 نقطه دارند، در حالی که دوربین های دیگر دارای 11 امتیاز یا حتی 51 امتیاز هستند. هرچه AF بیشتر یک دوربین داشته باشد، گزینه های بیشتری برای تنظیم دقیق فوکوس وجود دارد.</span></span><span class="tlid-translation translation">اکثر دوربین های DSLR و دوربین های بدون آینه پیشرفته دارای تشخیص دوگانه و کنتراست هستند که حتی در شرایط دشواری نیز امکان دقیق می دهد</span></div><div><img class="irc_mi" src="https://cdn.photographylife.com/wp-content/uploads/2011/01/Single-Point-AF-Area-Mode.jpg" style="margin-top: 18px;" alt="Image result for Autofocus in DSLR photography" width="478" height="318"><br><span class="tlid-translation translation"><span class="tlid-translation translation"><span class="tlid-translation translation"><span class="tlid-translation translation"> این یک گزینه در بسیاری از دوربین های DSLR است و ممکن است تنها گزینه ای برای برخی از دوربین های نقطه ای و ساقه باشد. در DSLR ها ممکن است مجبور شوید که این تنظیم را فعال یا غیرفعال کنید اگر می خواهید یا نمی خواهید از آن استفاده کنید</span>هنگامی که دکمه شاتر دوربین را تا نیمه به پایین فوکوس می کنید، نقطه های AF در استفاده می شود روشن می شود. قرمز رنگ مورد علاقه برای تولید کنندگان دوربین برای استفاده است، اما برخی از دوربین های دارای نقاط AF که سبز یا رنگ دیگری هستند<span class="tlid-translation translation">داشتن نقاط فوکوس بیشتر، به شما اجازه می دهد تا دقیق تر یک نقطه فوکوس اتوماتیک را انتخاب کنید و به دوربین کمک می کند تا دقیق تر از طریق فریم حرکت می کند.</span></span></span></span></div><div><br><span class="tlid-translation translation"><span class="tlid-translation translation"><span class="tlid-translation translation"><span class="tlid-translation translation"><img class="irc_mi" src="https://cdn.thewirecutter.com/wp-content/uploads/2016/07/midrange-dslr-nikon-d7200-auto-focus-630.jpg" style="margin-top: 16px;" alt="Image result for Autofocus in DSLR photography" width="478" height="322"></span></span></span></span><img class="irc_mi" src="http://www.best.com.kw/wcsstore/BEST/images/catalog/desc_img/D7200-18-140MMdes-3.jpg" style="margin-top: 67px;" alt="Related image" width="478" height="220"></div>                    <BlogExtendedPost><br><br><b></b></BlogExtendedPost>
+                    <br><br><font color="#9a3b02">نوع مطلب :</font>
+                                        <br><font color="#9a3b02">برچسب ها :</font>
+                                        <br><font color="#9a3b02">لینک های مرتبط :</font>
+                                    </font>
+
+
+
+
+
+
+
+
+
+                </div></div>
+            <div class=div26>
+                <div class=div27><font class=text8><a href="http://rajer2014.mihanblog.com/post/775#commentlist">نظرات (<script>setCommentCnt(775)</script>)</a></font></div>
+                <div class=div270>
+                    <a href="http://www.linkedin.com/shareArticle?mini=true&url=http://rajer2014.mihanblog.com/post/775&title= (AF) در صفحه نمایشگر" target="_blank"><img src="http://mihanblog.com/public/public/user_data/template/2099991/blank.gif" width="25" height="25" border="0" alt="" title="این مطلب را به اشتراک بگذارید"></a>&nbsp;
+                    <a href="http://www.stumbleupon.com/refer.php?url=http://rajer2014.mihanblog.com/post/775&title= (AF) در صفحه نمایشگر" target="_blank"><img src="http://mihanblog.com/public/public/user_data/template/2099991/blank.gif" width="25" height="25" border="0" alt="" title="این مطلب را به اشتراک بگذارید"></a>&nbsp;
+                    <a href="http://www.youtube.com/?url=http://rajer2014.mihanblog.com/post/775&title= (AF) در صفحه نمایشگر" target="_blank"><img src="http://mihanblog.com/public/public/user_data/template/2099991/blank.gif" width="25" height="25" border="0" alt="" title="این مطلب را به اشتراک بگذارید"></a>&nbsp;&nbsp;
+                    <a href="http://www.facebook.com/share.php?u=http://rajer2014.mihanblog.com/post/775&t= (AF) در صفحه نمایشگر" target="_blank"><img src="http://mihanblog.com/public/public/user_data/template/2099991/blank.gif" width="25" height="25" border="0" alt="" title="این مطلب را به اشتراک بگذارید"></a>&nbsp;
+                    <a href="http://twitter.com/home?status=Reading+this:+http://rajer2014.mihanblog.com/post/775&title= (AF) در صفحه نمایشگر" target="_blank"><img src="http://mihanblog.com/public/public/user_data/template/2099991/blank.gif" width="25" height="25" border="0" alt="" title="این مطلب را به اشتراک بگذارید"></a>&nbsp;
+                    <a href="http://del.icio.us/post?&url=http://rajer2014.mihanblog.com/post/775&title= (AF) در صفحه نمایشگر" target="_blank"><img src="http://mihanblog.com/public/public/user_data/template/2099991/blank.gif" width="25" height="25" border="0" alt="" title="این مطلب را به اشتراک بگذارید"></a>
+                </div>
+                <div class=div58><font class=text7><a href="../../author/1208568.html">محمد نریموسی</a></font></div>
+                <div class=div581 style="padding-top: 10px;">
+
+                    <div style="float: left; margin-left: 50px;margin-top:-4px;"><script>mihanblogPostLike('775','like')</script></div>
+
+                    <font class=text7>شنبه 13 بهمن 1397</font></div>
+            </div>
+
+            <div class=div54 style="background:#badb44;">
+                <style>
+
+
+
+
+                    .clearfix {display: inline-block;}
+                    .clearfix:after {
+                        content: ".";
+                        display: block;
+                        height: 0;
+                        clear: both;
+                        visibility: hidden;
+                    }
+
+
+
+
+                    .cblike{
+                        margin:4px 15px;
+                        float: left;
+                    }
+                    .cblike a {
+                        float:left;
+                        padding:3px;
+                        text-align:center;
+                        font-size:12px;
+                        color:#FFF;
+                        display:block;
+                        line-height:15px;
+                        text-decoration: none;
+                    }
+
+
+
+
+                    .cblike a.clike_plus {
+                        background-color:#009900 ; /*green #039B03*/
+
+                        border-radius: 5px ;
+
+                        border-top-right-radius: 0px;
+                        border-bottom-right-radius: 0px;
+
+                        /*border:1px solid green;
+                  border-right:0px;*/
+                    }
+                    .cblike a.clike_minus {
+                        background-color:#CC0000;
+                        border-radius: 5px ;
+                        border-top-left-radius: 0px;
+                        border-bottom-left-radius: 0px;
+
+                        /*border:1px solid red;
+                  border-left:0px;*/
+                    }
+                    .cblike a.clike_minus:hover {
+                        background-color:red;
+                        text-decoration: none;
+                    }
+                    .cblike a.clike_plus:hover {
+                        background-color:green;
+                        text-decoration: none;
+                    }
+                    .cblike a span{
+                        font-weight:bold;
+                        font-size:13px;
+
+                        color:#fff;
+                    }
+
+
+
+
+                    .text100 , .text100 a{color:#FFF; font-size:8pt;-moz-text-shadow: #444 1px 1px 0px;-webkit-text-shadow: #444 1px 1px 0px;text-shadow: #444 1px 1px 0px;}
+                    .text101 , .text101 a{color:#444444; font-size:8pt;-moz-text-shadow: #fff 1px 1px 0px;-webkit-text-shadow: #fff 1px 1px 0px;text-shadow: #fff 1px 1px 0px;}
+                    .text102 , .text102 a{color:#000; font-size:8pt;-moz-text-shadow: #fff 1px 1px 0px;-webkit-text-shadow: #fff 1px 1px 0px;text-shadow: #fff 1px 1px 0px;}
+
+                    .com{ width:535px; float:left; background:#d4f16c; -webkit-border-radius: 5px;-moz-border-radius: 5px;border-radius: 5px; margin: 0px 7px 0px 15px; padding:0 0 10px 0;}
+                    .com1{ width:517px; float:left; background:#709415; -webkit-border-radius: 5px;-moz-border-radius: 5px;border-radius: 5px; margin: 10px 20px 0 10px; padding:0 0 3px 0;}
+                    .com3{ width:290px; float:left; text-align:right; direction:rtl; line-height:27px;}
+                    .com2{ width:190px; float:left; height:30px; text-align:left; direction:rtl; line-height:27px; padding-left:10px; opacity:0.6;}
+                    .com4{ width:497px; float:left; background:#FFF; -webkit-border-radius: 5px;-moz-border-radius: 5px;border-radius: 5px; margin: 3px 3px 0 3px; padding: 7px; direction:rtl; text-align:right; -moz-box-shadow: inset #444 0px 0px 5px;-webkit-box-shadow:inset  #444 0px 0px 5px;box-shadow: inset #444 0px 0px 5px;}
+                    .com5{ width:497px; float:left; background:#cfcfcf; -webkit-border-radius: 5px;-moz-border-radius: 5px;border-radius: 5px; margin:  3px 3px 0 3px; padding: 7px; direction:rtl; text-align:right; -moz-box-shadow:inset  #444 0px 0px 5px;-webkit-box-shadow: inset #444 0px 0px 5px;box-shadow: inset #444 0px 0px 5px;}
+                    .com6{ width:507px; float:left; background:#fff; -webkit-border-radius: 5px;-moz-border-radius: 5px;border-radius: 5px; margin: 5px 20px 0 10px; padding: 5px 5px 5px 5px; direction:rtl; }
+                    .com7{width:25px; padding:5px 0 0 0; float:right; text-align:center;}
+                </style>
+                            </div>
+
+        </div><div class=div54>
+            <div class=div15>
+                <div class=div015></div>
+                <div class=div18><font class=text6><h2><a href="http://rajer2014.mihanblog.com/post/774">دو تکنیک اولیه برای گرفتن حرکت</a></h2></font></div>
+            </div>
+            <div class=div21>
+                <div class=div55></div>
+                <div class=div56><font class=text4>
+
+
+<div><img class="irc_mi" src="http://magazine.art21.org/wp-content/uploads/2016/01/Fig1_Shimamura.png" alt="Image result for how to capture moving objects in photography" style="margin-top: 0px;" width="457" height="353"></div><div><span class="tlid-translation translation">در حقیقت سرعت شاتر در کنترل وضوح به همان اندازه مهم است. دیافراگم لنز می تواند میزان وضوح را با عمق کنترل کند، اما سرعت شاتر همان کار را با یک بعد کاملا متفاوت - زمان انجام می دهد.</span><span class="tlid-translation translation">هنگامی که شما در حال کار کردن سرعت شاتر شما نیاز دارید، عوامل زیادی به بازی وارد می شوند، مانند سرعت مورد سوژه در حال سفر، فاصله آن و زاویه ای که از آن عکس می گیرید.</span><span class="tlid-translation translation">این سرعت سوژه در فریم است که موجب تاری، نه سرعت آن در زندگی واقعی است و دنبال کردن موضوع شما در منظره یاب، راز پنهان عکس های تیز است</span></div><div><br><span class="tlid-translation translation"><span class="tlid-translation translation" tabindex="-1"><img class="irc_mi" src="https://www.htc.com/uploadedimages/common/ditahowto/site_uk/htc-u11/GUID-CB05C199-C7F4-4CB8-AD86-5C37B88635C2-web.png" style="margin-top: 10px;" alt="Image result for how to capture moving objects in photography" width="380" height="333"><br></span></span></div><div><span class="tlid-translation translation"><span class="tlid-translation translation" tabindex="-1">تیز بودن به این بستگی دارد که تا چه حد موضوع در طول زمان قرار گرفتن در معرض حرکت می کند. برای یک موضوع معمولی مانند دوچرخه یا ماشین شما نیاز به موضوع کمتر از 2 میلی متر برای یک عکس تیز و کمتر از 10 میلی متر برای آن ارزش حفظ است.</span></span><span class="tlid-translation translation"><span class="tlid-translation translation" tabindex="-1"><span class="tlid-translation translation"> با استفاده از ISO بالا می توانید سرعت شاتر و دیافراگم دوربین خود را بدون افزایش احتمال عکس گرفتن های تاریک یا تاریک افزایش دهید. با این حال، با استفاده از ISO بالا معمولا می تواند یک تصویر گرانشی با سر و صدای دیجیتال ایجاد کند</span></span></span><span class="tlid-translation translation">برای گرفتن عکس کاملا زیبا، باید دوربین خود را کنترل کنید<span class="tlid-translation translation">به طور معمول، در RAW شلیک کنید. عکاسی با نور کم حتی مهمتر از حد معمول است، زیرا شانس بیشتری برای از دست دادن جزئیات و ایجاد نویز و مصنوعات وجود دارد. با RAW، دامنه دینامیکی بسیار بیشتری دارید، اطلاعات بیشتری را به دست آورید، که بعدا می توانید در پس پردازش استفاده کنید</span></span></div><div><img class="irc_mi" src="https://emj.europeanmedical-group.com/wp-content/uploads/sites/2/2018/08/EMJ-Gastroenterol.-2018-Suppl-2-Takeda-940x564.jpg" style="margin-top: 38px;" alt="Image result for how to  moving Gastroenterologist" width="464" height="278"><br><span class="tlid-translation translation"><span class="tlid-translation translation"><span class="tlid-translation translation">به جای گرفتن یک عکس در یک زمان، به حالت عکسبرداری پیوسته تغییر دهید. مدل های مختلف دوربین دارای نام های مختلف برای این پارامتر است. گزینه عکسبرداری پیوسته اجازه می دهد تا دوربین به طور مداوم بدون ضبط تصاویر را به طور طولانی مدت نگه دارد که دکمه شاتر را فشار داده اید. به طور معمول حالت عکسبرداری پیوسته را در همان زیر منو به عنوان حالت تایمر پیدا می کنید. به دنبال یک آیکون که به نظر می رسد این است: دوربین شما ممکن است یک دکمه مخصوص برای این تنظیم داشته باشد یا شما باید آن را در منوی سریع پیدا کنید.</span></span></span></div><div><br><span class="tlid-translation translation"><span class="tlid-translation translation"><span class="tlid-translation translation"><img class="irc_mut" style="margin-top: 65px;" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSIGIZlmePK-k33JYgHRVf8mMXK29hO44pXihaPhgMv8CjASov-6w" alt="Related image" width="464" height="223"></span></span></span></div>                    <BlogExtendedPost><br><br><b></b></BlogExtendedPost>
+                    <br><br><font color="#9a3b02">نوع مطلب :</font>
+                                        <br><font color="#9a3b02">برچسب ها :</font>
+                                        <br><font color="#9a3b02">لینک های مرتبط :</font>
+                                    </font>
+
+
+
+
+
+
+
+
+
+                </div></div>
+            <div class=div26>
+                <div class=div27><font class=text8><a href="http://rajer2014.mihanblog.com/post/774#commentlist">نظرات (<script>setCommentCnt(774)</script>)</a></font></div>
+                <div class=div270>
+                    <a href="http://www.linkedin.com/shareArticle?mini=true&url=http://rajer2014.mihanblog.com/post/774&title=دو تکنیک اولیه برای گرفتن حرکت" target="_blank"><img src="http://mihanblog.com/public/public/user_data/template/2099991/blank.gif" width="25" height="25" border="0" alt="" title="این مطلب را به اشتراک بگذارید"></a>&nbsp;
+                    <a href="http://www.stumbleupon.com/refer.php?url=http://rajer2014.mihanblog.com/post/774&title=دو تکنیک اولیه برای گرفتن حرکت" target="_blank"><img src="http://mihanblog.com/public/public/user_data/template/2099991/blank.gif" width="25" height="25" border="0" alt="" title="این مطلب را به اشتراک بگذارید"></a>&nbsp;
+                    <a href="http://www.youtube.com/?url=http://rajer2014.mihanblog.com/post/774&title=دو تکنیک اولیه برای گرفتن حرکت" target="_blank"><img src="http://mihanblog.com/public/public/user_data/template/2099991/blank.gif" width="25" height="25" border="0" alt="" title="این مطلب را به اشتراک بگذارید"></a>&nbsp;&nbsp;
+                    <a href="http://www.facebook.com/share.php?u=http://rajer2014.mihanblog.com/post/774&t=دو تکنیک اولیه برای گرفتن حرکت" target="_blank"><img src="http://mihanblog.com/public/public/user_data/template/2099991/blank.gif" width="25" height="25" border="0" alt="" title="این مطلب را به اشتراک بگذارید"></a>&nbsp;
+                    <a href="http://twitter.com/home?status=Reading+this:+http://rajer2014.mihanblog.com/post/774&title=دو تکنیک اولیه برای گرفتن حرکت" target="_blank"><img src="http://mihanblog.com/public/public/user_data/template/2099991/blank.gif" width="25" height="25" border="0" alt="" title="این مطلب را به اشتراک بگذارید"></a>&nbsp;
+                    <a href="http://del.icio.us/post?&url=http://rajer2014.mihanblog.com/post/774&title=دو تکنیک اولیه برای گرفتن حرکت" target="_blank"><img src="http://mihanblog.com/public/public/user_data/template/2099991/blank.gif" width="25" height="25" border="0" alt="" title="این مطلب را به اشتراک بگذارید"></a>
+                </div>
+                <div class=div58><font class=text7><a href="../../author/1208568.html">محمد نریموسی</a></font></div>
+                <div class=div581 style="padding-top: 10px;">
+
+                    <div style="float: left; margin-left: 50px;margin-top:-4px;"><script>mihanblogPostLike('774','like')</script></div>
+
+                    <font class=text7>چهارشنبه 3 بهمن 1397</font></div>
+            </div>
+
+            <div class=div54 style="background:#badb44;">
+                <style>
+
+
+
+
+                    .clearfix {display: inline-block;}
+                    .clearfix:after {
+                        content: ".";
+                        display: block;
+                        height: 0;
+                        clear: both;
+                        visibility: hidden;
+                    }
+
+
+
+
+                    .cblike{
+                        margin:4px 15px;
+                        float: left;
+                    }
+                    .cblike a {
+                        float:left;
+                        padding:3px;
+                        text-align:center;
+                        font-size:12px;
+                        color:#FFF;
+                        display:block;
+                        line-height:15px;
+                        text-decoration: none;
+                    }
+
+
+
+
+                    .cblike a.clike_plus {
+                        background-color:#009900 ; /*green #039B03*/
+
+                        border-radius: 5px ;
+
+                        border-top-right-radius: 0px;
+                        border-bottom-right-radius: 0px;
+
+                        /*border:1px solid green;
+                  border-right:0px;*/
+                    }
+                    .cblike a.clike_minus {
+                        background-color:#CC0000;
+                        border-radius: 5px ;
+                        border-top-left-radius: 0px;
+                        border-bottom-left-radius: 0px;
+
+                        /*border:1px solid red;
+                  border-left:0px;*/
+                    }
+                    .cblike a.clike_minus:hover {
+                        background-color:red;
+                        text-decoration: none;
+                    }
+                    .cblike a.clike_plus:hover {
+                        background-color:green;
+                        text-decoration: none;
+                    }
+                    .cblike a span{
+                        font-weight:bold;
+                        font-size:13px;
+
+                        color:#fff;
+                    }
+
+
+
+
+                    .text100 , .text100 a{color:#FFF; font-size:8pt;-moz-text-shadow: #444 1px 1px 0px;-webkit-text-shadow: #444 1px 1px 0px;text-shadow: #444 1px 1px 0px;}
+                    .text101 , .text101 a{color:#444444; font-size:8pt;-moz-text-shadow: #fff 1px 1px 0px;-webkit-text-shadow: #fff 1px 1px 0px;text-shadow: #fff 1px 1px 0px;}
+                    .text102 , .text102 a{color:#000; font-size:8pt;-moz-text-shadow: #fff 1px 1px 0px;-webkit-text-shadow: #fff 1px 1px 0px;text-shadow: #fff 1px 1px 0px;}
+
+                    .com{ width:535px; float:left; background:#d4f16c; -webkit-border-radius: 5px;-moz-border-radius: 5px;border-radius: 5px; margin: 0px 7px 0px 15px; padding:0 0 10px 0;}
+                    .com1{ width:517px; float:left; background:#709415; -webkit-border-radius: 5px;-moz-border-radius: 5px;border-radius: 5px; margin: 10px 20px 0 10px; padding:0 0 3px 0;}
+                    .com3{ width:290px; float:left; text-align:right; direction:rtl; line-height:27px;}
+                    .com2{ width:190px; float:left; height:30px; text-align:left; direction:rtl; line-height:27px; padding-left:10px; opacity:0.6;}
+                    .com4{ width:497px; float:left; background:#FFF; -webkit-border-radius: 5px;-moz-border-radius: 5px;border-radius: 5px; margin: 3px 3px 0 3px; padding: 7px; direction:rtl; text-align:right; -moz-box-shadow: inset #444 0px 0px 5px;-webkit-box-shadow:inset  #444 0px 0px 5px;box-shadow: inset #444 0px 0px 5px;}
+                    .com5{ width:497px; float:left; background:#cfcfcf; -webkit-border-radius: 5px;-moz-border-radius: 5px;border-radius: 5px; margin:  3px 3px 0 3px; padding: 7px; direction:rtl; text-align:right; -moz-box-shadow:inset  #444 0px 0px 5px;-webkit-box-shadow: inset #444 0px 0px 5px;box-shadow: inset #444 0px 0px 5px;}
+                    .com6{ width:507px; float:left; background:#fff; -webkit-border-radius: 5px;-moz-border-radius: 5px;border-radius: 5px; margin: 5px 20px 0 10px; padding: 5px 5px 5px 5px; direction:rtl; }
+                    .com7{width:25px; padding:5px 0 0 0; float:right; text-align:center;}
+                </style>
+                            </div>
+
+        </div><div class=div54>
+            <div class=div15>
+                <div class=div015></div>
+                <div class=div18><font class=text6><h2><a href="http://rajer2014.mihanblog.com/post/773">   چگونه موقعیت نور بر عکس تاثیر می گذارد</a></h2></font></div>
+            </div>
+            <div class=div21>
+                <div class=div55></div>
+                <div class=div56><font class=text4>
+
+
+<div><br></div><div><img class="irc_mut" src="data:image/jpeg;base64,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" alt="Image result for position of the light affects a photograph" style="margin-top: 85px;" width="478" height="183"></div><div><span class="tlid-translation translation">به منظور کنترل عکاسی خود، باید نور را درک کنید و کارهای آن را انجام دهید. اما درک روشنایی کمی پیچیده تر از یادگیری کنترل های دوربین های شما است - در حالی که از میان دیگران عبور می کند، برخی از اجسام را می شکند، سایه های بزرگ یا کوچک ایجاد می کنند و حتی بر روی رنگ تصویر تاثیر می گذارد.</span><span class="tlid-translation translation">تصور کنید که شما در آن اتاق کاملا تاریک هستید - اما اکنون شمع را میبندید. جایی که این شمع در رابطه با شی که شما در حال تیراندازی هستید، نقش چشمگیری در تصویر کلی تصویر نهایی ایفا می کند. در عکاسی، گاهی اوقات شما می توانید این منبع نور را حرکت دهید، و دیگران مجبورید که موضوع را عوض کنید تا موقعیت نور را عوض کنید.</span></div><div><img class="irc_mut" style="margin-top: 57px;" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRyjJKDOtZ3SNg4RYdF9Y8n1RZyhccMA7dwK2XPWEfL2Mtgs6nB" alt="Related image" width="478" height="239"><br><span class="tlid-translation translation"><span class="tlid-translation translation">روشنایی جلو و یا قرار دادن موضوع به طوری که نور مستقیم در مقابل فرد یا جسم است، جزئیات را به ارمغان می آورد. چرا؟ با نور به طور مستقیم در جلو، سایه ها پشت شیء قرار می گیرند، بنابراین هیچ سایه ای در تصویر برای پنهان کردن جزئیات وجود ندارد. نورپردازی جبهه ای ساده تر است، اما گاهی اوقات به نظر می رسد نسبتا صاف یا خسته کننده است.</span></span><span class="tlid-translation translation">با نور گرفتن سوژه از پشت، تمام سایه های نور در جلوی سوژه قرار دارند که سوژه را به یک شباهت تاریک تبدیل می کند. با این حال، با استفاده از حالت های دستی، می توانید نوردهی را تنظیم کنید تا سوژه به درستی در معرض قرار گیرد. این زمینه پس زمینه را بیش از حد ترک میکند، اما گاهی اوقات اثر شسته و رفته را ایجاد می کند</span></div><div><img class="irc_mi" src="https://www.lanermc.org/hubfs/Lanermc_January2018/Images/9858F9E0-155D-9B52-329963B865B28CAF_sub-page-banner.png" alt="Image result for position affects Gastroenterologist" style="margin-top: 129px;" width="478" height="96"><br><span class="tlid-translation translation"><span class="tlid-translation translation"><span class="tlid-translation translation">نورپردازی پشتی تیزترین از دسته است - با احتیاط ادامه دهید. بدون یک اصلاح کننده نور و یا درک حالت دستی، شما با یک شبح ظاهر خواهید شد. مبتکران اغلب بهتر از این هستند که از سناریوهای نورپردازی جلوگیری کنند، مانند زمانی که سوژه را مستقیما مقابل یک پنجره قرار دهید. برای مدت طولانی آن را نادیده نگیرید - هنگامی که شما در حالت دستی راحت هستید، نور پس زمینه می تواند تصاویر چشمگیر ایجاد کند. به عنوان مثال، هنگامی که نور پس زمینه، به نظر می رسد بسیاری از چیزها به رنگ درخشش - برگ ها و گل ها است. نور پس زمینه نیز پرتره های زیبا و تقریبا یک اثر هاله را ارائه می دهد.</span></span></span></div><div><br><span class="tlid-translation translation"><span class="tlid-translation translation"><span class="tlid-translation translation"><img class="irc_mi" src="https://cdn-7.nikon-cdn.com/Images/Learn-Explore/Photography-Techniques/2017/Deb-Sandidge-sunrises-sunsets/Media/Deb-Sandidge-11_Steptoe-Butte.jpg" style="margin-top: 19px;" alt="Image result for position of the light affects a photograph" width="478" height="315"></span></span></span></div>                    <BlogExtendedPost><br><br><b></b></BlogExtendedPost>
+                    <br><br><font color="#9a3b02">نوع مطلب :</font>
+                                        <br><font color="#9a3b02">برچسب ها :</font>
+                                        <br><font color="#9a3b02">لینک های مرتبط :</font>
+                                    </font>
+
+
+
+
+
+
+
+
+
+                </div></div>
+            <div class=div26>
+                <div class=div27><font class=text8><a href="http://rajer2014.mihanblog.com/post/773#commentlist">نظرات (<script>setCommentCnt(773)</script>)</a></font></div>
+                <div class=div270>
+                    <a href="http://www.linkedin.com/shareArticle?mini=true&url=http://rajer2014.mihanblog.com/post/773&title=   چگونه موقعیت نور بر عکس تاثیر می گذارد" target="_blank"><img src="http://mihanblog.com/public/public/user_data/template/2099991/blank.gif" width="25" height="25" border="0" alt="" title="این مطلب را به اشتراک بگذارید"></a>&nbsp;
+                    <a href="http://www.stumbleupon.com/refer.php?url=http://rajer2014.mihanblog.com/post/773&title=   چگونه موقعیت نور بر عکس تاثیر می گذارد" target="_blank"><img src="http://mihanblog.com/public/public/user_data/template/2099991/blank.gif" width="25" height="25" border="0" alt="" title="این مطلب را به اشتراک بگذارید"></a>&nbsp;
+                    <a href="http://www.youtube.com/?url=http://rajer2014.mihanblog.com/post/773&title=   چگونه موقعیت نور بر عکس تاثیر می گذارد" target="_blank"><img src="http://mihanblog.com/public/public/user_data/template/2099991/blank.gif" width="25" height="25" border="0" alt="" title="این مطلب را به اشتراک بگذارید"></a>&nbsp;&nbsp;
+                    <a href="http://www.facebook.com/share.php?u=http://rajer2014.mihanblog.com/post/773&t=   چگونه موقعیت نور بر عکس تاثیر می گذارد" target="_blank"><img src="http://mihanblog.com/public/public/user_data/template/2099991/blank.gif" width="25" height="25" border="0" alt="" title="این مطلب را به اشتراک بگذارید"></a>&nbsp;
+                    <a href="http://twitter.com/home?status=Reading+this:+http://rajer2014.mihanblog.com/post/773&title=   چگونه موقعیت نور بر عکس تاثیر می گذارد" target="_blank"><img src="http://mihanblog.com/public/public/user_data/template/2099991/blank.gif" width="25" height="25" border="0" alt="" title="این مطلب را به اشتراک بگذارید"></a>&nbsp;
+                    <a href="http://del.icio.us/post?&url=http://rajer2014.mihanblog.com/post/773&title=   چگونه موقعیت نور بر عکس تاثیر می گذارد" target="_blank"><img src="http://mihanblog.com/public/public/user_data/template/2099991/blank.gif" width="25" height="25" border="0" alt="" title="این مطلب را به اشتراک بگذارید"></a>
+                </div>
+                <div class=div58><font class=text7><a href="../../author/1208568.html">محمد نریموسی</a></font></div>
+                <div class=div581 style="padding-top: 10px;">
+
+                    <div style="float: left; margin-left: 50px;margin-top:-4px;"><script>mihanblogPostLike('773','like')</script></div>
+
+                    <font class=text7>دوشنبه 1 بهمن 1397</font></div>
+            </div>
+
+            <div class=div54 style="background:#badb44;">
+                <style>
+
+
+
+
+                    .clearfix {display: inline-block;}
+                    .clearfix:after {
+                        content: ".";
+                        display: block;
+                        height: 0;
+                        clear: both;
+                        visibility: hidden;
+                    }
+
+
+
+
+                    .cblike{
+                        margin:4px 15px;
+                        float: left;
+                    }
+                    .cblike a {
+                        float:left;
+                        padding:3px;
+                        text-align:center;
+                        font-size:12px;
+                        color:#FFF;
+                        display:block;
+                        line-height:15px;
+                        text-decoration: none;
+                    }
+
+
+
+
+                    .cblike a.clike_plus {
+                        background-color:#009900 ; /*green #039B03*/
+
+                        border-radius: 5px ;
+
+                        border-top-right-radius: 0px;
+                        border-bottom-right-radius: 0px;
+
+                        /*border:1px solid green;
+                  border-right:0px;*/
+                    }
+                    .cblike a.clike_minus {
+                        background-color:#CC0000;
+                        border-radius: 5px ;
+                        border-top-left-radius: 0px;
+                        border-bottom-left-radius: 0px;
+
+                        /*border:1px solid red;
+                  border-left:0px;*/
+                    }
+                    .cblike a.clike_minus:hover {
+                        background-color:red;
+                        text-decoration: none;
+                    }
+                    .cblike a.clike_plus:hover {
+                        background-color:green;
+                        text-decoration: none;
+                    }
+                    .cblike a span{
+                        font-weight:bold;
+                        font-size:13px;
+
+                        color:#fff;
+                    }
+
+
+
+
+                    .text100 , .text100 a{color:#FFF; font-size:8pt;-moz-text-shadow: #444 1px 1px 0px;-webkit-text-shadow: #444 1px 1px 0px;text-shadow: #444 1px 1px 0px;}
+                    .text101 , .text101 a{color:#444444; font-size:8pt;-moz-text-shadow: #fff 1px 1px 0px;-webkit-text-shadow: #fff 1px 1px 0px;text-shadow: #fff 1px 1px 0px;}
+                    .text102 , .text102 a{color:#000; font-size:8pt;-moz-text-shadow: #fff 1px 1px 0px;-webkit-text-shadow: #fff 1px 1px 0px;text-shadow: #fff 1px 1px 0px;}
+
+                    .com{ width:535px; float:left; background:#d4f16c; -webkit-border-radius: 5px;-moz-border-radius: 5px;border-radius: 5px; margin: 0px 7px 0px 15px; padding:0 0 10px 0;}
+                    .com1{ width:517px; float:left; background:#709415; -webkit-border-radius: 5px;-moz-border-radius: 5px;border-radius: 5px; margin: 10px 20px 0 10px; padding:0 0 3px 0;}
+                    .com3{ width:290px; float:left; text-align:right; direction:rtl; line-height:27px;}
+                    .com2{ width:190px; float:left; height:30px; text-align:left; direction:rtl; line-height:27px; padding-left:10px; opacity:0.6;}
+                    .com4{ width:497px; float:left; background:#FFF; -webkit-border-radius: 5px;-moz-border-radius: 5px;border-radius: 5px; margin: 3px 3px 0 3px; padding: 7px; direction:rtl; text-align:right; -moz-box-shadow: inset #444 0px 0px 5px;-webkit-box-shadow:inset  #444 0px 0px 5px;box-shadow: inset #444 0px 0px 5px;}
+                    .com5{ width:497px; float:left; background:#cfcfcf; -webkit-border-radius: 5px;-moz-border-radius: 5px;border-radius: 5px; margin:  3px 3px 0 3px; padding: 7px; direction:rtl; text-align:right; -moz-box-shadow:inset  #444 0px 0px 5px;-webkit-box-shadow: inset #444 0px 0px 5px;box-shadow: inset #444 0px 0px 5px;}
+                    .com6{ width:507px; float:left; background:#fff; -webkit-border-radius: 5px;-moz-border-radius: 5px;border-radius: 5px; margin: 5px 20px 0 10px; padding: 5px 5px 5px 5px; direction:rtl; }
+                    .com7{width:25px; padding:5px 0 0 0; float:right; text-align:center;}
+                </style>
+                            </div>
+
+        </div>    </div>
+
+    <div class=div29></div>
+    <div class=div28><font class=text7>
+                <br><br>
+        <br><br><br>
+    </font>
+    </div>
+</div>
+
+
+<div class=div170>
+    <div class=mdiv170>
+
+        
+        <div class=div24>
+            <div class=div35>
+                <div class=div25><font class=text5>پیوند روزانه</font></div></div>
+            <div class=div341><font class=text1><ul>
+                <li><a href="../../../index.html" title="عیب یابی کولرهای  گازی : اجنرال – سامسونگ – ال جی – سونی و........
+
+ 
+
+عیب یابی و تعمیرات  رایج  انواع کولرهای اسپیلت ( دو تیکه ) و پنجره ای شامل :
+
+ 
+
+ گیبسون -  ایران – کرافت – دولفین – سوپرا قدیم – کریر – اجنرال – فوجستو- ناسیونال – سوپرا جدید – توشیبا – میتسوبیشی – اریسون – اتمسفر- ال جی – سامسونگ – هیتاچی و .......
+
+ 
+
+هیچ یک از قسمت های کولر گازی کار نمی کند ؟
+
+ 
+
+علت عیب :
+
+1- محل مورد استفاده برق ندارد
+
+رفع عیب :
+
+با ولت متر برق پریز یا محل مورد استفاده کولر را تست کنید . اگر برق نباشد عیب از سیم کشی داخلی یا قطع بودن برق شهر می باشد
+
+ 
+
+2- سه شاخه معیوب است
+
+رفع عیب :
+
+اگر برای ارتباط سیم کولر به پریز برق از سه شاخه استفاده کرده باشند در این صورت دو شاخه را باز و صحیح بودن اتصالات آن را بازدید کنید اگر اتصالات آن ناقص یا قطع باشند اتصالات را کامل کنید تا عیب بر طرف شود
+
+ 
+
+3 – سیمهای برق ورودی کولر معیوبند
+
+رفع عیب :
+
+سیم های رابط را می توانید تست کنید.
+
+ 
+
+عیب یابی :
+
+موتور پروانه ( فن ) کار می کند ، کمپرسور کار نمی کند ، کولر سرما ندارد ؟
+
+ 
+
+علت عیب :
+
+1- ترموستات خراب است
+
+ 
+
+رفع عیب :
+
+در این روش پس از خارج کردن کولر از برق شهر ، سیمهای وصل شده به ترموستات را از کنتاکت های ترموستات جدا می کنند آنگاه دستگاه اهم متر را به دو کنتاکت ترموستات وصل می کنند ، اگر عقربه اهم متر حرکت کرد ترموستات سالم است ، در غیر این صورت ترموستات معیوب است و باید آن را با مشابه خود عوض نمود .
+
+ 
+
+2- سیم های رابط ترموستات معیوبند
+
+ 
+
+رفع عیب :
+
+سیمهای ترموستات را تست کنید اگر معیوبند ، عوض کنید تا عیب برطرف شود
+
+ 
+
+3- سیم های رابط موتور اصلی معیوبند
+
+رفع عیب :
+
+ 
+
+کولر را از برق  خارج کنید سیم های رابط موتور را از فیش مربوطه در موتور جدا کنید و آزمایش کنید گاهی سیم آن قطع یا فیش برق آن خراب شده اگر سیم معیوب است تعویض کنید .
+
+ 
+
+4- موتور معیوب است
+
+رفع عیب :
+
+ 
+
+با دستگاه اهم متر سه پایه کمپرسور ( R- S – C  ) را تست کنید اگر به هم راه دهند موتور سالم است و برای اطمینان آن را به طور جداگانه با یک خازن سالم به برق متصل می کنیم در غیر این صورت موتور خراب است .
+
+ 
+
+عیب یابی :
+
+کولر سرما ندارد ، موتور پروانه کار نمی کند ، موتور اصلی کار نمی کند گاهی صدای لرزه به خود می گیرد  ؟
+
+ 
+
+علت عیب :
+
+1- خازن مربوط به سیم پیچ کمکی ضعیف است
+
+رفع عیب :
+
+کولر را از برق خارج کنید ، خازن را از مدار خارج و تست کنید دقت کنید ، اگر خازن خراب است عوض کنید تا عیب بر طرف شود .
+
+ 
+
+2- سیم های رابط خازن معیوب یا اتصالات آن ناقص است
+
+رفع عیب :
+
+سیم های رابط خازن و اتصالات آن را پس از خارج کردن کولر از برق و دشارژ خازن ، تست کنید . اگر سیم ها معیوبند ، عوض کنید و چنانچه اتصالات آنها ناقص است اتصالات را کامل کنید تا عیب برطرف شود .
+
+ 
+
+3- موتور خراب است
+
+رفع عیب :
+
+ 
+
+موتور را جداگانه به کار اندازید اگر موتور کار نکند احتمالاً موتور خراب است . در این صورت برای کسب اطمینان بیشتر لوله های رفت و برگشت را از کمپرسور جدا کنید آن گاه مجدداً موتور را به کار اندازید ، چنانچه در این حالت اگر موتور کار کند موتور سالم است ، با آمپر متر مقدار شدت جریان موتور را نیز اندازه بگیرید اگر شدت جریان مناسب باشد و در حالی کمپرسور کار می کند انگشتتان را به دهانه لوله رفت قرار دهید چنانچه باد انگشتان را دفع نموده و خللی در وضعیت فشار پیش نیاید عیب از گرفتگی لوله ها به خصوص لوله مویی می باشد ولی اگر پس از آزاد ساختن لوله های رفت و برگشت کمپرسور ، موتور کار نکند موتور معیوب است و باید تعویض شود .
+
+ 
+
+ 
+
+عیب یابی :
+
+کمپرسور مطلوب کار می کند ، سرمای کولر در حد مطلوب است دور کند موتور پروانه ها به خوبی کار میکند دور تند آن کار نمی کند ؟
+
+ 
+
+علت عیب :
+
+1- کلید مربوط به دور تند کلید چند وضعیتی معیوب است
+
+رفع عیب :
+
+ 
+
+کلید مربوط  به دور تند کلید چند وضعیتی را شناسایی نموده آن را تست کنید اگر کلید معیوب است آن را تعمیر یا تعویض کنید تا عیب برطرف شود .
+
+ 
+
+2-  سیم رابط بین دور تند موتور پروانه ها و کلید مربوط به آن معیوب است .
+
+رفع عیب :
+
+ 
+
+سیم یاد شده را تست کنید اگر معیوب است عوض کنید و چنانچه اتصالات آن کثیف یا ناقص است اتصالات را کامل و محکم کنید تا عیب برطرف شود .
+
+ 
+
+عیب یابی :
+
+کمپرسور کم کار می کند تمام حالت های موتور پروانه ها به خوبی کار می کنند محیط به نحو مطلوب خنک نمی شود ؟
+
+ 
+
+علت عیب :
+
+1- درجه ترموستات روی حالت کم قرار دارد
+
+رفع عیب :
+
+ 
+
+درجه ترموستات را روی حالت مناسب قرار دهید
+
+ 
+
+2-  فیلتر های خروجی هوا کثیف هستند
+
+رفع عیب :
+
+ 
+
+فیلتر های خروجی هوا را به خوبی تمیز کنید تا عیب برطرف شود
+
+ 
+
+3- ترموستات تنظیم نیست یا خراب است
+
+رفع عیب :
+
+ 
+
+ترموستات را تنظیم کنید یا تعویض کنید
+
+ 
+
+عیب یابی :
+
+مدت کار کمپرسور طولانی تر است موتور پروانه ها در تملم حالت به خوبی کار می کنند سرما کم است ؟
+
+علت عیب :
+
+1-  کندانسور کثیف و در معرض آفتاب است
+
+رفع عیب :
+
+ 
+
+اگر کندانسور کثیف است آن را به دقت و با احتیاط تمیز کنید و برای آن سایه بان درست کنید تا عیب بر طرف شود
+
+ 
+
+2-  گاز کولر کم شده است
+
+رفع عیب :
+
+ 
+
+میزان گاز کولر را کنترل کنید اگر گاز کولر کم است پس از بررسی علت ، مقدار گاز را تکمیل کنید تا عیب برطرف شود .
+
+ 
+
+3 -  کمپرسور از فشار افتاده است
+
+رفع عیب :
+
+ 
+
+ممکن است فشار موتور کم شده باشد پس از آزاد کردن لوله های خروجی و ورودی ، میزان فشار موتور را تست کنید اگر موتور از فشار افتاده باشد آن را تعمیر یا عوض کنید تا عیب برطرف شود .
+
+ 
+
+عیب یابی :
+
+سرمای کولر مطلوب است ولی به هنگام کار صدای ناهنجاری از آن به گوش می رسد  ؟
+
+ 
+
+علت عیب :
+
+1 – محل قرار گرفتن کولر را تنظیم کنید
+
+رفع عیب :
+
+ 
+
+محل قرار گرفتن کولر را تنظیم کنید
+
+ 
+
+2 -  پیچهای کانالها ، دریچه های هوا  و یا سایر قسمت ها شل شده اند
+
+رفع عیب :
+
+ 
+
+شل شدن پیچهای قسمت های مختلف کولر را  بازدید کنید اگر پیچهای قسمت های مختلف شل شده باشند آنها را تا حد قابل قبول سفت کنید تا عیب برطرف شود .
+
+ 
+
+3- پروانه ها به بدنه می سایند
+
+رفع عیب :
+
+ 
+
+حرکت پروانه ها را در نظر بگیرید اگر در اثر شل شدن پیچ ها و یا تراز نبودن کولر به بدنه می سایند علت را بررسی کرده عیب را شناسایی و برطرف کنید
+
+ 
+
+4 – پیچهای کمپرسور شل شده اند
+
+رفع عیب :
+
+ 
+
+پیچهای کمپرسور را بازدید کنید اگر شل شده اند آنها را سفت کنید تا عیب برطرف شود
+
+ 
+
+5 – لاستیک های لرزه گیر موتور خراب شده اند
+
+رفع عیب :
+
+ 
+
+لاستیک های لرزه گیر موتور را بازدید کنید اگر خراب شده اند عوض کنید تا عیب بر طرف شود.
+
+ 
+
+6- لوله ها به هم یا به بدنه می سایند
+
+رفع عیب :
+
+ 
+
+وضعیت لوله های را بررسی کنید اگر به هم یا به بدنه می سایند علت را شناسایی و عیب را بر طرف کنید .
+
+ 
+
+عیب یابی :
+
+کمپرسور و موتور پروانه ( فن ) به خوبی کار می کنند قسمتی از اواپراتور برفک می زند در کل سرمای کولر کم شده است ؟
+
+علت عیب :
+
+1 – گاز کولر کم شده است
+
+رفع عیب :
+
+ 
+
+میزان گاز کولر را کم کنید اگر کم شده است به اندازه کافی اضافه کنید تا عیب بر طرف شود .
+
+ 
+
+2- داخل لوله ها کثیف هستند
+
+رفع عیب :
+
+ 
+
+اگر عیب از کمی گاز نباشد ممکن است لوله ها به ویژه لوله مویی یا فیلتر کثیف شده باشند در این صورت سیستم را شستشو داده و آنگاه به کولر گاز تزریق کنید تا عیب بر طرف شود
+
+ 
+
+3- صافی اواپراتور یا بیرون اواپراتور کثیف است
+
+رفع عیب :
+
+ 
+
+صافی و اواپراتور را تمیز کنید تا عیب بر طرف شود 
+
+ 
+
+4- لاستیک های لرزه گیر کمپرسور خراب شده اند
+
+رفع عیب :
+
+ 
+
+لاستیک های لرزه گیر کمپرسور را بازدید کنید اگر خراب هستند عوض کنید تا عیب بر طرف شود
+
+ 
+
+5- کمپرسور معیوب است
+
+رفع عیب :
+
+اگر عیب از علت های قبلی نباشد عیب از خرابی قسمت های داخلی کمپرسور می باشد در این صورت کمپرسور را تعمیر یا عوض کنید تا عیب بر طرف شود .
+
+ 
+
+عیب یابی
+
+به محض اینکه کولر را  روشن می کنیم فیوز محل استفاده عمل می کند  ؟
+
+ 
+
+علت عیب :
+
+1 – سیمهای برق در جایی به هم اتصال یافته اند
+
+رفع عیب :
+
+ 
+
+تمامی مسیرهای سیم های رابط برق کولر را بازدید کنید چنانچه سیم ها  یا کنتاکت های اتصال آنها به هم چسبیده باشند آنها را از هم جدا کنید تا عیب بر طرف شود .
+
+ 
+
+2- خازن ها اتصال کوتاه کرده اند
+
+رفع عیب :
+
+ 
+
+پس از خارج کردن کولر از برق خازن ها را تست کنید اگر خرابند عوض کنید تا عیب بر طرف شود
+
+ 
+
+3-  موتور اصلی خراب است
+
+رفع عیب :
+
+ 
+
+اتصالات موتور اصلی را از ترمینال موتور جدا کنید آنگاه کولر را به برق وصل نموده و آن را روشن نمایید اگر فیوز قطع نکرد عیب از موتور  اصلی است آن را عوض کنید تا عیب بر طرف شود
+
+ 
+
+4- موتور پروانه ها  ( فن ) معیوب است
+
+رفع عیب :
+
+ 
+
+پس از خارج کردن کولر از برق اتصالات برق موتور پروانه ها ( فن ) را جدا تست کنید
+
+ 
+
+5 – سیم کشی غلط است
+
+رفع عیب :
+
+ 
+
+اگر سیم کشی کولر جابجا شده باشد ممکن است سیم کشی و اتصالات کنتاکت ها در کلید و یا جاهای دیگر اتصال کوتاه شده باشد در این صورت سیم کشی و اتصالات صحیح آنها را کنترل کنید تا عیب شناسایی و بر طرف شود .
+
+ 
+
+عیب یابی :
+
+کولر به بدنه برق می دهد ؟
+
+ 
+
+علت عیب :
+
+ 
+
+1-  سیمهای رابط برق لخت شده و به بدنه اتصال کرده اند
+
+رفع عیب :
+
+ 
+
+تمامی مسرهای سیمهای رابط را از نظر لخت شدن و اتصال یافتن به بدنه به دقت بازدید کنید یا بعد از سرویس کولر هنوز خشک نشده است چنانچه عیبی در /انها مشاهده کردید آن را بر طرف سازید
+
+ 
+
+2- کنتاکت های اتصال جریان برق قطعات الکتریکی از قبیل کلید ترموستات و......  به بدنه اتصال یافته اند .
+
+رفع عیب :
+
+ 
+
+چگونگی اتصال کنتاکت های قطعات الکتریکی یاد شده را به دقت بازدید و کنترل کنید اگر کنتاکتی به بدنه اتصال نموده باشد آن را از بدنه جدا نمایید تا عیب بر طرف شود
+
+ 
+
+3 -  برق از سیم پیچهای کمپرسور به بدنه نشت می کند
+
+رفع عیب :
+
+ 
+
+اتصالات برق کمپرسور را از آن آزاد ساخته و سپس کولر را به برق وصل کرده و آن را روشن کنید اگر بدنه برق نداشته باشد عیب از موتور اصلی است در این صورت موتور اصلی را عوض کنید تا عیب بر طرف شود .
+
+ تعمیر" target="_blank">تعمیر</a></li>                <li><b><a href="../../../linkdaily/index.html">همه پیوندهای روزانه</a></b></li>
+                <li><b><a href="javascript:linkdailyForm()">ارسال پیوند روزانه</a></b></li>
+            </ul></font></div><div class=div30></div>
+        </div>
+        <div class=div24>
+            <div class=div35>
+                <div class=div25><font class=text5>پیوندها</font></div></div>
+            <div class=div341><font class=text1><ul>
+                <li><a href="https://www.crcpress.com/Nutritional-Care-of-the-Patient-with-Gastrointestinal-Disease/Buchman/p/book/9781482226034" title="." target="_blank">کتاب</a></li><li><a href="http://getandroid.ir" title="خوب" target="_blank">بازی های باربی دخترانه اندورید</a></li><li><a href="http://www.freedownload.ir" title="خوب" target="_blank">کلش اف کلنزاندورید</a></li><li><a href="../../../index.html" title="سمت های دیگر مدل را زیبا تر نشان دهید.
+۱
+تکنیک نرم کردن پوست
+[روتوش پرتره]
+ابتدا فایل های قرار داده شده را دانلود کنید و در تغییراتی که انجام می دهیم با ما همراه شوید! کسانی که در زمینه روتوش حرفه ای کار می کنند ساعت ها برای از بین بردن معایب صورت و نرم ت" target="_blank">تکنیک رتوش</a></li><li><a href="http://www.varzesh3.com" title="گل" target="_blank">ورزش</a></li>                <li><a target="_blank" href="http://www.mytheme.ir">بهترین قالب های وبلاگ</a></li>
+                <li><b><a href="../../../link/index.html">همه پیوندها</a></b></li>
+            </ul></font></div><div class=div30></div>
+        </div>
+        <div class=div24>
+            <div class=div35>
+                <div class=div25><font class=text5>صفحات جانبی</font></div></div>
+            <div class=div341><font class=text1><ul>
+                <li><a href="../../../extrapage/11com.html">عکس</a></li><li><a href="../../../extrapage/s19351248369.html">عکس</a></li><li><a href="../../../extrapage/55.html">ترفندهای رتوش</a></li><li><a href="../../../extrapage/22.html">45 کلید میانبر مخفی در فتوشاپ</a></li><li><a href="../../../extrapage/00.html">چرخش روزگار</a></li>            </ul></font></div><div class=div30></div>
+        </div>
+        <div class=div24>
+            <div class=div35>
+                <div class=div25><font class=text5>آمار وبلاگ</font></div></div>
+            <div class=div341><font class=text1><ul>
+                <li>کل بازدید : <script>getStatVar('total_view');</script></li>
+                <li>بازدید امروز :<script>getStatVar('today_view');</script></li>
+                <li>بازدید دیروز : <script>getStatVar('yesterday_view');</script></li>
+                <li>بازدید این ماه : <script>getStatVar('this_month_view');</script></li>
+                <li>بازدید ماه قبل : <script>getStatVar('last_month_view');</script></li>
+                <li>تعداد نویسندگان : <script>getStatVar('total_author');</script></li>
+                <li>تعداد کل پست ها : <script>getStatVar('total_post');</script></li>
+                <li>آخرین بازدید : <script>getStatVar('last_view_date');</script></li>
+                <li>آخرین بروز رسانی : <script>getStatVar('modify_date');</script></li>
+            </ul></font></div><div class=div30></div>
+        </div>
+        <div class=div24>
+            <div class=div35>
+                <div class=div25><font class=text5>امکانات جانبی</font></div></div>
+            <div class=div341>
+                <div class=sm></div>
+                <div class=div32><center><font class=text1></font></center>
+                    <style>
+                        .mihan_logo {
+                            background: url("http://mihanblog.com/public/public/images/logo/poweredby.gif") no-repeat scroll center top transparent;
+                            height: 131px;
+                            margin-top: 10px;
+                            text-align: center;
+                        }
+                    </style>
+                    <div class="mihan_logo"></div>
+
+                </div>
+            </div>
+            <div class=div30></div>
+        </div>
+
+    </div></div>
+</div>
+</td>
+</tr>
+<tr>
+    <td class="b2" valign="bottom">
+        <a href="http://www.mytheme.ir" target="_blank"><img src="http://mihanblog.com/public/public/user_data/template/2099991/blank.gif" border=0 width=200 height=50></a>
+    </td>
+</tr>
+</table>
+</div>
+<style>
+    img{
+        max-width : 515px;
+    }
+    h2,h1 {
+        margin: 0;
+    }
+</style>
+</body>
+
+</html><script>
+//    setTimeout(function () {
+//        GetMihanBlogShowAds();
+//    }, 1000);
+</script>
+<!--NEW SERVER--><!--;)-->
+
+<!--SabaVision Ads Handler--><!--<script type="text/javascript">(function (d) {var url =   location.protocol+'//api.sabavision.com/pox/poxjs.js';d.write('<script type="text/javascript" src="' + url + '" async></scri' + 'pt>');})(document);</script>-->
+
+
+<script type="text/javascript">
+
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-153829-9']);
+    _gaq.push(['_setDomainName', 'rajer2014.mihanblog.com']);
+    _gaq.push(['_trackPageview']);
+
+    (function() {
+        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+
+</script>
+
+
+<div id='mediaad-Kvcm'></div>
+<meta name="sabavision_zone" content="2500-Z499" />
+<center>
+    <div style="background-color:white;width:90%;padding:20px;margin-top:50px;margin-bottom:50px;">
+        <a href="https://www.cloob.com">شبکه اجتماعی فارسی کلوب</a> | <a href="https://www.seo25.com/product/buy-mobile-traffic-and-get-cheap-targeted-mobile-traffic/" target="_blank">Buy Mobile Traffic</a> | <a href="https://www.soalaat.com">سایت سوالات</a>
+    </div>
+</center>

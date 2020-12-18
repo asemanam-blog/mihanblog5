@@ -1,0 +1,1449 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" /><link rel="EditURI" type="application/rsd+xml" title="RSD" href="xmlrpc%3Frsd" />
+<script type="text/javascript" src="http://static.mihanblog.com//public/scripts/run/g.other.v3.js"></script>
+<script>
+
+	function c_$(id){
+        return document.getElementById(id);
+    }
+    
+			//if (parent.frames.length) top.location.href= document.location;
+		
+	setTodayDate = function(){
+		document.write('پنجشنبه 27 آذر 1399');
+		/*2081677*/	}
+
+</script>
+
+
+
+        <script type="text/javascript">
+            (function(){
+            var now = new Date();
+            var head = document.getElementsByTagName('head')[0];
+            var script = document.createElement('script');
+            script.async = true;
+            var script_address = 'https://cdn.yektanet.com/js/mihanblog.com/native-mihanblog.com-6531.js';
+            script.src = script_address + '?v=' + now.getFullYear().toString() + '0' + now.getMonth() + '0' + now.getDate() + '0' + now.getHours();
+            head.appendChild(script);
+            })();
+        </script>
+
+        <!--<script type="text/javascript">
+            var head = document.getElementsByTagName("head")[0];
+            var script = document.createElement("script");
+            script.type = "text/javascript";
+            script.async=1;
+            script.src = "https://s1.mediaad.org/serve/mihanblog.com/loader.js" ;
+            head.appendChild(script);
+        </script>-->
+        
+        <script>
+            var sabaVisionWebsiteID = "9bab9dac-041d-4bdb-b39a-1ed789f65eed"; var sabaVisionWebsitePage = "ALL"
+        </script>
+        <link rel="stylesheet" href="https://plus.sabavision.com/dox/dox.min.css">
+        <script src="https://plus.sabavision.com/dox/dox.min.js"></script>
+        
+        <script>
+	try{
+		var commentCnt = new Array();
+		commentCnt[1]='10';commentCnt[2]='140';commentCnt[3]='30';	} catch(e){}
+	
+	newComment = function(post_id){
+		try{
+			window.open('/post/comment/'+post_id,'comment','status=yes,scrollbars=yes,toolbar=no,menubar=no,location=no ,width=480px,height=540px');
+		} catch(e){}
+	}
+	setCommentCnt = function(post_id){
+		try{
+			if(commentCnt[post_id]){
+				document.write(commentCnt[post_id]);
+			} else {
+				document.write(0);
+			}
+		} catch(e){}
+	}
+</script><script>
+
+	statInfo = new Array();
+	setStatVar = function(index,value){
+		statInfo[index] = value;
+	}
+	getStatVar = function(index){
+		if(statInfo[index]) document.write(statInfo[index]);
+	}
+	
+	setStatVar('total_post','3');
+	setStatVar('total_author','0');
+	setStatVar('modify_date','چهارشنبه 15 شهریور 1396');
+	
+	setStatVar('today_view','7');
+	setStatVar('yesterday_view','4');
+	
+	setStatVar('this_month_view','217');
+	setStatVar('last_month_view','246');
+
+	setStatVar('total_view','69957');
+	setStatVar('last_view_date','پنجشنبه 27 آذر 1399 (17:21)');
+
+
+
+    
+</script><script>
+	messageForm = function(post_id){
+		try{
+			window.open('/message','message','status=yes,scrollbars=yes,toolbar=no,menubar=no,location=no ,width=480px,height=550px');
+		} catch(e){}
+	}
+</script><script>
+	linkdailyForm = function(){
+		try{
+			window.open('/linkdaily/new','linkdaily','status=yes,scrollbars=yes,toolbar=no,menubar=no,location=no ,width=500px,height=460px');
+		} catch(e){}
+	}
+</script><script>
+
+var MihanblogShopAdsArray = new Array();
+
+function GetMihanBlogShowAds(){
+	if(MihanblogShopAdsArray.length){
+		var adsTarget = 'MihanblogShopAds';
+		var containerWidth = document.getElementById(adsTarget).offsetWidth;
+		if(containerWidth>=200){
+			var adsCnt = parseInt(containerWidth / 200) ;
+			if(adsCnt>MihanblogShopAdsArray.length){
+				adsCnt = MihanblogShopAdsArray.length ; 
+			}
+//			var OneAdsWidth = parseInt(containerWidth / adsCnt) ;
+			var OneAdsWidth = containerWidth / adsCnt ;
+			if(OneAdsWidth>400){
+				OneAdsWidth = 400 ;
+			}
+			var OutHtml = '';
+			var img = '';
+			var link = '';
+			var title = '';
+			var description = '';
+			var imgWidth = 70;
+			if(OneAdsWidth>230){
+				imgWidth = 80;
+			}
+			if(OneAdsWidth>300){
+				imgWidth = 90;
+			}
+			for(adsOne=0;adsOne<adsCnt;adsOne++){
+				
+				img = MihanblogShopAdsArray[adsOne]['img'];
+				link = MihanblogShopAdsArray[adsOne]['link'];
+				title = MihanblogShopAdsArray[adsOne]['title'];
+				description = MihanblogShopAdsArray[adsOne]['description'];
+				
+				OutHtml += '<td style="background-color:#FFF;width: '+OneAdsWidth+'px;border:1px solid #f00;margin:0px 0px;font-size:11px;font-family:tahoma;padding:2px;margin:0px 0px;font-size:11px;border: 1px solid BurlyWood; padding: 1px; height: '+(imgWidth+25)+'px;">';
+
+				OutHtml += '	<a href="'+link+'.html" target="_blank" style="text-decoration:none">';
+
+				OutHtml += '			<div style="width: '+(OneAdsWidth-16)+'px;cursor:pointer;font-size:12px;padding: 4px 1px 4px 7px; white-space: nowrap; text-align: center; font-weight: bold; color: blue;white-space:nowrap;overflow:hidden">';
+				OutHtml += 					title;
+				OutHtml += '			</div>';
+				OutHtml += '			<div style="cursor:pointer;padding: 1px; display: block; float: right; width: '+imgWidth+'px;">';
+				OutHtml += '				<img src="'+img+'.html" style="border:0px;padding:0px;margin:0px;width:'+imgWidth+'px;height:'+imgWidth+'px;">';
+				OutHtml += '			</div>';
+				OutHtml += '			<div style="padding: 1px; display: block; float: right; width: '+(OneAdsWidth-13-imgWidth)+'px; text-align: right;overflow:hidden">';
+				OutHtml += '				<div style="overflow:hidden;cursor:pointer;padding: 2px 3px; line-height: 17px; height: '+(imgWidth-3)+'px; text-align: justify;color:#000;direction:rtl">';
+				OutHtml += 						description;
+				OutHtml += '				</div>';
+				OutHtml += '			</div>';
+
+				OutHtml += '	</a>';
+
+				OutHtml += '</td>';
+			}
+			
+			var Out = '<table align="center" cellpadding="0" cellspacing="2" style="width:'+(OneAdsWidth*adsCnt)+'px;"><tr>'+OutHtml+'</tr></table>'; 
+			
+			Out = '<div style="text-align:center;padding:0px;margin:3px auto;">'+Out+'</div>'; 
+			
+			document.getElementById(adsTarget).style.height = (imgWidth+35)+'px' ;
+			document.getElementById(adsTarget).innerHTML = Out ;
+		}
+	}
+}
+</script>
+    <style>
+        @font-face {
+            font-family: 'Mihan-Iransans';
+            src: url('http://lovepony4ever.mihanblog.com/public/public/fonts/Iransans.eot');
+            src: url('http://lovepony4ever.mihanblog.com/public/public/fonts/Iransans.eot?') format('embedded-opentype'),
+            url('http://lovepony4ever.mihanblog.com/public/public/fonts/Iransans.woff2') format('woff2'),
+            url('http://lovepony4ever.mihanblog.com/public/public/fonts/Iransans.woff') format('woff'),
+            url('http://lovepony4ever.mihanblog.com/public/public/fonts/Iransans.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+        @font-face {
+            font-family: 'Mihan-IransansBold';
+            src: url('http://lovepony4ever.mihanblog.com/public/public/fonts/Iransans-Black.eot');
+            src: url('http://lovepony4ever.mihanblog.com/public/public/fonts/Iransans-Black.eot?') format('embedded-opentype'),
+            url('http://lovepony4ever.mihanblog.com/public/public/fonts/Iransans-Black.woff2') format('woff2'),
+            url('http://lovepony4ever.mihanblog.com/public/public/fonts/Iransans-Black.woff') format('woff'),
+            url('http://lovepony4ever.mihanblog.com/public/public/fonts/Iransans-Black.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+        @font-face {
+            font-family: 'Mihan-IransansLight';
+            src: url('http://lovepony4ever.mihanblog.com/public/public/fonts/Iransans-UltraLight.eot');
+            src: url('http://lovepony4ever.mihanblog.com/public/public/fonts/Iransans-UltraLight.eot?') format('embedded-opentype'),
+            url('http://lovepony4ever.mihanblog.com/public/public/fonts/Iransans-UltraLight.woff2') format('woff2'),
+            url('http://lovepony4ever.mihanblog.com/public/public/fonts/Iransans-UltraLight.woff') format('woff'),
+            url('http://lovepony4ever.mihanblog.com/public/public/fonts/Iransans-UltraLight.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+        @font-face {
+            font-family: 'Mihan-Nassim';
+            src: url('http://lovepony4ever.mihanblog.com/public/public/fonts/Nassim.eot');
+            src: url('http://lovepony4ever.mihanblog.com/public/public/fonts/Nassim.eot?') format('embedded-opentype'),
+            url('http://lovepony4ever.mihanblog.com/public/public/fonts/Nassim.woff2') format('woff2'),
+            url('http://lovepony4ever.mihanblog.com/public/public/fonts/Nassim.woff') format('woff'),
+            url('http://lovepony4ever.mihanblog.com/public/public/fonts/Nassim.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+        @font-face {
+            font-family: 'Mihan-Koodak';
+            src: url('http://lovepony4ever.mihanblog.com/public/public/fonts/Koodak.eot');
+            src: url('http://lovepony4ever.mihanblog.com/public/public/fonts/Koodak.eot?') format('embedded-opentype'),
+            url('http://lovepony4ever.mihanblog.com/public/public/fonts/Koodak.woff2') format('woff2'),
+            url('http://lovepony4ever.mihanblog.com/public/public/fonts/Koodak.woff') format('woff'),
+            url('http://lovepony4ever.mihanblog.com/public/public/fonts/Koodak.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+        @font-face {
+            font-family: 'Mihan-Yekan';
+            src: url('http://lovepony4ever.mihanblog.com/public/public/fonts/Yekan.eot');
+            src: url('http://lovepony4ever.mihanblog.com/public/public/fonts/Yekan.eot?') format('embedded-opentype'),
+            url('http://lovepony4ever.mihanblog.com/public/public/fonts/Yekan.woff2') format('woff2'),
+            url('http://lovepony4ever.mihanblog.com/public/public/fonts/Yekan.woff') format('woff'),
+            url('http://lovepony4ever.mihanblog.com/public/public/fonts/Yekan.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+        @font-face {
+            font-family: 'FontAwesome';
+            src: url('http://lovepony4ever.mihanblog.com/public/public/fonts/fontawesome_webfont.eot');
+            src: url('http://lovepony4ever.mihanblog.com/public/public/fonts/fontawesome_webfont.eot?') format('embedded-opentype'),
+            url('http://lovepony4ever.mihanblog.com/public/public/fonts/fontawesome_webfont.woff2') format('woff2'),
+            url('http://lovepony4ever.mihanblog.com/public/public/fonts/fontawesome_webfont.woff') format('woff'),
+            url('http://lovepony4ever.mihanblog.com/public/public/fonts/fontawesome_webfont.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+
+
+        
+
+        /* Smartphones (portrait and landscape) ----------- */
+
+        /*
+        @media only screen and (max-width : 480px) and (min-width : 320px) {
+            .sabaClick_advert__wrapper{
+                display:block;
+            }
+            .sabaClick_advert__inner{
+                max-width: 90%;
+                margin: 0 5%;
+            }
+        }
+        */
+
+    </style>
+
+
+
+
+
+
+<html>
+<style>
+
+    /*
+    Theme Name: Cubismo
+    Theme URI: http://colorlightstudio.com
+    Description: Free WP Theme by Igor Penjivrag
+    Version: 1.0
+    Author: Igor Penjivrag
+    Author URI: http://www.colorlightstudio.com/
+    */
+
+html, body {
+    background: url(http://mihanblog.com/public/public/user_data/template/17/images/bg.gif);
+    font-family: tahoma;
+    border: 0;
+}
+
+body, p, h1, h2, h3, h4, ul, ol, li, form, blockquote {
+    margin: 0;
+    padding: 0;
+}
+
+a {
+    text-decoration: none;
+    color: #559AD3;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+    /* Header */
+
+#header {
+    width: 100%;
+    height: 4.25em;
+    padding-top: 10px;
+    text-align:right;
+}
+
+#header h2 {
+    color:#FFFFFF;
+    direction:rtl;
+    font-family:Georgia;
+    font-size:30px;
+    font-weight:normal;
+    overflow:hidden;
+    padding-top:12px;
+    white-space:nowrap;
+    width:777px;
+}
+
+#header h2 a {
+    color: #fff;
+    overflow:hidden;
+}
+
+#header h2 a:hover {
+    color: #ADE166;
+    text-decoration: none;
+}
+
+#header p {
+    padding-top: 1px;
+    color: #fff;
+    font-size: 13px;
+    color: #8F8F8F;
+}
+
+    /* Wrap */
+
+#wrap {
+    width: 781px;
+    margin: 0 auto;
+}
+
+#menu {
+    width: 100%;
+    font-size: 12px;
+    position: relative;
+}
+
+#menu ul {
+    width: 100%;
+}
+
+#menu li {
+    display: block;
+    line-height: 2.5em;
+    float: right;
+    margin-left: 10px;
+    background: url(http://mihanblog.com/public/public/user_data/template/17/images/menu_left_bg.gif) no-repeat left;
+    font-weight: bolder;
+}
+
+#menu li a {
+    line-height: 2.5em;
+    display: block;
+    background: url(http://mihanblog.com/public/public/user_data/template/17/images/menu_bg_right.jpg) repeat-x right;
+    margin-left: 1px;
+    color: #fff;
+    padding-left: 19px;
+    padding-right: 20px;
+}
+
+* html #menu li a {
+    width: 1%;
+}
+
+#menu li.current_page_item, #menu li.current_page_item a {
+    background: #fff;
+    color: #559AD3;
+}
+
+#menu li.current_page_item a:hover {
+    text-decoration: none;
+}
+
+
+    /* Page Description */
+
+#page_desc {
+    width: 100%;
+    height: 3.1em;
+    font-size: 14px;
+    padding-bottom: 10px;
+    background: #EEEEEE;
+    text-align:right;
+}
+
+#page_desc #text {
+    padding-right: 20px;
+    height: 3.1em;
+    float:right;
+    width: 499px;
+    background: #fff;
+}
+
+#page_desc p {
+    padding: 12px 0px;
+}
+
+    /* Search */
+
+#search_top {
+    float: left;
+    width: 262px;
+    height: 3.1em;
+    background: #fff;
+
+}
+
+#search_top #searchform {
+    margin-top: 0.65em;
+    position: relative;
+}
+
+#search_top input.sfield {
+    background: #fff;
+    border: #B8C7DA 1px solid;
+    width: 159px;
+    height: 21px;
+    font-size: 13px;
+    padding: 3px 2px 0 3px;
+    text-align:right;
+
+}
+
+#search_top input.sbutton {
+    position: absolute;
+    top:0px;
+    right: 168px;
+}
+.btn
+{
+    background:url(http://mihanblog.com/public/public/user_data/template/17/images/search_button.gif);
+    -x-system-font:none;
+    color:#000;
+    cursor:pointer;
+    float:none;
+    font-family:Tahoma;
+    font-size:12px;
+    font-size-adjust:none;
+    font-stretch:normal;
+    font-style:normal;
+    font-variant:normal;
+    font-weight:normal;
+    height:27px;
+    line-height:normal;
+    text-align:center;
+    width:92px;
+    border:1px solid #81C227;
+
+}
+
+    /* Content */
+
+#content_wrap {
+    background: #EEEEEE url(http://mihanblog.com/public/public/user_data/template/17/images/content_wrap_bg.gif) repeat-y;
+    padding: 0 16px;
+    width: 749px;
+    text-align:right;
+    direction:rtl;
+}
+
+#content {
+    width: 486px;
+    float: left;
+}
+
+#content h2 {
+    font-size: 15px;
+}
+
+#content p {
+    font-size: 13px;
+    line-height: 20px;
+    padding: 10px 0 0;
+}
+
+#content ul, #content ol {
+    padding: 0.5em 2.5em;
+    font-size: 13px;
+}
+
+#content ul li {
+    background: url(http://mihanblog.com/public/public/user_data/template/17/images/bullet.gif) no-repeat 0 0.6em;
+    line-height: 20px;
+    padding-left: 25px;
+    list-style: none;
+}
+
+#content ol {
+    margin-left: 1.4em;
+}
+
+#content ol li {
+    background: none;
+    padding-left: 7px;
+    line-height: 20px;
+}
+
+#content blockquote {
+    background: #F9F9F9;
+    border-bottom: #EEEEEE 1px solid;
+    border-left: 1px solid #EEEEEE;
+    font-size: 13px;
+    color: #737373;
+    padding: 0 10px;
+    width: 87%;
+    margin: 10px auto;
+    line-height: 20px;
+}
+
+    /* Caption */
+
+#caption {
+    width: 100%;
+    height: 1.9em;
+    background: #fff;
+}
+
+#caption h2 {
+    width: 250px;
+    float: left;
+    line-height: 1.9em;
+    padding-left: 18px;
+}
+
+#m_post {
+    width: 200px;
+    float: right;
+    height: 31px;
+    position: relative;
+    background: url(http://mihanblog.com/public/public/user_data/template/17/images/caption_m_posts.gif) no-repeat 130px 8px;
+}
+
+#m_post span {
+    display: none;
+}
+
+#m_post .o_entries a {
+    position: absolute;
+    right: 53px;
+    top: 8px;
+    display: block;
+    width: 17px;
+    height: 15px;
+    background: url(http://mihanblog.com/public/public/user_data/template/17/images/caption_o_entries.gif) no-repeat;
+}
+
+#m_post .r_entries a {
+    position: absolute;
+    right: 21px;
+    top: 8px;
+    display: block;
+    width: 17px;
+    height: 15px;
+    background: url(http://mihanblog.com/public/public/user_data/template/17/images/caption_r_entries.gif) no-repeat;
+}
+
+#m_post a:hover {
+    background-position: 0 -15px;
+    text-decoration: none;
+}
+
+#m_post a:hover span {
+    display: block;
+    font-size: 11px;
+    color: #2E2E2E;
+    position: absolute;
+    top: 0;
+}
+
+#m_post .o_entries a:hover span {
+    left: -100px;
+}
+
+#m_post .r_entries a:hover span {
+    left: -130px;
+}
+
+    /* Post */
+
+.post {
+    background: #fff;
+    padding: 5px 15px 15px 15px;
+    width:455px;
+    overflow:hidden;
+}
+.post #post_cat{
+    font-size:10px;
+}
+
+#page_post {
+    margin-top: 0px;
+}
+
+#page_post h2 {
+    color: #A52A2A;
+}
+
+.post h2 {
+    padding: 10px 0;
+}
+
+.post h2 a {
+    color: #A52A2A;
+}
+
+.post p a {
+    text-decoration: none;
+}
+
+.post p a:hover {
+    text-decoration: none;
+}
+
+.post_details {
+    padding: 0 15px 5px;
+    background: #fff;
+    margin-bottom: 15px;
+    width:455px;
+    margin-top:1px;
+    line-height:19px;
+}
+
+.post_details p {
+    padding: 5px 0;
+    margin-top: 1px;
+    font-size: 11px !important;
+}
+
+.post_details p a {
+    text-decoration: none;
+}
+
+.post_details p a:hover {
+    text-decoration: underline;
+}
+
+.post_details span{
+    font-size:11px;
+
+
+}
+    /* More Posts */
+
+#more_posts {
+    background: #fff;
+    padding: 10px 15px;
+    margin-top: 15px;
+    font-size: 12px;
+}
+
+
+img{
+    max-width : 445px;
+}
+
+
+#content form {
+    background: #FAFAFA;
+    width: 445px;
+    border: #EDEDED 1px solid;
+    padding: 15px 0 15px 15px;
+    margin: 0 auto;
+}
+
+#content form p {
+    padding: 0px 0 5px 0;
+    line-height: 20px;
+}
+
+#content input {
+    border: #EEEEEE 1px solid;
+    background: #fff;
+    padding: 5px;
+    font-size: 15px;
+    font-family: Georgia;
+}
+
+#content input.data {
+    width: 184px;
+}
+
+#content textarea {
+    border: #EEEEEE 1px solid;
+    width: 415px;
+    height: 170px;
+    padding: 3px;
+    font-size: 15px;
+    font-family: Georgia;
+}
+
+#content input.sbutton {
+    margin-top: 3px;
+}
+
+    /* Sidebar */
+
+
+#sidebar {
+    width: 216px;
+    float: right;
+    padding: 5px;
+}
+
+#sidebar h2 {
+    font-size: 13px;
+    color: #75A546;
+    padding: 10px 0;
+    line-height: 18px;
+}
+
+#sidebar p, #sidebar li {
+    font-size: 12px;
+    display:block;
+}
+
+#sidebar p {
+    padding: 10px 0;
+    line-height: 20px;
+}
+
+#sidebar ul {
+    list-style: none;
+}
+
+#sidebar ul ul {
+    padding: 10px 0;
+    list-style: none;
+}
+
+#sidebar ul ul ul {
+    padding: 0;
+}
+
+#sidebar ul li ul li {
+    background: url(http://mihanblog.com/public/public/user_data/template/17/images/bullet.gif) no-repeat 100% 9px;
+    padding-right: 23px;
+    line-height: 23px;
+}
+
+#sidebar ul li .simple li {
+    background: none;
+    padding-right: 23px;
+    line-height: 23px;
+    padding:5px 2px;
+}
+
+
+#sidebar ul li .rss_atom  li{
+    background:none;
+    text-align:center;
+    padding:0px;
+    margin:0px;
+}
+#sidebar ul li .rss_atom  #rss
+{
+    background: url(http://mihanblog.com/public/public/user_data/template/17/images/rss.gif) no-repeat 50% 0;
+}
+
+#sidebar ul li .rss_atom  #atom
+{
+    background: url(http://mihanblog.com/public/public/user_data/template/17/images/atom.gif) no-repeat 50% 0 ;
+    width:35px;
+}
+
+#sidebar ul li .stat li {
+    line-height: 15px;
+}
+
+#sidebar ul li .stat li span{
+    color:#BA5E05;
+}
+
+#sidebar ul li .cloud li {
+    float:right;
+}
+#sidebar .about_box  p{text-align:right;color:#559AD3;padding:0px;margin-bottom:2px;}
+#sidebar .about_box  img{width:150px;height:150px;border:2px solid #eee;}
+
+
+    /* Footer */
+
+#footer {
+    background: #fff;
+    height: 3.7em;
+    border-top: #EEEEEE 15px solid;
+    border-bottom: #EEEEEE 15px solid;
+    clear: both;
+    text-align:center;
+    direction:rtl;
+}
+#footer li a {
+    display: block;
+    float: left;
+    line-height: 24px;
+    font-size: 12px;
+    padding: 0 6px;
+    margin-right: 19px;
+    color: #2E2E2E;
+}
+
+#footer p {
+    font-size: 11px;
+    line-height: 2.5em;
+}
+#footer strong{font-size: 9px;}
+#footer p a {
+    color: #000;
+}
+
+
+    /* Copyright */
+
+#copyright {
+    width: 781px;
+    margin: 0 auto;
+    text-align: center;
+    font-size: 11px;
+    padding: 15px 0 25px 0;
+    color: #8F8F8F;
+}
+
+#copyright p {
+    line-height: 19px;
+}
+
+
+
+
+    /* Fix */
+
+#menu:after,
+#menu ul:after,
+#content_wrap:after,
+#footer:after,
+#leave_a_comment_wrap:after {
+    content: ".";
+    display: block;
+    height: 0;
+    clear: both;
+    visibility: hidden;
+}
+
+.author_photo{
+    margin:5px 5px 5px 17px;
+    color:#fff;
+    float:right;
+}
+.author_photo img{
+    border:none;
+}
+    /* ***************************************************************************** CLEAR FIX  */
+.clearfix {display: inline-block;}
+.clearfix:after {
+    content: ".";
+    display: block;
+    height: 0;
+    clear: both;
+    visibility: hidden;
+}
+    /* Hides from IE-mac \*/
+* html .clearfix {height: 1%;}
+.clearfix {display: block;}
+    /* End hide from IE-mac */
+    /* ************************************************************************** EO CLEAR FIX   */
+.mihan_logo{
+    background: url(http://mihanblog.com/public/public/images/logo/poweredby.gif) no-repeat top center;
+    text-align:center;
+    height:131px;
+    margin-top:10px;
+}
+
+#content .page_box ul{
+    direction:rtl;
+    height:17px;
+    margin:3px auto;
+    max-width:440px;
+    text-align:left;
+    width:440px;
+    list-style:none;
+}
+#content .page_box ul{
+    height:17px;
+}
+#content .page_box li{
+    float:right;
+    margin-right:5px;
+    list-style:none;
+    background:none;
+    padding:0px;
+
+}
+#content .page_box a{
+    border:1px solid #CCCCCC;
+    display:block;
+    line-height:17px;
+    text-align:center;
+    width:17px;
+}
+#content .page_box a b{
+    color:#fff;
+    background:#639BD6  none repeat scroll 0 0;
+
+    display:block;
+    line-height:17px;
+    text-align:center;
+    width:17px;
+    color:#fff;
+}
+#parentheses p{
+    float:right;
+    padding:0px 1px;
+    margin:0px;
+    direction:rtl;
+    text-align:right;
+}
+#parentheses p a:hover,#parentheses p:hover{
+    text-decoration:underline;
+}
+img{border:none;}
+.cb_general{
+    line-height:22px;
+    padding-right:40px;
+    font-size:12px;
+}
+
+
+.cb_share{
+    text-align:left;
+}
+.cb_share a{
+    font-size:11px;
+    text-decoration:none
+}
+#content .cb_share a img{
+    padding:0 0 0 5px;
+}
+
+
+
+.cblike{
+    margin:4px 0px;
+}
+.cblike a {
+    float:left;
+    padding:3px;
+    text-align:center;
+    font-size:12px;
+    color:#FFF;
+    display:block;
+    line-height:15px;
+    text-decoration: none;
+}
+
+
+
+
+.cblike a.clike_plus {
+    background-color:#009900 ; /*green #039B03*/
+
+    border-radius: 5px ;
+
+    border-top-right-radius: 0px;
+    border-bottom-right-radius: 0px;
+
+    /*border:1px solid green;
+             border-right:0px;*/
+}
+.cblike a.clike_minus {
+    background-color:#CC0000;
+    border-radius: 5px ;
+    border-top-left-radius: 0px;
+    border-bottom-left-radius: 0px;
+
+    /*border:1px solid red;
+             border-left:0px;*/
+}
+.cblike a.clike_minus:hover {
+    background-color:red;
+    text-decoration: none;
+}
+.cblike a.clike_plus:hover {
+    background-color:green;
+    text-decoration: none;
+}
+.cblike a span{
+    font-weight:bold;
+    font-size:13px;
+
+    color:#fff;
+}
+
+</style>
+
+<head>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    <meta name="description" content="" />
+    <meta name="keywords" content="" />
+
+    <link rel="alternate" type="application/rss+xml" title="CRM and Sales" href="post/rss/index.html" />
+    <link rel="alternate" type="application/atom+xml" title="CRM and Sales" href="post/atom/index.html" />
+
+    <title>CRM and Sales</title>
+
+
+
+<body>
+
+<div id="wrap">
+<div id="header">
+    <h2><a href="index.html">CRM and Sales</a></h2>
+    <p></p>
+</div>
+
+<div id="menu">
+    <ul>
+        <li class="page_item current_page_item"><a href="index.html">وبلاگ&nbsp;من</a></li>
+        <li class="page_item page-item-2"><a href="mailto:" >پست&nbsp;الکترونیک</a></li>
+        <li class="page_item page-item-3"><a href="javascript:messageForm()">تماس&nbsp;با&nbsp;ما</a></li>
+
+    </ul>
+</div>
+
+<div id="page_desc">
+
+    <div id="text">
+        <p>امروز: <script>setTodayDate()</script></p>
+    </div>
+    <form id="frm-16080898475fd980f7decd6" method="get" action="http://lovepony4ever.mihanblog.com/post/search/fid/16080898475fd980f7decd6"  onsubmit="window.open('', 'search', 'toolbar=0,location=0,status=0,menubar=0,scrollbars=1,resizable=0,width=400,height=310')" target="search"> 
+        <div id="search_top">
+            <div method="get" id="searchform" action="/index.php">
+                <div>
+                    <input type="text" value="" name="search_text" id="s" class="sfield" />
+                    <input type="submit"  class="sbutton btn" id="searchsubmit" value="جستجو"/>
+                </div>
+            </div>
+        </div>
+    <input type="hidden" name="frm-id" value="16080898475fd980f7decd6" id="frm-id" /></form></div>
+
+<div id="content_wrap">
+
+<div id="content">
+
+		<div id="MihanblogShopAds" style="display:block;height:0px;width:100%;border:0px"></div>
+		    <div class="post clearfix">
+        <blockquote><h2><a href="post/3.html">چرا  CRM ؟</a></h2></blockquote>
+                <div class="author_photo"></div>
+
+
+
+        <p><p><div id="InPost_MihanblogShopAds" style="display:block;height:0px;width:100%;border:0px"></div>
+
+			<title></title>				<p dir="rtl">			<span style="font-family:tahoma,geneva,sans-serif;"><font size="3">نرم افزار CRM چه کاری انجام می دهد؟</font></span></p>		<p dir="rtl">			<span style="font-family:tahoma,geneva,sans-serif;"><font size="3">قبلا در مطلبی با عنوان "چرا نرم افزار CRM ؟" در خصوص مزایای استفاده از نرم افزار CRM نسبت به سایر نرم افزارهای CRM توضیح دادیم. در این مطلب درباره اینکه نرم افزار CRM چه کاری می تواند انجام دهد، می نویسیم.</font></span></p>		<p dir="rtl">			<span style="font-family:tahoma,geneva,sans-serif;"><u><strong><font size="3">اتوماسیون فرآیند فروش</font></strong></u></span></p>		<p dir="rtl">			<span style="font-family:tahoma,geneva,sans-serif;"><font size="3">امکانات نرم افزار CRM به صورت موثر و دقیقی به مدیریت فرآیند فروش در مجموعه شما کمک می کند. رابط کاربری فرآیند محور CRM فرآیند تایید سرنخ ها و تبدیل صحیح آنها به مشتریان را ساده می کند. فرآیند از پیش طراحی شده در بخش مدیریت فرصت های تجاری برای مدیریت فرصت ها در گامها و مراحل مختلف فروش بسیار کمک کننده است.</font></span></p>		<p dir="rtl">			<span style="font-family:tahoma,geneva,sans-serif;"><font size="3">این برای شرکت هایی که از CRM استفاده می کنند به این معنی است که تیم فروش به صورت دقیق و همراستا فرصت های تجاری را در تمام فرآیند فروش با سرعت و بهتر کنترل می کند. در نهایت داینامیک CRM به شما کمک می کند تا روی مشتریان کلیدی تمرکز کنید و فرصت های تجاری را سریعتر به نتیجه برسانید.</font></span></p><p dir="rtl" style="text-align: center;"><font size="3"><img hspace="0" border="0" align="baseline" vspace="0" src="https://www.avidian.com/wp-content/uploads/2014/12/9.-CRM-Software.png" alt="نرم افزار مدیریت ارتباط با مشتری"></font></p>		<p dir="rtl">			<span style="font-family:tahoma,geneva,sans-serif;"><u><strong><font size="3">اتوماسیون بازاریابی</font></strong></u></span></p>		<p dir="rtl">			<span style="font-family:tahoma,geneva,sans-serif;"><font size="3">قابلیتهای نرم افزار مدیریت ارتباط با مشتری در تعریف وظایف عملی و توزیع آنها بین تیم اجرا کننده و مدیریت بودجه، امکان مدیریت موثر کمپین ها را فراهم می کند. این نرم افزار دارای یک ابزار ایجاد لیست بازاریابی قدرتمند است که توانایی بخش بندی بازار به شیوه های مختلف را فراهم می کند.</font></span></p>		<p dir="rtl">			<span style="font-family:tahoma,geneva,sans-serif;"><u><strong><font size="3">مدیریت مشکلات مشتریان و اتوماسیون خدمات پشتیبانی</font></strong></u></span></p>		<p dir="rtl">			<span style="font-family:tahoma,geneva,sans-serif;"><font size="3">نرم افزار ارتباط با مشتری یک مجموعه کامل از ابزارها را برای مدیریت خدمات پشتیبانی و فاز نگهداری از چرخه عمر مشتری در اختیار قرار می دهد. رابط کاربری فرآیند محور در مدیریت موارد اشکال، روال حل مشکل را بسیار ساده می کند. همانند رابط کاربری سرنخ ها و فرصت های تجاری، رابط کاربری خدمات مشتریان نیز قابل سفارشی سازی برای تطبیق با انتظارات شرکت شماست.</font></span></p>		<p dir="rtl">			<font size="3"><span style="font-family:tahoma,geneva,sans-serif;">CRM به شرکت ها در&nbsp;</span><a href="http://searchitchannel.techtarget.com/definition/service-level-agreement" target="" title="">مدیریت SLA</a></font><span style="font-family:tahoma,geneva,sans-serif;"><font size="3">&nbsp;ها و قراردادها کمک می کند. در رابط کاربری خوبی که برای فرم اشکالات طراحی شده است همه تعاملات قبلی با مشتری و مشکلات مشابه نمایش داده می شوند.</font></span></p>		<p dir="rtl">			<span style="font-family:tahoma,geneva,sans-serif;"><font size="3">برای مثال، اگر شرکت من در زمینه تعمیر کامپیوتر فعالیت کند. و مشتری تماس بگیرد و درخواست رفع مشکل کامپیوترش را داشته باشد، بر اساس ویژگی هایی که من انتخاب میکنم مانند رفع مشکل و مدل کامپیوتر و سوال مشتری، سی ار ام می تواند موارد مشابه را از پایگاه داده استخراج و نمایش دهد. به این ترتیب کارمندان پشتیبانی سریعتر آموزش می بینند و قادر خواهند بود سوالات مشتریان را سریعتر پاسخ دهند.</font></span></p>		<p dir="rtl"><font size="3">			&nbsp;</font></p>		<h2 dir="rtl">			<span style="font-family:tahoma,geneva,sans-serif;"><font size="3">چرا نرم افزار CRM ؟</font></span></h2>		<p dir="rtl">			<span style="font-family: tahoma, geneva, sans-serif;"><font size="3">در بازار امروز، مشتریان برای خرید تقریبا هر چیزی چندین گزینه در اختیار دارند. بنابراین درک مشتری از اولین تماس او با شرکت تا آخرین تعاملش و اینکه همه پرسنل شرکت به اطلاعات حاصل از این ارتباط آگاه باشند، بسیار حائز اهمیت است. سیستم های مدیریت ارتباط با مشتری (CRM) امکان ردیابی و اشتراک گذاری اطلاعات را بسیار ساده می کنند و برای سازمان این اطمینان را ایجاد می کنند که هر تعامل و ارتباطی با مشتری معنادار، مفید و لذت بخش باشد.</font></span></p>		<p dir="rtl">			<u><strong><span style="font-family:tahoma,geneva,sans-serif;"><font size="3">بیشتر از مکانیزه کردن فعالیتهای فروش</font></span></strong></u></p>		<p dir="rtl">			<span style="font-family:tahoma,geneva,sans-serif;"><font size="3">به طور سنتی سیستم های CRM یک ابزار فروش بودند که یک توالی مشخص از فعالیتها را در یک فرآیند فروش فراهم می کردند. امروزه شرکتها به طور فزآینده ای از مزایای به اشتراک گذاری اطلاعات در سراسر سازمان استقبال می کنند. استفاده از CRM باعث گسترش حوزه فروش فراتر از واحد فروش می شود. اگر چه برخی اطلاعات فقط باید در دسترسی افراد مشخصب باشد. اما بیشتر اطلاعات را می توان فراتر از واحد فروش بین همه پرسنل سازمان به اشتراک گذاشت.</font></span></p>		<p dir="rtl">			<span style="font-family:tahoma,geneva,sans-serif;"><font size="3">برای مثال اینکه واحد فروش از مشکلاتی که مشتری به واحد پشتیبانی اعلام کرده است و یا محتوای تبلیغاتی که برای مشتری ارسال شده است، مطلع باشد. بسیار ارزشمند است. و اگر تیم بازاریابی از چشم انداز یک فرآیند فروش آگاه باشند بسیار کمک کننده است. سیستم های CRM امروزی امکان اشتراک گذاری اطلاعات مرتبط را فراهم می کنند.</font></span></p>		<p dir="rtl">			<font size="3"><br>			<u><strong><span style="font-family:tahoma,geneva,sans-serif;">یکپارچگی با دیگر سیستم ها</span></strong></u></font></p>		<p dir="rtl">			<span style="font-family:tahoma,geneva,sans-serif;"><font size="3">علاوه بر اشتراک اطلاعات در نرم افزار CRM، ارتباط CRM با دیگر سیستم ها به افراد این اجازه را می دهد تا تمام اطلاعات مورد نیاز را از یک محل به دست آورند. دیگر دورانی که برای انجام یک کار ساده باید در چندین سیستم لاگین می کردیم سپری شده است. به عنوان مثال یکپارچگی سیستم حسابداری با نرم افزار CRM، فاکتورهای پرداخت شده را مشخص می کند. و بدین ترتیب با اینکه افراد کمی به سیستم حسابداری دسترسی دارند ولی اطلاعات مناسب در اختیار افراد قرار می گیرد.</font></span></p>		<p dir="rtl">			<u><strong><span style="font-family:tahoma,geneva,sans-serif;"><font size="3">بینش ارزشمند به داده ها</font></span></strong></u></p>		<p dir="rtl">			<span style="font-family:tahoma,geneva,sans-serif;"><font size="3">سیستم های CRM امکان نظارت مدیران بر فعالیتهای تیم را به شکل قابل ملاحظه ای افزایش داده است. آنها می توانند تصویری از وضعیت اجرای فرآیندها داشته باشند. و متوجه شوند که آیا نیرویی نیاز به آموزش برای بهره وری بهتر دارد. در گذشته گزارشات روزانه یا هفتگی یا حتی ماهانه آماده می شدند. که چندان مناسب نبود. گزارشات باید در لحظه و دقیق آماده شوند.</font></span></p>		<p dir="rtl">			<font size="3"><font face="tahoma, geneva, sans-serif">یکی دیگر از ویژگی های سیستم های CRM مدرن و مخصوصا داینامیک CRM در سرویس ابری &nbsp;امکان استفاده از هر مکان و در هر زمان و با هر گجتی می باشد. بدین ترتیب که پرسنل می توانند بیرون از شرکت نیز به اطلاعات مشتریان دسترسی داشته باشند. امکان دسترسی از طریق موبایل این اطمینان را ایجاد می کند که همه اطلاعات در&nbsp;</font><a href="http://www.afghanistancrm.com/" target="" title="">نرم افزار مدیریت ارتباط با مشتری</a><font face="tahoma, geneva, sans-serif">&nbsp;وارد شده اند و بلافاصله نیز توسط مدیر قابل بررسی می باشند.&nbsp; ارزشی که نرم افزار CRM برای سازمان ایجاد می کند پایان ناپذیر است.</font></font></p>		<p dir="rtl">			<u><strong><span style="font-family:tahoma,geneva,sans-serif;"><font size="3">چرا &nbsp;CRM ؟</font></span></strong></u></p>		<p dir="rtl">			<span style="font-family:tahoma,geneva,sans-serif;"><font size="3">یکی از بهترین محصولات در فضای CRM که مزایای اشاره شده در بالا را فراهم می کند، نرم افزار CRM است. نرم افزار CRM در بازار نرم افزارهای CRM یک محصول منحصر به فرد است که راه را برای نوآوری در فرآیند فروش باز می کند و قابلیت استفاده در انواع کسب و کارها در سراسر جهان را دارد. نرم افزار CRM مجموعه ای از امکانات را در رابطه با فروش، بازاریابی و خدمات ارایه می کند. نرم افزار CRM با رقبایش کاملا متفاوت است. توانایی این سیستم در توسعه امکاناتش در بخش های مختلف یک ویژگی برتر است. که با استفاده از آن می تواند بدون نیاز به نرم افزارهای دیگر امکانات بیشتری را بهره برداری نمود.</font></span></p>		<p dir="rtl">			<u><strong><span style="font-family:tahoma,geneva,sans-serif;"><font size="3">قدرت انتخاب</font></span></strong></u></p>		<p dir="rtl">			<span style="font-family:tahoma,geneva,sans-serif;"><font size="3">نرم افزار CRM را می توان به چندین روش مختلف مورد استفاده قرار داد. می توان از نرم افزار CRM در سرورهای محلی استفاده کرد و یا از آن در سرویس آفیس 365 استفاده برد و یا از CRM آنلاین در سرویسهای ابری نظیر سرویس ابری &nbsp;استفاده نمود. صرف نظر از شیوه استفاده از نرم افزار CRM ، تمام امکانات آن در همه روشها قابل استفاده می باشد. این روش های متنوع حق انتخاب را برای مشتری فراهم می کند.</font></span></p>		<p dir="rtl">			<u><strong><span style="font-family:tahoma,geneva,sans-serif;"><font size="3">بصری و هوشمند</font></span></strong></u></p>		<p dir="rtl">			<span style="font-family:tahoma,geneva,sans-serif;"><font size="3">نرم افزار CRM از رابط کاربری زیبا و کاربردی برخوردار است. و قادر است اطلاعات را در قالب داشبوردهای مدیریتی به کاربر نمایش دهد همچنین امکان اتصال نرم افزار CRM به Outlook وجود دارد.&nbsp; CRM فقط یک نرم افزار برای ورود اطلاعات نیست. بلکه یک ابزار ارزشمند برای رسیدن به یک تیم فروش بهره ور و کاربردی است. همچنین استفاده از نرم افزار CRM بینش عمیقی از همه روابط مشتری فراهم می کند.</font></span></p>	
+
+
+
+
+
+
+</p></p>
+
+        <p><br>
+        </p>
+    </div>
+    <div class="post_details  clearfix">
+        <p>نوشته شده در : چهارشنبه 15 شهریور 1396&nbsp;&nbsp;توسط : <a href="post/author/1709712.html" >Ehsan Pilehvar</a>.&nbsp;&nbsp;&nbsp; <a target="_self" href="post/3.html#commentlist" class="comment-link">نظرات(<script>setCommentCnt(3)</script>)</a>&nbsp;.
+
+        <div style="margin-top: -22px;"><script>mihanblogPostLike('3','like')</script></div>
+
+
+        </p>
+		<span>
+						
+
+					</span>
+
+        <div style="margin-top: 17px;" class="cb_share clearfix">
+            <a rel="nofollow" target="_blank" href="http://www.cloob.com/share/link/add/?url=http://lovepony4ever.mihanblog.com/post/3&amp;title=چرا  CRM ؟">
+                ارسال به <img title="ارسال به 100 درجه کلوب دات کام" alt="ارسال به 100 درجه کلوب دات کام" src="http://www.cloob.com/public/public/images/icon/100c.gif" />
+            </a>
+        </div>
+
+    </div>
+
+    <div class="post clearfix">
+        <blockquote><h2><a href="post/2.html">تکنیک های حفظ وفاداری مشتری خلاقیت های که باید داشته باشیم</a></h2></blockquote>
+                <div class="author_photo"></div>
+
+
+
+        <p><p>			<title></title>				<p dir="rtl"><br></p>		<p dir="rtl">			<span style="font-family:tahoma,geneva,sans-serif;"><font size="3">تکنیک های حفظ وفاداری مشتری در کسب و کارها&nbsp; :&nbsp;در دنیای امروز مصرف کنندگان ازهوش فناوری بالایی برخوردار هستند وانتظارات ویژه ای از فروشندگان دارند.&nbsp;به همین دلیل است که تنها کلید ما برای موفقیت در وفادارکردن مشتریان تکنیک درگیرکردن افرادباکسب وکارهاست.&nbsp;درگیر کردن افرادراههای زیادی دارد که در ذیل به برخی ازآنها اشاره هایی مستقیم و غیر مستقیم میکنیم.:</font></span></p>		<p dir="rtl">			<span style="font-family:tahoma,geneva,sans-serif;"><u><strong><font size="3">۰ – پیام رسانی خود را شخصی سازی کنید و درراستای خواسته های اطلاع رسانی کنید.</font></strong></u></span></p>		<p dir="rtl"><div style="text-align: center;"><img hspace="0" border="0" align="baseline" vspace="0" src="http://www.guilhembertholet.com/blog/wp-content/uploads/2014/03/SalesCourse.jpg" alt=""></div>			<font size="3">			<span style="font-family:tahoma,geneva,sans-serif;">در دنیای امروزارسال پیامهای ثابت وکاملا تبلیغاتی باعث شکست خوردن بازاریابی پیامکی ما میشود.&nbsp;مشتری امروزی به ایمیل‌ها،پیشنهادها،پست‌های اینترنتی و به طورکلی پیام‌هایی که از نظر زمان ومحتوایی متناسب با ویژگی‌ونیاز‌های شخصیش باشد، بهتر پاسخ می‌دهد.</span></font></p>		<p dir="rtl">			<span style="font-family:tahoma,geneva,sans-serif;"><u><strong><font size="3">۱ – حتمن به مشتریان خود اشانتیون بدهید.</font></strong></u></span></p>		<p dir="rtl">			<span style="font-family:tahoma,geneva,sans-serif;"><font size="3">این مساله به شما کمک میکند تا بتوانید به مشتریانتان اجازه بدهید تا قبل از خرید محصول بتوانند به طور کامل از تمامی خدمات ارایه شده توسط شما استفاده کنند و در صورتی که تمایل به خرید انها افزایش پیدا کرد و به این اطمینان رسیدند که میتواند جایگزین سیستم های قبلی و دستی شان شود و یا می تواند به طور کامل در سازمان پیاده سازی شود را با آرامش خاطرخریدکنندو ازاستفاده بهینه از این ابزارلذت کافی را ببرند و تبدیل به یکی از ابزار های فروش شرکت به عنوان معرف شوند. .</font></span></p>		<p dir="rtl">			<span style="font-family:tahoma,geneva,sans-serif;"><u><strong><font size="3">۲ – کلاس های آموزشی رایگان و صندلی تجربه برگزار کنید.</font></strong></u></span></p>		<ol dir="rtl">			<li>				<span style="font-family:tahoma,geneva,sans-serif;"><font size="3">مشتریانتان را با یکدیگر آشنا کنید و به مانند پلی مستحکم دلیل ارتباط کسب وکار های مختلف با یکدیگر باشید.</font></span></li>			<li>				<span style="font-family:tahoma,geneva,sans-serif;"><font size="3">در کلاس های آموزشی خود روش های جدید و ساده تری به مشتریان آموزش دهید.</font></span></li>			<li>				<span style="font-family:tahoma,geneva,sans-serif;"><font size="3">تا میتوانید به خواسته های آنان توجه ویژه ای کنید- احترام بگذارید و مبلغ کار مشتریانتان باشید.</font></span></li>			<li>				<span style="font-family:tahoma,geneva,sans-serif;"><font size="3">از آموزش دادن به تمامی پرسنل مجموعه مشتریانتان نترسید – این کار هزینه نیست.</font></span></li>			<li>				<span style="font-family:tahoma,geneva,sans-serif;"><font size="3">بلکه یک سرمایه گذاریست برای تبدیل کردن مشتریان وفادار به مشتریان کاملا طرفدار.</font></span></li>		</ol>		<p dir="rtl">			<span style="font-family:tahoma,geneva,sans-serif;"><u><strong><font size="3">۳ –&nbsp; کارگاه های کوچک برگزار کنید.</font></strong></u></span></p>		<p dir="rtl">			<span style="font-family:tahoma,geneva,sans-serif;"><font size="3">– برگزاری این کارگاهها تقریبا همانند مثال بالا میباشد – با این تفاوت که از اساتید به نام در حوزه های مرتبط استفاده میکنید و این موضوع منحصرا در ارتباط با ابزار مشتری مداری شما نمیباشد.</font></span></p>		<p dir="rtl">			<span style="font-family:tahoma,geneva,sans-serif;"><u><strong><font size="3">۴ – از باشگاه مشتریان استفاده کنید.</font></strong></u></span></p>		<p dir="rtl">			<span style="font-family:tahoma,geneva,sans-serif;"><font size="3">مشتریانتان در این باشگاه قرار دهید و به صورت کاملا عملی نحوه استفاده از ابزار را اموزش دهید.&nbsp;ابزار هایی که شما در سیستم باشگاه مشتریان در اختیار دارید شامل :<br>			نظرسنجی – قرعه کشی –مدیریت تماس ها – پیام رسانی مناسبتی – پیام رسانی با مضمون تشکر&nbsp;– پیام رسانی های تبلیغاتی – شبکه سازی مشتری – گروه بندی و اجرای پلکان های امتیازی&nbsp; و …</font></span></p>		<p dir="rtl">			<span style="font-family:tahoma,geneva,sans-serif;"><u><strong><font size="3">۵ –&nbsp; محصول و خدمات خود را در کنار یک خرید دیگر به مشتری ارائه دهید</font></strong></u></span></p>		<p dir="rtl">			<span style="font-family:tahoma,geneva,sans-serif;"><font size="3">– به عنوان مشاور در کنار مشتریانتان باشید و در صورت لزوم ابزار را در سازمانشان پیاده سازی کنید.</font></span></p>		<p dir="rtl">			<span style="font-family:tahoma,geneva,sans-serif;"><u><strong><font size="3">۶ – در خرید های بزرگ توسط مشتریانتان هدایای بزرگ بدهید</font></strong></u></span></p>		<p dir="rtl">			<span style="font-family:tahoma,geneva,sans-serif;"><font size="3">– زیرا این موضوع در چشم مشتری بسیار بزرگ جلوه میکند و در نهایت این شما هستید که سود نهایی را میبرید.</font></span></p>		<p dir="rtl">			<span style="font-family:tahoma,geneva,sans-serif;"><u><strong><font size="3">۷ – شعار (( یکی بخرید و دوتا ببرید )) در بعضی مواقع و زمان های خاص نتایج درخشانی دارد.</font></strong></u></span></p>		<p dir="rtl">			<span style="font-family:tahoma,geneva,sans-serif;"><u><strong><font size="3">۸ – برای محصولات ارائه شده توسط خودمان کارت های قرعه کشی در اختیار مشتریان قرار دهیم.</font></strong></u></span></p>		<p dir="rtl">			<span style="font-family:tahoma,geneva,sans-serif;"><u><strong><font size="3">۹ – شعار دوم برای جذب مشتری و وفادار کردن او این است که به مشتری بگویید :</font></strong></u></span></p>		<p dir="rtl">			<span style="font-family:tahoma,geneva,sans-serif;"><font size="3">((امروز بخرید و در طول زمان توافق شده هزینه آن را پرداخت کنید))</font></span></p>		<p dir="rtl">			<span style="font-family:tahoma,geneva,sans-serif;"><u><strong><font size="3">۱۰ –&nbsp; محصولات دسته بندی شده</font></strong></u></span></p>		<p dir="rtl">			<span style="font-family:tahoma,geneva,sans-serif;"><font size="3">هرچند که باهم تفاوت دارند را با یک بسته بندی دراختیار مشتری قرار دهید&nbsp;اینکار در شرایطی جوابگو است که یک محصول فروش کمتری به نسبت کالاهای دیگر دارد.</font></span></p>		<p dir="rtl">			<span style="font-family:tahoma,geneva,sans-serif;"><u><strong><font size="3">۱۱ – تکنیک بیش فروشی فراموش نشود.</font></strong></u></span></p>		<p dir="rtl">			<span style="font-family:tahoma,geneva,sans-serif;"><font size="3">شمادر زمانیکه مشتری درحال خریدمحصول است محصولات جانبی را که سوداصلی همراه آن است رابه مشتری ارائه دهید&nbsp;در این شرایط احتمال تجربه فروش،بالاتر است.فروشندگان تلفن همراه جزو قهارترین افراد در حوزه فروش لوازم جانبی هستند.</font></span></p>		<p dir="rtl">			<span style="font-family:tahoma,geneva,sans-serif;"><u><strong><font size="3">۱۲ – اطلاعات خود را درخصوص کالا و خدماتتان به صورت خلاصه و مفید در اختیار افراد قرار دهید.</font></strong></u></span></p>		<p dir="rtl">			<span style="font-family:tahoma,geneva,sans-serif;"><font size="3">با اینکارباعث رنجش خاطر آنان به علت ذیق وقت نشویم&nbsp;زیرا این اطلاعات میتواند همراه با بروشور نیز به مشتریان انتقال داده شود.</font></span></p>		<p dir="rtl">			<span style="font-family:tahoma,geneva,sans-serif;"><u><strong><font size="3">۱۳ –&nbsp; تکنیک استفاده از خدمات پس از فروش.</font></strong></u></span></p>		<p dir="rtl">			<span style="font-family:tahoma,geneva,sans-serif;"><font size="3">خدمات خود را بسیار گسترده کنید و تا حد امکان رایگان خدماتتان را ارائه دهید.</font></span></p>		<p dir="rtl">			<span style="font-family:tahoma,geneva,sans-serif;"><u><strong><font size="3">۱۴ – به مشتریانتان اجازه دهید تا سریع ، ساده و ارزان با شما در تماس باشند.</font></strong></u></span></p>		<p dir="rtl">			<span style="font-family:tahoma,geneva,sans-serif;"><u><strong><font size="3">۱۵ – کالاهایتان را به زیبایی طراحی کنید.</font></strong></u></span></p>		<p dir="rtl">			<span style="font-family:tahoma,geneva,sans-serif;"><font size="3">محصولاتتان در بسته بندیهای اختصاصی قرار دهید- اینکار شاید هزینه برباشداما باعث جذابیت و دلیلی براحترام برای مشتریان میباشد.</font></span></p>		<p dir="rtl">			<span style="font-family:tahoma,geneva,sans-serif;"><u><strong><font size="3">۱۶ –خریداردرخواست های مشتریانتان باشید.</font></strong></u></span></p>		<p dir="rtl">			<font size="3"><br>			<span style="font-family:tahoma,geneva,sans-serif;">شما میتوانید با تکنیک پرسش از نمونه سوالات زیربه گوشه ای از درخواست های مشتریانتان برسید تا بتوانیدآنها را رفع و رجوع کنید.</span></font></p>		<ul dir="rtl">			<li>				<span style="font-family:tahoma,geneva,sans-serif;"><font size="3">کدام ویژگی خدمات ما چشمگیراست؟</font></span></li>			<li>				<span style="font-family:tahoma,geneva,sans-serif;"><font size="3">کدام ویژگی محصول جذابیت کمتری برای شما دارد؟</font></span></li>			<li>				<span style="font-family:tahoma,geneva,sans-serif;"><font size="3">کدام ابزارها برای شما مهم تر است و بیشتر استفاده میکنید؟</font></span></li>			<li>				<span style="font-family:tahoma,geneva,sans-serif;"><font size="3">کدام ابزار ها دست و پاگیرهستند و استفاده نمیکنید؟</font></span></li>			<li>				<span style="font-family:tahoma,geneva,sans-serif;"><font size="3">آیا تمایل دارید ازخدمات و اتفاقات روز باخبرشوید و با ما در ارتباط باشید؟</font></span></li>			<li>				<span style="font-family:tahoma,geneva,sans-serif;"><font size="3">از پرسش‌نامه‌ های آنلاین، ایمیل، رسانه‌های اجتماعی یا هر ابزار دیگری که استفاده می‌کنید، سعی کنید اطلاعات دقیقی گردآوری&nbsp;کنید؛ این اطلاعات نقش مهمی در تهیه‌‌ی پیام مناسب برای مشتریان‌تان دارد.</font></span></li>		</ul>		<p dir="rtl">			<span style="font-family:tahoma,geneva,sans-serif;"><u><strong><font size="3">۱۷ – آسایش و آرامش خرید را برای مشتریانتان محیا کنید.</font></strong></u></span></p>		<p dir="rtl">			<span style="font-family:tahoma,geneva,sans-serif;"><font size="3">یکی از تکنیک هایی که برای مشتریان اهمیت دارد این است که بهترین بسته های پیشنهادی را برای او در نظر بگیریم.&nbsp;هم از لحاظ اقتصادی و هم ازنگاه کاربردی و ارزشی،زیرا شما با اینکارانتخاب محصول را برای مشتری آسان نموده ایدو برابربا نیازهایش خواسته هایش راشخصی سازی کرده اید.</font></span></p>		<p dir="rtl">			<span style="font-family:tahoma,geneva,sans-serif;"><u><strong><font size="3">۱۸ – راه و روش وفادار کردن مشتریانتان را برمبنای تجربیات مشتری قرار دهید.</font></strong></u></span></p>		<p dir="rtl">			<span style="font-family:tahoma,geneva,sans-serif;"><font size="3">امروزه مشتریان بر مبنای طیف گسترده‌ای ازالگوهاوخط‌ مشی‌هارفتارمیکنند.&nbsp;برای حفظ رقابت‌پذیری،راهبردشما باید این قابلیت راتشخیص دهد وخودرا باآن همگام سازد.</font></span></p>		<p dir="rtl">			<span style="font-family:tahoma,geneva,sans-serif;"><u><strong><font size="3">۱۹ – تکنیک استفاده از ابزارهای گفتگو مانند چت برای برقراری ارتباط با مشتریان بهره بگیرید.</font></strong></u></span></p>		<p dir="rtl">			<span style="font-family:tahoma,geneva,sans-serif;"><font size="3">یکی از بهترین تکنیک های وفادار کردن مشتریان استفاده از ابزارهای چت و گفتگو است.&nbsp;با استفاده از این ابزار رابطه کسب و کار با مشتری حفظ و تقویت میشود.&nbsp;طبق تحقیقات موسسه فارستر بیشتر مشتریان دوست دارند که پاسخگو مستقیم سوالاتشان یک فرد باشد تا یک ماشین یا یک ربات.&nbsp;دلیل اصلی این علاقه مندی هم این است که باعث ایجاد ارتباطی دوسویه با مشتری میشودو امکان پاسخگویی سریع را با مشتریان میدهد و نحوه استفاده ازآن نیز بسیار ساده است.</font></span></p>	
+
+
+</p></p>
+
+        <p><br>
+        </p>
+    </div>
+    <div class="post_details  clearfix">
+        <p>نوشته شده در : یکشنبه 29 مرداد 1396&nbsp;&nbsp;توسط : <a href="post/author/1709712.html" >Ehsan Pilehvar</a>.&nbsp;&nbsp;&nbsp; <a target="_self" href="post/2.html#commentlist" class="comment-link">نظرات(<script>setCommentCnt(2)</script>)</a>&nbsp;.
+
+        <div style="margin-top: -22px;"><script>mihanblogPostLike('2','like')</script></div>
+
+
+        </p>
+		<span>
+						
+
+					</span>
+
+        <div style="margin-top: 17px;" class="cb_share clearfix">
+            <a rel="nofollow" target="_blank" href="http://www.cloob.com/share/link/add/?url=http://lovepony4ever.mihanblog.com/post/2&amp;title=تکنیک های حفظ وفاداری مشتری خلاقیت های که باید داشته باشیم">
+                ارسال به <img title="ارسال به 100 درجه کلوب دات کام" alt="ارسال به 100 درجه کلوب دات کام" src="http://www.cloob.com/public/public/images/icon/100c.gif" />
+            </a>
+        </div>
+
+    </div>
+
+    <div class="post clearfix">
+        <blockquote><h2><a href="post/1.html">نرم‌افزار CRM برای بانک‌ها</a></h2></blockquote>
+                <div class="author_photo"></div>
+
+
+
+        <p><p>			<title></title>				<p dir="rtl"><br></p>		<p dir="rtl">			<span style="font-family:tahoma,geneva,sans-serif;"><font size="3">&nbsp;بعد از این که جواب کنکور مشخص شد، بار و بنه‌ام را جمع کردم. دانشگاهم با خانه چند صد کیلومتر فاصله داشت. برای اولین بار، حساب بانکی باز کردم. بهتر از این بود که مقدار زیادی پول نقد را (که هزینه‌های یک ترمم بود) با خود حمل کنم.</font></span></p><p dir="rtl" style="text-align: center;"><img hspace="0" border="0" align="baseline" vspace="0" src="https://thefinancialbrand.com/wp-content/uploads/2015/12/IBM_Graphic-530x448.jpg" alt=""></p>		<p dir="rtl">			<span style="font-family:tahoma,geneva,sans-serif;"><font size="3">در شهر محل زندگی‌ام فقط دو شعبه‌ی بانک وجود داشت. زمانی که به شعبه‌ی بزرگتر مراجعه کردم، بیش از دویست نفر در صف ایستاده بودند (در آن زمان دستگاه نوبت‌دهی وجود نداشت!). حدود دو ساعت سر پا ایستادم و بعد از کش و قوس فراوان، به متصدی باجه رسیدم. سلامم را جواب نداد. با ترشرویی فرم‌ها را تحویلم داد و گفت باید مدیر شعبه دستور بدهد تا برایم حساب باز کنند. مشکلی هم وجود نداشت؛ موضوع فقط کاغذبازی‌های دولتی بود. مدیر شعبه هم اتاقی مجزا داشت که با پارتیشن جدا شده بود. مدیر، بسیار ترشروتر از کارمند بانک بود و حتی به چشم‌هایم نگاه نمی‌کرد. آخرین حرفش هم این بود که کارت عابربانکم پانزده روز دیگر صادر می‌شود.</font></span></p>		<p dir="rtl">			<span style="font-family:tahoma,geneva,sans-serif;"><font size="3">من مشتری بانک بودم؛ ولی بانک نیازی به من نداشت. با آن همه قبض آب و برق، حقوق کارمندان دولت و اعتبارات عجیب و غریب، طبیعی بود که چند ده هزار تومان پول من برای بانک بار اضافی باشد. بنابراین نیازی هم نداشت تا من را راضی کند. در حقیقت، این من بودم که باید بانک را راضی می‌کردم تا برایم حساب باز کند.</font></span></p>		<p dir="rtl">			<span style="font-family:tahoma,geneva,sans-serif;"><font size="3">اگر الان به بانکی سر بزنم و بخواهم حساب باز کنم، بیش از هرچیز به برخوردشان توجه می‌کنم. می‌دانم که این کار اشتباه است؛ جایی که می‌خواهم پولم را در آن قرار دهم باید امن و مطمئن باشد. باید صورت‌های مالی بانک را نگاه کنم و ببینم چقدر در کارش موفق بوده است. ولی من هم مثل بسیاری از مردم، به ارتباطی نگاه می‌کنم که بانک با من برقرار می‌کند و بر این اساس، تصمیم می‌گیرم که حسابم فعال باشد یا نه. کافی است یکی از کارمندها برخورد بدی داشته باشد تا حسابم در بانک را غیر فعال کنم.</font></span></p>		<p dir="rtl">			<span style="font-family:tahoma,geneva,sans-serif;"><font size="3">در این باره (ارتباط بانک با مشتری‌هایش) حرف زیاد است. ولی هر زمان که این حرف‌ها پیش میاید، سه چالش عمده مطرح می‌شود:</font></span></p>		<ul dir="rtl">			<li>				<span style="font-family:tahoma,geneva,sans-serif;"><font size="3">در بانکداری، رفتار مشتری‌ها ثابت نیست. ممکن است حساب داشته باشم، ولی مشتری‌شان نباشم. ممکن است از خدمات‌شان هم استفاده نکم، ولی پولم را به آن‌ها بسپارم. زمانی که بانکی بخواهد «پروفایل مشتری» (Costumer profile) را درست کند، نمی‌تواند به سادگی شمایی کلی را تصور کند. چون مثل دیگر کسب و کارها نیست که در ازای خدمات یا محصول، پولی دریافت کند.</font></span></li>			<li>				<span style="font-family:tahoma,geneva,sans-serif;"><font size="3">چیزهایی که می‌دانند، به هم مرتبط نیستند. بانک‌ها در دپارتمان بازاریابی‌ اطلاعات زیادی دارند، در بخش فروش‌ چیزهای زیادی از مشتریان و رفتارهایشان می‌دانند و کارمندهای متصدی باجه‌شان که با مشتری‌ّ‌ها ارتباط دارند هم بازخوردهای زیادی از آن‌ها می‌گیرند. ولی این اطلاعات، در سه بخش مجزا هستند و نمی‌توان با یک نگاه، تحلیل‌شان کرد.</font></span></li>		</ul>		<p dir="rtl">			<span style="font-family:tahoma,geneva,sans-serif;"><font size="3">نمی‌توان نتیجه‌ی کارها را به سرعت مشاهده کرد. البته این مورد با بسیاری از کسب و کارهای دیگر مشترک است. همانطور که در پست‌مان راجع به اندیکاتورها گفتیم، تراز مالی خوب یا بد مهم نیست؛ مهم این است که چه عاملی باعث خوب یا بد شدنش می‌شود.&nbsp;این سه چالش اگر بخواهد با مغز و قلم و کاغذ حل شود، نیاز به یک ساختمان و چندین نفر کارمند دارد. ولی تکنولوژی کار را راحت کرده است؛ نرم‌افزارهای CRM می‌توانند این مشکلات را برای بانک‌ها حل کنند. نحوه‌ی حل این مشکل، در هفته‌های آینده خدمت‌تان عرض خواهد شد.</font></span></p>	
+
+
+</p></p>
+
+        <p><br>
+        </p>
+    </div>
+    <div class="post_details  clearfix">
+        <p>نوشته شده در : شنبه 14 مرداد 1396&nbsp;&nbsp;توسط : <a href="post/author/1709712.html" >Ehsan Pilehvar</a>.&nbsp;&nbsp;&nbsp; <a target="_self" href="post/1.html#commentlist" class="comment-link">نظرات(<script>setCommentCnt(1)</script>)</a>&nbsp;.
+
+        <div style="margin-top: -22px;"><script>mihanblogPostLike('1','like')</script></div>
+
+
+        </p>
+		<span>
+						
+
+					</span>
+
+        <div style="margin-top: 17px;" class="cb_share clearfix">
+            <a rel="nofollow" target="_blank" href="http://www.cloob.com/share/link/add/?url=http://lovepony4ever.mihanblog.com/post/1&amp;title=نرم‌افزار CRM برای بانک‌ها">
+                ارسال به <img title="ارسال به 100 درجه کلوب دات کام" alt="ارسال به 100 درجه کلوب دات کام" src="http://www.cloob.com/public/public/images/icon/100c.gif" />
+            </a>
+        </div>
+
+    </div>
+
+<!-- Comment -->
+
+
+<div class="comment_full" id="comment_full">
+
+    <style>
+
+            /*** COMMENT BODY***/
+        .comment_full{
+
+
+        }
+
+        .comment_body{
+            background: #DDDCD2;
+            margin:10px;
+            border-radius: 5px;
+            border-right:5px solid #c9c7b3;
+            overflow:hidden
+        }
+
+
+        .comment .comment_reply {
+            background: #A19B88;
+            border-right: 5px solid #76705d;
+            border-radius: 5px;
+            font-size: 12px;
+            width: 350px;
+            margin-top:10px;overflow:hidden
+        }
+
+
+        .comment .name {
+            font-weight: 600;
+            color: #4E3E09;
+            padding-right: 5px;
+            text-align: right;
+            line-height: 26px;
+            float: right;
+        }
+
+
+        .comment .date {
+            font-size: 10px;
+            padding: 5px;
+            color: #7E7E7E;
+            float: left;
+        }
+
+
+        .comment .comemnt_web {
+            padding: 5px 0 5px 15px; color: #999; direction: ltr; text-align: left;
+
+        }
+
+
+        .comment .comemnt_web a {
+            color: #554c3d;
+            text-decoration: underline;
+        }
+
+        .comment .comemnt_text {
+            text-align: justify;
+            line-height: 1.5em;
+            padding: 2px 5px;
+            text-align: right;
+            direction: rtl;
+        }
+
+        .comment_det{
+            border-bottom:1px solid #CCC;
+
+        }
+
+        .comment .name,.date,.comemnt_text,.comment_reply{
+            margin-right:3px;
+            padding-right:3px;
+
+        }
+
+            /**** COMMENT FORM ****/
+        #comment_full .comment_form input.btn
+        {
+            background:url(http://mihanblog.com/http://mihanblog.comhttp://cblogsvn.comhttp://mihanblog.com/public/public/user_data/template/17/images/search_button.gif);
+            -x-system-font:none;
+            color:#000;
+            cursor:pointer;
+            float:none;
+            font-family:Tahoma;
+            font-size:12px;
+            font-size-adjust:none;
+            font-stretch:normal;
+            font-style:normal;
+            font-variant:normal;
+            font-weight:normal;
+            height:27px;
+            line-height:normal;
+            text-align:center;
+            width:92px;
+            border:1px solid #81C227;
+
+        }
+
+        .comment_form {
+            background: none repeat scroll 0 0 #c5c3af;
+            border-radius: 5px 5px 5px 5px;
+            border-right: 5px solid #a7a485;
+            direction: rtl;
+            margin: 10px;
+            padding: 20px;
+        }
+
+        .comment_form label {
+            width: 100px;
+            display: block;
+            float: right;
+            text-align: left;
+            font-size: 10px;
+            color: #555;
+            padding-left: 10px;
+        }
+
+
+        .comment_form .comment_form_row {
+            margin: 3px 0;
+        }
+
+
+        #imageCodeWrapper .imageCode_input #imgstr {
+            font-size: 25px;
+            height: 34px;
+            width: 70px;
+        }
+
+
+        .comment_form_textbox {
+            width:220px;
+
+        }
+        .comment_form_textarea{
+            width:220px !important;
+        }
+
+        .comment_form .comment_form_textarea, .comment_form .comment_form_textbox {
+            border: 1px solid #C5C5C5;
+        }
+
+
+
+
+    </style>
+
+    </div>
+<!-- End Comment-->
+
+
+
+
+
+
+
+
+</div>
+
+<div id="sidebar">
+    <ul>
+
+        <li class="about_box">
+            <div align="center"></div>
+            <p></p>
+            <a href="post/author/1709712.html"><b>Ehsan Pilehvar</b></a>
+        </li>
+
+
+
+                    <li>
+                <h2>آخرین پستها</h2>
+                <ul>
+                                            <li><a  href="post/3.html">چرا  CRM ؟</a></li>
+                                            <li><a  href="post/2.html">تکنیک های حفظ وفاداری مشتری خلاقیت های که باید داشته باشیم</a></li>
+                                            <li><a  href="post/1.html">نرم‌افزار CRM برای بانک‌ها</a></li>
+                                        <b><li><a  href="post/list.html">همه پستها</a></li></b>
+                </ul>
+            </li>
+        
+        
+
+
+                    <li>
+                <h2>آرشیو</h2>
+                <ul>
+                                            <li><a href='post/archive/1396/6.html' title=' شهریور 1396(1)'> شهریور 1396</a></li>
+                                            <li><a href='post/archive/1396/5.html' title=' مرداد 1396(2)'> مرداد 1396</a></li>
+                                        <li><b><a href="post/archive.html">همه آرشیوها</a></b></li>
+                </ul>
+            </li>
+        
+                    <li>
+                <h2>نویسندگان</h2>
+                <ul>
+                                            <li  class="clearfix" id="parentheses"><p><a href="post/author/1709712.html"></a></p><a href="post/author/1709712.html"><p>Ehsan Pilehvar</p><p>(3)</p></a></li>
+                                    </ul>
+            </li>
+        
+        
+        
+        
+        
+		
+
+
+        
+                    <li>
+                <h2>آمار وبلاگ</h2>
+                <ul class="clearfix simple stat">
+                    <li>کل بازدید : <span><script>getStatVar('total_view');</script></span></li>
+                    <li>بازدید امروز : <span><script>getStatVar('today_view');</script></span></li>
+                    <li>بازدید دیروز : <span><script>getStatVar('yesterday_view');</script></span></li>
+                    <li>بازدید این ماه : <span><script>getStatVar('this_month_view');</script></span></li>
+                    <li>بازدید ماه قبل : <span><script>getStatVar('last_month_view');</script></span></li>
+                    <li>تعداد نویسندگان : <span><script>getStatVar('total_author');</script></span></li>
+                    <li>تعداد کل پست ها : <span><script>getStatVar('total_post');</script></span></li>
+                    <li>آخرین بازدید : <span><script>getStatVar('last_view_date');</script></span></li>
+                    <li>آخرین بروز رسانی : <span><script>getStatVar('modify_date');</script></span></li>
+
+                </ul>
+            </li>
+        
+        <li>
+            <ul class="rss_atom">
+                <li><a id='rss' href="post/rss/index.html">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</a></li>
+                <li><a id='atom' href="post/atom/index.html">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</a></li>
+            </ul>
+        </li>
+
+    </ul>
+
+    <div  align="center" class="clearfix"></div>
+    <div align="center" class="mihan_logo"></div>
+
+
+</div>
+
+<div dir="rtl" id="footer">
+    <p><strong>&nbsp;&nbsp;POWERED BY <a href="http://www.mihanblog.com/"><font color="#FF0000" size="2px">M</font>IHAN<font color="#FF0000" size="2px">B</font>LOG.COM</a></strong><br /></p>
+    <p>Design by <a>www.colorlightstudio.com</a>. Background by <a >www.squidfingers.com</a></p>
+</div>
+
+</div>
+</div>
+
+</body>
+</html><script>
+//    setTimeout(function () {
+//        GetMihanBlogShowAds();
+//    }, 1000);
+</script>
+<!--NEW SERVER--><!--;)-->
+
+<!--SabaVision Ads Handler--><!--<script type="text/javascript">(function (d) {var url =   location.protocol+'//api.sabavision.com/pox/poxjs.js';d.write('<script type="text/javascript" src="' + url + '" async></scri' + 'pt>');})(document);</script>-->
+
+
+<script type="text/javascript">
+
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-153829-9']);
+    _gaq.push(['_setDomainName', 'lovepony4ever.mihanblog.com']);
+    _gaq.push(['_trackPageview']);
+
+    (function() {
+        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+
+</script>
+
+
+<div id='mediaad-Kvcm'></div>
+<meta name="sabavision_zone" content="2500-Z499" />
+<center>
+    <div style="background-color:white;width:90%;padding:20px;margin-top:50px;margin-bottom:50px;">
+        <a href="https://www.cloob.com">شبکه اجتماعی فارسی کلوب</a> | <a href="https://www.targetedwebtraffic.com" target="_blank">Buy Website Traffic</a> | <a href="https://www.seo25.com" target="_blank">Buy Targeted Website Traffic</a>
+    </div>
+</center>

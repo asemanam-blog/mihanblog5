@@ -1,0 +1,2223 @@
+<!doctype html>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" /><link rel="EditURI" type="application/rsd+xml" title="RSD" href="../xmlrpc@rsd.html" />
+<script type="text/javascript" src="../../static.mihanblog.com/public/scripts/run/g.other.v3.js"></script>
+<script>
+
+	function c_$(id){
+        return document.getElementById(id);
+    }
+    
+			//if (parent.frames.length) top.location.href= document.location;
+		
+	setTodayDate = function(){
+		document.write('شنبه 22 آذر 1399');
+		/*710970*/	}
+
+</script>
+
+
+
+        <script type="text/javascript">
+            (function(){
+            var now = new Date();
+            var head = document.getElementsByTagName('head')[0];
+            var script = document.createElement('script');
+            script.async = true;
+            var script_address = 'https://cdn.yektanet.com/js/mihanblog.com/native-mihanblog.com-6531.js';
+            script.src = script_address + '?v=' + now.getFullYear().toString() + '0' + now.getMonth() + '0' + now.getDate() + '0' + now.getHours();
+            head.appendChild(script);
+            })();
+        </script>
+
+        <!--<script type="text/javascript">
+            var head = document.getElementsByTagName("head")[0];
+            var script = document.createElement("script");
+            script.type = "text/javascript";
+            script.async=1;
+            script.src = "https://s1.mediaad.org/serve/mihanblog.com/loader.js" ;
+            head.appendChild(script);
+        </script>-->
+        
+        <script>
+            var sabaVisionWebsiteID = "9bab9dac-041d-4bdb-b39a-1ed789f65eed"; var sabaVisionWebsitePage = "ALL"
+        </script>
+        <link rel="stylesheet" href="https://plus.sabavision.com/dox/dox.min.css">
+        <script src="https://plus.sabavision.com/dox/dox.min.js"></script>
+        
+        <script>
+	try{
+		var commentCnt = new Array();
+		commentCnt[452]='6';commentCnt[453]='3';commentCnt[454]='0';commentCnt[455]='0';commentCnt[456]='1';commentCnt[459]='0';commentCnt[462]='7';commentCnt[463]='3';commentCnt[464]='4';commentCnt[465]='2';commentCnt[467]='0';commentCnt[468]='3';commentCnt[469]='1';commentCnt[470]='1';	} catch(e){}
+	
+	newComment = function(post_id){
+		try{
+			window.open('/post/comment/'+post_id,'comment','status=yes,scrollbars=yes,toolbar=no,menubar=no,location=no ,width=480px,height=540px');
+		} catch(e){}
+	}
+	setCommentCnt = function(post_id){
+		try{
+			if(commentCnt[post_id]){
+				document.write(commentCnt[post_id]);
+			} else {
+				document.write(0);
+			}
+		} catch(e){}
+	}
+</script><script>
+
+
+	mihanblogUpdateLike = function(postid,type){
+		var url = '/post/like/'+postid+'/'+type;
+		mihanblogGetAjax(url,function(){});
+	};
+	try{
+        mihanblogGetAjax = function (url,callback) {
+    		var req;
+			if (window.XMLHttpRequest)
+            {
+                // code for IE7+, Firefox, Chrome, Opera, Safari
+			  	req = new XMLHttpRequest();
+			}else{	// code for IE6, IE5
+			  	req = new ActiveXObject("Microsoft.XMLHTTP");
+		  	}
+		    req.open("GET", url, 1);
+		    req.onreadystatechange = function () {
+		        if (req.readyState == 4) {
+		            if (req.status == 200) {
+		            	var response = eval(req.responseText);
+		            	callback();
+		            }else{
+	            		return ;
+		            }
+		        }else{
+					return ;
+		        }
+		    }
+		    req.send(null);
+		}
+	}catch(e){}
+
+	try{
+		var mihanblogLikeArrCnt = new Array();
+		var mihanblogDisLikeArrCnt = new Array();
+
+		mihanblogLikeArrCnt[452]='2';
+mihanblogDisLikeArrCnt[452]='0';
+mihanblogLikeArrCnt[453]='3';
+mihanblogDisLikeArrCnt[453]='0';
+mihanblogLikeArrCnt[454]='1';
+mihanblogDisLikeArrCnt[454]='0';
+mihanblogLikeArrCnt[455]='1';
+mihanblogDisLikeArrCnt[455]='0';
+mihanblogLikeArrCnt[456]='1';
+mihanblogDisLikeArrCnt[456]='0';
+mihanblogLikeArrCnt[459]='1';
+mihanblogDisLikeArrCnt[459]='0';
+mihanblogLikeArrCnt[462]='3';
+mihanblogDisLikeArrCnt[462]='0';
+mihanblogLikeArrCnt[463]='1';
+mihanblogDisLikeArrCnt[463]='0';
+mihanblogLikeArrCnt[464]='3';
+mihanblogDisLikeArrCnt[464]='1';
+mihanblogLikeArrCnt[465]='3';
+mihanblogDisLikeArrCnt[465]='0';
+mihanblogLikeArrCnt[468]='3';
+mihanblogDisLikeArrCnt[468]='0';
+mihanblogLikeArrCnt[469]='2';
+mihanblogDisLikeArrCnt[469]='0';
+mihanblogLikeArrCnt[470]='3';
+mihanblogDisLikeArrCnt[470]='0';
+	} catch(e){}
+
+
+
+    mihanblogPostLike = function(post_id){
+
+        mihanblogLikeCnt = (mihanblogLikeArrCnt[post_id]? mihanblogLikeArrCnt[post_id] : 0);
+        mihanblogDisLikeCnt = (mihanblogDisLikeArrCnt[post_id]? mihanblogDisLikeArrCnt[post_id] : 0);
+        mihanblogLikeCnt = parseInt(mihanblogLikeCnt);
+        mihanblogDisLikeCnt = parseInt(mihanblogDisLikeCnt);
+
+        document.write(
+                '<div class="mihanblog_like_wrapper ">'+
+                       '<div id="dislikeBar_'+post_id+'" onclick="mihanblogUpdateLike('+post_id+',\'dislike\')"   class="mihanblog_like_bar mihanblog_like_dislikeBar mihanblog_like_show_help ">-<div class="mihanblog_like_Cnt" id="disLikeCnt_'+post_id+'">'+mihanblogDisLikeCnt+'</div>'+
+                            '<span  class="mihanblog_like_v2_help mihanblog_like_v2_help_dislike clearfix"> '+
+                                '<span class="mihanblog_like_help_arrow mihanblog_like_help_arrow_dislike clearfix"></span>'+
+                                '<span class="mihanblog_like_help_text">نمی پسندم</span>'+
+                            '</span>'+
+                        '</div>'+
+                       '<div id="Like_'+post_id+'" class="mihanblog_like_border"></div>'+
+                       '<div id="likeBar_'+post_id+'" onclick="mihanblogUpdateLike('+post_id+',\'like\')"  class="mihanblog_like_bar mihanblog_like_likeBar mihanblog_like_show_help" >+<div class="mihanblog_like_Cnt" id="likeCnt_'+post_id+'">'+mihanblogLikeCnt+'</div>'+
+                            '<span  class="mihanblog_like_v2_help mihanblog_like_v2_help_like clearfix"> '+
+                                '<span class="mihanblog_like_help_arrow mihanblog_like_help_arrow_like clearfix"></span>'+
+                                '<span class="mihanblog_like_help_text">می پسندم</span>'+
+                            '</span>'+
+                        '</div>'+
+
+                '</div>'
+        );
+
+
+
+        mihanblogDisplayeLike(post_id);
+    }
+
+
+    mihanblogDisplayeLike = function(post_id){
+
+        mihanblogLikeCnt = (mihanblogLikeArrCnt[post_id]? mihanblogLikeArrCnt[post_id] : 0);
+        mihanblogDisLikeCnt = (mihanblogDisLikeArrCnt[post_id]? mihanblogDisLikeArrCnt[post_id] : 0);
+        mihanblogLikeCnt = parseInt(mihanblogLikeCnt);
+        mihanblogDisLikeCnt = parseInt(mihanblogDisLikeCnt);
+
+
+
+        sum = mihanblogLikeCnt - mihanblogDisLikeCnt;
+        backgroundBorder =  document.getElementById('Like_'+post_id);
+        var likeObj = document.getElementById('likeCnt_'+post_id);
+        var disLikeObj = document.getElementById('disLikeCnt_'+post_id);
+
+
+
+
+
+        likeObj.innerHTML =  mihanblogLikeCnt ;
+        disLikeObj.innerHTML =  mihanblogDisLikeCnt;
+
+        if(sum == 0){
+            backgroundBorder.style.backgroundImage = "url('/public/public/images/icons/like_likedislike.png')";
+            document.getElementById('dislikeBar_'+post_id).style.width = '19px';
+            document.getElementById('likeBar_'+post_id).style.width = '19px';
+        }else{
+             if(sum > 0){
+                 backgroundBorder.style.backgroundImage = "url('/public/public/images/icons/like_like.png')";
+                 document.getElementById('likeBar_'+post_id).style.width = '23px';
+                 document.getElementById('dislikeBar_'+post_id).style.width = '15px';
+             }else{
+                 backgroundBorder.style.backgroundImage = "url('/public/public/images/icons/like_dislike.png')";
+                 document.getElementById('likeBar_'+post_id).style.width = '15px';
+                 document.getElementById('dislikeBar_'+post_id).style.width = '23px';
+             }
+        }
+
+    }
+
+
+
+
+</script>
+
+<style type="text/css">
+
+
+    .clearfix {display: inline-block;}
+    .clearfix:after {
+        content: ".";
+        display: block;
+        height: 0;
+        clear: both;
+        visibility: hidden;
+    }
+
+    .mihanblog_like_wrapper {
+        color: #ffffff;
+        direction: ltr;
+        position: relative;
+    }
+    .mihanblog_like_wrapper span{
+        display: none;
+    }
+    .mihanblog_like_bar {
+        color: #FFFFFF;
+        cursor: pointer;
+        float: left;
+        font-size: 10px;
+        height: 20px;
+        line-height: 19px;
+        margin: 5px 0;
+    }
+    .mihanblog_like_likeBar {
+        background-color: #88B131;
+        padding-right: 5px;
+        border-top-right-radius: 2px;
+        border-bottom-right-radius: 2px;
+        text-align: right;
+    }
+    .mihanblog_like_likeBar:hover{
+        background-color: #699017;
+    }
+    .mihanblog_like_border {
+        background-color: #666666;
+        border: 1px solid #666666;
+        float: left;
+        font-size: 12px;
+        height: 20px;
+        margin-top: 2px;
+        width: 25px;
+        padding: 3px 5px 2px 0;
+        text-align: center;
+        border-radius: 2px;
+        color: #ffffff;
+        direction: ltr;
+        background-repeat: no-repeat ;
+        background-position: 4px center;
+    }
+    .mihanblog_like_border img {
+        margin-left: 2px;
+        margin-top: 2px;
+        width: 22px;
+    }
+    .mihanblog_like_dislikeBar {
+        background-color: #FF6F31;
+        padding-left: 5px;
+        border-top-left-radius: 2px;
+        border-bottom-left-radius: 2px;
+        text-align:left ;
+    }
+    .mihanblog_like_dislikeBar:hover{
+        background-color: #D54B10;
+    }
+
+
+
+    .mihanblog_like_show_help {
+        position: relative;
+    }
+    .mihanblog_like_show_help:hover span {
+        display: block;
+    }
+    .mihanblog_like_help_text {
+        background-color: white;
+        border: 1px solid #555555;
+        border-radius: 3px 3px 3px 3px;
+        color: #303030;
+        float: left;
+        font-size: 11px;
+        font-weight: normal;
+        padding: 5px 10px;
+    }
+
+    .mihanblog_like_help_arrow_dislike {
+        background: url("http://revaagh.mihanblog.com/public/public/images/icons/like_hover_top.png") no-repeat scroll 16px 0 transparent;
+        left: 0;
+        top: -4px;
+    }
+
+    .mihanblog_like_help_arrow_like {
+        background: url("http://revaagh.mihanblog.com/public/public/images/icons/like_hover_top _2.png") no-repeat scroll 16px 0 transparent;
+        left: -10px;
+        top: 29px;
+    }
+
+    .mihanblog_like_help_arrow{
+        height: 6px;
+        position: absolute;
+        width: 100px;
+
+    }
+
+    .mihanblog_like_v2_help_dislike {
+        left: -15px;
+        top: 24px;
+    }
+    .mihanblog_like_v2_help_like {
+        left: 0;
+        top: -35px;
+
+    }
+    .mihanblog_like_v2_help{
+        display: none;
+        position: absolute;
+        white-space: nowrap;
+        z-index: 1;
+    }
+
+    .mihanblog_like_Cnt{
+        display: inline;
+        color: #ffffff;
+    }
+
+</style><script>
+
+	statInfo = new Array();
+	setStatVar = function(index,value){
+		statInfo[index] = value;
+	}
+	getStatVar = function(index){
+		if(statInfo[index]) document.write(statInfo[index]);
+	}
+	
+	setStatVar('total_post','433');
+	setStatVar('total_author','0');
+	setStatVar('modify_date','پنجشنبه 21 فروردین 1399');
+	
+	setStatVar('today_view','48');
+	setStatVar('yesterday_view','29');
+	
+	setStatVar('this_month_view','1059');
+	setStatVar('last_month_view','2280');
+
+	setStatVar('total_view','353664');
+	setStatVar('last_view_date','شنبه 22 آذر 1399 (14:50)');
+
+
+
+    
+    function setStatFromClient()
+    {
+        var url = 'http://revaagh.mihanblog.com/statupdate/?data[refereruri]=http://revaagh.mihanblog.com/&data[postid]=&data[requesturi]=/page/6&data[sdate]=1607772703&data[hash]=2ebdb9e1fa22db15e0ea68749153afbd&data[resolution]='+screen.width+' X '+screen.height;
+
+//        alert(url);
+//        var newjs = document.createElement("SCRIPT");
+//        newjs.type = 'text/javascript';
+//        newjs.src = url;
+//
+//        var newdiv = document.createElement("DIV");
+//        newdiv.setAttribute("style","display:none");
+
+        document.write(unescape('%3Cscript src="'+url+'" type="text/javascript"%3E%3C/script%3E'));
+//        newdiv.appendChild (newjs);
+//        document.write(newjs);
+//        document.write(appendChild (newdiv);
+
+    };
+    setStatFromClient();
+        
+</script><script>
+	messageForm = function(post_id){
+		try{
+			window.open('/message','message','status=yes,scrollbars=yes,toolbar=no,menubar=no,location=no ,width=480px,height=550px');
+		} catch(e){}
+	}
+</script><script>
+	linkdailyForm = function(){
+		try{
+			window.open('/linkdaily/new','linkdaily','status=yes,scrollbars=yes,toolbar=no,menubar=no,location=no ,width=500px,height=460px');
+		} catch(e){}
+	}
+</script><script>
+
+var MihanblogShopAdsArray = new Array();
+
+function GetMihanBlogShowAds(){
+	if(MihanblogShopAdsArray.length){
+		var adsTarget = 'MihanblogShopAds';
+		var containerWidth = document.getElementById(adsTarget).offsetWidth;
+		if(containerWidth>=200){
+			var adsCnt = parseInt(containerWidth / 200) ;
+			if(adsCnt>MihanblogShopAdsArray.length){
+				adsCnt = MihanblogShopAdsArray.length ; 
+			}
+//			var OneAdsWidth = parseInt(containerWidth / adsCnt) ;
+			var OneAdsWidth = containerWidth / adsCnt ;
+			if(OneAdsWidth>400){
+				OneAdsWidth = 400 ;
+			}
+			var OutHtml = '';
+			var img = '';
+			var link = '';
+			var title = '';
+			var description = '';
+			var imgWidth = 70;
+			if(OneAdsWidth>230){
+				imgWidth = 80;
+			}
+			if(OneAdsWidth>300){
+				imgWidth = 90;
+			}
+			for(adsOne=0;adsOne<adsCnt;adsOne++){
+				
+				img = MihanblogShopAdsArray[adsOne]['img'];
+				link = MihanblogShopAdsArray[adsOne]['link'];
+				title = MihanblogShopAdsArray[adsOne]['title'];
+				description = MihanblogShopAdsArray[adsOne]['description'];
+				
+				OutHtml += '<td style="background-color:#FFF;width: '+OneAdsWidth+'px;border:1px solid #f00;margin:0px 0px;font-size:11px;font-family:tahoma;padding:2px;margin:0px 0px;font-size:11px;border: 1px solid BurlyWood; padding: 1px; height: '+(imgWidth+25)+'px;">';
+
+				OutHtml += '	<a href="http://revaagh.mihanblog.com/page/'+link+'" target="_blank" style="text-decoration:none">';
+
+				OutHtml += '			<div style="width: '+(OneAdsWidth-16)+'px;cursor:pointer;font-size:12px;padding: 4px 1px 4px 7px; white-space: nowrap; text-align: center; font-weight: bold; color: blue;white-space:nowrap;overflow:hidden">';
+				OutHtml += 					title;
+				OutHtml += '			</div>';
+				OutHtml += '			<div style="cursor:pointer;padding: 1px; display: block; float: right; width: '+imgWidth+'px;">';
+				OutHtml += '				<img src="'+img+'.html" style="border:0px;padding:0px;margin:0px;width:'+imgWidth+'px;height:'+imgWidth+'px;">';
+				OutHtml += '			</div>';
+				OutHtml += '			<div style="padding: 1px; display: block; float: right; width: '+(OneAdsWidth-13-imgWidth)+'px; text-align: right;overflow:hidden">';
+				OutHtml += '				<div style="overflow:hidden;cursor:pointer;padding: 2px 3px; line-height: 17px; height: '+(imgWidth-3)+'px; text-align: justify;color:#000;direction:rtl">';
+				OutHtml += 						description;
+				OutHtml += '				</div>';
+				OutHtml += '			</div>';
+
+				OutHtml += '	</a>';
+
+				OutHtml += '</td>';
+			}
+			
+			var Out = '<table align="center" cellpadding="0" cellspacing="2" style="width:'+(OneAdsWidth*adsCnt)+'px;"><tr>'+OutHtml+'</tr></table>'; 
+			
+			Out = '<div style="text-align:center;padding:0px;margin:3px auto;">'+Out+'</div>'; 
+			
+			document.getElementById(adsTarget).style.height = (imgWidth+35)+'px' ;
+			document.getElementById(adsTarget).innerHTML = Out ;
+		}
+	}
+}
+</script>
+    <style>
+        @font-face {
+            font-family: 'Mihan-Iransans';
+            src: url('http://revaagh.mihanblog.com/public/public/fonts/Iransans.eot');
+            src: url('http://revaagh.mihanblog.com/public/public/fonts/Iransans.eot?') format('embedded-opentype'),
+            url('http://revaagh.mihanblog.com/public/public/fonts/Iransans.woff2') format('woff2'),
+            url('http://revaagh.mihanblog.com/public/public/fonts/Iransans.woff') format('woff'),
+            url('http://revaagh.mihanblog.com/public/public/fonts/Iransans.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+        @font-face {
+            font-family: 'Mihan-IransansBold';
+            src: url('http://revaagh.mihanblog.com/public/public/fonts/Iransans-Black.eot');
+            src: url('http://revaagh.mihanblog.com/public/public/fonts/Iransans-Black.eot?') format('embedded-opentype'),
+            url('http://revaagh.mihanblog.com/public/public/fonts/Iransans-Black.woff2') format('woff2'),
+            url('http://revaagh.mihanblog.com/public/public/fonts/Iransans-Black.woff') format('woff'),
+            url('http://revaagh.mihanblog.com/public/public/fonts/Iransans-Black.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+        @font-face {
+            font-family: 'Mihan-IransansLight';
+            src: url('http://revaagh.mihanblog.com/public/public/fonts/Iransans-UltraLight.eot');
+            src: url('http://revaagh.mihanblog.com/public/public/fonts/Iransans-UltraLight.eot?') format('embedded-opentype'),
+            url('http://revaagh.mihanblog.com/public/public/fonts/Iransans-UltraLight.woff2') format('woff2'),
+            url('http://revaagh.mihanblog.com/public/public/fonts/Iransans-UltraLight.woff') format('woff'),
+            url('http://revaagh.mihanblog.com/public/public/fonts/Iransans-UltraLight.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+        @font-face {
+            font-family: 'Mihan-Nassim';
+            src: url('http://revaagh.mihanblog.com/public/public/fonts/Nassim.eot');
+            src: url('http://revaagh.mihanblog.com/public/public/fonts/Nassim.eot?') format('embedded-opentype'),
+            url('http://revaagh.mihanblog.com/public/public/fonts/Nassim.woff2') format('woff2'),
+            url('http://revaagh.mihanblog.com/public/public/fonts/Nassim.woff') format('woff'),
+            url('http://revaagh.mihanblog.com/public/public/fonts/Nassim.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+        @font-face {
+            font-family: 'Mihan-Koodak';
+            src: url('http://revaagh.mihanblog.com/public/public/fonts/Koodak.eot');
+            src: url('http://revaagh.mihanblog.com/public/public/fonts/Koodak.eot?') format('embedded-opentype'),
+            url('http://revaagh.mihanblog.com/public/public/fonts/Koodak.woff2') format('woff2'),
+            url('http://revaagh.mihanblog.com/public/public/fonts/Koodak.woff') format('woff'),
+            url('http://revaagh.mihanblog.com/public/public/fonts/Koodak.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+        @font-face {
+            font-family: 'Mihan-Yekan';
+            src: url('http://revaagh.mihanblog.com/public/public/fonts/Yekan.eot');
+            src: url('http://revaagh.mihanblog.com/public/public/fonts/Yekan.eot?') format('embedded-opentype'),
+            url('http://revaagh.mihanblog.com/public/public/fonts/Yekan.woff2') format('woff2'),
+            url('http://revaagh.mihanblog.com/public/public/fonts/Yekan.woff') format('woff'),
+            url('http://revaagh.mihanblog.com/public/public/fonts/Yekan.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+        @font-face {
+            font-family: 'FontAwesome';
+            src: url('http://revaagh.mihanblog.com/public/public/fonts/fontawesome_webfont.eot');
+            src: url('http://revaagh.mihanblog.com/public/public/fonts/fontawesome_webfont.eot?') format('embedded-opentype'),
+            url('http://revaagh.mihanblog.com/public/public/fonts/fontawesome_webfont.woff2') format('woff2'),
+            url('http://revaagh.mihanblog.com/public/public/fonts/fontawesome_webfont.woff') format('woff'),
+            url('http://revaagh.mihanblog.com/public/public/fonts/fontawesome_webfont.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+
+
+        
+
+        /* Smartphones (portrait and landscape) ----------- */
+
+        /*
+        @media only screen and (max-width : 480px) and (min-width : 320px) {
+            .sabaClick_advert__wrapper{
+                display:block;
+            }
+            .sabaClick_advert__inner{
+                max-width: 90%;
+                margin: 0 5%;
+            }
+        }
+        */
+
+    </style>
+
+
+
+
+
+
+
+<html>
+<head>
+<meta charset="utf-8">
+<meta http-equiv="Cache-Control" content="PUBLIC">
+<meta http-equiv="expires" content="never">
+<meta name="robots" content="index, follow">
+<meta name="revisit-after" content="1 days">
+<meta name="geography" content="Iran">
+<meta name="language" content="Farsi">
+<meta name="distribution" content="Global">
+<meta name="country" content="Iran">
+<meta name="resource-type" content="document">
+<meta name="author" content="مـینا خـ">
+<link rel="alternate" type="application/rss+xml" title="رواق" href="../post/rss/index.html" />
+<link rel="alternate" type="application/atom+xml" title="رواق"  href="../post/atom/index.html" />
+<link rel="alternate" type="application/sitemap+xml" title="رواق" href="../sitemap.xml" />
+<title>رواق</title>
+<style>
+div[style="border:1px solid #888;position:fixed;left:0px;top:0px;width:120;z-index:9999;background:#FFF;cursor:pointer"]{display:none;}
+@font-face {
+    font-family: 'yekan';
+    src: url('http://bayanbox.ir/download/3447216596873351515/Yekan.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+*{
+	padding:0px;
+	margin:0px;
+}
+body{
+	direction:rtl;
+	font:12px tahoma;
+	text-align:right;
+}
+a:link{
+	text-decoration:none;
+}
+a:hover{
+	transition:0.3s;
+}
+.header{
+	width:1135px;
+	height:330px;
+	margin:0px auto;
+	background-image:url(../../file.mihanblog.com/public/user_data/user_files/376/1127951/oth/t2/header5.png);
+	background-size:100%;
+	background-position:center top;
+	background-repeat:no-repeat;
+}
+.title{
+	margin-bottom:50px;
+}
+.title h1{
+	font:32px yekan;
+	color:#333;
+	margin-bottom:5px;
+}
+.title h1 a{
+	color:#00d7d7;
+}
+.title h2{
+	font:12px tahoma;
+	color:#00d7d7;
+}
+.page{
+	width:830px;
+	margin:10px auto;
+}
+.cpost{
+	width:500px;
+	overflow:hide;
+	float:right;
+	margin-left:80px;
+}
+.post{
+	overflow:hidden;
+	font:12px tahoma;
+	line-height:30px;
+	text-align:right;
+	color:#333;
+	padding:5px;
+	margin-bottom:25px;
+	border-bottom:1px solid #00d7d7;
+}
+.post a{
+	color:#00d7d7;
+}
+.post img{
+	max-width:100%;
+	border-radius:2px;
+}
+.post h2{
+	font:18px yekan;
+	font-weight:normal;
+	padding:5px 0px 10px 5px;
+	color:#00d7d7;
+
+}
+.post h2 a{
+	color:#00d7d7;
+}
+.post h4{
+	font:11px tahoma;
+	font-weight:normal;
+	color:#00d7d7;
+	padding:10px 0px 0px 0px;
+}
+.post h4 a{
+	color:#00d7d7;
+}
+.cside{
+	display:table;
+	float:left;
+}
+.side{
+	width:250px;
+	line-height:30px;
+	font:11px tahoma;
+	text-align:center;
+	color:#00d7d7;
+}
+.side a{
+	font:11px tahoma;
+	line-height:25px;
+	color:#00d7d7;
+}
+.side a:hover{
+	transition:0.3s;
+	color:#00d7d7;
+}
+.side a:visited{
+	color:#00d7d7;
+}
+.side a:active{
+	color:#00d7d7;
+}
+.side h4{
+	font:18px yekan;
+	font-weight:normal;
+	color:#333;
+	margin:40px 0px 0px 0px;
+	text-align:center;
+}
+.cpagenum{
+	display:table;
+	margin:auto;
+}
+.pagenum{
+	font:11px tahoma;
+	padding:5px 10px;
+	margin:5px;
+	float:right;
+	border:1px solid #333;
+	border-radius:45px;
+	color:#333;
+}
+.pagenum:hover{
+	transition:0.3s;
+	border:1px solid #00d7d7;
+	background-color:#00d7d7;
+	color:#fff;
+}
+#post_pass{
+	color:#000;
+	padding:6px 15px 6px 15px;
+	border:2px solid #00d7d7;
+	border-left:none;
+	-webkit-border-radius: 0px 2px 2px 0px;
+        -moz-border-radius: 0px 2px 2px 0px;
+        border-radius: 0px 2px 2px 0px;
+	background:#00d7d7;
+	-webkit-box-shadow: 0px 1px 1px rgb(204, 204, 204);
+	-moz-box-shadow:    0px 1px 1px rgb(204, 204, 204);
+	box-shadow:         0px 1px 1px rgb(204, 204, 204);
+}
+.btn{
+	color:#fff;
+	padding:5px 15px;
+	border:2px solid #00d7d7;
+	border-left:none;
+	-webkit-border-radius: 0px 2px 2px 0px;
+        -moz-border-radius: 0px 2px 2px 0px;
+        border-radius: 2px 0px 0px 2px;
+	background:#00d7d7;
+	-webkit-box-shadow: 0px 1px 1px rgb(204, 204, 204);
+	-moz-box-shadow:    0px 1px 1px rgb(204, 204, 204);
+	box-shadow:         0px 1px 1px rgb(204, 204, 204);
+}
+
+@media only screen and (max-width:1135px) {
+.header{
+	width:100%;
+	background-size:98%;
+}
+}
+@media only screen and (max-width:840px) {
+.header{
+	width:830px;
+	background-size:100%;
+}
+}
+</style>
+</head>
+
+<body>
+
+    <div class="header"></div>
+    <div class="page">
+    
+        <div class="title">
+        	<h1>
+                    <a href="../index.html" title="رواق">رواق</a>
+        	</h1>
+            <h2></h2>
+        </div>
+        
+        <div class="cpost">
+
+                        
+		<div id="MihanblogShopAds" style="display:block;height:0px;width:100%;border:0px"></div>
+		            <div class="post">
+            
+            	<div class="tpost">
+              <h2>
+                    <a href="http://revaagh.mihanblog.com/post/470" title="شرح ِ حال و نیز، رسیدن ِ اردیبهشت...">شرح ِ حال و نیز، رسیدن ِ اردیبهشت...</a>
+              </h2>
+                </div>
+                    <div id="InPost_MihanblogShopAds" style="display:block;height:0px;width:100%;border:0px"></div>
+
+
+<p class="MsoNormal" dir="RTL" style="text-align:justify;direction:rtl;unicode-bidi:
+embed"><span style="font-family: Tahoma, sans-serif; font-size: 8pt; line-height: 150%;">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <b><font color="#339999">&nbsp; &nbsp;&nbsp;</font></b></span><span style="font-family: Tahoma, sans-serif; font-size: 8pt; line-height: 150%;"><b><font color="#339999">" بسم ِ الله ِ الرّحمن ِ الرّحیم "</font></b></span></p>
+
+<p class="MsoNormal" align="left" dir="RTL" style="text-align: right; direction: rtl; unicode-bidi: embed;"><span lang="FA" style="font-size:8.0pt;
+font-family:&quot;Tahoma&quot;,&quot;sans-serif&quot;;mso-bidi-language:FA"><b>خدا رو شکر...</b><o:p></o:p></span></p>
+
+<p class="MsoNormal" align="left" dir="RTL" style="text-align: right; direction: rtl; unicode-bidi: embed;"><span lang="FA" style="font-size:8.0pt;
+font-family:&quot;Tahoma&quot;,&quot;sans-serif&quot;;mso-bidi-language:FA">یکشنبه شب رسیدیم خونه‌ی
+عمه اینا؛ بقیه بودن اما فاطمه نبود و مشغول کارهاش بود؛<o:p></o:p></span></p>
+
+<p class="MsoNormal" align="left" dir="RTL" style="text-align: right; direction: rtl; unicode-bidi: embed;"><span lang="FA" style="font-size:8.0pt;
+font-family:&quot;Tahoma&quot;,&quot;sans-serif&quot;;mso-bidi-language:FA">دوشنبه، برای اینکه از
+وقتمون استفاده کنیم، نزدیک ظهر&nbsp; رفتیم
+دریاچه‌ی خلیج فارس که علی دوست داشت ببینه؛ بعد‌از‌ظهر، بالاخره فاطمه با آقا
+مهدی اومد؛<o:p></o:p></span></p>
+
+<p class="MsoNormal" align="left" dir="RTL" style="text-align: right; direction: rtl; unicode-bidi: embed;"><span lang="FA" style="font-size:8.0pt;
+font-family:&quot;Tahoma&quot;,&quot;sans-serif&quot;;mso-bidi-language:FA">سه‌شنبه آماده شدیم برای
+عروسی؛ و عمو مجید اینا رو&nbsp; اون شب دیدیم؛
+به اضافه‌ی یه سری از فامیل و همسایه‌های قدیمی؛ آخر ِ شب که خانواده‌ی داماد
+اومدن خونه‌ی عروس که خداحافظی کنن و اجازه بگیرن برای بُردن ِ دختر، اون آخراش، یه
+مقدار فضا تغییر کرد؛ لحظاتی که آقا روح‌الله به عنوان پدر ِ عروس صحبت کرد و از
+حضور فاطمه گفت و اینکه نبودش سخته و اینکه فاطمه رو به آقا مهدی و اون‌ها رو به
+خدا می‌سپاره، که فاطمه تو بغل ِ باباش و احسان و نسرین بلند‌بلند گریه کرد، که
+وقتی<b> نشست</b> که با احسان خداحافظی کنه...اشک ِ همه دراومد...؛ و از زیر ِقرآن رد شدند و پشت ِ سرشون آب ریختند و رفتند...؛ درسته که خیلی دور نیست، اما به هر حال، دیگه
+از اون خونه رفت و هر وقت بیاد، شبیه ِ مهمون میاد؛ ان‌شاءالله خوشبخت و عاقبت به
+خیر باشند.<o:p></o:p></span></p>
+
+<p class="MsoNormal" align="left" dir="RTL" style="text-align: right; direction: rtl; unicode-bidi: embed;"><span lang="FA" style="font-size:8.0pt;
+font-family:&quot;Tahoma&quot;,&quot;sans-serif&quot;;mso-bidi-language:FA">چهارشنبه، مراسم پاتخت و
+شب هم منزل یکی از دوستان بودیم؛<o:p></o:p></span></p>
+
+<p class="MsoNormal" align="left" dir="RTL" style="text-align: right; direction: rtl; unicode-bidi: embed;"><span lang="FA" style="font-size:8.0pt;
+font-family:&quot;Tahoma&quot;,&quot;sans-serif&quot;;mso-bidi-language:FA">پنج‌شنبه هم، باز بیشتر
+به خاطر علی، رفتیم پُل ِ طبیعت و همین‌طور خونه‌ی یکی از اقوام؛ شب هم همه به
+همراه عروس و داماد، خونه‌ی عمو مجید اینا بودیم و جای عمو حمید خالی بود که سرکار
+بود؛ و صبح، قبل از هر جایی، رفتیم سر&nbsp;ِ خاک&nbsp;ِ مادر و بابابزرگ؛ به مادر گفتم که عمه، چادر نمازش رو بهم یادگاری داد که باهاش نماز بخونم...؛ و دلم براشون تنگ شده بود و طبق معمول، اشکهام، مرهم شدند...؛ خدایشان بیامرزد.<o:p></o:p></span></p>
+
+<p class="MsoNormal" align="left" dir="RTL" style="text-align: right; direction: rtl; unicode-bidi: embed;"><span lang="FA" style="font-size:8.0pt;
+font-family:&quot;Tahoma&quot;,&quot;sans-serif&quot;;mso-bidi-language:FA">جمعه هنوز هوا تاریک بود
+که حرکت کردیم؛ و بعد از ظهر حدود 4:30 رسیدیم؛ <b>و همیشه، خدا رو شکر...؛</b><o:p></o:p></span></p>
+
+<p class="MsoNormal" align="left" dir="RTL" style="text-align: right; direction: rtl; unicode-bidi: embed;"><span lang="FA" style="font-size:8.0pt;
+font-family:&quot;Tahoma&quot;,&quot;sans-serif&quot;;mso-bidi-language:FA">از همون جمعه، علائم ِ
+سرماخوردگی بر من نمودار شد و روزی که گذشت، دکتر رفتم؛ و ان‌شاءالله صبح ِ زود هم
+باید برم مشهد.<o:p></o:p></span></p>
+
+<p class="MsoNormal" align="left" dir="RTL" style="text-align: right; direction: rtl; unicode-bidi: embed;"><span lang="FA" style="font-size:8.0pt;
+font-family:&quot;Tahoma&quot;,&quot;sans-serif&quot;;mso-bidi-language:FA">.....<o:p></o:p></span></p>
+
+<p class="MsoNormal" align="left" dir="RTL" style="text-align: right; direction: rtl; unicode-bidi: embed;"><span lang="FA" style="font-size:8.0pt;
+font-family:&quot;Tahoma&quot;,&quot;sans-serif&quot;;mso-bidi-language:FA">و <font color="#cc66cc"><b>اردیبهشت،</b> <b>ماه ِ بهشتی
+ِ من،</b> </font>شروع شده؛ وقتی رسیدیم، دیدم گل ِ یاس ِمون پُر از غنچه‌ست، و امشب کلی از
+این غنچه‌ها باز شدند و این چند‌وقت، حسابی عطر آگین میکنند کوچه‌مون رو...؛<o:p></o:p></span></p>
+
+<p class="MsoNormal" align="left" dir="RTL" style="text-align: right; direction: rtl; unicode-bidi: embed;"><span lang="FA" style="font-size:8.0pt;
+font-family:&quot;Tahoma&quot;,&quot;sans-serif&quot;;mso-bidi-language:FA">فردا و به عبارتی امروز،<b>
+5 اردیبهشت، تولد ِ علی ِ عزیزمونه؛</b> هدیه‌ی تولدش رو که یه کتاب در مورد ِ آسمان و
+فضا و یه‌جورایی دایرة‌المعارف نجوم بود، امشب بهش دادم؛ (در راستای علاقه‌ش در
+این زمینه و کلاسی که رفت)&nbsp; و توی صفحه‌ی
+اولش براش نوشتم:<o:p></o:p></span></p>
+
+<p class="MsoNormal" align="left" dir="RTL" style="text-align: right; direction: rtl; unicode-bidi: embed;"><span lang="FA" style="font-size:8.0pt;
+font-family:&quot;Tahoma&quot;,&quot;sans-serif&quot;;mso-bidi-language:FA">علی عزیزم،<o:p></o:p></span></p>
+
+<p class="MsoNormal" align="left" dir="RTL" style="text-align: right; direction: rtl; unicode-bidi: embed;"><span lang="FA" style="font-size:8.0pt;
+font-family:&quot;Tahoma&quot;,&quot;sans-serif&quot;;mso-bidi-language:FA">تولدت هزاران بار مبارک.
+ان‌شاءالله 120 سال زنده باشی و بهترین‌های الهی نصیبت بشه؛ <o:p></o:p></span></p>
+
+<p class="MsoNormal" align="left" dir="RTL" style="text-align: right; direction: rtl; unicode-bidi: embed;"><span lang="FA" style="font-size:8.0pt;
+font-family:&quot;Tahoma&quot;,&quot;sans-serif&quot;;mso-bidi-language:FA">راستی،<o:p></o:p></span></p>
+
+<p class="MsoNormal" align="left" dir="RTL" style="text-align: right; direction: rtl; unicode-bidi: embed;"><span lang="FA" style="font-size:8.0pt;
+font-family:&quot;Tahoma&quot;,&quot;sans-serif&quot;;mso-bidi-language:FA">هیچ‌وقت، فراموش نکن اسم
+ِ چه <font color="#009900">بزرگ‌مــَردی</font> رو روی تو گذاشتن...؛ در پناه خدا و زیر سایه‌ی "<font color="#009900">مـولا
+علی" </font>و<font color="#009900"> آقا امام زمان</font>، و کنار مامان و بابای عزیزمون، امیدوارم به بالاترین
+مقامات برسی.<o:p></o:p></span></p>
+
+<p class="MsoNormal" align="left" dir="RTL" style="text-align: right; direction: rtl; unicode-bidi: embed;"><span lang="FA" style="font-size:8.0pt;
+font-family:&quot;Tahoma&quot;,&quot;sans-serif&quot;;mso-bidi-language:FA">خواهرت: مینا&nbsp;&nbsp;&nbsp;1395/2/5<o:p></o:p></span></p>
+
+
+
+
+
+
+
+
+                    <br>                    <script>mihanblogPostLike('470','like')</script>                    
+
+
+
+<h4 style="font-size:10px;"><a style="color:#333;">دسته بندی: </a>
+<a href="../post/category/1.html" title="روز نگار" target="_blank">روز نگار</a> ، 
+</h4>
+
+
+<h4>
+توسط مـینا خـ | یکشنبه 5 اردیبهشت 1395 | ساعت 01:08 ق.ظ | <a target="_self" href="javascript:newComment(470)">نظرها (<script>setCommentCnt(470)</script>)</a>
+</h4>
+            </div>
+                        <div class="post">
+            
+            	<div class="tpost">
+              <h2>
+                    <a href="http://revaagh.mihanblog.com/post/469" title="خدایی، ناز ِ شصت ِ کردگار است..">خدایی، ناز ِ شصت ِ کردگار است..</a>
+              </h2>
+                </div>
+                    <p class="MsoNormal" dir="RTL" style="text-align:justify;direction:rtl;unicode-bidi:
+embed"><span dir="RTL"></span><span lang="FA" style="font-size:8.0pt;line-height:
+150%;font-family:&quot;Tahoma&quot;,&quot;sans-serif&quot;;mso-bidi-language:FA"><span dir="RTL"></span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<font color="#339999"><b> " بسم ِ الله ِ الرّحمن ِ الرّحیم "</b></font></span></p><p class="MsoNormal" dir="RTL" style="text-align:justify;direction:rtl;unicode-bidi:
+embed"><span style="font-family: Tahoma, sans-serif; font-size: 8pt; text-align: right;"><b>&nbsp;</b></span></p><p class="MsoNormal" align="left" dir="RTL" style="text-align: right; direction: rtl; unicode-bidi: embed;"><span lang="FA" style="font-size:8.0pt;
+font-family:&quot;Tahoma&quot;,&quot;sans-serif&quot;;mso-bidi-language:FA">شاید از همان کودکی که
+آموختند ِمان: <font color="#009900">امام ِ اول: عـــلی</font>، <o:p></o:p></span></p><p class="MsoNormal" align="left" dir="RTL" style="text-align: right; direction: rtl; unicode-bidi: embed;"><span lang="FA" style="font-size:8.0pt;
+font-family:&quot;Tahoma&quot;,&quot;sans-serif&quot;;mso-bidi-language:FA">&nbsp;شاید از درس‌های دینی ِ دوران ِ دبستان،<o:p></o:p></span></p><p class="MsoNormal" align="left" dir="RTL" style="text-align: right; direction: rtl; unicode-bidi: embed;"><span lang="FA" style="font-size:8.0pt;
+font-family:&quot;Tahoma&quot;,&quot;sans-serif&quot;;mso-bidi-language:FA">&nbsp;شاید با تماشای فیلم/سریال ِ <font color="#009900">امام علی علیه‌السلام</font>...<o:p></o:p></span></p><p class="MsoNormal" align="left" dir="RTL" style="text-align: right; direction: rtl; unicode-bidi: embed;"><span lang="FA" style="font-size:8.0pt;
+font-family:&quot;Tahoma&quot;,&quot;sans-serif&quot;;mso-bidi-language:FA">مثلاً از همان موقع که
+فهمیدم اولین مؤمن بوده‌اید به <font color="#009900">آخرین پیامبر،</font><o:p></o:p></span></p><p class="MsoNormal" align="left" dir="RTL" style="text-align: right; direction: rtl; unicode-bidi: embed;"><span lang="FA" style="font-size:8.0pt;
+font-family:&quot;Tahoma&quot;,&quot;sans-serif&quot;;mso-bidi-language:FA">&nbsp;و بعد‌تر که خواندم به جای <font color="#009900">حضرت ِ رسول</font> خوابیدید در
+لیلة المبیت،<o:p></o:p></span></p><p class="MsoNormal" align="left" dir="RTL" style="text-align: right; direction: rtl; unicode-bidi: embed;"><span lang="FA" style="font-size:8.0pt;
+font-family:&quot;Tahoma&quot;,&quot;sans-serif&quot;;mso-bidi-language:FA">&nbsp;یا زمانی که شنیدم فتح ِ خیبر را به دست ِ شما،<o:p></o:p></span></p><p class="MsoNormal" align="left" dir="RTL" style="text-align: right; direction: rtl; unicode-bidi: embed;"><span lang="FA" style="font-size:8.0pt;
+font-family:&quot;Tahoma&quot;,&quot;sans-serif&quot;;mso-bidi-language:FA">&nbsp;شاید از وقتی که هُـمای رحمت ِ شهریار را خواندم
+و حفظ کردم که: به جز از <font color="#009900">علی</font> که گوید به پسر که قاتل ِ من * چو اسیر ِ توست اکنون،
+به اسیر کن مدارا...<o:p></o:p></span></p><p class="MsoNormal" align="left" dir="RTL" style="text-align: right; direction: rtl; unicode-bidi: embed;"><span lang="FA" style="font-size:8.0pt;
+font-family:&quot;Tahoma&quot;,&quot;sans-serif&quot;;mso-bidi-language:FA">همه‌ی این‌ها هست؛ اما
+می‌دانید؟ از یکی از یحتمل شب ِ جمعه‌های سال‌های دبیرستان، شِکَر ِ سخنان‌تان
+حسابی به مذاقم شیرین آمد...؛ تا مدت‌ها و تا هــنوز، مبهوت ِ آن کلمات هستم...؛
+واژه‌هایی که تک به تک، انگار که مخاطبشان این مینای روسیاه است، نه جناب ِ
+کمیل...؛<o:p></o:p></span></p><p class="MsoNormal" align="left" dir="RTL" style="text-align: right; direction: rtl; unicode-bidi: embed;"><span lang="FA" style="font-size:8.0pt;
+font-family:&quot;Tahoma&quot;,&quot;sans-serif&quot;;mso-bidi-language:FA">ولی، ولی، ولی... همیشه
+می‌گویند: شنیدن کِی بُوَد مانند ِ دیدن؟ و "من خود به چَشم ِ خویشتن"
+دیدم&nbsp; مِـهـر ِ شما چه ها که نمی‌کند با <b>صاحب‌دلان</b>...؛
+وقتی که حرف‌هایتان، تقوای بی‌نظیرتان و زندگی ِ ارزشمند و با برکت‌ِ‌تان می‌شود
+چراغ ِ راه، و بر حذر می‌دارد از تاریکی‌ها و جهالت‌های شایع ِ دوران، می‌شود
+سرمنزل ِ مقصود...؛<o:p></o:p></span></p><p class="MsoNormal" align="left" dir="RTL" style="text-align: right; direction: rtl; unicode-bidi: embed;"><span lang="FA" style="font-size:8.0pt;
+font-family:&quot;Tahoma&quot;,&quot;sans-serif&quot;;mso-bidi-language:FA">نوشتن از شما و برای شما،
+کار ِ من نیست که: أنا عَبدُ الضّعیفُ الذّلیلُ الحقیرُ المِسکینُ المُستَکین؛ غرض
+فقط، عرض ِ ارادت بود به محضر ِ نورانی‌تان،<font color="#009900"> حضرت ِ مــولا، حضرت ِ امـیر ‌المؤمنین،
+آقـا علی‌بن ِ ابی‌طالب علیه السلام</font>؛ و التماس می‌کنم، که نگاه‌تان را بدرقه‌ی راه
+ِ مان کنید.<o:p></o:p></span></p><p class="MsoNormal" align="left" dir="RTL" style="text-align: right; direction: rtl; unicode-bidi: embed;"><span lang="FA" style="font-size:8.0pt;
+font-family:&quot;Tahoma&quot;,&quot;sans-serif&quot;;mso-bidi-language:FA">.....<o:p></o:p></span></p><p class="MsoNormal" align="left" dir="RTL" style="text-align: right; direction: rtl; unicode-bidi: embed;"><span lang="FA" style="font-size:8.0pt;
+font-family:&quot;Tahoma&quot;,&quot;sans-serif&quot;;mso-bidi-language:FA">که <font color="#009900">مولایم امـیر
+المؤمنین</font> است؛ &nbsp;پیشنهاد میکنم&nbsp;<a href="http://film.tebyan.net/film/150280" target="_blank" title="">دیدنـش</a>&nbsp;رو از دست ندید.<o:p></o:p></span></p><p class="MsoNormal" dir="RTL" style="text-align:justify;direction:rtl;unicode-bidi:
+embed"><span lang="FA" style="font-size:8.0pt;line-height:
+150%;font-family:&quot;Tahoma&quot;,&quot;sans-serif&quot;;mso-bidi-language:FA">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</span></p><p class="MsoNormal" align="left" dir="RTL" style="text-align: right; direction: rtl; unicode-bidi: embed;"><span lang="FA" style="font-size:8.0pt;
+font-family:&quot;Tahoma&quot;,&quot;sans-serif&quot;;mso-bidi-language:FA">سالروز ِ خجسته میلاد ِ <font color="#009900">مــَرد
+ِ مـــَردان، مـولای متّقیان، امــیر ِ مؤمنان، حضرت ِ عــلی علیه‌السلام،</font> بر
+هـمگان مـبارک، تـهنیت و شـادباش.<o:p></o:p></span></p>
+
+
+                    <br>                    <script>mihanblogPostLike('469','like')</script>                    
+
+
+
+<h4 style="font-size:10px;"><a style="color:#333;">دسته بندی: </a>
+<a href="../post/category/1.html" title="روز نگار" target="_blank">روز نگار</a> ، 
+<a href="../post/category/2.html" title="حرف دل" target="_blank">حرف دل</a> ، 
+</h4>
+
+
+<h4>
+توسط مـینا خـ | پنجشنبه 2 اردیبهشت 1395 | ساعت 06:00 ق.ظ | <a target="_self" href="javascript:newComment(469)">نظرها (<script>setCommentCnt(469)</script>)</a>
+</h4>
+            </div>
+                        <div class="post">
+            
+            	<div class="tpost">
+              <h2>
+                    <a href="http://revaagh.mihanblog.com/post/468" title="بابا...">بابا...</a>
+              </h2>
+                </div>
+                    
+<p class="MsoNormal" dir="RTL" style="text-align:justify;direction:rtl;unicode-bidi:
+embed"><span dir="RTL"></span><span lang="FA" style="font-size:8.0pt;line-height:
+150%;font-family:&quot;Tahoma&quot;,&quot;sans-serif&quot;;mso-bidi-language:FA"><span dir="RTL"></span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <b><font color="#339999">&nbsp; &nbsp;" بسم ِ الله ِ الرّحمن ِ الرّحیم "</font></b><o:p></o:p></span></p><p class="MsoNormal" dir="RTL" style="text-align:justify;direction:rtl;unicode-bidi:
+embed"><span lang="FA" style="font-size:8.0pt;line-height:
+150%;font-family:&quot;Tahoma&quot;,&quot;sans-serif&quot;;mso-bidi-language:FA"><b><font color="#339999">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</font></b></span><img hspace="0" border="0" align="baseline" vspace="0" src="http://s6.picofile.com/file/8247517234/%D8%AC%D9%87%D8%A7%D8%B1%D9%85_001.jpg" alt=""></p><p class="MsoNormal" align="left" dir="RTL" style="text-align: right; direction: rtl; unicode-bidi: embed;"><span lang="FA" style="font-size:8.0pt;
+font-family:&quot;Tahoma&quot;,&quot;sans-serif&quot;;mso-bidi-language:FA">شاید من هم مثل خیلی از
+بچه‌ها، اول، گفتن ِ "<b>بابا</b>" رو یاد گرفته باشم...؛<o:p></o:p></span></p><p class="MsoNormal" align="left" dir="RTL" style="text-align: right; direction: rtl; unicode-bidi: embed;"><span lang="FA" style="font-size:8.0pt;
+font-family:&quot;Tahoma&quot;,&quot;sans-serif&quot;;mso-bidi-language:FA">بابایی که از بچگی تا
+الآن حتی، یه دفعه میاد ما رو می‌بوسه؛<o:p></o:p></span></p><p class="MsoNormal" align="left" dir="RTL" style="text-align: right; direction: rtl; unicode-bidi: embed;"><span lang="FA" style="font-size:8.0pt;
+font-family:&quot;Tahoma&quot;,&quot;sans-serif&quot;;mso-bidi-language:FA">&nbsp;بابایی که از وقتی یادم میاد، شبها روزنامه
+میخونه؛<o:p></o:p></span></p><p class="MsoNormal" align="left" dir="RTL" style="text-align: right; direction: rtl; unicode-bidi: embed;"><span lang="FA" style="font-size:8.0pt;
+font-family:&quot;Tahoma&quot;,&quot;sans-serif&quot;;mso-bidi-language:FA">&nbsp;بابایی که اهل اس‌ام‌اس نیست، فقط زنگ میزنه؛ <o:p></o:p></span></p><p class="MsoNormal" align="left" dir="RTL" style="text-align: right; direction: rtl; unicode-bidi: embed;"><span lang="FA" style="font-size:8.0pt;
+font-family:&quot;Tahoma&quot;,&quot;sans-serif&quot;;mso-bidi-language:FA">بابایی که همیشه برام عزیز
+بوده و هست و خواهد بود؛ "پـــدر" بوده و هست و خواهد بود.<o:p></o:p></span></p><p class="MsoNormal" align="left" dir="RTL" style="text-align: right; direction: rtl; unicode-bidi: embed;"><span lang="FA" style="font-size:8.0pt;
+font-family:&quot;Tahoma&quot;,&quot;sans-serif&quot;;mso-bidi-language:FA">بابایی که حالا موهاش
+داره سفید میشه و بهش میگن حاج‌آقا، به احترام سن، با اینکه هنوز حاج‌آقا نشده...؛<o:p></o:p></span></p><p class="MsoNormal" align="left" dir="RTL" style="text-align: right; direction: rtl; unicode-bidi: embed;"><span lang="FA" style="font-size:8.0pt;
+font-family:&quot;Tahoma&quot;,&quot;sans-serif&quot;;mso-bidi-language:FA">بابابی که امیدوارم از
+من راضی باشه و اگه جسارت کردم به محضرش، ببخشه...؛<o:p></o:p></span></p><p class="MsoNormal" align="left" dir="RTL" style="text-align: right; direction: rtl; unicode-bidi: embed;"><span lang="FA" style="font-size:8.0pt;
+font-family:&quot;Tahoma&quot;,&quot;sans-serif&quot;;mso-bidi-language:FA">بابایی که دوستش دارم و
+پیشاپیش میلاد ِ <b><font color="#009900">حضرت ِ مولا</font></b> و روز ِ پدر رو تبریک میگم بهش.<o:p></o:p></span></p><p class="MsoNormal" dir="RTL" style="text-align:justify;direction:rtl;unicode-bidi:
+embed"><span lang="FA" style="font-size:8.0pt;line-height:
+150%;font-family:&quot;Tahoma&quot;,&quot;sans-serif&quot;;mso-bidi-language:FA">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</span></p><p class="MsoNormal" align="left" dir="RTL" style="text-align: right; direction: rtl; unicode-bidi: embed;"><span lang="FA" style="font-size:8.0pt;
+font-family:&quot;Tahoma&quot;,&quot;sans-serif&quot;;mso-bidi-language:FA">و دعای همیشگیم:&nbsp; <b>خدایا، به همه‌‌ی پدر و مادرها، و همچنین مامان
+و بابای عزیزتر از جانم، سلامتی، تندرستی و عمر ِ طولانی و با عزت عطا بفرما.</b><o:p></o:p></span></p><p class="MsoNormal" align="left" dir="RTL" style="text-align: right; direction: rtl; unicode-bidi: embed;"><span lang="FA" style="font-size:8.0pt;
+font-family:&quot;Tahoma&quot;,&quot;sans-serif&quot;;mso-bidi-language:FA"><b><br></b></span></p><p class="MsoNormal" align="left" dir="RTL" style="text-align: right; direction: rtl; unicode-bidi: embed;"><span lang="FA" style="font-size:8.0pt;
+font-family:&quot;Tahoma&quot;,&quot;sans-serif&quot;;mso-bidi-language:FA"><b><br></b></span></p><p class="MsoNormal" align="left" dir="RTL" style="text-align: right; direction: rtl; unicode-bidi: embed;"><span lang="FA" style="font-family: Tahoma, sans-serif;"><font size="1">* بابا، لیلا و من.</font></span></p>
+
+
+
+
+                    <br>                    <script>mihanblogPostLike('468','like')</script>                    
+
+
+
+<h4 style="font-size:10px;"><a style="color:#333;">دسته بندی: </a>
+<a href="../post/category/1.html" title="روز نگار" target="_blank">روز نگار</a> ، 
+<a href="../post/category/2.html" title="حرف دل" target="_blank">حرف دل</a> ، 
+</h4>
+
+
+<h4>
+توسط مـینا خـ | پنجشنبه 2 اردیبهشت 1395 | ساعت 12:00 ق.ظ | <a target="_self" href="javascript:newComment(468)">نظرها (<script>setCommentCnt(468)</script>)</a>
+</h4>
+            </div>
+                        <div class="post">
+            
+            	<div class="tpost">
+              <h2>
+                    <a href="http://revaagh.mihanblog.com/post/467" title="نون و پنیر ارزونیتون، دختر نمیدیم بهِتون...">نون و پنیر ارزونیتون، دختر نمیدیم بهِتون...</a>
+              </h2>
+                </div>
+                    
+
+
+<p class="MsoNormal" dir="RTL" style="text-align:justify;direction:rtl;unicode-bidi:
+embed"><span dir="RTL"></span><span lang="FA" style="font-size:8.0pt;line-height:
+150%;font-family:&quot;Tahoma&quot;,&quot;sans-serif&quot;;mso-bidi-language:FA"><span dir="RTL"></span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <b>&nbsp;<font color="#339999"> " بسم ِ الله ِ الرّحمن ِ الرّحیم "</font><o:p></o:p></b></span></p>
+
+<p class="MsoNormal" align="left" dir="RTL" style="text-align: right; direction: rtl; unicode-bidi: embed;"><span lang="FA" style="font-size:8.0pt;
+font-family:&quot;Tahoma&quot;,&quot;sans-serif&quot;;mso-bidi-language:FA">احتمالاً این پست رو
+یادتونه:&nbsp;<o:p></o:p></span><a href="http://revaagh.mihanblog.com/post/333" target="_blank" title="">فاطمه...</a></p>
+
+<p class="MsoNormal" align="left" dir="RTL" style="text-align: right; direction: rtl; unicode-bidi: embed;"><span lang="FA" style="font-size:8.0pt;
+font-family:&quot;Tahoma&quot;,&quot;sans-serif&quot;;mso-bidi-language:FA">حالا در حالی که حدود یک
+سال و نیم از اون زمان میگذره، جشن عروسی فاطمه ست؛ دو-سه ماه ِ پیش بود که وقتی
+با فاطمه تلفنی حرف میزدم، گفت تالار رزرو کردیم برای 16 اردیبهشت، که مبعث <b><font color="#009900">پیامبر</font></b>
+</span><span lang="FA" style="font-family: Tahoma, sans-serif;"><font size="1" color="#009900">صلی‌الله علیه و آله</font></span><span lang="FA" style="font-size:8.0pt;
+font-family:&quot;Tahoma&quot;,&quot;sans-serif&quot;;mso-bidi-language:FA"> هم هست؛ همین که جمله‌ش تموم شد، صدای من با تعجب سؤال کرد: چندم؟!!!!&nbsp; و وقتی مطمئن شد درست شنیده، ناراحت شد که خب
+دقیقاً همون روز، آزمون ارشد داره، هم خودش و هم لیلا!<o:p></o:p></span></p>
+
+<p class="MsoNormal" align="left" dir="RTL" style="text-align: right; direction: rtl; unicode-bidi: embed;"><span lang="FA" style="font-size:8.0pt;
+font-family:&quot;Tahoma&quot;,&quot;sans-serif&quot;;mso-bidi-language:FA">غافل از اینکه فاطمه دست
+به کار شد و چند وقت بعد خبر داد که تاریخ مجلس رو عوض کردند و از اونجایی که قبل
+و بعدش محدودیت داشته، افتاده 31 فروردین...؛ و واقعاً دستشون درد نکنه بابت ِ این
+محبت؛ ان شاءالله همه، و همین طور فاطمه و همسرش، خوشبخت باشند و با مِهر، به پای هم پیر بشن.<o:p></o:p></span></p>
+
+<p class="MsoNormal" align="left" dir="RTL" style="text-align: right; direction: rtl; unicode-bidi: embed;"><span lang="FA" style="font-size:8.0pt;
+font-family:&quot;Tahoma&quot;,&quot;sans-serif&quot;;mso-bidi-language:FA">الغرض، ان‌شاءالله، به
+امید خدا، قراره که تا چند ساعت دیگه حرکت کنیم به سمت تهران؛ و بنده به خاطر
+کارهایی که داشتم، هنوز موفق نشدم بخوابم! و این در حالی ست که وقت ِ اذان شد و
+سحر...؛<o:p></o:p></span></p><p class="MsoNormal" align="left" dir="RTL" style="text-align: right; direction: rtl; unicode-bidi: embed;"><span lang="FA" style="font-size:8.0pt;
+font-family:&quot;Tahoma&quot;,&quot;sans-serif&quot;;mso-bidi-language:FA"><br></span></p><p class="MsoNormal" align="left" dir="RTL" style="text-align: right; direction: rtl; unicode-bidi: embed;"><span lang="FA" style="font-family: Tahoma, sans-serif;"><font size="1"><br></font></span></p>
+
+<p class="MsoNormal" align="left" dir="RTL" style="text-align: right; direction: rtl; unicode-bidi: embed;"><span lang="FA" style="font-family: Tahoma, sans-serif;"><font size="1">* البته که عنوان پست، فقط محض مزاح نوشته شده...؛ و نکته ی جالب اینجاست که نامزدیشون سه شنبه، 30 مهر بود؛ و عروسیشون سه شنبه، 31 فروردین...؛</font></span></p><p class="MsoNormal" align="left" dir="RTL" style="text-align: right; direction: rtl; unicode-bidi: embed;"><span lang="FA" style="font-family: Tahoma, sans-serif;"><font size="1">** دو تا پست ِ
+بعدی رو مینویسم و تاریخشون رو برای روزهایی که مدّ نظر هست، تنظیم میکنم که ان‌شاءالله
+به طور خودکار ثبت بشه؛ میهن بلاگ چندین ساله که این قابلیت رو داره و من تا حالا
+ازش استفاده نکردم.<o:p></o:p></font></span></p>
+
+<p class="MsoNormal" align="left" dir="RTL" style="text-align: right; direction: rtl; unicode-bidi: embed;"><span lang="FA" style="font-family: Tahoma, sans-serif;"><font size="1">*** و نظرات ِ این پست رو به
+رسم ِ پست‌هایی که قرار ِ سفر داریم، باز میذارم؛ حلال بفرمایید.</font></span></p>
+
+
+
+
+
+
+
+
+                    <br>                    <script>mihanblogPostLike('467','like')</script>                    
+
+
+
+<h4 style="font-size:10px;"><a style="color:#333;">دسته بندی: </a>
+<a href="../post/category/1.html" title="روز نگار" target="_blank">روز نگار</a> ، 
+</h4>
+
+
+<h4>
+توسط مـینا خـ | یکشنبه 29 فروردین 1395 | ساعت 03:44 ق.ظ | <a target="_self" href="javascript:newComment(467)">نظرها (<script>setCommentCnt(467)</script>)</a>
+</h4>
+            </div>
+                        <div class="post">
+            
+            	<div class="tpost">
+              <h2>
+                    <a href="http://revaagh.mihanblog.com/post/465" title="دعا کنیم برای هم...">دعا کنیم برای هم...</a>
+              </h2>
+                </div>
+                    
+
+
+
+
+
+<p class="MsoNormal" dir="RTL" style="text-align:justify;direction:rtl;unicode-bidi:
+embed"><span style="font-family: Tahoma, sans-serif; font-size: 8pt; line-height: 150%;">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<font color="#339999"> &nbsp; &nbsp;&nbsp;</font></span><span style="font-family: Tahoma, sans-serif; font-size: 8pt; line-height: 150%;"><font color="#339999"><b>" بسم ِ الله ِ الرّحمن ِ الرّحیم "</b></font></span></p>
+
+<p class="MsoNormal" align="left" dir="RTL" style="text-align: right; direction: rtl; unicode-bidi: embed;"><span lang="FA" style="font-size:8.0pt;
+font-family:&quot;Tahoma&quot;,&quot;sans-serif&quot;;mso-bidi-language:FA"><b>یک.</b> سه‌شنبه صبح رفتم
+مشهد و محل ِ کار؛ خدا رو شکر &nbsp;تا حدودی
+رفع ِ بیگانگی شده با کار، اما تمرین لازمه برای داشتن ِ سرعت ِ عمل، ان‌شاءالله؛ از
+اونجا رفتم خونه‌ی لیلا؛ دیدن، خوندن، حس کردن ِ بعضی چیزها، عمیقاً خوشحالم
+میکنه...؛ &nbsp;چهارشنبه هم بعد از سر کار و
+قبل از ظهر، راهی ِ نیشابور شدم؛ آقای محمدی که لطفشون بی‌نهایته، بچه‌ها هم خیلی
+خوبند، &nbsp;محل ِ کار و امکاناتش هم که عالی...خدا
+رو شکر.<o:p></o:p></span></p><p class="MsoNormal" align="left" dir="RTL" style="text-align: right; direction: rtl; unicode-bidi: embed;"><span lang="FA" style="font-size:8.0pt;
+font-family:&quot;Tahoma&quot;,&quot;sans-serif&quot;;mso-bidi-language:FA"><br></span></p>
+
+<p class="MsoNormal" align="left" dir="RTL" style="text-align: right; direction: rtl; unicode-bidi: embed;"><span lang="FA" style="font-size:8.0pt;
+font-family:&quot;Tahoma&quot;,&quot;sans-serif&quot;;mso-bidi-language:FA"><b>دو.</b> نتیجه‌ی دو بار
+بینایی سنجی ِ دو-سه هفته‌ی اخیر و تغییر ِ اندک ِ نمره‌ی چشمم در حد ِ بیست‌و‌پنج
+صدم، شد سفارش ِ یه فریم ِ جدید؛ یه فریم ِ گریف‌پیچ، که کمتر دیده میشه روی صورت؛
+دی‌ماه ِ 86 بود که عینکی شدم و از اون موقع تا همین الآن، عینکم رو عوض نکرده
+بودم؛ و البته که هنوز عادت نکردم به عینک ِ جدیدم...؛<o:p></o:p></span></p><p class="MsoNormal" align="left" dir="RTL" style="text-align: right; direction: rtl; unicode-bidi: embed;"><span lang="FA" style="font-size:8.0pt;
+font-family:&quot;Tahoma&quot;,&quot;sans-serif&quot;;mso-bidi-language:FA"><br></span></p>
+
+<p class="MsoNormal" align="left" dir="RTL" style="text-align: right; direction: rtl; unicode-bidi: embed;"><span lang="FA" style="font-size:8.0pt;
+font-family:&quot;Tahoma&quot;,&quot;sans-serif&quot;;mso-bidi-language:FA"><b>سه.</b> دیروز بیست و پنجم ِ
+فروردین بود، سالروز ِ بزرگداشت ِ عطار ِ نیشابوری، شاعر و عارف ِ نامی ِ ایران‌زمین؛
+قسمت شد به رسم ِ بیست و پنج ِ فروردین‌های هر سال ِ این چند سال، قدم بذاریم توی "باغ
+ِ آرامگاه ِ عطار و نیز کمال‌الملک"، نفس بکِشیم، ببینیم و بشنویم؛ مثل ِ هر
+سال، علیرضا بدیع، اجرا رو به عهده داشت و شعر‌خوانی ِ شاعران ِ بومی و غیر ِ بومی
+و موسیقی ِ سنتی...؛ و همچنین قطرات باران، که طراوت بخشید؛ ممنون جناب ِ فرید‌الدّین،
+که لا‌اقل به یمن ِ بودن ِ شما و خیام‌جان، صدایی از نیشابور به گوش میرسه
+گاهی...؛ این چند تا عکس هم یادگار ِ دیروزه:&nbsp;<a href="http://s6.picofile.com/file/8247179692/Jpg5544.jpg" target="_blank" title="">1</a>&nbsp;،<a href="http://s6.picofile.com/file/8247179600/Jpg4433.jpg" target="_blank" title=""> 2</a>&nbsp;،<a href="http://s7.picofile.com/file/8247179576/Jpg3322.jpg" target="_blank" title=""> 3</a>&nbsp;.<o:p></o:p></span></p>
+
+<p class="MsoNormal" align="left" dir="RTL" style="text-align: right; direction: rtl; unicode-bidi: embed;"><span lang="FA" style="font-size:8.0pt;
+font-family:&quot;Tahoma&quot;,&quot;sans-serif&quot;;mso-bidi-language:FA">...<o:p></o:p></span></p>
+
+<p class="MsoNormal" align="left" dir="RTL" style="text-align: right; direction: rtl; unicode-bidi: embed;"><span lang="FA" style="font-size:8.0pt;
+font-family:&quot;Tahoma&quot;,&quot;sans-serif&quot;;mso-bidi-language:FA"><b>چهار.</b> و امّا <b>رجب</b>، ماهی
+که وقتی میاد، یعنی شعبان داره میرسه، نیمه‌ی شعبان داره میرسه، یعنی شهر‌الرّمضان
+داره میرسه ان‌شاءالله...؛<o:p></o:p></span></p>
+
+<p class="MsoNormal" align="left" dir="RTL" style="text-align: right; direction: rtl; unicode-bidi: embed;"><span lang="FA" style="font-size:8.0pt;
+font-family:&quot;Tahoma&quot;,&quot;sans-serif&quot;;mso-bidi-language:FA">و<b> لیلة الرّغائب</b>،
+اولین شب ِ جمعه‌ی ماه ِ رجب؛ و به لفظ ِ عُرف: شب ِ آرزوها...؛ ولی من همون
+"لیلة الرِغائب" صداش میزنم، انگار که معناش این‌طوری کامل‌تره...؛ یکی
+از روزها و شب‌های مهم ِ سال برای من، امروز و امشبه؛ نمازش رو بین ِ نماز ِ مغرب و عشا از
+دست ندید؛ و دعا کنیم برای هم، که خوب میدونیم "<b>دعـا اثـر دارد</b>"...؛&nbsp;</span></p><p class="MsoNormal" align="left" dir="RTL" style="text-align: right; direction: rtl; unicode-bidi: embed;"><a href="http://www.yjc.ir/fa/news/5565752/%D8%A2%D8%AF%D8%A7%D8%A8-%D9%88-%D8%A7%D8%B9%D9%85%D8%A7%D9%84-%D9%84%DB%8C%D9%84%D8%A9-%D8%A7%D9%84%D8%B1%D8%BA%D8%A7%D8%A6%D8%A8%D8%B4%D8%A8-%D8%A2%D8%B1%D8%B2%D9%88%D9%87%D8%A7" target="_blank" title="">آداب و اعمال&nbsp;ِ لیلة الرّغائب</a><font face="Tahoma, sans-serif"><span style="font-size: 10.6667px;">.</span></font></p>
+
+<p class="MsoNormal" align="left" dir="RTL" style="text-align: right; direction: rtl; unicode-bidi: embed;"><span lang="FA" style="font-size:8.0pt;
+font-family:&quot;Tahoma&quot;,&quot;sans-serif&quot;;mso-bidi-language:FA">التماس دعا.&nbsp;</span></p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                    <br>                    <script>mihanblogPostLike('465','like')</script>                    
+
+
+
+<h4 style="font-size:10px;"><a style="color:#333;">دسته بندی: </a>
+<a href="../post/category/1.html" title="روز نگار" target="_blank">روز نگار</a> ، 
+</h4>
+
+
+<h4>
+توسط مـینا خـ | پنجشنبه 26 فروردین 1395 | ساعت 04:02 ب.ظ | <a target="_self" href="javascript:newComment(465)">نظرها (<script>setCommentCnt(465)</script>)</a>
+</h4>
+            </div>
+                        <div class="post">
+            
+            	<div class="tpost">
+              <h2>
+                    <a href="http://revaagh.mihanblog.com/post/464" title="تصمیم ِ مینا...">تصمیم ِ مینا...</a>
+              </h2>
+                </div>
+                    
+
+
+
+
+
+<p class="MsoNormal" dir="RTL" style="text-align:justify;direction:rtl;unicode-bidi:
+embed"><span dir="RTL"></span><span lang="FA" style="font-size:8.0pt;line-height:
+150%;font-family:&quot;Tahoma&quot;,&quot;sans-serif&quot;;mso-bidi-language:FA"><span dir="RTL"></span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<b><font color="#339999"> &nbsp;" بسم ِ الله ِ الرّحمن ِ الرّحیم "</font></b><o:p></o:p></span></p>
+
+<p class="MsoNormal" align="left" dir="RTL" style="text-align: right; direction: rtl; unicode-bidi: embed;"><span lang="FA" style="font-size:8.0pt;
+font-family:&quot;Tahoma&quot;,&quot;sans-serif&quot;;mso-bidi-language:FA">قطعاً فقط لطف خداست که
+همیشه، آدم‌های خوب سر ِ راهم قرار میگیرن؛ یعنی درستش اینه که: خدا همیشه آدم‌های
+خوب رو &nbsp;سر راهم میذاره.<o:p></o:p></span></p>
+
+<p class="MsoNormal" align="left" dir="RTL" style="text-align: right; direction: rtl; unicode-bidi: embed;"><span lang="FA" style="font-size:8.0pt;
+font-family:&quot;Tahoma&quot;,&quot;sans-serif&quot;;mso-bidi-language:FA">دوستانی که بنده رو
+میشناسن، تا حدودی از زندگی من خبر دارن؛ از اینکه حقوق خوندم، از اینکه اصلاً چی
+شد که حقوق خوندم...؛ علایقم، روحیاتم، و اینکه تو این چند سال، تجربه‌‌ی سه تا کار
+ِ موقت رو دارم؛ از اینکه بیشتر ِ وقتم رو توی خونه گذروندم و از این کار پشیمون
+نیستم؛ اهل ِ ریسک کردن نیستم، محتاطم؛ یه جورایی وابسته‌ام، وابسته به خانواده‌،
+وابسته به چهار‌چوب‌هایی که برای خودم تعریف کردم، وابسته به همین اتاق ِ نه چندان
+بزرگی که سال‌هـــا جلوی این سیستم نشستم و خوندم و نوشتم...؛ حتی به این ساعت ِ
+روی دیوار، به تابلوی خوشنویسی ِ یادگار ِ دبیرستانم که خودم متنش رو انتخاب کردم:
+&nbsp;" زندگی صحنه‌ی یکتای هنرمندی ِ
+ماست، هر کسی نغمه‌ی خود خوانَد و از صحنه رَوَد، صحنه پیوسته به‌جاست، خرّم آن
+نغمه که مردم بسپارند به یاد "، به عکس ِ عروسی مامان و بابا و همه‌ی وسیله‌های
+دور و برم حتی...؛ به علی وابسته ام، از وقتی که به دنیا اومده، همیشه کنارش بودم، همیشه کنارم
+بوده و یکی از بهترین کسانی که حرفامو شنیده...؛ من حتی به پشت ِ بوم ِ خونه‌مون
+وابسته‌ام، مخصوصاً بهار و تابستون و عصرها و غروب‌هاش...؛<o:p></o:p></span></p>
+
+<p class="MsoNormal" align="left" dir="RTL" style="text-align: right; direction: rtl; unicode-bidi: embed;"><span lang="FA" style="font-size:8.0pt;
+font-family:&quot;Tahoma&quot;,&quot;sans-serif&quot;;mso-bidi-language:FA">نمیدونم، شاید این درجه
+از حساسیت هم خوب نباشه؛ اصل ِ اصلش، ایده‌آل‌های زندگی از نظر ِ من با اکثر ِ اطرافیانم
+فرق میکنه؛ من طرفدار ِ آرامشم و با هیجان میونه‌ای ندارم؛ سنّت رو خیلی بیشتر از
+مدرنیته می‌پسندم؛ خط ِ قرمزهام به شدت برام مهمّه؛ تنوّع‌طلب نیستم و ...؛ اعتراف
+میکنم که مثل سنگ‌های کف ِ رودخونه ساکن شدم؛ شاید گاهی وقت‌ها سنگ‌های بزرگتری که
+میخواستن از مسیر رد بشن بهِم تنه زده باشن، شاید جریان ِ آب بهِم فشار آورده
+باشه، درسته که خیلی وقت‌ها با سنگ ِ صبورم درد و دل کردم و آه و فغان سَر دادم،
+اما اعتراف‌تـر! میکنم که خیلی هم ناراضی نبودم از این سکون! لابُد از بس که عادت
+کردم بهش...؛<o:p></o:p></span></p>
+
+<p class="MsoNormal" align="left" dir="RTL" style="text-align: right; direction: rtl; unicode-bidi: embed;"><span lang="FA" style="font-size:8.0pt;
+font-family:&quot;Tahoma&quot;,&quot;sans-serif&quot;;mso-bidi-language:FA">وقتی که حدود ِ دو ماه ِ
+قبل نوشتم: <font color="#333333">کسی</font></span><span lang="AR-SA" style="font-size: 8pt; font-family: Tahoma, sans-serif;">&nbsp;هست که یه کار</span><span dir="LTR"></span><span class="apple-converted-space"><span dir="LTR" style="font-size: 8pt; font-family: Tahoma, sans-serif;"><span dir="LTR"></span>&nbsp;</span></span><b><span lang="AR-SA" style="font-size: 8pt; font-family: Tahoma, sans-serif;">مناسب</span></b><span dir="LTR"></span><span class="apple-converted-space"><span dir="LTR" style="font-size: 8pt; font-family: Tahoma, sans-serif;"><span dir="LTR"></span>&nbsp;</span><span lang="AR-SA" style="font-size: 8pt; font-family: Tahoma, sans-serif;">برای من
+سراغ داشته باشه؟ حتی غیر از اینجا</span><span dir="LTR"></span><span dir="LTR" style="font-size: 8pt; font-family: Tahoma, sans-serif;"><span dir="LTR"></span>...</span></span><span dir="RTL"></span><span lang="AR-SA" style="font-size: 8pt; font-family: Tahoma, sans-serif;"><span dir="RTL"></span>، فکر نمیکردم واقعاً این اتفاق
+بیفته؛ حالا برمیگردم به خط ِ اولم و تکرار میکنم: خدا </span><span lang="FA" style="font-size:8.0pt;font-family:&quot;Tahoma&quot;,&quot;sans-serif&quot;;mso-bidi-language:
+FA">همیشه آدم‌های خوب رو &nbsp;سر راهم قرار
+میده؛ چه در دنیای واقعی و چه در دنیای مَجازی، (که به نظرم مَجازی فقط یه صفته،
+وگرنه همه واقعی هستیم) و من از طریق همین دنیا و همین "رواق"، با چه
+شخصیت‌های والایی که آشنا نشدم...؛ و&nbsp; حدود
+دو هفته‌ی قبل، یکی از همین شخصیت‌ها، یه کار ِ خوب بهم پیشنهاد دادند؛ کاری که به
+گفته‌ی خودشون حداقل یه سابقه‌ی کار ِ اداری و&nbsp;
+بیمه برای من به همراه خواهد داشت؛ و لازم به ذکره که این کار در مشهد هست
+و مساوی میشه با یه جورایی مهاجرت ِ من به مشهد؛ و این یعنی اون سنگ ِ ساکن قراره
+تکون بخوره، اینکه چقدر و چطوری، نمیدونم؛ شاید کم و سنگین، شاید هم با شتاب قِل
+بخوره با جریان ِ آب،<b> اللهُ أعلَم</b>...؛<o:p></o:p></span></p>
+
+<p class="MsoNormal" align="left" dir="RTL" style="text-align: right; direction: rtl; unicode-bidi: embed;"><span lang="FA" style="font-size:8.0pt;
+font-family:&quot;Tahoma&quot;,&quot;sans-serif&quot;;mso-bidi-language:FA">دو-سه روز ِ گذشته مشهد
+بودم و با محیط و کلّیت ِ کار آشنا شدم، و بیشتر از همه با لطف و بزرگواری ِ آقای
+محمدی؛ به دلایلی هنوز مونده تا شروع ِ رسمی ِ کار؛ و تو این چند روزه فکرم مُدام
+مشغوله که من از پس ِ این کار برمیام؟ (که البته با مقداری تمرین، احتمالاً دور
+نخواهد بود) و اینکه با توجه به پاراگراف ِ دوم، این قابلیت رو دارم؟ مامان و بابا
+و لیلا و علی و مهناز و خاله منصوره و &nbsp;مامانجونی حتی، معتقدن که میتونم و تشویقم کردند
+به رفتن؛ امروز (دیروز!) در حالی که عجله داشتم قضیه رو برای الهه تعریف کنم، رفتم
+و گفتم؛ الهه هم گفت: "با اینکه دوست ندارم بری، اما من اگه جای تو بودم دیگه
+فکر نمیکردم، میرفتم...؛"&nbsp; میدونم که
+این کار که مستلزم ِ تغییر سبک ِ زندگیمه، میتونه خیلی چیزها رو تغییر بده، حتی
+شاید بتونه مقدمه‌ای باشه برای مسائل دیگه و مسیرهای جدید، میدونم که با توجه به
+بودن ِ لیلا و داشتن ِ خونه، سهم ِ بزرگی از غربت از روی دوشم برداشته میشه،
+میدونم که واقعاً شاید این موقعیت برای من لازم‌الاجرا باشه، ولی خب، باز هم با
+توجه به پاراگراف دوم، حق بدین که فکر بکنم و فکر بکنم و فکر بکنم...؛ هرچند بر
+اساس آنچه از شواهد و قراین و نظرات اطرافیان برمیاد، و البته اگه قابل باشم، بنا
+بر رفتن خواهد بود، ان‌شاءالله.<o:p></o:p></span></p>
+
+<p class="MsoNormal" align="left" dir="RTL" style="text-align: right; direction: rtl; unicode-bidi: embed;"><span lang="FA" style="font-size:8.0pt;
+font-family:&quot;Tahoma&quot;,&quot;sans-serif&quot;;mso-bidi-language:FA">دیشب (شنبه غروب) در
+حالی که تازه رسیده بودم خونه، علی تبلت به دست اومد کنارم نشست تا فینال ِ مسابقه‌ی
+لباهنگ ِ برنامه ‌ی خندوانه رو که</span><span style="font-family: Tahoma, sans-serif; font-size: 10.6667px;">&nbsp;</span><span style="font-family: Tahoma, sans-serif; font-size: 10.6667px;">ما ندیده بودیم و</span><span style="font-family: Tahoma, sans-serif; font-size: 8pt;">&nbsp;از اینترنت گرفته بود، بهم
+نشون بده؛ با شنیدن ِاولین آهنگ ِ انتخابی ِ امیر‌علی نبویان چشمام اشکی شد، احساس
+کردم داره از زبون ِ من میخونه؛ قبل از این که بگم کدوم ترانه منظورمه، لازمه بگم
+که مکان ِ مورد ِ نظری که ان‌شاءالله قراره اونجا باشم، فاصله‌ی زیادی با بارگاه ِ
+ملکوتی ِ </span><font color="#009900" style="font-family: Tahoma, sans-serif; font-size: 8pt;">حضرت ِ ثامن، آقا امام رضا علیه السلام </font><span style="font-family: Tahoma, sans-serif; font-size: 8pt;">نداره و قاعدتاً بیشترین امتیازش،
+خاک ِ پای </span><font color="#009900" style="font-family: Tahoma, sans-serif; font-size: 8pt;">امام رضا</font><span style="font-family: Tahoma, sans-serif; font-size: 8pt;"> بودنه...؛</span></p>
+
+<p class="MsoNormal" align="left" dir="RTL" style="text-align: right; direction: rtl; unicode-bidi: embed;"><span lang="FA" style="font-size:8.0pt;
+font-family:&quot;Tahoma&quot;,&quot;sans-serif&quot;;mso-bidi-language:FA">و لازم میدونم دوباره و
+چند‌باره، از آقای محمدی تشکر کنم که بزرگواری رو در حق ِ این حقیر تموم کردند و
+با شرایطم کنار اومدند؛ ان‌شاءالله سلامت باشند و سایه‌شون بر سر ِ خانواده‌ی
+محترمشون مستدام باشه.<o:p></o:p></span></p>
+
+<p class="MsoNormal" align="left" dir="RTL" style="text-align: right; direction: rtl; unicode-bidi: embed;"><span lang="FA" style="font-size:8.0pt;
+font-family:&quot;Tahoma&quot;,&quot;sans-serif&quot;;mso-bidi-language:FA">مامانجونی میگن: <b>به خدا
+توکل کن و از <font color="#009900">امام رضا</font> کمک بخواه...؛</b><o:p></o:p></span></p>
+
+<p class="MsoNormal" align="left" dir="RTL" style="text-align: right; direction: rtl; unicode-bidi: embed;"><span lang="FA" style="font-size:8.0pt;
+font-family:&quot;Tahoma&quot;,&quot;sans-serif&quot;;mso-bidi-language:FA">تو دل ِ یه مزرعه، یه
+کلاغ ِ رو‌سیاه&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;هوایی شده بره پابوس ِ امام رضا<o:p></o:p></span></p>
+
+<p class="MsoNormal" align="left" dir="RTL" style="text-align: right; direction: rtl; unicode-bidi: embed;"><span lang="FA" style="font-size:8.0pt;
+font-family:&quot;Tahoma&quot;,&quot;sans-serif&quot;;mso-bidi-language:FA">اما هِی فکر میکنه اونجا
+جای کفتراست&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; آخه من کجا برم،
+یه کلاغ که روسیاست!<o:p></o:p></span></p>
+
+<p class="MsoNormal" align="left" dir="RTL" style="text-align: right; direction: rtl; unicode-bidi: embed;"><span lang="FA" style="font-size:8.0pt;
+font-family:&quot;Tahoma&quot;,&quot;sans-serif&quot;;mso-bidi-language:FA">من که توی سیاهیا از همه
+روسیاه‌ترم&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b> میون ِ اون
+کبوترات با چه رویی بپَرَم؟!</b><o:p></o:p></span></p>
+
+<p class="MsoNormal" align="left" dir="RTL" style="text-align: right; direction: rtl; unicode-bidi: embed;"><span lang="FA" style="font-size:8.0pt;
+font-family:&quot;Tahoma&quot;,&quot;sans-serif&quot;;mso-bidi-language:FA">تو همین فکرا بودش، کلاغ
+ِ عاشقمون&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; یه دلش میگفت
+برو، یه دلش میگفت بمون<o:p></o:p></span></p>
+
+<p class="MsoNormal" align="left" dir="RTL" style="text-align: right; direction: rtl; unicode-bidi: embed;"><span lang="FA" style="font-size:8.0pt;
+font-family:&quot;Tahoma&quot;,&quot;sans-serif&quot;;mso-bidi-language:FA">که یهو صدایی گفت: تو<b>
+نـ</b>ترس و راهی شو&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;<b>به سیاهی فکر نکن، تو یه زائری، بـرو...</b><o:p></o:p></span></p>
+
+<p class="MsoNormal" align="left" dir="RTL" style="text-align: right; direction: rtl; unicode-bidi: embed;"><span lang="FA" style="font-size:8.0pt;
+font-family:&quot;Tahoma&quot;,&quot;sans-serif&quot;;mso-bidi-language:FA">و&nbsp;&nbsp;<a href="http://s6.picofile.com/file/8246715718/Mohsen_Chavoshi_Emam_Reza_WWW_IRMP3_IR_.mp3.html" target="_blank" title="">شنیدنش</a>...؛<o:p></o:p></span></p><p class="MsoNormal" align="left" dir="RTL" style="text-align: right; direction: rtl; unicode-bidi: embed;"><span lang="FA" style="font-family: Tahoma, sans-serif;"><font size="1"><br></font></span></p>
+
+<p class="MsoNormal" align="left" dir="RTL" style="text-align: right; direction: rtl; unicode-bidi: embed;"><span lang="FA" style="font-family: Tahoma, sans-serif;"><font size="1">* شما هم برام دعا کنید
+لطفاً، و اگه قابل دونستید، خطی بنویسید.<o:p></o:p></font></span></p>
+
+<p class="MsoNormal" align="left" dir="RTL" style="text-align: right; direction: rtl; unicode-bidi: embed;"><span lang="FA" style="font-family: Tahoma, sans-serif;"><font size="1">** سالروز ِ شهادت ِ <font color="#009900">امام
+هادی، علی النّقی علیه السلام</font>، تسلیت.</font></span><span dir="LTR" style="font-size:8.0pt;
+font-family:&quot;Tahoma&quot;,&quot;sans-serif&quot;;mso-bidi-language:FA"><o:p></o:p></span></p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                    <br>                    <script>mihanblogPostLike('464','like')</script>                    
+
+
+
+<h4 style="font-size:10px;"><a style="color:#333;">دسته بندی: </a>
+<a href="../post/category/1.html" title="روز نگار" target="_blank">روز نگار</a> ، 
+</h4>
+
+
+<h4>
+توسط مـینا خـ | دوشنبه 23 فروردین 1395 | ساعت 02:38 ق.ظ | <a target="_self" href="javascript:newComment(464)">نظرها (<script>setCommentCnt(464)</script>)</a>
+</h4>
+            </div>
+                        <div class="post">
+            
+            	<div class="tpost">
+              <h2>
+                    <a href="http://revaagh.mihanblog.com/post/463" title="سیزده، چهارده، توصیف، تصویر...">سیزده، چهارده، توصیف، تصویر...</a>
+              </h2>
+                </div>
+                    
+<p class="MsoNormal" dir="RTL" style="text-align:justify;direction:rtl;unicode-bidi:
+embed"><span dir="RTL"></span><span lang="FA" style="font-size:8.0pt;line-height:
+150%;font-family:&quot;Tahoma&quot;,&quot;sans-serif&quot;;mso-bidi-language:FA"><span dir="RTL"></span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <b><font color="#339999">&nbsp; &nbsp;&nbsp;" بسم ِ الله ِ الرّحمن ِ الرّحیم "</font></b><o:p></o:p></span></p>
+
+<p class="MsoNormal" align="left" dir="RTL" style="text-align: right; direction: rtl; unicode-bidi: embed;"><span lang="FA" style="font-size:8.0pt;
+font-family:&quot;Tahoma&quot;,&quot;sans-serif&quot;;mso-bidi-language:FA">سیزده‌ بدر و دَبَرو
+رودخونه /&nbsp;&nbsp; تنبک و بردار تا بریم به خونه
+/&nbsp; من با تو قهرم، تو با من آشتی / &nbsp;دیشب چه مرگی! داشتی؟ / دور ِ حیاط میگشتی؟
+/&nbsp; دیشب آبغوره خوردم/ &nbsp;بعدش هَله هوله خوردم&nbsp; /&nbsp; خدا
+خواست که نمُردم / خدا خواست که نمُردم!!!<o:p></o:p></span></p>
+
+<p class="MsoNormal" align="left" dir="RTL" style="text-align: right; direction: rtl; unicode-bidi: embed;"><span lang="FA" style="font-size:8.0pt;
+font-family:&quot;Tahoma&quot;,&quot;sans-serif&quot;;mso-bidi-language:FA">این شعر ِ به غایت زیبا
+و با معنی! یادگار دوران ِ راهنماییمه که کرج بودیم؛ بچه‌ها میخوندن و منم حفظ
+کردم که احتمالاً از قافله عقب نمونم!<o:p></o:p></span></p>
+
+<p class="MsoNormal" align="left" dir="RTL" style="text-align: right; direction: rtl; unicode-bidi: embed;"><span lang="FA" style="font-size:8.0pt;
+font-family:&quot;Tahoma&quot;,&quot;sans-serif&quot;;mso-bidi-language:FA">و اما دیروز که سیزده
+بدر بود...؛ از صبح زود باران باریدن گرفت و همه حساب ِ کار دستشون اومد که امروز
+دیگه نمیتونن برن طبیعت و فرش بندازن و آتیش درست کنن و جوجه سیخ بکشن بخورن با؟
+با نوشابه... (به قول جناب مهران مدیری) ؛ مثل<a href="http://s7.picofile.com/file/8245564542/Jpg552.jpg" target="_blank" title=""> پارسال&nbsp;</a>و بقیه ی وقتهای ما...؛&nbsp;&nbsp;از اونجایی که طبقه‌ی پایین ِخونه‌ی خاله منصوره‌اینا
+به دلیل رونق بازار ِ مسکن! چندین ماهه که خالی از سکنه هست، و حیاط هم داره، قرار
+شد که همگی بریم اونجا؛ و اینگونه بود که سیزده ِ ما در مکانی با امکاناتی نظیر کف
+سرامیک، آشپزخانه اُپن، و اینترنت وای‌فای، به در شد...؛ و خب سبزه‌ای نبود تا به&nbsp;<a href="http://s6.picofile.com/file/8245564892/Jpg553.jpg" target="_blank" title="">رسم سالهای پیش</a>&nbsp;زلف‌هاش رو گره بزنیم ، و نیز سبزه‌ی هفت‌سین‌ِ مون که اتفاقاً
+همچنان زیبا و سرسبزه، در منزل به سر میبَره.<o:p></o:p></span></p>
+
+<p class="MsoNormal" align="left" dir="RTL" style="text-align: right; direction: rtl; unicode-bidi: embed;"><span lang="FA" style="font-size:8.0pt;
+font-family:&quot;Tahoma&quot;,&quot;sans-serif&quot;;mso-bidi-language:FA">.<o:p></o:p></span></p>
+
+<p class="MsoNormal" align="left" dir="RTL" style="text-align: right; direction: rtl; unicode-bidi: embed;"><span lang="FA" style="font-size:8.0pt;
+font-family:&quot;Tahoma&quot;,&quot;sans-serif&quot;;mso-bidi-language:FA">از سالهای دور، سر ِ
+کوچه‌ی مامانجونی اینا یه خونه‌ی ویلایی بود که سر ِ همون خونه هم یه آرایشگاه
+زنونه بود به اسم و تابلوی گُلباران؛ و طوری بود که حتی اسم کوچه رو که میخواستیم
+بگیم، نمیگفتیم کوچه‌ی نجفی یا اسدآبادی 25، میگفتیم کوچه‌ی گلباران؛ چند سالی هست
+که صاحب خونه و آرایشگاه اونجا رو فروختن و رفتند؛ تابلوی آرایشگاه که کم‌کم به
+دست ِ احتمالاً اوباش! شکسته شد و بعد هم برداشته شد؛ اما کاغذی که ساعات کار ِ
+آموزشگاه رو پشت در زده بودن، تا همین چند وقت پیش بود هنوز؛ قبل از عید، یه روز
+که داشتم میرفتم کتابخونه، دیدم در و پنجره‌هاشو برداشتن! رفتم توش یه نگاهی
+انداختم به دور و برش، به جایی که آرایشگاه بود و من رفته بودم سال 84، به حیاط ِ
+قشنگ و بزرگ و با صفاش، به درختهاش...؛ بعدتر دیدم کلا انگار لودر انداختن و اون
+خونه رو با همه‌ی خاطراتش با خاک یکسان کردند...؛&nbsp;<a href="http://s7.picofile.com/file/8245563876/Jpg551.jpg" target="_blank" title="">امروز</a>&nbsp;که دوباره داشتم از اونجا
+رد میشدم، شکوفه‌های درختهاش توجهم رو جلب کرد...؛ شکوفه‌هایی که میخوان بگن این
+درختها زنده اند، دارن نفَس میکِشند، دارن دوباره برگ درمیارن، میخوان میوه
+بدن...؛ حیف نیست؟ واقعاً حیف نیست این همه حیاط و باغچه رو خراب کردن و به‌جاش
+آپارتمان‌های عمودی ِ چند واحدی ساختن؟! حیف نیست عطر ِ خاک ِ نم‌خورده‌ی حیاط و
+شبنم ِ روی گُل‌های آب‌پاشی شده‌ی باغچه‌ها رو با راه‌پله و آسانسور عوض کنیم؟!
+حیف نیست؟ <o:p></o:p></span></p>
+
+<p class="MsoNormal" align="left" dir="RTL" style="text-align: right; direction: rtl; unicode-bidi: embed;"><span lang="FA" style="font-size:8.0pt;
+font-family:&quot;Tahoma&quot;,&quot;sans-serif&quot;;mso-bidi-language:FA">...</span><span dir="LTR" style="font-size:8.0pt;font-family:&quot;Tahoma&quot;,&quot;sans-serif&quot;;mso-bidi-language:
+FA"><o:p></o:p></span></p>
+
+
+
+
+                    <br>                    <script>mihanblogPostLike('463','like')</script>                    
+
+
+
+<h4 style="font-size:10px;"><a style="color:#333;">دسته بندی: </a>
+<a href="../post/category/1.html" title="روز نگار" target="_blank">روز نگار</a> ، 
+</h4>
+
+
+<h4>
+توسط مـینا خـ | شنبه 14 فروردین 1395 | ساعت 04:29 ب.ظ | <a target="_self" href="javascript:newComment(463)">نظرها (<script>setCommentCnt(463)</script>)</a>
+</h4>
+            </div>
+                        <div class="post">
+            
+            	<div class="tpost">
+              <h2>
+                    <a href="http://revaagh.mihanblog.com/post/462" title="یکی از روزهای هفته‌ی دوم ِ عید...">یکی از روزهای هفته‌ی دوم ِ عید...</a>
+              </h2>
+                </div>
+                    
+
+
+
+
+<p class="MsoNormal" dir="RTL" style="text-align:justify;direction:rtl;unicode-bidi:
+embed"><span dir="RTL"></span><span lang="FA" style="font-size:8.0pt;line-height:
+150%;font-family:&quot;Tahoma&quot;,&quot;sans-serif&quot;;mso-bidi-language:FA"><span dir="RTL"></span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<b><font color="#339999"> &nbsp; &nbsp; " بسم ِ
+الله ِ الرّحمن ِ الرّحیم "</font></b><o:p></o:p></span></p>
+
+<p class="MsoNormal" align="left" dir="RTL" style="text-align: right; direction: rtl; unicode-bidi: embed;"><span lang="FA" style="font-size:8.0pt;
+font-family:&quot;Tahoma&quot;,&quot;sans-serif&quot;;mso-bidi-language:FA">تو یه وبلاگی دیدم که از
+هفته دوم عید و &nbsp;همین‌طور یه سری سؤالات در
+عید دیدنی ها نوشته بودن، دیدم&nbsp; منم حرف
+دارم و بد نیست که یه پست با این مضمون بنویسم...؛<o:p></o:p></span></p>
+
+<p class="MsoNormal" align="left" dir="RTL" style="text-align: right; direction: rtl; unicode-bidi: embed;"><span lang="FA" style="font-size:8.0pt;
+font-family:&quot;Tahoma&quot;,&quot;sans-serif&quot;;mso-bidi-language:FA">کلا همیشه اینطوری بودم
+که روزهای قبل از اتفاقات و مناسبت‌های خوب رو بیشتر از خودشون دوست داشتم؛ مثلا
+همین عید نوروز، از اواسط اسفند رو بسیار دوست دارم که حال و هوای عید داره و بوی
+عید میده و همه در تکاپو هستند تا خود ِ سال تحویل و روز اول&nbsp; ِ عید؛ از اینجا به بعد، بیشتر به این فکر
+میکنم که داره تموم میشه ؛<o:p></o:p></span></p>
+
+<p class="MsoNormal" align="left" dir="RTL" style="text-align: right; direction: rtl; unicode-bidi: embed;"><span lang="FA" style="font-size:8.0pt;
+font-family:&quot;Tahoma&quot;,&quot;sans-serif&quot;;mso-bidi-language:FA">باز هفته‌ی اول حال و
+هوای متفاوتی داره، ولی هفته‌ی دوم دیگه فرق میکنه، مخصوصا وقتی که جای خاصی نری و
+بیشتر تو خونه باشی و لیلا هم برگشته باشه مشهد که بره سرکار...؛ نمیدونم چرا حتی
+حوصله‌ی دیدن ِ سریال‌ها رو هم ندارم! فقط خندوانه و دور ِهمی ِ شبکه‌ی نسیم...؛ و
+احیاناً بعضی فیلم سینمایی‌های شبکه‌ی آی فیلم.<o:p></o:p></span></p>
+
+<p class="MsoNormal" align="left" dir="RTL" style="text-align: right; direction: rtl; unicode-bidi: embed;"><span lang="FA" style="font-size:8.0pt;
+font-family:&quot;Tahoma&quot;,&quot;sans-serif&quot;;mso-bidi-language:FA">و اما یه سری سؤالات هست
+که در دید و بازدیدهای اقوامی که سالی یکی-دوبار (از جمله ایام نوروز) همدیگه رو
+ملاقات میکنند، مخصوصاً از یه قشر ِ خاص! پرسیده میشه، و فکر میکنم خیلی‌ها تجربه‌ش
+کرده باشند؛ مثل: ازدواج نکردی؟ چرا ازدواج نمیکنی؟ سختگیری نکن و دیر میشه و... &nbsp;کجا مشغولی؟ مینا جان شما چیکار میکنی؟ &nbsp;مخصوصاً دو فقره‌ی اخیر رو که تقریبا همه از
+بنده میپرسند!&nbsp; در صورتی که از زندگیت چیزی
+نمیدونند و تو هم آدمی نیستی که در این موارد با کسی حرف بزنی، اینه که مجبوری
+لبخند بزنی و یه جمله‌ی تکراری در جوابشون بگی...؛&nbsp;</span><span style="font-family: Tahoma, sans-serif; font-size: 8pt;">و این سؤالات ادامه‌دار هم
+هستنا، تا ازدواج نکردی میپرسن: کی ازدواج میکنی؟ وقتی ازدواج میکنی میپرسن: کی
+میرین خونه‌ی خودتون؟ وقتی میری خونه‌ی خودت، میپرسن: کی بچه‌دار میشین؟ و قس علی
+هذا...؛ و فکر میکنم سؤالات از من، خیلی به مراحل ِ بعد کشیده نشه و فقط در همون پلکان ِ اولیه باقی بمونه! &nbsp;&nbsp;</span><span style="font-family: Tahoma, sans-serif; font-size: 8pt; line-height: 150%;">یادتونه بچه که بودیم تا ما رو میدیدن، میپرسیدن:
+معدلت چند شده؟ اینا همون آدما هستند، فقط سؤالاتشون ارتقاء پیدا کرده؛&nbsp;</span><span style="font-family: Tahoma, sans-serif; font-size: 8pt;">و البته قبول دارم که
+اکثراً این سؤال ها رو از روی محبت و دلسوزی میپرسند.</span></p><p class="MsoNormal" align="left" dir="RTL" style="text-align: right; direction: rtl; unicode-bidi: embed;"><span style="font-family: Tahoma, sans-serif; font-size: 8pt;"><br></span></p><p class="MsoNormal" align="left" dir="RTL" style="text-align: right; direction: rtl; unicode-bidi: embed;"><span dir="LTR" style="font-size:9.0pt;font-family:&quot;Tahoma&quot;,&quot;sans-serif&quot;;mso-bidi-language:
+FA"><o:p></o:p></span></p><p class="MsoNormal" align="left" dir="RTL" style="text-align: right; direction: rtl; unicode-bidi: embed;"><span dir="LTR" style="font-size:9.0pt;font-family:
+&quot;Tahoma&quot;,&quot;sans-serif&quot;;mso-bidi-language:FA"><o:p></o:p></span></p>
+
+<p class="MsoNormal" align="left" dir="RTL" style="text-align: right; direction: rtl; unicode-bidi: embed;"><span lang="FA" style="font-size:8.0pt;
+font-family:&quot;Tahoma&quot;,&quot;sans-serif&quot;;mso-bidi-language:FA"><a href="http://s6.picofile.com/file/8244794634/Jpg87422.jpg" target="_blank" title="" style="font-family: tahoma; font-size: 11px;">سررسید امسال</a>&nbsp;که از قضا
+عیدی ِ دایی هادی اینا هم هست، دیروز به دستم رسید و من هنوز ننوشتم توش؛ ان‌شاءالله
+امشب افتتاحش میکنم؛ شاید به خاطر رنگ و سایز ِ متفاوتشه، ولی حس ِ خوبی بهش دارم،
+حس ِ نگاشتن ِ روزانه‌های خوب و متفاوت، به امید خدا؛<o:p></o:p></span></p><p class="MsoNormal" align="left" dir="RTL" style="text-align: right; direction: rtl; unicode-bidi: embed;"><span lang="FA" style="font-size:8.0pt;
+font-family:&quot;Tahoma&quot;,&quot;sans-serif&quot;;mso-bidi-language:FA">و در هر حال، <b>خدا رو شکر</b>.</span></p><p class="MsoNormal" align="left" dir="RTL" style="text-align: right; direction: rtl; unicode-bidi: embed;"><span lang="FA" style="font-size:8.0pt;
+font-family:&quot;Tahoma&quot;,&quot;sans-serif&quot;;mso-bidi-language:FA"><br></span></p><p class="MsoNormal" align="left" dir="RTL" style="text-align: right; direction: rtl; unicode-bidi: embed;"><span lang="FA" style="font-size:8.0pt;
+font-family:&quot;Tahoma&quot;,&quot;sans-serif&quot;;mso-bidi-language:FA"><br></span></p>
+
+<p class="MsoNormal" align="left" dir="RTL" style="text-align: right; direction: rtl; unicode-bidi: embed;"><span lang="FA" style="font-family: Tahoma, sans-serif;"><font size="1">* و من همچنان مشکل دارم
+برای عکس گذاشتن!</font><span style="font-size: 8pt;"><o:p></o:p></span></span></p>
+
+
+
+
+
+
+
+
+
+
+
+
+                    <br>                    <script>mihanblogPostLike('462','like')</script>                    
+
+
+
+<h4 style="font-size:10px;"><a style="color:#333;">دسته بندی: </a>
+<a href="../post/category/1.html" title="روز نگار" target="_blank">روز نگار</a> ، 
+</h4>
+
+
+<h4>
+توسط مـینا خـ | شنبه 7 فروردین 1395 | ساعت 09:01 ب.ظ | <a target="_self" href="javascript:newComment(462)">نظرها (<script>setCommentCnt(462)</script>)</a>
+</h4>
+            </div>
+                        <div class="post">
+            
+            	<div class="tpost">
+              <h2>
+                    <a href="http://revaagh.mihanblog.com/post/459" title="نوبرانه‌ی بهـار...">نوبرانه‌ی بهـار...</a>
+              </h2>
+                </div>
+                    
+
+
+
+
+
+
+
+<p class="MsoNormal" dir="RTL" style="text-align:justify;direction:rtl;unicode-bidi:
+embed"><span dir="RTL"></span><span lang="FA" style="font-size:8.0pt;line-height:
+150%;font-family:&quot;Tahoma&quot;,&quot;sans-serif&quot;;mso-bidi-language:FA"><span dir="RTL"></span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <b><font color="#339999">&nbsp;&nbsp;" بسم ِ الله ِ الرّحمن ِ الرّحیم "</font></b></span></p><p class="MsoNormal" align="left" dir="RTL" style="text-align: right; direction: rtl; unicode-bidi: embed;"><span lang="FA" style="font-size:9.0pt;
+font-family:&quot;Tahoma&quot;,&quot;sans-serif&quot;;mso-bidi-language:FA"><font color="#339999">" یا&nbsp;مقلّبَ القلوبِ و
+الأبصار،<o:p></o:p></font></span></p><p class="MsoNormal" align="left" dir="RTL" style="text-align: right; direction: rtl; unicode-bidi: embed;"><span lang="FA" style="font-size:9.0pt;
+font-family:&quot;Tahoma&quot;,&quot;sans-serif&quot;;mso-bidi-language:FA"><font color="#339999">&nbsp; &nbsp; &nbsp; یا
+مدبّرَ الّیل ِ و النّهار،<o:p></o:p></font></span></p><p class="MsoNormal" align="left" dir="RTL" style="text-align: right; direction: rtl; unicode-bidi: embed;"><span lang="FA" style="font-size:9.0pt;
+font-family:&quot;Tahoma&quot;,&quot;sans-serif&quot;;mso-bidi-language:FA"><font color="#339999">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; یا محوّلَ الحَولِ و الأحوال،<o:p></o:p></font></span></p><p class="MsoNormal" dir="RTL" style="text-align:justify;direction:rtl;unicode-bidi:
+embed">
+
+
+
+
+
+</p><p class="MsoNormal" align="left" dir="RTL" style="text-align: right; direction: rtl; unicode-bidi: embed;"><span lang="FA" style="font-size:9.0pt;
+font-family:&quot;Tahoma&quot;,&quot;sans-serif&quot;;mso-bidi-language:FA"><font color="#339999">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;حَوّل
+حالنا الی</font><font color="#33ccff"> </font><font color="#009900">أحسَن ِ الحال </font><font color="#339999">"</font></span></p>
+
+<p class="MsoNormal" dir="RTL" style="text-align: justify; direction: rtl; unicode-bidi: embed;"><span lang="FA" style="font-size:8.0pt;
+font-family:&quot;Tahoma&quot;,&quot;sans-serif&quot;;mso-bidi-language:FA">این شب ِ خاص، این لحظه‌ی
+خاص، این حس و حال ِ خاص، یک بار دیگه هم تکرار شد؛ که باید شُکر کنم بی نهایت، به
+درگاه ِ حضرتِ حق، که اجازه داد باز هم تکرارش رو ببینیم و حس کنیم...؛<o:p></o:p></span></p>
+
+<p class="MsoNormal" align="left" dir="RTL" style="text-align: right; direction: rtl; unicode-bidi: embed;"><span lang="FA" style="font-size:8.0pt;
+font-family:&quot;Tahoma&quot;,&quot;sans-serif&quot;;mso-bidi-language:FA">شب و لحظه و حس و حال ِ
+سال‌تحویل رو میگم؛ که به شخصه، صبح، اون هم فقط حدود دوساعت خوابیدم و دوباره قبل
+از سال‌تحویل بیدار شدم؛ و خدا رو شکر، در کنار ِ هم، نشستیم کنار ِ هفت سین و &nbsp;چشم دوختیم به ساعت و به تلویزیون، که ثانیه‌ثانیه
+رو نشونمون بده تا وقتی که توپ ِ سال ِ نو بتِرکه و اعلام کنه: آغاز سال ِ <b>&nbsp;یکـ هـزار و سیصد و نـود و پـنج ِ هجری خورشیدی</b>...؛<o:p></o:p></span></p>
+
+<p class="MsoNormal" align="left" dir="RTL" style="text-align: right; direction: rtl; unicode-bidi: embed;"><span lang="FA" style="font-size:8.0pt;
+font-family:&quot;Tahoma&quot;,&quot;sans-serif&quot;;mso-bidi-language:FA">نـود و پنج، شصت و
+پنج... شصت و پنج، نـود و پنج...؛ عدد رُندی میتونه باشه برای من...؛<o:p></o:p></span></p>
+
+<p class="MsoNormal" align="left" dir="RTL" style="text-align: right; direction: rtl; unicode-bidi: embed;"><span lang="FA" style="font-size:8.0pt;
+font-family:&quot;Tahoma&quot;,&quot;sans-serif&quot;;mso-bidi-language:FA">خدا رو شکر سال ِ 94 سال
+ِ خوبی بود، یعنی همین قدر که سلامت بودیم و در کنار ِ خانواده، یعنی کلّی، یعنی
+خیلی...؛ همه‌مون بنده‌ایم دیگه، بنده‌هایی که مورد امتحان و آزمایش خداوندی قرار
+میگیرن در طول زندگی؛ که البته شدت و ضعف داره این امتحان‌ها؛ &nbsp;که
+خداوند فرموده "لایُکَلِّفُ اللهُ نفساً الّا وُسعها"، و من هم که خودش
+میدونه وسعم محدوده، چرا که "أنا عبدُ الضّعیفُ الذّلیلُ الحقیرُ المسکینُ
+المستکین..."، فکر کنم یه جورایی آزمایش شدم اواسط سال، و خدا کنه که تجدید
+نشده باشم...؛ (البته غیر از آزمایش هایی که یحتمل و روتین&nbsp;ِ زندگی روزمره ست.)<o:p></o:p></span></p>
+
+<p class="MsoNormal" align="left" dir="RTL" style="text-align: right; direction: rtl; unicode-bidi: embed;"><span lang="FA" style="font-size:8.0pt;
+font-family:&quot;Tahoma&quot;,&quot;sans-serif&quot;;mso-bidi-language:FA"><b>ان‌شاء‌الله که قدم ِ
+سال ِ95 هم، برای همه‌مون خیر باشه،<o:p></o:p></b></span></p>
+
+<p class="MsoNormal" align="left" dir="RTL" style="text-align: right; direction: rtl; unicode-bidi: embed;"><span lang="FA" style="font-size:8.0pt;
+font-family:&quot;Tahoma&quot;,&quot;sans-serif&quot;;mso-bidi-language:FA"><b>در پناه ِ حضرتِ حق
+باشیم،<o:p></o:p></b></span></p>
+
+<p class="MsoNormal" align="left" dir="RTL" style="text-align: right; direction: rtl; unicode-bidi: embed;"><span lang="FA" style="font-size:8.0pt;
+font-family:&quot;Tahoma&quot;,&quot;sans-serif&quot;;mso-bidi-language:FA"><b>مشمول ِ دعای صاحب ِ
+عصرمون،<o:p></o:p></b></span></p>
+
+<p class="MsoNormal" align="left" dir="RTL" style="text-align: right; direction: rtl; unicode-bidi: embed;"><span lang="FA" style="font-size:8.0pt;
+font-family:&quot;Tahoma&quot;,&quot;sans-serif&quot;;mso-bidi-language:FA"><b>زیر سایه‌ی عزیز و عظیم
+ِ پدر و مادرها و بزرگترهامون،<o:p></o:p></b></span></p>
+
+<p class="MsoNormal" align="left" dir="RTL" style="text-align: right; direction: rtl; unicode-bidi: embed;"><span lang="FA" style="font-size:8.0pt;
+font-family:&quot;Tahoma&quot;,&quot;sans-serif&quot;;mso-bidi-language:FA"><b>سرشار از سلامتی و
+تندرستی،<o:p></o:p></b></span></p>
+
+<p class="MsoNormal" align="left" dir="RTL" style="text-align: right; direction: rtl; unicode-bidi: embed;"><span lang="FA" style="font-size:8.0pt;
+font-family:&quot;Tahoma&quot;,&quot;sans-serif&quot;;mso-bidi-language:FA"><b>لبریز از آرامش و موفقیت
+و کامیابی،<o:p></o:p></b></span></p>
+
+<p class="MsoNormal" align="left" dir="RTL" style="text-align: right; direction: rtl; unicode-bidi: embed;"><span lang="FA" style="font-size:8.0pt;
+font-family:&quot;Tahoma&quot;,&quot;sans-serif&quot;;mso-bidi-language:FA"><b>و برای رسیدن به
+اهدافمون، از صراط ِ مستقیم ِ خداوندی جدا نشیم هرگز،<o:p></o:p></b></span></p>
+
+<p class="MsoNormal" align="left" dir="RTL" style="text-align: right; direction: rtl; unicode-bidi: embed;"><span lang="FA" style="font-size:8.0pt;
+font-family:&quot;Tahoma&quot;,&quot;sans-serif&quot;;mso-bidi-language:FA"><b>و دعا کنیم&nbsp; بتونیم منتظر های خوبی باشیم که یار بشیم،
+یـار ِ غار، برای اویی که منتظر چند یـار ِ راستین و با وفاست تا ظهور محقق بشه ان‌شا‌ء‌الله...</b><o:p></o:p></span></p>
+
+<p class="MsoNormal" align="left" dir="RTL" style="text-align: right; direction: rtl; unicode-bidi: embed;"><span lang="FA" style="font-size:8.0pt;
+font-family:&quot;Tahoma&quot;,&quot;sans-serif&quot;;mso-bidi-language:FA"><font color="#339999"><b>سـال نـو مــبارکـــــــــ
+.<o:p></o:p></b></font></span></p>
+
+<p class="MsoNormal" align="left" dir="RTL" style="text-align: right; direction: rtl; unicode-bidi: embed;"><span lang="FA" style="font-size:8.0pt;
+font-family:&quot;Tahoma&quot;,&quot;sans-serif&quot;;mso-bidi-language:FA"><font color="#339999"><b>&nbsp;</b></font></span></p>
+
+<p class="MsoNormal" align="left" dir="RTL" style="text-align: right; direction: rtl; unicode-bidi: embed;"><span lang="FA" style="font-size:8.0pt;
+font-family:&quot;Tahoma&quot;,&quot;sans-serif&quot;;mso-bidi-language:FA"><br></span></p><p class="MsoNormal" align="left" dir="RTL" style="text-align: right; direction: rtl; unicode-bidi: embed;"><span lang="FA" style="font-family: Tahoma, sans-serif;"><font size="1">* سایت پیکوفایل چند روزه
+که با ما سر ِ یاری نداره و نمیدونم چرا عکس‌ها رو ویرایش نمیکنه!(فقط آپلود
+میکنه) بنابراین، عکس ِ هفت‌سین ِ مون رو که میخواستم اول این پست بذارم، کوچیک
+نشد؛ اینه که میذارش</font><a href="http://s6.picofile.com/file/8245553192/Jpg44477.jpg" target="_blank" title=""> اینجا</a><font size="1">، که هم بمونه، هم اگه خواستید ببینید.</font><span style="font-size: 8pt;"><o:p></o:p></span></span></p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                    <br>                    <script>mihanblogPostLike('459','like')</script>                    
+
+
+
+<h4 style="font-size:10px;"><a style="color:#333;">دسته بندی: </a>
+<a href="../post/category/1.html" title="روز نگار" target="_blank">روز نگار</a> ، 
+</h4>
+
+
+<h4>
+توسط مـینا خـ | سه شنبه 3 فروردین 1395 | ساعت 05:53 ب.ظ | <a target="_self" href="javascript:newComment(459)">نظرها (<script>setCommentCnt(459)</script>)</a>
+</h4>
+            </div>
+                        <div class="post">
+            
+            	<div class="tpost">
+              <h2>
+                    <a href="http://revaagh.mihanblog.com/post/456" title="سلام بر ابراهیم، پهلوان ِ بی‌مزار...">سلام بر ابراهیم، پهلوان ِ بی‌مزار...</a>
+              </h2>
+                </div>
+                    
+
+
+
+
+<p class="MsoNormal" dir="RTL" style="text-align:justify;direction:rtl;unicode-bidi:
+embed"><span lang="FA" style="font-size:9.0pt;line-height:150%;font-family:&quot;Tahoma&quot;,&quot;sans-serif&quot;;
+mso-bidi-language:FA">&nbsp;</span><span style="font-family: Tahoma, sans-serif; font-size: 10pt; line-height: 150%;">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <b><font color="#339999">&nbsp;&nbsp;</font></b></span><span style="font-family: Tahoma, sans-serif; font-size: 10pt; line-height: 150%;"><b><font color="#339999">" بسم ِ الله ِ الرّحمن ِ الرّحیم "</font></b></span></p><p class="MsoNormal" dir="RTL" style="text-align:justify;direction:rtl;unicode-bidi:
+embed"><span style="font-family: Tahoma, sans-serif; font-size: 10pt; line-height: 150%;"><b><font color="#339999"><br></font></b></span></p><p class="MsoNormal" dir="RTL" style="text-align:justify;direction:rtl;unicode-bidi:
+embed"><span style="font-family: Tahoma, sans-serif; font-size: 10pt; line-height: 150%;"><b><font color="#339999">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;</font></b></span><img hspace="0" border="0" align="baseline" vspace="0" src="http://s6.picofile.com/file/8243999218/%D8%B4%D9%87%DB%8C%D8%AF_%D8%A7%D8%A8%D8%B1%D8%A7%D9%87%DB%8C%D9%85_%D9%87%D8%A7%D8%AF%DB%8C.jpg" alt=""></p>
+
+<p class="MsoNormal" dir="RTL" style="text-align: justify; direction: rtl; unicode-bidi: embed;"><span lang="FA" style="font-size:9.0pt;
+font-family:&quot;Tahoma&quot;,&quot;sans-serif&quot;;mso-bidi-language:FA">نمیدونم تو این یه سال،
+چرا نشد بنویسم؟! خدا رو شکر حداقل یه جا نوشتمشون که یادم نَره...؛ پارسال مثل
+همین امشب، من رسیدم خونه؛ از یه سفر ِ خوب و معنوی و پُر خاطره، که یادش بخیر؛ و
+حالا یکــــ سال! گذشته...؛<o:p></o:p></span></p><p class="MsoNormal" dir="RTL" style="text-align: justify; direction: rtl; unicode-bidi: embed;"><span lang="FA" style="font-size:9.0pt;
+font-family:&quot;Tahoma&quot;,&quot;sans-serif&quot;;mso-bidi-language:FA">&nbsp;تو این چند وقتِ اخیر، چندجا دیدم که از شهید
+هادی نوشته بودند، از کتابشون، و حتی خوندم که(نقل به مضمون) گفته بودن ایشون کسانی
+رو که ازش کمک بخوان، دست ِ خالی برنمیگردونه...؛ شاید برای خیلی‌ها این حرف سنگین
+بیاد، یا خیلی راحت ازش بگذرند؛ اما برای من نه؛ چون به عینه دیدم خواست ِ خدا و
+عنایت ِ این شهید ِ عزیز رو...<o:p></o:p></span></p><p class="MsoNormal" dir="RTL" style="text-align: justify; direction: rtl; unicode-bidi: embed;"><span lang="FA" style="font-size:9.0pt;
+font-family:&quot;Tahoma&quot;,&quot;sans-serif&quot;;mso-bidi-language:FA">اون روز نوبت ِ طلائیه
+بود؛ تا تونستم روی اون خاک قدم زدم، فکر کردم، نگاه کردم...؛ دَم دَمای رفتن بود
+که با چند تا از بچه ها که رفتن سمت ِ چادر ِ محصولات فرهنگی، رفتم داخل و داشتم
+کتابها رو نگاه میکردم، تا اینکه...<o:p></o:p></span></p><p class="MsoNormal" dir="RTL" style="text-align: justify; direction: rtl; unicode-bidi: embed;"><span lang="FA" style="font-size:9.0pt;
+font-family:&quot;Tahoma&quot;,&quot;sans-serif&quot;;mso-bidi-language:FA">تا اینکه چشمم خورد به
+کتاب "سلام بر ابراهیم"، زندگی‌نامه و خاطرات پهلوان ِ بی‌مزار <font color="#ff0000">شهید</font> <b>ابراهیم هادی</b>...؛ من یه شهید ابراهیم یه جایی خونده بودم که فکر میکنم خاطراتشون
+از زبان همسرشون بیان شده بود، فکر کردم این همون کتابه؛ خلاصه انگار که این کتاب
+به من گفت بخرمش...؛ از اونجایی که عجله داشتیم و باید میرفتیم سمت ِ اتوبوس و هی
+این نکته رو متذکر میشدن، گوشی ِ موبایلم رو که به تازگی هدیه گرفته بودم و به
+خاطر نداشتن ِ جیب، توی دستم بود، موقع ِ حساب کردن ِ پول، گذاشتم روی میز ِ کتاب‌ها
+و بعد هم یادم رفت که بَرِش دارم!!!<o:p></o:p></span></p><p class="MsoNormal" dir="RTL" style="text-align: justify; direction: rtl; unicode-bidi: embed;"><span lang="FA" style="font-size:9.0pt;
+font-family:&quot;Tahoma&quot;,&quot;sans-serif&quot;;mso-bidi-language:FA">از یه طرف عجله داشتیم،
+از طرف دیگه یکی از همراهانمون برادرشون همون جا مفقود الأثر بودند گویا، و با
+گریه‌ها و مقاومت ایشون برای سوار نشدن رو‌به‌رو شدیم و خلاصه بنده همچنان در
+عالَم ِ بی‌خبری به سر میبُردم!&nbsp; رفتیم توی
+اتوبوس و راه افتاد و چند دقیقه‌ای هم گذشته بود که اومدم گوشیمو از توی کیفم
+بردارم و...؛ هر چی میگردم گوشی نمی‌بینم! یه دفعه انگار یه چیزی جرقه زد تو ذهنم
+که من دیگه از روی میز بر نداشتمِش! و در حالی که قلبم ریخته بود، گفتم گوشیم
+نیست! نمیدونم چرا، اما همون موقع توی دلم به شهید هادی گفتم: من کتاب ِ شما رو
+اومدم بخرم که گوشیمو جا گذاشتم، خودتون یه کاری کنیدگُم نشه و به دستم برسه...؛<o:p></o:p></span></p><p class="MsoNormal" dir="RTL" style="text-align: justify; direction: rtl; unicode-bidi: embed;"><span lang="FA" style="font-size:9.0pt;
+font-family:&quot;Tahoma&quot;,&quot;sans-serif&quot;;mso-bidi-language:FA">یکی از بچه‌ها زنگ زد به
+گوشیم که یه آقا جواب داد و گفت دست ِ منه، بیاین دَم ِ در ِ حسینیه بگیرین؛ ما هم
+که امکان ِ برگشت نداشتیم! روحانی ِ پادگان که حضورشون اون روز بی حکمت نبود،
+گفتند یکی از راویان ِ پادگان هنوز طلائیه هستند، به ایشون میگم برن گوشیتون رو
+تحویل بگیرن؛ نمیخوام خیلی طولانی کنم حرفمو، چند بار زنگ زدن و نشونی دادیم و
+فهمیدم که تحویل گرفتند؛ و البته بعد‌از‌ظهر ِ فردای اون روز، گوشیم به دستم
+رسید...؛ علاوه بر خود ِ گوشی، اطلاعاتم توش بود و همین‌طور تنها راه ِ ارتباطیم
+با خانواده، و همه‌ش مشوّش بودم که نکنه مامانم اینا زنگ بزنن و نگران بشن...؛<o:p></o:p></span></p><p class="MsoNormal" dir="RTL" style="text-align: justify; direction: rtl; unicode-bidi: embed;"><span lang="FA" style="font-size:9.0pt;
+font-family:&quot;Tahoma&quot;,&quot;sans-serif&quot;;mso-bidi-language:FA">&nbsp;تو جای به اون شلوغی که هزاران نفر رفت و آمد
+داشتند و یه گوشی ِ موبایل به راحتی میتونه ناپدید بشه، گوشی من صحیح و سالم به
+دستم رسید، هرچند به واسطه‌ی آقای روحانی و آقای راوی و اون کسی که دیده بود و
+وقتی زنگ زدیم جواب داده بود...؛&nbsp; و این
+برای من معنایی نداشت جُز عنایت ِ همه‌ی شهدایی که افتخار خادمی کردنشون رو داشتم
+و به ویژه شهید هادی؛ شهیدی که به نقل از همین کتاب: <b>"خودش از خدا خواسته بود گمنام
+بماند! و با گذشت سال‌ها، هنوز هم پیکرش پیدا نشده و مطلبی هم از او نَقل نگردیده!"</b></span></p><p class="MsoNormal" dir="RTL" style="text-align: justify; direction: rtl; unicode-bidi: embed;"><span lang="FA" style="font-size:9.0pt;
+font-family:&quot;Tahoma&quot;,&quot;sans-serif&quot;;mso-bidi-language:FA"><br></span></p>
+
+
+
+
+
+
+
+
+
+
+
+
+                    <br>                    <script>mihanblogPostLike('456','like')</script>                    
+
+
+
+<h4 style="font-size:10px;"><a style="color:#333;">دسته بندی: </a>
+<a href="../post/category/2.html" title="حرف دل" target="_blank">حرف دل</a> ، 
+<a href="../post/category/8.html" title="از بهترین ها" target="_blank">از بهترین ها</a> ، 
+</h4>
+
+
+<h4>
+توسط مـینا خـ | شنبه 29 اسفند 1394 | ساعت 03:33 ق.ظ | <a target="_self" href="javascript:newComment(456)">نظرها (<script>setCommentCnt(456)</script>)</a>
+</h4>
+            </div>
+                        <div class="post">
+            
+            	<div class="tpost">
+              <h2>
+                    <a href="http://revaagh.mihanblog.com/post/455" title="مـــاه ِ دوازدهم...">مـــاه ِ دوازدهم...</a>
+              </h2>
+                </div>
+                    
+
+
+
+
+
+
+<p class="MsoNormal" dir="RTL" style="text-align:justify;direction:rtl;unicode-bidi:
+embed"><span dir="RTL"></span><span lang="FA" style="font-size:10.0pt;line-height:
+150%;font-family:&quot;Tahoma&quot;,&quot;sans-serif&quot;;mso-bidi-language:FA"><span dir="RTL"></span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<b> &nbsp; <font color="#339999">&nbsp;" بسم ِ الله ِ الرّحمن ِ الرّحیم&nbsp;"</font></b><o:p></o:p></span></p>
+
+<p class="MsoNormal" dir="RTL" style="text-align: justify; direction: rtl; unicode-bidi: embed;"><span lang="FA" style="font-size:9.0pt;
+font-family:&quot;Tahoma&quot;,&quot;sans-serif&quot;;mso-bidi-language:FA">تا بوده چنین بوده رسم
+روزگار<o:p></o:p></span></p>
+
+<p class="MsoNormal" dir="RTL" style="text-align: justify; direction: rtl; unicode-bidi: embed;"><span lang="FA" style="font-size:9.0pt;
+font-family:&quot;Tahoma&quot;,&quot;sans-serif&quot;;mso-bidi-language:FA">&nbsp; &nbsp;&nbsp;ماه ِ
+دوازدهم که رَوَد، می‌رسد بهار<o:p></o:p></span></p>
+
+<p class="MsoNormal" dir="RTL" style="text-align: justify; direction: rtl; unicode-bidi: embed;"><span lang="FA" style="font-size:9.0pt;
+font-family:&quot;Tahoma&quot;,&quot;sans-serif&quot;;mso-bidi-language:FA">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; اما رسوم منتظران فرق می‌کند<o:p></o:p></span></p>
+
+<p class="MsoNormal" dir="RTL" style="text-align: justify; direction: rtl; unicode-bidi: embed;"><span lang="FA" style="font-size:9.0pt;
+font-family:&quot;Tahoma&quot;,&quot;sans-serif&quot;;mso-bidi-language:FA">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <font color="#009900">مـــاه ِ دوازدهم</font> که رسد، می‌رسد
+<font color="#cc66cc">بهـــار</font></span></p><p class="MsoNormal" dir="RTL" style="text-align: justify; direction: rtl; unicode-bidi: embed;"><span lang="FA" style="font-size:9.0pt;
+font-family:&quot;Tahoma&quot;,&quot;sans-serif&quot;;mso-bidi-language:FA"><font color="#cc66cc"><br></font></span></p>
+
+<p class="MsoNormal" dir="RTL" style="text-align: justify; direction: rtl; unicode-bidi: embed;"><span lang="FA" style="font-size:9.0pt;
+font-family:&quot;Tahoma&quot;,&quot;sans-serif&quot;;mso-bidi-language:FA">تو یه وبلاگی* از قول آیت‌الله
+بهجت </span><span lang="FA" style="font-family: Tahoma, sans-serif;"><font size="1">رحمة‌ الله علیه</font></span><span lang="FA" style="font-size:9.0pt;
+font-family:&quot;Tahoma&quot;,&quot;sans-serif&quot;;mso-bidi-language:FA"> خوندم که فرمودند: </span><span lang="AR-SA" style="font-size: 8.5pt; font-family: Tahoma, sans-serif;"><o:p></o:p></span></p>
+
+<p class="MsoNormal" dir="RTL" style="text-align: justify; direction: rtl; unicode-bidi: embed;"><span lang="AR-SA" style="font-size: 8.5pt; font-family: Tahoma, sans-serif;"><b>"</b>با اینکه ارتباط و وصل با حضرت حجت سلامُ‌الله علیه، و فـرج ِ
+شخصی (برخلاف فرج عمومی)، امر اختیاری ِ ماست، با این حال، چرا به این اهمیت نمی‌دهیم
+که چگونه با آن حضرت ارتباط برقرار کنیم؟ و چرا از این مطلب غافل هستیم؟!<b>"</b><o:p></o:p></span></p>
+
+<p class="MsoNormal" dir="RTL" style="text-align: justify; direction: rtl; unicode-bidi: embed;"><span lang="AR-SA" style="font-size: 8.5pt; font-family: Tahoma, sans-serif;">اگه عمیق بشم به این چند تا جمله، به نتیجه‌ی خوبی میرسم؛ اگه به
+نتیجه‌ی خوبی برسم، تنم میلرزه از این همه غفلت و گناهم؛ اون وقت به فکر میفتم که
+اگه شده یه ذره، خودمو بکِشم بالا، از این همه هوای نفس، که هوای نفس کشیدنم رو
+سنگین کرده...؛<o:p></o:p></span></p>
+
+<p class="MsoNormal" dir="RTL" style="text-align: justify; direction: rtl; unicode-bidi: embed;"><span lang="AR-SA" style="font-size: 8.5pt; font-family: Tahoma, sans-serif;">این جمعه‌ی آخر ِسال یک‌هزار‌ و‌ سیصد‌ و‌ نود‌ و‌ چهار هم گذشت <font color="#009900">آقاجان</font>؛ و
+ما همچنان بر مدار همان عادات و احوال ِ خودمون می‌چرخیم، اون‌هایی که خودمون
+تعیین‌شون میکنیم، نـه شما! &nbsp;امسال هم بر
+همون دایره‌ی به قول زنده‌یاد قیصر امین پور: زمان هماره همان و زمین همیشه همین،
+گشتیم و بقیه رو نمیدونم، اما من به شخصه، به جایی نرسیدم؛ منظورم از جا، نزدیک ‌تر
+شدن به شماست...؛<o:p></o:p></span></p>
+
+<p class="MsoNormal" dir="RTL" style="text-align: justify; direction: rtl; unicode-bidi: embed;"><span lang="AR-SA" style="font-size: 8.5pt; font-family: Tahoma, sans-serif;">"ببخشید و شرمنده‌ام"، هم به غایت تکراریه و هم گفتنش دردی رو دوا
+نمیکنه؛ دوا باید توی وجودم باشه، توی اراده‌م، توی صبرم...<o:p></o:p></span></p>
+
+<p class="MsoNormal" dir="RTL" style="text-align: justify; direction: rtl; unicode-bidi: embed;"><span lang="AR-SA" style="font-size: 8.5pt; font-family: Tahoma, sans-serif;">علی‌ ایُّحال در یک قدمی بهار هستیم، و با وجود همه‌ی پژمردگی‌ها و
+زردی‌های روحم، دلم میخواد از شما طلب کنم لطافت ِ بهار رو، چرا که شما خودتون بهــار
+هستید،<font color="#009900"> یا ربیعَ الأنام</font>...؛ همین وجود ِ پُر محبتتون، همین حضور بی مثال‌تون، که
+اگه بخوایم، از هر حاضری حاضرتره، اون نگاه ِ مهربون و نافذتون که از هر چه دیدنی‌ست
+تماشایی‌تره، مایه‌ی خیر و برکت ِ زندگی ماست.<o:p></o:p></span></p>
+
+<p class="MsoNormal" dir="RTL" style="text-align: justify; direction: rtl; unicode-bidi: embed;"><span lang="AR-SA" style="font-size: 8.5pt; font-family: Tahoma, sans-serif;"><font color="#009900">مَـهــدی جانم</font>، لطفا ببخشید و ببخشایید <font color="#009900">آقاجان</font>...<o:p></o:p></span></p>
+
+<p class="MsoNormal" dir="RTL" style="text-align: justify; direction: rtl; unicode-bidi: embed;"><span lang="AR-SA" style="font-size: 8.5pt; font-family: Tahoma, sans-serif;">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;<b> &nbsp;" الّـلـهـمّ عجّـل لولیـک الفــــــــرج &nbsp;"<o:p></o:p></b></span></p>
+
+<p class="MsoNormal" dir="RTL" style="text-align: justify; direction: rtl; unicode-bidi: embed;"><span lang="AR-SA" style="font-size: 8.5pt; font-family: Tahoma, sans-serif;"><b>&nbsp;</b></span></p>
+
+<p class="MsoNormal" dir="RTL" style="text-align: justify; direction: rtl; unicode-bidi: embed;"><span lang="AR-SA" style="font-family: Tahoma, sans-serif;"><font size="1"><br></font></span></p><p class="MsoNormal" dir="RTL" style="text-align: justify; direction: rtl; unicode-bidi: embed;"><font size="1"><span lang="AR-SA" style="font-family: Tahoma, sans-serif;">*&nbsp;</span><a href="http://lucy-may.blog.ir/" target="_blank" title="">ماجراهای من و خودم</a></font></p><p class="MsoNormal" dir="RTL" style="text-align: justify; direction: rtl; unicode-bidi: embed;"><span lang="AR-SA" style="font-family: Tahoma, sans-serif;"><font size="1">** لطفا برای آدم شدنم دعا کنید.</font><span style="font-size: 8.5pt;"><o:p></o:p></span></span></p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                    <br>                    <script>mihanblogPostLike('455','like')</script>                    
+
+
+
+<h4 style="font-size:10px;"><a style="color:#333;">دسته بندی: </a>
+<a href="../post/category/2.html" title="حرف دل" target="_blank">حرف دل</a> ، 
+<a href="../post/category/4.html" title="تمنای وصال" target="_blank">تمنای وصال</a> ، 
+</h4>
+
+
+<h4>
+توسط مـینا خـ | جمعه 28 اسفند 1394 | ساعت 05:49 ب.ظ | <a target="_self" href="javascript:newComment(455)">نظرها (<script>setCommentCnt(455)</script>)</a>
+</h4>
+            </div>
+                        <div class="post">
+            
+            	<div class="tpost">
+              <h2>
+                    <a href="http://revaagh.mihanblog.com/post/454" title="در راستای خرید شب عید... ">در راستای خرید شب عید... </a>
+              </h2>
+                </div>
+                    &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <b><font color="#339999">&nbsp; &nbsp; "بسم الله الرحمن الرحیم"</font></b><div><br></div><div>36؟&nbsp;</div><div>سی و شش؟</div><div><span style="font-size: 11px;">سی و&nbsp;</span><span style="font-size: 11px;">شش چیست آیا؟ &nbsp;</span></div><div><span style="font-size: 11px;">سی و شش، شماره ای ایده آل برای کفشی ست که مناسب پای بنده باشد! و از آنجایی که اکثر کفش ها سایز 36 ندارند و از 37 آغاز میشوند، کفش های انتخابی اینجانب که از قضا، در این فقره سخت پسند نیز میباشم، مزین است به یکی دو کفی یاری دهنده، بلکه بالاخره یک جورهایی آن کفش های نام برده لق نزنند به پاهایم...&nbsp;</span></div><div><span style="font-size: 11px;">کفش خریدن های من هم جالبه؛ خیلی از کفش هام رو از تهران خریدم، چند بار از مشهد، و حتی شواهد حاکی از آن است که در یه نصف روز که چند سال پیش برای ثبت نام دانشگاه دختر خاله م باهاشون رفته بودم قوچان، از اونجا کفش خریدم!&nbsp;</span></div><div><span style="font-size: 11px;">برای عید قصد کفش خریدن نداشتم، اما راه رفتن با کفش هام راحت نبود، اینه که در یک حرکت انتحاری یه کفش رو دیدم و پسندیدم و خریدم، البته ناگفته نماند با همراهی یک عدد و نیم کفی..؛&nbsp;</span></div><div><br></div><div>و روسری، که همیشه یکی از دوست داشتنی ترین خریدهامه؛ به اکثر روسری فروشی ها سر زدم و در نهایت، پارچه کرپ مقنعه ای گرفتم واسه روسری! بهتر و حتی به صرفه تر.&nbsp;</div><div><br></div><div><br></div><div><font size="1">* و این پستی بود در جهت اطمینان سازی مخاطب، از توانایی نویسنده، مبنی بر نوشتن مطالبی خاله زنک گونه! احتمالا برای اولین بار... ؛&nbsp;</font></div><div><font size="1">&nbsp;</font></div>
+
+                    <br>                    <script>mihanblogPostLike('454','like')</script>                    
+
+
+
+<h4 style="font-size:10px;"><a style="color:#333;">دسته بندی: </a>
+<a href="../post/category/1.html" title="روز نگار" target="_blank">روز نگار</a> ، 
+</h4>
+
+
+<h4>
+توسط مـینا خـ | پنجشنبه 27 اسفند 1394 | ساعت 04:52 ب.ظ | <a target="_self" href="javascript:newComment(454)">نظرها (<script>setCommentCnt(454)</script>)</a>
+</h4>
+            </div>
+                        <div class="post">
+            
+            	<div class="tpost">
+              <h2>
+                    <a href="http://revaagh.mihanblog.com/post/453" title="  نرگس در آستانه ی بهار...">  نرگس در آستانه ی بهار...</a>
+              </h2>
+                </div>
+                    
+
+
+
+
+<p class="MsoNormal" dir="RTL" style="text-align:justify;direction:rtl;unicode-bidi:
+embed"><span dir="RTL"></span><span lang="FA" style="font-size:10.0pt;line-height:
+150%;font-family:&quot;Tahoma&quot;,&quot;sans-serif&quot;;mso-bidi-language:FA"><span dir="RTL"></span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<b><font color="#339999"> &nbsp; "
+بسم ِ الله ِ الرّحمن ِ الرّحیم "</font></b><o:p></o:p></span></p><p class="MsoNormal" dir="RTL" style="text-align:justify;direction:rtl;unicode-bidi:
+embed"><span lang="FA" style="font-size:10.0pt;line-height:
+150%;font-family:&quot;Tahoma&quot;,&quot;sans-serif&quot;;mso-bidi-language:FA"><b><font color="#339999"><br></font></b></span></p>
+
+<p class="MsoNormal" dir="RTL" style="text-align: justify; direction: rtl; unicode-bidi: embed;"><span lang="FA" style="font-size:9.0pt;
+font-family:&quot;Tahoma&quot;,&quot;sans-serif&quot;;mso-bidi-language:FA">پریشب</span><span style="font-family: Tahoma, sans-serif; font-size: 12px;">&nbsp;</span><span style="font-family: Tahoma, sans-serif; font-size: 12px;">به قصد ِ خرید ِ بنفشه،&nbsp;</span><span style="font-family: Tahoma, sans-serif; font-size: 9pt;">رفتیم نمایشگاه گل
+و گیاه؛ &nbsp;اما با این سه تا گـُل برگشتیم:</span></p><p class="MsoNormal" dir="RTL" style="text-align: justify; direction: rtl; unicode-bidi: embed;"><span style="font-family: Tahoma, sans-serif; font-size: 9pt;"><br></span></p><p class="MsoNormal" dir="RTL" style="text-align: justify; direction: rtl; unicode-bidi: embed;"><span lang="FA" style="font-size:9.0pt;
+font-family:&quot;Tahoma&quot;,&quot;sans-serif&quot;;mso-bidi-language:FA">&nbsp; &nbsp; &nbsp; &nbsp;&nbsp;</span><img hspace="0" border="0" align="baseline" vspace="0" src="http://s6.picofile.com/file/8243676100/Jpg99993.jpg" alt=""></p>
+
+<p class="MsoNormal" dir="RTL" style="text-align: justify; direction: rtl; unicode-bidi: embed;"><span lang="FA" style="font-size:9.0pt;
+font-family:&quot;Tahoma&quot;,&quot;sans-serif&quot;;mso-bidi-language:FA">&nbsp;مامان میخواست سنبل ِ
+سفید بخره، اما به خاطر من نـرگس خرید، دستش درد نکنه؛ و بالاخره نـرگس‌دار شدم؛
+البته غیر از اون باغ ِ نـرگس ِ مجازی...؛<o:p></o:p></span></p>
+
+<p class="MsoNormal" dir="RTL" style="text-align: justify; direction: rtl; unicode-bidi: embed;"><span lang="FA" style="font-size:9.0pt;
+font-family:&quot;Tahoma&quot;,&quot;sans-serif&quot;;mso-bidi-language:FA">کاش میشد عطرش رو هم
+اینجا ثبت کرد.<o:p></o:p></span></p>
+
+<p class="MsoNormal" dir="RTL" style="text-align: justify; direction: rtl; unicode-bidi: embed;"><span lang="FA" style="font-size:9.0pt;
+font-family:&quot;Tahoma&quot;,&quot;sans-serif&quot;;mso-bidi-language:FA">.....<o:p></o:p></span></p>
+
+<p class="MsoNormal" dir="RTL" style="text-align: justify; direction: rtl; unicode-bidi: embed;"><span lang="FA" style="font-size:9.0pt;
+font-family:&quot;Tahoma&quot;,&quot;sans-serif&quot;;mso-bidi-language:FA">&nbsp;چند تا پست تو ذهنم هست
+که تصمیم دارم تو همین چند روز باقی‌مونده از سال بنویسم، ان شاءالله که بشه.<o:p></o:p></span></p><p class="MsoNormal" dir="RTL" style="text-align: justify; direction: rtl; unicode-bidi: embed;"><span lang="FA" style="font-size:9.0pt;
+font-family:&quot;Tahoma&quot;,&quot;sans-serif&quot;;mso-bidi-language:FA">.....</span></p>
+
+<span lang="FA" dir="RTL" style="font-size:9.0pt;line-height:150%;font-family:&quot;Tahoma&quot;,&quot;sans-serif&quot;;
+mso-fareast-font-family:Calibri;mso-fareast-theme-font:minor-latin;mso-ansi-language:
+EN-US;mso-fareast-language:EN-US;mso-bidi-language:FA">سال 92&nbsp;<a href="http://revaagh.mihanblog.com/post/261" target="_blank" title="">این پست</a>&nbsp;رو نوشتم،
+شاید بعضی از دوستان یادشون باشه...؛ خواستم بگم جمعه شب، 28 اسفند، ساعت 10 شب،
+شبکه مستند یه مستند درمورد همین مسجد نشون میده، باید برنامه‌ی جالبی باشه؛ گفتم
+که اگه دوست داشتین، نگاه کنید.</span><div><span lang="FA" dir="RTL" style="font-size:9.0pt;line-height:150%;font-family:&quot;Tahoma&quot;,&quot;sans-serif&quot;;
+mso-fareast-font-family:Calibri;mso-fareast-theme-font:minor-latin;mso-ansi-language:
+EN-US;mso-fareast-language:EN-US;mso-bidi-language:FA"><br></span></div><div><span lang="FA" dir="RTL" style="font-size:9.0pt;line-height:150%;font-family:&quot;Tahoma&quot;,&quot;sans-serif&quot;;
+mso-fareast-font-family:Calibri;mso-fareast-theme-font:minor-latin;mso-ansi-language:
+EN-US;mso-fareast-language:EN-US;mso-bidi-language:FA"><br></span></div><div><span lang="FA" dir="RTL" style="font-size:9.0pt;line-height:150%;font-family:&quot;Tahoma&quot;,&quot;sans-serif&quot;;
+mso-fareast-font-family:Calibri;mso-fareast-theme-font:minor-latin;mso-ansi-language:
+EN-US;mso-fareast-language:EN-US;mso-bidi-language:FA">* </span><span lang="FA" dir="RTL" style="line-height: 150%; font-family: Tahoma, sans-serif;"><font size="1">و نوای وبلاگ، بهار بهار ِ زنده یاد ناصر عبداللهی، خدایش بیامرزد...؛</font></span></div>
+
+
+
+
+
+
+
+                    <br>                    <script>mihanblogPostLike('453','like')</script>                    
+
+
+
+<h4 style="font-size:10px;"><a style="color:#333;">دسته بندی: </a>
+<a href="../post/category/1.html" title="روز نگار" target="_blank">روز نگار</a> ، 
+</h4>
+
+
+<h4>
+توسط مـینا خـ | چهارشنبه 26 اسفند 1394 | ساعت 07:18 ب.ظ | <a target="_self" href="javascript:newComment(453)">نظرها (<script>setCommentCnt(453)</script>)</a>
+</h4>
+            </div>
+                        <div class="post">
+            
+            	<div class="tpost">
+              <h2>
+                    <a href="http://revaagh.mihanblog.com/post/452" title="بوی بهار...">بوی بهار...</a>
+              </h2>
+                </div>
+                    
+
+
+<p class="MsoNormal" dir="RTL" style="text-align:justify;direction:rtl;unicode-bidi:
+embed"><font face="Tahoma, sans-serif"><span style="font-size: 12px; line-height: 18px;">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;</span></font><span style="font-family: Tahoma, sans-serif; font-size: 10pt; line-height: 150%;"> &nbsp; &nbsp; <b><font color="#339999">&nbsp; &nbsp;</font></b></span><span style="font-family: Tahoma, sans-serif; font-size: 10pt; line-height: 150%;"><b><font color="#339999">" بسم ِ الله ِ الرّحمن ِ الرّحیم "</font></b></span></p>
+
+<p class="MsoNormal" dir="RTL" style="text-align: justify; direction: rtl; unicode-bidi: embed;"><span lang="FA" style="font-size:9.0pt;
+font-family:&quot;Tahoma&quot;,&quot;sans-serif&quot;;mso-bidi-language:FA">چقدر بوی<font color="#cc66cc"> بهـار </font>میاد این
+روزها...؛ <o:p></o:p></span></p>
+
+<p class="MsoNormal" dir="RTL" style="text-align: justify; direction: rtl; unicode-bidi: embed;"><span lang="FA" style="font-size:9.0pt;
+font-family:&quot;Tahoma&quot;,&quot;sans-serif&quot;;mso-bidi-language:FA">گرم‌تر شدن ِ هوا، خونه
+تکونی‌ها، شلوغی خیابون‌ها و رونق گرفتن ِ کار و کاسبی ِ مغازه‌ها، بساط ِ خرید و
+فروش ِ "کُمای" توی خیابون و بوی منحصر به فرد ِ این آش، که احتمالا از
+هر کوی و برزن ِ اینجا به مشام میرسه، سبزه کاشتن و سمنو خریدن و به فکر&nbsp; سفره‌ی هفت سین بودن... &nbsp;<o:p></o:p></span></p>
+
+<p class="MsoNormal" dir="RTL" style="text-align: justify; direction: rtl; unicode-bidi: embed;"><span lang="FA" style="font-size:9.0pt;
+font-family:&quot;Tahoma&quot;,&quot;sans-serif&quot;;mso-bidi-language:FA">همین جُنب‌و‌جوش‌ها، همین
+شلوغی‌ها، همین بُدو بُدو‌ ها، به یه تعبیری یعنی <b>زندگی</b> به نظر من...؛ چند روز یا
+چند هفته&nbsp;</span><span style="font-family: Tahoma, sans-serif; font-size: 9pt; line-height: 150%;">می‌دویم</span><span style="font-family: Tahoma, sans-serif; font-size: 9pt;">، تمیز می‌کنیم، نو می‌کنیم، چون پُشت ِ مون گرمه، چون مطمئنیم و
+ایمان داریم که یه تحول ِ خیلی بزرگتر در راهه، نه برای ما فقط، که برای دنیا،
+برای هرچه آفریده ست، به دست ِ توانای<b> اوی</b> آفریننده، <b>اوی</b> نقاش ِ طبیعت، که هر سال
+همین وقت‌ها، با قلم ِ صُنع ِش رنگ‌های بی بدیل ِش رو سخاوتمندانه به سر و روی
+طبیعت می‌کِشه و می‌پاشه، رنگ‌هایی که جان می‌بخشند و زنده می‌کنند...؛</span></p>
+
+<p class="MsoNormal" dir="RTL" style="text-align: justify; direction: rtl; unicode-bidi: embed;"><span lang="FA" style="font-size:9.0pt;
+font-family:&quot;Tahoma&quot;,&quot;sans-serif&quot;;mso-bidi-language:FA">اون وقت مایی که جزئی از
+این اجزاء هستیم و پُشت‌مون گرمه، انقدر می‌دویم تا لحظه‌ی تحویل ِ سال برسه، تا
+بشینیم کنار ِ سفره‌ی هفت سین، و در پناه ِ قرآن و در سایه ی آینه و تیک تاک ِ
+ساعت، دل بسپاریم به تحولی که قراره، که التماس می‌کنیم از آسمان‌ها حال و احوال ِمون
+رو متحول بکنه و قلوب ِ مون رو منقلب، به سمت ِ <b>نور و روشنایی</b>...؛ اینجاست که آروم
+می‌گیریم بعد از اون‌همه دویدن، انگار که همه‌ی سکون و سکوت ِ دنیا توی همین یکی
+دو دقیقه جمع شده، ما صامتیم و تنها مصوّت، صدای "<b>یا مقلّبَ القلوب</b>" ِ و
+تیک تاک، تیک تاک، تیک تاک ِ ساعت...؛&nbsp;</span></p><p class="MsoNormal" dir="RTL" style="text-align: justify; direction: rtl; unicode-bidi: embed;"><span lang="FA" style="font-size:9.0pt;
+font-family:&quot;Tahoma&quot;,&quot;sans-serif&quot;;mso-bidi-language:FA">&nbsp;و من
+با اینا زمستون و سَر می‌کنم.<o:p></o:p></span></p>
+
+<p class="MsoNormal" dir="RTL" style="text-align: justify; direction: rtl; unicode-bidi: embed;"><span lang="FA" style="font-size:9.0pt;
+font-family:&quot;Tahoma&quot;,&quot;sans-serif&quot;;mso-bidi-language:FA">&nbsp;</span></p>
+
+<p class="MsoNormal" dir="RTL" style="text-align: justify; direction: rtl; unicode-bidi: embed;"><span lang="FA" style="font-family: Tahoma, sans-serif;"><font size="1">* درسته که
+"رواق" مأمنی ست برای خودم و دلــَ م، اما...</font></span></p>
+
+
+
+
+
+
+
+
+                    <br>                    <script>mihanblogPostLike('452','like')</script>                    
+
+
+
+<h4 style="font-size:10px;"><a style="color:#333;">دسته بندی: </a>
+<a href="../post/category/1.html" title="روز نگار" target="_blank">روز نگار</a> ، 
+</h4>
+
+
+<h4>
+توسط مـینا خـ | یکشنبه 16 اسفند 1394 | ساعت 02:00 ق.ظ | <a target="_self" href="javascript:newComment(452)">نظرها (<script>setCommentCnt(452)</script>)</a>
+</h4>
+            </div>
+                        
+                        <div class="cpagenum">
+                                <a href="2.html"><div class="pagenum"><i>...</i></div></a>
+                                <a href="3.html"><div class="pagenum"><span>3</span></div></a>
+                                <a href="4.html"><div class="pagenum"><span>4</span></div></a>
+                                <a href="5.html"><div class="pagenum"><span>5</span></div></a>
+                                <a href="6.html"><div class="pagenum"><b>6</b></div></a>
+                                <a href="7.html"><div class="pagenum"><span>7</span></div></a>
+                                <a href="8.html"><div class="pagenum"><span>8</span></div></a>
+                                <a href="http://revaagh.mihanblog.com/page/9"><div class="pagenum"><span>9</span></div></a>
+                                <a href="http://revaagh.mihanblog.com/page/10"><div class="pagenum"><i>...</i></div></a>
+                            </div>
+                        
+        </div>
+        
+        <div class="cside">
+            <div class="side">
+
+
+                <center><img src="../../static.mihanblog.com/public/user_data/web_photo/237/710970.jpg@2447"  /></center>
+                <div style="text-align:justify;width:170px;margin:2px auto;line-height:25px;color:#333;font-size:11px;">پیامبر ِ رحمت صلّی الله، می فرمایند:<br />
+&quot; هر کس در کتابی یا نوشته ای، بر من صلوات بفرستد(یعنی صلوات را بنویسد)، تا نامِ من در آن کتاب هست، ملائکه برای او از درگاهِ حق، طلبِ آمرزش می کنند.&quot;<br />
+.<br />
+&quot; الّلهمّ صَلِّ علی محمّد وَ آلِ محمّد<br />
+  وَ عَجّل فَرَجَهُم &quot;</div>
+
+                                <h4>دسته بندی ها</h4>
+                                	<a href="../post/category/1.html" target="_blank">روز نگار</a><br>
+                                	<a href="../post/category/2.html" target="_blank">حرف دل</a><br>
+                                	<a href="../post/category/3.html" target="_blank">رد پای خاطره</a><br>
+                                	<a href="../post/category/4.html" target="_blank">تمنای وصال</a><br>
+                                	<a href="../post/category/5.html" target="_blank">حق و حقوق</a><br>
+                                	<a href="../post/category/6.html" target="_blank">از زبان حافظ</a><br>
+                                	<a href="../post/category/7.html" target="_blank">مُحرّم گونه</a><br>
+                                	<a href="../post/category/8.html" target="_blank">از بهترین ها</a><br>
+                                	<a href="../post/category/9.html" target="_blank">یه دور ِ همی ِ مَجازی</a><br>
+                                
+                                <h4>آرشیو مطالب</h4>
+                                	<a href="../post/archive/1399/1.html" target="_blank"> فروردین 1399</a><br>
+                                	<a href="../post/archive/1398/8.html" target="_blank"> آبان 1398</a><br>
+                                	<a href="../post/archive/1398/7.html" target="_blank"> مهر 1398</a><br>
+                                	<a href="../post/archive/1398/6.html" target="_blank"> شهریور 1398</a><br>
+                                	<a href="../post/archive/1398/5.html" target="_blank"> مرداد 1398</a><br>
+                                	<a href="../post/archive/1398/4.html" target="_blank"> تیر 1398</a><br>
+                                	<a href="../post/archive/1398/2.html" target="_blank"> اردیبهشت 1398</a><br>
+                                	<a href="../post/archive/1397/12.html" target="_blank"> اسفند 1397</a><br>
+                                	<a href="../post/archive/1397/11.html" target="_blank"> بهمن 1397</a><br>
+                                	<a href="../post/archive/1397/10.html" target="_blank"> دی 1397</a><br>
+                                	<a href="../post/archive/1397/8.html" target="_blank"> آبان 1397</a><br>
+                                	<a href="../post/archive/1396/6.html" target="_blank"> شهریور 1396</a><br>
+                                	<a href="../post/archive/1396/5.html" target="_blank"> مرداد 1396</a><br>
+                                	<a href="../post/archive/1396/4.html" target="_blank"> تیر 1396</a><br>
+                                	<a href="../post/archive/1396/3.html" target="_blank"> خرداد 1396</a><br>
+                                	<a href="../post/archive/1396/2.html" target="_blank"> اردیبهشت 1396</a><br>
+                                	<a href="../post/archive/1396/1.html" target="_blank"> فروردین 1396</a><br>
+                                	<a href="../post/archive/1395/12.html" target="_blank"> اسفند 1395</a><br>
+                                	<a href="../post/archive/1395/11.html" target="_blank"> بهمن 1395</a><br>
+                                	<a href="../post/archive/1395/10.html" target="_blank"> دی 1395</a><br>
+                                	<a href="../post/archive/1395/9.html" target="_blank"> آذر 1395</a><br>
+                                	<a href="../post/archive/1395/8.html" target="_blank"> آبان 1395</a><br>
+                                	<a href="../post/archive/1395/7.html" target="_blank"> مهر 1395</a><br>
+                                	<a href="../post/archive/1395/6.html" target="_blank"> شهریور 1395</a><br>
+                                	<a href="../post/archive/1395/5.html" target="_blank"> مرداد 1395</a><br>
+                                	<a href="../post/archive/1395/4.html" target="_blank"> تیر 1395</a><br>
+                                	<a href="../post/archive/1395/3.html" target="_blank"> خرداد 1395</a><br>
+                                	<a href="../post/archive/1395/2.html" target="_blank"> اردیبهشت 1395</a><br>
+                                	<a href="../post/archive/1395/1.html" target="_blank"> فروردین 1395</a><br>
+                                	<a href="../post/archive/1394/12.html" target="_blank"> اسفند 1394</a><br>
+                                	<a href="../post/archive/1394/11.html" target="_blank"> بهمن 1394</a><br>
+                                	<a href="../post/archive/1394/10.html" target="_blank"> دی 1394</a><br>
+                                	<a href="../post/archive/1394/9.html" target="_blank"> آذر 1394</a><br>
+                                	<a href="../post/archive/1394/8.html" target="_blank"> آبان 1394</a><br>
+                                	<a href="../post/archive/1394/7.html" target="_blank"> مهر 1394</a><br>
+                                	<a href="../post/archive/1394/6.html" target="_blank"> شهریور 1394</a><br>
+                                	<a href="../post/archive/1394/5.html" target="_blank"> مرداد 1394</a><br>
+                                	<a href="../post/archive/1394/4.html" target="_blank"> تیر 1394</a><br>
+                                	<a href="../post/archive/1394/3.html" target="_blank"> خرداد 1394</a><br>
+                                	<a href="../post/archive/1394/2.html" target="_blank"> اردیبهشت 1394</a><br>
+                                	<a href="../post/archive/1394/1.html" target="_blank"> فروردین 1394</a><br>
+                                	<a href="../post/archive/1393/12.html" target="_blank"> اسفند 1393</a><br>
+                                	<a href="../post/archive/1393/11.html" target="_blank"> بهمن 1393</a><br>
+                                	<a href="../post/archive/1393/10.html" target="_blank"> دی 1393</a><br>
+                                	<a href="../post/archive/1393/9.html" target="_blank"> آذر 1393</a><br>
+                                	<a href="../post/archive/1393/8.html" target="_blank"> آبان 1393</a><br>
+                                	<a href="../post/archive/1393/7.html" target="_blank"> مهر 1393</a><br>
+                                	<a href="../post/archive/1393/6.html" target="_blank"> شهریور 1393</a><br>
+                                	<a href="../post/archive/1393/5.html" target="_blank"> مرداد 1393</a><br>
+                                	<a href="../post/archive/1393/4.html" target="_blank"> تیر 1393</a><br>
+                                	<a href="../post/archive/1393/3.html" target="_blank"> خرداد 1393</a><br>
+                                	<a href="../post/archive/1393/2.html" target="_blank"> اردیبهشت 1393</a><br>
+                                	<a href="../post/archive/1393/1.html" target="_blank"> فروردین 1393</a><br>
+                                	<a href="../post/archive/1392/12.html" target="_blank"> اسفند 1392</a><br>
+                                	<a href="../post/archive/1392/11.html" target="_blank"> بهمن 1392</a><br>
+                                	<a href="../post/archive/1392/10.html" target="_blank"> دی 1392</a><br>
+                                	<a href="../post/archive/1392/9.html" target="_blank"> آذر 1392</a><br>
+                                	<a href="../post/archive/1392/8.html" target="_blank"> آبان 1392</a><br>
+                                	<a href="../post/archive/1392/7.html" target="_blank"> مهر 1392</a><br>
+                                	<a href="../post/archive/1392/6.html" target="_blank"> شهریور 1392</a><br>
+                                
+                                <h4>پیوندهای وب</h4>
+                                	<a href="../../gusheneshin.mihanblog.com/index.html" title="" target="_blank">گوشه نشین*</a><br>
+                                	<a href="../../neshanee.mihanblog.com/index.html" title="" target="_blank">نشانی</a><br>
+                                	<a href="http://barayeayeha.persianblog.ir" title="" target="_blank">برای خاطر آیه ها</a><br>
+                                	<a href="http://baharnarenj89.persianblog.ir" title="" target="_blank">بهار نارنج</a><br>
+                                	<a href="http://ayegraphy.blog.ir" title="" target="_blank">آیه گرافی</a><br>
+                                	<a href="http://saghakhaneyeto.blogfa.com" title="" target="_blank">سقاخانه</a><br>
+                                	<a href="http://lassarat.blogfa.com" title="" target="_blank">و ما ادراك...؟</a><br>
+                                	<a href="http://womanart.blogfa.com/" title="" target="_blank">تو فقط لیلی باش</a><br>
+                                	<a href="http://legaltheory.blogfa.com" title="" target="_blank">فلسفه، حقوق و سه نقطه</a><br>
+                                	<a href="http://khaterechador.blogfa.com" title="" target="_blank">من و چادرم، خاطره ها</a><br>
+                                	<a href="http://a-karkhi.blogfa.com" title="" target="_blank">پرنده ترین ماهی</a><br>
+                                	<a href="http://big-fish.blogfa.com" title="" target="_blank">قلم</a><br>
+                                	<a href="http://www.ngc1980.blogfa.com" title="" target="_blank">شهر  بی نامی</a><br>
+                                	<a href="http://pak-nevis.ir" title="" target="_blank">پاک نویس های یک مداد رنگی</a><br>
+                                	<a href="http://roozegarevasl.blogfa.com" title="" target="_blank">روزگار وصل</a><br>
+                                	<a href="http://aftab.blog.ir" title="" target="_blank">هم از آفتاب</a><br>
+                                	<a href="http://www.danesib.parsiblog.com" title="" target="_blank">دانه سیب</a><br>
+                                	<a href="http://www.masafport.blogfa.com" title="" target="_blank">پایگاه فرهنگی اجتماعی مصاف</a><br>
+                                	<a href="../../rasann.mihanblog.com/index.html" title="" target="_blank">رسن</a><br>
+                                	<a href="http://darheirat.blogfa.com" title="" target="_blank">در حیرت</a><br>
+                                	<a href="http://www.smm625.blogfa.com" title="" target="_blank">اندر زِنامه</a><br>
+                                	<a href="http://bonaresh.blogfa.com" title="" target="_blank">گلدان شمعدانی</a><br>
+                                	<a href="http://ordibeheshtema.blogfa.com" title="" target="_blank">اردیبهشت</a><br>
+                                	<a href="http://taasnim.blog.ir" title="" target="_blank">تسنیم</a><br>
+                                	<a href="http://20mashhad.blogfa.com/" title="" target="_blank">یاران خراسانی</a><br>
+                                	<a href="http://yazahra9191.blogfa.com" title="" target="_blank">احسن الحال</a><br>
+                                	<a href="http://va-fa-86.blogfa.com" title="" target="_blank">و.. زندگی مشترک</a><br>
+                                	<a href="http://tmashayekh.blogfa.com" title="" target="_blank">گزارش یک زبان شناس</a><br>
+                                	<a href="http://niliofareabi.blogfa.com" title="" target="_blank">تسبیح</a><br>
+                                	<a href="http://hozkhoone.blogfa.com" title="" target="_blank">حوض خونه</a><br>
+                                	<a href="http://www.anarm.blogfa.com" title="" target="_blank">این روزها...</a><br>
+                                	<a href="http://dolatemahdi.blog.ir" title="" target="_blank">دولتِ مَهدی عجّل الله تعالی فرجهُ الشریف</a><br>
+                                	<a href="http://hamnafasetalabe.blogfa.com" title="" target="_blank">همنفس طلبه</a><br>
+                                	<a href="http://yazahraaa110.blogfa.com" title="" target="_blank">ساعت به وقت دلتنگی</a><br>
+                                	<a href="http://delyarsadat.blogfa.com" title="" target="_blank">ترنم خیال</a><br>
+                                	<a href="http://abroaftabeman.persianblog.ir/" title="" target="_blank">ابر و آفتاب</a><br>
+                                	<a href="http://rayeheasemany.blogfa.com" title="" target="_blank">اَینَ بقیّة الله؟!؟!؟</a><br>
+                                	<a href="http://nahalak.persianblog.ir" title="" target="_blank">سیده ...</a><br>
+                                	<a href="http://taraneh70.blogfa.com" title="" target="_blank">سنجاقک</a><br>
+                                	<a href="../../masoomane.mihanblog.com/index.html" title="" target="_blank">معصومانه</a><br>
+                                	<a href="../../footbalist2014.mihanblog.com/index.html" title="" target="_blank">فوتبالیست کوچک</a><br>
+                                	<a href="http://khabariazkhorshid.blogfa.com" title="" target="_blank">صندوق صبر(یادی از خورشید پشت ابر)</a><br>
+                                	<a href="http://roosha.niniweblog.com" title="" target="_blank">روشا نوری از بهشت</a><br>
+                                	<a href="../../rismanibeaseman.mihanblog.com/index.html" title="" target="_blank">تو را نفس می کشم</a><br>
+                                	<a href="../../ahmad-miri.mihanblog.com/index.html" title="" target="_blank">وبلاگ شخصی احمد میری</a><br>
+                                	<a href="http://www.nashrekhobiha.com" title="" target="_blank">نشر خوبی ها</a><br>
+                                
+                
+                                <h4>آمار وب</h4>
+تعداد کل مطالب: <script>getStatVar('total_post');</script><br><br>
+بازدید امروز: <script>getStatVar('today_view');</script><br><br>
+بازدید دیروز: <script>getStatVar('yesterday_view');</script><br><br>
+بازدید این ماه: <script>getStatVar('this_month_view');</script><br><br>
+بازدید ماه قبل: <script>getStatVar('last_month_view');</script><br><br>
+بازدید کلی وبلاگ: <script>getStatVar('total_view');</script><br><br>
+بروز شده در <script>getStatVar('modify_date');</script>                
+                <br><br><br><center>
+
+</center>
+
+            </div>
+        </div>
+        <div style="clear:both;"></div>
+    </div>
+</body>
+</html>
+<script>
+//    setTimeout(function () {
+//        GetMihanBlogShowAds();
+//    }, 1000);
+</script>
+<!--NEW SERVER--><!--;)-->
+
+<!--SabaVision Ads Handler--><!--<script type="text/javascript">(function (d) {var url =   location.protocol+'//api.sabavision.com/pox/poxjs.js';d.write('<script type="text/javascript" src="' + url + '" async></scri' + 'pt>');})(document);</script>-->
+
+
+<script type="text/javascript">
+
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-153829-9']);
+    _gaq.push(['_setDomainName', 'revaagh.mihanblog.com']);
+    _gaq.push(['_trackPageview']);
+
+    (function() {
+        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+
+</script>
+
+
+<div id='mediaad-Kvcm'></div>
+<meta name="sabavision_zone" content="2500-Z499" />
+<center>
+    <div style="background-color:white;width:90%;padding:20px;margin-top:50px;margin-bottom:50px;">
+        <a href="https://www.cloob.com">شبکه اجتماعی فارسی کلوب</a> | <a href="https://www.seo25.com/product/buy-mobile-traffic-and-get-cheap-targeted-mobile-traffic/" target="_blank">Buy Mobile Traffic</a> | <a href="https://www.soalaat.com">سایت سوالات</a>
+    </div>
+</center>

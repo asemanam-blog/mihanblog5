@@ -1,0 +1,909 @@
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" /><link rel="EditURI" type="application/rsd+xml" title="RSD" href="../../../../xmlrpc%3Frsd" />
+<script type="text/javascript" src="http://static.mihanblog.com//public/scripts/run/g.other.v3.js"></script>
+<script>
+
+	function c_$(id){
+        return document.getElementById(id);
+    }
+    
+			//if (parent.frames.length) top.location.href= document.location;
+		
+	setTodayDate = function(){
+		document.write('پنجشنبه 27 آذر 1399');
+		/*995652*/	}
+
+</script>
+
+
+
+        <script type="text/javascript">
+            (function(){
+            var now = new Date();
+            var head = document.getElementsByTagName('head')[0];
+            var script = document.createElement('script');
+            script.async = true;
+            var script_address = 'https://cdn.yektanet.com/js/mihanblog.com/native-mihanblog.com-6531.js';
+            script.src = script_address + '?v=' + now.getFullYear().toString() + '0' + now.getMonth() + '0' + now.getDate() + '0' + now.getHours();
+            head.appendChild(script);
+            })();
+        </script>
+
+        <!--<script type="text/javascript">
+            var head = document.getElementsByTagName("head")[0];
+            var script = document.createElement("script");
+            script.type = "text/javascript";
+            script.async=1;
+            script.src = "https://s1.mediaad.org/serve/mihanblog.com/loader.js" ;
+            head.appendChild(script);
+        </script>-->
+        
+        <script>
+            var sabaVisionWebsiteID = "9bab9dac-041d-4bdb-b39a-1ed789f65eed"; var sabaVisionWebsitePage = "ALL"
+        </script>
+        <link rel="stylesheet" href="https://plus.sabavision.com/dox/dox.min.css">
+        <script src="https://plus.sabavision.com/dox/dox.min.js"></script>
+        
+        <script>
+	linkdailyForm = function(){
+		try{
+			window.open('/linkdaily/new','linkdaily','status=yes,scrollbars=yes,toolbar=no,menubar=no,location=no ,width=500px,height=460px');
+		} catch(e){}
+	}
+</script><script>
+
+	statInfo = new Array();
+	setStatVar = function(index,value){
+		statInfo[index] = value;
+	}
+	getStatVar = function(index){
+		if(statInfo[index]) document.write(statInfo[index]);
+	}
+	
+	setStatVar('total_post','30');
+	setStatVar('total_author','1');
+	setStatVar('modify_date','جمعه 8 اردیبهشت 1396');
+	
+	setStatVar('today_view','20');
+	setStatVar('yesterday_view','143');
+	
+	setStatVar('this_month_view','3182');
+	setStatVar('last_month_view','3415');
+
+	setStatVar('total_view','687245');
+	setStatVar('last_view_date','پنجشنبه 27 آذر 1399 (07:02)');
+
+
+
+    
+    function setStatFromClient()
+    {
+        var url = 'http://kabotarsara.mihanblog.com/statupdate/?data[refereruri]=http://kabotarsara.mihanblog.com/post/author/846257&data[postid]=&data[requesturi]=/post/author/846257/page/7&data[sdate]=1608176565&data[hash]=5ac25be805c2096fcbc79e2fa2489898&data[resolution]='+screen.width+' X '+screen.height;
+
+//        alert(url);
+//        var newjs = document.createElement("SCRIPT");
+//        newjs.type = 'text/javascript';
+//        newjs.src = url;
+//
+//        var newdiv = document.createElement("DIV");
+//        newdiv.setAttribute("style","display:none");
+
+        document.write(unescape('%3Cscript src="'+url+'" type="text/javascript"%3E%3C/script%3E'));
+//        newdiv.appendChild (newjs);
+//        document.write(newjs);
+//        document.write(appendChild (newdiv);
+
+    };
+    setStatFromClient();
+        
+</script><script>
+	messageForm = function(post_id){
+		try{
+			window.open('/message','message','status=yes,scrollbars=yes,toolbar=no,menubar=no,location=no ,width=480px,height=550px');
+		} catch(e){}
+	}
+</script><script>
+	try{
+		var commentCnt = new Array();
+		commentCnt[45]='36';	} catch(e){}
+	
+	newComment = function(post_id){
+		try{
+			window.open('/post/comment/'+post_id,'comment','status=yes,scrollbars=yes,toolbar=no,menubar=no,location=no ,width=480px,height=540px');
+		} catch(e){}
+	}
+	setCommentCnt = function(post_id){
+		try{
+			if(commentCnt[post_id]){
+				document.write(commentCnt[post_id]);
+			} else {
+				document.write(0);
+			}
+		} catch(e){}
+	}
+</script><script>
+
+
+	mihanblogUpdateLike = function(postid,type){
+		var url = '/post/like/'+postid+'/'+type;
+		mihanblogGetAjax(url,function(){});
+	};
+	try{
+        mihanblogGetAjax = function (url,callback) {
+    		var req;
+			if (window.XMLHttpRequest)
+            {
+                // code for IE7+, Firefox, Chrome, Opera, Safari
+			  	req = new XMLHttpRequest();
+			}else{	// code for IE6, IE5
+			  	req = new ActiveXObject("Microsoft.XMLHTTP");
+		  	}
+		    req.open("GET", url, 1);
+		    req.onreadystatechange = function () {
+		        if (req.readyState == 4) {
+		            if (req.status == 200) {
+		            	var response = eval(req.responseText);
+		            	callback();
+		            }else{
+	            		return ;
+		            }
+		        }else{
+					return ;
+		        }
+		    }
+		    req.send(null);
+		}
+	}catch(e){}
+
+	try{
+		var mihanblogLikeArrCnt = new Array();
+		var mihanblogDisLikeArrCnt = new Array();
+
+		mihanblogLikeArrCnt[45]='0';
+mihanblogDisLikeArrCnt[45]='0';
+	} catch(e){}
+
+
+
+    mihanblogPostLike = function(post_id){
+
+        mihanblogLikeCnt = (mihanblogLikeArrCnt[post_id]? mihanblogLikeArrCnt[post_id] : 0);
+        mihanblogDisLikeCnt = (mihanblogDisLikeArrCnt[post_id]? mihanblogDisLikeArrCnt[post_id] : 0);
+        mihanblogLikeCnt = parseInt(mihanblogLikeCnt);
+        mihanblogDisLikeCnt = parseInt(mihanblogDisLikeCnt);
+
+        document.write(
+                '<div class="mihanblog_like_wrapper ">'+
+                       '<div id="dislikeBar_'+post_id+'" onclick="mihanblogUpdateLike('+post_id+',\'dislike\')"   class="mihanblog_like_bar mihanblog_like_dislikeBar mihanblog_like_show_help ">-<div class="mihanblog_like_Cnt" id="disLikeCnt_'+post_id+'">'+mihanblogDisLikeCnt+'</div>'+
+                            '<span  class="mihanblog_like_v2_help mihanblog_like_v2_help_dislike clearfix"> '+
+                                '<span class="mihanblog_like_help_arrow mihanblog_like_help_arrow_dislike clearfix"></span>'+
+                                '<span class="mihanblog_like_help_text">نمی پسندم</span>'+
+                            '</span>'+
+                        '</div>'+
+                       '<div id="Like_'+post_id+'" class="mihanblog_like_border"></div>'+
+                       '<div id="likeBar_'+post_id+'" onclick="mihanblogUpdateLike('+post_id+',\'like\')"  class="mihanblog_like_bar mihanblog_like_likeBar mihanblog_like_show_help" >+<div class="mihanblog_like_Cnt" id="likeCnt_'+post_id+'">'+mihanblogLikeCnt+'</div>'+
+                            '<span  class="mihanblog_like_v2_help mihanblog_like_v2_help_like clearfix"> '+
+                                '<span class="mihanblog_like_help_arrow mihanblog_like_help_arrow_like clearfix"></span>'+
+                                '<span class="mihanblog_like_help_text">می پسندم</span>'+
+                            '</span>'+
+                        '</div>'+
+
+                '</div>'
+        );
+
+
+
+        mihanblogDisplayeLike(post_id);
+    }
+
+
+    mihanblogDisplayeLike = function(post_id){
+
+        mihanblogLikeCnt = (mihanblogLikeArrCnt[post_id]? mihanblogLikeArrCnt[post_id] : 0);
+        mihanblogDisLikeCnt = (mihanblogDisLikeArrCnt[post_id]? mihanblogDisLikeArrCnt[post_id] : 0);
+        mihanblogLikeCnt = parseInt(mihanblogLikeCnt);
+        mihanblogDisLikeCnt = parseInt(mihanblogDisLikeCnt);
+
+
+
+        sum = mihanblogLikeCnt - mihanblogDisLikeCnt;
+        backgroundBorder =  document.getElementById('Like_'+post_id);
+        var likeObj = document.getElementById('likeCnt_'+post_id);
+        var disLikeObj = document.getElementById('disLikeCnt_'+post_id);
+
+
+
+
+
+        likeObj.innerHTML =  mihanblogLikeCnt ;
+        disLikeObj.innerHTML =  mihanblogDisLikeCnt;
+
+        if(sum == 0){
+            backgroundBorder.style.backgroundImage = "url('/public/public/images/icons/like_likedislike.png')";
+            document.getElementById('dislikeBar_'+post_id).style.width = '19px';
+            document.getElementById('likeBar_'+post_id).style.width = '19px';
+        }else{
+             if(sum > 0){
+                 backgroundBorder.style.backgroundImage = "url('/public/public/images/icons/like_like.png')";
+                 document.getElementById('likeBar_'+post_id).style.width = '23px';
+                 document.getElementById('dislikeBar_'+post_id).style.width = '15px';
+             }else{
+                 backgroundBorder.style.backgroundImage = "url('/public/public/images/icons/like_dislike.png')";
+                 document.getElementById('likeBar_'+post_id).style.width = '15px';
+                 document.getElementById('dislikeBar_'+post_id).style.width = '23px';
+             }
+        }
+
+    }
+
+
+
+
+</script>
+
+<style type="text/css">
+
+
+    .clearfix {display: inline-block;}
+    .clearfix:after {
+        content: ".";
+        display: block;
+        height: 0;
+        clear: both;
+        visibility: hidden;
+    }
+
+    .mihanblog_like_wrapper {
+        color: #ffffff;
+        direction: ltr;
+        position: relative;
+    }
+    .mihanblog_like_wrapper span{
+        display: none;
+    }
+    .mihanblog_like_bar {
+        color: #FFFFFF;
+        cursor: pointer;
+        float: left;
+        font-size: 10px;
+        height: 20px;
+        line-height: 19px;
+        margin: 5px 0;
+    }
+    .mihanblog_like_likeBar {
+        background-color: #88B131;
+        padding-right: 5px;
+        border-top-right-radius: 2px;
+        border-bottom-right-radius: 2px;
+        text-align: right;
+    }
+    .mihanblog_like_likeBar:hover{
+        background-color: #699017;
+    }
+    .mihanblog_like_border {
+        background-color: #666666;
+        border: 1px solid #666666;
+        float: left;
+        font-size: 12px;
+        height: 20px;
+        margin-top: 2px;
+        width: 25px;
+        padding: 3px 5px 2px 0;
+        text-align: center;
+        border-radius: 2px;
+        color: #ffffff;
+        direction: ltr;
+        background-repeat: no-repeat ;
+        background-position: 4px center;
+    }
+    .mihanblog_like_border img {
+        margin-left: 2px;
+        margin-top: 2px;
+        width: 22px;
+    }
+    .mihanblog_like_dislikeBar {
+        background-color: #FF6F31;
+        padding-left: 5px;
+        border-top-left-radius: 2px;
+        border-bottom-left-radius: 2px;
+        text-align:left ;
+    }
+    .mihanblog_like_dislikeBar:hover{
+        background-color: #D54B10;
+    }
+
+
+
+    .mihanblog_like_show_help {
+        position: relative;
+    }
+    .mihanblog_like_show_help:hover span {
+        display: block;
+    }
+    .mihanblog_like_help_text {
+        background-color: white;
+        border: 1px solid #555555;
+        border-radius: 3px 3px 3px 3px;
+        color: #303030;
+        float: left;
+        font-size: 11px;
+        font-weight: normal;
+        padding: 5px 10px;
+    }
+
+    .mihanblog_like_help_arrow_dislike {
+        background: url("http://kabotarsara.mihanblog.com/public/public/images/icons/like_hover_top.png") no-repeat scroll 16px 0 transparent;
+        left: 0;
+        top: -4px;
+    }
+
+    .mihanblog_like_help_arrow_like {
+        background: url("http://kabotarsara.mihanblog.com/public/public/images/icons/like_hover_top _2.png") no-repeat scroll 16px 0 transparent;
+        left: -10px;
+        top: 29px;
+    }
+
+    .mihanblog_like_help_arrow{
+        height: 6px;
+        position: absolute;
+        width: 100px;
+
+    }
+
+    .mihanblog_like_v2_help_dislike {
+        left: -15px;
+        top: 24px;
+    }
+    .mihanblog_like_v2_help_like {
+        left: 0;
+        top: -35px;
+
+    }
+    .mihanblog_like_v2_help{
+        display: none;
+        position: absolute;
+        white-space: nowrap;
+        z-index: 1;
+    }
+
+    .mihanblog_like_Cnt{
+        display: inline;
+        color: #ffffff;
+    }
+
+</style>
+    <style>
+        @font-face {
+            font-family: 'Mihan-Iransans';
+            src: url('http://kabotarsara.mihanblog.com/public/public/fonts/Iransans.eot');
+            src: url('http://kabotarsara.mihanblog.com/public/public/fonts/Iransans.eot?') format('embedded-opentype'),
+            url('http://kabotarsara.mihanblog.com/public/public/fonts/Iransans.woff2') format('woff2'),
+            url('http://kabotarsara.mihanblog.com/public/public/fonts/Iransans.woff') format('woff'),
+            url('http://kabotarsara.mihanblog.com/public/public/fonts/Iransans.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+        @font-face {
+            font-family: 'Mihan-IransansBold';
+            src: url('http://kabotarsara.mihanblog.com/public/public/fonts/Iransans-Black.eot');
+            src: url('http://kabotarsara.mihanblog.com/public/public/fonts/Iransans-Black.eot?') format('embedded-opentype'),
+            url('http://kabotarsara.mihanblog.com/public/public/fonts/Iransans-Black.woff2') format('woff2'),
+            url('http://kabotarsara.mihanblog.com/public/public/fonts/Iransans-Black.woff') format('woff'),
+            url('http://kabotarsara.mihanblog.com/public/public/fonts/Iransans-Black.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+        @font-face {
+            font-family: 'Mihan-IransansLight';
+            src: url('http://kabotarsara.mihanblog.com/public/public/fonts/Iransans-UltraLight.eot');
+            src: url('http://kabotarsara.mihanblog.com/public/public/fonts/Iransans-UltraLight.eot?') format('embedded-opentype'),
+            url('http://kabotarsara.mihanblog.com/public/public/fonts/Iransans-UltraLight.woff2') format('woff2'),
+            url('http://kabotarsara.mihanblog.com/public/public/fonts/Iransans-UltraLight.woff') format('woff'),
+            url('http://kabotarsara.mihanblog.com/public/public/fonts/Iransans-UltraLight.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+        @font-face {
+            font-family: 'Mihan-Nassim';
+            src: url('http://kabotarsara.mihanblog.com/public/public/fonts/Nassim.eot');
+            src: url('http://kabotarsara.mihanblog.com/public/public/fonts/Nassim.eot?') format('embedded-opentype'),
+            url('http://kabotarsara.mihanblog.com/public/public/fonts/Nassim.woff2') format('woff2'),
+            url('http://kabotarsara.mihanblog.com/public/public/fonts/Nassim.woff') format('woff'),
+            url('http://kabotarsara.mihanblog.com/public/public/fonts/Nassim.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+        @font-face {
+            font-family: 'Mihan-Koodak';
+            src: url('http://kabotarsara.mihanblog.com/public/public/fonts/Koodak.eot');
+            src: url('http://kabotarsara.mihanblog.com/public/public/fonts/Koodak.eot?') format('embedded-opentype'),
+            url('http://kabotarsara.mihanblog.com/public/public/fonts/Koodak.woff2') format('woff2'),
+            url('http://kabotarsara.mihanblog.com/public/public/fonts/Koodak.woff') format('woff'),
+            url('http://kabotarsara.mihanblog.com/public/public/fonts/Koodak.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+        @font-face {
+            font-family: 'Mihan-Yekan';
+            src: url('http://kabotarsara.mihanblog.com/public/public/fonts/Yekan.eot');
+            src: url('http://kabotarsara.mihanblog.com/public/public/fonts/Yekan.eot?') format('embedded-opentype'),
+            url('http://kabotarsara.mihanblog.com/public/public/fonts/Yekan.woff2') format('woff2'),
+            url('http://kabotarsara.mihanblog.com/public/public/fonts/Yekan.woff') format('woff'),
+            url('http://kabotarsara.mihanblog.com/public/public/fonts/Yekan.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+        @font-face {
+            font-family: 'FontAwesome';
+            src: url('http://kabotarsara.mihanblog.com/public/public/fonts/fontawesome_webfont.eot');
+            src: url('http://kabotarsara.mihanblog.com/public/public/fonts/fontawesome_webfont.eot?') format('embedded-opentype'),
+            url('http://kabotarsara.mihanblog.com/public/public/fonts/fontawesome_webfont.woff2') format('woff2'),
+            url('http://kabotarsara.mihanblog.com/public/public/fonts/fontawesome_webfont.woff') format('woff'),
+            url('http://kabotarsara.mihanblog.com/public/public/fonts/fontawesome_webfont.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+
+
+        
+
+        /* Smartphones (portrait and landscape) ----------- */
+
+        /*
+        @media only screen and (max-width : 480px) and (min-width : 320px) {
+            .sabaClick_advert__wrapper{
+                display:block;
+            }
+            .sabaClick_advert__inner{
+                max-width: 90%;
+                margin: 0 5%;
+            }
+        }
+        */
+
+    </style>
+
+
+
+
+
+
+<html>
+<head>
+<!-.-.-Design By : Pichak.net-.-.->
+<title>کبوتر دولاب - مطالب هادی </title>
+      <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+      <meta name="language" content="Farsi">
+      <meta name="keywords" content="کبوتر دولاب - مطالب هادی ,kabotarsara">
+      <meta name="description" content="کبوتر دولاب - مطالب هادی  -  - کبوتر دولاب">
+      <meta name="copyright" content="© pichak net, www.pichak.net">
+      <link rel="alternate" type="application/rss+xml" title="کبوتر دولاب" href="../../../rss/index.html" />
+      <meta name="designer" content="pichak.net  | http://pichak.net" />
+      <!-.-.-Design By : pichak.net-.-.->
+<style>
+<!--
+body{font-family:Tahoma;font-size:8pt;padding:0px;margin:0px;color:#d1dcf3;background:#000000}
+a, a:visited{color:#0F0F0F;text-decoration: none}a:hover{color:#FF299B;text-decoration: none}
+body {
+	BACKGROUND: #e9fdfc url('http://s1.freeupload.ir/i/00011/1pns9gijtnm5.jpg') no-repeat   center top; 
+ 
+}
+#page{background:url() center repeat-y;width:750px}img{border:none}
+#uwrapper {margin:0;padding:0;text-align:center;background-image:url(); background-repeat:repeat-x; background-position-y:top;}
+#header{height:450px;background:url() no-repeat right; }
+#header div{color:#2C2215;font-family:verdana;font-size:21pt;font-weight:bold;text-align:center;padding-top:50px}
+#header div p{margin-top:5px;margin-bottom:0px;color:#2C2215;font-family:Tahoma;font-size: 9pt;font-weight:normal;text-align:center;direction:rtl}
+#headerb{height:0px}
+#content{padding:0px 7px}
+#main{float:right;width:520px;text-align:right;overflow:hidden}
+#post{padding:0 0px;text-align:right}
+#posttitle{height:44px;background: url() center no-repeat;text-align:right;font-size:9pt;font-weight:42;direction:rtl;padding-top:14px;padding-right:60px}
+#posttitle a, #posttitle a:visited {color:#282829}#posttitle a:hover {color:#FF38A9}
+#postbody{text-align: justify;padding:0px 17px 5px 3;font-size:8pt;color:#1E1F1E;line-height:1.5em;direction:rtl}
+#postbody p{margin-top:10px;margin-bottom:0px}
+#postdesc{padding-top:15px;padding-right:7px;padding-left:7px;color:#606A9C;direction:rtl}
+#space{height:20px}
+#sidebar{float:left; url() no-repeat;width:175px;padding-top:0px;line-height:1.5em;text-align:right}
+#mmenu{width:160px;ine-height: 1.5em;text-align:center;direction:rtl;}
+#sidebar ul{font-size:8pt;list-style-type: none;margin: 0px;padding:0 5px 20px 5px}
+#sidebar li {font-size:8pt;padding-right:5px;padding-bottom:0px;line-height:1.5em;direction:rtl}
+#photo{width:160px;padding-top:5px;padding-bottom:2px;text-align:center}
+#about{width:160px;text-align: justify;font-size:8pt;padding:10px 7px 20px 7px;color:#ffd200;direction:rtl}
+#feed{margin:0px;padding-bottom:10px;text-align:center}
+#custom{width:160px;color:#5e7161;overflow:auto;margin:10px 0;text-align:center;direction:rtl}
+-->
+</style>
+
+</head>
+<body>
+<!-.-.-Design By : pichak.net-.-.->
+<div id=uwrapper>
+<div align=center>
+<div id=page>
+
+<div id=header><div></div></div>
+<div id=content>
+<div id=main><br><br><br><br><br><br><br><br><br>
+<FONT color=#363636><FONT style="FONT-SIZE: 14pt">
+<b>کبوتر دولاب</b><p>
+<FONT color=#B51414><FONT style="FONT-SIZE: 8pt">
+<p>
+		<div id="MihanblogShopAds" style="display:block;height:0px;width:100%;border:0px"></div>
+		  <FONT color=#1E1F1E>
+<div id=post>
+<div id=posttitle><a href="../../../45.html"><b>جوجه های پاییز 93</b></a></div></div>
+<div id=postbody><div id="InPost_MihanblogShopAds" style="display:block;height:0px;width:100%;border:0px"></div><div align="center"><b><font face="arial,helvetica,sans-serif" size="3">با اهدا سلام خدمت 
+دوستان و سروران عزیزم..ضمن عذر خواهی به خاطر تاخیر پیش آمده&nbsp;از آخرین پست
+ وبلاگ..توجه شما رو به تصاویر از جوجه های سری اول پاییز جلب 
+میکنم.امیدوارم مورد پسندتان واقع گردد..حقیقت امر اینست که امسال جوجه های
+ بسیار عالی و بی نظیر بودن و بعد از پروسه جلد شدن و بازی قرص نمودن همگی 
+جا شدند و متاسفانه بعد از 10 روز با مریضی عجیب و غریبی مواجه شدم و 90% 
+جوجه هایی که مشاهده میکنید از بین رفتن..نمیخواستم عکسشون و آپ کنم.چون با
+ دیدنشون به کلی اعصابم میریزه بهم..ولی با توجه به درخواست مکرر دوستان 
+برای خالی نبودن عریضه به نمایش در آوردم..امیدوارم هیچ عشق بازی&nbsp; در این ایام مواجه به&nbsp; 
+مریضی اعم از جوجه و کبوترای کهنه نگردد<br><br></font></b><br><b><font face="arial,helvetica,sans-serif" size="3"><img class="decoded" alt="http://s5.picofile.com/file/8156239442/16.jpg" src="http://s5.picofile.com/file/8156239442/16.jpg" height="214" width="467"><br><br></font></b><font color="#1E1F1E"><table style="text-align: left; margin-left: 0px; margin-right: 0px;" height="111" width="470" align="center" border="1" cellpadding="2" cellspacing="1"><tbody><tr align="center"><td style="text-align: right;"><a href="http://s5.picofile.com/file/8156236168/1.jpg" target="_blank" title=""><font color="#1E1F1E">1</font></a></td>
+<td style="text-align: right;"><a href="http://s5.picofile.com/file/8156236234/2.jpg" target="_blank" title="">2</a><a href="http://s5.picofile.com/file/8156236234/2.jpg" target="_blank" title=""><br></a></td>
+<td style="text-align: right;"><a href="http://s5.picofile.com/file/8156236368/3.jpg" target="_blank" title="">3</a><a href="http://s5.picofile.com/file/8156236368/3.jpg" target="_blank" title=""><br></a></td>
+<td style="text-align: right;"><a href="http://s5.picofile.com/file/8156236450/4.jpg" target="_blank" title="">4</a><a href="http://s5.picofile.com/file/8156236450/4.jpg" target="_blank" title=""><br></a></td>
+<td style="text-align: right;"><a href="http://s5.picofile.com/file/8156236550/5.jpg" target="_blank" title="">5</a><a href="http://s5.picofile.com/file/8156236550/5.jpg" target="_blank" title=""><br></a></td>
+
+
+</tr>
+<tr align="center">
+<td style="text-align: right;"><a href="http://s5.picofile.com/file/8156236600/6.jpg" target="_blank" title="">6</a></td>
+<td style="text-align: right;"><a href="http://s5.picofile.com/file/8156236642/7.jpg" target="_blank" title="">7</a><a href="http://s5.picofile.com/file/8156236642/7.jpg" target="_blank" title=""><br></a></td>
+<td style="text-align: right;"><a href="http://s5.picofile.com/file/8156236718/8.jpg" target="_blank" title="">8</a><a href="http://s5.picofile.com/file/8156236718/8.jpg" target="_blank" title=""><br></a></td>
+<td style="text-align: right;"><a href="http://s5.picofile.com/file/8156238450/9.jpg" target="_blank" title="">9</a><a href="http://s5.picofile.com/file/8156238450/9.jpg" target="_blank" title=""><br></a></td>
+<td style="text-align: right;"><a href="http://s5.picofile.com/file/8156238734/10.jpg" target="_blank" title="">10</a><a href="http://s5.picofile.com/file/8156238734/10.jpg" target="_blank" title=""><br></a></td>
+
+
+</tr>
+<tr align="center">
+<td style="text-align: right;"><a href="http://s5.picofile.com/file/8156238834/11.jpg" target="_blank" title="">11</a><a href="http://s5.picofile.com/file/8156238834/11.jpg" target="_blank" title=""><br></a></td>
+<td style="text-align: right;"><a href="http://s5.picofile.com/file/8156238992/12.jpg" target="_blank" title="">12</a><a href="http://s5.picofile.com/file/8156238992/12.jpg" target="_blank" title=""><br></a></td>
+<td style="text-align: right;"><a href="http://s5.picofile.com/file/8156239076/13.jpg" target="_blank" title="">13</a><a href="http://s5.picofile.com/file/8156239076/13.jpg" target="_blank" title=""><br></a></td>
+<td style="text-align: right;"><a href="http://s5.picofile.com/file/8156239200/14.jpg" target="_blank" title="">14</a><a href="http://s5.picofile.com/file/8156239200/14.jpg" target="_blank" title=""><br></a></td>
+<td style="text-align: right;"><a href="http://s5.picofile.com/file/8156239300/15.jpg" target="_blank" title="">15</a><a href="http://s5.picofile.com/file/8156239300/15.jpg" target="_blank" title=""><br></a></td>
+
+
+</tr>
+<tr align="right">
+<td style="text-align: right;" align="center"><a href="http://s5.picofile.com/file/8156239442/16.jpg" target="_blank" title="">16</a></td>
+<td style="text-align: right;" align="center"><a href="http://s5.picofile.com/file/8156239518/17.jpg" target="_blank" title="">17</a></td>
+<td style="text-align: right;" align="center"><a href="http://s5.picofile.com/file/8156239692/18.jpg" target="_blank" title="">1<font color="#1E1F1E">8</font></a></td>
+<td style="text-align: right;" align="center"><a href="http://s5.picofile.com/file/8156239792/19.jpg" target="_blank" title="">19</a><a href="http://s5.picofile.com/file/8156239792/19.jpg" target="_blank" title=""><br></a></td>
+<td style="text-align: right;" align="center"><a href="http://s5.picofile.com/file/8156239834/20.jpg" target="_blank" title="">20</a></td>
+
+
+</tr>
+</tbody></table><br>
+
+<br></font><br></div>
+
+
+<br><br>
+<br>طبقه بندی: <a href="../../../category/1.html">کبوتران پرشی</a>،&nbsp;<br>برچسب ها:<a href="../../../tag/جوجه&#32;های&#32;پاییز&#32;93.html" >جوجه های پاییز 93</a>، &nbsp;<br></div>
+
+<div id=postdesc>[ سه شنبه 18 آذر 1393  ]  [ 08:14 ب.ظ  ]  [ <a href="../../846257.html">هادی  </a> ]
+<a target="_self" href="javascript:newComment(45)">نظرات  <script>setCommentCnt(45)</script> </a><script type="text/javascript">GetBC(<-PostId->);</script></div>
+<div id=space></div>
+
+<p align="center"><img border="0" src="http://s1.freeupload.ir/i/00011/nx5ujely9k99.png"></p>
+
+<style>.pging {    direction:rtl;    font-size:1.2em;    height:30px;    margin:40px 0 0;    color:#222420;    padding-bottom: 20px;    text-align: center;}.pging a:link, .pging a:visited {border:1px solid #222420;    display:inline-block;    margin:0 3px;    padding:1px 5px;    text-decoration:none;}.pging a:hover, .pging a:active {    color:#222420;}.pging a.current:link, .pging a.current:visited {    background-color:#222420;    border:1px solid #222420;    color:red;    cursor:text;}</style> <div class=pging><p align="center"><font face="Tahoma" style="font-size: 9pt">تعداد کل صفحات&nbsp;:&nbsp;29&nbsp;::&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="3.html"><font color="#222420"><i>...</i></font></a>&nbsp;&nbsp;<a href="4.html"><font color="#222420"><span>4</span></font></a>&nbsp;&nbsp;<a href="5.html"><font color="#222420"><span>5</span></font></a>&nbsp;&nbsp;<a href="6.html"><font color="#222420"><span>6</span></font></a>&nbsp;&nbsp;<a href="7.html"><font color="#222420"><b>7</b></font></a>&nbsp;&nbsp;<a href="8.html"><font color="#222420"><span>8</span></font></a>&nbsp;&nbsp;<a href="9.html"><font color="#222420"><span>9</span></font></a>&nbsp;&nbsp;<a href="10.html"><font color="#222420"><span>10</span></font></a>&nbsp;&nbsp;<a href="11.html"><font color="#222420"><i>...</i></font></a>&nbsp;&nbsp;<br><br></font></p></div><!-.-.-Design By : pichak.net-.-.->
+<center>
+<br><br><table style="border-right: #222420 1px solid; border-top: #222420 1px solid; border-left: #222420 1px solid; direction: rtl; border-bottom: #222420 1px solid; height: 7px; font-size: 7pt;">
+
+<tr><td><a href="http://pichak.net/online-template/1" title="قالب ساز آنلاین" target=_blank>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; قالب ساز آنلاین &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</a></td></tr>
+</table><br><br>
+</div>
+<div id=sidebar><FONT color=#1E1F1E><br><br><br><br><br><br><br><br><br><br>
+
+<center>
+
+<p align="center"><font face="Tahoma" color="#222420" style="font-size: 13pt">درباره سایت</font></p>
+
+
+<!-.-.-Design By : Pichak.net-.-.->
+<p align="center"><img src="http://static.mihanblog.com//public/user_data/web_photo/332/995652.jpg?8442"  />
+<div id=about><FONT style="FONT-SIZE: 8pt" color="#1E1F1E" >
+</p></font></div>
+
+<center>
+
+
+<p align="center"><img border="0" src="http://s1.freeupload.ir/i/00011/zfwjv2p08zet.jpg"></p>
+<p align="center"><font face="Tahoma" color="#222420" style="font-size: 13pt">منوی سایت</font></p>
+
+
+
+<div id=mmenu>
+<ul>
+<li><a href="../../../../index.html">خانه</a></li>
+<li><a href="mailto:hadi.aghajanpour@yahoo.com">ایمیل</a></li>
+<li><a href="javascript:messageForm()">تماس با ما</a></li>
+<li><a href="../../../rss/index.html">Feed</a></li>
+</ul></div>
+
+
+<p align="center"><img border="0" src="http://s1.freeupload.ir/i/00011/zfwjv2p08zet.jpg"></p>
+<p align="center"><font face="Tahoma" color="#222420" style="font-size: 13pt">نویسنده سایت</font></p>
+
+
+<div id=mmenu>
+<ul>
+
+<li><a href="../../846257.html">هادی   29 </a></li></ul>
+</div>
+
+		<form id="frm-16081765655fdad3b547920" method="post" action="http://kabotarsara.mihanblog.com/poll/new/fid/16081765655fdad3b547920/atrty/1608176565/avrvy/0/key/b7fbef9c64183dbef40c6e448b29c054/"  onsubmit="window.open('', 'poll', 'toolbar=0,location=0,status=0,menubar=0,scrollbars=1,resizable=0,width=505,height=315')" target="poll"><input type="hidden" name="data[pollid]" value="199441" id="data[pollid]" />		
+
+
+<p align="center"><img border="0" src="http://s1.freeupload.ir/i/00011/zfwjv2p08zet.jpg"></p>
+<p align="center"><font face="Tahoma" color="#222420" style="font-size: 13pt">نظر سنجی</font></p>
+
+
+<div id=mmenu>
+<ul>
+
+<li>رنگ مورد علاقه شما در بین کبوترهای تهران کدام است<br><label><input type="checkbox"  name="data[v1]" id="v1" value="1" />هما </label><br><label><input type="checkbox"  name="data[v2]" id="v2" value="1" />شازده </label><br><label><input type="checkbox"  name="data[v3]" id="v3" value="1" />سرور </label><br><label><input type="checkbox"  name="data[v4]" id="v4" value="1" />گرگی</label><br><label><input type="checkbox"  name="data[v5]" id="v5" value="1" />پلنگ</label><br><label><input type="checkbox"  name="data[v6]" id="v6" value="1" />پشت دار </label><br><label><input type="checkbox"  name="data[v7]" id="v7" value="1" />ماه رو</label><br><label><input type="checkbox"  name="data[v8]" id="v8" value="1" />مهر</label><br><label><input type="checkbox"  name="data[v9]" id="v9" value="1" />ابلق</label><br><label><input type="checkbox"  name="data[v10]" id="v10" value="1" />سبز</label><br><br><input type="submit" value="ثبت"></li>
+</ul>
+</div>
+
+		<input type="hidden" name="frm-id" value="16081765655fdad3b547920" id="frm-id" /></form><center>
+
+
+<p align="center"><img border="0" src="http://s1.freeupload.ir/i/00011/zfwjv2p08zet.jpg"></p>
+<p align="center"><font face="Tahoma" color="#222420" style="font-size: 13pt">آخرین مطالب</font></p>
+
+<div id=mmenu>
+<ul><li><a href="../../../55.html">نحوه برخورد با کبکی ها</a></li>
+<li><a href="../../../54.html">آرشیو فیلم پاشوی کبکی های 95</a></li>
+<li><a href="../../../53.html">شروعی دوباره</a></li>
+<li><a href="../../../48.html">بدون شرح</a></li>
+<li><a href="../../../46.html">نکاتی در مورد برخورد با کبکی ها</a></li>
+<li><a href="../../../43.html">معرفی یکی از عشق بازان خطه شهر ری(مهدی توکلی) </a></li>
+<li><a href="../../../45.html">جوجه های پاییز 93</a></li>
+<li><a href="../../../42.html">جفتهای پاییز 93</a></li>
+<li><a href="../../../41.html">گرو و مهمانی های تیرماه 93</a></li>
+<li><a href="../../../38.html">چگونگی رفتار با کبکی ها</a></li>
+<li><a href="../../../33.html">معرفی یکی از دوستان(محسن ذاکری از اراک)</a></li>
+<li><a href="../../../28.html">جوجه های پاییز(1)</a></li>
+<li><a href="../../../27.html">جفتهای پاییز 92</a></li>
+<li><a href="../../../24.html">معرفی یکی از دوستان (اباذر انصاری از محلات)</a></li>
+<li><a href="../../../23.html">گرو و مهمانی تیرماه 92</a></li>
+<li><center><a href="../../../list.html"><b>لیست آخرین مطالب</b></a></center></li></ul>
+</div><BlogLinksBlock>
+<center>
+
+
+<p align="center"><img border="0" src="http://s1.freeupload.ir/i/00011/zfwjv2p08zet.jpg"></p>
+<p align="center"><font face="Tahoma" color="#222420" style="font-size: 13pt">لینک دوستان</font></p>
+
+<div id=mmenu>
+<ul>
+<li><a target="_blank" href="http://wonder-land.rzb.ir">سرزمین عجایب</a></li><li><a target="_blank" href="http://saraye-eshghbazan.blogfa.com/">سرای عشقبازان(سعید فلاحی)</a></li><li><a target="_blank" href="http://talae.persianblog.ir/">اولین پایگاه تخصصی مرغ عشق طلایی وقناری طلایی</a></li><li><a target="_blank" href="http://birdfa.com/">بازارچه تخصصی پرندگان زینتی و خانگی بیردفا</a></li><li><a target="_blank" href="http://tipler.blogfa.com/">فروش کبوتر های پرشی و تیپلر پاکستانی</a></li><li><a target="_blank" href="http://askaar.blogfa.com/">کبوتر پاکستانی (عسگرازسراب)</a></li><li><a target="_blank" href="http://kabootarsemnan.blogfa.com">معرفی برترین کبوترداران سمنان</a></li><li><a target="_blank" href="http://www.iranracingpigeon.blogfa.com/">کلوپ کبوتران مسافتی هرمزگان</a></li><li><a target="_blank" href="http://www.asgharesokouti.blogfa.com/">کبوتر هفت چنار (اصغر سکوتی)</a></li><li><a target="_blank" href="http://kabotaredolab.blogfa.com/">وبلاگ دیگر حقیر مرتبط با کبوتر</a></li><li><a target="_blank" href="http://kabootaresfahan1.loxblog.com/">کبوترماجوادمیرهادیان اصفهان</a></li><li><a target="_blank" href="http://www.kaboutaregonbad.ir/">Kaboutare Gonbad E Kāvūs</a></li><li><a target="_blank" href="http://hamidhasanlo.blogfa.com/">کبوتر کله دم سبز قهوه خانه</a></li><li><a target="_blank" href="http://www.racingpigeon.ir/">کلوپ کبوترداران جنوب غرب</a></li><li><a target="_blank" href="http://iranpigeons.ir/Forum/">انجمن کبوتران مسافتی ایران</a></li><li><a target="_blank" href="http://kakoli-ardebil1358.blogsky.com/">کبوتر پرشی اردبیل ( حسین)</a></li><li><a target="_blank" href="http://foroshgah-kaboutar.blogfa.com/">فروش کبوتر پاکستانی تیپلر</a></li><li><a target="_blank" href="http://www.haji1347.blogfa.com/">کبوتر (نژاد پرشی پاکستانی)</a></li><li><a target="_blank" href="http://kabootaras.blogfa.com/">کبوتر خال هما (علی حکیمیه)</a></li><li><a target="_blank" href="http://boomegolabgir.blogfa.com/">بوم گلابگیر(مهدی رستگاری)</a></li><li><a target="_blank" href="http://kabutarelenjan.blogfa.com/">کبوتر لنجان (علیرضا صفائی)</a></li><li><a target="_blank" href="http://mohsenkabotar.blogfa.com/">كبوتر محسن-مصطفی(اراك)</a></li><li><a target="_blank" href="http://kaboutarmotelghoo.blogfa.com/">کبوتر متل قو(محمدجوانپور)</a></li><li><a target="_blank" href="http://kabotarpareshi-tehran.mihanblog.com/">کبوتر پرشی تهران خاوران</a></li><li><a target="_blank" href="http://kabutar-ali.blogfa.com/">کبوتر خلخال(کبوتر پرشی)</a></li><li><a target="_blank" href="http://kabotareamol.blogfa.com/">کبوترآمل (محمدمحمدی)</a></li><li><a target="_blank" href="http://poshdarka.blogfa.com/">کبوتر شمال غرب(خلخال )</a></li><li><a target="_blank" href="http://www.9fun.ir/">وب سایت تفریحی 9 فان</a></li><li><a target="_blank" href="http://www.toghi94.Mihanblog.com">کبوتران خوشبال رشت</a></li><li><a target="_blank" href="http://sarbehava.blogfa.com/">پیام آور صلح(گیله مرد)</a></li><li><a target="_blank" href="http://rasimlavandevili.persianblog.ir/">کبوتر آستارا / لوندویل</a></li><li><a target="_blank" href="http://kabootarenaghsh.blogfa.com/">آشنایی با کبوتر نقش</a></li><li><a target="_blank" href="http://mostaphaheydari.blogfa.com/">آشنایی با کبوتر تهران</a></li><li><a target="_blank" href="http://simorghrasht.blogfa.com/">کبوتران پرشی رشت</a></li><li><a target="_blank" href="http://kaftarzarinshahr.blogfa.com/">کبوتر نقش زرین شهر</a></li><li><a target="_blank" href="http://nokghanar.blogfa.com/">کبوتر نوک قنار کاکلی</a></li><li><a target="_blank" href="http://www.reza-bastami.blogfa.com/">کبوترپرانی در  کردکوی</a></li><li><a target="_blank" href="http://www.kabotaremajid.blogfa.com/">کبوتربازی آمل(مجید)</a></li><li><a target="_blank" href="http://www.babak-arbabkhosro.blogfa.com/">بابک ارباب خسرو</a></li><li><a target="_blank" href="http://shahinshahrpigon.blog.ir/">کبوتر شاهین شهر</a></li><li><a target="_blank" href="http://kabotareh.persianblog.ir/">کبوتر پرانی در نکواباد</a></li><li><a target="_blank" href="http://kaftarsara.mihanblog.com/">کبوتر سرای میانداب</a></li><li><a target="_blank" href="http://2kat.ir/">کبوتران زیبا و لوکس</a></li><li><a target="_blank" href="http://adelpigeon.mihanblog.com/">مرکز کبوتران زینتی</a></li><li><a target="_blank" href="http://www.eshghbazanshomal.blogfa.com/">عشقبازان شمال</a></li><li><a target="_blank" href="http://kabootarsari.ir/">کبوتر پرشی ساری</a></li><li><a target="_blank" href="http://cici8111.blogfa.com/">زیرگذر کبوتر مجیدیه</a></li><li><a target="_blank" href="http://kabotar-ramsar.blogfa.com/">کبوتر رامسر(مجید)</a></li><li><a target="_blank" href="http://iranianpigeonsincanada.blogsky.com/">کبوتر حمید از کانادا</a></li><li><a target="_blank" href="http://daniyalkabotar.blogfa.com/">كبوتر پرشی(اراك)</a></li><li><a target="_blank" href="http://pigeoniran.blogfa.com/">کبوترهای آقا بهمن</a></li><li><a target="_blank" href="http://ali74043.blogfa.com/">کبوترآسمان تبریز</a></li><li><a target="_blank" href="http://www.ters-428.blogfa.com/">کبوتر پرشی قم</a></li><li><a target="_blank" href="http://www.kabotaresaravi.blogfa.com/">کبوترپرانی ساری</a></li><li><a target="_blank" href="http://kaboutareforoushi.blogfa.com/">کبوثر برای فروش</a></li><li><a target="_blank" href="http://www.kabutar-t.blogfa.com/">کبوتر ترکمن صحرا</a></li><li><a target="_blank" href="http://kabootarma.blogfa.com/">کبوترسرخ کاشان</a></li><li><a target="_blank" href="http://rasht-birds.blogfa.com">امید(کبوتر رشت)</a></li><li><a target="_blank" href="http://parposh.blogfa.com">كبوتر زنگان/زنجان</a></li><li><a target="_blank" href="http://pigeonslllllshiraz.lxb.ir/">خرید فروش کبوتر</a></li><li><a target="_blank" href="http://kqrd.blogfa.com/">کبوتر قم رسولی</a></li><li><a target="_blank" href="http://kabotarpakdasht.blogfa.com/">كبوتران پاكدشت</a></li><li><a target="_blank" href="http://kaftartabriz.blogfa.com/">کفتر بازان تبریز</a></li><li><a target="_blank" href="http://shhabi.blogfa.com/">کبوتر مازندران</a></li><li><a target="_blank" href="http://www.bia2kabootaran.blogfa.com/">کبوتران بروجرد</a></li><li><a target="_blank" href="http://www.qomp.ir/">سایت کبوتر قم</a></li><li><a target="_blank" href="http://gozarkabotarbazan.blogfa.com/">گذر کبوتر بازان</a></li><li><a target="_blank" href="http://gozaredashmehdi.blogfa.com/">گذر داش مهدی</a></li><li><a target="_blank" href="http://kabutar-lahijan.blogfa.com/">کبوترلاهیجان</a></li><li><a target="_blank" href="http://www.kabootar61.blogfa.com/">کبوتر زرتشت</a></li><li><a target="_blank" href="http://kabotarn-gargak.blogfa.com/">کبوتران قرچک</a></li><li><a target="_blank" href="http://kabootar0661.blogfa.com/">کبوتر خرم آباد</a></li><li><a target="_blank" href="http://kabotarkiashahr.blogfa.com/">کبوتر کیاشهر</a></li><li><a target="_blank" href="http://taks.blogsky.com/">کبوتر تاکستان</a></li><li><a target="_blank" href="http://www.ashyaneh-kabotaran.blogsky.com/">کبوتران رامسر</a></li><li><a target="_blank" href="http://kaboutar-niavaran.mihanblog.com/">کبوتر نیاوران</a></li><li><a target="_blank" href="http://freetala.blogfa.com/">کبوتر بهشهر</a></li><li><a target="_blank" href="http://kabotar-paytakht.mihanblog.com/">کبوتر پایتخت</a></li><li><a target="_blank" href="http://kabutarealeshtar.blogfa.com/">کبوتر الشتر</a></li><li><a target="_blank" href="http://www.kaboutarbolkheyr.blogfa.com/">کبوتر بوشهر</a></li><li><a target="_blank" title="ساخت قالب وبلاگ آنلاین پیچک" href="http://pichak.net/online-template">قالب ساز آنلاین</a></li>
+</ul>
+</div></BlogLinksBlock>
+<center>
+
+
+<p align="center"><img border="0" src="http://s1.freeupload.ir/i/00011/zfwjv2p08zet.jpg"></p>
+<p align="center"><font face="Tahoma" color="#222420" style="font-size: 13pt">ابر برچسب ها</font></p>
+
+<div id=mmenu>
+<ul><li><a href="../../../tag/جفتهای+93.html" style="font-size:1em">جفتهای 93</a></li>
+<li><a href="../../../tag/جلد+کردن+جوجه+ها.html" style="font-size:1.34em">جلد کردن جوجه ها</a></li>
+<li><a href="../../../tag/کبوتران+پرشی.html" style="font-size:1em">کبوتران پرشی</a></li>
+<li><a href="../../../tag/تیرماه+94.html" style="font-size:1em">تیرماه 94</a></li>
+<li><a href="../../../tag/جوجه+های+پاییز+93.html" style="font-size:1em">جوجه های پاییز 93</a></li>
+<li><a href="../../../tag/تیر+ماه.html" style="font-size:1.34em">تیر ماه</a></li>
+<li><a href="../../../tag/کبوتر.html" style="font-size:2em">کبوتر</a></li>
+<li><a href="../../../tag/تیرماه.html" style="font-size:1.67em">تیرماه</a></li>
+<li><a href="../../../tag/تیرماه+96.html" style="font-size:1.34em">تیرماه 96</a></li>
+<li><a href="../../../tag/کبکی+های+95.html" style="font-size:1em">کبکی های 95</a></li>
+</ul>
+</div><center>
+
+
+<p align="center"><img border="0" src="http://s1.freeupload.ir/i/00011/zfwjv2p08zet.jpg"></p>
+<p align="center"><font face="Tahoma" color="#222420" style="font-size: 13pt">پیوندهای روزانه</font></p>
+
+<div id=mmenu>
+<ul><li><a target="_blank" href="http://www.subnama.ir/" title="دانلود زیرنویس فارسی فیلم و سریال با لینک مستقیم و بدون فیلتر">دانلود زیرنویس</a></li>
+<li><a target="_blank" href="http://www.vidarchive.ir/" title="وید آرشیو. مجموعه ی بزرگی از کلیپ ها با موضوعات مختلف جایگزینی برای یوتیوب ...">دانلود کلیپ</a></li>
+<li><a target="_blank" href="http://yon.ir/AA8ez" title="سلام. ممنونم که پرچم وبلاگ نویسی رو بالا نگه داشتید :)
+
+سایت نویسور راه اندازی شده تا پست های شما بیشتر خونده بشن،.
+
+باید اعلام کنم که بعد از دوماه فعالیت 1000 تایی شدیم.
+
+دعوت میکنم تشریف بیارید به لینک زیر و فصل نو ی وبلاگ نویسی تون رو شروع کنید.
+yon.ir/AA8ez
+
+منتظر پست هاتون در نویسور هستیم :)">ــ وبـلاگ نویسی بهـترــ</a></li>
+<li><a target="_blank" href="http://webposter.ir" title="بازدید کنندگان را به سایت خود سرازیر کنید.
+
+پاپ آپ روش تبلیغاتی اینترنتی است که باعث می شود کاربران دیگر سایت ها به آدرسی که شما می خواهید هدایت شوند.
+اطلاعات بیشتر در 
+http://webposter.ir/popup-advertising
+
+لطفا تایید کنید">هدایت بازدید کننده به سایت</a></li>
+<li><a target="_blank" href="http://esteva.mihanblog.com" title="سلام .
+
+شما هم لینک وب سایتتون رو تو این صفحه ثبت کنید.
+http://esteva.mihanblog.com
+
+خیلی زود تایید میکنم
+
+این لینک رو تایید کنید لطفا.">مجله اینترنتی استوا</a></li>
+<li><a target="_blank" href="http://gemupload.ir" title="آیا به دنبال مکانی امن و دائمی برای آپلود عکس و فایل های خود میگردید؟
+جم آپلود
+http://gemupload.ir
+متفاوت ترین سرویس
+رایگان عضو شوید و فایل و عکس های آپلود شده خود را مدیریت کنید
+عکس و فایل های شما هیچوقت حذف نمیشوند
+سرعت باورنکردنی
+پشتیبانی 24ساعته
+امکانات باورنکردنی...
+http://blog.gemupload.ir
+----------------------------------
+حتما به ما بپیوندید
+منتظر حظور گرمتان هستیم....
+-ممنون میشم این لینک رو تایید کنی-">آپلود رایگان عکس و فایل نامحدود</a></li>
+<li><a target="_blank" href="http://serialkade14.com" title="با سلام....
+ 
+خواهان تبادل لینک با وبلاگ زیبای شما هستیم.در صورت تمایل لینک رو تایید و اطلاع بدید.">دانلود سریال با لینک مستقیم</a></li>
+<li><a target="_blank" href="http://link2.mikhak.net" title="تبادل لینک میکنی ؟">تبادل لینک میکنی ؟</a></li>
+<li><a target="_blank" title="قالب وبلاگ" href="http://pichak.net/themes">قالب وبلاگ</a></li></ul>
+</div><center>
+
+<p align="center"><img border="0" src="http://s1.freeupload.ir/i/00011/zfwjv2p08zet.jpg"></p>
+<p align="center"><font face="Tahoma" color="#222420" style="font-size: 13pt">لینک های مفید</font></p>
+
+<div id=mmenu>
+<ul>
+
+<li>?<a href="http://ghoghnooschat.com">چت</a></li>
+<li><a rel="follow" href="http://payam-resan.com/">سامانه پیامک</a>
+</li>
+<li><a href="http://storenew.ir/device-hair-texture-johnson/">خرید دستگاه بافت مو افریقایی</a>
+</li>
+<li><a href="http://store.p92.ir/insecticide-riddex-pulse/">خرید دستگاه دفع حشرات</a>
+</li>
+<li><a href="http://buyeasy.y85.ir/">خرید کارواش خانگی ایزی جت</a>
+</li>
+<li><a href="http://www.sakhtemoon.com/Fan-coil/Companies">فن کویل زمینی</a>
+ | ?<a href="http://on4.ir/%D8%AE%D8%B1%DB%8C%D8%AF-%D8%AC%D8%A7%D8%B1%D9%88-%D9%81%D9%86%D8%AF%DA%A9%DB%8C-%D9%85%D8%A7%D8%B4%DB%8C%D9%86/">جارو فندکی ماشین</a>
+</li>
+<li>?<a href="http://hoursfemale.ozx.ir/">خرید ساعت زنانه اینترنتی</a>
+ | <a href="http://store2014.ir/magic-rollers/">خرید بیگودی جادویی</a>
+</li>
+<li><a href="http://www.mars-co.com/">پرده هوا</a>
+ | ?<a href="http://vakonesh.com/fal-rozane/">فال روزانه</a>
+</li>
+<li><a rel="follow" title="آژانس مسافرتی" href="http://bartarinha.com/group/116/%D8%A2%DA%98%D8%A7%D9%86%D8%B3-%D9%85%D8%B3%D8%A7%D9%81%D8%B1%D8%AA%DB%8C-%D9%88-%D9%87%D8%AA%D9%84">آژانس مسافرتی</a>
+ | <a href="http://www.shalamchenews.ir/">شهید</a>
+</li>
+<li><a rel="follow" href="http://bartarinha.com/group/142/%D8%AF%D8%A7%D9%85%D9%BE%D8%B2%D8%B4%DA%A9%DB%8C">دامپزشکی</a>
+ | <a href="http://irancell123.com">خرید شارژ ایرانسل مستقیم</a>
+</li>
+</div>
+
+<center>
+
+
+<p align="center"><img border="0" src="http://s1.freeupload.ir/i/00011/zfwjv2p08zet.jpg"></p>
+<p align="center"><font face="Tahoma" color="#222420" style="font-size: 13pt">آرشیو مطالب</font></p>
+
+<div id=mmenu>
+<ul><li><a href="../../../archive/1396/2.html"> اردیبهشت 1396 ، 1 </a></li>
+<li><a href="../../../archive/1395/5.html"> مرداد 1395 ، 1 </a></li>
+<li><a href="../../../archive/1394/5.html"> مرداد 1394 ، 1 </a></li>
+<li><a href="../../../archive/1394/2.html"> اردیبهشت 1394 ، 1 </a></li>
+<li><a href="../../../archive/1393/11.html"> بهمن 1393 ، 1 </a></li>
+<li><a href="../../../archive/1393/9.html"> آذر 1393 ، 1 </a></li>
+<li><a href="../../../archive/1393/6.html"> شهریور 1393 ، 1 </a></li>
+<li><a href="../../../archive/1393/4.html"> تیر 1393 ، 1 </a></li>
+<li><a href="../../../archive/1393/2.html"> اردیبهشت 1393 ، 1 </a></li>
+</ul>
+</div><center>
+<!-.-.-Design By : pichak.net-.-.->
+
+<p align="center"><img border="0" src="http://s1.freeupload.ir/i/00011/zfwjv2p08zet.jpg"></p>
+<p align="center"><font face="Tahoma" color="#222420" style="font-size: 13pt">موضوعات سایت</font></p>
+
+<div id=mmenu>
+<ul>
+<li><a href="../../../category/9.html">اطلاعات در مورد کبوتر  6 </a></li><li><a href="../../../category/8.html">کبوتران دوستان  6 </a></li><li><a href="../../../category/6.html">بیماری های کبوتران(نیوکاسل-سفیدک-آبله-وغیره.....)  1 </a></li><li><a href="../../../category/5.html">کبوترهای خودم (قدیمی)  2 </a></li><li><a href="../../../category/3.html">جفت های امسال  4 </a></li><li><a href="../../../category/1.html">کبوتران پرشی  18 </a></li></ul></div>
+
+
+
+
+
+<div id=mmenu>
+<ul>
+<ul>
+	   <li><a title="قالب وبلاگ" href="http://pichak.net"target="_blank"> پیچك دات نت </a><br><br>
+<a title="قالب وبلاگ" href="http://Pichak.net" target="_blank"><img src="http://pichak.net/themes/logo/01.gif"></a></li></ul>
+</div>
+<center>
+
+
+<p align="center"><img border="0" src="http://s1.freeupload.ir/i/00011/zfwjv2p08zet.jpg"></p>
+<p align="center"><font face="Tahoma" color="#222420" style="font-size: 13pt">امكانات سایت</font></p>
+
+
+<div id=mmenu>
+<ul style="border:none">
+</p>
+<font face="Tahoma" color="#202624" style="font-size: 9pt"> <!-- pic gallery by www.1abzar.com --->
+<script type="text/javascript" src="http://1abzar.ir/abzar/tools/pic-gallery/slide.js"></script><div style="display:none"><h1><a href="http://www.1abzar.com">&#1575;&#1587;&#1604;&#1575;&#1740;&#1583;&#1588;&#1608;</a></h1></div><script type="text/javascript">
+viewer.add("http://kbpi.ir/forums/users/15-albums7-944.jpg","کبوتر دولاب");
+viewer.add("http://s5.picofile.com/file/8115691634/1_25_.jpg","کبوتر دولاب");
+viewer.add("http://s5.picofile.com/file/8115694900/1_47_.jpg","کبوتر دولاب");
+viewer.add("http://s5.picofile.com/file/8115697592/1_64_.jpg","کبوتر دولاب");
+viewer.add("http://s5.picofile.com/file/8115699434/1_78_.jpg","کبوتر دولاب");
+viewer.add("http://s5.picofile.com/file/8115748192/1_145_.jpg","کبوتر دولاب");
+viewer.add("http://s5.picofile.com/file/8115749442/1_180_.jpg","کبوتر دولاب");
+viewer.add("http://s5.picofile.com/file/8115749468/1_181_.jpg","کبوتر دولاب");
+viewer.add("http://s3.picofile.com/file/7675071505/23.jpg","کبوتر دولاب");
+viewer.add("http://s3.picofile.com/file/7675065478/20.jpg","کبوتر دولاب");
+viewer.add("http://s1.picofile.com/file/7972014515/29.jpg","کبوتر دولاب");
+viewer.add("http://s3.picofile.com/file/7972113117/14.jpg","کبوتر دولاب");
+viewer.add("http://s4.picofile.com/file/7750253759/3.jpg","کبوتر دولاب");
+viewer.add("http://kbpi.ir/forums/users/15-albums7-930.jpg","کبوتر دولاب");
+viewer.add("http://kbpi.ir/forums/users/15-albums7-607.jpg","کبوتر دولاب");
+viewer.add("http://kbpi.ir/forums/users/15-albums7-252.jpg","کبوتر دولاب");
+viewer.add("http://kbpi.ir/forums/users/15-albums7-250.jpg","کبوتر دولاب");
+viewer.add("http://kbpi.ir/forums/users/15-albums7-1159.jpg","کبوتر دولاب");
+viewer.add("http://kbpi.ir/forums/users/15-albums7-857.jpg","کبوتر دولاب");
+viewer.add("http://kbpi.ir/forums/users/15-albums7-1158.jpg","کبوتر دولاب");
+viewer.add("http://kbpi.ir/forums/users/15-albums7-168.jpg","کبوتر دولاب");
+viewer.add("http://kbpi.ir/forums/users/15-albums7-1026.jpg","کبوتر دولاب");
+viewer.add("http://kbpi.ir/forums/users/15-albums7-1715.jpg","کبوتر دولاب");
+viewer.add("http://kbpi.ir/forums/users/15-albums7-1098.jpg","کبوتر دولاب");
+viewer.add("http://kbpi.ir/forums/users/15-albums7-1025.jpg","کبوتر دولاب");
+viewer.add("http://s5.picofile.com/file/8115712918/1_115_.jpg","کبوتر دولاب");
+viewer.add("http://kbpi.ir/forums/users/15-albums7-860.jpg","کبوتر دولاب");
+viewer.add("http://kbpi.ir/forums/users/15-albums7-858.jpg","کبوتر دولاب");
+viewer.add("http://kbpi.ir/forums/users/15-albums7-754.jpg","کبوتر دولاب");
+viewer.add("http://kbpi.ir/forums/users/15-albums7-577.jpg","کبوتر دولاب");
+</script><a href="javascript:void(viewer.show(0))"><img border="0" src="http://1abzar.ir/abzar/tools/pic-gallery/abzar3.png" ></a>
+<!-- pic gallery by www.1abzar.com ---> </font></div>
+</div></div>
+
+</body>
+</html><script>
+//    setTimeout(function () {
+//        GetMihanBlogShowAds();
+//    }, 1000);
+</script>
+<!--NEW SERVER-->
+
+<!--SabaVision Ads Handler--><!--<script type="text/javascript">(function (d) {var url =   location.protocol+'//api.sabavision.com/pox/poxjs.js';d.write('<script type="text/javascript" src="' + url + '" async></scri' + 'pt>');})(document);</script>-->
+
+
+<script type="text/javascript">
+
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-153829-9']);
+    _gaq.push(['_setDomainName', 'kabotarsara.mihanblog.com']);
+    _gaq.push(['_trackPageview']);
+
+    (function() {
+        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+
+</script>
+
+
+<div id='mediaad-Kvcm'></div>
+<meta name="sabavision_zone" content="2500-Z499" />
+<center>
+    <div style="background-color:white;width:90%;padding:20px;margin-top:50px;margin-bottom:50px;">
+        <a href="https://www.cloob.com">شبکه اجتماعی فارسی کلوب</a> | <a href="https://www.seo25.com/product/buy-mobile-traffic-and-get-cheap-targeted-mobile-traffic/" target="_blank">Buy Mobile Traffic</a> | <a href="https://www.soalaat.com">سایت سوالات</a>
+    </div>
+</center>

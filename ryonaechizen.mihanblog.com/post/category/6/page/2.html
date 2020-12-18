@@ -1,0 +1,2445 @@
+<!DOCTYPE html PUBLIC 
+"-//W3C//DTD XHTML 1.0 Transitional//EN" 
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" /><link rel="EditURI" type="application/rsd+xml" title="RSD" href="../../../../xmlrpc%3Frsd" />
+<script type="text/javascript" src="http://static.mihanblog.com//public/scripts/run/g.other.v3.js"></script>
+<script>
+
+	function c_$(id){
+        return document.getElementById(id);
+    }
+    
+			//if (parent.frames.length) top.location.href= document.location;
+		
+	setTodayDate = function(){
+		document.write('جمعه 28 آذر 1399');
+		/*1722269*/	}
+
+</script>
+
+
+
+        <script type="text/javascript">
+            (function(){
+            var now = new Date();
+            var head = document.getElementsByTagName('head')[0];
+            var script = document.createElement('script');
+            script.async = true;
+            var script_address = 'https://cdn.yektanet.com/js/mihanblog.com/native-mihanblog.com-6531.js';
+            script.src = script_address + '?v=' + now.getFullYear().toString() + '0' + now.getMonth() + '0' + now.getDate() + '0' + now.getHours();
+            head.appendChild(script);
+            })();
+        </script>
+
+        <!--<script type="text/javascript">
+            var head = document.getElementsByTagName("head")[0];
+            var script = document.createElement("script");
+            script.type = "text/javascript";
+            script.async=1;
+            script.src = "https://s1.mediaad.org/serve/mihanblog.com/loader.js" ;
+            head.appendChild(script);
+        </script>-->
+        
+        <script>
+            var sabaVisionWebsiteID = "9bab9dac-041d-4bdb-b39a-1ed789f65eed"; var sabaVisionWebsitePage = "ALL"
+        </script>
+        <link rel="stylesheet" href="https://plus.sabavision.com/dox/dox.min.css">
+        <script src="https://plus.sabavision.com/dox/dox.min.js"></script>
+        
+        <script>
+	linkdailyForm = function(){
+		try{
+			window.open('/linkdaily/new','linkdaily','status=yes,scrollbars=yes,toolbar=no,menubar=no,location=no ,width=500px,height=460px');
+		} catch(e){}
+	}
+</script><script>
+
+	statInfo = new Array();
+	setStatVar = function(index,value){
+		statInfo[index] = value;
+	}
+	getStatVar = function(index){
+		if(statInfo[index]) document.write(statInfo[index]);
+	}
+	
+	setStatVar('total_post','104');
+	setStatVar('total_author','3');
+	setStatVar('modify_date','یکشنبه 4 تیر 1396');
+	
+	setStatVar('today_view','45');
+	setStatVar('yesterday_view','26');
+	
+	setStatVar('this_month_view','1772');
+	setStatVar('last_month_view','1340');
+
+	setStatVar('total_view','266821');
+	setStatVar('last_view_date','جمعه 28 آذر 1399 (00:13)');
+
+
+
+    
+    function setStatFromClient()
+    {
+        var url = 'http://ryonaechizen.mihanblog.com/statupdate/?data[refereruri]=http://ryonaechizen.mihanblog.com/post/category/6&data[postid]=&data[requesturi]=/post/category/6/page/2&data[sdate]=1608238888&data[hash]=ebe0be06d718187fedbffdf34e522aeb&data[resolution]='+screen.width+' X '+screen.height;
+
+//        alert(url);
+//        var newjs = document.createElement("SCRIPT");
+//        newjs.type = 'text/javascript';
+//        newjs.src = url;
+//
+//        var newdiv = document.createElement("DIV");
+//        newdiv.setAttribute("style","display:none");
+
+        document.write(unescape('%3Cscript src="'+url+'" type="text/javascript"%3E%3C/script%3E'));
+//        newdiv.appendChild (newjs);
+//        document.write(newjs);
+//        document.write(appendChild (newdiv);
+
+    };
+    setStatFromClient();
+        
+</script><script>
+	messageForm = function(post_id){
+		try{
+			window.open('/message','message','status=yes,scrollbars=yes,toolbar=no,menubar=no,location=no ,width=480px,height=550px');
+		} catch(e){}
+	}
+</script><script>
+	try{
+		var commentCnt = new Array();
+		commentCnt[42]='122';commentCnt[47]='4';commentCnt[66]='44';commentCnt[76]='0';commentCnt[90]='2';commentCnt[91]='4';commentCnt[96]='0';commentCnt[103]='1';commentCnt[110]='0';commentCnt[112]='3';commentCnt[116]='35';commentCnt[122]='32';commentCnt[152]='1';commentCnt[162]='1';	} catch(e){}
+	
+	newComment = function(post_id){
+		try{
+			window.open('/post/comment/'+post_id,'comment','status=yes,scrollbars=yes,toolbar=no,menubar=no,location=no ,width=480px,height=540px');
+		} catch(e){}
+	}
+	setCommentCnt = function(post_id){
+		try{
+			if(commentCnt[post_id]){
+				document.write(commentCnt[post_id]);
+			} else {
+				document.write(0);
+			}
+		} catch(e){}
+	}
+</script><script>
+
+
+	mihanblogUpdateLike = function(postid,type){
+		var url = '/post/like/'+postid+'/'+type;
+		mihanblogGetAjax(url,function(){});
+	};
+	try{
+        mihanblogGetAjax = function (url,callback) {
+    		var req;
+			if (window.XMLHttpRequest)
+            {
+                // code for IE7+, Firefox, Chrome, Opera, Safari
+			  	req = new XMLHttpRequest();
+			}else{	// code for IE6, IE5
+			  	req = new ActiveXObject("Microsoft.XMLHTTP");
+		  	}
+		    req.open("GET", url, 1);
+		    req.onreadystatechange = function () {
+		        if (req.readyState == 4) {
+		            if (req.status == 200) {
+		            	var response = eval(req.responseText);
+		            	callback();
+		            }else{
+	            		return ;
+		            }
+		        }else{
+					return ;
+		        }
+		    }
+		    req.send(null);
+		}
+	}catch(e){}
+
+	try{
+		var mihanblogLikeArrCnt = new Array();
+		var mihanblogDisLikeArrCnt = new Array();
+
+		mihanblogLikeArrCnt[42]='0';
+mihanblogDisLikeArrCnt[42]='0';
+mihanblogLikeArrCnt[47]='0';
+mihanblogDisLikeArrCnt[47]='0';
+mihanblogLikeArrCnt[66]='0';
+mihanblogDisLikeArrCnt[66]='0';
+mihanblogLikeArrCnt[76]='0';
+mihanblogDisLikeArrCnt[76]='0';
+mihanblogLikeArrCnt[90]='0';
+mihanblogDisLikeArrCnt[90]='0';
+mihanblogLikeArrCnt[91]='1';
+mihanblogDisLikeArrCnt[91]='0';
+mihanblogLikeArrCnt[110]='1';
+mihanblogDisLikeArrCnt[110]='0';
+mihanblogLikeArrCnt[112]='1';
+mihanblogDisLikeArrCnt[112]='0';
+mihanblogLikeArrCnt[122]='0';
+mihanblogDisLikeArrCnt[122]='0';
+	} catch(e){}
+
+
+
+    mihanblogPostLike = function(post_id){
+
+        mihanblogLikeCnt = (mihanblogLikeArrCnt[post_id]? mihanblogLikeArrCnt[post_id] : 0);
+        mihanblogDisLikeCnt = (mihanblogDisLikeArrCnt[post_id]? mihanblogDisLikeArrCnt[post_id] : 0);
+        mihanblogLikeCnt = parseInt(mihanblogLikeCnt);
+        mihanblogDisLikeCnt = parseInt(mihanblogDisLikeCnt);
+
+        document.write(
+                '<div class="mihanblog_like_wrapper ">'+
+                       '<div id="dislikeBar_'+post_id+'" onclick="mihanblogUpdateLike('+post_id+',\'dislike\')"   class="mihanblog_like_bar mihanblog_like_dislikeBar mihanblog_like_show_help ">-<div class="mihanblog_like_Cnt" id="disLikeCnt_'+post_id+'">'+mihanblogDisLikeCnt+'</div>'+
+                            '<span  class="mihanblog_like_v2_help mihanblog_like_v2_help_dislike clearfix"> '+
+                                '<span class="mihanblog_like_help_arrow mihanblog_like_help_arrow_dislike clearfix"></span>'+
+                                '<span class="mihanblog_like_help_text">نمی پسندم</span>'+
+                            '</span>'+
+                        '</div>'+
+                       '<div id="Like_'+post_id+'" class="mihanblog_like_border"></div>'+
+                       '<div id="likeBar_'+post_id+'" onclick="mihanblogUpdateLike('+post_id+',\'like\')"  class="mihanblog_like_bar mihanblog_like_likeBar mihanblog_like_show_help" >+<div class="mihanblog_like_Cnt" id="likeCnt_'+post_id+'">'+mihanblogLikeCnt+'</div>'+
+                            '<span  class="mihanblog_like_v2_help mihanblog_like_v2_help_like clearfix"> '+
+                                '<span class="mihanblog_like_help_arrow mihanblog_like_help_arrow_like clearfix"></span>'+
+                                '<span class="mihanblog_like_help_text">می پسندم</span>'+
+                            '</span>'+
+                        '</div>'+
+
+                '</div>'
+        );
+
+
+
+        mihanblogDisplayeLike(post_id);
+    }
+
+
+    mihanblogDisplayeLike = function(post_id){
+
+        mihanblogLikeCnt = (mihanblogLikeArrCnt[post_id]? mihanblogLikeArrCnt[post_id] : 0);
+        mihanblogDisLikeCnt = (mihanblogDisLikeArrCnt[post_id]? mihanblogDisLikeArrCnt[post_id] : 0);
+        mihanblogLikeCnt = parseInt(mihanblogLikeCnt);
+        mihanblogDisLikeCnt = parseInt(mihanblogDisLikeCnt);
+
+
+
+        sum = mihanblogLikeCnt - mihanblogDisLikeCnt;
+        backgroundBorder =  document.getElementById('Like_'+post_id);
+        var likeObj = document.getElementById('likeCnt_'+post_id);
+        var disLikeObj = document.getElementById('disLikeCnt_'+post_id);
+
+
+
+
+
+        likeObj.innerHTML =  mihanblogLikeCnt ;
+        disLikeObj.innerHTML =  mihanblogDisLikeCnt;
+
+        if(sum == 0){
+            backgroundBorder.style.backgroundImage = "url('/public/public/images/icons/like_likedislike.png')";
+            document.getElementById('dislikeBar_'+post_id).style.width = '19px';
+            document.getElementById('likeBar_'+post_id).style.width = '19px';
+        }else{
+             if(sum > 0){
+                 backgroundBorder.style.backgroundImage = "url('/public/public/images/icons/like_like.png')";
+                 document.getElementById('likeBar_'+post_id).style.width = '23px';
+                 document.getElementById('dislikeBar_'+post_id).style.width = '15px';
+             }else{
+                 backgroundBorder.style.backgroundImage = "url('/public/public/images/icons/like_dislike.png')";
+                 document.getElementById('likeBar_'+post_id).style.width = '15px';
+                 document.getElementById('dislikeBar_'+post_id).style.width = '23px';
+             }
+        }
+
+    }
+
+
+
+
+</script>
+
+<style type="text/css">
+
+
+    .clearfix {display: inline-block;}
+    .clearfix:after {
+        content: ".";
+        display: block;
+        height: 0;
+        clear: both;
+        visibility: hidden;
+    }
+
+    .mihanblog_like_wrapper {
+        color: #ffffff;
+        direction: ltr;
+        position: relative;
+    }
+    .mihanblog_like_wrapper span{
+        display: none;
+    }
+    .mihanblog_like_bar {
+        color: #FFFFFF;
+        cursor: pointer;
+        float: left;
+        font-size: 10px;
+        height: 20px;
+        line-height: 19px;
+        margin: 5px 0;
+    }
+    .mihanblog_like_likeBar {
+        background-color: #88B131;
+        padding-right: 5px;
+        border-top-right-radius: 2px;
+        border-bottom-right-radius: 2px;
+        text-align: right;
+    }
+    .mihanblog_like_likeBar:hover{
+        background-color: #699017;
+    }
+    .mihanblog_like_border {
+        background-color: #666666;
+        border: 1px solid #666666;
+        float: left;
+        font-size: 12px;
+        height: 20px;
+        margin-top: 2px;
+        width: 25px;
+        padding: 3px 5px 2px 0;
+        text-align: center;
+        border-radius: 2px;
+        color: #ffffff;
+        direction: ltr;
+        background-repeat: no-repeat ;
+        background-position: 4px center;
+    }
+    .mihanblog_like_border img {
+        margin-left: 2px;
+        margin-top: 2px;
+        width: 22px;
+    }
+    .mihanblog_like_dislikeBar {
+        background-color: #FF6F31;
+        padding-left: 5px;
+        border-top-left-radius: 2px;
+        border-bottom-left-radius: 2px;
+        text-align:left ;
+    }
+    .mihanblog_like_dislikeBar:hover{
+        background-color: #D54B10;
+    }
+
+
+
+    .mihanblog_like_show_help {
+        position: relative;
+    }
+    .mihanblog_like_show_help:hover span {
+        display: block;
+    }
+    .mihanblog_like_help_text {
+        background-color: white;
+        border: 1px solid #555555;
+        border-radius: 3px 3px 3px 3px;
+        color: #303030;
+        float: left;
+        font-size: 11px;
+        font-weight: normal;
+        padding: 5px 10px;
+    }
+
+    .mihanblog_like_help_arrow_dislike {
+        background: url("http://ryonaechizen.mihanblog.com/public/public/images/icons/like_hover_top.png") no-repeat scroll 16px 0 transparent;
+        left: 0;
+        top: -4px;
+    }
+
+    .mihanblog_like_help_arrow_like {
+        background: url("http://ryonaechizen.mihanblog.com/public/public/images/icons/like_hover_top _2.png") no-repeat scroll 16px 0 transparent;
+        left: -10px;
+        top: 29px;
+    }
+
+    .mihanblog_like_help_arrow{
+        height: 6px;
+        position: absolute;
+        width: 100px;
+
+    }
+
+    .mihanblog_like_v2_help_dislike {
+        left: -15px;
+        top: 24px;
+    }
+    .mihanblog_like_v2_help_like {
+        left: 0;
+        top: -35px;
+
+    }
+    .mihanblog_like_v2_help{
+        display: none;
+        position: absolute;
+        white-space: nowrap;
+        z-index: 1;
+    }
+
+    .mihanblog_like_Cnt{
+        display: inline;
+        color: #ffffff;
+    }
+
+</style>
+    <style>
+        @font-face {
+            font-family: 'Mihan-Iransans';
+            src: url('http://ryonaechizen.mihanblog.com/public/public/fonts/Iransans.eot');
+            src: url('http://ryonaechizen.mihanblog.com/public/public/fonts/Iransans.eot?') format('embedded-opentype'),
+            url('http://ryonaechizen.mihanblog.com/public/public/fonts/Iransans.woff2') format('woff2'),
+            url('http://ryonaechizen.mihanblog.com/public/public/fonts/Iransans.woff') format('woff'),
+            url('http://ryonaechizen.mihanblog.com/public/public/fonts/Iransans.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+        @font-face {
+            font-family: 'Mihan-IransansBold';
+            src: url('http://ryonaechizen.mihanblog.com/public/public/fonts/Iransans-Black.eot');
+            src: url('http://ryonaechizen.mihanblog.com/public/public/fonts/Iransans-Black.eot?') format('embedded-opentype'),
+            url('http://ryonaechizen.mihanblog.com/public/public/fonts/Iransans-Black.woff2') format('woff2'),
+            url('http://ryonaechizen.mihanblog.com/public/public/fonts/Iransans-Black.woff') format('woff'),
+            url('http://ryonaechizen.mihanblog.com/public/public/fonts/Iransans-Black.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+        @font-face {
+            font-family: 'Mihan-IransansLight';
+            src: url('http://ryonaechizen.mihanblog.com/public/public/fonts/Iransans-UltraLight.eot');
+            src: url('http://ryonaechizen.mihanblog.com/public/public/fonts/Iransans-UltraLight.eot?') format('embedded-opentype'),
+            url('http://ryonaechizen.mihanblog.com/public/public/fonts/Iransans-UltraLight.woff2') format('woff2'),
+            url('http://ryonaechizen.mihanblog.com/public/public/fonts/Iransans-UltraLight.woff') format('woff'),
+            url('http://ryonaechizen.mihanblog.com/public/public/fonts/Iransans-UltraLight.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+        @font-face {
+            font-family: 'Mihan-Nassim';
+            src: url('http://ryonaechizen.mihanblog.com/public/public/fonts/Nassim.eot');
+            src: url('http://ryonaechizen.mihanblog.com/public/public/fonts/Nassim.eot?') format('embedded-opentype'),
+            url('http://ryonaechizen.mihanblog.com/public/public/fonts/Nassim.woff2') format('woff2'),
+            url('http://ryonaechizen.mihanblog.com/public/public/fonts/Nassim.woff') format('woff'),
+            url('http://ryonaechizen.mihanblog.com/public/public/fonts/Nassim.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+        @font-face {
+            font-family: 'Mihan-Koodak';
+            src: url('http://ryonaechizen.mihanblog.com/public/public/fonts/Koodak.eot');
+            src: url('http://ryonaechizen.mihanblog.com/public/public/fonts/Koodak.eot?') format('embedded-opentype'),
+            url('http://ryonaechizen.mihanblog.com/public/public/fonts/Koodak.woff2') format('woff2'),
+            url('http://ryonaechizen.mihanblog.com/public/public/fonts/Koodak.woff') format('woff'),
+            url('http://ryonaechizen.mihanblog.com/public/public/fonts/Koodak.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+        @font-face {
+            font-family: 'Mihan-Yekan';
+            src: url('http://ryonaechizen.mihanblog.com/public/public/fonts/Yekan.eot');
+            src: url('http://ryonaechizen.mihanblog.com/public/public/fonts/Yekan.eot?') format('embedded-opentype'),
+            url('http://ryonaechizen.mihanblog.com/public/public/fonts/Yekan.woff2') format('woff2'),
+            url('http://ryonaechizen.mihanblog.com/public/public/fonts/Yekan.woff') format('woff'),
+            url('http://ryonaechizen.mihanblog.com/public/public/fonts/Yekan.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+        @font-face {
+            font-family: 'FontAwesome';
+            src: url('http://ryonaechizen.mihanblog.com/public/public/fonts/fontawesome_webfont.eot');
+            src: url('http://ryonaechizen.mihanblog.com/public/public/fonts/fontawesome_webfont.eot?') format('embedded-opentype'),
+            url('http://ryonaechizen.mihanblog.com/public/public/fonts/fontawesome_webfont.woff2') format('woff2'),
+            url('http://ryonaechizen.mihanblog.com/public/public/fonts/fontawesome_webfont.woff') format('woff'),
+            url('http://ryonaechizen.mihanblog.com/public/public/fonts/fontawesome_webfont.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+
+
+        
+
+        /* Smartphones (portrait and landscape) ----------- */
+
+        /*
+        @media only screen and (max-width : 480px) and (min-width : 320px) {
+            .sabaClick_advert__wrapper{
+                display:block;
+            }
+            .sabaClick_advert__inner{
+                max-width: 90%;
+                margin: 0 5%;
+            }
+        }
+        */
+
+    </style>
+
+
+
+
+
+
+<div
+ id="first_p" style="text-align: center; margin-top: 5px;"><a 
+onclick="document.getElementById('main_p').style.display = 
+'block';document.getElementById('first_p').style.display = 'none';" 
+href="2.html#"><img src="http://s2.picofile.com/file/8261848484/737251.png" 
+border="0"></a></div><div id="main_p" style="display: 
+none;">
+<html>
+    <head><link href=" 
+http://gazo.emoji7.jp/img/04c0h_597637/%E3%82%B0%E3%83%BC%E3%83%9F%E3%83%BC%E3%82%BA+%E8%A6%8B%E3%81%A6%E3%81%AD%28%5E%E2%97%87%5E%29%E2%94%9B_m.gif " rel="shortcut 
+icon">        <title>❤دنیای دوستداشتنی ما❤ - مطالب متفرقه</title>        
+<meta http-equiv="Content-Type" content="text/html; 
+charset=utf-8">        <meta http-equiv="Content-Language" 
+content="fa">        <meta name="description" 
+content="" />        <meta 
+name="keywords" content="" />                
+<link rel="alternate" type="application/rss+xml" 
+title="❤دنیای دوستداشتنی ما❤"           href="../../../rss/index.html" />       
+ <link rel="alternate" type="application/atom+xml" 
+title="❤دنیای دوستداشتنی ما❤"           href="../../../atom/index.html" />      
+  </head>    <style>        
+*{font-family:B Mahsa;direction:rtl;color:#000000}        
+#sidebar{float:left;width:200px;margin-right:15px}        
+#content{float:right;width:500px;padding:20px}            
+#body{display:block;font-size:15px}                
+a,a:hover,a.visited{text-decoration:none}        .inbox{list-style:none;
+ padding:0 4px}        ul{padding:3px;margin:5px;}        h2{color:red} 
+       h2 a{color:#ff0078; font-size:25px; font-family:B Mahsa}    
+    h3{color:#006f9d; margin-top:0; font-size:25px; font-family:B Mahsa 
+; text-align:center}        #header h1 a{font-size:35px; 
+font-family:B Mahsa; float:center; color:}                #header 
+h1{margin:0; height:50px; overflow:hidden}                .author_box 
+img{float:right;border:none;}        
+.mihan_logo{text-align:center;height:200px;margin-top:10px;    
+background: url() no-repeat top center;}        .slogan{            
+color:#FF0571; text-align:center; padding:314px 0;            
+background: url(http://s2.picofile.com/file/8261620868/121.png) repeat;            background: 
+expression(#FFFFFF);        }                
+#footer{font-size:9px;display:block;margin-top:50px; float:left}        
+#footer a,#footer a:hover,#footer a:visited{color:#;}                
+.hr{border-top:1px solid #CCCCCC;height:1px;margin:3px;}                
+    body{margin:0; background: #FFFFFF url(http://s1.picofile.com/file/8261765100/blue_aztec_pattern.png) repeat fixed 
+center}                .sidebar_box{background-color:#; padding:10px 
+5px; line-height:5px; line-height:20px}        
+.sidebar_box_border{background-color:#; height:1px; display:block; 
+overflow:hidden}        .sidebar_box_border_div{width:185px;}        
+.seprator{margin-bottom:10px}        .main_menu{text-align:center}      
+  .blog_title{color:#}                #header{height:0px; 
+overflow:hidden; background: #FFFFFF url() center repeat}        #body{ 
+           background: url(http://s1.picofile.com/file/8261620892/122.png) repeat;            background:
+ expression(#FFFFFF);        }        #blog_body{width:1140px; 
+margin:200px auto; }        #footer_background{background: url(http://s2.picofile.com/file/8261620926/123.png) repeat-x; padding-bottom:450px}            .clearfix {           
+ display:inline-block;        }        .clearfix:after {            
+clear:both;            content:'.';            display:block;           
+ height:0;            visibility:hidden;        }        * html 
+.clearfix {            height:20%;        }        .clearfix {          
+  display:block;        }    </style>    <body>        
+<div id="blog_body">                <div id="header">       
+         <h1><p style="text-align:center; margin:0"><a 
+class="blog_title" href="ryonaechizen.html" 
+style="margin:10px">❤دنیای دوستداشتنی ما❤</a></p></h1>   
+         </div>                    <div 
+class="slogan"></div>                        
+<div class="clearfix">                            <div 
+id="body" class="clearfix">                                        
+<div id="content">                           
+                         
+		<div id="MihanblogShopAds" style="display:block;height:0px;width:100%;border:0px"></div>
+		                           
+     <div>                                    <h2>          
+                              <a 
+href="../../../162.html">هوووورااااااااااااااااااااااا</a>                      
+              </h2>                                    <p 
+class="date">                                        
+یکشنبه 6 تیر 1395 11:50 ق.ظ                             
+       </p>                                </div>           
+                                 <b>Writer :</b>           
+                     <a href="../../../author/1426181.html">             
+                       ⓥⓨⓞⓝⓐ                              
+    </a>                                                        
+<br/>                                            
+                                    
+<b>Time:</b>                                    
+                                        
+<a href="../../6.html">                                
+            متفرقه                                     
+   </a>،                                    
+                                          
+                  <br>                                
+                                         
+                   <a href="../../../author/1426181.html"><img src="http://static.mihanblog.com//public/user_data/user_photo/476/1426181.jpg"  /></a>                           
+     <div id="InPost_MihanblogShopAds" style="display:block;height:0px;width:100%;border:0px"></div>
+<div style="text-align: center;"><font face="Mihan-IransansBold">سلام سلام</font><img src="http://mihanblog.com/public/public/rte/images_new/smiles/6.gif"></div><div style="text-align: center;"><font face="Mihan-IransansBold"><br></font></div><div style="text-align: center;"><font face="Mihan-IransansBold"><br></font></div><div style="text-align: center;"><font face="Mihan-IransansBold">ریما دوباره وب زدههههههههههههههه</font><img src="http://mihanblog.com/public/public/rte/images_new/smiles/85.gif"></div><div style="text-align: center;"><font face="Mihan-IransansBold"><br></font></div><div style="text-align: center;"><font face="Mihan-IransansBold"><br></font></div><div style="text-align: center;"><font face="Mihan-IransansBold">هوراااااااااااااااااااااااااااااااااا</font></div><div style="text-align: center;"><font face="Mihan-IransansBold"><br></font></div><div style="text-align: center;"><font face="Mihan-IransansBold"><br></font></div><div style="text-align: center;"><font face="Mihan-IransansBold">خوشحالم</font><img src="http://mihanblog.com/public/public/rte/images_new/smiles/4.gif"></div><div style="text-align: center;"><font face="Mihan-IransansBold"><br></font></div><div style="text-align: center;"><font face="Mihan-IransansBold">ادرسش</font></div><div style="text-align: center;"><font face="Mihan-IransansBold"><br></font></div><div style="text-align: center;"><font face="Mihan-IransansBold"><br></font></div><div style="text-align: center;"><font face="Mihan-IransansBold"><br></font></div><div style="text-align: center;"><a href="http://myloveryoma2.mihanblog.com/" target="" title="">بکیلیک</a></div>
+
+
+
+
+                                     
+                                               <br>               
+                                                                                                                 
+<br>                                <br>                    
+                                <a target="_self" href="javascript:newComment(162)">                                    
+<b>Comments : </b>                                    
+<script>setCommentCnt(162)</script> نظرات                          
+      </a>                                                        
+        <br/>                                            
+                         
+                                                           
+                                        <b>Edit:</b> <br><br> <p align="center"><img border="0" src="http://s1.picofile.com/file/8261640292/125.png"></p>	
+                               یکشنبه 6 تیر 1395  11:54 ق.ظ 
+                                                               
+<br><br>                                                    
+                               
+     <div>                                    <h2>          
+                              <a 
+href="../../../152.html">.....</a>                      
+              </h2>                                    <p 
+class="date">                                        
+یکشنبه 23 خرداد 1395 02:08 ب.ظ                             
+       </p>                                </div>           
+                                 <b>Writer :</b>           
+                     <a href="../../../author/1426181.html">             
+                       ⓥⓨⓞⓝⓐ                              
+    </a>                                                        
+<br/>                                            
+                                    
+<b>Time:</b>                                    
+                                        
+<a href="../../6.html">                                
+            متفرقه                                     
+   </a>،                                    
+                                        
+<a href="../../7.html">                                
+            اخبار وبلاگ                                     
+   </a>،                                    
+                                          
+                  <br>                                
+                                         
+                   <a href="../../../author/1426181.html"><img src="http://static.mihanblog.com//public/user_data/user_photo/476/1426181.jpg"  /></a>                           
+     <div style="text-align: center;">بچه ها بازدید وبلاگ دخی های باحال&nbsp;</div><div style="text-align: center;"><br></div><div style="text-align: center;">مال منو دوستم</div><div style="text-align: center;"><br></div><div style="text-align: center;">خیلی کمه</div><div style="text-align: center;"><br></div><div style="text-align: center;">برید اونجا و نظر بارونش کنید<img src="http://mihanblog.com/public/public/rte/images_new/smiles/6.gif"></div><div style="text-align: center;"><br></div><div style="text-align: center;"><br></div><div style="text-align: center;"><a href="http://myfrinds8.mihanblog.com/" target="" title=""><img hspace="0" border="0" align="baseline" vspace="0" src="http://s7.picofile.com/file/8255476618/Untitled_1.png" alt=""></a></div>                                     
+                                               <br>               
+                                                                                                                 
+<br>                                <br>                    
+                                <a target="_self" href="javascript:newComment(152)">                                    
+<b>Comments : </b>                                    
+<script>setCommentCnt(152)</script> نظرات                          
+      </a>                                                        
+        <br/>                                            
+                         
+                                                           
+                                        <b>Edit:</b> <br><br> <p align="center"><img border="0" src="http://s1.picofile.com/file/8261640292/125.png"></p>	
+                               یکشنبه 23 خرداد 1395  02:15 ب.ظ 
+                                                               
+<br><br>                                                    
+                               
+     <div>                                    <h2>          
+                              <a 
+href="../../../122.html">رتبه بندی نویسنده ها</a>                      
+              </h2>                                    <p 
+class="date">                                        
+پنجشنبه 6 خرداد 1395 10:48 ق.ظ                             
+       </p>                                </div>           
+                                 <b>Writer :</b>           
+                     <a href="../../../author/1426181.html">             
+                       ⓥⓨⓞⓝⓐ                              
+    </a>                                                        
+<br/>                                            
+                                    
+<b>Time:</b>                                    
+                                        
+<a href="../../7.html">                                
+            اخبار وبلاگ                                     
+   </a>،                                    
+                                        
+<a href="../../6.html">                                
+            متفرقه                                     
+   </a>،                                    
+                                          
+                  <br>                                
+                                         
+                   <a href="../../../author/1426181.html"><img src="http://static.mihanblog.com//public/user_data/user_photo/476/1426181.jpg"  /></a>                           
+     
+<div style="text-align: center;"><div>سیلام</div><div><br></div><div><br></div><div><br></div><div><br></div><div>نویسنده ها بیان</div><div><br></div><div><br></div><div><font face="Mihan-IransansBold" size="6">ادامه</font></div></div>
+
+
+
+
+                                     
+                                               <br>               
+                                                 <a href='../../../122.html'>بیاید بچه ها ...</a>                                                                
+<br>                                <br>                    
+                                <a target="_self" href="javascript:newComment(122)">                                    
+<b>Comments : </b>                                    
+<script>setCommentCnt(122)</script> نظرات                          
+      </a>                                                        
+        <br/>                                            
+                         
+                                                           
+                                        <b>Edit:</b> <br><br> <p align="center"><img border="0" src="http://s1.picofile.com/file/8261640292/125.png"></p>	
+                               شنبه 5 تیر 1395  04:12 ب.ظ 
+                                                               
+<br><br>                                                    
+                               
+     <div>                                    <h2>          
+                              <a 
+href="../../../116.html">تولدم مبارک!!!!!!!!</a>                      
+              </h2>                                    <p 
+class="date">                                        
+دوشنبه 3 خرداد 1395 10:16 ق.ظ                             
+       </p>                                </div>           
+                                 <b>Writer :</b>           
+                     <a href="../../../author/1426181.html">             
+                       ⓥⓨⓞⓝⓐ                              
+    </a>                                                        
+<br/>                                            
+                                    
+<b>Time:</b>                                    
+                                        
+<a href="../../6.html">                                
+            متفرقه                                     
+   </a>،                                    
+                                        
+<a href="../../7.html">                                
+            اخبار وبلاگ                                     
+   </a>،                                    
+                                          
+                  <br>                                
+                                         
+                   <a href="../../../author/1426181.html"><img src="http://static.mihanblog.com//public/user_data/user_photo/476/1426181.jpg"  /></a>                           
+     <div style="text-align: center;">تولد</div><div style="text-align: center;"><br></div><div style="text-align: center;">تولد</div><div style="text-align: center;"><br></div><div style="text-align: center;"><br></div><div style="text-align: center;">تولد</div><div style="text-align: center;"><br></div><div style="text-align: center;"><br></div><div style="text-align: center;">تولدم مبارک !!!!!!!! مبارک مبارک تولدم مبارک<img src="http://mihanblog.com/public/public/rte/images_new/smiles/36.gif"></div><div style="text-align: center;"><br></div><div style="text-align: center;"><br></div><div style="text-align: center;">دیگه کارم به جایی رسیده که خودم باید واس خودم تولد بگیرم؟؟؟؟؟؟<img src="http://mihanblog.com/public/public/rte/images_new/smiles/17.gif"></div><div style="text-align: center;"><br></div><div style="text-align: center;"><br></div><div style="text-align: center;"><img src="http://mihanblog.com/public/public/rte/images_new/smiles/36.gif"><img src="http://mihanblog.com/public/public/rte/images_new/smiles/36.gif"><img src="http://mihanblog.com/public/public/rte/images_new/smiles/36.gif"><img src="http://mihanblog.com/public/public/rte/images_new/smiles/36.gif"></div>
+
+
+                                     
+                                               <br>               
+                                                                                                                 
+<br>                                <br>                    
+                                <a target="_self" href="javascript:newComment(116)">                                    
+<b>Comments : </b>                                    
+<script>setCommentCnt(116)</script> تولدم                          
+      </a>                                                        
+        <br/>                                            
+                         
+                                                           
+                                        <b>Edit:</b> <br><br> <p align="center"><img border="0" src="http://s1.picofile.com/file/8261640292/125.png"></p>	
+                               دوشنبه 3 خرداد 1395  10:19 ق.ظ 
+                                                               
+<br><br>                                                    
+                               
+     <div>                                    <h2>          
+                              <a 
+href="../../../112.html">توجه!</a>                      
+              </h2>                                    <p 
+class="date">                                        
+پنجشنبه 14 بهمن 1395 02:30 ق.ظ                             
+       </p>                                </div>           
+                                 <b>Writer :</b>           
+                     <a href="../../../author/1426181.html">             
+                       ⓥⓨⓞⓝⓐ                              
+    </a>                                                        
+<br/>                                            
+                                    
+<b>Time:</b>                                    
+                                        
+<a href="../../6.html">                                
+            متفرقه                                     
+   </a>،                                    
+                                        
+<a href="../../7.html">                                
+            اخبار وبلاگ                                     
+   </a>،                                    
+                                          
+                  <br>                                
+                                         
+                   <a href="../../../author/1426181.html"><img src="http://static.mihanblog.com//public/user_data/user_photo/476/1426181.jpg"  /></a>                           
+     
+<div style="text-align: center;"><img hspace="0" border="0" align="baseline" vspace="0" src="http://s6.picofile.com/file/8249228134/5561354.png" alt=""></div>
+
+
+
+
+                                     
+                                               <br>               
+                                                                                                                 
+<br>                                <br>                    
+                                <a target="_self" href="javascript:newComment(112)">                                    
+<b>Comments : </b>                                    
+<script>setCommentCnt(112)</script> میخوای نویسنده شی؟؟؟                          
+      </a>                                                        
+        <br/>                                            
+                         
+                                                           
+                                        <b>Edit:</b> <br><br> <p align="center"><img border="0" src="http://s1.picofile.com/file/8261640292/125.png"></p>	
+                               پنجشنبه 14 بهمن 1395  03:32 ب.ظ 
+                                                               
+<br><br>                                                    
+                               
+     <div>                                    <h2>          
+                              <a 
+href="../../../110.html">یه نکته</a>                      
+              </h2>                                    <p 
+class="date">                                        
+یکشنبه 5 اردیبهشت 1395 04:27 ب.ظ                             
+       </p>                                </div>           
+                                 <b>Writer :</b>           
+                     <a href="../../../author/1426181.html">             
+                       ⓥⓨⓞⓝⓐ                              
+    </a>                                                        
+<br/>                                            
+                                    
+<b>Time:</b>                                    
+                                        
+<a href="../../6.html">                                
+            متفرقه                                     
+   </a>،                                    
+                                        
+<a href="../../7.html">                                
+            اخبار وبلاگ                                     
+   </a>،                                    
+                                        
+<a href="../../1.html">                                
+            رمان شاهدخت تنیس                                     
+   </a>،                                    
+                                        
+<a href="../../9.html">                                
+            رمان لمس واژه ی سرنوشت                                     
+   </a>،                                    
+                                          
+                  <br>                                
+                                         
+                   <a href="../../../author/1426181.html"><img src="http://static.mihanblog.com//public/user_data/user_photo/476/1426181.jpg"  /></a>                           
+     
+<div style="text-align: center;"><font face="Mihan-Iransans" size="1">سیلام</font></div><div style="text-align: center;"><font face="Mihan-Iransans" size="1"><br></font></div><div style="text-align: center;"><font face="Mihan-Iransans" size="1">یه نکته درمورد رمان لمس واژه ی سرنوشت</font></div><div style="text-align: center;"><font face="Mihan-Iransans" size="1"><br></font></div><div style="text-align: center;"><font face="Mihan-Iransans" size="1">من برا اینکه بایه تیکه از داستان سن شخصیت ها نمیاد</font></div><div style="text-align: center;"><font face="Mihan-Iransans" size="1"><br></font></div><div style="text-align: center;"><font face="Mihan-Iransans" size="1">میخوام سن شخصیت هارو عوض کنم</font></div><div style="text-align: center;"><font face="Mihan-Iransans" size="1"><br></font></div><div style="text-align: center;"><font face="Mihan-Iransans" size="1">ویونا و وارنیاو ریوما و کینتارو ۱۵</font></div><div style="text-align: center;"><font face="Mihan-Iransans" size="1"><br></font></div><div style="text-align: center;"><font face="Mihan-Iransans" size="1">آنی و رایاو تزوکاو شیر ایشی ۱۶</font></div><div style="text-align: center;"><font face="Mihan-Iransans" size="1"><br></font></div><div style="text-align: center;"><font face="Mihan-Iransans" size="1">بعد ۱۹خرداد رمان هامو مینوسم</font></div><div style="text-align: center;"><font face="Mihan-Iransans" size="1"><br></font></div><div style="text-align: center;"><font face="Mihan-Iransans" size="1">امتحاناتون ۲۰</font></div><div style="text-align: center;"><img src="http://mihanblog.com/public/public/rte/images_new/smiles/16.gif"></div>
+
+
+
+
+                                     
+                                               <br>               
+                                                                                                                 
+<br>                                <br>                    
+                                <a target="_self" href="javascript:newComment(110)">                                    
+<b>Comments : </b>                                    
+<script>setCommentCnt(110)</script> کآمنت                          
+      </a>                                                        
+        <br/>                                            
+                         
+                                                           
+                                        <b>Edit:</b> <br><br> <p align="center"><img border="0" src="http://s1.picofile.com/file/8261640292/125.png"></p>	
+                               پنجشنبه 9 اردیبهشت 1395  06:07 ب.ظ 
+                                                               
+<br><br>                                                    
+                               
+     <div>                                    <h2>          
+                              <a 
+href="../../../103.html">سلام سلام </a>                      
+              </h2>                                    <p 
+class="date">                                        
+شنبه 29 اسفند 1394 10:10 ق.ظ                             
+       </p>                                </div>           
+                                 <b>Writer :</b>           
+                     <a href="../../../author/1426181.html">             
+                       ⓥⓨⓞⓝⓐ                              
+    </a>                                                        
+<br/>                                            
+                                    
+<b>Time:</b>                                    
+                                        
+<a href="../../6.html">                                
+            متفرقه                                     
+   </a>،                                    
+                                        
+<a href="../../7.html">                                
+            اخبار وبلاگ                                     
+   </a>،                                    
+                                          
+                  <br>                                
+                                         
+                   <a href="../../../author/1426181.html"><img src="http://static.mihanblog.com//public/user_data/user_photo/476/1426181.jpg"  /></a>                           
+     <div style="text-align: center;"><font size="3" face="Mihan-IransansLight">سلام</font></div><div style="text-align: center;"><font size="3" face="Mihan-IransansLight"><br></font></div><div style="text-align: center;"><font size="3" face="Mihan-IransansLight"><br></font></div><div style="text-align: center;"><font size="3" face="Mihan-IransansLight">عیدتون مبارک</font></div><div style="text-align: center;"><font size="3" face="Mihan-IransansLight"><br></font></div><div style="text-align: center;"><font size="3" face="Mihan-IransansLight">مثلا ما قالبو برا عید نو کردیم<img src="http://mihanblog.com/public/public/rte/images_new/smiles/21.gif"></font></div><div style="text-align: center;"><font size="3" face="Mihan-IransansLight"><br></font></div><div style="text-align: center;"><font size="3" face="Mihan-IransansLight">خو این رنگ رو دوس دالم دیه</font></div><div style="text-align: center;"><font size="3" face="Mihan-IransansLight"><br></font></div><div style="text-align: center;"><font size="3" face="Mihan-IransansLight">خودم درستش کردما</font></div><div style="text-align: center;"><font size="3" face="Mihan-IransansLight"><br></font></div><div style="text-align: center;"><font size="3" face="Mihan-IransansLight"><br></font></div><div style="text-align: center;"><font size="3" face="Mihan-IransansLight">قشنگه؟؟؟؟؟</font></div><div style="text-align: center;"><font size="3" face="Mihan-IransansLight"><br></font></div><div style="text-align: center;"><font size="3" face="Mihan-IransansLight"><br></font></div><div style="text-align: center;"><font size="3" face="Mihan-IransansLight">شاید تو عید بتونم بیام و نظراتونو &nbsp;تایید کنم</font></div><div style="text-align: center;"><font size="3" face="Mihan-IransansLight"><br></font></div><div style="text-align: center;"><font size="3" face="Mihan-IransansLight">کاری باری ؟؟؟؟؟؟</font></div><div style="text-align: center;"><font size="3" face="Mihan-IransansLight"><br></font></div><div style="text-align: center;"><font size="3" face="Mihan-IransansLight"><br></font></div><div style="text-align: center;"><font size="3" face="Mihan-IransansLight">سر سفره هفت سین مارو هم یاد کنینا....</font></div>
+
+
+                                     
+                                               <br>               
+                                                                                                                 
+<br>                                <br>                    
+                                <a target="_self" href="javascript:newComment(103)">                                    
+<b>Comments : </b>                                    
+<script>setCommentCnt(103)</script> کامنت نوروزی                          
+      </a>                                                        
+        <br/>                                            
+                         
+                                                           
+                                        <b>Edit:</b> <br><br> <p align="center"><img border="0" src="http://s1.picofile.com/file/8261640292/125.png"></p>	
+                               شنبه 29 اسفند 1394  10:52 ق.ظ 
+                                                               
+<br><br>                                                    
+                               
+     <div>                                    <h2>          
+                              <a 
+href="../../../96.html">نتیجه ی نظر سنجی </a>                      
+              </h2>                                    <p 
+class="date">                                        
+شنبه 26 دی 1394 01:02 ب.ظ                             
+       </p>                                </div>           
+                                 <b>Writer :</b>           
+                     <a href="../../../author/1426181.html">             
+                       ⓥⓨⓞⓝⓐ                              
+    </a>                                                        
+<br/>                                            
+                                    
+<b>Time:</b>                                    
+                                        
+<a href="../../6.html">                                
+            متفرقه                                     
+   </a>،                                    
+                                        
+<a href="../../7.html">                                
+            اخبار وبلاگ                                     
+   </a>،                                    
+                                          
+                  <br>                                
+                                         
+                   <a href="../../../author/1426181.html"><img src="http://static.mihanblog.com//public/user_data/user_photo/476/1426181.jpg"  /></a>                           
+     
+
+<div style="text-align: center;">اینم نتیجه ی نظر سنجی</div><div style="text-align: center;"><br></div><div style="text-align: center;"><img hspace="0" border="0" align="baseline" vspace="0" src="http://www.98up.in/images/sh84m1n7kndtutkz55qf.png" alt=""></div>
+
+
+
+
+
+
+                                     
+                                               <br>               
+                                                                                                                 
+<br>                                <br>                    
+                                <a target="_self" href="javascript:newComment(96)">                                    
+<b>Comments : </b>                                    
+<script>setCommentCnt(96)</script> نظرات                          
+      </a>                                                        
+        <br/>                                            
+                         
+                                                           
+                                        <b>Edit:</b> <br><br> <p align="center"><img border="0" src="http://s1.picofile.com/file/8261640292/125.png"></p>	
+                               شنبه 26 دی 1394  01:43 ب.ظ 
+                                                               
+<br><br>                                                    
+                               
+     <div>                                    <h2>          
+                              <a 
+href="../../../91.html">سری دومـ عکس ها یـ انیمه ایـ</a>                      
+              </h2>                                    <p 
+class="date">                                        
+پنجشنبه 17 دی 1394 01:51 ب.ظ                             
+       </p>                                </div>           
+                                 <b>Writer :</b>           
+                     <a href="../../../author/1426181.html">             
+                       ⓥⓨⓞⓝⓐ                              
+    </a>                                                        
+<br/>                                            
+                                    
+<b>Time:</b>                                    
+                                        
+<a href="../../6.html">                                
+            متفرقه                                     
+   </a>،                                    
+                                        
+<a href="../../12.html">                                
+            عکس ها                                     
+   </a>،                                    
+                                          
+                  <br>                                
+                                         
+                   <a href="../../../author/1426181.html"><img src="http://static.mihanblog.com//public/user_data/user_photo/476/1426181.jpg"  /></a>                           
+     
+
+<img src="http://pre05.deviantart.net/6f22/th/pre/i/2015/282/d/e/iori_render_by_zofot-d9cj07k.png" alt="Iori Render by Zofot">
+
+
+
+
+
+
+                                     
+                                               <br>               
+                                                 <a href='../../../91.html'>بقیه ی عکسا...</a>                                                                
+<br>                                <br>                    
+                                <a target="_self" href="javascript:newComment(91)">                                    
+<b>Comments : </b>                                    
+<script>setCommentCnt(91)</script> چطور بود؟؟؟؟؟؟؟؟؟؟                          
+      </a>                                                        
+        <br/>                                            
+                         
+                                                           
+                                        <b>Edit:</b> <br><br> <p align="center"><img border="0" src="http://s1.picofile.com/file/8261640292/125.png"></p>	
+                               پنجشنبه 15 بهمن 1394  11:52 ق.ظ 
+                                                               
+<br><br>                                                    
+                               
+     <div>                                    <h2>          
+                              <a 
+href="../../../90.html">سری اول عکس ها ی انیمه ای</a>                      
+              </h2>                                    <p 
+class="date">                                        
+چهارشنبه 16 دی 1394 04:51 ب.ظ                             
+       </p>                                </div>           
+                                 <b>Writer :</b>           
+                     <a href="../../../author/1426181.html">             
+                       ⓥⓨⓞⓝⓐ                              
+    </a>                                                        
+<br/>                                            
+                                    
+<b>Time:</b>                                    
+                                        
+<a href="../../6.html">                                
+            متفرقه                                     
+   </a>،                                    
+                                        
+<a href="../../12.html">                                
+            عکس ها                                     
+   </a>،                                    
+                                          
+                  <br>                                
+                                         
+                   <a href="../../../author/1426181.html"><img src="http://static.mihanblog.com//public/user_data/user_photo/476/1426181.jpg"  /></a>                           
+     
+<div><br></div><div><img src="http://orig12.deviantart.net/b0e4/f/2014/014/0/e/render___22_by_exo_kailu88-d7298cz.png" alt="Render - 22 by Exo-KaiLu88"></div><div><br></div><div><br></div><div><br></div><div><br></div><div>ادامه</div>
+
+                                     
+                                               <br>               
+                                                 <a href='../../../90.html'>ادامه مطلب</a>                                                                
+<br>                                <br>                    
+                                <a target="_self" href="javascript:newComment(90)">                                    
+<b>Comments : </b>                                    
+<script>setCommentCnt(90)</script> نظرات                          
+      </a>                                                        
+        <br/>                                            
+                         
+                                                           
+                                        <b>Edit:</b> <br><br> <p align="center"><img border="0" src="http://s1.picofile.com/file/8261640292/125.png"></p>	
+                               پنجشنبه 15 بهمن 1394  11:51 ق.ظ 
+                                                               
+<br><br>                                                    
+                               
+     <div>                                    <h2>          
+                              <a 
+href="../../../76.html">اربعین</a>                      
+              </h2>                                    <p 
+class="date">                                        
+چهارشنبه 11 آذر 1394 06:07 ب.ظ                             
+       </p>                                </div>           
+                                 <b>Writer :</b>           
+                     <a href="../../../author/1426181.html">             
+                       ⓥⓨⓞⓝⓐ                              
+    </a>                                                        
+<br/>                                            
+                                    
+<b>Time:</b>                                    
+                                        
+<a href="../../6.html">                                
+            متفرقه                                     
+   </a>،                                    
+                                          
+                  <br>                                
+                                         
+                                              
+     
+<div style="text-align: center;"><img hspace="0" border="0" align="baseline" vspace="0" src="http://www.98up.in/images/niqkjhn4rbr7rfvw68n.jpg" alt=""></div><div style="text-align: center;"><br></div><div style="text-align: center;"><br></div><div style="text-align: center;"><br></div><div style="text-align: center;"><br></div><div style="text-align: center;"><br></div><div style="text-align: center;">سالروز اربیعن چهلم شهادت امام و سرور و سالار شهیدان&nbsp;</div><div style="text-align: center;"><br></div><div style="text-align: center;">بر همه ی مومنان تسلیت میگم&nbsp;</div><div style="text-align: center;"><br></div><div style="text-align: center;">عزاداری هاتون قبول باشه</div><div style="text-align: center;">**********************************</div><div style="text-align: center;"><p style="margin: 0px; color: rgb(31, 31, 31); font-family: Tahoma, Geneva, sans-serif; font-size: 13px; line-height: 30px;">تمام یاس هایت را به شام از کربلا بردم/چو برگشتم برایت یک چمن نیلوفر آوردم/مسافر از برای یار سوغات آورد اما/من از شام بلا داغ سه ساله دختر آوردم...اربعین حسینی تسلیت باد...</p><div>*********************************</div><div><p style="margin: 0px; color: rgb(31, 31, 31); font-family: Tahoma, Geneva, sans-serif; font-size: 13px; line-height: 30px;">امشب شب اربعین مصباح هداست/ دل یاد حسین بن علی شیر خداست/پروانه به گرد شمع حق پر زد و سوخت/ امشب شب یاد عشقیاء و شهداست...</p></div><div>*********************************</div><div><p style="margin: 0px; color: rgb(31, 31, 31); font-family: Tahoma, Geneva, sans-serif; font-size: 13px; line-height: 30px;">بار بگشایید اینجا کربلاست<br>آب و خاکش با دل و جان آشناست<br>اربعین است اربعین کربلاست<br>هر طرف غوغایی از غم ها به پاست</p></div><div>*********************************</div><div><p style="margin: 0px; color: rgb(31, 31, 31); font-family: Tahoma, Geneva, sans-serif; font-size: 13px; line-height: 30px;"><br>امشب شب اربعین مصباح هداست<br>دل یاد حسین بن علی شیر خداست<br>پروانه به گرد شمع حق پر زد و سوخت<br>امشب شب یاد عشقیاء و شهداست</p></div><div>*********************************</div><div><span style="color: rgb(31, 31, 31); font-family: Tahoma, Geneva, sans-serif; font-size: 13px; line-height: 30px;">درسی که اربعین به مامیدهد، زنده نگهداشتن یادِحقیقت و خاطره ی شهادت درمقابل طوفان تبلیغات دشمن است</span></div><div><span style="color: rgb(31, 31, 31); font-family: Tahoma, Geneva, sans-serif; font-size: 13px; line-height: 30px;"><br></span></div><div><br></div><div><br></div></div>
+
+
+
+
+                                     
+                                               <br>               
+                                                                                                                 
+<br>                                <br>                    
+                                <a target="_self" href="javascript:newComment(76)">                                    
+<b>Comments : </b>                                    
+<script>setCommentCnt(76)</script> نظرات                          
+      </a>                                                        
+        <br/>                                            
+                         
+                                                           
+                                        <b>Edit:</b> <br><br> <p align="center"><img border="0" src="http://s1.picofile.com/file/8261640292/125.png"></p>	
+                               چهارشنبه 11 آذر 1394  06:54 ب.ظ 
+                                                               
+<br><br>                                                    
+                               
+     <div>                                    <h2>          
+                              <a 
+href="../../../66.html">.....</a>                      
+              </h2>                                    <p 
+class="date">                                        
+جمعه 15 آبان 1394 11:15 ق.ظ                             
+       </p>                                </div>           
+                                 <b>Writer :</b>           
+                     <a href="../../../author/1426181.html">             
+                       ⓥⓨⓞⓝⓐ                              
+    </a>                                                        
+<br/>                                            
+                                    
+<b>Time:</b>                                    
+                                        
+<a href="../../6.html">                                
+            متفرقه                                     
+   </a>،                                    
+                                          
+                  <br>                                
+                                         
+                                              
+     
+<div style="text-align: center;"><font size="4" face="Mihan-Koodak" style="background-color: rgb(204, 204, 255);">سلوم بچههههههههههه هاااااااااا</font></div><div style="text-align: center;"><font size="4" face="Mihan-Koodak" style="background-color: rgb(204, 204, 255);"><br></font></div><div style="text-align: center;"><font size="4" face="Mihan-Koodak" style="background-color: rgb(204, 204, 255);">امروز رفتم امتحان دادم&nbsp;</font></div><div style="text-align: center;"><font size="4" face="Mihan-Koodak" style="background-color: rgb(204, 204, 255);"><br></font></div><div style="text-align: center;"><font size="4" face="Mihan-Koodak" style="background-color: rgb(204, 204, 255);">به نظر خودم که خوب بود</font><span style="background-color: rgb(204, 204, 255);"><img src="http://mihanblog.com/public/public/rte/images_new/smiles/16.gif"></span></div><div style="text-align: center;"><font face="Mihan-Koodak" size="4" style="background-color: rgb(204, 204, 255);">&nbsp;</font></div><div style="text-align: center;"><font face="Mihan-Koodak" size="4" style="background-color: rgb(204, 204, 255);">حالا نکته اینجاس که&nbsp;</font></div><div style="text-align: center;"><font face="Mihan-Koodak" size="4" style="background-color: rgb(204, 204, 255);"><br></font></div><div style="text-align: center;"><font face="Mihan-Koodak" size="4" style="background-color: rgb(204, 204, 255);">چرا من خوشحالم&nbsp;</font></div><div style="text-align: center;"><font face="Mihan-Koodak" size="4" style="background-color: rgb(204, 204, 255);"><br></font></div><div style="text-align: center;"><font face="Mihan-Koodak" size="4" style="background-color: rgb(204, 204, 255);">اول انیکه : امتحانش خیلی راحت بود&nbsp;</font></div><div style="text-align: center;"><font face="Mihan-Koodak" size="4" style="background-color: rgb(204, 204, 255);"><br></font></div><div style="text-align: center;"><font face="Mihan-Koodak" size="4" style="background-color: rgb(204, 204, 255);">دومم اینکه :دو تا از دوستامو اونجا دیدم<img src="http://mihanblog.com/public/public/rte/images_new/smiles/4.gif"></font></div><div style="text-align: center;"><font face="Mihan-Koodak" size="4" style="background-color: rgb(204, 204, 255);"><br></font></div><div style="text-align: center;"><font face="Mihan-Koodak" size="4" style="background-color: rgb(204, 204, 255);">بچه ها راستی برام دعا کنید از طرح الف نیفت</font><span style="background-color: rgb(204, 204, 255);"><font face="Mihan-Koodak" size="4">م</font><img src="http://mihanblog.com/public/public/rte/images_new/smiles/63.gif"></span></div><div style="text-align: center;"><font face="Mihan-Koodak" size="4" style="background-color: rgb(204, 204, 255);">.</font></div><div style="text-align: center;"><font face="Mihan-Koodak" size="4" style="background-color: rgb(204, 204, 255);">.</font></div><div style="text-align: center;"><font face="Mihan-Koodak" size="4" style="background-color: rgb(204, 204, 255);">.</font></div><div style="text-align: center;"><font face="Mihan-Koodak" size="4" style="background-color: rgb(204, 204, 255);">.</font></div><div style="text-align: center;"><font face="Mihan-Koodak" size="4" style="background-color: rgb(204, 204, 255);">.</font></div><div style="text-align: center;"><font face="Mihan-Koodak" size="4" style="background-color: rgb(204, 204, 255);">.</font></div><div style="text-align: center;"><font face="Mihan-Koodak" size="4" style="background-color: rgb(204, 204, 255);">.</font></div><div style="text-align: center;"><font face="Mihan-Koodak" size="4" style="background-color: rgb(204, 204, 255);">.</font></div><div style="text-align: center;"><font face="Mihan-Koodak" size="4" style="background-color: rgb(204, 204, 255);">.</font></div><div style="text-align: center;"><font face="Mihan-Koodak" size="4" style="background-color: rgb(204, 204, 255);">.</font></div><div style="text-align: center;"><font face="Mihan-Koodak" size="4" style="background-color: rgb(204, 204, 255);">.</font></div><div style="text-align: center;"><font face="Mihan-Koodak" size="4" style="background-color: rgb(204, 204, 255);">.</font></div><div style="text-align: center;"><font face="Mihan-Koodak" size="4" style="background-color: rgb(204, 204, 255);">.</font></div><div style="text-align: center;"><font face="Mihan-Koodak" size="4" style="background-color: rgb(204, 204, 255);">.</font></div><div style="text-align: center;"><font face="Mihan-Koodak" size="4" style="background-color: rgb(204, 204, 255);">.</font></div><div style="text-align: center;"><span style="background-color: rgb(204, 204, 255);"><font face="Mihan-Koodak" size="4">منکه نمی افتم ولی شما ها دعا کنید</font><img src="http://mihanblog.com/public/public/rte/images_new/smiles/24.gif"></span></div>
+
+
+
+
+                                     
+                                               <br>               
+                                                                                                                 
+<br>                                <br>                    
+                                <a target="_self" href="javascript:newComment(66)">                                    
+<b>Comments : </b>                                    
+<script>setCommentCnt(66)</script> دعا کردین *ـــــــ*                          
+      </a>                                                        
+        <br/>                                            
+                         
+                                                           
+                                        <b>Edit:</b> <br><br> <p align="center"><img border="0" src="http://s1.picofile.com/file/8261640292/125.png"></p>	
+                               جمعه 15 آبان 1394  05:32 ب.ظ 
+                                                               
+<br><br>                                                    
+                               
+     <div>                                    <h2>          
+                              <a 
+href="../../../47.html">داستان کوتاه غمگین شاد خیلی قشنگ به نام  دردسر بزرگ</a>                      
+              </h2>                                    <p 
+class="date">                                        
+جمعه 17 مهر 1394 06:09 ب.ظ                             
+       </p>                                </div>           
+                                 <b>Writer :</b>           
+                     <a href="../../../author/1430269.html">             
+                       میس طلایی                            
+    </a>                                                        
+<br/>                                            
+                                    
+<b>Time:</b>                                    
+                                        
+<a href="../../6.html">                                
+            متفرقه                                     
+   </a>،                                    
+                                          
+                  <br>                                
+                                         
+                   <a href="../../../author/1430269.html"><img src="http://static.mihanblog.com//public/user_data/user_photo/477/1430269.jpg"  /></a>                           
+     
+
+<font size="4">به نام خدا یه داستان ناراحت کننده دارم براتون خییییییییییلی</font><div><font size="4"><br></font></div><div><font size="4">غم انگیزه به خاطر اینکه تو این قسمت ریوما خیلی زجر میکشه</font></div><div><font size="4"><br></font></div><div><font size="4">حالا برو ادامه تا بفهمی موضوع ازچه قراره ولی آخرش شاد میشه</font></div><div><img src="data:image/jpeg;base64,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"></div>
+
+
+
+                                     
+                                               <br>               
+                                                 <a href='../../../47.html'>ادامه مطلب</a>                                                                
+<br>                                <br>                    
+                                <a target="_self" href="javascript:newComment(47)">                                    
+<b>Comments : </b>                                    
+<script>setCommentCnt(47)</script> کامنت ها                          
+      </a>                                                        
+        <br/>                                            
+                         
+                                                           
+                                        <b>Edit:</b> <br><br> <p align="center"><img border="0" src="http://s1.picofile.com/file/8261640292/125.png"></p>	
+                               شنبه 3 بهمن 1394  09:11 ب.ظ 
+                                                               
+<br><br>                                                    
+                               
+     <div>                                    <h2>          
+                              <a 
+href="../../../42.html">برای نگار</a>                      
+              </h2>                                    <p 
+class="date">                                        
+سه شنبه 14 مهر 1394 08:35 ب.ظ                             
+       </p>                                </div>           
+                                 <b>Writer :</b>           
+                     <a href="../../../author/1426181.html">             
+                       ⓥⓨⓞⓝⓐ                              
+    </a>                                                        
+<br/>                                            
+                                    
+<b>Time:</b>                                    
+                                        
+<a href="../../6.html">                                
+            متفرقه                                     
+   </a>،                                    
+                                          
+                  <br>                                
+                                         
+                                              
+     
+
+
+
+
+
+
+<div style="text-align: center;">اسم :ریونا&nbsp;</div><div style="text-align: center;">داداشم ریوگا با ریوما</div><div style="text-align: center;">با آتوبه(کاریش نمیشه کرد)<img src="http://mihanblog.com/public/public/rte/images_new/smiles/89.gif"></div><div style="text-align: center;">سنم13</div><div style="text-align: center;">اخلاق :اخلاق ریوما فقط یکم شاد تر</div><div style="text-align: center;"><br></div><div style="text-align: center;">اینم عکسم:</div><div style="text-align: center;"><img hspace="0" border="0" align="baseline" vspace="0" src="http://uupload.ir/files/ctjt_انمیه_ها_(447).jpg" alt=""></div><div style="text-align: center;"><br></div><div style="text-align: center;">لینکش</div><div style="text-align: center;"><br></div><div style="text-align: center;"><br></div><div style="text-align: center;">http://uupload.ir/files/zd0r_انمیه_ها_(447).jpg</div><div style="text-align: center;"><br></div><div style="text-align: center;"><br></div><div style="text-align: center;"><br></div><div style="text-align: center;"><br></div><div style="text-align: center;"><br></div><div style="text-align: center;"><br></div><div style="text-align: center;"><br></div><div style="text-align: center;"><br></div><div style="text-align: center;"><br></div><div style="text-align: center;"><br></div><div style="text-align: center;"><br></div><div style="text-align: center;"><br></div><div style="text-align: center;"><br></div><div style="text-align: center;"><br></div><div style="text-align: center;"><br></div><div style="text-align: center;"><br></div><div style="text-align: center;"><br></div><div style="text-align: center;"><br></div><div style="text-align: center;"><br></div><div style="text-align: center;"><br></div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                                     
+                                               <br>               
+                                                                                                                 
+<br>                                <br>                    
+                                <a target="_self" href="javascript:newComment(42)">                                    
+<b>Comments : </b>                                    
+<script>setCommentCnt(42)</script> نظرات                          
+      </a>                                                        
+        <br/>                                            
+                         
+                                                           
+                                        <b>Edit:</b> <br><br> <p align="center"><img border="0" src="http://s1.picofile.com/file/8261640292/125.png"></p>	
+                               شنبه 25 مهر 1394  06:02 ب.ظ 
+                                                               
+<br><br>                                                    
+                             
+                                           <br><br>         
+                                                                                 
+                                      تعدادکلصفحات
+ : 2                                
+                          <a href="1.html"> 
+<span>1</span></a>                            
+  
+                          <a href="2.html"> 
+<b>2</b></a>                            
+                           
+                                                     <div id="footer"
+ class="clearfix">                            <strong>         
+                       POWERED BY <a 
+href="http://mathandtheother.mihanblog.com/">                          
+      <font color="#FF0000" size="2px">M</font>agic         
+                       <font color="#FF0000" 
+size="2px">W</font>orld</a>                           
+ </strong>                        </div>                    
+</div>                                            <div 
+id="sidebar">                            <form id="frm-16082388885fdbc728298a9" method="get" action="http://ryonaechizen.mihanblog.com/post/search/fid/16082388885fdbc728298a9"  onsubmit="window.open('', 'search', 'toolbar=0,location=0,status=0,menubar=0,scrollbars=1,resizable=0,width=400,height=310')" target="search">      
+                           <div class="sidebar_box_border_div">   
+                                 <b class="sidebar_box_border" 
+style="margin:0 3px"><img 
+src="http://static.mihanblog.com//public/images/empty.gif"/></b>
+                                    <b class="sidebar_box_border" 
+style="margin:0 2px"><img 
+src="http://static.mihanblog.com//public/images/empty.gif"/></b>
+                                    <b class="sidebar_box_border" 
+style="margin:0 1px"><img 
+src="http://static.mihanblog.com//public/images/empty.gif"/></b>
+                                    <div class="sidebar_box">     
+                                   <input type="text" 
+name="search_text" style="width:120px"/>                              
+          <input type="submit" value="جستجو"/>  
+                                  </div>                          
+          <b class="sidebar_box_border" style="margin:0 
+1px"><img 
+src="http://static.mihanblog.com//public/images/empty.gif"/></b>
+                                    <b class="sidebar_box_border" 
+style="margin:0 2px"><img 
+src="http://static.mihanblog.com//public/images/empty.gif"/></b>
+                                    <b class="sidebar_box_border" 
+style="margin:0 3px"><img 
+src="http://static.mihanblog.com//public/images/empty.gif"/></b>
+                                </div>                            
+<input type="hidden" name="frm-id" value="16082388885fdbc728298a9" id="frm-id" /></form>                                                
+    <div class="seprator"><img 
+src="http://static.mihanblog.com//public/images/empty.gif"/></div>
+                                                <div 
+class="sidebar_box_border_div">                                <b 
+class="sidebar_box_border" style="margin:0 3px"><img 
+src="http://static.mihanblog.com//public/images/empty.gif"/></b>
+                                <b class="sidebar_box_border" 
+style="margin:0 2px"><img 
+src="http://static.mihanblog.com//public/images/empty.gif"/></b>
+                                <b class="sidebar_box_border" 
+style="margin:0 1px"><img 
+src="http://static.mihanblog.com//public/images/empty.gif"/></b>
+                                <div class="sidebar_box">         
+                           <div style="text-align:center">        
+                                <div align="center" 
+style="border:none; width:160px; 
+overflow:hidden"><img src="http://static.mihanblog.com//public/user_data/web_photo/575/1722269.jpg?7157"  /></div>                          
+              <a 
+href="2.html">Email</a><br/>             
+                           <a 
+href="javascript:messageForm()">Call</a><br/><!-- 
+start logo cod off http://mathandtheother.mihanblog.com/ --><p 
+align="center"><p align="center"><a 
+href="http://mathandtheother.mihanblog.com/" target="_blank"><img 
+border="0" src="http://i.cubeupload.com/IBH60p.png"  width="200" height="200" 
+alt="magic world"></a></p><!--finish logo cod off 
+http:/http://mathandtheother.mihanblog.com/ -->                                   
+      <div 
+style="text-align:center">مهم نیست متولدکدوم ماه باشی... همین که دختر باشی یعنی خاصی...<br />
+*********<br />
+سلام من مدیراین وب هستم امیدوارم لحظات خوشی روتوی این وب بگذرونید ....<br />
+اینجابرای سرگرمیه پس کپی هم ممنوعه<br />
+<br />
+╬♥═╬<br />
+╬♥═╬<br />
+╬═♥╬<br />
+╬♥═╬<br />
+╬═♥╬<br />
+╬♥═╬<br />
+╬═♥╬<br />
+╬♥═╬<br />
+╬═♥╬<br />
+╬♥═╬<br />
+╬♥═╬<br />
+╬═♥╬<br />
+╬♥═╬<br />
+╬═♥╬<br />
+╬♥═╬<br />
+╬═♥╬<br />
+╬♥═╬<br />
+╬♥═╬<br />
+╬═♥╬<br />
+╬♥═╬<br />
+╬═♥╬<br />
+╬♥═╬<br />
+╬═♥╬<br />
+╬♥═╬<br />
+╬═♥╬<br />
+╬♥═╬<br />
+╬♥═╬<br />
+╬═♥╬<br />
+╬♥═╬<br />
+╬═♥╬<br />
+╬♥═╬<br />
+╬═♥╬<br />
+╬♥═╬<br />
+╬♥═╬<br />
+╬═♥╬<br />
+╬♥═╬<br />
+╬═♥╬<br />
+╬♥═╬<br />
+╬═♥╬<br />
+╬♥═╬<br />
+╬═♥╬<br />
+╬♥═╬<br />
+╬♥═╬<br />
+╬═♥╬<br />
+╬♥═╬<br />
+╬═♥╬<br />
+╬♥═╬<br />
+╬═♥╬<br />
+╬♥═╬<br />
+╬♥═╬<br />
+╬═♥╬<br />
+╬♥═╬<br />
+╬═♥╬<br />
+╬♥═╬<br />
+╬═♥╬<br />
+╬♥═╬<br />
+╬═♥╬<br />
+╬♥═╬<br />
+╬♥═╬<br />
+╬═♥╬<br />
+╬♥═╬<br />
+╬═♥╬<br />
+╬♥═╬<br />
+╬═♥╬<br />
+╬♥═╬<br />
+╬♥═╬<br />
+╬═♥╬<br />
+╬♥═╬<br />
+╬═♥╬<br />
+╬♥═╬<br />
+╬═♥╬<br />
+╬♥═╬<br />
+╬═♥╬<br />
+╬♥═╬<br />
+╬♥═╬<br />
+╬═♥╬<br />
+╬♥═╬<br />
+╬═♥╬<br />
+╬♥═╬<br />
+╬═♥╬<br />
+╬♥═╬<br />
+╬♥═╬<br />
+╬═♥╬<br />
+╬♥═╬<br />
+╬═♥╬<br />
+╬♥═╬<br />
+╬═♥╬<br />
+╬♥═╬<br />
+╬═♥╬<br />
+╬♥═╬<br />
+╬♥═╬<br />
+╬═♥╬<br />
+╬♥═╬<br />
+╬═♥╬<br />
+╬♥═╬<br />
+╬═♥╬<br />
+╬♥═╬<br />
+╬♥═╬<br />
+╬═♥╬<br />
+╬♥═╬<br />
+╬═♥╬<br />
+╬♥═╬<br />
+╬═♥╬<br />
+╬♥═╬<br />
+╬═♥╬<br />
+╬♥═╬<br />
+╬♥═╬<br />
+╬═♥╬<br />
+╬♥═╬<br />
+╬═♥╬<br />
+╬♥═╬<br />
+╬═♥╬<br />
+╬♥═╬<br />
+╬♥═╬<br />
+╬═♥╬<br />
+╬♥═╬<br />
+╬═♥╬<br />
+╬♥═╬<br />
+╬═♥╬<br />
+╬♥═╬<br />
+╬═♥╬<br />
+╬♥═╬<br />
+╬♥═╬<br />
+╬═♥╬<br />
+╬♥═╬<br />
+╬═♥╬<br />
+╬♥═╬<br />
+╬═♥╬<br />
+╬♥═╬<br />
+╬♥═╬<br />
+╬═♥╬<br />
+╬♥═╬<br />
+╬═♥╬<br />
+╬♥═╬<br />
+╬═♥╬<br />
+╬♥═╬<br />
+╬═♥╬<br />
+╬♥═╬<br />
+╬♥═╬<br />
+╬═♥╬<br />
+╬♥═╬<br />
+╬═♥╬<br />
+╬♥═╬<br />
+╬═♥╬<br />
+╬♥═╬<br />
+╬♥═╬<br />
+╬═♥╬<br />
+╬♥═╬<br />
+╬═♥╬<br />
+╬♥═╬<br />
+╬═♥╬<br />
+╬♥═╬<br />
+╬═♥╬<br />
+╬♥═╬<br />
+╬♥═╬<br />
+╬═♥╬<br />
+╬♥═╬<br />
+╬═♥╬<br />
+╬♥═╬<br />
+╬═♥╬<br />
+</div>          
+                              <div class="clearfix" 
+style="margin-right:70px">                                           
+ <a href="../../../rss/index.html"><img style="border:none; 
+float:right" 
+src="http://static.mihanblog.com//public/images/icon/rss.gif"/></a>
+                                            <a 
+href="../../../atom/index.html"><img style="border:none; float:right" 
+src="http://static.mihanblog.com//public/images/icon/atom.gif"/></a>
+                                        </div>                    
+                </div>                                </div>
+                                <b class="sidebar_box_border" 
+style="margin:0 1px"><img 
+src="http://static.mihanblog.com//public/images/empty.gif"/></b>
+                                <b class="sidebar_box_border" 
+style="margin:0 2px"><img 
+src="http://static.mihanblog.com//public/images/empty.gif"/></b>
+                                <b class="sidebar_box_border" 
+style="margin:0 3px"><img 
+src="http://static.mihanblog.com//public/images/empty.gif"/></b>
+                            </div>                            
+<div class="seprator"><img 
+src="http://static.mihanblog.com//public/images/empty.gif"/></div>
+                                                        
+
+		<form id="frm-16082388885fdbc7282a077" method="post" action="http://ryonaechizen.mihanblog.com/poll/new/fid/16082388885fdbc7282a077/atrty/1608238888/avrvy/0/key/544499fff308e0a5301a35f4c313ff68/"  onsubmit="window.open('', 'poll', 'toolbar=0,location=0,status=0,menubar=0,scrollbars=1,resizable=0,width=505,height=315')" target="poll"><input type="hidden" name="data[pollid]" value="350715" id="data[pollid]" />		                                <div 
+class="sidebar_box_border_div">                                    
+<b class="sidebar_box_border" style="margin:0 3px"><img 
+src="http://static.mihanblog.com//public/images/empty.gif"/></b>
+                                    <b class="sidebar_box_border" 
+style="margin:0 2px"><img 
+src="http://static.mihanblog.com//public/images/empty.gif"/></b>
+                                    <b class="sidebar_box_border" 
+style="margin:0 1px"><img 
+src="http://static.mihanblog.com//public/images/empty.gif"/></b>
+                                    <div class="sidebar_box">     
+                                   <h3>Poolbutton</h3>         
+                               بیشتر چجور آپ هایی بزاریم<br>             
+                                                    
+                   <label><input type="radio" name="data[answer]" value="v1">آهنگ ها</label>                                     
+       <br>                                        
+                         
+                   <label><input type="radio" name="data[answer]" value="v2">دانلود انیمه</label>                                     
+       <br>                                        
+                         
+                   <label><input type="radio" name="data[answer]" value="v3">داستان </label>                                     
+       <br>                                        
+                         
+                   <label><input type="radio" name="data[answer]" value="v4">عکس دخترای انیمه ای</label>                                     
+       <br>                                        
+                         
+                   <label><input type="radio" name="data[answer]" value="v5">انیمه ی شاهزاده ی تنیس</label>                                     
+       <br>                                        
+                                            
+<input type="submit" value="ازاینا...."/>              
+                      </div>                                    
+<b class="sidebar_box_border" style="margin:0 1px"><img 
+src="http://static.mihanblog.com//public/images/empty.gif"/></b>
+                                    <b class="sidebar_box_border" 
+style="margin:0 2px"><img 
+src="http://static.mihanblog.com//public/images/empty.gif"/></b>
+                                    <b class="sidebar_box_border" 
+style="margin:0 3px"><img 
+src="http://static.mihanblog.com//public/images/empty.gif"/></b>
+                                </div>                            
+
+		<input type="hidden" name="frm-id" value="16082388885fdbc7282a077" id="frm-id" /></form>                                                  
+                                  <div class="seprator"><img 
+src="http://static.mihanblog.com//public/images/empty.gif"/></div>
+                                                                        
+                                    
+<div class="sidebar_box_border_div">                              
+      <b class="sidebar_box_border" style="margin:0 3px"><img 
+src="http://static.mihanblog.com//public/images/empty.gif"/></b>
+                                    <b class="sidebar_box_border" 
+style="margin:0 2px"><img 
+src="http://static.mihanblog.com//public/images/empty.gif"/></b>
+                                    <b class="sidebar_box_border" 
+style="margin:0 1px"><img 
+src="http://static.mihanblog.com//public/images/empty.gif"/></b>
+                                    <div class="sidebar_box">     
+                                   <h3>barchasbs</h3>     
+                                          
+                                                     <a 
+href="../../../tag/عکس+های+انیمه+ای.html" 
+style="font-size:1em">                        
+                        عکس های انیمه ای                        
+                     </a>                                        
+       
+                                                     <a 
+href="../../../tag/اهنگ.html" 
+style="font-size:1em">                        
+                        اهنگ                        
+                     </a>                                        
+       
+                                                     <a 
+href="../../../tag/انیمه.html" 
+style="font-size:1em">                        
+                        انیمه                        
+                     </a>                                        
+       
+                                                     <a 
+href="../../../tag/اهنگگگگگگگگگ.html" 
+style="font-size:1em">                        
+                        اهنگگگگگگگگگ                        
+                     </a>                                        
+       
+                                                     <a 
+href="../../../tag/اهنگ+اروم.html" 
+style="font-size:1em">                        
+                        اهنگ اروم                        
+                     </a>                                        
+       
+                                                     <a 
+href="../../../tag/دلنوشته.html" 
+style="font-size:2em">                        
+                        دلنوشته                        
+                     </a>                                        
+       
+                                                     <a 
+href="../../../tag/تکست.html" 
+style="font-size:1em">                        
+                        تکست                        
+                     </a>                                        
+       
+                                                     <a 
+href="../../../tag/معرفی.html" 
+style="font-size:1em">                        
+                        معرفی                        
+                     </a>                                        
+       
+                                                     <a 
+href="../../../tag/نویسنده+جدیدم.html" 
+style="font-size:1em">                        
+                        نویسنده جدیدم                        
+                     </a>                                        
+       
+                                                     <a 
+href="../../../tag/عکس+های+بدون+کادر.html" 
+style="font-size:1em">                        
+                        عکس های بدون کادر                        
+                     </a>                                        
+                                        
+</div>                                        <b 
+class="sidebar_box_border" style="margin:0 1px"><img 
+src="http://static.mihanblog.com//public/images/empty.gif"/></b>
+                                    <b class="sidebar_box_border" 
+style="margin:0 2px"><img 
+src="http://static.mihanblog.com//public/images/empty.gif"/></b>
+                                    <b class="sidebar_box_border" 
+style="margin:0 3px"><img 
+src="http://static.mihanblog.com//public/images/empty.gif"/></b>
+                                </div>                            
+                            <div 
+class="seprator"><img 
+src="http://static.mihanblog.com//public/images/empty.gif"/></div>
+                                                                        
+                                    
+<div class="sidebar_box_border_div">                              
+      <b class="sidebar_box_border" style="margin:0 3px"><img 
+src="http://static.mihanblog.com//public/images/empty.gif"/></b>
+                                    <b class="sidebar_box_border" 
+style="margin:0 2px"><img 
+src="http://static.mihanblog.com//public/images/empty.gif"/></b>
+                                    <b class="sidebar_box_border" 
+style="margin:0 1px"><img 
+src="http://static.mihanblog.com//public/images/empty.gif"/></b>
+                                    <div class="sidebar_box">     
+                                   <h3>categories</h3>     
+                                           
+                                    <a 
+href="../../6.html">                                      
+          متفرقه(29)        
+                                    </a>                          
+                  <br/>                                
+        
+                                    <a 
+href="../../10.html">                                      
+          آهنگ ها(6)        
+                                    </a>                          
+                  <br/>                                
+        
+                                    <a 
+href="../../12.html">                                      
+          عکس ها(33)        
+                                    </a>                          
+                  <br/>                                
+        
+                                    <a 
+href="../../8.html">                                      
+          دانلودی ها (3)        
+                                    </a>                          
+                  <br/>                                
+        
+                                    <a 
+href="../../7.html">                                      
+          اخبار وبلاگ(29)        
+                                    </a>                          
+                  <br/>                                
+        
+                                    <a 
+href="../../11.html">                                      
+          رمان دبستان مرگ(1)        
+                                    </a>                          
+                  <br/>                                
+        
+                                    <a 
+href="../../1.html">                                      
+          رمان شاهدخت تنیس(8)        
+                                    </a>                          
+                  <br/>                                
+        
+                                    <a 
+href="../../4.html">                                      
+          داستان عشق آتشین(1)        
+                                    </a>                          
+                  <br/>                                
+        
+                                    <a 
+href="../../13.html">                                      
+          رمان رویایی با طعم تنیس(4)        
+                                    </a>                          
+                  <br/>                                
+        
+                                    <a 
+href="../../2.html">                                      
+          انیمه ی شاهزاده ی تنیس(22)        
+                                    </a>                          
+                  <br/>                                
+        
+                                    <a 
+href="../../9.html">                                      
+          رمان لمس واژه ی سرنوشت(6)        
+                                    </a>                          
+                  <br/>                                
+                                    
+</div>                                    <b 
+class="sidebar_box_border" style="margin:0 1px"><img 
+src="http://static.mihanblog.com//public/images/empty.gif"/></b>
+                                    <b class="sidebar_box_border" 
+style="margin:0 2px"><img 
+src="http://static.mihanblog.com//public/images/empty.gif"/></b>
+                                    <b class="sidebar_box_border" 
+style="margin:0 3px"><img 
+src="http://static.mihanblog.com//public/images/empty.gif"/></b>
+                                </div>                            
+                                         
+               <div class="seprator"><img 
+src="http://static.mihanblog.com//public/images/empty.gif"/></div>
+                                                                        
+                                            
+<div class="sidebar_box_border_div">                              
+                              <b class="sidebar_box_border" 
+style="margin:0 3px"><img 
+src="http://static.mihanblog.com//public/images/empty.gif"/></b>
+                                    <b class="sidebar_box_border" 
+style="margin:0 2px"><img 
+src="http://static.mihanblog.com//public/images/empty.gif"/></b>
+                                    <b class="sidebar_box_border" 
+style="margin:0 1px"><img 
+src="http://static.mihanblog.com//public/images/empty.gif"/></b>
+                                    <div class="sidebar_box">     
+                                   <div>                          
+                  <h3>Authors</h3>                        
+                                                  
+                      <a href="../../../author/1426181.html"><img src="http://static.mihanblog.com//public/user_data/user_photo/476/1426181.jpg" style="width:16px;" /></a>                           
+                     <a href="../../../author/1426181.html">                  
+                                  
+ⓥⓨⓞⓝⓐ  (46)                                
+                </a>                                            
+<br/>                                            
+                              
+                      <a href="../../../author/1424881.html"><img src="http://static.mihanblog.com//public/user_data/user_photo/475/1424881.jpg" style="width:16px;" /></a>                           
+                     <a href="../../../author/1424881.html">                  
+                                  
+آنیسا (2)                                
+                </a>                                            
+<br/>                                            
+                                        
+</div>                                    </div>            
+                        <b class="sidebar_box_border" style="margin:0
+ 1px"><img 
+src="http://static.mihanblog.com//public/images/empty.gif"/></b>
+                                    <b class="sidebar_box_border" 
+style="margin:0 2px"><img 
+src="http://static.mihanblog.com//public/images/empty.gif"/></b>
+                                    <b class="sidebar_box_border" 
+style="margin:0 3px"><img 
+src="http://static.mihanblog.com//public/images/empty.gif"/></b>
+                                </div>                            
+                                                
+        <div class="seprator"><img 
+src="http://static.mihanblog.com//public/images/empty.gif"/></div>
+                                                                        
+                                    <div 
+class="sidebar_box_border_div">                                    
+<b class="sidebar_box_border" style="margin:0 3px"><img 
+src="http://static.mihanblog.com//public/images/empty.gif"/></b>
+                                    <b class="sidebar_box_border" 
+style="margin:0 2px"><img 
+src="http://static.mihanblog.com//public/images/empty.gif"/></b>
+                                    <b class="sidebar_box_border" 
+style="margin:0 1px"><img 
+src="http://static.mihanblog.com//public/images/empty.gif"/></b>
+                                    <div class="sidebar_box">     
+                                   <h3>Pages</h3>     
+                                               
+                                    <a href="../../../../extrapage/profil.html">
+                                                پروفایلم    
+                                        </a>                      
+                      <br/>                                       
+             
+                                    <a href="../../../../extrapage/586.html">
+                                                وب های دیگم    
+                                        </a>                      
+                      <br/>                                       
+             
+                                    <a href="../../../../extrapage/roman.html">
+                                                رمان های وب    
+                                        </a>                      
+                      <br/>                                       
+             
+                                    <a href="../../../../extrapage/5457.html">
+                                                چجوری نویسنده بشیم    
+                                        </a>                      
+                      <br/>                                       
+             
+                                    <a href="../../../../extrapage/logo.html">
+                                                لوگوی دوستامون(حتمابسرید)    
+                                        </a>                      
+                      <br/>                                       
+                                         
+</div>                                        <b 
+class="sidebar_box_border" style="margin:0 1px"><img 
+src="http://static.mihanblog.com//public/images/empty.gif"/></b>
+                                    <b class="sidebar_box_border" 
+style="margin:0 2px"><img 
+src="http://static.mihanblog.com//public/images/empty.gif"/></b>
+                                    <b class="sidebar_box_border" 
+style="margin:0 3px"><img 
+src="http://static.mihanblog.com//public/images/empty.gif"/></b>
+                                </div>                            
+                                             
+           <div class="seprator"><img 
+src="http://static.mihanblog.com//public/images/empty.gif"/></div>
+                                                                        
+                                           
+                         <div class="sidebar_box_border_div">     
+                               <b class="sidebar_box_border" 
+style="margin:0 3px"><img 
+src="http://static.mihanblog.com//public/images/empty.gif"/></b>
+                                    <b class="sidebar_box_border" 
+style="margin:0 2px"><img 
+src="http://static.mihanblog.com//public/images/empty.gif"/></b>
+                                    <b class="sidebar_box_border" 
+style="margin:0 1px"><img 
+src="http://static.mihanblog.com//public/images/empty.gif"/></b>
+                                    <div class="sidebar_box">     
+                                   <h3>Archives</h3>           
+                                            
+                             <a 
+href="../../../archive/1396/3.html"> خرداد 1396</a>       
+                                     <br/>                        
+                               
+                             <a 
+href="../../../archive/1395/12.html"> اسفند 1395</a>       
+                                     <br/>                        
+                               
+                             <a 
+href="../../../archive/1395/11.html"> بهمن 1395</a>       
+                                     <br/>                        
+                               
+                             <a 
+href="../../../archive/1395/9.html"> آذر 1395</a>       
+                                     <br/>                        
+                               
+                             <a 
+href="../../../archive/1395/7.html"> مهر 1395</a>       
+                                     <br/>                        
+                               
+                             <a 
+href="../../../archive/1395/5.html"> مرداد 1395</a>       
+                                     <br/>                        
+                               
+                             <a 
+href="../../../archive/1395/4.html"> تیر 1395</a>       
+                                     <br/>                        
+                               
+                             <a 
+href="../../../archive/1395/3.html"> خرداد 1395</a>       
+                                     <br/>                        
+                               
+                             <a 
+href="../../../archive/1395/2.html"> اردیبهشت 1395</a>       
+                                     <br/>                        
+                               
+                             <a 
+href="../../../archive/1395/1.html"> فروردین 1395</a>       
+                                     <br/>                        
+                               
+                             <a 
+href="../../../archive/1394/12.html"> اسفند 1394</a>       
+                                     <br/>                        
+                               
+                             <a 
+href="../../../archive/1394/11.html"> بهمن 1394</a>       
+                                     <br/>                        
+                                           
+             <a 
+href="../../../archive.html"><b>همه  
+آرشیوها</b></a>                                    
+</div>                                    <b 
+class="sidebar_box_border" style="margin:0 1px"><img 
+src="http://static.mihanblog.com//public/images/empty.gif"/></b>
+                                    <b class="sidebar_box_border" 
+style="margin:0 2px"><img 
+src="http://static.mihanblog.com//public/images/empty.gif"/></b>
+                                    <b class="sidebar_box_border" 
+style="margin:0 3px"><img 
+src="http://static.mihanblog.com//public/images/empty.gif"/></b>
+                                </div>                            
+                                          
+                                                                        
+          <div class="seprator"><img 
+src="http://static.mihanblog.com//public/images/empty.gif"/></div>
+                                                                        
+                                    <div 
+class="sidebar_box_border_div">                                    
+<b class="sidebar_box_border" style="margin:0 3px"><img 
+src="http://static.mihanblog.com//public/images/empty.gif"/></b>
+                                    <b class="sidebar_box_border" 
+style="margin:0 2px"><img 
+src="http://static.mihanblog.com//public/images/empty.gif"/></b>
+                                    <b class="sidebar_box_border" 
+style="margin:0 1px"><img 
+src="http://static.mihanblog.com//public/images/empty.gif"/></b>
+                                    <div class="sidebar_box">     
+                                   <h3>My Friends</h3>    <marquee scrollamount=1 scrolldelay=1 onmouseover='this.stop()' onmouseout='this.start()' direction=up width=100% height=250 > <center></body> </html> 	     	 											<a href="http://code-anime-r.mihanblog.com" title="" target="_blank"> 												قالب های میــ❤س ویونا(وب خودم) 											</a> 									<br/> 										     	 											<a href="http://agirl-a.mihanblog.com" title="" target="_blank"> 												دنیای دخملونه ی من(وب دخملونم) 											</a> 									<br/> 										     	 											<a href="http://myfrinds8.mihanblog.com/" title="" target="_blank"> 												✘دخـی های باحـــال✘(وب گروهیم) 											</a> 									<br/> 										 										<a href="../../../../link/index.html"> 	</center></marquee></body> </html>     
+                                                    
+                            <a href="http://code-anime-r.mihanblog.com" 
+title="" target="_blank">                             
+
+     </a>                                            <br/>  
+                                                          
+                            <a href="http://agirl-a.mihanblog.com" 
+title="" target="_blank">                             
+
+     </a>                                            <br/>  
+                                                          
+                            <a href="http://myfrinds8.mihanblog.com/" 
+title="" target="_blank">                             
+
+     </a>                                            <br/>  
+                                                   
+                           <a 
+href="../../../../link/index.html"><b>همه 
+لینکها</b></a>                                    
+</div>                                        <b 
+class="sidebar_box_border" style="margin:0 1px"><img 
+src="http://static.mihanblog.com//public/images/empty.gif"/></b>
+                                    <b class="sidebar_box_border" 
+style="margin:0 2px"><img 
+src="http://static.mihanblog.com//public/images/empty.gif"/></b>
+                                    <b class="sidebar_box_border" 
+style="margin:0 3px"><img 
+src="http://static.mihanblog.com//public/images/empty.gif"/></b>
+                                </div>                            
+                                                  
+      <div class="seprator"><img 
+src="http://static.mihanblog.com//public/images/empty.gif"/></div>
+                                                                        
+                                    <div 
+class="sidebar_box_border_div">                                    
+<b class="sidebar_box_border" style="margin:0 3px"><img 
+src="http://static.mihanblog.com//public/images/empty.gif"/></b>
+                                    <b class="sidebar_box_border" 
+style="margin:0 2px"><img 
+src="http://static.mihanblog.com//public/images/empty.gif"/></b>
+                                    <b class="sidebar_box_border" 
+style="margin:0 1px"><img 
+src="http://static.mihanblog.com//public/images/empty.gif"/></b>
+                                    <div class="sidebar_box">     
+                                   <h3>Links</h3>        
+                                               
+                                 <a href="http://blackbutler.mihanblog.com" 
+title="" target="_blank">                        
+                        خادم سیاه (وب آسولا جون)                             
+               </a>                                            
+<br/>                                        
+               
+                                 <a href="http://yurionice.mihanblog.com/" 
+title="" target="_blank">                        
+                        ユーリ!!! on ICE(وب ترسا جون و دسپینا جون)                             
+               </a>                                            
+<br/>                                        
+               
+                                 <a href="http://angleofdarknes.mihanblog.com/" 
+title="" target="_blank">                        
+                         (Incompatibles(Era MAXSOUL                             
+               </a>                                            
+<br/>                                        
+               
+                                 <a href="http://shadi13.blogfa.com/" 
+title="" target="_blank">                        
+                        رمان و انیمه (وب شادی جون)                             
+               </a>                                            
+<br/>                                        
+               
+                                 <a href="http://ldrm1995.mihanblog.com" 
+title="" target="_blank">                        
+                        ♚MAYER girls♚(وب لیانا جون و دیانا جون)                             
+               </a>                                            
+<br/>                                        
+               
+                                 <a href="http://mathandtheother.mihanblog.com" 
+title="" target="_blank">                        
+                        Magic world(وب ققنوس آروزها)                             
+               </a>                                            
+<br/>                                        
+               
+                                 <a href="http://asalfrozen.mihanblog.com/" 
+title="" target="_blank">                        
+                        Eternal life                             
+               </a>                                            
+<br/>                                        
+               
+                                 <a href="http://frozen-race.mihanblog.com/" 
+title="" target="_blank">                        
+                        مسابقات انیمه ای(وب ریحانه جون)                             
+               </a>                                            
+<br/>                                        
+               
+                                 <a href="http://roman-anime2.mihanblog.com/" 
+title="" target="_blank">                        
+                        ♡☆رمـ♡ــآن هـ♡ــآی انیمــ♡ــه ای ترســـ♡ـآ☆♡(وب ترسا جون)                             
+               </a>                                            
+<br/>                                        
+               
+                                 <a href="http://azo9.mihanblog.com/" 
+title="" target="_blank">                        
+                        کهکشان دوستی (وب آنیسا جون)                             
+               </a>                                            
+<br/>                                        
+               
+                                 <a href="http://hayjin.mihanblog.com" 
+title="" target="_blank">                        
+                        دنیای انیمه و رمان(وب هایجین جون)                             
+               </a>                                            
+<br/>                                        
+               
+                                 <a href="http://them-me.mihanblog.com/" 
+title="" target="_blank">                        
+                        قالب ساز تری جو                             
+               </a>                                            
+<br/>                                        
+               
+                                 <a href="http://girl1384.mihanblog.com/#" 
+title="" target="_blank">                        
+                        دخملا باحال                             
+               </a>                                            
+<br/>                                        
+               
+                                 <a href="http://www.seigakuelovers.mihanblog.com" 
+title="حتما بسرید" target="_blank">                        
+                        عشق سیگاکویی                             
+               </a>                                            
+<br/>                                        
+               
+                                 <a href="http://musaechizen12.mihanblog.com/" 
+title="" target="_blank">                        
+                        دلنوشته های تنهایی من (وب میوسا جون)                             
+               </a>                                            
+<br/>                                        
+               
+                                 <a href="http://acaiakarahara.mihanblog.com/" 
+title="" target="_blank">                        
+                        دختری از آرندل                             
+               </a>                                            
+<br/>                                        
+               
+                                 <a href="http://allh.mihanblog.com/" 
+title="" target="_blank">                        
+                        هرچی بخوای هست                             
+               </a>                                            
+<br/>                                        
+               
+                                 <a href="http://ryomawithme.mihanblog.com/" 
+title="" target="_blank">                        
+                        رمان های انیمه ای من(وب میوسا جون)                             
+               </a>                                            
+<br/>                                        
+               
+                                 <a href="http://farnaz20.mihanblog.com/" 
+title="" target="_blank">                        
+                        مسابقات فرناز جون                             
+               </a>                                            
+<br/>                                        
+               
+                                 <a href="http://ryoma23.mihanblog.com/" 
+title="" target="_blank">                        
+                        ღೋ قهرمانان تنیس ೋღ                             
+               </a>                                            
+<br/>                                        
+               
+                                 <a href="http://hellobeautiful.mihanblog.com/" 
+title="" target="_blank">                        
+                        انیمه های زیبا                             
+               </a>                                            
+<br/>                                        
+               
+                                 <a href="http://Filmation.mihanblog.com" 
+title="" target="_blank">                        
+                        وب پریا جون                             
+               </a>                                            
+<br/>                                        
+               
+                                 <a href="http://just-for-me.mihanblog.com/" 
+title="" target="_blank">                        
+                        T.B.V WORLD(وب ریونا جون والهام جون)                             
+               </a>                                            
+<br/>                                        
+               
+                                 <a href="http://fanosetanhai.blogfa.com/" 
+title="" target="_blank">                        
+                        نفس های آخر                             
+               </a>                                            
+<br/>                                        
+               
+                                 <a href="http://fateme16-love.blogfa.com/" 
+title="" target="_blank">                        
+                        نبض عشــــــــــــــــــق                             
+               </a>                                            
+<br/>                                        
+               
+                                 <a href="http://dookhi1381.blogfa.com/" 
+title="" target="_blank">                        
+                        ✘♥قاطی پاطی های دخترونه♥✘                             
+               </a>                                            
+<br/>                                        
+               
+                                 <a href="http://az09faezeh.mihanblog.com/" 
+title="توی این وب من یه عالمه چیزای خوشمل می ذارم" target="_blank">                        
+                        ما دخملا(وب فائزه اچیزن)                             
+               </a>                                            
+<br/>                                        
+               
+                                 <a href="http://ez09iloev.mihanblog.com/" 
+title="توی این وب من خاطرات باحال و غم انگیز می ذارم" target="_blank">                        
+                        خاطرات خوشمل من(وب آنیسا جون)                             
+               </a>                                            
+<br/>                                        
+               
+                                 <a href="http://girlscity13412.mihanblog.com" 
+title="" target="_blank">                        
+                        کلبه ی صورتی من(وب سویودو جیمی جون)                             
+               </a>                                            
+<br/>                                        
+               
+                                 <a href="http://myloveryoma2.mihanblog.com" 
+title="" target="_blank">                        
+                        رمان های من و ریوما (وب ریماکو جون)                             
+               </a>                                            
+<br/>                                        
+                                        <a 
+href="../../../../linkdaily/index.html"><b>همه 
+لینکها</b></a>                                        <a 
+href="javascript:linkdailyForm()"><b>ارسال 
+لینک</b></a>                                    </div>
+                                    <b class="sidebar_box_border" 
+style="margin:0 1px"><img 
+src="http://static.mihanblog.com//public/images/empty.gif"/></b>
+                                    <b class="sidebar_box_border" 
+style="margin:0 2px"><img 
+src="http://static.mihanblog.com//public/images/empty.gif"/></b>
+                                    <b class="sidebar_box_border" 
+style="margin:0 3px"><img 
+src="http://static.mihanblog.com//public/images/empty.gif"/></b>
+                                </div>                            
+                                             
+                                                                       
+<div class="seprator"><img 
+src="http://static.mihanblog.com//public/images/empty.gif"/></div>
+                                                                        
+                                    
+<div class="sidebar_box_border_div">                              
+      <b class="sidebar_box_border" style="margin:0 3px"><img 
+src="http://static.mihanblog.com//public/images/empty.gif"/></b>
+                                    <b class="sidebar_box_border" 
+style="margin:0 2px"><img 
+src="http://static.mihanblog.com//public/images/empty.gif"/></b>
+                                    <b class="sidebar_box_border" 
+style="margin:0 1px"><img 
+src="http://static.mihanblog.com//public/images/empty.gif"/></b>
+                                        <div class="sidebar_box"> 
+                                       <div>                      
+                      <h3>Articles</h3>                   
+                                        
+                                     <a 
+href="../../../194.html">                                   
+                 .........                             
+                   </a>                                           
+     <br/>                                            
+               
+                                     <a 
+href="../../../195.html">                                   
+                 ..                             
+                   </a>                                           
+     <br/>                                            
+               
+                                     <a 
+href="../../../190.html">                                   
+                 سلامممممممممممم سلامممممممم                             
+                   </a>                                           
+     <br/>                                            
+               
+                                     <a 
+href="../../../189.html">                                   
+                 hello every body!!!!                             
+                   </a>                                           
+     <br/>                                            
+               
+                                     <a 
+href="../../../187.html">                                   
+                 زمان                             
+                   </a>                                           
+     <br/>                                            
+               
+                                     <a 
+href="../../../186.html">                                   
+                 تنهای                             
+                   </a>                                           
+     <br/>                                            
+               
+                                     <a 
+href="../../../183.html">                                   
+                 ســــــلام                             
+                   </a>                                           
+     <br/>                                            
+               
+                                     <a 
+href="../../../182.html">                                   
+                 ......                             
+                   </a>                                           
+     <br/>                                            
+               
+                                     <a 
+href="../../../112.html">                                   
+                 توجه!                             
+                   </a>                                           
+     <br/>                                            
+               
+                                     <a 
+href="../../../181.html">                                   
+                 ****                             
+                   </a>                                           
+     <br/>                                            
+               
+                                     <a 
+href="../../../180.html">                                   
+                 ویسگون من                             
+                   </a>                                           
+     <br/>                                            
+               
+                                     <a 
+href="../../../179.html">                                   
+                 اومدم اومدم                              
+                   </a>                                           
+     <br/>                                            
+               
+                                     <a 
+href="../../../178.html">                                   
+                 ینی شانس که نیس جا خالیه....                             
+                   </a>                                           
+     <br/>                                            
+               
+                                     <a 
+href="../../../176.html">                                   
+                 شخصیت های رمان جدید                             
+                   </a>                                           
+     <br/>                                            
+               
+                                     <a 
+href="../../../175.html">                                   
+                 رمان جدیـ❤ــد                             
+                   </a>                                           
+     <br/>                                            
+                                       
+ </div>                                    </div>           
+                         <b class="sidebar_box_border" 
+style="margin:0 1px"><img 
+src="http://static.mihanblog.com//public/images/empty.gif"/></b>
+                                    <b class="sidebar_box_border" 
+style="margin:0 2px"><img 
+src="http://static.mihanblog.com//public/images/empty.gif"/></b>
+                                    <b class="sidebar_box_border" 
+style="margin:0 3px"><img 
+src="http://static.mihanblog.com//public/images/empty.gif"/></b>
+                                </div>                            
+                                      
+                  <div class="seprator"><img 
+src="http://static.mihanblog.com//public/images/empty.gif"/></div>
+                                                                        
+                                                   
+                     <div class="sidebar_box_border_div">         
+                           <b class="sidebar_box_border" 
+style="margin:0 3px"><img 
+src="http://static.mihanblog.com//public/images/empty.gif"/></b>
+                                    <b class="sidebar_box_border" 
+style="margin:0 2px"><img 
+src="http://static.mihanblog.com//public/images/empty.gif"/></b>
+                                    <b class="sidebar_box_border" 
+style="margin:0 1px"><img 
+src="http://static.mihanblog.com//public/images/empty.gif"/></b>
+                                <div class="sidebar_box">         
+                               <h3>Stat</h3>           
+                             کل بازدید:<script>getStatVar('total_view');</script><br/>  
+                                      بازدیدامروز 
+:<script>getStatVar('today_view');</script><br/>                                        
+بازدیددیروز : <script>getStatVar('yesterday_view');</script><br/>                       
+                 بازدیداین ماه : <script>getStatVar('this_month_view');</script><br/>   
+                                     بازدیدماه قبل : 
+<script>getStatVar('last_month_view');</script><br/>                                    
+    تعدادنویسندگان : <script>getStatVar('total_author');</script><br/>                  
+                      تعدادکل مطالب : <script>getStatVar('total_post');</script><br/>   
+                                     آخرین بازدید : 
+<script>getStatVar('last_view_date');</script><br/>                                     
+   آخرین بروزرسانی : <script>getStatVar('modify_date');</script><br/>                   
+                 </div>                                        
+<b class="sidebar_box_border" 
+ 										
+style="margin:0 1px"><img 
+src="http://static.mihanblog.com//public/images/empty.gif"/></b>
+                                    <b class="sidebar_box_border" 
+style="margin:0 2px"><img 
+src="http://static.mihanblog.com//public/images/empty.gif"/></b>
+                                    <b class="sidebar_box_border" 
+style="margin:0 3px"><img 
+src="http://static.mihanblog.com//public/images/empty.gif"/></b>
+                                </div>                            
+                                                  
+                                                          <div 
+class="seprator"><img 
+src="http://static.mihanblog.com//public/images/empty.gif"/></div>
+                                                <div 
+class="sidebar_box_border_div">  										<h3>desinger </h3> <!-- Start Code Banner By http://mathandtheother.mihanblog.com/ --><p style="text-align:center"><a title="magic world" href="http://mathandtheother.mihanblog.com/" target="_blank"><img src="http://i.cubeupload.com/sBUZfK.png" alt="magic world" width="200" height="200"></a></p><!-- End Code Banner By http://mathandtheother.mihanblog.com/ -->                               
+سایه دار شدن لینک
+
+</p>
+<style>
+a:hover{
+text-shadow:0px 2px 3px;
+-moz-text-shadow:0px 2px 3px;
+-o-text-shadow:0px 2px 3px;
+-ms-text-shadow:0px 2px 3px;
+-khtml-text-shadow:0px 2px 3px;
+-webkit-text-shadow:0px 2px 3px;}
+</style>
+<p><script type="text/javascript" src="http://itwebsite.ir/blogcode/effect-pic/java/java1.jpg"></script></p>
+<p style="text-align: center;">
+			<a href="http://itwebsite.ir/category/effect/" target="_blank" rel="nofollow" ><strong><span style="color:#ff33ff;">کد سایه دار شدن لینک ها</span></strong></a></p>
+<p>
+
+****
+کد راست کیلیک
+
+<!--locking Right click by : TakSkin.Com-->
+<script language="javascript" src="http://takskin.com/abzar/norightclick/norightclick.js"></script>
+<a target="_blank" href="http://takskin.com/no-right-click/" > کد حرفه ای قفل کردن کامل راست کلیک </a><div style="display:none"><a href="http://TakSkin.Com" >تک اسکین - قالب و ابزار وبلاگ</a></div>
+<!--locking Right click by : TakSkin.Com-->
+****
+انتخاب متن
+<!-- No selection by www.1abzar.com --->
+<script type="text/javascript" src="http://1abzaar.ir/abzar/tools/no-selects.js"></script><div style="display:none"><h1><a href="http://www.1abzar.com">&#1575;&#1576;&#1586;&#1575;&#1585; &#1608;&#1576;&#1605;&#1587;&#1578;&#1585;</a></h1></div>
+<!-- No selection by www.1abzar.com --->
+*****
+کد لوگوی ما
+<a 
+href="../../../../index.html"><img src=" http://s7.picofile.com/file/8253033518/bloggif_5746a60f2aea6.gif
+" border="0" alt="بکیلیک " /></a>
+<!-- Start Code By Love skin -->
+<textarea id="c" style="width: 200px; height: 50px; border: 1px solid #000; border-radius: 1px; font-size: pt; color: #fff; text-align: left; background: #000  url(http://s6.picofile.com/file/8253034318/%D8%A8%DA%A9%DA%AF%D8%B1%D8%A7%D9%86%D8%AF_2_.gif) repeat center; padding: 0px 0px 0px 0px;"><a 
+href="../../../../index.html"><img src="http://s7.picofile.com/file/8253033518/bloggif_5746a60f2aea6.gif
+" border="0" alt="بکیلیک " /></a></textarea>
+<!-- End Code By Love skin -->
+
+*****
+<!-- Online Support by www.1abzar.com --->
+<style>#abzar-online-support{position:fixed;z-index:20000;top:10px;left:10px}</style><script type="text/javascript" src="http://online.1abzar.com/1abzar.php?admin=3057379&hide=1&on=http://s7.picofile.com/file/8286099976/456.png&off="></script><div style="display:none"><h3><a href="http://www.1abzar.com">&#1662;&#1588;&#1578;&#1740;&#1576;&#1575;&#1606;&#1740;</a></h3></div>
+<!-- Online Support by www.1abzar.com --->
+******
+
+نقطه چین
+<center><style>
+img {
+max-width:400px;
+max-height:400px;
+border: dashed 2px #000;
+}
+img:hover {
+     border-top-left-radius:30px;
+        border-bottom-left-radius:30px;
+     border-top-right-radius:30px;
+        border-bottom-right-radius:30px;
+     border-top-right-radius:30px;
+        border-bottom-left-radius:30px;
+  border-top-left-radius:30px;
+        border-bottom-right-radius:30px;
+box-shadow: 0 0 0.10px #FFFFFF;
+-webkit-transition: all 1s ease-in;
+-moz-transition: all 1s ease-in;
+-o-transition: all 1s ease-in;
+transition: all 1s ease-in;
+-webkit-transform: rotate(0.15deg);
+-moz-transform: rotate(0.15deg);
+-o-transform: rotate(0.15deg);
+}</style>
+</p><p style="text-align:center;margin:2px 0px 0px 0px;font-size:10px;padding:0;"><a href="http://www.theme-skin.blogfa.com/" style="text-decoration:none;margin:0;padding:0;" title="دریافت کد نقطه چین شدن دور عکس"  target="_blank" >دریافت کد نقطه چین شدن دور عکس</a></p>
+<p></center><script language="javascript" type="text/javascript"src="http://theme-skin.persiangig.com/zibasazi-negar.js"></script>
+****
+بالابر
+<!-- www.webniaz.blogfa.com --->
+<script type="text/javascript" src="http://cafe-webniaz.ir/abzar/goup/up1.js"></script>
+<script>var abzar = "<img src=http://s2.picofile.com/file/8261777384/short_hair_anime_girl_render_by_schorch2812_d8e8hun.png>";</script>
+<script type="text/javascript" src="http://cafe-webniaz.ir/abzar/goup/up2.js"></script>
+<script src="http://cafe-webniaz.ir/abzaronline/www.jquery.min.js?v39067"></script>
+<!-- www.webniaz.blogfa.com --->
+****
+ضد هک
+<!------------------@  ANTI HACK  @--------------->
+
+<script src="http://them-me.mihanblog.com/" language="javascript"></script>
+
+<!------------------@  ANTI HACK  @---------------> 
+***
+l,s:
+<!-- www.webniaz.blogfa.com --->
+<style type="text/css">html, body, a, a:hover {cursor: url(http://s1.picofile.com/file/8288149068/4i234.png), progress;}</style>
+<script src="http://cafe-webniaz.ir/abzaronline/www.jquery.min.js?v39067"></script>
+<!-- www.webniaz.blogfa.com --->                            </div>                
+            <div class="sidebar_box_border_div">                  
+              <div class="mihan_logo"></div>                
+            </div>                    </div>                
+</div>            </div>                        <div 
+id="footer_background"><img 
+src="http://static.mihanblog.com//public/images/empty.gif"/></div>
+                                        </div>                    
+        </body></html>
+<script>
+//    setTimeout(function () {
+//        GetMihanBlogShowAds();
+//    }, 1000);
+</script>
+<!--NEW SERVER-->
+
+<!--SabaVision Ads Handler--><!--<script type="text/javascript">(function (d) {var url =   location.protocol+'//api.sabavision.com/pox/poxjs.js';d.write('<script type="text/javascript" src="' + url + '" async></scri' + 'pt>');})(document);</script>-->
+
+
+<script type="text/javascript">
+
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-153829-9']);
+    _gaq.push(['_setDomainName', 'ryonaechizen.mihanblog.com']);
+    _gaq.push(['_trackPageview']);
+
+    (function() {
+        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+
+</script>
+
+
+<div id='mediaad-Kvcm'></div>
+<meta name="sabavision_zone" content="2500-Z499" />
+<center>
+    <div style="background-color:white;width:90%;padding:20px;margin-top:50px;margin-bottom:50px;">
+        <a href="https://www.cloob.com">شبکه اجتماعی فارسی کلوب</a> | <a href="https://www.seo25.com/product/buy-mobile-traffic-and-get-cheap-targeted-mobile-traffic/" target="_blank">Buy Mobile Traffic</a> | <a href="https://www.soalaat.com">سایت سوالات</a>
+    </div>
+</center>

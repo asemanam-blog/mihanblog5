@@ -1,0 +1,2026 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+"http://www.w3.org/TR/html4/loose.dtd">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" /><link rel="EditURI" type="application/rsd+xml" title="RSD" href="http://khateratekhial.mihanblog.com/xmlrpc?rsd" />
+<script type="text/javascript" src="../static.mihanblog.com/public/scripts/run/g.other.v3.js"></script>
+<script>
+
+	function c_$(id){
+        return document.getElementById(id);
+    }
+    
+			//if (parent.frames.length) top.location.href= document.location;
+		
+	setTodayDate = function(){
+		document.write('یکشنبه 23 آذر 1399');
+		/*1015495*/	}
+
+</script>
+
+
+
+        <script type="text/javascript">
+            (function(){
+            var now = new Date();
+            var head = document.getElementsByTagName('head')[0];
+            var script = document.createElement('script');
+            script.async = true;
+            var script_address = 'https://cdn.yektanet.com/js/mihanblog.com/native-mihanblog.com-6531.js';
+            script.src = script_address + '?v=' + now.getFullYear().toString() + '0' + now.getMonth() + '0' + now.getDate() + '0' + now.getHours();
+            head.appendChild(script);
+            })();
+        </script>
+
+        <!--<script type="text/javascript">
+            var head = document.getElementsByTagName("head")[0];
+            var script = document.createElement("script");
+            script.type = "text/javascript";
+            script.async=1;
+            script.src = "https://s1.mediaad.org/serve/mihanblog.com/loader.js" ;
+            head.appendChild(script);
+        </script>-->
+        
+        <script>
+            var sabaVisionWebsiteID = "9bab9dac-041d-4bdb-b39a-1ed789f65eed"; var sabaVisionWebsitePage = "ALL"
+        </script>
+        <link rel="stylesheet" href="https://plus.sabavision.com/dox/dox.min.css">
+        <script src="https://plus.sabavision.com/dox/dox.min.js"></script>
+        
+        <script>
+	try{
+		var commentCnt = new Array();
+		commentCnt[503]='1';commentCnt[504]='-';commentCnt[505]='0';commentCnt[506]='0';commentCnt[507]='1';commentCnt[508]='-';commentCnt[509]='-';commentCnt[510]='-';commentCnt[511]='-';commentCnt[512]='-';	} catch(e){}
+	
+	newComment = function(post_id){
+		try{
+			window.open('/post/comment/'+post_id,'comment','status=yes,scrollbars=yes,toolbar=no,menubar=no,location=no ,width=480px,height=540px');
+		} catch(e){}
+	}
+	setCommentCnt = function(post_id){
+		try{
+			if(commentCnt[post_id]){
+				document.write(commentCnt[post_id]);
+			} else {
+				document.write(0);
+			}
+		} catch(e){}
+	}
+</script><script>
+
+
+	mihanblogUpdateLike = function(postid,type){
+		var url = '/post/like/'+postid+'/'+type;
+		mihanblogGetAjax(url,function(){});
+	};
+	try{
+        mihanblogGetAjax = function (url,callback) {
+    		var req;
+			if (window.XMLHttpRequest)
+            {
+                // code for IE7+, Firefox, Chrome, Opera, Safari
+			  	req = new XMLHttpRequest();
+			}else{	// code for IE6, IE5
+			  	req = new ActiveXObject("Microsoft.XMLHTTP");
+		  	}
+		    req.open("GET", url, 1);
+		    req.onreadystatechange = function () {
+		        if (req.readyState == 4) {
+		            if (req.status == 200) {
+		            	var response = eval(req.responseText);
+		            	callback();
+		            }else{
+	            		return ;
+		            }
+		        }else{
+					return ;
+		        }
+		    }
+		    req.send(null);
+		}
+	}catch(e){}
+
+	try{
+		var mihanblogLikeArrCnt = new Array();
+		var mihanblogDisLikeArrCnt = new Array();
+
+		mihanblogLikeArrCnt[503]='1';
+mihanblogDisLikeArrCnt[503]='0';
+mihanblogLikeArrCnt[505]='0';
+mihanblogDisLikeArrCnt[505]='0';
+mihanblogLikeArrCnt[506]='0';
+mihanblogDisLikeArrCnt[506]='0';
+mihanblogLikeArrCnt[507]='2';
+mihanblogDisLikeArrCnt[507]='0';
+mihanblogLikeArrCnt[508]='2';
+mihanblogDisLikeArrCnt[508]='0';
+mihanblogLikeArrCnt[509]='3';
+mihanblogDisLikeArrCnt[509]='0';
+mihanblogLikeArrCnt[510]='4';
+mihanblogDisLikeArrCnt[510]='1';
+mihanblogLikeArrCnt[511]='0';
+mihanblogDisLikeArrCnt[511]='0';
+mihanblogLikeArrCnt[512]='1';
+mihanblogDisLikeArrCnt[512]='0';
+	} catch(e){}
+
+
+
+    mihanblogPostLike = function(post_id){
+
+        mihanblogLikeCnt = (mihanblogLikeArrCnt[post_id]? mihanblogLikeArrCnt[post_id] : 0);
+        mihanblogDisLikeCnt = (mihanblogDisLikeArrCnt[post_id]? mihanblogDisLikeArrCnt[post_id] : 0);
+        mihanblogLikeCnt = parseInt(mihanblogLikeCnt);
+        mihanblogDisLikeCnt = parseInt(mihanblogDisLikeCnt);
+
+        document.write(
+                '<div class="mihanblog_like_wrapper ">'+
+                       '<div id="dislikeBar_'+post_id+'" onclick="mihanblogUpdateLike('+post_id+',\'dislike\')"   class="mihanblog_like_bar mihanblog_like_dislikeBar mihanblog_like_show_help ">-<div class="mihanblog_like_Cnt" id="disLikeCnt_'+post_id+'">'+mihanblogDisLikeCnt+'</div>'+
+                            '<span  class="mihanblog_like_v2_help mihanblog_like_v2_help_dislike clearfix"> '+
+                                '<span class="mihanblog_like_help_arrow mihanblog_like_help_arrow_dislike clearfix"></span>'+
+                                '<span class="mihanblog_like_help_text">نمی پسندم</span>'+
+                            '</span>'+
+                        '</div>'+
+                       '<div id="Like_'+post_id+'" class="mihanblog_like_border"></div>'+
+                       '<div id="likeBar_'+post_id+'" onclick="mihanblogUpdateLike('+post_id+',\'like\')"  class="mihanblog_like_bar mihanblog_like_likeBar mihanblog_like_show_help" >+<div class="mihanblog_like_Cnt" id="likeCnt_'+post_id+'">'+mihanblogLikeCnt+'</div>'+
+                            '<span  class="mihanblog_like_v2_help mihanblog_like_v2_help_like clearfix"> '+
+                                '<span class="mihanblog_like_help_arrow mihanblog_like_help_arrow_like clearfix"></span>'+
+                                '<span class="mihanblog_like_help_text">می پسندم</span>'+
+                            '</span>'+
+                        '</div>'+
+
+                '</div>'
+        );
+
+
+
+        mihanblogDisplayeLike(post_id);
+    }
+
+
+    mihanblogDisplayeLike = function(post_id){
+
+        mihanblogLikeCnt = (mihanblogLikeArrCnt[post_id]? mihanblogLikeArrCnt[post_id] : 0);
+        mihanblogDisLikeCnt = (mihanblogDisLikeArrCnt[post_id]? mihanblogDisLikeArrCnt[post_id] : 0);
+        mihanblogLikeCnt = parseInt(mihanblogLikeCnt);
+        mihanblogDisLikeCnt = parseInt(mihanblogDisLikeCnt);
+
+
+
+        sum = mihanblogLikeCnt - mihanblogDisLikeCnt;
+        backgroundBorder =  document.getElementById('Like_'+post_id);
+        var likeObj = document.getElementById('likeCnt_'+post_id);
+        var disLikeObj = document.getElementById('disLikeCnt_'+post_id);
+
+
+
+
+
+        likeObj.innerHTML =  mihanblogLikeCnt ;
+        disLikeObj.innerHTML =  mihanblogDisLikeCnt;
+
+        if(sum == 0){
+            backgroundBorder.style.backgroundImage = "url('/public/public/images/icons/like_likedislike.png')";
+            document.getElementById('dislikeBar_'+post_id).style.width = '19px';
+            document.getElementById('likeBar_'+post_id).style.width = '19px';
+        }else{
+             if(sum > 0){
+                 backgroundBorder.style.backgroundImage = "url('/public/public/images/icons/like_like.png')";
+                 document.getElementById('likeBar_'+post_id).style.width = '23px';
+                 document.getElementById('dislikeBar_'+post_id).style.width = '15px';
+             }else{
+                 backgroundBorder.style.backgroundImage = "url('/public/public/images/icons/like_dislike.png')";
+                 document.getElementById('likeBar_'+post_id).style.width = '15px';
+                 document.getElementById('dislikeBar_'+post_id).style.width = '23px';
+             }
+        }
+
+    }
+
+
+
+
+</script>
+
+<style type="text/css">
+
+
+    .clearfix {display: inline-block;}
+    .clearfix:after {
+        content: ".";
+        display: block;
+        height: 0;
+        clear: both;
+        visibility: hidden;
+    }
+
+    .mihanblog_like_wrapper {
+        color: #ffffff;
+        direction: ltr;
+        position: relative;
+    }
+    .mihanblog_like_wrapper span{
+        display: none;
+    }
+    .mihanblog_like_bar {
+        color: #FFFFFF;
+        cursor: pointer;
+        float: left;
+        font-size: 10px;
+        height: 20px;
+        line-height: 19px;
+        margin: 5px 0;
+    }
+    .mihanblog_like_likeBar {
+        background-color: #88B131;
+        padding-right: 5px;
+        border-top-right-radius: 2px;
+        border-bottom-right-radius: 2px;
+        text-align: right;
+    }
+    .mihanblog_like_likeBar:hover{
+        background-color: #699017;
+    }
+    .mihanblog_like_border {
+        background-color: #666666;
+        border: 1px solid #666666;
+        float: left;
+        font-size: 12px;
+        height: 20px;
+        margin-top: 2px;
+        width: 25px;
+        padding: 3px 5px 2px 0;
+        text-align: center;
+        border-radius: 2px;
+        color: #ffffff;
+        direction: ltr;
+        background-repeat: no-repeat ;
+        background-position: 4px center;
+    }
+    .mihanblog_like_border img {
+        margin-left: 2px;
+        margin-top: 2px;
+        width: 22px;
+    }
+    .mihanblog_like_dislikeBar {
+        background-color: #FF6F31;
+        padding-left: 5px;
+        border-top-left-radius: 2px;
+        border-bottom-left-radius: 2px;
+        text-align:left ;
+    }
+    .mihanblog_like_dislikeBar:hover{
+        background-color: #D54B10;
+    }
+
+
+
+    .mihanblog_like_show_help {
+        position: relative;
+    }
+    .mihanblog_like_show_help:hover span {
+        display: block;
+    }
+    .mihanblog_like_help_text {
+        background-color: white;
+        border: 1px solid #555555;
+        border-radius: 3px 3px 3px 3px;
+        color: #303030;
+        float: left;
+        font-size: 11px;
+        font-weight: normal;
+        padding: 5px 10px;
+    }
+
+    .mihanblog_like_help_arrow_dislike {
+        background: url("http://khateratekhial.mihanblog.com/public/public/images/icons/like_hover_top.png") no-repeat scroll 16px 0 transparent;
+        left: 0;
+        top: -4px;
+    }
+
+    .mihanblog_like_help_arrow_like {
+        background: url("http://khateratekhial.mihanblog.com/public/public/images/icons/like_hover_top _2.png") no-repeat scroll 16px 0 transparent;
+        left: -10px;
+        top: 29px;
+    }
+
+    .mihanblog_like_help_arrow{
+        height: 6px;
+        position: absolute;
+        width: 100px;
+
+    }
+
+    .mihanblog_like_v2_help_dislike {
+        left: -15px;
+        top: 24px;
+    }
+    .mihanblog_like_v2_help_like {
+        left: 0;
+        top: -35px;
+
+    }
+    .mihanblog_like_v2_help{
+        display: none;
+        position: absolute;
+        white-space: nowrap;
+        z-index: 1;
+    }
+
+    .mihanblog_like_Cnt{
+        display: inline;
+        color: #ffffff;
+    }
+
+</style><script>
+
+	statInfo = new Array();
+	setStatVar = function(index,value){
+		statInfo[index] = value;
+	}
+	getStatVar = function(index){
+		if(statInfo[index]) document.write(statInfo[index]);
+	}
+	
+	setStatVar('total_post','456');
+	setStatVar('total_author','3');
+	setStatVar('modify_date','یکشنبه 27 مهر 1399');
+	
+	setStatVar('today_view','9');
+	setStatVar('yesterday_view','4');
+	
+	setStatVar('this_month_view','2075');
+	setStatVar('last_month_view','2007');
+
+	setStatVar('total_view','253611');
+	setStatVar('last_view_date','یکشنبه 23 آذر 1399 (05:16)');
+
+
+
+    
+    function setStatFromClient()
+    {
+        var url = 'http://khateratekhial.mihanblog.com/statupdate/?data[refereruri]=http://zahrakhanooom.mihanblog.com/&data[postid]=&data[requesturi]=/&data[sdate]=1607832655&data[hash]=4e4f80d538f0b18f35bee196ae66d5ae&data[resolution]='+screen.width+' X '+screen.height;
+
+//        alert(url);
+//        var newjs = document.createElement("SCRIPT");
+//        newjs.type = 'text/javascript';
+//        newjs.src = url;
+//
+//        var newdiv = document.createElement("DIV");
+//        newdiv.setAttribute("style","display:none");
+
+        document.write(unescape('%3Cscript src="'+url+'" type="text/javascript"%3E%3C/script%3E'));
+//        newdiv.appendChild (newjs);
+//        document.write(newjs);
+//        document.write(appendChild (newdiv);
+
+    };
+    setStatFromClient();
+        
+</script><script>
+	messageForm = function(post_id){
+		try{
+			window.open('/message','message','status=yes,scrollbars=yes,toolbar=no,menubar=no,location=no ,width=480px,height=550px');
+		} catch(e){}
+	}
+</script><script>
+	linkdailyForm = function(){
+		try{
+			window.open('/linkdaily/new','linkdaily','status=yes,scrollbars=yes,toolbar=no,menubar=no,location=no ,width=500px,height=460px');
+		} catch(e){}
+	}
+</script><script>
+
+var MihanblogShopAdsArray = new Array();
+
+function GetMihanBlogShowAds(){
+	if(MihanblogShopAdsArray.length){
+		var adsTarget = 'MihanblogShopAds';
+		var containerWidth = document.getElementById(adsTarget).offsetWidth;
+		if(containerWidth>=200){
+			var adsCnt = parseInt(containerWidth / 200) ;
+			if(adsCnt>MihanblogShopAdsArray.length){
+				adsCnt = MihanblogShopAdsArray.length ; 
+			}
+//			var OneAdsWidth = parseInt(containerWidth / adsCnt) ;
+			var OneAdsWidth = containerWidth / adsCnt ;
+			if(OneAdsWidth>400){
+				OneAdsWidth = 400 ;
+			}
+			var OutHtml = '';
+			var img = '';
+			var link = '';
+			var title = '';
+			var description = '';
+			var imgWidth = 70;
+			if(OneAdsWidth>230){
+				imgWidth = 80;
+			}
+			if(OneAdsWidth>300){
+				imgWidth = 90;
+			}
+			for(adsOne=0;adsOne<adsCnt;adsOne++){
+				
+				img = MihanblogShopAdsArray[adsOne]['img'];
+				link = MihanblogShopAdsArray[adsOne]['link'];
+				title = MihanblogShopAdsArray[adsOne]['title'];
+				description = MihanblogShopAdsArray[adsOne]['description'];
+				
+				OutHtml += '<td style="background-color:#FFF;width: '+OneAdsWidth+'px;border:1px solid #f00;margin:0px 0px;font-size:11px;font-family:tahoma;padding:2px;margin:0px 0px;font-size:11px;border: 1px solid BurlyWood; padding: 1px; height: '+(imgWidth+25)+'px;">';
+
+				OutHtml += '	<a href="http://khateratekhial.mihanblog.com/'+link+'" target="_blank" style="text-decoration:none">';
+
+				OutHtml += '			<div style="width: '+(OneAdsWidth-16)+'px;cursor:pointer;font-size:12px;padding: 4px 1px 4px 7px; white-space: nowrap; text-align: center; font-weight: bold; color: blue;white-space:nowrap;overflow:hidden">';
+				OutHtml += 					title;
+				OutHtml += '			</div>';
+				OutHtml += '			<div style="cursor:pointer;padding: 1px; display: block; float: right; width: '+imgWidth+'px;">';
+				OutHtml += '				<img src="'+img+'.html" style="border:0px;padding:0px;margin:0px;width:'+imgWidth+'px;height:'+imgWidth+'px;">';
+				OutHtml += '			</div>';
+				OutHtml += '			<div style="padding: 1px; display: block; float: right; width: '+(OneAdsWidth-13-imgWidth)+'px; text-align: right;overflow:hidden">';
+				OutHtml += '				<div style="overflow:hidden;cursor:pointer;padding: 2px 3px; line-height: 17px; height: '+(imgWidth-3)+'px; text-align: justify;color:#000;direction:rtl">';
+				OutHtml += 						description;
+				OutHtml += '				</div>';
+				OutHtml += '			</div>';
+
+				OutHtml += '	</a>';
+
+				OutHtml += '</td>';
+			}
+			
+			var Out = '<table align="center" cellpadding="0" cellspacing="2" style="width:'+(OneAdsWidth*adsCnt)+'px;"><tr>'+OutHtml+'</tr></table>'; 
+			
+			Out = '<div style="text-align:center;padding:0px;margin:3px auto;">'+Out+'</div>'; 
+			
+			document.getElementById(adsTarget).style.height = (imgWidth+35)+'px' ;
+			document.getElementById(adsTarget).innerHTML = Out ;
+		}
+	}
+}
+</script>
+    <style>
+        @font-face {
+            font-family: 'Mihan-Iransans';
+            src: url('http://khateratekhial.mihanblog.com/public/public/fonts/Iransans.eot');
+            src: url('http://khateratekhial.mihanblog.com/public/public/fonts/Iransans.eot?') format('embedded-opentype'),
+            url('http://khateratekhial.mihanblog.com/public/public/fonts/Iransans.woff2') format('woff2'),
+            url('http://khateratekhial.mihanblog.com/public/public/fonts/Iransans.woff') format('woff'),
+            url('http://khateratekhial.mihanblog.com/public/public/fonts/Iransans.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+        @font-face {
+            font-family: 'Mihan-IransansBold';
+            src: url('http://khateratekhial.mihanblog.com/public/public/fonts/Iransans-Black.eot');
+            src: url('http://khateratekhial.mihanblog.com/public/public/fonts/Iransans-Black.eot?') format('embedded-opentype'),
+            url('http://khateratekhial.mihanblog.com/public/public/fonts/Iransans-Black.woff2') format('woff2'),
+            url('http://khateratekhial.mihanblog.com/public/public/fonts/Iransans-Black.woff') format('woff'),
+            url('http://khateratekhial.mihanblog.com/public/public/fonts/Iransans-Black.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+        @font-face {
+            font-family: 'Mihan-IransansLight';
+            src: url('http://khateratekhial.mihanblog.com/public/public/fonts/Iransans-UltraLight.eot');
+            src: url('http://khateratekhial.mihanblog.com/public/public/fonts/Iransans-UltraLight.eot?') format('embedded-opentype'),
+            url('http://khateratekhial.mihanblog.com/public/public/fonts/Iransans-UltraLight.woff2') format('woff2'),
+            url('http://khateratekhial.mihanblog.com/public/public/fonts/Iransans-UltraLight.woff') format('woff'),
+            url('http://khateratekhial.mihanblog.com/public/public/fonts/Iransans-UltraLight.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+        @font-face {
+            font-family: 'Mihan-Nassim';
+            src: url('http://khateratekhial.mihanblog.com/public/public/fonts/Nassim.eot');
+            src: url('http://khateratekhial.mihanblog.com/public/public/fonts/Nassim.eot?') format('embedded-opentype'),
+            url('http://khateratekhial.mihanblog.com/public/public/fonts/Nassim.woff2') format('woff2'),
+            url('http://khateratekhial.mihanblog.com/public/public/fonts/Nassim.woff') format('woff'),
+            url('http://khateratekhial.mihanblog.com/public/public/fonts/Nassim.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+        @font-face {
+            font-family: 'Mihan-Koodak';
+            src: url('http://khateratekhial.mihanblog.com/public/public/fonts/Koodak.eot');
+            src: url('http://khateratekhial.mihanblog.com/public/public/fonts/Koodak.eot?') format('embedded-opentype'),
+            url('http://khateratekhial.mihanblog.com/public/public/fonts/Koodak.woff2') format('woff2'),
+            url('http://khateratekhial.mihanblog.com/public/public/fonts/Koodak.woff') format('woff'),
+            url('http://khateratekhial.mihanblog.com/public/public/fonts/Koodak.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+        @font-face {
+            font-family: 'Mihan-Yekan';
+            src: url('http://khateratekhial.mihanblog.com/public/public/fonts/Yekan.eot');
+            src: url('http://khateratekhial.mihanblog.com/public/public/fonts/Yekan.eot?') format('embedded-opentype'),
+            url('http://khateratekhial.mihanblog.com/public/public/fonts/Yekan.woff2') format('woff2'),
+            url('http://khateratekhial.mihanblog.com/public/public/fonts/Yekan.woff') format('woff'),
+            url('http://khateratekhial.mihanblog.com/public/public/fonts/Yekan.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+        @font-face {
+            font-family: 'FontAwesome';
+            src: url('http://khateratekhial.mihanblog.com/public/public/fonts/fontawesome_webfont.eot');
+            src: url('http://khateratekhial.mihanblog.com/public/public/fonts/fontawesome_webfont.eot?') format('embedded-opentype'),
+            url('http://khateratekhial.mihanblog.com/public/public/fonts/fontawesome_webfont.woff2') format('woff2'),
+            url('http://khateratekhial.mihanblog.com/public/public/fonts/fontawesome_webfont.woff') format('woff'),
+            url('http://khateratekhial.mihanblog.com/public/public/fonts/fontawesome_webfont.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+
+
+        
+
+        /* Smartphones (portrait and landscape) ----------- */
+
+        /*
+        @media only screen and (max-width : 480px) and (min-width : 320px) {
+            .sabaClick_advert__wrapper{
+                display:block;
+            }
+            .sabaClick_advert__inner{
+                max-width: 90%;
+                margin: 0 5%;
+            }
+        }
+        */
+
+    </style>
+
+
+
+
+
+
+
+<html>
+
+<head>
+    <style>
+        .mihan_logo {
+            background: url("http://mihanblog.com/public/public/images/logo/poweredby.gif") no-repeat scroll center top transparent;
+            height: 131px;
+            margin-top: 10px;
+            text-align: center;
+        }
+    </style>
+    <meta http-equiv="Content-Language" content="en-us">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta name="Theme Designer" content="www.MyTheme.ir">
+
+    <meta name="description" content=""/>
+    <meta name="keywords" content=""/>
+    <link rel="alternate" type="application/rss+xml" title="بازی زندگی" href="http://khateratekhial.mihanblog.com/post/rss/" />
+    <link rel="alternate" type="application/atom+xml" title="بازی زندگی" href="http://khateratekhial.mihanblog.com/post/atom/" />
+    <link href="http://mihanblog.com/public/public/user_data/template/2098701/style.css" type="text/css" rel="stylesheet">
+    <script src="http://mihanblog.com/public/public/user_data/template/2098701/marqu.js" type="text/javascript"></script>
+    <title>بازی زندگی</title>
+</head>
+
+<body>
+
+<div align="center">
+<table border="0" width="100%" height="100%" cellspacing="0" cellpadding="0">
+<tr>
+<td>&nbsp;</td>
+<td class=div2>
+<div class=div00>
+<div class=div001>
+
+<div class=div60>
+    <div class=div101>
+        <div class=div10><font class=title>بازی زندگی</font></div></div>
+    <div class=div11>
+        <div class=div12><font class=des>زندگی حس غریبیست که یک مرغ مهاجر دارد </font></div></div>
+</div>
+
+<div class=ss>
+
+    <div class=s4>
+        <div class=s5><font class=text10>
+            <a href="index.html">صفحه نخست</a>&nbsp;&nbsp; &nbsp; &nbsp;
+            <a href="javascript:messageForm()">تماس با مدیر</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;
+            <a href="mailto:arezu9094@yahoo.com">پست الکترونیک</a>&nbsp; &nbsp; &nbsp;
+            <a href="http://khateratekhial.mihanblog.com/post/rss/">RSS</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <a href="http://khateratekhial.mihanblog.com/post/atom/">ATOM</a></font></div></div>
+
+    <div class=s1><form id="frm-16076150295fd2423550915" method="get" action="http://khateratekhial.mihanblog.com/post/search/fid/16076150295fd2423550915"  onsubmit="window.open('', 'search', 'toolbar=0,location=0,status=0,menubar=0,scrollbars=1,resizable=0,width=400,height=310')" target="search"> 
+        <div class=s2>
+            <input type="text" name="search_text" size="24" style="border: 0px none; background: none; font-family:Tahoma; font-size:9pt; direction:ltr; color:#000;"></div>
+        <div class=s3><input type="image" src="http://mihanblog.com/public/public/user_data/template/2098701/blank.gif" width=35 height=30 value="دنبال چی میگردی؟"></div>
+    <input type="hidden" name="frm-id" value="16076150295fd2423550915" id="frm-id" /></form></div>
+
+</div>
+
+<div class=div171></div>
+
+<div class=div20>
+
+    		<div id="MihanblogShopAds" style="display:block;height:0px;width:100%;border:0px"></div>
+		<div class=div54>
+        <div class=div15>
+            <div class=div015></div>
+            <div class=div18><font class=text6><a href="http://khateratekhial.mihanblog.com/post/512">این نیز بگذرد</a></font></div>
+            <div class=div27><font class=text8><a href="http://khateratekhial.mihanblog.com/post/512#commentlist">نظرات (<script>setCommentCnt(512)</script>)</a></font></div>
+           <div class=div58 style="width:80px; padding-top: 0;margin-top:3px;"><script>mihanblogPostLike('512','like')</script></div>
+            <div class=div58 style="width:200px;"><font class=text7>
+                یکشنبه 27 مهر 1399 <b>::</b> <a href="http://khateratekhial.mihanblog.com/post/author/853421">نگار </a></font></div>
+
+
+            <style>
+
+
+                .cblike{
+                    margin:4px 0 0 30px;
+                }
+                .cblike a {
+                    float:left;
+                    padding:3px;
+                    text-align:center;
+                    font-size:12px;
+                    color:#FFF;
+                    display:block;
+                    line-height:15px;
+                    text-decoration: none;
+                }
+
+
+
+
+                .cblike a.clike_plus {
+                    background-color:#009900 ; /*green #039B03*/
+
+                    border-radius: 5px ;
+
+                    border-top-right-radius: 0px;
+                    border-bottom-right-radius: 0px;
+
+                    /*border:1px solid green;
+                    border-right:0px;*/
+                }
+                .cblike a.clike_minus {
+                    background-color:#CC0000;
+                    border-radius: 5px ;
+                    border-top-left-radius: 0px;
+                    border-bottom-left-radius: 0px;
+
+                    /*border:1px solid red;
+                    border-left:0px;*/
+                }
+                .cblike a.clike_minus:hover {
+                    background-color:red;
+                    text-decoration: none;
+                }
+                .cblike a.clike_plus:hover {
+                    background-color:green;
+                    text-decoration: none;
+                }
+                .cblike a span{
+                    font-weight:bold;
+                    font-size:13px;
+
+                    color:#fff;
+                }
+
+
+            </style>
+
+
+
+
+
+
+        </div>
+
+
+
+
+
+
+
+
+        <div class=div21>
+            <div class=div55></div>
+            <div class=div56><font class=text4><div id="InPost_MihanblogShopAds" style="display:block;height:0px;width:100%;border:0px"></div><p>هرروزی که میگذره بیشتر حسرت خوشیای قبل رو میخورم.
+</p>
+<p>ترسناک ترش اینجاس که فردا حسرت امروزمو قراره داشته باشم .
+</p>                <BlogExtendedPost><br><br><b></b></BlogExtendedPost>
+                <br><br><font color="#c70900">نوع مطلب :</font>
+                                <br><font color="#c70900">برچسب ها :</font>
+                                <br><font color="#c70900">لینک های مرتبط :</font>
+                            </font></div></div>
+        <div class=div26></div>
+        <style>
+
+
+
+
+
+
+
+            .text100 , .text100 a{color:#FFF; font-size:8pt;-moz-text-shadow: #444 1px 1px 0px;-webkit-text-shadow: #444 1px 1px 0px;text-shadow: #444 1px 1px 0px;}
+            .text101 , .text101 a{color:#444444; font-size:8pt;-moz-text-shadow: #fff 1px 1px 0px;-webkit-text-shadow: #fff 1px 1px 0px;text-shadow: #fff 1px 1px 0px;}
+            .text102 , .text102 a{color:#000; font-size:8pt;-moz-text-shadow: #fff 1px 1px 0px;-webkit-text-shadow: #fff 1px 1px 0px;text-shadow: #fff 1px 1px 0px;}
+
+            .com{ width:335px; float:left; background:#ededed; -webkit-border-radius: 5px;-moz-border-radius: 5px;border-radius: 5px; margin: 10px 7px 0px 27px; padding:0 0 10px 0;}
+            .com1{ width:317px; float:left; background:#4e8cbd; -webkit-border-radius: 5px;-moz-border-radius: 5px;border-radius: 5px; margin: 10px 20px 0 10px; padding:0 0 3px 0;}
+            .com3{ width:90px; float:left; text-align:right; direction:rtl; line-height:27px;}
+            .com2{ width:190px; float:left; height:30px; text-align:left; direction:rtl; line-height:27px; padding-left:10px; opacity:0.6;}
+            .com4{ width:297px; float:left; background:#FFF; -webkit-border-radius: 5px;-moz-border-radius: 5px;border-radius: 5px; margin: 3px 3px 0 3px; padding: 7px; direction:rtl; text-align:right; -moz-box-shadow: inset #444 0px 0px 5px;-webkit-box-shadow:inset  #444 0px 0px 5px;box-shadow: inset #444 0px 0px 5px;}
+            .com5{ width:297px; float:left; background:#cfcfcf; -webkit-border-radius: 5px;-moz-border-radius: 5px;border-radius: 5px; margin:  3px 3px 0 3px; padding: 7px; direction:rtl; text-align:right; -moz-box-shadow:inset  #444 0px 0px 5px;-webkit-box-shadow: inset #444 0px 0px 5px;box-shadow: inset #444 0px 0px 5px;}
+            .com6{ width:307px; float:left; background:#fff; -webkit-border-radius: 5px;-moz-border-radius: 5px;border-radius: 5px; margin: 5px 20px 0 10px; padding: 5px 5px 5px 5px; direction:rtl; }
+            .com7{width:25px; padding:5px 0 0 0; float:right; text-align:center;}
+        </style>
+        
+    </div><div class=div54>
+        <div class=div15>
+            <div class=div015></div>
+            <div class=div18><font class=text6><a href="http://khateratekhial.mihanblog.com/post/511">بهترینا اینجاس</a></font></div>
+            <div class=div27><font class=text8><a href="http://khateratekhial.mihanblog.com/post/511#commentlist">نظرات (<script>setCommentCnt(511)</script>)</a></font></div>
+           <div class=div58 style="width:80px; padding-top: 0;margin-top:3px;"><script>mihanblogPostLike('511','like')</script></div>
+            <div class=div58 style="width:200px;"><font class=text7>
+                سه شنبه 30 مهر 1398 <b>::</b> <a href="http://khateratekhial.mihanblog.com/post/author/853421">نگار </a></font></div>
+
+
+            <style>
+
+
+                .cblike{
+                    margin:4px 0 0 30px;
+                }
+                .cblike a {
+                    float:left;
+                    padding:3px;
+                    text-align:center;
+                    font-size:12px;
+                    color:#FFF;
+                    display:block;
+                    line-height:15px;
+                    text-decoration: none;
+                }
+
+
+
+
+                .cblike a.clike_plus {
+                    background-color:#009900 ; /*green #039B03*/
+
+                    border-radius: 5px ;
+
+                    border-top-right-radius: 0px;
+                    border-bottom-right-radius: 0px;
+
+                    /*border:1px solid green;
+                    border-right:0px;*/
+                }
+                .cblike a.clike_minus {
+                    background-color:#CC0000;
+                    border-radius: 5px ;
+                    border-top-left-radius: 0px;
+                    border-bottom-left-radius: 0px;
+
+                    /*border:1px solid red;
+                    border-left:0px;*/
+                }
+                .cblike a.clike_minus:hover {
+                    background-color:red;
+                    text-decoration: none;
+                }
+                .cblike a.clike_plus:hover {
+                    background-color:green;
+                    text-decoration: none;
+                }
+                .cblike a span{
+                    font-weight:bold;
+                    font-size:13px;
+
+                    color:#fff;
+                }
+
+
+            </style>
+
+
+
+
+
+
+        </div>
+
+
+
+
+
+
+
+
+        <div class=div21>
+            <div class=div55></div>
+            <div class=div56><font class=text4><p>نم نم بارون ، بوی کاهگل ، ی لیوان قهوه داغ ، صدای یاکریم ، ریختن قطره های بارون از گلدونا روی زمین و کارگاه گلدوزی و ارامش...
+</p>
+<p>فکر کنم بتونم تو همین لحظه بمیرم ...
+</p>                <BlogExtendedPost><br><br><b></b></BlogExtendedPost>
+                <br><br><font color="#c70900">نوع مطلب :</font>
+                <a href="http://khateratekhial.mihanblog.com/post/category/10" class=text4>من</a>،&nbsp;                <br><font color="#c70900">برچسب ها :</font>
+                                <br><font color="#c70900">لینک های مرتبط :</font>
+                            </font></div></div>
+        <div class=div26></div>
+        <style>
+
+
+
+
+
+
+
+            .text100 , .text100 a{color:#FFF; font-size:8pt;-moz-text-shadow: #444 1px 1px 0px;-webkit-text-shadow: #444 1px 1px 0px;text-shadow: #444 1px 1px 0px;}
+            .text101 , .text101 a{color:#444444; font-size:8pt;-moz-text-shadow: #fff 1px 1px 0px;-webkit-text-shadow: #fff 1px 1px 0px;text-shadow: #fff 1px 1px 0px;}
+            .text102 , .text102 a{color:#000; font-size:8pt;-moz-text-shadow: #fff 1px 1px 0px;-webkit-text-shadow: #fff 1px 1px 0px;text-shadow: #fff 1px 1px 0px;}
+
+            .com{ width:335px; float:left; background:#ededed; -webkit-border-radius: 5px;-moz-border-radius: 5px;border-radius: 5px; margin: 10px 7px 0px 27px; padding:0 0 10px 0;}
+            .com1{ width:317px; float:left; background:#4e8cbd; -webkit-border-radius: 5px;-moz-border-radius: 5px;border-radius: 5px; margin: 10px 20px 0 10px; padding:0 0 3px 0;}
+            .com3{ width:90px; float:left; text-align:right; direction:rtl; line-height:27px;}
+            .com2{ width:190px; float:left; height:30px; text-align:left; direction:rtl; line-height:27px; padding-left:10px; opacity:0.6;}
+            .com4{ width:297px; float:left; background:#FFF; -webkit-border-radius: 5px;-moz-border-radius: 5px;border-radius: 5px; margin: 3px 3px 0 3px; padding: 7px; direction:rtl; text-align:right; -moz-box-shadow: inset #444 0px 0px 5px;-webkit-box-shadow:inset  #444 0px 0px 5px;box-shadow: inset #444 0px 0px 5px;}
+            .com5{ width:297px; float:left; background:#cfcfcf; -webkit-border-radius: 5px;-moz-border-radius: 5px;border-radius: 5px; margin:  3px 3px 0 3px; padding: 7px; direction:rtl; text-align:right; -moz-box-shadow:inset  #444 0px 0px 5px;-webkit-box-shadow: inset #444 0px 0px 5px;box-shadow: inset #444 0px 0px 5px;}
+            .com6{ width:307px; float:left; background:#fff; -webkit-border-radius: 5px;-moz-border-radius: 5px;border-radius: 5px; margin: 5px 20px 0 10px; padding: 5px 5px 5px 5px; direction:rtl; }
+            .com7{width:25px; padding:5px 0 0 0; float:right; text-align:center;}
+        </style>
+        
+    </div><div class=div54>
+        <div class=div15>
+            <div class=div015></div>
+            <div class=div18><font class=text6><a href="http://khateratekhial.mihanblog.com/post/510">عادت</a></font></div>
+            <div class=div27><font class=text8><a href="http://khateratekhial.mihanblog.com/post/510#commentlist">نظرات (<script>setCommentCnt(510)</script>)</a></font></div>
+           <div class=div58 style="width:80px; padding-top: 0;margin-top:3px;"><script>mihanblogPostLike('510','like')</script></div>
+            <div class=div58 style="width:200px;"><font class=text7>
+                جمعه 7 تیر 1398 <b>::</b> <a href="http://khateratekhial.mihanblog.com/post/author/853421">نگار </a></font></div>
+
+
+            <style>
+
+
+                .cblike{
+                    margin:4px 0 0 30px;
+                }
+                .cblike a {
+                    float:left;
+                    padding:3px;
+                    text-align:center;
+                    font-size:12px;
+                    color:#FFF;
+                    display:block;
+                    line-height:15px;
+                    text-decoration: none;
+                }
+
+
+
+
+                .cblike a.clike_plus {
+                    background-color:#009900 ; /*green #039B03*/
+
+                    border-radius: 5px ;
+
+                    border-top-right-radius: 0px;
+                    border-bottom-right-radius: 0px;
+
+                    /*border:1px solid green;
+                    border-right:0px;*/
+                }
+                .cblike a.clike_minus {
+                    background-color:#CC0000;
+                    border-radius: 5px ;
+                    border-top-left-radius: 0px;
+                    border-bottom-left-radius: 0px;
+
+                    /*border:1px solid red;
+                    border-left:0px;*/
+                }
+                .cblike a.clike_minus:hover {
+                    background-color:red;
+                    text-decoration: none;
+                }
+                .cblike a.clike_plus:hover {
+                    background-color:green;
+                    text-decoration: none;
+                }
+                .cblike a span{
+                    font-weight:bold;
+                    font-size:13px;
+
+                    color:#fff;
+                }
+
+
+            </style>
+
+
+
+
+
+
+        </div>
+
+
+
+
+
+
+
+
+        <div class=div21>
+            <div class=div55></div>
+            <div class=div56><font class=text4><p>عادتها قرار نیس همیشه کارای خاص و سنگینی باشن.عادت ممکنه چک کردن گوشی تو راه خونه ، لبخند قبل خواب ، حاضر شدن سر تایم مشخص باشه.
+</p>
+<p>حتی همین عادتای ساده و مسخره هم ترکشون سخته . تازه اگه مجبورت کنن و ازت بخوان که ترک کنی سخترم میشه . اگه بدون دلیلم باشه که میتونه یه سلاح به حساب بیاد. سلاح فرسایشی روحی !...
+</p>                <BlogExtendedPost><br><br><b></b></BlogExtendedPost>
+                <br><br><font color="#c70900">نوع مطلب :</font>
+                                <br><font color="#c70900">برچسب ها :</font>
+                                <br><font color="#c70900">لینک های مرتبط :</font>
+                            </font></div></div>
+        <div class=div26></div>
+        <style>
+
+
+
+
+
+
+
+            .text100 , .text100 a{color:#FFF; font-size:8pt;-moz-text-shadow: #444 1px 1px 0px;-webkit-text-shadow: #444 1px 1px 0px;text-shadow: #444 1px 1px 0px;}
+            .text101 , .text101 a{color:#444444; font-size:8pt;-moz-text-shadow: #fff 1px 1px 0px;-webkit-text-shadow: #fff 1px 1px 0px;text-shadow: #fff 1px 1px 0px;}
+            .text102 , .text102 a{color:#000; font-size:8pt;-moz-text-shadow: #fff 1px 1px 0px;-webkit-text-shadow: #fff 1px 1px 0px;text-shadow: #fff 1px 1px 0px;}
+
+            .com{ width:335px; float:left; background:#ededed; -webkit-border-radius: 5px;-moz-border-radius: 5px;border-radius: 5px; margin: 10px 7px 0px 27px; padding:0 0 10px 0;}
+            .com1{ width:317px; float:left; background:#4e8cbd; -webkit-border-radius: 5px;-moz-border-radius: 5px;border-radius: 5px; margin: 10px 20px 0 10px; padding:0 0 3px 0;}
+            .com3{ width:90px; float:left; text-align:right; direction:rtl; line-height:27px;}
+            .com2{ width:190px; float:left; height:30px; text-align:left; direction:rtl; line-height:27px; padding-left:10px; opacity:0.6;}
+            .com4{ width:297px; float:left; background:#FFF; -webkit-border-radius: 5px;-moz-border-radius: 5px;border-radius: 5px; margin: 3px 3px 0 3px; padding: 7px; direction:rtl; text-align:right; -moz-box-shadow: inset #444 0px 0px 5px;-webkit-box-shadow:inset  #444 0px 0px 5px;box-shadow: inset #444 0px 0px 5px;}
+            .com5{ width:297px; float:left; background:#cfcfcf; -webkit-border-radius: 5px;-moz-border-radius: 5px;border-radius: 5px; margin:  3px 3px 0 3px; padding: 7px; direction:rtl; text-align:right; -moz-box-shadow:inset  #444 0px 0px 5px;-webkit-box-shadow: inset #444 0px 0px 5px;box-shadow: inset #444 0px 0px 5px;}
+            .com6{ width:307px; float:left; background:#fff; -webkit-border-radius: 5px;-moz-border-radius: 5px;border-radius: 5px; margin: 5px 20px 0 10px; padding: 5px 5px 5px 5px; direction:rtl; }
+            .com7{width:25px; padding:5px 0 0 0; float:right; text-align:center;}
+        </style>
+        
+    </div><div class=div54>
+        <div class=div15>
+            <div class=div015></div>
+            <div class=div18><font class=text6><a href="http://khateratekhial.mihanblog.com/post/509">ترور شخصیت</a></font></div>
+            <div class=div27><font class=text8><a href="http://khateratekhial.mihanblog.com/post/509#commentlist">نظرات (<script>setCommentCnt(509)</script>)</a></font></div>
+           <div class=div58 style="width:80px; padding-top: 0;margin-top:3px;"><script>mihanblogPostLike('509','like')</script></div>
+            <div class=div58 style="width:200px;"><font class=text7>
+                شنبه 25 خرداد 1398 <b>::</b> <a href="http://khateratekhial.mihanblog.com/post/author/853421">نگار </a></font></div>
+
+
+            <style>
+
+
+                .cblike{
+                    margin:4px 0 0 30px;
+                }
+                .cblike a {
+                    float:left;
+                    padding:3px;
+                    text-align:center;
+                    font-size:12px;
+                    color:#FFF;
+                    display:block;
+                    line-height:15px;
+                    text-decoration: none;
+                }
+
+
+
+
+                .cblike a.clike_plus {
+                    background-color:#009900 ; /*green #039B03*/
+
+                    border-radius: 5px ;
+
+                    border-top-right-radius: 0px;
+                    border-bottom-right-radius: 0px;
+
+                    /*border:1px solid green;
+                    border-right:0px;*/
+                }
+                .cblike a.clike_minus {
+                    background-color:#CC0000;
+                    border-radius: 5px ;
+                    border-top-left-radius: 0px;
+                    border-bottom-left-radius: 0px;
+
+                    /*border:1px solid red;
+                    border-left:0px;*/
+                }
+                .cblike a.clike_minus:hover {
+                    background-color:red;
+                    text-decoration: none;
+                }
+                .cblike a.clike_plus:hover {
+                    background-color:green;
+                    text-decoration: none;
+                }
+                .cblike a span{
+                    font-weight:bold;
+                    font-size:13px;
+
+                    color:#fff;
+                }
+
+
+            </style>
+
+
+
+
+
+
+        </div>
+
+
+
+
+
+
+
+
+        <div class=div21>
+            <div class=div55></div>
+            <div class=div56><font class=text4>واسه تو یه حرفه سادس<div>واسه اون شاید اثرش از بمب اتمم بیشتر باشه.خیلی راحت تر از زخم جسمی میشه زخم روحی ایجاد کرد.ولی چون این چشمای دروغگو نمیبینه ، کسیم پیگیرش نمیشه.</div>                <BlogExtendedPost><br><br><b></b></BlogExtendedPost>
+                <br><br><font color="#c70900">نوع مطلب :</font>
+                                <br><font color="#c70900">برچسب ها :</font>
+                                <br><font color="#c70900">لینک های مرتبط :</font>
+                            </font></div></div>
+        <div class=div26></div>
+        <style>
+
+
+
+
+
+
+
+            .text100 , .text100 a{color:#FFF; font-size:8pt;-moz-text-shadow: #444 1px 1px 0px;-webkit-text-shadow: #444 1px 1px 0px;text-shadow: #444 1px 1px 0px;}
+            .text101 , .text101 a{color:#444444; font-size:8pt;-moz-text-shadow: #fff 1px 1px 0px;-webkit-text-shadow: #fff 1px 1px 0px;text-shadow: #fff 1px 1px 0px;}
+            .text102 , .text102 a{color:#000; font-size:8pt;-moz-text-shadow: #fff 1px 1px 0px;-webkit-text-shadow: #fff 1px 1px 0px;text-shadow: #fff 1px 1px 0px;}
+
+            .com{ width:335px; float:left; background:#ededed; -webkit-border-radius: 5px;-moz-border-radius: 5px;border-radius: 5px; margin: 10px 7px 0px 27px; padding:0 0 10px 0;}
+            .com1{ width:317px; float:left; background:#4e8cbd; -webkit-border-radius: 5px;-moz-border-radius: 5px;border-radius: 5px; margin: 10px 20px 0 10px; padding:0 0 3px 0;}
+            .com3{ width:90px; float:left; text-align:right; direction:rtl; line-height:27px;}
+            .com2{ width:190px; float:left; height:30px; text-align:left; direction:rtl; line-height:27px; padding-left:10px; opacity:0.6;}
+            .com4{ width:297px; float:left; background:#FFF; -webkit-border-radius: 5px;-moz-border-radius: 5px;border-radius: 5px; margin: 3px 3px 0 3px; padding: 7px; direction:rtl; text-align:right; -moz-box-shadow: inset #444 0px 0px 5px;-webkit-box-shadow:inset  #444 0px 0px 5px;box-shadow: inset #444 0px 0px 5px;}
+            .com5{ width:297px; float:left; background:#cfcfcf; -webkit-border-radius: 5px;-moz-border-radius: 5px;border-radius: 5px; margin:  3px 3px 0 3px; padding: 7px; direction:rtl; text-align:right; -moz-box-shadow:inset  #444 0px 0px 5px;-webkit-box-shadow: inset #444 0px 0px 5px;box-shadow: inset #444 0px 0px 5px;}
+            .com6{ width:307px; float:left; background:#fff; -webkit-border-radius: 5px;-moz-border-radius: 5px;border-radius: 5px; margin: 5px 20px 0 10px; padding: 5px 5px 5px 5px; direction:rtl; }
+            .com7{width:25px; padding:5px 0 0 0; float:right; text-align:center;}
+        </style>
+        
+    </div><div class=div54>
+        <div class=div15>
+            <div class=div015></div>
+            <div class=div18><font class=text6><a href="http://khateratekhial.mihanblog.com/post/508">گم شدم</a></font></div>
+            <div class=div27><font class=text8><a href="http://khateratekhial.mihanblog.com/post/508#commentlist">نظرات (<script>setCommentCnt(508)</script>)</a></font></div>
+           <div class=div58 style="width:80px; padding-top: 0;margin-top:3px;"><script>mihanblogPostLike('508','like')</script></div>
+            <div class=div58 style="width:200px;"><font class=text7>
+                شنبه 27 بهمن 1397 <b>::</b> <a href="http://khateratekhial.mihanblog.com/post/author/853421">نگار </a></font></div>
+
+
+            <style>
+
+
+                .cblike{
+                    margin:4px 0 0 30px;
+                }
+                .cblike a {
+                    float:left;
+                    padding:3px;
+                    text-align:center;
+                    font-size:12px;
+                    color:#FFF;
+                    display:block;
+                    line-height:15px;
+                    text-decoration: none;
+                }
+
+
+
+
+                .cblike a.clike_plus {
+                    background-color:#009900 ; /*green #039B03*/
+
+                    border-radius: 5px ;
+
+                    border-top-right-radius: 0px;
+                    border-bottom-right-radius: 0px;
+
+                    /*border:1px solid green;
+                    border-right:0px;*/
+                }
+                .cblike a.clike_minus {
+                    background-color:#CC0000;
+                    border-radius: 5px ;
+                    border-top-left-radius: 0px;
+                    border-bottom-left-radius: 0px;
+
+                    /*border:1px solid red;
+                    border-left:0px;*/
+                }
+                .cblike a.clike_minus:hover {
+                    background-color:red;
+                    text-decoration: none;
+                }
+                .cblike a.clike_plus:hover {
+                    background-color:green;
+                    text-decoration: none;
+                }
+                .cblike a span{
+                    font-weight:bold;
+                    font-size:13px;
+
+                    color:#fff;
+                }
+
+
+            </style>
+
+
+
+
+
+
+        </div>
+
+
+
+
+
+
+
+
+        <div class=div21>
+            <div class=div55></div>
+            <div class=div56><font class=text4><p>هروقت به اخرش فکر نکنی ، آخرش به اولش فکر میکنی ....
+</p>
+<p>همیشه میگم این شعارا و سبک زندگیا واسه بقیه اس نه من. مشکلا ،دردسرا، پیشنهادا و.... . ولی گاهی زندگی اونقد پیچیده میشه که سر نخ زندگی از دست ادم در میره. به اولش که هیچی ؛ دیگه حتی به قبل از بوجود اومدنشم فکر کنی فایده نداره . آخرش فقط یه چیز نصیبت میشه : ی ذهن مشغول و درهم. یه سبک زندگی استرسی و بی خوابی شبونه و مشکلایی ک ندونی از کجا میشه شروع به حلشون کرد.
+</p>                <BlogExtendedPost><br><br><b></b></BlogExtendedPost>
+                <br><br><font color="#c70900">نوع مطلب :</font>
+                                <br><font color="#c70900">برچسب ها :</font>
+                                <br><font color="#c70900">لینک های مرتبط :</font>
+                            </font></div></div>
+        <div class=div26></div>
+        <style>
+
+
+
+
+
+
+
+            .text100 , .text100 a{color:#FFF; font-size:8pt;-moz-text-shadow: #444 1px 1px 0px;-webkit-text-shadow: #444 1px 1px 0px;text-shadow: #444 1px 1px 0px;}
+            .text101 , .text101 a{color:#444444; font-size:8pt;-moz-text-shadow: #fff 1px 1px 0px;-webkit-text-shadow: #fff 1px 1px 0px;text-shadow: #fff 1px 1px 0px;}
+            .text102 , .text102 a{color:#000; font-size:8pt;-moz-text-shadow: #fff 1px 1px 0px;-webkit-text-shadow: #fff 1px 1px 0px;text-shadow: #fff 1px 1px 0px;}
+
+            .com{ width:335px; float:left; background:#ededed; -webkit-border-radius: 5px;-moz-border-radius: 5px;border-radius: 5px; margin: 10px 7px 0px 27px; padding:0 0 10px 0;}
+            .com1{ width:317px; float:left; background:#4e8cbd; -webkit-border-radius: 5px;-moz-border-radius: 5px;border-radius: 5px; margin: 10px 20px 0 10px; padding:0 0 3px 0;}
+            .com3{ width:90px; float:left; text-align:right; direction:rtl; line-height:27px;}
+            .com2{ width:190px; float:left; height:30px; text-align:left; direction:rtl; line-height:27px; padding-left:10px; opacity:0.6;}
+            .com4{ width:297px; float:left; background:#FFF; -webkit-border-radius: 5px;-moz-border-radius: 5px;border-radius: 5px; margin: 3px 3px 0 3px; padding: 7px; direction:rtl; text-align:right; -moz-box-shadow: inset #444 0px 0px 5px;-webkit-box-shadow:inset  #444 0px 0px 5px;box-shadow: inset #444 0px 0px 5px;}
+            .com5{ width:297px; float:left; background:#cfcfcf; -webkit-border-radius: 5px;-moz-border-radius: 5px;border-radius: 5px; margin:  3px 3px 0 3px; padding: 7px; direction:rtl; text-align:right; -moz-box-shadow:inset  #444 0px 0px 5px;-webkit-box-shadow: inset #444 0px 0px 5px;box-shadow: inset #444 0px 0px 5px;}
+            .com6{ width:307px; float:left; background:#fff; -webkit-border-radius: 5px;-moz-border-radius: 5px;border-radius: 5px; margin: 5px 20px 0 10px; padding: 5px 5px 5px 5px; direction:rtl; }
+            .com7{width:25px; padding:5px 0 0 0; float:right; text-align:center;}
+        </style>
+        
+    </div><div class=div54>
+        <div class=div15>
+            <div class=div015></div>
+            <div class=div18><font class=text6><a href="http://khateratekhial.mihanblog.com/post/507">همیشه مراقب باشیم</a></font></div>
+            <div class=div27><font class=text8><a href="http://khateratekhial.mihanblog.com/post/507#commentlist">نظرات (<script>setCommentCnt(507)</script>)</a></font></div>
+           <div class=div58 style="width:80px; padding-top: 0;margin-top:3px;"><script>mihanblogPostLike('507','like')</script></div>
+            <div class=div58 style="width:200px;"><font class=text7>
+                چهارشنبه 23 آبان 1397 <b>::</b> <a href="http://khateratekhial.mihanblog.com/post/author/853421">نگار </a></font></div>
+
+
+            <style>
+
+
+                .cblike{
+                    margin:4px 0 0 30px;
+                }
+                .cblike a {
+                    float:left;
+                    padding:3px;
+                    text-align:center;
+                    font-size:12px;
+                    color:#FFF;
+                    display:block;
+                    line-height:15px;
+                    text-decoration: none;
+                }
+
+
+
+
+                .cblike a.clike_plus {
+                    background-color:#009900 ; /*green #039B03*/
+
+                    border-radius: 5px ;
+
+                    border-top-right-radius: 0px;
+                    border-bottom-right-radius: 0px;
+
+                    /*border:1px solid green;
+                    border-right:0px;*/
+                }
+                .cblike a.clike_minus {
+                    background-color:#CC0000;
+                    border-radius: 5px ;
+                    border-top-left-radius: 0px;
+                    border-bottom-left-radius: 0px;
+
+                    /*border:1px solid red;
+                    border-left:0px;*/
+                }
+                .cblike a.clike_minus:hover {
+                    background-color:red;
+                    text-decoration: none;
+                }
+                .cblike a.clike_plus:hover {
+                    background-color:green;
+                    text-decoration: none;
+                }
+                .cblike a span{
+                    font-weight:bold;
+                    font-size:13px;
+
+                    color:#fff;
+                }
+
+
+            </style>
+
+
+
+
+
+
+        </div>
+
+
+
+
+
+
+
+
+        <div class=div21>
+            <div class=div55></div>
+            <div class=div56><font class=text4><p>بعضی وقتا تو فکرمون برای ایندمون برنامه میریزیم.
+</p>
+<p>گاهی اونقدر شرایط سخت میشه که میایم تو فکرمونم خودمونو محدود میکنیم و به حداقلا برای ایندمون قانع میشیم که همین باعث پیشرفت نکردنمون میشه.
+</p>
+<p>قدیمیا میگفتن مواظب حرف و فکرات باش .شاید یهو فرشته آمین بغلت بود و بعد حرفت آمین بگه و براورده بشه.جدیدیا میگن کائنات انرژی خودتو بهت برمیگردونه.....
+</p>
+<p><br>
+</p>
+<p>پس بیاین حتی توی فکرامون تویه شرایط سخت زندگیمون خودمونو محدود نکنیم. به کم فکر نکنیم و واسه خودمون بالابالاها جایگاه در نظر بگیریم.
+</p>                <BlogExtendedPost><br><br><b></b></BlogExtendedPost>
+                <br><br><font color="#c70900">نوع مطلب :</font>
+                <a href="http://khateratekhial.mihanblog.com/post/category/2" class=text4>زندگی</a>،&nbsp;                <br><font color="#c70900">برچسب ها :</font>
+                                <br><font color="#c70900">لینک های مرتبط :</font>
+                            </font></div></div>
+        <div class=div26></div>
+        <style>
+
+
+
+
+
+
+
+            .text100 , .text100 a{color:#FFF; font-size:8pt;-moz-text-shadow: #444 1px 1px 0px;-webkit-text-shadow: #444 1px 1px 0px;text-shadow: #444 1px 1px 0px;}
+            .text101 , .text101 a{color:#444444; font-size:8pt;-moz-text-shadow: #fff 1px 1px 0px;-webkit-text-shadow: #fff 1px 1px 0px;text-shadow: #fff 1px 1px 0px;}
+            .text102 , .text102 a{color:#000; font-size:8pt;-moz-text-shadow: #fff 1px 1px 0px;-webkit-text-shadow: #fff 1px 1px 0px;text-shadow: #fff 1px 1px 0px;}
+
+            .com{ width:335px; float:left; background:#ededed; -webkit-border-radius: 5px;-moz-border-radius: 5px;border-radius: 5px; margin: 10px 7px 0px 27px; padding:0 0 10px 0;}
+            .com1{ width:317px; float:left; background:#4e8cbd; -webkit-border-radius: 5px;-moz-border-radius: 5px;border-radius: 5px; margin: 10px 20px 0 10px; padding:0 0 3px 0;}
+            .com3{ width:90px; float:left; text-align:right; direction:rtl; line-height:27px;}
+            .com2{ width:190px; float:left; height:30px; text-align:left; direction:rtl; line-height:27px; padding-left:10px; opacity:0.6;}
+            .com4{ width:297px; float:left; background:#FFF; -webkit-border-radius: 5px;-moz-border-radius: 5px;border-radius: 5px; margin: 3px 3px 0 3px; padding: 7px; direction:rtl; text-align:right; -moz-box-shadow: inset #444 0px 0px 5px;-webkit-box-shadow:inset  #444 0px 0px 5px;box-shadow: inset #444 0px 0px 5px;}
+            .com5{ width:297px; float:left; background:#cfcfcf; -webkit-border-radius: 5px;-moz-border-radius: 5px;border-radius: 5px; margin:  3px 3px 0 3px; padding: 7px; direction:rtl; text-align:right; -moz-box-shadow:inset  #444 0px 0px 5px;-webkit-box-shadow: inset #444 0px 0px 5px;box-shadow: inset #444 0px 0px 5px;}
+            .com6{ width:307px; float:left; background:#fff; -webkit-border-radius: 5px;-moz-border-radius: 5px;border-radius: 5px; margin: 5px 20px 0 10px; padding: 5px 5px 5px 5px; direction:rtl; }
+            .com7{width:25px; padding:5px 0 0 0; float:right; text-align:center;}
+        </style>
+        
+    </div><div class=div54>
+        <div class=div15>
+            <div class=div015></div>
+            <div class=div18><font class=text6><a href="http://khateratekhial.mihanblog.com/post/506">رودربایستی</a></font></div>
+            <div class=div27><font class=text8><a href="http://khateratekhial.mihanblog.com/post/506#commentlist">نظرات (<script>setCommentCnt(506)</script>)</a></font></div>
+           <div class=div58 style="width:80px; padding-top: 0;margin-top:3px;"><script>mihanblogPostLike('506','like')</script></div>
+            <div class=div58 style="width:200px;"><font class=text7>
+                یکشنبه 4 شهریور 1397 <b>::</b> <a href="http://khateratekhial.mihanblog.com/post/author/853421">نگار </a></font></div>
+
+
+            <style>
+
+
+                .cblike{
+                    margin:4px 0 0 30px;
+                }
+                .cblike a {
+                    float:left;
+                    padding:3px;
+                    text-align:center;
+                    font-size:12px;
+                    color:#FFF;
+                    display:block;
+                    line-height:15px;
+                    text-decoration: none;
+                }
+
+
+
+
+                .cblike a.clike_plus {
+                    background-color:#009900 ; /*green #039B03*/
+
+                    border-radius: 5px ;
+
+                    border-top-right-radius: 0px;
+                    border-bottom-right-radius: 0px;
+
+                    /*border:1px solid green;
+                    border-right:0px;*/
+                }
+                .cblike a.clike_minus {
+                    background-color:#CC0000;
+                    border-radius: 5px ;
+                    border-top-left-radius: 0px;
+                    border-bottom-left-radius: 0px;
+
+                    /*border:1px solid red;
+                    border-left:0px;*/
+                }
+                .cblike a.clike_minus:hover {
+                    background-color:red;
+                    text-decoration: none;
+                }
+                .cblike a.clike_plus:hover {
+                    background-color:green;
+                    text-decoration: none;
+                }
+                .cblike a span{
+                    font-weight:bold;
+                    font-size:13px;
+
+                    color:#fff;
+                }
+
+
+            </style>
+
+
+
+
+
+
+        </div>
+
+
+
+
+
+
+
+
+        <div class=div21>
+            <div class=div55></div>
+            <div class=div56><font class=text4><p>باهاش رودرواسی دارم
+</p>
+<p>اره باو تو رو درواسی گیر کردم قبول کردم
+</p>
+<p>تو رو درواسی نشد بهش نه بگم
+</p>
+<p>نمیدونم این رودرواسیایی ک این چن وخته زندگیمو پیچیده کرده واقعا رودرواسیه یا عدم اعتماد ب نفس یا ترحم...
+</p>
+<p>هر کوفتی که هست واقعا داره نابودم میکنه.دیگه داره جوری میشه بخاطر بقیه و خوشایندشون جورچینامو میچینم نه خودم.
+</p>
+<p>شایدم چون همه این اتفاقا فقط مختص ب خودم نی یکم برام سخته.بلاخره من یه طرف ماجراهام و طرفای دیگم ادمای دیگه.شاید بخاطر لطفایی ک بهم داشتن و کمکاشون تو شرایط بحرانی باید کوتا بیام تا نمک ب حروم حساب نشم.....
+</p>
+<p>چقد قضاوت در مورد خودم سختتر از در مورد دیگرانه.واسه دیگران خیلی راحتتر حکم میدما.اینجور وختاس ک کلهم دچار یاس فلسفی میشم ک چجور اصن من قضاوت کردم درموردشون؟؟چطور ب خودم همچین اجازه ای دادم...
+</p>
+<p>و من اینگونه در یک لوپ گرفتار شدم.
+</p>
+<ol>
+</ol>                <BlogExtendedPost><br><br><b></b></BlogExtendedPost>
+                <br><br><font color="#c70900">نوع مطلب :</font>
+                                <br><font color="#c70900">برچسب ها :</font>
+                                <br><font color="#c70900">لینک های مرتبط :</font>
+                            </font></div></div>
+        <div class=div26></div>
+        <style>
+
+
+
+
+
+
+
+            .text100 , .text100 a{color:#FFF; font-size:8pt;-moz-text-shadow: #444 1px 1px 0px;-webkit-text-shadow: #444 1px 1px 0px;text-shadow: #444 1px 1px 0px;}
+            .text101 , .text101 a{color:#444444; font-size:8pt;-moz-text-shadow: #fff 1px 1px 0px;-webkit-text-shadow: #fff 1px 1px 0px;text-shadow: #fff 1px 1px 0px;}
+            .text102 , .text102 a{color:#000; font-size:8pt;-moz-text-shadow: #fff 1px 1px 0px;-webkit-text-shadow: #fff 1px 1px 0px;text-shadow: #fff 1px 1px 0px;}
+
+            .com{ width:335px; float:left; background:#ededed; -webkit-border-radius: 5px;-moz-border-radius: 5px;border-radius: 5px; margin: 10px 7px 0px 27px; padding:0 0 10px 0;}
+            .com1{ width:317px; float:left; background:#4e8cbd; -webkit-border-radius: 5px;-moz-border-radius: 5px;border-radius: 5px; margin: 10px 20px 0 10px; padding:0 0 3px 0;}
+            .com3{ width:90px; float:left; text-align:right; direction:rtl; line-height:27px;}
+            .com2{ width:190px; float:left; height:30px; text-align:left; direction:rtl; line-height:27px; padding-left:10px; opacity:0.6;}
+            .com4{ width:297px; float:left; background:#FFF; -webkit-border-radius: 5px;-moz-border-radius: 5px;border-radius: 5px; margin: 3px 3px 0 3px; padding: 7px; direction:rtl; text-align:right; -moz-box-shadow: inset #444 0px 0px 5px;-webkit-box-shadow:inset  #444 0px 0px 5px;box-shadow: inset #444 0px 0px 5px;}
+            .com5{ width:297px; float:left; background:#cfcfcf; -webkit-border-radius: 5px;-moz-border-radius: 5px;border-radius: 5px; margin:  3px 3px 0 3px; padding: 7px; direction:rtl; text-align:right; -moz-box-shadow:inset  #444 0px 0px 5px;-webkit-box-shadow: inset #444 0px 0px 5px;box-shadow: inset #444 0px 0px 5px;}
+            .com6{ width:307px; float:left; background:#fff; -webkit-border-radius: 5px;-moz-border-radius: 5px;border-radius: 5px; margin: 5px 20px 0 10px; padding: 5px 5px 5px 5px; direction:rtl; }
+            .com7{width:25px; padding:5px 0 0 0; float:right; text-align:center;}
+        </style>
+        
+    </div><div class=div54>
+        <div class=div15>
+            <div class=div015></div>
+            <div class=div18><font class=text6><a href="http://khateratekhial.mihanblog.com/post/505">خاله خرسه</a></font></div>
+            <div class=div27><font class=text8><a href="http://khateratekhial.mihanblog.com/post/505#commentlist">نظرات (<script>setCommentCnt(505)</script>)</a></font></div>
+           <div class=div58 style="width:80px; padding-top: 0;margin-top:3px;"><script>mihanblogPostLike('505','like')</script></div>
+            <div class=div58 style="width:200px;"><font class=text7>
+                دوشنبه 18 تیر 1397 <b>::</b> <a href="http://khateratekhial.mihanblog.com/post/author/853421">نگار </a></font></div>
+
+
+            <style>
+
+
+                .cblike{
+                    margin:4px 0 0 30px;
+                }
+                .cblike a {
+                    float:left;
+                    padding:3px;
+                    text-align:center;
+                    font-size:12px;
+                    color:#FFF;
+                    display:block;
+                    line-height:15px;
+                    text-decoration: none;
+                }
+
+
+
+
+                .cblike a.clike_plus {
+                    background-color:#009900 ; /*green #039B03*/
+
+                    border-radius: 5px ;
+
+                    border-top-right-radius: 0px;
+                    border-bottom-right-radius: 0px;
+
+                    /*border:1px solid green;
+                    border-right:0px;*/
+                }
+                .cblike a.clike_minus {
+                    background-color:#CC0000;
+                    border-radius: 5px ;
+                    border-top-left-radius: 0px;
+                    border-bottom-left-radius: 0px;
+
+                    /*border:1px solid red;
+                    border-left:0px;*/
+                }
+                .cblike a.clike_minus:hover {
+                    background-color:red;
+                    text-decoration: none;
+                }
+                .cblike a.clike_plus:hover {
+                    background-color:green;
+                    text-decoration: none;
+                }
+                .cblike a span{
+                    font-weight:bold;
+                    font-size:13px;
+
+                    color:#fff;
+                }
+
+
+            </style>
+
+
+
+
+
+
+        </div>
+
+
+
+
+
+
+
+
+        <div class=div21>
+            <div class=div55></div>
+            <div class=div56><font class=text4><p>چجوری میشه دوست و از بدخواه جدا کرد؟؟
+</p>
+<p>چجوری میشه دوستیه خاله خرسه رو فهمید؟
+</p>
+<p>چجوری میشه بهشون بفهمونی دخالت نکنن
+</p>
+<p>بعضی وقتا چقد توضیح یه سری بدیهیات سخت میشه
+</p>                <BlogExtendedPost><br><br><b></b></BlogExtendedPost>
+                <br><br><font color="#c70900">نوع مطلب :</font>
+                                <br><font color="#c70900">برچسب ها :</font>
+                                <br><font color="#c70900">لینک های مرتبط :</font>
+                            </font></div></div>
+        <div class=div26></div>
+        <style>
+
+
+
+
+
+
+
+            .text100 , .text100 a{color:#FFF; font-size:8pt;-moz-text-shadow: #444 1px 1px 0px;-webkit-text-shadow: #444 1px 1px 0px;text-shadow: #444 1px 1px 0px;}
+            .text101 , .text101 a{color:#444444; font-size:8pt;-moz-text-shadow: #fff 1px 1px 0px;-webkit-text-shadow: #fff 1px 1px 0px;text-shadow: #fff 1px 1px 0px;}
+            .text102 , .text102 a{color:#000; font-size:8pt;-moz-text-shadow: #fff 1px 1px 0px;-webkit-text-shadow: #fff 1px 1px 0px;text-shadow: #fff 1px 1px 0px;}
+
+            .com{ width:335px; float:left; background:#ededed; -webkit-border-radius: 5px;-moz-border-radius: 5px;border-radius: 5px; margin: 10px 7px 0px 27px; padding:0 0 10px 0;}
+            .com1{ width:317px; float:left; background:#4e8cbd; -webkit-border-radius: 5px;-moz-border-radius: 5px;border-radius: 5px; margin: 10px 20px 0 10px; padding:0 0 3px 0;}
+            .com3{ width:90px; float:left; text-align:right; direction:rtl; line-height:27px;}
+            .com2{ width:190px; float:left; height:30px; text-align:left; direction:rtl; line-height:27px; padding-left:10px; opacity:0.6;}
+            .com4{ width:297px; float:left; background:#FFF; -webkit-border-radius: 5px;-moz-border-radius: 5px;border-radius: 5px; margin: 3px 3px 0 3px; padding: 7px; direction:rtl; text-align:right; -moz-box-shadow: inset #444 0px 0px 5px;-webkit-box-shadow:inset  #444 0px 0px 5px;box-shadow: inset #444 0px 0px 5px;}
+            .com5{ width:297px; float:left; background:#cfcfcf; -webkit-border-radius: 5px;-moz-border-radius: 5px;border-radius: 5px; margin:  3px 3px 0 3px; padding: 7px; direction:rtl; text-align:right; -moz-box-shadow:inset  #444 0px 0px 5px;-webkit-box-shadow: inset #444 0px 0px 5px;box-shadow: inset #444 0px 0px 5px;}
+            .com6{ width:307px; float:left; background:#fff; -webkit-border-radius: 5px;-moz-border-radius: 5px;border-radius: 5px; margin: 5px 20px 0 10px; padding: 5px 5px 5px 5px; direction:rtl; }
+            .com7{width:25px; padding:5px 0 0 0; float:right; text-align:center;}
+        </style>
+        
+    </div><div class=div54>
+        <div class=div15>
+            <div class=div015></div>
+            <div class=div18><font class=text6><a href="http://khateratekhial.mihanblog.com/post/504">...</a></font></div>
+            <div class=div27><font class=text8><a href="http://khateratekhial.mihanblog.com/post/504#commentlist">نظرات (<script>setCommentCnt(504)</script>)</a></font></div>
+           <div class=div58 style="width:80px; padding-top: 0;margin-top:3px;"><script>mihanblogPostLike('504','like')</script></div>
+            <div class=div58 style="width:200px;"><font class=text7>
+                جمعه 18 خرداد 1397 <b>::</b> <a href="http://khateratekhial.mihanblog.com/post/author/853421">نگار </a></font></div>
+
+
+            <style>
+
+
+                .cblike{
+                    margin:4px 0 0 30px;
+                }
+                .cblike a {
+                    float:left;
+                    padding:3px;
+                    text-align:center;
+                    font-size:12px;
+                    color:#FFF;
+                    display:block;
+                    line-height:15px;
+                    text-decoration: none;
+                }
+
+
+
+
+                .cblike a.clike_plus {
+                    background-color:#009900 ; /*green #039B03*/
+
+                    border-radius: 5px ;
+
+                    border-top-right-radius: 0px;
+                    border-bottom-right-radius: 0px;
+
+                    /*border:1px solid green;
+                    border-right:0px;*/
+                }
+                .cblike a.clike_minus {
+                    background-color:#CC0000;
+                    border-radius: 5px ;
+                    border-top-left-radius: 0px;
+                    border-bottom-left-radius: 0px;
+
+                    /*border:1px solid red;
+                    border-left:0px;*/
+                }
+                .cblike a.clike_minus:hover {
+                    background-color:red;
+                    text-decoration: none;
+                }
+                .cblike a.clike_plus:hover {
+                    background-color:green;
+                    text-decoration: none;
+                }
+                .cblike a span{
+                    font-weight:bold;
+                    font-size:13px;
+
+                    color:#fff;
+                }
+
+
+            </style>
+
+
+
+
+
+
+        </div>
+
+
+
+
+
+
+
+
+        <div class=div21>
+            <div class=div55></div>
+            <div class=div56><font class=text4><p>الان دقیقا وسط اون روزاییم که برای دیقه به دیقه اش برنامه داشتم...
+</p>                <BlogExtendedPost><br><br><b></b></BlogExtendedPost>
+                <br><br><font color="#c70900">نوع مطلب :</font>
+                                <br><font color="#c70900">برچسب ها :</font>
+                                <br><font color="#c70900">لینک های مرتبط :</font>
+                            </font></div></div>
+        <div class=div26></div>
+        <style>
+
+
+
+
+
+
+
+            .text100 , .text100 a{color:#FFF; font-size:8pt;-moz-text-shadow: #444 1px 1px 0px;-webkit-text-shadow: #444 1px 1px 0px;text-shadow: #444 1px 1px 0px;}
+            .text101 , .text101 a{color:#444444; font-size:8pt;-moz-text-shadow: #fff 1px 1px 0px;-webkit-text-shadow: #fff 1px 1px 0px;text-shadow: #fff 1px 1px 0px;}
+            .text102 , .text102 a{color:#000; font-size:8pt;-moz-text-shadow: #fff 1px 1px 0px;-webkit-text-shadow: #fff 1px 1px 0px;text-shadow: #fff 1px 1px 0px;}
+
+            .com{ width:335px; float:left; background:#ededed; -webkit-border-radius: 5px;-moz-border-radius: 5px;border-radius: 5px; margin: 10px 7px 0px 27px; padding:0 0 10px 0;}
+            .com1{ width:317px; float:left; background:#4e8cbd; -webkit-border-radius: 5px;-moz-border-radius: 5px;border-radius: 5px; margin: 10px 20px 0 10px; padding:0 0 3px 0;}
+            .com3{ width:90px; float:left; text-align:right; direction:rtl; line-height:27px;}
+            .com2{ width:190px; float:left; height:30px; text-align:left; direction:rtl; line-height:27px; padding-left:10px; opacity:0.6;}
+            .com4{ width:297px; float:left; background:#FFF; -webkit-border-radius: 5px;-moz-border-radius: 5px;border-radius: 5px; margin: 3px 3px 0 3px; padding: 7px; direction:rtl; text-align:right; -moz-box-shadow: inset #444 0px 0px 5px;-webkit-box-shadow:inset  #444 0px 0px 5px;box-shadow: inset #444 0px 0px 5px;}
+            .com5{ width:297px; float:left; background:#cfcfcf; -webkit-border-radius: 5px;-moz-border-radius: 5px;border-radius: 5px; margin:  3px 3px 0 3px; padding: 7px; direction:rtl; text-align:right; -moz-box-shadow:inset  #444 0px 0px 5px;-webkit-box-shadow: inset #444 0px 0px 5px;box-shadow: inset #444 0px 0px 5px;}
+            .com6{ width:307px; float:left; background:#fff; -webkit-border-radius: 5px;-moz-border-radius: 5px;border-radius: 5px; margin: 5px 20px 0 10px; padding: 5px 5px 5px 5px; direction:rtl; }
+            .com7{width:25px; padding:5px 0 0 0; float:right; text-align:center;}
+        </style>
+        
+    </div><div class=div54>
+        <div class=div15>
+            <div class=div015></div>
+            <div class=div18><font class=text6><a href="http://khateratekhial.mihanblog.com/post/503">من میترسم عقب بکشم</a></font></div>
+            <div class=div27><font class=text8><a href="http://khateratekhial.mihanblog.com/post/503#commentlist">نظرات (<script>setCommentCnt(503)</script>)</a></font></div>
+           <div class=div58 style="width:80px; padding-top: 0;margin-top:3px;"><script>mihanblogPostLike('503','like')</script></div>
+            <div class=div58 style="width:200px;"><font class=text7>
+                پنجشنبه 5 بهمن 1396 <b>::</b> <a href="http://khateratekhial.mihanblog.com/post/author/853421">نگار </a></font></div>
+
+
+            <style>
+
+
+                .cblike{
+                    margin:4px 0 0 30px;
+                }
+                .cblike a {
+                    float:left;
+                    padding:3px;
+                    text-align:center;
+                    font-size:12px;
+                    color:#FFF;
+                    display:block;
+                    line-height:15px;
+                    text-decoration: none;
+                }
+
+
+
+
+                .cblike a.clike_plus {
+                    background-color:#009900 ; /*green #039B03*/
+
+                    border-radius: 5px ;
+
+                    border-top-right-radius: 0px;
+                    border-bottom-right-radius: 0px;
+
+                    /*border:1px solid green;
+                    border-right:0px;*/
+                }
+                .cblike a.clike_minus {
+                    background-color:#CC0000;
+                    border-radius: 5px ;
+                    border-top-left-radius: 0px;
+                    border-bottom-left-radius: 0px;
+
+                    /*border:1px solid red;
+                    border-left:0px;*/
+                }
+                .cblike a.clike_minus:hover {
+                    background-color:red;
+                    text-decoration: none;
+                }
+                .cblike a.clike_plus:hover {
+                    background-color:green;
+                    text-decoration: none;
+                }
+                .cblike a span{
+                    font-weight:bold;
+                    font-size:13px;
+
+                    color:#fff;
+                }
+
+
+            </style>
+
+
+
+
+
+
+        </div>
+
+
+
+
+
+
+
+
+        <div class=div21>
+            <div class=div55></div>
+            <div class=div56><font class=text4><p>خیلی وقتا میدونی الان باید بکشی کنار ولی نمیکشی. میترسی . شرایط نمیذاره. کم کم زیر این فشار داغون میشی ولی این فوبیایی که پیدا کردی نمیذاره راه درستتو ادامه بدی...
+</p>                <BlogExtendedPost><br><br><b></b></BlogExtendedPost>
+                <br><br><font color="#c70900">نوع مطلب :</font>
+                <a href="http://khateratekhial.mihanblog.com/post/category/2" class=text4>زندگی</a>،&nbsp;<a href="http://khateratekhial.mihanblog.com/post/category/10" class=text4>من</a>،&nbsp;                <br><font color="#c70900">برچسب ها :</font>
+                                <br><font color="#c70900">لینک های مرتبط :</font>
+                            </font></div></div>
+        <div class=div26></div>
+        <style>
+
+
+
+
+
+
+
+            .text100 , .text100 a{color:#FFF; font-size:8pt;-moz-text-shadow: #444 1px 1px 0px;-webkit-text-shadow: #444 1px 1px 0px;text-shadow: #444 1px 1px 0px;}
+            .text101 , .text101 a{color:#444444; font-size:8pt;-moz-text-shadow: #fff 1px 1px 0px;-webkit-text-shadow: #fff 1px 1px 0px;text-shadow: #fff 1px 1px 0px;}
+            .text102 , .text102 a{color:#000; font-size:8pt;-moz-text-shadow: #fff 1px 1px 0px;-webkit-text-shadow: #fff 1px 1px 0px;text-shadow: #fff 1px 1px 0px;}
+
+            .com{ width:335px; float:left; background:#ededed; -webkit-border-radius: 5px;-moz-border-radius: 5px;border-radius: 5px; margin: 10px 7px 0px 27px; padding:0 0 10px 0;}
+            .com1{ width:317px; float:left; background:#4e8cbd; -webkit-border-radius: 5px;-moz-border-radius: 5px;border-radius: 5px; margin: 10px 20px 0 10px; padding:0 0 3px 0;}
+            .com3{ width:90px; float:left; text-align:right; direction:rtl; line-height:27px;}
+            .com2{ width:190px; float:left; height:30px; text-align:left; direction:rtl; line-height:27px; padding-left:10px; opacity:0.6;}
+            .com4{ width:297px; float:left; background:#FFF; -webkit-border-radius: 5px;-moz-border-radius: 5px;border-radius: 5px; margin: 3px 3px 0 3px; padding: 7px; direction:rtl; text-align:right; -moz-box-shadow: inset #444 0px 0px 5px;-webkit-box-shadow:inset  #444 0px 0px 5px;box-shadow: inset #444 0px 0px 5px;}
+            .com5{ width:297px; float:left; background:#cfcfcf; -webkit-border-radius: 5px;-moz-border-radius: 5px;border-radius: 5px; margin:  3px 3px 0 3px; padding: 7px; direction:rtl; text-align:right; -moz-box-shadow:inset  #444 0px 0px 5px;-webkit-box-shadow: inset #444 0px 0px 5px;box-shadow: inset #444 0px 0px 5px;}
+            .com6{ width:307px; float:left; background:#fff; -webkit-border-radius: 5px;-moz-border-radius: 5px;border-radius: 5px; margin: 5px 20px 0 10px; padding: 5px 5px 5px 5px; direction:rtl; }
+            .com7{width:25px; padding:5px 0 0 0; float:right; text-align:center;}
+        </style>
+        
+    </div>
+    <div class=div29></div>
+    <div class=div28><font class=text9>
+                <br><br>
+        ( کل صفحات : 46 )&nbsp;&nbsp;&nbsp;
+            <a href="http://khateratekhial.mihanblog.com/page/1" class=text4><b>1</b></a>&nbsp;&nbsp;&nbsp;<a href="http://khateratekhial.mihanblog.com/page/2" class=text4><span>2</span></a>&nbsp;&nbsp;&nbsp;<a href="http://khateratekhial.mihanblog.com/page/3" class=text4><span>3</span></a>&nbsp;&nbsp;&nbsp;<a href="http://khateratekhial.mihanblog.com/page/4" class=text4><span>4</span></a>&nbsp;&nbsp;&nbsp;<a href="http://khateratekhial.mihanblog.com/page/5" class=text4><span>5</span></a>&nbsp;&nbsp;&nbsp;<a href="http://khateratekhial.mihanblog.com/page/6" class=text4><span>6</span></a>&nbsp;&nbsp;&nbsp;<a href="http://khateratekhial.mihanblog.com/page/7" class=text4><span>7</span></a>&nbsp;&nbsp;&nbsp;<a href="http://khateratekhial.mihanblog.com/page/8" class=text4><i>...</i></a>&nbsp;&nbsp;&nbsp;    </font>
+    </div>
+</div>
+
+<div class=div170>
+
+    <div class=div240>
+
+        <div class=div341>
+            <div id="marqueecontainer" onMouseover="copyspeed=pausespeed" onMouseout="copyspeed=marqueespeed">
+                <div id="vmarquee" style="position: absolute; float:left;">
+                    <div class=sm></div>
+                    <div class=div31><font class=text1>
+                        <center><br><br>
+                            اگر به خانه من آمدی برای من ای مهربان چراغ<br />
+بیاور<br />
+و یك دریچه كه از آن<br />
+به ازدحام كوچه ی خوشبخت بنگرم  <br />
+فروغ فرخزاد</center><br>
+                        <b>مدیر وبلاگ :</b> <a href="http://khateratekhial.mihanblog.com/post/author/853421">نگار </a></font></div></div></div>
+        </div><div class=div30></div>
+    </div>
+
+    <div class=div24>
+        <div class=div35>
+            <div class=div25><font class=text5>مطالب اخیر</font></div></div>
+
+        <div class=div341><font class=text1><ul>
+            <li><a href="http://khateratekhial.mihanblog.com/post/512">این نیز بگذرد</a></li><li><a href="http://khateratekhial.mihanblog.com/post/511">بهترینا اینجاس</a></li><li><a href="http://khateratekhial.mihanblog.com/post/510">عادت</a></li><li><a href="http://khateratekhial.mihanblog.com/post/509">ترور شخصیت</a></li><li><a href="http://khateratekhial.mihanblog.com/post/508">گم شدم</a></li><li><a href="http://khateratekhial.mihanblog.com/post/507">همیشه مراقب باشیم</a></li><li><a href="http://khateratekhial.mihanblog.com/post/506">رودربایستی</a></li><li><a href="http://khateratekhial.mihanblog.com/post/505">خاله خرسه</a></li><li><a href="http://khateratekhial.mihanblog.com/post/504">...</a></li><li><a href="http://khateratekhial.mihanblog.com/post/503">من میترسم عقب بکشم</a></li><li><a href="http://khateratekhial.mihanblog.com/post/502">کاش میشد ذهنمو کنترل کنم ...</a></li><li><a href="http://khateratekhial.mihanblog.com/post/501">میشد؟</a></li><li><a href="http://khateratekhial.mihanblog.com/post/500">همیشه نالان</a></li><li><a href="http://khateratekhial.mihanblog.com/post/499">تحملش سخته</a></li><li><a href="http://khateratekhial.mihanblog.com/post/498">نقطه عطفش کجا میشه؟؟؟</a></li>        </ul></font></div><div class=div30></div>
+    </div>
+    <div class=div24>
+        <div class=div35>
+            <div class=div25><font class=text5>موضوعات</font></div></div>
+
+        <div class=div341><font class=text1><ul>
+            <li><a href="http://khateratekhial.mihanblog.com/post/category/26">خوشگل ترین حیوونا (2)</a></li><li><a href="http://khateratekhial.mihanblog.com/post/category/25">اشعار فروغ (2)</a></li><li><a href="http://khateratekhial.mihanblog.com/post/category/24">تکست آهنگ (3)</a></li><li><a href="http://khateratekhial.mihanblog.com/post/category/23">حدیث هفته (4)</a></li><li><a href="http://khateratekhial.mihanblog.com/post/category/22">سهراب سپهری (2)</a></li><li><a href="http://khateratekhial.mihanblog.com/post/category/21">بانوان نامدار ایران (2)</a></li><li><a href="http://khateratekhial.mihanblog.com/post/category/20">دقت کردین? (10)</a></li><li><a href="http://khateratekhial.mihanblog.com/post/category/18">جنگولک بازی دانشگاه (6)</a></li><li><a href="http://khateratekhial.mihanblog.com/post/category/17">داستان طنز (5)</a></li><li><a href="http://khateratekhial.mihanblog.com/post/category/15">سمنی (8)</a></li><li><a href="http://khateratekhial.mihanblog.com/post/category/13">شل سیلور استاین (2)</a></li><li><a href="http://khateratekhial.mihanblog.com/post/category/12">حکایت (6)</a></li><li><a href="http://khateratekhial.mihanblog.com/post/category/11">جملات درستو حسابی (26)</a></li><li><a href="http://khateratekhial.mihanblog.com/post/category/10">من (85)</a></li><li><a href="http://khateratekhial.mihanblog.com/post/category/9">اشعار حسین پناهی (11)</a></li><li><a href="http://khateratekhial.mihanblog.com/post/category/8">طنز (42)</a></li><li><a href="http://khateratekhial.mihanblog.com/post/category/7">خدا (22)</a></li><li><a href="http://khateratekhial.mihanblog.com/post/category/6">عاشقونه (23)</a></li><li><a href="http://khateratekhial.mihanblog.com/post/category/5">دلتنگی (24)</a></li><li><a href="http://khateratekhial.mihanblog.com/post/category/4">یه مرد (16)</a></li><li><a href="http://khateratekhial.mihanblog.com/post/category/3">دخترونه (34)</a></li><li><a href="http://khateratekhial.mihanblog.com/post/category/2">زندگی (105)</a></li><li><a href="http://khateratekhial.mihanblog.com/post/category/1">دنیا (9)</a></li>        </ul></font></div><div class=div30></div>
+    </div>
+    <div class=div24>
+        <div class=div35>
+            <div class=div25><font class=text5>آرشیو وبلاگ</font></div></div>
+
+        <div class=div341><font class=text1><ul>
+            <li><a href="http://khateratekhial.mihanblog.com/post/archive/1399/7"> مهر 1399</a></li><li><a href="http://khateratekhial.mihanblog.com/post/archive/1398/7"> مهر 1398</a></li><li><a href="http://khateratekhial.mihanblog.com/post/archive/1398/4"> تیر 1398</a></li><li><a href="http://khateratekhial.mihanblog.com/post/archive/1398/3"> خرداد 1398</a></li><li><a href="http://khateratekhial.mihanblog.com/post/archive/1397/11"> بهمن 1397</a></li><li><a href="http://khateratekhial.mihanblog.com/post/archive/1397/8"> آبان 1397</a></li><li><a href="http://khateratekhial.mihanblog.com/post/archive/1397/6"> شهریور 1397</a></li><li><a href="http://khateratekhial.mihanblog.com/post/archive/1397/4"> تیر 1397</a></li><li><a href="http://khateratekhial.mihanblog.com/post/archive/1397/3"> خرداد 1397</a></li><li><a href="http://khateratekhial.mihanblog.com/post/archive/1396/11"> بهمن 1396</a></li><li><a href="http://khateratekhial.mihanblog.com/post/archive/1396/10"> دی 1396</a></li><li><a href="http://khateratekhial.mihanblog.com/post/archive/1396/9"> آذر 1396</a></li><li><a href="http://khateratekhial.mihanblog.com/post/archive/1396/8"> آبان 1396</a></li><li><a href="http://khateratekhial.mihanblog.com/post/archive/1396/7"> مهر 1396</a></li><li><a href="http://khateratekhial.mihanblog.com/post/archive/1396/6"> شهریور 1396</a></li><li><a href="http://khateratekhial.mihanblog.com/post/archive/1396/5"> مرداد 1396</a></li><li><a href="http://khateratekhial.mihanblog.com/post/archive/1396/4"> تیر 1396</a></li><li><a href="http://khateratekhial.mihanblog.com/post/archive/1396/2"> اردیبهشت 1396</a></li><li><a href="http://khateratekhial.mihanblog.com/post/archive/1396/1"> فروردین 1396</a></li><li><a href="http://khateratekhial.mihanblog.com/post/archive/1395/11"> بهمن 1395</a></li>            <li><b><a href="http://khateratekhial.mihanblog.com/post/archive">آرشیو كل مطالب</a></b></li>
+        </ul></font></div><div class=div30></div>
+    </div>
+    <div class=div24>
+        <div class=div35>
+            <div class=div25><font class=text5>پیوندهای روزانه</font></div></div>
+
+        <div class=div341><font class=text1><ul>
+            <li><a href="http://jelle.blogfa.com" title="" target="_blank">آشپزی الهام</a></li><li><a href="http://www.azad-dl.com/" title="" target="_blank">آزاد دانلود</a></li><li><a href="http://engineers.blogsky.com/1386/01/12/post-22/" title="" target="_blank">جوجه مهندس ها</a></li><li><a href="http://fashionstar1.persianblog.ir" title="" target="_blank">فاشیون</a></li><li><a href="http://www.zibasho.com" title="" target="_blank">زیبا شو</a></li><li><a href="http://mu3ic22.tk" title="سلام
+
+کلبه موزیک مخصوص دوستای رپ گوش کن و هیپ هاپ و راک هستش اگه خواستی ی سربزن .....
+
+راستی لینکم کن بعد پیام بذار لینکت کنم" target="_blank">کلبه موزیک</a></li><li><a href="../www.dadabeyglu.mihanblog.com/index.html" title="روســـــــــــتاییــــــــــــــ
+در
+دل
+سبــــــــــــــــــلان...
+اگه روستا دوست داری؟! بیا تو
+خوش اومدی... دوست من..." target="_blank">&quot;روستاییــ در دل سبلان&quot;</a></li><li><a href="http://www.prosperity.ir" title="سلام بر شما 
+انجمن کار آفرینان برتر با هدف گفتگو و تبادل نظر ، مشاوره های کسب در آمد ،اصول کسب و کار و مباحث روانشناسی 
+شروع به فعالیت نموده است 
+در صورتی که جنابعالی از صاحبان مشاغل و یا دارای تخصص کاری هستید و مشتاق به تبادل اطلاعات کاری هستید ویا نیاز به دریافت مشاوره دارید 
+از شما دعوت به حضور می گردد
+با سپاس/انجمن کار آفرینان برتر" target="_blank">انجمن کار آفرینان برتر</a></li><li><a href="http://www.montazeram.ir" title="با سلام....
+
+&quot;من هنوز منتظرم&quot;
+ 
+هر کس بمیرد و امام زمان خود را نشناسد به مرگ جاهلیت مرده است
+رسول اکرم (ص)
+
+در صورت تمایل به کمک در اشاعه و نشر فرهنگ مهدوی لینک را تایید فرمایید و با ما نیز اطلاع دهید
+
+متشکریم" target="_blank">من هنوز منتظرم</a></li><li><a href="../nojum9.mihanblog.com/index.html" title="با سلام....
+
+وبلاگ خوبی داری به وبلاگ من هم سربزن" target="_blank">nojum نجوم</a></li><li><a href="../marriagelearn.mihanblog.com/index.html" title="" target="_blank">آموزش های زناشوئی</a></li><li><a href="http://www.hadith.net/n1428-e27301.html" title="" target="_blank">حدیث</a></li><li><a href="http://www.zefreh.com" title="روستای زفره دارای جاذبه های طبیعت گردی ، گردشگری ، صخره های مناسب جهت کوهنوردی و دارای طبیعت زیبا و هوای مطبوع می باشد." target="_blank">روستای زفــره</a></li><li><a href="http://mihantools.net/" title="با سلام دوست من شما می توانید بهترین ابزار مورد نیاز خود برای وبلاگ خودتون رو از ما بخواهید کاملا رایگان" target="_blank">ابزار مورد نیاز وبلاگ نویسان</a></li><li><a href="../iraniatakdownload.mihanblog.com/index.html" title="سلام.
+وبلاگ واقعا جالبی داری.خیلی مشتاقم تبادل لینک انجام بدیم.لطفا وبلاگ منو با اسم &quot;نما دانلود&quot; لینک بفرمایید.راستی بعدش بگید وبلاگتون رو با چه اسمی لینک کنم.بیصبرانه منتظر لطفتون هستم.امیدوارم در آینده روابط بهتر و بیشتری با همدیگه داشته باشیم.
+با تشکر فراوان.
+
+http://iraniatakdownload.mihanblog.com" target="_blank">نما دانلود</a></li>            <li><b><a href="http://khateratekhial.mihanblog.com/linkdaily/">همه پیوندهای روزانه</a></b></li>
+            <li><b><a href="javascript:linkdailyForm()">ارسال پیوند روزانه</a></b></li>
+        </ul></font></div><div class=div30></div>
+    </div>
+    <div class=div24>
+        <div class=div35>
+            <div class=div25><font class=text5>پیوندها</font></div></div>
+
+        <div class=div341><font class=text1><ul>
+            <li><a href="http://www.aviny.com" title="" target="_blank">شهید آوینی</a></li><li><a href="http://nethistory.mihanblog.com" title="" target="_blank">دنیای نت</a></li><li><a href="http://baranesorkh.mihanblog.com/" title="" target="_blank">باران سرخ</a></li><li><a href="http://sokote.mihanblog.com" title="" target="_blank">سکوت خانومی</a></li><li><a href="../amirdt.mihanblog.com/index.html" title="" target="_blank">امید ناامیدی های من</a></li><li><a href="http://alon-boy.blogfa.com/" title="" target="_blank">هوامو کام میگیرم</a></li><li><a href="../www.doreakhar.mihanblog.com/index.html" title="" target="_blank">یخمک فروش جهنم</a></li><li><a href="http://kungfutoa-esfahan.blogfa.com/" title="" target="_blank">Kung Fu To'A - Anti Zionism</a></li><li><a href="../eng-90.mihanblog.com/index.html" title="" target="_blank">مهندس کوچولو</a></li><li><a href="../www.eshghekhoda73.mihanblog.com/index.html" title="" target="_blank">حرف دل یك جوان</a></li><li><a href="http://www.khodam-na.blogfa.com" title="" target="_blank">خودم</a></li><li><a href="http://www.remocom.blogfa.com/" title="" target="_blank">ریحانه</a></li><li><a href="http://www.manesht.ir/" title="" target="_blank">شوق پرواز</a></li><li><a href="http://nilufaresiah.persianblog.ir" title="خیلی خاص بود" target="_blank">درد حرف نیست</a></li><li><a href="http://citydel.blogfa.com" title="" target="_blank">جایی برای دلم</a></li><li><a href="http://labkhand-bezan.blogfa.com" title="" target="_blank">لبخند بزن</a></li><li><a href="../sokutemobham.mihanblog.com/index.html" title="" target="_blank">DONT LOVE ME</a></li><li><a href="http://1ki1doone.blogfa.com" title="" target="_blank">ایلیا</a></li><li><a href="http://boronsy.ir/" title="" target="_blank">شهید عبدالحسین برونسی</a></li><li><a href="http://noestemna.mihanblog.com/" title="" target="_blank">خودارضایی</a></li><li><a href="http://sakhtiha22.blogfa.com/" title="" target="_blank">پر از ......خالی</a></li><li><a href="http://paeizaneh7.mihanblog.com" title="" target="_blank">^^مهرانه ای پاییزی ^^</a></li><li><a href="http://az-khodam.blogfa.com" title="" target="_blank">سرخط</a></li><li><a href="http://www.ordibehesht22.blogfa.com" title="" target="_blank">اردیبهشت</a></li><li><a href="http://beine2binahayat.blogfa.com" title="" target="_blank">کلبه احساس</a></li>            <li><a target="_blank" href="http://www.mytheme.ir">بهترین قالب های وبلاگ</a></li>
+            <li><b><a href="http://khateratekhial.mihanblog.com/link/">همه پیوندها</a></b></li>
+        </ul></font></div><div class=div30></div>
+    </div>
+    <div class=div24>
+        <div class=div35>
+            <div class=div25><font class=text5>نویسندگان</font></div></div>
+
+        <div class=div341><font class=text1><ul>
+            <li><a href="http://khateratekhial.mihanblog.com/post/author/853421">نگار  (323)</a></li><li><a href="http://khateratekhial.mihanblog.com/post/author/866649">هوما  (73)</a></li><li><a href="http://khateratekhial.mihanblog.com/post/author/1071848">به سوی نور  (4)</a></li>        </ul></font></div><div class=div30></div>
+    </div>
+    <div class=div24>
+        <div class=div35>
+            <div class=div25><font class=text5>صفحات جانبی</font></div></div>
+
+        <div class=div341><font class=text1><ul>
+            <li><a href="http://khateratekhial.mihanblog.com/extrapage/khastegari">خـودآموز جامـع خواستـگاری به هم زدن !!!</a></li><li><a href="http://khateratekhial.mihanblog.com/extrapage/hossein_panahi">شاید ندانید که حسین پناهی روحانی بوده است...</a></li><li><a href="http://khateratekhial.mihanblog.com/extrapage/lebas">راهنمای انتخاب لباس مناسب ، بایدها و نبایدها</a></li>        </ul></font></div><div class=div30></div>
+    </div>
+    
+		
+    <div class=div24>
+        <div class=div35>
+            <div class=div25><font class=text5>برچسبها</font></div></div>
+
+        <div class=div341><font class=text1><ul>
+            <li><a href="http://khateratekhial.mihanblog.com/post/tag/%D8%AF%D9%84%D8%AA%D9%86%DA%AF%DB%8C">دلتنگی</a></li><li><a href="http://khateratekhial.mihanblog.com/post/tag/%D8%AF%D9%86%DB%8C%D8%A7">دنیا</a></li><li><a href="http://khateratekhial.mihanblog.com/post/tag/%D9%85%D9%86">من</a></li><li><a href="http://khateratekhial.mihanblog.com/post/tag/%D9%85%D8%A8%D8%A7%D8%B1%D8%B2%D9%87">مبارزه</a></li><li><a href="http://khateratekhial.mihanblog.com/post/tag/%D9%85%D8%B1%D8%AF">مرد</a></li><li><a href="http://khateratekhial.mihanblog.com/post/tag/%D9%85%D8%AF%D8%A7%D9%84+%D8%A8%D8%B1%D9%86%D8%B2">مدال برنز</a></li><li><a href="http://khateratekhial.mihanblog.com/post/tag/%D8%B2%D9%86">زن</a></li><li><a href="http://khateratekhial.mihanblog.com/post/tag/%D8%AF%D8%B1%D8%AF">درد</a></li><li><a href="http://khateratekhial.mihanblog.com/post/tag/%D8%A8%D8%A7%D8%A8%D8%A7">بابا</a></li><li><a href="http://khateratekhial.mihanblog.com/post/tag/%D8%A8%DB%8C+%D9%BE%D9%88%D9%84%DB%8C">بی پولی</a></li><li><a href="http://khateratekhial.mihanblog.com/post/tag/%DA%A9%D8%A7%D9%85%D8%B1%D8%A7%D9%86+%D8%AA%D9%81%D8%AA%DB%8C">کامران تفتی</a></li><li><a href="http://khateratekhial.mihanblog.com/post/tag/%D8%A7%D9%81%DA%A9%D8%A7%D8%B1">افکار</a></li><li><a href="http://khateratekhial.mihanblog.com/post/tag/%D8%B4%D9%87%D8%A7%D8%AF%D8%AA">شهادت</a></li><li><a href="http://khateratekhial.mihanblog.com/post/tag/%D8%A8%D8%A7+%D8%AA%D9%88">با تو</a></li><li><a href="http://khateratekhial.mihanblog.com/post/tag/%D9%85%D8%B3%D8%A7%D8%A8%D9%82%D8%A7%D8%AA+%D8%A7%D8%B3%D8%AA%D8%A7%D9%86%DB%8C+%DA%A9%D9%88%D9%86%DA%AF%D9%81%D9%88+%D8%AA%D9%88%D8%A7">مسابقات استانی کونگفو توا</a></li><li><a href="http://khateratekhial.mihanblog.com/post/tag/%D8%AF%D8%A7%D9%86%D8%B4%DA%AF%D8%A7">دانشگا</a></li><li><a href="http://khateratekhial.mihanblog.com/post/tag/%D8%B2%D9%86%D8%AF%DA%AF%DB%8C">زندگی</a></li><li><a href="http://khateratekhial.mihanblog.com/post/tag/%D9%85%D8%A7%D8%AF%D8%B1">مادر</a></li><li><a href="http://khateratekhial.mihanblog.com/post/tag/%D8%AE%DB%8C%D8%A7%D9%86%D8%AA">خیانت</a></li><li><a href="http://khateratekhial.mihanblog.com/post/tag/%D8%B3%D9%85%D9%86%DB%8C">سمنی</a></li>        </ul></font></div><div class=div30></div>
+    </div>
+    <div class=div24>
+        <div class=div35>
+            <div class=div25><font class=text5>آمار وبلاگ</font></div></div>
+
+        <div class=div341><font class=text1><ul>
+            <li>کل بازدید : <script>getStatVar('total_view');</script></li>
+            <li>بازدید امروز :<script>getStatVar('today_view');</script></li>
+            <li>بازدید دیروز : <script>getStatVar('yesterday_view');</script></li>
+            <li>بازدید این ماه : <script>getStatVar('this_month_view');</script></li>
+            <li>بازدید ماه قبل : <script>getStatVar('last_month_view');</script></li>
+            <li>تعداد نویسندگان : <script>getStatVar('total_author');</script></li>
+            <li>تعداد کل پست ها : <script>getStatVar('total_post');</script></li>
+            <li>آخرین بازدید : <script>getStatVar('last_view_date');</script></li>
+            <li>آخرین بروز رسانی : <script>getStatVar('modify_date');</script></li>
+        </ul></font></div><div class=div30></div>
+    </div>
+    <div style="text-align:right" class=div024><div  class="mihan_logo"></div><center><!نمایش دفعا قبلی كه بود و تایمش>
+<!--Best Codes By WwW.Javacode.Persiangig.com\Please Dont Delete this Line-->
+
+<script type="text/javascript">
+
+var lastvisit=new Object()
+lastvisit.firstvisitmsg="سلام.این اولین بازدید شما از وب من است.خوش امد میگم" 
+lastvisit.subsequentvisitmsg="خوش اومدی عزیزم دفعه قبلی كه اینجا بودی میدونی كی بود؟ بذا من بگم <b>[displaydate]</b>" 
+
+lastvisit.getCookie=function(Name){ //get cookie value
+var re=new RegExp(Name+"=[^;]+", "i"); 
+if (document.cookie.match(re)) //if cookie found
+return document.cookie.match(re)[0].split("=")[1] //return its value
+return ""
+}
+
+lastvisit.setCookie=function(name, value, days){ //set cookei value
+var expireDate = new Date()
+//set "expstring" to either future or past date, to set or delete cookie, respectively
+var expstring=expireDate.setDate(expireDate.getDate()+parseInt(days))
+document.cookie = name+"="+value+"; expires="+expireDate.toGMTString()+"; path=/";
+}
+
+lastvisit.showmessage=function(){
+if (lastvisit.getCookie("visitcounter")==""){ //if first visit
+lastvisit.setCookie("visitcounter", 2, 730) //set "visitcounter" to 2 and for 730 days (2 years)
+document.write(lastvisit.firstvisitmsg)
+}
+else
+document.write(lastvisit.subsequentvisitmsg.replace("\[displaydate\]", new Date().toLocaleString()))
+}
+
+lastvisit.showmessage()
+
+</script>
+
+<!--Best Codes By WwW.Javacode.Persiangig.com\Please Dont Delete this Line-->
+
+
+
+<!دیكشنری انلاین>
+
+
+<!كد موزیك>
+
+
+
+    </center>
+
+    </div>
+</div>
+
+<div class=div06>
+    <div class=div7>
+        <a href="http://www.mytheme.ir" target="_blank">
+            <img src="http://mihanblog.com/public/public/user_data/template/2098701/blank.gif" border=0 width=160 height=30></a></div>
+</div>
+
+</div></div>
+</td>
+<td>&nbsp;</td>
+</tr>
+</table>
+</div>
+<style>
+    img{
+        max-width : 360px;
+    }
+</style>
+</body>
+
+</html><script>
+//    setTimeout(function () {
+//        GetMihanBlogShowAds();
+//    }, 1000);
+</script>
+<!--NEW SERVER--><!--;)-->
+
+<!--SabaVision Ads Handler--><!--<script type="text/javascript">(function (d) {var url =   location.protocol+'//api.sabavision.com/pox/poxjs.js';d.write('<script type="text/javascript" src="' + url + '" async></scri' + 'pt>');})(document);</script>-->
+
+
+<script type="text/javascript">
+
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-153829-9']);
+    _gaq.push(['_setDomainName', 'khateratekhial.mihanblog.com']);
+    _gaq.push(['_trackPageview']);
+
+    (function() {
+        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+
+</script>
+
+
+<div id='mediaad-Kvcm'></div>
+<meta name="sabavision_zone" content="2500-Z499" />
+<center>
+    <div style="background-color:white;width:90%;padding:20px;margin-top:50px;margin-bottom:50px;">
+        <a href="https://www.cloob.com">شبکه اجتماعی فارسی کلوب</a> | <a href="https://www.seo25.com/product/buy-mobile-traffic-and-get-cheap-targeted-mobile-traffic/" target="_blank">Buy Mobile Traffic</a> | <a href="https://www.soalaat.com">سایت سوالات</a>
+    </div>
+</center>

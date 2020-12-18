@@ -1,0 +1,1576 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" /><link rel="EditURI" type="application/rsd+xml" title="RSD" href="http://khodaytanha.mihanblog.com/xmlrpc?rsd" />
+<script type="text/javascript" src="../static.mihanblog.com/public/scripts/run/g.other.v3.js"></script>
+<script>
+
+	function c_$(id){
+        return document.getElementById(id);
+    }
+    
+			//if (parent.frames.length) top.location.href= document.location;
+		
+	setTodayDate = function(){
+		document.write('یکشنبه 23 آذر 1399');
+		/*1039552*/	}
+
+</script>
+
+
+
+        <script type="text/javascript">
+            (function(){
+            var now = new Date();
+            var head = document.getElementsByTagName('head')[0];
+            var script = document.createElement('script');
+            script.async = true;
+            var script_address = 'https://cdn.yektanet.com/js/mihanblog.com/native-mihanblog.com-6531.js';
+            script.src = script_address + '?v=' + now.getFullYear().toString() + '0' + now.getMonth() + '0' + now.getDate() + '0' + now.getHours();
+            head.appendChild(script);
+            })();
+        </script>
+
+        <!--<script type="text/javascript">
+            var head = document.getElementsByTagName("head")[0];
+            var script = document.createElement("script");
+            script.type = "text/javascript";
+            script.async=1;
+            script.src = "https://s1.mediaad.org/serve/mihanblog.com/loader.js" ;
+            head.appendChild(script);
+        </script>-->
+        
+        <script>
+            var sabaVisionWebsiteID = "9bab9dac-041d-4bdb-b39a-1ed789f65eed"; var sabaVisionWebsitePage = "ALL"
+        </script>
+        <link rel="stylesheet" href="https://plus.sabavision.com/dox/dox.min.css">
+        <script src="https://plus.sabavision.com/dox/dox.min.js"></script>
+        
+        <script>
+	try{
+		var commentCnt = new Array();
+		commentCnt[478]='7';commentCnt[479]='1';commentCnt[480]='3';commentCnt[481]='1';commentCnt[483]='3';commentCnt[484]='1';commentCnt[485]='4';commentCnt[487]='26';	} catch(e){}
+	
+	newComment = function(post_id){
+		try{
+			window.open('/post/comment/'+post_id,'comment','status=yes,scrollbars=yes,toolbar=no,menubar=no,location=no ,width=480px,height=540px');
+		} catch(e){}
+	}
+	setCommentCnt = function(post_id){
+		try{
+			if(commentCnt[post_id]){
+				document.write(commentCnt[post_id]);
+			} else {
+				document.write(0);
+			}
+		} catch(e){}
+	}
+</script><script>
+
+
+	mihanblogUpdateLike = function(postid,type){
+		var url = '/post/like/'+postid+'/'+type;
+		mihanblogGetAjax(url,function(){});
+	};
+	try{
+        mihanblogGetAjax = function (url,callback) {
+    		var req;
+			if (window.XMLHttpRequest)
+            {
+                // code for IE7+, Firefox, Chrome, Opera, Safari
+			  	req = new XMLHttpRequest();
+			}else{	// code for IE6, IE5
+			  	req = new ActiveXObject("Microsoft.XMLHTTP");
+		  	}
+		    req.open("GET", url, 1);
+		    req.onreadystatechange = function () {
+		        if (req.readyState == 4) {
+		            if (req.status == 200) {
+		            	var response = eval(req.responseText);
+		            	callback();
+		            }else{
+	            		return ;
+		            }
+		        }else{
+					return ;
+		        }
+		    }
+		    req.send(null);
+		}
+	}catch(e){}
+
+	try{
+		var mihanblogLikeArrCnt = new Array();
+		var mihanblogDisLikeArrCnt = new Array();
+
+		mihanblogLikeArrCnt[478]='0';
+mihanblogDisLikeArrCnt[478]='0';
+mihanblogLikeArrCnt[479]='0';
+mihanblogDisLikeArrCnt[479]='0';
+mihanblogLikeArrCnt[480]='0';
+mihanblogDisLikeArrCnt[480]='0';
+mihanblogLikeArrCnt[481]='0';
+mihanblogDisLikeArrCnt[481]='0';
+mihanblogLikeArrCnt[483]='0';
+mihanblogDisLikeArrCnt[483]='0';
+mihanblogLikeArrCnt[484]='0';
+mihanblogDisLikeArrCnt[484]='0';
+mihanblogLikeArrCnt[485]='0';
+mihanblogDisLikeArrCnt[485]='0';
+mihanblogLikeArrCnt[487]='0';
+mihanblogDisLikeArrCnt[487]='0';
+	} catch(e){}
+
+
+
+    mihanblogPostLike = function(post_id){
+
+        mihanblogLikeCnt = (mihanblogLikeArrCnt[post_id]? mihanblogLikeArrCnt[post_id] : 0);
+        mihanblogDisLikeCnt = (mihanblogDisLikeArrCnt[post_id]? mihanblogDisLikeArrCnt[post_id] : 0);
+        mihanblogLikeCnt = parseInt(mihanblogLikeCnt);
+        mihanblogDisLikeCnt = parseInt(mihanblogDisLikeCnt);
+
+        document.write(
+                '<div class="mihanblog_like_wrapper ">'+
+                       '<div id="dislikeBar_'+post_id+'" onclick="mihanblogUpdateLike('+post_id+',\'dislike\')"   class="mihanblog_like_bar mihanblog_like_dislikeBar mihanblog_like_show_help ">-<div class="mihanblog_like_Cnt" id="disLikeCnt_'+post_id+'">'+mihanblogDisLikeCnt+'</div>'+
+                            '<span  class="mihanblog_like_v2_help mihanblog_like_v2_help_dislike clearfix"> '+
+                                '<span class="mihanblog_like_help_arrow mihanblog_like_help_arrow_dislike clearfix"></span>'+
+                                '<span class="mihanblog_like_help_text">نمی پسندم</span>'+
+                            '</span>'+
+                        '</div>'+
+                       '<div id="Like_'+post_id+'" class="mihanblog_like_border"></div>'+
+                       '<div id="likeBar_'+post_id+'" onclick="mihanblogUpdateLike('+post_id+',\'like\')"  class="mihanblog_like_bar mihanblog_like_likeBar mihanblog_like_show_help" >+<div class="mihanblog_like_Cnt" id="likeCnt_'+post_id+'">'+mihanblogLikeCnt+'</div>'+
+                            '<span  class="mihanblog_like_v2_help mihanblog_like_v2_help_like clearfix"> '+
+                                '<span class="mihanblog_like_help_arrow mihanblog_like_help_arrow_like clearfix"></span>'+
+                                '<span class="mihanblog_like_help_text">می پسندم</span>'+
+                            '</span>'+
+                        '</div>'+
+
+                '</div>'
+        );
+
+
+
+        mihanblogDisplayeLike(post_id);
+    }
+
+
+    mihanblogDisplayeLike = function(post_id){
+
+        mihanblogLikeCnt = (mihanblogLikeArrCnt[post_id]? mihanblogLikeArrCnt[post_id] : 0);
+        mihanblogDisLikeCnt = (mihanblogDisLikeArrCnt[post_id]? mihanblogDisLikeArrCnt[post_id] : 0);
+        mihanblogLikeCnt = parseInt(mihanblogLikeCnt);
+        mihanblogDisLikeCnt = parseInt(mihanblogDisLikeCnt);
+
+
+
+        sum = mihanblogLikeCnt - mihanblogDisLikeCnt;
+        backgroundBorder =  document.getElementById('Like_'+post_id);
+        var likeObj = document.getElementById('likeCnt_'+post_id);
+        var disLikeObj = document.getElementById('disLikeCnt_'+post_id);
+
+
+
+
+
+        likeObj.innerHTML =  mihanblogLikeCnt ;
+        disLikeObj.innerHTML =  mihanblogDisLikeCnt;
+
+        if(sum == 0){
+            backgroundBorder.style.backgroundImage = "url('/public/public/images/icons/like_likedislike.png')";
+            document.getElementById('dislikeBar_'+post_id).style.width = '19px';
+            document.getElementById('likeBar_'+post_id).style.width = '19px';
+        }else{
+             if(sum > 0){
+                 backgroundBorder.style.backgroundImage = "url('/public/public/images/icons/like_like.png')";
+                 document.getElementById('likeBar_'+post_id).style.width = '23px';
+                 document.getElementById('dislikeBar_'+post_id).style.width = '15px';
+             }else{
+                 backgroundBorder.style.backgroundImage = "url('/public/public/images/icons/like_dislike.png')";
+                 document.getElementById('likeBar_'+post_id).style.width = '15px';
+                 document.getElementById('dislikeBar_'+post_id).style.width = '23px';
+             }
+        }
+
+    }
+
+
+
+
+</script>
+
+<style type="text/css">
+
+
+    .clearfix {display: inline-block;}
+    .clearfix:after {
+        content: ".";
+        display: block;
+        height: 0;
+        clear: both;
+        visibility: hidden;
+    }
+
+    .mihanblog_like_wrapper {
+        color: #ffffff;
+        direction: ltr;
+        position: relative;
+    }
+    .mihanblog_like_wrapper span{
+        display: none;
+    }
+    .mihanblog_like_bar {
+        color: #FFFFFF;
+        cursor: pointer;
+        float: left;
+        font-size: 10px;
+        height: 20px;
+        line-height: 19px;
+        margin: 5px 0;
+    }
+    .mihanblog_like_likeBar {
+        background-color: #88B131;
+        padding-right: 5px;
+        border-top-right-radius: 2px;
+        border-bottom-right-radius: 2px;
+        text-align: right;
+    }
+    .mihanblog_like_likeBar:hover{
+        background-color: #699017;
+    }
+    .mihanblog_like_border {
+        background-color: #666666;
+        border: 1px solid #666666;
+        float: left;
+        font-size: 12px;
+        height: 20px;
+        margin-top: 2px;
+        width: 25px;
+        padding: 3px 5px 2px 0;
+        text-align: center;
+        border-radius: 2px;
+        color: #ffffff;
+        direction: ltr;
+        background-repeat: no-repeat ;
+        background-position: 4px center;
+    }
+    .mihanblog_like_border img {
+        margin-left: 2px;
+        margin-top: 2px;
+        width: 22px;
+    }
+    .mihanblog_like_dislikeBar {
+        background-color: #FF6F31;
+        padding-left: 5px;
+        border-top-left-radius: 2px;
+        border-bottom-left-radius: 2px;
+        text-align:left ;
+    }
+    .mihanblog_like_dislikeBar:hover{
+        background-color: #D54B10;
+    }
+
+
+
+    .mihanblog_like_show_help {
+        position: relative;
+    }
+    .mihanblog_like_show_help:hover span {
+        display: block;
+    }
+    .mihanblog_like_help_text {
+        background-color: white;
+        border: 1px solid #555555;
+        border-radius: 3px 3px 3px 3px;
+        color: #303030;
+        float: left;
+        font-size: 11px;
+        font-weight: normal;
+        padding: 5px 10px;
+    }
+
+    .mihanblog_like_help_arrow_dislike {
+        background: url("http://khodaytanha.mihanblog.com/public/public/images/icons/like_hover_top.png") no-repeat scroll 16px 0 transparent;
+        left: 0;
+        top: -4px;
+    }
+
+    .mihanblog_like_help_arrow_like {
+        background: url("http://khodaytanha.mihanblog.com/public/public/images/icons/like_hover_top _2.png") no-repeat scroll 16px 0 transparent;
+        left: -10px;
+        top: 29px;
+    }
+
+    .mihanblog_like_help_arrow{
+        height: 6px;
+        position: absolute;
+        width: 100px;
+
+    }
+
+    .mihanblog_like_v2_help_dislike {
+        left: -15px;
+        top: 24px;
+    }
+    .mihanblog_like_v2_help_like {
+        left: 0;
+        top: -35px;
+
+    }
+    .mihanblog_like_v2_help{
+        display: none;
+        position: absolute;
+        white-space: nowrap;
+        z-index: 1;
+    }
+
+    .mihanblog_like_Cnt{
+        display: inline;
+        color: #ffffff;
+    }
+
+</style><script>
+
+	statInfo = new Array();
+	setStatVar = function(index,value){
+		statInfo[index] = value;
+	}
+	getStatVar = function(index){
+		if(statInfo[index]) document.write(statInfo[index]);
+	}
+	
+	setStatVar('total_post','417');
+	setStatVar('total_author','1');
+	setStatVar('modify_date','جمعه 2 آبان 1393');
+	
+	setStatVar('today_view','8');
+	setStatVar('yesterday_view','30');
+	
+	setStatVar('this_month_view','589');
+	setStatVar('last_month_view','1274');
+
+	setStatVar('total_view','243301');
+	setStatVar('last_view_date','یکشنبه 23 آذر 1399 (06:54)');
+
+
+
+    
+    function setStatFromClient()
+    {
+        var url = 'http://khodaytanha.mihanblog.com/statupdate/?data[refereruri]=http://bezabanedel.mihanblog.com/&data[postid]=&data[requesturi]=/&data[sdate]=1607830246&data[hash]=ac7d2e34486bef113e1159af452934e3&data[resolution]='+screen.width+' X '+screen.height;
+
+//        alert(url);
+//        var newjs = document.createElement("SCRIPT");
+//        newjs.type = 'text/javascript';
+//        newjs.src = url;
+//
+//        var newdiv = document.createElement("DIV");
+//        newdiv.setAttribute("style","display:none");
+
+        document.write(unescape('%3Cscript src="'+url+'" type="text/javascript"%3E%3C/script%3E'));
+//        newdiv.appendChild (newjs);
+//        document.write(newjs);
+//        document.write(appendChild (newdiv);
+
+    };
+    setStatFromClient();
+        
+</script><script>
+	messageForm = function(post_id){
+		try{
+			window.open('/message','message','status=yes,scrollbars=yes,toolbar=no,menubar=no,location=no ,width=480px,height=550px');
+		} catch(e){}
+	}
+</script><script>
+	linkdailyForm = function(){
+		try{
+			window.open('/linkdaily/new','linkdaily','status=yes,scrollbars=yes,toolbar=no,menubar=no,location=no ,width=500px,height=460px');
+		} catch(e){}
+	}
+</script><script>
+
+var MihanblogShopAdsArray = new Array();
+
+function GetMihanBlogShowAds(){
+	if(MihanblogShopAdsArray.length){
+		var adsTarget = 'MihanblogShopAds';
+		var containerWidth = document.getElementById(adsTarget).offsetWidth;
+		if(containerWidth>=200){
+			var adsCnt = parseInt(containerWidth / 200) ;
+			if(adsCnt>MihanblogShopAdsArray.length){
+				adsCnt = MihanblogShopAdsArray.length ; 
+			}
+//			var OneAdsWidth = parseInt(containerWidth / adsCnt) ;
+			var OneAdsWidth = containerWidth / adsCnt ;
+			if(OneAdsWidth>400){
+				OneAdsWidth = 400 ;
+			}
+			var OutHtml = '';
+			var img = '';
+			var link = '';
+			var title = '';
+			var description = '';
+			var imgWidth = 70;
+			if(OneAdsWidth>230){
+				imgWidth = 80;
+			}
+			if(OneAdsWidth>300){
+				imgWidth = 90;
+			}
+			for(adsOne=0;adsOne<adsCnt;adsOne++){
+				
+				img = MihanblogShopAdsArray[adsOne]['img'];
+				link = MihanblogShopAdsArray[adsOne]['link'];
+				title = MihanblogShopAdsArray[adsOne]['title'];
+				description = MihanblogShopAdsArray[adsOne]['description'];
+				
+				OutHtml += '<td style="background-color:#FFF;width: '+OneAdsWidth+'px;border:1px solid #f00;margin:0px 0px;font-size:11px;font-family:tahoma;padding:2px;margin:0px 0px;font-size:11px;border: 1px solid BurlyWood; padding: 1px; height: '+(imgWidth+25)+'px;">';
+
+				OutHtml += '	<a href="http://khodaytanha.mihanblog.com/'+link+'" target="_blank" style="text-decoration:none">';
+
+				OutHtml += '			<div style="width: '+(OneAdsWidth-16)+'px;cursor:pointer;font-size:12px;padding: 4px 1px 4px 7px; white-space: nowrap; text-align: center; font-weight: bold; color: blue;white-space:nowrap;overflow:hidden">';
+				OutHtml += 					title;
+				OutHtml += '			</div>';
+				OutHtml += '			<div style="cursor:pointer;padding: 1px; display: block; float: right; width: '+imgWidth+'px;">';
+				OutHtml += '				<img src="'+img+'.html" style="border:0px;padding:0px;margin:0px;width:'+imgWidth+'px;height:'+imgWidth+'px;">';
+				OutHtml += '			</div>';
+				OutHtml += '			<div style="padding: 1px; display: block; float: right; width: '+(OneAdsWidth-13-imgWidth)+'px; text-align: right;overflow:hidden">';
+				OutHtml += '				<div style="overflow:hidden;cursor:pointer;padding: 2px 3px; line-height: 17px; height: '+(imgWidth-3)+'px; text-align: justify;color:#000;direction:rtl">';
+				OutHtml += 						description;
+				OutHtml += '				</div>';
+				OutHtml += '			</div>';
+
+				OutHtml += '	</a>';
+
+				OutHtml += '</td>';
+			}
+			
+			var Out = '<table align="center" cellpadding="0" cellspacing="2" style="width:'+(OneAdsWidth*adsCnt)+'px;"><tr>'+OutHtml+'</tr></table>'; 
+			
+			Out = '<div style="text-align:center;padding:0px;margin:3px auto;">'+Out+'</div>'; 
+			
+			document.getElementById(adsTarget).style.height = (imgWidth+35)+'px' ;
+			document.getElementById(adsTarget).innerHTML = Out ;
+		}
+	}
+}
+</script>
+    <style>
+        @font-face {
+            font-family: 'Mihan-Iransans';
+            src: url('http://khodaytanha.mihanblog.com/public/public/fonts/Iransans.eot');
+            src: url('http://khodaytanha.mihanblog.com/public/public/fonts/Iransans.eot?') format('embedded-opentype'),
+            url('http://khodaytanha.mihanblog.com/public/public/fonts/Iransans.woff2') format('woff2'),
+            url('http://khodaytanha.mihanblog.com/public/public/fonts/Iransans.woff') format('woff'),
+            url('http://khodaytanha.mihanblog.com/public/public/fonts/Iransans.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+        @font-face {
+            font-family: 'Mihan-IransansBold';
+            src: url('http://khodaytanha.mihanblog.com/public/public/fonts/Iransans-Black.eot');
+            src: url('http://khodaytanha.mihanblog.com/public/public/fonts/Iransans-Black.eot?') format('embedded-opentype'),
+            url('http://khodaytanha.mihanblog.com/public/public/fonts/Iransans-Black.woff2') format('woff2'),
+            url('http://khodaytanha.mihanblog.com/public/public/fonts/Iransans-Black.woff') format('woff'),
+            url('http://khodaytanha.mihanblog.com/public/public/fonts/Iransans-Black.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+        @font-face {
+            font-family: 'Mihan-IransansLight';
+            src: url('http://khodaytanha.mihanblog.com/public/public/fonts/Iransans-UltraLight.eot');
+            src: url('http://khodaytanha.mihanblog.com/public/public/fonts/Iransans-UltraLight.eot?') format('embedded-opentype'),
+            url('http://khodaytanha.mihanblog.com/public/public/fonts/Iransans-UltraLight.woff2') format('woff2'),
+            url('http://khodaytanha.mihanblog.com/public/public/fonts/Iransans-UltraLight.woff') format('woff'),
+            url('http://khodaytanha.mihanblog.com/public/public/fonts/Iransans-UltraLight.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+        @font-face {
+            font-family: 'Mihan-Nassim';
+            src: url('http://khodaytanha.mihanblog.com/public/public/fonts/Nassim.eot');
+            src: url('http://khodaytanha.mihanblog.com/public/public/fonts/Nassim.eot?') format('embedded-opentype'),
+            url('http://khodaytanha.mihanblog.com/public/public/fonts/Nassim.woff2') format('woff2'),
+            url('http://khodaytanha.mihanblog.com/public/public/fonts/Nassim.woff') format('woff'),
+            url('http://khodaytanha.mihanblog.com/public/public/fonts/Nassim.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+        @font-face {
+            font-family: 'Mihan-Koodak';
+            src: url('http://khodaytanha.mihanblog.com/public/public/fonts/Koodak.eot');
+            src: url('http://khodaytanha.mihanblog.com/public/public/fonts/Koodak.eot?') format('embedded-opentype'),
+            url('http://khodaytanha.mihanblog.com/public/public/fonts/Koodak.woff2') format('woff2'),
+            url('http://khodaytanha.mihanblog.com/public/public/fonts/Koodak.woff') format('woff'),
+            url('http://khodaytanha.mihanblog.com/public/public/fonts/Koodak.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+        @font-face {
+            font-family: 'Mihan-Yekan';
+            src: url('http://khodaytanha.mihanblog.com/public/public/fonts/Yekan.eot');
+            src: url('http://khodaytanha.mihanblog.com/public/public/fonts/Yekan.eot?') format('embedded-opentype'),
+            url('http://khodaytanha.mihanblog.com/public/public/fonts/Yekan.woff2') format('woff2'),
+            url('http://khodaytanha.mihanblog.com/public/public/fonts/Yekan.woff') format('woff'),
+            url('http://khodaytanha.mihanblog.com/public/public/fonts/Yekan.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+        @font-face {
+            font-family: 'FontAwesome';
+            src: url('http://khodaytanha.mihanblog.com/public/public/fonts/fontawesome_webfont.eot');
+            src: url('http://khodaytanha.mihanblog.com/public/public/fonts/fontawesome_webfont.eot?') format('embedded-opentype'),
+            url('http://khodaytanha.mihanblog.com/public/public/fonts/fontawesome_webfont.woff2') format('woff2'),
+            url('http://khodaytanha.mihanblog.com/public/public/fonts/fontawesome_webfont.woff') format('woff'),
+            url('http://khodaytanha.mihanblog.com/public/public/fonts/fontawesome_webfont.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+
+
+        
+
+        /* Smartphones (portrait and landscape) ----------- */
+
+        /*
+        @media only screen and (max-width : 480px) and (min-width : 320px) {
+            .sabaClick_advert__wrapper{
+                display:block;
+            }
+            .sabaClick_advert__inner{
+                max-width: 90%;
+                margin: 0 5%;
+            }
+        }
+        */
+
+    </style>
+
+
+
+
+
+
+
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head><!--قالب 008162745-->
+<title>فقط و فقط خــــــــــــــــدا</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta name="language" content="Farsi">
+<meta name="description" content="فقط و فقط خــــــــــــــــدا - معبودا . . . ببخش بندگان گناه کارت را .&nbsp; - فقط و فقط خــــــــــــــــدا">
+<meta name="keywords" content="فقط و فقط خــــــــــــــــدا,khodaytanha, Blog, Weblog, Persian,Iran, Iranian, Farsi, Weblogs">
+<link rel="alternate" type="application/rss+xml" title="فقط و فقط خــــــــــــــــدا" href="http://khodaytanha.mihanblog.com/post/rss/">
+<meta name="description" content="<-BlogAndPostTitle-> - معبودا . . . ببخش بندگان گناه کارت را . - فقط و فقط خــــــــــــــــدا"><script type="text/javascript" >var url = "http://khodaytanha.mihanblog.com"</script>
+<meta name="keywords" content="فقط و فقط خــــــــــــــــدا,khodaytanha, Blog, Weblog, Persian,Iran, Iranian, Farsi, Weblogs">
+<link rel="alternate" type="application/rss+xml" title="فقط و فقط خــــــــــــــــدا" href="http://khodaytanha.mihanblog.com/post/rss/">
+
+
+
+<link rel='stylesheet' id='style-changer-css'  href='http://m-qaleb.com/Templates/free/M-QaLeB/blogfa/simple/religion/008162745/css/picker.css' type='text/css' media='all' />
+<link rel='stylesheet' id='colorpicker-css'  href='http://m-qaleb.com/Templates/free/M-QaLeB/blogfa/simple/religion/008162745/css/colorpicker.css' type='text/css' media='all' />
+   
+
+	<script type="text/javascript" src="http://m-qaleb.com/Templates/free/M-QaLeB/blogfa/simple/religion/008162745/js/jquery.js"></script>
+	<!-- End  http://m-qaleb.com HEAD section -->
+
+<script type='text/javascript' src='http://m-qaleb.com/Templates/free/M-QaLeB/blogfa/simple/religion/008162745/js/jquery.tipsy.js'></script>
+
+
+
+
+<script type='text/javascript' src='http://m-qaleb.com/Templates/free/M-QaLeB/blogfa/simple/religion/008162745/js/jquery.cookie.js'></script>
+<script type='text/javascript' src='http://m-qaleb.com/Templates/free/M-QaLeB/blogfa/simple/religion/008162745/js/colorpicker.js'></script>
+
+<style type="text/css">body, .stretched-layout .bgWrapper {
+	background-color: #E1EBEA;
+background-image:  url('http://m-qaleb.com/Templates/free/M-QaLeB/blogfa/simple/religion/008162745/images/backgrounds/041.jpg');
+background-position: top center;
+background-repeat: repeat;
+background-attachment: fixed}
+
+
+
+
+</style>
+
+
+
+
+<script type="text/javascript" >var url = "http://khodaytanha.mihanblog.com"</script>
+
+<script language="JavaScript" src="http://m-qaleb.com/Templates/free/M-QaLeB/blogfa/simple/religion/008162745/008162745.js"></script>
+ <script src="http://m-qaleb.com/Templates/free/M-QaLeB/blogfa/simple/religion/008162745/js/jquery.id.chopslider-2.2.0.free.min.js"></script>
+        <script src="http://m-qaleb.com/Templates/free/M-QaLeB/blogfa/simple/religion/008162745/js/jquery.id.cstransitions-1.2.min.js"></script>
+        <script src="http://m-qaleb.com/Templates/free/M-QaLeB/blogfa/simple/religion/008162745/js/main.js"></script>
+
+
+
+
+
+
+
+<script type="text/javascript">
+//<![CDATA[
+function currentYPosition() {
+// Firefox, Chrome, Opera, Safari
+if (self.pageYOffset) return self.pageYOffset;
+// Internet Explorer 6 
+if (document.documentElement && document.documentElement.scrollTop)
+return document.documentElement.scrollTop;
+// Internet Explorer 6, 7 and 8
+if (document.body.scrollTop) return document.body.scrollTop;
+return 0;
+}
+function elmYPosition(eID) {
+var elm = document.getElementById(eID);
+var y = elm.offsetTop;
+var node = elm;
+while (node.offsetParent && node.offsetParent != document.body) {
+node = node.offsetParent;
+y += node.offsetTop;
+} return y;
+}
+function smoothScroll(eID) {
+var startY = currentYPosition();
+var stopY = elmYPosition(eID);
+var distance = stopY > startY ? stopY - startY : startY - stopY;
+if (distance < 100) {
+scrollTo(0, stopY); return;
+}
+var speed = Math.round(distance / 100);
+if (speed >= 20) speed = 20;
+var step = Math.round(distance / 25);
+var leapY = stopY > startY ? startY + step : startY - step;
+var timer = 0;
+if (stopY > startY) {
+for ( var i=startY; i<stopY; i+=step ) {
+setTimeout("window.scrollTo(0, "+leapY+")", timer * speed);
+leapY += step; if (leapY > stopY) leapY = stopY; timer++;
+} return;
+}
+for ( var i=startY; i>stopY; i-=step ) {
+setTimeout("window.scrollTo(0, "+leapY+")", timer * speed);
+leapY -= step; if (leapY < stopY) leapY = stopY; timer++;
+}
+}
+//]]>
+</script>
+
+<script language="JavaScript1.2">
+<!--
+
+var bookmarkurl="http://khodaytanha.mihanblog.com"
+var bookmarktitle=" فقط و فقط خــــــــــــــــدا "
+
+function ccaddbookmark() {
+	if (document.all)
+	window.external.AddFavorite(bookmarkurl,bookmarktitle)
+}
+
+//-->
+</script>
+
+ <script  language="javascript">
+<!-- Begin
+function printWindow() {
+bV = parseInt(navigator.appVersion);
+if (bV >= 4) window.print();
+}
+//  End -->
+</script>
+</head>
+
+<body>   
+
+
+	
+		
+
+<div align="center">
+			
+<div id="Header">
+
+<div id="blockid"></div>
+<div id="BlogTitle"><a href="index.html">فقط و فقط خــــــــــــــــدا</a>
+</div><div id="BlogDescription">معبودا . . . ببخش بندگان گناه کارت را .</div>
+</div>
+
+
+<!--#header-->
+
+<div id=Back>
+<table border="0" width="1000" cellspacing="0" cellpadding="0">
+<tr>
+<td width="220" valign="top">
+<div id=left-sidebar>
+
+<ul class="vert-one">
+  <li><a href="http://khodaytanha.mihanblog.com/post/rss/" target="blank" title="Rss.02">بازخورد</a></li>
+  <li><a href="javascript:printWindow()" class="tip" title="چاپ این صفحه">چاپ این صفحه</a></li>
+ <li><a  class="current" href="index.html#footer" onclick="smoothScroll('footer'); return false" title="رفتن به انتهای صفحه">رفتن به انتهای صفحه</a></li>
+
+  <li><a onclick="this.style.behavior='url(#default#homepage)';this.setHomePage('http://khodaytanha.mihanblog.com');return false;" href="javascript:void(0)"  class="tip" title="این سایت را صفحه خانگی خود نمایید !" class="current">خانگی سازی</a></li>
+  <li><a href="index.html#http://khodaytanha.mihanblog.com" class="tip" onclick="window.location=document.URL;" title="بارگذاری مجدد صفحه">بارگذاری مجدد</a></li>
+  <li><a href="javascript:ccaddbookmark()" target="_self" class="tip"  title="افزودن به علاقمندیها">افزودن به علاقمندیها</a></li>
+ </ul>
+
+
+<div class=sidebar-top2><div class=sidebar-top-txt>
+<b>نویسندگان</b></div></div>
+<div class=sidebar-bg>  <div class=li-Sid>
+<a class="tip" href="http://khodaytanha.mihanblog.com/post/author/870962" title="197">بنده گناه کار خدا    </a></div></div>
+<div class=sidebar-bottom></div>
+
+
+		
+<div class=sidebar-top2><div class=sidebar-top-txt>
+<b>لینک دوستان</b></div></div>
+<div class=sidebar-bg>
+<div class=li-Sid>
+<a class="tip" target="_blank" title="قائم ( عج )" href="http://www.qaaem.com/">قائم ( عج )</a></div><div class=li-Sid>
+<a class="tip" target="_blank" title="شبکه جهانی اطلاع رسانی امام مهدی ( عج )" href="http://www.imamamahdi.com/">شبکه جهانی اطلاع رسانی امام مهدی ( عج )</a></div><div class=li-Sid>
+<a class="tip" target="_blank" title="پایگاه اطلاع رسانی امام حسن مجتبی ( ع )" href="http://www.imamhasan.info/">پایگاه اطلاع رسانی امام حسن مجتبی ( ع )</a></div><div class=li-Sid>
+<a class="tip" target="_blank" title="پایگاه اطلاع رسانی پیامبر اعظم ( ص )" href="http://www.payambarazam.ir/">پایگاه اطلاع رسانی پیامبر اعظم ( ص )</a></div><div class=li-Sid>
+<a class="tip" target="_blank" title="پایگاه شناخت آقا امام زمان ( عج )" href="http://www.yamahdi.5u.com/">پایگاه شناخت آقا امام زمان ( عج )</a></div><div class=li-Sid>
+<a class="tip" target="_blank" title="السلام علیک یا صاحب الزمان" href="http://www.sahebzaman1214.blogfa.com/">السلام علیک یا صاحب الزمان</a></div><div class=li-Sid>
+<a class="tip" target="_blank" title="شبکه امام رضا (ع)" href="http://www.imamreza.net/per/">شبکه امام رضا (ع)</a></div><div class=li-Sid>
+<a class="tip" target="_blank" title="♥ فقط خداوتنهایی ام رادوست دارم ♥" href="http://khoda13681379.mihanblog.com/">♥ فقط خداوتنهایی ام رادوست دارم ♥</a></div><div class=li-Sid>
+<a class="tip" target="_blank" title="مسیر هدایت،313 مرد کافیست !" href="http://monji70.mihanblog.com/">مسیر هدایت،313 مرد کافیست !</a></div><div class=li-Sid>
+<a class="tip" target="_blank" title="❤✿❤فقط خدا‏.❤✿❤" href="http://yamahdi1360.blogfa.com/">❤✿❤فقط خدا‏.❤✿❤</a></div><div class=li-Sid>
+<a class="tip" target="_blank" title="بیا تو خودت ببین" href="http://gomshodehma.blogfa.com/">بیا تو خودت ببین</a></div><div class=li-Sid>
+<a class="tip" target="_blank" title="فقط خدا" href="http://taksavar1.blogfa.com/">فقط خدا</a></div><div class=li-Sid>
+<a class="tip" target="_blank" title="رایحه ی نور" href="http://www.rayeheyenoor.blogfa.com/">رایحه ی نور</a></div><div class=li-Sid>
+<a class="tip" target="_blank" title="ضد و نقیض" href="http://zvn.blogfa.com/">ضد و نقیض</a></div><div class=li-Sid>
+<a class="tip" target="_blank" title="ღ♥ღ خـــدایـــــــ مهربونــــــــ ღ♥ღ" href="../khodayemehraboon.mihanblog.com/index.html">ღ♥ღ خـــدایـــــــ مهربونــــــــ ღ♥ღ</a></div><div class=li-Sid>
+<a class="tip" target="_blank" title="کلید بهشت" href="http://www.peyambar-mesenger.blogfa.com/">کلید بهشت</a></div><div class=li-Sid>
+<a class="tip" target="_blank" title="حلقه ی شجره ی طیبه ی صالحین" href="http://SALEHYN14.MIHANBLOG.COM">حلقه ی شجره ی طیبه ی صالحین</a></div><div class=li-Sid>
+<a class="tip" target="_blank" title="مطلع الفجر" href="http://matlaelfajr.blogfa.com/">مطلع الفجر</a></div><div class=li-Sid>
+<a class="tip" target="_blank" title="جستجوگر ایرانی سلام" href="http://salam.ir">جستجوگر ایرانی سلام</a></div><div class=li-Sid>
+<a class="tip" target="_blank" title="سمت خدا" href="http://ch3.ir/samtekhoda/">سمت خدا</a></div><div class=li-Sid>
+<a class="tip" target="_blank" title="ღღ عصــ ــر انتـــ ــظار ღღ" href="http://islamic1391.mihanblog.com">ღღ عصــ ــر انتـــ ــظار ღღ</a></div><div class=li-Sid>
+<a class="tip" target="_blank" title="نور معرفت" href="http://noormarft.mihanblog.com">نور معرفت</a></div><div class=li-Sid>
+<a class="tip" target="_blank" title="فقط خدا (ایستگاه تلنگر)" href="http://torbategomnam.persianblog.ir ">فقط خدا (ایستگاه تلنگر)</a></div><div class=li-Sid>
+<a class="tip" target="_blank" title="قرآن" href="http://kalamebartar-gh.blogfa.com/">قرآن</a></div><div class=li-Sid>
+<a class="tip" target="_blank" title="محفل شمع زینب(سلام الله علیها)" href="http://mahfel69.persianblog.ir/">محفل شمع زینب(سلام الله علیها)</a></div><div class=li-Sid>
+<a class="tip" target="_blank" title="فطرس" href="http://khoda-ba-mast90.blogfa.com/">فطرس</a></div><div class=li-Sid>
+<a class="tip" target="_blank" title="بهشتیان" href="../www.beheshtiyan.mihanblog.com/index.html">بهشتیان</a></div><div class=li-Sid>
+<a class="tip" target="_blank" title="دیوان عشق" href="../divanelove.mihanblog.com/index.html">دیوان عشق</a></div><div class=li-Sid>
+<a class="tip" target="_blank" title="هیئت زینبیون" href="http://zeinabion.parsiblog.com/">هیئت زینبیون</a></div><div class=li-Sid>
+<a class="tip" target="_blank" title="آیینه ی معرفت" href="http://noremarefatehag.mihanblog.com/">آیینه ی معرفت</a></div><div class=li-Sid>
+<a class="tip" target="_blank" title="بهنام حسن پور" href="../behnam-hassanpoor.mihanblog.com/index.html">بهنام حسن پور</a></div><div class=li-Sid>
+<a class="tip" target="_blank" title="بچه های اهل قلم" href="http://www.bgh.ir/">بچه های اهل قلم</a></div><div class=li-Sid>
+<a class="tip" target="_blank" title="گروه فرهنگی تخریبچی" href="http://takhrybchy.mihanblog.com">گروه فرهنگی تخریبچی</a></div><div class=li-Sid>
+<a class="tip" target="_blank" title="موسسه گفتگوی دینی قم" href="http://www.goftego.ir/">موسسه گفتگوی دینی قم</a></div><div class=li-Sid>
+<a class="tip" target="_blank" title="مرکزاطلاع رسانی شهیدآوینی" href="http://www.aviny.com/">مرکزاطلاع رسانی شهیدآوینی</a></div><div class=li-Sid>
+<a class="tip" target="_blank" title="اللهم صل علی محمد وآل محمد" href="http://oshtor.mihanblog.com/">اللهم صل علی محمد وآل محمد</a></div><div class=li-Sid>
+<a class="tip" target="_blank" title="پایگاه اطلاع رسانی تخصصی دفاع مقدس" href="http://www.sabokbalan.com/">پایگاه اطلاع رسانی تخصصی دفاع مقدس</a></div><div class=li-Sid>
+<a class="tip" target="_blank" title="پایگاه اطلاع رسانی مسجد مقدس جمکران" href="http://www.jamkaran.info/">پایگاه اطلاع رسانی مسجد مقدس جمکران</a></div><div class=li-Sid>
+<a class="tip" target="_blank" title="اسلام پنجره ای زیبابه سوی دوست" href="http://shamim-eslam.blogfa.com">اسلام پنجره ای زیبابه سوی دوست</a></div><div class=li-Sid>
+<a class="tip" target="_blank" title="لحظات من ، نظرات من" href="http://lahezat.mihanblog.com">لحظات من ، نظرات من</a></div><div class=li-Sid>
+<a class="tip" target="_blank" title="مانده ام خیره به راه" href="http://derang228.blogfa.com/">مانده ام خیره به راه</a></div><div class=li-Sid>
+<a class="tip" target="_blank" title="منتظران گل نرگس" href="http://asheganrahbar.mihanblog.com/">منتظران گل نرگس</a></div><div class=li-Sid>
+<a class="tip" target="_blank" title="دختران بصیرت" href="http://www.b-ba30rat.blogfa.com">دختران بصیرت</a></div><div class=li-Sid>
+<a class="tip" target="_blank" title="نقطه سر خط" href="http://2nasim2.mihanblog.com/">نقطه سر خط</a></div><div class=li-Sid>
+<a class="tip" target="_blank" title="شلمچه" href="http://www.shalamcheh.com/">شلمچه</a></div> <div class=li-Sid>
+<a class="tip" target="_blank" href="http://www.m-qaleb.com" title="طراحی قالب وبلاگهای پارسی">ایران نقش</a>
+ </div></div>
+<div class=sidebar-bottom></div>
+
+
+<div class=sidebar-top2><div class=sidebar-top-txt>
+<b>صفحات جانبی</b></div></div>
+<div class=sidebar-bg> <div class=li-Sid>
+<a class="tip" href="http://khodaytanha.mihanblog.com/extrapage/namaz" title="شماره یا عنوان صفحه:<br>نماز استغاثه به امام زمان (علیه السلام)">نماز استغاثه به امام زمان (علیه السلام)</a></div><div class=li-Sid>
+<a class="tip" href="http://khodaytanha.mihanblog.com/extrapage/asar" title="شماره یا عنوان صفحه:<br>اهمیت و آثار استعاذه!">اهمیت و آثار استعاذه!</a></div><div class=li-Sid>
+<a class="tip" href="http://khodaytanha.mihanblog.com/extrapage/nafes" title="شماره یا عنوان صفحه:<br>نخستین گام برای تهذیب نفس">نخستین گام برای تهذیب نفس</a></div><div class=li-Sid>
+<a class="tip" href="http://khodaytanha.mihanblog.com/extrapage/neshaneh" title="شماره یا عنوان صفحه:<br>نشانه های پذیرش اعمال">نشانه های پذیرش اعمال</a></div><div class=li-Sid>
+<a class="tip" href="http://khodaytanha.mihanblog.com/extrapage/tobe" title="شماره یا عنوان صفحه:<br>7 نکته پیرامون دوام توبه">7 نکته پیرامون دوام توبه</a></div><div class=li-Sid>
+<a class="tip" href="http://khodaytanha.mihanblog.com/extrapage/tobe1" title="شماره یا عنوان صفحه:<br>چرا توبه کنیم؟">چرا توبه کنیم؟</a></div><div class=li-Sid>
+<a class="tip" href="http://khodaytanha.mihanblog.com/extrapage/gonah3" title="شماره یا عنوان صفحه:<br>نیّت کارهایی که گناه است!">نیّت کارهایی که گناه است!</a></div><div class=li-Sid>
+<a class="tip" href="http://khodaytanha.mihanblog.com/extrapage/gonah2" title="شماره یا عنوان صفحه:<br>گناهان با ما چه می کنند ؟!">گناهان با ما چه می کنند ؟!</a></div><div class=li-Sid>
+<a class="tip" href="http://khodaytanha.mihanblog.com/extrapage/gonah1" title="شماره یا عنوان صفحه:<br>چگونگی تبدیل گناهان صغیره به کبیره">چگونگی تبدیل گناهان صغیره به کبیره</a></div><div class=li-Sid>
+<a class="tip" href="http://khodaytanha.mihanblog.com/extrapage/gonah" title="شماره یا عنوان صفحه:<br>آثار وضعی گناه چیست؟">آثار وضعی گناه چیست؟</a></div><div class=li-Sid>
+<a class="tip" href="http://khodaytanha.mihanblog.com/extrapage/dorogh3" title="شماره یا عنوان صفحه:<br>عاقبت دروغ‌گویی!">عاقبت دروغ‌گویی!</a></div><div class=li-Sid>
+<a class="tip" href="http://khodaytanha.mihanblog.com/extrapage/dorogh1" title="شماره یا عنوان صفحه:<br>عوارض دروغگویی از نظر پزشکی">عوارض دروغگویی از نظر پزشکی</a></div><div class=li-Sid>
+<a class="tip" href="http://khodaytanha.mihanblog.com/extrapage/dorogh" title="شماره یا عنوان صفحه:<br>مقاله ای پیرامون دروغ و دروغ گویی">مقاله ای پیرامون دروغ و دروغ گویی</a></div><div class=li-Sid>
+<a class="tip" href="http://khodaytanha.mihanblog.com/extrapage/namahram" title="شماره یا عنوان صفحه:<br>پیامدهای شوم نگاه به نامحرم">پیامدهای شوم نگاه به نامحرم</a></div><div class=li-Sid>
+<a class="tip" href="http://khodaytanha.mihanblog.com/extrapage/levat" title="شماره یا عنوان صفحه:<br>عاقبت وخیم گناه لواط !">عاقبت وخیم گناه لواط !</a></div><div class=li-Sid>
+<a class="tip" href="http://khodaytanha.mihanblog.com/extrapage/tarkegonah" title="شماره یا عنوان صفحه:<br>آسیب‌ها و عوارض خود‌ارضایی">آسیب‌ها و عوارض خود‌ارضایی</a></div><div class=li-Sid>
+<a class="tip" href="http://khodaytanha.mihanblog.com/extrapage/tarkegonah1" title="شماره یا عنوان صفحه:<br>چهل روش موثر برای ترک خود ارضایی">چهل روش موثر برای ترک خود ارضایی</a></div></div>
+<div class=sidebar-bottom></div>
+
+
+
+<div class=sidebar-top2><div class=sidebar-top-txt>
+<b>ابر برچسب ها</b></div></div>
+<div class=sidebar-bg>
+<div class=li-Sid><a class="tip" title="ضامن آهو" href="http://khodaytanha.mihanblog.com/post/tag/%D8%B6%D8%A7%D9%85%D9%86+%D8%A2%D9%87%D9%88" style="font-size:1em">
+		ضامن آهو</a></div> <div class=li-Sid><a class="tip" title="فیلم لامپ" href="http://khodaytanha.mihanblog.com/post/tag/%D9%81%DB%8C%D9%84%D9%85+%D9%84%D8%A7%D9%85%D9%BE" style="font-size:1em">
+		فیلم لامپ</a></div> <div class=li-Sid><a class="tip" title="جریان اسید پاشی" href="http://khodaytanha.mihanblog.com/post/tag/%D8%AC%D8%B1%DB%8C%D8%A7%D9%86+%D8%A7%D8%B3%DB%8C%D8%AF+%D9%BE%D8%A7%D8%B4%DB%8C" style="font-size:1em">
+		جریان اسید پاشی</a></div> <div class=li-Sid><a class="tip" title="عیدقربان" href="http://khodaytanha.mihanblog.com/post/tag/%D8%B9%DB%8C%D8%AF%D9%82%D8%B1%D8%A8%D8%A7%D9%86" style="font-size:1em">
+		عیدقربان</a></div> <div class=li-Sid><a class="tip" title="امید به خدا" href="http://khodaytanha.mihanblog.com/post/tag/%D8%A7%D9%85%DB%8C%D8%AF+%D8%A8%D9%87+%D8%AE%D8%AF%D8%A7" style="font-size:1em">
+		امید به خدا</a></div> <div class=li-Sid><a class="tip" title="ولادت امام رضا (ع)" href="http://khodaytanha.mihanblog.com/post/tag/%D9%88%D9%84%D8%A7%D8%AF%D8%AA+%D8%A7%D9%85%D8%A7%D9%85+%D8%B1%D8%B6%D8%A7+%28%D8%B9%29" style="font-size:1em">
+		ولادت امام رضا (ع)</a></div> <div class=li-Sid><a class="tip" title="محرم حسینی" href="http://khodaytanha.mihanblog.com/post/tag/%D9%85%D8%AD%D8%B1%D9%85+%D8%AD%D8%B3%DB%8C%D9%86%DB%8C" style="font-size:1em">
+		محرم حسینی</a></div> <div class=li-Sid><a class="tip" title="امام هشتم" href="http://khodaytanha.mihanblog.com/post/tag/%D8%A7%D9%85%D8%A7%D9%85+%D9%87%D8%B4%D8%AA%D9%85" style="font-size:1em">
+		امام هشتم</a></div> <div class=li-Sid><a class="tip" title="خداوجود ندارد" href="http://khodaytanha.mihanblog.com/post/tag/%D8%AE%D8%AF%D8%A7%D9%88%D8%AC%D9%88%D8%AF+%D9%86%D8%AF%D8%A7%D8%B1%D8%AF" style="font-size:1em">
+		خداوجود ندارد</a></div> <div class=li-Sid><a class="tip" title="خالق عشق" href="http://khodaytanha.mihanblog.com/post/tag/%D8%AE%D8%A7%D9%84%D9%82+%D8%B9%D8%B4%D9%82" style="font-size:1em">
+		خالق عشق</a></div> <div class=li-Sid><a class="tip" title="دنیای بی خدا" href="http://khodaytanha.mihanblog.com/post/tag/%D8%AF%D9%86%DB%8C%D8%A7%DB%8C+%D8%A8%DB%8C+%D8%AE%D8%AF%D8%A7" style="font-size:1em">
+		دنیای بی خدا</a></div> <div class=li-Sid><a class="tip" title="قربانگاه نفس" href="http://khodaytanha.mihanblog.com/post/tag/%D9%82%D8%B1%D8%A8%D8%A7%D9%86%DA%AF%D8%A7%D9%87+%D9%86%D9%81%D8%B3" style="font-size:1em">
+		قربانگاه نفس</a></div> </div>
+<div class=sidebar-bottom></div>
+
+		
+			
+
+</div>			
+</td>
+
+
+<td width="560" valign="top">
+
+<div align="center">
+
+
+
+<div id="post">	
+            	
+	<!-- Start irannaghsh BODY section -->
+<div id="irannaghsh-slider">
+       <div class="s-shadow-b"></div>
+              <a id="slide-next" href="index.html#"></a> 
+              <a id="slide-prev" href="index.html#"></a>
+              <div id="slider">
+                <div class="slide cs-activeSlide"> <img src="http://m-qaleb.com/Templates/free/M-QaLeB/blogfa/simple/religion/008162745/images/slides/01.jpg"  alt="photo #1" /> </div>
+                <div class="slide"> <img src="http://m-qaleb.com/Templates/free/M-QaLeB/blogfa/simple/religion/008162745/images/slides/02.jpg"  alt="photo #2" /> </div>
+                <div class="slide"> <img src="http://m-qaleb.com/Templates/free/M-QaLeB/blogfa/simple/religion/008162745/images/slides/03.jpg"  alt="photo #3" /> </div>
+                <div class="slide"> <img src="http://m-qaleb.com/Templates/free/M-QaLeB/blogfa/simple/religion/008162745/images/slides/04.jpg"  alt="photo #4" /> </div>
+                <div class="slide"> <img src="http://m-qaleb.com/Templates/free/M-QaLeB/blogfa/simple/religion/008162745/images/slides/05.jpg"  alt="photo #5" /> </div>
+                <div class="slide"> <img src="http://m-qaleb.com/Templates/free/M-QaLeB/blogfa/simple/religion/008162745/images/slides/06.jpg"  alt="photo #6" /> </div>
+                <div class="slide"> <img src="http://m-qaleb.com/Templates/free/M-QaLeB/blogfa/simple/religion/008162745/images/slides/07.jpg"  alt="photo #7" /> </div>
+              </div>
+              <div class="pagination"> 
+                <span class="slider-pagination"></span> 
+                <span class="slider-pagination"></span> 
+                <span class="slider-pagination"></span> 
+                <span class="slider-pagination"></span> 
+                <span class="slider-pagination"></span> 
+                <span class="slider-pagination"></span> 
+                <span class="slider-pagination"></span> 
+              </div>
+              <div class="slide-descriptions">
+                <div class="sl-descr">السلام علیک یا ابا صالح المهدی </div>
+                <div class="sl-descr">لهى عَظُمَ الْبَلاَّءُ وَبَرِحَ الْخَفاَّءُ وَانْکَشَفَ الْغِطاَّءُ وَانْقَطَعَ الرَّجاَّءُ وَضاقَتِ الاْرْضُ وَمُنِعَتِ السَّماَّءُ واَنْتَ الْمُسْتَعانُ وَاِلَیْکَ الْمُشْتَکى وَعَلَیْکَ الْمُعَوَّلُ فِى الشِّدَّةِ وَالرَّخاَّءِ اَللّهُمَّ صَلِّ عَلى مُحَمَّدٍ وَ الِ مُحَمَّدٍ</div>
+                <div class="sl-descr">اُولِى الاْمْرِ الَّذینَ فَرَضْتَ عَلَیْنا طاعَتَهُمْ وَعَرَّفْتَنا بِذلِکَ مَنْزِلَتَهُمْ فَفَرِّجْ عَنا بِحَقِّهِمْ فَرَجاً عاجِلا قَریباً کَلَمْحِ الْبَصَرِ اَوْ هُوَ اَقْرَبُ یا مُحَمَّدُ یا عَلِىُّ یا عَلِىُّ یا مُحَمَّدُ اِکْفِیانى فَاِنَّکُما کافِیانِ وَانْصُرانى فَاِنَّکُما ناصِرانِ </div>
+                <div class="sl-descr"> یا مَوْلانا یا صاحِبَ الزَّمانِ الْغَوْثَ الْغَوْثَ الْغَوْثَ اَدْرِکْنى اَدْرِکْنى اَدْرِکْنى السّاعَةَ السّاعَةَ السّاعَةَ الْعَجَلَ الْعَجَلَ الْعَجَلَ یا اَرْحَمَ الرّاحِمینَ بِحَقِّ مُحَمَّدٍ وَآلِهِ الطّاهِرینَ</div>
+                <div class="sl-descr">خدایا بلاء عظیم گشته و درون آشکار شد و پرده از کارها برداشته شد و امید قطع شدو زمین تنگ شد و از ریزش رحمت آسمان جلوگیرى شد و تویى یاور و شکوه بسوى تو است و اعتماد و تکیه ما چه در سختى و چه در آسانى بر تو است خدایا درود فرست بر محمد و آل محمد </div>
+                <div class="sl-descr">آن زمامدارانى که پیرویشان را بر ما واجب کردى و بدین سبب مقام و منزلتشان را به ما شناساندى به حق ایشان به ما گشایشى ده فورى و نزدیک مانند چشم بر هم زدن یا نزدیکتر اى محمد اى على اى على اى محمد </div>
+                <div class="sl-descr">مرا کفایت کنید الزمان فریاد، فریاد، فریاد، دریاب مرا دریاب مرا دریاب مرا همین ساعت همین ساعت هم اکنون زود زود زود اى خدا اى مهربانترین مهربانان به حق محمد و آل پاکیزه اش</div>
+              </div>
+              <div class="caption"></div>
+</div><!--/#irannaghsh-slider-->
+	<!-- End irannaghsh BODY section -->
+	            	
+
+		<div id="MihanblogShopAds" style="display:block;height:0px;width:100%;border:0px"></div>
+			<div id="post-container">	 		
+
+<div class=entry>
+
+<div class="post-top" >	
+  <a class="tip" href="http://khodaytanha.mihanblog.com/post/487" title="اسید پاشی...">اسید پاشی...</a>
+</div><div class=entry2>					
+							
+<div id="InPost_MihanblogShopAds" style="display:block;height:0px;width:100%;border:0px"></div>
+<font size="3">لطفآ تا تهش بخون فقط 1دقیقه لازمه!</font><br><br><font size="3">خیلی جالبه خیلی ...<br>چند رو مونده به عید غدیر بحث لامپ تو کشور به وجود میاد و تو فیلم اسم ائمه رو می برن(بردن ابروی شیعیان و معتقدین غدیر)<br><br>خیلی
+ جالب تر اینکه چند روز مونده به محرم و عاشورا بحث اسید پاشی به بهانه&nbsp; 
+امر به معروف و نهی از منکر پیش میاد(زیر سوال بردن قیام امام حسین) چون 
+تمام دنیا میدونه که امام حسین فرمودند قیام نمیکنم مگر برای امر به معروف و
+ نهی از منکر و احیای دین جدم رسول الله بدین واسطه<br><br>یعنی تنها دلیل امام حسین از قیام عاشورا فقط و فقط امر به معروف و نهی از منکر بوده<br>اما شنیدیم و دیدیم که یه بی شرف داخل اصفهان به بهانه امر به معروف و نهی از منکر میاد روی صورت دختری اسید می پشه<br>&nbsp;<br>کدوم عقل سلیمی باور میکنه این دردش دینه؟؟؟اگر دین داشت که مرتکب منکر نمی شد<br>کدوم عقل سلیمی باور میکنه این حرومزاده دردش بد حجابی بود؟؟؟<br>حواستون باشه تمام این ها برنامه ریزی شدس برای اهداف چندگانه<br>شیعه ها حواستون باشه به وسیله این شبکه های مجازی ابزار دست وهابیت نشید <br></font>
+
+
+
+
+<br><div class="blogtages">
+
+	<br><br>			طبقه بندی: <a class="tip" href="http://khodaytanha.mihanblog.com/post/category/3" title="چهارده نفس مقدس" >
+			چهارده نفس مقدس</a>، <a class="tip" href="http://khodaytanha.mihanblog.com/post/category/17" title="محرم حسینی" >
+			محرم حسینی</a>، <a class="tip" href="http://khodaytanha.mihanblog.com/post/category/12" title="مبارزه با تفرقه اندازان" >
+			مبارزه با تفرقه اندازان</a>، <br>										برچسب ها:
+													<a class="tip" href="http://khodaytanha.mihanblog.com/post/tag/%D9%81%DB%8C%D9%84%D9%85%20%D9%84%D8%A7%D9%85%D9%BE" title="فیلم لامپ" >فیلم لامپ</a>، 
+													<a class="tip" href="http://khodaytanha.mihanblog.com/post/tag/%D8%AC%D8%B1%DB%8C%D8%A7%D9%86%20%D8%A7%D8%B3%DB%8C%D8%AF%20%D9%BE%D8%A7%D8%B4%DB%8C" title="جریان اسید پاشی" >جریان اسید پاشی</a>، 
+													<a class="tip" href="http://khodaytanha.mihanblog.com/post/tag/%D9%85%D8%AD%D8%B1%D9%85%20%D8%AD%D8%B3%DB%8C%D9%86%DB%8C" title="محرم حسینی" >محرم حسینی</a>، 
+												  
+					<br>					</div>
+				
+</div>		
+
+
+
+
+
+
+
+
+<div class=date>&nbsp; 18:45&nbsp;&nbsp;جمعه 2 آبان 1393<a class="tip" /post/author/870962" title="ارسال مطلب توسط: <BR> بنده گناه کار خدا  "> <img src="http://m-qaleb.com/Templates/free/M-QaLeB/blogfa/simple/religion/008162745/images/author.png">&nbsp;بنده گناه کار خدا  </a> </div>
+<div class=Comment><a class="tip" title="از ارسال نظر شما متشکریم" target="_self" href="javascript:newComment(487)">نظرات  <script>setCommentCnt(487)</script> </a><script type="text/javascript">GetBC(<-PostId->);</script></div>	
+	<div class=post-bottom3>			
+</div></div>
+<div class="clear-post"></div>
+</div>
+	<div id="post-container">	 		
+
+<div class=entry>
+
+<div class="post-top" >	
+  <a class="tip" href="http://khodaytanha.mihanblog.com/post/485" title="مبارک باد ...">مبارک باد ...</a>
+</div><div class=entry2>					
+							
+<a rel="nofollow" target="_blank" href="http://www.cloob.com/share/link/add/?url=http://andisheh-man.mihanblog.com/post/1783&amp;title=%D8%B9%DB%8C%D8%AF%20%D9%82%D8%B1%D8%A8%D8%A7%D9%86%20%D9%85%D8%A8%D8%A7%D8%B1%DA%A9">
+                </a>
+            
+
+            <p><span class="main_body">
+							</span></p>
+							<div style="text-align: center;"><font size="3">بارالها</font></div><div style="text-align: center;"><font size="3">مقدر فرما آنچه ذبح می شود نفسانیت من باشد</font></div><div style="text-align: center;"><font size="3">به پای ربانیت تو</font></div><div style="text-align: center;"><font size="3">عید بر شما و خانواده محترمتان مبارک</font></div><div style="text-align: center;"><font size="2"><br></font></div><div style="text-align: center;"><img src="data:image/jpeg;base64,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"></div>
+
+
+<br><div class="blogtages">
+
+	<br><br>			طبقه بندی: <a class="tip" href="http://khodaytanha.mihanblog.com/post/category/13" title="خدای همیشه تنها" >
+			خدای همیشه تنها</a>، <br>										برچسب ها:
+													<a class="tip" href="http://khodaytanha.mihanblog.com/post/tag/%D8%B9%DB%8C%D8%AF%D9%82%D8%B1%D8%A8%D8%A7%D9%86" title="عیدقربان" >عیدقربان</a>، 
+													<a class="tip" href="http://khodaytanha.mihanblog.com/post/tag/%D9%82%D8%B1%D8%A8%D8%A7%D9%86%DA%AF%D8%A7%D9%87%20%D9%86%D9%81%D8%B3" title="قربانگاه نفس" >قربانگاه نفس</a>، 
+												  
+					<br>					</div>
+				
+</div>		
+
+
+
+
+
+
+
+
+<div class=date>&nbsp; 22:33&nbsp;&nbsp;شنبه 12 مهر 1393<a class="tip" /post/author/870962" title="ارسال مطلب توسط: <BR> بنده گناه کار خدا  "> <img src="http://m-qaleb.com/Templates/free/M-QaLeB/blogfa/simple/religion/008162745/images/author.png">&nbsp;بنده گناه کار خدا  </a> </div>
+<div class=Comment><a class="tip" title="از ارسال نظر شما متشکریم" target="_self" href="javascript:newComment(485)">نظرات  <script>setCommentCnt(485)</script> </a><script type="text/javascript">GetBC(<-PostId->);</script></div>	
+	<div class=post-bottom3>			
+</div></div>
+<div class="clear-post"></div>
+</div>
+	<div id="post-container">	 		
+
+<div class=entry>
+
+<div class="post-top" >	
+  <a class="tip" href="http://khodaytanha.mihanblog.com/post/484" title="خدایا ؛ چشمِ امید به تو بسته ام ...">خدایا ؛ چشمِ امید به تو بسته ام ...</a>
+</div><div class=entry2>					
+							
+<div style="text-align: center;"><strong><img src="http://upload.iranvij.ir/farvardin92/23848910742450344550.jpg"></strong></div><p style="text-align: center;"><font size="3"><strong><span class="userContent"><span style="color: rgb(204, 0, 0);">الهی</span> ...<br> <span style="color: rgb(153, 102, 0);">سه خصلت است که نمی گذارد از درگاهت چیزی بخواهم</span> ،<br> <span style="color: rgb(153, 51, 0);">و فقط یک خصلت است که مرا به آن ترغیب می کند</span> ؛<br> <br> <span style="color: rgb(153, 102, 0);">آن سه خصلت عبارتند از</span> :<br> <span style="color: rgb(153, 51, 0);">فرمانی که داده ای و من در انجامش درنگ کرده ام</span> ،<br> <span style="color: rgb(153, 102, 0);">و کاری که مرا از آن نهی فرمودی ولی من بدان شتافته ام</span> ،<br> <span style="color: rgb(153, 51, 0);">و نعمتی است که عطا فرموده ای ولی من در شکرگزاریش کوتاهی نموده ام </span>...<br> <span class="text_exposed_show"><br> <span style="color: rgb(0, 102, 0);">و اما تنها مساله ای که مرا به سویت می خواند</span> :<br> <span style="color: rgb(0, 153, 51);">تفضل و مهربانی تو به کسی است که به آستانت روی آورده</span> ،<br> <span style="color: rgb(0, 102, 51);">و چشمِ امید به تو بسته است</span> ...<br> <br> <span style="color: rgb(0, 204, 0);"><span style="color: rgb(0, 153, 0);">همه ی لطف و احسانت از روی</span> تفضل</span> ،<br> <span style="color: rgb(0, 153, 0);">و همه ی نعمتهایت <span style="color: rgb(0, 204, 0);">بی سبب <span style="color: rgb(0, 153, 0);">و </span>بدونِ زمینه ی استحقاق</span> است</span> ...</span></span></strong></font></p><p style="text-align: center;"><font size="3"><br></font></p><p style="text-align: center;"><font size="3"><strong><span class="userContent"><span class="text_exposed_show"> " </span></span></strong><span style="color: rgb(153, 153, 0);"><span class="userContent"><span class="text_exposed_show">دعای 12 صحیفه ی سجادیه - بخش 1 تا 3</span></span></span><strong><span class="userContent"><span class="text_exposed_show"><span style="color: rgb(153, 153, 0);"> </span>"</span></span></strong></font></p>
+
+
+<br><div class="blogtages">
+
+	<br><br>			طبقه بندی: <a class="tip" href="http://khodaytanha.mihanblog.com/post/category/13" title="خدای همیشه تنها" >
+			خدای همیشه تنها</a>، <br>										برچسب ها:
+													<a class="tip" href="http://khodaytanha.mihanblog.com/post/tag/%D8%A7%D9%85%DB%8C%D8%AF%20%D8%A8%D9%87%20%D8%AE%D8%AF%D8%A7" title="امید به خدا" >امید به خدا</a>، 
+												  
+					<br>					</div>
+				
+</div>		
+
+
+
+
+
+
+
+
+<div class=date>&nbsp; 08:39&nbsp;&nbsp;دوشنبه 7 مهر 1393<a class="tip" /post/author/870962" title="ارسال مطلب توسط: <BR> بنده گناه کار خدا  "> <img src="http://m-qaleb.com/Templates/free/M-QaLeB/blogfa/simple/religion/008162745/images/author.png">&nbsp;بنده گناه کار خدا  </a> </div>
+<div class=Comment><a class="tip" title="از ارسال نظر شما متشکریم" target="_self" href="javascript:newComment(484)">نظرات  <script>setCommentCnt(484)</script> </a><script type="text/javascript">GetBC(<-PostId->);</script></div>	
+	<div class=post-bottom3>			
+</div></div>
+<div class="clear-post"></div>
+</div>
+	<div id="post-container">	 		
+
+<div class=entry>
+
+<div class="post-top" >	
+  <a class="tip" href="http://khodaytanha.mihanblog.com/post/483" title="ولادت امام رضا (ع) خجسته باد">ولادت امام رضا (ع) خجسته باد</a>
+</div><div class=entry2>					
+							
+&nbsp;
+<p style="TEXT-ALIGN: center"><font color="#ff0000" size="3">دل داده ام زدست که دلداده ام کنی</font></p><font size="3">
+<p style="TEXT-ALIGN: center"><br><font color="#ff0000">افتاده ام به پات که افتاده ام کنی</font></p>
+<p style="TEXT-ALIGN: center"><br><font color="#ff0000">سالک که بی تو راه به جایی نمی برد</font></p>
+<p style="TEXT-ALIGN: center"><br><font color="#ff0000">باید خودت مسافر این جاده ام کنی</font></p>
+<p style="TEXT-ALIGN: center"><br><font style="BACKGROUND-COLOR: #ffff99" color="#ff0000">ولادت امام رضا (ع) خجسته باد</font></p>
+<p style="TEXT-ALIGN: center">&nbsp;</p>
+<p style="TEXT-ALIGN: center"><img class="aligncenter  wp-image-702 colorbox-701" alt="میلاد امام رضا" src="http://abasieh.ir/wp-content/uploads/2013/09/%D9%85%DB%8C%D9%84%D8%A7%D8%AF-%D8%A7%D9%85%D8%A7%D9%85-%D8%B1%D8%B6%D8%A7.jpg" height="369" width="491"></p></font>
+
+
+<br><div class="blogtages">
+
+	<br><br>			طبقه بندی: <a class="tip" href="http://khodaytanha.mihanblog.com/post/category/23" title="زندگی بزرگان دینی" >
+			زندگی بزرگان دینی</a>، <a class="tip" href="http://khodaytanha.mihanblog.com/post/category/3" title="چهارده نفس مقدس" >
+			چهارده نفس مقدس</a>، <br>										برچسب ها:
+													<a class="tip" href="http://khodaytanha.mihanblog.com/post/tag/%D9%88%D9%84%D8%A7%D8%AF%D8%AA%20%D8%A7%D9%85%D8%A7%D9%85%20%D8%B1%D8%B6%D8%A7%20(%D8%B9)" title="ولادت امام رضا (ع)" >ولادت امام رضا (ع)</a>، 
+													<a class="tip" href="http://khodaytanha.mihanblog.com/post/tag/%D8%A7%D9%85%D8%A7%D9%85%20%D9%87%D8%B4%D8%AA%D9%85" title="امام هشتم" >امام هشتم</a>، 
+													<a class="tip" href="http://khodaytanha.mihanblog.com/post/tag/%D8%B6%D8%A7%D9%85%D9%86%20%D8%A2%D9%87%D9%88" title="ضامن آهو" >ضامن آهو</a>، 
+												  
+					<br>					</div>
+				
+</div>		
+
+
+
+
+
+
+
+
+<div class=date>&nbsp; 10:51&nbsp;&nbsp;یکشنبه 16 شهریور 1393<a class="tip" /post/author/870962" title="ارسال مطلب توسط: <BR> بنده گناه کار خدا  "> <img src="http://m-qaleb.com/Templates/free/M-QaLeB/blogfa/simple/religion/008162745/images/author.png">&nbsp;بنده گناه کار خدا  </a> </div>
+<div class=Comment><a class="tip" title="از ارسال نظر شما متشکریم" target="_self" href="javascript:newComment(483)">نظرات  <script>setCommentCnt(483)</script> </a><script type="text/javascript">GetBC(<-PostId->);</script></div>	
+	<div class=post-bottom3>			
+</div></div>
+<div class="clear-post"></div>
+</div>
+	<div id="post-container">	 		
+
+<div class=entry>
+
+<div class="post-top" >	
+  <a class="tip" href="http://khodaytanha.mihanblog.com/post/481" title="خدا وجود ندارد...">خدا وجود ندارد...</a>
+</div><div class=entry2>					
+							
+<p class="MsoNormal" dir="RTL"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAALoAAABACAIAAAAiZfrZAAAF7klEQVR4nO2cu5WsMAyGqef2Qh8ughKoYBogJyeelJSQkIwOdAPN0Rq/kMzDy6y+M9GuGYT8W5ZlMxUoCpuqtAHKk1C5KAJULooAlYsiQOWiCFC5KAJULn+dZQFjYBhYjVUuRxlHMAbmubQdubQtVBVUFXTdfmOVS4Bh4Hb/ukJdf9w9TRebtQffbGKeP8YzH0HlEqCuuS277sfXdQ3reqVZe/DNJii0MANMQC7TBMaIb/w1DANUvEG0rhtfV1XJKYlvNrEsrv3juHNJ4A7GQFVxc5/vAx+fw/vturtgdOGbTTj2c2KEe4dxFFz8fUzT5/E5vF6ySH4dIrNt3m9Z7uXeAUWKn2UR3/7p9L1sqGD74omL1GybdYW25Wp9IxcSKXMm+z5wtLSt4JJ5BmMK+yrD7Dw2cnGi6x9MX/DBb/D7udxm9kYuFFr/plyoCPEsudxp9kYuzsqqYO5WhEv9PgzQttC20PeBpHCa8lOfYnIB+MmTqwr6/vLb/yqu87sTtqsKmgaGAaYJxvFTK8teWJSUi52+6GR07tcmPkfKFiXlYpduVC6n0DTQtjDPMM8wDJtSxSmuLikXeyj8tYU0PfuJSRvONf4fbdFk7PXYXGF2jEAh8DfsgBSB/H5iWI0lsFTiapqj9b0rzI4RkAtlu09hms4pQJPf3+8Tvi3Bsnyc3DQnfNttZkNQLpioH4yQd4KB/bizyO8nhlXag6NlplQr2B2JieYKs2NE5fJ6XX7vU6D+kK78/cbk97OwD0/hHh5phTka7YVqTDGnm50gKpenLIuchQZzhGHRzAHziVMmCMQ5fNS2P1rhzJ7+CjzIcbPXFeaZlUJF5fKIPNcOLZQ5cjAmEF3whNHupMbMTP3O/vdPoBXw1BbrlINm4+VU/ul7GIboOc6AXPBA4SMI1jB2uxNF5h/veL3254hh4E55zn4tfZhaCRb3gl14xGxbKxw7w9HlKXtswefcjYs4an2aZqd0gbkIp7/9c5mVsJQVVFuQbLNRkW0LwwBdt0mzYgIIy+WGJdkpjOPmITlywW3UoDs4Y5SZovrnMqWrB//y2K2zzTbG1RlGa2OiQyIsl7In2kXQWoMpF5xqg+Nh96nrmht3g3Lhv1kSDE4xteWZ3fdunodzdFp8D0lSkjjnLhJQN2SMB5rmmVCiSgmWCPuVlOpAFS5oNnrMDiHz/Bl16cH2DXIByynplREmBBklJXu486W2LLCun1GbcdNl+XQedmQGttl22tQ0m8yXYmHOe0bzzE3++x7qWpC+Xdp+dwjSWiNj6xRDBcYJ+3KOCPCq7Hccs9UG26V4XX/Eh7viyDz/tOGkZQG5NA1LaDHlFmmP4yP9wKJyqv/lvt+7br8XMexlH2ehunBGGSyYPzUN1DUY81MzFKVW0feMqr2aujO57j7Pde0pd4lVovFHBtJtdr88+EnnE+TM7KMgOHQzKrZps/l5tEPqPaPEPO2n7uluuK49rYxiI9hebEtDi/3lQS8n8hg6cJkXWvB9FObQipndNB/BpT98t2zk4tfUY+tvP29Ph7KL2k/Tzi6MU+wSjXLbG8HBGltU2z2d8GECu9gqPTHtmB2ckpi97LORi7NJkRgW/JbXtSe/UDLh/NeZm0V+988s+2XW4KC3T3EbI85wl2UTD6RaCR619iuZ2UMoJZfEfOE81W60PL09+aXrAjOCsyLoOkE8d3RGKf/uWzVkM94xYylklwOkVZaY2eC9nGqrWRr53NyFZgFOeoWPxz8ielZ7nJL7Ppw64PIbt0JEsz6+LUzebBp35OFPmQQHPWolTyUIrrPGUVxC3DUbzbMDT9tmZt+BhfQ4ClLxjGe7tH02mAahCo+8JHYzN5v9JVVd5R5ULooAlYsiQOWiCFC5lKHvc9axxVG5FIBKOPxj3r8ElUsB7DLJs34yUuVyN/720yPe0UFULnfj7J4+6OViULncz6N/L1LlUgBSzLMSF1C5lAJ3Kx+UtSAqF0WAykURoHJRBKhcFAEqF0WAykURoHJRBKhcFAH/AekDVQW519UwAAAAAElFTkSuQmCC" alt=""><br></p><p class="MsoNormal" dir="RTL">
+
+</p><p class="MsoNormal" dir="RTL"><font color="#3333FF"><b><span style="font-size:18.0pt;line-height:
+115%;font-family:&quot;2  Kamran&quot;" lang="FA">مردی به آرایشگاه رفت تا موهایش را كوتاه كند.</span></b></font></p><font color="#3333FF">
+
+</font><p class="MsoNormal" dir="RTL"><font color="#3333FF"><b><span style="font-size:18.0pt;line-height:
+115%;font-family:&quot;2  Kamran&quot;" lang="FA">مثل همیشه با آرایشگر گپ می زد تا اینكه چشم شان به
+خبری در روزنامه،</span></b></font></p><font color="#3333FF">
+
+</font><p class="MsoNormal" dir="RTL"><font color="#3333FF"><b><span style="font-size:18.0pt;line-height:
+115%;font-family:&quot;2  Kamran&quot;" lang="FA">درباره ی كودكان سر راهی افتاد.</span></b></font></p><font color="#3333FF">
+
+</font><p class="MsoNormal" dir="RTL"><font color="#3333FF"><b><span style="font-size:18.0pt;line-height:
+115%;font-family:&quot;2  Kamran&quot;" lang="FA">آرایشگر گفت:می بینید؟این فاجعه نشان می دهد كه خدا
+وجود ندارد..</span></b></font></p><font color="#3333FF">
+
+</font><p class="MsoNormal" dir="RTL"><font color="#3333FF"><b><span style="font-size:18.0pt;line-height:
+115%;font-family:&quot;2  Kamran&quot;" lang="FA">-چطور؟</span></b></font></p><font color="#3333FF">
+
+</font><p class="MsoNormal" dir="RTL"><font color="#3333FF"><b><span style="font-size:18.0pt;line-height:
+115%;font-family:&quot;2  Kamran&quot;" lang="FA">روزنامه نمی خوانید؟مردم رنج می كشند،بچه ها را سر
+راه می گذارند،</span></b></font></p><font color="#3333FF">
+
+</font><p class="MsoNormal" dir="RTL"><font color="#3333FF"><b><span style="font-size:18.0pt;line-height:
+115%;font-family:&quot;2  Kamran&quot;" lang="FA">همه جور جنایتی انجام می دهند.اگر خدا وجود داشت
+رنج وجود نداشت.</span></b></font></p><br>
+
+
+
+
+
+
+
+
+										
+
+<p class="MsoNormal" dir="RTL"><b><span style="font-size:18.0pt;line-height:
+115%;font-family:&quot;2  Kamran&quot;" lang="FA">مشتری به فكر افتاد اما كار آرایشگر تمام شده بود و
+تصمیم گرفت این گفتگو را ادامه ندهد.</span></b></p>
+
+<p class="MsoNormal" dir="RTL"><b><span style="font-size:18.0pt;line-height:
+115%;font-family:&quot;2  Kamran&quot;" lang="FA">درباره مسائل ساده صحبت كردند و بعد حق الزحمه ی
+آرایشگر را داد و رفت.</span></b></p>
+
+<p class="MsoNormal" dir="RTL"><b><span style="font-size:18.0pt;line-height:
+115%;font-family:&quot;2  Kamran&quot;" lang="FA">اما اولین چیزی كه دید گدایی بود با موهای بلندو
+ژولیده.</span></b></p><p class="MsoNormal" dir="RTL"><b><span style="font-size:18.0pt;line-height:
+115%;font-family:&quot;2  Kamran&quot;" lang="FA">بی درنگ به آرایشگاه بر گشت و به آرایشگر گفت:</span></b></p>
+
+<p class="MsoNormal" dir="RTL"><b><span style="font-size:18.0pt;line-height:
+115%;font-family:&quot;2  Kamran&quot;" lang="FA">-میدانید كه آرایشگر ها وجود ندارند؟</span></b></p>
+
+<p class="MsoNormal" dir="RTL"><b><span style="font-size:18.0pt;line-height:
+115%;font-family:&quot;2  Kamran&quot;" lang="FA">-چه طور ممكن است من خودم آرایشگرم!</span></b></p>
+
+<p class="MsoNormal" dir="RTL"><b><span style="font-size:18.0pt;line-height:
+115%;font-family:&quot;2  Kamran&quot;" lang="FA">مرد اصرار كرد:</span></b></p>
+
+<p class="MsoNormal" dir="RTL"><b><span style="font-size:18.0pt;line-height:
+115%;font-family:&quot;2  Kamran&quot;" lang="FA">وجود ندارد.اگر وجود داشتند هیچ كس نباید موی بلند
+و ژولیده می داشت،</span></b></p><p class="MsoNormal" dir="RTL"><b><span style="font-size:18.0pt;line-height:
+115%;font-family:&quot;2  Kamran&quot;" lang="FA">ان مرد را در ان گوشه ببین!</span></b></p>
+
+<p class="MsoNormal" dir="RTL"><b><span style="font-size:18.0pt;line-height:
+115%;font-family:&quot;2  Kamran&quot;" lang="FA">-مطمئن باش كه آرایشگر ها وجود دارند اما این مرد
+نمی آید اینجا تا من موهایش را كوتاه كنم.</span></b></p>
+
+<p class="MsoNormal" dir="RTL"><b><span style="font-size:18.0pt;line-height:
+115%;font-family:&quot;2  Kamran&quot;;color:red" lang="FA">-دقیقا!خدا هم وجود دارداما مردم نزد او
+نمی روند.اگر به دنبالش بگردند،</span></b></p>
+
+<p class="MsoNormal" dir="RTL"><b><span style="font-size:18.0pt;line-height:
+115%;font-family:&quot;2  Kamran&quot;;color:red" lang="FA">كمتر تنهامی مانند و این همه بد بختی در
+دنیا وجود نخواهد داشت.</span></b></p>
+
+
+<br><div class="blogtages">
+
+	<br><br>			طبقه بندی: <a class="tip" href="http://khodaytanha.mihanblog.com/post/category/13" title="خدای همیشه تنها" >
+			خدای همیشه تنها</a>، <br>										برچسب ها:
+													<a class="tip" href="http://khodaytanha.mihanblog.com/post/tag/%D8%AE%D8%AF%D8%A7%D9%88%D8%AC%D9%88%D8%AF%20%D9%86%D8%AF%D8%A7%D8%B1%D8%AF" title="خداوجود ندارد" >خداوجود ندارد</a>، 
+													<a class="tip" href="http://khodaytanha.mihanblog.com/post/tag/%D8%AF%D9%86%DB%8C%D8%A7%DB%8C%20%D8%A8%DB%8C%20%D8%AE%D8%AF%D8%A7" title="دنیای بی خدا" >دنیای بی خدا</a>، 
+												  
+					<br>					</div>
+				
+</div>		
+
+
+
+
+
+
+
+
+<div class=date>&nbsp; 20:49&nbsp;&nbsp;چهارشنبه 12 شهریور 1393<a class="tip" /post/author/870962" title="ارسال مطلب توسط: <BR> بنده گناه کار خدا  "> <img src="http://m-qaleb.com/Templates/free/M-QaLeB/blogfa/simple/religion/008162745/images/author.png">&nbsp;بنده گناه کار خدا  </a> </div>
+<div class=Comment><a class="tip" title="از ارسال نظر شما متشکریم" target="_self" href="javascript:newComment(481)">نظرات  <script>setCommentCnt(481)</script> </a><script type="text/javascript">GetBC(<-PostId->);</script></div>	
+	<div class=post-bottom3>			
+</div></div>
+<div class="clear-post"></div>
+</div>
+	<div id="post-container">	 		
+
+<div class=entry>
+
+<div class="post-top" >	
+  <a class="tip" href="http://khodaytanha.mihanblog.com/post/480" title="فقط یه سوال">فقط یه سوال</a>
+</div><div class=entry2>					
+							
+
+<font face="times new roman,times,serif" size="5"><font size="3">تو رو جون هرکی که دوسش داری جواب این یه سوال رو به خودت بده و اندکی روش تامل کن</font><br>&nbsp;<br></font><div align="center"><font face="times new roman,times,serif" size="5">آیا به جز خدا کسی رو داری که هیچ وقت تنهات نذاره</font><font size="3">؟؟؟</font><br><img src="../static.mihanblog.com/public/user_data/user_files/347/1039552/111.jpg" alt="فقط و فقط خــــــــــــــــدا" border="0" align="bottom" hspace="0" vspace="0"><br></div>
+
+
+
+
+<br><div class="blogtages">
+
+	<br><br>			طبقه بندی: <a class="tip" href="http://khodaytanha.mihanblog.com/post/category/13" title="خدای همیشه تنها" >
+			خدای همیشه تنها</a>، <br>										برچسب ها:
+													<a class="tip" href="http://khodaytanha.mihanblog.com/post/tag/%D8%B3%D9%88%D8%A7%D9%84" title="سوال" >سوال</a>، 
+													<a class="tip" href="http://khodaytanha.mihanblog.com/post/tag/%D8%B9%D8%B4%D9%82" title="عشق" >عشق</a>، 
+													<a class="tip" href="http://khodaytanha.mihanblog.com/post/tag/%D8%B9%D8%B4%D9%82%20%D9%88%20%D8%AA%D9%86%D9%87%D8%A7%DB%8C%DB%8C" title="عشق و تنهایی" >عشق و تنهایی</a>، 
+													<a class="tip" href="http://khodaytanha.mihanblog.com/post/tag/%D8%AE%D8%A7%D9%84%D9%82%20%D8%B9%D8%B4%D9%82" title="خالق عشق" >خالق عشق</a>، 
+												  
+					<br>					</div>
+				
+</div>		
+
+
+
+
+
+
+
+
+<div class=date>&nbsp; 22:37&nbsp;&nbsp;چهارشنبه 5 شهریور 1393<a class="tip" /post/author/870962" title="ارسال مطلب توسط: <BR> بنده گناه کار خدا  "> <img src="http://m-qaleb.com/Templates/free/M-QaLeB/blogfa/simple/religion/008162745/images/author.png">&nbsp;بنده گناه کار خدا  </a> </div>
+<div class=Comment><a class="tip" title="از ارسال نظر شما متشکریم" target="_self" href="javascript:newComment(480)">نظرات  <script>setCommentCnt(480)</script> </a><script type="text/javascript">GetBC(<-PostId->);</script></div>	
+	<div class=post-bottom3>			
+</div></div>
+<div class="clear-post"></div>
+</div>
+	<div id="post-container">	 		
+
+<div class=entry>
+
+<div class="post-top" >	
+  <a class="tip" href="http://khodaytanha.mihanblog.com/post/479" title="مهمترین عمل شب قدر">مهمترین عمل شب قدر</a>
+</div><div class=entry2>					
+							
+
+<p style="text-align: right; margin: 0px; padding: 0px; font-family: Tahoma, Geneva, sans-serif; font-size: 13px; line-height: 20px;"><font style="background-color: rgb(255, 255, 255);">شب قدر، شب نور، رحمت و شب نزول قرآن و مَطْلَع خیرات و سعادات، و هنگام نزول برکات و سرآغاز زندگی نوین بشر و مبدأ تحوّل و تاریخ کمال واقعی انسان‎هاست شبی که اگر نبود و نیامده بود، شب تیره بدبختی انسان به پایان نمی‎رسید و بامداد نیک‎بختی او طلوع نمی‎کرد و از بند اسارت اقویا و استعمارگران آزاد نمی‎گشت. شب قدر، لیله مبارکه، شب آزادی بشر و اعلان حقوق انسان و حکومت عدالت و دادگستری است. شبی که برای ملّت‎های غفلت زده، ناآگاه و آلوده به فساد و تباهی و گمراهی، صبح هدایت و بیداری و آگاهی و رستگاری گشت و بزرگ‎ترین و گرامی‎ترین کتب آسمانی ـ ‎که الی الابد و جاودان، راهنمای بشر و ضامن سعادت است ـ نازل شد و با اشراق ملکوتی، جهان را از ظلمت شرک و ثنویّتِ مجوس، تثلیث ترسا، خرافات یهود و بت‎پرستی و… به روشنایی توحید و پرستش خدای یگانه راهبر شد.</font></p><p style="text-align: right; margin: 0px; padding: 0px; font-family: Tahoma, Geneva, sans-serif; font-size: 13px; line-height: 20px;"><span style="margin-right: auto; margin-left: auto; -webkit-transition: color 0.3s ease-in-out, background 0.3s ease-in-out; transition: color 0.3s ease-in-out, background 0.3s ease-in-out; cursor: pointer; background-color: rgb(255, 255, 255);"><font color="#000000"><img class="aligncenter" alt="IMG_7731" src="http://kaloot.ir/main/wp-content/uploads/2014/07/IMG_77311.jpg" width="600" height="400" style="margin: 0px auto 10px; padding: 0px; border: 0px; display: block;"></font></span></p><p style="text-align: right; margin: 0px; padding: 0px; font-family: Tahoma, Geneva, sans-serif; font-size: 13px; line-height: 20px;"><font style="background-color: rgb(255, 255, 255);">اگر شب قدر نبود چه می شد؟</font></p>
+
+
+
+
+<br><a href='http://khodaytanha.mihanblog.com/post/479'>ادامه مطلب</a><div class="blogtages">
+
+	<br><br>			طبقه بندی: <a class="tip" href="http://khodaytanha.mihanblog.com/post/category/13" title="خدای همیشه تنها" >
+			خدای همیشه تنها</a>، <a class="tip" href="http://khodaytanha.mihanblog.com/post/category/29" title="رمضان ، ماه بندگی خالصانه" >
+			رمضان ، ماه بندگی خالصانه</a>، <br>									</div>
+				
+</div>		
+
+
+
+
+
+
+
+
+<div class=date>&nbsp; 08:47&nbsp;&nbsp;یکشنبه 29 تیر 1393<a class="tip" /post/author/870962" title="ارسال مطلب توسط: <BR> بنده گناه کار خدا  "> <img src="http://m-qaleb.com/Templates/free/M-QaLeB/blogfa/simple/religion/008162745/images/author.png">&nbsp;بنده گناه کار خدا  </a> </div>
+<div class=Comment><a class="tip" title="از ارسال نظر شما متشکریم" target="_self" href="javascript:newComment(479)">نظرات  <script>setCommentCnt(479)</script> </a><script type="text/javascript">GetBC(<-PostId->);</script></div>	
+	<div class=post-bottom3>			
+</div></div>
+<div class="clear-post"></div>
+</div>
+	<div id="post-container">	 		
+
+<div class=entry>
+
+<div class="post-top" >	
+  <a class="tip" href="http://khodaytanha.mihanblog.com/post/478" title="یا مهــــــــدی">یا مهــــــــدی</a>
+</div><div class=entry2>					
+							
+
+<div style="text-align: center;"><br></div><div style="text-align: center;"><img style="width: 375px; height: 263px;" src="http://t0.gstatic.com/images?q=tbn:ANd9GcTcDPg96AJYa_2IMt01woJHw7k5Kvx1pRPb9aOA8noIIOrsehuzjw" alt="" vspace="0" align="bottom" border="0" hspace="0"><br><font size="5" color="#000000">هر چند كه بیمار تو هستیم همه</font><br><br></div><div style="text-align: center;"><font size="5" color="#000000">دیوانه ی دیدار تو هستیم همه</font><br><br></div><div style="text-align: center;"><font size="5"><a href="http://jomalatziba.ir/" target="_blank"><font color="#000000">ب</font></a></font><font size="5" color="#000000">ین خودمان بماند آقا عمری است</font><br><br></div><div style="text-align: center;"><font size="5" color="#000000">انگار طلب كار تو هستیم همه<br><br></font></div>
+<p style="text-align: center;"><font size="5" color="#000000"><font color="#000000">هم چاه سر راه تو باید بكنیم</font></font></p><p style="text-align: center;"><br><font size="5" color="#000000"><font color="#000000">هم اینكه از انتظار تو دم بزنیم</font></font></p><p style="text-align: center;"><font size="5" color="#000000"><font color="#000000">این نامه ی چندم است كه می خوانی <br></font></font></p><p style="text-align: center;"><font size="5" color="#000000"><font color="#000000">داریم ركورد كوفه را می شكنیم</font><br></font></p><p style="text-align: center;"><font size="5" color="#000000"> <a href="http://jomalatziba.blogfa.com/post-330.aspx" target="_blank"><font color="#003300"><font color="#990066">جلیل صفر بیگی</font></font></a></font></p>
+
+
+
+
+<br><div class="blogtages">
+
+	<br><br>									</div>
+				
+</div>		
+
+
+
+
+
+
+
+
+<div class=date>&nbsp; 00:07&nbsp;&nbsp;جمعه 6 تیر 1393<a class="tip" /post/author/1188672" title="ارسال مطلب توسط: <BR> سمانه  "> <img src="http://m-qaleb.com/Templates/free/M-QaLeB/blogfa/simple/religion/008162745/images/author.png">&nbsp;سمانه  </a> </div>
+<div class=Comment><a class="tip" title="از ارسال نظر شما متشکریم" target="_self" href="javascript:newComment(478)">نظرات  <script>setCommentCnt(478)</script> </a><script type="text/javascript">GetBC(<-PostId->);</script></div>	
+	<div class=post-bottom3>			
+</div></div>
+<div class="clear-post"></div>
+</div>
+	<br>
+		
+
+		<div id="pages-pn">	                                    
+                    
+                        <ul>
+                                   
+                                       
+                                      <li><a href="index.html#">کل صفحات : 53</a></li>
+                                        
+                                                                         
+                                            
+                                         <li>      <a href="http://khodaytanha.mihanblog.com/page/1">
+			<b>1</b></a></li>                                     
+                                            
+                                         <li>      <a href="http://khodaytanha.mihanblog.com/page/2">
+			<span>2</span></a></li>                                     
+                                            
+                                         <li>      <a href="http://khodaytanha.mihanblog.com/page/3">
+			<span>3</span></a></li>                                     
+                                            
+                                         <li>      <a href="http://khodaytanha.mihanblog.com/page/4">
+			<span>4</span></a></li>                                     
+                                            
+                                         <li>      <a href="http://khodaytanha.mihanblog.com/page/5">
+			<span>5</span></a></li>                                     
+                                            
+                                         <li>      <a href="http://khodaytanha.mihanblog.com/page/6">
+			<span>6</span></a></li>                                     
+                                            
+                                         <li>      <a href="http://khodaytanha.mihanblog.com/page/7">
+			<span>7</span></a></li>                                     
+                                            
+                                         <li>      <a href="http://khodaytanha.mihanblog.com/page/8">
+			<i>...</i></a></li>                                             
+                                           
+                                        
+                                        
+                                   
+</ul>
+</div></div>
+
+</div></div> </td>
+
+<td width="220" valign="top">	
+
+<div id=right-sidebar>
+<ul class="vert-one">
+  <li><a href="index.html" title="Home" class="current">صفحه نخست</a></li>
+<li><a class="tip"  href="mailto:khodaytanha@mihanmail.ir" title="khodaytanha@mihanmail.ir"> رایانامه </a></li>
+<li><a class="tip" title="نسخه موبایل" href="http://khodaytanha.mihanblog.com/m" taeget="blank">نسخه موبایل</a></li> 
+<li><a class="tip" title="ارتباط با مدیر" href="javascript:messageForm()" taeget="blank">ارتباط با ما </a></li> 
+<li><a class="tip" target="_blank" href="http://khodaytanha.mihanblog.com/post/list" title="مطالب ارسال شده قبلی">آرشیو</a></li>
+<li> 
+<a class="tip" target="_blank" href="http://www.m-qaleb.com/" title="طراحی قالب وبلاگهای پارسی">ایران نقش</a></li>
+</ul>
+
+<div class=sidebar-top><div class=sidebar-top-txt>			
+<b>درباره وبلاگ</b></div></div>
+<div class=sidebar-bg><div class=li-Sid2>  <center>
+<img src="../static.mihanblog.com/public/user_data/web_photo/347/1039552.jpg@4686"  /><br>این جا یک وبلاگ شخصی نیست بلکه یک پایگاه اینترنتی فعال در زمینه ارتباط با خدا و سایر مسائل فرهنگی و مذهبی می باشد.از این رو هرکس در این زمینه مایل به همکاری و کسب توفیقات الهی است میتواند با ثبت نام به جمع ما بپیوندد.<br />
+==================<br />
+هرگونه کپی برداری از این وبلاگ جهت ترویج و گسترش رابطه دوستی با خدا؛،حتی بدون ذکر منبع کاملا مجاز و حلال می باشد.<br />
+==================<br />
+شما میتوانید پیشنهادات و انتقاد های خود را از طریق این ایمیل به ما اطلاع دهید.khodaytanha@mihanmail.ir</center></div></div>
+<div class=sidebar-bottom></div>
+
+
+<div class=sidebar-top><div class=sidebar-top-txt>
+<b>آرشیو مطالب</b></div></div>
+<div class=sidebar-bg>
+
+<div class=li-Sid>
+<a class="tip" title="1" href="http://khodaytanha.mihanblog.com/post/archive/1393/8"> آبان 1393   </a></div><div class=li-Sid>
+<a class="tip" title="2" href="http://khodaytanha.mihanblog.com/post/archive/1393/7"> مهر 1393   </a></div><div class=li-Sid>
+<a class="tip" title="3" href="http://khodaytanha.mihanblog.com/post/archive/1393/6"> شهریور 1393   </a></div><div class=li-Sid>
+<a class="tip" title="2" href="http://khodaytanha.mihanblog.com/post/archive/1393/4"> تیر 1393   </a></div><div class=li-Sid>
+<a class="tip" title="5" href="http://khodaytanha.mihanblog.com/post/archive/1393/3"> خرداد 1393   </a></div><div class=li-Sid>
+<a class="tip" title="6" href="http://khodaytanha.mihanblog.com/post/archive/1393/2"> اردیبهشت 1393   </a></div><div class=li-Sid>
+<a class="tip" title="10" href="http://khodaytanha.mihanblog.com/post/archive/1393/1"> فروردین 1393   </a></div><div class=li-Sid>
+<a class="tip" title="5" href="http://khodaytanha.mihanblog.com/post/archive/1392/12"> اسفند 1392   </a></div><div class=li-Sid>
+<a class="tip" title="3" href="http://khodaytanha.mihanblog.com/post/archive/1392/11"> بهمن 1392   </a></div><div class=li-Sid>
+<a class="tip" title="8" href="http://khodaytanha.mihanblog.com/post/archive/1392/10"> دی 1392   </a></div><div class=li-Sid>
+<a class="tip" title="8" href="http://khodaytanha.mihanblog.com/post/archive/1392/9"> آذر 1392   </a></div><div class=li-Sid>
+<a class="tip" title="8" href="http://khodaytanha.mihanblog.com/post/archive/1392/8"> آبان 1392   </a></div><div class=li-Sid>
+<a class="tip" title="13" href="http://khodaytanha.mihanblog.com/post/archive/1392/7"> مهر 1392   </a></div><div class=li-Sid>
+<a class="tip" title="15" href="http://khodaytanha.mihanblog.com/post/archive/1392/6"> شهریور 1392   </a></div><div class=li-Sid>
+<a class="tip" title="44" href="http://khodaytanha.mihanblog.com/post/archive/1392/5"> مرداد 1392   </a></div><div class=li-Sid>
+<a class="tip" title="33" href="http://khodaytanha.mihanblog.com/post/archive/1392/4"> تیر 1392   </a></div><div class=li-Sid>
+<a class="tip" title="23" href="http://khodaytanha.mihanblog.com/post/archive/1392/3"> خرداد 1392   </a></div><div class=li-Sid>
+<a class="tip" title="20" href="http://khodaytanha.mihanblog.com/post/archive/1392/2"> اردیبهشت 1392   </a></div><div class=li-Sid>
+<a class="tip" title="25" href="http://khodaytanha.mihanblog.com/post/archive/1392/1"> فروردین 1392   </a></div><div class=li-Sid>
+<a class="tip" title="14" href="http://khodaytanha.mihanblog.com/post/archive/1391/12"> اسفند 1391   </a></div></div>
+<div class=sidebar-bottom></div>
+
+
+<div class=sidebar-top><div class=sidebar-top-txt>
+<b>آخرین مطالب</b></div></div>
+<div class=sidebar-bg>
+<div class=li-Sid>
+<a class="tip" href="http://khodaytanha.mihanblog.com/post/487" title="اسید پاشی...">اسید پاشی...</a></div><div class=li-Sid>
+<a class="tip" href="http://khodaytanha.mihanblog.com/post/485" title="مبارک باد ...">مبارک باد ...</a></div><div class=li-Sid>
+<a class="tip" href="http://khodaytanha.mihanblog.com/post/484" title="خدایا ؛ چشمِ امید به تو بسته ام ...">خدایا ؛ چشمِ امید به تو بسته ام ...</a></div><div class=li-Sid>
+<a class="tip" href="http://khodaytanha.mihanblog.com/post/483" title="ولادت امام رضا (ع) خجسته باد">ولادت امام رضا (ع) خجسته باد</a></div><div class=li-Sid>
+<a class="tip" href="http://khodaytanha.mihanblog.com/post/481" title="خدا وجود ندارد...">خدا وجود ندارد...</a></div><div class=li-Sid>
+<a class="tip" href="http://khodaytanha.mihanblog.com/post/480" title="فقط یه سوال">فقط یه سوال</a></div><div class=li-Sid>
+<a class="tip" href="http://khodaytanha.mihanblog.com/post/479" title="مهمترین عمل شب قدر">مهمترین عمل شب قدر</a></div><div class=li-Sid>
+<a class="tip" href="http://khodaytanha.mihanblog.com/post/478" title="یا مهــــــــدی">یا مهــــــــدی</a></div><div class=li-Sid>
+<a class="tip" href="http://khodaytanha.mihanblog.com/post/477" title="میلاد حضرت رقیه خاتون(س)">میلاد حضرت رقیه خاتون(س)</a></div><div class=li-Sid>
+<a class="tip" href="http://khodaytanha.mihanblog.com/post/475" title="کعبه عشق">کعبه عشق</a></div><div class=li-Sid>
+<a class="tip" href="http://khodaytanha.mihanblog.com/post/472" title="دلنوشته">دلنوشته</a></div><div class=li-Sid>
+<a class="tip" href="http://khodaytanha.mihanblog.com/post/470" title="اعیاد شعبانیه خجسته باد.">اعیاد شعبانیه خجسته باد.</a></div><div class=li-Sid>
+<a class="tip" href="http://khodaytanha.mihanblog.com/post/469" title="اردو میریم کربلا">اردو میریم کربلا</a></div><div class=li-Sid>
+<a class="tip" href="http://khodaytanha.mihanblog.com/post/468" title="حدیثی امید بخش در مورد توبه">حدیثی امید بخش در مورد توبه</a></div><div class=li-Sid>
+<a class="tip" href="http://khodaytanha.mihanblog.com/post/467" title="کلینیک خدا">کلینیک خدا</a></div><div class=li-Sid>
+<a class="tip" href="http://khodaytanha.mihanblog.com/post/466" title=" امام نقی(ع)"> امام نقی(ع)</a></div><div class=li-Sid>
+<a class="tip" href="http://khodaytanha.mihanblog.com/post/464" title="فضیلت و اهمیت ماه رجب">فضیلت و اهمیت ماه رجب</a></div><div class=li-Sid>
+<a class="tip" href="http://khodaytanha.mihanblog.com/post/463" title="نظر سنجی درباره خلیج فارس...">نظر سنجی درباره خلیج فارس...</a></div><div class=li-Sid>
+<a class="tip" href="http://khodaytanha.mihanblog.com/post/462" title="خدایا فقط باش">خدایا فقط باش</a></div><div class=li-Sid>
+<a class="tip" href="http://khodaytanha.mihanblog.com/post/461" title="مادر روزت مبارک">مادر روزت مبارک</a></div><center><a class="tip" href="http://khodaytanha.mihanblog.com/post/list"><b>لیست آخرین مطالب</b></a></center></div>
+<div class=sidebar-bottom></div>	
+
+
+<div class=sidebar-top>
+<div class=sidebar-top-txt>
+<b>موضوعات</b></div></div>			
+<div class=sidebar-bg><div class=li-Sid>				
+<a class="tip" href="http://khodaytanha.mihanblog.com/post/category/13" title="خدای همیشه تنها" >خدای همیشه تنها  72 </a></div><div class=li-Sid>				
+<a class="tip" href="http://khodaytanha.mihanblog.com/post/category/2" title="خاتم الانبیاء" >خاتم الانبیاء  9 </a></div><div class=li-Sid>				
+<a class="tip" href="http://khodaytanha.mihanblog.com/post/category/3" title="چهارده نفس مقدس" >چهارده نفس مقدس  45 </a></div><div class=li-Sid>				
+<a class="tip" href="http://khodaytanha.mihanblog.com/post/category/10" title="مهدویت و آخرالزمان" >مهدویت و آخرالزمان  32 </a></div><div class=li-Sid>				
+<a class="tip" href="http://khodaytanha.mihanblog.com/post/category/29" title="رمضان ، ماه بندگی خالصانه" >رمضان ، ماه بندگی خالصانه  55 </a></div><div class=li-Sid>				
+<a class="tip" href="http://khodaytanha.mihanblog.com/post/category/17" title="محرم حسینی" >محرم حسینی  16 </a></div><div class=li-Sid>				
+<a class="tip" href="http://khodaytanha.mihanblog.com/post/category/14" title="بهشت و جهنم" >بهشت و جهنم  21 </a></div><div class=li-Sid>				
+<a class="tip" href="http://khodaytanha.mihanblog.com/post/category/4" title="شهید و شهادت" >شهید و شهادت  8 </a></div><div class=li-Sid>				
+<a class="tip" href="http://khodaytanha.mihanblog.com/post/category/21" title="احکام دینی" >احکام دینی  7 </a></div><div class=li-Sid>				
+<a class="tip" href="http://khodaytanha.mihanblog.com/post/category/27" title="اعمال و ادعیه" >اعمال و ادعیه  57 </a></div><div class=li-Sid>				
+<a class="tip" href="http://khodaytanha.mihanblog.com/post/category/15" title="نماز" >نماز  28 </a></div><div class=li-Sid>				
+<a class="tip" href="http://khodaytanha.mihanblog.com/post/category/20" title="قرآن" >قرآن  18 </a></div><div class=li-Sid>				
+<a class="tip" href="http://khodaytanha.mihanblog.com/post/category/16" title="صدقه" >صدقه  2 </a></div><div class=li-Sid>				
+<a class="tip" href="http://khodaytanha.mihanblog.com/post/category/26" title="قیامت" >قیامت  4 </a></div><div class=li-Sid>				
+<a class="tip" href="http://khodaytanha.mihanblog.com/post/category/5" title="حجاب و عفاف" >حجاب و عفاف  13 </a></div><div class=li-Sid>				
+<a class="tip" href="http://khodaytanha.mihanblog.com/post/category/28" title="آرامش سبز" >آرامش سبز  7 </a></div><div class=li-Sid>				
+<a class="tip" href="http://khodaytanha.mihanblog.com/post/category/24" title="احادیث و سخنان" >احادیث و سخنان  12 </a></div><div class=li-Sid>				
+<a class="tip" href="http://khodaytanha.mihanblog.com/post/category/25" title="اصول و فروع دین" >اصول و فروع دین  1 </a></div><div class=li-Sid>				
+<a class="tip" href="http://khodaytanha.mihanblog.com/post/category/19" title="کلیپ های مذهبی" >کلیپ های مذهبی  2 </a></div><div class=li-Sid>				
+<a class="tip" href="http://khodaytanha.mihanblog.com/post/category/23" title="زندگی بزرگان دینی" >زندگی بزرگان دینی  5 </a></div><div class=li-Sid>				
+<a class="tip" href="http://khodaytanha.mihanblog.com/post/category/6" title="موسیقی و نواهای مذهبی" >موسیقی و نواهای مذهبی  6 </a></div><div class=li-Sid>				
+<a class="tip" href="http://khodaytanha.mihanblog.com/post/category/22" title="مبارزه با صهیونیسم،اومانیسم و فراماسونری" >مبارزه با صهیونیسم،اومانیسم و فراماسونری  1 </a></div><div class=li-Sid>				
+<a class="tip" href="http://khodaytanha.mihanblog.com/post/category/18" title="نرم افزار های مذهبی" >نرم افزار های مذهبی  2 </a></div><div class=li-Sid>				
+<a class="tip" href="http://khodaytanha.mihanblog.com/post/category/12" title="مبارزه با تفرقه اندازان" >مبارزه با تفرقه اندازان  2 </a></div><div class=li-Sid>				
+<a class="tip" href="http://khodaytanha.mihanblog.com/post/category/8" title="اخبار مذهبی" >اخبار مذهبی  10 </a></div><div class=li-Sid>				
+<a class="tip" href="http://khodaytanha.mihanblog.com/post/category/11" title="متفرقه" >متفرقه  61 </a></div></div>			
+<div class=sidebar-bottom></div>
+
+
+		
+
+<div class=sidebar-top><div class=sidebar-top-txt>
+<b>آمار سایت</b></div></div>
+<div class=sidebar-bg>
+<right>
+<font face="Tahoma" style="font-size: 8pt">
+<div class=li-Sid>بازدیدهای امروز : <b><script>getStatVar('today_view');</script></b> نفر</div>
+<div class=li-Sid>بازدیدهای دیروز : <b><script>getStatVar('yesterday_view');</script></b> نفر</div>
+<div class=li-Sid>كل بازدیدها : <b><script>getStatVar('total_view');</script></b> نفر</div>
+<div class=li-Sid>بازدید این ماه :<b> <script>getStatVar('this_month_view');</script></b> نفر</div>
+<div class=li-Sid>بازدید ماه قبل : <b><script>getStatVar('last_month_view');</script></b> نفر</div>
+<div class=li-Sid>تعداد نویسندگان : <b><script>getStatVar('total_author');</script></b> عدد</div>
+<div class=li-Sid>كل مطالب : <b><script>getStatVar('total_post');</script></b> عدد</div>
+<center>آخرین بروز رسانی : <script>getStatVar('modify_date');</script></center>
+</font></right></div>
+<div class=sidebar-bottom></div>	
+			
+
+
+<div class=sidebar-top><div class=sidebar-top-txt>
+<b>امکانات وب</b></div></div>
+<div class=sidebar-bg>
+<center>
+
+<script language="javascript" src="http://www.askdin.com/askdin/leftsalavatlogo.php"></script>
+
+
+<style type="text/css">//Ashoora.ir|Zekr Begins</style><script type="text/javascript" src="http://www.ashoora.biz/mazhabi-projects/zekr/png.js"></script><script language="javascript" src="http://www.ashoora.biz/mazhabi-projects/zekr/zekr.php?mod=2&width=130"></script><style type="text/css">//Ashoora.ir|Zekr Ends</style>
+
+<html>
+<head>
+<title>Untitled Document</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+</head>
+<body>
+</body>
+</html>
+<script language="javascript">
+var m
+m=window.prompt("سلام , لطفا اسم شریفتون؟")
+window.alert("خوش اومدین, قبل از ورود برای سلامتی و ظهور امام زمانمون یه صلوات هدیه کن " +m)
+</script>
+<center><a href="http://khodaytanha.mihanblog.com/htt&#32;p://roozgozar.com" target="" title=""> </a><br></center>
+
+<style>
+.www-20tools-com{
+;color: #008000
+;font-size: 8pt
+;TEXT-ALIGN: center
+;font-family: Tahoma
+;FONT-WEIGHT: bold
+;}</style>
+<script src="http://www.20tools.com/java/absence/02.php" language="javascript"></script>
+<div style="visibility:hidden;display:none">﻿<center><a href="http://20i.ir">ابزار وبلاگ</a> | <a href="http://www.ipac4.ir/">آی پک 4</a><BR>
+<a href="http://www.foxblog.ir/">قالب وردپرس</a> | <a href="http://backlink.ir">بک لینک</a><BR>
+<a href="http://www.nariya.ir">ناریا</a> | <a href="http://yas-theme.com">یاس تم</a><center><a href=http://www.20tools.com/java/absence>کد لحظه شمار غیبت امام زمان برای وبلاگهای مهدویت</a></div></center>
+</div>
+<div class=sidebar-bottom></div>
+
+</div>
+</td></tr></table>
+
+</div>
+<div id="footer">
+<div id="footer-goup">
+<a class="tip" title="بازگشت به ابتدای صفحه"  href="index.html#blockid" onclick="smoothScroll('blockid'); return false"><img src="http://m-qaleb.com/Templates/free/M-QaLeB/blogfa/simple/religion/008162745/images/upper.png"></a>
+</div>
+Designed By: <a class="tip" href="http://www. http://m-qaleb.com"target="_blank" title="www. http://m-qaleb.com<br>M-QaLeB">irannaghsh</a> & copyright 2013 <a class="tip" href="index.html"target="_blank" title="فقط و فقط خــــــــــــــــدا">khodaytanha</a> <br>:::نیرو گرفته از :
+ <a class="tip" href="../www.mihanblog.com/index.html"target="_blank" title="mihanblog">mihanblog</a>:::</div><!--#footer-->
+
+
+</div>
+  <div class="style-picker">
+			<div class="container bgChanger">
+				<a href="index.html#" class="handler">&nbsp;</a>
+				<div class="options">
+                    <div class="stBgs stBlock" style="padding-bottom:8px;border-top:0;">
+    					<span>Backgrounds</span>
+    
+                                                <a rel="http://m-qaleb.com/Templates/free/M-QaLeB/blogfa/simple/religion/008162745/images/backgrounds/001.jpg" class="thumb-img bgBody" title="Flowers 1" style="background:#fff url(http://m-qaleb.com/Templates/free/M-QaLeB/blogfa/simple/religion/008162745/images/backgrounds/001.jpg)">&nbsp;</a>
+                                                <a rel="http://m-qaleb.com/Templates/free/M-QaLeB/blogfa/simple/religion/008162745/images/backgrounds/009.jpg" class="thumb-img bgBody" title="Flowers 4" style="background:#fff url(http://m-qaleb.com/Templates/free/M-QaLeB/blogfa/simple/religion/008162745/images/backgrounds/009.jpg)">&nbsp;</a>
+                                                <a rel="http://m-qaleb.com/Templates/free/M-QaLeB/blogfa/simple/religion/008162745/images/backgrounds/011.jpg" class="thumb-img bgBody" title="Flowers 5" style="background:#fff url(http://m-qaleb.com/Templates/free/M-QaLeB/blogfa/simple/religion/008162745/images/backgrounds/011.jpg)">&nbsp;</a>
+                                                <a rel="http://m-qaleb.com/Templates/free/M-QaLeB/blogfa/simple/religion/008162745/images/backgrounds/022.jpg" class="thumb-img bgBody" title="Flowers 8" style="background:#fff url(http://m-qaleb.com/Templates/free/M-QaLeB/blogfa/simple/religion/008162745/images/backgrounds/022.jpg)">&nbsp;</a>
+                                                <a rel="http://m-qaleb.com/Templates/free/M-QaLeB/blogfa/simple/religion/008162745/images/backgrounds/032.jpg" class="thumb-img bgBody" title="Flowers 9" style="background:#fff url(http://m-qaleb.com/Templates/free/M-QaLeB/blogfa/simple/religion/008162745/images/backgrounds/032.jpg)">&nbsp;</a>
+                                                <a rel="http://m-qaleb.com/Templates/free/M-QaLeB/blogfa/simple/religion/008162745/images/backgrounds/015.jpg" class="thumb-img bgBody" title="Flowers Black" style="background:#fff url(http://m-qaleb.com/Templates/free/M-QaLeB/blogfa/simple/religion/008162745/images/backgrounds/015.jpg)">&nbsp;</a>
+                                                <a rel="http://m-qaleb.com/Templates/free/M-QaLeB/blogfa/simple/religion/008162745/images/backgrounds/019.jpg" class="thumb-img bgBody" title="Flowers Black and light" style="background:#fff url(http://m-qaleb.com/Templates/free/M-QaLeB/blogfa/simple/religion/008162745/images/backgrounds/019.jpg)">&nbsp;</a>
+                                                <a rel="http://m-qaleb.com/Templates/free/M-QaLeB/blogfa/simple/religion/008162745/images/backgrounds/020.jpg" class="thumb-img bgBody" title="Flowers Gold and light" style="background:#fff url(http://m-qaleb.com/Templates/free/M-QaLeB/blogfa/simple/religion/008162745/images/backgrounds/020.jpg)">&nbsp;</a>
+                                                <a rel="http://m-qaleb.com/Templates/free/M-QaLeB/blogfa/simple/religion/008162745/images/backgrounds/021.jpg" class="thumb-img bgBody" title="Flowers Red and light" style="background:#fff url(http://m-qaleb.com/Templates/free/M-QaLeB/blogfa/simple/religion/008162745/images/backgrounds/021.jpg)">&nbsp;</a>
+                                                <a rel="http://m-qaleb.com/Templates/free/M-QaLeB/blogfa/simple/religion/008162745/images/backgrounds/029.jpg" class="thumb-img bgBody" title="Abstract 2" style="background:#fff url(http://m-qaleb.com/Templates/free/M-QaLeB/blogfa/simple/religion/008162745/images/backgrounds/029.jpg)">&nbsp;</a>
+                                                <a rel="http://m-qaleb.com/Templates/free/M-QaLeB/blogfa/simple/religion/008162745/images/backgrounds/033.jpg" class="thumb-img bgBody" title="Abstract 3" style="background:#fff url(http://m-qaleb.com/Templates/free/M-QaLeB/blogfa/simple/religion/008162745/images/backgrounds/033.jpg)">&nbsp;</a>
+                                                <a rel="http://m-qaleb.com/Templates/free/M-QaLeB/blogfa/simple/religion/008162745/images/backgrounds/041.jpg" class="thumb-img bgBody" title="Abstract 7" style="background:#fff url(http://m-qaleb.com/Templates/free/M-QaLeB/blogfa/simple/religion/008162745/images/backgrounds/041.jpg)">&nbsp;</a>
+                                                <a rel="http://m-qaleb.com/Templates/free/M-QaLeB/blogfa/simple/religion/008162745/images/backgrounds/034.jpg" class="thumb-img bgBody" title="White" style="background:#fff url(http://m-qaleb.com/Templates/free/M-QaLeB/blogfa/simple/religion/008162745/images/backgrounds/034.jpg)">&nbsp;</a>
+                                                <a rel="http://m-qaleb.com/Templates/free/M-QaLeB/blogfa/simple/religion/008162745/images/backgrounds/008.jpg" class="thumb-img bgBody" title="Blue 2" style="background:#fff url(http://m-qaleb.com/Templates/free/M-QaLeB/blogfa/simple/religion/008162745/images/backgrounds/008.jpg)">&nbsp;</a>
+                                                <a rel="http://m-qaleb.com/Templates/free/M-QaLeB/blogfa/simple/religion/008162745/images/backgrounds/023.jpg" class="thumb-img bgBody" title="Black Papyrus" style="background:#fff url(http://m-qaleb.com/Templates/free/M-QaLeB/blogfa/simple/religion/008162745/images/backgrounds/023.jpg)">&nbsp;</a>
+                                                <a rel="http://m-qaleb.com/Templates/free/M-QaLeB/blogfa/simple/religion/008162745/images/backgrounds/003.jpg" class="thumb-img bgBody" title="Black Wood" style="background:#fff url(http://m-qaleb.com/Templates/free/M-QaLeB/blogfa/simple/religion/008162745/images/backgrounds/003.jpg)">&nbsp;</a>
+                                                <a rel="http://m-qaleb.com/Templates/free/M-QaLeB/blogfa/simple/religion/008162745/images/backgrounds/007.jpg" class="thumb-img bgBody" title="007" style="background:#fff url(http://m-qaleb.com/Templates/free/M-QaLeB/blogfa/simple/religion/008162745/images/backgrounds/007.jpg)">&nbsp;</a>
+                                                <a rel="http://m-qaleb.com/Templates/free/M-QaLeB/blogfa/simple/religion/008162745/images/backgrounds/005.jpg" class="thumb-img bgBody" title="Natural Wood" style="background:#fff url(http://m-qaleb.com/Templates/free/M-QaLeB/blogfa/simple/religion/008162745/images/backgrounds/005.jpg)">&nbsp;</a>
+                                                <a rel="http://m-qaleb.com/Templates/free/M-QaLeB/blogfa/simple/religion/008162745/images/backgrounds/016.jpg" class="thumb-img bgBody" title="Stripes" style="background:#fff url(http://m-qaleb.com/Templates/free/M-QaLeB/blogfa/simple/religion/008162745/images/backgrounds/016.jpg)">&nbsp;</a>
+                                                <a rel="http://m-qaleb.com/Templates/free/M-QaLeB/blogfa/simple/religion/008162745/images/backgrounds/026.jpg" class="thumb-img bgBody" title="Paper 2" style="background:#fff url(http://m-qaleb.com/Templates/free/M-QaLeB/blogfa/simple/religion/008162745/images/backgrounds/026.jpg)">&nbsp;</a>
+                                                <a rel="http://m-qaleb.com/Templates/free/M-QaLeB/blogfa/simple/religion/008162745/images/backgrounds/036.gif" class="thumb-img bgBody" title="Tiles" style="background:#fff url(http://m-qaleb.com/Templates/free/M-QaLeB/blogfa/simple/religion/008162745/images/backgrounds/036.gif)">&nbsp;</a>
+                                                <a rel="http://m-qaleb.com/Templates/free/M-QaLeB/blogfa/simple/religion/008162745/images/backgrounds/patterns/bg_t_11.png" class="thumb-img bgBody" title="Pattern 4" style="background:#fff url(http://m-qaleb.com/Templates/free/M-QaLeB/blogfa/simple/religion/008162745/images/backgrounds/patterns/bg_t_11.png)">&nbsp;</a>
+                                                <a rel="http://m-qaleb.com/Templates/free/M-QaLeB/blogfa/simple/religion/008162745/images/backgrounds/patterns/bgNoiseHatch.png" class="thumb-img bgBody" title="Pattern 5" style="background:#fff url(http://m-qaleb.com/Templates/free/M-QaLeB/blogfa/simple/religion/008162745/images/backgrounds/patterns/bgNoiseHatch.png)">&nbsp;</a>
+                                                <a rel="http://m-qaleb.com/Templates/free/M-QaLeB/blogfa/simple/religion/008162745/images/backgrounds/patterns/bg-page.png" class="thumb-img bgBody" title="Pattern 6" style="background:#fff url(http://m-qaleb.com/Templates/free/M-QaLeB/blogfa/simple/religion/008162745/images/backgrounds/patterns/bg-page.png)">&nbsp;</a>
+                                                <a rel="http://m-qaleb.com/Templates/free/M-QaLeB/blogfa/simple/religion/008162745/images/backgrounds/patterns/circle_pattern.png" class="thumb-img bgBody" title="Pattern 8" style="background:#fff url(http://m-qaleb.com/Templates/free/M-QaLeB/blogfa/simple/religion/008162745/images/backgrounds/patterns/circle_pattern.png)">&nbsp;</a>
+                                                <a rel="http://m-qaleb.com/Templates/free/M-QaLeB/blogfa/simple/religion/008162745/images/backgrounds/patterns/diagonal-line1.png" class="thumb-img bgBody" title="Pattern 9" style="background:#fff url(http://m-qaleb.com/Templates/free/M-QaLeB/blogfa/simple/religion/008162745/images/backgrounds/patterns/diagonal-line1.png)">&nbsp;</a>
+                                                <a rel="http://m-qaleb.com/Templates/free/M-QaLeB/blogfa/simple/religion/008162745/images/backgrounds/patterns/flower_pattern.png" class="thumb-img bgBody" title="Pattern 11" style="background:#fff url(http://m-qaleb.com/Templates/free/M-QaLeB/blogfa/simple/religion/008162745/images/backgrounds/patterns/flower_pattern.png)">&nbsp;</a>
+                                                <a rel="http://m-qaleb.com/Templates/free/M-QaLeB/blogfa/simple/religion/008162745/images/backgrounds/patterns/flower6_pattern.png" class="thumb-img bgBody" title="Pattern 12" style="background:#fff url(http://m-qaleb.com/Templates/free/M-QaLeB/blogfa/simple/religion/008162745/images/backgrounds/patterns/flower6_pattern.png)">&nbsp;</a>
+                                                <a rel="http://m-qaleb.com/Templates/free/M-QaLeB/blogfa/simple/religion/008162745/images/backgrounds/patterns/flower-swirl4.png" class="thumb-img bgBody" title="Pattern 13" style="background:#fff url(http://m-qaleb.com/Templates/free/M-QaLeB/blogfa/simple/religion/008162745/images/backgrounds/patterns/flower-swirl4.png)">&nbsp;</a>
+                                                <a rel="http://m-qaleb.com/Templates/free/M-QaLeB/blogfa/simple/religion/008162745/images/backgrounds/patterns/grid3.png" class="thumb-img bgBody" title="Pattern 15" style="background:#fff url(http://m-qaleb.com/Templates/free/M-QaLeB/blogfa/simple/religion/008162745/images/backgrounds/patterns/grid3.png)">&nbsp;</a>
+                                                <a rel="http://m-qaleb.com/Templates/free/M-QaLeB/blogfa/simple/religion/008162745/images/backgrounds/patterns/horizontal-line1.png" class="thumb-img bgBody" title="Pattern 16" style="background:#fff url(http://m-qaleb.com/Templates/free/M-QaLeB/blogfa/simple/religion/008162745/images/backgrounds/patterns/horizontal-line1.png)">&nbsp;</a>
+                                                <a rel="http://m-qaleb.com/Templates/free/M-QaLeB/blogfa/simple/religion/008162745/images/backgrounds/patterns/pattern10.png" class="thumb-img bgBody" title="Pattern 20" style="background:#fff url(http://m-qaleb.com/Templates/free/M-QaLeB/blogfa/simple/religion/008162745/images/backgrounds/patterns/pattern10.png)">&nbsp;</a>
+                                                <a rel="http://m-qaleb.com/Templates/free/M-QaLeB/blogfa/simple/religion/008162745/images/backgrounds/patterns/pattern19.png" class="thumb-img bgBody" title="Pattern 21" style="background:#fff url(http://m-qaleb.com/Templates/free/M-QaLeB/blogfa/simple/religion/008162745/images/backgrounds/patterns/pattern19.png)">&nbsp;</a>
+                                                <a rel="http://m-qaleb.com/Templates/free/M-QaLeB/blogfa/simple/religion/008162745/images/backgrounds/patterns/pixelite.png" class="thumb-img bgBody" title="Pattern 22" style="background:#fff url(http://m-qaleb.com/Templates/free/M-QaLeB/blogfa/simple/religion/008162745/images/backgrounds/patterns/pixelite.png)">&nbsp;</a>
+                                                <a rel="http://m-qaleb.com/Templates/free/M-QaLeB/blogfa/simple/religion/008162745/images/backgrounds/patterns/right_strip_pattern.png" class="thumb-img bgBody" title="Pattern 23" style="background:#fff url(http://m-qaleb.com/Templates/free/M-QaLeB/blogfa/simple/religion/008162745/images/backgrounds/patterns/right_strip_pattern.png)">&nbsp;</a>
+                                               
+    				</div>
+					<a href="index.html#" class="bgColor">Custom Color <span id="bgColor" title="454545" style="background-color:#454545;">&nbsp;</span></a>
+					
+				
+                                                         
+					
+				
+			
+		</div>   </div><!--end style-picker--> 
+
+
+
+<script type='text/javascript' src='http://m-qaleb.com/Templates/free/M-QaLeB/blogfa/simple/religion/008162745/js/changer.js'></script>
+<div class="users-on"><script language="javascript" type="text/javascript"src="http://m-qaleb.com/M-QaLeB/weblog/footer.js"></script></div>	
+	<div id="go-bottom"></div></div>
+﻿</body>
+</html><script>
+//    setTimeout(function () {
+//        GetMihanBlogShowAds();
+//    }, 1000);
+</script>
+<!--NEW SERVER--><!--;)-->
+
+<!--SabaVision Ads Handler--><!--<script type="text/javascript">(function (d) {var url =   location.protocol+'//api.sabavision.com/pox/poxjs.js';d.write('<script type="text/javascript" src="' + url + '" async></scri' + 'pt>');})(document);</script>-->
+
+
+<script type="text/javascript">
+
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-153829-9']);
+    _gaq.push(['_setDomainName', 'khodaytanha.mihanblog.com']);
+    _gaq.push(['_trackPageview']);
+
+    (function() {
+        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+
+</script>
+
+
+<div id='mediaad-Kvcm'></div>
+<meta name="sabavision_zone" content="2500-Z499" />
+<center>
+    <div style="background-color:white;width:90%;padding:20px;margin-top:50px;margin-bottom:50px;">
+        <a href="https://www.cloob.com">شبکه اجتماعی فارسی کلوب</a> | <a href="https://www.seo25.com/product/buy-mobile-traffic-and-get-cheap-targeted-mobile-traffic/" target="_blank">Buy Mobile Traffic</a> | <a href="https://www.soalaat.com">سایت سوالات</a>
+    </div>
+</center>

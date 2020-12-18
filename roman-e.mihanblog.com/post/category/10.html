@@ -1,0 +1,1706 @@
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" /><link rel="EditURI" type="application/rsd+xml" title="RSD" href="../../xmlrpc@rsd.html" />
+<script type="text/javascript" src="../../../static.mihanblog.com/public/scripts/run/g.other.v3.js"></script>
+<script>
+
+	function c_$(id){
+        return document.getElementById(id);
+    }
+    
+			//if (parent.frames.length) top.location.href= document.location;
+		
+	setTodayDate = function(){
+		document.write('یکشنبه 23 آذر 1399');
+		/*1924102*/	}
+
+</script>
+
+
+
+        <script type="text/javascript">
+            (function(){
+            var now = new Date();
+            var head = document.getElementsByTagName('head')[0];
+            var script = document.createElement('script');
+            script.async = true;
+            var script_address = 'https://cdn.yektanet.com/js/mihanblog.com/native-mihanblog.com-6531.js';
+            script.src = script_address + '?v=' + now.getFullYear().toString() + '0' + now.getMonth() + '0' + now.getDate() + '0' + now.getHours();
+            head.appendChild(script);
+            })();
+        </script>
+
+        <!--<script type="text/javascript">
+            var head = document.getElementsByTagName("head")[0];
+            var script = document.createElement("script");
+            script.type = "text/javascript";
+            script.async=1;
+            script.src = "https://s1.mediaad.org/serve/mihanblog.com/loader.js" ;
+            head.appendChild(script);
+        </script>-->
+        
+        <script>
+            var sabaVisionWebsiteID = "9bab9dac-041d-4bdb-b39a-1ed789f65eed"; var sabaVisionWebsitePage = "ALL"
+        </script>
+        <link rel="stylesheet" href="https://plus.sabavision.com/dox/dox.min.css">
+        <script src="https://plus.sabavision.com/dox/dox.min.js"></script>
+        
+        <script>
+	try{
+		var commentCnt = new Array();
+		commentCnt[123]='-';commentCnt[153]='-';commentCnt[187]='6';commentCnt[240]='3';commentCnt[259]='-';commentCnt[260]='-';commentCnt[293]='-';commentCnt[302]='-';commentCnt[389]='3';	} catch(e){}
+	
+	newComment = function(post_id){
+		try{
+			window.open('/post/comment/'+post_id,'comment','status=yes,scrollbars=yes,toolbar=no,menubar=no,location=no ,width=480px,height=540px');
+		} catch(e){}
+	}
+	setCommentCnt = function(post_id){
+		try{
+			if(commentCnt[post_id]){
+				document.write(commentCnt[post_id]);
+			} else {
+				document.write(0);
+			}
+		} catch(e){}
+	}
+</script><script>
+
+
+	mihanblogUpdateLike = function(postid,type){
+		var url = '/post/like/'+postid+'/'+type;
+		mihanblogGetAjax(url,function(){});
+	};
+	try{
+        mihanblogGetAjax = function (url,callback) {
+    		var req;
+			if (window.XMLHttpRequest)
+            {
+                // code for IE7+, Firefox, Chrome, Opera, Safari
+			  	req = new XMLHttpRequest();
+			}else{	// code for IE6, IE5
+			  	req = new ActiveXObject("Microsoft.XMLHTTP");
+		  	}
+		    req.open("GET", url, 1);
+		    req.onreadystatechange = function () {
+		        if (req.readyState == 4) {
+		            if (req.status == 200) {
+		            	var response = eval(req.responseText);
+		            	callback();
+		            }else{
+	            		return ;
+		            }
+		        }else{
+					return ;
+		        }
+		    }
+		    req.send(null);
+		}
+	}catch(e){}
+
+	try{
+		var mihanblogLikeArrCnt = new Array();
+		var mihanblogDisLikeArrCnt = new Array();
+
+		mihanblogLikeArrCnt[153]='0';
+mihanblogDisLikeArrCnt[153]='0';
+mihanblogLikeArrCnt[187]='0';
+mihanblogDisLikeArrCnt[187]='0';
+mihanblogLikeArrCnt[240]='0';
+mihanblogDisLikeArrCnt[240]='0';
+mihanblogLikeArrCnt[259]='0';
+mihanblogDisLikeArrCnt[259]='0';
+mihanblogLikeArrCnt[260]='0';
+mihanblogDisLikeArrCnt[260]='0';
+mihanblogLikeArrCnt[293]='0';
+mihanblogDisLikeArrCnt[293]='0';
+mihanblogLikeArrCnt[302]='0';
+mihanblogDisLikeArrCnt[302]='0';
+mihanblogLikeArrCnt[389]='0';
+mihanblogDisLikeArrCnt[389]='0';
+	} catch(e){}
+
+
+
+    mihanblogPostLike = function(post_id){
+
+        mihanblogLikeCnt = (mihanblogLikeArrCnt[post_id]? mihanblogLikeArrCnt[post_id] : 0);
+        mihanblogDisLikeCnt = (mihanblogDisLikeArrCnt[post_id]? mihanblogDisLikeArrCnt[post_id] : 0);
+        mihanblogLikeCnt = parseInt(mihanblogLikeCnt);
+        mihanblogDisLikeCnt = parseInt(mihanblogDisLikeCnt);
+
+        document.write(
+                '<div class="mihanblog_like_wrapper ">'+
+                       '<div id="dislikeBar_'+post_id+'" onclick="mihanblogUpdateLike('+post_id+',\'dislike\')"   class="mihanblog_like_bar mihanblog_like_dislikeBar mihanblog_like_show_help ">-<div class="mihanblog_like_Cnt" id="disLikeCnt_'+post_id+'">'+mihanblogDisLikeCnt+'</div>'+
+                            '<span  class="mihanblog_like_v2_help mihanblog_like_v2_help_dislike clearfix"> '+
+                                '<span class="mihanblog_like_help_arrow mihanblog_like_help_arrow_dislike clearfix"></span>'+
+                                '<span class="mihanblog_like_help_text">نمی پسندم</span>'+
+                            '</span>'+
+                        '</div>'+
+                       '<div id="Like_'+post_id+'" class="mihanblog_like_border"></div>'+
+                       '<div id="likeBar_'+post_id+'" onclick="mihanblogUpdateLike('+post_id+',\'like\')"  class="mihanblog_like_bar mihanblog_like_likeBar mihanblog_like_show_help" >+<div class="mihanblog_like_Cnt" id="likeCnt_'+post_id+'">'+mihanblogLikeCnt+'</div>'+
+                            '<span  class="mihanblog_like_v2_help mihanblog_like_v2_help_like clearfix"> '+
+                                '<span class="mihanblog_like_help_arrow mihanblog_like_help_arrow_like clearfix"></span>'+
+                                '<span class="mihanblog_like_help_text">می پسندم</span>'+
+                            '</span>'+
+                        '</div>'+
+
+                '</div>'
+        );
+
+
+
+        mihanblogDisplayeLike(post_id);
+    }
+
+
+    mihanblogDisplayeLike = function(post_id){
+
+        mihanblogLikeCnt = (mihanblogLikeArrCnt[post_id]? mihanblogLikeArrCnt[post_id] : 0);
+        mihanblogDisLikeCnt = (mihanblogDisLikeArrCnt[post_id]? mihanblogDisLikeArrCnt[post_id] : 0);
+        mihanblogLikeCnt = parseInt(mihanblogLikeCnt);
+        mihanblogDisLikeCnt = parseInt(mihanblogDisLikeCnt);
+
+
+
+        sum = mihanblogLikeCnt - mihanblogDisLikeCnt;
+        backgroundBorder =  document.getElementById('Like_'+post_id);
+        var likeObj = document.getElementById('likeCnt_'+post_id);
+        var disLikeObj = document.getElementById('disLikeCnt_'+post_id);
+
+
+
+
+
+        likeObj.innerHTML =  mihanblogLikeCnt ;
+        disLikeObj.innerHTML =  mihanblogDisLikeCnt;
+
+        if(sum == 0){
+            backgroundBorder.style.backgroundImage = "url('/public/public/images/icons/like_likedislike.png')";
+            document.getElementById('dislikeBar_'+post_id).style.width = '19px';
+            document.getElementById('likeBar_'+post_id).style.width = '19px';
+        }else{
+             if(sum > 0){
+                 backgroundBorder.style.backgroundImage = "url('/public/public/images/icons/like_like.png')";
+                 document.getElementById('likeBar_'+post_id).style.width = '23px';
+                 document.getElementById('dislikeBar_'+post_id).style.width = '15px';
+             }else{
+                 backgroundBorder.style.backgroundImage = "url('/public/public/images/icons/like_dislike.png')";
+                 document.getElementById('likeBar_'+post_id).style.width = '15px';
+                 document.getElementById('dislikeBar_'+post_id).style.width = '23px';
+             }
+        }
+
+    }
+
+
+
+
+</script>
+
+<style type="text/css">
+
+
+    .clearfix {display: inline-block;}
+    .clearfix:after {
+        content: ".";
+        display: block;
+        height: 0;
+        clear: both;
+        visibility: hidden;
+    }
+
+    .mihanblog_like_wrapper {
+        color: #ffffff;
+        direction: ltr;
+        position: relative;
+    }
+    .mihanblog_like_wrapper span{
+        display: none;
+    }
+    .mihanblog_like_bar {
+        color: #FFFFFF;
+        cursor: pointer;
+        float: left;
+        font-size: 10px;
+        height: 20px;
+        line-height: 19px;
+        margin: 5px 0;
+    }
+    .mihanblog_like_likeBar {
+        background-color: #88B131;
+        padding-right: 5px;
+        border-top-right-radius: 2px;
+        border-bottom-right-radius: 2px;
+        text-align: right;
+    }
+    .mihanblog_like_likeBar:hover{
+        background-color: #699017;
+    }
+    .mihanblog_like_border {
+        background-color: #666666;
+        border: 1px solid #666666;
+        float: left;
+        font-size: 12px;
+        height: 20px;
+        margin-top: 2px;
+        width: 25px;
+        padding: 3px 5px 2px 0;
+        text-align: center;
+        border-radius: 2px;
+        color: #ffffff;
+        direction: ltr;
+        background-repeat: no-repeat ;
+        background-position: 4px center;
+    }
+    .mihanblog_like_border img {
+        margin-left: 2px;
+        margin-top: 2px;
+        width: 22px;
+    }
+    .mihanblog_like_dislikeBar {
+        background-color: #FF6F31;
+        padding-left: 5px;
+        border-top-left-radius: 2px;
+        border-bottom-left-radius: 2px;
+        text-align:left ;
+    }
+    .mihanblog_like_dislikeBar:hover{
+        background-color: #D54B10;
+    }
+
+
+
+    .mihanblog_like_show_help {
+        position: relative;
+    }
+    .mihanblog_like_show_help:hover span {
+        display: block;
+    }
+    .mihanblog_like_help_text {
+        background-color: white;
+        border: 1px solid #555555;
+        border-radius: 3px 3px 3px 3px;
+        color: #303030;
+        float: left;
+        font-size: 11px;
+        font-weight: normal;
+        padding: 5px 10px;
+    }
+
+    .mihanblog_like_help_arrow_dislike {
+        background: url("http://roman-e.mihanblog.com/public/public/images/icons/like_hover_top.png") no-repeat scroll 16px 0 transparent;
+        left: 0;
+        top: -4px;
+    }
+
+    .mihanblog_like_help_arrow_like {
+        background: url("http://roman-e.mihanblog.com/public/public/images/icons/like_hover_top _2.png") no-repeat scroll 16px 0 transparent;
+        left: -10px;
+        top: 29px;
+    }
+
+    .mihanblog_like_help_arrow{
+        height: 6px;
+        position: absolute;
+        width: 100px;
+
+    }
+
+    .mihanblog_like_v2_help_dislike {
+        left: -15px;
+        top: 24px;
+    }
+    .mihanblog_like_v2_help_like {
+        left: 0;
+        top: -35px;
+
+    }
+    .mihanblog_like_v2_help{
+        display: none;
+        position: absolute;
+        white-space: nowrap;
+        z-index: 1;
+    }
+
+    .mihanblog_like_Cnt{
+        display: inline;
+        color: #ffffff;
+    }
+
+</style><script>
+
+	statInfo = new Array();
+	setStatVar = function(index,value){
+		statInfo[index] = value;
+	}
+	getStatVar = function(index){
+		if(statInfo[index]) document.write(statInfo[index]);
+	}
+	
+	setStatVar('total_post','235');
+	setStatVar('total_author','2');
+	setStatVar('modify_date','سه شنبه 30 اردیبهشت 1399');
+	
+	setStatVar('today_view','16');
+	setStatVar('yesterday_view','40');
+	
+	setStatVar('this_month_view','1211');
+	setStatVar('last_month_view','1314');
+
+	setStatVar('total_view','341991');
+	setStatVar('last_view_date','یکشنبه 23 آذر 1399 (05:44)');
+
+
+
+    
+    function setStatFromClient()
+    {
+        var url = 'http://roman-e.mihanblog.com/statupdate/?data[refereruri]=http://roman-e.mihanblog.com/&data[postid]=&data[requesturi]=/post/category/10&data[sdate]=1607826357&data[hash]=727b862fe5c2c5037b3201fe0a10487a&data[resolution]='+screen.width+' X '+screen.height;
+
+//        alert(url);
+//        var newjs = document.createElement("SCRIPT");
+//        newjs.type = 'text/javascript';
+//        newjs.src = url;
+//
+//        var newdiv = document.createElement("DIV");
+//        newdiv.setAttribute("style","display:none");
+
+        document.write(unescape('%3Cscript src="'+url+'" type="text/javascript"%3E%3C/script%3E'));
+//        newdiv.appendChild (newjs);
+//        document.write(newjs);
+//        document.write(appendChild (newdiv);
+
+    };
+    setStatFromClient();
+        
+</script><script>
+	messageForm = function(post_id){
+		try{
+			window.open('/message','message','status=yes,scrollbars=yes,toolbar=no,menubar=no,location=no ,width=480px,height=550px');
+		} catch(e){}
+	}
+</script><script>
+	linkdailyForm = function(){
+		try{
+			window.open('/linkdaily/new','linkdaily','status=yes,scrollbars=yes,toolbar=no,menubar=no,location=no ,width=500px,height=460px');
+		} catch(e){}
+	}
+</script><script>
+
+var MihanblogShopAdsArray = new Array();
+
+function GetMihanBlogShowAds(){
+	if(MihanblogShopAdsArray.length){
+		var adsTarget = 'MihanblogShopAds';
+		var containerWidth = document.getElementById(adsTarget).offsetWidth;
+		if(containerWidth>=200){
+			var adsCnt = parseInt(containerWidth / 200) ;
+			if(adsCnt>MihanblogShopAdsArray.length){
+				adsCnt = MihanblogShopAdsArray.length ; 
+			}
+//			var OneAdsWidth = parseInt(containerWidth / adsCnt) ;
+			var OneAdsWidth = containerWidth / adsCnt ;
+			if(OneAdsWidth>400){
+				OneAdsWidth = 400 ;
+			}
+			var OutHtml = '';
+			var img = '';
+			var link = '';
+			var title = '';
+			var description = '';
+			var imgWidth = 70;
+			if(OneAdsWidth>230){
+				imgWidth = 80;
+			}
+			if(OneAdsWidth>300){
+				imgWidth = 90;
+			}
+			for(adsOne=0;adsOne<adsCnt;adsOne++){
+				
+				img = MihanblogShopAdsArray[adsOne]['img'];
+				link = MihanblogShopAdsArray[adsOne]['link'];
+				title = MihanblogShopAdsArray[adsOne]['title'];
+				description = MihanblogShopAdsArray[adsOne]['description'];
+				
+				OutHtml += '<td style="background-color:#FFF;width: '+OneAdsWidth+'px;border:1px solid #f00;margin:0px 0px;font-size:11px;font-family:tahoma;padding:2px;margin:0px 0px;font-size:11px;border: 1px solid BurlyWood; padding: 1px; height: '+(imgWidth+25)+'px;">';
+
+				OutHtml += '	<a href="http://roman-e.mihanblog.com/post/category/'+link+'" target="_blank" style="text-decoration:none">';
+
+				OutHtml += '			<div style="width: '+(OneAdsWidth-16)+'px;cursor:pointer;font-size:12px;padding: 4px 1px 4px 7px; white-space: nowrap; text-align: center; font-weight: bold; color: blue;white-space:nowrap;overflow:hidden">';
+				OutHtml += 					title;
+				OutHtml += '			</div>';
+				OutHtml += '			<div style="cursor:pointer;padding: 1px; display: block; float: right; width: '+imgWidth+'px;">';
+				OutHtml += '				<img src="'+img+'.html" style="border:0px;padding:0px;margin:0px;width:'+imgWidth+'px;height:'+imgWidth+'px;">';
+				OutHtml += '			</div>';
+				OutHtml += '			<div style="padding: 1px; display: block; float: right; width: '+(OneAdsWidth-13-imgWidth)+'px; text-align: right;overflow:hidden">';
+				OutHtml += '				<div style="overflow:hidden;cursor:pointer;padding: 2px 3px; line-height: 17px; height: '+(imgWidth-3)+'px; text-align: justify;color:#000;direction:rtl">';
+				OutHtml += 						description;
+				OutHtml += '				</div>';
+				OutHtml += '			</div>';
+
+				OutHtml += '	</a>';
+
+				OutHtml += '</td>';
+			}
+			
+			var Out = '<table align="center" cellpadding="0" cellspacing="2" style="width:'+(OneAdsWidth*adsCnt)+'px;"><tr>'+OutHtml+'</tr></table>'; 
+			
+			Out = '<div style="text-align:center;padding:0px;margin:3px auto;">'+Out+'</div>'; 
+			
+			document.getElementById(adsTarget).style.height = (imgWidth+35)+'px' ;
+			document.getElementById(adsTarget).innerHTML = Out ;
+		}
+	}
+}
+</script>
+    <style>
+        @font-face {
+            font-family: 'Mihan-Iransans';
+            src: url('http://roman-e.mihanblog.com/public/public/fonts/Iransans.eot');
+            src: url('http://roman-e.mihanblog.com/public/public/fonts/Iransans.eot?') format('embedded-opentype'),
+            url('http://roman-e.mihanblog.com/public/public/fonts/Iransans.woff2') format('woff2'),
+            url('http://roman-e.mihanblog.com/public/public/fonts/Iransans.woff') format('woff'),
+            url('http://roman-e.mihanblog.com/public/public/fonts/Iransans.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+        @font-face {
+            font-family: 'Mihan-IransansBold';
+            src: url('http://roman-e.mihanblog.com/public/public/fonts/Iransans-Black.eot');
+            src: url('http://roman-e.mihanblog.com/public/public/fonts/Iransans-Black.eot?') format('embedded-opentype'),
+            url('http://roman-e.mihanblog.com/public/public/fonts/Iransans-Black.woff2') format('woff2'),
+            url('http://roman-e.mihanblog.com/public/public/fonts/Iransans-Black.woff') format('woff'),
+            url('http://roman-e.mihanblog.com/public/public/fonts/Iransans-Black.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+        @font-face {
+            font-family: 'Mihan-IransansLight';
+            src: url('http://roman-e.mihanblog.com/public/public/fonts/Iransans-UltraLight.eot');
+            src: url('http://roman-e.mihanblog.com/public/public/fonts/Iransans-UltraLight.eot?') format('embedded-opentype'),
+            url('http://roman-e.mihanblog.com/public/public/fonts/Iransans-UltraLight.woff2') format('woff2'),
+            url('http://roman-e.mihanblog.com/public/public/fonts/Iransans-UltraLight.woff') format('woff'),
+            url('http://roman-e.mihanblog.com/public/public/fonts/Iransans-UltraLight.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+        @font-face {
+            font-family: 'Mihan-Nassim';
+            src: url('http://roman-e.mihanblog.com/public/public/fonts/Nassim.eot');
+            src: url('http://roman-e.mihanblog.com/public/public/fonts/Nassim.eot?') format('embedded-opentype'),
+            url('http://roman-e.mihanblog.com/public/public/fonts/Nassim.woff2') format('woff2'),
+            url('http://roman-e.mihanblog.com/public/public/fonts/Nassim.woff') format('woff'),
+            url('http://roman-e.mihanblog.com/public/public/fonts/Nassim.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+        @font-face {
+            font-family: 'Mihan-Koodak';
+            src: url('http://roman-e.mihanblog.com/public/public/fonts/Koodak.eot');
+            src: url('http://roman-e.mihanblog.com/public/public/fonts/Koodak.eot?') format('embedded-opentype'),
+            url('http://roman-e.mihanblog.com/public/public/fonts/Koodak.woff2') format('woff2'),
+            url('http://roman-e.mihanblog.com/public/public/fonts/Koodak.woff') format('woff'),
+            url('http://roman-e.mihanblog.com/public/public/fonts/Koodak.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+        @font-face {
+            font-family: 'Mihan-Yekan';
+            src: url('http://roman-e.mihanblog.com/public/public/fonts/Yekan.eot');
+            src: url('http://roman-e.mihanblog.com/public/public/fonts/Yekan.eot?') format('embedded-opentype'),
+            url('http://roman-e.mihanblog.com/public/public/fonts/Yekan.woff2') format('woff2'),
+            url('http://roman-e.mihanblog.com/public/public/fonts/Yekan.woff') format('woff'),
+            url('http://roman-e.mihanblog.com/public/public/fonts/Yekan.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+        @font-face {
+            font-family: 'FontAwesome';
+            src: url('http://roman-e.mihanblog.com/public/public/fonts/fontawesome_webfont.eot');
+            src: url('http://roman-e.mihanblog.com/public/public/fonts/fontawesome_webfont.eot?') format('embedded-opentype'),
+            url('http://roman-e.mihanblog.com/public/public/fonts/fontawesome_webfont.woff2') format('woff2'),
+            url('http://roman-e.mihanblog.com/public/public/fonts/fontawesome_webfont.woff') format('woff'),
+            url('http://roman-e.mihanblog.com/public/public/fonts/fontawesome_webfont.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+
+
+        
+
+        /* Smartphones (portrait and landscape) ----------- */
+
+        /*
+        @media only screen and (max-width : 480px) and (min-width : 320px) {
+            .sabaClick_advert__wrapper{
+                display:block;
+            }
+            .sabaClick_advert__inner{
+                max-width: 90%;
+                margin: 0 5%;
+            }
+        }
+        */
+
+    </style>
+
+
+
+
+
+
+<html>
+<head>
+<link href='https://fonts.googleapis.com/css?family=Allura|Dancing+Script|Pacifico|Satisfy' rel='stylesheet'>
+<link href='http://fonts.googleapis.com/css?family=Handlee|Delius+Swash+Caps|Englebert|Ribeye+Marrow|SacramentoShort+Stack|Delius|Dancing+Script|Parisienne|Homemade+Apple|Sacramento|Lobster+Two|Rock+Salt|Nova+Flat' rel='stylesheet' type='text/css'>
+ <link href='http://www.fontonline.ir/css/Shams.css' rel='stylesheet' type='text/css'>
+ <link href='http://www.fontonline.ir/css/BYas.css' rel='stylesheet' type='text/css'>
+<img class="header" src="http://uupload.ir/files/9w6h_17f2c18bc7c59ef481960ad803795f5b.jpg"/>
+<title>MAGIC SPIRIT</title>
+ 
+<style type="text/css">
+ 
+.header {
+position: relative;
+top: 30;
+left: 600;
+width: 550px;
+}
+
+a:link, a:visited, a:active {
+color: #7e7e7e;
+cursor: default;
+text-decoration: none;
+text-transform: lowercase; 
+}
+ 
+a:hover {
+color:#7e7e7e;
+cursor: crosshair;
+font-family: arial;
+letter-spacing: 1pt;
+font-size: 10x;
+}
+ 
+body {
+ background-color: #fff;
+ background: #FFFFFF url('http://uupload.ir/files/aqxq_1.jpg') no-repeat fixed right 0% ;
+ background-size: cover;
+ background-position: left;
+ background-attachment: fixed;
+ color: #000;
+ font-size: 13px;
+ text-align: left;
+}
+ .title {font:11px trebuchet ms,BYas,'BYas'; text-transform:uppercase; font-weight:bold; color:#fff; background:black; padding:5px; margin:0 0 7 0;}
+ .titla {font:11px trebuchet ms; text-transform:uppercase; font-weight:bold; color:#fff; background:black; padding:5px; margin:0 0 7 0; text-align:right}
+ .title2 a{font:10px trebuchet ms; color:white; text-align:right; text-transform:uppercase;}
+.h1 { 
+ font-family: Satisfy;
+ font-size: 18px;
+ color: #fff;
+ line-height: 18px;
+ text-align: center;
+ padding-right: 5px;
+ padding-top:4px;
+ padding-bottom:4px;
+ background-color: #000;
+ width:71px;
+ float:left;
+}
+ 
+.h1:hover {
+ font-family: Satisfy;
+ font-size: 18px;
+ color: #000;
+ background-color: #fff;
+}
+ 
+ .h3 {
+ 
+ font-family: verdana;
+ font-size: 11px;
+ color: #a6d3fb;
+ letter-spacing: 1pt;
+ line-height: 18px;
+ text-align: left;
+ border-bottom: solid 5px #f2e3c8;
+ text-transform: uppercase;
+}
+ 
+ .h4 {
+ 
+ font-family: arial;
+ font-size: 10px;
+ color: #efa0a0;
+ text-align: left;
+ letter-spacing: 1pt;
+ line-height: 11px;
+ padding-left: 10px;
+ text-transform: lowercase;
+}
+ 
+ .h5 {
+font:12px trebuchet ms,Shams,'Shams'; text-transform:uppercase; font-weight:bold; color:#fff; background:black; padding:5px; margin:0 0 7 0;
+
+}
+ 
+.h6 { 
+ font-family: Dancing Script;
+ font-size: 28px;
+ color: #48c7e7;
+ letter-spacing: -1pt;
+ text-align: center;
+ line-height: 19px;
+ padding-left: 5px;
+}
+ 
+.h7 {
+ 
+ font-family: arial;
+ font-size: 11px;
+ color: #b39a8a;
+ letter-spacing: 1pt;
+ text-align: left;
+ 
+}
+ 
+.h8 {
+ 
+ font-family: arial;
+ font-size: 12px;
+ color: #cf6869;
+ text-align: left;
+ line-height: 14px;
+ padding-left: 5px;
+}
+ 
+.h9 {
+ 
+ font-family: courier;
+ color: #b4d5bb;
+ font-size: 38px;
+ letter-spacing: -1pt;
+ text-align: right;
+ line-height: 5px;
+ font-weight: bold;
+}
+ 
+.h10 { 
+background : #ffffff;
+border-bottom-right-radius: 20px;
+border-bottom-left-radius: 20px;
+font-family: Handlee,BHelal;
+font-size:11px;
+width: 350px;
+margin-top:-6px;
+border-top: 0px solid #696969;
+border-bottom: 1px solid #696969;
+border-right: 1px solid #696969;
+border-left: 1px solid #696969;
+color: #666;
+margin-left: 130px;
+text-align: center;
+padding:3px;
+margin-bottom: -26px;
+ border-bottom: 1px dashed #b39a8a;
+}
+ 
+img {
+ 
+ padding: 5px;
+ 
+}
+ 
+blockquote {
+ font-family: courier new;
+ font-size: 10px;
+ padding: 5px;
+ color: #000;
+ background:#f7f7f7;
+}
+ 
+i{
+ 
+color: #cb797d;
+}
+ 
+b{ 
+color: #000;
+text-transform: uppercase;
+font-size: 8px;
+}
+ 
+u{
+ 
+color: #bf766f;
+ 
+}
+ 
+#navbar-iframe {
+ 
+ display: none;
+ 
+}
+ 
+ .icon1{ border: 1px solid #ddd; background-color: #fff; padding: 2px; float: right; margin-left:10px; }
+
+.old {
+margin-top:10px;
+font:12px century gothic;
+padding:2px;
+width:200px;
+color:#444444;
+align:center;
+text-align:center;
+float:left;
+direction:ltr;
+margin-right:150px;
+
+}
+
+.old1 {
+margin-top:10px;
+font:12px century gothic,Shams,'Shams';
+padding:2px;
+width:300px;
+color:#444444;
+border-radius:10px;
+text-align:center;
+float: left;
+margin-left:-70px;
+}
+.page-numbers{
+	       direction: rtl;
+	       margin: 20px auto;
+	       text-align: center;
+	       font-family: cursive;
+}
+
+
+.page-numbers a {
+            direction:rtl;
+            display: inline-block;
+            border-radius: 50%;
+            width: 25px;
+            height: 25px;
+            text-align: center;
+	    text-decoration: none;
+	    font-size: 16px;
+	    background: #000000;
+	    color: #FFFFFF;
+	    transition: all .2s linear;
+	    font-family: Parisienne;
+}
+.page-numbers a:hover{
+	border-radius: 20px / 10px;
+	background: #ffffff;
+	color: #000000;
+        text-shadow: 1px 1px 2px white, 0 0 10px white , 0 0 1px white 
+}
+
+.linkarchivefriends {
+	font-size: 9pt;
+	line-height: 1;
+	word-wrap: break-word;
+	padding-top: 8px;
+	padding-bottom: 8px;
+	margin-top: 3px;
+	margin-bottom: 3px;
+	padding-right: 8px;
+        direction: rtl;
+}
+
+.line-height {
+line-height:24px;
+direction: rtl;
+text-align:right;
+}
+
+#customers {
+    font-family: IranNastaliq,'IranNastaliq';
+    border-collapse: collapse;
+    width: 100%;
+}
+
+#customers td, #customers th {
+    font-family: IranNastaliq,'IranNastaliq';
+    font-size:14px;
+    text-align: center;
+    color: black;
+    border: 1px solid #ddd;
+    padding: 8px;
+}
+
+#customers tr:nth-child(even){background-color: #f2f2f2;}
+
+#customers tr:hover {background-color: #ddd;}
+
+#customers th {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    text-align: center;
+    background-color: #363636;
+    color: white;
+}
+
+
+a.linky {
+display:inline-block;
+background:#fff;
+width:130px;
+border:1px dashed #777777;
+padding: 3px;
+border-radius:10px;
+margin: 2px;text-align:center;
+color:#726E6D;
+-moz-transition: all 0.5s ease-in-out;
+-o-transition: all 0.5s ease-in-out;
+-ms-transition: all 0.5s ease-in-out;
+transition: all 0.5s ease-in-out;
+}
+
+a.linky:hover {
+border-radius:0px;
+color:#000;
+}
+</style>
+</head>
+ 
+<body>
+ 
+<div style="position: absolute; left: 590px; top: 370px; z-index: 3; width: 600px;">
+<div id="post" style="width: 630px; padding: 10px; background-color: transparent;">
+<Blogger><br>
+      <table border="0" cellpadding="0" cellspacing="0">
+      <tr>
+      <td valign="top" width="90px" style="background:">
+      </td>
+      </td>
+      </tr>
+      </table><br>
+      </div> 
+<div id="pages">
+<blogger> 
+				<div id="MihanblogShopAds" style="display:block;height:0px;width:100%;border:0px"></div>
+		                                         <div class="title">ولکام + بالابر <span style="float:right;"><div class="title2">
+                      <a style="dir:ltr" target="_self" href="javascript:newComment(389)" > Comment:(<script>setCommentCnt(389)</script>)</a></div></div>
+		          	    <div class="h10">چهارشنبه 17 مرداد 1397|01:24 ب.ظ                            <br><b>send in:</b>
+	          	  	     	          	     		 <a href="10.html">
+	          	     			ღWelcomeღ </a>
+              	  		     	          	     		 <a href="4.html">
+	          	     			ღCodesღ </a>
+              	  		     	            		</div><br><br>
+        	<div class="line-height">		          	
+		            	<div id="InPost_MihanblogShopAds" style="display:block;height:0px;width:100%;border:0px"></div>
+<div><font size="3" face="Mihan-Iransans">چن تا ولکام و بالابر مجانی <br></font></div><div><font size="3" face="Mihan-Iransans">هرکی خواست بگه </font><br></div><div><br></div><div><img src="http://uupload.ir/files/bpqk_dead_land.png" alt="http://uupload.ir/files/bpqk_dead_land.png" class="shrinkToFit transparent" width="555" height="309"></div>		            	</div>
+		            	<div class="old"><a href='http://roman-e.mihanblog.com/post/389'>بقیه اش این جاست</a></div><br>
+	        	                                         <div class="title">Sea Welcome<span style="float:right;"><div class="title2">
+                      <a style="dir:ltr" target="_self" href="javascript:newComment(302)" > Comment:(<script>setCommentCnt(302)</script>)</a></div></div>
+		          	    <div class="h10">سه شنبه 1 اسفند 1396|09:14 ب.ظ                            <br><b>send in:</b>
+	          	  	     	          	     		 <a href="10.html">
+	          	     			ღWelcomeღ </a>
+              	  		     	          	     		 <a href="4.html">
+	          	     			ღCodesღ </a>
+              	  		     	          	     		 <a href="2.html">
+	          	     			ღAnimeღ </a>
+              	  		     	            		</div><br><br>
+        	<div class="line-height">		          	
+		            	
+
+<div align="right"><img src="http://uupload.ir/files/vahf_sea_welcome.png" alt="http://uupload.ir/files/vahf_sea_welcome.png" class="shrinkToFit" width="427" height="589"><br><font size="4" face="Mihan-IransansLight"><br>هایع (:<br>خوشمل شده *-*<br>قیمت: 80 نظر به پست ثابت...</font><br></div>
+
+
+
+
+
+
+		            	</div>
+		            	<div class="old"></div><br>
+	        	                                         <div class="title">charlotte welcome<span style="float:right;"><div class="title2">
+                      <a style="dir:ltr" target="_self" href="javascript:newComment(293)" > Comment:(<script>setCommentCnt(293)</script>)</a></div></div>
+		          	    <div class="h10">سه شنبه 24 بهمن 1396|05:19 ب.ظ                            <br><b>send in:</b>
+	          	  	     	          	     		 <a href="10.html">
+	          	     			ღWelcomeღ </a>
+              	  		     	          	     		 <a href="4.html">
+	          	     			ღCodesღ </a>
+              	  		     	          	     		 <a href="2.html">
+	          	     			ღAnimeღ </a>
+              	  		     	            		</div><br><br>
+        	<div class="line-height">		          	
+		            	
+
+<div align="right"><img src="http://uupload.ir/files/38pu_%D9%88%D9%84%DA%A9%D8%A7%D9%85_%DA%A9%D9%87%DA%A9%D8%B4%D8%A7%D9%86%DB%8C.png" alt="http://uupload.ir/files/38pu_%D9%88%D9%84%DA%A9%D8%A7%D9%85_%DA%A9%D9%87%DA%A9%D8%B4%D8%A7%D9%86%DB%8C.png" class="transparent" width="635" height="423"><br><br><font size="4" face="Mihan-Nassim">کنیچیوا :)<br>ی ولکام از چارلوت...<br>قیمتش 80 نظر به پست ثابت^^</font><br></div>
+
+
+
+
+
+
+		            	</div>
+		            	<div class="old"></div><br>
+	        	                                         <div class="title">Kawaii Welcome Two<span style="float:right;"><div class="title2">
+                      <a style="dir:ltr" target="_self" href="javascript:newComment(260)" > Comment:(<script>setCommentCnt(260)</script>)</a></div></div>
+		          	    <div class="h10">دوشنبه 11 دی 1396|01:49 ب.ظ                            <br><b>send in:</b>
+	          	  	     	          	     		 <a href="10.html">
+	          	     			ღWelcomeღ </a>
+              	  		     	          	     		 <a href="4.html">
+	          	     			ღCodesღ </a>
+              	  		     	          	     		 <a href="2.html">
+	          	     			ღAnimeღ </a>
+              	  		     	            		</div><br><br>
+        	<div class="line-height">		          	
+		            	
+
+
+<div align="right"><img src="http://uupload.ir/files/6fje_%D9%88%D9%84%DA%A9%D8%A7%D9%85_%D9%86%D8%A7%D8%B2%DB%8C_%D9%86%D8%A7%D8%B2%DB%8C.png" alt="http://uupload.ir/files/6fje_%D9%88%D9%84%DA%A9%D8%A7%D9%85_%D9%86%D8%A7%D8%B2%DB%8C_%D9%86%D8%A7%D8%B2%DB%8C.png" class="transparent" width="562" height="489"></div><div align="right"><br></div><div align="right"><font size="4" face="Mihan-Koodak">قیمت: 70 نظر ب پست ثابت</font><br></div>
+
+
+
+
+
+
+
+
+		            	</div>
+		            	<div class="old"></div><br>
+	        	                                         <div class="title">Green Welcome<span style="float:right;"><div class="title2">
+                      <a style="dir:ltr" target="_self" href="javascript:newComment(259)" > Comment:(<script>setCommentCnt(259)</script>)</a></div></div>
+		          	    <div class="h10">دوشنبه 11 دی 1396|01:43 ب.ظ                            <br><b>send in:</b>
+	          	  	     	          	     		 <a href="10.html">
+	          	     			ღWelcomeღ </a>
+              	  		     	          	     		 <a href="4.html">
+	          	     			ღCodesღ </a>
+              	  		     	          	     		 <a href="2.html">
+	          	     			ღAnimeღ </a>
+              	  		     	            		</div><br><br>
+        	<div class="line-height">		          	
+		            	
+<div align="right"><img src="http://uupload.ir/files/dpen_%D9%88%D9%84%DA%A9%D8%A7%D9%85_%D8%AC%D8%AF%DB%8C%D8%AF.png" alt="http://uupload.ir/files/dpen_%D9%88%D9%84%DA%A9%D8%A7%D9%85_%D8%AC%D8%AF%DB%8C%D8%AF.png" class="transparent" width="588" height="418"><br></div><br><div align="right"><br></div><div align="right"><font size="4" face="Mihan-Koodak">ولکام خوجمل<img src="http://mihanblog.com/public/public/rte/images_new/smiles/67.gif"></font><br><br><font size="4" face="Mihan-Koodak">قیمت 70 نظر ب پست ثابت^^</font><br></div>
+
+
+
+
+		            	</div>
+		            	<div class="old"></div><br>
+	        	                                         <div class="title">kawaii welcome<span style="float:right;"><div class="title2">
+                      <a style="dir:ltr" target="_self" href="javascript:newComment(240)" > Comment:(<script>setCommentCnt(240)</script>)</a></div></div>
+		          	    <div class="h10">چهارشنبه 15 آذر 1396|06:19 ب.ظ                            <br><b>send in:</b>
+	          	  	     	          	     		 <a href="10.html">
+	          	     			ღWelcomeღ </a>
+              	  		     	          	     		 <a href="4.html">
+	          	     			ღCodesღ </a>
+              	  		     	          	     		 <a href="2.html">
+	          	     			ღAnimeღ </a>
+              	  		     	            		</div><br><br>
+        	<div class="line-height">		          	
+		            	
+
+
+
+<div align="right"><img src="http://uupload.ir/files/ovm9_%D9%88%D9%84%DA%A9%D8%A7%D9%85_%D8%A8%D8%A7%D8%AD%D8%A7%D9%84%DB%8C.png" alt="http://uupload.ir/files/ovm9_%D9%88%D9%84%DA%A9%D8%A7%D9%85_%D8%A8%D8%A7%D8%AD%D8%A7%D9%84%DB%8C.png" class="transparent" width="551" height="454"></div><div align="right"><br></div><div align="right"><font size="4" face="Mihan-Nassim"><br></font></div><div align="right"><font size="4" face="Mihan-Nassim">ی ولکام<br></font></div><div align="right"><font size="4" face="Mihan-Nassim">خعـــــلی خوشگلـــــه*-*</font></div><div align="right"><font size="4" face="Mihan-Nassim">واسه خریدش: 60 نظر ب پست ثابت:)</font><br></div>
+
+
+
+
+
+
+
+
+
+
+		            	</div>
+		            	<div class="old"></div><br>
+	        	                                         <div class="title">ولکام دختر پروانه ای<span style="float:right;"><div class="title2">
+                      <a style="dir:ltr" target="_self" href="javascript:newComment(187)" > Comment:(<script>setCommentCnt(187)</script>)</a></div></div>
+		          	    <div class="h10">یکشنبه 19 شهریور 1396|07:10 ب.ظ                            <br><b>send in:</b>
+	          	  	     	          	     		 <a href="10.html">
+	          	     			ღWelcomeღ </a>
+              	  		     	          	     		 <a href="4.html">
+	          	     			ღCodesღ </a>
+              	  		     	          	     		 <a href="2.html">
+	          	     			ღAnimeღ </a>
+              	  		     	            		</div><br><br>
+        	<div class="line-height">		          	
+		            	
+
+<br><div align="right"><b><font size="4"><font face="Mihan-Nassim"><img src="http://uupload.ir/files/30ue_%D9%88%D9%84%DA%A9%D8%A7%D9%85_%D9%86%D8%A7%D8%B2%D9%86%D8%A7%D8%B2%DB%8C_%D9%BE%D8%B1%D9%88%D8%A7%D9%86%D9%87_%D8%A7%DB%8C.png" alt="http://uupload.ir/files/30ue_%D9%88%D9%84%DA%A9%D8%A7%D9%85_%D9%86%D8%A7%D8%B2%D9%86%D8%A7%D8%B2%DB%8C_%D9%BE%D8%B1%D9%88%D8%A7%D9%86%D9%87_%D8%A7%DB%8C.png" class="shrinkToFit transparent" width="482" height="547"><br></font></font></b></div><div align="right"><b><font size="4"><font face="Mihan-Nassim"><br></font></font></b></div><div align="right"><b><font size="4"><font face="Mihan-Nassim">اویاسومی ناسای ^^</font></font></b></div><div align="right"><b><font size="4"><font face="Mihan-Nassim"><br></font></font></b></div><div align="right"><b><font size="4"><font face="Mihan-Nassim">یه ولکام کاوایـــــــــی براتون آوردم<img src="http://mihanblog.com/public/public/rte/images_new/smiles/15.gif"><br></font></font></b></div><div align="right"><b><font size="4"><font face="Mihan-Nassim"><br></font></font></b></div><div align="right"><b><font size="4"><font face="Mihan-Nassim">قیمتش 70 نظره :)</font></font></b></div><div align="right"><b><font size="4"><font face="Mihan-Nassim"><br></font></font></b></div><div align="center"><br><b><font size="4"><font face="Mihan-Nassim"></font></font></b></div><b><font size="4"><font face="Mihan-Nassim"><br></font></font></b>
+
+
+
+
+
+
+		            	</div>
+		            	<div class="old"></div><br>
+	        	                                         <div class="title">ولکام صورتی انیمه ای ^^<span style="float:right;"><div class="title2">
+                      <a style="dir:ltr" target="_self" href="javascript:newComment(153)" > Comment:(<script>setCommentCnt(153)</script>)</a></div></div>
+		          	    <div class="h10">سه شنبه 31 مرداد 1396|02:23 ب.ظ                            <br><b>send in:</b>
+	          	  	     	          	     		 <a href="10.html">
+	          	     			ღWelcomeღ </a>
+              	  		     	          	     		 <a href="4.html">
+	          	     			ღCodesღ </a>
+              	  		     	          	     		 <a href="2.html">
+	          	     			ღAnimeღ </a>
+              	  		     	            		</div><br><br>
+        	<div class="line-height">		          	
+		            	<font size="4"><font face="Mihan-Nassim">خعلــــــــــــــــــــــــــــــی خوشمل شده</font></font><br><div align="right"><font size="4"><font face="Mihan-Nassim">قیمتش 60 نظر به پست ثابته<img src="http://mihanblog.com/public/public/rte/images_new/smiles/4.gif"><br><br></font></font></div><div align="right"><br></div><div align="right"><img src="http://uupload.ir/files/ahi_%D9%88%D9%84%DA%A9%D8%A7%D9%85_%D8%B5%D9%88%D8%B1%D8%AA%DB%8C_%D9%BE%D9%86%D8%AC%D9%87_%D8%A7%DB%8C_%D9%86%D8%A7%D8%B2%D9%86%D8%A7%D8%B2%DB%8C.png" alt="http://uupload.ir/files/ahi_%D9%88%D9%84%DA%A9%D8%A7%D9%85_%D8%B5%D9%88%D8%B1%D8%AA%DB%8C_%D9%BE%D9%86%D8%AC%D9%87_%D8%A7%DB%8C_%D9%86%D8%A7%D8%B2%D9%86%D8%A7%D8%B2%DB%8C.png" class="transparent" width="564" height="532"></div>
+
+
+
+
+
+
+
+
+
+
+		            	</div>
+		            	<div class="old"></div><br>
+	        	                                         <div class="title">ولکام پسر انیمه ای<span style="float:right;"><div class="title2">
+                      <a style="dir:ltr" target="_self" href="javascript:newComment(123)" > Comment:(<script>setCommentCnt(123)</script>)</a></div></div>
+		          	    <div class="h10">سه شنبه 10 مرداد 1396|12:36 ب.ظ                            <br><b>send in:</b>
+	          	  	     	          	     		 <a href="10.html">
+	          	     			ღWelcomeღ </a>
+              	  		     	          	     		 <a href="4.html">
+	          	     			ღCodesღ </a>
+              	  		     	          	     		 <a href="2.html">
+	          	     			ღAnimeღ </a>
+              	  		     	            		</div><br><br>
+        	<div class="line-height">		          	
+		            	
+
+
+<br><div align="right"><div><img src="http://uupload.ir/files/q211_%D9%88%D9%84%DA%A9%D8%A7%D9%85.png" alt="http://uupload.ir/files/q211_%D9%88%D9%84%DA%A9%D8%A7%D9%85.png" class="shrinkToFit transparent" width="577" height="349"><br></div><br><br><font size="3"><font face="Mihan-IransansBold">هایع هایع ^^<br><br>قیمتش 60 نظر به پست ثابته :)<br></font></font></div>
+
+
+
+
+
+
+
+
+		            	</div>
+		            	<div class="old"></div><br>
+	        		     	      </Blogger></div>
+
+<div id="entries" style="display:none">
+
+<blogger> 
+				<div id="MihanblogShopAds" style="display:block;height:0px;width:100%;border:0px"></div>
+		                                         <div class="title">ولکام + بالابر <span style="float:right;"><div class="title2">
+                      <a style="dir:ltr" target="_self" href="javascript:newComment(389)" > Comment:(<script>setCommentCnt(389)</script>)</a></div></div>
+		          	    <div class="h10">چهارشنبه 17 مرداد 1397|01:24 ب.ظ                            <br><b>send in:</b>
+	          	  	     	          	     		 <a href="10.html">
+	          	     			ღWelcomeღ </a>
+              	  		     	          	     		 <a href="4.html">
+	          	     			ღCodesღ </a>
+              	  		     	            		</div><br><br>
+        	<div class="line-height">		          	
+		            	<div id="InPost_MihanblogShopAds" style="display:block;height:0px;width:100%;border:0px"></div>
+<div><font size="3" face="Mihan-Iransans">چن تا ولکام و بالابر مجانی <br></font></div><div><font size="3" face="Mihan-Iransans">هرکی خواست بگه </font><br></div><div><br></div><div><img src="http://uupload.ir/files/bpqk_dead_land.png" alt="http://uupload.ir/files/bpqk_dead_land.png" class="shrinkToFit transparent" width="555" height="309"></div>		            	</div>
+		            	<div class="old"><a href='http://roman-e.mihanblog.com/post/389'>بقیه اش این جاست</a></div><br>
+	        	                                         <div class="title">Sea Welcome<span style="float:right;"><div class="title2">
+                      <a style="dir:ltr" target="_self" href="javascript:newComment(302)" > Comment:(<script>setCommentCnt(302)</script>)</a></div></div>
+		          	    <div class="h10">سه شنبه 1 اسفند 1396|09:14 ب.ظ                            <br><b>send in:</b>
+	          	  	     	          	     		 <a href="10.html">
+	          	     			ღWelcomeღ </a>
+              	  		     	          	     		 <a href="4.html">
+	          	     			ღCodesღ </a>
+              	  		     	          	     		 <a href="2.html">
+	          	     			ღAnimeღ </a>
+              	  		     	            		</div><br><br>
+        	<div class="line-height">		          	
+		            	
+
+<div align="right"><img src="http://uupload.ir/files/vahf_sea_welcome.png" alt="http://uupload.ir/files/vahf_sea_welcome.png" class="shrinkToFit" width="427" height="589"><br><font size="4" face="Mihan-IransansLight"><br>هایع (:<br>خوشمل شده *-*<br>قیمت: 80 نظر به پست ثابت...</font><br></div>
+
+
+
+
+
+
+		            	</div>
+		            	<div class="old"></div><br>
+	        	                                         <div class="title">charlotte welcome<span style="float:right;"><div class="title2">
+                      <a style="dir:ltr" target="_self" href="javascript:newComment(293)" > Comment:(<script>setCommentCnt(293)</script>)</a></div></div>
+		          	    <div class="h10">سه شنبه 24 بهمن 1396|05:19 ب.ظ                            <br><b>send in:</b>
+	          	  	     	          	     		 <a href="10.html">
+	          	     			ღWelcomeღ </a>
+              	  		     	          	     		 <a href="4.html">
+	          	     			ღCodesღ </a>
+              	  		     	          	     		 <a href="2.html">
+	          	     			ღAnimeღ </a>
+              	  		     	            		</div><br><br>
+        	<div class="line-height">		          	
+		            	
+
+<div align="right"><img src="http://uupload.ir/files/38pu_%D9%88%D9%84%DA%A9%D8%A7%D9%85_%DA%A9%D9%87%DA%A9%D8%B4%D8%A7%D9%86%DB%8C.png" alt="http://uupload.ir/files/38pu_%D9%88%D9%84%DA%A9%D8%A7%D9%85_%DA%A9%D9%87%DA%A9%D8%B4%D8%A7%D9%86%DB%8C.png" class="transparent" width="635" height="423"><br><br><font size="4" face="Mihan-Nassim">کنیچیوا :)<br>ی ولکام از چارلوت...<br>قیمتش 80 نظر به پست ثابت^^</font><br></div>
+
+
+
+
+
+
+		            	</div>
+		            	<div class="old"></div><br>
+	        	                                         <div class="title">Kawaii Welcome Two<span style="float:right;"><div class="title2">
+                      <a style="dir:ltr" target="_self" href="javascript:newComment(260)" > Comment:(<script>setCommentCnt(260)</script>)</a></div></div>
+		          	    <div class="h10">دوشنبه 11 دی 1396|01:49 ب.ظ                            <br><b>send in:</b>
+	          	  	     	          	     		 <a href="10.html">
+	          	     			ღWelcomeღ </a>
+              	  		     	          	     		 <a href="4.html">
+	          	     			ღCodesღ </a>
+              	  		     	          	     		 <a href="2.html">
+	          	     			ღAnimeღ </a>
+              	  		     	            		</div><br><br>
+        	<div class="line-height">		          	
+		            	
+
+
+<div align="right"><img src="http://uupload.ir/files/6fje_%D9%88%D9%84%DA%A9%D8%A7%D9%85_%D9%86%D8%A7%D8%B2%DB%8C_%D9%86%D8%A7%D8%B2%DB%8C.png" alt="http://uupload.ir/files/6fje_%D9%88%D9%84%DA%A9%D8%A7%D9%85_%D9%86%D8%A7%D8%B2%DB%8C_%D9%86%D8%A7%D8%B2%DB%8C.png" class="transparent" width="562" height="489"></div><div align="right"><br></div><div align="right"><font size="4" face="Mihan-Koodak">قیمت: 70 نظر ب پست ثابت</font><br></div>
+
+
+
+
+
+
+
+
+		            	</div>
+		            	<div class="old"></div><br>
+	        	                                         <div class="title">Green Welcome<span style="float:right;"><div class="title2">
+                      <a style="dir:ltr" target="_self" href="javascript:newComment(259)" > Comment:(<script>setCommentCnt(259)</script>)</a></div></div>
+		          	    <div class="h10">دوشنبه 11 دی 1396|01:43 ب.ظ                            <br><b>send in:</b>
+	          	  	     	          	     		 <a href="10.html">
+	          	     			ღWelcomeღ </a>
+              	  		     	          	     		 <a href="4.html">
+	          	     			ღCodesღ </a>
+              	  		     	          	     		 <a href="2.html">
+	          	     			ღAnimeღ </a>
+              	  		     	            		</div><br><br>
+        	<div class="line-height">		          	
+		            	
+<div align="right"><img src="http://uupload.ir/files/dpen_%D9%88%D9%84%DA%A9%D8%A7%D9%85_%D8%AC%D8%AF%DB%8C%D8%AF.png" alt="http://uupload.ir/files/dpen_%D9%88%D9%84%DA%A9%D8%A7%D9%85_%D8%AC%D8%AF%DB%8C%D8%AF.png" class="transparent" width="588" height="418"><br></div><br><div align="right"><br></div><div align="right"><font size="4" face="Mihan-Koodak">ولکام خوجمل<img src="http://mihanblog.com/public/public/rte/images_new/smiles/67.gif"></font><br><br><font size="4" face="Mihan-Koodak">قیمت 70 نظر ب پست ثابت^^</font><br></div>
+
+
+
+
+		            	</div>
+		            	<div class="old"></div><br>
+	        	                                         <div class="title">kawaii welcome<span style="float:right;"><div class="title2">
+                      <a style="dir:ltr" target="_self" href="javascript:newComment(240)" > Comment:(<script>setCommentCnt(240)</script>)</a></div></div>
+		          	    <div class="h10">چهارشنبه 15 آذر 1396|06:19 ب.ظ                            <br><b>send in:</b>
+	          	  	     	          	     		 <a href="10.html">
+	          	     			ღWelcomeღ </a>
+              	  		     	          	     		 <a href="4.html">
+	          	     			ღCodesღ </a>
+              	  		     	          	     		 <a href="2.html">
+	          	     			ღAnimeღ </a>
+              	  		     	            		</div><br><br>
+        	<div class="line-height">		          	
+		            	
+
+
+
+<div align="right"><img src="http://uupload.ir/files/ovm9_%D9%88%D9%84%DA%A9%D8%A7%D9%85_%D8%A8%D8%A7%D8%AD%D8%A7%D9%84%DB%8C.png" alt="http://uupload.ir/files/ovm9_%D9%88%D9%84%DA%A9%D8%A7%D9%85_%D8%A8%D8%A7%D8%AD%D8%A7%D9%84%DB%8C.png" class="transparent" width="551" height="454"></div><div align="right"><br></div><div align="right"><font size="4" face="Mihan-Nassim"><br></font></div><div align="right"><font size="4" face="Mihan-Nassim">ی ولکام<br></font></div><div align="right"><font size="4" face="Mihan-Nassim">خعـــــلی خوشگلـــــه*-*</font></div><div align="right"><font size="4" face="Mihan-Nassim">واسه خریدش: 60 نظر ب پست ثابت:)</font><br></div>
+
+
+
+
+
+
+
+
+
+
+		            	</div>
+		            	<div class="old"></div><br>
+	        	                                         <div class="title">ولکام دختر پروانه ای<span style="float:right;"><div class="title2">
+                      <a style="dir:ltr" target="_self" href="javascript:newComment(187)" > Comment:(<script>setCommentCnt(187)</script>)</a></div></div>
+		          	    <div class="h10">یکشنبه 19 شهریور 1396|07:10 ب.ظ                            <br><b>send in:</b>
+	          	  	     	          	     		 <a href="10.html">
+	          	     			ღWelcomeღ </a>
+              	  		     	          	     		 <a href="4.html">
+	          	     			ღCodesღ </a>
+              	  		     	          	     		 <a href="2.html">
+	          	     			ღAnimeღ </a>
+              	  		     	            		</div><br><br>
+        	<div class="line-height">		          	
+		            	
+
+<br><div align="right"><b><font size="4"><font face="Mihan-Nassim"><img src="http://uupload.ir/files/30ue_%D9%88%D9%84%DA%A9%D8%A7%D9%85_%D9%86%D8%A7%D8%B2%D9%86%D8%A7%D8%B2%DB%8C_%D9%BE%D8%B1%D9%88%D8%A7%D9%86%D9%87_%D8%A7%DB%8C.png" alt="http://uupload.ir/files/30ue_%D9%88%D9%84%DA%A9%D8%A7%D9%85_%D9%86%D8%A7%D8%B2%D9%86%D8%A7%D8%B2%DB%8C_%D9%BE%D8%B1%D9%88%D8%A7%D9%86%D9%87_%D8%A7%DB%8C.png" class="shrinkToFit transparent" width="482" height="547"><br></font></font></b></div><div align="right"><b><font size="4"><font face="Mihan-Nassim"><br></font></font></b></div><div align="right"><b><font size="4"><font face="Mihan-Nassim">اویاسومی ناسای ^^</font></font></b></div><div align="right"><b><font size="4"><font face="Mihan-Nassim"><br></font></font></b></div><div align="right"><b><font size="4"><font face="Mihan-Nassim">یه ولکام کاوایـــــــــی براتون آوردم<img src="http://mihanblog.com/public/public/rte/images_new/smiles/15.gif"><br></font></font></b></div><div align="right"><b><font size="4"><font face="Mihan-Nassim"><br></font></font></b></div><div align="right"><b><font size="4"><font face="Mihan-Nassim">قیمتش 70 نظره :)</font></font></b></div><div align="right"><b><font size="4"><font face="Mihan-Nassim"><br></font></font></b></div><div align="center"><br><b><font size="4"><font face="Mihan-Nassim"></font></font></b></div><b><font size="4"><font face="Mihan-Nassim"><br></font></font></b>
+
+
+
+
+
+
+		            	</div>
+		            	<div class="old"></div><br>
+	        	                                         <div class="title">ولکام صورتی انیمه ای ^^<span style="float:right;"><div class="title2">
+                      <a style="dir:ltr" target="_self" href="javascript:newComment(153)" > Comment:(<script>setCommentCnt(153)</script>)</a></div></div>
+		          	    <div class="h10">سه شنبه 31 مرداد 1396|02:23 ب.ظ                            <br><b>send in:</b>
+	          	  	     	          	     		 <a href="10.html">
+	          	     			ღWelcomeღ </a>
+              	  		     	          	     		 <a href="4.html">
+	          	     			ღCodesღ </a>
+              	  		     	          	     		 <a href="2.html">
+	          	     			ღAnimeღ </a>
+              	  		     	            		</div><br><br>
+        	<div class="line-height">		          	
+		            	<font size="4"><font face="Mihan-Nassim">خعلــــــــــــــــــــــــــــــی خوشمل شده</font></font><br><div align="right"><font size="4"><font face="Mihan-Nassim">قیمتش 60 نظر به پست ثابته<img src="http://mihanblog.com/public/public/rte/images_new/smiles/4.gif"><br><br></font></font></div><div align="right"><br></div><div align="right"><img src="http://uupload.ir/files/ahi_%D9%88%D9%84%DA%A9%D8%A7%D9%85_%D8%B5%D9%88%D8%B1%D8%AA%DB%8C_%D9%BE%D9%86%D8%AC%D9%87_%D8%A7%DB%8C_%D9%86%D8%A7%D8%B2%D9%86%D8%A7%D8%B2%DB%8C.png" alt="http://uupload.ir/files/ahi_%D9%88%D9%84%DA%A9%D8%A7%D9%85_%D8%B5%D9%88%D8%B1%D8%AA%DB%8C_%D9%BE%D9%86%D8%AC%D9%87_%D8%A7%DB%8C_%D9%86%D8%A7%D8%B2%D9%86%D8%A7%D8%B2%DB%8C.png" class="transparent" width="564" height="532"></div>
+
+
+
+
+
+
+
+
+
+
+		            	</div>
+		            	<div class="old"></div><br>
+	        	                                         <div class="title">ولکام پسر انیمه ای<span style="float:right;"><div class="title2">
+                      <a style="dir:ltr" target="_self" href="javascript:newComment(123)" > Comment:(<script>setCommentCnt(123)</script>)</a></div></div>
+		          	    <div class="h10">سه شنبه 10 مرداد 1396|12:36 ب.ظ                            <br><b>send in:</b>
+	          	  	     	          	     		 <a href="10.html">
+	          	     			ღWelcomeღ </a>
+              	  		     	          	     		 <a href="4.html">
+	          	     			ღCodesღ </a>
+              	  		     	          	     		 <a href="2.html">
+	          	     			ღAnimeღ </a>
+              	  		     	            		</div><br><br>
+        	<div class="line-height">		          	
+		            	
+
+
+<br><div align="right"><div><img src="http://uupload.ir/files/q211_%D9%88%D9%84%DA%A9%D8%A7%D9%85.png" alt="http://uupload.ir/files/q211_%D9%88%D9%84%DA%A9%D8%A7%D9%85.png" class="shrinkToFit transparent" width="577" height="349"><br></div><br><br><font size="3"><font face="Mihan-IransansBold">هایع هایع ^^<br><br>قیمتش 60 نظر به پست ثابته :)<br></font></font></div>
+
+
+
+
+
+
+
+
+		            	</div>
+		            	<div class="old"></div><br>
+	        		     	      </Blogger>
+</div><br>
+</div>
+ 
+<div id="sidebar" style="position: fixed; left: 250px; top: 30px; z-index: 3; width: 250px; padding: 10px; background-color: #fff; border-color:#000;  border-width: 10px 10px 24px 10px;border-style: solid;">
+<center><div class="h1" onClick="changeNavigation('entries')">Home</div>
+<div class="h1" onClick="changeNavigation('profile')">Profile</div>
+<div class="h1" onClick="changeNavigation('stuff')">Friends</div><br><br>
+<div class="h1" onClick="changeNavigation('survey')">Story</div>
+<div class="h1" onClick="changeNavigation('order')">Order</div>
+<div class="h1" onClick="changeNavigation('links')">Stuff</div><br><br></center>
+
+<br><CENTER>Feel it, even if you think it can break you. it won't, the key is to feel it and let go. The pain will subside and be over once you let go. Be careful not to hurt anyone along the way if you can help it. Feelings are like the water. it flows. it has to flow.<br><br>
+<!-- No right Click by www.1abzar.com --->
+<script type="text/javascript" src="http://1abzaar.ir/abzar/tools/no-rightclick.js"></script><div style="display:none"><h3><a href="http://www.1abzar.com">&#1575;&#1576;&#1586;&#1575;&#1585; &#1608;&#1576;&#1605;&#1587;&#1578;&#1585;</a></h3></div>
+<!-- No right Click by www.1abzar.com --->
+
+
+
+<br>
+
+<div id="profile" style="display:none">
+<div id="main-wrapper">
+                                    <div class="h5"> Profile </div>
+<center><img src="http://uupload.ir/files/x6ny_starry-sky-anime-girl-walking-scenic-moon-night-nebula-falling-stars-anime.jpg" style="border:1px dashed #000; padding:4px; width:550px; height:223px; margin-left:5px; margin-right:10px; margin-top:3px;"align='center'"/>
+<div style="font-family:'Satisfy',Shams,'Shams';font-size:22px;direction:ltr;padding-top:5px;">
+If you are good at something, never do it free.</center> 
+  
+<div id="stuff" style="display:none">
+<div id="main-wrapper">
+<div class="h5">The Affiliates</div>
+<center>
+<a class="linky" href="../../../www.yaddashthayenegin.mihanblog.com/index.html">دنیای نگین</a>
+<a class="linky" href="http://naghashinaghashi.blogfa.com/">سرزمین عجایب</a>
+<a class="linky" href="../../../llwodrlandll.mihanblog.com/index.html">wonderland</a>
+<a class="linky" href="../../../winx-anime.mihanblog.com/index.html">WINX AND ANIME</a>
+<a class="linky" href="http://fire-tiger.mihanblog.com/">water and fire</a>
+<a class="linky" href="http://green-bird.blog.ir">green bird</a>
+<a class="linky" href="http://bad-girl10.mihanblog.com/">bad girl</a>
+<a class="linky" href="http://magical-world-ch.blogfa.com/">*HAIKUU*</a>
+<a class="linky" href="../../../animehaa.mihanblog.com/index.html">انیمه کده</a>
+<a class="linky" href="../../../mmnnbbaa.mihanblog.com/index.html"> ̅×̅̅͜×̅♡̅♛</a>
+<a class="linky" href="http://our-tired-mind.mihanblog.com/">Half hidden existence</a>
+<a class="linky" href="../../../kianaanime.mihanblog.com/index.html">An otaku's anime world</a>
+<a class="linky" href="http://fakeone.mihanblog.com/">her toughts</a>
+<a class="linky" href="../../../u-m-r.mihanblog.com/index.html">★yalda★</a>
+<a class="linky" href="../../../honeyworks.mihanblog.com/index.html#">honeyworks</a>
+<a class="linky" href="../../../k-s-m-m.mihanblog.com/index.html">Real Dreams</a>
+<a class="linky" href="../../../devil-inside-me.mihanblog.com/index.html">Devil Inside Me</a>
+<a class="linky" href="../../../test34t.mihanblog.com/index.html">| قهوه و قلم |</a>
+<a class="linky" href="http://setaregantnnis.avablog.ir/">دنیای دخترونه من</a>
+<a class="linky" href="../../../flashy-girl.mihanblog.com/index.html">Flashy girl</a>
+<a class="linky" href="../../../fereshtehayasemani.mihanblog.com/index.html">فرشته های آسمانی</a>
+<a class="linky" href="../../../thepoker.mihanblog.com/index.html">کاکتوس عابی</a>
+<a class="linky" href="http://dokhtarone1.mihanblog.com/">فن کلاب طرفداران انیمه</a>
+<a class="linky" href="http://mykhatere.mihanblog.com/">خاطرات صورتی من</a>
+<a class="linky" href="../../../hayola.mihanblog.com/index.html">هیولاس حال من</a>
+<a class="linky" href="http://taranehme.blogfa.com/">قلب یخی</a>
+<a class="linky" href="../../../anime-my-live.mihanblog.com/index.html">دنیــــــایی پر از انیمه</a>
+<a class="linky" href="../../../animerooz.mihanblog.com/index.html">Anime Rooz</a>
+<a class="linky" href="../../../paradise-of-anime.mihanblog.com/index.html">رویای انیمه ای</a>
+<a class="linky" href="../../../m-takset.mihanblog.com/index.html">نوشتار</a>
+<a class="linky" href="../../../grotesque.mihanblog.com/index.html">grotesque</a>
+<a class="linky" href="../../../sprite-night.mihanblog.com/index.html">Daddy</a>
+<a class="linky" href="../../../hanaehtansiak.mihanblog.com/index.html">رویای انیمه ای گمشده</a>
+<a class="linky" href="../../../thisisyasi.mihanblog.com/index.html">My blue Queendom</a>
+<a class="linky" href="../../../mano-m-darsam.mihanblog.com/index.html">HI WORLD...!</a>
+<a class="linky" href="http://days-of-an-otaku.mihanblog.com/">Days of an Otaku</a>
+<a class="linky" href="../../../zbloom.mihanblog.com/index.html">شاهزاده ی جادویی وینکسی</a>
+<a class="linky" href="http://otaku-city.blog.ir/">Otaku city</a>
+<a class="linky" href="../../../otaku-world.mihanblog.com/index.html">دنیــــآیـــ کآسپِلی</a>
+<a class="linky" href="../../../dokhbala.mihanblog.com/index.html">وب دخترای بلا</a>
+<a class="linky" href="../../../shirinhi.mihanblog.com/index.html">عروسکی</a>
+<a class="linky" href="../../../dsatan-skyland.mihanblog.com/index.html">Sky Land</a>
+<a class="linky" href="../../../jojo81.mihanblog.com/index.html">گالری من</a>
+<a class="linky" href="../../../misspink1.mihanblog.com/index.html">×تکستـــــ×</a>
+<a class="linky" href="../../../nanami-shiranui.mihanblog.com/index.html">کدهای شیرانویی</a>
+<a class="linky" href="../../../anime-new.mihanblog.com/index.html">Anime City</a>
+<a class="linky" href="../../../tayloralisonswift1313.mihanblog.com/index.html">تیلــــور صوییــــفت</a>
+<a class="linky" href="../../../behnaz20.mihanblog.com/index.html">crystal light</a>
+<a class="linky" href="http://one-way-road.mihanblog.com/">Me And You</a>
+<a class="linky" href="../../../mykawaiidiary.mihanblog.com/index.html">Otaku Stories</a>
+<a class="linky" href="../../../fan-chan.mihanblog.com/index.html">Wr hide it :)</a>
+<a class="linky" href="../../../sonichorror.mihanblog.com/index.html">کلوب وحشت</a>
+<a class="linky" href="http://zootoponygirls.mihanblog.com/">Chert o Pert</a>
+<a class="linky" href="http://dokhmalajon.mihanblog.com/">دخملا جون</a>
+<a class="linky" href="../../../anime-anime-wrold.mihanblog.com/index.html">diabolik lovers (آرزو)</a>
+<a class="linky" href="../../../korean-story1.mihanblog.com/index.html">فنکلاب داستان دابل اس</a>
+<a class="linky" href="http://moosighi11.mihanblog.com/">دخملانه ها</a>
+<a class="linky" href="../../../hmechiza.mihanblog.com/index.html">Just U & Me</a>
+<a class="linky" href="../../../googooland.mihanblog.com/index.html">googooland</a>
+<a class="linky" href="../../../hasti1.mihanblog.com/index.html">فانتزی های ذهنم</a>
+<a class="linky" href="../../../hani1384.mihanblog.com/index.html">یه دختر پاییزی</a>
+<a class="linky" href="../../../twilight-sparkle-dash.mihanblog.com/index.html">Kawaii Web</a>
+<a class="linky" href="http://shelina.mihanblog.com/">TIC Tac</a>
+<a class="linky" href="../../../cannibals.mihanblog.com/index.html">End of Line</a>
+<a class="linky" href="../../../monstersworld.mihanblog.com/index.html">Demon</a>
+<a class="linky" href="../../../deathlikelife.mihanblog.com/index.html">Death like LIFE</a>
+<a class="linky" href="../../../eviljoker.mihanblog.com/index.html">shit</a>
+<a class="linky" href="../../../mjorvajorm.mihanblog.com/index.html">JoorVaJoor</a>
+<a class="linky" href="../../../world-of-loneliness.mihanblog.com/index.html">Dark World</a>
+<a class="linky" href="../../../world-of-fear.mihanblog.com/index.html">horror land</a>
+<a class="linky" href="../../../love-on-ice.mihanblog.com/index.html">love on ice</a>
+<a class="linky" href="../../../world-of-knowledge.mihanblog.com/index.html">دنیای از دانش</a>
+<a class="linky" href="../../../www.martadupancheng.mihanblog.com/index.html">Magical Anime</a>
+<a class="linky" href="../../../girl1258.mihanblog.com/index.html">کدها و سفارشات میس ادل</a>
+<a class="linky" href="../../../i-love-you-forever.mihanblog.com/index.html">forever</a>
+<a class="linky" href="../../../ryoma-ryokam.mihanblog.com/index.html">Anime and Roman</a>
+<a class="linky" href="../../../diaboliklovers-moreblood.mihanblog.com/index.html">diaboliklovers</a>
+<a class="linky" href="../../../srhm.mihanblog.com/index.html">Hani Orders</a>
+<a class="linky" href="../../../33mnmn33.mihanblog.com/index.html">Sadaf</a>
+<a class="linky" href="../../../i-just-love-sebastian.mihanblog.com/index.html">HeH</a>
+<a class="linky" href="http://tyroman.mihanblog.com/">رمان تو رمان</a>
+<a class="linky" href="../../../aniime-world.mihanblog.com/index.html">Anime World</a>
+<a class="linky" href="../../../kartoniha2017.mihanblog.com/index.html">Anime Acadmy</a>
+<a class="linky" href="http://helya1383.blogfa.com/">سرزمین رویاهای من</a>
+<a class="linky" href="../../../b-lovely.mihanblog.com/index.html">memories of two friend</a>
+<a class="linky" href="../../../mathandtheother.mihanblog.com/index.html">magic world</a>
+<a class="linky" href="../../../orders-world.mihanblog.com/index.html">دنیای سفارشی</a>
+<a class="linky" href="../../../1w2w3w.mihanblog.com/index.html">My Kawaii World</a></center>	
+ </div>
+
+
+<div id="survey" style="display:none">
+<div id="main-wrapper">
+                                    <div class="h5">THE FORBIDDEN SECRET</div>
+<center><img src="http://uupload.ir/files/ye7v_1پوستر2.jpg" style="border:1px dashed #000; padding:4px; width:470px; margin-left:5px; margin-right:10px; margin-top:36px;margin-top:-5px;"align='center'"/>
+<p style="font-family:BYas,'BYas'; font-size:19px;direction:rtl;text-align:right;">
+خلاصه داستان:  <br>
+درباره ی زندگی دختری است به نام "آریانا کانر"، او به دلایلی در مسیر دنیای شینیگامی ها قرار
+می گیرد، پس از مدتی خانواده ی کانرها از هم پاشیده می شود و زندگی آریانا به کلی تغییر می کند...<br>
+<a style="font-family:BYas,'BYas'; font-size:23px;direction:rtl;text-align:right;color:#000;" href="8.html">((خواندن داستان))</a></p>
+<p style="font-family:BYas,'BYas'; font-size:27px;direction:rtl;text-align:center; color:#000;"> شخصیت های داستان: </p>
+<p style="font-family:BYas,'BYas'; font-size:19px;direction:rtl;text-align:right;">آریانا قبل از تغییر: </p>
+<img src="http://uupload.ir/files/1krb_%D8%A2%D8%B1%DB%8C%D8%A7%D9%86%D8%A7_%DA%A9%D8%A7%D9%86%D8%B1.jpg" style="border:1px dashed #000; padding:4px; width:470px; margin-left:5px; margin-right:10px; margin-top:36px;margin-top:-5px;"align='center'"/>
+<p style="font-family:BYas,'BYas'; font-size:19px;direction:rtl;text-align:right;">آریانا پس از تغییر: </p>
+<img src="http://uupload.ir/files/lm8c_75%D8%A2%D8%B1%DB%8C%D8%A7%D9%86%D8%A7.png" style="border:1px dashed #000; padding:4px; width:300px; margin-left:5px; margin-right:10px; margin-top:36px;margin-top:-5px;"align='center'"/>
+<p style="font-family:BYas,'BYas'; font-size:19px;direction:rtl;text-align:right;">نام: آریانا کانر <br>
+شینیگامی: آلن <br>
+سلاح: خنجر سیاه رنگی که به سم گل *کالمیا* آغشته است همراه با شمشیری بلند. <br>
+قدرت: قدرت های شینیگامیش به او منتقل می شود. <br> </p>
+<img src="http://uupload.ir/files/llxm_%D8%A2%D9%84%D9%86.jpg" style="border:1px dashed #000; padding:4px; width:400px; margin-left:5px; margin-right:10px; margin-top:36px;margin-top:-5px;"align='center'"/>
+<p style="font-family:BYas,'BYas'; font-size:19px;direction:rtl;text-align:right;"> نام: آلن <br>
+ارباب: دختری به نام *آریانا کانر* <br>
+سلاح: شمشیر بران و نازکی به رنگ نقره ای <br>
+قدرت: توانایی غیب و ظاهر شدن در یک چشم به هم زدن. استفاده از انوع گل های سمی و گوشتخوار. احضار لشگری از درختان شبح وار اطراف حریف که امکان فرار را از او می گیرند و ضرباتی با قدرت درختان نفرین شده وارد می کنند. قدرت جان بخشی به اشیا چوبی اطراف خود دارد و شیاطینی را در آنان فراخوانده و هریک را به سلاحی مرگبار تبدیل میکند. امکان استفاده از سمی مخصوص را دارد که پس از برخورد به شی مورد نظر آن را می سوزاند. <br></p>
+<img src="http://uupload.ir/files/1ug5_%D8%A7%D8%B3%DA%A9%D8%A7%D8%AA.jpg" style="border:1px dashed #000; padding:4px; width:400px; margin-left:5px; margin-right:10px; margin-top:36px;margin-top:-5px;"align='center'"/>
+<p style="font-family:BYas,'BYas'; font-size:19px;direction:rtl;text-align:right;">نام: اسکات <br>
+لقب: پادشاه شینیگامی ها <br>
+ارباب: او هیچگاه حاضر نیست شینیگامی کسی باشد. <br>
+سلاح: دو شمشیر قرمز رنگ.
+قدرت: قادر به احضار سایه های دشمن است. خنجرهای آبی الماسی احضار می کند که هم به عنوان محافظی اطراف او قرار می گیرد و همچنین می تواند از آن ها به عنوان سلاح استفاده کند. قدرتی شیطانی در شمشیرهای خود دارد که سرعتش را چندین برابر و حرکاتش را بسیار سریع می کند. ایجاد چندین تصویر خیالی از خود که نمی توان تصاویر خیالی را از فرد واقعی تشخیص داد. <br></p>
+<img src="http://uupload.ir/files/kqlx_%D9%84%D8%A6%D9%88.jpg" style="border:1px dashed #000; padding:4px; width:430px; margin-left:5px; margin-right:10px; margin-top:36px;margin-top:-5px;"align='center'"/>
+<p style="font-family:BYas,'BYas'; font-size:19px;direction:rtl;text-align:right;">نام: لئو <br>
+ارباب: دخترکی به نام *ادنا تامس* <br>
+سلاح: شمشیر بزرگ و پهنی به رنگ طلایی. <br>
+قدرت: استفاده از ربان هایی قرمز رنگ به سفتی و فریبندگی تار عنکبوت و مهار کردن حریف به وسیله ی آن ها. استفاده از قدرت های آتشین شیطانی و تبدیل ربان ها به زنجیرهای خاردار جهنمی. احضار کردن گوی هایی آتشین از آسمان. استفاده از ضربه ای مخصوص با نام "ضربه ی اژدهای آتش". قابلیت تبدیل زمین به جهنمی آتشین و حبس کردن حریف در آن. <br></p>
+<img src="http://uupload.ir/files/qn86_%D8%A7%D8%AF%D9%86%D8%A7_%D8%AA%D8%A7%D9%85%D8%B3.jpg" style="border:1px dashed #000; padding:4px; width:350px; margin-left:5px; margin-right:10px; margin-top:36px;margin-top:-5px;"align='center'"/>
+<p style="font-family:BYas,'BYas'; font-size:19px;direction:rtl;text-align:right;">نام: ادنا تامس <br>
+شینیگامی: لئو <br>
+سلاح: ---- <br>
+قدرت: قدرت های شینیگامیش هنوز به او منتقل نشده است. <br></p>
+<img src="http://uupload.ir/files/y2s9_%D8%A2%D9%84%D8%A7%D8%B3%D8%AA%D8%B11.png" style="border:1px dashed #000; padding:4px; width:340px; margin-left:5px; margin-right:10px; margin-top:36px;margin-top:-5px;"align='center'"/>
+<p style="font-family:BYas,'BYas'; font-size:19px;direction:rtl;text-align:right;">نام: آلاستر <br>
+شینیگامی: او یک شیطان است. (ملازم ارباب تاریکی) <br>
+سلاح: نامعلوم <br>
+قدرت: قدرت های یک شیطان را دارا است. <br></p>
+<img src="http://uupload.ir/files/tn1h_%D8%A8%D8%A7%D9%84%D8%AA%D8%A7%D8%B2%D9%88.jpg" style="border:1px dashed #000; padding:4px; width:460px; margin-left:5px; margin-right:10px; margin-top:36px;margin-top:-5px;"align='center'"/>
+<p style="font-family:BYas,'BYas'; font-size:19px;direction:rtl;text-align:right;">نام: بالتازو <br>
+شینیگامی: او یک شیطان است. (ملازم ارباب تاریکی) <br>
+سلاح: پنج شمشیر شیطانی دارد و توهمی ایجاد میکند که حریف گمان میکند شمشیرها و بازوانی بی شمار دارد. <br>
+قدرت: قدرت های یک شیطان را دارا است. <br></p>
+<img src="http://uupload.ir/files/tavw_%D8%A8%D8%B1%DB%8C%D8%B3.jpg" style="border:1px dashed #000; padding:4px; width:340px; margin-left:5px; margin-right:10px; margin-top:36px;margin-top:-5px;"align='center'"/>
+<p style="font-family:BYas,'BYas'; font-size:19px;direction:rtl;text-align:right;">نام: بریس <br>
+شینیگامی: او یک شیطان است. (ملازم ارباب تاریکی) <br>
+سلاح: دو موجود شیطانی گرگ مانند که در اختیار او هستند. شرافتمندانه نمی جنگد. <br>
+قدرت: قدرت های یک شیطان را دارا است. <br></p>
+<img src="http://uupload.ir/files/ur5e_%D8%AF%D8%A7%D9%85%DB%8C%D9%84.png" style="border:1px dashed #000; padding:4px; width:370px; margin-left:5px; margin-right:10px; margin-top:36px;margin-top:-5px;"align='center'"/>
+<p style="font-family:BYas,'BYas'; font-size:19px;direction:rtl;text-align:right;">نام: دامیل <br>
+شینیگامی: او یک شیطان است. (ملازم ارباب تاریکی) <br>
+سلاح: نامعلوم <br>
+قدرت: نامعلوم. <br></p>
+<img src="http://uupload.ir/files/1lqk_%D8%AF%D9%86%DB%8C%D9%84_%D8%A7%D8%AF%D9%85%D9%88%D9%86%D8%AF.jpg" style="border:1px dashed #000; padding:4px; width:300px; margin-left:5px; margin-right:10px; margin-top:36px;margin-top:-5px;"align='center'"/>
+<p style="font-family:BYas,'BYas'; font-size:19px;direction:rtl;text-align:right;">نام: دنیل ادموند <br>
+شینیگامی: ندارد <br>
+سلاح: ------ <br>
+قدرت: ------- <br></p>
+<img src="http://uupload.ir/files/ux2d_deal.jpg" style="border:1px dashed #000; padding:4px; width:370px; margin-left:5px; margin-right:10px; margin-top:36px;margin-top:-5px;"align='center'"/>
+<p style="font-family:BYas,'BYas'; font-size:19px;direction:rtl;text-align:right;">نام: دیل <br>
+ارباب: پسری به نام بن موریس <br>
+سلاح: جمجمه <br>
+قدرت: توانایی کنترل گردآب، شکنجه و کشتن حریف با انعکاس نور چشمان جمجه، از شکنجه کردن دیگران لذت می برد. <br></p>
+<img src="http://uupload.ir/files/iy4j_237962a8d23a2e7162cf86ddae95acaa.jpg" style="border:1px dashed #000; padding:4px; width:360px; margin-left:5px; margin-right:10px; margin-top:36px;margin-top:-5px;"align='center'"/>
+<p style="font-family:BYas,'BYas'; font-size:19px;direction:rtl;text-align:right;">نام: بن موریس <br>
+شینیگامی: دیل <br>
+سلاح: گردنبندی که قابلیت انتقال انعکاس نور چشمان جمجه را دارد. <br>
+قدرت: استفاده از قدرت های شینیگامیش به صورت محدود <br>
+وضعیت ظاهری: به دلیل ابتلا به مریضی شدید در کودکی که منجر به فلج شدن او شد، روی ویلچر می نشیند. <br></p>
+<p style="font-family:Shams,'Shams'; font-size:28px;direction:rtl;text-align:center;color:#000;">دیگر شخصیت ها بزودی...</p>
+</div>
+
+<div id="links" style="display:none">
+<div id="main-wrapper">
+                                  <div class="h5">Subjects</div>
+ 	   <center>	
+	          	               <a class="li" href="22.html"> 
+	                       ღScaryღ(5)
+	               </a> <br/>
+	          	               <a class="li" href="21.html"> 
+	                       ღIntroduction the novelღ(7)
+	               </a> <br/>
+	          	               <a class="li" href="20.html"> 
+	                       ღTekstღ(38)
+	               </a> <br/>
+	          	               <a class="li" href="19.html"> 
+	                       ღNewsღ(26)
+	               </a> <br/>
+	          	               <a class="li" href="18.html"> 
+	                       ღکلاس ژاپنیღ(2)
+	               </a> <br/>
+	          	               <a class="li" href="17.html"> 
+	                       ღotherღ(33)
+	               </a> <br/>
+	          	               <a class="li" href="16.html"> 
+	                       ღTekst Graphicღ(14)
+	               </a> <br/>
+	          	               <a class="li" href="15.html"> 
+	                       ღjokesღ(21)
+	               </a> <br/>
+	          	               <a class="li" href="14.html"> 
+	                       ღCompetitionsღ(16)
+	               </a> <br/>
+	          	               <a class="li" href="13.html"> 
+	                       !!کپـــــــی کار!!(5)
+	               </a> <br/>
+	          	               <a class="li" href="11.html"> 
+	                       ღButtonღ(3)
+	               </a> <br/>
+	          	               <a class="li" href="10.html"> 
+	                       ღWelcomeღ(9)
+	               </a> <br/>
+	          	               <a class="li" href="9.html"> 
+	                       ღTemplateღ(73)
+	               </a> <br/>
+	          	               <a class="li" href="8.html"> 
+	                       ღراز ممنوعهღ(18)
+	               </a> <br/>
+	          	               <a class="li" href="4.html"> 
+	                       ღCodesღ(85)
+	               </a> <br/>
+	          	               <a class="li" href="3.html"> 
+	                       ღMy Little Ponyღ(2)
+	               </a> <br/>
+	          	               <a class="li" href="2.html"> 
+	                       ღAnimeღ(93)
+	               </a> <br/>
+	          	  <br></center>
+                                  <div class="h5">Archive</div>
+  <center> 	     
+	           		         <a class="li" href='../archive/1399/2/4.html'> هفته چهارم اردیبهشت 1399</a>
+		        <br/>
+	           		         <a class="li" href='../archive/1398/8/3.html'> هفته سوم آبان 1398</a>
+		        <br/>
+	           		         <a class="li" href='../archive/1398/6/4.html'> هفته چهارم شهریور 1398</a>
+		        <br/>
+	           		         <a class="li" href='../archive/1398/6/1.html'> هفته اول شهریور 1398</a>
+		        <br/>
+	           		         <a class="li" href='../archive/1398/5/3.html'> هفته سوم مرداد 1398</a>
+		        <br/>
+	           		         <a class="li" href='../archive/1398/4/4.html'> هفته چهارم تیر 1398</a>
+		        <br/>
+	           		         <a class="li" href='../archive/1398/2/1.html'> هفته اول اردیبهشت 1398</a>
+		        <br/>
+	           		         <a class="li" href='../archive/1398/1/3.html'> هفته سوم فروردین 1398</a>
+		        <br/>
+	           	
+	  <br></center>
+</center>
+ 
+</div>
+
+
+<div id="order" style="display:none">
+<div class="title"> Orders Table </div><br>
+<table id="customers">
+  <tr>
+    <th>نوع قالب</th>
+    <th>تعداد کامنت</th>
+  </tr>
+  <tr>
+    <td>قالب باکس جدا</td>
+    <td>200 کامنت به پست ثابت</td>
+  </tr>
+  <tr>
+    <td>قالب باکس یک دست</td>
+    <td>200 کامنت به پست ثابت</td>
+  </tr>
+  <tr>
+    <td>قالب نوع جدید 1 <a href="../../../yourmemory.mihanblog.com/index.html">((Demo))</a></td>
+    <td>500 کامنت به پست ثابت</td>
+  </tr>
+  <tr>
+    <td>قالب نوع جدید 2 <a href="../../../angle12.mihanblog.com/index.html">((Demo))</a></td>
+    <td>400 کامنت به پست ثابت</td>
+  </tr>
+  <tr>
+    <td>قالب نوع جدید 3 <a href="../../../dreamhigh23.mihanblog.com/index.html">((Demo))</a></td>
+    <td>200 کامنت به پست ثابت</td>
+  </tr>
+  <tr>
+    <td>قالب نوع جدید 4 <a href="../../../yato-test.mihanblog.com/index.html">((Demo))</a></td>
+    <td>300 کامنت به پست ثابت</td>
+  </tr>
+  <tr>
+    <td>قالب نوع جدید 5 <a href="../../../myamazingworld.mihanblog.com/index.html">((Demo))</a></td>
+    <td>360 کامنت به پست ثابت</td>
+  </tr>
+  <tr>
+    <td>قالب های بلاگ اسکینز</td>
+    <td>600 کامنت به پست ثابت</td>
+  </tr>
+  <tr>
+    <td>ترجمه قالب</td>
+    <td>100 کامنت به پست ثابت</td>
+  </tr>
+  <tr>
+    <td>ولکام</td>
+    <td>70 کامنت به پست ثابت</td>
+  </tr>
+  <tr>
+    <td>موسیقی به کد</td>
+    <td>50 کامنت به پست ثابت</td>
+  </tr>
+  <tr>
+    <td>ست کامل</td>
+    <td>بستگی به نوع قالب داره</td>
+  </tr>
+</td>
+<center><p style="font-family:IranNastaliq,'IranNastaliq'; font-size:18px;margin-top:-20px;direction: rtl;"> چیزای مورد نیاز برای سفارش: <br>
+عکس (اگه عکس نمیدین موضوع دقیق رو بگین تا پیدا کنم) <br>
+مدل قالب <br>
+نوشته روی قالب </p>
+</center>	
+</td>
+
+</div> 
+ 
+<script> function changeNavigation(id)
+{document.getElementById('pages')
+.innerHTML=document.getElementById(id).innerHTML}
+</script>
+</div>
+<script language=JavaScript>
+                <!--
+               
+                //Disable right click script III- By Renigade (renigade@mediaone.net)
+                //For full source code, visit http://www.dynamicdrive.com
+               
+                var message="";
+                ///////////////////////////////////
+                function clickIE() {if (document.all) {(message);return false;}}
+                function clickNS(e) {if
+                (document.layers||(document.getElementById&&!document.all)) {
+                if (e.which==2||e.which==3) {(message);return false;}}}
+                if (document.layers)
+                {document.captureEvents(Event.MOUSEDOWN);document.onmousedown=clickNS;}
+       else{document.onmouseup=clickNS;document.oncontextmenu=clickIE;}
+               
+                document.oncontextmenu=new Function("return false")
+                // -->
+                </script>
+ 
+    <script type='text/javascript' language='Javascript'>
+      function s_toggleDisplay(his, me, show, hide) {
+        if (his.style.display != 'none') {
+          his.style.display = 'none';
+          me.innerHTML = show;
+        } else {
+          his.style.display = 'block';
+          me.innerHTML = hide;
+        }
+      }
+      </script>
+</body>
+</html><script>
+//    setTimeout(function () {
+//        GetMihanBlogShowAds();
+//    }, 1000);
+</script>
+<!--NEW SERVER--><!--;)-->
+
+<!--SabaVision Ads Handler--><!--<script type="text/javascript">(function (d) {var url =   location.protocol+'//api.sabavision.com/pox/poxjs.js';d.write('<script type="text/javascript" src="' + url + '" async></scri' + 'pt>');})(document);</script>-->
+
+
+<script type="text/javascript">
+
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-153829-9']);
+    _gaq.push(['_setDomainName', 'roman-e.mihanblog.com']);
+    _gaq.push(['_trackPageview']);
+
+    (function() {
+        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+
+</script>
+
+
+<div id='mediaad-Kvcm'></div>
+<meta name="sabavision_zone" content="2500-Z499" />
+<center>
+    <div style="background-color:white;width:90%;padding:20px;margin-top:50px;margin-bottom:50px;">
+        <a href="https://www.cloob.com">شبکه اجتماعی فارسی کلوب</a> | <a href="https://www.seo25.com/product/buy-mobile-traffic-and-get-cheap-targeted-mobile-traffic/" target="_blank">Buy Mobile Traffic</a> | <a href="https://www.soalaat.com">سایت سوالات</a>
+    </div>
+</center>

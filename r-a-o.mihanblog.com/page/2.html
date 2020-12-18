@@ -1,0 +1,1378 @@
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" /><link rel="EditURI" type="application/rsd+xml" title="RSD" href="../xmlrpc@rsd.html" />
+<script type="text/javascript" src="../../static.mihanblog.com/public/scripts/run/g.other.v3.js"></script>
+<script>
+
+	function c_$(id){
+        return document.getElementById(id);
+    }
+    
+			//if (parent.frames.length) top.location.href= document.location;
+		
+	setTodayDate = function(){
+		document.write('یکشنبه 23 آذر 1399');
+		/*1852193*/	}
+
+</script>
+
+
+
+        <script type="text/javascript">
+            (function(){
+            var now = new Date();
+            var head = document.getElementsByTagName('head')[0];
+            var script = document.createElement('script');
+            script.async = true;
+            var script_address = 'https://cdn.yektanet.com/js/mihanblog.com/native-mihanblog.com-6531.js';
+            script.src = script_address + '?v=' + now.getFullYear().toString() + '0' + now.getMonth() + '0' + now.getDate() + '0' + now.getHours();
+            head.appendChild(script);
+            })();
+        </script>
+
+        <!--<script type="text/javascript">
+            var head = document.getElementsByTagName("head")[0];
+            var script = document.createElement("script");
+            script.type = "text/javascript";
+            script.async=1;
+            script.src = "https://s1.mediaad.org/serve/mihanblog.com/loader.js" ;
+            head.appendChild(script);
+        </script>-->
+        
+        <script>
+            var sabaVisionWebsiteID = "9bab9dac-041d-4bdb-b39a-1ed789f65eed"; var sabaVisionWebsitePage = "ALL"
+        </script>
+        <link rel="stylesheet" href="https://plus.sabavision.com/dox/dox.min.css">
+        <script src="https://plus.sabavision.com/dox/dox.min.js"></script>
+        
+        <script>
+	try{
+		var commentCnt = new Array();
+		commentCnt[1]='4622';commentCnt[884]='3';commentCnt[890]='6';commentCnt[893]='12';commentCnt[895]='8';commentCnt[902]='9';commentCnt[911]='7';commentCnt[929]='7';commentCnt[942]='7';	} catch(e){}
+	
+	newComment = function(post_id){
+		try{
+			window.open('/post/comment/'+post_id,'comment','status=yes,scrollbars=yes,toolbar=no,menubar=no,location=no ,width=480px,height=540px');
+		} catch(e){}
+	}
+	setCommentCnt = function(post_id){
+		try{
+			if(commentCnt[post_id]){
+				document.write(commentCnt[post_id]);
+			} else {
+				document.write(0);
+			}
+		} catch(e){}
+	}
+</script><script>
+
+
+	mihanblogUpdateLike = function(postid,type){
+		var url = '/post/like/'+postid+'/'+type;
+		mihanblogGetAjax(url,function(){});
+	};
+	try{
+        mihanblogGetAjax = function (url,callback) {
+    		var req;
+			if (window.XMLHttpRequest)
+            {
+                // code for IE7+, Firefox, Chrome, Opera, Safari
+			  	req = new XMLHttpRequest();
+			}else{	// code for IE6, IE5
+			  	req = new ActiveXObject("Microsoft.XMLHTTP");
+		  	}
+		    req.open("GET", url, 1);
+		    req.onreadystatechange = function () {
+		        if (req.readyState == 4) {
+		            if (req.status == 200) {
+		            	var response = eval(req.responseText);
+		            	callback();
+		            }else{
+	            		return ;
+		            }
+		        }else{
+					return ;
+		        }
+		    }
+		    req.send(null);
+		}
+	}catch(e){}
+
+	try{
+		var mihanblogLikeArrCnt = new Array();
+		var mihanblogDisLikeArrCnt = new Array();
+
+		mihanblogLikeArrCnt[1]='0';
+mihanblogDisLikeArrCnt[1]='0';
+mihanblogLikeArrCnt[884]='0';
+mihanblogDisLikeArrCnt[884]='0';
+mihanblogLikeArrCnt[890]='0';
+mihanblogDisLikeArrCnt[890]='0';
+mihanblogLikeArrCnt[893]='0';
+mihanblogDisLikeArrCnt[893]='0';
+mihanblogLikeArrCnt[895]='0';
+mihanblogDisLikeArrCnt[895]='0';
+mihanblogLikeArrCnt[902]='0';
+mihanblogDisLikeArrCnt[902]='0';
+mihanblogLikeArrCnt[911]='0';
+mihanblogDisLikeArrCnt[911]='0';
+mihanblogLikeArrCnt[929]='0';
+mihanblogDisLikeArrCnt[929]='0';
+mihanblogLikeArrCnt[942]='0';
+mihanblogDisLikeArrCnt[942]='0';
+	} catch(e){}
+
+
+
+    mihanblogPostLike = function(post_id){
+
+        mihanblogLikeCnt = (mihanblogLikeArrCnt[post_id]? mihanblogLikeArrCnt[post_id] : 0);
+        mihanblogDisLikeCnt = (mihanblogDisLikeArrCnt[post_id]? mihanblogDisLikeArrCnt[post_id] : 0);
+        mihanblogLikeCnt = parseInt(mihanblogLikeCnt);
+        mihanblogDisLikeCnt = parseInt(mihanblogDisLikeCnt);
+
+        document.write(
+                '<div class="mihanblog_like_wrapper ">'+
+                       '<div id="dislikeBar_'+post_id+'" onclick="mihanblogUpdateLike('+post_id+',\'dislike\')"   class="mihanblog_like_bar mihanblog_like_dislikeBar mihanblog_like_show_help ">-<div class="mihanblog_like_Cnt" id="disLikeCnt_'+post_id+'">'+mihanblogDisLikeCnt+'</div>'+
+                            '<span  class="mihanblog_like_v2_help mihanblog_like_v2_help_dislike clearfix"> '+
+                                '<span class="mihanblog_like_help_arrow mihanblog_like_help_arrow_dislike clearfix"></span>'+
+                                '<span class="mihanblog_like_help_text">نمی پسندم</span>'+
+                            '</span>'+
+                        '</div>'+
+                       '<div id="Like_'+post_id+'" class="mihanblog_like_border"></div>'+
+                       '<div id="likeBar_'+post_id+'" onclick="mihanblogUpdateLike('+post_id+',\'like\')"  class="mihanblog_like_bar mihanblog_like_likeBar mihanblog_like_show_help" >+<div class="mihanblog_like_Cnt" id="likeCnt_'+post_id+'">'+mihanblogLikeCnt+'</div>'+
+                            '<span  class="mihanblog_like_v2_help mihanblog_like_v2_help_like clearfix"> '+
+                                '<span class="mihanblog_like_help_arrow mihanblog_like_help_arrow_like clearfix"></span>'+
+                                '<span class="mihanblog_like_help_text">می پسندم</span>'+
+                            '</span>'+
+                        '</div>'+
+
+                '</div>'
+        );
+
+
+
+        mihanblogDisplayeLike(post_id);
+    }
+
+
+    mihanblogDisplayeLike = function(post_id){
+
+        mihanblogLikeCnt = (mihanblogLikeArrCnt[post_id]? mihanblogLikeArrCnt[post_id] : 0);
+        mihanblogDisLikeCnt = (mihanblogDisLikeArrCnt[post_id]? mihanblogDisLikeArrCnt[post_id] : 0);
+        mihanblogLikeCnt = parseInt(mihanblogLikeCnt);
+        mihanblogDisLikeCnt = parseInt(mihanblogDisLikeCnt);
+
+
+
+        sum = mihanblogLikeCnt - mihanblogDisLikeCnt;
+        backgroundBorder =  document.getElementById('Like_'+post_id);
+        var likeObj = document.getElementById('likeCnt_'+post_id);
+        var disLikeObj = document.getElementById('disLikeCnt_'+post_id);
+
+
+
+
+
+        likeObj.innerHTML =  mihanblogLikeCnt ;
+        disLikeObj.innerHTML =  mihanblogDisLikeCnt;
+
+        if(sum == 0){
+            backgroundBorder.style.backgroundImage = "url('/public/public/images/icons/like_likedislike.png')";
+            document.getElementById('dislikeBar_'+post_id).style.width = '19px';
+            document.getElementById('likeBar_'+post_id).style.width = '19px';
+        }else{
+             if(sum > 0){
+                 backgroundBorder.style.backgroundImage = "url('/public/public/images/icons/like_like.png')";
+                 document.getElementById('likeBar_'+post_id).style.width = '23px';
+                 document.getElementById('dislikeBar_'+post_id).style.width = '15px';
+             }else{
+                 backgroundBorder.style.backgroundImage = "url('/public/public/images/icons/like_dislike.png')";
+                 document.getElementById('likeBar_'+post_id).style.width = '15px';
+                 document.getElementById('dislikeBar_'+post_id).style.width = '23px';
+             }
+        }
+
+    }
+
+
+
+
+</script>
+
+<style type="text/css">
+
+
+    .clearfix {display: inline-block;}
+    .clearfix:after {
+        content: ".";
+        display: block;
+        height: 0;
+        clear: both;
+        visibility: hidden;
+    }
+
+    .mihanblog_like_wrapper {
+        color: #ffffff;
+        direction: ltr;
+        position: relative;
+    }
+    .mihanblog_like_wrapper span{
+        display: none;
+    }
+    .mihanblog_like_bar {
+        color: #FFFFFF;
+        cursor: pointer;
+        float: left;
+        font-size: 10px;
+        height: 20px;
+        line-height: 19px;
+        margin: 5px 0;
+    }
+    .mihanblog_like_likeBar {
+        background-color: #88B131;
+        padding-right: 5px;
+        border-top-right-radius: 2px;
+        border-bottom-right-radius: 2px;
+        text-align: right;
+    }
+    .mihanblog_like_likeBar:hover{
+        background-color: #699017;
+    }
+    .mihanblog_like_border {
+        background-color: #666666;
+        border: 1px solid #666666;
+        float: left;
+        font-size: 12px;
+        height: 20px;
+        margin-top: 2px;
+        width: 25px;
+        padding: 3px 5px 2px 0;
+        text-align: center;
+        border-radius: 2px;
+        color: #ffffff;
+        direction: ltr;
+        background-repeat: no-repeat ;
+        background-position: 4px center;
+    }
+    .mihanblog_like_border img {
+        margin-left: 2px;
+        margin-top: 2px;
+        width: 22px;
+    }
+    .mihanblog_like_dislikeBar {
+        background-color: #FF6F31;
+        padding-left: 5px;
+        border-top-left-radius: 2px;
+        border-bottom-left-radius: 2px;
+        text-align:left ;
+    }
+    .mihanblog_like_dislikeBar:hover{
+        background-color: #D54B10;
+    }
+
+
+
+    .mihanblog_like_show_help {
+        position: relative;
+    }
+    .mihanblog_like_show_help:hover span {
+        display: block;
+    }
+    .mihanblog_like_help_text {
+        background-color: white;
+        border: 1px solid #555555;
+        border-radius: 3px 3px 3px 3px;
+        color: #303030;
+        float: left;
+        font-size: 11px;
+        font-weight: normal;
+        padding: 5px 10px;
+    }
+
+    .mihanblog_like_help_arrow_dislike {
+        background: url("http://r-a-o.mihanblog.com/public/public/images/icons/like_hover_top.png") no-repeat scroll 16px 0 transparent;
+        left: 0;
+        top: -4px;
+    }
+
+    .mihanblog_like_help_arrow_like {
+        background: url("http://r-a-o.mihanblog.com/public/public/images/icons/like_hover_top _2.png") no-repeat scroll 16px 0 transparent;
+        left: -10px;
+        top: 29px;
+    }
+
+    .mihanblog_like_help_arrow{
+        height: 6px;
+        position: absolute;
+        width: 100px;
+
+    }
+
+    .mihanblog_like_v2_help_dislike {
+        left: -15px;
+        top: 24px;
+    }
+    .mihanblog_like_v2_help_like {
+        left: 0;
+        top: -35px;
+
+    }
+    .mihanblog_like_v2_help{
+        display: none;
+        position: absolute;
+        white-space: nowrap;
+        z-index: 1;
+    }
+
+    .mihanblog_like_Cnt{
+        display: inline;
+        color: #ffffff;
+    }
+
+</style><script>
+
+	statInfo = new Array();
+	setStatVar = function(index,value){
+		statInfo[index] = value;
+	}
+	getStatVar = function(index){
+		if(statInfo[index]) document.write(statInfo[index]);
+	}
+	
+	setStatVar('total_post','29');
+	setStatVar('total_author','1');
+	setStatVar('modify_date','یکشنبه 1 تیر 1399');
+	
+	setStatVar('today_view','5');
+	setStatVar('yesterday_view','20');
+	
+	setStatVar('this_month_view','379');
+	setStatVar('last_month_view','537');
+
+	setStatVar('total_view','191670');
+	setStatVar('last_view_date','یکشنبه 23 آذر 1399 (05:21)');
+
+
+
+    
+    function setStatFromClient()
+    {
+        var url = 'http://r-a-o.mihanblog.com/statupdate/?data[refereruri]=http://r-a-o.mihanblog.com/&data[postid]=&data[requesturi]=/page/2&data[sdate]=1607825956&data[hash]=a5e0893c5d145259c8433dab6ed8327e&data[resolution]='+screen.width+' X '+screen.height;
+
+//        alert(url);
+//        var newjs = document.createElement("SCRIPT");
+//        newjs.type = 'text/javascript';
+//        newjs.src = url;
+//
+//        var newdiv = document.createElement("DIV");
+//        newdiv.setAttribute("style","display:none");
+
+        document.write(unescape('%3Cscript src="'+url+'" type="text/javascript"%3E%3C/script%3E'));
+//        newdiv.appendChild (newjs);
+//        document.write(newjs);
+//        document.write(appendChild (newdiv);
+
+    };
+    setStatFromClient();
+        
+</script><script>
+	messageForm = function(post_id){
+		try{
+			window.open('/message','message','status=yes,scrollbars=yes,toolbar=no,menubar=no,location=no ,width=480px,height=550px');
+		} catch(e){}
+	}
+</script><script>
+	linkdailyForm = function(){
+		try{
+			window.open('/linkdaily/new','linkdaily','status=yes,scrollbars=yes,toolbar=no,menubar=no,location=no ,width=500px,height=460px');
+		} catch(e){}
+	}
+</script><script>
+
+var MihanblogShopAdsArray = new Array();
+
+function GetMihanBlogShowAds(){
+	if(MihanblogShopAdsArray.length){
+		var adsTarget = 'MihanblogShopAds';
+		var containerWidth = document.getElementById(adsTarget).offsetWidth;
+		if(containerWidth>=200){
+			var adsCnt = parseInt(containerWidth / 200) ;
+			if(adsCnt>MihanblogShopAdsArray.length){
+				adsCnt = MihanblogShopAdsArray.length ; 
+			}
+//			var OneAdsWidth = parseInt(containerWidth / adsCnt) ;
+			var OneAdsWidth = containerWidth / adsCnt ;
+			if(OneAdsWidth>400){
+				OneAdsWidth = 400 ;
+			}
+			var OutHtml = '';
+			var img = '';
+			var link = '';
+			var title = '';
+			var description = '';
+			var imgWidth = 70;
+			if(OneAdsWidth>230){
+				imgWidth = 80;
+			}
+			if(OneAdsWidth>300){
+				imgWidth = 90;
+			}
+			for(adsOne=0;adsOne<adsCnt;adsOne++){
+				
+				img = MihanblogShopAdsArray[adsOne]['img'];
+				link = MihanblogShopAdsArray[adsOne]['link'];
+				title = MihanblogShopAdsArray[adsOne]['title'];
+				description = MihanblogShopAdsArray[adsOne]['description'];
+				
+				OutHtml += '<td style="background-color:#FFF;width: '+OneAdsWidth+'px;border:1px solid #f00;margin:0px 0px;font-size:11px;font-family:tahoma;padding:2px;margin:0px 0px;font-size:11px;border: 1px solid BurlyWood; padding: 1px; height: '+(imgWidth+25)+'px;">';
+
+				OutHtml += '	<a href="http://r-a-o.mihanblog.com/page/'+link+'" target="_blank" style="text-decoration:none">';
+
+				OutHtml += '			<div style="width: '+(OneAdsWidth-16)+'px;cursor:pointer;font-size:12px;padding: 4px 1px 4px 7px; white-space: nowrap; text-align: center; font-weight: bold; color: blue;white-space:nowrap;overflow:hidden">';
+				OutHtml += 					title;
+				OutHtml += '			</div>';
+				OutHtml += '			<div style="cursor:pointer;padding: 1px; display: block; float: right; width: '+imgWidth+'px;">';
+				OutHtml += '				<img src="'+img+'.html" style="border:0px;padding:0px;margin:0px;width:'+imgWidth+'px;height:'+imgWidth+'px;">';
+				OutHtml += '			</div>';
+				OutHtml += '			<div style="padding: 1px; display: block; float: right; width: '+(OneAdsWidth-13-imgWidth)+'px; text-align: right;overflow:hidden">';
+				OutHtml += '				<div style="overflow:hidden;cursor:pointer;padding: 2px 3px; line-height: 17px; height: '+(imgWidth-3)+'px; text-align: justify;color:#000;direction:rtl">';
+				OutHtml += 						description;
+				OutHtml += '				</div>';
+				OutHtml += '			</div>';
+
+				OutHtml += '	</a>';
+
+				OutHtml += '</td>';
+			}
+			
+			var Out = '<table align="center" cellpadding="0" cellspacing="2" style="width:'+(OneAdsWidth*adsCnt)+'px;"><tr>'+OutHtml+'</tr></table>'; 
+			
+			Out = '<div style="text-align:center;padding:0px;margin:3px auto;">'+Out+'</div>'; 
+			
+			document.getElementById(adsTarget).style.height = (imgWidth+35)+'px' ;
+			document.getElementById(adsTarget).innerHTML = Out ;
+		}
+	}
+}
+</script>
+    <style>
+        @font-face {
+            font-family: 'Mihan-Iransans';
+            src: url('http://r-a-o.mihanblog.com/public/public/fonts/Iransans.eot');
+            src: url('http://r-a-o.mihanblog.com/public/public/fonts/Iransans.eot?') format('embedded-opentype'),
+            url('http://r-a-o.mihanblog.com/public/public/fonts/Iransans.woff2') format('woff2'),
+            url('http://r-a-o.mihanblog.com/public/public/fonts/Iransans.woff') format('woff'),
+            url('http://r-a-o.mihanblog.com/public/public/fonts/Iransans.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+        @font-face {
+            font-family: 'Mihan-IransansBold';
+            src: url('http://r-a-o.mihanblog.com/public/public/fonts/Iransans-Black.eot');
+            src: url('http://r-a-o.mihanblog.com/public/public/fonts/Iransans-Black.eot?') format('embedded-opentype'),
+            url('http://r-a-o.mihanblog.com/public/public/fonts/Iransans-Black.woff2') format('woff2'),
+            url('http://r-a-o.mihanblog.com/public/public/fonts/Iransans-Black.woff') format('woff'),
+            url('http://r-a-o.mihanblog.com/public/public/fonts/Iransans-Black.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+        @font-face {
+            font-family: 'Mihan-IransansLight';
+            src: url('http://r-a-o.mihanblog.com/public/public/fonts/Iransans-UltraLight.eot');
+            src: url('http://r-a-o.mihanblog.com/public/public/fonts/Iransans-UltraLight.eot?') format('embedded-opentype'),
+            url('http://r-a-o.mihanblog.com/public/public/fonts/Iransans-UltraLight.woff2') format('woff2'),
+            url('http://r-a-o.mihanblog.com/public/public/fonts/Iransans-UltraLight.woff') format('woff'),
+            url('http://r-a-o.mihanblog.com/public/public/fonts/Iransans-UltraLight.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+        @font-face {
+            font-family: 'Mihan-Nassim';
+            src: url('http://r-a-o.mihanblog.com/public/public/fonts/Nassim.eot');
+            src: url('http://r-a-o.mihanblog.com/public/public/fonts/Nassim.eot?') format('embedded-opentype'),
+            url('http://r-a-o.mihanblog.com/public/public/fonts/Nassim.woff2') format('woff2'),
+            url('http://r-a-o.mihanblog.com/public/public/fonts/Nassim.woff') format('woff'),
+            url('http://r-a-o.mihanblog.com/public/public/fonts/Nassim.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+        @font-face {
+            font-family: 'Mihan-Koodak';
+            src: url('http://r-a-o.mihanblog.com/public/public/fonts/Koodak.eot');
+            src: url('http://r-a-o.mihanblog.com/public/public/fonts/Koodak.eot?') format('embedded-opentype'),
+            url('http://r-a-o.mihanblog.com/public/public/fonts/Koodak.woff2') format('woff2'),
+            url('http://r-a-o.mihanblog.com/public/public/fonts/Koodak.woff') format('woff'),
+            url('http://r-a-o.mihanblog.com/public/public/fonts/Koodak.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+        @font-face {
+            font-family: 'Mihan-Yekan';
+            src: url('http://r-a-o.mihanblog.com/public/public/fonts/Yekan.eot');
+            src: url('http://r-a-o.mihanblog.com/public/public/fonts/Yekan.eot?') format('embedded-opentype'),
+            url('http://r-a-o.mihanblog.com/public/public/fonts/Yekan.woff2') format('woff2'),
+            url('http://r-a-o.mihanblog.com/public/public/fonts/Yekan.woff') format('woff'),
+            url('http://r-a-o.mihanblog.com/public/public/fonts/Yekan.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+        @font-face {
+            font-family: 'FontAwesome';
+            src: url('http://r-a-o.mihanblog.com/public/public/fonts/fontawesome_webfont.eot');
+            src: url('http://r-a-o.mihanblog.com/public/public/fonts/fontawesome_webfont.eot?') format('embedded-opentype'),
+            url('http://r-a-o.mihanblog.com/public/public/fonts/fontawesome_webfont.woff2') format('woff2'),
+            url('http://r-a-o.mihanblog.com/public/public/fonts/fontawesome_webfont.woff') format('woff'),
+            url('http://r-a-o.mihanblog.com/public/public/fonts/fontawesome_webfont.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+
+
+        
+
+        /* Smartphones (portrait and landscape) ----------- */
+
+        /*
+        @media only screen and (max-width : 480px) and (min-width : 320px) {
+            .sabaClick_advert__wrapper{
+                display:block;
+            }
+            .sabaClick_advert__inner{
+                max-width: 90%;
+                margin: 0 5%;
+            }
+        }
+        */
+
+    </style>
+
+
+
+
+
+
+<html>
+
+<head>
+<link href='http://fonts.googleapis.com/css?family=Patrick+Hand+SC|Short+Stack' rel='stylesheet' type='text/css'>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+   <title>sunflower in october</title>
+
+      <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+      <meta name="language" content="Farsi">
+      <meta name="keywords" content="sunflower in october,r-a-o">
+      <meta name="description" content="sunflower in october -  - sunflower in october">
+      <meta name="copyright" content="©88love, 88love.mihanblog.com">
+      <link rel="alternate" type="application/rss+xml" title="sunflower in october" href="../post/rss/index.html" />
+      <meta name="designer" content="88love.mihanblog.com  | http://88love.mihanblog.com" />
+<style>
+::-moz-selection {
+	background: #D5D5FF;
+	color: #000;
+}
+::selection {
+	background: #D5D5FF;
+	color: #000;
+}
+body {
+	text-align: Center;
+	color: #000000;
+	font-family: Short Stack;
+	font-size: 8pt;
+}
+::-webkit-scrollbar {
+width: 7px;
+height: 7px;
+}
+::-webkit-scrollbar-track-piece  {
+	background-color: #FFFFFF;
+	border: 3px solid #fff;
+}
+
+::-webkit-scrollbar-thumb:vertical, ::-webkit-scrollbar-thumb:horizontal {
+	background-color: #D5D5FF;
+	border: 1px solid #fff;
+}
+body {
+	background-color: #000000;
+	background-image: url('http://8pic.ir/images/ms6ds5bmxyjcm51jsrzz.gif');
+}
+A, A:visited{
+	color: #ffffff;
+	text-decoration: none;
+
+}
+A:hover{
+	color: #D5D5FF;
+	text-decoration: none;
+}
+
+.page{
+	float: Center;
+	background-color: #000000;
+}
+img{border:none}
+.space{padding:0px 10px}
+	.header{
+	;padding: 2px 0px 2px 0px;
+	border-radius: 0px;
+	background-position: center;
+	margin: -12px;
+	box-shadow: 0px 0px 0px 0px;
+	position: relative;
+	background: url('http://8pic.ir/images/n8f7gsrkkbj2gr6mfnrq.jpg') no-repeat;
+	width: 553px;
+	height: 332px;
+	text-align: right;
+	font-size: 12pt;
+	transition-duration: .4s;
+	-moz-transition-duration: .4s;
+	opacity: .80;
+	background-attachment: inherit;
+	float: center;
+	clear: both;
+	display: block;
+}
+.header:hover{
+	box-shadow: 0px 0px 0px 0px;
+	opacity: .95;
+}
+.header h1{
+	position: relative;
+	font-family: Segoe Script;
+	font-size: 16pt;
+	color: #FFFFFF;
+	text-align: left;
+	margin-top: 5px;
+	margin-bottom: 10px;
+	margin-left: 15px;
+}
+.header .subtitle {
+	font-family: Short Stack;;
+	font-size: 8pt;
+	color: #D5D5FF;
+	text-align: left;
+	margin: 0px 0px 30px 30px;
+	line-height: 1.5em;
+	font-weight: bold;
+}
+#Sidebar{
+	border-top-right-radius: 15px;
+	border-bottom-left-radius: 15px;
+	border: 2px solid #000000;
+	box-shadow: 0px 0px 5px #D5D5FF;
+	float: left;
+	direction: rtl;
+	width: 180px;
+	overflow: hidden;
+	margin-top: 10px;
+	transition-duration: .4s;
+	-moz-transition-duration: .4s;
+	opacity: .80;
+	background-color: #000000;
+	margin-left: 10px;
+}
+.roza-sid{
+	width: 150px;
+	
+	
+}
+.roza-sid-box {
+	border: 1px solid #000040;
+	border-radius: 5px;
+	padding: 5px;
+	margin: 10px;
+	font-family: Short Stack;
+	font-size: 10px;
+	color: #000040;
+	font-weight: bold;
+	background-color: #000000;
+}
+.Toproza-sid{
+	background-position: center;
+	border-top-left-radius: 7px;
+	border-bottom-right-radius: 7px;
+	width: 100%;
+	padding: 5px 0px 5px 0px;
+	font-size: 10pt;
+	color: #FFFFFF;
+	font-weight: bold;
+	text-align: center;
+	margin-bottom: 10px;
+	font-family: "Segoe Script";
+	background-repeat: repeat;
+	background-color: #D5D5FF;
+	margin-top: 10px;
+	background-image: url('http://8pic.ir/images/lif0xtfa2am1axn3ga85.jpg');
+}
+.miss-roza-Sid{
+	font-size: 8pt;
+	color: #FFFFFF;
+	text-align: center;
+	overflow: hidden;
+	font-family: "Segoe Script";
+}
+.miss-roza-Sid a{
+	color: #FFFFFF;
+	font-family: "Segoe Script";
+}
+.miss-roza-Sid a:hover{
+	color: #D5D5FF;
+}
+.ROZA{
+	text-shadow: 0 0 2px #F7C288, 0 0 2px #000000;
+	color: #D5D5FF;
+	font-family: "Segoe Script";
+}
+
+.About img{
+	text-align: center;
+	Padding-Top: 3px;
+}
+.About{
+	color: #211E1D;
+	line-height: 1.5em;
+	text-align: center;
+	padding-Right: 10px;
+	padding-Left: 10px;
+}
+.bodyposts{
+	border-top-left-radius: 15px;
+	border-bottom-right-radius: 15px;
+	border: 3px solid #000000;
+	box-shadow: 0px 0px 3px #D5D5FF;
+	float: left;
+	text-align: right;
+	overflow: hidden;
+	margin-bottom: 10px;
+	margin-top: 10px;
+	transition-duration: .4s;
+	-moz-transition-duration: .4s;
+	opacity: .80;
+	background-color: #000000;
+	width: 553px;
+}
+.bodyposts:hover{
+	box-shadow: 0px 0px 5px #D5D5FF;
+	opacity: .95;
+}
+
+	img{-moz-transition-duration: 1s;-webkit-transition-duration: 1s;border-radius:15px}
+	img:hover{-moz-transition-duration: 1s;-webkit-transition-duration: 1s;transform: rotate(-7deg) scale(1);border-radius:50%;
+}
+	
+.post {
+	font-size: 9pt;
+	font-family: Segoe Script;
+	color: #000000;
+}
+.post  A:link{
+	font-size: 9pt;
+	font-family: "Segoe Script";
+	text-decoration: none;
+	color: #FFFFFF;
+	text-shadow: 0px 0px 2px #000000;
+}
+.post  A:hover{
+	;text-decoration: none;
+	color: #D5D5FF;
+	text-shadow: 0px 0px 2px #000000;
+}
+.post  A:visited  {
+	font-size: 9pt; ;
+	text-decoration: none;
+}
+.post .cnt{
+	font-family: "Segoe Script";;
+	color: #FFFFFF;
+	font-size: 9pt;
+	line-height: 1.5em;
+	text-shadow: 0px 0px 2px #000000;
+}
+A:link{
+	color: #FFFFFF;
+	text-decoration: none;
+	text-shadow: 0px 0px 2px #000000;
+}
+a,a visited  {
+	text-decoration: none;
+	-moz-transition-duration: 1s;
+	-webkit-transition-duration: 1s;
+	text-shadow: 0px 0px 2px #000000;
+}
+A:hover{
+	color: #D5D5FF;
+	text-decoration: none;
+	-moz-transition-duration: 1s;
+	-webkit-transition-duration: 1s;
+	text-shadow: 0px 0px 2px #000000;
+}
+.post .info{
+	font-family: "Segoe Script";;
+	color: #FFFFFF;
+	margin-top: 10px;
+	font-size: 9pt;
+	padding-bottom: 5px;
+	text-align: left;
+	text-shadow: 0px 0px 2px #000000;
+	margin-left: 3px;
+}
+.post .info A{
+	font-size: 9pt;
+	color: #FFFFFF;
+	font-family: "Segoe Script";
+}
+.custom{
+	color: #FFFFFF;
+	margin: 10px 0;
+	text-align: center;
+	direction: rtl;
+}
+.rozaa {
+	margin: 1px;
+	padding: 1px;
+}
+.ROZ{
+	text-shadow: 0px 0px 2px #000000;
+	color: #D5D5FF;
+	font-family: "Segoe Script";
+}
+.hr {
+	background-position: center center;
+	border-top-left-radius: 15px;
+	border-bottom-right-radius: 15px;
+	border: 1px solid #000000;
+	background-color: #D5D5FF;
+	margin: 10px;
+	background-image: url('http://8pic.ir/images/lif0xtfa2am1axn3ga85.jpg');
+	background-repeat: no-repeat;
+	color: #FFFFFF;
+}
+#title{
+	background-position: right;
+	padding-bottom: 1px;
+	padding-top: 10px;
+	text-shadow: 0px 0px 2px #E24A4E;
+	font-size: 18px;
+	margin-left: 5px;
+	margin-right: 5px;
+	font-family: "Segoe Script";
+	padding-right: 5px;
+}
+
+	
+#multipage {
+	text-align: center;
+	
+}
+
+    .bloging-pagination{
+	direction: rtl;
+	margin: 250px auto 20px auto;
+	text-align: center;
+	font-family: "Segoe Script";;
+}
+.bloging-pagination a {
+	margin: 10px 2px 10px 2px;
+	border: 1px solid #040C31;
+	box-shadow: 0px 0px 5px 2px #D5D5FF;
+	text-decoration: none;
+	font-size: 11px;
+	padding: 2px 6px;
+	color: #040C31;
+	border-radius: 0px;
+	transition: all .2s linear;
+	font-variant: small-caps;
+	font-weight: bold;
+}
+.bloging-pagination a:hover{
+	border: 1px solid #000000;
+	box-shadow: 0px 0px 10px 2px #D5D5FF;
+	color: #000040;
+	border-radius: 0px;
+	font-weight: bolder;
+	font-family: "Segoe Script";
+}
+
+</style>
+
+</head>
+
+<body>
+<!--Design By : 88love.mihanblog.com-->
+<div class=Top>
+	<div align =center>
+		<div class="page" dir="rtl" style="width: 801px" >
+			<div class="bodyposts">
+				<div class="space">
+					<div  class ="header" >
+						<h1 class="ROZA">sunflower in october</h1>
+						
+						<p class="subtitle"></p>
+					</div>
+	<!-- end header -->
+<!--Design By : 88love.mihanblog.com-->
+				</div>
+								
+		<div id="MihanblogShopAds" style="display:block;height:0px;width:100%;border:0px"></div>
+						<div class="post">
+					<font size="2" >
+					<div id="title">
+						<span class="ROZA">we are home</span></div>
+					<div class ="info" style="text-align: left">
+						<font color=#FFFFFF>سه شنبه 4 خرداد 1395<font color=#D5D5FF  >  |  
+						</font>09:55 ب.ظ</font><br></div>
+					<div class="cnt">
+						<div id="InPost_MihanblogShopAds" style="display:block;height:0px;width:100%;border:0px"></div>
+
+
+
+
+
+
+
+
+
+<div align="center"><img src="http://s8.picofile.com/file/8343537534/190098_380.jpg" alt="http://s8.picofile.com/file/8343537534/190098_380.jpg" class="shrinkToFit" width="453" height="369"></div><div align="center"><br></div><div align="center">"نفرتی که تو میکاری همه چیزو به گند میکشه!"</div><div align="center"><br></div><div align="center"><br></div><div align="center">جامعه ی چندش آور،مشکلات خنده دار،ماهی های بیرون تنگ،آفتاگردونایی که سرشون رو تا مرز شکستن پایین انداختن،طنز تلخ،مرگ لیلی،رنگ های ونگوگ،ام الفساد،گوسفند ها،شهوت کائنات،فلسفه های تلخ،رویا های کثیف،آهنگ های زشت و زمین یک سیاره ی پیر و درب و داغون!<br></div><div style="text-align: center;">&nbsp;</div><div style="text-align: center;">-"داستانِ آفتابگردانی در زمستان که از غمِ دوریِ خورشید پژمرده شد و افتاد و مرد!</div><div style="text-align: center;"><br></div><div style="text-align: center;">instagram: littleranneh</div><div align="center"><br></div><div align="center">پی اس:اسمم راناعه،نه رعنا:)))<br></div>
+
+
+
+
+
+
+
+
+
+ <br><font color=#C92B68>
+						<div align="left">
+							&nbsp;&nbsp;&nbsp; </div>
+					</div>
+					
+				<div id="hr" class="hr"><div class ="info">
+						Ranna- 						<font color=#000040 size="2"  > | </font><a target="_self" href="javascript:newComment(1)" >کـامـنـت(<script>setCommentCnt(1)</script>)</a>
+						<font color=#FFFFFF>&nbsp;</font></div>
+				</div>
+					<div>
+						<br>
+						<div>
+						</div>
+					</div>
+				</div>
+				<br>				<div class="post">
+					<font size="2" >
+					<div id="title">
+						<span class="ROZA">&quot;هیچی&quot;هایِ&quot;پوچ&quot;</span></div>
+					<div class ="info" style="text-align: left">
+						<font color=#FFFFFF>یکشنبه 28 مرداد 1397<font color=#D5D5FF  >  |  
+						</font>02:31 ب.ظ</font><br></div>
+					<div class="cnt">
+						
+
+<div align="center"><img class="irc_mi" src="http://www.mccallerickson.com/wp-content/uploads/2013/09/nothing1.jpg" alt="Image result for nothing" style="margin-top: 0px;" width="351" height="369"></div><div align="center"><br></div><div align="center">سرچ های بیهوده،کلماتِ بی معنی،صدای هایی که هرگز وجود نداشته اند،و یاد حتی شلوغی های بی صدا</div><div align="center"><br></div><div align="center">شب را نخوابیدم و در خیالم دنبال تو گشته ام،اما از وقتی چشم باز کرده ام ندیده ام تو را</div><div align="center"><br></div><div align="center">گشتم و گشتم،دنبالت گشتم،به کافه ی مورد علاقه ات رفتم،نبودی</div><div align="center"><br></div><div align="center">میدانم که آن صندلی از پارک را دوست داری،آنجا دنبالت گشتم،نبودی</div><div align="center"><br></div><div align="center">به خانه ات رفتم،نبودی</div><div align="center"><br></div><div align="center">همه جا گشتم،حتی در آسمان و زیر زمین را...اما نبودی...نبودی...</div><div align="center"><br></div><div align="center">و الان تمامِ وجودِ من بی تو در یک کلمه خلاصه میشود</div><div align="center"><br></div><div align="center">"هیچی"</div><div align="center"><br></div><div align="center">آخر،حتی در قلبم هم گشتم...اما نبودی....نبودی...:)<br></div>
+
+
+
+
+
+
+ <br><font color=#C92B68>
+						<div align="left">
+							&nbsp;&nbsp;&nbsp; </div>
+					</div>
+					
+				<div id="hr" class="hr"><div class ="info">
+						Ranna- 						<font color=#000040 size="2"  > | </font><a target="_self" href="javascript:newComment(942)" >کـامـنـت(<script>setCommentCnt(942)</script>)</a>
+						<font color=#FFFFFF>&nbsp;</font></div>
+				</div>
+					<div>
+						<br>
+						<div>
+						</div>
+					</div>
+				</div>
+				<br>				<div class="post">
+					<font size="2" >
+					<div id="title">
+						<span class="ROZA">اوج های غمگین و کلاهی خالی</span></div>
+					<div class ="info" style="text-align: left">
+						<font color=#FFFFFF>پنجشنبه 18 مرداد 1397<font color=#D5D5FF  >  |  
+						</font>08:00 ب.ظ</font><br></div>
+					<div class="cnt">
+						
+
+
+<div align="center">بعضی از نوشته ها غمگینن،بعضی از آهنگ ها غمگینن،بعضی از موسیقی ها و صدا ها هم غمگینن...</div><div align="center"><br></div><div align="center">حتی بعضی از رنگ ها هم غمناکن...اما تا حالا چیزی در مورد حرکات غمگین شنیده بودی؟</div><div align="center"><br></div><div align="center">من دیدمشون،همین دیشب،جلوی چشم هام.</div><div align="center"><br></div><div align="center">"اون مرد قشنگ میرقصید.نه به خوبی دنسر های معروف یا حرفه ای،اما من رقصشو دوست داشتم</div><div align="center"><br></div><div align="center">طوری که اونجا جلوی چشم اون همه آدم ایستاده بود و با ریتم آهنگ اوج میگرفت،خیلی دوست داشتنی بود</div><div align="center"><br></div><div align="center">اما همه ی چیز های قشنگ،شاد نیستن...اون اوج های غمگین میگرفت و در پایان آهنگ،حرکات غمگینِ بدنش رو به تمام میرسوند</div><div align="center"><br></div><div align="center">هیچکس اینو نفهمید،انگاری فقط من فهمیدم.آخه من مردمک های نا امیدش رو میدیدم که باهاشون یواشکی به مردمِ اطرافش نگاه میکرد <br></div><div align="center"><br></div><div align="center">مردمی که نگاهش میکردن،اما لحظه ای ارزش برای اون پسر قائل نبودن.آخه آخرش،فقط اون پسر بود و کلاهی خالی از پول!</div><div align="center"><br></div><div align="center">اما ادامه میداد!برام جالب بود.فقط من بودم که نگاهش میکردم،منی که پشت بوته های درخت قایم شده بودم و اون اینو نمیدونست.ولی باز هم ادامه میداد</div><div align="center"><br></div><div align="center">دیگه برای پولش نمیرقصید،اوج هایی که میگرفت و لبخندی که میزد برای جلب توجه مردم نبودن.برای خودش میرقصید.قدرتش رو به رخ خودش میکشید</div><div align="center"><br></div><div align="center">اما همچنان غمگین بود.لبخند غمگین،حرکات غمگین،اوج ها غمگین....</div><div align="center"><br></div><div align="center">بالاخره از پشت درخت کنار رفتم و روی صندلی نشستم.درست جلوی خودش.و شروع کردم به دست زدن</div><div align="center"><br></div><div align="center">"""نگاهم کرد،نگاهش کردم"""</div><div align="center"><br></div><div align="center">مردم دست زدن های من رو دیدن.اونا هم شروع کردن به دست زدن.و بعد،میان این همه صدا،اون تنها صدای دست زدن مردم رو میشنید.منم همینطور</div><div align="center"><br></div><div align="center">خوشحال شد،من ذوق توی چشمهاش رو دیدم.</div><div align="center"><br></div><div align="center">دوباره به من نگاه کرد،نه یه نگاه معمولی،از اون نگاه های قشنگ<br></div><div align="center"><br></div><div align="center">"""لبخند زدم،لبخند زد"""</div><div align="center"><br></div><div align="center">آهنگ بعدی و اون باز هم ادامه داد.اینبار خوشحال.خیلی خوشحال.اما غم از رقصش و چهره اش جدا نمیشد</div><div align="center"><br></div><div align="center">اینبار منم اجازه دادم اون غم آبی رنگش تمام وجودمو پر کنه</div><div align="center"><br></div><div align="center">آخه تو چقدر زیبا غمگینی پسر!؟"</div><div align="center"><br></div><div align="center">آدم های زیادی هستن که وارد زندگیمون میشن،سرکی میکشن و باز هم میرن،بدون هیچ ردی از وجودشون</div><div align="center"><br></div><div align="center">این پسر،ده دقیقه بیشتر توی زندگی من نبود.اما یه رد آبی رنگِ قشنگ از خودش به جا گذاشت</div><div align="center"><br></div><div align="center">و من هر وقت به اون رنگِ آبیه وسط قلبم نگاه میکنم،زیبا ترین غم دنیا میاد جلوی چشم هام</div><div align="center"><br></div><div align="center">اون پسر خودِ غم بود.میرقصید و میرقصید و میرقصید،و با اون حرکات زیبا غم هاش رو به نمایش میزاشت</div><div align="center"><br></div><div align="center">مسخره اس،نه؟ولی باید بودیو میدید...که چقدر زیبا غمگین بود...!</div><div align="center"><br></div><div align="center">آهنگش تموم نشده بود،ولی به اندازه ی کافی احساس کرده بودم.پس بلند شدمو رفتم</div><div align="center"><br></div><div align="center">یادته گفتم آدم های زیادی هستن که به زندگیم اومدن و بی هیچ ردی از بودنشون رفتن؟</div><div align="center"><br></div><div align="center">مثل اون دختری که با من به تونل وحشت اومد و وقتی رفت من حتی قیافش رو هم به یاد نیاوردم،یا مثل اون پسری که موقع اسکیت بازی بهم خورد و معذرت خواهی کرد،یا اون دختر دبیرستانی که وقتی کلاس اول بودم یکدفعه ای یه کادو بهم داد</div><div align="center"><br></div><div align="center">اما این پسر...</div><div align="center"><br></div><div align="center">نگاهم کرد،نگاهش کردم</div><div align="center"><br></div><div align="center">لبخند زد،لبخند زدم</div><div align="center"><br></div><div align="center">رفتم،اونم رفت</div><div align="center"><br></div><div align="center">همین!اما خاطرات هیچوقت نمیرن نه؟اون رنگ آبی هیچوقت از این گوشه ی قلبم نرفت</div><div align="center"><br></div><div align="center">و من اگر اون شب پولی داشتم،همه رو فدای اون حرکات غمگین دست هاش میکردم...!</div><div align="center"><hr>پ.ن:نه به خدا عاشقش نشدم<img src="http://mihanblog.com/public/public/rte/images_new/smiles/21.gif">ولی اون حرکاتش ارزش عاشق شدن داشت!<br></div>
+
+
+
+
+
+ <br><font color=#C92B68>
+						<div align="left">
+							&nbsp;&nbsp;&nbsp; </div>
+					</div>
+					
+				<div id="hr" class="hr"><div class ="info">
+						Ranna- 						<font color=#000040 size="2"  > | </font><a target="_self" href="javascript:newComment(929)" >کـامـنـت(<script>setCommentCnt(929)</script>)</a>
+						<font color=#FFFFFF>&nbsp;</font></div>
+				</div>
+					<div>
+						<br>
+						<div>
+						</div>
+					</div>
+				</div>
+				<br>				<div class="post">
+					<font size="2" >
+					<div id="title">
+						<span class="ROZA">روحم تقلای برگشتنت را میکند...</span></div>
+					<div class ="info" style="text-align: left">
+						<font color=#FFFFFF>سه شنبه 2 مرداد 1397<font color=#D5D5FF  >  |  
+						</font>03:47 ب.ظ</font><br></div>
+					<div class="cnt">
+						
+
+
+
+
+<div align="center"><br></div><div align="center"><img src="https://pre00.deviantart.net/e713/th/pre/f/2017/002/3/6/4055db_by_pascalcampion-dau1kjl.jpg" alt="Rainy January by PascalCampion" class="dev-content-normal" data-embed-id="655123521" data-embed-type="deviation" data-embed-format="thumb" style="width: 363px; height: 531px; top: 0px;" width="740" height="1081"></div><div align="center"><br></div><div align="center">ساعت تقریبا چهار صبحه...</div><div align="center"><br></div><div align="center">اینجا هزاران پنجره هست،اما بین همه شون فقط یک پنجره ی روشن دیده میشه</div><div align="center"><br></div><div align="center">این پنجره ی اتاق منه،اینم منم که کنار پنجره نشستم و دارم تاریکی هارو تماشا میکنم</div><div align="center"><br></div><div align="center">آخه نمیتونم بخوابم</div><div align="center"><br></div><div align="center">خوابم نمیبره</div><div align="center"><br></div><div align="center">میترسم...خیلی میترسم...<br></div><div align="center"><br></div><div align="center">ترس اینکه الان میتونی هر جای دنیا باشی و منو دیگه به یاد نیاری...بند بند وجودمو به هم میریزه</div><div align="center"><br></div><div align="center">خوابم نمیبره</div><div align="center"><br></div><div align="center">احساس تنهایی میکنم،از وقتی رفتی...یه حس بدی توی دلم دارم</div><div align="center"><br></div><div align="center">انگار که همه چیز تموم شده...انگار دیگه هیچ امیدی نیست...یه حس پوچی!</div><div align="center"><br></div><div align="center">خوابم نمیبره</div><div align="center"><br></div><div align="center">دلم برات تنگ شده...دلم میخواد محکم بغلت کنم و فشارت بدم،عطرتو داخل ریه هام بکشم و احساست کنم...اما تو اینجا نیستی...</div><div align="center"><br></div><div align="center">اینجا نیستی که منو به آغوشت بکشی و بزاری باور کنم که همیشه یک تکیه گاه دارم...دلم برای وجودت خیلی تنگ شده...</div><div align="center"><br></div><div align="center">خوابم نمیبره</div><div align="center"><br></div><div align="center">نگرانتم،نکنه دوباره موقع خواب چیزی روی خودت نکشیدی؟دوباره سرما میخوریا!</div><div align="center"><br></div><div align="center">نگرانم،همیشه نگرانتم...نگرانم که دوباره به خودت آسیب بزنی...ببین،حواست به خودت باشه،منم دردم میگیره ها!</div><div align="center"><br></div><div align="center">خوابم نمیبره</div><div align="center"><br></div><div align="center">خاطراتت به چشم هام اجازه ی بسته شدن نمیدن...</div><div align="center"><br></div><div align="center">هر وقت که چشم هام رو میبندم،هجوم خاطراتت به ذهنم رو احساس میکنم،و بدون اینکه متوجه بشم تمام شب رو به خاطراتت لبخند میزنم</div><div align="center"><br></div><div align="center">لعنتی...حتی بعد از رفتنت هم من رو میخندونی...!</div><div align="center"><br></div><div align="center">هر چند که هر وقت یادم میاد دیگه از خاطرات جدید خبری نیست،لبخندم روی صورتم خشک میشه و چند قطره اشک جاشو میگیرن...یعنی واقعا دیگه خبری ازت نیست؟...</div><div align="center"><br></div><div align="center">خوابم نمیبره</div><div align="center"><br></div><div align="center">نگاهم روی ساعت خیره مونده،چند دقیقه ی دیگه،میشه روز سی صد و سی و سوم که نیستی...<br></div><div align="center"><br></div><div align="center">مگه خاطرات سی صد و سی و سه روز پیش...هنوزم میزارن من بخوابم؟</div><div align="center"><br></div><div align="center">خسته ام...خسته ام....خیلی خسته ام....</div><div align="center"><br></div><div align="center">اما نمیتونم بخوابم...نمیخوام بخوابم....نمیخوام...</div><div align="center"><br></div><div align="center">میخوام منتظرت بمونم،میخوام باز هم به بیرون پنجره زل بزنم..تا که شاید معجزه ای پیش اومد و تو برگشتی...</div><div align="center"><br></div><div align="center">میشه برگردی؟چشمام دارن تقلای دیدن تو رو میکنن،قلبم تقلای عشق رو میکنه...</div><div align="center"><br></div><div align="center">ولی این مغزه لعنتی،هر دفعه حقیقت اینکه تو دیگه برنمیگردی رو مثل پتک توی سرم میکوبه...</div><div align="center"><br></div><div align="center">خوابم نمیبره...<br></div><div align="center"><br></div><div><br></div><div align="center">-باز هم بخشی از داستانی که باز هم براش اسمی انتخاب نکردم:/<br></div>
+
+
+
+
+
+
+
+
+
+ <br><font color=#C92B68>
+						<div align="left">
+							&nbsp;&nbsp;&nbsp; </div>
+					</div>
+					
+				<div id="hr" class="hr"><div class ="info">
+						Ranna- 						<font color=#000040 size="2"  > | </font><a target="_self" href="javascript:newComment(911)" >کـامـنـت(<script>setCommentCnt(911)</script>)</a>
+						<font color=#FFFFFF>&nbsp;</font></div>
+				</div>
+					<div>
+						<br>
+						<div>
+						</div>
+					</div>
+				</div>
+				<br>				<div class="post">
+					<font size="2" >
+					<div id="title">
+						<span class="ROZA">تو خود عشقی...مگر نه؟:)...!</span></div>
+					<div class ="info" style="text-align: left">
+						<font color=#FFFFFF>یکشنبه 31 تیر 1397<font color=#D5D5FF  >  |  
+						</font>06:08 ب.ظ</font><br></div>
+					<div class="cnt">
+						
+
+
+<div align="right"><img src="https://pre00.deviantart.net/7b9e/th/pre/f/2017/285/d/3/foresty_4rdc_by_pascalcampion-dbqektl.jpg" alt="Wait... by PascalCampion" class="dev-content-normal" data-embed-id="709478121" data-embed-type="deviation" data-embed-format="thumb" style="width: 363px; height: 531px; top: 0px;" width="740" height="1081"></div><div align="center"><br></div><div>مهتاب قشنگه،باروون هم قشنگه...</div><div><br></div><div>رنگ آبی،گل های خوشبو،لبخند ها،کتاب های قدیمی،تابلو های پر از رنگ...</div><div><br></div><div>قدم زدن زیر نور مهتاب،تماشای دریا...همه قشنگن...</div><div><br></div><div>ولی میگن،زیبایی عشق به پای هیچکدومشون نمیرسه...</div><div><br></div><div>من عشق رو نمیشناسم....ولی تورو میشناسم...</div><div><br></div><div>ببینم،تو خودِ عشقی...مگه نه؟:)...!</div><div><br></div><div>-بخشی از داستانی که هنوز براش اسم انتخاب نکردم!<br></div>
+
+
+
+
+
+ <br><font color=#C92B68>
+						<div align="left">
+							&nbsp;&nbsp;&nbsp; </div>
+					</div>
+					
+				<div id="hr" class="hr"><div class ="info">
+						Ranna- 						<font color=#000040 size="2"  > | </font><a target="_self" href="javascript:newComment(902)" >کـامـنـت(<script>setCommentCnt(902)</script>)</a>
+						<font color=#FFFFFF>&nbsp;</font></div>
+				</div>
+					<div>
+						<br>
+						<div>
+						</div>
+					</div>
+				</div>
+				<br>				<div class="post">
+					<font size="2" >
+					<div id="title">
+						<span class="ROZA">ماه مهمونه آسمونه و آسمون خوشحال،پس من چی؟</span></div>
+					<div class ="info" style="text-align: left">
+						<font color=#FFFFFF>جمعه 29 تیر 1397<font color=#D5D5FF  >  |  
+						</font>11:21 ب.ظ</font><br></div>
+					<div class="cnt">
+						
+
+<div align="center">شب بود...شبِ شب</div><div align="center"><br></div><div align="center">یه شبِ تاریک.به تاریکی یک"شب"</div><div align="center"><br></div><div align="center">وقتی به آسمون نگاه میکردم،دلم پر از غم میشد...آخه...آخه آسمون طوری تاریک بود که انگار دیگه هیچ امیدی نداره...</div><div align="center"><br></div><div align="center">انگار اون شب آسمون هم از همه چیز نا امید بود...</div><div align="center"><br></div><div align="center">چشمامو بستم و صدای آهنگمو بلند تر کردم،نمیدونم چند دقیقه یا حتی چند ساعت گذشت</div><div align="center"><br></div><div align="center">فقط میدونم،آسمون از افکار من با خبر شد،آخه بدجور گریش گرفت...</div><div align="center"><br></div><div align="center">دلم براش سوخت،انگار که نا امیدِ نا امید بود،فکر میکنم روشناییشو از دست داده بود</div><div align="center"><br></div><div align="center">منم باهاش گریه کردم،آخه مگه ماه هم میتونه بی رحم باشه؟میتونه؟</div><div align="center"><br></div><div align="center">باز هم نفهمیدم چند دقیقه گذشت،اونقدر غرق همدردی با آسمونِ سیاهم شده بودم که گذر زمانو فراموش کرده بودم</div><div align="center"><br></div><div align="center">اما وقتی سرمو رو به پنجره برگردوندم،نوری رو دیدم</div><div align="center"><br></div><div align="center">یه نور قشنگ،حس قشنگی بود که بین تمام تاریکی ها نقطه ای نورانی،به این بزرگی ببینم</div><div align="center"><br></div><div align="center">جا به جا شدم،و ماه رو دیدم</div><div align="center"><br></div><div align="center">آسمون آروم گرفته بود،دل من هم آروم گرفت</div><div align="center"><br></div><div align="center">میدونی چیه،من فهمیدم نه ماه بدون آسمون زیباییشو داره،نه آسمون بدون ماه.</div><div align="center"><br></div><div align="center">انگار اونا مکمل همدیگه ان.مثل یک عشق...</div><div align="center"><br></div><div align="center">چند ماه از اون شب میگذره...ماه هر شب مهمونه آسمونه و آسمون خوشحال.</div><div align="center"><br></div><div align="center">میبینی؟حتی آسمونم تنها نیست،اون ماهشو پیدا کرد،درسته که اولش گمش کرده بود و دلش بارونی بود...</div><div align="center"><br></div><div align="center">اما الان داره میخنده...لبخندشو میبینی؟</div><div align="center"><br></div><div align="center">دیگه تنها نیست...</div><div align="center"><br></div><div align="center">ولی من هنوز تنهام...</div><div align="center"><br></div><div align="center">امشب آسمون گریه نمیکنه،اما دل من بارونیه...</div><div align="center"><br></div><div align="center">پس تو کِی بر میگردی؟....</div><div align="center"><br></div><div align="center"><br></div><div align="center">پ.ن:وقتی رانا یدفعه میره تو فاز معنوی!آره،از همون حسا که گفتم.<br></div>
+
+
+
+
+
+
+ <br><font color=#C92B68>
+						<div align="left">
+							&nbsp;&nbsp;&nbsp; </div>
+					</div>
+					
+				<div id="hr" class="hr"><div class ="info">
+						Ranna- 						<font color=#000040 size="2"  > | </font><a target="_self" href="javascript:newComment(895)" >کـامـنـت(<script>setCommentCnt(895)</script>)</a>
+						<font color=#FFFFFF>&nbsp;</font></div>
+				</div>
+					<div>
+						<br>
+						<div>
+						</div>
+					</div>
+				</div>
+				<br>				<div class="post">
+					<font size="2" >
+					<div id="title">
+						<span class="ROZA">رنگین کمون آبیِ آبیِ آبی...</span></div>
+					<div class ="info" style="text-align: left">
+						<font color=#FFFFFF>جمعه 29 تیر 1397<font color=#D5D5FF  >  |  
+						</font>07:34 ب.ظ</font><br></div>
+					<div class="cnt">
+						
+
+
+<div align="center"><img src="https://img00.deviantart.net/3741/i/2007/128/d/8/rainbow_rain_by_penguinlamp.jpg" alt="rainbow Rain by PenguinLamp" class="dev-content-normal" data-embed-id="54953220" data-embed-type="deviation" data-embed-format="thumb" style="top: 0px;" width="435" height="326"></div><div align="center"><br></div><div align="center">میگن،رنگین کمون شیش تا رنگ داره.رنگ هایی که کنار هم قرار میگیرن و یک پدیده ی زیبا رو به وجود میارن</div><div align="center"><br></div><div align="center">شاید به زیبایی غروب آفتاب،شاید هم به زیبایی انعکاس نور مهتاب روی آب دریا</div><div align="center"><br></div><div align="center">اما،من اینطور فکر نمیکنم...آخه رنگین کمونِ من خیلی فرق داره!</div><div align="center"><br></div><div align="center">زیباییه بی حد و مرزی داره،زیبایی فراتر از غروب آفتاب و انعکاس مهتاب توی آب...</div><div align="center"><br></div><div align="center">میخوای رنگ های رنگین کمون منو بدونی؟</div><div align="center"><br></div><div align="center">آبی،آبی،آبی،آبی،آبی و آبی</div><div align="center"><br></div><div align="center">آخه آبی رنگ مورد علاقه ی منه،میگن رنگ دریا و اقیانوس هم آبیه.</div><div align="center"><br></div><div align="center">من تا حالا دریا رو ندیدم،جایی که من زندگی میکنم،هیچ دریایی وجود نداره</div><div align="center"><br></div><div align="center">اما باور کن اولین بار که دیدمت،تمام دریا ها و اقیانوس های جهانو توی چشمات دیدم...</div><div align="center"><br></div><div align="center">اقیانوس ها هم روزی به پایان میرسن،اما اقیانوس چشم های تو،بی نهایت بود.</div><div align="center"><br></div><div align="center">پس آره...رنگین کمون من فقط یک رنگ داره</div><div align="center"><br></div><div align="center">آبی به رنگ چشم های تو...</div><div align="center"><br></div><div align="center">آبی به رنگ چشم های تو...</div><div align="center"><br></div><div align="center">آبی به رنگ چشم های تو...</div><div align="center"><br></div><div align="center">آبی به رنگ چشم های تو...</div><div align="center"><br></div><div align="center">آبی به رنگ چشم های تو...<br></div><div align="center"><br></div><div align="center">&nbsp;و آبی به رنگ دنیای من...</div><div align="center"><br></div><div align="center">آخه مگه کی میدونه؟...چشمای تو به تنهایی،تمام دنیای منن...:)</div><div align="center"><br></div><div align="center">میشه لطفا برگردی؟دلم برای آبی های پر از احساست تنگ شده...</div><div align="center"><br></div><div align="center">دلم برای وقتی که به چشمات نگاه میکردم و هوش از سرم میپرید تنگ شده...</div><div align="center"><br></div><div align="center">دلم برای پخش شدن رنگ آبیِ چشم های تو توی رگ هام تنگ شده....</div><div align="center"><br></div><div align="center">مبشه منو ببخشی؟میشه حس آبیه زندگیم رو بهم برگردونی؟</div><div align="center"><br></div><div align="center">من از رنگ خاکستری خوشم نمیاد...از وقتی دیگه نیستی هیچ آبی اینجا وجود نداره...</div><div align="center"><br></div><div align="center">خاکستری های تکراری دارن قلب آبیم رو تکه تکه میکنن...</div><div align="center"><br></div><div align="center">هنوز باهام قهری نه؟ولی من قهر نیستم...بهت نیاز دارم...</div><div align="center"><br></div><div align="center">بیشتر از هر چیزی به اون بغل آبی رنگت احتیاج دارم...</div><div align="center"><br></div><div align="center">به خنده های آبیت،به نگاه های آبیت،به صدای آبیت،به لمس های آبیت،به چشم های آبیت...</div><div align="center"><br></div><div align="center">من به رنگین کمونم احتیاج دارم....</div><div align="center"><br></div><div align="center">میشوی چی میگم؟من به رنگین کمونم نیاز دارم...</div><div align="center"><br></div><div align="center">منو نگاه کن...خاکستری ها رو میبینی؟</div><div align="center"><br></div><div align="center">من که میدونم از خاکستری ها خوشت نمیاد...پس برگرد و از بین ببرشون...</div><div align="center"><br></div><div align="center">ببین... من متاسفم...متاسفم...</div><div align="center"><br></div><div align="center">"میشه برگردی؟"</div><div align="center"><br></div><div align="center">-بخشی از داستان"علامت تعجب زندگی من"نوشته ی خودم</div><div align="center"><br></div><div align="center">این نامه رو دوست دارم...</div><div align="center"><br></div><div align="center">حس آبی و خاکستریش قلبمو به درد میاره...</div><div align="center"><br></div><div align="center">جوری که نوشتنش با لبخند و پایانش با یه بغض تموم شد رو خیلی دوست دارم...</div><div align="center"><br></div><div align="center">پ.ن:چرا من دوست دارم شخصیتای داستانامو اینجوری زجر بدم و خودم باهاشون گریه کنم؟<br>
+
+
+</div>
+
+
+
+
+
+ <br><font color=#C92B68>
+						<div align="left">
+							&nbsp;&nbsp;&nbsp; </div>
+					</div>
+					
+				<div id="hr" class="hr"><div class ="info">
+						Ranna- 						<font color=#000040 size="2"  > | </font><a target="_self" href="javascript:newComment(893)" >کـامـنـت(<script>setCommentCnt(893)</script>)</a>
+						<font color=#FFFFFF>&nbsp;</font></div>
+				</div>
+					<div>
+						<br>
+						<div>
+						</div>
+					</div>
+				</div>
+				<br>				<div class="post">
+					<font size="2" >
+					<div id="title">
+						<span class="ROZA">درک نکنید!!!</span></div>
+					<div class ="info" style="text-align: left">
+						<font color=#FFFFFF>جمعه 29 تیر 1397<font color=#D5D5FF  >  |  
+						</font>04:20 ب.ظ</font><br></div>
+					<div class="cnt">
+						
+
+
+<div align="center">هیچوقت،هیچوقت،هیچوقت،هیچوقت و هیچوقت به کسی که ناراحته نگید "درکت میکنم"</div><div align="center"><br></div><div align="center">چون نه، شما ها "درک نمیکنید"</div><div align="center"><br></div><div align="center">شما ها همیشه بخش کوچیکی از داستان غم انگیز زندگی یک شخصو میبنید</div><div align="center"><br></div><div align="center">خیلی کوچیک،اونقدر کوچیک که وقتی بهش نگاه میکنید خندتون میگیره.</div><div align="center"><br></div><div align="center">شما ها درک نمیکنید،چون هیچوقت جای دیگران نیستید،جاشون زندگی نمیکنید</div><div align="center"><br></div><div align="center">یادمه وقتی داشتم یکی از غم هامو برای یکی تعریف میکردم،بیشتر از سه دقیقه طول نکشید</div><div align="center"><br></div><div align="center">با خودم گفتم چطور تمام درد های من فقط سه دقیقه طول کشید؟</div><div align="center"><br></div><div align="center">بعد از اون روز فهمیدم،تمام این سه دقیقه ای ها،برای صاحب درد هاشون مثل سه قرن طول میکشه</div><div align="center"><br></div><div align="center">و وقتی شما ها به صاحب درد ها میگید"درکت میکنم"،قلبشو میشکنید</div><div align="center"><br></div><div align="center">چون اون موقع،اون فکر میکنه شما ها به غمی که در تلاش بود باهاتون در میون بزاره تا یه بخشی از اون ترک های روی قلبش ترمیم بشه،بی توجهی کردید</div><div align="center"><br></div><div align="center">و فقط گفتید"درکت میکنم"</div><div align="center"><br></div><div align="center">و این درکت میکنم برای اون یعنی"دردی که تو کشیدی هیچی نیست چون من هم اون دردو کشیدم"</div><div align="center"><br></div><div align="center">یا یک توهینه،یک توهین به دردی که کشیدن</div><div align="center"><br></div><div align="center">پس شما ها هیچوقت "درک نمیکنید"،همونطور که بقیه "درکتون نمیکنن".</div><div align="center"><br></div><div align="center">پس لطفا هیچوقت "درک نکنید".فقط اون دختر ناراحت رو "احساس کنید"</div><div align="center"><br></div><div align="center">احساس کردن با درک کردن خیلی فرق داره...<br></div>
+
+
+
+
+
+
+
+
+ <br><font color=#C92B68>
+						<div align="left">
+							&nbsp;&nbsp;&nbsp; </div>
+					</div>
+					
+				<div id="hr" class="hr"><div class ="info">
+						Ranna- 						<font color=#000040 size="2"  > | </font><a target="_self" href="javascript:newComment(890)" >کـامـنـت(<script>setCommentCnt(890)</script>)</a>
+						<font color=#FFFFFF>&nbsp;</font></div>
+				</div>
+					<div>
+						<br>
+						<div>
+						</div>
+					</div>
+				</div>
+				<br>				<div class="post">
+					<font size="2" >
+					<div id="title">
+						<span class="ROZA">بیا گناه کنیم:)</span></div>
+					<div class ="info" style="text-align: left">
+						<font color=#FFFFFF>پنجشنبه 21 تیر 1397<font color=#D5D5FF  >  |  
+						</font>12:50 ب.ظ</font><br></div>
+					<div class="cnt">
+						
+
+<font size="2">
+</font><div align="center"><font size="2">"تفاوت یک گناه نیست"</font></div><div align="center"><font size="2"><br></font></div><div align="center"><font size="2">"و متفاوت بودن،گناهکار بودن نیست"</font></div><div align="center"><font size="2"><br></font></div><div align="center"><font size="2">مردم از تفاوت ها متنفرن،اونا دست به هر کاری میزنن تا یک دنیای یک رنگ داشته باشیم</font></div><div align="center"><font size="2"><br></font></div><div align="center"><font size="2">یک رنگِ یک رنگ</font></div><div align="center"><font size="2"><br></font></div><div align="center"><font size="2">عشق خاکستری،رویای خاکستری،احساسات خاکستری،قلب خاکستری!</font></div><div align="center"><font size="2"><br></font></div><div align="center"><font size="2">اونا میخوان همه چی طبق برنامه پیش بره،یه کاغذ سفید برمیدارن و توش اتفاقاتی که میخوان بیوفته رو مینویسن و براشون زمان تعیین میکنن</font></div><div align="center"><font size="2"><br></font></div><div align="center"><font size="2">و خنده داره که فکر میکنن حتما این اتفاقا سر موقع میوفتن!</font></div><div align="center"><font size="2"><br></font></div><div align="center"><font size="2">و انتظار دارن با همین روال،یه دنیای آروم،هماهنگ و پیش بینی شده داشته باشن</font></div><div align="center"><font size="2"><br></font></div><div align="center"><font size="2">اما یه چیزیو نمیدونن،اینکه زندگی اصلا خوشش نمیاد براش تعیین تکلیف کنیم!</font></div><div align="center"><font size="2"><br></font></div><div align="center"><font size="2">و سعی میکنه...بومممم!یه بمب بی همگاهنگی درست وسط دنیامون بترکونه.</font></div><div align="center"><font size="2"><br></font></div><div align="center"><font size="2">میدونی چیه،منم میخوام دست به دست زندگی بدم و این هماهنگی رو بهم بزنم</font></div><div align="center"><font size="2"><br></font></div><div align="center"><font size="2">میخوام سطل های رنگی بخرم و بدون خط کش و قلمو و طرح معین،همه ی رنگ ها رو روی خاکستری های دنبا پرتاپ کنم</font></div><div align="center"><font size="2"><br></font></div><div align="center"><font size="2">جیغ بزنم و ملودی آروم دنیا رو بهم بزنم</font></div><div align="center"><font size="2"><br></font></div><div align="center"><font size="2">میخوام تمام کاغذ هایی رو که توشون برنامه ریزی شده رو پاره کنم و تیکه هاش رو توی سطل زبانه بریزم</font></div><div align="center"><font size="2"><br></font></div><div align="center"><font size="2">میخوام متفاوت باشم،اونقدر متفاوت که تمام یک رنگی ها به هم بخوره</font></div><div align="center"><font size="2"><br></font></div><div align="center"><font size="2">میگما،اینجوری من تنهام!</font></div><div align="center"><font size="2"><br></font></div><div align="center"><font size="2">بیا با هم یکم صبر کنیم،اختیار دنیا که همیشه دست بزرگترا نیست!؟</font></div><div align="center"><font size="2"><br></font></div><div align="center"><font size="2">با هم دنیا رو تصاحب میکنیم و یه دنیا میسازیم گه پر از رنگه!</font></div><div align="center"><font size="2"><br></font></div><div align="center"><font size="2">میلیارد ها رنگ!</font></div><div align="center"><font size="2"><br></font></div><div align="center"><font size="2">هر کسی هم یه رنگه،هر کس یه جور متفاوته،همه جا پر رنگین کمونه وهیچ ملودی آرومی وجود نداره</font></div><div align="center"><font size="2"><br></font></div><div align="center"><font size="2">بیا با هم مرز ها رو به هم بزنیم و متفاوت ترین دنیا رو با هم بسازیم</font></div><div align="center"><font size="2"><br></font></div><div align="center"><font size="2">اونا میگن تفاوت ها گناهن،پس چرا که نه!؟بیا با هم گناهکار باشیم:)<br></font></div><div align="center"><font size="2"><br></font></div><div align="center"><font size="2"><br></font></div><font size="2">
+
+
+
+
+</font>
+
+
+
+ <br><font color=#C92B68>
+						<div align="left">
+							&nbsp;&nbsp;&nbsp; </div>
+					</div>
+					
+				<div id="hr" class="hr"><div class ="info">
+						Ranna- 						<font color=#000040 size="2"  > | </font><a target="_self" href="javascript:newComment(884)" >کـامـنـت(<script>setCommentCnt(884)</script>)</a>
+						<font color=#FFFFFF>&nbsp;</font></div>
+				</div>
+					<div>
+						<br>
+						<div>
+						</div>
+					</div>
+				</div>
+				<br>							
+					<font face="comic sans ms;" style="font-size: 9pt">
+	<!-- end post -->
+		<span dir="rtl" >
+					<p align="center" class="bloging-pagination" id="multipage">
+					<font  style="font-size:" color="#343130" >
+					<strong>
+					<font style="font-size: 9pt" color="#D5D5FF">
+					&nbsp;صفحه هــا:<span class="auto-style4">
+					</span></font> </strong>
+					</font><font  style="font-size:" color="#ffd1e0" >
+					<font  style="font-size:" color="#f69" >
+					<font  style="font-size:" color="#ffd1e0" >
+					<font style="font-size: 9pt">
+					<span class="auto-style4">
+					<a href="1.html"><strong><span>1</span></strong></a></span></font><font  style="font-size:" ><font style="font-size: 9pt"><span class="auto-style4"><span class="auto-style7"><strong>
+					</strong></span><a href="2.html"><strong><b>2</b></strong></a></span></font><font  style="font-size:" ><font style="font-size: 9pt"><span class="auto-style4"><span class="auto-style7"><strong>
+					</strong></span>					</span>
+					</p>
+					</font>
+					<!--Design By : 88love.mihanblog.com-->
+			</div>
+			<div class="Sidebar" id="Sidebar">
+	<div class=" roza-sid">
+	<div class="roza-sid-box"><a title="home" href="../index.html">Home</a> | 
+<a title="mail" href="mailto:">MaiL</a> | 
+<a title="roza" href="../../88love.mihanblog.com/index.html">Roza</a> 
+</div>
+	<div class= Toproza-sid>About</div>
+<div class= miss-roza-Sid>
+<p align="center"></p>
+!</div></div>
+<div class= roza-sid>
+<div class=  Toproza-sid>Authors</div>
+<div class= miss-roza-Sid>
+  			<a href="../post/author/1401889.html"   >Ranna- </a><br>
+		 			</div>
+				</div>
+<div class= roza-sid>
+<div class= Toproza-sid>Archives</div>
+<div class= miss-roza-Sid>
+	<span dir="ltr">
+					<a href="../post/archive/1399/4.html"> تیر 1399</a><br>
+					<a href="../post/archive/1399/2.html"> اردیبهشت 1399</a><br>
+					<a href="../post/archive/1399/1.html"> فروردین 1399</a><br>
+					<a href="../post/archive/1398/12.html"> اسفند 1398</a><br>
+					<a href="../post/archive/1398/11.html"> بهمن 1398</a><br>
+					<a href="../post/archive/1398/10.html"> دی 1398</a><br>
+					<a href="../post/archive/1398/9.html"> آذر 1398</a><br>
+					<a href="../post/archive/1398/5.html"> مرداد 1398</a><br>
+					<a href="../post/archive/1397/9.html"> آذر 1397</a><br>
+				</span>
+		<br>
+</div></div>
+<BlogLinksBlock>
+<div class= roza-sid>
+<div class= Toproza-sid>Links</div>
+<div class= miss-roza-Sid>
+<div class= rozaa><a title="themes" href="../../zibasaz.mihanblog.com/index.html" target="_blank" rel="nofollow">Miss Roza</a></div>
+			<a href="../../symphony-of-mylife.mihanblog.com/index.html" target="_blank">symphony of my life</a><br>
+					<a href="../../me-myselfandi.mihanblog.com/index.html" target="_blank">♪ ME MYSELF &amp; I ♪</a><br>
+					<a href="http://what-the-fuck.mihanblog.com" target="_blank">Never Mind</a><br>
+					<a href="../../mlplight.mihanblog.com/index.html" target="_blank">Teenagers rock it</a><br>
+					<a href="../../aridelmz.mihanblog.com/index.html" target="_blank">start of ending</a><br>
+					<a href="../../thisisyasi.mihanblog.com/index.html" target="_blank">My blue Queendom</a><br>
+					</div></div>
+</BlogLinksBlock>
+
+<div class= roza-sid>
+<div class= Toproza-sid>Daiy Link</div>
+<div class= miss-roza-Sid>
+ 			<a href="../../freetemplatesforgirls.mihanblog.com/index.html" target="_blank" title="" >قالب های مجانی دخترونهـ</a><br>
+				<a href="../linkdaily/index.html">See All</a><br>
+		<br>
+</div></div>
+
+
+		<form id="frm-16078243085fd573b4c734a" method="post" action="http://r-a-o.mihanblog.com/poll/new/fid/16078243085fd573b4c734a/atrty/1607824308/avrvy/0/key/d5d5c5609f0c98d6029013e63e160345/"  onsubmit="window.open('', 'poll', 'toolbar=0,location=0,status=0,menubar=0,scrollbars=1,resizable=0,width=505,height=315')" target="poll"><input type="hidden" name="data[pollid]" value="378220" id="data[pollid]" />		
+<div class= roza-sid>
+<div class= Toproza-sid>Poll</div>
+<div class= miss-roza-Sid>
+<div class= rozaa><b>آیا امروز،روز خوبی برای مردنه؟</b></div>
+<label><input type="radio" name="data[answer]" value="v1">نه</label><br>
+<label><input type="radio" name="data[answer]" value="v2">آره</label><br>
+<label><input type="radio" name="data[answer]" value="v3">شاید</label><br>
+<br>
+<input type="submit" value="done">
+</div></div>
+
+		<input type="hidden" name="frm-id" value="16078243085fd573b4c734a" id="frm-id" /></form>
+
+
+<div class= roza-sid>
+<div class= Toproza-sid>Stat</div>
+<div class= miss-roza-Sid>
+		<cb:block_stat>
+				<div class=rozaa>بازدید امروز : <b><script>getStatVar('today_view');</script></b></div>
+<div class=rozaa>بازدید دیروز : <b><script>getStatVar('yesterday_view');</script></b></div>
+<div class=rozaaa>بازدید این ماه :<b> <script>getStatVar('this_month_view');</script></b></div>
+<div class=rozaaa>بازدید ماه قبل : <b><script>getStatVar('last_month_view');</script></b></div>
+<div class=rozaaa>بازدید کلی : <b><script>getStatVar('total_view');</script></b></div>
+</div></div>
+
+		
+
+<div class= roza-sid>
+<div class= Toproza-sid>Other</div>
+<div class= miss-roza-Sid>
+<div style="text-align:center"></div>
+</div></div>
+
+</div>
+</body>
+
+</html><script>
+//    setTimeout(function () {
+//        GetMihanBlogShowAds();
+//    }, 1000);
+</script>
+<!--NEW SERVER--><!--;)-->
+
+<!--SabaVision Ads Handler--><!--<script type="text/javascript">(function (d) {var url =   location.protocol+'//api.sabavision.com/pox/poxjs.js';d.write('<script type="text/javascript" src="' + url + '" async></scri' + 'pt>');})(document);</script>-->
+
+
+<script type="text/javascript">
+
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-153829-9']);
+    _gaq.push(['_setDomainName', 'r-a-o.mihanblog.com']);
+    _gaq.push(['_trackPageview']);
+
+    (function() {
+        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+
+</script>
+
+
+<div id='mediaad-Kvcm'></div>
+<meta name="sabavision_zone" content="2500-Z499" />
+<center>
+    <div style="background-color:white;width:90%;padding:20px;margin-top:50px;margin-bottom:50px;">
+        <a href="https://www.cloob.com">شبکه اجتماعی فارسی کلوب</a> | <a href="https://www.seo25.com/product/buy-mobile-traffic-and-get-cheap-targeted-mobile-traffic/" target="_blank">Buy Mobile Traffic</a> | <a href="https://www.soalaat.com">سایت سوالات</a>
+    </div>
+</center>

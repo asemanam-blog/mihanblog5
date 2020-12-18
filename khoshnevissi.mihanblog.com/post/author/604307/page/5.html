@@ -1,0 +1,1189 @@
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" /><link rel="EditURI" type="application/rsd+xml" title="RSD" href="../../../../xmlrpc@rsd" />
+<script type="text/javascript" src="../../../../../static.mihanblog.com/public/scripts/run/g.other.v3.js"></script>
+<script>
+
+	function c_$(id){
+        return document.getElementById(id);
+    }
+    
+			//if (parent.frames.length) top.location.href= document.location;
+		
+	setTodayDate = function(){
+		document.write('شنبه 22 آذر 1399');
+		/*735558*/	}
+
+</script>
+
+
+
+        <script type="text/javascript">
+            (function(){
+            var now = new Date();
+            var head = document.getElementsByTagName('head')[0];
+            var script = document.createElement('script');
+            script.async = true;
+            var script_address = 'https://cdn.yektanet.com/js/mihanblog.com/native-mihanblog.com-6531.js';
+            script.src = script_address + '?v=' + now.getFullYear().toString() + '0' + now.getMonth() + '0' + now.getDate() + '0' + now.getHours();
+            head.appendChild(script);
+            })();
+        </script>
+
+        <!--<script type="text/javascript">
+            var head = document.getElementsByTagName("head")[0];
+            var script = document.createElement("script");
+            script.type = "text/javascript";
+            script.async=1;
+            script.src = "https://s1.mediaad.org/serve/mihanblog.com/loader.js" ;
+            head.appendChild(script);
+        </script>-->
+        
+        <script>
+            var sabaVisionWebsiteID = "9bab9dac-041d-4bdb-b39a-1ed789f65eed"; var sabaVisionWebsitePage = "ALL"
+        </script>
+        <link rel="stylesheet" href="https://plus.sabavision.com/dox/dox.min.css">
+        <script src="https://plus.sabavision.com/dox/dox.min.js"></script>
+        
+        <script>
+	try{
+		var commentCnt = new Array();
+		commentCnt[14245]='0';commentCnt[14246]='0';commentCnt[14247]='0';commentCnt[14248]='0';commentCnt[14249]='0';commentCnt[14250]='0';commentCnt[14251]='0';commentCnt[14252]='0';commentCnt[14253]='0';commentCnt[14254]='0';commentCnt[14256]='0';commentCnt[14257]='0';commentCnt[14258]='0';commentCnt[14260]='0';commentCnt[14261]='0';commentCnt[14262]='0';commentCnt[14263]='0';commentCnt[14264]='0';commentCnt[14265]='0';commentCnt[14266]='0';	} catch(e){}
+	
+	newComment = function(post_id){
+		try{
+			window.open('/post/comment/'+post_id,'comment','status=yes,scrollbars=yes,toolbar=no,menubar=no,location=no ,width=480px,height=540px');
+		} catch(e){}
+	}
+	setCommentCnt = function(post_id){
+		try{
+			if(commentCnt[post_id]){
+				document.write(commentCnt[post_id]);
+			} else {
+				document.write(0);
+			}
+		} catch(e){}
+	}
+</script><script>
+
+
+	mihanblogUpdateLike = function(postid,type){
+		var url = '/post/like/'+postid+'/'+type;
+		mihanblogGetAjax(url,function(){});
+	};
+	try{
+        mihanblogGetAjax = function (url,callback) {
+    		var req;
+			if (window.XMLHttpRequest)
+            {
+                // code for IE7+, Firefox, Chrome, Opera, Safari
+			  	req = new XMLHttpRequest();
+			}else{	// code for IE6, IE5
+			  	req = new ActiveXObject("Microsoft.XMLHTTP");
+		  	}
+		    req.open("GET", url, 1);
+		    req.onreadystatechange = function () {
+		        if (req.readyState == 4) {
+		            if (req.status == 200) {
+		            	var response = eval(req.responseText);
+		            	callback();
+		            }else{
+	            		return ;
+		            }
+		        }else{
+					return ;
+		        }
+		    }
+		    req.send(null);
+		}
+	}catch(e){}
+
+	try{
+		var mihanblogLikeArrCnt = new Array();
+		var mihanblogDisLikeArrCnt = new Array();
+
+		mihanblogLikeArrCnt[14247]='0';
+mihanblogDisLikeArrCnt[14247]='0';
+mihanblogLikeArrCnt[14264]='0';
+mihanblogDisLikeArrCnt[14264]='0';
+	} catch(e){}
+
+
+
+    mihanblogPostLike = function(post_id){
+
+        mihanblogLikeCnt = (mihanblogLikeArrCnt[post_id]? mihanblogLikeArrCnt[post_id] : 0);
+        mihanblogDisLikeCnt = (mihanblogDisLikeArrCnt[post_id]? mihanblogDisLikeArrCnt[post_id] : 0);
+        mihanblogLikeCnt = parseInt(mihanblogLikeCnt);
+        mihanblogDisLikeCnt = parseInt(mihanblogDisLikeCnt);
+
+        document.write(
+                '<div class="mihanblog_like_wrapper ">'+
+                       '<div id="dislikeBar_'+post_id+'" onclick="mihanblogUpdateLike('+post_id+',\'dislike\')"   class="mihanblog_like_bar mihanblog_like_dislikeBar mihanblog_like_show_help ">-<div class="mihanblog_like_Cnt" id="disLikeCnt_'+post_id+'">'+mihanblogDisLikeCnt+'</div>'+
+                            '<span  class="mihanblog_like_v2_help mihanblog_like_v2_help_dislike clearfix"> '+
+                                '<span class="mihanblog_like_help_arrow mihanblog_like_help_arrow_dislike clearfix"></span>'+
+                                '<span class="mihanblog_like_help_text">نمی پسندم</span>'+
+                            '</span>'+
+                        '</div>'+
+                       '<div id="Like_'+post_id+'" class="mihanblog_like_border"></div>'+
+                       '<div id="likeBar_'+post_id+'" onclick="mihanblogUpdateLike('+post_id+',\'like\')"  class="mihanblog_like_bar mihanblog_like_likeBar mihanblog_like_show_help" >+<div class="mihanblog_like_Cnt" id="likeCnt_'+post_id+'">'+mihanblogLikeCnt+'</div>'+
+                            '<span  class="mihanblog_like_v2_help mihanblog_like_v2_help_like clearfix"> '+
+                                '<span class="mihanblog_like_help_arrow mihanblog_like_help_arrow_like clearfix"></span>'+
+                                '<span class="mihanblog_like_help_text">می پسندم</span>'+
+                            '</span>'+
+                        '</div>'+
+
+                '</div>'
+        );
+
+
+
+        mihanblogDisplayeLike(post_id);
+    }
+
+
+    mihanblogDisplayeLike = function(post_id){
+
+        mihanblogLikeCnt = (mihanblogLikeArrCnt[post_id]? mihanblogLikeArrCnt[post_id] : 0);
+        mihanblogDisLikeCnt = (mihanblogDisLikeArrCnt[post_id]? mihanblogDisLikeArrCnt[post_id] : 0);
+        mihanblogLikeCnt = parseInt(mihanblogLikeCnt);
+        mihanblogDisLikeCnt = parseInt(mihanblogDisLikeCnt);
+
+
+
+        sum = mihanblogLikeCnt - mihanblogDisLikeCnt;
+        backgroundBorder =  document.getElementById('Like_'+post_id);
+        var likeObj = document.getElementById('likeCnt_'+post_id);
+        var disLikeObj = document.getElementById('disLikeCnt_'+post_id);
+
+
+
+
+
+        likeObj.innerHTML =  mihanblogLikeCnt ;
+        disLikeObj.innerHTML =  mihanblogDisLikeCnt;
+
+        if(sum == 0){
+            backgroundBorder.style.backgroundImage = "url('/public/public/images/icons/like_likedislike.png')";
+            document.getElementById('dislikeBar_'+post_id).style.width = '19px';
+            document.getElementById('likeBar_'+post_id).style.width = '19px';
+        }else{
+             if(sum > 0){
+                 backgroundBorder.style.backgroundImage = "url('/public/public/images/icons/like_like.png')";
+                 document.getElementById('likeBar_'+post_id).style.width = '23px';
+                 document.getElementById('dislikeBar_'+post_id).style.width = '15px';
+             }else{
+                 backgroundBorder.style.backgroundImage = "url('/public/public/images/icons/like_dislike.png')";
+                 document.getElementById('likeBar_'+post_id).style.width = '15px';
+                 document.getElementById('dislikeBar_'+post_id).style.width = '23px';
+             }
+        }
+
+    }
+
+
+
+
+</script>
+
+<style type="text/css">
+
+
+    .clearfix {display: inline-block;}
+    .clearfix:after {
+        content: ".";
+        display: block;
+        height: 0;
+        clear: both;
+        visibility: hidden;
+    }
+
+    .mihanblog_like_wrapper {
+        color: #ffffff;
+        direction: ltr;
+        position: relative;
+    }
+    .mihanblog_like_wrapper span{
+        display: none;
+    }
+    .mihanblog_like_bar {
+        color: #FFFFFF;
+        cursor: pointer;
+        float: left;
+        font-size: 10px;
+        height: 20px;
+        line-height: 19px;
+        margin: 5px 0;
+    }
+    .mihanblog_like_likeBar {
+        background-color: #88B131;
+        padding-right: 5px;
+        border-top-right-radius: 2px;
+        border-bottom-right-radius: 2px;
+        text-align: right;
+    }
+    .mihanblog_like_likeBar:hover{
+        background-color: #699017;
+    }
+    .mihanblog_like_border {
+        background-color: #666666;
+        border: 1px solid #666666;
+        float: left;
+        font-size: 12px;
+        height: 20px;
+        margin-top: 2px;
+        width: 25px;
+        padding: 3px 5px 2px 0;
+        text-align: center;
+        border-radius: 2px;
+        color: #ffffff;
+        direction: ltr;
+        background-repeat: no-repeat ;
+        background-position: 4px center;
+    }
+    .mihanblog_like_border img {
+        margin-left: 2px;
+        margin-top: 2px;
+        width: 22px;
+    }
+    .mihanblog_like_dislikeBar {
+        background-color: #FF6F31;
+        padding-left: 5px;
+        border-top-left-radius: 2px;
+        border-bottom-left-radius: 2px;
+        text-align:left ;
+    }
+    .mihanblog_like_dislikeBar:hover{
+        background-color: #D54B10;
+    }
+
+
+
+    .mihanblog_like_show_help {
+        position: relative;
+    }
+    .mihanblog_like_show_help:hover span {
+        display: block;
+    }
+    .mihanblog_like_help_text {
+        background-color: white;
+        border: 1px solid #555555;
+        border-radius: 3px 3px 3px 3px;
+        color: #303030;
+        float: left;
+        font-size: 11px;
+        font-weight: normal;
+        padding: 5px 10px;
+    }
+
+    .mihanblog_like_help_arrow_dislike {
+        background: url("http://khoshnevissi.mihanblog.com/public/public/images/icons/like_hover_top.png") no-repeat scroll 16px 0 transparent;
+        left: 0;
+        top: -4px;
+    }
+
+    .mihanblog_like_help_arrow_like {
+        background: url("http://khoshnevissi.mihanblog.com/public/public/images/icons/like_hover_top _2.png") no-repeat scroll 16px 0 transparent;
+        left: -10px;
+        top: 29px;
+    }
+
+    .mihanblog_like_help_arrow{
+        height: 6px;
+        position: absolute;
+        width: 100px;
+
+    }
+
+    .mihanblog_like_v2_help_dislike {
+        left: -15px;
+        top: 24px;
+    }
+    .mihanblog_like_v2_help_like {
+        left: 0;
+        top: -35px;
+
+    }
+    .mihanblog_like_v2_help{
+        display: none;
+        position: absolute;
+        white-space: nowrap;
+        z-index: 1;
+    }
+
+    .mihanblog_like_Cnt{
+        display: inline;
+        color: #ffffff;
+    }
+
+</style><script>
+
+	statInfo = new Array();
+	setStatVar = function(index,value){
+		statInfo[index] = value;
+	}
+	getStatVar = function(index){
+		if(statInfo[index]) document.write(statInfo[index]);
+	}
+	
+	setStatVar('total_post','11620');
+	setStatVar('total_author','0');
+	setStatVar('modify_date','جمعه 21 آذر 1399');
+	
+	setStatVar('today_view','170');
+	setStatVar('yesterday_view','665');
+	
+	setStatVar('this_month_view','4465');
+	setStatVar('last_month_view','9264');
+
+	setStatVar('total_view','1147231');
+	setStatVar('last_view_date','شنبه 22 آذر 1399 (14:48)');
+
+
+
+    
+    function setStatFromClient()
+    {
+        var url = 'http://khoshnevissi.mihanblog.com/statupdate/?data[refereruri]=http://khoshnevissi.mihanblog.com/post/author/604307&data[postid]=&data[requesturi]=/post/author/604307/page/5&data[sdate]=1607772057&data[hash]=9cf30c0d1d92a76f19e4e004c98da36a&data[resolution]='+screen.width+' X '+screen.height;
+
+//        alert(url);
+//        var newjs = document.createElement("SCRIPT");
+//        newjs.type = 'text/javascript';
+//        newjs.src = url;
+//
+//        var newdiv = document.createElement("DIV");
+//        newdiv.setAttribute("style","display:none");
+
+        document.write(unescape('%3Cscript src="'+url+'" type="text/javascript"%3E%3C/script%3E'));
+//        newdiv.appendChild (newjs);
+//        document.write(newjs);
+//        document.write(appendChild (newdiv);
+
+    };
+    setStatFromClient();
+        
+</script><script>
+	messageForm = function(post_id){
+		try{
+			window.open('/message','message','status=yes,scrollbars=yes,toolbar=no,menubar=no,location=no ,width=480px,height=550px');
+		} catch(e){}
+	}
+</script><script>
+	linkdailyForm = function(){
+		try{
+			window.open('/linkdaily/new','linkdaily','status=yes,scrollbars=yes,toolbar=no,menubar=no,location=no ,width=500px,height=460px');
+		} catch(e){}
+	}
+</script><script>
+
+var MihanblogShopAdsArray = new Array();
+
+function GetMihanBlogShowAds(){
+	if(MihanblogShopAdsArray.length){
+		var adsTarget = 'MihanblogShopAds';
+		var containerWidth = document.getElementById(adsTarget).offsetWidth;
+		if(containerWidth>=200){
+			var adsCnt = parseInt(containerWidth / 200) ;
+			if(adsCnt>MihanblogShopAdsArray.length){
+				adsCnt = MihanblogShopAdsArray.length ; 
+			}
+//			var OneAdsWidth = parseInt(containerWidth / adsCnt) ;
+			var OneAdsWidth = containerWidth / adsCnt ;
+			if(OneAdsWidth>400){
+				OneAdsWidth = 400 ;
+			}
+			var OutHtml = '';
+			var img = '';
+			var link = '';
+			var title = '';
+			var description = '';
+			var imgWidth = 70;
+			if(OneAdsWidth>230){
+				imgWidth = 80;
+			}
+			if(OneAdsWidth>300){
+				imgWidth = 90;
+			}
+			for(adsOne=0;adsOne<adsCnt;adsOne++){
+				
+				img = MihanblogShopAdsArray[adsOne]['img'];
+				link = MihanblogShopAdsArray[adsOne]['link'];
+				title = MihanblogShopAdsArray[adsOne]['title'];
+				description = MihanblogShopAdsArray[adsOne]['description'];
+				
+				OutHtml += '<td style="background-color:#FFF;width: '+OneAdsWidth+'px;border:1px solid #f00;margin:0px 0px;font-size:11px;font-family:tahoma;padding:2px;margin:0px 0px;font-size:11px;border: 1px solid BurlyWood; padding: 1px; height: '+(imgWidth+25)+'px;">';
+
+				OutHtml += '	<a href="'+link+'.html" target="_blank" style="text-decoration:none">';
+
+				OutHtml += '			<div style="width: '+(OneAdsWidth-16)+'px;cursor:pointer;font-size:12px;padding: 4px 1px 4px 7px; white-space: nowrap; text-align: center; font-weight: bold; color: blue;white-space:nowrap;overflow:hidden">';
+				OutHtml += 					title;
+				OutHtml += '			</div>';
+				OutHtml += '			<div style="cursor:pointer;padding: 1px; display: block; float: right; width: '+imgWidth+'px;">';
+				OutHtml += '				<img src="'+img+'.html" style="border:0px;padding:0px;margin:0px;width:'+imgWidth+'px;height:'+imgWidth+'px;">';
+				OutHtml += '			</div>';
+				OutHtml += '			<div style="padding: 1px; display: block; float: right; width: '+(OneAdsWidth-13-imgWidth)+'px; text-align: right;overflow:hidden">';
+				OutHtml += '				<div style="overflow:hidden;cursor:pointer;padding: 2px 3px; line-height: 17px; height: '+(imgWidth-3)+'px; text-align: justify;color:#000;direction:rtl">';
+				OutHtml += 						description;
+				OutHtml += '				</div>';
+				OutHtml += '			</div>';
+
+				OutHtml += '	</a>';
+
+				OutHtml += '</td>';
+			}
+			
+			var Out = '<table align="center" cellpadding="0" cellspacing="2" style="width:'+(OneAdsWidth*adsCnt)+'px;"><tr>'+OutHtml+'</tr></table>'; 
+			
+			Out = '<div style="text-align:center;padding:0px;margin:3px auto;">'+Out+'</div>'; 
+			
+			document.getElementById(adsTarget).style.height = (imgWidth+35)+'px' ;
+			document.getElementById(adsTarget).innerHTML = Out ;
+		}
+	}
+}
+</script>
+    <style>
+        @font-face {
+            font-family: 'Mihan-Iransans';
+            src: url('http://khoshnevissi.mihanblog.com/public/public/fonts/Iransans.eot');
+            src: url('http://khoshnevissi.mihanblog.com/public/public/fonts/Iransans.eot?') format('embedded-opentype'),
+            url('http://khoshnevissi.mihanblog.com/public/public/fonts/Iransans.woff2') format('woff2'),
+            url('http://khoshnevissi.mihanblog.com/public/public/fonts/Iransans.woff') format('woff'),
+            url('http://khoshnevissi.mihanblog.com/public/public/fonts/Iransans.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+        @font-face {
+            font-family: 'Mihan-IransansBold';
+            src: url('http://khoshnevissi.mihanblog.com/public/public/fonts/Iransans-Black.eot');
+            src: url('http://khoshnevissi.mihanblog.com/public/public/fonts/Iransans-Black.eot?') format('embedded-opentype'),
+            url('http://khoshnevissi.mihanblog.com/public/public/fonts/Iransans-Black.woff2') format('woff2'),
+            url('http://khoshnevissi.mihanblog.com/public/public/fonts/Iransans-Black.woff') format('woff'),
+            url('http://khoshnevissi.mihanblog.com/public/public/fonts/Iransans-Black.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+        @font-face {
+            font-family: 'Mihan-IransansLight';
+            src: url('http://khoshnevissi.mihanblog.com/public/public/fonts/Iransans-UltraLight.eot');
+            src: url('http://khoshnevissi.mihanblog.com/public/public/fonts/Iransans-UltraLight.eot?') format('embedded-opentype'),
+            url('http://khoshnevissi.mihanblog.com/public/public/fonts/Iransans-UltraLight.woff2') format('woff2'),
+            url('http://khoshnevissi.mihanblog.com/public/public/fonts/Iransans-UltraLight.woff') format('woff'),
+            url('http://khoshnevissi.mihanblog.com/public/public/fonts/Iransans-UltraLight.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+        @font-face {
+            font-family: 'Mihan-Nassim';
+            src: url('http://khoshnevissi.mihanblog.com/public/public/fonts/Nassim.eot');
+            src: url('http://khoshnevissi.mihanblog.com/public/public/fonts/Nassim.eot?') format('embedded-opentype'),
+            url('http://khoshnevissi.mihanblog.com/public/public/fonts/Nassim.woff2') format('woff2'),
+            url('http://khoshnevissi.mihanblog.com/public/public/fonts/Nassim.woff') format('woff'),
+            url('http://khoshnevissi.mihanblog.com/public/public/fonts/Nassim.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+        @font-face {
+            font-family: 'Mihan-Koodak';
+            src: url('http://khoshnevissi.mihanblog.com/public/public/fonts/Koodak.eot');
+            src: url('http://khoshnevissi.mihanblog.com/public/public/fonts/Koodak.eot?') format('embedded-opentype'),
+            url('http://khoshnevissi.mihanblog.com/public/public/fonts/Koodak.woff2') format('woff2'),
+            url('http://khoshnevissi.mihanblog.com/public/public/fonts/Koodak.woff') format('woff'),
+            url('http://khoshnevissi.mihanblog.com/public/public/fonts/Koodak.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+        @font-face {
+            font-family: 'Mihan-Yekan';
+            src: url('http://khoshnevissi.mihanblog.com/public/public/fonts/Yekan.eot');
+            src: url('http://khoshnevissi.mihanblog.com/public/public/fonts/Yekan.eot?') format('embedded-opentype'),
+            url('http://khoshnevissi.mihanblog.com/public/public/fonts/Yekan.woff2') format('woff2'),
+            url('http://khoshnevissi.mihanblog.com/public/public/fonts/Yekan.woff') format('woff'),
+            url('http://khoshnevissi.mihanblog.com/public/public/fonts/Yekan.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+        @font-face {
+            font-family: 'FontAwesome';
+            src: url('http://khoshnevissi.mihanblog.com/public/public/fonts/fontawesome_webfont.eot');
+            src: url('http://khoshnevissi.mihanblog.com/public/public/fonts/fontawesome_webfont.eot?') format('embedded-opentype'),
+            url('http://khoshnevissi.mihanblog.com/public/public/fonts/fontawesome_webfont.woff2') format('woff2'),
+            url('http://khoshnevissi.mihanblog.com/public/public/fonts/fontawesome_webfont.woff') format('woff'),
+            url('http://khoshnevissi.mihanblog.com/public/public/fonts/fontawesome_webfont.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+
+
+        
+
+        /* Smartphones (portrait and landscape) ----------- */
+
+        /*
+        @media only screen and (max-width : 480px) and (min-width : 320px) {
+            .sabaClick_advert__wrapper{
+                display:block;
+            }
+            .sabaClick_advert__inner{
+                max-width: 90%;
+                margin: 0 5%;
+            }
+        }
+        */
+
+    </style>
+
+
+
+
+
+
+<html>
+<head>
+<title>خوشنویسی -هنر-حیدرامیرپور</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta name="language" content="Farsi">
+<meta name="geo.region" CONTENT="IR" />
+<meta name="googlebot" content="INDEX, follow" />
+<meta name="robots" content="index, follow">
+<meta name="description" content="خوشنویسی -هنر-حیدرامیرپور - مطالب حیدر  امیرپور - خوشنویسی نستعلیق -هنر اصیل ایرانی - خوشنویسی -هنر-حیدرامیرپور">
+<meta name="keywords" content="خوشنویسی -هنر-حیدرامیرپور - مطالب حیدر  امیرپور,khoshnevissi, Blog, Weblog, Persian,Iran, Iranian, Farsi, Weblogs">
+<link rel="alternate" type="application/rss+xml" title="خوشنویسی -هنر-حیدرامیرپور" href="../../../rss/index.html">
+<link href="http://www.iranskin.com/template3/41/m41.css" type="text/css" rel="stylesheet">
+</head>
+<body>
+<div align="center">
+<div class=Back-IS>
+	
+<table border="0" width="1000" cellspacing="0" cellpadding="0">		
+
+
+<tr><td colspan="3" id=Header-IS>			
+
+
+<div id=BlogTitle><br>خوشنویسی -هنر-حیدرامیرپور</div><div style="width:100%;height:23;float:right"></div>
+<div id=BlogDescription>خوشنویسی نستعلیق -هنر اصیل ایرانی&nbsp;</div>	
+	
+    
+<div class=TopMenu><div style="float:right;width:782;direction:rtl">
+<div style="width:30;height:20;float:right"></div>
+
+
+<a href="../../../../index.html"><img border="0" src="http://www.iranskin.com/template3/41/blank.gif" width="80" height="32" hspace="1"></a>
+<a href="../../../list.html"><img border="0" src="http://www.iranskin.com/template3/41/blank.gif" width="90" height="32" hspace="1"></a>
+<a href="javascript:messageForm()"><img border="0" src="http://www.iranskin.com/template3/41/blank.gif" width="80" height="32" hspace="1"></a>
+<a target="_blank" href="http://www.iranskin.com"><img alt="قالب وبلاگ" border="0" src="http://www.iranskin.com/template3/41/blank.gif" width="90" height="32" hspace="1"></a>
+<a target="_blank" href="../../../rss/index.html"><img border="0" src="http://www.iranskin.com/template3/41/blank.gif" width="70" height="32" hspace="1"></a>
+
+</div>
+
+
+</div>
+
+</td></tr>
+
+
+<tr><td width="220" valign="top">
+
+<div id=leftmenu>
+<div class=TopSid><div class=TopSid2>
+<b>نویسندگان</b></div></div>
+<div class=CenterSid><div class=li-Sid>
+<a href="../../604307.html">حیدر  امیرپور  11620 </a></div></div>
+<div class=LowSid></div></div>
+
+
+		
+<div id=leftmenu>
+<div class=TopSid><div class=TopSid2>
+<b>لینک دوستان</b></div></div>
+<div class=CenterSid><div class=li-Sid>
+<a target="_blank" href="http://www.iranskin.com">قالب میهن بلاگ</a></div><div class=li-Sid><a target="_blank" href="http://www.IranSkin.com" title="قالب بلاگفا">قالب بلاگفا</a></div><div class=li-Sid>
+<a target="_blank" href="http://www.iranskin.com/games">بازی آنلاین</a></div></div>
+<div class=LowSid></div></div>
+
+
+
+
+
+
+<div id=leftmenu>
+<div class=TopSid><div class=TopSid2>
+<b>پیوندهای روزانه</b></div></div>
+<div class=CenterSid><div class=li-Sid>
+<a target="_blank" href="https://mokaab.org/" title="نمایندگی شیائومی Xiaomi">نمایندگی شیائومی Xiaomi</a></div><div class=li-Sid>
+<a target="_blank" href="http://www.iranskin.com" title="قالب میهن بلاگ">قالب میهن بلاگ</a></div>
+<div class=li-Sid>
+<a target="_blank" href="http://planet.iranskin.com">دانلود</a></div></div>
+<div class=LowSid></div></div>
+
+<div id=leftmenu>
+<div class=TopSid><div class=TopSid2>
+<b>لینک های مفید</b></div></div>
+<div class=CenterSid><script language="javascript" src="https://www.shahrekhabar.com/javascript.jsp?type=analysis&num=99&bullet=true&source=false" ></script>
+<div class=li-Sid><a target="_blank" href="http://showhow.ir/">showhow</a>
+</div>
+<div class=li-Sid><a target="_blank" href="http://www.bibakmusic.com/category/artists/%d9%85%d8%ad%d9%85%d8%af-%d8%b9%d9%84%db%8c%d8%b2%d8%a7%d8%af%d9%87">محمد علیزاده</a>
+</div>
+<div class=li-Sid><a target="_blank" href="http://baspower.ir/kes-cummins/">محصولات kes energy کامینز</a>
+</div>
+<div class=li-Sid><a target="_blank" href="http://www.iranhafez.com/%D9%81%D8%A7%D9%84-%D8%AD%D8%A7%D9%81%D8%B8/#hafez">فال حافظ</a>
+</div>
+<div class=li-Sid><a target="_blank" href="https://tinateb.net/product/vacuum-machine-for-men/">دستگاه وکیوم</a>
+</div>
+</div>
+<div class=LowSid></div></div>
+			
+</td>
+
+
+<td width="563" valign="top">
+
+<div align="center">
+
+			
+
+		<div id="MihanblogShopAds" style="display:block;height:0px;width:100%;border:0px"></div>
+					
+<div class=TopPost>
+<div class=TopPost2>		
+
+<b><a href="../../../14266.html">خوشنویسی</a></b></div></div>
+<div class=CenterPost><div class=CenterPost2>					
+<div id="InPost_MihanblogShopAds" style="display:block;height:0px;width:100%;border:0px"></div><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcTJCk6jDTgEDWRSg2pse3stcsP40o2bT6CLEA&amp;usqp=CAU" alt="گالری آثار خوشنویسی حسین غلامی (4) » آثار هنرمندان ایران - عزیزی هنر">
+
+
+<br>
+														
+</div></div>			
+
+<div class=LowPost3><div class=CPost3>
+
+<div class=date> [ چهارشنبه 15 مرداد 1399  ]  [ 07:58 ب.ظ  ]  [ <a href="../../604307.html">حیدر  امیرپور </a> ] </div>
+<div class=Comment><a target="_self" href="javascript:newComment(14266)">نظرات  <script>setCommentCnt(14266)</script> </a><script type="text/javascript">GetBC(<-PostId->);</script>
+</div></div></div>						
+
+
+			
+<div class=TopPost>
+<div class=TopPost2>		
+
+<b><a href="../../../14265.html">خوشنویسی</a></b></div></div>
+<div class=CenterPost><div class=CenterPost2>					
+<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcSJd3NdO5YRqc04xozDUgpCT9p6R_lU4L9qCw&amp;usqp=CAU" alt="قدما - مطالب آثار میرزا كاظم">
+
+
+<br>
+														
+</div></div>			
+
+<div class=LowPost3><div class=CPost3>
+
+<div class=date> [ چهارشنبه 15 مرداد 1399  ]  [ 07:57 ب.ظ  ]  [ <a href="../../604307.html">حیدر  امیرپور </a> ] </div>
+<div class=Comment><a target="_self" href="javascript:newComment(14265)">نظرات  <script>setCommentCnt(14265)</script> </a><script type="text/javascript">GetBC(<-PostId->);</script>
+</div></div></div>						
+
+
+			
+<div class=TopPost>
+<div class=TopPost2>		
+
+<b><a href="../../../14264.html">رستم‌علی خراسانی</a></b></div></div>
+<div class=CenterPost><div class=CenterPost2>					
+<h1 id="firstHeading" class="firstHeading" lang="fa" style="margin: 0px 0px 0.25em; padding: 0px; overflow: visible; border-bottom: 1px solid rgb(162, 169, 177); font-size: 1.8em; font-weight: normal; font-family: &quot;.Arabic UI Display&quot;, Tahoma, &quot;Iranian Serif&quot;, &quot;Noto Naskh Arabic&quot;, &quot;Iranian Sans&quot;, &quot;DejaVu Sans&quot;, serif; line-height: 1.3;">رستم‌علی خراسانی</h1><div id="bodyContent" class="mw-body-content" style="position: relative; z-index: 0; font-size: calc(0.875em); line-height: 1.6; color: rgb(32, 33, 34); font-family: &quot;.Arabic UI Text&quot;, Tahoma, &quot;Iranian Sans&quot;, &quot;Noto Sans Arabic&quot;, &quot;DejaVu Sans&quot;, sans-serif;"><div id="siteSub" class="noprint" style="display: inline; font-size: 12.88px;">از ویکی‌پدیا، دانشنامهٔ آزاد</div><div id="contentSub" style="font-size: 11.76px; line-height: 1.2em; margin: 0px 1em 1.4em 0px; color: rgb(84, 89, 93); width: auto;"><span class="mw-redirectedfrom">(تغییرمسیر از&nbsp;<a href="https://fa.wikipedia.org/w/index.php?title=%D8%B1%D8%B3%D8%AA%D9%85_%D8%B9%D9%84%DB%8C_%D8%AE%D8%B1%D8%A7%D8%B3%D8%A7%D9%86%DB%8C&amp;redirect=no" class="mw-redirect" title="رستم علی خراسانی" style="text-decoration-line: none; color: rgb(11, 0, 128); background: none;">رستم علی خراسانی</a>)</span></div><div id="contentSub2" style="font-size: 11.76px; line-height: 1.2em; margin: 0px 1em 1.4em 0px; color: rgb(84, 89, 93); width: auto;"></div><div id="jump-to-nav"></div><a class="mw-jump-link" href="https://fa.wikipedia.org/wiki/%D8%B1%D8%B3%D8%AA%D9%85%E2%80%8C%D8%B9%D9%84%DB%8C_%D8%AE%D8%B1%D8%A7%D8%B3%D8%A7%D9%86%DB%8C#mw-sidebar-button" style="text-decoration-line: none; color: rgb(11, 0, 128); background: none; display: block; clip: rect(1px, 1px, 1px, 1px); width: 1px; height: 1px; margin: -1px; border: 0px; padding: 0px; overflow: hidden; position: absolute !important;">پرش به ناوبری</a><a class="mw-jump-link" href="https://fa.wikipedia.org/wiki/%D8%B1%D8%B3%D8%AA%D9%85%E2%80%8C%D8%B9%D9%84%DB%8C_%D8%AE%D8%B1%D8%A7%D8%B3%D8%A7%D9%86%DB%8C#searchInput" style="text-decoration-line: none; color: rgb(11, 0, 128); background: none; display: block; clip: rect(1px, 1px, 1px, 1px); width: 1px; height: 1px; margin: -1px; border: 0px; padding: 0px; overflow: hidden; position: absolute !important;">پرش به جستجو</a><div id="mw-content-text" lang="fa" dir="rtl" class="mw-content-rtl" style="direction: rtl;"><div class="mw-parser-output"><p style="margin: 0.5em 0px;"><b>مولانا رستم علی خراسانی</b>&nbsp;از&nbsp;<a href="https://fa.wikipedia.org/wiki/%D8%AE%D9%88%D8%B4%D9%86%D9%88%DB%8C%D8%B3" class="mw-redirect" title="خوشنویس" style="text-decoration-line: none; color: rgb(11, 0, 128); background: none;">خوشنویسان</a>&nbsp;و&nbsp;<a href="https://fa.wikipedia.org/wiki/%D9%86%D8%B3%D8%AA%D8%B9%D9%84%DB%8C%D9%82" title="نستعلیق" style="text-decoration-line: none; color: rgb(11, 0, 128); background: none;">نستعلیق</a>&nbsp;نویسان سده دهم هجری است.</p><p style="margin: 0.5em 0px;">او خواهرزاده&nbsp;<a href="https://fa.wikipedia.org/wiki/%DA%A9%D9%85%D8%A7%D9%84%E2%80%8C%D8%A7%D9%84%D8%AF%DB%8C%D9%86_%D8%A8%D9%87%D8%B2%D8%A7%D8%AF" title="کمال‌الدین بهزاد" style="text-decoration-line: none; color: rgb(11, 0, 128); background: none;">کمال‌الدین بهزاد</a>&nbsp;نقاش پر آوازه بود. خط نستعلیق را خوش می‌نوشت و در کتابت خفی و جلی مهارت داشت.<sup id="cite_ref-احوال_و_آثار_خوشنویسان_1-0" class="reference" style="line-height: 1em; unicode-bidi: isolate; white-space: nowrap;"><a href="https://fa.wikipedia.org/wiki/%D8%B1%D8%B3%D8%AA%D9%85%E2%80%8C%D8%B9%D9%84%DB%8C_%D8%AE%D8%B1%D8%A7%D8%B3%D8%A7%D9%86%DB%8C#cite_note-%D8%A7%D8%AD%D9%88%D8%A7%D9%84_%D9%88_%D8%A2%D8%AB%D8%A7%D8%B1_%D8%AE%D9%88%D8%B4%D9%86%D9%88%DB%8C%D8%B3%D8%A7%D9%86-1" style="text-decoration-line: none; color: rgb(11, 0, 128); background: none;">[۱]</a></sup></p><p style="margin: 0.5em 0px;">رستم‌علی به قولی در&nbsp;<a href="https://fa.wikipedia.org/wiki/%D9%87%D8%B1%D8%A7%D8%AA" title="هرات" style="text-decoration-line: none; color: rgb(11, 0, 128); background: none;">هرات</a>&nbsp;نشو و نما یافت و در دربار&nbsp;<a href="https://fa.wikipedia.org/wiki/%D8%B3%D9%84%D8%B7%D8%A7%D9%86_%D8%AD%D8%B3%DB%8C%D9%86_%D8%A8%D8%A7%DB%8C%D9%82%D8%B1%D8%A7" title="سلطان حسین بایقرا" style="text-decoration-line: none; color: rgb(11, 0, 128); background: none;">سلطان حسین بایقرا</a>&nbsp;به کتابت مشغول بود و پس از زوال سلطنت او به&nbsp;<a href="https://fa.wikipedia.org/wiki/%D9%81%D8%A7%D8%B1%D8%B3_(%D8%B3%D8%B1%D8%B2%D9%85%DB%8C%D9%86)" title="فارس (سرزمین)" style="text-decoration-line: none; color: rgb(11, 0, 128); background: none;">فارس</a>&nbsp;رفت.<sup id="cite_ref-راسخون_2-0" class="reference" style="line-height: 1em; unicode-bidi: isolate; white-space: nowrap;"><a href="https://fa.wikipedia.org/wiki/%D8%B1%D8%B3%D8%AA%D9%85%E2%80%8C%D8%B9%D9%84%DB%8C_%D8%AE%D8%B1%D8%A7%D8%B3%D8%A7%D9%86%DB%8C#cite_note-%D8%B1%D8%A7%D8%B3%D8%AE%D9%88%D9%86-2" style="text-decoration-line: none; color: rgb(11, 0, 128); background: none;">[۲]</a></sup></p><p style="margin: 0.5em 0px;">رستم علی در ابتدا برای&nbsp;<a href="https://fa.wikipedia.org/wiki/%D8%A8%D9%87%D8%B1%D8%A7%D9%85_%D9%85%DB%8C%D8%B1%D8%B2%D8%A7" title="بهرام میرزا" style="text-decoration-line: none; color: rgb(11, 0, 128); background: none;">بهرام میرزا</a>&nbsp;<a href="https://fa.wikipedia.org/wiki/%D8%B5%D9%81%D9%88%DB%8C%D8%A7%D9%86" class="mw-redirect" title="صفویان" style="text-decoration-line: none; color: rgb(11, 0, 128); background: none;">صفوی</a>&nbsp;کار می‌کرد پس از درگذشت این شاهزادهٔ صفوی، در سنین پیری، به‌مدت هفت سال در کتابخانه فرزندش&nbsp;<a href="https://fa.wikipedia.org/wiki/%D8%B3%D9%84%D8%B7%D8%A7%D9%86_%D8%A7%D8%A8%D8%B1%D8%A7%D9%87%DB%8C%D9%85_%D9%85%DB%8C%D8%B1%D8%B2%D8%A7_%D8%B5%D9%81%D9%88%DB%8C" title="سلطان ابراهیم میرزا صفوی" style="text-decoration-line: none; color: rgb(11, 0, 128); background: none;">ابوالفتح سلطان ابراهیم میرزا</a>، در&nbsp;<a href="https://fa.wikipedia.org/wiki/%D9%85%D8%B4%D9%87%D8%AF" title="مشهد" style="text-decoration-line: none; color: rgb(11, 0, 128); background: none;">مشهد</a>&nbsp;به‌کار کتابت مشغول بود.<sup id="cite_ref-احوال_و_آثار_خوشنویسان_1-1" class="reference" style="line-height: 1em; unicode-bidi: isolate; white-space: nowrap;"><a href="https://fa.wikipedia.org/wiki/%D8%B1%D8%B3%D8%AA%D9%85%E2%80%8C%D8%B9%D9%84%DB%8C_%D8%AE%D8%B1%D8%A7%D8%B3%D8%A7%D9%86%DB%8C#cite_note-%D8%A7%D8%AD%D9%88%D8%A7%D9%84_%D9%88_%D8%A2%D8%AB%D8%A7%D8%B1_%D8%AE%D9%88%D8%B4%D9%86%D9%88%DB%8C%D8%B3%D8%A7%D9%86-1" style="text-decoration-line: none; color: rgb(11, 0, 128); background: none;">[۱]</a></sup>&nbsp;وی به همراه&nbsp;<a href="https://fa.wikipedia.org/wiki/%D9%85%D9%88%D9%84%D8%A7%D9%86%D8%A7_%D9%85%D8%A7%D9%84%DA%A9_%D8%AF%DB%8C%D9%84%D9%85%DB%8C" class="mw-redirect" title="مولانا مالک دیلمی" style="text-decoration-line: none; color: rgb(11, 0, 128); background: none;">مولانا مالک دیلمی</a>،&nbsp;<a href="https://fa.wikipedia.org/wiki/%D9%85%D8%AD%D8%A8%E2%80%8C%D8%B9%D9%84%DB%8C_%D9%86%D8%A7%DB%8C%DB%8C" title="محب‌علی نایی" style="text-decoration-line: none; color: rgb(11, 0, 128); background: none;">محب‌علی</a>&nbsp;(مسئول کتابخانه و پسرش)،&nbsp;<a href="https://fa.wikipedia.org/wiki/%D8%B4%D8%A7%D9%87_%D9%85%D8%AD%D9%85%D9%88%D8%AF_%D9%86%DB%8C%D8%B4%D8%A7%D8%A8%D9%88%D8%B1%DB%8C" class="mw-redirect" title="شاه محمود نیشابوری" style="text-decoration-line: none; color: rgb(11, 0, 128); background: none;">شاه محمود نیشابوری</a>، و&nbsp;<a href="https://fa.wikipedia.org/wiki/%D9%85%D9%84%D8%A7_%D8%B9%DB%8C%D8%B4%DB%8C_%D9%87%D8%B1%D9%88%DB%8C" class="mw-redirect" title="ملا عیشی هروی" style="text-decoration-line: none; color: rgb(11, 0, 128); background: none;">ملا عیشی هروی</a>&nbsp;مشغول نوشتن نسخه خطی&nbsp;<a href="https://fa.wikipedia.org/wiki/%D9%87%D9%81%D8%AA_%D8%A7%D9%88%D8%B1%D9%86%DA%AF" class="mw-redirect" title="هفت اورنگ" style="text-decoration-line: none; color: rgb(11, 0, 128); background: none;">هفت اورنگ</a>&nbsp;<a href="https://fa.wikipedia.org/wiki/%D8%AC%D8%A7%D9%85%DB%8C" title="جامی" style="text-decoration-line: none; color: rgb(11, 0, 128); background: none;">جامی</a>&nbsp;شد. این کتاب از مشهورترین نسخه‌های خطی است و اکنون در نگارخانه&nbsp;<a href="https://fa.wikipedia.org/w/index.php?title=%D9%81%D8%B1%DB%8C%E2%80%8C%DB%8C%D8%B1&amp;action=edit&amp;redlink=1" class="new" title="فری‌یر (صفحه وجود ندارد)" style="text-decoration-line: none; color: rgb(165, 88, 88); background: none;">فری‌یر</a>&nbsp;در&nbsp;<a href="https://fa.wikipedia.org/wiki/%D9%88%D8%A7%D8%B4%D9%86%DA%AF%D8%AA%D9%86" class="mw-redirect mw-disambig" title="واشنگتن" style="text-decoration-line: none; color: rgb(11, 0, 128); background: none;">واشنگتن</a>&nbsp;است. اتمام این کتاب با بیست و هشت مینیاتوری که دارد نه سال طول کشید.<sup id="cite_ref-3" class="reference" style="line-height: 1em; unicode-bidi: isolate; white-space: nowrap;"><a href="https://fa.wikipedia.org/wiki/%D8%B1%D8%B3%D8%AA%D9%85%E2%80%8C%D8%B9%D9%84%DB%8C_%D8%AE%D8%B1%D8%A7%D8%B3%D8%A7%D9%86%DB%8C#cite_note-3" style="text-decoration-line: none; color: rgb(11, 0, 128); background: none;">[۳]</a></sup></p><p style="margin: 0.5em 0px;">در کتاب «مناقب هنروران» آمده که از شاگردان&nbsp;<a href="https://fa.wikipedia.org/wiki/%D8%B3%D9%84%D8%B7%D8%A7%D9%86%E2%80%8C%D8%B9%D9%84%DB%8C_%D9%85%D8%B4%D9%87%D8%AF%DB%8C" title="سلطان‌علی مشهدی" style="text-decoration-line: none; color: rgb(11, 0, 128); background: none;">سلطان‌علی مشهدی</a>&nbsp;بوده‌است و مؤلف «قواعدالخطوط» شیوه او را به سلطان‌علی مشهدی نزدیک می‌داند.<sup id="cite_ref-احوال_و_آثار_خوشنویسان_1-2" class="reference" style="line-height: 1em; unicode-bidi: isolate; white-space: nowrap;"><a href="https://fa.wikipedia.org/wiki/%D8%B1%D8%B3%D8%AA%D9%85%E2%80%8C%D8%B9%D9%84%DB%8C_%D8%AE%D8%B1%D8%A7%D8%B3%D8%A7%D9%86%DB%8C#cite_note-%D8%A7%D8%AD%D9%88%D8%A7%D9%84_%D9%88_%D8%A2%D8%AB%D8%A7%D8%B1_%D8%AE%D9%88%D8%B4%D9%86%D9%88%DB%8C%D8%B3%D8%A7%D9%86-1" style="text-decoration-line: none; color: rgb(11, 0, 128); background: none;">[۱]</a></sup>&nbsp;او را از نزدیکان&nbsp;<a href="https://fa.wikipedia.org/wiki/%D8%B4%D8%A7%D9%87_%D9%85%D8%AD%D9%85%D9%88%D8%AF_%D9%86%DB%8C%D8%B4%D8%A7%D8%A8%D9%88%D8%B1%DB%8C" class="mw-redirect" title="شاه محمود نیشابوری" style="text-decoration-line: none; color: rgb(11, 0, 128); background: none;">شاه محمود نیشابوری</a>&nbsp;ذکر کرده‌اند. از شاگردان برجسته او می‌توان به فرزند هنرمندش،&nbsp;<a href="https://fa.wikipedia.org/wiki/%D9%85%D8%AD%D8%A8%E2%80%8C%D8%B9%D9%84%DB%8C_%D9%86%D8%A7%DB%8C%DB%8C" title="محب‌علی نایی" style="text-decoration-line: none; color: rgb(11, 0, 128); background: none;">محب‌علی نایی</a>، اشاره کرد.<sup id="cite_ref-راسخون_2-1" class="reference" style="line-height: 1em; unicode-bidi: isolate; white-space: nowrap;"><a href="https://fa.wikipedia.org/wiki/%D8%B1%D8%B3%D8%AA%D9%85%E2%80%8C%D8%B9%D9%84%DB%8C_%D8%AE%D8%B1%D8%A7%D8%B3%D8%A7%D9%86%DB%8C#cite_note-%D8%B1%D8%A7%D8%B3%D8%AE%D9%88%D9%86-2" style="text-decoration-line: none; color: rgb(11, 0, 128); background: none;">[۲]</a></sup></p><p style="margin: 0.5em 0px;">درمورد مکان و زمان درگذشت رستم‌علی اختلافاتی وجود دارد: عده‌ای معتقدند در هرات در جوار قبر&nbsp;<a href="https://fa.wikipedia.org/wiki/%DA%A9%D9%85%D8%A7%D9%84%E2%80%8C%D8%A7%D9%84%D8%AF%DB%8C%D9%86_%D8%A8%D9%87%D8%B2%D8%A7%D8%AF" title="کمال‌الدین بهزاد" style="text-decoration-line: none; color: rgb(11, 0, 128); background: none;">کمال‌الدین بهزاد</a>&nbsp;در سال ۹۴۲ ق دفن شده، و عده‌ای دیگر مدفن وی را در هرات و درگذشتش را در حدود سال ۹۳۵ تا ۹۴۲ ق ذکر کرده‌اند، اما مولف «گلستان هنر» مرقد وی را در جنب مزار سلطانعلی مشهدی دانسته و سال درگذشت وی را ۹۷۰ ق در مشهد ذکر کرده‌است.<sup id="cite_ref-راسخون_2-2" class="reference" style="line-height: 1em; unicode-bidi: isolate; white-space: nowrap;"><a href="https://fa.wikipedia.org/wiki/%D8%B1%D8%B3%D8%AA%D9%85%E2%80%8C%D8%B9%D9%84%DB%8C_%D8%AE%D8%B1%D8%A7%D8%B3%D8%A7%D9%86%DB%8C#cite_note-%D8%B1%D8%A7%D8%B3%D8%AE%D9%88%D9%86-2" style="text-decoration-line: none; color: rgb(11, 0, 128); background: none;">[۲]</a></sup></p><p style="margin: 0.5em 0px;"><small></small></p><small><h2 style="color: rgb(0, 0, 0); margin: 1em 0px 0.25em; padding: 0px; overflow: hidden; border-bottom: 1px solid rgb(162, 169, 177); font-weight: normal; font-family: &quot;.Arabic UI Display&quot;, Tahoma, &quot;Iranian Serif&quot;, &quot;Noto Naskh Arabic&quot;, &quot;Iranian Sans&quot;, &quot;DejaVu Sans&quot;, serif; line-height: 1.3;"><span id=".D9.BE.D8.A7.D9.86.D9.88.DB.8C.D8.B3"></span><span class="mw-headline" id="پانویس">پانویس</span></h2></small></div></div></div>
+
+
+<br>
+														
+</div></div>			
+
+<div class=LowPost3><div class=CPost3>
+
+<div class=date> [ سه شنبه 14 مرداد 1399  ]  [ 04:18 ب.ظ  ]  [ <a href="../../604307.html">حیدر  امیرپور </a> ] </div>
+<div class=Comment><a target="_self" href="javascript:newComment(14264)">نظرات  <script>setCommentCnt(14264)</script> </a><script type="text/javascript">GetBC(<-PostId->);</script>
+</div></div></div>						
+
+
+			
+<div class=TopPost>
+<div class=TopPost2>		
+
+<b><a href="../../../14263.html">خوشنویسی</a></b></div></div>
+<div class=CenterPost><div class=CenterPost2>					
+<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcSBlwXQDmAbFFBV1W1IYx89VZliwhmkhURxVw&amp;usqp=CAU" alt="سرقت آثار تاریخی خوشنویسی از منزل دکتر قدیمی - قدس آنلاین | پایگاه ...">
+
+
+<br>
+														
+</div></div>			
+
+<div class=LowPost3><div class=CPost3>
+
+<div class=date> [ سه شنبه 14 مرداد 1399  ]  [ 04:16 ب.ظ  ]  [ <a href="../../604307.html">حیدر  امیرپور </a> ] </div>
+<div class=Comment><a target="_self" href="javascript:newComment(14263)">نظرات  <script>setCommentCnt(14263)</script> </a><script type="text/javascript">GetBC(<-PostId->);</script>
+</div></div></div>						
+
+
+			
+<div class=TopPost>
+<div class=TopPost2>		
+
+<b><a href="../../../14262.html">خوشنویسی</a></b></div></div>
+<div class=CenterPost><div class=CenterPost2>					
+<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcSRdqIG7gc3s6Y_X_TQYajYTJSKkonOyCeuVw&amp;usqp=CAU" alt="اثر استاد امیرخانی - زبان * خط * سخن * صفحه شخصی : ابوالقاسم آوند">
+
+
+<br>
+														
+</div></div>			
+
+<div class=LowPost3><div class=CPost3>
+
+<div class=date> [ سه شنبه 14 مرداد 1399  ]  [ 04:15 ب.ظ  ]  [ <a href="../../604307.html">حیدر  امیرپور </a> ] </div>
+<div class=Comment><a target="_self" href="javascript:newComment(14262)">نظرات  <script>setCommentCnt(14262)</script> </a><script type="text/javascript">GetBC(<-PostId->);</script>
+</div></div></div>						
+
+
+			
+<div class=TopPost>
+<div class=TopPost2>		
+
+<b><a href="../../../14261.html">خوشنویسی</a></b></div></div>
+<div class=CenterPost><div class=CenterPost2>					
+<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcS-ULFgMinVYwkjxSp3pUXOGSThNHMx5Y661A&amp;usqp=CAU" alt="عضویت درارسال آثارخوشنویسی قدما‎ added... - عضویت درارسال ...">
+
+
+<br>
+														
+</div></div>			
+
+<div class=LowPost3><div class=CPost3>
+
+<div class=date> [ سه شنبه 14 مرداد 1399  ]  [ 04:15 ب.ظ  ]  [ <a href="../../604307.html">حیدر  امیرپور </a> ] </div>
+<div class=Comment><a target="_self" href="javascript:newComment(14261)">نظرات  <script>setCommentCnt(14261)</script> </a><script type="text/javascript">GetBC(<-PostId->);</script>
+</div></div></div>						
+
+
+			
+<div class=TopPost>
+<div class=TopPost2>		
+
+<b><a href="../../../14260.html">خوشنویسی</a></b></div></div>
+<div class=CenterPost><div class=CenterPost2>					
+<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcSpo8wWTnVMgMMFkKScBnLjqq5k7Serhfyiyg&amp;usqp=CAU" alt="آثارهنرمندان ایران/عزیزی هنر/نمایشگاه آثار خوشنویسی استاد احمد ...">
+
+
+<br>
+														
+</div></div>			
+
+<div class=LowPost3><div class=CPost3>
+
+<div class=date> [ سه شنبه 14 مرداد 1399  ]  [ 04:11 ب.ظ  ]  [ <a href="../../604307.html">حیدر  امیرپور </a> ] </div>
+<div class=Comment><a target="_self" href="javascript:newComment(14260)">نظرات  <script>setCommentCnt(14260)</script> </a><script type="text/javascript">GetBC(<-PostId->);</script>
+</div></div></div>						
+
+
+			
+<div class=TopPost>
+<div class=TopPost2>		
+
+<b><a href="../../../14258.html"> سید علی تهرانی</a></b></div></div>
+<div class=CenterPost><div class=CenterPost2>					
+
+
+
+<div><br></div><div><h1 id="firstHeading" class="firstHeading" lang="fa" style="margin: 0px 0px 0.25em; padding: 0px; overflow: visible; border-bottom: 1px solid rgb(162, 169, 177); font-size: 1.8em; font-weight: normal; font-family: &quot;.Arabic UI Display&quot;, Tahoma, &quot;Iranian Serif&quot;, &quot;Noto Naskh Arabic&quot;, &quot;Iranian Sans&quot;, &quot;DejaVu Sans&quot;, serif; line-height: 1.3;">سید علی تهرانی</h1><div id="bodyContent" class="mw-body-content" style="position: relative; z-index: 0; font-size: calc(0.875em); line-height: 1.6; color: rgb(32, 33, 34); font-family: &quot;.Arabic UI Text&quot;, Tahoma, &quot;Iranian Sans&quot;, &quot;Noto Sans Arabic&quot;, &quot;DejaVu Sans&quot;, sans-serif;"><div id="siteSub" class="noprint" style="display: inline; font-size: 12.88px;">از ویکی‌پدیا، دانشنامهٔ آزاد</div><div id="contentSub" style="font-size: 11.76px; line-height: 1.2em; margin: 0px 1em 1.4em 0px; color: rgb(84, 89, 93); width: auto;"><span class="mw-redirectedfrom">(تغییرمسیر از&nbsp;<a href="https://fa.wikipedia.org/w/index.php?title=%D9%85%DB%8C%D8%B1_%D8%B3%DB%8C%D8%AF_%D8%B9%D9%84%DB%8C_%D8%AA%D9%87%D8%B1%D8%A7%D9%86%DB%8C&amp;redirect=no" class="mw-redirect" title="میر سید علی تهرانی" style="text-decoration-line: none; color: rgb(11, 0, 128); background: none;">میر سید علی تهرانی</a>)</span></div><div id="contentSub2" style="font-size: 11.76px; line-height: 1.2em; margin: 0px 1em 1.4em 0px; color: rgb(84, 89, 93); width: auto;"></div><div id="jump-to-nav"></div><a class="mw-jump-link" href="https://fa.wikipedia.org/wiki/%D8%B3%DB%8C%D8%AF_%D8%B9%D9%84%DB%8C_%D8%AA%D9%87%D8%B1%D8%A7%D9%86%DB%8C#mw-sidebar-button" style="text-decoration-line: none; color: rgb(11, 0, 128); background: none; display: block; clip: rect(1px, 1px, 1px, 1px); width: 1px; height: 1px; margin: -1px; border: 0px; padding: 0px; overflow: hidden; position: absolute !important;">پرش به ناوبری</a><a class="mw-jump-link" href="https://fa.wikipedia.org/wiki/%D8%B3%DB%8C%D8%AF_%D8%B9%D9%84%DB%8C_%D8%AA%D9%87%D8%B1%D8%A7%D9%86%DB%8C#searchInput" style="text-decoration-line: none; color: rgb(11, 0, 128); background: none; display: block; clip: rect(1px, 1px, 1px, 1px); width: 1px; height: 1px; margin: -1px; border: 0px; padding: 0px; overflow: hidden; position: absolute !important;">پرش به جستجو</a><div id="mw-content-text" lang="fa" dir="rtl" class="mw-content-rtl" style="direction: rtl;"><div class="mw-parser-output"><p style="margin: 0.5em 0px;"><b>میر سید علی تهرانی</b>&nbsp;معروف به&nbsp;<b>علی حسینی</b>&nbsp;از&nbsp;<a href="https://fa.wikipedia.org/wiki/%D8%AE%D9%88%D8%B4%D9%86%D9%88%DB%8C%D8%B3" class="mw-redirect" title="خوشنویس" style="text-decoration-line: none; color: rgb(11, 0, 128); background: none;">خوشنویسان</a>&nbsp;و&nbsp;<a href="https://fa.wikipedia.org/wiki/%D9%86%D8%B3%D8%AA%D8%B9%D9%84%DB%8C%D9%82" title="نستعلیق" style="text-decoration-line: none; color: rgb(11, 0, 128); background: none;">نستعلیق‌نویسان</a>&nbsp;قرن سیزدهم هجری بوده است. او پدر&nbsp;<a href="https://fa.wikipedia.org/wiki/%D9%85%DB%8C%D8%B1%D8%AD%D8%B3%DB%8C%D9%86_%D8%AE%D9%88%D8%B4%D9%86%D9%88%DB%8C%D8%B3" title="میرحسین خوشنویس" style="text-decoration-line: none; color: rgb(11, 0, 128); background: none;">میرحسین خوشنویس</a>&nbsp;و استاد&nbsp;<a href="https://fa.wikipedia.org/wiki/%D9%85%DB%8C%D8%B1%D8%B2%D8%A7_%D8%BA%D9%84%D8%A7%D9%85_%D8%B1%D8%B6%D8%A7_%D8%A7%D8%B5%D9%81%D9%87%D8%A7%D9%86%DB%8C" class="mw-redirect" title="میرزا غلام رضا اصفهانی" style="text-decoration-line: none; color: rgb(11, 0, 128); background: none;">میرزا غلام رضا اصفهانی</a>، هر دو از مشاهیر خوشنویسی عهد&nbsp;<a href="https://fa.wikipedia.org/wiki/%D9%82%D8%A7%D8%AC%D8%A7%D8%B1" class="mw-redirect" title="قاجار" style="text-decoration-line: none; color: rgb(11, 0, 128); background: none;">قاجار</a>، بوده است.</p><p style="margin: 0.5em 0px;"><br></p><p style="margin: 0.5em 0px;"><small></small></p><small><h2 style="color: rgb(0, 0, 0); margin: 1em 0px 0.25em; padding: 0px; overflow: hidden; border-bottom: 1px solid rgb(162, 169, 177); font-weight: normal; font-family: &quot;.Arabic UI Display&quot;, Tahoma, &quot;Iranian Serif&quot;, &quot;Noto Naskh Arabic&quot;, &quot;Iranian Sans&quot;, &quot;DejaVu Sans&quot;, serif; line-height: 1.3;"><span id=".D9.85.D9.86.D8.A7.D8.A8.D8.B9"></span><span class="mw-headline" id="منابع">منابع</span></h2></small></div></div></div></div><br>
+														
+</div></div>			
+
+<div class=LowPost3><div class=CPost3>
+
+<div class=date> [ دوشنبه 13 مرداد 1399  ]  [ 10:36 ب.ظ  ]  [ <a href="../../604307.html">حیدر  امیرپور </a> ] </div>
+<div class=Comment><a target="_self" href="javascript:newComment(14258)">نظرات  <script>setCommentCnt(14258)</script> </a><script type="text/javascript">GetBC(<-PostId->);</script>
+</div></div></div>						
+
+
+			
+<div class=TopPost>
+<div class=TopPost2>		
+
+<b><a href="../../../14257.html">خوشنویسی</a></b></div></div>
+<div class=CenterPost><div class=CenterPost2>					
+<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcTIdFSFjDSFTvMJScYu1cBe-aipnWBIsQCXLQ&amp;usqp=CAU" alt="ابوالقاسم آوند - زبان * خط * سخن * صفحه شخصی : ابوالقاسم آوند"><br>
+														
+</div></div>			
+
+<div class=LowPost3><div class=CPost3>
+
+<div class=date> [ دوشنبه 13 مرداد 1399  ]  [ 10:31 ب.ظ  ]  [ <a href="../../604307.html">حیدر  امیرپور </a> ] </div>
+<div class=Comment><a target="_self" href="javascript:newComment(14257)">نظرات  <script>setCommentCnt(14257)</script> </a><script type="text/javascript">GetBC(<-PostId->);</script>
+</div></div></div>						
+
+
+			
+<div class=TopPost>
+<div class=TopPost2>		
+
+<b><a href="../../../14256.html">خوشنویسی</a></b></div></div>
+<div class=CenterPost><div class=CenterPost2>					
+
+<img src="data:image/jpeg;base64,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" alt="آثار خوشنویسی استاد امیرخانی ( بخش چهارم) - زبان * خط * سخن * صفحه ...">
+
+
+
+
+<br>
+														
+</div></div>			
+
+<div class=LowPost3><div class=CPost3>
+
+<div class=date> [ دوشنبه 13 مرداد 1399  ]  [ 10:29 ب.ظ  ]  [ <a href="../../604307.html">حیدر  امیرپور </a> ] </div>
+<div class=Comment><a target="_self" href="javascript:newComment(14256)">نظرات  <script>setCommentCnt(14256)</script> </a><script type="text/javascript">GetBC(<-PostId->);</script>
+</div></div></div>						
+
+
+			
+<div class=TopPost>
+<div class=TopPost2>		
+
+<b><a href="../../../14254.html">خوشنویسی</a></b></div></div>
+<div class=CenterPost><div class=CenterPost2>					
+<img src="data:image/jpeg;base64,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" alt="آثار خوشنویسی استاد امیرخانی ( بخش چهارم) - زبان * خط * سخن * صفحه ...">
+
+
+<br>
+														
+</div></div>			
+
+<div class=LowPost3><div class=CPost3>
+
+<div class=date> [ دوشنبه 13 مرداد 1399  ]  [ 10:28 ب.ظ  ]  [ <a href="../../604307.html">حیدر  امیرپور </a> ] </div>
+<div class=Comment><a target="_self" href="javascript:newComment(14254)">نظرات  <script>setCommentCnt(14254)</script> </a><script type="text/javascript">GetBC(<-PostId->);</script>
+</div></div></div>						
+
+
+			
+<div class=TopPost>
+<div class=TopPost2>		
+
+<b><a href="../../../14253.html">عبدالله ترمذی</a></b></div></div>
+<div class=CenterPost><div class=CenterPost2>					
+<h1 id="firstHeading" class="firstHeading" lang="fa" style="margin: 0px 0px 0.25em; padding: 0px; overflow: visible; border-bottom: 1px solid rgb(162, 169, 177); font-size: 1.8em; font-weight: normal; font-family: &quot;.Arabic UI Display&quot;, Tahoma, &quot;Iranian Serif&quot;, &quot;Noto Naskh Arabic&quot;, &quot;Iranian Sans&quot;, &quot;DejaVu Sans&quot;, serif; line-height: 1.3;">عبدالله ترمذی</h1><div id="bodyContent" class="mw-body-content" style="position: relative; z-index: 0; font-size: calc(0.875em); line-height: 1.6; color: rgb(32, 33, 34); font-family: &quot;.Arabic UI Text&quot;, Tahoma, &quot;Iranian Sans&quot;, &quot;Noto Sans Arabic&quot;, &quot;DejaVu Sans&quot;, sans-serif;"><div id="siteSub" class="noprint" style="display: inline; font-size: 12.88px;">از ویکی‌پدیا، دانشنامهٔ آزاد</div><div id="contentSub" style="font-size: 11.76px; line-height: 1.2em; margin: 0px 1em 1.4em 0px; color: rgb(84, 89, 93); width: auto;"><span class="mw-redirectedfrom">(تغییرمسیر از&nbsp;<a href="https://fa.wikipedia.org/w/index.php?title=%D9%85%DB%8C%D8%B1_%D8%B9%D8%A8%D8%AF%D8%A7%D9%84%D9%84%D9%87_%D8%AA%D8%B1%D9%85%D8%B0%DB%8C&amp;redirect=no" class="mw-redirect" title="میر عبدالله ترمذی" style="text-decoration-line: none; color: rgb(11, 0, 128); background: none;">میر عبدالله ترمذی</a>)</span></div><div id="contentSub2" style="font-size: 11.76px; line-height: 1.2em; margin: 0px 1em 1.4em 0px; color: rgb(84, 89, 93); width: auto;"></div><div id="jump-to-nav"></div><a class="mw-jump-link" href="https://fa.wikipedia.org/wiki/%D8%B9%D8%A8%D8%AF%D8%A7%D9%84%D9%84%D9%87_%D8%AA%D8%B1%D9%85%D8%B0%DB%8C#mw-sidebar-button" style="text-decoration-line: none; color: rgb(11, 0, 128); background: none; display: block; clip: rect(1px, 1px, 1px, 1px); width: 1px; height: 1px; margin: -1px; border: 0px; padding: 0px; overflow: hidden; position: absolute !important;">پرش به ناوبری</a><a class="mw-jump-link" href="https://fa.wikipedia.org/wiki/%D8%B9%D8%A8%D8%AF%D8%A7%D9%84%D9%84%D9%87_%D8%AA%D8%B1%D9%85%D8%B0%DB%8C#searchInput" style="text-decoration-line: none; color: rgb(11, 0, 128); background: none; display: block; clip: rect(1px, 1px, 1px, 1px); width: 1px; height: 1px; margin: -1px; border: 0px; padding: 0px; overflow: hidden; position: absolute !important;">پرش به جستجو</a><div id="mw-content-text" lang="fa" dir="rtl" class="mw-content-rtl" style="direction: rtl;"><div class="mw-parser-output"><p style="margin: 0.5em 0px;"><b>میر عبدالله ترمذی</b>&nbsp;(یا ترمدی) از فرزندان&nbsp;<a href="https://fa.wikipedia.org/wiki/%D9%86%D8%B9%D9%85%D8%AA%E2%80%8C%D8%A7%D9%84%D9%84%D9%87_%D9%88%D9%84%DB%8C" class="mw-redirect" title="نعمت‌الله ولی" style="text-decoration-line: none; color: rgb(11, 0, 128); background: none;">شاه نعمت‌الله ولی</a>، از&nbsp;<a href="https://fa.wikipedia.org/wiki/%D8%AE%D9%88%D8%B4%D9%86%D9%88%DB%8C%D8%B3" class="mw-redirect" title="خوشنویس" style="text-decoration-line: none; color: rgb(11, 0, 128); background: none;">خوشنویسان</a>&nbsp;و&nbsp;<a href="https://fa.wikipedia.org/wiki/%D8%B4%D8%A7%D8%B9%D8%B1" title="شاعر" style="text-decoration-line: none; color: rgb(11, 0, 128); background: none;">شاعران</a>&nbsp;اواخر قرن دهم و اوایل یازدهم در دربار&nbsp;<a href="https://fa.wikipedia.org/wiki/%D8%A7%DA%A9%D8%A8%D8%B1%D8%B4%D8%A7%D9%87" class="mw-redirect" title="اکبرشاه" style="text-decoration-line: none; color: rgb(11, 0, 128); background: none;">اکبرشاه</a>&nbsp;و&nbsp;<a href="https://fa.wikipedia.org/wiki/%D8%AC%D9%87%D8%A7%D9%86%DA%AF%DB%8C%D8%B1" class="mw-disambig" title="جهانگیر" style="text-decoration-line: none; color: rgb(11, 0, 128); background: none;">جهانگیر</a>&nbsp;از&nbsp;<a href="https://fa.wikipedia.org/wiki/%DA%AF%D9%88%D8%B1%DA%A9%D8%A7%D9%86%DB%8C%D8%A7%D9%86_%D9%87%D9%86%D8%AF" class="mw-redirect" title="گورکانیان هند" style="text-decoration-line: none; color: rgb(11, 0, 128); background: none;">پادشاهان گورکانی هند</a>&nbsp;بوده است. تخلص وی «وصفی» است و خطاب «مشکین قلم» داشت. او همیشه «عبدالله مشکین قلم» رقم می‌زده و در سال ۱۰۲۵ه‍. ق درگذشته است.<small></small></p><small><h2 style="color: rgb(0, 0, 0); margin: 1em 0px 0.25em; padding: 0px; overflow: hidden; border-bottom: 1px solid rgb(162, 169, 177); font-weight: normal; font-family: &quot;.Arabic UI Display&quot;, Tahoma, &quot;Iranian Serif&quot;, &quot;Noto Naskh Arabic&quot;, &quot;Iranian Sans&quot;, &quot;DejaVu Sans&quot;, serif; line-height: 1.3;"><span id=".D9.85.D9.86.D8.A7.D8.A8.D8.B9"></span><span class="mw-headline" id="منابع">منابع</span></h2></small></div></div></div>
+
+
+<br>
+														
+</div></div>			
+
+<div class=LowPost3><div class=CPost3>
+
+<div class=date> [ شنبه 11 مرداد 1399  ]  [ 11:08 ب.ظ  ]  [ <a href="../../604307.html">حیدر  امیرپور </a> ] </div>
+<div class=Comment><a target="_self" href="javascript:newComment(14253)">نظرات  <script>setCommentCnt(14253)</script> </a><script type="text/javascript">GetBC(<-PostId->);</script>
+</div></div></div>						
+
+
+			
+<div class=TopPost>
+<div class=TopPost2>		
+
+<b><a href="../../../14252.html">خوشنویسی</a></b></div></div>
+<div class=CenterPost><div class=CenterPost2>					
+<img src="https://lh3.googleusercontent.com/proxy/gU-A_JrKvJG7ptVZmV5Y8YmcHmGe2QrHXBW6zf3xplnRk4Ottz-49pahnWafuu7Ra1MekLo4nO_LoKne0hn4bUP4AxqLE0aeTUvfszm9L3YchOxnXqA" alt="خرید آثار هنری | art4u"><br>
+														
+</div></div>			
+
+<div class=LowPost3><div class=CPost3>
+
+<div class=date> [ شنبه 11 مرداد 1399  ]  [ 11:06 ب.ظ  ]  [ <a href="../../604307.html">حیدر  امیرپور </a> ] </div>
+<div class=Comment><a target="_self" href="javascript:newComment(14252)">نظرات  <script>setCommentCnt(14252)</script> </a><script type="text/javascript">GetBC(<-PostId->);</script>
+</div></div></div>						
+
+
+			
+<div class=TopPost>
+<div class=TopPost2>		
+
+<b><a href="../../../14251.html">خوشنویسی</a></b></div></div>
+<div class=CenterPost><div class=CenterPost2>					
+<img src="https://lh3.googleusercontent.com/proxy/AF38X3u8OaDmCAnZm-bvU6EoOgoCn0k-uoz2SWcemOR_lXWvmn2_Sgr0Oa133i8c_6awTZRpMuSlGQVghTYzEkRb6cQhqcNYlntAVc0UuqebnSWYaqFCy49AOwaIfEmep_NNjEhsMBMpQw" alt="خوشنویسان دوره قاجار,بر چکاد قلم,موزه کتاب و مستند ایران,نگارخانه ...">
+
+
+<br>
+														
+</div></div>			
+
+<div class=LowPost3><div class=CPost3>
+
+<div class=date> [ شنبه 11 مرداد 1399  ]  [ 11:05 ب.ظ  ]  [ <a href="../../604307.html">حیدر  امیرپور </a> ] </div>
+<div class=Comment><a target="_self" href="javascript:newComment(14251)">نظرات  <script>setCommentCnt(14251)</script> </a><script type="text/javascript">GetBC(<-PostId->);</script>
+</div></div></div>						
+
+
+			
+<div class=TopPost>
+<div class=TopPost2>		
+
+<b><a href="../../../14250.html">میرحسین خوشنویس</a></b></div></div>
+<div class=CenterPost><div class=CenterPost2>					
+<h1 id="firstHeading" class="firstHeading" lang="fa" style="margin: 0px 0px 0.25em; padding: 0px; overflow: visible; border-bottom: 1px solid rgb(162, 169, 177); font-size: 1.8em; font-weight: normal; font-family: &quot;.Arabic UI Display&quot;, Tahoma, &quot;Iranian Serif&quot;, &quot;Noto Naskh Arabic&quot;, &quot;Iranian Sans&quot;, &quot;DejaVu Sans&quot;, serif; line-height: 1.3;">میرحسین خوشنویس</h1><div id="bodyContent" class="mw-body-content" style="position: relative; z-index: 0; font-size: calc(0.875em); line-height: 1.6;"><div id="siteSub" class="noprint" style="display: inline; font-size: 12.88px;">از ویکی‌پدیا، دانشنامهٔ آزاد</div><div id="contentSub" style="font-size: 11.76px; line-height: 1.2em; margin: 0px 1em 1.4em 0px; color: rgb(84, 89, 93); width: auto;"></div><div id="contentSub2" style="font-size: 11.76px; line-height: 1.2em; margin: 0px 1em 1.4em 0px; color: rgb(84, 89, 93); width: auto;"></div><div id="jump-to-nav"></div><a class="mw-jump-link" href="https://fa.wikipedia.org/wiki/%D9%85%DB%8C%D8%B1%D8%AD%D8%B3%DB%8C%D9%86_%D8%AE%D9%88%D8%B4%D9%86%D9%88%DB%8C%D8%B3#mw-sidebar-button" style="text-decoration-line: none; color: rgb(11, 0, 128); background: none; display: block; clip: rect(1px, 1px, 1px, 1px); width: 1px; height: 1px; margin: -1px; border: 0px; padding: 0px; overflow: hidden; position: absolute !important;">پرش به ناوبری</a><a class="mw-jump-link" href="https://fa.wikipedia.org/wiki/%D9%85%DB%8C%D8%B1%D8%AD%D8%B3%DB%8C%D9%86_%D8%AE%D9%88%D8%B4%D9%86%D9%88%DB%8C%D8%B3#searchInput" style="text-decoration-line: none; color: rgb(11, 0, 128); background: none; display: block; clip: rect(1px, 1px, 1px, 1px); width: 1px; height: 1px; margin: -1px; border: 0px; padding: 0px; overflow: hidden; position: absolute !important;">پرش به جستجو</a><div id="mw-content-text" lang="fa" dir="rtl" class="mw-content-rtl" style="direction: rtl;"><div class="mw-parser-output"><p style="margin: 0.5em 0px; color: rgb(32, 33, 34); font-family: &quot;.Arabic UI Text&quot;, Tahoma, &quot;Iranian Sans&quot;, &quot;Noto Sans Arabic&quot;, &quot;DejaVu Sans&quot;, sans-serif; font-size: 14px;"><b>میرحسین خوشنویس</b>&nbsp;یا&nbsp;<b>میر سید حسین خوشنویسباشی</b>&nbsp;(درگذشت&nbsp;<a href="https://fa.wikipedia.org/wiki/%DB%B1%DB%B3%DB%B0%DB%B3_(%D9%82%D9%85%D8%B1%DB%8C)" title="۱۳۰۳ (قمری)" style="text-decoration-line: none; color: rgb(11, 0, 128); background: none;">۱۳۰۳</a>&nbsp;ه‍. ‍ق) فرزند&nbsp;<a href="https://fa.wikipedia.org/wiki/%D8%B3%DB%8C%D8%AF_%D8%B9%D9%84%DB%8C_%D8%AA%D9%87%D8%B1%D8%A7%D9%86%DB%8C" title="سید علی تهرانی" style="text-decoration-line: none; color: rgb(11, 0, 128); background: none;">سید علی تهرانی</a>&nbsp;معروف به علی حسینی بود. او اغلب آثارش را با نام&nbsp;<b>میرحسین</b>&nbsp;رقم می‌زد و از&nbsp;<a href="https://fa.wikipedia.org/wiki/%D8%AE%D9%88%D8%B4%D9%86%D9%88%DB%8C%D8%B3" class="mw-redirect" title="" style="color: rgb(11, 0, 128); background: none; outline-color: rgb(51, 102, 204);">خوشنویسان</a>&nbsp;<a href="https://fa.wikipedia.org/wiki/%D8%AF%D9%88%D8%B1%D9%87_%D9%86%D8%A7%D8%B5%D8%B1%DB%8C" class="mw-redirect" title="دوره ناصری" style="text-decoration-line: none; color: rgb(11, 0, 128); background: none;">دوره ناصری</a>&nbsp;و از&nbsp;<a href="https://fa.wikipedia.org/wiki/%D9%86%D8%B3%D8%AA%D8%B9%D9%84%DB%8C%D9%82" title="نستعلیق" style="text-decoration-line: none; color: rgb(11, 0, 128); background: none;">نستعلیق‌نویسان</a>&nbsp;زبردست است که در&nbsp;<a href="https://fa.wikipedia.org/wiki/%D8%B3%DB%8C%D8%A7%D9%87%E2%80%8C%D9%85%D8%B4%D9%82" title="سیاه‌مشق" style="text-decoration-line: none; color: rgb(11, 0, 128); background: none;">سیاه‌مشق‌نویسی</a>&nbsp;آثار بدیعی ایجاد کرده‌است.</p><p style="margin: 0.5em 0px; color: rgb(32, 33, 34); font-family: &quot;.Arabic UI Text&quot;, Tahoma, &quot;Iranian Sans&quot;, &quot;Noto Sans Arabic&quot;, &quot;DejaVu Sans&quot;, sans-serif; font-size: 14px;">برخی میرحسین را اهل&nbsp;<a href="https://fa.wikipedia.org/wiki/%D9%82%D9%85" title="قم" style="text-decoration-line: none; color: rgb(11, 0, 128); background: none;">قم</a><sup id="cite_ref-اطلس_خط_1-0" class="reference" style="line-height: 1em; unicode-bidi: isolate; white-space: nowrap;"><a href="https://fa.wikipedia.org/wiki/%D9%85%DB%8C%D8%B1%D8%AD%D8%B3%DB%8C%D9%86_%D8%AE%D9%88%D8%B4%D9%86%D9%88%DB%8C%D8%B3#cite_note-%D8%A7%D8%B7%D9%84%D8%B3_%D8%AE%D8%B7-1" style="text-decoration-line: none; color: rgb(11, 0, 128); background: none;">[۱]</a></sup>&nbsp;و برخی&nbsp;<a href="https://fa.wikipedia.org/wiki/%D8%AA%D9%87%D8%B1%D8%A7%D9%86%DB%8C" class="mw-disambig" title="تهرانی" style="text-decoration-line: none; color: rgb(11, 0, 128); background: none;">تهرانی</a><sup id="cite_ref-بیانی_2-0" class="reference" style="line-height: 1em; unicode-bidi: isolate; white-space: nowrap;"><a href="https://fa.wikipedia.org/wiki/%D9%85%DB%8C%D8%B1%D8%AD%D8%B3%DB%8C%D9%86_%D8%AE%D9%88%D8%B4%D9%86%D9%88%DB%8C%D8%B3#cite_note-%D8%A8%DB%8C%D8%A7%D9%86%DB%8C-2" style="text-decoration-line: none; color: rgb(11, 0, 128); background: none;">[۲]</a></sup>&nbsp;خوانده‌اند اما در اثر اقامت طولانی در&nbsp;<a href="https://fa.wikipedia.org/wiki/%D8%AA%D8%A8%D8%B1%DB%8C%D8%B2" title="تبریز" style="text-decoration-line: none; color: rgb(11, 0, 128); background: none;">تبریز</a>&nbsp;به&nbsp;<b>آقاسیدحسین ترک</b>&nbsp;یا&nbsp;<b>خوش‌نویس‌باشی تبریزی</b>&nbsp;معروف شده‌است. چنانچه در «الماثروالآثار» آمده او هنگام ولیعهدی&nbsp;<a href="https://fa.wikipedia.org/wiki/%D9%85%D8%B8%D9%81%D8%B1%D8%A7%D9%84%D8%AF%DB%8C%D9%86_%D8%B4%D8%A7%D9%87" class="mw-redirect" title="مظفرالدین شاه" style="text-decoration-line: none; color: rgb(11, 0, 128); background: none;">مظفرالدین شاه</a>&nbsp;که از&nbsp;<a href="https://fa.wikipedia.org/wiki/%D8%AA%D9%87%D8%B1%D8%A7%D9%86" title="تهران" style="text-decoration-line: none; color: rgb(11, 0, 128); background: none;">تهران</a>&nbsp;به&nbsp;<a href="https://fa.wikipedia.org/wiki/%D8%AA%D8%A8%D8%B1%DB%8C%D8%B2" title="تبریز" style="text-decoration-line: none; color: rgb(11, 0, 128); background: none;">تبریز</a>&nbsp;رفت به همراه ولیعهد و با سمت معلمی او تهران را ترک گفته و در تبریز اقامت گزید. او شاگردان بسیار تربیت کرد و در سال ۱۳۰۳ هجری قمری بدرود حیات گفت.<sup id="cite_ref-یساولی_3-0" class="reference" style="line-height: 1em; unicode-bidi: isolate; white-space: nowrap;"><a href="https://fa.wikipedia.org/wiki/%D9%85%DB%8C%D8%B1%D8%AD%D8%B3%DB%8C%D9%86_%D8%AE%D9%88%D8%B4%D9%86%D9%88%DB%8C%D8%B3#cite_note-%DB%8C%D8%B3%D8%A7%D9%88%D9%84%DB%8C-3" style="text-decoration-line: none; color: rgb(11, 0, 128); background: none;">[۳]</a></sup></p><p style="margin: 0.5em 0px; color: rgb(32, 33, 34); font-family: &quot;.Arabic UI Text&quot;, Tahoma, &quot;Iranian Sans&quot;, &quot;Noto Sans Arabic&quot;, &quot;DejaVu Sans&quot;, sans-serif; font-size: 14px;"><a href="https://fa.wikipedia.org/wiki/%D8%AF%DA%A9%D8%AA%D8%B1_%D9%85%D9%87%D8%AF%DB%8C_%D8%A8%DB%8C%D8%A7%D9%86%DB%8C" class="mw-redirect" title="دکتر مهدی بیانی" style="text-decoration-line: none; color: rgb(11, 0, 128); background: none;">دکتر مهدی بیانی</a>&nbsp;درگذشت او را سال&nbsp;<a href="https://fa.wikipedia.org/wiki/%DB%B1%DB%B3%DB%B0%DB%B0_(%D9%82%D9%85%D8%B1%DB%8C)" title="۱۳۰۰ (قمری)" style="text-decoration-line: none; color: rgb(11, 0, 128); background: none;">۱۳۰۰</a>&nbsp;ه‍. ق در تبریز ذکر کرده‌است.<sup id="cite_ref-بیانی_2-1" class="reference" style="line-height: 1em; unicode-bidi: isolate; white-space: nowrap;"><a href="https://fa.wikipedia.org/wiki/%D9%85%DB%8C%D8%B1%D8%AD%D8%B3%DB%8C%D9%86_%D8%AE%D9%88%D8%B4%D9%86%D9%88%DB%8C%D8%B3#cite_note-%D8%A8%DB%8C%D8%A7%D9%86%DB%8C-2" style="text-decoration-line: none; color: rgb(11, 0, 128); background: none;">[۲]</a></sup></p><div><br></div></div></div></div>
+
+
+<br>
+														
+</div></div>			
+
+<div class=LowPost3><div class=CPost3>
+
+<div class=date> [ شنبه 11 مرداد 1399  ]  [ 11:26 ق.ظ  ]  [ <a href="../../604307.html">حیدر  امیرپور </a> ] </div>
+<div class=Comment><a target="_self" href="javascript:newComment(14250)">نظرات  <script>setCommentCnt(14250)</script> </a><script type="text/javascript">GetBC(<-PostId->);</script>
+</div></div></div>						
+
+
+			
+<div class=TopPost>
+<div class=TopPost2>		
+
+<b><a href="../../../14249.html">خوشنویسی</a></b></div></div>
+<div class=CenterPost><div class=CenterPost2>					
+<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcSJd3NdO5YRqc04xozDUgpCT9p6R_lU4L9qCw&amp;usqp=CAU" alt="قدما - مطالب آثار میرزا كاظم">
+
+
+<br>
+														
+</div></div>			
+
+<div class=LowPost3><div class=CPost3>
+
+<div class=date> [ شنبه 11 مرداد 1399  ]  [ 11:25 ق.ظ  ]  [ <a href="../../604307.html">حیدر  امیرپور </a> ] </div>
+<div class=Comment><a target="_self" href="javascript:newComment(14249)">نظرات  <script>setCommentCnt(14249)</script> </a><script type="text/javascript">GetBC(<-PostId->);</script>
+</div></div></div>						
+
+
+			
+<div class=TopPost>
+<div class=TopPost2>		
+
+<b><a href="../../../14248.html">خوشنویسی</a></b></div></div>
+<div class=CenterPost><div class=CenterPost2>					
+<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcS-ULFgMinVYwkjxSp3pUXOGSThNHMx5Y661A&amp;usqp=CAU" alt="عضویت درارسال آثارخوشنویسی قدما‎ added... - عضویت درارسال ...">
+
+
+<br>
+														
+</div></div>			
+
+<div class=LowPost3><div class=CPost3>
+
+<div class=date> [ شنبه 11 مرداد 1399  ]  [ 11:24 ق.ظ  ]  [ <a href="../../604307.html">حیدر  امیرپور </a> ] </div>
+<div class=Comment><a target="_self" href="javascript:newComment(14248)">نظرات  <script>setCommentCnt(14248)</script> </a><script type="text/javascript">GetBC(<-PostId->);</script>
+</div></div></div>						
+
+
+			
+<div class=TopPost>
+<div class=TopPost2>		
+
+<b><a href="../../../14247.html">پیرمحمد هروی</a></b></div></div>
+<div class=CenterPost><div class=CenterPost2>					
+<h1 id="firstHeading" class="firstHeading" lang="fa" style="margin: 0px 0px 0.25em; padding: 0px; overflow: visible; border-bottom: 1px solid rgb(162, 169, 177); font-size: 1.8em; font-weight: normal; font-family: &quot;.Arabic UI Display&quot;, Tahoma, &quot;Iranian Serif&quot;, &quot;Noto Naskh Arabic&quot;, &quot;Iranian Sans&quot;, &quot;DejaVu Sans&quot;, serif; line-height: 1.3;">پیرمحمد هروی</h1><div id="bodyContent" class="mw-body-content" style="position: relative; z-index: 0; font-size: calc(0.875em); line-height: 1.6; color: rgb(32, 33, 34); font-family: &quot;.Arabic UI Text&quot;, Tahoma, &quot;Iranian Sans&quot;, &quot;Noto Sans Arabic&quot;, &quot;DejaVu Sans&quot;, sans-serif;"><div id="siteSub" class="noprint" style="display: inline; font-size: 12.88px;">از ویکی‌پدیا، دانشنامهٔ آزاد</div><div id="contentSub" style="font-size: 11.76px; line-height: 1.2em; margin: 0px 1em 1.4em 0px; color: rgb(84, 89, 93); width: auto;"></div><div id="contentSub2" style="font-size: 11.76px; line-height: 1.2em; margin: 0px 1em 1.4em 0px; color: rgb(84, 89, 93); width: auto;"></div><div id="jump-to-nav"></div><a class="mw-jump-link" href="https://fa.wikipedia.org/wiki/%D9%BE%DB%8C%D8%B1%D9%85%D8%AD%D9%85%D8%AF_%D9%87%D8%B1%D9%88%DB%8C#mw-sidebar-button" style="text-decoration-line: none; color: rgb(11, 0, 128); background: none; display: block; clip: rect(1px, 1px, 1px, 1px); width: 1px; height: 1px; margin: -1px; border: 0px; padding: 0px; overflow: hidden; position: absolute !important;">پرش به ناوبری</a><a class="mw-jump-link" href="https://fa.wikipedia.org/wiki/%D9%BE%DB%8C%D8%B1%D9%85%D8%AD%D9%85%D8%AF_%D9%87%D8%B1%D9%88%DB%8C#searchInput" style="text-decoration-line: none; color: rgb(11, 0, 128); background: none; display: block; clip: rect(1px, 1px, 1px, 1px); width: 1px; height: 1px; margin: -1px; border: 0px; padding: 0px; overflow: hidden; position: absolute !important;">پرش به جستجو</a><div id="mw-content-text" lang="fa" dir="rtl" class="mw-content-rtl" style="direction: rtl;"><div class="mw-parser-output"><p style="margin: 0.5em 0px;"><b>پیرمحمد هروی</b>&nbsp;از&nbsp;<a href="https://fa.wikipedia.org/wiki/%D8%AE%D9%88%D8%B4%D9%86%D9%88%DB%8C%D8%B3%DB%8C" title="خوشنویسی" style="text-decoration-line: none; color: rgb(11, 0, 128); background: none;">خوشنویسان</a>&nbsp;و&nbsp;<a href="https://fa.wikipedia.org/wiki/%D9%86%D8%B3%D8%AA%D8%B9%D9%84%DB%8C%D9%82" title="نستعلیق" style="text-decoration-line: none; color: rgb(11, 0, 128); background: none;">نستعلیق‌نویسان</a>&nbsp;صاحب‌نام سدهٔ دهم هجری است. او را از شاگردان&nbsp;<a href="https://fa.wikipedia.org/wiki/%D9%85%DB%8C%D8%B1%D8%B9%D9%84%DB%8C_%D9%87%D8%B1%D9%88%DB%8C" class="mw-redirect" title="میرعلی هروی" style="text-decoration-line: none; color: rgb(11, 0, 128); background: none;">میرعلی هروی</a><sup id="cite_ref-اطلس_خط_1-0" class="reference" style="line-height: 1em; unicode-bidi: isolate; white-space: nowrap;"><a href="https://fa.wikipedia.org/wiki/%D9%BE%DB%8C%D8%B1%D9%85%D8%AD%D9%85%D8%AF_%D9%87%D8%B1%D9%88%DB%8C#cite_note-%D8%A7%D8%B7%D9%84%D8%B3_%D8%AE%D8%B7-1" style="text-decoration-line: none; color: rgb(11, 0, 128); background: none;">[۱]</a></sup>&nbsp;و معاصر با مولانا&nbsp;<a href="https://fa.wikipedia.org/w/index.php?title=%D9%85%D8%AD%D9%85%D9%88%D8%AF_%D8%B3%DB%8C%D8%A7%D9%88%D8%B4_%D8%B4%DB%8C%D8%B1%D8%A7%D8%B2%DB%8C&amp;action=edit&amp;redlink=1" class="new" title="محمود سیاوش شیرازی (صفحه وجود ندارد)" style="text-decoration-line: none; color: rgb(165, 88, 88); background: none;">محمود سیاوش شیرازی</a>&nbsp;دانسته‌اند.<sup id="cite_ref-وب‌گاه_آفتاب_2-0" class="reference" style="line-height: 1em; unicode-bidi: isolate; white-space: nowrap;"><a href="https://fa.wikipedia.org/wiki/%D9%BE%DB%8C%D8%B1%D9%85%D8%AD%D9%85%D8%AF_%D9%87%D8%B1%D9%88%DB%8C#cite_note-%D9%88%D8%A8%E2%80%8C%DA%AF%D8%A7%D9%87_%D8%A2%D9%81%D8%AA%D8%A7%D8%A8-2" style="text-decoration-line: none; color: rgb(11, 0, 128); background: none;">[۲]</a></sup></p><p style="margin: 0.5em 0px;">در کتاب «آثار و احوال خوشنویسان» از سه خوشنویس با نام «پیرمحمد» یاد شده است.<sup id="cite_ref-وب‌گاه_آفتاب_2-1" class="reference" style="line-height: 1em; unicode-bidi: isolate; white-space: nowrap;"><a href="https://fa.wikipedia.org/wiki/%D9%BE%DB%8C%D8%B1%D9%85%D8%AD%D9%85%D8%AF_%D9%87%D8%B1%D9%88%DB%8C#cite_note-%D9%88%D8%A8%E2%80%8C%DA%AF%D8%A7%D9%87_%D8%A2%D9%81%D8%AA%D8%A7%D8%A8-2" style="text-decoration-line: none; color: rgb(11, 0, 128); background: none;">[۲]</a></sup></p><h2 style="color: rgb(0, 0, 0); margin: 1em 0px 0.25em; padding: 0px; overflow: hidden; border-bottom: 1px solid rgb(162, 169, 177); font-weight: normal; font-family: &quot;.Arabic UI Display&quot;, Tahoma, &quot;Iranian Serif&quot;, &quot;Noto Naskh Arabic&quot;, &quot;Iranian Sans&quot;, &quot;DejaVu Sans&quot;, serif; line-height: 1.3;"><span id=".D9.BE.D8.A7.D9.86.D9.88.DB.8C.D8.B3"></span><span class="mw-headline" id="پانویس">پانویس</span></h2></div></div></div>
+
+
+<br>
+														
+</div></div>			
+
+<div class=LowPost3><div class=CPost3>
+
+<div class=date> [ پنجشنبه 9 مرداد 1399  ]  [ 12:49 ب.ظ  ]  [ <a href="../../604307.html">حیدر  امیرپور </a> ] </div>
+<div class=Comment><a target="_self" href="javascript:newComment(14247)">نظرات  <script>setCommentCnt(14247)</script> </a><script type="text/javascript">GetBC(<-PostId->);</script>
+</div></div></div>						
+
+
+			
+<div class=TopPost>
+<div class=TopPost2>		
+
+<b><a href="../../../14246.html">خوشنویسی</a></b></div></div>
+<div class=CenterPost><div class=CenterPost2>					
+<img src="https://lh3.googleusercontent.com/proxy/HmoRZE6wbRzoW7bHNuoG6J7IGajdMzF9_cphlOME-L2e0vhrtBzoLPEpEOrtabCdP7-9VxQ0j3YF2iUsvPOrtYsOr-_bJshYTdkI9uo" alt="حراج ملی؛ این بار برای آثار خوشنویسی – خانواده الهیه">
+
+
+<br>
+														
+</div></div>			
+
+<div class=LowPost3><div class=CPost3>
+
+<div class=date> [ پنجشنبه 9 مرداد 1399  ]  [ 12:47 ب.ظ  ]  [ <a href="../../604307.html">حیدر  امیرپور </a> ] </div>
+<div class=Comment><a target="_self" href="javascript:newComment(14246)">نظرات  <script>setCommentCnt(14246)</script> </a><script type="text/javascript">GetBC(<-PostId->);</script>
+</div></div></div>						
+
+
+			
+<div class=TopPost>
+<div class=TopPost2>		
+
+<b><a href="../../../14245.html">خوشنویسی</a></b></div></div>
+<div class=CenterPost><div class=CenterPost2>					
+<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcQUP02sil_L7K1k98LW42alFEDo2g7xzpMc3A&amp;usqp=CAU" alt="تصاویر چند اثر خوشنویسی از آثار استاد احمد قائم مقامی در نمایشگاه ...">
+
+
+<br>
+														
+</div></div>			
+
+<div class=LowPost3><div class=CPost3>
+
+<div class=date> [ پنجشنبه 9 مرداد 1399  ]  [ 12:44 ب.ظ  ]  [ <a href="../../604307.html">حیدر  امیرپور </a> ] </div>
+<div class=Comment><a target="_self" href="javascript:newComment(14245)">نظرات  <script>setCommentCnt(14245)</script> </a><script type="text/javascript">GetBC(<-PostId->);</script>
+</div></div></div>						
+
+
+
+
+<center><b><font color="#3f3f3f" size="1">.:</font></b><a target="_blank" href="http://www.iranskin.com"><span style="text-decoration: none">
+<font style="FONT-SIZE: 8pt" color="#666666"> Weblog Themes By</font><b>
+<font class=text5 size="1"><font color="#666666">Iran Skin</font></span></a> </font><font color="#3f3f3f" size="1">:.</font>
+</b></a></center><br>
+
+</div>
+<style>.pging {    direction:rtl;    font-size:1.2em;    height:30px;    margin:40px 0 0;    color:#000000;    padding-bottom: 20px;    text-align: center;}
+.pging a:link, .pging a:visited {border:1px solid #666666;  color:#2a8fac;   display:inline-block;    margin:0 3px;    padding:1px 5px;    text-decoration:none;}
+.pging a:hover, .pging a:active {    color:#000000;}.pging a.current:link, .pging a.current:visited {    background-color:#000000;    border:1px solid #666666;    color:red;    cursor:text;}</style> <div class=pging>
+<p align="center"><font face="Tahoma" style="font-size: 9pt">
+			تعداد کل صفحات : 581 ::     			<a href="1.html">
+			<i>...</i></a>  			<a href="2.html">
+			<span>2</span></a>  			<a href="3.html">
+			<span>3</span></a>  			<a href="4.html">
+			<span>4</span></a>  			<a href="5.html">
+			<b>5</b></a>  			<a href="6.html">
+			<span>6</span></a>  			<a href="7.html">
+			<span>7</span></a>  			<a href="8.html">
+			<span>8</span></a>  			<a href="9.html">
+			<i>...</i></a>  <br><br></div>
+</font></p></div></td>
+
+<td width="220" valign="top">	
+
+<div id=rightmenu>
+<div class=TopSid><div class=TopSid2>			
+<b>درباره وبلاگ</b></div></div>
+<div class=CenterSid><div class=li-Sid2>  <center>
+<img src="../../../../../static.mihanblog.com/public/user_data/web_photo/246/735558.jpg@3727"  /><br>سلام عزیزان بازدید کننده <br />
+ممنون از اینكه از  وبلاك خوشنویسی        -هنر-     حیدر امیرپور       دیدن میفرمائید<br />
+         باتشکر امیرپور</center></div></div>
+<div class=LowSid></div></div>
+
+
+<div id=rightmenu>
+<div class=TopSid><div class=TopSid2>
+<b>آرشیو مطالب</b></div></div>
+<div class=CenterSid>
+<div class=li-Sid>
+<a href="../../../archive/1399/9.html"> آذر 1399 ، 2 </a></div><div class=li-Sid>
+<a href="../../../archive/1399/8.html"> آبان 1399 ، 13 </a></div><div class=li-Sid>
+<a href="../../../archive/1399/7.html"> مهر 1399 ، 2 </a></div><div class=li-Sid>
+<a href="../../../archive/1399/6.html"> شهریور 1399 ، 41 </a></div><div class=li-Sid>
+<a href="../../../archive/1399/5.html"> مرداد 1399 ، 53 </a></div><div class=li-Sid>
+<a href="../../../archive/1399/4.html"> تیر 1399 ، 54 </a></div><div class=li-Sid>
+<a href="../../../archive/1399/3.html"> خرداد 1399 ، 39 </a></div><div class=li-Sid>
+<a href="../../../archive/1399/2.html"> اردیبهشت 1399 ، 11 </a></div><div class=li-Sid>
+<a href="../../../archive/1399/1.html"> فروردین 1399 ، 20 </a></div><div class=li-Sid>
+<a href="../../../archive/1398/12.html"> اسفند 1398 ، 7 </a></div></div>
+<div class=LowSid></div></div>
+
+
+<div id=rightmenu>
+<div class=TopSid><div class=TopSid2>
+<b>آخرین مطالب</b></div></div>
+<div class=CenterSid>
+<div class=li-Sid>
+<a href="../../../14373.html">خوشنویسی</a></div><div class=li-Sid>
+<a href="../../../14372.html">منابع</a></div><div class=li-Sid>
+<a href="../../../14370.html">تفننی</a></div><div class=li-Sid>
+<a href="../../../14369.html">شش</a></div><div class=li-Sid>
+<a href="../../../14366.html">		تحولات نوین خوشنویسی</a></div><div class=li-Sid>
+<a href="../../../14365.html">خوشنویسی</a></div><div class=li-Sid>
+<a href="../../../14364.html">خوشنویسی</a></div><div class=li-Sid>
+<a href="../../../14362.html">خطوط ۶ گانه</a></div><div class=li-Sid>
+<a href="../../../14358.html">خوشنویسی</a></div><div class=li-Sid>
+<a href="../../../14356.html">خط ای انی</a></div><center><a href="../../../list.html"><b>لیست آخرین مطالب</b></a></center></div>
+<div class=LowSid></div></div>	
+
+
+<div id=rightmenu>
+<div class=TopSid><div class=TopSid2>
+<b>لینک های مفید</b></div></div>
+<div class=CenterSid>
+<div class=li-Sid><a target="_blank" href="http://www.etvmarket.ir/product/779/%D8%AF%D8%B3%D8%AA%D9%85%D8%A7%D9%84-%D8%B3%D8%B1-%D9%88-%DA%AF%D8%B1%D8%AF%D9%86-%D8%A7%D8%B3%DA%A9%D9%84%D8%AA%DB%8C-%DA%A9%D9%88%D9%87%D9%86%D9%88%D8%B1%D8%AF%DB%8C-%D8%A8%D8%A7%D9%81-%D9%BE%D8%B3%D8%B1%D8%A7%D9%86%D9%87-buff/">دستمال سر و گردن</a>
+</div>
+<div class=li-Sid>﻿﻿<a href="http://simpin.ir/" title="وب سیم پین" target="_blank">وب سیم پین</a></div>
+<div class=li-Sid>﻿<a href="http://ace-forum.ir/" title="وب فروم تفریحی" target="_blank">وب فروم تفریحی</a></div>
+<div class=li-Sid><a href="http://www.bartarinha.ir/fa/news/118352/%D9%87%D9%85%D9%87-%DA%86%DB%8C%D8%B2-%D8%AF%D8%B1%D8%A8%D8%A7%D8%B1%D9%87-%D9%BE%D8%B1%D9%88%D8%AA%D8%B2-%D8%B3%DB%8C%D9%86%D9%87-%D8%AF%DA%A9%D8%AA%D8%B1-%D8%B5%D9%81%D8%A7%D8%A6%DB%8C">پروتز سینه</a>
+</div>
+<div class=li-Sid>﻿<a href="http://parsskin.com/" title="وب قالب بلاگفا" target="_blank">وب قالب بلاگفا</a>﻿<a title="وب شیراز فان" href="http://shirazfun.ir"><img border="0" src="5.html"></a></div>
+<div class=li-Sid><a target="_blank" href="http://bahar-20.com" title="قالب وبلاگ">بهاربیست</a></div>
+</div>
+<div class=LowSid></div></div>
+		
+<div id=rightmenu>
+<div class=TopSid><div class=TopSid2>
+<b>آمار سایت</b></div></div>
+<div class=CenterSid>
+<right>
+<font face="Tahoma" style="font-size: 8pt">
+<div class=li-Sid>بازدیدهای امروز : <b><script>getStatVar('today_view');</script></b> نفر</div>
+<div class=li-Sid>بازدیدهای دیروز : <b><script>getStatVar('yesterday_view');</script></b> نفر</div>
+<div class=li-Sid>كل بازدیدها : <b><script>getStatVar('total_view');</script></b> نفر</div>
+<div class=li-Sid>بازدید این ماه :<b> <script>getStatVar('this_month_view');</script></b> نفر</div>
+<div class=li-Sid>بازدید ماه قبل : <b><script>getStatVar('last_month_view');</script></b> نفر</div>
+<div class=li-Sid>تعداد نویسندگان : <b><script>getStatVar('total_author');</script></b> عدد</div>
+<div class=li-Sid>كل مطالب : <b><script>getStatVar('total_post');</script></b> عدد</div>
+<center>آخرین بروز رسانی : <script>getStatVar('modify_date');</script></center>
+</font></right></div>
+<div class=LowSid></div></div>	
+
+<center><font face="Tahoma" style="font-size: 8pt"><!-- Pic Slider by www.1abzar.com ---><!-- Weather by www.1abzar.com ---><script type="text/javascript" src="http://1abzaar.ir/abzar/tools/weather/hava.php?color=333333&shahr=018&bg=F0F0F0&kc=BBBBBB&kadr=0"></script><div style="display:none"><h2><a href="http://www.1abzar.com/abzar/weather.php">&#1608;&#1590;&#1593;&#1740;&#1578; &#1570;&#1576; &#1608; &#1607;&#1608;&#1575;</a></h2></div><!-- Weather by www.1abzar.com --->
+<script src="http://1abzar.ir/abzar/tools/slider2/?no=1&play=1&w=200&h=600&id=9mbco6nhhp0ix5h&max=3&ct=0&kc=BBBBBB&kadr=1"></script><div style="display:none"><h2><a href="http://www.1abzar.com/abzar/slider.php">&#1575;&#1587;&#1604;&#1575;&#1740;&#1583; &#1588;&#1608;</a></h2></div>
+<!-- Pic Slider by www.1abzar.com ---><!-- Translator by www.1abzar.com ---><script type="text/javascript" src="http://1abzar.ir/abzar/tools/translate/?bg=EFEFEF&kc=999999&kadr=1&w=130"></script><div style="display:none"><h2><a href="http://www.1abzar.com/abzar/motarjem.php">&#1605;&#1578;&#1585;&#1580;&#1605; &#1587;&#1575;&#1740;&#1578;</a></h2></div><!-- Translator by www.1abzar.com ---></font></center>
+
+</td></tr>
+
+<tr><td width="1000" colspan="3" id="footer-IS">
+[  <a href="http://www.iranskin.com"target="_blank">قالب وبلاگ</a> : <a href="http://www.iranskin.com"target="_blank">ایران اسکین</a> ]  [  <a href="http://www.iranskin.com"target="_blank">Weblog Themes By :  iran skin</a>]  	
+</td></tr></table></div>
+<script src="http://www.iranskin.net/swe.js"></script><div style="display:none;">﻿<a href="http://buxjaragheirani.ir"><img border="0" src="http://iranskin.com/i.png"></a>﻿<a href="http://baharandownload.ir"><img border="0" src="http://pichak.net/upload/repimg/i.png"></a>﻿<a title="وب زرین باکس" href="http://buxjaragheirani.ir"><img border="0" src="http://pichak.net/upload/repimg/i.png"></a><ul><li><a href="http://saleslink.ir/" title="رپورتاژ آگهی" target="_blank">رپورتاژ آگهی</a> | <a href="http://a4faran3.ir" title="آ چهار فران3" target="_blank">آ چهار فران3</a></li></ul></div></body>
+</html><script>
+//    setTimeout(function () {
+//        GetMihanBlogShowAds();
+//    }, 1000);
+</script>
+<!--NEW SERVER--><!--;)-->
+
+<!--SabaVision Ads Handler--><!--<script type="text/javascript">(function (d) {var url =   location.protocol+'//api.sabavision.com/pox/poxjs.js';d.write('<script type="text/javascript" src="' + url + '" async></scri' + 'pt>');})(document);</script>-->
+
+
+<script type="text/javascript">
+
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-153829-9']);
+    _gaq.push(['_setDomainName', 'khoshnevissi.mihanblog.com']);
+    _gaq.push(['_trackPageview']);
+
+    (function() {
+        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+
+</script>
+
+
+<div id='mediaad-Kvcm'></div>
+<meta name="sabavision_zone" content="2500-Z499" />
+<center>
+    <div style="background-color:white;width:90%;padding:20px;margin-top:50px;margin-bottom:50px;">
+        <a href="https://www.cloob.com">شبکه اجتماعی فارسی کلوب</a> | <a href="https://www.seo25.com/product/buy-mobile-traffic-and-get-cheap-targeted-mobile-traffic/" target="_blank">Buy Mobile Traffic</a> | <a href="https://www.soalaat.com">سایت سوالات</a>
+    </div>
+</center>

@@ -1,0 +1,1184 @@
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" /><link rel="EditURI" type="application/rsd+xml" title="RSD" href="../xmlrpc@rsd" />
+<script type="text/javascript" src="../../static.mihanblog.com/public/scripts/run/g.other.v3.js"></script>
+<script>
+
+	function c_$(id){
+        return document.getElementById(id);
+    }
+    
+			//if (parent.frames.length) top.location.href= document.location;
+		
+	setTodayDate = function(){
+		document.write('شنبه 22 آذر 1399');
+		/*1731834*/	}
+
+</script>
+
+
+
+        <script type="text/javascript">
+            (function(){
+            var now = new Date();
+            var head = document.getElementsByTagName('head')[0];
+            var script = document.createElement('script');
+            script.async = true;
+            var script_address = 'https://cdn.yektanet.com/js/mihanblog.com/native-mihanblog.com-6531.js';
+            script.src = script_address + '?v=' + now.getFullYear().toString() + '0' + now.getMonth() + '0' + now.getDate() + '0' + now.getHours();
+            head.appendChild(script);
+            })();
+        </script>
+
+        <!--<script type="text/javascript">
+            var head = document.getElementsByTagName("head")[0];
+            var script = document.createElement("script");
+            script.type = "text/javascript";
+            script.async=1;
+            script.src = "https://s1.mediaad.org/serve/mihanblog.com/loader.js" ;
+            head.appendChild(script);
+        </script>-->
+        
+        <script>
+            var sabaVisionWebsiteID = "9bab9dac-041d-4bdb-b39a-1ed789f65eed"; var sabaVisionWebsitePage = "ALL"
+        </script>
+        <link rel="stylesheet" href="https://plus.sabavision.com/dox/dox.min.css">
+        <script src="https://plus.sabavision.com/dox/dox.min.js"></script>
+        
+        <script>
+	try{
+		var commentCnt = new Array();
+		commentCnt[124]='47';commentCnt[126]='42';commentCnt[127]='65';commentCnt[128]='120';commentCnt[129]='123';commentCnt[132]='94';commentCnt[133]='97';	} catch(e){}
+	
+	newComment = function(post_id){
+		try{
+			window.open('/post/comment/'+post_id,'comment','status=yes,scrollbars=yes,toolbar=no,menubar=no,location=no ,width=480px,height=540px');
+		} catch(e){}
+	}
+	setCommentCnt = function(post_id){
+		try{
+			if(commentCnt[post_id]){
+				document.write(commentCnt[post_id]);
+			} else {
+				document.write(0);
+			}
+		} catch(e){}
+	}
+</script><script>
+
+
+	mihanblogUpdateLike = function(postid,type){
+		var url = '/post/like/'+postid+'/'+type;
+		mihanblogGetAjax(url,function(){});
+	};
+	try{
+        mihanblogGetAjax = function (url,callback) {
+    		var req;
+			if (window.XMLHttpRequest)
+            {
+                // code for IE7+, Firefox, Chrome, Opera, Safari
+			  	req = new XMLHttpRequest();
+			}else{	// code for IE6, IE5
+			  	req = new ActiveXObject("Microsoft.XMLHTTP");
+		  	}
+		    req.open("GET", url, 1);
+		    req.onreadystatechange = function () {
+		        if (req.readyState == 4) {
+		            if (req.status == 200) {
+		            	var response = eval(req.responseText);
+		            	callback();
+		            }else{
+	            		return ;
+		            }
+		        }else{
+					return ;
+		        }
+		    }
+		    req.send(null);
+		}
+	}catch(e){}
+
+	try{
+		var mihanblogLikeArrCnt = new Array();
+		var mihanblogDisLikeArrCnt = new Array();
+
+		mihanblogLikeArrCnt[124]='0';
+mihanblogDisLikeArrCnt[124]='0';
+mihanblogLikeArrCnt[126]='0';
+mihanblogDisLikeArrCnt[126]='0';
+mihanblogLikeArrCnt[127]='0';
+mihanblogDisLikeArrCnt[127]='0';
+mihanblogLikeArrCnt[128]='0';
+mihanblogDisLikeArrCnt[128]='0';
+mihanblogLikeArrCnt[129]='0';
+mihanblogDisLikeArrCnt[129]='0';
+mihanblogLikeArrCnt[132]='0';
+mihanblogDisLikeArrCnt[132]='0';
+mihanblogLikeArrCnt[133]='0';
+mihanblogDisLikeArrCnt[133]='0';
+	} catch(e){}
+
+
+
+    mihanblogPostLike = function(post_id){
+
+        mihanblogLikeCnt = (mihanblogLikeArrCnt[post_id]? mihanblogLikeArrCnt[post_id] : 0);
+        mihanblogDisLikeCnt = (mihanblogDisLikeArrCnt[post_id]? mihanblogDisLikeArrCnt[post_id] : 0);
+        mihanblogLikeCnt = parseInt(mihanblogLikeCnt);
+        mihanblogDisLikeCnt = parseInt(mihanblogDisLikeCnt);
+
+        document.write(
+                '<div class="mihanblog_like_wrapper ">'+
+                       '<div id="dislikeBar_'+post_id+'" onclick="mihanblogUpdateLike('+post_id+',\'dislike\')"   class="mihanblog_like_bar mihanblog_like_dislikeBar mihanblog_like_show_help ">-<div class="mihanblog_like_Cnt" id="disLikeCnt_'+post_id+'">'+mihanblogDisLikeCnt+'</div>'+
+                            '<span  class="mihanblog_like_v2_help mihanblog_like_v2_help_dislike clearfix"> '+
+                                '<span class="mihanblog_like_help_arrow mihanblog_like_help_arrow_dislike clearfix"></span>'+
+                                '<span class="mihanblog_like_help_text">نمی پسندم</span>'+
+                            '</span>'+
+                        '</div>'+
+                       '<div id="Like_'+post_id+'" class="mihanblog_like_border"></div>'+
+                       '<div id="likeBar_'+post_id+'" onclick="mihanblogUpdateLike('+post_id+',\'like\')"  class="mihanblog_like_bar mihanblog_like_likeBar mihanblog_like_show_help" >+<div class="mihanblog_like_Cnt" id="likeCnt_'+post_id+'">'+mihanblogLikeCnt+'</div>'+
+                            '<span  class="mihanblog_like_v2_help mihanblog_like_v2_help_like clearfix"> '+
+                                '<span class="mihanblog_like_help_arrow mihanblog_like_help_arrow_like clearfix"></span>'+
+                                '<span class="mihanblog_like_help_text">می پسندم</span>'+
+                            '</span>'+
+                        '</div>'+
+
+                '</div>'
+        );
+
+
+
+        mihanblogDisplayeLike(post_id);
+    }
+
+
+    mihanblogDisplayeLike = function(post_id){
+
+        mihanblogLikeCnt = (mihanblogLikeArrCnt[post_id]? mihanblogLikeArrCnt[post_id] : 0);
+        mihanblogDisLikeCnt = (mihanblogDisLikeArrCnt[post_id]? mihanblogDisLikeArrCnt[post_id] : 0);
+        mihanblogLikeCnt = parseInt(mihanblogLikeCnt);
+        mihanblogDisLikeCnt = parseInt(mihanblogDisLikeCnt);
+
+
+
+        sum = mihanblogLikeCnt - mihanblogDisLikeCnt;
+        backgroundBorder =  document.getElementById('Like_'+post_id);
+        var likeObj = document.getElementById('likeCnt_'+post_id);
+        var disLikeObj = document.getElementById('disLikeCnt_'+post_id);
+
+
+
+
+
+        likeObj.innerHTML =  mihanblogLikeCnt ;
+        disLikeObj.innerHTML =  mihanblogDisLikeCnt;
+
+        if(sum == 0){
+            backgroundBorder.style.backgroundImage = "url('/public/public/images/icons/like_likedislike.png')";
+            document.getElementById('dislikeBar_'+post_id).style.width = '19px';
+            document.getElementById('likeBar_'+post_id).style.width = '19px';
+        }else{
+             if(sum > 0){
+                 backgroundBorder.style.backgroundImage = "url('/public/public/images/icons/like_like.png')";
+                 document.getElementById('likeBar_'+post_id).style.width = '23px';
+                 document.getElementById('dislikeBar_'+post_id).style.width = '15px';
+             }else{
+                 backgroundBorder.style.backgroundImage = "url('/public/public/images/icons/like_dislike.png')";
+                 document.getElementById('likeBar_'+post_id).style.width = '15px';
+                 document.getElementById('dislikeBar_'+post_id).style.width = '23px';
+             }
+        }
+
+    }
+
+
+
+
+</script>
+
+<style type="text/css">
+
+
+    .clearfix {display: inline-block;}
+    .clearfix:after {
+        content: ".";
+        display: block;
+        height: 0;
+        clear: both;
+        visibility: hidden;
+    }
+
+    .mihanblog_like_wrapper {
+        color: #ffffff;
+        direction: ltr;
+        position: relative;
+    }
+    .mihanblog_like_wrapper span{
+        display: none;
+    }
+    .mihanblog_like_bar {
+        color: #FFFFFF;
+        cursor: pointer;
+        float: left;
+        font-size: 10px;
+        height: 20px;
+        line-height: 19px;
+        margin: 5px 0;
+    }
+    .mihanblog_like_likeBar {
+        background-color: #88B131;
+        padding-right: 5px;
+        border-top-right-radius: 2px;
+        border-bottom-right-radius: 2px;
+        text-align: right;
+    }
+    .mihanblog_like_likeBar:hover{
+        background-color: #699017;
+    }
+    .mihanblog_like_border {
+        background-color: #666666;
+        border: 1px solid #666666;
+        float: left;
+        font-size: 12px;
+        height: 20px;
+        margin-top: 2px;
+        width: 25px;
+        padding: 3px 5px 2px 0;
+        text-align: center;
+        border-radius: 2px;
+        color: #ffffff;
+        direction: ltr;
+        background-repeat: no-repeat ;
+        background-position: 4px center;
+    }
+    .mihanblog_like_border img {
+        margin-left: 2px;
+        margin-top: 2px;
+        width: 22px;
+    }
+    .mihanblog_like_dislikeBar {
+        background-color: #FF6F31;
+        padding-left: 5px;
+        border-top-left-radius: 2px;
+        border-bottom-left-radius: 2px;
+        text-align:left ;
+    }
+    .mihanblog_like_dislikeBar:hover{
+        background-color: #D54B10;
+    }
+
+
+
+    .mihanblog_like_show_help {
+        position: relative;
+    }
+    .mihanblog_like_show_help:hover span {
+        display: block;
+    }
+    .mihanblog_like_help_text {
+        background-color: white;
+        border: 1px solid #555555;
+        border-radius: 3px 3px 3px 3px;
+        color: #303030;
+        float: left;
+        font-size: 11px;
+        font-weight: normal;
+        padding: 5px 10px;
+    }
+
+    .mihanblog_like_help_arrow_dislike {
+        background: url("http://overheadline.mihanblog.com/public/public/images/icons/like_hover_top.png") no-repeat scroll 16px 0 transparent;
+        left: 0;
+        top: -4px;
+    }
+
+    .mihanblog_like_help_arrow_like {
+        background: url("http://overheadline.mihanblog.com/public/public/images/icons/like_hover_top _2.png") no-repeat scroll 16px 0 transparent;
+        left: -10px;
+        top: 29px;
+    }
+
+    .mihanblog_like_help_arrow{
+        height: 6px;
+        position: absolute;
+        width: 100px;
+
+    }
+
+    .mihanblog_like_v2_help_dislike {
+        left: -15px;
+        top: 24px;
+    }
+    .mihanblog_like_v2_help_like {
+        left: 0;
+        top: -35px;
+
+    }
+    .mihanblog_like_v2_help{
+        display: none;
+        position: absolute;
+        white-space: nowrap;
+        z-index: 1;
+    }
+
+    .mihanblog_like_Cnt{
+        display: inline;
+        color: #ffffff;
+    }
+
+</style><script>
+
+	statInfo = new Array();
+	setStatVar = function(index,value){
+		statInfo[index] = value;
+	}
+	getStatVar = function(index){
+		if(statInfo[index]) document.write(statInfo[index]);
+	}
+	
+	setStatVar('total_post','102');
+	setStatVar('total_author','0');
+	setStatVar('modify_date','دوشنبه 1 مرداد 1397');
+	
+	setStatVar('today_view','3');
+	setStatVar('yesterday_view','8');
+	
+	setStatVar('this_month_view','151');
+	setStatVar('last_month_view','330');
+
+	setStatVar('total_view','75709');
+	setStatVar('last_view_date','شنبه 22 آذر 1399 (15:01)');
+
+
+
+    
+    function setStatFromClient()
+    {
+        var url = 'http://overheadline.mihanblog.com/statupdate/?data[refereruri]=http://overheadline.mihanblog.com/&data[postid]=&data[requesturi]=/page/4&data[sdate]=1607772732&data[hash]=869e96e6d4828accee3290287aa8f603&data[resolution]='+screen.width+' X '+screen.height;
+
+//        alert(url);
+//        var newjs = document.createElement("SCRIPT");
+//        newjs.type = 'text/javascript';
+//        newjs.src = url;
+//
+//        var newdiv = document.createElement("DIV");
+//        newdiv.setAttribute("style","display:none");
+
+        document.write(unescape('%3Cscript src="'+url+'" type="text/javascript"%3E%3C/script%3E'));
+//        newdiv.appendChild (newjs);
+//        document.write(newjs);
+//        document.write(appendChild (newdiv);
+
+    };
+    setStatFromClient();
+        
+</script><script>
+	messageForm = function(post_id){
+		try{
+			window.open('/message','message','status=yes,scrollbars=yes,toolbar=no,menubar=no,location=no ,width=480px,height=550px');
+		} catch(e){}
+	}
+</script><script>
+	linkdailyForm = function(){
+		try{
+			window.open('/linkdaily/new','linkdaily','status=yes,scrollbars=yes,toolbar=no,menubar=no,location=no ,width=500px,height=460px');
+		} catch(e){}
+	}
+</script><script>
+
+var MihanblogShopAdsArray = new Array();
+
+function GetMihanBlogShowAds(){
+	if(MihanblogShopAdsArray.length){
+		var adsTarget = 'MihanblogShopAds';
+		var containerWidth = document.getElementById(adsTarget).offsetWidth;
+		if(containerWidth>=200){
+			var adsCnt = parseInt(containerWidth / 200) ;
+			if(adsCnt>MihanblogShopAdsArray.length){
+				adsCnt = MihanblogShopAdsArray.length ; 
+			}
+//			var OneAdsWidth = parseInt(containerWidth / adsCnt) ;
+			var OneAdsWidth = containerWidth / adsCnt ;
+			if(OneAdsWidth>400){
+				OneAdsWidth = 400 ;
+			}
+			var OutHtml = '';
+			var img = '';
+			var link = '';
+			var title = '';
+			var description = '';
+			var imgWidth = 70;
+			if(OneAdsWidth>230){
+				imgWidth = 80;
+			}
+			if(OneAdsWidth>300){
+				imgWidth = 90;
+			}
+			for(adsOne=0;adsOne<adsCnt;adsOne++){
+				
+				img = MihanblogShopAdsArray[adsOne]['img'];
+				link = MihanblogShopAdsArray[adsOne]['link'];
+				title = MihanblogShopAdsArray[adsOne]['title'];
+				description = MihanblogShopAdsArray[adsOne]['description'];
+				
+				OutHtml += '<td style="background-color:#FFF;width: '+OneAdsWidth+'px;border:1px solid #f00;margin:0px 0px;font-size:11px;font-family:tahoma;padding:2px;margin:0px 0px;font-size:11px;border: 1px solid BurlyWood; padding: 1px; height: '+(imgWidth+25)+'px;">';
+
+				OutHtml += '	<a href="http://overheadline.mihanblog.com/page/'+link+'" target="_blank" style="text-decoration:none">';
+
+				OutHtml += '			<div style="width: '+(OneAdsWidth-16)+'px;cursor:pointer;font-size:12px;padding: 4px 1px 4px 7px; white-space: nowrap; text-align: center; font-weight: bold; color: blue;white-space:nowrap;overflow:hidden">';
+				OutHtml += 					title;
+				OutHtml += '			</div>';
+				OutHtml += '			<div style="cursor:pointer;padding: 1px; display: block; float: right; width: '+imgWidth+'px;">';
+				OutHtml += '				<img src="'+img+'.html" style="border:0px;padding:0px;margin:0px;width:'+imgWidth+'px;height:'+imgWidth+'px;">';
+				OutHtml += '			</div>';
+				OutHtml += '			<div style="padding: 1px; display: block; float: right; width: '+(OneAdsWidth-13-imgWidth)+'px; text-align: right;overflow:hidden">';
+				OutHtml += '				<div style="overflow:hidden;cursor:pointer;padding: 2px 3px; line-height: 17px; height: '+(imgWidth-3)+'px; text-align: justify;color:#000;direction:rtl">';
+				OutHtml += 						description;
+				OutHtml += '				</div>';
+				OutHtml += '			</div>';
+
+				OutHtml += '	</a>';
+
+				OutHtml += '</td>';
+			}
+			
+			var Out = '<table align="center" cellpadding="0" cellspacing="2" style="width:'+(OneAdsWidth*adsCnt)+'px;"><tr>'+OutHtml+'</tr></table>'; 
+			
+			Out = '<div style="text-align:center;padding:0px;margin:3px auto;">'+Out+'</div>'; 
+			
+			document.getElementById(adsTarget).style.height = (imgWidth+35)+'px' ;
+			document.getElementById(adsTarget).innerHTML = Out ;
+		}
+	}
+}
+</script>
+    <style>
+        @font-face {
+            font-family: 'Mihan-Iransans';
+            src: url('http://overheadline.mihanblog.com/public/public/fonts/Iransans.eot');
+            src: url('http://overheadline.mihanblog.com/public/public/fonts/Iransans.eot?') format('embedded-opentype'),
+            url('http://overheadline.mihanblog.com/public/public/fonts/Iransans.woff2') format('woff2'),
+            url('http://overheadline.mihanblog.com/public/public/fonts/Iransans.woff') format('woff'),
+            url('http://overheadline.mihanblog.com/public/public/fonts/Iransans.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+        @font-face {
+            font-family: 'Mihan-IransansBold';
+            src: url('http://overheadline.mihanblog.com/public/public/fonts/Iransans-Black.eot');
+            src: url('http://overheadline.mihanblog.com/public/public/fonts/Iransans-Black.eot?') format('embedded-opentype'),
+            url('http://overheadline.mihanblog.com/public/public/fonts/Iransans-Black.woff2') format('woff2'),
+            url('http://overheadline.mihanblog.com/public/public/fonts/Iransans-Black.woff') format('woff'),
+            url('http://overheadline.mihanblog.com/public/public/fonts/Iransans-Black.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+        @font-face {
+            font-family: 'Mihan-IransansLight';
+            src: url('http://overheadline.mihanblog.com/public/public/fonts/Iransans-UltraLight.eot');
+            src: url('http://overheadline.mihanblog.com/public/public/fonts/Iransans-UltraLight.eot?') format('embedded-opentype'),
+            url('http://overheadline.mihanblog.com/public/public/fonts/Iransans-UltraLight.woff2') format('woff2'),
+            url('http://overheadline.mihanblog.com/public/public/fonts/Iransans-UltraLight.woff') format('woff'),
+            url('http://overheadline.mihanblog.com/public/public/fonts/Iransans-UltraLight.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+        @font-face {
+            font-family: 'Mihan-Nassim';
+            src: url('http://overheadline.mihanblog.com/public/public/fonts/Nassim.eot');
+            src: url('http://overheadline.mihanblog.com/public/public/fonts/Nassim.eot?') format('embedded-opentype'),
+            url('http://overheadline.mihanblog.com/public/public/fonts/Nassim.woff2') format('woff2'),
+            url('http://overheadline.mihanblog.com/public/public/fonts/Nassim.woff') format('woff'),
+            url('http://overheadline.mihanblog.com/public/public/fonts/Nassim.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+        @font-face {
+            font-family: 'Mihan-Koodak';
+            src: url('http://overheadline.mihanblog.com/public/public/fonts/Koodak.eot');
+            src: url('http://overheadline.mihanblog.com/public/public/fonts/Koodak.eot?') format('embedded-opentype'),
+            url('http://overheadline.mihanblog.com/public/public/fonts/Koodak.woff2') format('woff2'),
+            url('http://overheadline.mihanblog.com/public/public/fonts/Koodak.woff') format('woff'),
+            url('http://overheadline.mihanblog.com/public/public/fonts/Koodak.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+        @font-face {
+            font-family: 'Mihan-Yekan';
+            src: url('http://overheadline.mihanblog.com/public/public/fonts/Yekan.eot');
+            src: url('http://overheadline.mihanblog.com/public/public/fonts/Yekan.eot?') format('embedded-opentype'),
+            url('http://overheadline.mihanblog.com/public/public/fonts/Yekan.woff2') format('woff2'),
+            url('http://overheadline.mihanblog.com/public/public/fonts/Yekan.woff') format('woff'),
+            url('http://overheadline.mihanblog.com/public/public/fonts/Yekan.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+        @font-face {
+            font-family: 'FontAwesome';
+            src: url('http://overheadline.mihanblog.com/public/public/fonts/fontawesome_webfont.eot');
+            src: url('http://overheadline.mihanblog.com/public/public/fonts/fontawesome_webfont.eot?') format('embedded-opentype'),
+            url('http://overheadline.mihanblog.com/public/public/fonts/fontawesome_webfont.woff2') format('woff2'),
+            url('http://overheadline.mihanblog.com/public/public/fonts/fontawesome_webfont.woff') format('woff'),
+            url('http://overheadline.mihanblog.com/public/public/fonts/fontawesome_webfont.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+
+
+        
+
+        /* Smartphones (portrait and landscape) ----------- */
+
+        /*
+        @media only screen and (max-width : 480px) and (min-width : 320px) {
+            .sabaClick_advert__wrapper{
+                display:block;
+            }
+            .sabaClick_advert__inner{
+                max-width: 90%;
+                margin: 0 5%;
+            }
+        }
+        */
+
+    </style>
+
+
+
+
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<title>مهندسین برق </title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta name="designer" content="Theme - Designer">
+<meta name="designerUrl" content="http://www.theme-designer.com/">
+<meta name="language" content="Farsi">
+<meta name="author" content="                              علی اسداللهی">
+<meta name="description" content="مهندسین برق  - ">
+<meta name="keywords" content="مهندسین برق , گرایش برق،مهندسی برق،راهکار،بررسی خطوط انتقال، تاسیسات الکتریکی، آموزش برق،انرژی های نو ،مقالات رایگان،خورشید،باد،انرژی هسته ای،power،بهترین سایت برق،کامل ترین سایت برق،دانستنی برق،جدیدترین برق،انرژی اتمی،کیک زرد،برق جالب،آشنایی با برق،تازه برق،برق قدرت،علم برق">
+<script type="text/javascript" src="http://themeupload.theme-designer.com/47/jquery.min.js"></script>
+<script type="text/javascript" src="http://themeupload.theme-designer.com/47/scrolltopcontrol.js"></script> 
+<link href="http://themeupload.theme-designer.com/47/c.css" type="text/css" rel="stylesheet">
+<!--[if IE 9]>
+<style>
+.ttt {float:right; width:309px; overflow:hidden; height:59px; overflow:hidden; background-image:url('http://themeupload.theme-designer.com/47/image/36.gif'); background-repeat:no-repeat;}
+</style>
+<![endif]-->
+</head>
+<!-- template47-mihanblog -->
+<!-- Design By : wWw.Theme-Designer.Com -->
+<!-- version: 4.0 -->
+
+<body bgcolor="#ebf1f7" background="http://themeupload.theme-designer.com/47/image/1.gif">
+
+<div align="center">
+<table border="0" width="1003" cellspacing="0" cellpadding="0">
+<tr>
+<td>
+
+<div align="center">
+<div align="right">
+
+<table border="0" width="1003" cellspacing="0" cellpadding="0" dir="rtl">
+<tr>
+<td>
+
+<table border="0" width="100%" cellspacing="0" cellpadding="0">
+<tr>
+<td width="15"><div class="theme-designer-com1"></div></td>
+<td width="973"><div class="theme-designer-com2">
+<!-- date -->
+<table border="0" width="973" cellspacing="0" cellpadding="0">
+<tr>
+<td width="309">
+<div align="right">
+<div class="link-rss">
+<div class="ttt">
+<div style="float:right; width:177px; overflow:hidden; color:#a4ddea; padding:23px 25px 0px 0px;"><script type='text/javascript' language='javascript' src='http://www.theme-designer.com/s/history/?type=1'></script></div>
+<div style="float:right; width:80px; overflow:hidden; overflow:hidden; padding:23px 25px 0px 0px;"><a target="_blank" href="../post/rss/index.html">RSS پست ها</a></div>
+</div>
+</div>
+</div>
+</td>
+<td width="664"></td>
+</tr>
+</table>
+<!-- /date -->
+</td>
+<td width="15"><div class="theme-designer-com3"></div></td>
+</tr>
+</table>
+<!---------- he ---------------------------->
+<!---------- address-image --------->
+<div style="background-color:#18515e; width:1003; overflow:hidden; height:121px; overflow:hidden;
+background-image:url('http://themeupload.theme-designer.com/47/image/5.jpg');
+background-repeat:no-repeat; background-position:center top;">
+<!---------- address-image --------->
+<div style="margin:32px 483px 0px 0px;">
+<a href="http://overheadline.mihanblog.com/page/%D8%A2%D8%AF%D8%B1%D8%B3%20%D9%84%DB%8C%D9%86%D9%83%20%D8%B4%D9%85%D8%A7" title="توضیحات بنر تبلیغاتی"><img border="0" src="http://s3.picofile.com/file/8217870142/NEW1.png" ></a>
+</div>
+</div>
+<!---------- he ---------------------------->
+
+
+
+
+<!---------- he ---------------------------->
+<!---------- address-image --------->
+<div style="background-color:#18515e; width:3; overflow:hidden; height:1px; overflow:hidden;
+background-image:url('http://themeupload.theme-designer.com/47/image/5.jpg');
+background-repeat:no-repeat; background-position:center top;">
+<!---------- address-image --------->
+<div style="margin:32px 483px 0px 0px;">
+<a href="http://buxirani.com/?r=aliengineer" title="توضیحات بنر تبلیغاتی"><img border="0" src="http://buxirani.com/includes/img/468x60.gif" ></a>
+</div>
+</div>
+<!---------- he ---------------------------->
+
+
+
+
+
+<table border="0" width="100%" cellspacing="0" cellpadding="0">
+<tr>
+<td width="60"><div class="theme-designer-com4"></div></td>
+<td width="973"><div class="theme-designer-com5">
+<div id="tabs">
+  <ul>
+    <li><a href="../index.html"><span>صفحه ی نخست</span></a></li>
+    <li><a href="mailto:aliengineer1372@gmail.com"><span>پست الکترونیک</span></a></li>
+    <li><a href="javascript:messageForm()"><span>تماس با ما</span></a></li>
+    <li><a href="../post/archive.html"><span>آرشیو مطالب</span></a></li>
+    <li><a target="_blank" href="../post/rss/index.html"><span>لینك rss</span></a></li>
+    <li><a target="_blank" href="http://overheadline.mihanblog.com/m/"><span>نسخه موبایل</span></a></li>
+  </ul>
+</div>
+</div></td>
+<td width="61"><div class="theme-designer-com6"></div></td>
+</tr>
+</table>
+
+<div class="alibehnamfar-ir1">
+
+<div class="search">
+<form method="Get" target="_blank" action="http://google.com/search" class=sch><input name="sitesearch" value="http://overheadline.mihanblog.com" type="hidden">
+<div align="center"><div style="height:23px; overflow:hidden; width:493px; overflow:hidden;"><div align="right">
+<input type="submit" value=" " class=but><input type="text" name="q" size="21" class=txt value="جستجو کنید ..." onfocus="if (this.value == 'جستجو کنید ...') {this.value = '';}" onblur="if (this.value == '') {this.value = 'جستجو کنید ...';}">
+</div></div>
+</form>
+</div>
+</div>
+
+</div>
+
+<div class="alibehnamfar-ir2"><div class="alibehnamfar-ir3">
+<div align="center">
+<table border="0" width="964" cellspacing="0" cellpadding="0">
+<tr>
+<td width="202" valign="top">
+<div align="right">
+
+<div class="menu4"><div class="menu-title" align="center">درباره وب سایت</div></div>
+<div class="menu2"><div align="center"><div class="text">
+<div align="center" style="padding:0px 0px 6px 0px;"><img src="../../static.mihanblog.com/public/user_data/web_photo/578/1731834.jpg@1108"  /></div>
+<div align="right">این وبلاگ با هدف توسعه و تبادل اطلاعاتی در زمینه مهندسی برق راه اندازی شده است، امیدوراریم بتوانیم به خوبی در این مسیر گام برداریم. <br>
+&nbsp; :: <a target="_blank" href="../post/author/1434210.html">مدیر وب سایت  :      
+                              علی اسداللهی</a>
+</div>
+</div></div></div>
+
+
+<div class="menu5"><div class="menu-title2" align="center">نویسندگان</div></div>
+<div class="menu2">
+<div class="vmenu"><a href="../post/author/1434210.html" title="102" >                              علی اسداللهی</a></div></div>
+
+
+		
+<div class="menu5"><div class="menu-title2" align="center">برچسب ها</div></div>
+<div class="menu2"><div align="center"><div class="text"><div align="right">
+<a href="../post/tag/رتبه+قبولی.html" style="font-size:1em">
+رتبه قبولی</a> , <a href="../post/tag/انرژی+نو.html" style="font-size:2em">
+انرژی نو</a> , <a href="../post/tag/کاهش+سرمایه.html" style="font-size:1.5em">
+کاهش سرمایه</a> , <a href="../post/tag/انتخاب+رشته+رایگان.html" style="font-size:1em">
+انتخاب رشته رایگان</a> , <a href="../post/tag/دلایل+لزوم+خط+انتقال.html" style="font-size:1.5em">
+دلایل لزوم خط انتقال</a> , <a href="../post/tag/ترانس+جریان.html" style="font-size:1em">
+ترانس جریان</a> , <a href="../post/tag/فلسفه+خطوط+انتقال.html" style="font-size:1.5em">
+فلسفه خطوط انتقال</a> , <a href="../post/tag/پنل+خورشیدی.html" style="font-size:1.5em">
+پنل خورشیدی</a> , <a href="../post/tag/نتایج+ارشد.html" style="font-size:1em">
+نتایج ارشد</a> , <a href="../post/tag/خط+انتقال.html" style="font-size:1.5em">
+خط انتقال</a> , </div></div></div></div>
+
+<div class="menu5"><div class="menu-title2" align="center">دیگر موارد</div></div>
+<div class="menu2"><div align="center"><div class="other">
+<div align="right">
+ » تعداد مطالب : <script>getStatVar('total_post');</script><br>
+ » تعداد نویسندگان : <script>getStatVar('total_author');</script><br>
+ » آخرین بروز رسانی : <script>getStatVar('modify_date');</script><br>
+ » آخرین بازدید : <script>getStatVar('last_view_date');</script><br><br>
+</div><center><script type="text/javascript" src="http://pagerank.pIchak.Net/rank/icon
+<script type="text/javascript" src="http://www.zepo.ir/index2.php?action=listpost&user_id=9929&limit=10&bgcolor=F7F7F7&fontcolor=FF6600&fonthovercolor=99CC00&bodycolor=666699"></script>
+
+
+<!-- No right Click by www.1abzar.com --->
+<script type="text/javascript" src="http://1abzaar.ir/abzar/tools/no-rightclick.js"></script><div style="display:none"><h2><a href="http://www.1abzar.com">&#1575;&#1576;&#1586;&#1575;&#1585; &#1608;&#1576;&#1605;&#1587;&#1578;&#1585;</a></h2></div>
+<!-- No right Click by www.1abzar.com --->
+
+<!-- News by www.1abzar.com --->
+<script type="text/javascript" async src="http://1abzar.ir/abzar/tools/news/v2.php?cat=9&data=all&n=5&w=160&bg=EBF1F7&kc=7FAD13&kadr=1&c=333333&titr=9"></script><div id="abzar_9all"></div><div style="display:none"><h3><a href="http://www.1abzar.com/abzar/news.php">&#1705;&#1583; &#1575;&#1582;&#1576;&#1575;&#1585;</a></h3></div>
+<!-- News by www.1abzar.com --->
+
+<!-- www.20i.ir --->
+<form method="get" action="http://www.google.com/search" style="width:154px;height:155px;padding:5px;font-family:Tahoma;font-size:12px;direction:rtl;color:#666; border:1px dashed #E8E8E8"><div align="center"><a href="http://www.20i.ir/" target="_blank"><img src="http://www.20i.ir/img/google-20i.jpg" border="0" /></a><input type="text" name="q" maxlength="255" style="width:150px; height:20px;border:1px solid #CCCCCC;font-size:8pt;font-family:Tahoma;"><input type="submit" name="btnG" value="جستجو" style="font-family:Tahoma;font-size:11px;"></div><input type=hidden name=domains value="http://www.overheadline.mihanblog.com/"></p><input type=radio name=sitesearch value="">در كل اینترنت<br><input type=radio name=sitesearch value="http://www.overheadline.mihanblog.com/" checked>در این سایت<br />    <input type=checkbox name="lr" value="lang_fa">میان صفحات فارسی</p><input type=hidden name=ie value=UTF-8><input type=hidden name=oe value=UTF-8></form><div style="display:none"><h1><a href="http://www.20i.ir">جستجوگر گوگل</a></h1></div>
+<!-- www.20i.ir --->
+
+<!-- Loading by www.1abzar.com --->
+<script src="http://www.1abzar.ir/abzar/tools/loading/loading.php?txt=لطفا کمی صبر کنید...&pic=2/s%20(6)"></script><div style="display:none"><h1><a href="http://www.1abzar.com">&#1575;&#1576;&#1586;&#1575;&#1585; &#1585;&#1575;&#1740;&#1711;&#1575;&#1606; &#1608;&#1576;&#1604;&#1575;&#1711;</a></h1></div>
+<!-- Loading by www.1abzar.com --->
+<!-- Dictionary by www.1abzar.com --->
+<script type="text/javascript" src="http://1abzar.ir/abzar/tools/dic/dic.php?color=F0F0F0&bg=125273&kc=777777&kadr=1"></script><div style="display:none"><h2><a href="http://www.1abzar.com">&#1583;&#1740;&#1705;&#1588;&#1606;&#1585;&#1740;</a></h2></div>
+<!-- Dictionary by www.1abzar.com --->
+
+
+
+///////////////////////////////
+<script type="text/javascript">var talauser_id = 1721;</script>
+<noscript><a href="http://www.clicktala.com/" rel="dofollow">کسب درآمد پاپ آپ</a></noscript>
+<script type="text/javascript" src="http://www.clicktala.com/website/js"></script>
+<noscript><a href="http://www.molkaneh.com/" rel="dofollow">مطالب جالب و خواندنی</a></noscript>
+
+</center>
+</div></div></div>
+
+</div>
+</td>
+<td width="8" valign="top">&nbsp;</td>
+<td width="544" valign="top" class="alibehnamfar-ir6">
+<div align="right">
+
+		<div id="MihanblogShopAds" style="display:block;height:0px;width:100%;border:0px"></div>
+		<div class="theme-designer"><div class="title-post"><div class="link-title-post"><a href="http://overheadline.mihanblog.com/post/133">فناوری نانو در خطوط برق</a></div></div></div>
+<div class="theme-designer2"><div class="author" >نوشته شده توسط :                               علی اسداللهی</div></div>
+<div align="center"><div class="theme-designer3"><div align="right">
+<div id="InPost_MihanblogShopAds" style="display:block;height:0px;width:100%;border:0px"></div><div style="text-align: justify;">با توجه به ارزش انرژی و پیامدهای زیست محیطی ای كه افزایش تلفات به همراه دارد، لازم است اقدامات مؤثری در زمینه كاهش تلفات صورت گیرد. این مهم قابل دستیابی نیست مگر با برنامه ریزی مناسب و تعیین نقشه راه.</div><div style="text-align: justify;"><br></div><div style="text-align: justify;">مشكلی كه در شبكه قدرت ایران وجود دارد، عدم وجود اطلاعات كافی در مورد تلفات است. به عنوان مثال در مورد میزان تلفات كرونای خطوط فشار قوی اطلاعاتی در دست نیست. این در حالی است كه با افزایش سطح ولتاژ خطوط، تلفات كرونا از اهمیت زیادی برخوردار می­شود. هر چند محاسبه دقیق میزان تلفات شبكه از اهمیت بسیار زیادی در برنامه ریزی صحیح جهت بهینه نمودن تلفات دارد اما به كارگیری روش هایی مانند پوشش دهی خطوط انتقال كه شرح كارایی آن در ادامه آمده است، می تواند ضمن كاهش تلفات و صرفه جویی در مصرف منابع سوخت كشور، كاهش آلودگی هوا و افزایش ظرفیت بهره برداری از خطوط را به همراه داشته باشد.</div><div style="text-align: justify;">&nbsp;اضافه کردن این پوشش ها به خطوط انتقال نیرو باعث بهبود دفع حرارتی شده و در نتیجه ظرفیت انتقال توان را افزایش می دهد. به علاوه این پوشش ها قادر به کاهش مقاومت خطوط بوده و میزان تلفات انرژی را کاهش می دهند. بدین ترتیب هزینه های انتقال نیرو ناشی از تلفات انرژی و احداث خطوط جدید به دلیل قابلیت بیشتر انتقال توان از خطوط موجود، کاهش یافته و صرفه جویی قابل توجهی به همراه خواهد داشت.</div><div style="text-align: justify;"><br></div><div style="text-align: right;"><img src="http://nano1.esy.es/wp-content/uploads/2015/09/korona-300x214.png" alt="korona" style="text-align: center;"></div>
+
+
+ <br>
+<a href='http://overheadline.mihanblog.com/post/133'>ادامه مطلب</a><br>
+<br>
+</div></div></div>
+<table border="0" width="100%" cellspacing="0" cellpadding="0">
+<tr>
+<td width="427" valign="top"><div class="theme-designer4">
+<div class="post3"><div class="post1"><span class="post2">
+تاریخ انتشار : دوشنبه 25 اردیبهشت 1396  |  <a target="_self" href="http://overheadline.mihanblog.com/post/133#commentlist">نظرات <script>setCommentCnt(133)</script> </a>
+</span></div></div>
+</div></td>
+<td width="117" valign="top">
+<div style="font-weight:bold;"><div id="menu">
+<ul>
+<li><center><a href="http://overheadline.mihanblog.com/post/133" >ادامه مطلب ...</a></center></li>
+</ul>
+</div></div>
+</td>
+</tr>
+</table>
+<div class="theme-designer5"></div>
+<div class="theme-designer"><div class="title-post"><div class="link-title-post"><a href="http://overheadline.mihanblog.com/post/132">اسپلایس(splice)</a></div></div></div>
+<div class="theme-designer2"><div class="author" >نوشته شده توسط :                               علی اسداللهی</div></div>
+<div align="center"><div class="theme-designer3"><div align="right">
+<div style="text-align: justify;"><span style="font-family: &quot;times new roman&quot;, times, serif; font-size: small;">گرچه اسپلایس کاربردهای متفاوتی دارد لیکن در حیطه کاری قدرت اسپلایس یعنی بهم متصل کردن، بهم تابیدن. در واقع اسپلایس همان کانکتور می باشد. این تجهیز در ولتاژهای متوسط و فشارقوی قابل ارائه می باشد. از اسپلایس جهت اتصال کشش با هادی های آلومینیومی، آلومینیومی با مغزی فولاد و هادی های مسی در خطوط انتقال هوایی استفاده می شود.</span></div>
+<div style="text-align: justify;"><br></div><div><br></div><div style="text-align: center;"><img src="data:image/jpeg;base64,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" alt="نتیجه تصویری برای اسپلایس"></div><div><h3 dir="rtl                     " style="box-sizing: border-box; line-height: 1.1; margin-top: 20px; margin-bottom: 10px; text-align: right;"><br></h3></div>
+
+ <br>
+<a href='http://overheadline.mihanblog.com/post/132'>ادامه مطلب</a><br>
+<br>
+</div></div></div>
+<table border="0" width="100%" cellspacing="0" cellpadding="0">
+<tr>
+<td width="427" valign="top"><div class="theme-designer4">
+<div class="post3"><div class="post1"><span class="post2">
+تاریخ انتشار : پنجشنبه 14 اردیبهشت 1396  |  <a target="_self" href="http://overheadline.mihanblog.com/post/132#commentlist">نظرات <script>setCommentCnt(132)</script> </a>
+</span></div></div>
+</div></td>
+<td width="117" valign="top">
+<div style="font-weight:bold;"><div id="menu">
+<ul>
+<li><center><a href="http://overheadline.mihanblog.com/post/132" >ادامه مطلب ...</a></center></li>
+</ul>
+</div></div>
+</td>
+</tr>
+</table>
+<div class="theme-designer5"></div>
+<div class="theme-designer"><div class="title-post"><div class="link-title-post"><a href="http://overheadline.mihanblog.com/post/129">شستشوی مقره ها</a></div></div></div>
+<div class="theme-designer2"><div class="author" >نوشته شده توسط :                               علی اسداللهی</div></div>
+<div align="center"><div class="theme-designer3"><div align="right">
+
+<div style="text-align: justify;"><div style="text-align: center;"><img src="https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcQf6RXfSKyZtf2A86Vcb83sFO7vFaA23mErylGlkuLj97xUmFFCdw" style="width: 435px; height: 243px; margin-left: 0px; margin-right: 0px; margin-top: 0px; font-weight: bold; font-style: italic; text-decoration: line-through;" class="rg_ic rg_i" data-src="https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcQf6RXfSKyZtf2A86Vcb83sFO7vFaA23mErylGlkuLj97xUmFFCdw" data-sz="f" name="RKO5oFXV3752aM:" alt="نتیجه تصویری برای ‪washing insulator transmission line‬‏"><br></div><br>آلودگی و رطوبت از عواملی است که بر روی کلیه تجهیزات شبکه بخصوص مقره ها اثرات نا مطلوب داشته و باعث می گردد که شبکه نتواند وظیفه ی خود را بخوبی انجام دهد. این مسئله در مناطق ساحلی و بیابانها و شوره زارها و نیز مناطق صنعتی اثرات خود را بیشتر نمایان می سازد. آلودگی و کثیفی مقره توام با رطوبت موجب هادی شدن مقره و برقراری قوس الکتریکی می گردد. آلودگی مقره بستگی به محل نصب آن دارد. طبیعت آلودگی در مناطق مختلف با هم متفاوت است. لذا شناخت محیط آلوده و نوع آلودگی و تعیین مشخصه های ویژه جهت عایقی تجهیزات . طراحی مناسب شبکه از اهمیت زیادی برخوردار است.<br></div><br><div style="text-align: center;"><br></div><br>
+
+
+
+
+ <br>
+<a href='http://overheadline.mihanblog.com/post/129'>ادامه مطلب...</a><br>
+<br>
+</div></div></div>
+<table border="0" width="100%" cellspacing="0" cellpadding="0">
+<tr>
+<td width="427" valign="top"><div class="theme-designer4">
+<div class="post3"><div class="post1"><span class="post2">
+تاریخ انتشار : دوشنبه 11 اردیبهشت 1396  |  <a target="_self" href="http://overheadline.mihanblog.com/post/129#commentlist">نظرات <script>setCommentCnt(129)</script> </a>
+</span></div></div>
+</div></td>
+<td width="117" valign="top">
+<div style="font-weight:bold;"><div id="menu">
+<ul>
+<li><center><a href="http://overheadline.mihanblog.com/post/129" >ادامه مطلب ...</a></center></li>
+</ul>
+</div></div>
+</td>
+</tr>
+</table>
+<div class="theme-designer5"></div>
+<div class="theme-designer"><div class="title-post"><div class="link-title-post"><a href="http://overheadline.mihanblog.com/post/128">طراحی سلول های خورشیدی کم هزینه</a></div></div></div>
+<div class="theme-designer2"><div class="author" >نوشته شده توسط :                               علی اسداللهی</div></div>
+<div align="center"><div class="theme-designer3"><div align="right">
+
+<div style="text-align: justify;"><div style="text-align: center;"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRRkP81BBGMjrF_eo73-O7m56OI-B9yf5jE9sTlFzNZ4giYxLPH" style="width:240px;height:179px;margin-left:-20px;margin-right:0px;margin-top:0px" class="rg_ic rg_i" data-src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRRkP81BBGMjrF_eo73-O7m56OI-B9yf5jE9sTlFzNZ4giYxLPH" data-sz="f" name="AZCUs9b_EvRQKM:" alt="نتیجه تصویری برای ‪CELL SOLAR‬‏"><br><br></div>به گزارش سرویس علم و فن آوری پایگاه اطلاع رسانی صبا به نقل از ایسنا، دکتر امیرحسین چشمه خاور، از محققان طرح اظهار کرد: ترکیبات نیمه‌ هادی ترکیباتی هستند که مقاومت الکتریکی آنها بسیار بیشتر از مواد هادی و بسیار کمتر از مواد عایق است. این ترکیبات تحت شرایط خاص می‌توانند به هادی جریان الکتریسیته تبدیل شوند. وی افزود: عمده کاربرد این مواد که به دو دسته‌ کلی نوع p و نوع n تقسیم می‌شوند، در ساخت دیود، تولید اشعه‌ لیزر و سلول‌های خورشیدی است، از این رو بهینه‌ سازی خواص این ترکیبات می‌تواند عملکرد تجهیزات تولید شده از آنها را بهبود بخشد.<br>چشمه خاور با اشاره به مشکلات اصلی پیش روی تجاری‌سازی سلول‌های خورشیدی، گفت: سلول‌های خورشیدی بدون ایجاد کوچک‌ترین آلودگی توانایی تبدیل انرژی خورشید به انرژی الکتریکی را دارند؛ ولی مشکلی که تجاری شدن این سلول‌ها را با محدودیت جدی مواجه می‌کند، قیمت تمام ‌شده‌ بالای سلول و عدم پایداری آنها است.<br><div style="text-align: center;"><br></div></div>
+
+
+
+
+ <br>
+<a href='http://overheadline.mihanblog.com/post/128'>ادامه مطلب...</a><br>
+<br>
+</div></div></div>
+<table border="0" width="100%" cellspacing="0" cellpadding="0">
+<tr>
+<td width="427" valign="top"><div class="theme-designer4">
+<div class="post3"><div class="post1"><span class="post2">
+تاریخ انتشار : چهارشنبه 10 شهریور 1395  |  <a target="_self" href="http://overheadline.mihanblog.com/post/128#commentlist">نظرات <script>setCommentCnt(128)</script> </a>
+</span></div></div>
+</div></td>
+<td width="117" valign="top">
+<div style="font-weight:bold;"><div id="menu">
+<ul>
+<li><center><a href="http://overheadline.mihanblog.com/post/128" >ادامه مطلب ...</a></center></li>
+</ul>
+</div></div>
+</td>
+</tr>
+</table>
+<div class="theme-designer5"></div>
+<div class="theme-designer"><div class="title-post"><div class="link-title-post"><a href="http://overheadline.mihanblog.com/post/127">روشنایی لامپ با جاذبه</a></div></div></div>
+<div class="theme-designer2"><div class="author" >نوشته شده توسط :                               علی اسداللهی</div></div>
+<div align="center"><div class="theme-designer3"><div align="right">
+<div style="text-align: justify;"><div style="text-align: center;"><img id="ctl00_cphMiddle_SAMPARL_Web_View_NewsUI_NewsDetailCustomized10cphMiddle_8_imgNews" title="لامپی که با جاذبه روشن می‌شود" src="http://www.sabainfo.ir/Components/General/ShowImage.aspx?imagepath=/Content/media/image/2015/06/51174_orig.jpg&amp;mode=150" style="border-color: rgb(154, 154, 154); border-width: 1px; border-style: solid; width: 154px; height: 167px;"><br>
+</div>
+لامپی که با استفاده از جاذبه کار می‌کند می‌تواند برای یک میلیارد و ۳۰۰ میلیون نفری که روی زمین بدون برق زندگی می‌کنند روشنایی قابل توجهی ایجاد کند.<br>این لامپ که GravityLight نام دارد دارای گیره‌ای است که یک وزنه 12کیلویی به آن آویزان می‌شود. فشار وزنه یاد‌شده به موتوری که داخل آن وجود دارد الکتریسیته‌ای را برای روشن‌ماندن نیم‌ساعتی یک لامپ ال‌ای‌دی تأمین می‌کند.<br><br><div style="text-align: center;"><br></div></div>
+
+
+ <br>
+<br>
+<br>
+</div></div></div>
+<table border="0" width="100%" cellspacing="0" cellpadding="0">
+<tr>
+<td width="427" valign="top"><div class="theme-designer4">
+<div class="post3"><div class="post1"><span class="post2">
+تاریخ انتشار : چهارشنبه 10 شهریور 1395  |  <a target="_self" href="http://overheadline.mihanblog.com/post/127#commentlist">نظرات <script>setCommentCnt(127)</script> </a>
+</span></div></div>
+</div></td>
+<td width="117" valign="top">
+<div style="font-weight:bold;"><div id="menu">
+<ul>
+<li><center><a href="http://overheadline.mihanblog.com/post/127" >ادامه مطلب ...</a></center></li>
+</ul>
+</div></div>
+</td>
+</tr>
+</table>
+<div class="theme-designer5"></div>
+<div class="theme-designer"><div class="title-post"><div class="link-title-post"><a href="http://overheadline.mihanblog.com/post/126">آشنایی با اصطلاحات صنعت برق</a></div></div></div>
+<div class="theme-designer2"><div class="author" >نوشته شده توسط :                               علی اسداللهی</div></div>
+<div align="center"><div class="theme-designer3"><div align="right">
+
+<div style="text-align: center;"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQbFfeC-WlDwzhKVwuRyXCRoIbi_YknNYuYo3rwMrF7OE3dMytDFQ" style="width: 254px; height: 160px; margin-left: 0px; margin-right: 0px; margin-top: 0px;" class="rg_ic rg_i" data-src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQbFfeC-WlDwzhKVwuRyXCRoIbi_YknNYuYo3rwMrF7OE3dMytDFQ" data-sz="f" name="6h8YzWgiWhnB6M:" alt="نتیجه تصویری برای بریکر"><br></div><span style="font-weight: bold;">CT<br></span>چون جریان خطوط زیاد می باشد و نمی توان مستقیما آن را اندازه گرفت با استفاده ازاین دستگاه از جریان نمونه برداری میکنند.این دستگاه به صورت سری در مدار قرار می گیرد.همچنین برای ایزوله شدن شبکه های فشار قوی از سیتم های اندازه گیری و حفاظت از این وسیله استفاده می شود.<br><br><span style="font-weight: bold;">CVT</span><br>به موازات برقگیر این دستگاه نصب می گردد و علت استفاده آن برای سد كننده فركانس 50 هرتز برای سیستم مخابراتی و اندازه گیری ولتاژ و محافظت برای رله ها مورد استفاده قرار می گیرد و فرق آن باPT این است كه پی تی فقط برای اندازه گیری و حفاظت مورد استفاده قرار می گیرد.<br><br><span style="font-weight: bold;">PLC</span><br>روشی است که سیگنال های مخابراتی را از یک پست یا نیروگاه توسط خطوط فشار قوی ارسال کرده و در پست یا نیروگاه دیگر دریافت می کنند.<br><br><span style="font-weight: bold;">PT</span><br>چون ولتاژ خطوط زیاد می باشد و نمی توان مستقیما آن را اندازه گرفت با استفاده ازاین دستگاه از ولتاژ نمونه برداری میکنند.این دستگاه به صورت موازی در مدار قرار می گیرد.همچنین برای حفاظتی که نیاز به نمونه ولتاژ مانند رله های ولتاژی مانند رله های اندر ولتاژ یا آور ولتاژ و رله دیستانس دارد استفاده می شود.<br><br><span style="font-weight: bold;">REF رله</span><br>این رله مشابه رله دیفرانسیل می باشد و برای اتصالیهای فاز با زمین در داخل ترانس به کار می رود و به طور جداگانه در دو طرف ترانس نصب می شود.<br><br><span style="font-weight: bold;">SF6 كلید</span><br>كلیدی كه در آن برای خاموش كردن جرقه ناشی از قطع و وصل از گاز خاموش كننده ای استفاده می شود كه آن گاز SF6 نامیده می شود.<br><br>
+
+
+
+
+ <br>
+<a href='http://overheadline.mihanblog.com/post/126'>ادامه مطلب...</a><br>
+<br>
+</div></div></div>
+<table border="0" width="100%" cellspacing="0" cellpadding="0">
+<tr>
+<td width="427" valign="top"><div class="theme-designer4">
+<div class="post3"><div class="post1"><span class="post2">
+تاریخ انتشار : دوشنبه 8 شهریور 1395  |  <a target="_self" href="http://overheadline.mihanblog.com/post/126#commentlist">نظرات <script>setCommentCnt(126)</script> </a>
+</span></div></div>
+</div></td>
+<td width="117" valign="top">
+<div style="font-weight:bold;"><div id="menu">
+<ul>
+<li><center><a href="http://overheadline.mihanblog.com/post/126" >ادامه مطلب ...</a></center></li>
+</ul>
+</div></div>
+</td>
+</tr>
+</table>
+<div class="theme-designer5"></div>
+<div class="theme-designer"><div class="title-post"><div class="link-title-post"><a href="http://overheadline.mihanblog.com/post/124">نرم افزار صرفه جویی انرژِی</a></div></div></div>
+<div class="theme-designer2"><div class="author" >نوشته شده توسط :                               علی اسداللهی</div></div>
+<div align="center"><div class="theme-designer3"><div align="right">
+
+
+اپلیکیشن صرفه جویی انرژی دارای 14 بخش است که&nbsp; مطالب مفید و خوبی در زمینه انرژیارائه می دهد و موضوعاتی که در این اپلیکیشن قابل رویت است شامل: لامپ های کم مصرف، راه کارهای عمومی مصرف بهینه، صرف جویی در مصرف برق تلویزیون و ... می باشد. در لینک زیر می توانید این نرم افزار را دانلود نمایید.<br><br><div style="text-align: center;"><img src="http://ekahroba.ir/electrica/uploads/posts_images/214.jpg" alt="دانلود نرم افزار اندرویدی صرفه جویی انرژی" class="img-responsive" style="max-height: 379px; width: 356px; height: 198px;" title="دانلود نرم افزار اندرویدی صرفه جویی انرژی"><br><br><span style="font-weight: bold;">لینک مستقیم:</span><br><a href="http://vip.opload.ir/vipdl/95/1/aliengineer/overheadline-mihanblog-com.apk" target="_blank" title="دانلود">http://vip.opload.ir/vipdl/95/1/aliengineer/overheadline-mihanblog-com.apk</a><br><div style="text-align: right;"><br><br><br>برگرفته از: ekahroba.ir<br></div></div>
+
+
+
+
+
+
+ <br>
+<br>
+<br>:: برچسب‌ها: <a href="http://overheadline.mihanblog.com/post/tag/%D8%A7%D9%86%D8%AF%D8%B1%D9%88%DB%8C%D8%AF">
+اندروید</a> , <br>
+</div></div></div>
+<table border="0" width="100%" cellspacing="0" cellpadding="0">
+<tr>
+<td width="427" valign="top"><div class="theme-designer4">
+<div class="post3"><div class="post1"><span class="post2">
+تاریخ انتشار : دوشنبه 27 اردیبهشت 1395  |  <a target="_self" href="http://overheadline.mihanblog.com/post/124#commentlist">نظرات <script>setCommentCnt(124)</script> </a>
+</span></div></div>
+</div></td>
+<td width="117" valign="top">
+<div style="font-weight:bold;"><div id="menu">
+<ul>
+<li><center><a href="http://overheadline.mihanblog.com/post/124" >ادامه مطلب ...</a></center></li>
+</ul>
+</div></div>
+</td>
+</tr>
+</table>
+<div class="theme-designer5"></div>
+
+<!-- ------------comment------------ -->
+<!-- ------------/comment------------ -->
+
+
+
+<table border="0" width="100%" id="table3" cellspacing="0" cellpadding="0">
+<tr>
+<td width="10">&nbsp;</td>
+<td>
+<table border="0" width="100%" id="table4" cellspacing="0" cellpadding="0">
+<tr>
+<td align="center">
+<p align="right">
+<div id="styleone2">
+  <ul>
+    <li><a href="4.html"> تعداد کل صفحات: 15 </a></li>
+    <li><a href="1.html"><span>1</span></a></li><li><a href="2.html"><span>2</span></a></li><li><a href="3.html"><span>3</span></a></li><li><a href="4.html"><b>4</b></a></li><li><a href="5.html"><span>5</span></a></li><li><a href="6.html"><span>6</span></a></li><li><a href="7.html"><span>7</span></a></li><li><a href="8.html"><i>...</i></a></li>  </ul>
+</div>
+</td>
+</tr>
+</table>
+</td>
+<td width="10">&nbsp;</td>
+</tr>
+</table>
+<br>
+<br>
+
+</div>
+</td>
+<td width="8" valign="top">&nbsp;</td>
+<td width="202" valign="top">
+<div align="right">
+
+
+<div class="menu3"><div class="menu-title2" align="center">آرشیو مطالب</div></div>
+<div class="menu2">
+<div class="vmenu"><a href="../post/archive/1397/5.html" title="1">
+ مرداد 1397</a></div><div class="vmenu"><a href="../post/archive/1396/7.html" title="3">
+ مهر 1396</a></div><div class="vmenu"><a href="../post/archive/1396/5.html" title="10">
+ مرداد 1396</a></div><div class="vmenu"><a href="../post/archive/1396/3.html" title="3">
+ خرداد 1396</a></div><div class="vmenu"><a href="../post/archive/1396/2.html" title="7">
+ اردیبهشت 1396</a></div><div class="vmenu"><a href="../post/archive/1395/6.html" title="3">
+ شهریور 1395</a></div><div class="vmenu"><a href="../post/archive/1395/2.html" title="7">
+ اردیبهشت 1395</a></div><div class="vmenu"><a href="../post/archive/1395/1.html" title="2">
+ فروردین 1395</a></div><div class="vmenu"><a href="../post/archive/1394/11.html" title="6">
+ بهمن 1394</a></div><div class="vmenu"><a href="../post/archive/1394/10.html" title="7">
+ دی 1394</a></div><div class="vmenu"><a href="../post/archive/1394/9.html" title="6">
+ آذر 1394</a></div></div>
+
+<div class="menu3"><div class="menu-title2" align="center">آخرین مطالب</div></div>
+<div class="menu2">
+<div class="vmenu"><a href="../post/157.html" title="دوشنبه 1 مرداد 1397" > سرانه مصرف برق </a></div><div class="vmenu"><a href="../post/155.html" title="چهارشنبه 19 مهر 1396" > گلند کابل </a></div><div class="vmenu"><a href="../post/154.html" title="چهارشنبه 19 مهر 1396" > سرج یا موج گذرا </a></div><div class="vmenu"><a href="../post/153.html" title="سه شنبه 18 مهر 1396" > تست HIPOT </a></div><div class="vmenu"><a href="../post/152.html" title="یکشنبه 29 مرداد 1396" > چراغ های LECS </a></div><div class="vmenu"><a href="../post/151.html" title="یکشنبه 29 مرداد 1396" > جدول تعریف حفاظت IP </a></div><div class="vmenu"><a href="../post/150.html" title="یکشنبه 15 مرداد 1396" > CT کوربالانس </a></div><div class="vmenu"><a href="../post/149.html" title="یکشنبه 15 مرداد 1396" > بهینه سازی برج های انتقال نیرو </a></div><div class="vmenu"><a href="../post/148.html" title="سه شنبه 10 مرداد 1396" > آشنای با کلمپ ها </a></div><div class="vmenu"><a href="../post/147.html" title="دوشنبه 9 مرداد 1396" > بانک خازنی </a></div><div class="vmenu"><a href="../post/145.html" title="یکشنبه 8 مرداد 1396" > حذف بار فرکانسی  </a></div><div class="vmenu"><a href="../post/144.html" title="یکشنبه 8 مرداد 1396" > سرمایه گذاری در برق خورشیدی </a></div><div class="vmenu"><a href="../post/143.html" title="چهارشنبه 4 مرداد 1396" > ترانس های اندازه گیری </a></div><div class="vmenu"><a href="../post/142.html" title="چهارشنبه 4 مرداد 1396" > آشنایی با تجهیزات پست (1) </a></div><div class="vmenu"><a href="../post/140.html" title="پنجشنبه 18 خرداد 1396" > استخدام کارمند اینترنتی  </a></div></div>
+
+<div class="menu3"><div class="menu-title2" align="center">صفحات</div></div>
+<div class="menu2">
+<div class="vmenu" ><a href="../extrapage/shop.html">دانلود مقالات با ترجمه فارسی</a></div><div class="vmenu" ><a href="../extrapage/date.html">تقویم</a></div></div>
+
+<div class="menu3"><div class="menu-title2" align="center">پیوند های روزانه</div></div>
+<div class="menu2">
+<div class="vmenu"><a target="_blank" href="http://www.parstamin-co.com" title="ممنون از وبلاگ خوب و مفید شما خوشحال می شم سری به وبلاگ ما بزنید" >
+بلبرینگ پارس تامین</a></div><div class="vmenu"><a target="_blank" href="http://www.mhm20.blogfa.com" title="سلام دوست عزیز
+ما قبلا با هم تبادل لینک داشتیم، اما متاسفانه الان لینک وبلاگ ما در وبلاگ شما موجود نیست. لطفا لینک وبلاگ ما را پیرو تبادل لینک قبلی، در وبلاگتان قرار دهید.
+با تشکر
+www.mhm20.blogfa.com" >
+وبلاگ جامع مهندسی برق</a></div><div class="vmenu"><a target="_blank" href="http://overheadline.tk" title="" >
+مهندسین برق(آدرس وبسایت جدید)</a></div><div class="vmenu"><a target="_blank" href="http://www.civilica.com" title="" >
+سیویلیکا، مقالات علمی کنفرانس و ژورنال</a></div><div class="vmenu"><a target="_blank" href="http://www.powerelectron.ir" title="" >
+پاور الکترون</a></div><div class="vmenu"><a target="_blank" href="http://mathworks.ir" title="" >
+سایت تخصصی MATLAB</a></div><div class="vmenu"><a target="_blank" href="http://www.eca.ir/" title="" >
+انجمن تخصصی برق-الکترونیک</a></div><div class="vmenu"><a target="_blank" href="http://www.sciencedirect.com/" title="" >
+SCIENCEDIRECT</a></div><div class="vmenu"><a target="_blank" href="http://ieeexplore.ieee.org/Xplore/home.jsp" title="" >
+IEEE</a></div><div class="vmenu"><a target="_blank" href="http://sadeghkhani.ir/tag/Useful-Site" title="" >
+فقط مهندسی برق</a></div><br>
+<div class="vmenu"><a  target="_blank" href="../linkdaily/index.html" >لیست کامل پیوندهای روزانه</a></div>
+<div class="vmenu"><a  href="javascript:linkdailyForm()" >ارسال پیوند</a></div>
+</div>
+
+<!---------- block left ------------------------->
+<div class="menu3"><div class="menu-title2" align="center">امكانات جانبی</div></div>
+<div class="menu2"><div align="center"><div class="other">
+جهت اطلاع از تنظیمات و ویــــرایش این قالب اینجا را کلیک کنید.<br><br>
+<center><a target="_blank" title="جهت اطلاع از تنظیمات و ویرایش این قالب اینجا را کلیک کنید " 
+href="http://www.theme-designer.com/help">.:: کلیک کنید ::.</a></center>
+</div></div></div>
+<!---------- block left ------------------------->
+
+</div>
+</td>
+</tr>
+</table>
+</div>
+</div></div>
+
+<div class="alibehnamfar-ir4"></div>
+<div class="alibehnamfar-ir5">
+<table border="0" width="100%" cellspacing="0" cellpadding="0" >
+<tr>
+<td width="60">&nbsp;</td>
+<td valign="top" >
+<div id="pc">
+  <ul>
+    <li><a href="../index.html"><span>صفحه ی نخست</span></a></li>
+    <li><a href="mailto:aliengineer1372@gmail.com"><span>پست الکترونیک</span></a></li>
+    <li><a href="javascript:messageForm()"><span>تماس با ما</span></a></li>
+    <li><a href="../post/archive.html"><span>آرشیو مطالب</span></a></li>
+    <li><a target="_blank" href="../post/rss/index.html"><span>لینك rss</span></a></li>
+    <li><a target="_blank" href="http://overheadline.mihanblog.com/m/"><span>نسخه موبایل</span></a></li>
+  </ul>
+</div>
+<td width="60">&nbsp;</td>
+</td>
+</tr>
+</table>
+
+<table border="0" width="100%" cellspacing="0" cellpadding="0">
+<tr>
+<td valign="top" >
+<div class="theme-designer-com7">
+متن دلخواه شما
+</div>
+</td>
+<td valign="top" width="154">
+<div class="top">
+<div align="right">
+<a href="4.html#top"><img border="0" src="http://themeupload.theme-designer.com/47/image/26.png"></a>
+</div>
+</div>
+</td>
+</tr>
+</table>
+</div>
+
+<div class="theme-designer-com8"></div>
+
+<div align="center">
+<table border="0" width="964" cellspacing="0" cellpadding="0">
+<tr>
+<td width="15" valign="top"><div class="theme-designer-com11"></div></td>
+<td width="934" valign="top"><div class="theme-designer-com10">
+<table border="0" width="100%" cellspacing="0" cellpadding="0">
+<tr>
+<td width="727" valign="top">
+<div class="alibehnamfar6" >
+<div align="right">
+<div class="copyright" style="line-height: 25px">
+تمام حقوق این وب سایت و مطالب آن متعلق به <a href="../index.html"> مهندسین برق  </a>می باشد
+.<br>
+كد نویسی و گرافیك قالب توسط : <a target="_blank" title="قالب وبلاگ" href="http://www.theme-designer.com/">تم دیزاینر</a>
+</div>
+</div>
+</div>
+</td>
+<td width="25" valign="top"><center><img src="http://themeupload.theme-designer.com/47/image/31.gif"></center></td>
+<td width="169" valign="top">
+<div class="web2"></div>
+<div class="web"><a target="_blank" href="http://www.mozilla.org/en-US/firefox/fx"><img border="0" src="http://themeupload.theme-designer.com/47/image/32.gif"></a></div>
+<div class="web"><a target="_blank" href="http://www.opera.com/download"><img border="0" src="http://themeupload.theme-designer.com/47/image/33.gif"></a></div>
+<div class="web"><a target="_blank" href="https://www.google.com/chrome"><img border="0" src="http://themeupload.theme-designer.com/47/image/34.gif"></a></div>
+<div class="web"><a target="_blank" href="http://www.apple.com/safari/download"><img border="0" src="http://themeupload.theme-designer.com/47/image/35.gif"></a></div>
+</td>
+</tr>
+</table>
+</div></td>
+<td width="15" valign="top"><div class="theme-designer-com9"></div></td>
+</tr>
+</table>
+</div>
+
+</td>
+</tr>
+</table>
+</div>
+</div>
+
+
+</td>
+</tr>
+</table>
+</div>
+
+</body></html>
+
+
+
+<script>
+//    setTimeout(function () {
+//        GetMihanBlogShowAds();
+//    }, 1000);
+</script>
+<!--NEW SERVER--><!--;)-->
+
+<!--SabaVision Ads Handler--><!--<script type="text/javascript">(function (d) {var url =   location.protocol+'//api.sabavision.com/pox/poxjs.js';d.write('<script type="text/javascript" src="' + url + '" async></scri' + 'pt>');})(document);</script>-->
+
+
+<script type="text/javascript">
+
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-153829-9']);
+    _gaq.push(['_setDomainName', 'overheadline.mihanblog.com']);
+    _gaq.push(['_trackPageview']);
+
+    (function() {
+        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+
+</script>
+
+
+<div id='mediaad-Kvcm'></div>
+<meta name="sabavision_zone" content="2500-Z499" />
+<center>
+    <div style="background-color:white;width:90%;padding:20px;margin-top:50px;margin-bottom:50px;">
+        <a href="https://www.cloob.com">شبکه اجتماعی فارسی کلوب</a> | <a href="https://www.seo25.com/product/buy-mobile-traffic-and-get-cheap-targeted-mobile-traffic/" target="_blank">Buy Mobile Traffic</a> | <a href="https://www.soalaat.com">سایت سوالات</a>
+    </div>
+</center>

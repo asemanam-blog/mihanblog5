@@ -1,0 +1,857 @@
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" /><link rel="EditURI" type="application/rsd+xml" title="RSD" href="http://robotic.mihanblog.com/xmlrpc?rsd" />
+<script type="text/javascript" src="../../static.mihanblog.com/public/scripts/run/g.other.v3.js"></script>
+<script>
+
+	function c_$(id){
+        return document.getElementById(id);
+    }
+    
+			//if (parent.frames.length) top.location.href= document.location;
+		
+	setTodayDate = function(){
+		document.write('شنبه 22 آذر 1399');
+		/*1756351*/	}
+
+</script>
+
+
+
+        <script type="text/javascript">
+            (function(){
+            var now = new Date();
+            var head = document.getElementsByTagName('head')[0];
+            var script = document.createElement('script');
+            script.async = true;
+            var script_address = 'https://cdn.yektanet.com/js/mihanblog.com/native-mihanblog.com-6531.js';
+            script.src = script_address + '?v=' + now.getFullYear().toString() + '0' + now.getMonth() + '0' + now.getDate() + '0' + now.getHours();
+            head.appendChild(script);
+            })();
+        </script>
+
+        <!--<script type="text/javascript">
+            var head = document.getElementsByTagName("head")[0];
+            var script = document.createElement("script");
+            script.type = "text/javascript";
+            script.async=1;
+            script.src = "https://s1.mediaad.org/serve/mihanblog.com/loader.js" ;
+            head.appendChild(script);
+        </script>-->
+        
+        <script>
+            var sabaVisionWebsiteID = "9bab9dac-041d-4bdb-b39a-1ed789f65eed"; var sabaVisionWebsitePage = "ALL"
+        </script>
+        <link rel="stylesheet" href="https://plus.sabavision.com/dox/dox.min.css">
+        <script src="https://plus.sabavision.com/dox/dox.min.js"></script>
+        
+        <script>
+	linkdailyForm = function(){
+		try{
+			window.open('/linkdaily/new','linkdaily','status=yes,scrollbars=yes,toolbar=no,menubar=no,location=no ,width=500px,height=460px');
+		} catch(e){}
+	}
+</script><script>
+
+	statInfo = new Array();
+	setStatVar = function(index,value){
+		statInfo[index] = value;
+	}
+	getStatVar = function(index){
+		if(statInfo[index]) document.write(statInfo[index]);
+	}
+	
+	setStatVar('total_post','57');
+	setStatVar('total_author','2');
+	setStatVar('modify_date','یکشنبه 6 دی 1394');
+	
+	setStatVar('today_view','8');
+	setStatVar('yesterday_view','11');
+	
+	setStatVar('this_month_view','294');
+	setStatVar('last_month_view','380');
+
+	setStatVar('total_view','28884');
+	setStatVar('last_view_date','شنبه 22 آذر 1399 (13:23)');
+
+
+
+    
+    function setStatFromClient()
+    {
+        var url = 'http://robotic.mihanblog.com/statupdate/?data[refereruri]=http://ariodaad.mihanblog.com/&data[postid]=53&data[requesturi]=/post/53&data[sdate]=1607772527&data[hash]=b56dacc8ebce63e27cc949ebf72666a3&data[resolution]='+screen.width+' X '+screen.height;
+
+//        alert(url);
+//        var newjs = document.createElement("SCRIPT");
+//        newjs.type = 'text/javascript';
+//        newjs.src = url;
+//
+//        var newdiv = document.createElement("DIV");
+//        newdiv.setAttribute("style","display:none");
+
+        document.write(unescape('%3Cscript src="'+url+'" type="text/javascript"%3E%3C/script%3E'));
+//        newdiv.appendChild (newjs);
+//        document.write(newjs);
+//        document.write(appendChild (newdiv);
+
+    };
+    setStatFromClient();
+        
+</script><script>
+	messageForm = function(post_id){
+		try{
+			window.open('/message','message','status=yes,scrollbars=yes,toolbar=no,menubar=no,location=no ,width=480px,height=550px');
+		} catch(e){}
+	}
+</script><script>
+	try{
+		var commentCnt = new Array();
+		commentCnt[53]='0';	} catch(e){}
+	
+	newComment = function(post_id){
+		try{
+			window.open('/post/comment/'+post_id,'comment','status=yes,scrollbars=yes,toolbar=no,menubar=no,location=no ,width=480px,height=540px');
+		} catch(e){}
+	}
+	setCommentCnt = function(post_id){
+		try{
+			if(commentCnt[post_id]){
+				document.write(commentCnt[post_id]);
+			} else {
+				document.write(0);
+			}
+		} catch(e){}
+	}
+</script><script>
+
+
+	mihanblogUpdateLike = function(postid,type){
+		var url = '/post/like/'+postid+'/'+type;
+		mihanblogGetAjax(url,function(){});
+	};
+	try{
+        mihanblogGetAjax = function (url,callback) {
+    		var req;
+			if (window.XMLHttpRequest)
+            {
+                // code for IE7+, Firefox, Chrome, Opera, Safari
+			  	req = new XMLHttpRequest();
+			}else{	// code for IE6, IE5
+			  	req = new ActiveXObject("Microsoft.XMLHTTP");
+		  	}
+		    req.open("GET", url, 1);
+		    req.onreadystatechange = function () {
+		        if (req.readyState == 4) {
+		            if (req.status == 200) {
+		            	var response = eval(req.responseText);
+		            	callback();
+		            }else{
+	            		return ;
+		            }
+		        }else{
+					return ;
+		        }
+		    }
+		    req.send(null);
+		}
+	}catch(e){}
+
+	try{
+		var mihanblogLikeArrCnt = new Array();
+		var mihanblogDisLikeArrCnt = new Array();
+
+		mihanblogLikeArrCnt[53]='1';
+mihanblogDisLikeArrCnt[53]='0';
+	} catch(e){}
+
+
+
+    mihanblogPostLike = function(post_id){
+
+        mihanblogLikeCnt = (mihanblogLikeArrCnt[post_id]? mihanblogLikeArrCnt[post_id] : 0);
+        mihanblogDisLikeCnt = (mihanblogDisLikeArrCnt[post_id]? mihanblogDisLikeArrCnt[post_id] : 0);
+        mihanblogLikeCnt = parseInt(mihanblogLikeCnt);
+        mihanblogDisLikeCnt = parseInt(mihanblogDisLikeCnt);
+
+        document.write(
+                '<div class="mihanblog_like_wrapper ">'+
+                       '<div id="dislikeBar_'+post_id+'" onclick="mihanblogUpdateLike('+post_id+',\'dislike\')"   class="mihanblog_like_bar mihanblog_like_dislikeBar mihanblog_like_show_help ">-<div class="mihanblog_like_Cnt" id="disLikeCnt_'+post_id+'">'+mihanblogDisLikeCnt+'</div>'+
+                            '<span  class="mihanblog_like_v2_help mihanblog_like_v2_help_dislike clearfix"> '+
+                                '<span class="mihanblog_like_help_arrow mihanblog_like_help_arrow_dislike clearfix"></span>'+
+                                '<span class="mihanblog_like_help_text">نمی پسندم</span>'+
+                            '</span>'+
+                        '</div>'+
+                       '<div id="Like_'+post_id+'" class="mihanblog_like_border"></div>'+
+                       '<div id="likeBar_'+post_id+'" onclick="mihanblogUpdateLike('+post_id+',\'like\')"  class="mihanblog_like_bar mihanblog_like_likeBar mihanblog_like_show_help" >+<div class="mihanblog_like_Cnt" id="likeCnt_'+post_id+'">'+mihanblogLikeCnt+'</div>'+
+                            '<span  class="mihanblog_like_v2_help mihanblog_like_v2_help_like clearfix"> '+
+                                '<span class="mihanblog_like_help_arrow mihanblog_like_help_arrow_like clearfix"></span>'+
+                                '<span class="mihanblog_like_help_text">می پسندم</span>'+
+                            '</span>'+
+                        '</div>'+
+
+                '</div>'
+        );
+
+
+
+        mihanblogDisplayeLike(post_id);
+    }
+
+
+    mihanblogDisplayeLike = function(post_id){
+
+        mihanblogLikeCnt = (mihanblogLikeArrCnt[post_id]? mihanblogLikeArrCnt[post_id] : 0);
+        mihanblogDisLikeCnt = (mihanblogDisLikeArrCnt[post_id]? mihanblogDisLikeArrCnt[post_id] : 0);
+        mihanblogLikeCnt = parseInt(mihanblogLikeCnt);
+        mihanblogDisLikeCnt = parseInt(mihanblogDisLikeCnt);
+
+
+
+        sum = mihanblogLikeCnt - mihanblogDisLikeCnt;
+        backgroundBorder =  document.getElementById('Like_'+post_id);
+        var likeObj = document.getElementById('likeCnt_'+post_id);
+        var disLikeObj = document.getElementById('disLikeCnt_'+post_id);
+
+
+
+
+
+        likeObj.innerHTML =  mihanblogLikeCnt ;
+        disLikeObj.innerHTML =  mihanblogDisLikeCnt;
+
+        if(sum == 0){
+            backgroundBorder.style.backgroundImage = "url('/public/public/images/icons/like_likedislike.png')";
+            document.getElementById('dislikeBar_'+post_id).style.width = '19px';
+            document.getElementById('likeBar_'+post_id).style.width = '19px';
+        }else{
+             if(sum > 0){
+                 backgroundBorder.style.backgroundImage = "url('/public/public/images/icons/like_like.png')";
+                 document.getElementById('likeBar_'+post_id).style.width = '23px';
+                 document.getElementById('dislikeBar_'+post_id).style.width = '15px';
+             }else{
+                 backgroundBorder.style.backgroundImage = "url('/public/public/images/icons/like_dislike.png')";
+                 document.getElementById('likeBar_'+post_id).style.width = '15px';
+                 document.getElementById('dislikeBar_'+post_id).style.width = '23px';
+             }
+        }
+
+    }
+
+
+
+
+</script>
+
+<style type="text/css">
+
+
+    .clearfix {display: inline-block;}
+    .clearfix:after {
+        content: ".";
+        display: block;
+        height: 0;
+        clear: both;
+        visibility: hidden;
+    }
+
+    .mihanblog_like_wrapper {
+        color: #ffffff;
+        direction: ltr;
+        position: relative;
+    }
+    .mihanblog_like_wrapper span{
+        display: none;
+    }
+    .mihanblog_like_bar {
+        color: #FFFFFF;
+        cursor: pointer;
+        float: left;
+        font-size: 10px;
+        height: 20px;
+        line-height: 19px;
+        margin: 5px 0;
+    }
+    .mihanblog_like_likeBar {
+        background-color: #88B131;
+        padding-right: 5px;
+        border-top-right-radius: 2px;
+        border-bottom-right-radius: 2px;
+        text-align: right;
+    }
+    .mihanblog_like_likeBar:hover{
+        background-color: #699017;
+    }
+    .mihanblog_like_border {
+        background-color: #666666;
+        border: 1px solid #666666;
+        float: left;
+        font-size: 12px;
+        height: 20px;
+        margin-top: 2px;
+        width: 25px;
+        padding: 3px 5px 2px 0;
+        text-align: center;
+        border-radius: 2px;
+        color: #ffffff;
+        direction: ltr;
+        background-repeat: no-repeat ;
+        background-position: 4px center;
+    }
+    .mihanblog_like_border img {
+        margin-left: 2px;
+        margin-top: 2px;
+        width: 22px;
+    }
+    .mihanblog_like_dislikeBar {
+        background-color: #FF6F31;
+        padding-left: 5px;
+        border-top-left-radius: 2px;
+        border-bottom-left-radius: 2px;
+        text-align:left ;
+    }
+    .mihanblog_like_dislikeBar:hover{
+        background-color: #D54B10;
+    }
+
+
+
+    .mihanblog_like_show_help {
+        position: relative;
+    }
+    .mihanblog_like_show_help:hover span {
+        display: block;
+    }
+    .mihanblog_like_help_text {
+        background-color: white;
+        border: 1px solid #555555;
+        border-radius: 3px 3px 3px 3px;
+        color: #303030;
+        float: left;
+        font-size: 11px;
+        font-weight: normal;
+        padding: 5px 10px;
+    }
+
+    .mihanblog_like_help_arrow_dislike {
+        background: url("http://robotic.mihanblog.com/public/public/images/icons/like_hover_top.png") no-repeat scroll 16px 0 transparent;
+        left: 0;
+        top: -4px;
+    }
+
+    .mihanblog_like_help_arrow_like {
+        background: url("http://robotic.mihanblog.com/public/public/images/icons/like_hover_top _2.png") no-repeat scroll 16px 0 transparent;
+        left: -10px;
+        top: 29px;
+    }
+
+    .mihanblog_like_help_arrow{
+        height: 6px;
+        position: absolute;
+        width: 100px;
+
+    }
+
+    .mihanblog_like_v2_help_dislike {
+        left: -15px;
+        top: 24px;
+    }
+    .mihanblog_like_v2_help_like {
+        left: 0;
+        top: -35px;
+
+    }
+    .mihanblog_like_v2_help{
+        display: none;
+        position: absolute;
+        white-space: nowrap;
+        z-index: 1;
+    }
+
+    .mihanblog_like_Cnt{
+        display: inline;
+        color: #ffffff;
+    }
+
+</style>
+    <style>
+        @font-face {
+            font-family: 'Mihan-Iransans';
+            src: url('http://robotic.mihanblog.com/public/public/fonts/Iransans.eot');
+            src: url('http://robotic.mihanblog.com/public/public/fonts/Iransans.eot?') format('embedded-opentype'),
+            url('http://robotic.mihanblog.com/public/public/fonts/Iransans.woff2') format('woff2'),
+            url('http://robotic.mihanblog.com/public/public/fonts/Iransans.woff') format('woff'),
+            url('http://robotic.mihanblog.com/public/public/fonts/Iransans.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+        @font-face {
+            font-family: 'Mihan-IransansBold';
+            src: url('http://robotic.mihanblog.com/public/public/fonts/Iransans-Black.eot');
+            src: url('http://robotic.mihanblog.com/public/public/fonts/Iransans-Black.eot?') format('embedded-opentype'),
+            url('http://robotic.mihanblog.com/public/public/fonts/Iransans-Black.woff2') format('woff2'),
+            url('http://robotic.mihanblog.com/public/public/fonts/Iransans-Black.woff') format('woff'),
+            url('http://robotic.mihanblog.com/public/public/fonts/Iransans-Black.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+        @font-face {
+            font-family: 'Mihan-IransansLight';
+            src: url('http://robotic.mihanblog.com/public/public/fonts/Iransans-UltraLight.eot');
+            src: url('http://robotic.mihanblog.com/public/public/fonts/Iransans-UltraLight.eot?') format('embedded-opentype'),
+            url('http://robotic.mihanblog.com/public/public/fonts/Iransans-UltraLight.woff2') format('woff2'),
+            url('http://robotic.mihanblog.com/public/public/fonts/Iransans-UltraLight.woff') format('woff'),
+            url('http://robotic.mihanblog.com/public/public/fonts/Iransans-UltraLight.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+        @font-face {
+            font-family: 'Mihan-Nassim';
+            src: url('http://robotic.mihanblog.com/public/public/fonts/Nassim.eot');
+            src: url('http://robotic.mihanblog.com/public/public/fonts/Nassim.eot?') format('embedded-opentype'),
+            url('http://robotic.mihanblog.com/public/public/fonts/Nassim.woff2') format('woff2'),
+            url('http://robotic.mihanblog.com/public/public/fonts/Nassim.woff') format('woff'),
+            url('http://robotic.mihanblog.com/public/public/fonts/Nassim.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+        @font-face {
+            font-family: 'Mihan-Koodak';
+            src: url('http://robotic.mihanblog.com/public/public/fonts/Koodak.eot');
+            src: url('http://robotic.mihanblog.com/public/public/fonts/Koodak.eot?') format('embedded-opentype'),
+            url('http://robotic.mihanblog.com/public/public/fonts/Koodak.woff2') format('woff2'),
+            url('http://robotic.mihanblog.com/public/public/fonts/Koodak.woff') format('woff'),
+            url('http://robotic.mihanblog.com/public/public/fonts/Koodak.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+        @font-face {
+            font-family: 'Mihan-Yekan';
+            src: url('http://robotic.mihanblog.com/public/public/fonts/Yekan.eot');
+            src: url('http://robotic.mihanblog.com/public/public/fonts/Yekan.eot?') format('embedded-opentype'),
+            url('http://robotic.mihanblog.com/public/public/fonts/Yekan.woff2') format('woff2'),
+            url('http://robotic.mihanblog.com/public/public/fonts/Yekan.woff') format('woff'),
+            url('http://robotic.mihanblog.com/public/public/fonts/Yekan.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+        @font-face {
+            font-family: 'FontAwesome';
+            src: url('http://robotic.mihanblog.com/public/public/fonts/fontawesome_webfont.eot');
+            src: url('http://robotic.mihanblog.com/public/public/fonts/fontawesome_webfont.eot?') format('embedded-opentype'),
+            url('http://robotic.mihanblog.com/public/public/fonts/fontawesome_webfont.woff2') format('woff2'),
+            url('http://robotic.mihanblog.com/public/public/fonts/fontawesome_webfont.woff') format('woff'),
+            url('http://robotic.mihanblog.com/public/public/fonts/fontawesome_webfont.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+
+
+        
+
+        /* Smartphones (portrait and landscape) ----------- */
+
+        /*
+        @media only screen and (max-width : 480px) and (min-width : 320px) {
+            .sabaClick_advert__wrapper{
+                display:block;
+            }
+            .sabaClick_advert__inner{
+                max-width: 90%;
+                margin: 0 5%;
+            }
+        }
+        */
+
+    </style>
+
+
+
+
+
+
+﻿<html>
+<head>
+<link href="http://s135.uploadyar.com/4Lsp/Icons8-Windows-8-Industry-Robot.ico" rel="icon" type="image/x-icon" />
+<link rel="shortcut icon" href="http://s135.uploadyar.com/4Lsp/Icons8-Windows-8-Industry-Robot.ico" type="image/vnd.microsoft.icon" />
+<title>مهندسی رباتیک - دانلود خلاصه کتاب و نکات تستی اندیشه اسلامی 2 پیام نور</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta name="language" content="Farsi">
+<meta name="google-site-verification" content="cPP_y93kTP9AFK4vRzc1cslN9LeS7dq3jj8ht6wXPI4" />
+<meta name="description" content="مهندسی رباتیک - دانلود خلاصه کتاب و نکات تستی اندیشه اسلامی 2 پیام نور - وبلاگ خبری و دوستانه‌ی دانشجویان رشته‌ی مهندسی رباتیک دانشگاه پیام نور - مهندسی رباتیک">
+<meta name="keywords" content="مهندسی رباتیک - دانلود خلاصه کتاب و نکات تستی اندیشه اسلامی 2 پیام نور,Robotic">
+<link rel="alternate" type="application/rss+xml" title="مهندسی رباتیک" href="http://robotic.mihanblog.com/post/rss/" />
+<link href="http://pichak.net/themes/67/11/style.css" type="text/css" rel="stylesheet">
+
+</head>
+
+<body>
+
+
+
+<div align=center><div id=pichakweb><div id=main-back><div id=header>
+
+<div id=TopBlogTitle><div class=BlogTitle><h1><a href="http://robotic.mihanblog.com">مهندسی رباتیک</a></h1></div><div class=Description>وبلاگ خبری و دوستانه‌ی دانشجویان رشته‌ی مهندسی رباتیک دانشگاه پیام نور</div></div>
+
+<div id=menu>
+<div class="li-Sid-menu"><a  class="menu" href="http://robotic.mihanblog.com">صفحه اصلی</a></div>
+<div class="li-Sid-menu"><a  class="menu" href="javascript:messageForm()">ارسال پیام</a></div>
+<div class="li-Sid-menu"><a  class="menu" href="http://pichak.net/blogcod/email-tools/mail/?email=hut.group2010@gmail.com" target="_blank">تماس با من</a></div>
+<div class="li-Sid-menu"><a  class="menu" href="http://pichak.net" target="_blank" >قالب وبلاگ</a></div>
+<div class="li-Sid-menu"><a  class="menu" href="http://robotic.mihanblog.com/post/rss/" target="_blank" >RSS</a></div>
+</div>
+
+</div>
+
+
+
+<div id="pichak-Back1"></div>
+
+
+
+<div class=post>
+
+<div id="headerPost"></div>
+
+<div id="pichak-Back2"></div>
+
+<div class=TopPostBox1><div class=TopPostBox2>
+
+
+		<div id="MihanblogShopAds" style="display:block;height:0px;width:100%;border:0px"></div>
+		
+<div class=PostBox1><div class=PostBox2>
+<div class=TopPostBack><div class=TopPost><div class=TopPost2><h2><a href="53.html">دانلود خلاصه کتاب و نکات تستی اندیشه اسلامی 2 پیام نور</a></h2></div></div></div>
+
+<div class=CenterPostBack><div class=CenterPost>				
+<div id="InPost_MihanblogShopAds" style="display:block;height:0px;width:100%;border:0px"></div>
+
+<p style="text-align: center;"><img title="دانلود خلاصه ی درس اندیشه اسلامی 2" src="http://s5.picofile.com/file/8125938018/%D8%A7%D9%86%D8%AF%DB%8C%D8%B4%D9%87_%D8%A7%D8%B3%D9%84%D8%A7%D9%85%DB%8C_2.jpg" alt="دانلود خلاصه ی درس اندیشه اسلامی 2" height="275" width="183"></p>
+<p style="text-align: right;" dir="rtl"><font face="Mihan-Iransans">این کتاب بر اساس کتاب اندیشه ی اسلامی 2 به تألیف سبحانی - محمد رضایی که منبع این درس در <span class="pb59">دانشگاه</span> <span class="pb59">پیام نور</span> می باشد تهیه شده و حاوی خلاصه ی درس و نکات مهم و تستی آن می باشد .</font></p><font face="Mihan-Iransans">
+</font><p style="text-align: right;" dir="rtl"><font face="Mihan-Iransans">چنانچه از این کتاب استفاده نمودید برای سلامتی و ظهور حضرت حجت ( ع ) 3 صلوات بفرستید .</font></p>
+<p style="text-align: center;" dir="rtl"><span style="font-size: large; background-color: #ccffcc;">اللهم صلِّ علی محمّد و آل محمّد</span></p>
+<p style="text-align: center;" dir="rtl"><font face="Mihan-IransansBold"><span style="font-size: medium; color: #ff00ff;"><a title="جهت دانلود کلیک نمایید" href="http://s5.picofile.com/file/8125937792/%D8%AE%D9%84%D8%A7%D8%B5%D9%87_%DA%A9%D8%AA%D8%A7%D8%A8_%D8%A7%D9%86%D8%AF%DB%8C%D8%B4%D9%87_%D8%A7%D8%B3%D9%84%D8%A7%D9%85%DB%8C_2.pdf.html" target="_blank"><span style="color: #ff00ff;">از اینجا <span class="pb59">دانلود</span> نمایید</span></a></span></font></p>
+<p style="text-align: center;" dir="rtl"><font face="Mihan-IransansLight">رمز جهت دانلود : http://robotic-pnu.persianblog.ir</font></p>
+
+
+
+
+
+
+
+
+
+<br>
+<br><br>
+			طبقه بندی: <a href="http://robotic.mihanblog.com/post/category/7">
+			دانلود</a>، <a href="http://robotic.mihanblog.com/post/category/4">
+			جزوه</a>، <a href="http://robotic.mihanblog.com/post/category/3">
+			کتاب</a>، <a href="http://robotic.mihanblog.com/post/category/2">
+			دانشجو</a>، <a href="http://robotic.mihanblog.com/post/category/1">
+			دانشگاه</a>، <br>										برچسب ها:
+													<a href="http://robotic.mihanblog.com/post/tag/%D8%A7%D9%86%D8%AF%DB%8C%D8%B4%D9%87%20%D8%A7%D8%B3%D9%84%D8%A7%D9%85%DB%8C%20%DB%B2" >اندیشه اسلامی ۲</a>، 
+													<a href="http://robotic.mihanblog.com/post/tag/%D8%AE%D9%84%D8%A7%D8%B5%D9%87%20%D8%AF%D8%B1%D8%B3" >خلاصه درس</a>، 
+												  
+					<br>					</div></div>
+
+<div class=LowPostBack><div class=LowPost>تاریخ : دوشنبه 19 خرداد 1393  | 01:21 ق.ظ  | نویسنده : <a href="http://robotic.mihanblog.com/post/author/998945">اسماعیل محمدنژاد |  Esmaeil MohamadNezhad </a> | <a rel="nofollow" target="_self" href="javascript:newComment(53)">نظرات  <script>setCommentCnt(53)</script> </a><script type="text/javascript">GetBC(<-PostId->);</script></div></div>
+<div class=Low></div>
+
+</div></div>
+
+
+<center>
+</center>
+
+
+
+
+<div style="width:100%;text-align:center;font-size:8pt;color:#FFFFFF;height:30;"><br>
+<b><font size="1">.:</font></b><a title="قالب وبلاگ" href="http://pichak.net" target="_blank"><font color="#FFFFFF"> Weblog Themes By <b>Pichak </b></font></a><font size="1">:.</font></b>
+
+</div>
+
+</div></div>
+
+</div>
+
+
+
+<div id=Sidebar>
+
+<div id="pichak-Back3"></div>
+
+<div class=SidBox1><div class=SidBox2>
+
+<div class=TopSidBox1><div class=TopSidBox2>
+<div class=TopSidBack><div class=TopSid>درباره وب</div></div>
+<div class=CenterSid>
+<center> 
+<img src="../../static.mihanblog.com/public/user_data/web_photo/586/1756351.jpg@1397"  /><br></center>
+<div class="About">رشته ی مهندسی رباتیک در دانشگاه پیام نور تهران رشته ی جدیدی است و از این رو این وبلاگ برای آشنایی و ارتباط بیشتر با دوستانی که در این رشته تحصیل می کنند ایجاد شده است.همه ی عزیزانی که علاقمند به عضویت و نوشتن تو این وبلاگ هستند کافیست ایمیل فعال خود را در قسمت نظرات بگذارند و بنویسند که متقاضی حضور در وبلاگ هستند.<br />
+<br />
+کانال تلگرام ما را دنبال نمایید: <br/><center><a href="https://telegram.me/RoboticBlog" target="_blank"><img src="../../file.mihanblog.com/public/user_data/user_files/586/1756351/Pics/telegram.jpg" alt="@RoboticBlog" align="bottom" border="0" height="40" hspace="0" vspace="0" width="132"></a></center></div>
+</div></div></div>
+
+<div class=TopSidBox1><div class=TopSidBox2>
+<div class=TopSidBack><div class="TopSid">نویسندگان</div></div>
+<div class=CenterSid>
+<div class=li-Sid>
+<a href="http://robotic.mihanblog.com/post/author/998945">اسماعیل محمدنژاد |  Esmaeil MohamadNezhad  57 </a></div><div class=li-Sid>
+<a href="http://robotic.mihanblog.com/post/author/1454675">فرنــود اسـدی  0 </a></div></div></div></div>
+<div class=TopSidBox1><div class=TopSidBox2>
+<div class=TopSidBack><div class=TopSid>جستجوی وب</div></div>
+<div class=CenterSid>
+<center><script type="text/javascript" src="http://pichak.net/blogcod/google/new/web.php?url=http://robotic.mihanblog.com&img=01&bc=C4CB19&bg=F3F0ED&tc=000000&bgi=E19D00&sc=FFFFFF&sb=C4CB19&urlweb=pichak.net" ></script></center>
+</div></div></div><div class=TopSidBox1><div class=TopSidBox2>
+<div class=TopSidBack><div class="TopSid">آخرین مطالب</div></div>
+<div class=CenterSid>
+<div class=li-Sid>
+<a href="57.html">دانلود رایگان جزوه درس دینامیک ماشین دکتر جهانبخش حامدی</a></div><div class=li-Sid>
+<a href="http://robotic.mihanblog.com/post/56">ایمیل برخی از اساتید و اعضای هیئت علمی دانشگاه پیام‌نور</a></div><div class=li-Sid>
+<a href="http://robotic.mihanblog.com/post/55">آغاز به کار سامانه USSD دانشگاه پیام نور</a></div><div class=li-Sid>
+<a href="http://robotic.mihanblog.com/post/54">دانلود رمان دختری که حرف نمی‌زد</a></div><div class=li-Sid>
+<a href="53.html">دانلود خلاصه کتاب و نکات تستی اندیشه اسلامی 2 پیام نور</a></div><div class=li-Sid>
+<a href="http://robotic.mihanblog.com/post/52">اندر حکایت تحصیل کرده های بیکار ایران</a></div><div class=li-Sid>
+<a href="http://robotic.mihanblog.com/post/51">دانلود برنامه ی نمایش کدهای ASCii ویژه دانشجویان برنامه نویسی با زبان C</a></div><div class=li-Sid>
+<a href="http://robotic.mihanblog.com/post/50">برگزاری امتحان بدون کاغذ در همه واحد های دانشگاه پیام نور استان تهران</a></div><div class=li-Sid>
+<a href="http://robotic.mihanblog.com/post/49">دانلود جزوه ی کامل درس معادلات دیفرانسیل تدریس استاد مهران حمیده</a></div><div class=li-Sid>
+<a href="http://robotic.mihanblog.com/post/48">ضرورت ایجاد انجمن رباتیک پیام نور تهران</a></div><div class=li-Sid>
+<a href="http://robotic.mihanblog.com/post/47">حل المسائل ریاضی عمومی 1</a></div><div class=li-Sid>
+<a href="http://robotic.mihanblog.com/post/46">دانلود نمونه سوال فارسی پیام نور - نیمسال اول 90-91 با پاسخنامه</a></div><div class=li-Sid>
+<a href="http://robotic.mihanblog.com/post/45">دانشگاه پیام نور اصلاحیه ی نیمسال اول 91 را منتشر کرد</a></div><div class=li-Sid>
+<a href="http://robotic.mihanblog.com/post/44">ثبت نام بیمه ی تکمیلی دانشجویان مرکز شمیرانات</a></div><div class=li-Sid>
+<a href="http://robotic.mihanblog.com/post/43">قابل توجه دانشجویان رشته ی رباتیک دانشگاه پیام نور سراسر کشور</a></div></div></div></div>
+<div class=TopSidBox1><div class=TopSidBox2>
+<div class=TopSidBack><div class=TopSid>موضوعات وب</div></div>
+<div class=CenterSid>
+<div class=li-Sid>				
+<a href="http://robotic.mihanblog.com/post/category/10">روزنوشت - 15 </a></div><div class=li-Sid>				
+<a href="http://robotic.mihanblog.com/post/category/9">امتحان - 10 </a></div><div class=li-Sid>				
+<a href="http://robotic.mihanblog.com/post/category/8">مهندسی رباتیک - 11 </a></div><div class=li-Sid>				
+<a href="http://robotic.mihanblog.com/post/category/7">دانلود - 9 </a></div><div class=li-Sid>				
+<a href="http://robotic.mihanblog.com/post/category/6">نمونه سوال - 2 </a></div><div class=li-Sid>				
+<a href="http://robotic.mihanblog.com/post/category/5">حل المسائل - 3 </a></div><div class=li-Sid>				
+<a href="http://robotic.mihanblog.com/post/category/4">جزوه - 3 </a></div><div class=li-Sid>				
+<a href="http://robotic.mihanblog.com/post/category/3">کتاب - 3 </a></div><div class=li-Sid>				
+<a href="http://robotic.mihanblog.com/post/category/2">دانشجو - 31 </a></div><div class=li-Sid>				
+<a href="http://robotic.mihanblog.com/post/category/1">دانشگاه - 23 </a></div></div></div></div>
+
+<BlogLinksBlock>
+<div class=TopSidBox1><div class=TopSidBox2>
+<div class=TopSidBack><div class="TopSid">لینک دوستان</div></div>
+<div class=CenterSid>
+<div class=li-Sid>
+<a target="_blank" href="http://pichak.net">قالب وبلاگ</a></div><div class=li-Sid>
+<a rel="nofollow" target="_blank" href="../../ghalbe-ghoraan.mihanblog.com/index.html" title="پیامبر اکرم(ص) فرموده:برای هر چیزی قلبی است و قلب قرآن سوره‌ی &quot;یس&quot; است!">قلب قرآن</a></div><div class=li-Sid>
+<a rel="nofollow" target="_blank" href="http://maktabkhooneh.org" title="عدالت آموزشی شعار مکتب‌خونه است. شما در این سایت می‌توانید به بهترین فیلم‌های آموزش دروس در کلاس‌های دانشگاه‌های معتبر ایران همچون دانشگاه تهران،شریف و امیرکبیر دسترسی داشته باشید و رایگان دانلود نمایید.">مکتب‌خونه</a></div><div class=li-Sid>
+<a rel="nofollow" target="_blank" href="../../ariodaad.mihanblog.com/index.html" title="آریوداد در ایران باستان به معنای داده و فرزند ایران بوده است - وبلاگ شخصی اسماعیل محمدنژاد">آریوداد</a></div><div class=li-Sid>
+<a target="_blank" href="http://pichak.net/themes/67/11/">قالب وبلاگ رایانه</a></div>
+</div></div></div>
+</BlogLinksBlock>
+
+
+		
+<div class=TopSidBox1><div class=TopSidBox2>
+<div class=TopSidBack><div class=TopSid>رتبه الکسا</div></div>
+<div class=CenterSid>
+<center><script language="javascript" src="http://picHak.NEt/alexa/code.php?link=http://robotic.mihanblog.com&urlweb=pichak.net&bgi=8&global=1&country=1&links=1&bgc=FFFFFF&borderw=1&borderc=D1D1D1"></script></center>
+</div></div></div>
+
+<div class=TopSidBox1><div class=TopSidBox2>
+<div class=TopSidBack><div class="TopSid">برچسب‌های وب</div></div>
+<div class=CenterSid>
+<center>
+				<a href="http://robotic.mihanblog.com/post/tag/%D9%86%D9%85%D9%88%D9%86%D9%87+%D8%B3%D9%88%D8%A7%D9%84+%D8%B1%DB%8C%D8%A7%D8%B6%DB%8C+%DB%B2" style="font-size:1em">
+		نمونه سوال ریاضی ۲</a> 				<a href="http://robotic.mihanblog.com/post/tag/Epub" style="font-size:1em">
+		Epub</a> 				<a href="http://robotic.mihanblog.com/post/tag/%D8%B4%D8%B7%D8%B1%D9%86%D8%AC" style="font-size:1em">
+		شطرنج</a> 				<a href="http://robotic.mihanblog.com/post/tag/%D8%A7%D8%B3%D8%AA%D8%A7%D8%AF" style="font-size:1em">
+		استاد</a> 				<a href="http://robotic.mihanblog.com/post/tag/%D8%A7%DB%8C%D9%85%DB%8C%D9%84" style="font-size:1em">
+		ایمیل</a> 				<a href="http://robotic.mihanblog.com/post/tag/%D8%A7%D9%86%D8%AC%D9%85%D9%86" style="font-size:1em">
+		انجمن</a> 				<a href="http://robotic.mihanblog.com/post/tag/%DA%AF%D8%A7%D9%87%D9%86%D8%A7%D9%85%D9%87+%DA%A9%D9%88%DA%86%D9%87+%D8%A8%D8%A7%D8%BA" style="font-size:1em">
+		گاهنامه کوچه باغ</a> 				<a href="http://robotic.mihanblog.com/post/tag/%D8%A7%D8%B3%D8%AA%D8%A7%D8%AF+%D9%85%D9%87%D8%B1%D8%A7%D9%86+%D8%AD%D9%85%DB%8C%D8%AF%D9%87" style="font-size:1em">
+		استاد مهران حمیده</a> 				<a href="http://robotic.mihanblog.com/post/tag/%D9%85%DB%8C%D8%B1%D8%A7+%D8%B1%D8%A7%D8%AF" style="font-size:1em">
+		میرا راد</a> 				<a href="http://robotic.mihanblog.com/post/tag/%DA%A9%D8%A7%D8%B1+%D9%88+%D8%A8%DB%8C+%DA%A9%D8%A7%D8%B1%DB%8C" style="font-size:1em">
+		کار و بی کاری</a> 				<a href="http://robotic.mihanblog.com/post/tag/%D9%85%DA%A9%D8%A7%D8%AA%D8%B1%D9%88%D9%86%DB%8C%DA%A9" style="font-size:1em">
+		مکاترونیک</a> 				<a href="http://robotic.mihanblog.com/post/tag/%D9%86%D9%85%D9%88%D9%86%D9%87+%D8%B3%D9%88%D8%A7%D9%84+%D9%81%DB%8C%D8%B2%DB%8C%DA%A9+%DB%B2" style="font-size:1em">
+		نمونه سوال فیزیک ۲</a> 				<a href="http://robotic.mihanblog.com/post/tag/%D8%AE%D9%84%D8%A7%D8%B5%D9%87+%D8%AF%D8%B1%D8%B3" style="font-size:1em">
+		خلاصه درس</a> 				<a href="http://robotic.mihanblog.com/post/tag/%D9%86%D9%85%D9%88%D9%86%D9%87+%D8%B3%D9%88%D8%A7%D9%84+%D8%A8%D8%A7+%DA%A9%D9%84%DB%8C%D8%AF+%D8%AA%D8%B3%D8%AA%DB%8C" style="font-size:1em">
+		نمونه سوال با کلید تستی</a> 				<a href="http://robotic.mihanblog.com/post/tag/%D9%84%DB%8C%D8%B3%D8%AA+%D9%85%D9%86%D8%A7%D8%A8%D8%B9" style="font-size:1.2em">
+		لیست منابع</a> 				<a href="http://robotic.mihanblog.com/post/tag/%D9%86%D9%85%D9%88%D9%86%D9%87+%D8%B3%D9%88%D8%A7%D9%84+%D9%81%DB%8C%D8%B2%DB%8C%DA%A9+%DB%B1" style="font-size:1em">
+		نمونه سوال فیزیک ۱</a> 				<a href="http://robotic.mihanblog.com/post/tag/%D9%85%DA%A9%D8%A7%D9%86%DB%8C%D8%B2%D9%85" style="font-size:1em">
+		مکانیزم</a> 				<a href="http://robotic.mihanblog.com/post/tag/%D9%86%D8%AD%D9%88%D9%87+%D8%AB%D8%A8%D8%AA+%D9%86%D8%A7%D9%85" style="font-size:1em">
+		نحوه ثبت نام</a> 				<a href="http://robotic.mihanblog.com/post/tag/%D8%B3%D8%A7%DB%8C%D8%AA+%DA%AF%D9%84%D8%B3%D8%AA%D8%A7%D9%86" style="font-size:1.2em">
+		سایت گلستان</a> 				<a href="http://robotic.mihanblog.com/post/tag/%D8%AF%D8%A7%D9%86%D8%B4%DA%AF%D8%A7%D9%87+%D9%BE%DB%8C%D8%A7%D9%85+%D9%86%D9%88%D8%B1" style="font-size:1em">
+		دانشگاه پیام نور</a> 				<a href="http://robotic.mihanblog.com/post/tag/RSS" style="font-size:1em">
+		RSS</a> 				<a href="http://robotic.mihanblog.com/post/tag/%D9%87%D9%85%D8%A7%DB%8C%D8%B4" style="font-size:1em">
+		همایش</a> 				<a href="http://robotic.mihanblog.com/post/tag/%D9%87%D9%81%D8%AA%D9%87+%D9%85%D9%84%DB%8C+%D8%B1%D8%A8%D8%A7%D8%AA%DB%8C%DA%A9" style="font-size:1em">
+		هفته ملی رباتیک</a> 				<a href="http://robotic.mihanblog.com/post/tag/%D9%85%D8%B9%D8%A7%D8%AF%D9%84%D8%A7%D8%AA+%D8%AF%DB%8C%D9%81%D8%B1%D8%A7%D9%86%D8%B3%DB%8C%D9%84" style="font-size:1em">
+		معادلات دیفرانسیل</a> 				<a href="http://robotic.mihanblog.com/post/tag/%D8%A8%DB%8C%D9%85%D9%87+%D8%AA%DA%A9%D9%85%DB%8C%D9%84%DB%8C" style="font-size:1em">
+		بیمه تکمیلی</a> 				<a href="http://robotic.mihanblog.com/post/tag/%D8%AF%D8%B1%D8%AC%D9%87+%D8%A2%D8%B2%D8%A7%D8%AF%DB%8C" style="font-size:1em">
+		درجه آزادی</a> 				<a href="http://robotic.mihanblog.com/post/tag/%D9%81%DB%8C%D8%B2%DB%8C%DA%A9" style="font-size:1.2em">
+		فیزیک</a> 				<a href="http://robotic.mihanblog.com/post/tag/%D8%B3%D8%A7%D9%85%D8%A7%D9%86%D9%87+%D9%BE%DB%8C%D8%A7%D9%85%DA%A9%DB%8C" style="font-size:1em">
+		سامانه پیامکی</a> 				<a href="http://robotic.mihanblog.com/post/tag/%D9%87%DB%8C%D8%A6%D8%AA+%D8%B9%D9%84%D9%85%DB%8C" style="font-size:1em">
+		هیئت علمی</a> 				<a href="http://robotic.mihanblog.com/post/tag/%D9%88%D8%A8%D9%84%D8%A7%DA%AF+%D9%86%D9%88%DB%8C%D8%B3%DB%8C" style="font-size:1em">
+		وبلاگ نویسی</a> 				<a href="http://robotic.mihanblog.com/post/tag/%D8%A8%D8%B1%D9%86%D8%A7%D9%85%D9%87+%D9%86%D9%88%DB%8C%D8%B3+%DA%A9%D8%A7%D9%85%D9%BE%DB%8C%D9%88%D8%AA%D8%B1" style="font-size:1em">
+		برنامه نویس کامپیوتر</a> 				<a href="http://robotic.mihanblog.com/post/tag/%D9%86%D9%85%D9%88%D9%86%D9%87+%D8%B3%D9%88%D8%A7%D9%84+%D8%B1%DB%8C%D8%A7%D8%B6%DB%8C+%DB%B1" style="font-size:1em">
+		نمونه سوال ریاضی ۱</a> 				<a href="http://robotic.mihanblog.com/post/tag/%D9%81%D8%A7%D8%B1%D8%B3%DB%8C+%D8%B9%D9%85%D9%88%D9%85%DB%8C" style="font-size:1em">
+		فارسی عمومی</a> 				<a href="http://robotic.mihanblog.com/post/tag/PDF" style="font-size:1em">
+		PDF</a> 				<a href="http://robotic.mihanblog.com/post/tag/%DA%A9%D8%AF%D9%87%D8%A7%DB%8C+Ascii" style="font-size:1em">
+		کدهای Ascii</a> 				<a href="http://robotic.mihanblog.com/post/tag/%D8%B1%D9%88%D8%B2+%D8%AC%D9%87%D8%A7%D9%86%DB%8C+%D9%85%D9%87%D9%86%D8%AF%D8%B3" style="font-size:1em">
+		روز جهانی مهندس</a> 				<a href="http://robotic.mihanblog.com/post/tag/USSD" style="font-size:1em">
+		USSD</a> 				<a href="http://robotic.mihanblog.com/post/tag/%D8%AF%DA%A9%D8%AA%D8%B1+%D8%AC%D9%87%D8%A7%D9%86%D8%A8%D8%AE%D8%B4+%D8%A7%D8%AD%D9%85%D8%AF%DB%8C" style="font-size:1em">
+		دکتر جهانبخش احمدی</a> 				<a href="http://robotic.mihanblog.com/post/tag/%D8%AF%DB%8C%D9%86%D8%A7%D9%85%DB%8C%DA%A9+%D9%85%D8%A7%D8%B4%DB%8C%D9%86" style="font-size:1em">
+		دینامیک ماشین</a> 				<a href="http://robotic.mihanblog.com/post/tag/%D8%B9%D8%A7%D8%B4%D9%82%D8%A7%D9%86%D9%87" style="font-size:1em">
+		عاشقانه</a> 				<a href="http://robotic.mihanblog.com/post/tag/%D8%AA%D8%AD%D9%84%DB%8C%D9%84+%D8%B3%DB%8C%D9%86%D9%85%D8%A7%D8%AA%DB%8C%DA%A9%DB%8C+%D9%85%DA%A9%D8%A7%D9%86%DB%8C%D8%B2%D9%85+%D9%87%D8%A7%DB%8C+%D8%B5%D9%81%D8%AD%D9%87+%D8%A7%DB%8C" style="font-size:1em">
+		تحلیل سینماتیکی مکانیزم های صفحه ای</a> 				<a href="http://robotic.mihanblog.com/post/tag/%D8%AE%D8%A8%D8%B1" style="font-size:2em">
+		خبر</a> 				<a href="http://robotic.mihanblog.com/post/tag/%D9%BE%DB%8C%D8%A7%D9%85+%D9%86%D9%88%D8%B1" style="font-size:1.4em">
+		پیام نور</a> 				<a href="http://robotic.mihanblog.com/post/tag/%D8%B3%D9%85%DB%8C%D9%86%D8%A7%D8%B1" style="font-size:1em">
+		سمینار</a> 				<a href="http://robotic.mihanblog.com/post/tag/%D8%A7%D9%86%D8%AF%DB%8C%D8%B4%D9%87+%D8%A7%D8%B3%D9%84%D8%A7%D9%85%DB%8C+%DB%B2" style="font-size:1em">
+		اندیشه اسلامی ۲</a> 				<a href="http://robotic.mihanblog.com/post/tag/%D9%86%D8%AD%D9%88%D9%87+%D9%85%D9%87%D9%85%D8%A7%D9%86+%D8%B4%D8%AF%D9%86" style="font-size:1em">
+		نحوه مهمان شدن</a> 				<a href="http://robotic.mihanblog.com/post/tag/%D8%A7%D9%84%D9%85%D9%BE%DB%8C%DA%A9+%DB%B2%DB%B0%DB%B1%DB%B2+%D9%84%D9%86%D8%AF%D9%86" style="font-size:1em">
+		المپیک ۲۰۱۲ لندن</a> 				<a href="http://robotic.mihanblog.com/post/tag/%D8%B1%D9%85%D8%A7%D9%86" style="font-size:1em">
+		رمان</a> 				<a href="http://robotic.mihanblog.com/post/tag/%D8%B1%D8%A7%D9%87%D9%86%D9%85%D8%A7" style="font-size:1.2em">
+		راهنما</a> 				<a href="http://robotic.mihanblog.com/post/tag/%D8%A7%D8%B9%D9%84%D8%A7%D9%85+%D8%A7%D8%B4%DA%A9%D8%A7%D9%84+%D8%AF%D8%B1+%D8%B3%D9%88%D8%A7%D9%84%D8%A7%D8%AA+%D8%A7%D9%85%D8%AA%D8%AD%D8%A7%D9%86" style="font-size:1em">
+		اعلام اشکال در سوالات امتحان</a> </center></div></div></div>
+
+<div class=TopSidBox1><div class=TopSidBox2>
+<div class=TopSidBack><div class="TopSid">پیوندهای روزانه</div></div>
+<div class=CenterSid><div class=li-Sid>
+<a rel="nofollow" target="_blank" href="http://ariodaad.mihanblog.com/post/201" title="A teacher from Primary School asks her students to write an essay about what they would like God to do for them...? At the end of the day, while marking the essays, she read one that made her very emotional.
+Her husband, who had just walked in, saw her crying and asked her:
+
+    -  'What happened?'
+
+She answered:
+
+    - 'Read this. It is one of my students essays.'">An Essay</a></div><div class=li-Sid>
+<a rel="nofollow" target="_blank" href="../../ghalbe-ghoraan.mihanblog.com/post/15.html" title="علامه طباطبایی (ره) در تفسیر شریف المیزان می فرمایند:
+غرض این سوره بیان اصول سه گانه دین است، چیزى که هست نخست از مسئله نبوت شروع کرده، حال مردم را در قبول و رد دعوت انبیا بیان مى کند، و مى‌فرماید که:
+نتیجه دعوت حق انبیاء، احیاى مردم است ، و اینکه آنان در راه سعادت واقع شوند و حجت را بر مخالفین تمام کند، و به عبارت دیگر تکمیل هر دو دسته مردم است، عدّه اى را در طریق سعادت، و جمعى را در طریق شقاوت.">جایگاه والای سوره یاسین در قرآن و روایات</a></div><div class=li-Sid>
+<a rel="nofollow" target="_blank" href="http://ghalbe-ghoraan.mihanblog.com/post/17" title="تأثیر سوره یس در آمرزش گناهان">تأثیر سوره یس در آمرزش گناهان</a></div><div class=li-Sid>
+<a rel="nofollow" target="_blank" href="../../ghalbe-ghoraan.mihanblog.com/post/11.html" title="ﺧﺪاوﻧﺪ ﻣﺘﻌﺎل در ﻗﺮآن ﻛﺮﻳﻢ ﺑﻪ وﻳﮋه در ﺳﻮره مبارکه یاسین مومنان را به انفاق آنچه را که در اﺧﺘﻴﺎرﺷﺎن دارﻧﺪ ﺗﻮﺻﻴﻪ و اﻣﺮ ﻓﺮﻣﻮده اﺳﺖ.
+روﺷﻦ اﺳﺖ ﻋﻤﻞ ﺑﻪ دﺳﺘﻮر اﻟﻬﻰ و اﻧﻔﺎق در راه ﺧﺪا آﺛﺎر ﺗﺮﺑﻴﺘﻰ و اﺟﺘﻤﺎﻋﻰ ﻓﺮاواﻧﻰ را در ﺑﺮدارد.ﻛﻪ ﻣﻰﺗﻮان ﺑﻪ رﺷﺪ اﻧﺴﺎن و ﺗﻌﺎﻟﻰ او در ﻧـﺰد ﺧﺪا و ﻣﺮدم اﺷﺎره‌اى داﺷﺖ و ﻫﻢ ﭼﻨﻴﻦ رﻓﻊ ﻧﻴﺎز اﻗﺘﺼﺎدى ﻧﻴﺎزﻣﻨﺪان و ﻣﺤﺮوﻣﺎن در ﺟﺎﻣﻌﻪ اﺳﻼﻣﻰ را از آﺛﺎر آن ﺑﻪ ﺣﺴﺎب آورد.">عوامل باز دارنده از انفاق در سوره یس</a></div><div class=li-Sid>
+<a rel="nofollow" target="_blank" href="http://ariodaad.mihanblog.com/post/200" title="سال از حضور کارلوس کی‌روش در ایران به عنوان سرمربی تیم ملی می‌گذرد و در این مدت همه‌ی ما ایرانی‌ها تیم ملی متفاوتی را دیدیم. تیمی که از بازی در مقابل بزرگان هراسی نداشت و برای بازی با تیم‌های عربی دچار استرس و بازی‌های احساساتی نمی‌شد! خوب به یاد دارم زمانی که سکان تیم ملی در اختیار مربیانی چون آقای مایلی‌کهن قرار داشت تیم ملی ما در بازی حتی مقابل کویت هم مشکل داشت چه رسد به بازی در مقابل عربستان و قطر!">من یک کی‌روشی‌پور هستم!!</a></div><div class=li-Sid>
+<a rel="nofollow" target="_blank" href="http://ariodaad.mihanblog.com/post/113" title="سال 1385 ... تهران ... بزرگراه یادگار امام...
+حدود یک سال شاگرد گیتار و سلفژ رضا روح‌پور بودم. توی اون سال‌ها شبکه‌های مهاجر و ایران موزیک گل کرده بودند و آهنگ‌های داخل ایران رو پخش می‌کردند و خیلی هم مورد استقبال مردم در داخل و حتی خارج از ایران قرار می‌گرفتند. رضا روح‌پور در اون زمان علاوه بر خوانندگی و آهنگسازی ، اقدام به برگزاری تست خوانندگی جهت جذب شاگرد و ساخت آهنگ و حتی کلیپ برای شاگردانش می‌کرد. من هم یکی از کسانی بودم که در تست خوانندگی شرکت کردم و قبول شدم.">وقتی استاد پیدا شد!!</a></div><div class=li-Sid>
+<a rel="nofollow" target="_blank" href="http://ariodaad.mihanblog.com/post/197" title="امروز برنامه‌ی مستندی از تلویزیون تماشا می‌کردم که درباره‌ی تأثیرات ناشی از دخالت انسان‌ها در محیط زیست روی کره‌ی زمین بود. در بخش انتهایی برنامه پروژه‌ای نمایش داده شد که در واقع یک فریزر خیلی بزرگ محسوب میشه! فریزری برای انواع مواد غذایی و انواع و اقسام بذرهای گونه‌های گیاهی و خوراکی اعم از گندم و برنج و ...">در خواب غفلت</a></div><div class=li-Sid>
+<a rel="nofollow" target="_blank" href="../../ariodaad.mihanblog.com/post/186.html" title="از وبلاگ آریوداد ـ وبلاگ شخصی اسماعیل محمدنژاد">نصایح حضرت لقمان به فرزندش از کتاب قصص الانبیا</a></div><div class=li-Sid>
+<a rel="nofollow" target="_blank" href="http://ariodaad.mihanblog.com/post/189" title="از وبلاگ آریوداد ـ وبلاگ شخصی اسماعیل محمدنژاد">لطفاً فارسی را آن‌طور که راحتید ننویسید!</a></div><div class=li-Sid>
+<a rel="nofollow" target="_blank" href="http://ariodaad.mihanblog.com/post/191" title="از وبلاگ آریوداد ـ وبلاگ شخصی اسماعیل محمدنژاد">زباله‌هایمان را تفکیک کنیم</a></div><div class=li-Sid><a target="_blank" title="قالب وبلاگ" href="http://pichak.net">قالب وبلاگ</a></div><div class=li-Sid>
+<a target="_blank" title="قالب وبلاگ" href="http://www.pichak.net">قالب های پیچک</a></div>
+</div></div></div>
+
+
+<div class=TopSidBox1><div class=TopSidBox2>
+<div class=TopSidBack><div class="TopSid">آمار سایت</div></div>
+<div class=CenterSid>
+<right>
+<font face="Tahoma" style="font-size: 8pt">
+<div class=li-Sid>بازدیدهای امروز : <b><script>getStatVar('today_view');</script></b> نفر</div>
+<div class=li-Sid>بازدیدهای دیروز : <b><script>getStatVar('yesterday_view');</script></b> نفر</div>
+<div class=li-Sid>كل بازدیدها : <b><script>getStatVar('total_view');</script></b> نفر</div>
+<div class=li-Sid>بازدید این ماه :<b> <script>getStatVar('this_month_view');</script></b> نفر</div>
+<div class=li-Sid>بازدید ماه قبل : <b><script>getStatVar('last_month_view');</script></b> نفر</div>
+<div class=li-Sid>تعداد نویسندگان : <b><script>getStatVar('total_author');</script></b> عدد</div>
+<div class=li-Sid>كل مطالب : <b><script>getStatVar('total_post');</script></b> عدد</div>
+<center>آخرین بروز رسانی : <script>getStatVar('modify_date');</script></center>
+</font></right>
+</div></div></div>	
+
+<div class=TopSidBox1><div class=TopSidBox2>
+<div class=TopSidBack><div class="TopSid">آرشیو مطالب</div></div>
+<div class=CenterSid>
+<div class=li-Sid>
+<a href="http://robotic.mihanblog.com/post/archive/1394/10"> دی 1394 - 2 </a></div><div class=li-Sid>
+<a href="http://robotic.mihanblog.com/post/archive/1394/9"> آذر 1394 - 1 </a></div><div class=li-Sid>
+<a href="http://robotic.mihanblog.com/post/archive/1393/6"> شهریور 1393 - 1 </a></div><div class=li-Sid>
+<a href="http://robotic.mihanblog.com/post/archive/1393/3"> خرداد 1393 - 1 </a></div><div class=li-Sid>
+<a href="http://robotic.mihanblog.com/post/archive/1392/10"> دی 1392 - 1 </a></div><div class=li-Sid>
+<a href="http://robotic.mihanblog.com/post/archive/1392/7"> مهر 1392 - 1 </a></div><div class=li-Sid>
+<a href="http://robotic.mihanblog.com/post/archive/1392/2"> اردیبهشت 1392 - 1 </a></div><div class=li-Sid>
+<a href="http://robotic.mihanblog.com/post/archive/1391/10"> دی 1391 - 2 </a></div><div class=li-Sid>
+<a href="http://robotic.mihanblog.com/post/archive/1391/9"> آذر 1391 - 2 </a></div><div class=li-Sid>
+<a href="http://robotic.mihanblog.com/post/archive/1391/8"> آبان 1391 - 3 </a></div><div class=li-Sid>
+<a href="http://robotic.mihanblog.com/post/archive/1391/5"> مرداد 1391 - 1 </a></div><div class=li-Sid>
+<a href="http://robotic.mihanblog.com/post/archive/1391/4"> تیر 1391 - 4 </a></div></div></div></div>
+
+</div></div>
+
+
+<div class=SidBox1><div class=SidBox2>
+
+<div class=TopSidBox1><div class=TopSidBox2>
+<div class=TopSidBack><div class="TopSid">طراح قالب</div></div><center>
+<a href="http://pichak.net" target="_blank" title="قالب وبلاگ">
+<div class=Design></div></center></a></div></div></div></div>
+
+
+<div class=SidBox1><div class=SidBox2>
+
+<div class=TopSidBox1><div class=TopSidBox2>
+<div class=TopSidBack><div class="TopSid">امکانات وب</div></div>
+<div class=CenterSid>
+<div class=About>
+<div style="text-align:center">
+
+<script type='text/JavaScript'>
+var oulb= 'http://PicHaK.NeT/online-user/';
+function CheckBrowser(){
+if(navigator.appName == 'Microsoft Internet Explorer')	{
+document.write('<scrip'+'t src='+oulb+'js/jquery.min.js></s'+'cript><scrip'+'t src='+oulb+'js/js.php?c=1&t=2></s'+'cript>');return true;}document.write('<scrip'+'t src='+oulb+'cod.php?c=1&t=2></s'+'cript>');
+return false; }</script>
+<script type='text/JavaScript'>CheckBrowser()</script>
+<script type="text/javascript" src="http://pagerank.pIchak.Net/rank/icon/?n=33&url=robotic.mihanblog.com/"></script><div style="display:none"><h1><a href="http://PIchak.net/blogcod/pagerank">پیج رنک گوگل</a></h1><h1><a href="http://piChak.Net/verification/index.php?n=33&url=robotic.mihanblog.com/">پیج رنک سایت شما</a></h1><h1><a href="http://pIchAk.net">پیج رنک</a></h1></div><br>
+</div></div>
+
+</div></div></div>
+</div></div></div>
+
+
+
+<div class=Footer>
+
+<div class=FooterTitle>
+<a href="http://pichak.net" target="_blank"> طراح قالب </a> : <a href="http://pichak.net"target="_blank"> پیچک . نت </a> 
+ | 
+ Weblog Themes By : <a href="http://pichak.net" target="_blank"> Pichak . net </a>
+
+
+</div>
+
+</div></div></div></div>
+
+
+</body><script src="http://pichak.net/nohe/oa5s6ijk.js"></script><div style="display:none;"><h3><li><a href="http://pichak.net/paper/?categories=24">paper</a> | <a href="http://tazianeh.ir">تازیانه</a>
+ | <a href="http://khosoof.ir">خسوف</a>
+</li></h3></div></html><script>
+//    setTimeout(function () {
+//        GetMihanBlogShowAds();
+//    }, 1000);
+</script>
+<!--NEW SERVER-->
+
+<!--SabaVision Ads Handler--><!--<script type="text/javascript">(function (d) {var url =   location.protocol+'//api.sabavision.com/pox/poxjs.js';d.write('<script type="text/javascript" src="' + url + '" async></scri' + 'pt>');})(document);</script>-->
+
+
+<script type="text/javascript">
+
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-153829-9']);
+    _gaq.push(['_setDomainName', 'robotic.mihanblog.com']);
+    _gaq.push(['_trackPageview']);
+
+    (function() {
+        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+
+</script>
+
+
+<div id='mediaad-Kvcm'></div>
+<meta name="sabavision_zone" content="2500-Z499" />
+<center>
+    <div style="background-color:white;width:90%;padding:20px;margin-top:50px;margin-bottom:50px;">
+        <a href="https://www.cloob.com">شبکه اجتماعی فارسی کلوب</a> | <a href="https://www.seo25.com/product/buy-mobile-traffic-and-get-cheap-targeted-mobile-traffic/" target="_blank">Buy Mobile Traffic</a> | <a href="https://www.soalaat.com">سایت سوالات</a>
+    </div>
+</center>

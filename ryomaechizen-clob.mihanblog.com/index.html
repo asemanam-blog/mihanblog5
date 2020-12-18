@@ -1,0 +1,1375 @@
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" /><link rel="EditURI" type="application/rsd+xml" title="RSD" href="http://ryomaechizen-clob.mihanblog.com/xmlrpc?rsd" />
+<script type="text/javascript" src="../static.mihanblog.com/public/scripts/run/g.other.v3.js"></script>
+<script>
+
+	function c_$(id){
+        return document.getElementById(id);
+    }
+    
+			//if (parent.frames.length) top.location.href= document.location;
+		
+	setTodayDate = function(){
+		document.write('یکشنبه 23 آذر 1399');
+		/*1673814*/	}
+
+</script>
+
+
+
+        <script type="text/javascript">
+            (function(){
+            var now = new Date();
+            var head = document.getElementsByTagName('head')[0];
+            var script = document.createElement('script');
+            script.async = true;
+            var script_address = 'https://cdn.yektanet.com/js/mihanblog.com/native-mihanblog.com-6531.js';
+            script.src = script_address + '?v=' + now.getFullYear().toString() + '0' + now.getMonth() + '0' + now.getDate() + '0' + now.getHours();
+            head.appendChild(script);
+            })();
+        </script>
+
+        <!--<script type="text/javascript">
+            var head = document.getElementsByTagName("head")[0];
+            var script = document.createElement("script");
+            script.type = "text/javascript";
+            script.async=1;
+            script.src = "https://s1.mediaad.org/serve/mihanblog.com/loader.js" ;
+            head.appendChild(script);
+        </script>-->
+        
+        <script>
+            var sabaVisionWebsiteID = "9bab9dac-041d-4bdb-b39a-1ed789f65eed"; var sabaVisionWebsitePage = "ALL"
+        </script>
+        <link rel="stylesheet" href="https://plus.sabavision.com/dox/dox.min.css">
+        <script src="https://plus.sabavision.com/dox/dox.min.js"></script>
+        
+        <script>
+	try{
+		var commentCnt = new Array();
+		commentCnt[918]='5505';commentCnt[1038]='-';commentCnt[1039]='-';commentCnt[1042]='-';commentCnt[1043]='-';commentCnt[1044]='-';commentCnt[1045]='-';commentCnt[1048]='-';commentCnt[1049]='-';commentCnt[1050]='-';commentCnt[1051]='-';commentCnt[1056]='-';commentCnt[1057]='0';commentCnt[1060]='-';commentCnt[1061]='-';commentCnt[1062]='-';	} catch(e){}
+	
+	newComment = function(post_id){
+		try{
+			window.open('/post/comment/'+post_id,'comment','status=yes,scrollbars=yes,toolbar=no,menubar=no,location=no ,width=480px,height=540px');
+		} catch(e){}
+	}
+	setCommentCnt = function(post_id){
+		try{
+			if(commentCnt[post_id]){
+				document.write(commentCnt[post_id]);
+			} else {
+				document.write(0);
+			}
+		} catch(e){}
+	}
+</script><script>
+
+
+	mihanblogUpdateLike = function(postid,type){
+		var url = '/post/like/'+postid+'/'+type;
+		mihanblogGetAjax(url,function(){});
+	};
+	try{
+        mihanblogGetAjax = function (url,callback) {
+    		var req;
+			if (window.XMLHttpRequest)
+            {
+                // code for IE7+, Firefox, Chrome, Opera, Safari
+			  	req = new XMLHttpRequest();
+			}else{	// code for IE6, IE5
+			  	req = new ActiveXObject("Microsoft.XMLHTTP");
+		  	}
+		    req.open("GET", url, 1);
+		    req.onreadystatechange = function () {
+		        if (req.readyState == 4) {
+		            if (req.status == 200) {
+		            	var response = eval(req.responseText);
+		            	callback();
+		            }else{
+	            		return ;
+		            }
+		        }else{
+					return ;
+		        }
+		    }
+		    req.send(null);
+		}
+	}catch(e){}
+
+	try{
+		var mihanblogLikeArrCnt = new Array();
+		var mihanblogDisLikeArrCnt = new Array();
+
+		mihanblogLikeArrCnt[918]='0';
+mihanblogDisLikeArrCnt[918]='0';
+mihanblogLikeArrCnt[1050]='0';
+mihanblogDisLikeArrCnt[1050]='0';
+mihanblogLikeArrCnt[1057]='0';
+mihanblogDisLikeArrCnt[1057]='0';
+	} catch(e){}
+
+
+
+    mihanblogPostLike = function(post_id){
+
+        mihanblogLikeCnt = (mihanblogLikeArrCnt[post_id]? mihanblogLikeArrCnt[post_id] : 0);
+        mihanblogDisLikeCnt = (mihanblogDisLikeArrCnt[post_id]? mihanblogDisLikeArrCnt[post_id] : 0);
+        mihanblogLikeCnt = parseInt(mihanblogLikeCnt);
+        mihanblogDisLikeCnt = parseInt(mihanblogDisLikeCnt);
+
+        document.write(
+                '<div class="mihanblog_like_wrapper ">'+
+                       '<div id="dislikeBar_'+post_id+'" onclick="mihanblogUpdateLike('+post_id+',\'dislike\')"   class="mihanblog_like_bar mihanblog_like_dislikeBar mihanblog_like_show_help ">-<div class="mihanblog_like_Cnt" id="disLikeCnt_'+post_id+'">'+mihanblogDisLikeCnt+'</div>'+
+                            '<span  class="mihanblog_like_v2_help mihanblog_like_v2_help_dislike clearfix"> '+
+                                '<span class="mihanblog_like_help_arrow mihanblog_like_help_arrow_dislike clearfix"></span>'+
+                                '<span class="mihanblog_like_help_text">نمی پسندم</span>'+
+                            '</span>'+
+                        '</div>'+
+                       '<div id="Like_'+post_id+'" class="mihanblog_like_border"></div>'+
+                       '<div id="likeBar_'+post_id+'" onclick="mihanblogUpdateLike('+post_id+',\'like\')"  class="mihanblog_like_bar mihanblog_like_likeBar mihanblog_like_show_help" >+<div class="mihanblog_like_Cnt" id="likeCnt_'+post_id+'">'+mihanblogLikeCnt+'</div>'+
+                            '<span  class="mihanblog_like_v2_help mihanblog_like_v2_help_like clearfix"> '+
+                                '<span class="mihanblog_like_help_arrow mihanblog_like_help_arrow_like clearfix"></span>'+
+                                '<span class="mihanblog_like_help_text">می پسندم</span>'+
+                            '</span>'+
+                        '</div>'+
+
+                '</div>'
+        );
+
+
+
+        mihanblogDisplayeLike(post_id);
+    }
+
+
+    mihanblogDisplayeLike = function(post_id){
+
+        mihanblogLikeCnt = (mihanblogLikeArrCnt[post_id]? mihanblogLikeArrCnt[post_id] : 0);
+        mihanblogDisLikeCnt = (mihanblogDisLikeArrCnt[post_id]? mihanblogDisLikeArrCnt[post_id] : 0);
+        mihanblogLikeCnt = parseInt(mihanblogLikeCnt);
+        mihanblogDisLikeCnt = parseInt(mihanblogDisLikeCnt);
+
+
+
+        sum = mihanblogLikeCnt - mihanblogDisLikeCnt;
+        backgroundBorder =  document.getElementById('Like_'+post_id);
+        var likeObj = document.getElementById('likeCnt_'+post_id);
+        var disLikeObj = document.getElementById('disLikeCnt_'+post_id);
+
+
+
+
+
+        likeObj.innerHTML =  mihanblogLikeCnt ;
+        disLikeObj.innerHTML =  mihanblogDisLikeCnt;
+
+        if(sum == 0){
+            backgroundBorder.style.backgroundImage = "url('/public/public/images/icons/like_likedislike.png')";
+            document.getElementById('dislikeBar_'+post_id).style.width = '19px';
+            document.getElementById('likeBar_'+post_id).style.width = '19px';
+        }else{
+             if(sum > 0){
+                 backgroundBorder.style.backgroundImage = "url('/public/public/images/icons/like_like.png')";
+                 document.getElementById('likeBar_'+post_id).style.width = '23px';
+                 document.getElementById('dislikeBar_'+post_id).style.width = '15px';
+             }else{
+                 backgroundBorder.style.backgroundImage = "url('/public/public/images/icons/like_dislike.png')";
+                 document.getElementById('likeBar_'+post_id).style.width = '15px';
+                 document.getElementById('dislikeBar_'+post_id).style.width = '23px';
+             }
+        }
+
+    }
+
+
+
+
+</script>
+
+<style type="text/css">
+
+
+    .clearfix {display: inline-block;}
+    .clearfix:after {
+        content: ".";
+        display: block;
+        height: 0;
+        clear: both;
+        visibility: hidden;
+    }
+
+    .mihanblog_like_wrapper {
+        color: #ffffff;
+        direction: ltr;
+        position: relative;
+    }
+    .mihanblog_like_wrapper span{
+        display: none;
+    }
+    .mihanblog_like_bar {
+        color: #FFFFFF;
+        cursor: pointer;
+        float: left;
+        font-size: 10px;
+        height: 20px;
+        line-height: 19px;
+        margin: 5px 0;
+    }
+    .mihanblog_like_likeBar {
+        background-color: #88B131;
+        padding-right: 5px;
+        border-top-right-radius: 2px;
+        border-bottom-right-radius: 2px;
+        text-align: right;
+    }
+    .mihanblog_like_likeBar:hover{
+        background-color: #699017;
+    }
+    .mihanblog_like_border {
+        background-color: #666666;
+        border: 1px solid #666666;
+        float: left;
+        font-size: 12px;
+        height: 20px;
+        margin-top: 2px;
+        width: 25px;
+        padding: 3px 5px 2px 0;
+        text-align: center;
+        border-radius: 2px;
+        color: #ffffff;
+        direction: ltr;
+        background-repeat: no-repeat ;
+        background-position: 4px center;
+    }
+    .mihanblog_like_border img {
+        margin-left: 2px;
+        margin-top: 2px;
+        width: 22px;
+    }
+    .mihanblog_like_dislikeBar {
+        background-color: #FF6F31;
+        padding-left: 5px;
+        border-top-left-radius: 2px;
+        border-bottom-left-radius: 2px;
+        text-align:left ;
+    }
+    .mihanblog_like_dislikeBar:hover{
+        background-color: #D54B10;
+    }
+
+
+
+    .mihanblog_like_show_help {
+        position: relative;
+    }
+    .mihanblog_like_show_help:hover span {
+        display: block;
+    }
+    .mihanblog_like_help_text {
+        background-color: white;
+        border: 1px solid #555555;
+        border-radius: 3px 3px 3px 3px;
+        color: #303030;
+        float: left;
+        font-size: 11px;
+        font-weight: normal;
+        padding: 5px 10px;
+    }
+
+    .mihanblog_like_help_arrow_dislike {
+        background: url("http://ryomaechizen-clob.mihanblog.com/public/public/images/icons/like_hover_top.png") no-repeat scroll 16px 0 transparent;
+        left: 0;
+        top: -4px;
+    }
+
+    .mihanblog_like_help_arrow_like {
+        background: url("http://ryomaechizen-clob.mihanblog.com/public/public/images/icons/like_hover_top _2.png") no-repeat scroll 16px 0 transparent;
+        left: -10px;
+        top: 29px;
+    }
+
+    .mihanblog_like_help_arrow{
+        height: 6px;
+        position: absolute;
+        width: 100px;
+
+    }
+
+    .mihanblog_like_v2_help_dislike {
+        left: -15px;
+        top: 24px;
+    }
+    .mihanblog_like_v2_help_like {
+        left: 0;
+        top: -35px;
+
+    }
+    .mihanblog_like_v2_help{
+        display: none;
+        position: absolute;
+        white-space: nowrap;
+        z-index: 1;
+    }
+
+    .mihanblog_like_Cnt{
+        display: inline;
+        color: #ffffff;
+    }
+
+</style><script>
+
+	statInfo = new Array();
+	setStatVar = function(index,value){
+		statInfo[index] = value;
+	}
+	getStatVar = function(index){
+		if(statInfo[index]) document.write(statInfo[index]);
+	}
+	
+	setStatVar('total_post','62');
+	setStatVar('total_author','2');
+	setStatVar('modify_date','چهارشنبه 4 تیر 1399');
+	
+	setStatVar('today_view','11');
+	setStatVar('yesterday_view','58');
+	
+	setStatVar('this_month_view','1321');
+	setStatVar('last_month_view','1332');
+
+	setStatVar('total_view','913162');
+	setStatVar('last_view_date','یکشنبه 23 آذر 1399 (05:32)');
+
+
+
+    
+    function setStatFromClient()
+    {
+        var url = 'http://ryomaechizen-clob.mihanblog.com/statupdate/?data[refereruri]=http://khateratekoudaki.mihanblog.com/&data[postid]=&data[requesturi]=/&data[sdate]=1607825871&data[hash]=7781b074b586a0c431225f0f0a07b989&data[resolution]='+screen.width+' X '+screen.height;
+
+//        alert(url);
+//        var newjs = document.createElement("SCRIPT");
+//        newjs.type = 'text/javascript';
+//        newjs.src = url;
+//
+//        var newdiv = document.createElement("DIV");
+//        newdiv.setAttribute("style","display:none");
+
+        document.write(unescape('%3Cscript src="'+url+'" type="text/javascript"%3E%3C/script%3E'));
+//        newdiv.appendChild (newjs);
+//        document.write(newjs);
+//        document.write(appendChild (newdiv);
+
+    };
+    setStatFromClient();
+        
+</script><script>
+	messageForm = function(post_id){
+		try{
+			window.open('/message','message','status=yes,scrollbars=yes,toolbar=no,menubar=no,location=no ,width=480px,height=550px');
+		} catch(e){}
+	}
+</script><script>
+	linkdailyForm = function(){
+		try{
+			window.open('/linkdaily/new','linkdaily','status=yes,scrollbars=yes,toolbar=no,menubar=no,location=no ,width=500px,height=460px');
+		} catch(e){}
+	}
+</script><script>
+
+var MihanblogShopAdsArray = new Array();
+
+function GetMihanBlogShowAds(){
+	if(MihanblogShopAdsArray.length){
+		var adsTarget = 'MihanblogShopAds';
+		var containerWidth = document.getElementById(adsTarget).offsetWidth;
+		if(containerWidth>=200){
+			var adsCnt = parseInt(containerWidth / 200) ;
+			if(adsCnt>MihanblogShopAdsArray.length){
+				adsCnt = MihanblogShopAdsArray.length ; 
+			}
+//			var OneAdsWidth = parseInt(containerWidth / adsCnt) ;
+			var OneAdsWidth = containerWidth / adsCnt ;
+			if(OneAdsWidth>400){
+				OneAdsWidth = 400 ;
+			}
+			var OutHtml = '';
+			var img = '';
+			var link = '';
+			var title = '';
+			var description = '';
+			var imgWidth = 70;
+			if(OneAdsWidth>230){
+				imgWidth = 80;
+			}
+			if(OneAdsWidth>300){
+				imgWidth = 90;
+			}
+			for(adsOne=0;adsOne<adsCnt;adsOne++){
+				
+				img = MihanblogShopAdsArray[adsOne]['img'];
+				link = MihanblogShopAdsArray[adsOne]['link'];
+				title = MihanblogShopAdsArray[adsOne]['title'];
+				description = MihanblogShopAdsArray[adsOne]['description'];
+				
+				OutHtml += '<td style="background-color:#FFF;width: '+OneAdsWidth+'px;border:1px solid #f00;margin:0px 0px;font-size:11px;font-family:tahoma;padding:2px;margin:0px 0px;font-size:11px;border: 1px solid BurlyWood; padding: 1px; height: '+(imgWidth+25)+'px;">';
+
+				OutHtml += '	<a href="http://ryomaechizen-clob.mihanblog.com/'+link+'" target="_blank" style="text-decoration:none">';
+
+				OutHtml += '			<div style="width: '+(OneAdsWidth-16)+'px;cursor:pointer;font-size:12px;padding: 4px 1px 4px 7px; white-space: nowrap; text-align: center; font-weight: bold; color: blue;white-space:nowrap;overflow:hidden">';
+				OutHtml += 					title;
+				OutHtml += '			</div>';
+				OutHtml += '			<div style="cursor:pointer;padding: 1px; display: block; float: right; width: '+imgWidth+'px;">';
+				OutHtml += '				<img src="'+img+'.html" style="border:0px;padding:0px;margin:0px;width:'+imgWidth+'px;height:'+imgWidth+'px;">';
+				OutHtml += '			</div>';
+				OutHtml += '			<div style="padding: 1px; display: block; float: right; width: '+(OneAdsWidth-13-imgWidth)+'px; text-align: right;overflow:hidden">';
+				OutHtml += '				<div style="overflow:hidden;cursor:pointer;padding: 2px 3px; line-height: 17px; height: '+(imgWidth-3)+'px; text-align: justify;color:#000;direction:rtl">';
+				OutHtml += 						description;
+				OutHtml += '				</div>';
+				OutHtml += '			</div>';
+
+				OutHtml += '	</a>';
+
+				OutHtml += '</td>';
+			}
+			
+			var Out = '<table align="center" cellpadding="0" cellspacing="2" style="width:'+(OneAdsWidth*adsCnt)+'px;"><tr>'+OutHtml+'</tr></table>'; 
+			
+			Out = '<div style="text-align:center;padding:0px;margin:3px auto;">'+Out+'</div>'; 
+			
+			document.getElementById(adsTarget).style.height = (imgWidth+35)+'px' ;
+			document.getElementById(adsTarget).innerHTML = Out ;
+		}
+	}
+}
+</script>
+    <style>
+        @font-face {
+            font-family: 'Mihan-Iransans';
+            src: url('http://ryomaechizen-clob.mihanblog.com/public/public/fonts/Iransans.eot');
+            src: url('http://ryomaechizen-clob.mihanblog.com/public/public/fonts/Iransans.eot?') format('embedded-opentype'),
+            url('http://ryomaechizen-clob.mihanblog.com/public/public/fonts/Iransans.woff2') format('woff2'),
+            url('http://ryomaechizen-clob.mihanblog.com/public/public/fonts/Iransans.woff') format('woff'),
+            url('http://ryomaechizen-clob.mihanblog.com/public/public/fonts/Iransans.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+        @font-face {
+            font-family: 'Mihan-IransansBold';
+            src: url('http://ryomaechizen-clob.mihanblog.com/public/public/fonts/Iransans-Black.eot');
+            src: url('http://ryomaechizen-clob.mihanblog.com/public/public/fonts/Iransans-Black.eot?') format('embedded-opentype'),
+            url('http://ryomaechizen-clob.mihanblog.com/public/public/fonts/Iransans-Black.woff2') format('woff2'),
+            url('http://ryomaechizen-clob.mihanblog.com/public/public/fonts/Iransans-Black.woff') format('woff'),
+            url('http://ryomaechizen-clob.mihanblog.com/public/public/fonts/Iransans-Black.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+        @font-face {
+            font-family: 'Mihan-IransansLight';
+            src: url('http://ryomaechizen-clob.mihanblog.com/public/public/fonts/Iransans-UltraLight.eot');
+            src: url('http://ryomaechizen-clob.mihanblog.com/public/public/fonts/Iransans-UltraLight.eot?') format('embedded-opentype'),
+            url('http://ryomaechizen-clob.mihanblog.com/public/public/fonts/Iransans-UltraLight.woff2') format('woff2'),
+            url('http://ryomaechizen-clob.mihanblog.com/public/public/fonts/Iransans-UltraLight.woff') format('woff'),
+            url('http://ryomaechizen-clob.mihanblog.com/public/public/fonts/Iransans-UltraLight.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+        @font-face {
+            font-family: 'Mihan-Nassim';
+            src: url('http://ryomaechizen-clob.mihanblog.com/public/public/fonts/Nassim.eot');
+            src: url('http://ryomaechizen-clob.mihanblog.com/public/public/fonts/Nassim.eot?') format('embedded-opentype'),
+            url('http://ryomaechizen-clob.mihanblog.com/public/public/fonts/Nassim.woff2') format('woff2'),
+            url('http://ryomaechizen-clob.mihanblog.com/public/public/fonts/Nassim.woff') format('woff'),
+            url('http://ryomaechizen-clob.mihanblog.com/public/public/fonts/Nassim.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+        @font-face {
+            font-family: 'Mihan-Koodak';
+            src: url('http://ryomaechizen-clob.mihanblog.com/public/public/fonts/Koodak.eot');
+            src: url('http://ryomaechizen-clob.mihanblog.com/public/public/fonts/Koodak.eot?') format('embedded-opentype'),
+            url('http://ryomaechizen-clob.mihanblog.com/public/public/fonts/Koodak.woff2') format('woff2'),
+            url('http://ryomaechizen-clob.mihanblog.com/public/public/fonts/Koodak.woff') format('woff'),
+            url('http://ryomaechizen-clob.mihanblog.com/public/public/fonts/Koodak.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+        @font-face {
+            font-family: 'Mihan-Yekan';
+            src: url('http://ryomaechizen-clob.mihanblog.com/public/public/fonts/Yekan.eot');
+            src: url('http://ryomaechizen-clob.mihanblog.com/public/public/fonts/Yekan.eot?') format('embedded-opentype'),
+            url('http://ryomaechizen-clob.mihanblog.com/public/public/fonts/Yekan.woff2') format('woff2'),
+            url('http://ryomaechizen-clob.mihanblog.com/public/public/fonts/Yekan.woff') format('woff'),
+            url('http://ryomaechizen-clob.mihanblog.com/public/public/fonts/Yekan.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+        @font-face {
+            font-family: 'FontAwesome';
+            src: url('http://ryomaechizen-clob.mihanblog.com/public/public/fonts/fontawesome_webfont.eot');
+            src: url('http://ryomaechizen-clob.mihanblog.com/public/public/fonts/fontawesome_webfont.eot?') format('embedded-opentype'),
+            url('http://ryomaechizen-clob.mihanblog.com/public/public/fonts/fontawesome_webfont.woff2') format('woff2'),
+            url('http://ryomaechizen-clob.mihanblog.com/public/public/fonts/fontawesome_webfont.woff') format('woff'),
+            url('http://ryomaechizen-clob.mihanblog.com/public/public/fonts/fontawesome_webfont.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+
+
+        
+
+        /* Smartphones (portrait and landscape) ----------- */
+
+        /*
+        @media only screen and (max-width : 480px) and (min-width : 320px) {
+            .sabaClick_advert__wrapper{
+                display:block;
+            }
+            .sabaClick_advert__inner{
+                max-width: 90%;
+                margin: 0 5%;
+            }
+        }
+        */
+
+    </style>
+
+
+
+
+
+
+<html><meta http-equiv="Content-Type" content="text/html; charset=utf-8" >
+<meta name="language" content="Farsi">
+<meta name="geo.region" CONTENT="IR" />
+<meta name="googlebot" content="INDEX, follow" />
+<meta name="robots" content="index, follow">
+<meta name="description" content="تیـم آبـی عشق آبـی -  - تیـم آبـی عشق آبـی">
+<meta name="keywords" content="تیـم آبـی عشق آبـی,ryomaechizen-clob,">
+<link rel="alternate" type="application/rss+xml" title="تیـم آبـی عشق آبـی" href="http://ryomaechizen-clob.mihanblog.com/post/rss/">
+
+<head><link href="http://fonts.googleapis.com/css?family=Imprima" rel="stylesheet" type="text/css">
+    <link href="../file.mihanblog.com/public/user_data/user_files/558/1673814/95.png"
+          rel="shortcut icon">
+    <style>
+        #navbar-iframe {display: none;}
+        body {color: #000000;
+            background: url(http://uupload.ir/files/f7p2_bg109.png);
+            background-color: #000000;
+            background-attachment:fixed;
+            cursor: url(http://cur.cursors-4u.net/cursors/cur-9/cur827.cur), auto;
+            font-family:;
+            line-height: 15px
+            font-size: 16px;}
+        a:link, a:visited {text-decoration:none;
+            -webkit-transition: all 0.5s ease-in-out;
+            -moz-transition: all 0.5s ease-in-out;
+            border-bottom:2px solid transparent;
+            -o-transition: all 0.5s ease-in-out;
+            -ms-transition: all 0.5s ease-in-out;
+            transition: all 0.5s ease-in-out;
+            color: #000000;border:1px solid transparent;
+            cursor: url(http://s5.picofile.com/file/8369350034/ani1061.png), progress;}
+        a:hover{border:1px solid #000000;
+            color:#999;
+            border-radius:10px;}
+        ::-webkit-scrollbar {width: 9px;height: 9px;}
+        ::-webkit-scrollbar-track-piece  {background-color: #FFFFFF;}
+        ::-webkit-scrollbar-thumb:vertical, ::-webkit-scrollbar-thumb:horizontal {
+            background-color: rgba(0, 4, 60, 0.16);border: 4px double #707070;}
+        img {opacity:1;
+            -webkit-transition: all 0.5s ease-in-out;
+            -moz-transition: all 0.5s ease-in-out;
+            border-bottom:2px solid transparent;
+            -o-transition: all 0.5s ease-in-out;
+            -ms-transition: all 0.5s ease-in-out;
+            transition: all 0.5s ease-in-out;}
+        img:hover {opacity:0.6;}
+        ::-moz-selection {background: #9bdfff;color: #00043c;}
+        ::selection {color: #00043c;background: #9bdfff;}
+        blockquote {border: 1px dashed #0046a8;
+            border-radius:5px;border-left: 12px solid #0046a8;background:url(http://i.imgur.com/tJOuVgP.png);
+            padding:10px;
+            -moz-transition: all 1.0s ease-in-out;
+            -o-transition: all 1.0s ease-in-out;
+            -ms-transition: all 1.0s ease-in-out;
+            transition: all 1.0s ease-in-out;}
+        blockquote:hover {border: 1px dashed #00043c;
+            border-radius: 30px;border-right: 12px solid #00043c;
+            background:url(http://i.imgur.com/Optg26z.png);
+            -webkit-box-shadow: 0px 0px 12px 2px #94d4f2;
+            -moz-box-shadow:    0px 0px 12px 2px rgba(0, 70, 168, 0.48);
+            box-shadow:         0px 0px 12px 2px rgba(0, 4, 60, 0.25);}
+        .title-a {font: 16px;
+            font-family: flowy brush rust;
+            margin: 5px;
+            border-radius:10px;
+            text-transform:uppercase;
+            color:#666666;
+            letter-spacing:4px;
+            padding: 5px;
+            line-height:20px;
+            text-align: center;
+            border-left: 25px solid #ffffff;
+            border-right: 25px solid #ffffff;
+            border-top: 2px solid #101da3;
+            border-bottom: 2px solid #101da3;
+            background: #ffffff;
+            -moz-transition: all 0.5s ease-in-out;
+            -o-transition: all 0.5s ease-in-out;
+            -ms-transition: all 0.5s ease-in-out;
+            transition: all 0.5s ease-in-out;}
+        .title-a:hover {border-left: 60px solid #ffffff;
+            border-right: 1px solid #000000;}
+        .title-b {text-align: center;
+            font:12px Imprima;}
+        u {text-decoration:none;
+            border-bottom: 1px solid rgba(69, 85, 255, 0.51);}
+        b {color: #4455ff;
+            font-weight: bold;}
+        strike {text-decoration: line through;
+            color: rgb(0, 4, 60);
+            -moz-transition: all 0.5s ease-in-out;
+            -o-transition: all 0.5s ease-in-out;
+            -ms-transition: all 0.5s ease-in-out;
+            transition: all 0.5s ease-in-out}
+        strike:hover {color: transparent;}
+        a.tablo{box-shadow:0px 1px 10px 2px #2ae9fb;
+            background:#ffffff;
+            width:67px;margin:3px;
+            font:14px Imprima;
+            padding-top:26px;
+            padding-bottom:26px;
+            display:inline-block;
+            border-radius: 50px;
+            text-align:center;
+            color: #555;
+            text-transform:uppercase;
+            letter-spacing:1px;
+            border:0px dotted #FFEEF3;
+            -moz-transition: all 0.5s ease-in-out;
+            -o-transition: all 0.5s ease-in-out;
+            -ms-transition: all 0.5s ease-in-out;
+            transition: all 0.5s ease-in-out;}
+        a.tablo:hover{background: #4555ff;
+            color: #2ae9fb;
+            -moz-transform: rotate(360deg) scale(0.7);
+            -webkit-transform: rotate(360deg) scale(0.7);
+            -o-transform: rotate(360deg) scale(0.7);
+            -ms-transform: rotate(360deg) scale(0.7);
+            transform: rotate(360deg) scale(0.7);}
+        a.linkies {display:inline-block;
+            background-color: #00043c;width:100px;
+            background-image:url(کوچیک);
+            background-repeat:no-repeat;
+            background-size:24px;
+            background-position:100% 100%;
+            padding: 5px;
+            border:2px solid #ffffff;
+            margin: 3px;text-align:center;
+            color: #2ae9fb;
+            -moz-transition: all 0.5s ease-in-out;
+            -o-transition: all 0.5s ease-in-out;
+            -ms-transition: all 0.5s ease-in-out;
+            transition: all 0.5s ease-in-out;}
+        a.linkies:hover {border-radius:10px;
+            color:#ffffff;
+            border:2px solid #ffffff;
+            background-color:#7c7c7c;}
+        a.nav{box-shadow: inset 9px 0 0px 0 rgba(148, 212, 242, 0.58);
+            margin:10px;
+            display:inline-block;
+            text-align:center;
+            background: #fff;
+            color:4d4d4d;
+            width:350px;
+            border:1px solid rgba(148, 212, 242, 0.55);
+            border-left:20px solid #F4D4FF;
+            width: 400px;
+            overflow: hidden;
+            -moz-transition: all 0.5s ease-in-out;
+            -o-transition: all 0.5s ease-in-out;
+            -ms-transition: all 0.5s ease-in-out;
+            transition: all 0.5s ease-in-out;}
+        a.nav:hover{box-shadow: inset 850px 0 0px 0 #FFFFFF;
+            color: #555;}
+        a.uhmy {letter-spacing:1px;
+            -moz-transition: all 0.5s ease-in-out;
+            -o-transition: all 0.5s ease-in-out;
+            -ms-transition: all 0.5s ease-in-out;
+            transition: all 0.5s ease-in-out;
+            margin:2px;
+            text-transform:uppercase;
+            display:inline-block;
+            font:9px Imprima;
+            text-align:left;
+            background: #ffffff;
+            text-align:center;
+            background: #ffffff;
+            width:350px;
+            color:#777;
+            padding:3px;
+            border:1px solid rgba(68, 85, 255, 0.55);
+            text-decoration:none;}a.uhmy:hover{
+                                      border-left:1px solid rgba(68, 85, 255, 0.52);
+                                      color: rgba(0, 4, 60, 0.57);
+                                      border:1px solid rgba(42, 233, 251, 0.49);}
+        .cutie {background: #ffffff;
+            color: #6C6C6C;
+            font-size: 16px;
+            padding:1px;
+            border-radius: 10px;
+            text-align: justify;}
+        .nana {font:13px;background: #00043c;
+            font-family:B Koodak;
+            margin-right:20px;margin-top:15px;margin-bottom:5px;
+            margin-left:425px;padding:3px;
+            text-align: center;border-radius:10px;
+            border: 2px solid #ffffff;box-shadow:2px 2px 4px #ffffff;}
+        .mimi {font: 14px;padding-left:9px;
+            font-family:Alex brush;
+            margin-bottom: 5px;margin-top: 10px;
+            border-radius:30px;
+            color:#666666;
+            letter-spacing:2px;
+            padding-top: 7px;padding-bottom: 7px;
+            text-align: center;
+            background-color: #8eaeff;
+            background-image:url(../file.mihanblog.com/public/user_data/user_files/558/1673814/95.png);
+            background-repeat:no-repeat;
+            background-size:24px;
+            background-position:95% 100%;
+            border: 2px solid #ffffff;
+            -moz-transition: all 0.5s ease-in-out;
+            -o-transition: all 0.5s ease-in-out;
+            -ms-transition: all 0.5s ease-in-out;
+            transition: all 0.5s ease-in-out;}
+        .mimi:hover {border-radius:0px;
+        .old {background: url(http://i.imgur.com/6KKVi.gif);
+            font:12px Imprima;
+            padding:2px;
+            text-align:center;}
+        /* Comment Start
+        ----------------------------------------------- */
+        #comments h4 {text-align:center; color: #555555;
+            font-weight:normal;
+            font:17px Imprima;
+            font-style:italic;}
+        #comments-block {width:480px;
+            margin:2em;
+            color:#444444;text-align:center;
+            font:11px Imprima;}
+        .comment-body {margin:0px;}
+        .comment-body p {background:#FFFFFF;
+            border-radius: 5px;
+            box-shadow:0px 0px 4px 2px #FFE6EA;
+            border:2px dashed #FFFFFF;
+            margin:0em;text-align:center;
+            padding:5px;
+            color:#333333;}
+        .comment-timestamp {margin:1em;
+            text-align:center; color: #555555;
+            font-weight:normal;
+            font:15px georgia;}
+        .comment-data {margin-top:5px !important;margin-bottom:5px !important;
+            padding:3px;
+            color:#666666;text-align:center;}
+        .comment-icon blogger-comment-icon{display:none}
+        span.comment-icon{display:none}
+        .deleted-comment {font-style:italic;
+            color:#B2B2B2;}
+        /* Comment Ends
+        ----------------------------------------------- */
+    </style>
+    <center>
+        <div style="position:center;margin-top:25px;width:900px;border:4px solid #0046a8;background:url(http://uupload.ir/files/ipyp_starkiteckt_devil-s-lair-nebula.png) ; height:314px;"><img src="http://s2.picofile.com/file/8369300726/headr.png" style="float:left;width:500px; height:314px;"><br/>
+            <div class="nana" style="color:#ffffff">تیـم آبـی عشق آبـی</div><br/><div style="text-align:center; padding-left: 20px;font-size: 13px;margin: 10px;margin-left:400px;font-family:Imprima;">Hate My blog? Please, click <a href="javascript:window.close();">Here</a><br><br><br></div>
+            <div style="font-size:20px;text-align:center; padding-left:22px;display:inline-block;center;">
+                <div class="top"><a class="tablo" <a href="index.html">Home</a><a class="tablo" <a href="../srhm.mihanblog.com/index.html">designe</a>
+                    <a class="tablo" <a href="javascript:messageForm()">Message</a><a class="tablo" <a href="https://www.instagram.com/Esteghlal.Fc.Official/">insta</a>
+    </center><script type="text/javascript">
+        document.ondragstart = function () { return false; }; </script><title>تیـم آبـی عشق آبـی</title>
+    <link rel="shortcut icon" href="http://gfx.manographic.ir/up/images/si8iztzqj8224c165a9f.gif"></head>
+<table style="margin-bottom: 5px;margin-top:30px;font-size:13px;padding-left: 10px;padding-right: 10px; line-height: 22px; background:url(http://s8.picofile.com/file/8367464742/3jlx_bg34.png); border: 4px solid #0046a8; border-bottom:4px solid #0046a8;border-top:4px solid #0046a8;" width="900" align="center" border="0" cellspacing="10" ;><tbody><tr>
+    <td valign="top" style="width:530px; padding-right:5px;padding-bottom:10px; padding-left:15px; "><div id="page">
+        <script type="text/javascript" language="javascript" src="http://up.zibatools.ir/view/175770/1.js"></script>
+        <div class=" " dir="rtl" ><div class="mnen">		<div id="MihanblogShopAds" style="display:block;height:0px;width:100%;border:0px"></div>
+		<div class="title-a" style="color:#00043c"><BlogItemTitle><span class="PostTitle" style="color:#00043c">Fix#</a>
+</span></BlogItemTitle></div><div class="title-b"> [ سه شنبه 29 اسفند 1396  ]  [ 01:20 ق.ظ  ]  <a href="http://ryomaechizen-clob.mihanblog.com/post/author/1391115">[ ✭Barana_ tajii✭ ] </a></div>
+            <div></br></br><div id="InPost_MihanblogShopAds" style="display:block;height:0px;width:100%;border:0px"></div>
+
+
+
+
+
+
+
+
+
+<div align="center"><font size="5" face="impact"><font size="6">I miss you coach</font><font face="times new roman,times,serif">(Andrea Stramaccioni)</font></font><font face="impact"><br></font></div><div align="center"><br></div><div align="center"><font size="3" face="Mihan-Iransans"><font color="#33CCFF"><font face="Mihan-IransansBold"><font color="#000000">به نام</font> <span style="background-color: rgb(0, 0, 153);"><font color="#33FFFF">خدا</font></span></font></font></font></div><div align="center"><font size="3" face="Mihan-Iransans"><font color="#33CCFF"><font face="Mihan-IransansBold"><font color="#000000">به نام</font> <font color="#3333FF">عشق</font></font></font></font></div><div align="center"><font size="3" face="Mihan-Iransans"><font color="#33CCFF"><font face="Mihan-IransansBold"><font color="#000000">به نام<font color="#333399"> </font></font><font color="#333399">تیمی</font> <font color="#000000">که تو </font><font color="#3333FF">قلبـــه</font> <font color="#000000">میلیون ها عاشقه</font></font></font></font><br><font size="3" face="Mihan-Iransans"><font color="#33CCFF"><font face="Mihan-IransansBold"><font color="#000000">به نـام</font> <font color="#000099">اسـتقلال&nbsp; <font color="#000000">/</font><font color="#3333FF">تــاج</font> <i><span style="background-color: rgb(0, 0, 0);"><font color="#FFFF00">دوستاره</font></span></i><font color="#000000"> آسیا/</font></font></font></font></font></div><div align="center"><font size="3" face="Mihan-Iransans"><font color="#33CCFF"><font face="Mihan-IransansBold"><font color="#000099"><font color="#000000">#آبــی_به_رنگ_آسمـان</font></font></font></font></font></div><div align="center"><font size="3" face="Mihan-Iransans"><font color="#33CCFF"><font face="Mihan-IransansBold"><font color="#000099"><font color="#000000">#سال_نو_مبارک<br></font></font></font></font></font></div><div align="center"><font size="3" face="Mihan-Iransans"><font color="#33CCFF"><font face="Mihan-IransansBold"><font color="#000099"><br></font></font></font></font></div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<br><BlogPostTagsBlock><br>                </BlogPostTags></BlogPostTagsBlock><BlogExtendedPost><br><a href="http://ryomaechizen-clob.mihanblog.com/post/918"></a></BlogExtendedPost>
+                <itempage><div id="comments" style=""><blogitemcommentsenabled><a name="comments"></a>
+                    <dl id="comments-block"><div style="width:475px;"><blogitemcomments></a></dt><dd class="comment-body">
+                        <p><span class="comment"><BlogComment><a target="_self" href="javascript:newComment(918)"> 									<b> </b> 									<script>setCommentCnt(918)</script>:نظرات 								</a>
+<span dir="rtl" > <script type="text/javascript">GetBC(<-PostId->);</script></span></BlogComment></p>
+                    </dd></BlogItemComments></dl></div><center><p class="comment-timestamp"></p></div></ItemPage></center><br /><div class="title-a" style="color:#00043c"><BlogItemTitle><span class="PostTitle" style="color:#00043c">^^</a>
+</span></BlogItemTitle></div><div class="title-b"> [ چهارشنبه 4 تیر 1399  ]  [ 10:47 ب.ظ  ]  <a href="http://ryomaechizen-clob.mihanblog.com/post/author/1391115">[ ✭Barana_ tajii✭ ] </a></div>
+            <div></br></br><div align="center"><font size="3" face="Mihan-IransansBold"><br></font></div><div align="center"><font size="3" face="Mihan-IransansBold">و در آخر این نادان ها هستند که جهان را دگرگون میکنند.</font></div><div align="center"><font size="3" face="Mihan-IransansBold">گاهی تغییرات سخت،ویران کننده و اساسی هستند.</font></div><div align="center"><font size="3" face="Mihan-IransansBold">به زودی شاهد این اتفاقات مثبت خواهیم بود.</font></div><div align="center"><font size="3" face="Mihan-IransansBold">آن روز....</font></div><div align="center"><font size="3" face="Mihan-IransansBold">دور نیست.</font></div><div align="center"><font size="3" face="Mihan-IransansBold"><br></font></div><div align="center"><font size="3" face="Mihan-IransansBold">Bani<br></font></div><div align="center"><font size="3" face="Mihan-IransansBold"><br></font></div><font size="3" face="Mihan-IransansBold">
+
+
+</font><br><BlogPostTagsBlock><br>                </BlogPostTags></BlogPostTagsBlock><BlogExtendedPost><br><a href="http://ryomaechizen-clob.mihanblog.com/post/1062"></a></BlogExtendedPost>
+                <itempage><div id="comments" style=""><blogitemcommentsenabled><a name="comments"></a>
+                    <dl id="comments-block"><div style="width:475px;"><blogitemcomments></a></dt><dd class="comment-body">
+                        <p><span class="comment"><BlogComment><a target="_self" href="javascript:newComment(1062)"> 									<b> </b> 									<script>setCommentCnt(1062)</script>:نظرات 								</a>
+<span dir="rtl" > <script type="text/javascript">GetBC(<-PostId->);</script></span></BlogComment></p>
+                    </dd></BlogItemComments></dl></div><center><p class="comment-timestamp"></p></div></ItemPage></center><br /><div class="title-a" style="color:#00043c"><BlogItemTitle><span class="PostTitle" style="color:#00043c">FARSHID_TIME#</a>
+</span></BlogItemTitle></div><div class="title-b"> [ جمعه 1 فروردین 1399  ]  [ 03:09 ب.ظ  ]  <a href="http://ryomaechizen-clob.mihanblog.com/post/author/1391115">[ ✭Barana_ tajii✭ ] </a></div>
+            <div></br></br><div align="center"><br></div><div style="direction: rtl;" align="center"><img alt="ورزشی - فوتبال - لیگ برتر ایران - دوره هجدهم - 11 مرداد 1397 - ذوب" class="n3VNCb" src="https://lh3.googleusercontent.com/proxy/IXZh3c_TEz4ePSzhRUWHHXSJCFV_IaAPb2qMYtc30hIF-JKnvATdVKdKNYvjAAlqhqCtSLmcQg1Ph-kyTvRT684Vrrj8lrW-kvme1skBmKZGMh2yXL_hHmk0PK0x5aooaUqCibbD72H810qeewl0JqF2HtEcxehDWEYqpN6BDVDlIAIsaKJsubPiyO_W74JIjTpRL2ki0Oi3gZqS5Rf9Z9Qj--tKxZbEDAH6uFWkt_oYRj2ut79J5ZbG8l6L7xNPo9PLRnxnPp1DR-PAzwT6DIoW5ecogf8ESaZERxcDkHiIVcLjI9DkpDYLDfUUHbqjdLHQh6NcZdJL7gPX0mxJv4vfZ6ziZuIZbfshR-_dlpNwyn3_K_TBae9jyVLixXmoB-c6T1NUQ9ueBtg7P0kP6pf7WUk0YgBCik4ZboODxv57tzY_odPD-yNPDKXJLhe8Mp2RFFBmc3VOdvNzdEqBed5E_KjwU5o-bcHR1NtqEqeP3ZCcZ-1znxQuZtg08i4LLKmsexv0L9Gs4lNLWwUgh-TCBd9naS8N8bJ7djorrWphElPwxD2miC6tCoJets-vbsGgHcMsUbuSx4MjV3HgDI9xE7kamMrR6d57IDhGAXbNAF26ftOflLo2YtjL6C2vOA9W0k6aoEh5cfPgadaqiOr73Anx6UPPNCnbfok0BZ5hcSzrhGrUcwbKN3wNoFy9hQ" data-noaft="1" style="width: 383px; height: 574.5px; margin: 0px;"></div><div style="direction: rtl;" align="center"><font size="2" face="Mihan-Iransans">آقــای فرشیــد اسماعیلـــی</font></div><div style="direction: rtl;" align="center"><font size="2" face="Mihan-Iransans">این روزا وصف خوبیات زیاد از بازیکنای جوونتر تیم شنیده میشه.</font></div><div style="direction: rtl;" align="center"><font size="2" face="Mihan-Iransans">کمکات بهشون...</font></div><div style="direction: rtl;" align="center"><font size="2" face="Mihan-Iransans">چه مالی،چه روحی روانی،چه اینکه هواشونو همیشه داشتی...</font></div><div style="direction: rtl;" align="center"><font size="2" face="Mihan-Iransans">هرچند که این قلب مهربونت از دوسال پیش به من ثابت شدست</font></div><div style="direction: rtl;" align="center"><font size="3" face="Mihan-IransansBold">مهربــون...سلطان لحجه شیرازی....کاکو ....داداش محمد و فرزانه جون</font></div><div style="direction: rtl;" align="center"><font size="3" face="Mihan-IransansBold">مررررررررسی که اینقد خوبی!</font></div><div style="direction: rtl;" align="center"><font size="3" face="Mihan-IransansBold"><br></font></div><div style="direction: rtl;" align="center"><font size="3" face="Mihan-IransansBold"><br></font></div><div style="direction: rtl;" align="center"><font size="3" face="Mihan-IransansBold"><font size="2"><font face="Mihan-Iransans">{نمیدونی چ قد دلم واسه خوب..بــــآشه&nbsp; گفتنات تنگ شده...</font></font></font></div><div style="direction: rtl;" align="center"><font size="3" face="Mihan-IransansBold"><font size="2"><font face="Mihan-Iransans">زیباترین لحجه شیرازی دنیا رو توداری،درجریانی که؟</font></font></font></div><div style="direction: rtl;" align="center"><font size="3" face="Mihan-IransansBold"><font size="2"><font face="Mihan-Iransans">بهترین صدارو توداری!</font></font></font></div><div style="direction: rtl;" align="center"><font size="3" face="Mihan-IransansBold"><font size="2"><font face="Mihan-Iransans">غرغرو ترین و بهونه گیرترین ادم دنیا تویی!</font></font></font></div><div style="direction: rtl;" align="center"><font size="3" face="Mihan-IransansBold"><font size="2"><font face="Mihan-Iransans">خیلیم پرویی!</font></font></font></div><div style="direction: rtl;" align="center"><font size="3" face="Mihan-IransansBold"><font size="2"><font face="Mihan-Iransans">درجریانی؟}</font></font></font></div><div style="direction: rtl;" align="center"><font size="3" face="Mihan-IransansBold"><font size="2"><font face="Mihan-Iransans">آقای اسماعیلی...</font></font></font></div><div style="direction: rtl;" align="center"><font size="3" face="Mihan-IransansBold"><font size="2"><font face="Mihan-Iransans">دلم برات تنگ شده:/<br></font></font></font></div><div style="direction: rtl;" align="center"><font size="2" face="Mihan-IransansBold"><br></font></div><div style="direction: rtl;" align="center"><font size="3" face="Mihan-IransansBold"><br></font></div><br><BlogPostTagsBlock><br>                </BlogPostTags></BlogPostTagsBlock><BlogExtendedPost><br><a href="http://ryomaechizen-clob.mihanblog.com/post/1061"></a></BlogExtendedPost>
+                <itempage><div id="comments" style=""><blogitemcommentsenabled><a name="comments"></a>
+                    <dl id="comments-block"><div style="width:475px;"><blogitemcomments></a></dt><dd class="comment-body">
+                        <p><span class="comment"><BlogComment><a target="_self" href="javascript:newComment(1061)"> 									<b> </b> 									<script>setCommentCnt(1061)</script>:نظرات 								</a>
+<span dir="rtl" > <script type="text/javascript">GetBC(<-PostId->);</script></span></BlogComment></p>
+                    </dd></BlogItemComments></dl></div><center><p class="comment-timestamp"></p></div></ItemPage></center><br /><div class="title-a" style="color:#00043c"><BlogItemTitle><span class="PostTitle" style="color:#00043c">Be_name_eshgh#</a>
+</span></BlogItemTitle></div><div class="title-b"> [ چهارشنبه 28 اسفند 1398  ]  [ 05:30 ب.ظ  ]  <a href="http://ryomaechizen-clob.mihanblog.com/post/author/1391115">[ ✭Barana_ tajii✭ ] </a></div>
+            <div></br></br>
+<div align="center">
+		<!--AparatShow-->
+				<div style="display:none">[http://www.aparat.com/v/Gpe2k]</div>
+                <div class="aparatFrame">
+                    <iframe frameborder=0  allowFullScreen="true" webkitallowfullscreen="true" mozallowfullscreen="true" width="435" height="290" src="http://www.aparat.com/video/video/embed/videohash/Gpe2k/vt/frame"> </iframe>
+                </div>
+
+		<!--eoAparatShow-->
+				</div><div align="center"><br></div><div align="center"><font size="3" face="Mihan-IransansBold">موزیک به نام عشق_کاری از مهبد عزیز</font></div><div align="center"><font size="3" face="Mihan-IransansBold"><br></font></div><div align="center"><font size="3" face="Mihan-IransansBold">98 گذشت!</font></div><div align="center"><font size="3" face="Mihan-IransansBold">سال متفاوتی بود،خیلی متفاوت شاید برای من!</font></div><div align="center"><font size="3" face="Mihan-IransansBold">از اولاش بگیر تا خرداد و تیر لعنتی...</font></div><div align="center"><font size="3" face="Mihan-IransansBold">شهریور و مهر و ابان پر از خاطره های ایتالیایی...</font></div><div align="center"><font size="3" face="Mihan-IransansBold">جدایی سرمربی...23روز ناراحتی!</font></div><div align="center"><font size="3" face="Mihan-IransansBold">دبیرستان و رشته ریاضی!</font></div><div align="center"><font size="3" face="Mihan-IransansBold">جشنواره ستارگان اصفهان...</font></div><div align="center"><font size="3" face="Mihan-IransansBold">کلی کتاب جدید...</font></div><div align="center"><font size="3" face="Mihan-IransansBold">یه گــــــام بزرگ به هدف نزدیک شدن...<br></font></div><div align="center"><font size="3" face="Mihan-IransansBold"><br></font></div><div align="center"><font size="3" face="Mihan-IransansBold">به همشون که نگاه میکنم</font></div><div align="center"><font size="3" face="Mihan-IransansBold">میبینم چیز زیاد بدی هم نبوده!یه سری روابط تموم شدن و فصل جدیدی از روابط دیگه کلید خوردن.خوشحالم اگر هزار بار دیگه هم به عقب برگردم باز هم دوستیمو اونجا با اون شخص تموم میکنم..محترمانه با 10 سال خاطره&nbsp; خداحافظی میکنمو....</font></div><div align="center"><font size="3" face="Mihan-IransansBold">شاید دلم بخواد واقعن امسال هر روز 1 درصد پیشرفت بکنم به سمت چیزی که میخوام!</font></div><div align="center"><font size="3" face="Mihan-IransansBold">امیدوارم کمکم کنی!میدونی ک بدون تو نمیشه!</font></div><div align="center"><font size="3" face="Mihan-IransansBold">برای تک تک انسای روی زمین ارزوی یه سال پر از خوشحالی دارم..</font></div><div align="center"><font size="3" face="Mihan-IransansBold">ارزو میکنم امسال لبخند های از ته دل همتونو ببینم..</font></div><div align="center"><font size="3" face="Mihan-IransansBold">ساز دلتون کوک رفیقای من</font></div><div align="center"><font size="3" face="Mihan-IransansBold">بخندید!<br></font></div><div align="center"><font size="3" face="Mihan-IransansBold">زیاد!</font></div><div align="center"><font size="3" face="Mihan-IransansBold">سال نو تون حســـــــــــابی مبارک<br></font></div>
+
+
+
+
+<br><BlogPostTagsBlock><br>                </BlogPostTags></BlogPostTagsBlock><BlogExtendedPost><br><a href="http://ryomaechizen-clob.mihanblog.com/post/1060"></a></BlogExtendedPost>
+                <itempage><div id="comments" style=""><blogitemcommentsenabled><a name="comments"></a>
+                    <dl id="comments-block"><div style="width:475px;"><blogitemcomments></a></dt><dd class="comment-body">
+                        <p><span class="comment"><BlogComment><a target="_self" href="javascript:newComment(1060)"> 									<b> </b> 									<script>setCommentCnt(1060)</script>:نظرات 								</a>
+<span dir="rtl" > <script type="text/javascript">GetBC(<-PostId->);</script></span></BlogComment></p>
+                    </dd></BlogItemComments></dl></div><center><p class="comment-timestamp"></p></div></ItemPage></center><br /><div class="title-a" style="color:#00043c"><BlogItemTitle><span class="PostTitle" style="color:#00043c">EL_CAPO#</a>
+</span></BlogItemTitle></div><div class="title-b"> [ یکشنبه 15 دی 1398  ]  [ 09:36 ب.ظ  ]  <a href="http://ryomaechizen-clob.mihanblog.com/post/author/1391115">[ ✭Barana_ tajii✭ ] </a></div>
+            <div></br></br>
+
+
+<div align="center">
+		<!--AparatShow-->
+				<div style="display:none">[http://www.aparat.com/v/z7oqX]</div>
+                <div class="aparatFrame">
+                    <iframe frameborder=0  allowFullScreen="true" webkitallowfullscreen="true" mozallowfullscreen="true" width="435" height="290" src="http://www.aparat.com/video/video/embed/videohash/z7oqX/vt/frame"> </iframe>
+                </div>
+
+		<!--eoAparatShow-->
+				</div><div align="center"><br></div><div align="center"><font size="3" face="Mihan-Koodak"><font size="4"><b>"<font color="#000099"> خداحافظ رئیس</font> " </b></font><br><font size="4">قصه جدایی ها همیشه تلخ و حزن انگیزند. رئیس را از آبی ها جدا کردند،محبوب قلبشان را از ایران فراری دادند<br>اما بهترین جواب به این سوال را در دنیای فوتبال سر الکس فرگوسن کبیر داده است:</font></font></div><div align="center"><font size="4" face="Mihan-Koodak"> کسانی که در روزهای شکست در کنار ما نیستند، در روزهای پیروزی حق حضور ندارند.</font></div><div align="center"><font size="4" face="Mihan-Koodak">این خطاب به تک تک مدیران خیانت کار است!!!</font></div><div align="center"><font size="4" face="Mihan-Koodak">آری دلتنگ رئیس خواهیم شد، دلتنگ جنتلمنی که انگار آمده بود رویایمان را بیدار کند و برود. <br>این بار رویا بیدار شده است، خودباوری در بند بند وجود آبی ها رخنه کرده است.<br>اِستِرا به ما یاد داد تا آخرین نفس ناامید نشویم، یاد داد جنگیدن و تسلیم نشدن رمز پیروزی است. <br>از ویرانه ها کاخ ساخت اما زمانی که باید تاج گذاری می کرد کاخ زیبای معمار ایتالیایی را ویران کردند.<br>حالا باید دست روی زانوهای خود بگذاریم و بار دیگر این کاخ رویایی را از نو بنا کنیم اما این بار بدون رئیس، آری بدون او...</font></div><div align="center"><font size="3" face="Mihan-Koodak"><font size="4" color="#3333FF"><b><font color="#000000">بدونِ</font> مردی که در تاریخ آبی ها جاودانه شد..</b></font><br><font size="4">باید به رئیس نشان دهیم که درس هایی که به ما داده است را به خوبی یاد گرفته ایم و تا آخرین نفس خواهیم جنگید، <br></font></font></div><div align="center"><font size="4" face="Mihan-Koodak">دوباره برخواهیم خواست و رویای فتح آسیا را زنده خواهیم کرد.<br>رئیس برای تمام خاطرات خوبی که برایمان ساختی از تو ممنونیم،</font></div><div align="center"><font size="4" face="Mihan-Koodak"> تو باعث شدی سرزمین چکمه را بیشتر دوست بداریم،</font></div><div align="center"><font size="4" face="Mihan-Koodak"> امیدواریم روزی دوباره تو را روی نیمکت نراتزوری تماشا کنیم.<br>میلیون ها قلب با رفتنت شکسته شد اما تو با رفتنت هم نشان دادی در زیر پوست این باشگاه چه خبر است.<br>نشان دادی ارزش صداقت بیشتر از همه چیز است. <br></font></div><div align="center"><font size="3" face="Mihan-Koodak"><font size="4">صادقانه و تا ابد در قلب آبی ها ماندگار شدی.<br>راستی آقای رئیس فایل صوتی ات خطاب به فرهاد را شنیدیم‌، باید اعتراف کنیم </font><br></font></div><div align="center"><font size="5" face="Mihan-Nassim"><b><font color="#3333FF"><u>هیچ کس اینجا به تو مانند نخواهد شد...</u></font></b></font></div><div align="center"><img class="irc_mi" src="https://miro.medium.com/proxy/0*eitWo3HjxKuVrL5f.jpg" style="" alt="Related image" width="450" height="308"></div><div align="center"><font size="4" face="Mihan-Koodak">اقای استراماچونی...</font></div><div align="center"><font size="4" face="Mihan-Koodak">میدونی با نبودت چند میلیون هوادارا نخوابیدن؟</font></div><div align="center"><font size="4" face="Mihan-Koodak">شب تا صبح متنظر به صفحه گوشیاشون نگاه میکردن بلکه خبری بیاد..از تو!</font></div><div align="center"><font size="4" face="Mihan-Koodak">اره از خوده تو..23 روز تمام..!</font></div><div align="center"><font size="4" face="Mihan-Koodak">برات تجمع کردن اعتراض کردن..تو خیابون اومدن!اما نشد ک باز کنار هم باشیم..</font></div><div align="center"><font size="4" face="Mihan-Koodak">نشد دوباره با دیدن سه پنج دوی دوست داشتنیت اشک بریزم از خوش حالی</font></div><div align="center"><font size="4" face="Mihan-Koodak">و چه شادی ها گذرا اَن...!</font></div><div align="center"><font size="4" face="Mihan-Koodak">مثل یه خواب بودی..کوتاه و شیرین!اما برمیگردی و من این قول رو به تو میدم!</font></div><div align="center"><font size="4" face="Mihan-Koodak">دلم برات تنگ میشه اما به لیست حسرت هام اضافت نمیکنم!اسمت قاطی اسم تیام و جپاروف و پاتوسی و... نمیره</font></div><div align="center"><font size="4" face="Mihan-Koodak">چون تو برمیگردی و دوباره یه استقلال با یه فلسفه جدید میسازیم</font></div><div align="center"><font size="4" face="Mihan-Koodak">عاشقتم مرد <font color="#000099">ایتالیایی</font> <font color="#3333FF">جذاب </font><font color="#33CCFF">من</font>!</font></div><div style="direction: ltr;" align="center"><font size="4"><b><font face="Mihan-Koodak">I miss you boss♥</font></b></font><br></div>
+
+
+
+
+
+
+
+
+<br><BlogPostTagsBlock><br>                </BlogPostTags></BlogPostTagsBlock><BlogExtendedPost><br><a href="http://ryomaechizen-clob.mihanblog.com/post/1056"></a></BlogExtendedPost>
+                <itempage><div id="comments" style=""><blogitemcommentsenabled><a name="comments"></a>
+                    <dl id="comments-block"><div style="width:475px;"><blogitemcomments></a></dt><dd class="comment-body">
+                        <p><span class="comment"><BlogComment><a target="_self" href="javascript:newComment(1056)"> 									<b> </b> 									<script>setCommentCnt(1056)</script>:نظرات 								</a>
+<span dir="rtl" > <script type="text/javascript">GetBC(<-PostId->);</script></span></BlogComment></p>
+                    </dd></BlogItemComments></dl></div><center><p class="comment-timestamp"></p></div></ItemPage></center><br /><div class="title-a" style="color:#00043c"><BlogItemTitle><span class="PostTitle" style="color:#00043c">  مطلب رمز دار : M_template#</a>
+</span></BlogItemTitle></div><div class="title-b"> [ شنبه 14 دی 1398  ]  [ 10:51 ب.ظ  ]  <a href="http://ryomaechizen-clob.mihanblog.com/post/author/1391115">[ ✭Barana_ tajii✭ ] </a></div>
+            <div></br></br>این مطلب رمزدار است، جهت مشاهده باید کلمه رمز این مطلب را وارد کنید.<form id="frm-16076361445fd294b02be62" method="post" action="http://ryomaechizen-clob.mihanblog.com/post/protected/1057/fid/16076361445fd294b02be62/atrty/1607636144/avrvy/0/key/c98bb1a23327d8414a37889da50853b1/" ><input type="password" name="data[post_pass]" id="post_pass" value="" class="english" /><input type="hidden" name="secfrdcodedvar" id="secfrdcodedvar" value="8762eb942a4b964dfcfcb9538a4f3266"><input type="submit" value="ارسال" class="btn" /><input type="hidden" name="frm-id" value="16076361445fd294b02be62" id="frm-id" /></form><br><BlogPostTagsBlock><br>                </BlogPostTags></BlogPostTagsBlock><BlogExtendedPost><br><a href="http://ryomaechizen-clob.mihanblog.com/post/protected/1057"></a></BlogExtendedPost>
+                <itempage><div id="comments" style=""><blogitemcommentsenabled><a name="comments"></a>
+                    <dl id="comments-block"><div style="width:475px;"><blogitemcomments></a></dt><dd class="comment-body">
+                        <p><span class="comment"><BlogComment><a target="_self" href="javascript:newComment(1057)"> 									<b> </b> 									<script>setCommentCnt(1057)</script>:نظرات 								</a>
+<span dir="rtl" > <script type="text/javascript">GetBC(<-PostId->);</script></span></BlogComment></p>
+                    </dd></BlogItemComments></dl></div><center><p class="comment-timestamp"></p></div></ItemPage></center><br /><div class="title-a" style="color:#00043c"><BlogItemTitle><span class="PostTitle" style="color:#00043c">Esteghlal_Golreyhan#</a>
+</span></BlogItemTitle></div><div class="title-b"> [ سه شنبه 9 مهر 1398  ]  [ 07:51 ب.ظ  ]  <a href="http://ryomaechizen-clob.mihanblog.com/post/author/1391115">[ ✭Barana_ tajii✭ ] </a></div>
+            <div></br></br>
+<font size="3" face="Mihan-Iransans">
+
+
+</font><div align="center"><font size="3" face="Mihan-Iransans"><img src="../file.mihanblog.com/public/user_data/user_files/558/1673814/222.jpg" alt="http://file.mihanblog.com//public/user_data/user_files/558/1673814/222.jpg"></font></div><div align="center"><font size="3" face="Mihan-Iransans">این قشنننننگ ترین قاب توی این چند ماه اخیر بود^^</font></div><div align="center"><font size="3" face="Mihan-Iransans">استقلال3-1گل ریحان البرز</font></div><div align="center"><font size="3" face="Mihan-Iransans">درخشش سجاد آقایی ستاره جوون استقلال و هافبک بازیساز درجه یکمون فرشید اسماعیلی</font></div><div align="center"><font size="3" face="Mihan-Iransans">پنالتی خراب کردن مری تبریزی و اشکاش روی نیمکت</font></div><div align="center"><font size="3" face="Mihan-Iransans">درخشش عارف غلامی و روزبه چشمی تو دفاع</font></div><div align="center"><font size="3" face="Mihan-Iransans">عوض شدن روند بازی با اومدن آرش رضاوند</font></div><div align="center"><font size="3" face="Mihan-Iransans">و البته رفتن برق استادیوم!!!!</font></div><div align="center"><font size="3" face="Mihan-Iransans">همه و همه و همه..ی شب قشنگ..رویایی و ارمانی!استقلال استرا خیلی مدرنه اما حیف ک ی جاهایی یه ابزارایی نداره..</font></div><div align="center"><font size="3" face="Mihan-Iransans">ولی خب..ب قول مربیمون:</font></div><div align="center"><font size="3" face="Mihan-IransansBold">ما به نداشته هامون فکر نمیکنیم!</font></div><div align="center"><font size="3" face="Mihan-Iransans">و البته این جملشم باید با طلا نوشت زد به سردر باشگاه:</font></div><div align="center"><font size="3" face="Mihan-IransansBold" color="#000099">ما توی تیم فشار هارو تحمل میکنیم</font></div><div align="center"><font size="3" face="Mihan-Iransans"><font face="Mihan-IransansBold" color="#000099">و به خاطر تحمل فشار ها پول دریافت میکنیم!بازیکن ها باید باهاش کنار بیان سرشونو بالا بگیرن و تلاش کنن!</font><br></font></div><div align="center"><font size="3" face="Mihan-Iransans">به همین قشنگی!!!!مرد ایتالیایی...ممنون^^</font></div><div align="center"><font size="3" face="Mihan-Iransans">من ک عاشق این استقلالم..البته از روز اولم بودما..اما لعنتی خیلی خوشم اومده از این سبک بازی جدید ک داری تو تیم ما پیادش میکنی..ببخش ک دستت خالیه..اما میدونیم ک تو بیشتر همه دنبال موفقیتی^^در ضمن...</font></div><div align="center"><font size="3" face="Mihan-IransansBold" color="#3333FF">مثل سجاد اقایی تو زندگیتون مفید باشید</font></div><div align="center"><font size="3" face="Mihan-Iransans"><font face="Mihan-IransansBold" color="#3333FF">30 دقیقه <span style="background-color: rgb(0, 0, 153);"><font color="#99FFFF">یک گل</font></span> یک <span style="background-color: rgb(0, 0, 153);"><font color="#99FFFF">پاس گل</font></span></font></font></div><div align="center"><font size="3" face="Mihan-Iransans"><font face="Mihan-IransansBold" color="#3333FF"></font><br></font></div><div align="center"><div align="center"><font size="3" face="Mihan-Iransans"><img src="../file.mihanblog.com/public/user_data/user_files/558/1673814/3333.jpg" alt="http://file.mihanblog.com//public/user_data/user_files/558/1673814/3333.jpg"><br></font></div><div align="center"><font size="3"><font face="Mihan-Iransans">ترکیب دیروز<font size="2">(همه شاخا همه دافا)</font><br></font></font></div><div align="center"><font size="3"><font face="Mihan-Iransans"><font face="Mihan-IransansBold">بالا راست:حسین.عارف.موری.ممد.روزبه.میلاد</font></font></font></div><div align="center"><font size="3"><font face="Mihan-Iransans"><font face="Mihan-IransansBold">پایین راست:مهدی.فرشید.داریوش.علی کریمی.علی دشتی<br></font></font></font></div><font size="3" face="Mihan-Iransans"><img src="../file.mihanblog.com/public/user_data/user_files/558/1673814/1111.jpg" alt="http://file.mihanblog.com//public/user_data/user_files/558/1673814/1111.jpg"></font></div><div align="center"><font size="3" face="Mihan-Iransans">این یه استعداده..</font></div><div align="center"><font size="3" face="Mihan-Iransans">اقای فتحی...خواهشا سجادو دیگکه رد نکن بره!!!!مرسی ک هستی پسر!<br></font></div><div align="center"><font size="3" face="Mihan-Iransans"><br></font></div><div align="center"><font size="3" face="Mihan-Iransans"><img src="../file.mihanblog.com/public/user_data/user_files/558/1673814/4444.jpg" alt="http://file.mihanblog.com//public/user_data/user_files/558/1673814/4444.jpg"><br></font></div><div align="center"><font size="3" face="Mihan-IransansBold">آخ که فدای خنده هات مرد ایتالیایی جذاب من!!!</font></div><div align="center"><font size="3" face="Mihan-IransansBold">همیشه بخندی سلطان!</font><br><font size="3" face="Mihan-Iransans"></font></div>
+
+<br><BlogPostTagsBlock><br>                </BlogPostTags></BlogPostTagsBlock><BlogExtendedPost><br><a href="http://ryomaechizen-clob.mihanblog.com/post/1051"></a></BlogExtendedPost>
+                <itempage><div id="comments" style=""><blogitemcommentsenabled><a name="comments"></a>
+                    <dl id="comments-block"><div style="width:475px;"><blogitemcomments></a></dt><dd class="comment-body">
+                        <p><span class="comment"><BlogComment><a target="_self" href="javascript:newComment(1051)"> 									<b> </b> 									<script>setCommentCnt(1051)</script>:نظرات 								</a>
+<span dir="rtl" > <script type="text/javascript">GetBC(<-PostId->);</script></span></BlogComment></p>
+                    </dd></BlogItemComments></dl></div><center><p class="comment-timestamp"></p></div></ItemPage></center><br /><div class="title-a" style="color:#00043c"><BlogItemTitle><span class="PostTitle" style="color:#00043c">HBD_bro#</a>
+</span></BlogItemTitle></div><div class="title-b"> [ شنبه 6 مهر 1398  ]  [ 03:44 ب.ظ  ]  <a href="http://ryomaechizen-clob.mihanblog.com/post/author/1391115">[ ✭Barana_ tajii✭ ] </a></div>
+            <div></br></br>
+<div style="text-align: center;"><font size="3" face="Mihan-Iransans">هی بِرارم...</font></div><div style="text-align: center;"><font size="3" face="Mihan-Iransans">تولدت مبارک^^</font></div><div style="text-align: center;"><font size="3" face="Mihan-Iransans">با استقلالمون تو یه روز ب دنیا اومدی و چ سعادتی!و چه اتفاق قشنگی**</font></div>
+
+
+
+
+<br><BlogPostTagsBlock><br>                </BlogPostTags></BlogPostTagsBlock><BlogExtendedPost><br><a href="http://ryomaechizen-clob.mihanblog.com/post/1050"></a></BlogExtendedPost>
+                <itempage><div id="comments" style=""><blogitemcommentsenabled><a name="comments"></a>
+                    <dl id="comments-block"><div style="width:475px;"><blogitemcomments></a></dt><dd class="comment-body">
+                        <p><span class="comment"><BlogComment><a target="_self" href="javascript:newComment(1050)"> 									<b> </b> 									<script>setCommentCnt(1050)</script>:نظرات 								</a>
+<span dir="rtl" > <script type="text/javascript">GetBC(<-PostId->);</script></span></BlogComment></p>
+                    </dd></BlogItemComments></dl></div><center><p class="comment-timestamp"></p></div></ItemPage></center><br /><div class="title-a" style="color:#00043c"><BlogItemTitle><span class="PostTitle" style="color:#00043c">M1#</a>
+</span></BlogItemTitle></div><div class="title-b"> [ یکشنبه 24 شهریور 1398  ]  [ 10:05 ب.ظ  ]  <a href="http://ryomaechizen-clob.mihanblog.com/post/author/1391115">[ ✭Barana_ tajii✭ ] </a></div>
+            <div></br></br><div style="text-align: center;"><font face="Mihan-IransansBold" size="3">من پای استقلال روزای بد وایسادم...</font></div><div style="text-align: center;"><font face="Mihan-IransansBold" size="3">استقلال نزدیک به روزای فوق العادشو ول کنم؟</font></div><div style="text-align: center;"><font face="Mihan-IransansBold" size="3">عصبانیم از دست تک تکتون ولی حیف که الان وظیفم حمایته:/</font></div><div style="text-align: center;"><font face="Mihan-IransansBold" size="3">بعدن به خدمت تک تک بازیکنان خاطی خواهم رسید^^</font></div><div style="text-align: center;"><font face="Mihan-IransansBold" size="3">خدایا توروخدا شیخ برسه..میدونی که من سکته میکنم اگه دفعه بعد موری تو ترکیب باشه!</font></div><div style="text-align: center;"><font face="Mihan-IransansBold" size="3">و فرشید...!تو عادته همون جایی که نباید...خواهشا اوکی شو دیگه!</font></div><br><BlogPostTagsBlock><br>                </BlogPostTags></BlogPostTagsBlock><BlogExtendedPost><br><a href="http://ryomaechizen-clob.mihanblog.com/post/1049"></a></BlogExtendedPost>
+                <itempage><div id="comments" style=""><blogitemcommentsenabled><a name="comments"></a>
+                    <dl id="comments-block"><div style="width:475px;"><blogitemcomments></a></dt><dd class="comment-body">
+                        <p><span class="comment"><BlogComment><a target="_self" href="javascript:newComment(1049)"> 									<b> </b> 									<script>setCommentCnt(1049)</script>:نظرات 								</a>
+<span dir="rtl" > <script type="text/javascript">GetBC(<-PostId->);</script></span></BlogComment></p>
+                    </dd></BlogItemComments></dl></div><center><p class="comment-timestamp"></p></div></ItemPage></center><br /><div class="title-a" style="color:#00043c"><BlogItemTitle><span class="PostTitle" style="color:#00043c">Bluegirl#</a>
+</span></BlogItemTitle></div><div class="title-b"> [ چهارشنبه 20 شهریور 1398  ]  [ 10:28 ب.ظ  ]  <a href="http://ryomaechizen-clob.mihanblog.com/post/author/1391115">[ ✭Barana_ tajii✭ ] </a></div>
+            <div></br></br><div style="text-align: center;"><font face="Mihan-IransansBold" size="3">همچنان همراه و همصدای #bluegirl در اینستا^^</font></div><div style="text-align: center;"><font face="Mihan-IransansBold" size="3">Barana_tajii@</font></div>
+
+
+<br><BlogPostTagsBlock><br>                </BlogPostTags></BlogPostTagsBlock><BlogExtendedPost><br><a href="http://ryomaechizen-clob.mihanblog.com/post/1048"></a></BlogExtendedPost>
+                <itempage><div id="comments" style=""><blogitemcommentsenabled><a name="comments"></a>
+                    <dl id="comments-block"><div style="width:475px;"><blogitemcomments></a></dt><dd class="comment-body">
+                        <p><span class="comment"><BlogComment><a target="_self" href="javascript:newComment(1048)"> 									<b> </b> 									<script>setCommentCnt(1048)</script>:نظرات 								</a>
+<span dir="rtl" > <script type="text/javascript">GetBC(<-PostId->);</script></span></BlogComment></p>
+                    </dd></BlogItemComments></dl></div><center><p class="comment-timestamp"></p></div></ItemPage></center><br /><div class="title-a" style="color:#00043c"><BlogItemTitle><span class="PostTitle" style="color:#00043c">daily#</a>
+</span></BlogItemTitle></div><div class="title-b"> [ چهارشنبه 13 شهریور 1398  ]  [ 02:20 ب.ظ  ]  <a href="http://ryomaechizen-clob.mihanblog.com/post/author/1391115">[ ✭Barana_ tajii✭ ] </a></div>
+            <div></br></br>
+<font size="3">
+</font><div align="center"><font size="3" face="Mihan-Iransans">به به جمعن همه روزانه نویسا!!!</font></div><div align="center"><font size="3" face="Mihan-Iransans">اخرین باری ک نشستم و نوشتم تابستون پارسال بود..شایدم قبل ترش!</font></div><div align="center"><font size="3" face="Mihan-Iransans">وب من چن بار نصفه نیمه هک شد و خب خیلی از خاطرات از&nbsp; 94 ب اینطرف پاک شد..!</font></div><div align="center"><font size="3" face="Mihan-Iransans">اینقدر از اون زمان گذشته که واقعن غریبم با روزانه نویسی..</font></div><div align="center"><font size="3" face="Mihan-Iransans">شاید هم یادم نیست چون خیلی وقته نمینویسم</font></div><div align="center"><font size="3" face="Mihan-Iransans">مینویسم ..اما به سبک قبلم و تو موضوعات قبل حتی ی کلمه هم دیگه نمینویسم!</font></div><div align="center"><font size="3" face="Mihan-Iransans">موضوع من ..سبک من.. و علاقه های من الان همینن و قطع به یقین تغییر نخواهند کرد..</font></div><div align="center"><font size="3" face="Mihan-Iransans">اما دلم زیاد تنگ شد..</font></div><div align="center"><font size="3" face="Mihan-Iransans">پس این یه پست موقته ک مغز من ازادانه کلماتو توش به بازی میگیره..</font></div><div align="center"><font size="3" face="Mihan-Iransans">من کلن ادمیم که زیاد دوست نداره حرف بزنه و شاید همین مسبب اینه ک من هیچوقت همچین پستایی نمینویسم</font></div><div align="center"><font size="3" face="Mihan-Iransans">من ادم پر حرفی نیستم...یعنی درکل.</font></div><div align="center"><font size="3" face="Mihan-Iransans">در پی زیاد حرف نزدنم حوصله سر بر نیستم اما ترجیحا زمانی که نیازه و مطمئنم ک اشراف کامل به اون موضوع دارم شاید حرف بزنم</font></div><div align="center"><font size="3" face="Mihan-Iransans">در غیر این صورت ترجیح میدم بقیه همون چیزیو فکر کنن که خیال میکنن میخوان!</font></div><div align="center"><font size="3" face="Mihan-Iransans">من عینکی ام!من ادمی نیستم که زود با کسی دوست شه یا اینکه حداکثر به چند جمله اکتفا میکنم!</font></div><div align="center"><font size="3" face="Mihan-Iransans">من افکار خودمو به حرف زدن با دیگران ترجیح میدم اما هیچوقت اجازه نمیدم به خودم که غرق بشم توی سراب خیالاتم.</font></div><div align="center"><font size="3" face="Mihan-Iransans">من کاملن نه ولی زیاد کمال گرام!به خاطر همین هیچوقت از خودم و کارم راضی نمیشم و همیشه انتظار بیشتری دارم</font></div><div align="center"><font size="3" face="Mihan-Iransans">و خب این تا جایی درسته چون میوه ای که فکر کنه رسیده لا اینکه بفهمه کپک میزنه!</font></div><div align="center"><font size="3" face="Mihan-Iransans">پس همیشه تعادلی در اینجا لازمه...</font></div><div align="center"><font size="3" face="Mihan-Iransans">همیشه تعادل و حد وسط برام مهم بوده..ولی منکر نمیشم افراط در جاهایی بسیار قشنگه.</font></div><div align="center"><font size="3" face="Mihan-Iransans">کسی نمیتونه منو ناراحت کنه..جالبه!اما واقعن اینطوریه..کسی نمیتونه منو ناراحت کنه جز استقلال</font></div><div align="center"><font size="3" face="Mihan-Iransans">خب این حقو من میدم ک کی</font><font size="3" face="Mihan-Iransans"> ناراحتم کنه دیگه و خب من این جازرو به کسی نمیدم</font></div><div align="center"><font size="3" face="Mihan-Iransans">خب همیشه خوبه ادم یه چیزیو داشته باشه تو زندگیش که وسط همه بدبختیاش یادش بیافته و لبخند بزنه..اونو برا خودتون جور کنین..ک خب من خیلی وقته یکیشو دارم..</font></div><div align="center"><font size="3" face="Mihan-Iransans">خب دیگه..البته مجبورم هی کلی بگم چون اشاره کردم من چند ساله که اینجوری ننوشتم!</font></div><div align="center"><font size="3" face="Mihan-Iransans">اینقدر فری و ازاد و درهم برهم..من اجراییم..ینی یه شخصیت اجرایی که نظم در هر شرایطی براش مهمه <br></font></div><div align="center"><font size="3" face="Mihan-Iransans">و درواقع یه چیزیم بین اگزکیوتیو و کنسول! <br></font></div><div align="center"><font size="3" face="Mihan-Iransans">کلن توام با عشق میبینم و خب بماند عشق نباشه من زنده نمیمونم..!!</font></div><div align="center"><font size="3" face="Mihan-Iransans">سخت میگیرم و سخت گرفته شدن رو دوست دارم..</font></div><div align="center"><font size="3" face="Mihan-Iransans">اما خیلی جاهام راحتم..</font></div><div align="center"><font size="3" face="Mihan-Iransans">یعنی راحت میشینم و راحت پامو رو پام میندازم.نه غرق در افکارمم و نه فرار میکنم</font></div><div align="center"><font size="3" face="Mihan-Iransans">من خیلی تمرین کردم تا تونستم جوری کنار ساحل راه برم که اب دریا خیسم نکنه.</font><div align="center"><font size="3" face="Mihan-Iransans">من ادمی نیستم 
+که شوخی کنه...یعنی از شوخی های بقیه حتی در عین شوخی بودن بدم میاد چون 
+اونا درباره چیز هایی که کاملا جدین برای من شوخی میکنند!البته با دوستام شوخی میکنم و هیچوقت از شوخی کردن با ادم بزرگا خوشم نمیاد چون باید حدم رو جلوشون حفظ کنم و هرچیزیو نگم!<br></font></div><div align="center"><font size="3" face="Mihan-Iransans">اوه
+ و این واقعا برای من سردرد اوره!و این دلیلیه که شاید زیاد علاقه به قاطی 
+کردن خودم تو حرفای بقیه ندارم!خب چون حرص میخورم از حرف های اشتباهشون!غرغروام هستم!و اینا منو 
+اذیت&nbsp; میکنن و گاهی مجبورم بگم خدایا من جای اونا ازت عذر میخوام!<br></font></div><div align="center"><font size="3" face="Mihan-Iransans"><br></font></div><div align="center"><font size="3" face="Mihan-Iransans">کلن کنار میام..ولی نه با همه چیز و هیچ چیز!این مهمه!</font></div><div align="center"><font size="3" face="Mihan-Iransans">نمیگم قانعم ولی طمع هم ندارم..اهل ریسک هم نیستم و هم هستم!ولی خب همیشه اینو تکرار میکنم که بزرگترین ریسک اینه ک ریسک نکنم.</font></div></div><div align="center"><font size="3" face="Mihan-Iransans"><br></font></div><div align="center"><font size="3" face="Mihan-Iransans">من شیش یا هفت سال شاگرد خانم عزیزی بودم..یاد گرفتم مثل عزیزی راه برم..</font></div><div align="center"><font size="3" face="Mihan-Iransans">مثل اون حرف بزنم..رفتار کنم..و حتی فکر کنم</font></div><div align="center"><font size="3" face="Mihan-Iransans">چون اون واقعن برای من بهترین و وجود کسایی مثل اون برای همه لازمه..کسی که یادت بده چجوری درست زندگی کنی قبل اینکه به قول خانوم با اون غول های بزرگ و سیاه زندگی روبه روشی!</font></div><div align="center"><font size="3" face="Mihan-Iransans">اون همیشه میگفت هر ادمی ی جوری ب ی&nbsp; شیوه ای میتونه با دنیای درون بقیه ارتباط برقرار کنه</font></div><div align="center"><font size="3" face="Mihan-Iransans">و خب این مختص هر فرده...</font></div><div align="center"><font size="3" face="Mihan-Iransans">همیشه از اینکه کنار اونم حس خوبی بهم دست میداد از همون حسا که تو زندگیت فقط یه بار اونم کنار یه ادم بهت دست میده که انگار همه ی دنیا برای توئه!و من همیشه سر کلاس اون برای نود دقیقه همچین حسی داشتم و خب میدونم کنار هیچ بشری دیگه حسش نمیکنم!</font></div><div align="center"><font size="3" face="Mihan-Iransans">از اون یاد گرفتم کاملا خودکفا باشم و خوب البته استعدادش ذاتا توم بود!من واقعن همچین ادمی بودم و خب پرورشش دادم..من کلا ادم وابسته ای نیستم!و احساسی کاملا استقلال دارم..</font></div><div align="center"><font size="3" face="Mihan-Iransans">حتی چند وقت پیش با رفیق 10 سالم دعوام شد.. و خوشحالم از اینکه وقتی اومد باهام اشتی کنه..فهمیده بود وقتی باشه زندگی من اینجوره و نباشه هم باز زندگی من اینجوره.انسان ها باید حد خودشون رو بدونن چون این برترین ادبه.<br></font></div><font size="3"><br></font><div align="center"><font size="3" face="Mihan-Iransans">دوستم یه روزی حرف خوبی زد..گفت من انسانیت رو تحسین میکنم!</font></div><div align="center"><font size="3" face="Mihan-Iransans">و این جمله شد برای مدتی سر در وب من در ...فکر کنم دوسال پیش!</font></div><div align="center"><font size="3" face="Mihan-Iransans">I admire</font><font size="3" face="Mihan-Iransans"><span class="tlid-translation translation" lang="en"><span title="" class=""> humanity و خب شاید این خیلی جاها نظر منو عوض کرد.و اون روز هم باز بحث یه جمله دیگه بود که میگفت همه چیز ممکنه..خانوم عزیزی همیشه به یکی از بچه ها اینو میگفت..اون حتی اون ی جفت کفش خاص و نوشو که یک بار بخصوص فقط پوشید سر کلاس رو به اون دوستم داد</span></span></font><div align="center"><font size="3" face="Mihan-Iransans"><span class="tlid-translation translation" lang="en"><span title="" class=""></span></span><span class="tlid-translation-gender-indicator translation-gender-indicator"></span>و گفت وقتی خواستی بری برای کار یا از این قبیل کارها که عمدتا جراتشو نداری..این کفشارو بپوش </font><font size="3" face="Mihan-Iransans"><span class="tlid-translation translation" lang="en"><span title="" class=""></span><span title="" class="">و هر جا رفتی یادت نره که کفشای من پاته!و خب فکر کنم این حس همیشه تو من بیشتره تا اون دوستم البته با اینکه کفشا مال من نبود!</span></span></font></div></div><div align="center"><font size="3" face="Mihan-Iransans"><span class="tlid-translation translation" lang="en"><span title="" class="">با وجود اینکه همیشه خشن بود و سفت و سخت گیر اما اون همینجوری با همین اخلاقش ادمارو جذب میکرد..البته همرو نه..چون عمدتا همه قابلیت درک دنیای معلمی که بعضی روزا مانتوی جیغ صورتی یا مقنعه سبز مغز پسته ای میپوشید رو نداشتن!و خب این واقعن عجیب بود!</span></span></font></div><div align="center"><font size="3" face="Mihan-Iransans"><span class="tlid-translation translation" lang="en"><span title="" class="">البته اون منو چند بار همون اوایل از کلاس بیرون کرد...ولی من بازم میرفتم..</span></span></font></div><div align="center"><font size="3" face="Mihan-Iransans"><span class="tlid-translation translation" lang="en"><span title="" class="">این اخریا بهم گفت تو یه کله شقی اما بلدی از زندگیت لذت ببری..و خوشحال بودم بعد 7 سال از معلمم اینو میشنوم!</span></span></font></div><div align="center"><font size="3" face="Mihan-Iransans"><span class="tlid-translation translation" lang="en"><span title="" class="">از کسی&nbsp; که زندگیمو..منو..ساخت!به بهترین نحو ممکن</span></span></font></div><div align="center"><font size="3" face="Mihan-Iransans"><span class="tlid-translation translation" lang="en"><span title="" class="">و من واقعن مدیونشم..</span></span></font></div><div align="center"><font size="3" face="Mihan-Iransans"><span class="tlid-translation translation" lang="en"><span title="" class="">شاید مجبور شم یه روزی خب در اینده ای نزدیک وبمو کاملا خصوصی کنم و برای ورودش رمز بذارم..</span></span></font></div><div align="center"><font size="3" face="Mihan-Iransans"><span class="tlid-translation translation" lang="en"><span title="" class="">چون ممکنه دیگه تنها وبم جایی باشه ک ازادی عمل دارم..و خب بیان بهتره.</span></span></font></div><div align="center"><font size="3" face="Mihan-Iransans"><span class="tlid-translation translation" lang="en"><span title="" class="">امیدوارم سالها کنار هم خوش بگذرونیم دخترا</span></span></font></div><div align="center"><font size="3" face="Mihan-Iransans"><span class="tlid-translation translation" lang="en"><span title="" class="">حتی وقتی بزرگ شدیم و غول های بزرگتریو رد کردیم..</span></span></font></div><div align="center"><font size="3" face="Mihan-Iransans"><span class="tlid-translation translation" lang="en"><span title="" class="">باور کنین کنار هم بودن خیلی قشنگ تره خوبه انتظار نداشته باشیم بقیه تو ناراحتیامون باشن..اما ب کسایی بگین ک مطمئنین حالتونو خوب میکنن..چون میدونم نصف ناراحتیای ما از هم اینه ک طرف چرا وقتی من حالم بد بود نبود..عاقا جان اون بدبخت از کجا بدونه خوب!!!!</span></span></font></div><div align="center"><font size="3" face="Mihan-Iransans"><span class="tlid-translation translation" lang="en"><span title="" class="">اینقد سخت نگیریم همه چیزو ک ب خودمون بدتر همه سخت بگذره..لبخند بزنین و رد شین..</span></span></font></div><div align="center"><font size="3" face="Mihan-Iransans"><span class="tlid-translation translation" lang="en"><span title="" class="">همیشه دوست داشتم اینو بهتون بگم...و خب خیلی وقته</span></span></font></div><div align="center"><font size="3" face="Mihan-Iransans"><span class="tlid-translation translation" lang="en"><span title="" class=""><br></span></span></font></div><div align="center"><font size="3" face="Mihan-Iransans"><span class="tlid-translation translation" lang="en"><span title="" class="">تلخ ترین حقیقت دنیا اینه که کسیو از نزدیک بشناسین</span></span></font></div><div align="center"><font size="3" face="Mihan-Iransans"><span class="tlid-translation translation" lang="en"><span title="" class="">پس عزیزای من چشماتونو ببندین و با تصور اینکه همه خوبن رد شین</span></span></font></div><div align="center"><font size="3" face="Mihan-Iransans"><span class="tlid-translation translation" lang="en"><span title="" class=""><br></span></span></font></div><br><div align="center"><font size="3"><br></font></div><div align="center"><font size="3" face="Mihan-Iransans"><br></font></div><font size="3" face="Mihan-Iransans">
+
+
+</font><font size="3">
+
+</font>
+
+<br><BlogPostTagsBlock><br>                </BlogPostTags></BlogPostTagsBlock><BlogExtendedPost><br><a href="http://ryomaechizen-clob.mihanblog.com/post/1045"></a></BlogExtendedPost>
+                <itempage><div id="comments" style=""><blogitemcommentsenabled><a name="comments"></a>
+                    <dl id="comments-block"><div style="width:475px;"><blogitemcomments></a></dt><dd class="comment-body">
+                        <p><span class="comment"><BlogComment><a target="_self" href="javascript:newComment(1045)"> 									<b> </b> 									<script>setCommentCnt(1045)</script>:نظرات 								</a>
+<span dir="rtl" > <script type="text/javascript">GetBC(<-PostId->);</script></span></BlogComment></p>
+                    </dd></BlogItemComments></dl></div><center><p class="comment-timestamp"></p></div></ItemPage></center><br /><div class="title-a" style="color:#00043c"><BlogItemTitle><span class="PostTitle" style="color:#00043c">We_are_together_forever#</a>
+</span></BlogItemTitle></div><div class="title-b"> [ جمعه 8 شهریور 1398  ]  [ 08:05 ب.ظ  ]  <a href="http://ryomaechizen-clob.mihanblog.com/post/author/1391115">[ ✭Barana_ tajii✭ ] </a></div>
+            <div></br></br>
+
+
+<div align="center"><font size="3" face="Mihan-IransansBold">فصل نقل انتقالات و رفتن ستاره‌های تیم؛</font><br><font size="3" face="Mihan-IransansBold">
+تشکیل تیم با کلی بازیکن جدید؛</font><br><font size="3" face="Mihan-IransansBold">
+ایجاد حواشی، از ارکان مختلف فدراسیون تا رسانه‌های زرد و پولکی؛</font><br><font size="3" face="Mihan-IransansBold">
+یک نیم فصل اول غم‌انگیز؛</font><br><font size="3" face="Mihan-IransansBold">
+تقویت تیم در نیم فصل و آمدن یکی دو ستاره؛</font><br><font size="3" face="Mihan-IransansBold">
+یک نیم فصل دوم فوق‌العاده با رکورد ها و آمار و ارقام عالی؛ اما دیر!!!</font><br><font size="3" face="Mihan-IransansBold">
+نتیجه: قهرمانی از دست رفته!</font><br><font color="#66FFFF"><span style="background-color: rgb(0, 0, 153);"><font size="3" face="Mihan-IransansBold">
+اییییییین سناریوی تکراری استقلاله!</font></span></font><br><font size="3" face="Mihan-IransansBold">
+</font><br><font size="3" face="Mihan-IransansBold">
+وقتی همه جامعه داوری ایران پاچه خوار استاد دانشگا ی جاییو میکنن توقع دارین بیان بگن اشتباه کرده؟؟؟؟</font><br><font size="3" face="Mihan-IransansBold">
+قبل از گل، ‌دو ‌تا خطای اشتباه از استقلال گرفت و تا وقتی استقلال گل ‌نخورد سوت بازی رو ‌نزد!</font><br><font size="3" face="Mihan-IransansBold">
+همینقدر بی شرف^^</font><br><font size="3" face="Mihan-IransansBold">
+همینقدر بی ناموس^^</font><br><font size="3" face="Mihan-IransansBold">
+</font><font color="#666666"><br><font size="3" face="Mihan-IransansBold">
+</font><br><font size="3" face="Mihan-IransansBold">
+آقای فغانی؛یه روزی چنان این بیشرف بازیاتو سرت تلافی میکنم که به گو خوردن بیافتی و اینقد ماله کشی نکنی هم تو هم اون رفیقای بوقت^^</font><br><font size="3" face="Mihan-IransansBold">
+ببین من کی گفتم!!!!</font></font><br><font size="3" face="Mihan-IransansBold">
+</font><br><font size="3" face="Mihan-IransansBold">
+</font></div><div align="center"><br></div><div align="center"><img src="http://s2.picofile.com/file/8370948926/Negar_30082019_112758.png" alt="http://s2.picofile.com/file/8370948926/Negar_30082019_112758.png" class="transparent"><br><font size="3" face="Mihan-IransansBold">
+</font><br><font size="3" face="Mihan-IransansBold">
+<font color="#000099">این مرد نه شومنه نه شال آبی تو هوا میچرخونه نه راه به راه مصاحبه می‌کنه نه تو اینستا ‌و فضای مجازی می‌چرخه نه حرف‌های عامه پسند و قلمبه سلمبه می‌زنه...</font></font><br><font size="3" face="Mihan-IransansBold">
+تیم سال قبل شخم زده شده بازیکنان تاثیرگذار رفتن قرار بود بازیکن بگیرن که هنوز لَنگ هافبک بازیساز هستیم....</font><br><font size="3" face="Mihan-IransansBold">
+<font color="#3333FF">با این همه جلوی فولاد دو سوم بازی صاحب توپ بود دو برابر فولاد پاسکاری کردن اونم با دقت فوق‌العاده ۸۲% و به تیمی که آقای گل فصل قبل رو داشت و خط حمله زهرداری تا دقیقه ۹۵ و زمان قانونی بازی یک موقعیت هم نداد!</font></font><br><font size="3" face="Mihan-IransansBold">
+اگه چیزی سرت نمیشع پس زیپ ایت!</font><br><font size="3" face="Mihan-IransansBold">
+این بشر مثل هر مربی دیگر زمان میخواد با ابزار!</font><br><font size="3" face="Mihan-IransansBold">
+و البته همراهی مسئولین در خوابِ باشگاه استقلال و حمایت ما هوادارا^^</font><br><font size="3" face="Mihan-IransansBold">
+حداقل ما سهم خودمون رو به بهترین نحو انجام بدیم و با تمام وجود و عشقمون حمایتش کنیم.</font><br><font size="3" face="Mihan-IransansBold">
+</font></div><div align="center"><font size="3" face="Mihan-IransansBold"><br></font></div><div align="center"><font size="3" face="Mihan-IransansBold" color="#660000">البت ‏الان سایت لجن ورزش3 و برنامه شبای دلالی&nbsp; با دعوت از نوذر رودنیل و خسروی ثابت می کنن که بازی 20 دقیقه وقت های تلف شده داشته، فوتبال ما پاکه، فغانی آدم با شرفیه،وزیر دلال و دروغگو نیست،پسر وزیر بی شرف نیست و تیم حکومتی هم پر افتخار ترین تیم اسیاس!</font><br><font size="3" face="Mihan-IransansBold">
+</font><br><font size="3" face="Mihan-IransansBold">
+خب دیگه...تا کور شود هر آنکه نتواند دید!</font><br><font size="3" face="Mihan-IransansBold">
+مخصوصا شما دوست عزیز رونیکا!</font><br><font size="3" face="Mihan-IransansBold">
+گفتم بدونی با من دهن ب دهن نزاری ک بد تو دهنی میخوری!من ک پشت این تیم هسم توام رژیمتو عوض نکن مث بقیه اعضا تیمت همون چیزیو نوش کن ک اول هر صبح از استقلال میخورن!فقط اضاف نزن رو دل میکنی.اره^^</font><br><font size="3" face="Mihan-IransansBold">
+</font><br><font size="3" face="Mihan-IransansBold">
+پیروز و پاینده باشید!</font><br><font size="3" face="Mihan-IransansBold">
+</font><br><br></div>
+
+
+
+
+
+
+
+
+
+<br><BlogPostTagsBlock><br>                </BlogPostTags></BlogPostTagsBlock><BlogExtendedPost><br><a href="http://ryomaechizen-clob.mihanblog.com/post/1044"></a></BlogExtendedPost>
+                <itempage><div id="comments" style=""><blogitemcommentsenabled><a name="comments"></a>
+                    <dl id="comments-block"><div style="width:475px;"><blogitemcomments></a></dt><dd class="comment-body">
+                        <p><span class="comment"><BlogComment><a target="_self" href="javascript:newComment(1044)"> 									<b> </b> 									<script>setCommentCnt(1044)</script>:نظرات 								</a>
+<span dir="rtl" > <script type="text/javascript">GetBC(<-PostId->);</script></span></BlogComment></p>
+                    </dd></BlogItemComments></dl></div><center><p class="comment-timestamp"></p></div></ItemPage></center><br /><div class="title-a" style="color:#00043c"><BlogItemTitle><span class="PostTitle" style="color:#00043c">Ss_vs_Folad#</a>
+</span></BlogItemTitle></div><div class="title-b"> [ پنجشنبه 7 شهریور 1398  ]  [ 04:32 ب.ظ  ]  <a href="http://ryomaechizen-clob.mihanblog.com/post/author/1391115">[ ✭Barana_ tajii✭ ] </a></div>
+            <div></br></br><div align="center"><font size="3" face="Mihan-IransansBold" color="#3333FF"><br></font></div><div align="center"><font size="3" face="Mihan-IransansBold" color="#3333FF">اشتیاقی که به دیدار تو دارد دل من</font></div><div align="center"><font size="3" face="Mihan-IransansBold" color="#3333FF">دل من داند</font></div><div align="center"><font size="3" face="Mihan-IransansBold" color="#3333FF">و من دانم</font></div><div align="center"><font size="3" face="Mihan-IransansBold" color="#3333FF">و دل داند</font></div><div align="center"><font size="3" face="Mihan-IransansBold" color="#3333FF">و من..</font></div><div align="center"><font size="3" face="Mihan-IransansBold"><br></font></div><div align="center"><font size="3" face="Mihan-IransansBold">استقلالvsفولاد خوزستان</font></div><div align="center"><font size="3" face="Mihan-IransansBold">خدایا مواظب پسرای تیممون..هوادارای تیممون</font></div><div align="center"><font size="3" face="Mihan-IransansBold">و کوچ مون باش^^</font></div><div align="center"><font size="3" face="Mihan-IransansBold">ایشالله بریم ب امید موفقیت و برد<br></font></div>
+
+
+<br><BlogPostTagsBlock><br>                </BlogPostTags></BlogPostTagsBlock><BlogExtendedPost><br><a href="http://ryomaechizen-clob.mihanblog.com/post/1043"></a></BlogExtendedPost>
+                <itempage><div id="comments" style=""><blogitemcommentsenabled><a name="comments"></a>
+                    <dl id="comments-block"><div style="width:475px;"><blogitemcomments></a></dt><dd class="comment-body">
+                        <p><span class="comment"><BlogComment><a target="_self" href="javascript:newComment(1043)"> 									<b> </b> 									<script>setCommentCnt(1043)</script>:نظرات 								</a>
+<span dir="rtl" > <script type="text/javascript">GetBC(<-PostId->);</script></span></BlogComment></p>
+                    </dd></BlogItemComments></dl></div><center><p class="comment-timestamp"></p></div></ItemPage></center><br /><div class="title-a" style="color:#00043c"><BlogItemTitle><span class="PostTitle" style="color:#00043c">Be_happy_my_dears#</a>
+</span></BlogItemTitle></div><div class="title-b"> [ چهارشنبه 6 شهریور 1398  ]  [ 03:43 ب.ظ  ]  <a href="http://ryomaechizen-clob.mihanblog.com/post/author/1391115">[ ✭Barana_ tajii✭ ] </a></div>
+            <div></br></br><div align="center"><font size="3" face="Mihan-IransansBold">از ته دلم</font></div><div align="center"><font size="3" face="Mihan-IransansBold">برا همتون</font></div><div align="center"><font size="3" face="Mihan-IransansBold">آرزو میکنم تو تک تک لحظات زندگی..</font></div><div align="center"><font size="3" face="Mihan-IransansBold">خدا هواتونو داشته باشه</font></div><div align="center"><font size="3" face="Mihan-IransansBold"><br></font></div><div align="center"><font size="3" face="Mihan-IransansBold">شاد باشین رفقا^^</font><br></div>
+
+
+<br><BlogPostTagsBlock><br>                </BlogPostTags></BlogPostTagsBlock><BlogExtendedPost><br><a href="http://ryomaechizen-clob.mihanblog.com/post/1042"></a></BlogExtendedPost>
+                <itempage><div id="comments" style=""><blogitemcommentsenabled><a name="comments"></a>
+                    <dl id="comments-block"><div style="width:475px;"><blogitemcomments></a></dt><dd class="comment-body">
+                        <p><span class="comment"><BlogComment><a target="_self" href="javascript:newComment(1042)"> 									<b> </b> 									<script>setCommentCnt(1042)</script>:نظرات 								</a>
+<span dir="rtl" > <script type="text/javascript">GetBC(<-PostId->);</script></span></BlogComment></p>
+                    </dd></BlogItemComments></dl></div><center><p class="comment-timestamp"></p></div></ItemPage></center><br /><div class="title-a" style="color:#00043c"><BlogItemTitle><span class="PostTitle" style="color:#00043c">#-#</a>
+</span></BlogItemTitle></div><div class="title-b"> [ یکشنبه 3 شهریور 1398  ]  [ 04:47 ق.ظ  ]  <a href="http://ryomaechizen-clob.mihanblog.com/post/author/1391115">[ ✭Barana_ tajii✭ ] </a></div>
+            <div></br></br><div style="text-align: center;"><font color="#333333" face="Mihan-IransansBold" size="3">مادوتا بیهوده ولی خوب ب هم می آییم!</font></div><div style="text-align: center;"><font color="#333333" face="Mihan-IransansBold" size="3"><br></font></div><div style="text-align: center;"><font face="Mihan-IransansBold" size="3"><font color="#333333">هر کیم حرف مفت زد بگو بزنم تو دهنش تا ادم&nbsp;</font></font><font face="Mihan-IransansBold" size="3"><font color="#333333">شه</font></font><img src="http://mihanblog.com/public/public/rte/images_new/smiles/21.gif" style="font-family: Mihan-IransansBold; font-size: medium;"></div><div style="text-align: center;"><font face="Mihan-Iransans" size="2">صبحتون بخیر رفقا</font></div><div style="text-align: center;"><font face="Mihan-Iransans" size="2">۵:۵۰ بامداد</font></div><div style="text-align: center;"><br></div><br><BlogPostTagsBlock><br>                </BlogPostTags></BlogPostTagsBlock><BlogExtendedPost><br><a href="http://ryomaechizen-clob.mihanblog.com/post/1039"></a></BlogExtendedPost>
+                <itempage><div id="comments" style=""><blogitemcommentsenabled><a name="comments"></a>
+                    <dl id="comments-block"><div style="width:475px;"><blogitemcomments></a></dt><dd class="comment-body">
+                        <p><span class="comment"><BlogComment><a target="_self" href="javascript:newComment(1039)"> 									<b> </b> 									<script>setCommentCnt(1039)</script>:نظرات 								</a>
+<span dir="rtl" > <script type="text/javascript">GetBC(<-PostId->);</script></span></BlogComment></p>
+                    </dd></BlogItemComments></dl></div><center><p class="comment-timestamp"></p></div></ItemPage></center><br /><div class="title-a" style="color:#00043c"><BlogItemTitle><span class="PostTitle" style="color:#00043c">HBD_Mahtab#</a>
+</span></BlogItemTitle></div><div class="title-b"> [ شنبه 2 شهریور 1398  ]  [ 07:18 ب.ظ  ]  <a href="http://ryomaechizen-clob.mihanblog.com/post/author/1391115">[ ✭Barana_ tajii✭ ] </a></div>
+            <div></br></br><div align="center"><font size="3" face="Mihan-IransansBold"><img class="irc_mi" src="https://images-na.ssl-images-amazon.com/images/I/71YkBHhyQAL._SL1400_.jpg" style="" alt="Image result for hbd sis blue" width="400" height="467"></font></div><div align="center"><font size="3" face="Mihan-IransansBold">دوست داشتم حداقل روز تولدت باشـی...</font></div><div align="center"><font size="3" face="Mihan-IransansBold">تا ک هر چند غیر حضوری،اما حضوری بهت تبریک بگـم!</font></div><div align="center"><font size="3" face="Mihan-IransansBold">فک نکنی یادم رفتـه ها..</font></div><div align="center"><font size="3" face="Mihan-IransansBold"><font color="#3333FF">تــــولــــــــدت</font> مبــــارکآآآآآآآ<br></font></div><div align="center"><font size="3" face="Mihan-IransansBold">خواهری..دوستم..رفیقم...قدیمی..صمیمی</font></div><div align="center"><font size="3" face="Mihan-IransansBold"><font size="2">دیگه چی بگم؟؟خره!<font size="3">**</font></font><br></font></div><div align="center"><font size="3" face="Mihan-IransansBold"><br></font></div><div align="center"><font size="3" face="Mihan-IransansBold"><font face="Mihan-Iransans" color="#3366FF">{{</font>اگ اومدی..اگه خوندیش..</font></div><div align="center"><font size="3" face="Mihan-IransansBold">بشمار ببین چندمین سالگرد تولدیه ک کنار همیم با همه ی نبودنامون♥<font face="Mihan-Iransans" color="#3366FF">}}</font></font><br></div>
+
+
+<br><BlogPostTagsBlock><br>                </BlogPostTags></BlogPostTagsBlock><BlogExtendedPost><br><a href="http://ryomaechizen-clob.mihanblog.com/post/1038"></a></BlogExtendedPost>
+                <itempage><div id="comments" style=""><blogitemcommentsenabled><a name="comments"></a>
+                    <dl id="comments-block"><div style="width:475px;"><blogitemcomments></a></dt><dd class="comment-body">
+                        <p><span class="comment"><BlogComment><a target="_self" href="javascript:newComment(1038)"> 									<b> </b> 									<script>setCommentCnt(1038)</script>:نظرات 								</a>
+<span dir="rtl" > <script type="text/javascript">GetBC(<-PostId->);</script></span></BlogComment></p>
+                    </dd></BlogItemComments></dl></div><center><p class="comment-timestamp"></p></div></ItemPage></center><br />		 								 					 						 							Total pages : 5   							 							<a href="http://ryomaechizen-clob.mihanblog.com/page/1"> <b>1</b></a> 							 							<a href="http://ryomaechizen-clob.mihanblog.com/page/2"> <span>2</span></a> 							 							<a href="http://ryomaechizen-clob.mihanblog.com/page/3"> <span>3</span></a> 							 							<a href="http://ryomaechizen-clob.mihanblog.com/page/4"> <span>4</span></a> 							 							<a href="http://ryomaechizen-clob.mihanblog.com/page/5"> <span>5</span></a> 							 						
+    <td valign="top" style="line-height:17px; font-size:11px; width:240px; padding-right:10px;"background:url(http://gfx.manographic.ir/up/images/s38ewfgzh73axylobhr.png);>
+    <div class="cutie"><div class="mimi" style="color:#000000">About me</div><center><BlogProfile><center></b>
+        <BlogPhoto><div id=photo><center><div id=about>تو همانی که بودنت،داشتنت و هواداریت<br />
+افتخاریست بی انتها!<br />
+ای بی انتهای قلب من<br />
+ای معشوق میلیون ها دل عـاشق<br />
+استقلالــــم<br />
+به رنـگ آبــی پیـراهنـت قســم<br />
+در هر شرایطی با هر مقام و نتیجه ای تا ابد <br />
+استقلالـی میمانم!<br />
+پس بمـان در این روزهای گمشده میان<br />
+تاریکی های دنیا<br />
+استوار و پابرجا!<br />
+که اگر شکسته شوی ویران میشود<br />
+این هوادارای که<br />
+سـالهاست تمامش شده تو! <br />
+بگذار هر چه میخواهند <br />
+بگویند!آن یاوه گویان که نمیدانند<br />
+ چه دنیایی را ساخته ای<br />
+آنان که نمیدانند درد هست<br />
+و تو درمانش هستی<br />
+کسی چه میداند بی انتهایی<br />
+ من با تو معنا میشود..<br />
+کسی چه میداند تو تمــام منـی!<br />
+تمام ناتمام های من<br />
+عاشقانه <br />
+دوستت دارم!<br />
+barana</div>
+            <div class="cutie"><div class="mimi" style="color:#000000">Survey</div><br><center><BlogProfile><center></b>
+                
+		
+
+
+                <div class="cutie"><div class="mimi" style="color:#000000">Writers</div><center><BlogProfile><center></b>
+                    <a target="_blank" href="http://ryomaechizen-clob.mihanblog.com/post/author/1391115" >✭Barana_ tajii✭</a></br><a target="_blank" href="http://ryomaechizen-clob.mihanblog.com/post/author/1738899" >✌ SETAYESH ✌  </a></br></div><div class="space"></div
+
+
+
+
+                <div class="cutie"><div class="mimi" style="color:#000000">Topics</div><br><center><BlogProfile><center></b>
+                                    </div><div class="space"></div>
+
+
+
+
+
+                <div class="cutie"><div class="mimi" style="color:#000000">My friends</div><br><center><BlogProfile><center></b>
+                    <a target="_blank" href="http://black-and-white-world.mihanblog.com/" title="/black and white/ari">/black and white/ari</a></br><a target="_blank" href="http://niupony.mihanblog.com/" title="لونای من/اسمون شبم/">لونای من/اسمون شبم/</a></br><a target="_blank" href="http://myb-a-c-w.mihanblog.com/" title="اسمون شبم">اسمون شبم</a></br><a target="_blank" href="http://goodbyeworld.mihanblog.com" title="دنیایی که خراب شد/نازنین/">دنیایی که خراب شد/نازنین/</a></br><a target="_blank" href="../my-redlife.mihanblog.com/index.html" title="white life/آلوم/">white life/آلوم/</a></br><a target="_blank" href="http://z-f-d-happysad.mihanblog.com/" title="قره قوروت/زهرا/">قره قوروت/زهرا/</a></br><a target="_blank" href="http://anahitafarshiyan.blogfa.com" title="جوجو کوچولو/آناهیتا/">جوجو کوچولو/آناهیتا/</a></br><a target="_blank" href="http://lover-alone1375.blogfa.com" title="بعد تو هیچ چیز دوست داشتنی نیست/کوروش/">بعد تو هیچ چیز دوست داشتنی نیست/کوروش/</a></br><a target="_blank" href="../design-city.mihanblog.com/index.html" title="دیزاین سیتی/ملیکا/">دیزاین سیتی/ملیکا/</a></br><a target="_blank" href="http://lovelylonely.blogfa.com" title="Lonel forever/دابریا/">Lonel forever/دابریا/</a></br><a target="_blank" href="http://www.negar191380.blogfa.com" title="گپ تلخ/نگار/">گپ تلخ/نگار/</a></br><a target="_blank" href="http://mohanam.blogfa.com" title="A&amp;M">A&amp;M</a></br><a target="_blank" href="http://girl-bad6844.blogfa.com" title="مغزم جیغ میزنه/عاطی/">مغزم جیغ میزنه/عاطی/</a></br><a target="_blank" href="../code-design-center.mihanblog.com/index.html" title="مرکز طراحی کد">مرکز طراحی کد</a></br><a target="_blank" href="http://changwk-jinho.mihanblog.com" title="والیبال پلیر/هومن/">والیبال پلیر/هومن/</a></br><a target="_blank" href="http://fire-tiger.mihanblog.com/" title="آب و آتش/زهرا/">آب و آتش/زهرا/</a></br><a target="_blank" href="../ruya-tt.mihanblog.com/index.html" title="دخیا/رویا/">دخیا/رویا/</a></br><a target="_blank" href="../niya-yesh85.mihanblog.com/index.html" title="پاتوق دخیا/نیا/">پاتوق دخیا/نیا/</a></br><a target="_blank" href="http://bad-girl10.mihanblog.com" title="Good girl/زهرا/">Good girl/زهرا/</a></br><a target="_blank" href="http://my-secretss.mihanblog.com/" title="my secrets/ملیکا/">my secrets/ملیکا/</a></br><a target="_blank" href="http://girly-gallery.blogfa.com/" title="girly gallery/مهسا/">girly gallery/مهسا/</a></br><a target="_blank" href="http://hamishe-bekhand.blogfa.com/" title="smile/کوثر/">smile/کوثر/</a></br><a target="_blank" href="../r-r-r-r1.mihanblog.com/index.html" title="دخی وروجک/ریحونیــم/">دخی وروجک/ریحونیــم/</a></br><a target="_blank" href="http://banafsheshop.mihanblog.com/" title="dreams/بنفشه/">dreams/بنفشه/</a></br><a target="_blank" href="../mmnnbbaa.mihanblog.com/index.html" title="angle of death">angle of death</a></br><a target="_blank" href="http://dokhtaroonegihamoon.mihanblog.com/" title="کسی مثل ط/ترنم/">کسی مثل ط/ترنم/</a></br><a target="_blank" href="http://autism84.mihanblog.com/" title="blue moon/فاطمه/">blue moon/فاطمه/</a></br><a target="_blank" href="http://ponyoc.mihanblog.com/" title="پونی کمپ/mary/">پونی کمپ/mary/</a></br><a target="_blank" href="../mano-m-darsam.mihanblog.com/index.html" title="hi world">hi world</a></br><a target="_blank" href="http://otaku-city.blog.ir/" title="اوتاکو سیتی/میونا چآن/">اوتاکو سیتی/میونا چآن/</a></br><a target="_blank" href="http://mar-zey.mihanblog.com/" title="من و تو/مرمرین سادات/">من و تو/مرمرین سادات/</a></br><a target="_blank" href="http://stardarling.mihanblog.com" title="بهترین های کدنویسی/ستانیا/">بهترین های کدنویسی/ستانیا/</a></br><a target="_blank" href="http://dokhmalayefootbally.mihanblog.com/" title="دخترونه فوتبالی/ایلین/">دخترونه فوتبالی/ایلین/</a></br><a target="_blank" href="../doniaidokhtarane.mihanblog.com/index.html#" title="دنیایـ دخترانهـ/غزل/">دنیایـ دخترانهـ/غزل/</a></br><a target="_blank" href="http://shado1.mihanblog.com/" title="blou/آیلیـن و ونوس/">blou/آیلیـن و ونوس/</a></br><a target="_blank" href="../hayola.mihanblog.com/index.html" title="حس و حآل منو هیولآ/مرضیه/">حس و حآل منو هیولآ/مرضیه/</a></br><a target="_blank" href="../melina82.mihanblog.com/index.html" title="قآطی پآتی خونه/ملینآ/">قآطی پآتی خونه/ملینآ/</a></br><a target="_blank" href="../kaktooos.mihanblog.com/index.html#" title="سرگرمی های صورتی/فآفآ/">سرگرمی های صورتی/فآفآ/</a></br><a target="_blank" href="../banafsha.mihanblog.com/index.html" title="بنفشآ/فاطیما/">بنفشآ/فاطیما/</a></br><a target="_blank" href="http://mykhatere.mihanblog.com/" title="خاطرات صورتی من/پنآه/">خاطرات صورتی من/پنآه/</a></br><a target="_blank" href="http://raceblog.mihanblog.com" title="وب مسابقه ای من/دیانا/">وب مسابقه ای من/دیانا/</a></br><a target="_blank" href="http://shool0031.mihanblog.com" title="مدرسه دختران یک دل/اکتویا/">مدرسه دختران یک دل/اکتویا/</a></br><a target="_blank" href="../themeland.mihanblog.com/index.html" title="Theme land/هآنی/">Theme land/هآنی/</a></br><a target="_blank" href="../rainbowshycod.mihanblog.com/index.html#" title="دنیآی انیمه من/نائو چآن/">دنیآی انیمه من/نائو چآن/</a></br><a target="_blank" href="http://darknessword.blogfa.com/" title="spiking my heart/ساحل/">spiking my heart/ساحل/</a></br><a target="_blank" href="http://hastievan.blogfa.com" title="رمان=زندگی/یه پرسپولیسی شیش آتیشه/">رمان=زندگی/یه پرسپولیسی شیش آتیشه/</a></br><a target="_blank" href="http://taranehme.blogfa.com" title="قلب یخی/ملیکآ/">قلب یخی/ملیکآ/</a></br><a target="_blank" href="../flashy-girl.mihanblog.com/index.html" title="Flashy girl">Flashy girl</a></br><a target="_blank" href="../thisisyasi.mihanblog.com/index.html" title="My blue queendom/یآسی/">My blue queendom/یآسی/</a></br><a target="_blank" href="../aridelmz.mihanblog.com/index.html" title="دنیای تینیجری/زد/">دنیای تینیجری/زد/</a></br><a target="_blank" href="../fereshtehayasemani.mihanblog.com/index.html" title="فرشته های آسمونی/زهرآ/">فرشته های آسمونی/زهرآ/</a></br><a target="_blank" href="../countrygirls-1384.mihanblog.com/index.html" title="اکیپ دخملا/هلیا/">اکیپ دخملا/هلیا/</a></br><a target="_blank" href="http://royahayerangirangi.mihanblog.com/" title="رویاهای رنگی رنگی/مهتاب/">رویاهای رنگی رنگی/مهتاب/</a></br><a target="_blank" href="http://cafe-novels.blogfa.com" title="کافه ی رمان/هلیا/">کافه ی رمان/هلیا/</a></br><a target="_blank" href="../girlycompetitions.mihanblog.com/index.html" title="diamond races/هلیا/">diamond races/هلیا/</a></br><a target="_blank" href="../mosabeghatfafa.mihanblog.com/index.html" title="girly races/پناه/">girly races/پناه/</a></br><a target="_blank" href="../1w2w3w.mihanblog.com/index.html" title="my kawaii world/میساکی می/">my kawaii world/میساکی می/</a></br><a target="_blank" href="../mymemoriesforever.mihanblog.com/index.html" title="my memories/غزل/">my memories/غزل/</a></br><a target="_blank" href="../esteghlal-taj1324.mihanblog.com/index.html" title="استقلال/سعید/">استقلال/سعید/</a></br><a target="_blank" href="../anglecomplex.mihanblog.com/index.html" title="tahoo/angle complex/">tahoo/angle complex/</a></br><a target="_blank" href="../33mnmn33.mihanblog.com/index.html" title="nabtori.exo/بی اعصآب/">nabtori.exo/بی اعصآب/</a></br><a target="_blank" href="../khateratekoudaki.mihanblog.com/index.html" title="یه دختر آذر ماهی/فآطی/">یه دختر آذر ماهی/فآطی/</a></br><a target="_blank" href="../mydeadlife84.mihanblog.com/index.html" title="mydeadlife/هآنی/">mydeadlife/هآنی/</a></br><a target="_blank" href="../misspink1.mihanblog.com/index.html" title="تکست و مسابقه/روژآن/">تکست و مسابقه/روژآن/</a></br><a target="_blank" href="http://mamadivazezejon.mihanblog.com/" title="غریبی های یک دختر/زهرا سادات/">غریبی های یک دختر/زهرا سادات/</a></br><a target="_blank" href="../wgirl83.mihanblog.com/index.html" title="wintergirl/سحر/">wintergirl/سحر/</a></br><a target="_blank" href="../amin2002.mihanblog.com/index.html" title="یک قدم تا قلم/محمدامین/">یک قدم تا قلم/محمدامین/</a></br><a target="_blank" href="../girlscity13412.mihanblog.com/index.html" title="وب هپول پپوی خودم/امیکو/">وب هپول پپوی خودم/امیکو/</a></br><a target="_blank" href="../dsatan-skyland.mihanblog.com/index.html" title="اسکآی لند/سحرشآلی/">اسکآی لند/سحرشآلی/</a></br><a target="_blank" href="../mosabeghat-setayesh.mihanblog.com/index.html#" title="مسابقات پرنسس ستایش/ستایش/">مسابقات پرنسس ستایش/ستایش/</a></br><a target="_blank" href="http://moosighi11.mihanblog.com/" title="دخملانه ها/ملیکا/">دخملانه ها/ملیکا/</a></br><a target="_blank" href="../dokhbala.mihanblog.com/index.html" title="دخترای بلا/ماهانا/">دخترای بلا/ماهانا/</a></br><a target="_blank" href="../s-1383.mihanblog.com/index.html#" title="دخی خاصا/ستایش/">دخی خاصا/ستایش/</a></br><a target="_blank" href="../paria-1383.mihanblog.com/index.html" title="world girl mehri/پریا/">world girl mehri/پریا/</a></br><a target="_blank" href="../twilight-sparkle-dash.mihanblog.com/index.html" title="world secret/مهزاد/">world secret/مهزاد/</a></br><a target="_blank" href="../mjorvajorm.mihanblog.com/index.html" title="♛Mahtab♛/♛JoorVaJoor♛/">♛Mahtab♛/♛JoorVaJoor♛/</a></br><a target="_blank" href="http://www.myloveryoma2.mihanblog.com" title="رمان های منو ریوما/ریما/">رمان های منو ریوما/ریما/</a></br>
+
+
+
+
+                    <div class="cutie"><div class="mimi" style="color:#000000">Links</div><br><center><BlogProfile><center></b>
+                        <a target="_blank" href="http://faraboursi.ir" title="">آموزش بورس</a></br>
+
+
+
+
+                        <div class="cutie"><div class="mimi" style="color:#000000">Side plates</div><br><center><BlogProfile><center></b>
+                                                    </div><div class="space"></div>
+
+
+
+
+                        <div class="cutie"><div class="mimi" style="color:#000000">Archive</div><br><center><BlogProfile><center></b>
+                            <a href="http://ryomaechizen-clob.mihanblog.com/post/archive/1399/4"> تیر 1399</a></br><a href="http://ryomaechizen-clob.mihanblog.com/post/archive/1399/1"> فروردین 1399</a></br><a href="http://ryomaechizen-clob.mihanblog.com/post/archive/1398/12"> اسفند 1398</a></br><a href="http://ryomaechizen-clob.mihanblog.com/post/archive/1398/10"> دی 1398</a></br><a href="http://ryomaechizen-clob.mihanblog.com/post/archive/1398/7"> مهر 1398</a></br><a href="http://ryomaechizen-clob.mihanblog.com/post/archive/1398/6"> شهریور 1398</a></br><a href="http://ryomaechizen-clob.mihanblog.com/post/archive/1398/5"> مرداد 1398</a></br><a href="http://ryomaechizen-clob.mihanblog.com/post/archive/1398/4"> تیر 1398</a></br><a href="http://ryomaechizen-clob.mihanblog.com/post/archive/1398/3"> خرداد 1398</a></br><a href="http://ryomaechizen-clob.mihanblog.com/post/archive/1398/2"> اردیبهشت 1398</a></br><a href="http://ryomaechizen-clob.mihanblog.com/post/archive/1398/1"> فروردین 1398</a></br><a href="http://ryomaechizen-clob.mihanblog.com/post/archive/1397/12"> اسفند 1397</a></br><a href="http://ryomaechizen-clob.mihanblog.com/post/archive/1397/11"> بهمن 1397</a></br><a href="http://ryomaechizen-clob.mihanblog.com/post/archive/1397/9"> آذر 1397</a></br><a href="http://ryomaechizen-clob.mihanblog.com/post/archive/1397/8"> آبان 1397</a></br><a href="http://ryomaechizen-clob.mihanblog.com/post/archive/1397/7"> مهر 1397</a></br><a href="http://ryomaechizen-clob.mihanblog.com/post/archive/1397/6"> شهریور 1397</a></br><a href="http://ryomaechizen-clob.mihanblog.com/post/archive/1397/5"> مرداد 1397</a></br><a href="http://ryomaechizen-clob.mihanblog.com/post/archive/1397/4"> تیر 1397</a></br><a href="http://ryomaechizen-clob.mihanblog.com/post/archive/1397/3"> خرداد 1397</a></br><a href="http://ryomaechizen-clob.mihanblog.com/post/archive/1397/1"> فروردین 1397</a></br><a href="http://ryomaechizen-clob.mihanblog.com/post/archive/1396/12"> اسفند 1396</a></br>                        </div><div class="space"></div>
+
+
+
+
+                        <div class="cutie"><div class="mimi" style="color:#000000">Visit</div><br>
+                            <center><div class=li-Sid>Today visit : <b><script>getStatVar('today_view');</script></b></div>
+                                <div class=li-Sid>Total visit : <b><script>getStatVar('total_view');</script></b></div><div class=li-Sid>This month :<b> <script>getStatVar('this_month_view');</script></b></div>
+                                <center>Last update : <script>getStatVar('modify_date');</script></center><br></center>
+                    </BlogProfile></div><div class="cutie"><div class="mimi" style="color:#000000">Others</div><!-- start logo cod off http://code-design-center.mihanblog.com --><p align="center"><p align="center"><a href="../code-design-center.mihanblog.com/index.html" target="_blank"><img border="0" src="http://s8.picofile.com/file/8368070168/l8.png"  width="150" height="105" alt="Code Design Center"></a></p><!--finish logo cod off http://code-design-center.mihanblog.com --><br><center><!---begin GOFTINO code--->
+<script type="text/javascript">
+!function(){function g(){var g=document.createElement("script"),s="https://www.goftino.com/widget/d8z2H4";g.type="text/javascript", g.async=!0,g.src=localStorage.getItem("goftino")?s+"?o="+localStorage.getItem("goftino"):s;var e=document.getElementsByTagName("script")[0];e.parentNode.insertBefore(g, e);}
+var a = window;"complete" === document.readyState ? g() : a.attachEvent ? a.attachEvent("onload", g) : a.addEventListener("load", g, !1);}();
+</script>
+<!---end GOFTINO code--->
+
+\
+
+
+<center><audio controls autoplay preload="none" style="width:94%;margin:0% 3%;"><source type="audio/mpeg" id="player" src="http://uupload.ir/filelink/682af37460d5d529518c20f9b2cc2986/kkut_kkfm_mahbod_9_(online-audio-converter.com).mp3">مرورگر شما از Player ساپورت نمی کند</audio><br /><a href="https://nex1music.ir/tag/دانلود-آهنگ/" target="_blank">دانلود آهنگ</a></center></center>
+
+
+
+
+                    </div></td></tr></tbody></table><div id="profile" style="display: none;">
+    <div class="title-a" style="color:#000000">Pushi Behind The Screen</div><br></a></center><br><br></center>
+    <div style="text-align: left; padding-left: 30px; padding-right: 20px;"><center><u><center><u><u><br><br>
+        <div id="links" style="display: none;"><div class="title-a" style="color:#000000">Link Exchanges</div><br>
+            <center><br><br><div style="text-align: left; padding-left: 20px; padding-right: 20px;"><img src="http://s8.picofile.com/file/8367464776/%D9%81%D8%A7%D9%88.png" style="width:20px; height:20px;" />
+                <script type="text/javascript" language="javascript" src="http://up.zibatools.ir/468.js"></script><br>
+                Exchange link? tell me at my cbox...<br>
+                <img src="http://s8.picofile.com/file/8367464776/%D9%81%D8%A7%D9%88.png" style="width:20px; height:20px;" />  Put mine as...<br>
+                <img src="http://s8.picofile.com/file/8367464776/%D9%81%D8%A7%D9%88.png" style="width:20px; height:20px;" />  Also include your nickname to put...<br><br><br>
+                <a class="linkies" target="_blank" href="http://black-and-white-world.mihanblog.com/">/black and white/ari</a></div><a class="linkies" target="_blank" href="http://niupony.mihanblog.com/">لونای من/اسمون شبم/</a></div><a class="linkies" target="_blank" href="http://myb-a-c-w.mihanblog.com/">اسمون شبم</a></div><a class="linkies" target="_blank" href="http://goodbyeworld.mihanblog.com">دنیایی که خراب شد/نازنین/</a></div><a class="linkies" target="_blank" href="../my-redlife.mihanblog.com/index.html">white life/آلوم/</a></div><a class="linkies" target="_blank" href="http://z-f-d-happysad.mihanblog.com/">قره قوروت/زهرا/</a></div><a class="linkies" target="_blank" href="http://anahitafarshiyan.blogfa.com">جوجو کوچولو/آناهیتا/</a></div><a class="linkies" target="_blank" href="http://lover-alone1375.blogfa.com">بعد تو هیچ چیز دوست داشتنی نیست/کوروش/</a></div><a class="linkies" target="_blank" href="../design-city.mihanblog.com/index.html">دیزاین سیتی/ملیکا/</a></div><a class="linkies" target="_blank" href="http://lovelylonely.blogfa.com">Lonel forever/دابریا/</a></div><a class="linkies" target="_blank" href="http://www.negar191380.blogfa.com">گپ تلخ/نگار/</a></div><a class="linkies" target="_blank" href="http://mohanam.blogfa.com">A&amp;M</a></div><a class="linkies" target="_blank" href="http://girl-bad6844.blogfa.com">مغزم جیغ میزنه/عاطی/</a></div><a class="linkies" target="_blank" href="../code-design-center.mihanblog.com/index.html">مرکز طراحی کد</a></div><a class="linkies" target="_blank" href="http://changwk-jinho.mihanblog.com">والیبال پلیر/هومن/</a></div><a class="linkies" target="_blank" href="http://fire-tiger.mihanblog.com/">آب و آتش/زهرا/</a></div><a class="linkies" target="_blank" href="../ruya-tt.mihanblog.com/index.html">دخیا/رویا/</a></div><a class="linkies" target="_blank" href="../niya-yesh85.mihanblog.com/index.html">پاتوق دخیا/نیا/</a></div><a class="linkies" target="_blank" href="http://bad-girl10.mihanblog.com">Good girl/زهرا/</a></div><a class="linkies" target="_blank" href="http://my-secretss.mihanblog.com/">my secrets/ملیکا/</a></div><a class="linkies" target="_blank" href="http://girly-gallery.blogfa.com/">girly gallery/مهسا/</a></div><a class="linkies" target="_blank" href="http://hamishe-bekhand.blogfa.com/">smile/کوثر/</a></div><a class="linkies" target="_blank" href="../r-r-r-r1.mihanblog.com/index.html">دخی وروجک/ریحونیــم/</a></div><a class="linkies" target="_blank" href="http://banafsheshop.mihanblog.com/">dreams/بنفشه/</a></div><a class="linkies" target="_blank" href="../mmnnbbaa.mihanblog.com/index.html">angle of death</a></div><a class="linkies" target="_blank" href="http://dokhtaroonegihamoon.mihanblog.com/">کسی مثل ط/ترنم/</a></div><a class="linkies" target="_blank" href="http://autism84.mihanblog.com/">blue moon/فاطمه/</a></div><a class="linkies" target="_blank" href="http://ponyoc.mihanblog.com/">پونی کمپ/mary/</a></div><a class="linkies" target="_blank" href="../mano-m-darsam.mihanblog.com/index.html">hi world</a></div><a class="linkies" target="_blank" href="http://otaku-city.blog.ir/">اوتاکو سیتی/میونا چآن/</a></div><a class="linkies" target="_blank" href="http://mar-zey.mihanblog.com/">من و تو/مرمرین سادات/</a></div><a class="linkies" target="_blank" href="http://stardarling.mihanblog.com">بهترین های کدنویسی/ستانیا/</a></div><a class="linkies" target="_blank" href="http://dokhmalayefootbally.mihanblog.com/">دخترونه فوتبالی/ایلین/</a></div><a class="linkies" target="_blank" href="../doniaidokhtarane.mihanblog.com/index.html#">دنیایـ دخترانهـ/غزل/</a></div><a class="linkies" target="_blank" href="http://shado1.mihanblog.com/">blou/آیلیـن و ونوس/</a></div><a class="linkies" target="_blank" href="../hayola.mihanblog.com/index.html">حس و حآل منو هیولآ/مرضیه/</a></div><a class="linkies" target="_blank" href="../melina82.mihanblog.com/index.html">قآطی پآتی خونه/ملینآ/</a></div><a class="linkies" target="_blank" href="../kaktooos.mihanblog.com/index.html#">سرگرمی های صورتی/فآفآ/</a></div><a class="linkies" target="_blank" href="../banafsha.mihanblog.com/index.html">بنفشآ/فاطیما/</a></div><a class="linkies" target="_blank" href="http://mykhatere.mihanblog.com/">خاطرات صورتی من/پنآه/</a></div><a class="linkies" target="_blank" href="http://raceblog.mihanblog.com">وب مسابقه ای من/دیانا/</a></div><a class="linkies" target="_blank" href="http://shool0031.mihanblog.com">مدرسه دختران یک دل/اکتویا/</a></div><a class="linkies" target="_blank" href="../themeland.mihanblog.com/index.html">Theme land/هآنی/</a></div><a class="linkies" target="_blank" href="../rainbowshycod.mihanblog.com/index.html#">دنیآی انیمه من/نائو چآن/</a></div><a class="linkies" target="_blank" href="http://darknessword.blogfa.com/">spiking my heart/ساحل/</a></div><a class="linkies" target="_blank" href="http://hastievan.blogfa.com">رمان=زندگی/یه پرسپولیسی شیش آتیشه/</a></div><a class="linkies" target="_blank" href="http://taranehme.blogfa.com">قلب یخی/ملیکآ/</a></div><a class="linkies" target="_blank" href="../flashy-girl.mihanblog.com/index.html">Flashy girl</a></div><a class="linkies" target="_blank" href="../thisisyasi.mihanblog.com/index.html">My blue queendom/یآسی/</a></div><a class="linkies" target="_blank" href="../aridelmz.mihanblog.com/index.html">دنیای تینیجری/زد/</a></div><a class="linkies" target="_blank" href="../fereshtehayasemani.mihanblog.com/index.html">فرشته های آسمونی/زهرآ/</a></div><a class="linkies" target="_blank" href="../countrygirls-1384.mihanblog.com/index.html">اکیپ دخملا/هلیا/</a></div><a class="linkies" target="_blank" href="http://royahayerangirangi.mihanblog.com/">رویاهای رنگی رنگی/مهتاب/</a></div><a class="linkies" target="_blank" href="http://cafe-novels.blogfa.com">کافه ی رمان/هلیا/</a></div><a class="linkies" target="_blank" href="../girlycompetitions.mihanblog.com/index.html">diamond races/هلیا/</a></div><a class="linkies" target="_blank" href="../mosabeghatfafa.mihanblog.com/index.html">girly races/پناه/</a></div><a class="linkies" target="_blank" href="../1w2w3w.mihanblog.com/index.html">my kawaii world/میساکی می/</a></div><a class="linkies" target="_blank" href="../mymemoriesforever.mihanblog.com/index.html">my memories/غزل/</a></div><a class="linkies" target="_blank" href="../esteghlal-taj1324.mihanblog.com/index.html">استقلال/سعید/</a></div><a class="linkies" target="_blank" href="../anglecomplex.mihanblog.com/index.html">tahoo/angle complex/</a></div><a class="linkies" target="_blank" href="../33mnmn33.mihanblog.com/index.html">nabtori.exo/بی اعصآب/</a></div><a class="linkies" target="_blank" href="../khateratekoudaki.mihanblog.com/index.html">یه دختر آذر ماهی/فآطی/</a></div><a class="linkies" target="_blank" href="../mydeadlife84.mihanblog.com/index.html">mydeadlife/هآنی/</a></div><a class="linkies" target="_blank" href="../misspink1.mihanblog.com/index.html">تکست و مسابقه/روژآن/</a></div><a class="linkies" target="_blank" href="http://mamadivazezejon.mihanblog.com/">غریبی های یک دختر/زهرا سادات/</a></div><a class="linkies" target="_blank" href="../wgirl83.mihanblog.com/index.html">wintergirl/سحر/</a></div><a class="linkies" target="_blank" href="../amin2002.mihanblog.com/index.html">یک قدم تا قلم/محمدامین/</a></div><a class="linkies" target="_blank" href="../girlscity13412.mihanblog.com/index.html">وب هپول پپوی خودم/امیکو/</a></div><a class="linkies" target="_blank" href="../dsatan-skyland.mihanblog.com/index.html">اسکآی لند/سحرشآلی/</a></div><a class="linkies" target="_blank" href="../mosabeghat-setayesh.mihanblog.com/index.html#">مسابقات پرنسس ستایش/ستایش/</a></div><a class="linkies" target="_blank" href="http://moosighi11.mihanblog.com/">دخملانه ها/ملیکا/</a></div><a class="linkies" target="_blank" href="../dokhbala.mihanblog.com/index.html">دخترای بلا/ماهانا/</a></div><a class="linkies" target="_blank" href="../s-1383.mihanblog.com/index.html#">دخی خاصا/ستایش/</a></div><a class="linkies" target="_blank" href="../paria-1383.mihanblog.com/index.html">world girl mehri/پریا/</a></div><a class="linkies" target="_blank" href="../twilight-sparkle-dash.mihanblog.com/index.html">world secret/مهزاد/</a></div><a class="linkies" target="_blank" href="../mjorvajorm.mihanblog.com/index.html">♛Mahtab♛/♛JoorVaJoor♛/</a></div><a class="linkies" target="_blank" href="http://www.myloveryoma2.mihanblog.com">رمان های منو ریوما/ریما/</a></div></BlogLinks><br/><br/></div>
+        <div id="rules" style="display: none;"><div class="title-a" style="color:#000000" style="color:#000000">Read this rules first</div><br>
+            <div class="separator" style="clear: both; text-align: center;"></div><br>
+            <div style="text-align: left; padding-left: 20px; padding-right: 20px;">
+                <cb:loop_blog_archive><img src="http://s8.picofile.com/file/8367464776/%D9%81%D8%A7%D9%88.png"  style="width:20px; height:20px;"/><a href="http://ryomaechizen-clob.mihanblog.com/post/archive/1396/6"> شهریور 1396 ، 0 </a></div></cb:loop_blog_archive><br>            </img src="http://s8.picofile.com/file/8367464776/%D9%81%D8%A7%D9%88.png" style="width:20px; height:20px;" /></BlogArchive>
+            <div style="text-align: center;"></div><div id="stuff" style="display: none;"><div class="title-a" style="color:#000000">Blog Tutorial</div><br><br><br><br>
+                <br><br><br></center><center>
+        <script type="text/javascript" src="http://up.zibatools.ir/online/3.js"></script></center>
+    </div></body></html><script>
+//    setTimeout(function () {
+//        GetMihanBlogShowAds();
+//    }, 1000);
+</script>
+<!--NEW SERVER--><!--;)-->
+
+<!--SabaVision Ads Handler--><!--<script type="text/javascript">(function (d) {var url =   location.protocol+'//api.sabavision.com/pox/poxjs.js';d.write('<script type="text/javascript" src="' + url + '" async></scri' + 'pt>');})(document);</script>-->
+
+
+<script type="text/javascript">
+
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-153829-9']);
+    _gaq.push(['_setDomainName', 'ryomaechizen-clob.mihanblog.com']);
+    _gaq.push(['_trackPageview']);
+
+    (function() {
+        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+
+</script>
+
+
+<div id='mediaad-Kvcm'></div>
+<meta name="sabavision_zone" content="2500-Z499" />
+<center>
+    <div style="background-color:white;width:90%;padding:20px;margin-top:50px;margin-bottom:50px;">
+        <a href="https://www.cloob.com">شبکه اجتماعی فارسی کلوب</a> | <a href="https://www.seo25.com/product/buy-mobile-traffic-and-get-cheap-targeted-mobile-traffic/" target="_blank">Buy Mobile Traffic</a> | <a href="https://www.soalaat.com">سایت سوالات</a>
+    </div>
+</center>

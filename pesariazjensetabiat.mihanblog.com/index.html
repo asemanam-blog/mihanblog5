@@ -1,0 +1,1377 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" /><link rel="EditURI" type="application/rsd+xml" title="RSD" href="http://pesariazjensetabiat.mihanblog.com/xmlrpc?rsd" />
+<script type="text/javascript" src="../static.mihanblog.com/public/scripts/run/g.other.v3.js"></script>
+<script>
+
+	function c_$(id){
+        return document.getElementById(id);
+    }
+    
+			//if (parent.frames.length) top.location.href= document.location;
+		
+	setTodayDate = function(){
+		document.write('1399/09/22');
+		/*1878596*/	}
+
+</script>
+
+
+
+        <script type="text/javascript">
+            (function(){
+            var now = new Date();
+            var head = document.getElementsByTagName('head')[0];
+            var script = document.createElement('script');
+            script.async = true;
+            var script_address = 'https://cdn.yektanet.com/js/mihanblog.com/native-mihanblog.com-6531.js';
+            script.src = script_address + '?v=' + now.getFullYear().toString() + '0' + now.getMonth() + '0' + now.getDate() + '0' + now.getHours();
+            head.appendChild(script);
+            })();
+        </script>
+
+        <!--<script type="text/javascript">
+            var head = document.getElementsByTagName("head")[0];
+            var script = document.createElement("script");
+            script.type = "text/javascript";
+            script.async=1;
+            script.src = "https://s1.mediaad.org/serve/mihanblog.com/loader.js" ;
+            head.appendChild(script);
+        </script>-->
+        
+        <script>
+            var sabaVisionWebsiteID = "9bab9dac-041d-4bdb-b39a-1ed789f65eed"; var sabaVisionWebsitePage = "ALL"
+        </script>
+        <link rel="stylesheet" href="https://plus.sabavision.com/dox/dox.min.css">
+        <script src="https://plus.sabavision.com/dox/dox.min.js"></script>
+        
+        <script>
+	try{
+		var commentCnt = new Array();
+		commentCnt[215]='0';commentCnt[216]='2';commentCnt[217]='0';commentCnt[218]='0';commentCnt[219]='0';commentCnt[220]='0';commentCnt[221]='0';commentCnt[222]='2';commentCnt[223]='2';commentCnt[224]='3';	} catch(e){}
+	
+	newComment = function(post_id){
+		try{
+			window.open('/post/comment/'+post_id,'comment','status=yes,scrollbars=yes,toolbar=no,menubar=no,location=no ,width=480px,height=540px');
+		} catch(e){}
+	}
+	setCommentCnt = function(post_id){
+		try{
+			if(commentCnt[post_id]){
+				document.write(commentCnt[post_id]);
+			} else {
+				document.write(0);
+			}
+		} catch(e){}
+	}
+</script><script>
+
+
+	mihanblogUpdateLike = function(postid,type){
+		var url = '/post/like/'+postid+'/'+type;
+		mihanblogGetAjax(url,function(){});
+	};
+	try{
+        mihanblogGetAjax = function (url,callback) {
+    		var req;
+			if (window.XMLHttpRequest)
+            {
+                // code for IE7+, Firefox, Chrome, Opera, Safari
+			  	req = new XMLHttpRequest();
+			}else{	// code for IE6, IE5
+			  	req = new ActiveXObject("Microsoft.XMLHTTP");
+		  	}
+		    req.open("GET", url, 1);
+		    req.onreadystatechange = function () {
+		        if (req.readyState == 4) {
+		            if (req.status == 200) {
+		            	var response = eval(req.responseText);
+		            	callback();
+		            }else{
+	            		return ;
+		            }
+		        }else{
+					return ;
+		        }
+		    }
+		    req.send(null);
+		}
+	}catch(e){}
+
+	try{
+		var mihanblogLikeArrCnt = new Array();
+		var mihanblogDisLikeArrCnt = new Array();
+
+		mihanblogLikeArrCnt[215]='0';
+mihanblogDisLikeArrCnt[215]='0';
+mihanblogLikeArrCnt[216]='0';
+mihanblogDisLikeArrCnt[216]='0';
+mihanblogLikeArrCnt[217]='0';
+mihanblogDisLikeArrCnt[217]='0';
+mihanblogLikeArrCnt[218]='0';
+mihanblogDisLikeArrCnt[218]='0';
+mihanblogLikeArrCnt[219]='0';
+mihanblogDisLikeArrCnt[219]='0';
+mihanblogLikeArrCnt[220]='0';
+mihanblogDisLikeArrCnt[220]='0';
+mihanblogLikeArrCnt[221]='0';
+mihanblogDisLikeArrCnt[221]='0';
+mihanblogLikeArrCnt[222]='0';
+mihanblogDisLikeArrCnt[222]='0';
+mihanblogLikeArrCnt[223]='0';
+mihanblogDisLikeArrCnt[223]='0';
+mihanblogLikeArrCnt[224]='0';
+mihanblogDisLikeArrCnt[224]='0';
+	} catch(e){}
+
+
+
+    mihanblogPostLike = function(post_id){
+
+        mihanblogLikeCnt = (mihanblogLikeArrCnt[post_id]? mihanblogLikeArrCnt[post_id] : 0);
+        mihanblogDisLikeCnt = (mihanblogDisLikeArrCnt[post_id]? mihanblogDisLikeArrCnt[post_id] : 0);
+        mihanblogLikeCnt = parseInt(mihanblogLikeCnt);
+        mihanblogDisLikeCnt = parseInt(mihanblogDisLikeCnt);
+
+        document.write(
+                '<div class="mihanblog_like_wrapper ">'+
+                       '<div id="dislikeBar_'+post_id+'" onclick="mihanblogUpdateLike('+post_id+',\'dislike\')"   class="mihanblog_like_bar mihanblog_like_dislikeBar mihanblog_like_show_help ">-<div class="mihanblog_like_Cnt" id="disLikeCnt_'+post_id+'">'+mihanblogDisLikeCnt+'</div>'+
+                            '<span  class="mihanblog_like_v2_help mihanblog_like_v2_help_dislike clearfix"> '+
+                                '<span class="mihanblog_like_help_arrow mihanblog_like_help_arrow_dislike clearfix"></span>'+
+                                '<span class="mihanblog_like_help_text">نمی پسندم</span>'+
+                            '</span>'+
+                        '</div>'+
+                       '<div id="Like_'+post_id+'" class="mihanblog_like_border"></div>'+
+                       '<div id="likeBar_'+post_id+'" onclick="mihanblogUpdateLike('+post_id+',\'like\')"  class="mihanblog_like_bar mihanblog_like_likeBar mihanblog_like_show_help" >+<div class="mihanblog_like_Cnt" id="likeCnt_'+post_id+'">'+mihanblogLikeCnt+'</div>'+
+                            '<span  class="mihanblog_like_v2_help mihanblog_like_v2_help_like clearfix"> '+
+                                '<span class="mihanblog_like_help_arrow mihanblog_like_help_arrow_like clearfix"></span>'+
+                                '<span class="mihanblog_like_help_text">می پسندم</span>'+
+                            '</span>'+
+                        '</div>'+
+
+                '</div>'
+        );
+
+
+
+        mihanblogDisplayeLike(post_id);
+    }
+
+
+    mihanblogDisplayeLike = function(post_id){
+
+        mihanblogLikeCnt = (mihanblogLikeArrCnt[post_id]? mihanblogLikeArrCnt[post_id] : 0);
+        mihanblogDisLikeCnt = (mihanblogDisLikeArrCnt[post_id]? mihanblogDisLikeArrCnt[post_id] : 0);
+        mihanblogLikeCnt = parseInt(mihanblogLikeCnt);
+        mihanblogDisLikeCnt = parseInt(mihanblogDisLikeCnt);
+
+
+
+        sum = mihanblogLikeCnt - mihanblogDisLikeCnt;
+        backgroundBorder =  document.getElementById('Like_'+post_id);
+        var likeObj = document.getElementById('likeCnt_'+post_id);
+        var disLikeObj = document.getElementById('disLikeCnt_'+post_id);
+
+
+
+
+
+        likeObj.innerHTML =  mihanblogLikeCnt ;
+        disLikeObj.innerHTML =  mihanblogDisLikeCnt;
+
+        if(sum == 0){
+            backgroundBorder.style.backgroundImage = "url('/public/public/images/icons/like_likedislike.png')";
+            document.getElementById('dislikeBar_'+post_id).style.width = '19px';
+            document.getElementById('likeBar_'+post_id).style.width = '19px';
+        }else{
+             if(sum > 0){
+                 backgroundBorder.style.backgroundImage = "url('/public/public/images/icons/like_like.png')";
+                 document.getElementById('likeBar_'+post_id).style.width = '23px';
+                 document.getElementById('dislikeBar_'+post_id).style.width = '15px';
+             }else{
+                 backgroundBorder.style.backgroundImage = "url('/public/public/images/icons/like_dislike.png')";
+                 document.getElementById('likeBar_'+post_id).style.width = '15px';
+                 document.getElementById('dislikeBar_'+post_id).style.width = '23px';
+             }
+        }
+
+    }
+
+
+
+
+</script>
+
+<style type="text/css">
+
+
+    .clearfix {display: inline-block;}
+    .clearfix:after {
+        content: ".";
+        display: block;
+        height: 0;
+        clear: both;
+        visibility: hidden;
+    }
+
+    .mihanblog_like_wrapper {
+        color: #ffffff;
+        direction: ltr;
+        position: relative;
+    }
+    .mihanblog_like_wrapper span{
+        display: none;
+    }
+    .mihanblog_like_bar {
+        color: #FFFFFF;
+        cursor: pointer;
+        float: left;
+        font-size: 10px;
+        height: 20px;
+        line-height: 19px;
+        margin: 5px 0;
+    }
+    .mihanblog_like_likeBar {
+        background-color: #88B131;
+        padding-right: 5px;
+        border-top-right-radius: 2px;
+        border-bottom-right-radius: 2px;
+        text-align: right;
+    }
+    .mihanblog_like_likeBar:hover{
+        background-color: #699017;
+    }
+    .mihanblog_like_border {
+        background-color: #666666;
+        border: 1px solid #666666;
+        float: left;
+        font-size: 12px;
+        height: 20px;
+        margin-top: 2px;
+        width: 25px;
+        padding: 3px 5px 2px 0;
+        text-align: center;
+        border-radius: 2px;
+        color: #ffffff;
+        direction: ltr;
+        background-repeat: no-repeat ;
+        background-position: 4px center;
+    }
+    .mihanblog_like_border img {
+        margin-left: 2px;
+        margin-top: 2px;
+        width: 22px;
+    }
+    .mihanblog_like_dislikeBar {
+        background-color: #FF6F31;
+        padding-left: 5px;
+        border-top-left-radius: 2px;
+        border-bottom-left-radius: 2px;
+        text-align:left ;
+    }
+    .mihanblog_like_dislikeBar:hover{
+        background-color: #D54B10;
+    }
+
+
+
+    .mihanblog_like_show_help {
+        position: relative;
+    }
+    .mihanblog_like_show_help:hover span {
+        display: block;
+    }
+    .mihanblog_like_help_text {
+        background-color: white;
+        border: 1px solid #555555;
+        border-radius: 3px 3px 3px 3px;
+        color: #303030;
+        float: left;
+        font-size: 11px;
+        font-weight: normal;
+        padding: 5px 10px;
+    }
+
+    .mihanblog_like_help_arrow_dislike {
+        background: url("http://pesariazjensetabiat.mihanblog.com/public/public/images/icons/like_hover_top.png") no-repeat scroll 16px 0 transparent;
+        left: 0;
+        top: -4px;
+    }
+
+    .mihanblog_like_help_arrow_like {
+        background: url("http://pesariazjensetabiat.mihanblog.com/public/public/images/icons/like_hover_top _2.png") no-repeat scroll 16px 0 transparent;
+        left: -10px;
+        top: 29px;
+    }
+
+    .mihanblog_like_help_arrow{
+        height: 6px;
+        position: absolute;
+        width: 100px;
+
+    }
+
+    .mihanblog_like_v2_help_dislike {
+        left: -15px;
+        top: 24px;
+    }
+    .mihanblog_like_v2_help_like {
+        left: 0;
+        top: -35px;
+
+    }
+    .mihanblog_like_v2_help{
+        display: none;
+        position: absolute;
+        white-space: nowrap;
+        z-index: 1;
+    }
+
+    .mihanblog_like_Cnt{
+        display: inline;
+        color: #ffffff;
+    }
+
+</style><script>
+
+	statInfo = new Array();
+	setStatVar = function(index,value){
+		statInfo[index] = value;
+	}
+	getStatVar = function(index){
+		if(statInfo[index]) document.write(statInfo[index]);
+	}
+	
+	setStatVar('total_post','218');
+	setStatVar('total_author','1');
+	setStatVar('modify_date','1397/03/8');
+	
+	setStatVar('today_view','26');
+	setStatVar('yesterday_view','65');
+	
+	setStatVar('this_month_view','1587');
+	setStatVar('last_month_view','2474');
+
+	setStatVar('total_view','116866');
+	setStatVar('last_view_date','1399/09/22 (15:35)');
+
+
+
+    
+    function setStatFromClient()
+    {
+        var url = 'http://pesariazjensetabiat.mihanblog.com/statupdate/?data[refereruri]=http://sunset313.mihanblog.com/&data[postid]=&data[requesturi]=/&data[sdate]=1607779742&data[hash]=912cb7528690dc24d3b132c95cbc8d74&data[resolution]='+screen.width+' X '+screen.height;
+
+//        alert(url);
+//        var newjs = document.createElement("SCRIPT");
+//        newjs.type = 'text/javascript';
+//        newjs.src = url;
+//
+//        var newdiv = document.createElement("DIV");
+//        newdiv.setAttribute("style","display:none");
+
+        document.write(unescape('%3Cscript src="'+url+'" type="text/javascript"%3E%3C/script%3E'));
+//        newdiv.appendChild (newjs);
+//        document.write(newjs);
+//        document.write(appendChild (newdiv);
+
+    };
+    setStatFromClient();
+        
+</script><script>
+	messageForm = function(post_id){
+		try{
+			window.open('/message','message','status=yes,scrollbars=yes,toolbar=no,menubar=no,location=no ,width=480px,height=550px');
+		} catch(e){}
+	}
+</script><script>
+	linkdailyForm = function(){
+		try{
+			window.open('/linkdaily/new','linkdaily','status=yes,scrollbars=yes,toolbar=no,menubar=no,location=no ,width=500px,height=460px');
+		} catch(e){}
+	}
+</script><script>
+
+var MihanblogShopAdsArray = new Array();
+
+function GetMihanBlogShowAds(){
+	if(MihanblogShopAdsArray.length){
+		var adsTarget = 'MihanblogShopAds';
+		var containerWidth = document.getElementById(adsTarget).offsetWidth;
+		if(containerWidth>=200){
+			var adsCnt = parseInt(containerWidth / 200) ;
+			if(adsCnt>MihanblogShopAdsArray.length){
+				adsCnt = MihanblogShopAdsArray.length ; 
+			}
+//			var OneAdsWidth = parseInt(containerWidth / adsCnt) ;
+			var OneAdsWidth = containerWidth / adsCnt ;
+			if(OneAdsWidth>400){
+				OneAdsWidth = 400 ;
+			}
+			var OutHtml = '';
+			var img = '';
+			var link = '';
+			var title = '';
+			var description = '';
+			var imgWidth = 70;
+			if(OneAdsWidth>230){
+				imgWidth = 80;
+			}
+			if(OneAdsWidth>300){
+				imgWidth = 90;
+			}
+			for(adsOne=0;adsOne<adsCnt;adsOne++){
+				
+				img = MihanblogShopAdsArray[adsOne]['img'];
+				link = MihanblogShopAdsArray[adsOne]['link'];
+				title = MihanblogShopAdsArray[adsOne]['title'];
+				description = MihanblogShopAdsArray[adsOne]['description'];
+				
+				OutHtml += '<td style="background-color:#FFF;width: '+OneAdsWidth+'px;border:1px solid #f00;margin:0px 0px;font-size:11px;font-family:tahoma;padding:2px;margin:0px 0px;font-size:11px;border: 1px solid BurlyWood; padding: 1px; height: '+(imgWidth+25)+'px;">';
+
+				OutHtml += '	<a href="http://pesariazjensetabiat.mihanblog.com/'+link+'" target="_blank" style="text-decoration:none">';
+
+				OutHtml += '			<div style="width: '+(OneAdsWidth-16)+'px;cursor:pointer;font-size:12px;padding: 4px 1px 4px 7px; white-space: nowrap; text-align: center; font-weight: bold; color: blue;white-space:nowrap;overflow:hidden">';
+				OutHtml += 					title;
+				OutHtml += '			</div>';
+				OutHtml += '			<div style="cursor:pointer;padding: 1px; display: block; float: right; width: '+imgWidth+'px;">';
+				OutHtml += '				<img src="'+img+'.html" style="border:0px;padding:0px;margin:0px;width:'+imgWidth+'px;height:'+imgWidth+'px;">';
+				OutHtml += '			</div>';
+				OutHtml += '			<div style="padding: 1px; display: block; float: right; width: '+(OneAdsWidth-13-imgWidth)+'px; text-align: right;overflow:hidden">';
+				OutHtml += '				<div style="overflow:hidden;cursor:pointer;padding: 2px 3px; line-height: 17px; height: '+(imgWidth-3)+'px; text-align: justify;color:#000;direction:rtl">';
+				OutHtml += 						description;
+				OutHtml += '				</div>';
+				OutHtml += '			</div>';
+
+				OutHtml += '	</a>';
+
+				OutHtml += '</td>';
+			}
+			
+			var Out = '<table align="center" cellpadding="0" cellspacing="2" style="width:'+(OneAdsWidth*adsCnt)+'px;"><tr>'+OutHtml+'</tr></table>'; 
+			
+			Out = '<div style="text-align:center;padding:0px;margin:3px auto;">'+Out+'</div>'; 
+			
+			document.getElementById(adsTarget).style.height = (imgWidth+35)+'px' ;
+			document.getElementById(adsTarget).innerHTML = Out ;
+		}
+	}
+}
+</script>
+    <style>
+        @font-face {
+            font-family: 'Mihan-Iransans';
+            src: url('http://pesariazjensetabiat.mihanblog.com/public/public/fonts/Iransans.eot');
+            src: url('http://pesariazjensetabiat.mihanblog.com/public/public/fonts/Iransans.eot?') format('embedded-opentype'),
+            url('http://pesariazjensetabiat.mihanblog.com/public/public/fonts/Iransans.woff2') format('woff2'),
+            url('http://pesariazjensetabiat.mihanblog.com/public/public/fonts/Iransans.woff') format('woff'),
+            url('http://pesariazjensetabiat.mihanblog.com/public/public/fonts/Iransans.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+        @font-face {
+            font-family: 'Mihan-IransansBold';
+            src: url('http://pesariazjensetabiat.mihanblog.com/public/public/fonts/Iransans-Black.eot');
+            src: url('http://pesariazjensetabiat.mihanblog.com/public/public/fonts/Iransans-Black.eot?') format('embedded-opentype'),
+            url('http://pesariazjensetabiat.mihanblog.com/public/public/fonts/Iransans-Black.woff2') format('woff2'),
+            url('http://pesariazjensetabiat.mihanblog.com/public/public/fonts/Iransans-Black.woff') format('woff'),
+            url('http://pesariazjensetabiat.mihanblog.com/public/public/fonts/Iransans-Black.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+        @font-face {
+            font-family: 'Mihan-IransansLight';
+            src: url('http://pesariazjensetabiat.mihanblog.com/public/public/fonts/Iransans-UltraLight.eot');
+            src: url('http://pesariazjensetabiat.mihanblog.com/public/public/fonts/Iransans-UltraLight.eot?') format('embedded-opentype'),
+            url('http://pesariazjensetabiat.mihanblog.com/public/public/fonts/Iransans-UltraLight.woff2') format('woff2'),
+            url('http://pesariazjensetabiat.mihanblog.com/public/public/fonts/Iransans-UltraLight.woff') format('woff'),
+            url('http://pesariazjensetabiat.mihanblog.com/public/public/fonts/Iransans-UltraLight.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+        @font-face {
+            font-family: 'Mihan-Nassim';
+            src: url('http://pesariazjensetabiat.mihanblog.com/public/public/fonts/Nassim.eot');
+            src: url('http://pesariazjensetabiat.mihanblog.com/public/public/fonts/Nassim.eot?') format('embedded-opentype'),
+            url('http://pesariazjensetabiat.mihanblog.com/public/public/fonts/Nassim.woff2') format('woff2'),
+            url('http://pesariazjensetabiat.mihanblog.com/public/public/fonts/Nassim.woff') format('woff'),
+            url('http://pesariazjensetabiat.mihanblog.com/public/public/fonts/Nassim.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+        @font-face {
+            font-family: 'Mihan-Koodak';
+            src: url('http://pesariazjensetabiat.mihanblog.com/public/public/fonts/Koodak.eot');
+            src: url('http://pesariazjensetabiat.mihanblog.com/public/public/fonts/Koodak.eot?') format('embedded-opentype'),
+            url('http://pesariazjensetabiat.mihanblog.com/public/public/fonts/Koodak.woff2') format('woff2'),
+            url('http://pesariazjensetabiat.mihanblog.com/public/public/fonts/Koodak.woff') format('woff'),
+            url('http://pesariazjensetabiat.mihanblog.com/public/public/fonts/Koodak.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+        @font-face {
+            font-family: 'Mihan-Yekan';
+            src: url('http://pesariazjensetabiat.mihanblog.com/public/public/fonts/Yekan.eot');
+            src: url('http://pesariazjensetabiat.mihanblog.com/public/public/fonts/Yekan.eot?') format('embedded-opentype'),
+            url('http://pesariazjensetabiat.mihanblog.com/public/public/fonts/Yekan.woff2') format('woff2'),
+            url('http://pesariazjensetabiat.mihanblog.com/public/public/fonts/Yekan.woff') format('woff'),
+            url('http://pesariazjensetabiat.mihanblog.com/public/public/fonts/Yekan.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+        @font-face {
+            font-family: 'FontAwesome';
+            src: url('http://pesariazjensetabiat.mihanblog.com/public/public/fonts/fontawesome_webfont.eot');
+            src: url('http://pesariazjensetabiat.mihanblog.com/public/public/fonts/fontawesome_webfont.eot?') format('embedded-opentype'),
+            url('http://pesariazjensetabiat.mihanblog.com/public/public/fonts/fontawesome_webfont.woff2') format('woff2'),
+            url('http://pesariazjensetabiat.mihanblog.com/public/public/fonts/fontawesome_webfont.woff') format('woff'),
+            url('http://pesariazjensetabiat.mihanblog.com/public/public/fonts/fontawesome_webfont.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+
+
+        
+
+        /* Smartphones (portrait and landscape) ----------- */
+
+        /*
+        @media only screen and (max-width : 480px) and (min-width : 320px) {
+            .sabaClick_advert__wrapper{
+                display:block;
+            }
+            .sabaClick_advert__inner{
+                max-width: 90%;
+                margin: 0 5%;
+            }
+        }
+        */
+
+    </style>
+
+
+
+
+
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+
+<center><script language="javascript" src="http://www.iranskin.com/toolsi/no-rightclick.js"></script></center><div style='display:none'><h1><a title='' href='http://www.iranskin.com'></a></h1></div>
+
+
+<style> html, body{background : url(http://s3.picofile.com/file/7408525806/Untitled_1.png)}</style>
+
+
+<head>
+<title>پسری از جنس طبیعت</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta name="designer" content="Theme - Designer">
+<meta name="designerUrl" conّtent="http://www.theme-designer.com/">
+<meta name="language" content="Farsi">
+<meta name="author" content="Khashayar Pooladvand">
+<meta name="description" content="پسری از جنس طبیعت - ">
+<meta name="keywords" content="پسری از جنس طبیعت, ">
+<link rel="alternate" type="application/rss+xml" title="پسری از جنس طبیعت" href="http://pesariazjensetabiat.mihanblog.com/post/rss/" />
+<script type="text/javascript" src="http://themeupload.theme-designer.com/39/scrolltopcontrol.js"></script> 
+<link href="http://themeupload.theme-designer.com/39/c.css" type="text/css" rel="stylesheet">
+</head>
+</head>
+
+<!-- template38-mihanblog-version:4 -->
+<!-- Design By : wWw.Theme-Designer.Com -->
+<body bgcolor="#E5F3F5">
+
+<table border="0" width="100%" cellspacing="0" cellpadding="0" dir="rtl" >
+<tr>
+<td>
+<div class="back1">
+
+<div align="center">
+<table border="0" width="1003" cellspacing="0" cellpadding="0">
+<tr>
+<td>
+<table border="0" width="100%" cellspacing="0" cellpadding="0">
+<tr>
+<td>
+<div class="menu-bala">
+<div class="menu-bala-link">
+<div style="width:100%">
+<div class="vmenu3"><a href="index.html">صفحه ی نخست </a></div>
+<div class="vmenu3"><a href="mailto:khashayarpooladvand@yahoo.com">پست الکترونیک</a></div>
+<div class="vmenu3"><a href="javascript:messageForm()">تماس با ما</a></div>
+<div class="vmenu3"><a href="http://pesariazjensetabiat.mihanblog.com/post/archive">عناوین مطالب وبلاگ</a></div>
+<div class="vmenu3"><a target="_blank" href="http://pesariazjensetabiat.mihanblog.com/post/rss/">لینك rss</a></div>
+<div class="vmenu3"><a target="_blank" href="http://pesariazjensetabiat.mihanblog.com/m/">نسخه موبایل</a></div>
+<div class="vmenu3"><a target="_blank" title="" href="index.html" >قالب وبلاگ</a></div>
+</div>
+</div>
+</div>
+</td>
+<td width="283">
+
+
+<style>
+.search{width:273px; height:45px; background-image:url('http://themeupload.theme-designer.com/39/image/19.jpg'); background-repeat:no-repeat; background-position: 0px 0px; }
+.sch{margin:0px;padding:0px;height:27px;}
+.but{cursor:pointer;width:85px; height:18px; border:none;background:none; margin:15px 0px 0px 0px;}
+.txt{border:0;background:none;color:#666666; width:180px; height:18px; padding:0px 8px 0px 0px; font-size:8pt; font-family:tahoma;}
+.auto-style1 {
+	width: 420px;
+	overflow: hidden;
+	background-image: url('http://themeupload.theme-designer.com/39/image/3.jpg');
+	background-repeat: repeat-y;
+	text-align: center;
+}
+</style>
+<div class="search">
+<form method="Get" target="_blank" action="http://google.com/search" class=sch><input name="sitesearch" value="http://pesariazjensetabiat.mihanblog.com" type="hidden">
+<div align="center"><div style="height:45px; overflow:hidden; width:273px; overflow:hidden;"><div align="right">
+<input type="submit" value=" " class=but><input type="text" name="q" size="21" class=txt value="" onfocus="if (this.value == 'جستجو کنید ...') {this.value = '';}" onblur="if (this.value == '') {this.value = 'جستجو کنید ...';}">
+</div></div>
+</form>
+</div>
+</div>
+
+<div class="space5"></div>
+</td>
+</tr>
+</table>
+
+<!---------- he ---------------------------->
+<!---------- address-image --------->
+
+
+
+<!---------- address-image --------->
+<div align="right"><div class="bb"><div class="blogtitle2"><div class="title"><h1><font face="Mihan-Yekan"><a href="index.html">پسری از جنس طبیعت</a></font></h1></div></div><div class="blogdescription"></div></div></div>
+</div>
+</div>
+<!---------- he ---------------------------->
+
+<div class="space1"></div>
+
+<div align="center">
+<table border="0" width="980" cellspacing="0" cellpadding="0">
+<tr>
+
+<td width="540" valign="top" style="height: 967px" >
+<div align="right">
+
+<!---------- block sabet ------------------------>
+<div class="post">
+<div class="post1"></div>
+<div class="post2">
+<div align="center"><div class="post5"><div align="center">
+
+<div align="center"><img src="http://s5.picofile.com/file/8124126784/Besm_3D_Small_.png" alt="http://pesariazjensetabiat.mihanblog.com" vspace="0" hspace="0" border="0" align="bottom"></div><br> 
+
+<div align="center"><img src="../file.mihanblog.com/public/user_data/user_files/627/1878596/pesariazjensetabiat_mihanblog_com.gif" alt="http://pesariazjensetabiat.mihanblog.com" vspace="0" hspace="0" border="0" align="bottom"></div><br><br>
+
+<div align="center"><a href="https://web.telegram.org/#/im?p=@AmouKhashi" target="_blank" title=""><img src="../file.mihanblog.com/public/user_data/user_files/627/1878596/4558.png" alt="http://file.mihanblog.com//public/user_data/user_files/627/1878596/4558.png" width="40" vspace="0" hspace="0" height="40" border="0" align="bottom"></a> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <a href="https://www.instagram.com/AmouKhashi" target="_blank" title=""><img src="../file.mihanblog.com/public/user_data/user_files/627/1878596/455.jpg" alt="http://pesariazjensetabiat.mihanblog.com" width="40" vspace="0" hspace="0" height="40" border="0" align="bottom"></a></div>
+
+</div></div></div>
+</div>
+<div class="post3"></div>
+</div>
+<div class="space2"></div>
+<!---------- block sabet ------------------------>
+
+
+		<div id="MihanblogShopAds" style="display:block;height:0px;width:100%;border:0px"></div>
+		<div class="post">
+<div class="post1"></div>
+<div class="post2">
+<div class="title-post"><div class="link-title-post"><br />
+	<a href="http://pesariazjensetabiat.mihanblog.com/post/224">شھر لک لک ھا در روستای « بیلو » شھر مریوان...</a></div></div>
+
+<div class="post-date"><br />
+	</div>
+<div align="center" style="width:100%" ><div class="post4">
+<div align="right" style="width:400px;  padding:5px 5px 0px 0px; float:right;" >
+	نوشته شده توسط : خشایار پولادوند
+</div>
+<div align="center" style="width:110px; padding:5px 5px 0px 0px; float:left;" ><div class="menu-link">
+<a target="_self" href="http://pesariazjensetabiat.mihanblog.com/post/224#commentlist">نظرات <script>setCommentCnt(224)</script> </a>
+</div></div>
+</div></div>
+<div align="center"><div class="post5"><div align="right"><br><div id="InPost_MihanblogShopAds" style="display:block;height:0px;width:100%;border:0px"></div><div align="center">در شهر مریوان اطراف دریاچه زریبار روستایی به نام بیلو در 10 کیلو متری
+ این</div><div align="center"> دریاچه وجود دارد که در بین اھالی روستا به نام شھر لک لک ھا مشھور 
+است،اهالی این</div><div align="center"> روستا معتقدند لک لک‌های سفید برای مردم این دیار نماد خوش 
+اقبالی و صلح است.</div><div align="center"><br></div><div align="center"><img src="https://worldup.ir/file/85316ab7791a1.jpg" alt="http://pesariazjensetabiat.mihanblog.com" vspace="0" hspace="0" border="0" align="bottom"></div><div align="center"><br></div><div align="center"><img src="https://worldup.ir/file/9ba900c4d0de3.jpg" alt="http://pesariazjensetabiat.mihanblog.com" vspace="0" hspace="0" border="0" align="bottom"></div><div align="center"><br></div><div align="center"><img src="https://worldup.ir/file/038ef8b26da55.jpg" alt="http://pesariazjensetabiat.mihanblog.com" vspace="0" hspace="0" border="0" align="bottom"></div> <br>
+
+<br>
+<b>» </b>
+</div></div></div>
+<div class="post6"></div>
+<div class="post7">
+
+
+
+<script type="text/javascript">;!(function(e, d) {'use strict';var sharing = {id: 'pst-' + ~~(Math.random() * 999999),theme: '1',size:'medium',type:'icon',topoffset:'40',text:'',
+url: 'http://pesariazjensetabiat.mihanblog.com/post/224',
+title: 'شھر لک لک ھا در روستای « بیلو » شھر مریوان...',
+services: 'facebook,googleplus,telegram,twitter,cloob,linkedin,skype,whatsapp,line,sms,viber,print,pinterest'
+};if (typeof e.pstAttrs != 'object') e.pstAttrs = {};e.pstAttrs[sharing.id] = sharing;d.write('<d'+'iv id="' + sharing.id + '"></d'+'iv>');d.write('<scr'+'ipt type="text/javascript" src="http://code.parstools.com/async/share/share.js" async></scri' + 'pt>');})(window, document);</script>
+
+
+
+</div>
+</div>
+<div class="post3"></div>
+</div>
+<div class="space2"></div>
+<div class="post">
+<div class="post1"></div>
+<div class="post2">
+<div class="title-post"><div class="link-title-post"><br />
+	<a href="http://pesariazjensetabiat.mihanblog.com/post/223">کاری که بانک ملی با بنای تاریخی میدان حسن آباد تهران کرد! «عکس»</a></div></div>
+
+<div class="post-date"><br />
+	</div>
+<div align="center" style="width:100%" ><div class="post4">
+<div align="right" style="width:400px;  padding:5px 5px 0px 0px; float:right;" >
+	نوشته شده توسط : خشایار پولادوند
+</div>
+<div align="center" style="width:110px; padding:5px 5px 0px 0px; float:left;" ><div class="menu-link">
+<a target="_self" href="http://pesariazjensetabiat.mihanblog.com/post/223#commentlist">نظرات <script>setCommentCnt(223)</script> </a>
+</div></div>
+</div></div>
+<div align="center"><div class="post5"><div align="right"><br><div align="center"><img src="https://worldup.ir/file/ad2a61c9c08d1.jpg" alt="http://pesariazjensetabiat.mihanblog.com" vspace="0" hspace="0" border="0" align="bottom"></div>
+
+
+ <br>
+
+<br>
+<b>» </b>
+</div></div></div>
+<div class="post6"></div>
+<div class="post7">
+
+
+
+<script type="text/javascript">;!(function(e, d) {'use strict';var sharing = {id: 'pst-' + ~~(Math.random() * 999999),theme: '1',size:'medium',type:'icon',topoffset:'40',text:'',
+url: 'http://pesariazjensetabiat.mihanblog.com/post/223',
+title: 'کاری که بانک ملی با بنای تاریخی میدان حسن آباد تهران کرد! «عکس»',
+services: 'facebook,googleplus,telegram,twitter,cloob,linkedin,skype,whatsapp,line,sms,viber,print,pinterest'
+};if (typeof e.pstAttrs != 'object') e.pstAttrs = {};e.pstAttrs[sharing.id] = sharing;d.write('<d'+'iv id="' + sharing.id + '"></d'+'iv>');d.write('<scr'+'ipt type="text/javascript" src="http://code.parstools.com/async/share/share.js" async></scri' + 'pt>');})(window, document);</script>
+
+
+
+</div>
+</div>
+<div class="post3"></div>
+</div>
+<div class="space2"></div>
+<div class="post">
+<div class="post1"></div>
+<div class="post2">
+<div class="title-post"><div class="link-title-post"><br />
+	<a href="http://pesariazjensetabiat.mihanblog.com/post/222">تصویری نفس گیر از سه جهان در یک قاب!</a></div></div>
+
+<div class="post-date"><br />
+	</div>
+<div align="center" style="width:100%" ><div class="post4">
+<div align="right" style="width:400px;  padding:5px 5px 0px 0px; float:right;" >
+	نوشته شده توسط : خشایار پولادوند
+</div>
+<div align="center" style="width:110px; padding:5px 5px 0px 0px; float:left;" ><div class="menu-link">
+<a target="_self" href="http://pesariazjensetabiat.mihanblog.com/post/222#commentlist">نظرات <script>setCommentCnt(222)</script> </a>
+</div></div>
+</div></div>
+<div align="center"><div class="post5"><div align="right"><br><div align="center"><font size="4" face="Mihan-Yekan">دنیای زیر آب، سطح سیاره‌‌ ی زمین و کهکشان راه شیری..!</font></div><div align="center"><br></div><div align="center"><img src="https://worldup.ir/file/bf632b7c74211.jpg" alt="http://pesariazjensetabiat.mihanblog.com" vspace="0" hspace="0" border="0" align="bottom"><br></div>
+
+
+ <br>
+
+<br>
+<b>» </b>
+</div></div></div>
+<div class="post6"></div>
+<div class="post7">
+
+
+
+<script type="text/javascript">;!(function(e, d) {'use strict';var sharing = {id: 'pst-' + ~~(Math.random() * 999999),theme: '1',size:'medium',type:'icon',topoffset:'40',text:'',
+url: 'http://pesariazjensetabiat.mihanblog.com/post/222',
+title: 'تصویری نفس گیر از سه جهان در یک قاب!',
+services: 'facebook,googleplus,telegram,twitter,cloob,linkedin,skype,whatsapp,line,sms,viber,print,pinterest'
+};if (typeof e.pstAttrs != 'object') e.pstAttrs = {};e.pstAttrs[sharing.id] = sharing;d.write('<d'+'iv id="' + sharing.id + '"></d'+'iv>');d.write('<scr'+'ipt type="text/javascript" src="http://code.parstools.com/async/share/share.js" async></scri' + 'pt>');})(window, document);</script>
+
+
+
+</div>
+</div>
+<div class="post3"></div>
+</div>
+<div class="space2"></div>
+<div class="post">
+<div class="post1"></div>
+<div class="post2">
+<div class="title-post"><div class="link-title-post"><br />
+	<a href="http://pesariazjensetabiat.mihanblog.com/post/221">کبوتر استوایی...</a></div></div>
+
+<div class="post-date"><br />
+	</div>
+<div align="center" style="width:100%" ><div class="post4">
+<div align="right" style="width:400px;  padding:5px 5px 0px 0px; float:right;" >
+	نوشته شده توسط : خشایار پولادوند
+</div>
+<div align="center" style="width:110px; padding:5px 5px 0px 0px; float:left;" ><div class="menu-link">
+<a target="_self" href="http://pesariazjensetabiat.mihanblog.com/post/221#commentlist">نظرات <script>setCommentCnt(221)</script> </a>
+</div></div>
+</div></div>
+<div align="center"><div class="post5"><div align="right"><br>
+
+<div align="center"><font size="3" face="Mihan-Yekan"><font color="#FF0000">کبوتر استوایی دیده بودین..?! <img src="http://mihanblog.com/public/public/rte/images_new/smiles/5.gif"><br> آدم از این کبوترا ببینه روحش شاد میشه..! <img src="http://mihanblog.com/public/public/rte/images_new/smiles/6.gif"><br></font></font></div><div align="center"><font size="3" face="Mihan-Yekan"><font color="#FF0000"></font><br></font></div><div align="center"><br></div><div align="center"><font size="3"><font face="Mihan-Yekan">کبوتر سبز گردن صورتی گونه‌ ای از پرنده است که در کامبوج، اندونزی، مالزی،</font></font></div><div align="center"><font size="3"><font face="Mihan-Yekan"><br></font></font></div><div align="center"><font size="3"><font face="Mihan-Yekan"> میانمار، فیلیپین، سنگاپور، تایلند و ویتنام یافت می‌شود. زیستگاه طبیعی این کبوتر</font></font></div><div align="center"><font size="3"><font face="Mihan-Yekan"><br></font></font></div><div align="center"><font size="3"><font face="Mihan-Yekan"> زیبا جنگل‌ های مرطوب زیراستوایی یا استوایی می‌باشد.</font></font></div><div align="center"><font size="3"><font face="Mihan-Yekan"><br></font></font></div><div align="center"><br></div><div align="center"><font size="3"><font face="Mihan-Yekan">این کبوتر زیبا علاقه‌ ی زیادی به درختان دارد و بیشتر وقت خود را در بین آن‌ ها</font></font></div><div align="center"><font size="3"><font face="Mihan-Yekan"><br></font></font></div><div align="center"><font size="3"><font face="Mihan-Yekan"> می‌گذراند و تنها زمانی روی زمین می‌آید که تشنه باشد یا دنبال غذا باشد. لانه‌ هایی که این</font></font></div><div align="center"><font size="3"><font face="Mihan-Yekan"><br></font></font></div><div align="center"><font size="3"><font face="Mihan-Yekan"> کبوترها می‌سازند بسیار سست و نازک هستند در حدی که محتوای آن را از زیر هم</font></font></div><div align="center"><font size="3"><font face="Mihan-Yekan"><br></font></font></div><div align="center"><font size="3"><font face="Mihan-Yekan"> می‌توان مشاهده کرد. کبوترهای سبز گردن صورتی عمدتاً از میوه‌ ها تغذیه می‌کنند</font></font></div><div align="center"><font size="3"><font face="Mihan-Yekan"><br></font></font></div><div align="center"><font size="3"><font face="Mihan-Yekan"> و رنگ آن‌ ها به استتار کامل‌شان در درختان میوه‌ دار رنگی کمک می‌کند.</font></font></div><div align="center"><font size="3"><font face="Mihan-Yekan"><br></font></font></div><div align="center"><br></div><div align="center"><img src="https://worldup.ir/file/bd5413397eea1.jpg" alt="http://pesariazjensetabiat.mihanblog.com" vspace="0" hspace="0" border="0" align="bottom"><br><font size="3" face="Mihan-Yekan"></font></div>
+
+
+
+
+
+
+ <br>
+
+<br>
+<b>» </b>
+</div></div></div>
+<div class="post6"></div>
+<div class="post7">
+
+
+
+<script type="text/javascript">;!(function(e, d) {'use strict';var sharing = {id: 'pst-' + ~~(Math.random() * 999999),theme: '1',size:'medium',type:'icon',topoffset:'40',text:'',
+url: 'http://pesariazjensetabiat.mihanblog.com/post/221',
+title: 'کبوتر استوایی...',
+services: 'facebook,googleplus,telegram,twitter,cloob,linkedin,skype,whatsapp,line,sms,viber,print,pinterest'
+};if (typeof e.pstAttrs != 'object') e.pstAttrs = {};e.pstAttrs[sharing.id] = sharing;d.write('<d'+'iv id="' + sharing.id + '"></d'+'iv>');d.write('<scr'+'ipt type="text/javascript" src="http://code.parstools.com/async/share/share.js" async></scri' + 'pt>');})(window, document);</script>
+
+
+
+</div>
+</div>
+<div class="post3"></div>
+</div>
+<div class="space2"></div>
+<div class="post">
+<div class="post1"></div>
+<div class="post2">
+<div class="title-post"><div class="link-title-post"><br />
+	<a href="http://pesariazjensetabiat.mihanblog.com/post/220">گیاهی که توی بدنه ماشین رشد کرده..! «عکس»</a></div></div>
+
+<div class="post-date"><br />
+	</div>
+<div align="center" style="width:100%" ><div class="post4">
+<div align="right" style="width:400px;  padding:5px 5px 0px 0px; float:right;" >
+	نوشته شده توسط : خشایار پولادوند
+</div>
+<div align="center" style="width:110px; padding:5px 5px 0px 0px; float:left;" ><div class="menu-link">
+<a target="_self" href="http://pesariazjensetabiat.mihanblog.com/post/220#commentlist">نظرات <script>setCommentCnt(220)</script> </a>
+</div></div>
+</div></div>
+<div align="center"><div class="post5"><div align="right"><br>
+<div></div><div></div><div align="center"><img src="https://worldup.ir/file/82f13e9f0feb1.jpg" alt="http://pesariazjensetabiat.mihanblog.com" vspace="0" hspace="0" border="0" align="bottom"><br></div>
+
+
+
+
+ <br>
+
+<br>
+<b>» </b>
+</div></div></div>
+<div class="post6"></div>
+<div class="post7">
+
+
+
+<script type="text/javascript">;!(function(e, d) {'use strict';var sharing = {id: 'pst-' + ~~(Math.random() * 999999),theme: '1',size:'medium',type:'icon',topoffset:'40',text:'',
+url: 'http://pesariazjensetabiat.mihanblog.com/post/220',
+title: 'گیاهی که توی بدنه ماشین رشد کرده..! «عکس»',
+services: 'facebook,googleplus,telegram,twitter,cloob,linkedin,skype,whatsapp,line,sms,viber,print,pinterest'
+};if (typeof e.pstAttrs != 'object') e.pstAttrs = {};e.pstAttrs[sharing.id] = sharing;d.write('<d'+'iv id="' + sharing.id + '"></d'+'iv>');d.write('<scr'+'ipt type="text/javascript" src="http://code.parstools.com/async/share/share.js" async></scri' + 'pt>');})(window, document);</script>
+
+
+
+</div>
+</div>
+<div class="post3"></div>
+</div>
+<div class="space2"></div>
+<div class="post">
+<div class="post1"></div>
+<div class="post2">
+<div class="title-post"><div class="link-title-post"><br />
+	<a href="http://pesariazjensetabiat.mihanblog.com/post/219">تولد بچه لاک‌ پشت..! «عکس»</a></div></div>
+
+<div class="post-date"><br />
+	</div>
+<div align="center" style="width:100%" ><div class="post4">
+<div align="right" style="width:400px;  padding:5px 5px 0px 0px; float:right;" >
+	نوشته شده توسط : خشایار پولادوند
+</div>
+<div align="center" style="width:110px; padding:5px 5px 0px 0px; float:left;" ><div class="menu-link">
+<a target="_self" href="http://pesariazjensetabiat.mihanblog.com/post/219#commentlist">نظرات <script>setCommentCnt(219)</script> </a>
+</div></div>
+</div></div>
+<div align="center"><div class="post5"><div align="right"><br><div align="center"><img src="https://worldup.ir/file/0fcdba89aa561.jpg" alt="http://pesariazjensetabiat.mihanblog.com" vspace="0" hspace="0" border="0" align="bottom"></div>
+
+
+ <br>
+
+<br>
+<b>» </b>
+</div></div></div>
+<div class="post6"></div>
+<div class="post7">
+
+
+
+<script type="text/javascript">;!(function(e, d) {'use strict';var sharing = {id: 'pst-' + ~~(Math.random() * 999999),theme: '1',size:'medium',type:'icon',topoffset:'40',text:'',
+url: 'http://pesariazjensetabiat.mihanblog.com/post/219',
+title: 'تولد بچه لاک‌ پشت..! «عکس»',
+services: 'facebook,googleplus,telegram,twitter,cloob,linkedin,skype,whatsapp,line,sms,viber,print,pinterest'
+};if (typeof e.pstAttrs != 'object') e.pstAttrs = {};e.pstAttrs[sharing.id] = sharing;d.write('<d'+'iv id="' + sharing.id + '"></d'+'iv>');d.write('<scr'+'ipt type="text/javascript" src="http://code.parstools.com/async/share/share.js" async></scri' + 'pt>');})(window, document);</script>
+
+
+
+</div>
+</div>
+<div class="post3"></div>
+</div>
+<div class="space2"></div>
+<div class="post">
+<div class="post1"></div>
+<div class="post2">
+<div class="title-post"><div class="link-title-post"><br />
+	<a href="http://pesariazjensetabiat.mihanblog.com/post/218">ریزش رنگ ها بر سر سیاهى شب هاى كارون «عکس»</a></div></div>
+
+<div class="post-date"><br />
+	</div>
+<div align="center" style="width:100%" ><div class="post4">
+<div align="right" style="width:400px;  padding:5px 5px 0px 0px; float:right;" >
+	نوشته شده توسط : خشایار پولادوند
+</div>
+<div align="center" style="width:110px; padding:5px 5px 0px 0px; float:left;" ><div class="menu-link">
+<a target="_self" href="http://pesariazjensetabiat.mihanblog.com/post/218#commentlist">نظرات <script>setCommentCnt(218)</script> </a>
+</div></div>
+</div></div>
+<div align="center"><div class="post5"><div align="right"><br><div align="center"><img src="https://worldup.ir/file/27b99a1571031.jpg" alt="http://pesariazjensetabiat.mihanblog.com" vspace="0" hspace="0" border="0" align="bottom"><br></div>
+
+
+ <br>
+
+<br>
+<b>» </b>
+</div></div></div>
+<div class="post6"></div>
+<div class="post7">
+
+
+
+<script type="text/javascript">;!(function(e, d) {'use strict';var sharing = {id: 'pst-' + ~~(Math.random() * 999999),theme: '1',size:'medium',type:'icon',topoffset:'40',text:'',
+url: 'http://pesariazjensetabiat.mihanblog.com/post/218',
+title: 'ریزش رنگ ها بر سر سیاهى شب هاى كارون «عکس»',
+services: 'facebook,googleplus,telegram,twitter,cloob,linkedin,skype,whatsapp,line,sms,viber,print,pinterest'
+};if (typeof e.pstAttrs != 'object') e.pstAttrs = {};e.pstAttrs[sharing.id] = sharing;d.write('<d'+'iv id="' + sharing.id + '"></d'+'iv>');d.write('<scr'+'ipt type="text/javascript" src="http://code.parstools.com/async/share/share.js" async></scri' + 'pt>');})(window, document);</script>
+
+
+
+</div>
+</div>
+<div class="post3"></div>
+</div>
+<div class="space2"></div>
+<div class="post">
+<div class="post1"></div>
+<div class="post2">
+<div class="title-post"><div class="link-title-post"><br />
+	<a href="http://pesariazjensetabiat.mihanblog.com/post/217">گل بسیار زیبا از گیاه زردچوبه..!</a></div></div>
+
+<div class="post-date"><br />
+	</div>
+<div align="center" style="width:100%" ><div class="post4">
+<div align="right" style="width:400px;  padding:5px 5px 0px 0px; float:right;" >
+	نوشته شده توسط : خشایار پولادوند
+</div>
+<div align="center" style="width:110px; padding:5px 5px 0px 0px; float:left;" ><div class="menu-link">
+<a target="_self" href="http://pesariazjensetabiat.mihanblog.com/post/217#commentlist">نظرات <script>setCommentCnt(217)</script> </a>
+</div></div>
+</div></div>
+<div align="center"><div class="post5"><div align="right"><br><div align="center"><font size="3" face="Mihan-Yekan">تصویر گل بسیار زیبا از گیاه زردچوبه... <img src="http://mihanblog.com/public/public/rte/images_new/smiles/53.gif"></font></div><div align="center"><font size="3" face="Mihan-Yekan"><br></font></div><div align="center"><font size="3" face="Mihan-Yekan">شاید خیلی از ما گل زردچوبه رو ندیده باشیم... <img src="http://mihanblog.com/public/public/rte/images_new/smiles/1.gif"></font></div><div align="center"><br></div><div align="center"><img src="https://worldup.ir/file/926c1f5e4ecb1.jpg" alt="http://pesariazjensetabiat.mihanblog.com" border="0" align="bottom"></div>
+
+
+ <br>
+
+<br>
+<b>» </b>
+</div></div></div>
+<div class="post6"></div>
+<div class="post7">
+
+
+
+<script type="text/javascript">;!(function(e, d) {'use strict';var sharing = {id: 'pst-' + ~~(Math.random() * 999999),theme: '1',size:'medium',type:'icon',topoffset:'40',text:'',
+url: 'http://pesariazjensetabiat.mihanblog.com/post/217',
+title: 'گل بسیار زیبا از گیاه زردچوبه..!',
+services: 'facebook,googleplus,telegram,twitter,cloob,linkedin,skype,whatsapp,line,sms,viber,print,pinterest'
+};if (typeof e.pstAttrs != 'object') e.pstAttrs = {};e.pstAttrs[sharing.id] = sharing;d.write('<d'+'iv id="' + sharing.id + '"></d'+'iv>');d.write('<scr'+'ipt type="text/javascript" src="http://code.parstools.com/async/share/share.js" async></scri' + 'pt>');})(window, document);</script>
+
+
+
+</div>
+</div>
+<div class="post3"></div>
+</div>
+<div class="space2"></div>
+<div class="post">
+<div class="post1"></div>
+<div class="post2">
+<div class="title-post"><div class="link-title-post"><br />
+	<a href="http://pesariazjensetabiat.mihanblog.com/post/216">ذرت‌ های فوق العاده زیبا و عجیب...</a></div></div>
+
+<div class="post-date"><br />
+	</div>
+<div align="center" style="width:100%" ><div class="post4">
+<div align="right" style="width:400px;  padding:5px 5px 0px 0px; float:right;" >
+	نوشته شده توسط : خشایار پولادوند
+</div>
+<div align="center" style="width:110px; padding:5px 5px 0px 0px; float:left;" ><div class="menu-link">
+<a target="_self" href="http://pesariazjensetabiat.mihanblog.com/post/216#commentlist">نظرات <script>setCommentCnt(216)</script> </a>
+</div></div>
+</div></div>
+<div align="center"><div class="post5"><div align="right"><br>
+<div align="center">ذرت‌ های فوق العاده زیبا و عجیبی که حاصل پیوند ریشه ی درخت انار با ذرت هستن <img src="http://mihanblog.com/public/public/rte/images_new/smiles/65.gif"></div><div align="center"><br></div><div align="center"><img src="https://worldup.ir/file/7b1c1d4bac341.jpg" alt="http://pesariazjensetabiat.mihanblog.com" vspace="0" hspace="0" border="0" align="bottom"></div>
+
+
+
+
+ <br>
+
+<br>
+<b>» </b>
+</div></div></div>
+<div class="post6"></div>
+<div class="post7">
+
+
+
+<script type="text/javascript">;!(function(e, d) {'use strict';var sharing = {id: 'pst-' + ~~(Math.random() * 999999),theme: '1',size:'medium',type:'icon',topoffset:'40',text:'',
+url: 'http://pesariazjensetabiat.mihanblog.com/post/216',
+title: 'ذرت‌ های فوق العاده زیبا و عجیب...',
+services: 'facebook,googleplus,telegram,twitter,cloob,linkedin,skype,whatsapp,line,sms,viber,print,pinterest'
+};if (typeof e.pstAttrs != 'object') e.pstAttrs = {};e.pstAttrs[sharing.id] = sharing;d.write('<d'+'iv id="' + sharing.id + '"></d'+'iv>');d.write('<scr'+'ipt type="text/javascript" src="http://code.parstools.com/async/share/share.js" async></scri' + 'pt>');})(window, document);</script>
+
+
+
+</div>
+</div>
+<div class="post3"></div>
+</div>
+<div class="space2"></div>
+<div class="post">
+<div class="post1"></div>
+<div class="post2">
+<div class="title-post"><div class="link-title-post"><br />
+	<a href="http://pesariazjensetabiat.mihanblog.com/post/215">طنز محیط زیستى...</a></div></div>
+
+<div class="post-date"><br />
+	</div>
+<div align="center" style="width:100%" ><div class="post4">
+<div align="right" style="width:400px;  padding:5px 5px 0px 0px; float:right;" >
+	نوشته شده توسط : خشایار پولادوند
+</div>
+<div align="center" style="width:110px; padding:5px 5px 0px 0px; float:left;" ><div class="menu-link">
+<a target="_self" href="http://pesariazjensetabiat.mihanblog.com/post/215#commentlist">نظرات <script>setCommentCnt(215)</script> </a>
+</div></div>
+</div></div>
+<div align="center"><div class="post5"><div align="right"><br><div align="center"><font size="4" face="Mihan-Yekan">عزیزم اخم نکنی خوشگلتری <img src="http://mihanblog.com/public/public/rte/images_new/smiles/11.gif"><br></font></div><div align="center"><br></div><div align="center"><img src="https://worldup.ir/file/08c1de4f37411.jpg" alt="http://pesariazjensetabiat.mihanblog.com" vspace="0" hspace="0" border="0" align="bottom"><br><font size="4" face="Mihan-Yekan"></font></div>
+
+
+ <br>
+
+<br>
+<b>» </b>
+</div></div></div>
+<div class="post6"></div>
+<div class="post7">
+
+
+
+<script type="text/javascript">;!(function(e, d) {'use strict';var sharing = {id: 'pst-' + ~~(Math.random() * 999999),theme: '1',size:'medium',type:'icon',topoffset:'40',text:'',
+url: 'http://pesariazjensetabiat.mihanblog.com/post/215',
+title: 'طنز محیط زیستى...',
+services: 'facebook,googleplus,telegram,twitter,cloob,linkedin,skype,whatsapp,line,sms,viber,print,pinterest'
+};if (typeof e.pstAttrs != 'object') e.pstAttrs = {};e.pstAttrs[sharing.id] = sharing;d.write('<d'+'iv id="' + sharing.id + '"></d'+'iv>');d.write('<scr'+'ipt type="text/javascript" src="http://code.parstools.com/async/share/share.js" async></scri' + 'pt>');})(window, document);</script>
+
+
+
+</div>
+</div>
+<div class="post3"></div>
+</div>
+<div class="space2"></div>
+
+<!-- ------------comment------------ -->
+<!-- ------------/comment------------ -->
+
+
+
+
+<br><table border="0" width="100%" id="table3" cellspacing="0" cellpadding="0"><tr>
+<td width="30"><br></td><td><table border="0" width="100%" id="table4" cellspacing="0" cellpadding="0">
+<tr><td width="161" align="center"><p><b>
+<font color="#000000">( تعداد کل صفحات: 22 )</font></b></td>
+<td align="center"><p align="right"><a href="http://pesariazjensetabiat.mihanblog.com/page/1">[ <b>1</b> ]</a>  <a href="http://pesariazjensetabiat.mihanblog.com/page/2">[ <span>2</span> ]</a>  <a href="http://pesariazjensetabiat.mihanblog.com/page/3">[ <span>3</span> ]</a>  <a href="http://pesariazjensetabiat.mihanblog.com/page/4">[ <span>4</span> ]</a>  <a href="http://pesariazjensetabiat.mihanblog.com/page/5">[ <span>5</span> ]</a>  <a href="http://pesariazjensetabiat.mihanblog.com/page/6">[ <span>6</span> ]</a>  <a href="http://pesariazjensetabiat.mihanblog.com/page/7">[ <span>7</span> ]</a>  <a href="http://pesariazjensetabiat.mihanblog.com/page/8">[ <i>...</i> ]</a>  </td>
+</tr></table></td><td width="30"><br></td></tr></table><br><br>
+</div>
+</td>
+
+<td width="20" valign="top" style="height: 967px" ></td>
+<td width="420" valign="top" style="height: 967px" >
+<div align="right">
+
+<div class="menu-right-one-1"><div class="menu-right-one-text">اخبار حوادث<br />
+	<br />
+	<br />
+	</div></div>
+<div class="auto-style1">
+	<div class="MTForumtitle">
+		<br />
+<!---------- block news ------------------------->	
+</div>
+
+
+
+<!-- News by www.1abzar.com --->
+<script type="text/javascript" async src="http://1abzar.ir/abzar/tools/news/v2.php?cat=10&data=all&n=20&w=400&bg=FAFAFA&kc=F8F8F8&kadr=1&c=707070"></script><div id="abzar_10all"></div><div style="display:none"><h3><a href="http://www.1abzar.com/abzar/news.php">&#1705;&#1583; &#1575;&#1582;&#1576;&#1575;&#1585;</a></h3></div>
+<!-- News by www.1abzar.com --->
+
+
+
+<div class="space3"></div>
+</div>
+<div class="menu-right-one-3"></div>
+
+<div class="space2"></div>
+
+<div class="menu-right-one-1"><div class="menu-right-one-text">پروفایل من</div></div>
+<div class="menu-right-one-2">
+<div class="space3"></div>
+<center>
+
+<div align="center"><img src="../file.mihanblog.com/public/user_data/user_files/627/1878596/IMG_20191229_180427_445.jpg" alt="پسری از جنس طبیعت" width="300" vspace="0" border="0" hspace="0" height="300" align="bottom"></div><br>
+
+</center>
+<div class="text">khashayarpooladvand@yahoo.com<br />
+<br />
+khashayarpooladvand@gmail.com<br />
+<br />
+facebook.com/khashayarpooladvand<br />
+<br />
+instagram.com/khashayarpooladvand<br />
+<br />
+telegram.me/pesariazjensetabiat<br />
+<br />
+telegram.me/MrKhashi</div>
+<div style="padding:10px 10px 10px 10px;" >مدیریت وبلاگ » خشایار پولادوند</div>
+</div>
+<div class="menu-right-one-3"></div>
+
+<div class="space2"></div>
+
+<div class="previousitems-link">
+<div class="menu-right-one-4"></div>
+<div class="menu-right-one-5">
+<div class="menu-link">
+<div class="vmenu"><a href="http://pesariazjensetabiat.mihanblog.com/post/224" title="1397/03/8" > شھر لک لک ھا در روستای « بیلو » شھر مریوان... </a></div><div class="vmenu"><a href="http://pesariazjensetabiat.mihanblog.com/post/223" title="1397/03/1" > کاری که بانک ملی با بنای تاریخی میدان حسن آباد تهران کرد! «عکس» </a></div><div class="vmenu"><a href="http://pesariazjensetabiat.mihanblog.com/post/222" title="1397/03/1" > تصویری نفس گیر از سه جهان در یک قاب! </a></div><div class="vmenu"><a href="http://pesariazjensetabiat.mihanblog.com/post/221" title="1397/02/31" > کبوتر استوایی... </a></div><div class="vmenu"><a href="http://pesariazjensetabiat.mihanblog.com/post/220" title="1397/02/30" > گیاهی که توی بدنه ماشین رشد کرده..! «عکس» </a></div><div class="vmenu"><a href="http://pesariazjensetabiat.mihanblog.com/post/219" title="1397/02/30" > تولد بچه لاک‌ پشت..! «عکس» </a></div><div class="vmenu"><a href="http://pesariazjensetabiat.mihanblog.com/post/218" title="1397/02/30" > ریزش رنگ ها بر سر سیاهى شب هاى كارون «عکس» </a></div><div class="vmenu"><a href="http://pesariazjensetabiat.mihanblog.com/post/217" title="1397/02/30" > گل بسیار زیبا از گیاه زردچوبه..! </a></div><div class="vmenu"><a href="http://pesariazjensetabiat.mihanblog.com/post/216" title="1397/02/30" > ذرت‌ های فوق العاده زیبا و عجیب... </a></div><div class="vmenu"><a href="http://pesariazjensetabiat.mihanblog.com/post/215" title="1397/02/30" > طنز محیط زیستى... </a></div><div class="vmenu"><a href="http://pesariazjensetabiat.mihanblog.com/post/214" title="1397/02/30" > زیبا ترین کوچه ایران..! </a></div><div class="vmenu"><a href="http://pesariazjensetabiat.mihanblog.com/post/213" title="1397/02/30" > گربه عجیب و مهربان در كوه هاى سوئیس... </a></div><div class="vmenu"><a href="http://pesariazjensetabiat.mihanblog.com/post/212" title="1397/02/29" > ‏این عکس یک دنیا حرف توشه... </a></div><div class="vmenu"><a href="http://pesariazjensetabiat.mihanblog.com/post/211" title="1397/02/29" > طنز محیط زیستى... </a></div><div class="vmenu"><a href="http://pesariazjensetabiat.mihanblog.com/post/210" title="1397/02/29" > طنز محیط زیستى... </a></div><div class="vmenu"><a href="http://pesariazjensetabiat.mihanblog.com/post/209" title="1397/02/29" > بدون شرح! </a></div><div class="vmenu"><a href="http://pesariazjensetabiat.mihanblog.com/post/208" title="1397/02/29" > عکس اینستاگرام نشنال جئوگرافیگ از ساحل فلوریدا..! </a></div><div class="vmenu"><a href="http://pesariazjensetabiat.mihanblog.com/post/207" title="1397/02/29" > تصاویر ماهواره‌ ای شگفت انگیز از زمین... </a></div><div class="vmenu"><a href="http://pesariazjensetabiat.mihanblog.com/post/206" title="1397/02/29" > مادرانه های حیات وحش «عکس» </a></div><div class="vmenu"><a href="http://pesariazjensetabiat.mihanblog.com/post/205" title="1397/02/29" > پنجه‌ های عظیم و قدرتمند عقاب «عکس» </a></div></div>
+<div class="space5"></div>
+</div>
+<div class="menu-right-one-6"></div>
+</div>
+
+<div class="space2"></div>
+
+<table border="0" width="100%" cellspacing="0" cellpadding="0">
+<tr>
+<td width="200" valign="top" >
+<div class="menu-link">
+<div align="right">
+
+
+
+		<form id="frm-16075927385fd1eb2235428" method="post" action="http://pesariazjensetabiat.mihanblog.com/poll/new/fid/16075927385fd1eb2235428/atrty/1607592738/avrvy/0/key/144913953ae66162acc7e6e690e13b43/"  onsubmit="window.open('', 'poll', 'toolbar=0,location=0,status=0,menubar=0,scrollbars=1,resizable=0,width=505,height=315')" target="poll"><input type="hidden" name="data[pollid]" value="374400" id="data[pollid]" />		
+<div class="menu-right-two-1"><div class="menu-right-two-text">نظر سنجی</div></div>
+<div class="menu-right-two-2">
+<div class="text">عاغا نظرتون درمورد وبلاگ چیه؟<br>
+<label><input type="radio" name="data[answer]" value="v1">خیلی باحاله</label><br><label><input type="radio" name="data[answer]" value="v2">عالیه</label><br><label><input type="radio" name="data[answer]" value="v3">خوبه</label><br><label><input type="radio" name="data[answer]" value="v4">بدک نیس</label><br><label><input type="radio" name="data[answer]" value="v5">مزخرفه</label><br><label><input type="radio" name="data[answer]" value="v6">دلت خوشه</label><br><center><br><input type="submit" value="لطفا همه جواب بدن!" style="height: 20"/></center></div>
+<div class="space5"></div>
+</div>
+<div class="menu-right-two-3"></div>
+<div class="space3"></div>
+
+		<input type="hidden" name="frm-id" value="16075927385fd1eb2235428" id="frm-id" /></form>
+<div class="menu-right-two-1"><div class="menu-right-two-text">آرشیو مطالب</div></div>
+<div class="menu-right-two-2">
+<div class="vmenu2"><a href="http://pesariazjensetabiat.mihanblog.com/post/archive/1397/3" title="3">
+ خرداد 1397</a></div><div class="vmenu2"><a href="http://pesariazjensetabiat.mihanblog.com/post/archive/1397/2" title="48">
+ اردیبهشت 1397</a></div><div class="vmenu2"><a href="http://pesariazjensetabiat.mihanblog.com/post/archive/1397/1" title="1">
+ فروردین 1397</a></div><div class="vmenu2"><a href="http://pesariazjensetabiat.mihanblog.com/post/archive/1396/12" title="26">
+ اسفند 1396</a></div><div class="vmenu2"><a href="http://pesariazjensetabiat.mihanblog.com/post/archive/1396/11" title="4">
+ بهمن 1396</a></div><div class="vmenu2"><a href="http://pesariazjensetabiat.mihanblog.com/post/archive/1396/10" title="7">
+ دی 1396</a></div><div class="vmenu2"><a href="http://pesariazjensetabiat.mihanblog.com/post/archive/1396/9" title="10">
+ آذر 1396</a></div><div class="vmenu2"><a href="http://pesariazjensetabiat.mihanblog.com/post/archive/1396/5" title="1">
+ مرداد 1396</a></div><div class="vmenu2"><a href="http://pesariazjensetabiat.mihanblog.com/post/archive/1396/4" title="2">
+ تیر 1396</a></div><div class="vmenu2"><a href="http://pesariazjensetabiat.mihanblog.com/post/archive/1396/1" title="3">
+ فروردین 1396</a></div><div class="space5"></div>
+</div>
+<div class="menu-right-two-3"></div>
+<div class="space3"></div>
+</div>
+</div>
+</td>
+<td width="20" valign="top" ></td>
+<td width="200" valign="top" >
+<div class="menu-link">
+<div align="right">
+
+
+
+
+
+
+<div class="menu-right-two-1"><div class="menu-right-two-text">آمار وبلاگ ما</div></div>
+<div class="menu-right-two-2">
+<div class="text">
+ » تعداد مطالب : <script>getStatVar('total_post');</script><br>
+ » تعداد نویسندگان : <script>getStatVar('total_author');</script><br>
+ » آخرین بروز رسانی : <script>getStatVar('modify_date');</script><br>
+ » بازدید امروز : <script>getStatVar('today_view');</script><br>
+ » بازدید دیروز : <script>getStatVar('yesterday_view');</script><br>
+ » بازدید این ماه : <script>getStatVar('this_month_view');</script><br>
+ » بازدید ماه قبل : <script>getStatVar('last_month_view');</script><br>
+ » بازدید کل : <script>getStatVar('total_view');</script><br>
+ » آخرین بازدید : <script>getStatVar('last_view_date');</script><br><br>
+</div><div align="center"><div class="other"><script type="text/javascript" src="http://dl.20script.ir/tools/telegram/telegram.js"></script>
+<br><div id="fbpop">
+<div class="fbpop-closebutton"></div>
+<div class="fbpop-header" dir="rtl">با عضویت در کانال تلگرام ما همیشه بروز باشید :)
+<br>
+<a href="https://telegram.me/PesariAzJenseTabiat" target="_blank">
+برای ورود به کانال کلیک کنید
+</a>
+ /
+<a href="index.html" target="_blank">
+ پسری از جنس طبیعت
+</a>
+</div></div>
+<script type="text/javascript" src="http://dl.20script.ir/tools/telegram/jquery.min.js"></script>
+<script type="text/javascript" src="http://dl.20script.ir/tools/telegram/jquery.plugins.js"></script>
+<script type="text/javascript" src="http://dl.20script.ir/tools/telegram/main.min.js"></script>
+
+<!-- pesariazjensetabiat.mihanblog.com --><div align="center"><audio style="width:150px"autoplay="0" controls=""><source type="audio/mpeg" src="http://file.mihanblog.com//public/user_data/user_files/627/1878596/ringtone.mp3"><!-- پیام مورد نظر شما در صورتی که مرورگر قابلیت پخش آنلاین را پشتیبانی نکند -->مرورگر شما پخش آنلاین را پشتیبانی نمی کند</audio></div><p align="center"><a title="دانلود آهنگ جدید"  ="" href="http://www.funmusic.blogfa.com" target="_blank">دانلود آهنگ جدید</a></p><p align="center"><a title="کد آهنگ برای وبلاگ"  ="" href="http://www.funmusic.blogfa.com" target="_blank">کد آهنگ وبلاگ</a></p> <!-- pesariazjensetabiat.mihanblog.com -->
+
+<link rel="shortcut icon" type="image/ico" href="../file.mihanblog.com/public/user_data/user_files/627/1878596/prsaretabiat.png">
+
+<script type="text/JavaScript">
+var oulb= 'http://www.iranskin.com/online/';
+function CheckBrowser(){
+if(navigator.appName == "Microsoft Internet Explorer")	{
+document.write('<scrip'+'t src="'+oulb+'js/jquery.min.js"></s'+'cript><scrip'+'t src="'+oulb+'js/js.php?c=1&t=3"></s'+'cript>');return true;}document.write('<scrip'+'t src="'+oulb+'cod.php?c=1&t=3"></s'+'cript>');
+return false; }</script>
+<script type="text/JavaScript">CheckBrowser()</script><script src="http://www.iranskin.com/online/cod.php?c=1&amp;t=3"></script><div style="position:fixed !important;right:0% !important;bottom:0% !important;width:89px !important;height:89px !important;margin-bottom:0em !important; margin-right:0em !important;z-index:9999 !important;">
+<a href="index.html" target="_blank">
+<img alt="http://pesariazjensetabiat.mihanblog.com" src="http://www.iranskin.com/online/online.php?t=3&amp;c=1&amp;url=google.com" border="0" longdesc="http://pesariazjensetabiat.mihanblog.com"></a></div></div></div>
+<div class="space5"></div>
+</div>
+<div class="menu-right-two-3"></div>
+
+<!---------- block left ------------------------->
+<div class="space3"></div>
+<!---------- block left ------------------------->
+
+</div>
+</div>
+</td>
+</tr>
+</table>
+
+</td>
+</tr>
+</table>
+</div>
+
+</td>
+</tr>
+</table>
+</div>
+
+</div>
+</td>
+</tr>
+</table>
+
+<table border="0" width="100%" cellspacing="0" cellpadding="0" dir="rtl" >
+<tr>
+<td>
+<div class="copyright">
+
+<div align="center">
+<table border="0" width="1003" cellspacing="0" cellpadding="0">
+<tr>
+<td valign="top" style="height: 95px" >
+
+
+<script type="text/javascript">window.$crisp=[];window.CRISP_WEBSITE_ID="f8e059f8-91b5-4d04-af00-4374a5800d68";(function(){d=document;s=d.createElement("script");s.src="https://client.crisp.chat/l.js";s.async=1;d.getElementsByTagName("head")[0].appendChild(s);})();</script>
+
+
+<div align="right">
+<div class="copyright3" ><div class="copyright-link" >
+<p dir="rtl">تمام حقوق این وبلاگ و مطالب آن متعلق به <a href="index.html"><b>پسری از جنس طبیعت</b></a> می باشد.</div></div>
+</div>
+
+</td>
+</tr>
+</table>
+</div>
+
+</td>
+</tr>
+</table>
+</div>
+</body>
+
+
+</html><script>
+//    setTimeout(function () {
+//        GetMihanBlogShowAds();
+//    }, 1000);
+</script>
+<!--NEW SERVER--><!--;)-->
+
+<!--SabaVision Ads Handler--><!--<script type="text/javascript">(function (d) {var url =   location.protocol+'//api.sabavision.com/pox/poxjs.js';d.write('<script type="text/javascript" src="' + url + '" async></scri' + 'pt>');})(document);</script>-->
+
+
+<script type="text/javascript">
+
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-153829-9']);
+    _gaq.push(['_setDomainName', 'pesariazjensetabiat.mihanblog.com']);
+    _gaq.push(['_trackPageview']);
+
+    (function() {
+        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+
+</script>
+
+
+<div id='mediaad-Kvcm'></div>
+<meta name="sabavision_zone" content="2500-Z499" />
+<center>
+    <div style="background-color:white;width:90%;padding:20px;margin-top:50px;margin-bottom:50px;">
+        <a href="https://www.cloob.com">شبکه اجتماعی فارسی کلوب</a> | <a href="https://www.seo25.com/product/buy-mobile-traffic-and-get-cheap-targeted-mobile-traffic/" target="_blank">Buy Mobile Traffic</a> | <a href="https://www.soalaat.com">سایت سوالات</a>
+    </div>
+</center>

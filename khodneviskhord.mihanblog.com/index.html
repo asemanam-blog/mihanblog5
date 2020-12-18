@@ -1,0 +1,1838 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" /><link rel="EditURI" type="application/rsd+xml" title="RSD" href="http://khodneviskhord.mihanblog.com/xmlrpc?rsd" />
+<script type="text/javascript" src="../static.mihanblog.com/public/scripts/run/g.other.v3.js"></script>
+<script>
+
+	function c_$(id){
+        return document.getElementById(id);
+    }
+    
+			//if (parent.frames.length) top.location.href= document.location;
+		
+	setTodayDate = function(){
+		document.write('یکشنبه 23 آذر 1399');
+		/*1803062*/	}
+
+</script>
+
+
+
+        <script type="text/javascript">
+            (function(){
+            var now = new Date();
+            var head = document.getElementsByTagName('head')[0];
+            var script = document.createElement('script');
+            script.async = true;
+            var script_address = 'https://cdn.yektanet.com/js/mihanblog.com/native-mihanblog.com-6531.js';
+            script.src = script_address + '?v=' + now.getFullYear().toString() + '0' + now.getMonth() + '0' + now.getDate() + '0' + now.getHours();
+            head.appendChild(script);
+            })();
+        </script>
+
+        <!--<script type="text/javascript">
+            var head = document.getElementsByTagName("head")[0];
+            var script = document.createElement("script");
+            script.type = "text/javascript";
+            script.async=1;
+            script.src = "https://s1.mediaad.org/serve/mihanblog.com/loader.js" ;
+            head.appendChild(script);
+        </script>-->
+        
+        <script>
+            var sabaVisionWebsiteID = "9bab9dac-041d-4bdb-b39a-1ed789f65eed"; var sabaVisionWebsitePage = "ALL"
+        </script>
+        <link rel="stylesheet" href="https://plus.sabavision.com/dox/dox.min.css">
+        <script src="https://plus.sabavision.com/dox/dox.min.js"></script>
+        
+        <script>
+	try{
+		var commentCnt = new Array();
+		commentCnt[236]='0';commentCnt[237]='0';commentCnt[238]='1';commentCnt[240]='0';commentCnt[241]='11';commentCnt[242]='1';commentCnt[244]='1';commentCnt[245]='4';commentCnt[247]='43';commentCnt[248]='0';commentCnt[249]='0';commentCnt[250]='0';commentCnt[251]='1';commentCnt[252]='2';commentCnt[253]='17';	} catch(e){}
+	
+	newComment = function(post_id){
+		try{
+			window.open('/post/comment/'+post_id,'comment','status=yes,scrollbars=yes,toolbar=no,menubar=no,location=no ,width=480px,height=540px');
+		} catch(e){}
+	}
+	setCommentCnt = function(post_id){
+		try{
+			if(commentCnt[post_id]){
+				document.write(commentCnt[post_id]);
+			} else {
+				document.write(0);
+			}
+		} catch(e){}
+	}
+</script><script>
+
+
+	mihanblogUpdateLike = function(postid,type){
+		var url = '/post/like/'+postid+'/'+type;
+		mihanblogGetAjax(url,function(){});
+	};
+	try{
+        mihanblogGetAjax = function (url,callback) {
+    		var req;
+			if (window.XMLHttpRequest)
+            {
+                // code for IE7+, Firefox, Chrome, Opera, Safari
+			  	req = new XMLHttpRequest();
+			}else{	// code for IE6, IE5
+			  	req = new ActiveXObject("Microsoft.XMLHTTP");
+		  	}
+		    req.open("GET", url, 1);
+		    req.onreadystatechange = function () {
+		        if (req.readyState == 4) {
+		            if (req.status == 200) {
+		            	var response = eval(req.responseText);
+		            	callback();
+		            }else{
+	            		return ;
+		            }
+		        }else{
+					return ;
+		        }
+		    }
+		    req.send(null);
+		}
+	}catch(e){}
+
+	try{
+		var mihanblogLikeArrCnt = new Array();
+		var mihanblogDisLikeArrCnt = new Array();
+
+		mihanblogLikeArrCnt[236]='0';
+mihanblogDisLikeArrCnt[236]='0';
+mihanblogLikeArrCnt[238]='0';
+mihanblogDisLikeArrCnt[238]='0';
+mihanblogLikeArrCnt[240]='0';
+mihanblogDisLikeArrCnt[240]='0';
+mihanblogLikeArrCnt[241]='0';
+mihanblogDisLikeArrCnt[241]='0';
+mihanblogLikeArrCnt[242]='0';
+mihanblogDisLikeArrCnt[242]='0';
+mihanblogLikeArrCnt[244]='0';
+mihanblogDisLikeArrCnt[244]='0';
+mihanblogLikeArrCnt[245]='0';
+mihanblogDisLikeArrCnt[245]='0';
+mihanblogLikeArrCnt[247]='0';
+mihanblogDisLikeArrCnt[247]='0';
+mihanblogLikeArrCnt[249]='0';
+mihanblogDisLikeArrCnt[249]='0';
+mihanblogLikeArrCnt[251]='1';
+mihanblogDisLikeArrCnt[251]='0';
+mihanblogLikeArrCnt[252]='0';
+mihanblogDisLikeArrCnt[252]='0';
+mihanblogLikeArrCnt[253]='0';
+mihanblogDisLikeArrCnt[253]='0';
+	} catch(e){}
+
+
+
+    mihanblogPostLike = function(post_id){
+
+        mihanblogLikeCnt = (mihanblogLikeArrCnt[post_id]? mihanblogLikeArrCnt[post_id] : 0);
+        mihanblogDisLikeCnt = (mihanblogDisLikeArrCnt[post_id]? mihanblogDisLikeArrCnt[post_id] : 0);
+        mihanblogLikeCnt = parseInt(mihanblogLikeCnt);
+        mihanblogDisLikeCnt = parseInt(mihanblogDisLikeCnt);
+
+        document.write(
+                '<div class="mihanblog_like_wrapper ">'+
+                       '<div id="dislikeBar_'+post_id+'" onclick="mihanblogUpdateLike('+post_id+',\'dislike\')"   class="mihanblog_like_bar mihanblog_like_dislikeBar mihanblog_like_show_help ">-<div class="mihanblog_like_Cnt" id="disLikeCnt_'+post_id+'">'+mihanblogDisLikeCnt+'</div>'+
+                            '<span  class="mihanblog_like_v2_help mihanblog_like_v2_help_dislike clearfix"> '+
+                                '<span class="mihanblog_like_help_arrow mihanblog_like_help_arrow_dislike clearfix"></span>'+
+                                '<span class="mihanblog_like_help_text">نمی پسندم</span>'+
+                            '</span>'+
+                        '</div>'+
+                       '<div id="Like_'+post_id+'" class="mihanblog_like_border"></div>'+
+                       '<div id="likeBar_'+post_id+'" onclick="mihanblogUpdateLike('+post_id+',\'like\')"  class="mihanblog_like_bar mihanblog_like_likeBar mihanblog_like_show_help" >+<div class="mihanblog_like_Cnt" id="likeCnt_'+post_id+'">'+mihanblogLikeCnt+'</div>'+
+                            '<span  class="mihanblog_like_v2_help mihanblog_like_v2_help_like clearfix"> '+
+                                '<span class="mihanblog_like_help_arrow mihanblog_like_help_arrow_like clearfix"></span>'+
+                                '<span class="mihanblog_like_help_text">می پسندم</span>'+
+                            '</span>'+
+                        '</div>'+
+
+                '</div>'
+        );
+
+
+
+        mihanblogDisplayeLike(post_id);
+    }
+
+
+    mihanblogDisplayeLike = function(post_id){
+
+        mihanblogLikeCnt = (mihanblogLikeArrCnt[post_id]? mihanblogLikeArrCnt[post_id] : 0);
+        mihanblogDisLikeCnt = (mihanblogDisLikeArrCnt[post_id]? mihanblogDisLikeArrCnt[post_id] : 0);
+        mihanblogLikeCnt = parseInt(mihanblogLikeCnt);
+        mihanblogDisLikeCnt = parseInt(mihanblogDisLikeCnt);
+
+
+
+        sum = mihanblogLikeCnt - mihanblogDisLikeCnt;
+        backgroundBorder =  document.getElementById('Like_'+post_id);
+        var likeObj = document.getElementById('likeCnt_'+post_id);
+        var disLikeObj = document.getElementById('disLikeCnt_'+post_id);
+
+
+
+
+
+        likeObj.innerHTML =  mihanblogLikeCnt ;
+        disLikeObj.innerHTML =  mihanblogDisLikeCnt;
+
+        if(sum == 0){
+            backgroundBorder.style.backgroundImage = "url('/public/public/images/icons/like_likedislike.png')";
+            document.getElementById('dislikeBar_'+post_id).style.width = '19px';
+            document.getElementById('likeBar_'+post_id).style.width = '19px';
+        }else{
+             if(sum > 0){
+                 backgroundBorder.style.backgroundImage = "url('/public/public/images/icons/like_like.png')";
+                 document.getElementById('likeBar_'+post_id).style.width = '23px';
+                 document.getElementById('dislikeBar_'+post_id).style.width = '15px';
+             }else{
+                 backgroundBorder.style.backgroundImage = "url('/public/public/images/icons/like_dislike.png')";
+                 document.getElementById('likeBar_'+post_id).style.width = '15px';
+                 document.getElementById('dislikeBar_'+post_id).style.width = '23px';
+             }
+        }
+
+    }
+
+
+
+
+</script>
+
+<style type="text/css">
+
+
+    .clearfix {display: inline-block;}
+    .clearfix:after {
+        content: ".";
+        display: block;
+        height: 0;
+        clear: both;
+        visibility: hidden;
+    }
+
+    .mihanblog_like_wrapper {
+        color: #ffffff;
+        direction: ltr;
+        position: relative;
+    }
+    .mihanblog_like_wrapper span{
+        display: none;
+    }
+    .mihanblog_like_bar {
+        color: #FFFFFF;
+        cursor: pointer;
+        float: left;
+        font-size: 10px;
+        height: 20px;
+        line-height: 19px;
+        margin: 5px 0;
+    }
+    .mihanblog_like_likeBar {
+        background-color: #88B131;
+        padding-right: 5px;
+        border-top-right-radius: 2px;
+        border-bottom-right-radius: 2px;
+        text-align: right;
+    }
+    .mihanblog_like_likeBar:hover{
+        background-color: #699017;
+    }
+    .mihanblog_like_border {
+        background-color: #666666;
+        border: 1px solid #666666;
+        float: left;
+        font-size: 12px;
+        height: 20px;
+        margin-top: 2px;
+        width: 25px;
+        padding: 3px 5px 2px 0;
+        text-align: center;
+        border-radius: 2px;
+        color: #ffffff;
+        direction: ltr;
+        background-repeat: no-repeat ;
+        background-position: 4px center;
+    }
+    .mihanblog_like_border img {
+        margin-left: 2px;
+        margin-top: 2px;
+        width: 22px;
+    }
+    .mihanblog_like_dislikeBar {
+        background-color: #FF6F31;
+        padding-left: 5px;
+        border-top-left-radius: 2px;
+        border-bottom-left-radius: 2px;
+        text-align:left ;
+    }
+    .mihanblog_like_dislikeBar:hover{
+        background-color: #D54B10;
+    }
+
+
+
+    .mihanblog_like_show_help {
+        position: relative;
+    }
+    .mihanblog_like_show_help:hover span {
+        display: block;
+    }
+    .mihanblog_like_help_text {
+        background-color: white;
+        border: 1px solid #555555;
+        border-radius: 3px 3px 3px 3px;
+        color: #303030;
+        float: left;
+        font-size: 11px;
+        font-weight: normal;
+        padding: 5px 10px;
+    }
+
+    .mihanblog_like_help_arrow_dislike {
+        background: url("http://khodneviskhord.mihanblog.com/public/public/images/icons/like_hover_top.png") no-repeat scroll 16px 0 transparent;
+        left: 0;
+        top: -4px;
+    }
+
+    .mihanblog_like_help_arrow_like {
+        background: url("http://khodneviskhord.mihanblog.com/public/public/images/icons/like_hover_top _2.png") no-repeat scroll 16px 0 transparent;
+        left: -10px;
+        top: 29px;
+    }
+
+    .mihanblog_like_help_arrow{
+        height: 6px;
+        position: absolute;
+        width: 100px;
+
+    }
+
+    .mihanblog_like_v2_help_dislike {
+        left: -15px;
+        top: 24px;
+    }
+    .mihanblog_like_v2_help_like {
+        left: 0;
+        top: -35px;
+
+    }
+    .mihanblog_like_v2_help{
+        display: none;
+        position: absolute;
+        white-space: nowrap;
+        z-index: 1;
+    }
+
+    .mihanblog_like_Cnt{
+        display: inline;
+        color: #ffffff;
+    }
+
+</style><script>
+
+	statInfo = new Array();
+	setStatVar = function(index,value){
+		statInfo[index] = value;
+	}
+	getStatVar = function(index){
+		if(statInfo[index]) document.write(statInfo[index]);
+	}
+	
+	setStatVar('total_post','226');
+	setStatVar('total_author','0');
+	setStatVar('modify_date','شنبه 26 اسفند 1396');
+	
+	setStatVar('today_view','0');
+	setStatVar('yesterday_view','3');
+	
+	setStatVar('this_month_view','90');
+	setStatVar('last_month_view','104');
+
+	setStatVar('total_view','33182');
+	setStatVar('last_view_date','شنبه 22 آذر 1399 (21:36)');
+
+
+
+    
+    function setStatFromClient()
+    {
+        var url = 'http://khodneviskhord.mihanblog.com/statupdate/?data[refereruri]=http://myyesterdays.mihanblog.com/&data[postid]=&data[requesturi]=/&data[sdate]=1607826187&data[hash]=4056d06588fac5b86c18991ab62d1ffe&data[resolution]='+screen.width+' X '+screen.height;
+
+//        alert(url);
+//        var newjs = document.createElement("SCRIPT");
+//        newjs.type = 'text/javascript';
+//        newjs.src = url;
+//
+//        var newdiv = document.createElement("DIV");
+//        newdiv.setAttribute("style","display:none");
+
+        document.write(unescape('%3Cscript src="'+url+'" type="text/javascript"%3E%3C/script%3E'));
+//        newdiv.appendChild (newjs);
+//        document.write(newjs);
+//        document.write(appendChild (newdiv);
+
+    };
+    setStatFromClient();
+        
+</script><script>
+	messageForm = function(post_id){
+		try{
+			window.open('/message','message','status=yes,scrollbars=yes,toolbar=no,menubar=no,location=no ,width=480px,height=550px');
+		} catch(e){}
+	}
+</script><script>
+	linkdailyForm = function(){
+		try{
+			window.open('/linkdaily/new','linkdaily','status=yes,scrollbars=yes,toolbar=no,menubar=no,location=no ,width=500px,height=460px');
+		} catch(e){}
+	}
+</script><script>
+
+var MihanblogShopAdsArray = new Array();
+
+function GetMihanBlogShowAds(){
+	if(MihanblogShopAdsArray.length){
+		var adsTarget = 'MihanblogShopAds';
+		var containerWidth = document.getElementById(adsTarget).offsetWidth;
+		if(containerWidth>=200){
+			var adsCnt = parseInt(containerWidth / 200) ;
+			if(adsCnt>MihanblogShopAdsArray.length){
+				adsCnt = MihanblogShopAdsArray.length ; 
+			}
+//			var OneAdsWidth = parseInt(containerWidth / adsCnt) ;
+			var OneAdsWidth = containerWidth / adsCnt ;
+			if(OneAdsWidth>400){
+				OneAdsWidth = 400 ;
+			}
+			var OutHtml = '';
+			var img = '';
+			var link = '';
+			var title = '';
+			var description = '';
+			var imgWidth = 70;
+			if(OneAdsWidth>230){
+				imgWidth = 80;
+			}
+			if(OneAdsWidth>300){
+				imgWidth = 90;
+			}
+			for(adsOne=0;adsOne<adsCnt;adsOne++){
+				
+				img = MihanblogShopAdsArray[adsOne]['img'];
+				link = MihanblogShopAdsArray[adsOne]['link'];
+				title = MihanblogShopAdsArray[adsOne]['title'];
+				description = MihanblogShopAdsArray[adsOne]['description'];
+				
+				OutHtml += '<td style="background-color:#FFF;width: '+OneAdsWidth+'px;border:1px solid #f00;margin:0px 0px;font-size:11px;font-family:tahoma;padding:2px;margin:0px 0px;font-size:11px;border: 1px solid BurlyWood; padding: 1px; height: '+(imgWidth+25)+'px;">';
+
+				OutHtml += '	<a href="http://khodneviskhord.mihanblog.com/'+link+'" target="_blank" style="text-decoration:none">';
+
+				OutHtml += '			<div style="width: '+(OneAdsWidth-16)+'px;cursor:pointer;font-size:12px;padding: 4px 1px 4px 7px; white-space: nowrap; text-align: center; font-weight: bold; color: blue;white-space:nowrap;overflow:hidden">';
+				OutHtml += 					title;
+				OutHtml += '			</div>';
+				OutHtml += '			<div style="cursor:pointer;padding: 1px; display: block; float: right; width: '+imgWidth+'px;">';
+				OutHtml += '				<img src="'+img+'.html" style="border:0px;padding:0px;margin:0px;width:'+imgWidth+'px;height:'+imgWidth+'px;">';
+				OutHtml += '			</div>';
+				OutHtml += '			<div style="padding: 1px; display: block; float: right; width: '+(OneAdsWidth-13-imgWidth)+'px; text-align: right;overflow:hidden">';
+				OutHtml += '				<div style="overflow:hidden;cursor:pointer;padding: 2px 3px; line-height: 17px; height: '+(imgWidth-3)+'px; text-align: justify;color:#000;direction:rtl">';
+				OutHtml += 						description;
+				OutHtml += '				</div>';
+				OutHtml += '			</div>';
+
+				OutHtml += '	</a>';
+
+				OutHtml += '</td>';
+			}
+			
+			var Out = '<table align="center" cellpadding="0" cellspacing="2" style="width:'+(OneAdsWidth*adsCnt)+'px;"><tr>'+OutHtml+'</tr></table>'; 
+			
+			Out = '<div style="text-align:center;padding:0px;margin:3px auto;">'+Out+'</div>'; 
+			
+			document.getElementById(adsTarget).style.height = (imgWidth+35)+'px' ;
+			document.getElementById(adsTarget).innerHTML = Out ;
+		}
+	}
+}
+</script>
+    <style>
+        @font-face {
+            font-family: 'Mihan-Iransans';
+            src: url('http://khodneviskhord.mihanblog.com/public/public/fonts/Iransans.eot');
+            src: url('http://khodneviskhord.mihanblog.com/public/public/fonts/Iransans.eot?') format('embedded-opentype'),
+            url('http://khodneviskhord.mihanblog.com/public/public/fonts/Iransans.woff2') format('woff2'),
+            url('http://khodneviskhord.mihanblog.com/public/public/fonts/Iransans.woff') format('woff'),
+            url('http://khodneviskhord.mihanblog.com/public/public/fonts/Iransans.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+        @font-face {
+            font-family: 'Mihan-IransansBold';
+            src: url('http://khodneviskhord.mihanblog.com/public/public/fonts/Iransans-Black.eot');
+            src: url('http://khodneviskhord.mihanblog.com/public/public/fonts/Iransans-Black.eot?') format('embedded-opentype'),
+            url('http://khodneviskhord.mihanblog.com/public/public/fonts/Iransans-Black.woff2') format('woff2'),
+            url('http://khodneviskhord.mihanblog.com/public/public/fonts/Iransans-Black.woff') format('woff'),
+            url('http://khodneviskhord.mihanblog.com/public/public/fonts/Iransans-Black.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+        @font-face {
+            font-family: 'Mihan-IransansLight';
+            src: url('http://khodneviskhord.mihanblog.com/public/public/fonts/Iransans-UltraLight.eot');
+            src: url('http://khodneviskhord.mihanblog.com/public/public/fonts/Iransans-UltraLight.eot?') format('embedded-opentype'),
+            url('http://khodneviskhord.mihanblog.com/public/public/fonts/Iransans-UltraLight.woff2') format('woff2'),
+            url('http://khodneviskhord.mihanblog.com/public/public/fonts/Iransans-UltraLight.woff') format('woff'),
+            url('http://khodneviskhord.mihanblog.com/public/public/fonts/Iransans-UltraLight.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+        @font-face {
+            font-family: 'Mihan-Nassim';
+            src: url('http://khodneviskhord.mihanblog.com/public/public/fonts/Nassim.eot');
+            src: url('http://khodneviskhord.mihanblog.com/public/public/fonts/Nassim.eot?') format('embedded-opentype'),
+            url('http://khodneviskhord.mihanblog.com/public/public/fonts/Nassim.woff2') format('woff2'),
+            url('http://khodneviskhord.mihanblog.com/public/public/fonts/Nassim.woff') format('woff'),
+            url('http://khodneviskhord.mihanblog.com/public/public/fonts/Nassim.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+        @font-face {
+            font-family: 'Mihan-Koodak';
+            src: url('http://khodneviskhord.mihanblog.com/public/public/fonts/Koodak.eot');
+            src: url('http://khodneviskhord.mihanblog.com/public/public/fonts/Koodak.eot?') format('embedded-opentype'),
+            url('http://khodneviskhord.mihanblog.com/public/public/fonts/Koodak.woff2') format('woff2'),
+            url('http://khodneviskhord.mihanblog.com/public/public/fonts/Koodak.woff') format('woff'),
+            url('http://khodneviskhord.mihanblog.com/public/public/fonts/Koodak.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+        @font-face {
+            font-family: 'Mihan-Yekan';
+            src: url('http://khodneviskhord.mihanblog.com/public/public/fonts/Yekan.eot');
+            src: url('http://khodneviskhord.mihanblog.com/public/public/fonts/Yekan.eot?') format('embedded-opentype'),
+            url('http://khodneviskhord.mihanblog.com/public/public/fonts/Yekan.woff2') format('woff2'),
+            url('http://khodneviskhord.mihanblog.com/public/public/fonts/Yekan.woff') format('woff'),
+            url('http://khodneviskhord.mihanblog.com/public/public/fonts/Yekan.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+        @font-face {
+            font-family: 'FontAwesome';
+            src: url('http://khodneviskhord.mihanblog.com/public/public/fonts/fontawesome_webfont.eot');
+            src: url('http://khodneviskhord.mihanblog.com/public/public/fonts/fontawesome_webfont.eot?') format('embedded-opentype'),
+            url('http://khodneviskhord.mihanblog.com/public/public/fonts/fontawesome_webfont.woff2') format('woff2'),
+            url('http://khodneviskhord.mihanblog.com/public/public/fonts/fontawesome_webfont.woff') format('woff'),
+            url('http://khodneviskhord.mihanblog.com/public/public/fonts/fontawesome_webfont.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+
+
+        
+
+        /* Smartphones (portrait and landscape) ----------- */
+
+        /*
+        @media only screen and (max-width : 480px) and (min-width : 320px) {
+            .sabaClick_advert__wrapper{
+                display:block;
+            }
+            .sabaClick_advert__inner{
+                max-width: 90%;
+                margin: 0 5%;
+            }
+        }
+        */
+
+    </style>
+
+
+
+
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta name="description" content=""/>
+<meta name="keywords" content="تک جملات "/>
+
+<link rel="alternate" type="application/rss+xml" title="خود نویس" href="http://khodneviskhord.mihanblog.com/post/rss/" />
+<link rel="alternate" type="application/atom+xml" title="خود نویس" href="http://khodneviskhord.mihanblog.com/post/atom/" />
+
+<title>خود نویس</title>
+<style type="text/css">
+body{
+    background:url("http://mihanblog.com/public//public/user_data/user_files/97/289651/paper/body.jpg") repeat scroll center top transparent;
+    color:#333333;
+    font:Tahoma ,  arial;
+    margin:0;
+    text-align:right;
+    direction:rtl;
+    font-size:12px;
+}
+    /* ***************************************************************************** CLEAR FIX  */
+.clearfix {display: inline-block;}
+.clearfix:after {
+    content: ".";
+    display: block;
+    height: 0;
+    clear: both;
+    visibility: hidden;
+}
+    /* Hides from IE-mac \*/
+* html .clearfix {height: 1%;}
+.clearfix {display: block;}
+    /* End hide from IE-mac */
+    /* ************************************************************************** EO CLEAR FIX   */
+.wrapper{
+    margin:15px auto 0;
+    width:960px;
+}
+a{
+    color:#0588B1;
+    text-decoration:none;
+}
+a:hover{
+    color:#5588AA;
+    text-decoration:underline;
+}
+img{
+    max-width : 582px;
+}
+.postCom{
+    float:right;
+    padding-right:15px;
+    background:transparent url(http://mihanblog.com/public//public/user_data/user_files/97/289651/paper/comment.png) scroll no-repeat center right;
+}
+
+.header{
+    background:url("http://mihanblog.com/public//public/user_data/user_files/97/289651/paper/top-content.png") no-repeat scroll center bottom transparent;
+    height:119px;
+    color:#222222;
+}
+.header-inn{
+    background-position:center center;
+    height:61px;
+    margin-left:auto;
+    margin-right:auto;
+}
+.header-inn h1 a{
+    font:bold 24px ,arial,Tahoma;
+    margin:0;
+    padding:0 38px;
+    width:340px;
+    display:block;
+    color:#333333;
+}
+.header-inn h1 a:hover{
+    text-decoration:none;
+}
+.slogan{
+    color:#000;
+    padding:0 38px;
+    width:340px;
+}
+.tab-menu{
+    -moz-border-radius:10px 10px 10px 10px;
+    background:url("http://mihanblog.com/public//public/user_data/user_files/97/289651/paper/widget.png") repeat scroll 0 0 transparent;
+    border:1px solid #CCCCCC;
+    margin-right:420px;
+    margin-left:31px;
+    margin-top:-32px;
+    padding-left:10px;
+    padding-right:10px;
+}
+.tab-menu a{
+    float:right;
+    border-left:1px solid #CCCCCC;
+    color:#333333;
+    font-weight:bold;
+    padding:10px 17px;
+    text-decoration:none;
+    text-transform:none;
+    font-size:14px;
+}
+.tab-menu a:hover{
+    background-color:#ccc;
+}
+.content{
+    background:url("http://mihanblog.com/public//public/user_data/user_files/97/289651/paper/content.png") repeat-y scroll 0 0 transparent;
+}
+.left{
+    float:left;
+    margin-left:48px;
+    margin-top:7px;
+    overflow:hidden;
+    width:582px;
+}
+.author{
+    float:right;
+    width:200px;
+}
+.date{
+    float:left;
+    width:320px;
+}
+.left h1 a{
+    color:#000000;
+    font-size:25px;
+    font-weight:bold;
+    line-height:20px;
+    margin:10px 0 0;
+    padding:0 0 4px;
+    display:block;
+}
+.left h1 a:hover{
+    color:#333333;
+    text-decoration:none;
+}
+.post-body{
+    line-height:25px;
+    text-align:justify;
+    margin:5px;
+}
+.page_box ul{
+    direction:rtl;
+    height:17px;
+    margin:3px auto;
+    max-width:460px;
+    text-align:left;
+    width:390px;
+    list-style:none;
+}
+.page_box ul{
+    height:17px;
+}
+.page_box li{
+    float:right;
+    margin-right:5px;
+    list-style:none;
+    background:none;
+    color:#444;
+    font-family: Tahoma, Arial, Times New Roman;
+    font-size: 14px;
+}
+
+.page_box a{
+    border:1px solid #452105;
+    color:#265777;
+    display:block;
+    line-height:17px;
+    text-align:center;
+    width:17px;
+}
+.page_box a:hover{
+    text-decoration:none;
+    color:#5588aa;
+}
+.page_box a b{
+    color:#333;
+    display:block;
+    line-height:17px;
+    text-align:center;
+    width:17px;
+    background-attachment: scroll;
+    background-color: #ffffff;
+    background-image: none;
+    background-repeat: repeat;
+    background-position: 0 0;
+}
+.right{
+    float:right;
+    margin-right:40px;
+    margin-top:0;
+    overflow:hidden;
+    width:269px;
+}
+.right a{
+    display:block;
+}
+.nav{
+    -moz-border-radius:10px 10px 10px 10px;
+    background:url("http://mihanblog.com/public//public/user_data/user_files/97/289651/paper/widget.png") repeat scroll 0 0 transparent;
+    border:1px solid #CCCCCC;
+    margin-top:-14px;
+    padding:10px;
+}
+.right h2{
+    color:#000000;
+    margin:0;
+    padding:8px 10px;
+    text-shadow:0 1px 0 #FFFFFF;
+    font-size:18px;
+    font-weight:bold;
+}
+
+.footer{
+    background:url("http://mihanblog.com/public//public/user_data/user_files/97/289651/paper/footer.png") no-repeat scroll 0 0 transparent;
+    color:#444444;
+    font:11px Tahoma;
+    height:18px;
+    margin:0 auto 10px;
+    padding-bottom:15px;
+    padding-top:26px;
+    text-align:center;
+    text-transform:none;
+    width:960px;
+}
+
+
+.cblike{
+    margin:4px 0px;
+}
+.cblike a {
+    float:left;
+    padding:3px;
+    text-align:center;
+    font-size:12px;
+    color:#FFF;
+    display:block;
+    line-height:15px;
+    text-decoration: none;
+}
+
+
+
+
+.cblike a.clike_plus {
+    background-color:#009900 ; /*green #039B03*/
+
+    border-radius: 5px ;
+
+    border-top-right-radius: 0px;
+    border-bottom-right-radius: 0px;
+
+    /*border:1px solid green;
+             border-right:0px;*/
+}
+.cblike a.clike_minus {
+    background-color:#CC0000;
+    border-radius: 5px ;
+    border-top-left-radius: 0px;
+    border-bottom-left-radius: 0px;
+
+    /*border:1px solid red;
+             border-left:0px;*/
+}
+.cblike a.clike_minus:hover {
+    background-color:red;
+    text-decoration: none;
+}
+.cblike a.clike_plus:hover {
+    background-color:green;
+    text-decoration: none;
+}
+.cblike a span{
+    font-weight:bold;
+    font-size:13px;
+
+    color:#fff;
+}
+
+
+</style>
+</head>
+<body>
+<div class="wrapper">
+<div class="header">
+    <div class="header-inn">
+        <h1><a href="index.html" id="logo">خود نویس</a> </h1>
+        <span class="slogan">  </span>
+    </div>
+    <div class="tab-menu clearfix">
+        <a href="index.html" >خانه</a>
+        <a href="mailto:" >پست الكترونیك</a>
+        <a href="javascript:messageForm()" >تماس با مدیر</a>
+        <a href="http://khodneviskhord.mihanblog.com/post/atom/">Atom</a>
+        <a  href="http://khodneviskhord.mihanblog.com/post/rss/">RSS </a>
+    </div>
+</div>
+<div class="content clearfix">
+<div class="right">
+    <h2>درباره وبلاگ</h2>
+    <div class="nav">
+        <div style="text-align:center; margin-bottom:10px;"><img src="../static.mihanblog.com/public/user_data/web_photo/602/1803062.jpg@1127"  /></div>
+        <div style="text-align:justify; direction:rtl;">نوشتن درد را کاهش می دهد گاهی<br />
+ دردی که مدام حسش می کنی و گاهی نیز جان تو را این درد می خورد ,<br />
+و  وجودت می خواهد از هم بپاشد</div>
+    </div>
+            <h2>آرشیو</h2>
+        <div class="nav">
+                            <a href="http://khodneviskhord.mihanblog.com/post/archive/1396/12"> اسفند 1396</a>
+                            <a href="http://khodneviskhord.mihanblog.com/post/archive/1396/11"> بهمن 1396</a>
+                            <a href="http://khodneviskhord.mihanblog.com/post/archive/1396/10"> دی 1396</a>
+                            <a href="http://khodneviskhord.mihanblog.com/post/archive/1396/9"> آذر 1396</a>
+                            <a href="http://khodneviskhord.mihanblog.com/post/archive/1396/8"> آبان 1396</a>
+                            <a href="http://khodneviskhord.mihanblog.com/post/archive/1396/6"> شهریور 1396</a>
+                            <a href="http://khodneviskhord.mihanblog.com/post/archive/1396/5"> مرداد 1396</a>
+                            <a href="http://khodneviskhord.mihanblog.com/post/archive/1396/3"> خرداد 1396</a>
+                            <a href="http://khodneviskhord.mihanblog.com/post/archive/1396/2"> اردیبهشت 1396</a>
+                            <a href="http://khodneviskhord.mihanblog.com/post/archive/1396/1"> فروردین 1396</a>
+                            <a href="http://khodneviskhord.mihanblog.com/post/archive/1395/12"> اسفند 1395</a>
+                            <a href="http://khodneviskhord.mihanblog.com/post/archive/1395/11"> بهمن 1395</a>
+            
+            <a href="http://khodneviskhord.mihanblog.com/post/archive"><b>لیست آرشیوها</b></a></li>
+        </div>
+    
+
+            <h2>آخرین پستها</h2>
+        <div class="nav">
+                            <a  href="http://khodneviskhord.mihanblog.com/post/253">مخاطب </a>
+                            <a  href="http://khodneviskhord.mihanblog.com/post/252">تک کلمات 11 </a>
+                            <a  href="http://khodneviskhord.mihanblog.com/post/251">حال خراب </a>
+                            <a  href="http://khodneviskhord.mihanblog.com/post/250">اسفند </a>
+                            <a  href="http://khodneviskhord.mihanblog.com/post/249">تک جملات 10 </a>
+                            <a  href="http://khodneviskhord.mihanblog.com/post/248">تک جملات 9 </a>
+                            <a  href="http://khodneviskhord.mihanblog.com/post/247">تک جملات 8 </a>
+                            <a  href="http://khodneviskhord.mihanblog.com/post/245">تناقضات </a>
+                            <a  href="http://khodneviskhord.mihanblog.com/post/244">تک جملات 7 </a>
+                            <a  href="http://khodneviskhord.mihanblog.com/post/242">تک جملات 6 </a>
+                            <a  href="http://khodneviskhord.mihanblog.com/post/241">تک جملات 5 </a>
+                            <a  href="http://khodneviskhord.mihanblog.com/post/240">اسیر </a>
+                            <a  href="http://khodneviskhord.mihanblog.com/post/238">امیدی رفته از دست </a>
+                            <a  href="http://khodneviskhord.mihanblog.com/post/237">شاید </a>
+                            <a  href="http://khodneviskhord.mihanblog.com/post/236">او </a>
+                        <b><a  href="http://khodneviskhord.mihanblog.com/post/list">لیست آخرین پستها</a></b>
+        </div>
+    
+    
+
+            <H2>پیوندهای روزانه</H2>
+        <div class="nav">
+                            <a href="http://axtext.com/category/romantic/" title="سلام 
+پیشنهاد میکنم از سایت ما بازدید کنید. و با تایید لینک از ما حمایت کنید. 
+خیلی ممنون
+خدانگهدار" target="_blank">عکس نوشته عاشقانه</a>
+                            <a href="http://axtext.com" title="سلام ، خسته نباشید
+وبلاگ بسیار خوب و زیبایی دارید .
+پیشنهاد میکنم از سایت ما هم بازدید کنید. و با تایید لینک از ما حمایت کنید. 
+خیلی ممنون
+خدانگهدار" target="_blank">عکس پروفایل</a>
+                            <a href="../amin2002.mihanblog.com/index.html" title="" target="_blank">یک قدم تا قلم</a>
+                            <a href="http://uupload.ir" title="سلام ، خسته نباشید
+وبلاگ بسیار خوب و زیبایی دارید .
+پیشنهاد میکنم برای آپلود فایل و عکس از سایت یو آپلود استفاده کنید.
+به صورت رایگان ، دائمی و سرعت بالا 
+لطفا لینک رو تایید کنید تا هم آدرس سایت رو داشته باشید و هم یه حمایتی بشه از ما
+خیلی ممنون
+خدانگهدار" target="_blank">آپلود فایل</a>
+                            <a href="http://axtext.com/category/romantic" title="سلام ، خسته نباشید
+وبلاگ بسیار خوب و زیبایی دارید .
+پیشنهاد میکنم از سایت ما هم بازدید کنید. و با تایید لینک از ما حمایت کنید. 
+خیلی ممنون
+خدانگهدار" target="_blank">عکس پروفایل عاشقانه</a>
+                            <a href="http://raingirl523.mihanblog.com" title="" target="_blank">دختر باران</a>
+                            <a href="http://edo.ir" title="کوتاه کننده لینک فارسی ، با قابلیت آمار گیری برای هر لینک بصورت رمز دار
+edo.ir" target="_blank">کوتاه کننده لینک فارسی</a>
+                            <a href="http://iraniannurse.com" title="سلام.
+وبلاگ زیبایی دارید
+
+لطفا لینک ما را تایید کنید.با تشکر" target="_blank">وب سایت پرستاری ایرانیان</a>
+                            <a href="http://edo.ir" title="پیام آموزشی برای مدیران سایت ها و کانال ها:
+سایت های کوتاه کننده لینک به شما چه کمکی می کند ؟
+سایتهای کوتاه کننده لینک به شما کمک کنند تا لینک های بلند شما به لینک های بسیار کوچک تبدیل شوند و تعداد حروف لینک و متن شما کاهش یابد و ظاهر پست شما زیبا تر شود. 
+همچنین برخی از این کوتاه کننده ها خدماتی ارائه میکنند که مزیت استفاده را چندین برابر میکند. این مزیت، قابلیت آمارگیری و آنلیز کلیک های هر لینک است و شما میتوانید از وضعیت کلیک های انجام شده بر روی لینک خود خبر دار شوید. نمونه ی جدید و پیشرفته فارسی که قابلیت رمزگذاری بر روی آمار را نیز دارد در زیر آمده است.
+لطفا این پیام را برای دوستان ادمین خود ارسال کنید تا از این به بعد کامنت ها را با ظاهری زیباتر ببینیم.
+edo.ir" target="_blank">کوتاه کننده لینک فارسی</a>
+                            <a href="http://shop.panizz.com/product.php?id=31" title="سلام 
+لطفا این لینک را تایید کنید سپس لینک خود را در سایت زیر قرار دهید
+http://link.9rang.com
+ارادتمند" target="_blank">آموزش بافتنی</a>
+                        <a href="http://khodneviskhord.mihanblog.com/linkdaily/"><b>همه پیوندهای روزانه</b></a>
+            <a href="javascript:linkdailyForm()"><b>ارسال پیوند روزانه</b></a>
+        </div>
+    
+
+    
+
+
+    
+
+            <h2>نویسندگان</h2>
+        <div class="nav">
+                            <p><a href="http://khodneviskhord.mihanblog.com/post/author/1488080"></a><a class="clearfix" href="http://khodneviskhord.mihanblog.com/post/author/1488080" >	خود بی خود(226)</a>	</p>
+                    </div>
+    
+
+
+    
+
+    
+		<form id="frm-16076527345fd2d57ec1a44" method="post" action="http://khodneviskhord.mihanblog.com/poll/new/fid/16076527345fd2d57ec1a44/atrty/1607652734/avrvy/0/key/8721324de43d7177ecaeb159bb229021/"  onsubmit="window.open('', 'poll', 'toolbar=0,location=0,status=0,menubar=0,scrollbars=1,resizable=0,width=505,height=315')" target="poll"><input type="hidden" name="data[pollid]" value="373764" id="data[pollid]" />		
+        <h2>نظر سنجی</h2>
+        <div class="nav">
+            به نظر شما وبلاگ از نظر محتوایی در چه حدی است؟            <br>
+                            <label><input type="radio" name="data[answer]" value="v1">خیلی خوب</label> <br>
+                            <label><input type="radio" name="data[answer]" value="v2">خوب</label> <br>
+                            <label><input type="radio" name="data[answer]" value="v3">متوسط</label> <br>
+                            <label><input type="radio" name="data[answer]" value="v4">بد</label> <br>
+                            <label><input type="radio" name="data[answer]" value="v5">خیلی بد</label> <br>
+                        <br>
+            <br>
+            <div align="center">
+                <input type="submit" value="ثبت" class="subbtn"/>
+            </div>
+        </div>
+    
+		<input type="hidden" name="frm-id" value="16076527345fd2d57ec1a44" id="frm-id" /></form>
+            <h2>آمار وبلاگ</h2>
+        <div class="nav">
+            کل بازدید : <script>getStatVar('total_view');</script>            <br>
+            بازدید امروز :<script>getStatVar('today_view');</script>            <br>
+            بازدید دیروز : <script>getStatVar('yesterday_view');</script>            <br>
+            بازدید این ماه : <script>getStatVar('this_month_view');</script>            <br>
+            بازدید ماه قبل : <script>getStatVar('last_month_view');</script>            <br>
+            تعداد نویسندگان : <script>getStatVar('total_author');</script>            <br>
+            تعداد کل پست ها : <script>getStatVar('total_post');</script>            <br>
+            آخرین بازدید : <script>getStatVar('last_view_date');</script>            <br>
+            آخرین بروز رسانی : <script>getStatVar('modify_date');</script>        </div>
+        <br>
+    <br>
+    <div align="center" >
+        <a href="../www.admin.mihanblog.com/index.html"><img src="http://mihanblog.com/http://mihanblog.com/public/public/images/logo/poweredby.gif" alt="Admin Logo" style="border:0px"/></a>
+        <br>
+        <a href="../www.themebox.mihanblog.com/index.html"><img src="http://mihanblog.com/public//public/user_data/user_files/97/289651/logo.jpg" alt="themebox Logo" style="border:0px"/></a>
+        <br>
+        <div align="center" ></div>
+        <br>
+        <br>
+    </div>
+</div>
+<div class="left">
+		<div id="MihanblogShopAds" style="display:block;height:0px;width:100%;border:0px"></div>
+		    <div class="clearfix">
+        <div class="author">نویسنده :<a href="http://khodneviskhord.mihanblog.com/post/author/1488080">خود بی خود</a></div>
+        <div class="date">تاریخ:شنبه 26 اسفند 1396-01:02 ب.ظ</div>
+    </div>
+
+
+
+
+
+    <h1><a href="http://khodneviskhord.mihanblog.com/post/253">مخاطب</a></h1>
+    <div class="post-body">
+        <p> <div id="InPost_MihanblogShopAds" style="display:block;height:0px;width:100%;border:0px"></div>
+<h1 class="post-tile entry-title" itemprop="name" style="font-size: 24px; margin: 0px 0px 10px; line-height: 1.3em; color: rgb(64, 69, 77); font-family: &quot;Droid Arabic Naskh&quot;, serif !important;"><br></h1><div><div align="right" class="MsoNormal" data-blogger-escaped-style="background: white; direction: ltr; line-height: normal; margin-bottom: .0001pt; margin-bottom: 0cm; text-align: right; unicode-bidi: embed;" style="font-family: &quot;Times New Roman&quot;; font-size: medium; text-align: right; background-image: initial; background-position: initial; background-size: initial; background-repeat: initial; background-attachment: initial; background-origin: initial; background-clip: initial; direction: ltr; line-height: normal; margin-bottom: 0cm; unicode-bidi: embed;"><p style="margin: 0px;"><font color="#333333" data-blogger-escaped-style="color: #333333; font-family: &quot;Times New Roman&quot;,serif; font-size: 18.0pt; mso-ascii-font-family: Georgia; mso-fareast-font-family: &quot;Times New Roman&quot;; mso-hansi-font-family: Georgia;" dir="RTL" face="&quot;times new roman&quot; , serif" lang="FA" style="font-size: 18pt;">&nbsp;او مدتها بود که&nbsp; برای هیچ کسی نمی نوشت هیچ مخاطبی نداشت&nbsp;</font></p><p style="margin: 0px;"><span style="color: rgb(51, 51, 51); font-family: &quot;times new roman&quot;, serif; font-size: 18pt;">تنها برون می ریخت&nbsp;</span></p></div><div align="right" class="MsoNormal" data-blogger-escaped-style="background: white; direction: ltr; line-height: normal; margin-bottom: .0001pt; margin-bottom: 0cm; text-align: right; unicode-bidi: embed;" style="font-family: &quot;Times New Roman&quot;; font-size: medium; text-align: right; background-image: initial; background-position: initial; background-size: initial; background-repeat: initial; background-attachment: initial; background-origin: initial; background-clip: initial; direction: ltr; line-height: normal; margin-bottom: 0cm; unicode-bidi: embed;"><p style="margin: 0px;"><span style="font-size: 18pt; color: rgb(51, 51, 51); font-family: &quot;times new roman&quot;, serif;">چیزی را که نمی دانست چیست</span><span style="color: rgb(51, 51, 51); font-family: &quot;times new roman&quot;, serif; font-size: 18pt;">&nbsp;</span></p><p style="margin: 0px;"><span style="font-size: 18pt; color: rgb(51, 51, 51); font-family: &quot;times new roman&quot;, serif;">چیزی ورای کلماتی که گفته می شود</span></p></div><div align="right" class="MsoNormal" data-blogger-escaped-style="background: white; direction: ltr; line-height: normal; margin-bottom: .0001pt; margin-bottom: 0cm; text-align: right; unicode-bidi: embed;" style="font-family: &quot;Times New Roman&quot;; font-size: medium; text-align: right; background-image: initial; background-position: initial; background-size: initial; background-repeat: initial; background-attachment: initial; background-origin: initial; background-clip: initial; direction: ltr; line-height: normal; margin-bottom: 0cm; unicode-bidi: embed;"><p style="margin: 0px;"><font color="#333333" data-blogger-escaped-style="color: #333333; font-family: &quot;Times New Roman&quot;,serif; font-size: 18.0pt; mso-ascii-font-family: Georgia; mso-fareast-font-family: &quot;Times New Roman&quot;; mso-hansi-font-family: Georgia;" dir="RTL" face="&quot;times new roman&quot; , serif" lang="FA" style="font-size: 18pt;">&nbsp;شنیده می شود و فهمیده می شود،</font></p><p style="margin: 0px;"><font color="#333333" data-blogger-escaped-style="color: #333333; font-family: &quot;Times New Roman&quot;,serif; font-size: 18.0pt; mso-ascii-font-family: Georgia; mso-fareast-font-family: &quot;Times New Roman&quot;; mso-hansi-font-family: Georgia;" dir="RTL" face="&quot;times new roman&quot; , serif" lang="FA" style="font-size: 18pt;">&nbsp;وجود داشت که&nbsp; در دسترس نبود و شنونده ای که نمی دانست کیست و نبود&nbsp;</font></p></div></div>
+
+
+
+
+<br><br></p>
+    </div>
+    <br>
+    <div class="clearfix" style="margin-bottom:20px;">
+        <a style="float:left;margin-left:15px;"  target="_blank"
+           href="http://www.cloob.com/share/link/add?
+						url=http://khodneviskhord.mihanblog.com//post/253&title=مخاطب">
+            <img alt="داغ کن - کلوب دات کام" src="http://static1.cloob.com//public/images/icon/100c.gif" style='border: none; padding: 0px'/>
+        </a>
+        <div class="PostCom"><a style="float: right;margin-top: 2px;" target="_self" href="http://khodneviskhord.mihanblog.com/post/253#commentlist" class="comment-link">نظرات(<script>setCommentCnt(253)</script>)</a>&nbsp;
+
+            <div style="float: right;margin-right: 15px;margin-top:-4px;"><script>mihanblogPostLike('253','like')</script></div>
+
+        </div>
+
+    </div>
+    <br>
+        
+        <div style="border-bottom:1px solid #222;height:5px;margin-bottom:10px;"></div>
+    <div class="clearfix">
+        <div class="author">نویسنده :<a href="http://khodneviskhord.mihanblog.com/post/author/1488080">خود بی خود</a></div>
+        <div class="date">تاریخ:چهارشنبه 23 اسفند 1396-05:18 ب.ظ</div>
+    </div>
+
+
+
+
+
+    <h1><a href="http://khodneviskhord.mihanblog.com/post/252">تک کلمات 11</a></h1>
+    <div class="post-body">
+        <p> <p class="p-name" align="right" style="margin: 0px; font-family: &quot;Times New Roman&quot;; font-size: medium; background-image: initial; background-position: initial; background-size: initial; background-repeat: initial; background-attachment: initial; background-origin: initial; background-clip: initial;"><span lang="FA" dir="RTL" style="color: rgb(51, 51, 51);"><o:p><font size="5" face="Georgia, Times New Roman, serif">&nbsp;</font></o:p></span></p><p class="p-name" align="right" style="margin: 0px; font-family: &quot;Times New Roman&quot;; font-size: medium; background-image: initial; background-position: initial; background-size: initial; background-repeat: initial; background-attachment: initial; background-origin: initial; background-clip: initial;"><span lang="FA" dir="RTL" style="color: rgb(51, 51, 51);"><font size="5" face="Georgia, Times New Roman, serif">و تو دوری، دور تر از آنچه&nbsp; که خود می پنداری از دنیا و آدمها&nbsp;</font></span></p><p class="p-name" align="right" style="margin: 0px; font-family: &quot;Times New Roman&quot;; font-size: medium; background-image: initial; background-position: initial; background-size: initial; background-repeat: initial; background-attachment: initial; background-origin: initial; background-clip: initial;"><span lang="FA" dir="RTL" style="color: rgb(51, 51, 51);"><font size="5" face="Georgia, Times New Roman, serif"><br></font></span></p><p class="p-name" align="right" style="margin: 0px; font-family: &quot;Times New Roman&quot;; font-size: medium; background-image: initial; background-position: initial; background-size: initial; background-repeat: initial; background-attachment: initial; background-origin: initial; background-clip: initial;"><span lang="FA" dir="RTL" style="color: rgb(51, 51, 51);"><font size="5" face="Georgia, Times New Roman, serif">&nbsp;بین تو و خودت و آدمها ،&nbsp;</font></span><span style="color: rgb(51, 51, 51); font-family: Georgia, &quot;Times New Roman&quot;, serif; font-size: x-large;">فاصله ایست عمیق و طولانی</span></p><p class="p-name" align="right" style="margin: 0px; font-family: &quot;Times New Roman&quot;; font-size: medium; background-image: initial; background-position: initial; background-size: initial; background-repeat: initial; background-attachment: initial; background-origin: initial; background-clip: initial;"><span lang="FA" dir="RTL" style="color: rgb(51, 51, 51);"><font size="5" face="Georgia, Times New Roman, serif"><br></font></span></p><p class="p-name" align="right" style="margin: 0px; font-family: &quot;Times New Roman&quot;; font-size: medium; background-image: initial; background-position: initial; background-size: initial; background-repeat: initial; background-attachment: initial; background-origin: initial; background-clip: initial;"><span lang="FA" dir="RTL" style="color: rgb(51, 51, 51);"><font size="5" face="Georgia, Times New Roman, serif">نمی شود نزدیک کسی شوی و نمی شود&nbsp;</font></span></p><p class="p-name" align="right" style="margin: 0px; font-family: &quot;Times New Roman&quot;; font-size: medium; background-image: initial; background-position: initial; background-size: initial; background-repeat: initial; background-attachment: initial; background-origin: initial; background-clip: initial;"><span lang="FA" dir="RTL" style="color: rgb(51, 51, 51);"><font size="5" face="Georgia, Times New Roman, serif">&nbsp;<o:p></o:p></font></span></p><p class="p-name" align="right" style="margin: 0px; font-family: &quot;Times New Roman&quot;; font-size: medium; background-image: initial; background-position: initial; background-size: initial; background-repeat: initial; background-attachment: initial; background-origin: initial; background-clip: initial;"><span lang="FA" dir="RTL" style="color: rgb(51, 51, 51);"><font size="5" face="Georgia, Times New Roman, serif">و اکنون در اندیشه آنم که&nbsp; در حال انجام چه کاری هستم که خود نمی دانم&nbsp;<o:p></o:p></font></span></p><p class="p-name" align="right" style="margin: 0px; font-family: &quot;Times New Roman&quot;; font-size: medium; background-image: initial; background-position: initial; background-size: initial; background-repeat: initial; background-attachment: initial; background-origin: initial; background-clip: initial;"><span lang="FA" dir="RTL" style="color: rgb(51, 51, 51);"><font size="5" face="Georgia, Times New Roman, serif"><br></font></span></p><p class="p-name" align="right" style="margin: 0px; font-family: &quot;Times New Roman&quot;; font-size: medium; background-image: initial; background-position: initial; background-size: initial; background-repeat: initial; background-attachment: initial; background-origin: initial; background-clip: initial;"><span lang="FA" dir="RTL" style="color: rgb(51, 51, 51);"><font size="5" face="Georgia, Times New Roman, serif">در ناآگاهی مفرطی و ب شرط ندانستنی ابدی، زندگی خویش را به پیش می برد</font></span></p><p class="p-name" align="right" style="margin: 0px; font-family: &quot;Times New Roman&quot;; font-size: medium; background-image: initial; background-position: initial; background-size: initial; background-repeat: initial; background-attachment: initial; background-origin: initial; background-clip: initial;"><span lang="FA" dir="RTL" style="color: rgb(51, 51, 51);"><font size="5" face="Georgia, Times New Roman, serif">&nbsp;<o:p></o:p></font></span></p><p class="p-name" align="right" style="margin: 0px; font-family: &quot;Times New Roman&quot;; font-size: medium; background-image: initial; background-position: initial; background-size: initial; background-repeat: initial; background-attachment: initial; background-origin: initial; background-clip: initial;"><span lang="FA" dir="RTL" style="color: rgb(51, 51, 51);"><font size="5" face="Georgia, Times New Roman, serif">و هر چه گفت نمیدانم گفت که&nbsp; میدانی و باید به خاطر آوری و او&nbsp; متعجب و متحیر ماند&nbsp;<o:p></o:p></font></span></p><p class="p-name" align="right" style="margin: 0px; font-family: &quot;Times New Roman&quot;; font-size: medium; background-image: initial; background-position: initial; background-size: initial; background-repeat: initial; background-attachment: initial; background-origin: initial; background-clip: initial;"><span lang="FA" dir="RTL" style="color: rgb(51, 51, 51);"><font size="5" face="Georgia, Times New Roman, serif"><br></font></span></p><p style="margin: 0px; font-family: &quot;Times New Roman&quot;; font-size: medium; text-align: right;"><span lang="FA" dir="RTL" style="line-height: 18.4px; color: rgb(51, 51, 51);"><font size="5" face="Georgia, Times New Roman, serif">&nbsp;فاصله های است بین آدمها و&nbsp; موقعیت آدمها از هم ، و همان به خوبی نمایش می دهد&nbsp;</font></span></p><p style="margin: 0px; font-family: &quot;Times New Roman&quot;; font-size: medium; text-align: right;"><span lang="FA" dir="RTL" style="line-height: 18.4px; color: rgb(51, 51, 51);"><font size="5" face="Georgia, Times New Roman, serif"><br></font></span></p><p style="margin: 0px; font-family: &quot;Times New Roman&quot;; font-size: medium; text-align: right;"><span lang="FA" dir="RTL" style="line-height: 18.4px; color: rgb(51, 51, 51);"><font size="5" face="Georgia, Times New Roman, serif">آنچه که در زندگی خویش هستند</font></span></p><p class="p-name" style="margin: 0px; font-family: &quot;Times New Roman&quot;; font-size: medium; text-align: right; background-image: initial; background-position: initial; background-size: initial; background-repeat: initial; background-attachment: initial; background-origin: initial; background-clip: initial;"><span lang="FA" dir="RTL" style="color: rgb(51, 51, 51);"><o:p><font size="5" face="Georgia, Times New Roman, serif">&nbsp;</font></o:p></span><span style="color: rgb(51, 51, 51); font-family: Georgia, &quot;Times New Roman&quot;, serif; font-size: x-large;">&nbsp;</span></p><p class="p-name" style="margin: 0px; font-family: &quot;Times New Roman&quot;; font-size: medium; text-align: right; background-image: initial; background-position: initial; background-size: initial; background-repeat: initial; background-attachment: initial; background-origin: initial; background-clip: initial;"><span lang="FA" dir="RTL" style="color: rgb(51, 51, 51);"><font size="5" face="Georgia, Times New Roman, serif">و او رزمنده ای بود در میدان می جنگید تا کشته شود ولی ترسید و فرار کرد و همان جا مرد&nbsp;<o:p></o:p></font></span></p><p class="p-name" align="right" style="margin: 0px; font-family: &quot;Times New Roman&quot;; font-size: medium; background-image: initial; background-position: initial; background-size: initial; background-repeat: initial; background-attachment: initial; background-origin: initial; background-clip: initial;"><span lang="FA" dir="RTL" style="color: rgb(51, 51, 51);"><o:p><font size="5" face="Georgia, Times New Roman, serif">&nbsp;</font></o:p></span></p><p style="margin: 0px; font-family: &quot;Times New Roman&quot;; font-size: medium; text-align: right;"><span lang="FA" dir="RTL" style="line-height: 18.4px; color: rgb(51, 51, 51);"><font size="5" face="Georgia, Times New Roman, serif"><span lang="FA" dir="RTL" style="line-height: 27.6px;">و او یک جنگنده واقعی بود ولی فکر می کرد او مرده ای بیش نبود که ازش یک مشت استخوان بیش باقی نمانده بود</span></font></span></p>
+
+
+<br><br></p>
+    </div>
+    <br>
+    <div class="clearfix" style="margin-bottom:20px;">
+        <a style="float:left;margin-left:15px;"  target="_blank"
+           href="http://www.cloob.com/share/link/add?
+						url=http://khodneviskhord.mihanblog.com//post/252&title=تک کلمات 11">
+            <img alt="داغ کن - کلوب دات کام" src="http://static1.cloob.com//public/images/icon/100c.gif" style='border: none; padding: 0px'/>
+        </a>
+        <div class="PostCom"><a style="float: right;margin-top: 2px;" target="_self" href="http://khodneviskhord.mihanblog.com/post/252#commentlist" class="comment-link">نظرات(<script>setCommentCnt(252)</script>)</a>&nbsp;
+
+            <div style="float: right;margin-right: 15px;margin-top:-4px;"><script>mihanblogPostLike('252','like')</script></div>
+
+        </div>
+
+    </div>
+    <br>
+        
+        <div style="border-bottom:1px solid #222;height:5px;margin-bottom:10px;"></div>
+    <div class="clearfix">
+        <div class="author">نویسنده :<a href="http://khodneviskhord.mihanblog.com/post/author/1488080">خود بی خود</a></div>
+        <div class="date">تاریخ:یکشنبه 20 اسفند 1396-05:51 ب.ظ</div>
+    </div>
+
+
+
+
+
+    <h1><a href="http://khodneviskhord.mihanblog.com/post/251">حال خراب</a></h1>
+    <div class="post-body">
+        <p> <font face="georgia, times new roman, times, serif" size="4">این روزها چقدر حالم خراب است نمی توانم به هیچ شکل و به هیچ وجه افکارم را جمع کنم</font><div><font face="georgia, times new roman, times, serif" size="4">اشفته و پریشان حال و بهم ریخته</font></div><div><font face="georgia, times new roman, times, serif" size="4">اصلا نمی توانم هیچ کاری کنم</font></div><div><font face="georgia, times new roman, times, serif" size="4">در یک بهم ریختگی عجیبی فرو رفته ام</font></div><div><font face="georgia, times new roman, times, serif" size="4">وضع عجیبیست</font></div><div><font face="georgia, times new roman, times, serif" size="4">که نمی دانم چجوری میتونم بر این حال خراب غلبه کنم</font></div><div><font face="georgia, times new roman, times, serif" size="4">وای حرف زیاده ولی ذهن جمع و جور میخاد حرف زدن نوشتن</font></div><div><font face="georgia, times new roman, times, serif" size="4">تمرکز میخاد که الان ندارم</font></div><div><font face="georgia, times new roman, times, serif" size="4">.......................</font></div><br><br></p>
+    </div>
+    <br>
+    <div class="clearfix" style="margin-bottom:20px;">
+        <a style="float:left;margin-left:15px;"  target="_blank"
+           href="http://www.cloob.com/share/link/add?
+						url=http://khodneviskhord.mihanblog.com//post/251&title=حال خراب">
+            <img alt="داغ کن - کلوب دات کام" src="http://static1.cloob.com//public/images/icon/100c.gif" style='border: none; padding: 0px'/>
+        </a>
+        <div class="PostCom"><a style="float: right;margin-top: 2px;" target="_self" href="http://khodneviskhord.mihanblog.com/post/251#commentlist" class="comment-link">نظرات(<script>setCommentCnt(251)</script>)</a>&nbsp;
+
+            <div style="float: right;margin-right: 15px;margin-top:-4px;"><script>mihanblogPostLike('251','like')</script></div>
+
+        </div>
+
+    </div>
+    <br>
+        
+        <div style="border-bottom:1px solid #222;height:5px;margin-bottom:10px;"></div>
+    <div class="clearfix">
+        <div class="author">نویسنده :<a href="http://khodneviskhord.mihanblog.com/post/author/1488080">خود بی خود</a></div>
+        <div class="date">تاریخ:شنبه 12 اسفند 1396-01:10 ب.ظ</div>
+    </div>
+
+
+
+
+
+    <h1><a href="http://khodneviskhord.mihanblog.com/post/250">اسفند</a></h1>
+    <div class="post-body">
+        <p> <p style="margin: 0px; font-family: &quot;Times New Roman&quot;; font-size: medium; text-align: right;"><font face="Georgia, Times New Roman, serif" size="5">اسفند</font></p><p style="margin: 0px; font-family: &quot;Times New Roman&quot;; font-size: medium; text-align: right;"><font face="Georgia, Times New Roman, serif" size="5">یه حسی داری که انگار به آخر دنیا رسیده ای و دوباره قرار است که همه چیز تغییر کند و از اول شروع شود</font></p><p style="margin: 0px; font-family: &quot;Times New Roman&quot;; font-size: medium; text-align: right;"><font face="Georgia, Times New Roman, serif" size="5">کلی هول و تکون داری و میخواهی یه عالمه کار نا تموم رو تموم کنی و باز دوباره بروی اول داستان ، انگار قرار است یه اتفاقاتی بی افتد ، نو شدن و تازه شدن رو واقعی تجربه کنی و با طبیعت همراه شوی ، تو هم&nbsp; نو و تازه شوی وقتی همه چیز طبیعت دچار دگرگونی می شود تو هم دچار دگرگونی شوی و هر روزی که به تحویل سال و عید نزدیک می شود یه حسی که نمی دونم از کجا میاد و چرا در وجود تو هم این چیزها رو ایجاد میکند و همش میخواهی که تند تند کارهای عقب مانده را انجام دهی تا به این تغییرات برسی در حالی که همه ی این چیزها هم تکراری هست و هر سال دارد این چیزها&nbsp; تکرار می شود و اتفاقی هم اگر هست ،در پس همان کارهایی که در طول این سال انجام داده ای هست و همان هاست که در طول سال بعدی اتفاقات خوب و بد را رقم خواهد زد ولی هیچ چیزی این احساس رو تغییر نمی دهد و هر سال این حس و حال رو داری و هر کسی هم برای خودش یه ایده ای برای اسفند داره و همه این ها تا لحظه تحویل سال است و دقیقا وقتی سال تحویل شد انگار همه چیز تموم شده است و تمام این احساس هم ناپدید می شود و تو دوباره همان کار های تکراری و همیشگی رو انجام می دهی و همه چیز انگار بر میگردد به روال سابق خودش بی تغییر واقعی بی اتفاقی خاص و انگار ماشینی که پنچر شده باشد در یک اتوبان با هلک و هلک به راهت ادامه می دهی تازه شاید هم آرام ترفقط اسفند یادت می آورد که چقدر عقب هستی از همه چیز از هستی از دنیا از زندگی از زندگی کردن&nbsp;</font></p>
+
+
+<br><br></p>
+    </div>
+    <br>
+    <div class="clearfix" style="margin-bottom:20px;">
+        <a style="float:left;margin-left:15px;"  target="_blank"
+           href="http://www.cloob.com/share/link/add?
+						url=http://khodneviskhord.mihanblog.com//post/250&title=اسفند">
+            <img alt="داغ کن - کلوب دات کام" src="http://static1.cloob.com//public/images/icon/100c.gif" style='border: none; padding: 0px'/>
+        </a>
+        <div class="PostCom"><a style="float: right;margin-top: 2px;" target="_self" href="http://khodneviskhord.mihanblog.com/post/250#commentlist" class="comment-link">نظرات(<script>setCommentCnt(250)</script>)</a>&nbsp;
+
+            <div style="float: right;margin-right: 15px;margin-top:-4px;"><script>mihanblogPostLike('250','like')</script></div>
+
+        </div>
+
+    </div>
+    <br>
+        
+        <div style="border-bottom:1px solid #222;height:5px;margin-bottom:10px;"></div>
+    <div class="clearfix">
+        <div class="author">نویسنده :<a href="http://khodneviskhord.mihanblog.com/post/author/1488080">خود بی خود</a></div>
+        <div class="date">تاریخ:چهارشنبه 9 اسفند 1396-02:05 ب.ظ</div>
+    </div>
+
+
+
+
+
+    <h1><a href="http://khodneviskhord.mihanblog.com/post/249">تک جملات 10</a></h1>
+    <div class="post-body">
+        <p> 
+
+
+
+
+
+
+<div><font face="georgia, times new roman, times, serif"><br></font></div><div><p class="p-name" align="right" style="margin: 0px; font-size: medium; background-image: initial; background-position: initial; background-size: initial; background-repeat: initial; background-attachment: initial; background-origin: initial; background-clip: initial;"><font size="5" face="georgia, times new roman, times, serif"><span lang="FA" dir="RTL" style="color: rgb(51, 51, 51);">گاهی كه نه حتی بیشتر دلت هوای چیزی می كند و می خواند تو را که نمیدانی چیست و چرا&nbsp;</span><span style="color: rgb(51, 51, 51);"><o:p></o:p></span></font></p><p class="p-name" align="right" style="margin: 0px; font-size: medium; background-image: initial; background-position: initial; background-size: initial; background-repeat: initial; background-attachment: initial; background-origin: initial; background-clip: initial;"><font size="5" face="georgia, times new roman, times, serif"><span lang="FA" dir="RTL" style="color: rgb(51, 51, 51);"><br></span></font></p><p class="p-name" align="right" style="margin: 0px; font-size: medium; background-image: initial; background-position: initial; background-size: initial; background-repeat: initial; background-attachment: initial; background-origin: initial; background-clip: initial;"><font size="5" face="georgia, times new roman, times, serif"><span lang="FA" dir="RTL" style="color: rgb(51, 51, 51);">گاهی به خیال خویش تنها می خندی و گاهی نیز به خود خویش&nbsp;</span></font></p><p class="p-name" align="right" style="margin: 0px; font-size: medium; background-image: initial; background-position: initial; background-size: initial; background-repeat: initial; background-attachment: initial; background-origin: initial; background-clip: initial;"><span lang="FA" dir="RTL" style="color: rgb(51, 51, 51);"><font size="5" face="georgia, times new roman, times, serif"><br></font></span></p><p class="p-name" align="right" style="margin: 0px; font-size: medium; background-image: initial; background-position: initial; background-size: initial; background-repeat: initial; background-attachment: initial; background-origin: initial; background-clip: initial;"><span lang="FA" dir="RTL" style="color: rgb(51, 51, 51);"><font size="5" face="georgia, times new roman, times, serif">حالا به گذشته می نگری و آینده ای كه یك خیال مبهم است ز آنچه در سر داری&nbsp;<o:p></o:p></font></span></p><p class="p-name" align="right" style="margin: 0px; font-size: medium; background-image: initial; background-position: initial; background-size: initial; background-repeat: initial; background-attachment: initial; background-origin: initial; background-clip: initial;"><span lang="FA" dir="RTL" style="color: rgb(51, 51, 51);"><font size="5" face="georgia, times new roman, times, serif"><br></font></span></p><p class="p-name" align="right" style="margin: 0px; font-size: medium; background-image: initial; background-position: initial; background-size: initial; background-repeat: initial; background-attachment: initial; background-origin: initial; background-clip: initial;"><span lang="FA" dir="RTL" style="color: rgb(51, 51, 51);"><font size="5" face="georgia, times new roman, times, serif">تا یه جایی آدم فكر می كند كه با حرف زدن میشود نزدیك تر شد اما از یه جایی به بعد می اندیشی&nbsp; حرف زدن فقط تو را&nbsp; دورتر می كند از آدم ها&nbsp;<o:p></o:p></font></span></p><p class="p-name" align="right" style="margin: 0px; font-size: medium; background-image: initial; background-position: initial; background-size: initial; background-repeat: initial; background-attachment: initial; background-origin: initial; background-clip: initial;"><span lang="FA" dir="RTL" style="color: rgb(51, 51, 51);"><font size="5" face="georgia, times new roman, times, serif"><br></font></span></p><p class="p-name" align="right" style="margin: 0px; font-size: medium; background-image: initial; background-position: initial; background-size: initial; background-repeat: initial; background-attachment: initial; background-origin: initial; background-clip: initial;"><span lang="FA" dir="RTL" style="color: rgb(51, 51, 51);"><font size="5" face="georgia, times new roman, times, serif">و گاهی فكر می كنی یك دنیا فاصله است&nbsp; بین تو و آدمها</font></span></p><p class="p-name" align="right" style="margin: 0px; font-size: medium; background-image: initial; background-position: initial; background-size: initial; background-repeat: initial; background-attachment: initial; background-origin: initial; background-clip: initial;"><span lang="FA" dir="RTL" style="color: rgb(51, 51, 51);"><font size="5" face="georgia, times new roman, times, serif"><br></font></span></p><p class="p-name" align="right" style="margin: 0px; font-size: medium; background-image: initial; background-position: initial; background-size: initial; background-repeat: initial; background-attachment: initial; background-origin: initial; background-clip: initial;"><font face="georgia, times new roman, times, serif"><br></font></p><p class="p-name" align="right" style="margin: 0px; font-size: medium; background-image: initial; background-position: initial; background-size: initial; background-repeat: initial; background-attachment: initial; background-origin: initial; background-clip: initial;"><span lang="FA" dir="RTL" style="color: rgb(51, 51, 51);"><font size="5" face="georgia, times new roman, times, serif">گاهی می شود خودت را آنقدر تنهای حس میکنی که حتی فریاد هم دوایش نیست وقتی کسی نیست تو را بشنود بفهمد&nbsp;<o:p></o:p></font></span></p><p class="p-name" align="right" style="margin: 0px; font-size: medium; background-image: initial; background-position: initial; background-size: initial; background-repeat: initial; background-attachment: initial; background-origin: initial; background-clip: initial;"><span lang="FA" dir="RTL" style="color: rgb(51, 51, 51);"><font size="5" face="georgia, times new roman, times, serif"><br></font></span></p><p class="p-name" align="right" style="margin: 0px; font-size: medium; background-image: initial; background-position: initial; background-size: initial; background-repeat: initial; background-attachment: initial; background-origin: initial; background-clip: initial;"><span lang="FA" dir="RTL" style="color: rgb(51, 51, 51);"><font size="5" face="georgia, times new roman, times, serif">تمام آنچه در سر می پنداشتم نبود جز یک خیال باطلی<o:p></o:p></font></span></p><p class="p-name" align="right" style="margin: 0px; font-size: medium; background-image: initial; background-position: initial; background-size: initial; background-repeat: initial; background-attachment: initial; background-origin: initial; background-clip: initial;"><span lang="FA" dir="RTL" style="color: rgb(51, 51, 51);"><font size="5" face="georgia, times new roman, times, serif"><br></font></span></p><p class="p-name" align="right" style="margin: 0px; font-size: medium; background-image: initial; background-position: initial; background-size: initial; background-repeat: initial; background-attachment: initial; background-origin: initial; background-clip: initial;"><font face="georgia, times new roman, times, serif"><span lang="FA" dir="RTL" style="color: rgb(51, 51, 51);"><font size="5">دل بی قراری و سر سودایی در سر داشت او سر به تک دیوار مانده از یک اتاقی داشت</font></span><span style="color: rgb(51, 51, 51); font-size: x-large;">&nbsp;و در اندیشه ای از حضور چیزی که دیگر حتی رویایش هم مبهم است&nbsp;</span></font></p><p class="p-name" align="right" style="margin: 0px; font-size: medium; background-image: initial; background-position: initial; background-size: initial; background-repeat: initial; background-attachment: initial; background-origin: initial; background-clip: initial;"><span style="color: rgb(51, 51, 51); font-size: x-large;"><font face="georgia, times new roman, times, serif"><br></font></span></p><p style="margin: 0px; font-size: medium; text-align: right;"><span lang="FA" dir="RTL" style="line-height: 18.4px; color: rgb(51, 51, 51);"><font size="5" style="" face="georgia, times new roman, times, serif">هزار بار دلت میخواست تو را خر کند و کرد اما نه آن چنان که در سر می پنداشتی&nbsp;</font></span></p></div>
+
+
+
+
+
+
+
+<br><br></p>
+    </div>
+    <br>
+    <div class="clearfix" style="margin-bottom:20px;">
+        <a style="float:left;margin-left:15px;"  target="_blank"
+           href="http://www.cloob.com/share/link/add?
+						url=http://khodneviskhord.mihanblog.com//post/249&title=تک جملات 10">
+            <img alt="داغ کن - کلوب دات کام" src="http://static1.cloob.com//public/images/icon/100c.gif" style='border: none; padding: 0px'/>
+        </a>
+        <div class="PostCom"><a style="float: right;margin-top: 2px;" target="_self" href="http://khodneviskhord.mihanblog.com/post/249#commentlist" class="comment-link">نظرات(<script>setCommentCnt(249)</script>)</a>&nbsp;
+
+            <div style="float: right;margin-right: 15px;margin-top:-4px;"><script>mihanblogPostLike('249','like')</script></div>
+
+        </div>
+
+    </div>
+    <br>
+        
+        <div style="border-bottom:1px solid #222;height:5px;margin-bottom:10px;"></div>
+    <div class="clearfix">
+        <div class="author">نویسنده :<a href="http://khodneviskhord.mihanblog.com/post/author/1488080">خود بی خود</a></div>
+        <div class="date">تاریخ:پنجشنبه 5 بهمن 1396-05:38 ب.ظ</div>
+    </div>
+
+
+
+
+
+    <h1><a href="http://khodneviskhord.mihanblog.com/post/248">تک جملات 9</a></h1>
+    <div class="post-body">
+        <p> 
+
+<p class="MsoNormal" align="right" style="margin-bottom: 12pt; text-align: right; line-height: normal; background-image: initial; background-position: initial; background-size: initial; background-repeat: initial; background-attachment: initial; background-origin: initial; background-clip: initial; direction: ltr; unicode-bidi: embed;"></p><div><br></div><div><div align="right" class="MsoNormal" data-blogger-escaped-style="background-attachment: initial; background-clip: initial; background-image: initial; background-origin: initial; background-position: initial; background-repeat: initial; background-size: initial; direction: ltr; font-family: tahoma; font-size: 11px; line-height: normal; margin-bottom: 0.0001pt; unicode-bidi: embed;" style="direction: ltr; line-height: normal; margin-bottom: 0.0001pt; unicode-bidi: embed;"><p style="margin: 0px;"><font color="#241801" data-blogger-escaped-style="color: #241801; font-family: georgia, &quot;times new roman&quot;, times, serif; font-size: large;" face="&quot;georgia&quot; , &quot;times new roman&quot; , &quot;times&quot; , serif" size="5">اینك به گوشها محتاج ترینم</font></p></div><div align="right" class="MsoNormal" data-blogger-escaped-style="background-attachment: initial; background-clip: initial; background-image: initial; background-origin: initial; background-position: initial; background-repeat: initial; background-size: initial; direction: ltr; font-family: tahoma; font-size: 11px; line-height: normal; margin-bottom: 0.0001pt; unicode-bidi: embed;" style="direction: ltr; line-height: normal; margin-bottom: 0.0001pt; unicode-bidi: embed;"><p style="margin: 0px;"><font color="#241801" data-blogger-escaped-style="color: #241801; font-family: georgia, &quot;times new roman&quot;, times, serif; font-size: large;" face="&quot;georgia&quot; , &quot;times new roman&quot; , &quot;times&quot; , serif" size="5"><br></font></p></div><div class="MsoNormal" data-blogger-escaped-style="font-family: tahoma; font-size: 11px; line-height: normal; margin-bottom: 0.0001pt; text-align: start;" dir="RTL" style="text-align: right; line-height: normal; margin-bottom: 0.0001pt;"><p style="margin: 0px;"><font data-blogger-escaped-style="font-family: georgia, times new roman, times, serif; font-size: large;" face="&quot;georgia&quot; , &quot;times new roman&quot; , &quot;times&quot; , serif" size="5"><font color="#333333" data-blogger-escaped-style="background-attachment: initial; background-clip: initial; background-image: initial; background-origin: initial; background-position: initial; background-repeat: initial; background-size: initial; color: #333333;" lang="FA">و اویی که ز هر چیز جز ساختن سپری تازه هیچ ندانست ،&nbsp;</font></font></p></div><div class="MsoNormal" data-blogger-escaped-style="font-family: tahoma; font-size: 11px; line-height: normal; margin-bottom: 0.0001pt; text-align: start;" dir="RTL" style="text-align: right; line-height: normal; margin-bottom: 0.0001pt;"><p style="margin: 0px;"><font data-blogger-escaped-style="font-family: georgia, times new roman, times, serif; font-size: large;" face="&quot;georgia&quot; , &quot;times new roman&quot; , &quot;times&quot; , serif" size="5"><font color="#333333" data-blogger-escaped-style="background-attachment: initial; background-clip: initial; background-image: initial; background-origin: initial; background-position: initial; background-repeat: initial; background-size: initial; color: #333333;" lang="FA"><br></font></font></p></div><div class="MsoNormal" data-blogger-escaped-style="font-family: tahoma; font-size: 11px; line-height: normal; margin-bottom: 0.0001pt; text-align: start;" dir="RTL" style="text-align: right; line-height: normal; margin-bottom: 0.0001pt;"><p style="margin: 0px;"><font data-blogger-escaped-style="font-family: georgia, times new roman, times, serif; font-size: large;" face="&quot;georgia&quot; , &quot;times new roman&quot; , &quot;times&quot; , serif" size="5"><font color="#333333" data-blogger-escaped-style="background-attachment: initial; background-clip: initial; background-image: initial; background-origin: initial; background-position: initial; background-repeat: initial; background-size: initial; color: #333333;" lang="FA">که اندر خیال باطلی بود، جنگی می کند بی شکست&nbsp;</font><font dir="LTR"><data-blogger-escaped-o:p></data-blogger-escaped-o:p></font></font></p></div><div class="MsoNormal" data-blogger-escaped-style="font-family: tahoma; font-size: 11px; line-height: normal; margin-bottom: 0.0001pt; text-align: start;" dir="RTL" style="text-align: right; line-height: normal; margin-bottom: 0.0001pt;"><p style="margin: 0px;"><font data-blogger-escaped-style="font-family: georgia, times new roman, times, serif; font-size: large;" face="&quot;georgia&quot; , &quot;times new roman&quot; , &quot;times&quot; , serif" size="5"><font color="#333333" data-blogger-escaped-style="background-attachment: initial; background-clip: initial; background-image: initial; background-origin: initial; background-position: initial; background-repeat: initial; background-size: initial; color: #333333;" lang="FA"><br></font></font></p></div><div class="MsoNormal" data-blogger-escaped-style="font-family: tahoma; font-size: 11px; line-height: normal; margin-bottom: 0.0001pt; text-align: start;" dir="RTL" style="text-align: right; line-height: normal; margin-bottom: 0.0001pt;"><p style="margin: 0px;"><font data-blogger-escaped-style="font-family: georgia, times new roman, times, serif; font-size: large;" face="&quot;georgia&quot; , &quot;times new roman&quot; , &quot;times&quot; , serif" size="5"><font color="#333333" data-blogger-escaped-style="background-attachment: initial; background-clip: initial; background-image: initial; background-origin: initial; background-position: initial; background-repeat: initial; background-size: initial; color: #333333;" lang="FA">که شکستی بود بی جنگ ، تسلیم شده بود و در خیال بود که می جنگید</font></font></p></div><div class="MsoNormal" data-blogger-escaped-style="font-family: tahoma; font-size: 11px; line-height: normal; margin-bottom: 0.0001pt; text-align: start;" dir="RTL" style="text-align: right; line-height: normal; margin-bottom: 0.0001pt;"><p style="margin: 0px;"><font data-blogger-escaped-style="font-family: georgia, times new roman, times, serif; font-size: large;" face="&quot;georgia&quot; , &quot;times new roman&quot; , &quot;times&quot; , serif" size="5"><font color="#333333" data-blogger-escaped-style="background-attachment: initial; background-clip: initial; background-image: initial; background-origin: initial; background-position: initial; background-repeat: initial; background-size: initial; color: #333333;" lang="FA"><br></font></font></p></div><div class="MsoNormal" data-blogger-escaped-style="font-family: tahoma; font-size: 11px; line-height: normal; margin-bottom: 0.0001pt; text-align: start;" dir="RTL" style="text-align: right; line-height: normal; margin-bottom: 0.0001pt;"><p style="margin: 0px;"><font data-blogger-escaped-style="font-family: georgia, times new roman, times, serif; font-size: large;" face="&quot;georgia&quot; , &quot;times new roman&quot; , &quot;times&quot; , serif" size="5"><font color="#333333" data-blogger-escaped-style="background-attachment: initial; background-clip: initial; background-image: initial; background-origin: initial; background-position: initial; background-repeat: initial; background-size: initial; color: #333333;" lang="FA">شکست همان سپرهایی بود که ساخته بود از برای نشکستن خویش</font><font data-blogger-escaped-style="background-attachment: initial; background-clip: initial; background-image: initial; background-origin: initial; background-position: initial; background-repeat: initial; background-size: initial;" dir="LTR"><data-blogger-escaped-o:p></data-blogger-escaped-o:p></font></font></p></div><div class="MsoNormal" data-blogger-escaped-style="font-family: tahoma; font-size: 11px; line-height: normal; margin-bottom: 0.0001pt; text-align: start;" dir="RTL" style="text-align: right; line-height: normal; margin-bottom: 0.0001pt;"><p style="margin: 0px;"><font data-blogger-escaped-style="font-family: georgia, times new roman, times, serif; font-size: large;" face="&quot;georgia&quot; , &quot;times new roman&quot; , &quot;times&quot; , serif" size="5"><font color="#333333" data-blogger-escaped-style="background-attachment: initial; background-clip: initial; background-image: initial; background-origin: initial; background-position: initial; background-repeat: initial; background-size: initial; color: #333333;" lang="FA"><br></font></font></p></div><div class="MsoNormal" data-blogger-escaped-style="font-family: tahoma; font-size: 11px; line-height: normal; margin-bottom: 0.0001pt; text-align: start;" dir="RTL" style="text-align: right; line-height: normal; margin-bottom: 0.0001pt;"><p style="margin: 0px;"><font data-blogger-escaped-style="font-family: georgia, times new roman, times, serif; font-size: large;" face="&quot;georgia&quot; , &quot;times new roman&quot; , &quot;times&quot; , serif" size="5"><font color="#333333" data-blogger-escaped-style="background-attachment: initial; background-clip: initial; background-image: initial; background-origin: initial; background-position: initial; background-repeat: initial; background-size: initial; color: #333333;" lang="FA">و تو رنگی هستی با هزار خیال که نقابی پوشانده وجودت را ،</font></font></p><p style="margin: 0px;"><font data-blogger-escaped-style="font-family: georgia, times new roman, times, serif; font-size: large;" face="&quot;georgia&quot; , &quot;times new roman&quot; , &quot;times&quot; , serif" size="5"><font color="#333333" data-blogger-escaped-style="background-attachment: initial; background-clip: initial; background-image: initial; background-origin: initial; background-position: initial; background-repeat: initial; background-size: initial; color: #333333;" lang="FA"><br></font></font></p><p style="margin: 0px;"><font data-blogger-escaped-style="font-family: georgia, times new roman, times, serif; font-size: large;" face="&quot;georgia&quot; , &quot;times new roman&quot; , &quot;times&quot; , serif" size="5"><font color="#333333" data-blogger-escaped-style="background-attachment: initial; background-clip: initial; background-image: initial; background-origin: initial; background-position: initial; background-repeat: initial; background-size: initial; color: #333333;" lang="FA">&nbsp;و دیگر هیچ چیزی نیستی</font></font></p></div><div class="MsoNormal" data-blogger-escaped-style="font-family: tahoma; font-size: 11px; line-height: normal; margin-bottom: 0.0001pt; text-align: start;" dir="RTL" style="text-align: right; line-height: normal; margin-bottom: 0.0001pt;"><p style="margin: 0px;"><font data-blogger-escaped-style="font-family: georgia, times new roman, times, serif; font-size: large;" face="&quot;georgia&quot; , &quot;times new roman&quot; , &quot;times&quot; , serif" size="5"><font color="#333333" data-blogger-escaped-style="background-attachment: initial; background-clip: initial; background-image: initial; background-origin: initial; background-position: initial; background-repeat: initial; background-size: initial; color: #333333;" lang="FA"><br></font></font></p></div><div class="MsoNormal" data-blogger-escaped-style="font-family: tahoma; font-size: 11px; line-height: normal; margin-bottom: 0.0001pt; text-align: start;" dir="RTL" style="text-align: right; line-height: normal; margin-bottom: 0.0001pt;"><p style="margin: 0px;"><font data-blogger-escaped-style="font-family: georgia, times new roman, times, serif; font-size: large;" face="&quot;georgia&quot; , &quot;times new roman&quot; , &quot;times&quot; , serif" size="5"><font color="#333333" data-blogger-escaped-style="background-attachment: initial; background-clip: initial; background-image: initial; background-origin: initial; background-position: initial; background-repeat: initial; background-size: initial; color: #333333;" lang="FA">كاش او از اسارت خویش تن خویش آزاد می گشت&nbsp;</font><font data-blogger-escaped-style="background-attachment: initial; background-clip: initial; background-image: initial; background-origin: initial; background-position: initial; background-repeat: initial; background-size: initial;" dir="LTR"><data-blogger-escaped-o:p></data-blogger-escaped-o:p></font></font></p></div><div class="MsoNormal" data-blogger-escaped-style="font-family: tahoma; font-size: 11px; line-height: normal; margin-bottom: 0.0001pt; text-align: start;" dir="RTL" style="text-align: right; line-height: normal; margin-bottom: 0.0001pt;"><p style="margin: 0px;"><font data-blogger-escaped-style="font-family: georgia, times new roman, times, serif; font-size: large;" face="&quot;georgia&quot; , &quot;times new roman&quot; , &quot;times&quot; , serif" size="5"><font color="#333333" data-blogger-escaped-style="background-attachment: initial; background-clip: initial; background-image: initial; background-origin: initial; background-position: initial; background-repeat: initial; background-size: initial; color: #333333;" lang="FA"><br></font></font></p></div><div class="MsoNormal" data-blogger-escaped-style="font-family: tahoma; font-size: 11px; line-height: normal; margin-bottom: 0.0001pt; text-align: start;" dir="RTL" style="text-align: right; line-height: normal; margin-bottom: 0.0001pt;"><p style="margin: 0px;"><font color="#333333" data-blogger-escaped-style="color: #333333; font-family: georgia, &quot;times new roman&quot;, times, serif; font-size: large; text-align: right;" face="&quot;georgia&quot; , &quot;times new roman&quot; , &quot;times&quot; , serif" size="5">مدتها بود گم کرده بود خودش را جایی بسیار دور</font></p></div><div class="MsoNormal" data-blogger-escaped-style="font-family: tahoma; font-size: 11px; line-height: normal; margin-bottom: 0.0001pt; text-align: start;" dir="RTL" style="text-align: right; line-height: normal; margin-bottom: 0.0001pt;"><p style="margin: 0px;"><font color="#333333" data-blogger-escaped-style="color: #333333; font-family: georgia, &quot;times new roman&quot;, times, serif; font-size: large; text-align: right;" face="&quot;georgia&quot; , &quot;times new roman&quot; , &quot;times&quot; , serif" size="5"><br></font></p></div><div align="right" class="p-name" data-blogger-escaped-style="background-attachment: initial; background-clip: initial; background-image: initial; background-origin: initial; background-position: initial; background-repeat: initial; background-size: initial; font-family: tahoma; font-size: 11px;"><p style="margin: 0px;"><font color="#333333" data-blogger-escaped-style="color: #333333;" dir="RTL" lang="FA"><font data-blogger-escaped-style="font-family: georgia, times new roman, times, serif; font-size: large;" face="&quot;georgia&quot; , &quot;times new roman&quot; , &quot;times&quot; , serif" size="5">و باز كاش گوشی بود كه می شنوید ، گوش خودش شاید<data-blogger-escaped-o:p></data-blogger-escaped-o:p></font></font></p></div><div align="right" class="p-name" data-blogger-escaped-style="background-attachment: initial; background-clip: initial; background-image: initial; background-origin: initial; background-position: initial; background-repeat: initial; background-size: initial; font-family: tahoma; font-size: 11px;"><p style="margin: 0px;"><font color="#333333" data-blogger-escaped-style="color: #333333;" dir="RTL" lang="FA"><font data-blogger-escaped-style="font-family: georgia, times new roman, times, serif; font-size: large;" face="&quot;georgia&quot; , &quot;times new roman&quot; , &quot;times&quot; , serif" size="5"><br></font></font></p></div><div align="right" class="p-name" data-blogger-escaped-style="background-attachment: initial; background-clip: initial; background-image: initial; background-origin: initial; background-position: initial; background-repeat: initial; background-size: initial; font-family: tahoma; font-size: 11px;"><p style="margin: 0px;"><font color="#333333" data-blogger-escaped-style="color: #333333;" dir="RTL" lang="FA"><font data-blogger-escaped-style="font-family: georgia, times new roman, times, serif; font-size: large;" face="&quot;georgia&quot; , &quot;times new roman&quot; , &quot;times&quot; , serif" size="5">و او به دیوانه وار ترین خیال خویش می خندید&nbsp;<data-blogger-escaped-o:p></data-blogger-escaped-o:p></font></font></p></div><div align="right" class="p-name" data-blogger-escaped-style="background-attachment: initial; background-clip: initial; background-image: initial; background-origin: initial; background-position: initial; background-repeat: initial; background-size: initial; font-family: tahoma; font-size: 11px;"><p style="margin: 0px;"><font color="#333333" data-blogger-escaped-style="color: #333333;" dir="RTL" lang="FA"><font data-blogger-escaped-style="font-family: georgia, times new roman, times, serif; font-size: large;" face="&quot;georgia&quot; , &quot;times new roman&quot; , &quot;times&quot; , serif" size="5"><br></font></font></p></div><p style="margin: 0px; font-family: &quot;Times New Roman&quot;; font-size: medium; text-align: right;"><font color="#333333" data-blogger-escaped-style="color: #333333; font-family: tahoma; font-size: 11px; line-height: 12.65px; text-align: start;" dir="RTL" face="&quot;tahoma&quot;" lang="FA" style="font-size: 11px; line-height: 12.65px;"><font data-blogger-escaped-style="font-family: georgia, times new roman, times, serif; font-size: large;" face="&quot;georgia&quot; , &quot;times new roman&quot; , &quot;times&quot; , serif" size="5">سینه ای صدای مرا فریاد می كند كه نمی شناسم او را&nbsp;</font></font></p></div>
+
+<br><br></p>
+    </div>
+    <br>
+    <div class="clearfix" style="margin-bottom:20px;">
+        <a style="float:left;margin-left:15px;"  target="_blank"
+           href="http://www.cloob.com/share/link/add?
+						url=http://khodneviskhord.mihanblog.com//post/248&title=تک جملات 9">
+            <img alt="داغ کن - کلوب دات کام" src="http://static1.cloob.com//public/images/icon/100c.gif" style='border: none; padding: 0px'/>
+        </a>
+        <div class="PostCom"><a style="float: right;margin-top: 2px;" target="_self" href="http://khodneviskhord.mihanblog.com/post/248#commentlist" class="comment-link">نظرات(<script>setCommentCnt(248)</script>)</a>&nbsp;
+
+            <div style="float: right;margin-right: 15px;margin-top:-4px;"><script>mihanblogPostLike('248','like')</script></div>
+
+        </div>
+
+    </div>
+    <br>
+        
+        <div style="border-bottom:1px solid #222;height:5px;margin-bottom:10px;"></div>
+    <div class="clearfix">
+        <div class="author">نویسنده :<a href="http://khodneviskhord.mihanblog.com/post/author/1488080">خود بی خود</a></div>
+        <div class="date">تاریخ:شنبه 30 دی 1396-05:50 ب.ظ</div>
+    </div>
+
+
+
+
+
+    <h1><a href="http://khodneviskhord.mihanblog.com/post/247">تک جملات 8</a></h1>
+    <div class="post-body">
+        <p> 
+<p class="MsoNormal" dir="RTL" style="margin-bottom:0cm;margin-bottom:.0001pt;
+line-height:normal"><span dir="LTR" style="background-image: initial; background-position: initial; background-size: initial; background-repeat: initial; background-attachment: initial; background-origin: initial; background-clip: initial;"><o:p style=""><font face="georgia, times new roman, times, serif" style="" size="5">&nbsp;</font></o:p></span></p>
+
+<p class="MsoNormal" dir="RTL" style="margin-bottom:0cm;margin-bottom:.0001pt;
+line-height:normal"><span lang="FA" style="background-image: initial; background-position: initial; background-size: initial; background-repeat: initial; background-attachment: initial; background-origin: initial; background-clip: initial;"><font face="georgia, times new roman, times, serif" size="5">رمیده بود ز خویشتن خویش ز کسی که باید می بود ، <o:p></o:p></font></span></p>
+
+<p class="MsoNormal" dir="RTL" style="margin-bottom:0cm;margin-bottom:.0001pt;
+line-height:normal"><span lang="FA" style="background-image: initial; background-position: initial; background-size: initial; background-repeat: initial; background-attachment: initial; background-origin: initial; background-clip: initial;"><font face="georgia, times new roman, times, serif" size="5">او ز بودن بود که می جنگید که نباشد ، <o:p></o:p></font></span></p>
+
+<p class="MsoNormal" dir="RTL" style="margin-bottom:0cm;margin-bottom:.0001pt;
+line-height:normal"><font face="georgia, times new roman, times, serif" size="5"><span lang="FA" style="background-image: initial; background-position: initial; background-size: initial; background-repeat: initial; background-attachment: initial; background-origin: initial; background-clip: initial;">که بودن را معنایی بود که او نبود</span><span dir="LTR" style="background-image: initial; background-position: initial; background-size: initial; background-repeat: initial; background-attachment: initial; background-origin: initial; background-clip: initial;"><o:p></o:p></span></font></p>
+
+<p class="MsoNormal" dir="RTL" style="margin-bottom:0cm;margin-bottom:.0001pt;
+line-height:normal"><span dir="LTR" style="background-image: initial; background-position: initial; background-size: initial; background-repeat: initial; background-attachment: initial; background-origin: initial; background-clip: initial;"><o:p><font face="georgia, times new roman, times, serif" size="5">&nbsp;</font></o:p></span></p>
+
+<p class="MsoNormal" dir="RTL" style="margin-bottom:0cm;margin-bottom:.0001pt;
+line-height:normal"><font face="georgia, times new roman, times, serif" size="5"><span lang="FA" style="background-image: initial; background-position: initial; background-size: initial; background-repeat: initial; background-attachment: initial; background-origin: initial; background-clip: initial;">هیچگاه از درون قلب آدمها چیزی را جستجو نكنید زیرا درونش خالیست، تنها
+حبابی ست روی آب كه منتظر نسیمی ست</span><span dir="LTR" style="background-image: initial; background-position: initial; background-size: initial; background-repeat: initial; background-attachment: initial; background-origin: initial; background-clip: initial;"><o:p></o:p></span></font></p>
+
+<p class="MsoNormal" dir="RTL" style="margin-bottom:0cm;margin-bottom:.0001pt;
+line-height:normal"><span dir="LTR" style="background-image: initial; background-position: initial; background-size: initial; background-repeat: initial; background-attachment: initial; background-origin: initial; background-clip: initial;"><o:p><font face="georgia, times new roman, times, serif" size="5">&nbsp;</font></o:p></span></p>
+
+<p class="MsoNormal" dir="RTL" style="margin-bottom:0cm;margin-bottom:.0001pt;
+line-height:normal"><span lang="FA" style="background-image: initial; background-position: initial; background-size: initial; background-repeat: initial; background-attachment: initial; background-origin: initial; background-clip: initial;"><font face="georgia, times new roman, times, serif" size="5">هر از گاهی هنوز، سر میزند کسی به کوچه باغ های بی کسی ، از نبود هیچ کسی ،<o:p></o:p></font></span></p>
+
+<p class="MsoNormal" dir="RTL" style="margin-bottom:0cm;margin-bottom:.0001pt;
+line-height:normal"><font face="georgia, times new roman, times, serif" size="5"><span lang="FA" style="background-image: initial; background-position: initial; background-size: initial; background-repeat: initial; background-attachment: initial; background-origin: initial; background-clip: initial;">&nbsp;می آزارد هنوز چیزی را از درون</span><span dir="LTR" style="background-image: initial; background-position: initial; background-size: initial; background-repeat: initial; background-attachment: initial; background-origin: initial; background-clip: initial;"><o:p></o:p></span></font></p>
+
+<p class="MsoNormal" dir="RTL" style="margin-bottom:0cm;margin-bottom:.0001pt;
+line-height:normal"><span dir="LTR" style="background-image: initial; background-position: initial; background-size: initial; background-repeat: initial; background-attachment: initial; background-origin: initial; background-clip: initial;"><o:p><font face="georgia, times new roman, times, serif" size="5">&nbsp;</font></o:p></span></p>
+
+<p class="MsoNormal" dir="RTL" style="margin-bottom:0cm;margin-bottom:.0001pt;
+line-height:normal"><font face="georgia, times new roman, times, serif" size="5"><span lang="FA" style="background-image: initial; background-position: initial; background-size: initial; background-repeat: initial; background-attachment: initial; background-origin: initial; background-clip: initial;">می گشت و در پی چیزی بود ، جایی خودش را گم کرده بود</span><span dir="LTR" style="background-image: initial; background-position: initial; background-size: initial; background-repeat: initial; background-attachment: initial; background-origin: initial; background-clip: initial;"><o:p></o:p></span></font></p>
+
+<p class="MsoNormal" dir="RTL" style="margin-bottom:0cm;margin-bottom:.0001pt;
+line-height:normal"><span dir="LTR" style="background-image: initial; background-position: initial; background-size: initial; background-repeat: initial; background-attachment: initial; background-origin: initial; background-clip: initial;"><o:p><font face="georgia, times new roman, times, serif" size="5">&nbsp;</font></o:p></span></p>
+
+<p class="MsoNormal" dir="RTL" style="margin-bottom:0cm;margin-bottom:.0001pt;
+line-height:normal"><span lang="FA" style="background-image: initial; background-position: initial; background-size: initial; background-repeat: initial; background-attachment: initial; background-origin: initial; background-clip: initial;"><font face="georgia, times new roman, times, serif" size="5">گاهی یا نه گاه گاهی پنجره چشمانت را بگشا اینجا یا نه كمی آن سو تر كسی
+منتظر گشوده شدن است و چیزی منتظر دیده شدن<o:p></o:p></font></span></p>
+
+<p class="MsoNormal" dir="RTL" style="margin-bottom:0cm;margin-bottom:.0001pt;
+line-height:normal"><span lang="FA" style="background-image: initial; background-position: initial; background-size: initial; background-repeat: initial; background-attachment: initial; background-origin: initial; background-clip: initial;"><o:p><font face="georgia, times new roman, times, serif" size="5">&nbsp;</font></o:p></span></p>
+
+<p class="MsoNormal" dir="RTL" style="margin-bottom:0cm;margin-bottom:.0001pt;
+line-height:normal"><font face="georgia, times new roman, times, serif" size="5"><span lang="FA" style="color: rgb(51, 51, 51); background-image: initial; background-position: initial; background-size: initial; background-repeat: initial; background-attachment: initial; background-origin: initial; background-clip: initial;">او ز تعبیر خواب خویش وحشت داشت</span><span lang="FA" style="background-image: initial; background-position: initial; background-size: initial; background-repeat: initial; background-attachment: initial; background-origin: initial; background-clip: initial;"><o:p></o:p></span></font></p>
+
+<p class="MsoNormal" dir="RTL" style="margin-bottom:0cm;margin-bottom:.0001pt;
+line-height:normal"><span lang="FA" style="background-image: initial; background-position: initial; background-size: initial; background-repeat: initial; background-attachment: initial; background-origin: initial; background-clip: initial;"><o:p><font face="georgia, times new roman, times, serif" size="5">&nbsp;</font></o:p></span></p>
+
+<p class="MsoNormal" dir="RTL" style="margin-bottom:0cm;margin-bottom:.0001pt;
+line-height:normal"><font face="georgia, times new roman, times, serif" size="5"><span lang="FA" style="color: rgb(51, 51, 51); background-image: initial; background-position: initial; background-size: initial; background-repeat: initial; background-attachment: initial; background-origin: initial; background-clip: initial;">و من هنوز نشسته ام به انتظار تا که رسد زمان احتضار</span><span lang="FA" style="background-image: initial; background-position: initial; background-size: initial; background-repeat: initial; background-attachment: initial; background-origin: initial; background-clip: initial;"><o:p></o:p></span></font></p>
+
+<p class="MsoNormal" dir="RTL" style="margin-bottom:0cm;margin-bottom:.0001pt;
+line-height:normal"><span lang="FA" style="background-image: initial; background-position: initial; background-size: initial; background-repeat: initial; background-attachment: initial; background-origin: initial; background-clip: initial;"><o:p><font face="georgia, times new roman, times, serif" size="5">&nbsp;</font></o:p></span></p>
+
+<p class="MsoNormal" dir="RTL" style="margin-bottom:0cm;margin-bottom:.0001pt;
+line-height:normal"><span lang="FA" style="color: rgb(51, 51, 51); background-image: initial; background-position: initial; background-size: initial; background-repeat: initial; background-attachment: initial; background-origin: initial; background-clip: initial;"><font face="georgia, times new roman, times, serif" size="5">او ز رنگهای آبی نقاشی ام بیش از پیش بیزاراست که
+آنها سیاهی را خواستند پنهان کنند که در او پنهان بود<o:p></o:p></font></span></p>
+
+<p class="MsoNormal" dir="RTL" style="margin-bottom:0cm;margin-bottom:.0001pt;
+line-height:normal"><span lang="FA" style="background-image: initial; background-position: initial; background-size: initial; background-repeat: initial; background-attachment: initial; background-origin: initial; background-clip: initial;"><o:p><font face="georgia, times new roman, times, serif" size="5">&nbsp;</font></o:p></span></p>
+
+<p class="MsoNormal" dir="RTL" style="margin-bottom:0cm;margin-bottom:.0001pt;
+line-height:normal"><span lang="FA" style="color: rgb(51, 51, 51); background-image: initial; background-position: initial; background-size: initial; background-repeat: initial; background-attachment: initial; background-origin: initial; background-clip: initial;"><font face="georgia, times new roman, times, serif" style="" size="5">او از قرمزی ها روی آستین لباسش مدتهاست که دلش
+تنگ شده است که آنها او را یاد جنگی خونین در شبی سرد می اندازد که چیزی جز مرگ
+گذر نمی کرد آنجا</font></span><span lang="FA" style="font-size: 14pt; font-family: &quot;B Mitra&quot;; background-image: initial; background-position: initial; background-size: initial; background-repeat: initial; background-attachment: initial; background-origin: initial; background-clip: initial;"><o:p></o:p></span></p>
+
+
+
+
+<br><br></p>
+    </div>
+    <br>
+    <div class="clearfix" style="margin-bottom:20px;">
+        <a style="float:left;margin-left:15px;"  target="_blank"
+           href="http://www.cloob.com/share/link/add?
+						url=http://khodneviskhord.mihanblog.com//post/247&title=تک جملات 8">
+            <img alt="داغ کن - کلوب دات کام" src="http://static1.cloob.com//public/images/icon/100c.gif" style='border: none; padding: 0px'/>
+        </a>
+        <div class="PostCom"><a style="float: right;margin-top: 2px;" target="_self" href="http://khodneviskhord.mihanblog.com/post/247#commentlist" class="comment-link">نظرات(<script>setCommentCnt(247)</script>)</a>&nbsp;
+
+            <div style="float: right;margin-right: 15px;margin-top:-4px;"><script>mihanblogPostLike('247','like')</script></div>
+
+        </div>
+
+    </div>
+    <br>
+        
+        <div style="border-bottom:1px solid #222;height:5px;margin-bottom:10px;"></div>
+    <div class="clearfix">
+        <div class="author">نویسنده :<a href="http://khodneviskhord.mihanblog.com/post/author/1488080">خود بی خود</a></div>
+        <div class="date">تاریخ:چهارشنبه 27 دی 1396-12:53 ب.ظ</div>
+    </div>
+
+
+
+
+
+    <h1><a href="http://khodneviskhord.mihanblog.com/post/245">تناقضات</a></h1>
+    <div class="post-body">
+        <p> 
+
+
+<div><br></div><div><div class="MsoNormal" data-blogger-escaped-style="line-height: normal; margin-bottom: .0001pt; margin-bottom: 0cm;" dir="RTL" style="font-family: &quot;Times New Roman&quot;; font-size: medium; text-align: right; line-height: normal; margin-bottom: 0cm;"><p style="margin: 0px;"><font data-blogger-escaped-style="background: white; font-family: &quot;B Mitra&quot;; font-size: 14pt;" face="&quot;b mitra&quot;" lang="FA" size="5" style="background-image: initial; background-position: initial; background-size: initial; background-repeat: initial; background-attachment: initial; background-origin: initial; background-clip: initial;">رمیده بود ز خویشتن خویش&nbsp;</font></p><p style="margin: 0px;"><font data-blogger-escaped-style="background: white; font-family: &quot;B Mitra&quot;; font-size: 14pt;" face="&quot;b mitra&quot;" lang="FA" size="5" style="background-image: initial; background-position: initial; background-size: initial; background-repeat: initial; background-attachment: initial; background-origin: initial; background-clip: initial;">از کسی بود یا می بایست بود ،&nbsp;</font></p><p style="margin: 0px;"><font data-blogger-escaped-style="background: white; font-family: &quot;B Mitra&quot;; font-size: 14pt;" face="&quot;b mitra&quot;" lang="FA" size="5" style="background-image: initial; background-position: initial; background-size: initial; background-repeat: initial; background-attachment: initial; background-origin: initial; background-clip: initial;">ز بودنی که بود&nbsp;</font></p><p style="margin: 0px;"><font data-blogger-escaped-style="background: white; font-family: &quot;B Mitra&quot;; font-size: 14pt;" face="&quot;b mitra&quot;" lang="FA" size="5" style="background-image: initial; background-position: initial; background-size: initial; background-repeat: initial; background-attachment: initial; background-origin: initial; background-clip: initial;">که باید می جنگید که نباشد ،</font></p><p style="margin: 0px;"><font size="5"><font data-blogger-escaped-style="background: white; font-family: &quot;B Mitra&quot;; font-size: 14pt;" face="&quot;b mitra&quot;" lang="FA" style="background-image: initial; background-position: initial; background-size: initial; background-repeat: initial; background-attachment: initial; background-origin: initial; background-clip: initial;">&nbsp;که بودن را معنایی بود که او نبود</font><font data-blogger-escaped-style="background: white; font-family: &quot;Times New Roman&quot;, serif; font-size: 14pt;" dir="LTR" face="&quot;times new roman&quot; , serif" style="background-image: initial; background-position: initial; background-size: initial; background-repeat: initial; background-attachment: initial; background-origin: initial; background-clip: initial;"><data-blogger-escaped-o:p></data-blogger-escaped-o:p></font></font></p></div><div class="MsoNormal" data-blogger-escaped-style="line-height: normal; margin-bottom: .0001pt; margin-bottom: 0cm;" dir="RTL" style="font-family: &quot;Times New Roman&quot;; font-size: medium; text-align: right; line-height: normal; margin-bottom: 0cm;"><p style="margin: 0px;"><font size="5"><br></font></p></div><div class="MsoNormal" data-blogger-escaped-style="line-height: normal; margin-bottom: .0001pt; margin-bottom: 0cm;" dir="RTL" style="font-family: &quot;Times New Roman&quot;; font-size: medium; text-align: right; line-height: normal; margin-bottom: 0cm;"><p style="margin: 0px;"><font size="5"><font data-blogger-escaped-style="background: white; font-family: &quot;B Mitra&quot;; font-size: 14pt;" face="&quot;b mitra&quot;" lang="FA" style="background-image: initial; background-position: initial; background-size: initial; background-repeat: initial; background-attachment: initial; background-origin: initial; background-clip: initial;">هیچگاه از درون انتهای قلب آدمها چیزی را جستجو نكنید زیرا درونش خالیست، تنها حبابی ست روی آب كه منتظر نسیمی ست</font><font data-blogger-escaped-style="background: white; font-family: &quot;Times New Roman&quot;, serif; font-size: 14pt;" dir="LTR" face="&quot;times new roman&quot; , serif" style="background-image: initial; background-position: initial; background-size: initial; background-repeat: initial; background-attachment: initial; background-origin: initial; background-clip: initial;"><data-blogger-escaped-o:p></data-blogger-escaped-o:p></font></font></p></div><div class="MsoNormal" data-blogger-escaped-style="line-height: normal; margin-bottom: .0001pt; margin-bottom: 0cm;" dir="RTL" style="font-family: &quot;Times New Roman&quot;; font-size: medium; text-align: right; line-height: normal; margin-bottom: 0cm;"><p style="margin: 0px;"><font size="5"><br></font></p></div><div class="MsoNormal" data-blogger-escaped-style="line-height: normal; margin-bottom: .0001pt; margin-bottom: 0cm;" dir="RTL" style="font-family: &quot;Times New Roman&quot;; font-size: medium; text-align: right; line-height: normal; margin-bottom: 0cm;"><p style="margin: 0px;"><font size="5"><font data-blogger-escaped-style="background: white; font-family: &quot;B Mitra&quot;; font-size: 14pt;" face="&quot;b mitra&quot;" lang="FA" style="background-image: initial; background-position: initial; background-size: initial; background-repeat: initial; background-attachment: initial; background-origin: initial; background-clip: initial;">هر از گاهی هنوز، سر میزند کسی به کوچه باغ های بی کسی، از نبود هیچ کسی،</font></font></p><p style="margin: 0px;"><font size="5"><font data-blogger-escaped-style="background: white; font-family: &quot;B Mitra&quot;; font-size: 14pt;" face="&quot;b mitra&quot;" lang="FA" style="background-image: initial; background-position: initial; background-size: initial; background-repeat: initial; background-attachment: initial; background-origin: initial; background-clip: initial;">چیزی می آزرد کسی را از درون</font><font data-blogger-escaped-style="background: white; font-family: &quot;Times New Roman&quot;, serif; font-size: 14pt;" dir="LTR" face="&quot;times new roman&quot; , serif" style="background-image: initial; background-position: initial; background-size: initial; background-repeat: initial; background-attachment: initial; background-origin: initial; background-clip: initial;"><data-blogger-escaped-o:p></data-blogger-escaped-o:p></font></font></p></div><div class="MsoNormal" data-blogger-escaped-style="line-height: normal; margin-bottom: .0001pt; margin-bottom: 0cm;" dir="RTL" style="font-family: &quot;Times New Roman&quot;; font-size: medium; text-align: right; line-height: normal; margin-bottom: 0cm;"><p style="margin: 0px;"><span style="font-family: &quot;b mitra&quot;;"><font size="5">می گشت و در پی چیزی بود ،&nbsp;</font></span></p></div><div class="MsoNormal" data-blogger-escaped-style="line-height: normal; margin-bottom: .0001pt; margin-bottom: 0cm;" dir="RTL" style="font-family: &quot;Times New Roman&quot;; font-size: medium; text-align: right; line-height: normal; margin-bottom: 0cm;"><p style="margin: 0px;"><font size="5"><font data-blogger-escaped-style="background: white; font-family: &quot;B Mitra&quot;; font-size: 14pt;" face="&quot;b mitra&quot;" lang="FA" style="background-image: initial; background-position: initial; background-size: initial; background-repeat: initial; background-attachment: initial; background-origin: initial; background-clip: initial;">جایی خودش را گم کرده بود</font><font data-blogger-escaped-style="background: white; font-family: &quot;Times New Roman&quot;, serif; font-size: 14pt;" dir="LTR" face="&quot;times new roman&quot; , serif" style="background-image: initial; background-position: initial; background-size: initial; background-repeat: initial; background-attachment: initial; background-origin: initial; background-clip: initial;"><data-blogger-escaped-o:p></data-blogger-escaped-o:p></font></font></p></div><div class="MsoNormal" data-blogger-escaped-style="line-height: normal; margin-bottom: .0001pt; margin-bottom: 0cm;" dir="RTL" style="font-family: &quot;Times New Roman&quot;; font-size: medium; text-align: right; line-height: normal; margin-bottom: 0cm;"><p style="margin: 0px;"><font size="5"><br></font></p></div><p style="margin: 0px; font-family: &quot;Times New Roman&quot;; font-size: medium; text-align: right;"><font data-blogger-escaped-style="background: white; font-family: &quot;B Mitra&quot;; font-size: 14pt; line-height: 115%;" dir="RTL" face="&quot;b mitra&quot;" lang="FA" size="5" style="background-image: initial; background-position: initial; background-size: initial; background-repeat: initial; background-attachment: initial; background-origin: initial; background-clip: initial; line-height: 27.6px;">گاهی یا نه گاه گاهی پنجره چشمانت را بگشا اینجا یا نه كمی آن سو تر كسی منتظر گشوده شدن است و کسی صبری ندارد و پنجره را می بندد</font></p><p style="margin: 0px; font-family: &quot;Times New Roman&quot;; font-size: medium; text-align: right;"><font data-blogger-escaped-style="background: white; font-family: &quot;B Mitra&quot;; font-size: 14pt; line-height: 115%;" dir="RTL" face="&quot;b mitra&quot;" lang="FA" size="5" style="background-image: initial; background-position: initial; background-size: initial; background-repeat: initial; background-attachment: initial; background-origin: initial; background-clip: initial; line-height: 27.6px;"><br></font></p><p style="margin: 0px; font-family: &quot;Times New Roman&quot;; font-size: medium; text-align: right;"><font data-blogger-escaped-style="background: white; font-family: &quot;B Mitra&quot;; font-size: 14pt; line-height: 115%;" dir="RTL" face="&quot;b mitra&quot;" lang="FA" size="5" style="background-image: initial; background-position: initial; background-size: initial; background-repeat: initial; background-attachment: initial; background-origin: initial; background-clip: initial; line-height: 27.6px;">بسته شدنش را هزار بار بیشتر از باز شدن می خواهد که چیزی به داخل نیاید و چیزی به بیرون نرود در یک حصار تو در تو بدون راه خروجی خود را حبس کرده بود ولی اما انتظار دیگری داشت انتظار چیزی را که نبود و نیز تحمل بودنش را هم نداشت و همه راه ها را نیز بسته بود&nbsp;</font></p></div><div><font data-blogger-escaped-style="background: white; font-family: &quot;B Mitra&quot;; font-size: 14pt; line-height: 115%;" dir="RTL" face="&quot;b mitra&quot;" lang="FA" size="5" style="background-image: initial; background-position: initial; background-size: initial; background-repeat: initial; background-attachment: initial; background-origin: initial; background-clip: initial; line-height: 27.6px;"><br></font></div><br><br></p>
+    </div>
+    <br>
+    <div class="clearfix" style="margin-bottom:20px;">
+        <a style="float:left;margin-left:15px;"  target="_blank"
+           href="http://www.cloob.com/share/link/add?
+						url=http://khodneviskhord.mihanblog.com//post/245&title=تناقضات">
+            <img alt="داغ کن - کلوب دات کام" src="http://static1.cloob.com//public/images/icon/100c.gif" style='border: none; padding: 0px'/>
+        </a>
+        <div class="PostCom"><a style="float: right;margin-top: 2px;" target="_self" href="http://khodneviskhord.mihanblog.com/post/245#commentlist" class="comment-link">نظرات(<script>setCommentCnt(245)</script>)</a>&nbsp;
+
+            <div style="float: right;margin-right: 15px;margin-top:-4px;"><script>mihanblogPostLike('245','like')</script></div>
+
+        </div>
+
+    </div>
+    <br>
+        
+        <div style="border-bottom:1px solid #222;height:5px;margin-bottom:10px;"></div>
+    <div class="clearfix">
+        <div class="author">نویسنده :<a href="http://khodneviskhord.mihanblog.com/post/author/1488080">خود بی خود</a></div>
+        <div class="date">تاریخ:شنبه 16 دی 1396-05:45 ب.ظ</div>
+    </div>
+
+
+
+
+
+    <h1><a href="http://khodneviskhord.mihanblog.com/post/244">تک جملات 7</a></h1>
+    <div class="post-body">
+        <p> 
+
+
+
+<div><br></div><div><div class="MsoNormal" data-blogger-escaped-style="direction: ltr; line-height: normal; margin-bottom: 0.0001pt; unicode-bidi: embed;" style="font-family: &quot;Times New Roman&quot;; font-size: medium; text-align: right; direction: ltr; line-height: normal; margin-bottom: 0.0001pt; unicode-bidi: embed;"><p style="margin: 0px;"><font data-blogger-escaped-style="font-size: large;" size="5"><font data-blogger-escaped-style="background: white; font-family: &quot;B Mitra&quot;;" dir="RTL" lang="FA" face="Georgia, Times New Roman, serif" style="background-image: initial; background-position: initial; background-size: initial; background-repeat: initial; background-attachment: initial; background-origin: initial; background-clip: initial;">چون ناتوان از گذشتن زخواسته های کودکانه اش است حتی توان نداشت که چیزی را&nbsp;</font></font></p><p style="margin: 0px;"><font data-blogger-escaped-style="font-size: large;" size="5" face="Georgia, Times New Roman, serif"><font data-blogger-escaped-style="background: white; font-family: &quot;B Mitra&quot;;" dir="RTL" lang="FA" style="background-image: initial; background-position: initial; background-size: initial; background-repeat: initial; background-attachment: initial; background-origin: initial; background-clip: initial;">به چیز دگر&nbsp; &nbsp;تبدیل کند و برایش تمام تبدیل ها یک معنا داشت</font><font data-blogger-escaped-style="background: white; font-family: &quot;Times New Roman&quot;, serif;" style="background-image: initial; background-position: initial; background-size: initial; background-repeat: initial; background-attachment: initial; background-origin: initial; background-clip: initial;"><data-blogger-escaped-o:p></data-blogger-escaped-o:p></font></font></p></div><div class="MsoNormal" data-blogger-escaped-style="direction: ltr; line-height: normal; margin-bottom: 0.0001pt; unicode-bidi: embed;" style="font-family: &quot;Times New Roman&quot;; font-size: medium; text-align: right; direction: ltr; line-height: normal; margin-bottom: 0.0001pt; unicode-bidi: embed;"><p style="margin: 0px;"><font face="Georgia, Times New Roman, serif"><br></font></p></div><div class="MsoNormal" data-blogger-escaped-style="direction: ltr; line-height: normal; margin-bottom: 0.0001pt; unicode-bidi: embed;" style="font-family: &quot;Times New Roman&quot;; font-size: medium; text-align: right; direction: ltr; line-height: normal; margin-bottom: 0.0001pt; unicode-bidi: embed;"><p style="margin: 0px;"><font data-blogger-escaped-style="font-size: large;" size="5" face="Georgia, Times New Roman, serif"><font data-blogger-escaped-style="background: white; font-family: &quot;B Mitra&quot;;" dir="RTL" lang="FA" style="background-image: initial; background-position: initial; background-size: initial; background-repeat: initial; background-attachment: initial; background-origin: initial; background-clip: initial;">کسی بود که هرگز تن نداد به آنچه که حق می پنداشت، اسب سرکشی بود که از رام شدن می گریخت و هردم در پی فراری تازه</font><font data-blogger-escaped-style="background: white; font-family: &quot;Times New Roman&quot;, serif;" style="background-image: initial; background-position: initial; background-size: initial; background-repeat: initial; background-attachment: initial; background-origin: initial; background-clip: initial;"><data-blogger-escaped-o:p></data-blogger-escaped-o:p></font></font></p></div><div class="MsoNormal" data-blogger-escaped-style="direction: ltr; line-height: normal; margin-bottom: 0.0001pt; unicode-bidi: embed;" style="font-family: &quot;Times New Roman&quot;; font-size: medium; text-align: right; direction: ltr; line-height: normal; margin-bottom: 0.0001pt; unicode-bidi: embed;"><p style="margin: 0px;"><font face="Georgia, Times New Roman, serif"><br></font></p></div><div class="MsoNormal" data-blogger-escaped-style="direction: ltr; line-height: normal; margin-bottom: 0.0001pt; unicode-bidi: embed;" style="font-family: &quot;Times New Roman&quot;; font-size: medium; text-align: right; direction: ltr; line-height: normal; margin-bottom: 0.0001pt; unicode-bidi: embed;"><p style="margin: 0px;"><font data-blogger-escaped-style="font-size: large;" size="5" face="Georgia, Times New Roman, serif"><font data-blogger-escaped-style="background: white; font-family: &quot;B Mitra&quot;;" dir="RTL" lang="FA" style="background-image: initial; background-position: initial; background-size: initial; background-repeat: initial; background-attachment: initial; background-origin: initial; background-clip: initial;">همراه او بود الاغی لنگ که می برد باری از سنگ و به مقصد نمی رساند به چند</font><font data-blogger-escaped-style="background: white; font-family: &quot;Times New Roman&quot;, serif;" style="background-image: initial; background-position: initial; background-size: initial; background-repeat: initial; background-attachment: initial; background-origin: initial; background-clip: initial;"><data-blogger-escaped-o:p></data-blogger-escaped-o:p></font></font></p></div><div class="MsoNormal" data-blogger-escaped-style="direction: ltr; line-height: normal; margin-bottom: 0.0001pt; unicode-bidi: embed;" style="font-family: &quot;Times New Roman&quot;; font-size: medium; text-align: right; direction: ltr; line-height: normal; margin-bottom: 0.0001pt; unicode-bidi: embed;"><p style="margin: 0px;"><font face="Georgia, Times New Roman, serif"><br></font></p></div><p style="margin: 0px; font-family: &quot;Times New Roman&quot;; font-size: medium; text-align: right;"><font face="Georgia, Times New Roman, serif"><br></font></p><div class="MsoNormal" data-blogger-escaped-style="direction: ltr; line-height: normal; margin-bottom: 0.0001pt; unicode-bidi: embed;" style="font-family: &quot;Times New Roman&quot;; font-size: medium; text-align: right; direction: ltr; line-height: normal; margin-bottom: 0.0001pt; unicode-bidi: embed;"><p style="margin: 0px;"><font data-blogger-escaped-style="background: white; font-family: &quot;B Mitra&quot;;" dir="RTL" lang="FA" style="background-image: initial; background-position: initial; background-size: initial; background-repeat: initial; background-attachment: initial; background-origin: initial; background-clip: initial;"><font data-blogger-escaped-style="font-size: large;" size="5" face="Georgia, Times New Roman, serif">او درخواب و خیالی گنگ به سر می&nbsp;برد</font></font></p></div></div>
+
+<br><br></p>
+    </div>
+    <br>
+    <div class="clearfix" style="margin-bottom:20px;">
+        <a style="float:left;margin-left:15px;"  target="_blank"
+           href="http://www.cloob.com/share/link/add?
+						url=http://khodneviskhord.mihanblog.com//post/244&title=تک جملات 7">
+            <img alt="داغ کن - کلوب دات کام" src="http://static1.cloob.com//public/images/icon/100c.gif" style='border: none; padding: 0px'/>
+        </a>
+        <div class="PostCom"><a style="float: right;margin-top: 2px;" target="_self" href="http://khodneviskhord.mihanblog.com/post/244#commentlist" class="comment-link">نظرات(<script>setCommentCnt(244)</script>)</a>&nbsp;
+
+            <div style="float: right;margin-right: 15px;margin-top:-4px;"><script>mihanblogPostLike('244','like')</script></div>
+
+        </div>
+
+    </div>
+    <br>
+        
+        <div style="border-bottom:1px solid #222;height:5px;margin-bottom:10px;"></div>
+    <div class="clearfix">
+        <div class="author">نویسنده :<a href="http://khodneviskhord.mihanblog.com/post/author/1488080">خود بی خود</a></div>
+        <div class="date">تاریخ:شنبه 16 دی 1396-05:31 ب.ظ</div>
+    </div>
+
+
+
+
+
+    <h1><a href="http://khodneviskhord.mihanblog.com/post/242">تک جملات 6</a></h1>
+    <div class="post-body">
+        <p> 
+
+
+
+<div><br></div><div><div class="MsoNormal" data-blogger-escaped-style="direction: ltr; line-height: normal; margin-bottom: 0.0001pt; text-align: right; unicode-bidi: embed;" style="font-family: &quot;Times New Roman&quot;; font-size: medium; text-align: right; direction: ltr; line-height: normal; margin-bottom: 0.0001pt; unicode-bidi: embed;"><p style="margin: 0px;"><font data-blogger-escaped-style="font-size: large;" size="5"><font data-blogger-escaped-style="background: white; font-family: &quot;B Mitra&quot;;" dir="RTL" lang="FA" face="Georgia, Times New Roman, serif" style="background-image: initial; background-position: initial; background-size: initial; background-repeat: initial; background-attachment: initial; background-origin: initial; background-clip: initial;">&nbsp;این حكم ابدیست جای پروانه ها گرد شمع سوختن است و آنانكه نخواستند بسوزند در غم فراق سوختند&nbsp;</font></font></p></div><div class="MsoNormal" data-blogger-escaped-style="direction: ltr; line-height: normal; margin-bottom: 0.0001pt; text-align: right; unicode-bidi: embed;" style="font-family: &quot;Times New Roman&quot;; font-size: medium; text-align: right; direction: ltr; line-height: normal; margin-bottom: 0.0001pt; unicode-bidi: embed;"><p style="margin: 0px;"><font face="Georgia, Times New Roman, serif"><br></font></p></div><div class="MsoNormal" data-blogger-escaped-style="direction: ltr; line-height: normal; margin-bottom: 0.0001pt; text-align: right; unicode-bidi: embed;" style="font-family: &quot;Times New Roman&quot;; font-size: medium; text-align: right; direction: ltr; line-height: normal; margin-bottom: 0.0001pt; unicode-bidi: embed;"><p style="margin: 0px;"><font data-blogger-escaped-style="font-size: large;" size="5" face="Georgia, Times New Roman, serif"><font data-blogger-escaped-style="background: white; font-family: &quot;B Mitra&quot;;" dir="RTL" lang="FA" style="background-image: initial; background-position: initial; background-size: initial; background-repeat: initial; background-attachment: initial; background-origin: initial; background-clip: initial;">كس را تحمل او نیست و او را نیز تحمل خود نیست</font><font data-blogger-escaped-style="background: white; font-family: &quot;Times New Roman&quot;, serif;" style="background-image: initial; background-position: initial; background-size: initial; background-repeat: initial; background-attachment: initial; background-origin: initial; background-clip: initial;"><data-blogger-escaped-o:p></data-blogger-escaped-o:p></font></font></p></div><div class="MsoNormal" data-blogger-escaped-style="direction: ltr; line-height: normal; margin-bottom: 0.0001pt; text-align: right; unicode-bidi: embed;" style="font-family: &quot;Times New Roman&quot;; font-size: medium; text-align: right; direction: ltr; line-height: normal; margin-bottom: 0.0001pt; unicode-bidi: embed;"><p style="margin: 0px;"><font face="Georgia, Times New Roman, serif"><br></font></p></div><div class="MsoNormal" data-blogger-escaped-style="direction: ltr; line-height: normal; margin-bottom: 0.0001pt; text-align: right; unicode-bidi: embed;" style="font-family: &quot;Times New Roman&quot;; font-size: medium; text-align: right; direction: ltr; line-height: normal; margin-bottom: 0.0001pt; unicode-bidi: embed;"><p style="margin: 0px;"><font data-blogger-escaped-style="font-size: large;" size="5"><font data-blogger-escaped-style="background: white; font-family: &quot;B Mitra&quot;;" dir="RTL" lang="FA" face="Georgia, Times New Roman, serif" style="background-image: initial; background-position: initial; background-size: initial; background-repeat: initial; background-attachment: initial; background-origin: initial; background-clip: initial;">میرود در گوشه ای كنج تنهایی اش كنار آن تك درخت خشكیده زیر چتر ابری كه دیگر نیست رو به سوی راهی كه مدتهاست دیگر نیست می نشیند روی زمینی که دیگر خیس نیست&nbsp;</font></font></p></div><div class="MsoNormal" data-blogger-escaped-style="direction: ltr; line-height: normal; margin-bottom: 0.0001pt; text-align: right; unicode-bidi: embed;" style="font-family: &quot;Times New Roman&quot;; font-size: medium; text-align: right; direction: ltr; line-height: normal; margin-bottom: 0.0001pt; unicode-bidi: embed;"><p style="margin: 0px;"><font data-blogger-escaped-style="background-color: white; font-family: &quot;Times New Roman&quot;, serif; font-size: large;" size="5" face="Georgia, Times New Roman, serif">آوازی سر می دهد با صدایی که شنیدنی نیست و شعری می خواند که شعر نیست&nbsp;</font></p></div><div class="MsoNormal" data-blogger-escaped-style="direction: ltr; line-height: normal; margin-bottom: 0.0001pt; text-align: right; unicode-bidi: embed;" style="font-family: &quot;Times New Roman&quot;; font-size: medium; text-align: right; direction: ltr; line-height: normal; margin-bottom: 0.0001pt; unicode-bidi: embed;"><p style="margin: 0px;"><font face="Georgia, Times New Roman, serif"><br></font></p></div><div class="MsoNormal" data-blogger-escaped-style="direction: ltr; line-height: normal; margin-bottom: 0.0001pt; text-align: right; unicode-bidi: embed;" style="font-family: &quot;Times New Roman&quot;; font-size: medium; text-align: right; direction: ltr; line-height: normal; margin-bottom: 0.0001pt; unicode-bidi: embed;"><p style="margin: 0px;"><font data-blogger-escaped-style="font-size: large;" size="5"><font data-blogger-escaped-style="background: white; font-family: &quot;B Mitra&quot;;" dir="RTL" lang="FA" face="Georgia, Times New Roman, serif" style="background-image: initial; background-position: initial; background-size: initial; background-repeat: initial; background-attachment: initial; background-origin: initial; background-clip: initial;">&nbsp; و کسی بود که او فرا میخواند، تا که رو به سویش کرد راند او را</font></font></p></div><div class="MsoNormal" data-blogger-escaped-style="direction: ltr; line-height: normal; margin-bottom: 0.0001pt; text-align: right; unicode-bidi: embed;" style="font-family: &quot;Times New Roman&quot;; font-size: medium; text-align: right; direction: ltr; line-height: normal; margin-bottom: 0.0001pt; unicode-bidi: embed;"><p style="margin: 0px;"><font face="Georgia, Times New Roman, serif"><br></font></p></div><div class="MsoNormal" data-blogger-escaped-style="direction: ltr; line-height: normal; margin-bottom: 0.0001pt; text-align: right; unicode-bidi: embed;" style="font-family: &quot;Times New Roman&quot;; font-size: medium; text-align: right; direction: ltr; line-height: normal; margin-bottom: 0.0001pt; unicode-bidi: embed;"><p style="margin: 0px;"><font data-blogger-escaped-style="font-size: large;" size="5"><font data-blogger-escaped-style="background: white; font-family: &quot;B Mitra&quot;;" dir="RTL" lang="FA" face="Georgia, Times New Roman, serif" style="background-image: initial; background-position: initial; background-size: initial; background-repeat: initial; background-attachment: initial; background-origin: initial; background-clip: initial;">كلمات را همچو تاس های تخته نرد میریزد كف صفحه بازی تا كه چه آید در پیش</font></font></p><div><font data-blogger-escaped-style="font-size: large;" size="5"><font data-blogger-escaped-style="background: white; font-family: &quot;B Mitra&quot;;" dir="RTL" lang="FA" face="Georgia, Times New Roman, serif" style="background-image: initial; background-position: initial; background-size: initial; background-repeat: initial; background-attachment: initial; background-origin: initial; background-clip: initial;"><br></font></font></div></div><div class="MsoNormal" data-blogger-escaped-style="direction: ltr; line-height: normal; margin-bottom: 0.0001pt; text-align: right; unicode-bidi: embed;" style="font-family: &quot;Times New Roman&quot;; font-size: medium; text-align: right; direction: ltr; line-height: normal; margin-bottom: 0.0001pt; unicode-bidi: embed;"></div></div>
+
+<br><br></p>
+    </div>
+    <br>
+    <div class="clearfix" style="margin-bottom:20px;">
+        <a style="float:left;margin-left:15px;"  target="_blank"
+           href="http://www.cloob.com/share/link/add?
+						url=http://khodneviskhord.mihanblog.com//post/242&title=تک جملات 6">
+            <img alt="داغ کن - کلوب دات کام" src="http://static1.cloob.com//public/images/icon/100c.gif" style='border: none; padding: 0px'/>
+        </a>
+        <div class="PostCom"><a style="float: right;margin-top: 2px;" target="_self" href="http://khodneviskhord.mihanblog.com/post/242#commentlist" class="comment-link">نظرات(<script>setCommentCnt(242)</script>)</a>&nbsp;
+
+            <div style="float: right;margin-right: 15px;margin-top:-4px;"><script>mihanblogPostLike('242','like')</script></div>
+
+        </div>
+
+    </div>
+    <br>
+        
+        <div style="border-bottom:1px solid #222;height:5px;margin-bottom:10px;"></div>
+    <div class="clearfix">
+        <div class="author">نویسنده :<a href="http://khodneviskhord.mihanblog.com/post/author/1488080">خود بی خود</a></div>
+        <div class="date">تاریخ:یکشنبه 3 دی 1396-02:09 ب.ظ</div>
+    </div>
+
+
+
+
+
+    <h1><a href="http://khodneviskhord.mihanblog.com/post/241">تک جملات 5</a></h1>
+    <div class="post-body">
+        <p> 
+
+
+
+
+<div><font face="georgia, times new roman, times, serif"><br></font></div><div><font face="georgia, times new roman, times, serif"><br></font></div><div><p style="margin: 0px; font-size: medium; text-align: right;"><font size="5" face="georgia, times new roman, times, serif">من و اشتباهی دگر و دگری&nbsp; دگر در منی دگر</font></p><p style="margin: 0px; font-size: medium; text-align: right;"><font size="5" face="georgia, times new roman, times, serif"><br></font></p><p style="margin: 0px; font-size: medium; text-align: right;"><font size="5" face="georgia, times new roman, times, serif">نمی دانست به كدامین گناه در كدامین كوچه گم شده بود</font></p><p style="margin: 0px; font-size: medium; text-align: right;"><font size="5" face="georgia, times new roman, times, serif"><br></font></p><p style="margin: 0px; font-size: medium; text-align: right;"><font size="5" face="georgia, times new roman, times, serif">&nbsp;او شبیه&nbsp; شبیست در انتظاری صبحی هر هرگز صبح نشد</font></p><p style="margin: 0px; font-size: medium; text-align: right;"><font size="5" face="georgia, times new roman, times, serif"><br></font></p><p style="margin: 0px; font-size: medium; text-align: right;"><font size="5" face="georgia, times new roman, times, serif">همه در یک نقشی اسیرند به باورهایی رنگ می دهند که باور ندارند</font></p><p style="margin: 0px; font-size: medium; text-align: right;"><font size="5" face="georgia, times new roman, times, serif">&nbsp;با آنها بازی زندگی خویش را به بازی گرفته اند</font></p><p style="margin: 0px; font-size: medium; text-align: right;"><font size="5" face="georgia, times new roman, times, serif"><br></font></p><p style="margin: 0px; font-size: medium; text-align: right;"><font size="5" face="georgia, times new roman, times, serif">کسی یا چیزی از درونش میل به فریاد کشیدن داشت، و هر دم فریادی از سکوت می داشت&nbsp;</font></p><p style="margin: 0px; font-size: medium; text-align: right;"><font face="georgia, times new roman, times, serif"><font size="5">هردم به سختی سخنی رابه اصرارو تکرار،به کسی میگوید،اما او وا اَ</font><span style="font-size: x-large;">سفا که آرام نمی گیرد</span></font></p><p style="margin: 0px; font-size: medium; text-align: right;"><font size="5" face="georgia, times new roman, times, serif"><br></font></p><p style="margin: 0px; font-size: medium; text-align: right;"><font size="5" face="georgia, times new roman, times, serif">گاهی تكه تكه شدن خودت را روی دیوار خیالت میبینی&nbsp;</font></p><p style="margin: 0px; font-size: medium; text-align: right;"><font size="5" face="georgia, times new roman, times, serif">و اما باز هم دست بر نمیداری از آن لذت مرگبار</font></p><p style="margin: 0px; font-size: medium; text-align: right;"><font size="5" face="georgia, times new roman, times, serif">و تکه تکه هایت را تکه تکه تر میکنی و باز هم میخندی</font></p></div><div><font size="5"><b><br></b></font></div>
+
+
+
+<br><br></p>
+    </div>
+    <br>
+    <div class="clearfix" style="margin-bottom:20px;">
+        <a style="float:left;margin-left:15px;"  target="_blank"
+           href="http://www.cloob.com/share/link/add?
+						url=http://khodneviskhord.mihanblog.com//post/241&title=تک جملات 5">
+            <img alt="داغ کن - کلوب دات کام" src="http://static1.cloob.com//public/images/icon/100c.gif" style='border: none; padding: 0px'/>
+        </a>
+        <div class="PostCom"><a style="float: right;margin-top: 2px;" target="_self" href="http://khodneviskhord.mihanblog.com/post/241#commentlist" class="comment-link">نظرات(<script>setCommentCnt(241)</script>)</a>&nbsp;
+
+            <div style="float: right;margin-right: 15px;margin-top:-4px;"><script>mihanblogPostLike('241','like')</script></div>
+
+        </div>
+
+    </div>
+    <br>
+        
+        <div style="border-bottom:1px solid #222;height:5px;margin-bottom:10px;"></div>
+    <div class="clearfix">
+        <div class="author">نویسنده :<a href="http://khodneviskhord.mihanblog.com/post/author/1488080">خود بی خود</a></div>
+        <div class="date">تاریخ:یکشنبه 12 آذر 1396-01:24 ب.ظ</div>
+    </div>
+
+
+
+
+
+    <h1><a href="http://khodneviskhord.mihanblog.com/post/240">اسیر</a></h1>
+    <div class="post-body">
+        <p> 
+
+
+
+<font size="5" face="verdana, arial, helvetica, sans-serif">
+ما و من و شما همه اسیریم</font><div><font face="verdana, arial, helvetica, sans-serif" size="5"><br></font><div><div><font size="5" face="verdana, arial, helvetica, sans-serif">اسیری به سارت گرفته شده توسط خویشتن خویش</font></div><div><font size="5" face="verdana, arial, helvetica, sans-serif"><br></font><div><font size="5" face="verdana, arial, helvetica, sans-serif">و به اسارت گرفتار آمدیم آن زمان که خویش را شناختیم</font></div><div><font size="5" face="verdana, arial, helvetica, sans-serif"><br></font></div><div><font size="5" face="verdana, arial, helvetica, sans-serif">که برایش از هیچ هیچ روی گردان نبودیم</font></div><div><font size="5" face="verdana, arial, helvetica, sans-serif"><br></font></div><div><font size="5" face="verdana, arial, helvetica, sans-serif">که آن را همه چیز شمردیم</font></div><div><font size="5" face="verdana, arial, helvetica, sans-serif"><br></font></div><div><font size="5" face="verdana, arial, helvetica, sans-serif">که از لذت داشتن اش بی انتها بهره جستیم</font></div><div><font size="5" face="verdana, arial, helvetica, sans-serif"><br></font></div><div><font size="5" face="verdana, arial, helvetica, sans-serif">که برایش همه چیز را قربانی کردیم</font></div><div><font size="5" face="verdana, arial, helvetica, sans-serif"><br></font></div><div><font size="5" face="verdana, arial, helvetica, sans-serif">قربانی کرده بودیم خود را که اسیر شدیم</font></div><div><font size="5" face="verdana, arial, helvetica, sans-serif"><br></font></div><div><font size="5" face="verdana, arial, helvetica, sans-serif">در این اسارت عاشق زندان شدیم</font></div><div><font size="5" face="verdana, arial, helvetica, sans-serif"><br></font></div><div><font size="5" face="verdana, arial, helvetica, sans-serif">پرستیدیم زندان را</font></div><div><br></div><div><font size="5" face="verdana, arial, helvetica, sans-serif">زندانی از خویشتن خویش ساختیم</font></div><div><font size="5" face="verdana, arial, helvetica, sans-serif"><br></font></div><div><font size="5" face="verdana, arial, helvetica, sans-serif">و بی حد به آن عشق ورزیدیم</font></div><div><font size="5" face="verdana, arial, helvetica, sans-serif"><br></font></div><div><font size="5" face="verdana, arial, helvetica, sans-serif">تا جایی که برایش حد و انتهایی متصور نیست</font></div><div><font size="5" face="verdana, arial, helvetica, sans-serif"><br></font></div><div><font size="5" face="verdana, arial, helvetica, sans-serif">و تا آن جا پیش رفتیم که بیرون آمدن از این زندان&nbsp;</font></div><div><font size="5" face="verdana, arial, helvetica, sans-serif"><br></font></div><div><font size="5" face="verdana, arial, helvetica, sans-serif">برایمان چنان وحشتناک است که</font></div><div><font size="5" face="verdana, arial, helvetica, sans-serif"><br></font></div><div><span style="font-family: verdana, arial, helvetica, sans-serif; font-size: x-large;">&nbsp;حتی توان فکر کردن اش نیست</span></div><div><font size="5" face="verdana, arial, helvetica, sans-serif"><br></font></div><div><font size="5" face="verdana, arial, helvetica, sans-serif">روبرو شدن این حقیقت برای مان ناممکنی نمود پیدا کرد</font></div><div><font size="5" face="verdana, arial, helvetica, sans-serif"><br></font></div><div><font size="5" face="verdana, arial, helvetica, sans-serif">و این زندان شد همه وجود ما که چنان در آن گرفتار آمدیم&nbsp;</font></div><div><font size="5" face="verdana, arial, helvetica, sans-serif"><br></font></div><div><font size="5" face="verdana, arial, helvetica, sans-serif">که دیگر توانی برای دیدن</font></div><div><font size="5" face="verdana, arial, helvetica, sans-serif"><br></font></div><div><font size="5" face="verdana, arial, helvetica, sans-serif">&nbsp;نظاره چیز های دیگری وجود ندارد</font></div><div><font size="5" face="verdana, arial, helvetica, sans-serif"><br></font></div><div><font size="5" face="verdana, arial, helvetica, sans-serif">تمام افق شد همین سطح از دید به شکلی که تمام جهان ما همین شد</font></div><div><font size="5" face="verdana, arial, helvetica, sans-serif"><br></font></div><div><font size="5" face="verdana, arial, helvetica, sans-serif">چنان که اسیر و زندان بان و اسارت گاه هر سه با هم یکی شد</font></div><div><br></div></div>
+
+
+
+</div>
+
+
+
+</div>
+
+<br><br></p>
+    </div>
+    <br>
+    <div class="clearfix" style="margin-bottom:20px;">
+        <a style="float:left;margin-left:15px;"  target="_blank"
+           href="http://www.cloob.com/share/link/add?
+						url=http://khodneviskhord.mihanblog.com//post/240&title=اسیر">
+            <img alt="داغ کن - کلوب دات کام" src="http://static1.cloob.com//public/images/icon/100c.gif" style='border: none; padding: 0px'/>
+        </a>
+        <div class="PostCom"><a style="float: right;margin-top: 2px;" target="_self" href="http://khodneviskhord.mihanblog.com/post/240#commentlist" class="comment-link">نظرات(<script>setCommentCnt(240)</script>)</a>&nbsp;
+
+            <div style="float: right;margin-right: 15px;margin-top:-4px;"><script>mihanblogPostLike('240','like')</script></div>
+
+        </div>
+
+    </div>
+    <br>
+        
+        <div style="border-bottom:1px solid #222;height:5px;margin-bottom:10px;"></div>
+    <div class="clearfix">
+        <div class="author">نویسنده :<a href="http://khodneviskhord.mihanblog.com/post/author/1488080">خود بی خود</a></div>
+        <div class="date">تاریخ:شنبه 20 آبان 1396-12:34 ب.ظ</div>
+    </div>
+
+
+
+
+
+    <h1><a href="http://khodneviskhord.mihanblog.com/post/238">امیدی رفته از دست</a></h1>
+    <div class="post-body">
+        <p> 
+
+
+<font face="arial, helvetica, sans-serif" size="5">خیلی وقت شده که نمی نویسد چرا که&nbsp;</font><span style="font-family: arial, helvetica, sans-serif; font-size: x-large;">امیدی به تغییر ندارد و</span><div><span style="font-family: arial, helvetica, sans-serif; font-size: x-large;"><br></span></div><div><span style="font-family: arial, helvetica, sans-serif; font-size: x-large;">&nbsp;این نا امیدی او را دارد مثل</span><span style="font-family: arial, helvetica, sans-serif; font-size: x-large;">&nbsp;خوره از بین می برد</span><div><font face="arial, helvetica, sans-serif" size="5"><br></font><div><font face="arial, helvetica, sans-serif" size="5">این خوره افتاده به جانش و او را&nbsp; تکه تکه می کند ،</font></div><div><font face="arial, helvetica, sans-serif" size="5"><br></font></div><div><font face="arial, helvetica, sans-serif" size="5">&nbsp;به سوی نابودی می بردَ</font><span style="font-family: arial, helvetica, sans-serif; font-size: x-large;">ش و</span><span style="font-family: arial, helvetica, sans-serif; font-size: x-large;">&nbsp;</span><span style="font-family: arial, helvetica, sans-serif; font-size: x-large;">می&nbsp;ِ</span><span style="font-family: arial, helvetica, sans-serif; font-size: x-large;">کشانَدَش</span><span style="font-family: arial, helvetica, sans-serif; font-size: x-large;">&nbsp;به هیچستان</span></div><div><span style="font-family: arial, helvetica, sans-serif; font-size: x-large;"><br></span></div><div><font face="arial, helvetica, sans-serif" size="5">و او به این هیچستان است که دل خوش است ای وای</font></div><div><br></div><div><font face="arial, helvetica, sans-serif" size="5">انگار به نابودی بیش تر از بودن و آبادی عشق می ورزد</font></div><div><font face="arial, helvetica, sans-serif" size="5"><br></font></div><div><font face="arial, helvetica, sans-serif" size="5">حال عجیبیست که او را فرا گرفته است&nbsp;</font></div><div><font face="arial, helvetica, sans-serif" size="5"><br></font></div><div><font face="arial, helvetica, sans-serif" size="5">این دیوانگیست یک دیوانگی با از خود بیگانگی عجین شده&nbsp;</font></div><div><font face="arial, helvetica, sans-serif" size="5"><br></font><div><br></div></div>
+
+
+
+</div>
+
+</div><br><br></p>
+    </div>
+    <br>
+    <div class="clearfix" style="margin-bottom:20px;">
+        <a style="float:left;margin-left:15px;"  target="_blank"
+           href="http://www.cloob.com/share/link/add?
+						url=http://khodneviskhord.mihanblog.com//post/238&title=امیدی رفته از دست">
+            <img alt="داغ کن - کلوب دات کام" src="http://static1.cloob.com//public/images/icon/100c.gif" style='border: none; padding: 0px'/>
+        </a>
+        <div class="PostCom"><a style="float: right;margin-top: 2px;" target="_self" href="http://khodneviskhord.mihanblog.com/post/238#commentlist" class="comment-link">نظرات(<script>setCommentCnt(238)</script>)</a>&nbsp;
+
+            <div style="float: right;margin-right: 15px;margin-top:-4px;"><script>mihanblogPostLike('238','like')</script></div>
+
+        </div>
+
+    </div>
+    <br>
+        
+        <div style="border-bottom:1px solid #222;height:5px;margin-bottom:10px;"></div>
+    <div class="clearfix">
+        <div class="author">نویسنده :<a href="http://khodneviskhord.mihanblog.com/post/author/1488080">خود بی خود</a></div>
+        <div class="date">تاریخ:شنبه 20 آبان 1396-12:33 ب.ظ</div>
+    </div>
+
+
+
+
+
+    <h1><a href="http://khodneviskhord.mihanblog.com/post/237">شاید</a></h1>
+    <div class="post-body">
+        <p> 
+
+<p dir="rtl" style="margin: 0px; font-size: medium; font-family: arial, sans-serif;"><font size="5" style="">و چه سرد است دلت&nbsp;</font></p><p dir="rtl" style="margin: 0px; font-size: medium; font-family: arial, sans-serif;"><font size="5" style=""><br>دست بردار نیست سرت</font></p><p dir="rtl" style="margin: 0px; font-size: medium; font-family: arial, sans-serif;"><font size="5" style=""><br>حاصل این جنگ بی پایان</font></p><p dir="rtl" style="margin: 0px; font-size: medium; font-family: arial, sans-serif;"><font size="5" style=""><br>گم شدن در اسارت های تحمل&nbsp;</font><span style="font-size: x-large;">نا شدنی اما بی نهایت لذت بخشیست&nbsp;</span></p><p dir="rtl" style="margin: 0px; font-size: medium; font-family: arial, sans-serif;"><span style="font-size: x-large;"><br></span></p><p dir="rtl" style="margin: 0px; font-size: medium; font-family: arial, sans-serif;"><span style="font-size: x-large;">که نمی دانی چیست و تو را تا بی نهایت در خویش فرو برده</span></p><p dir="rtl" style="margin: 0px; font-size: medium; font-family: arial, sans-serif;"><font size="5" style=""><br></font></p><p dir="rtl" style="margin: 0px; font-size: medium; font-family: arial, sans-serif;"><font size="5" style="">تو انکار داری&nbsp; و او اصرار&nbsp;</font></p><p dir="rtl" style="margin: 0px; font-size: medium; font-family: arial, sans-serif;"><font size="5" style=""><br></font></p><p dir="rtl" style="margin: 0px; font-size: medium; font-family: arial, sans-serif;"><font size="5">&nbsp;میدوی به سویی بی نشان</font></p><p dir="rtl" style="margin: 0px; font-size: medium; font-family: arial, sans-serif;"><font size="5"><br></font></p><p dir="rtl" style="margin: 0px; font-size: medium; font-family: arial, sans-serif;"><font size="5">شاید که روی از این جای ناجور برداری و به امید و امیدی&nbsp;</font></p><p dir="rtl" style="margin: 0px; font-size: medium; font-family: arial, sans-serif;"><font size="5"><br></font></p><p dir="rtl" style="margin: 0px; font-size: medium; font-family: arial, sans-serif;"><font size="5">نا امید شده که تو را نیست کرده دست بردارد&nbsp;</font></p><p dir="rtl" style="margin: 0px; font-size: medium; font-family: arial, sans-serif;"><font size="5"><br>شاید او تو را تکیده می خواهد که به سان دیواری در حال</font></p><p dir="rtl" style="margin: 0px; font-size: medium; font-family: arial, sans-serif;"><font size="5"><br></font></p><p dir="rtl" style="margin: 0px; font-size: medium; font-family: arial, sans-serif;"><font size="5">&nbsp;فرو ریختن ایستاده بی خویشتن خویش می خواهدت&nbsp;</font></p><p dir="rtl" style="margin: 0px; font-size: medium; font-family: arial, sans-serif;"><font size="5"><br>این آفتاب سوزان و این تن رنجور در این هیاهو های&nbsp;</font></p><p dir="rtl" style="margin: 0px; font-size: medium; font-family: arial, sans-serif;"><font size="5"><br></font></p><p dir="rtl" style="margin: 0px; font-size: medium; font-family: arial, sans-serif;"><font size="5">بی هویت تو</font></p><p dir="rtl" style="margin: 0px; font-size: medium; font-family: arial, sans-serif;"><font size="5" style=""><br></font></p><p dir="rtl" style="margin: 0px; font-size: medium; font-family: arial, sans-serif;"><font size="5" style="">شاید</font></p>
+
+
+
+
+
+
+<br><br></p>
+    </div>
+    <br>
+    <div class="clearfix" style="margin-bottom:20px;">
+        <a style="float:left;margin-left:15px;"  target="_blank"
+           href="http://www.cloob.com/share/link/add?
+						url=http://khodneviskhord.mihanblog.com//post/237&title=شاید">
+            <img alt="داغ کن - کلوب دات کام" src="http://static1.cloob.com//public/images/icon/100c.gif" style='border: none; padding: 0px'/>
+        </a>
+        <div class="PostCom"><a style="float: right;margin-top: 2px;" target="_self" href="http://khodneviskhord.mihanblog.com/post/237#commentlist" class="comment-link">نظرات(<script>setCommentCnt(237)</script>)</a>&nbsp;
+
+            <div style="float: right;margin-right: 15px;margin-top:-4px;"><script>mihanblogPostLike('237','like')</script></div>
+
+        </div>
+
+    </div>
+    <br>
+        
+        <div style="border-bottom:1px solid #222;height:5px;margin-bottom:10px;"></div>
+    <div class="clearfix">
+        <div class="author">نویسنده :<a href="http://khodneviskhord.mihanblog.com/post/author/1488080">خود بی خود</a></div>
+        <div class="date">تاریخ:پنجشنبه 23 شهریور 1396-10:53 ق.ظ</div>
+    </div>
+
+
+
+
+
+    <h1><a href="http://khodneviskhord.mihanblog.com/post/236">او</a></h1>
+    <div class="post-body">
+        <p> 
+<p style="margin: 0px; font-family: &quot;Times New Roman&quot;; font-size: medium; text-align: right;"><font size="5">او خود را در راهی که میرفت غرق در بی قراری هایی یافته بود</font></p><p style="margin: 0px; font-family: &quot;Times New Roman&quot;; font-size: medium; text-align: right;"><font size="5"><br></font></p><p style="margin: 0px; font-family: &quot;Times New Roman&quot;; font-size: medium; text-align: right;"><font size="5">&nbsp;که او را با خودش برده بودند</font></p><p style="margin: 0px; font-family: &quot;Times New Roman&quot;; font-size: medium; text-align: right;"><font size="5"><br></font></p><p style="margin: 0px; font-family: &quot;Times New Roman&quot;; font-size: medium; text-align: right;"><font size="5">جایی در تنهایی رهایش کرده بودند</font></p><p style="margin: 0px; font-family: &quot;Times New Roman&quot;; font-size: medium; text-align: right;"><font size="5"><br></font></p><p style="margin: 0px; font-family: &quot;Times New Roman&quot;; font-size: medium; text-align: right;"><font size="5">و حالا او تنها گشته بود&nbsp;</font></p><p style="margin: 0px; font-family: &quot;Times New Roman&quot;; font-size: medium; text-align: right;"><font size="5"><br></font></p><p style="margin: 0px; font-family: &quot;Times New Roman&quot;; font-size: medium; text-align: right;"><font size="5">و در این غریبی همان جا مانده بود و یارای حرکتی در خودش نمی دید</font></p><p style="margin: 0px; font-family: &quot;Times New Roman&quot;; font-size: medium; text-align: right;"><font size="5"><br></font></p><p style="margin: 0px; font-family: &quot;Times New Roman&quot;; font-size: medium; text-align: right;"><font size="5">و به سختی داشت این تن رنجورش را تحمل می کرد و بی حرکت در&nbsp;</font></p><p style="margin: 0px; font-family: &quot;Times New Roman&quot;; font-size: medium; text-align: right;"><font size="5"><br></font></p><p style="margin: 0px; font-family: &quot;Times New Roman&quot;; font-size: medium; text-align: right;"><font size="5">همین جا میخکوب گشته بود انگار داشت در زمین فرو میرفت زیر</font></p><p style="margin: 0px; font-family: &quot;Times New Roman&quot;; font-size: medium; text-align: right;"><font size="5"><br></font></p><p style="margin: 0px; font-family: &quot;Times New Roman&quot;; font-size: medium; text-align: right;"><font size="5">&nbsp;این بار سنگینی که رو دوشش حس می کرد</font></p><div><font size="5"><br></font></div>
+
+
+
+
+<br><br></p>
+    </div>
+    <br>
+    <div class="clearfix" style="margin-bottom:20px;">
+        <a style="float:left;margin-left:15px;"  target="_blank"
+           href="http://www.cloob.com/share/link/add?
+						url=http://khodneviskhord.mihanblog.com//post/236&title=او">
+            <img alt="داغ کن - کلوب دات کام" src="http://static1.cloob.com//public/images/icon/100c.gif" style='border: none; padding: 0px'/>
+        </a>
+        <div class="PostCom"><a style="float: right;margin-top: 2px;" target="_self" href="http://khodneviskhord.mihanblog.com/post/236#commentlist" class="comment-link">نظرات(<script>setCommentCnt(236)</script>)</a>&nbsp;
+
+            <div style="float: right;margin-right: 15px;margin-top:-4px;"><script>mihanblogPostLike('236','like')</script></div>
+
+        </div>
+
+    </div>
+    <br>
+        
+        <div style="border-bottom:1px solid #222;height:5px;margin-bottom:10px;"></div>
+
+<br>
+<!-- Comment -->
+
+
+<style>
+
+        /*** COMMENT BODY***/
+    .comment_body{
+        background: #F0F1F3;
+        margin:10px;
+        border-radius: 5px;
+        border-right:5px solid #D7D7D7;
+        overflow:hidden
+    }
+
+
+    .comment .comment_reply {
+        background: #c3c7ce;
+        border-right: 5px solid #a5aab4;
+        border-radius: 5px;
+        width: 350px;
+        margin-top:10px;
+        color:black;
+        font-size:12px;
+        overflow:hidden
+    }
+
+
+
+    .comment .name {
+        font-weight: 600;
+        color: #4E3E09;
+        padding-right: 5px;
+        text-align: right;
+        line-height: 26px;
+        float: right;
+    }
+
+
+    .comment .date {
+        font-size: 10px;
+        padding: 5px;
+        color: #C30;
+        text-align: left;
+        float: left;
+    }
+
+
+    .comment .comemnt_web {
+        padding: 5px 0 5px 15px; color: #999; direction: ltr; text-align: left;
+
+    }
+
+
+    .comment .comemnt_web a {
+        color: #554c3d;
+        text-decoration: underline;
+    }
+
+
+
+    .comment_det{
+        border-bottom:1px solid #CCC;
+
+    }
+
+    .comment .name,.date,.comemnt_text,.comment_reply{
+        margin-right:3px;
+        padding-right:3px;
+
+    }
+
+        /**** COMMENT FORM ****/
+
+    .comment_form {
+        background: none repeat scroll 0 0 #CCC;
+        border-radius: 5px 5px 5px 5px;
+        border-right: 5px solid #D7D7D7;
+        direction: rtl;
+        margin: 10px;
+        padding: 20px;
+    }
+
+
+
+    .comment_form label {
+        width: 100px;
+        display: block;
+        float: right;
+        text-align: left;
+        font-size: 11px;
+        color: #555;
+        padding-left: 10px;
+    }
+
+
+    .comment_form .comment_form_row {
+        margin: 3px 0;
+    }
+
+
+    #imageCodeWrapper .imageCode_input #imgstr {
+        font-size: 25px;
+        height: 34px;
+        width: 70px;
+    }
+
+    input.btn {
+        background: url("http://mihanblog.com/public/public/user_data/template/23/images/SubmitComment.gif") no-repeat scroll 0 0 		transparent;
+        border: medium none;
+        color: #FFFFFF;
+        font-family: tahoma;
+        height: 26px;
+        margin-top: 10px;
+        padding: 0;
+        width: 85px;
+    }
+    .comment_form .comment_form_textarea, .comment_form .comment_form_textbox {
+        border: 1px solid #C5C5C5;
+    }
+
+
+    .comment_form_textbox {
+        width:240px;
+
+    }
+    .comment_form_textarea{
+        width:240px;
+    }
+
+
+</style>
+
+</div>
+
+
+<!-- END Comment -->
+
+
+
+<br>
+<br>
+<div align="center" class="page_box clearfix">
+            <ul>
+            <li>
+                <b>تعداد صفحات :</b>16            </li>
+                            <li>
+                    <a href="http://khodneviskhord.mihanblog.com/page/1"><b>1</b></a>&nbsp;&nbsp;
+                </li>
+                            <li>
+                    <a href="http://khodneviskhord.mihanblog.com/page/2"><span>2</span></a>&nbsp;&nbsp;
+                </li>
+                            <li>
+                    <a href="http://khodneviskhord.mihanblog.com/page/3"><span>3</span></a>&nbsp;&nbsp;
+                </li>
+                            <li>
+                    <a href="http://khodneviskhord.mihanblog.com/page/4"><span>4</span></a>&nbsp;&nbsp;
+                </li>
+                            <li>
+                    <a href="http://khodneviskhord.mihanblog.com/page/5"><span>5</span></a>&nbsp;&nbsp;
+                </li>
+                            <li>
+                    <a href="http://khodneviskhord.mihanblog.com/page/6"><span>6</span></a>&nbsp;&nbsp;
+                </li>
+                            <li>
+                    <a href="http://khodneviskhord.mihanblog.com/page/7"><span>7</span></a>&nbsp;&nbsp;
+                </li>
+                            <li>
+                    <a href="http://khodneviskhord.mihanblog.com/page/8"><i>...</i></a>&nbsp;&nbsp;
+                </li>
+                    </ul>
+    </div>
+</div>
+</div>
+</div>
+<div class="footer">
+    <p><b>POWERED  BY <font style="color:#f00;font-size:14px">M</font>IHAN <font style="color:#f00;font-size:14px">B</font>LOG.COM</b> .Theme is created by: <a href="../www.themebox.mihanblog.com/index.html"><b>ThemeBox</b></a></p>
+</div>
+</body>
+</html><script>
+//    setTimeout(function () {
+//        GetMihanBlogShowAds();
+//    }, 1000);
+</script>
+<!--NEW SERVER--><!--;)-->
+
+<!--SabaVision Ads Handler--><!--<script type="text/javascript">(function (d) {var url =   location.protocol+'//api.sabavision.com/pox/poxjs.js';d.write('<script type="text/javascript" src="' + url + '" async></scri' + 'pt>');})(document);</script>-->
+
+
+<script type="text/javascript">
+
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-153829-9']);
+    _gaq.push(['_setDomainName', 'khodneviskhord.mihanblog.com']);
+    _gaq.push(['_trackPageview']);
+
+    (function() {
+        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+
+</script>
+
+
+<div id='mediaad-Kvcm'></div>
+<meta name="sabavision_zone" content="2500-Z499" />
+<center>
+    <div style="background-color:white;width:90%;padding:20px;margin-top:50px;margin-bottom:50px;">
+        <a href="https://www.cloob.com">شبکه اجتماعی فارسی کلوب</a> | <a href="https://www.seo25.com/product/buy-mobile-traffic-and-get-cheap-targeted-mobile-traffic/" target="_blank">Buy Mobile Traffic</a> | <a href="https://www.soalaat.com">سایت سوالات</a>
+    </div>
+</center>

@@ -1,0 +1,1762 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" /><link rel="EditURI" type="application/rsd+xml" title="RSD" href="../../../xmlrpc@rsd" />
+<script type="text/javascript" src="../../../../static.mihanblog.com/public/scripts/run/g.other.v3.js"></script>
+<script>
+
+	function c_$(id){
+        return document.getElementById(id);
+    }
+    
+			//if (parent.frames.length) top.location.href= document.location;
+		
+	setTodayDate = function(){
+		document.write('شنبه 22 آذر 1399');
+		/*850222*/	}
+
+</script>
+
+
+
+        <script type="text/javascript">
+            (function(){
+            var now = new Date();
+            var head = document.getElementsByTagName('head')[0];
+            var script = document.createElement('script');
+            script.async = true;
+            var script_address = 'https://cdn.yektanet.com/js/mihanblog.com/native-mihanblog.com-6531.js';
+            script.src = script_address + '?v=' + now.getFullYear().toString() + '0' + now.getMonth() + '0' + now.getDate() + '0' + now.getHours();
+            head.appendChild(script);
+            })();
+        </script>
+
+        <!--<script type="text/javascript">
+            var head = document.getElementsByTagName("head")[0];
+            var script = document.createElement("script");
+            script.type = "text/javascript";
+            script.async=1;
+            script.src = "https://s1.mediaad.org/serve/mihanblog.com/loader.js" ;
+            head.appendChild(script);
+        </script>-->
+        
+        <script>
+            var sabaVisionWebsiteID = "9bab9dac-041d-4bdb-b39a-1ed789f65eed"; var sabaVisionWebsitePage = "ALL"
+        </script>
+        <link rel="stylesheet" href="https://plus.sabavision.com/dox/dox.min.css">
+        <script src="https://plus.sabavision.com/dox/dox.min.js"></script>
+        
+        <script>
+	try{
+		var commentCnt = new Array();
+		commentCnt[20679]='0';commentCnt[20680]='0';commentCnt[20682]='0';commentCnt[20683]='0';commentCnt[20684]='0';commentCnt[20685]='0';commentCnt[20686]='0';commentCnt[20693]='0';commentCnt[20694]='0';commentCnt[20695]='0';commentCnt[20700]='0';	} catch(e){}
+	
+	newComment = function(post_id){
+		try{
+			window.open('/post/comment/'+post_id,'comment','status=yes,scrollbars=yes,toolbar=no,menubar=no,location=no ,width=480px,height=540px');
+		} catch(e){}
+	}
+	setCommentCnt = function(post_id){
+		try{
+			if(commentCnt[post_id]){
+				document.write(commentCnt[post_id]);
+			} else {
+				document.write(0);
+			}
+		} catch(e){}
+	}
+</script><script>
+
+
+	mihanblogUpdateLike = function(postid,type){
+		var url = '/post/like/'+postid+'/'+type;
+		mihanblogGetAjax(url,function(){});
+	};
+	try{
+        mihanblogGetAjax = function (url,callback) {
+    		var req;
+			if (window.XMLHttpRequest)
+            {
+                // code for IE7+, Firefox, Chrome, Opera, Safari
+			  	req = new XMLHttpRequest();
+			}else{	// code for IE6, IE5
+			  	req = new ActiveXObject("Microsoft.XMLHTTP");
+		  	}
+		    req.open("GET", url, 1);
+		    req.onreadystatechange = function () {
+		        if (req.readyState == 4) {
+		            if (req.status == 200) {
+		            	var response = eval(req.responseText);
+		            	callback();
+		            }else{
+	            		return ;
+		            }
+		        }else{
+					return ;
+		        }
+		    }
+		    req.send(null);
+		}
+	}catch(e){}
+
+	try{
+		var mihanblogLikeArrCnt = new Array();
+		var mihanblogDisLikeArrCnt = new Array();
+
+		mihanblogLikeArrCnt[20685]='0';
+mihanblogDisLikeArrCnt[20685]='0';
+mihanblogLikeArrCnt[20686]='0';
+mihanblogDisLikeArrCnt[20686]='0';
+mihanblogLikeArrCnt[20693]='0';
+mihanblogDisLikeArrCnt[20693]='0';
+mihanblogLikeArrCnt[20700]='0';
+mihanblogDisLikeArrCnt[20700]='0';
+	} catch(e){}
+
+
+
+    mihanblogPostLike = function(post_id){
+
+        mihanblogLikeCnt = (mihanblogLikeArrCnt[post_id]? mihanblogLikeArrCnt[post_id] : 0);
+        mihanblogDisLikeCnt = (mihanblogDisLikeArrCnt[post_id]? mihanblogDisLikeArrCnt[post_id] : 0);
+        mihanblogLikeCnt = parseInt(mihanblogLikeCnt);
+        mihanblogDisLikeCnt = parseInt(mihanblogDisLikeCnt);
+
+        document.write(
+                '<div class="mihanblog_like_wrapper ">'+
+                       '<div id="dislikeBar_'+post_id+'" onclick="mihanblogUpdateLike('+post_id+',\'dislike\')"   class="mihanblog_like_bar mihanblog_like_dislikeBar mihanblog_like_show_help ">-<div class="mihanblog_like_Cnt" id="disLikeCnt_'+post_id+'">'+mihanblogDisLikeCnt+'</div>'+
+                            '<span  class="mihanblog_like_v2_help mihanblog_like_v2_help_dislike clearfix"> '+
+                                '<span class="mihanblog_like_help_arrow mihanblog_like_help_arrow_dislike clearfix"></span>'+
+                                '<span class="mihanblog_like_help_text">نمی پسندم</span>'+
+                            '</span>'+
+                        '</div>'+
+                       '<div id="Like_'+post_id+'" class="mihanblog_like_border"></div>'+
+                       '<div id="likeBar_'+post_id+'" onclick="mihanblogUpdateLike('+post_id+',\'like\')"  class="mihanblog_like_bar mihanblog_like_likeBar mihanblog_like_show_help" >+<div class="mihanblog_like_Cnt" id="likeCnt_'+post_id+'">'+mihanblogLikeCnt+'</div>'+
+                            '<span  class="mihanblog_like_v2_help mihanblog_like_v2_help_like clearfix"> '+
+                                '<span class="mihanblog_like_help_arrow mihanblog_like_help_arrow_like clearfix"></span>'+
+                                '<span class="mihanblog_like_help_text">می پسندم</span>'+
+                            '</span>'+
+                        '</div>'+
+
+                '</div>'
+        );
+
+
+
+        mihanblogDisplayeLike(post_id);
+    }
+
+
+    mihanblogDisplayeLike = function(post_id){
+
+        mihanblogLikeCnt = (mihanblogLikeArrCnt[post_id]? mihanblogLikeArrCnt[post_id] : 0);
+        mihanblogDisLikeCnt = (mihanblogDisLikeArrCnt[post_id]? mihanblogDisLikeArrCnt[post_id] : 0);
+        mihanblogLikeCnt = parseInt(mihanblogLikeCnt);
+        mihanblogDisLikeCnt = parseInt(mihanblogDisLikeCnt);
+
+
+
+        sum = mihanblogLikeCnt - mihanblogDisLikeCnt;
+        backgroundBorder =  document.getElementById('Like_'+post_id);
+        var likeObj = document.getElementById('likeCnt_'+post_id);
+        var disLikeObj = document.getElementById('disLikeCnt_'+post_id);
+
+
+
+
+
+        likeObj.innerHTML =  mihanblogLikeCnt ;
+        disLikeObj.innerHTML =  mihanblogDisLikeCnt;
+
+        if(sum == 0){
+            backgroundBorder.style.backgroundImage = "url('/public/public/images/icons/like_likedislike.png')";
+            document.getElementById('dislikeBar_'+post_id).style.width = '19px';
+            document.getElementById('likeBar_'+post_id).style.width = '19px';
+        }else{
+             if(sum > 0){
+                 backgroundBorder.style.backgroundImage = "url('/public/public/images/icons/like_like.png')";
+                 document.getElementById('likeBar_'+post_id).style.width = '23px';
+                 document.getElementById('dislikeBar_'+post_id).style.width = '15px';
+             }else{
+                 backgroundBorder.style.backgroundImage = "url('/public/public/images/icons/like_dislike.png')";
+                 document.getElementById('likeBar_'+post_id).style.width = '15px';
+                 document.getElementById('dislikeBar_'+post_id).style.width = '23px';
+             }
+        }
+
+    }
+
+
+
+
+</script>
+
+<style type="text/css">
+
+
+    .clearfix {display: inline-block;}
+    .clearfix:after {
+        content: ".";
+        display: block;
+        height: 0;
+        clear: both;
+        visibility: hidden;
+    }
+
+    .mihanblog_like_wrapper {
+        color: #ffffff;
+        direction: ltr;
+        position: relative;
+    }
+    .mihanblog_like_wrapper span{
+        display: none;
+    }
+    .mihanblog_like_bar {
+        color: #FFFFFF;
+        cursor: pointer;
+        float: left;
+        font-size: 10px;
+        height: 20px;
+        line-height: 19px;
+        margin: 5px 0;
+    }
+    .mihanblog_like_likeBar {
+        background-color: #88B131;
+        padding-right: 5px;
+        border-top-right-radius: 2px;
+        border-bottom-right-radius: 2px;
+        text-align: right;
+    }
+    .mihanblog_like_likeBar:hover{
+        background-color: #699017;
+    }
+    .mihanblog_like_border {
+        background-color: #666666;
+        border: 1px solid #666666;
+        float: left;
+        font-size: 12px;
+        height: 20px;
+        margin-top: 2px;
+        width: 25px;
+        padding: 3px 5px 2px 0;
+        text-align: center;
+        border-radius: 2px;
+        color: #ffffff;
+        direction: ltr;
+        background-repeat: no-repeat ;
+        background-position: 4px center;
+    }
+    .mihanblog_like_border img {
+        margin-left: 2px;
+        margin-top: 2px;
+        width: 22px;
+    }
+    .mihanblog_like_dislikeBar {
+        background-color: #FF6F31;
+        padding-left: 5px;
+        border-top-left-radius: 2px;
+        border-bottom-left-radius: 2px;
+        text-align:left ;
+    }
+    .mihanblog_like_dislikeBar:hover{
+        background-color: #D54B10;
+    }
+
+
+
+    .mihanblog_like_show_help {
+        position: relative;
+    }
+    .mihanblog_like_show_help:hover span {
+        display: block;
+    }
+    .mihanblog_like_help_text {
+        background-color: white;
+        border: 1px solid #555555;
+        border-radius: 3px 3px 3px 3px;
+        color: #303030;
+        float: left;
+        font-size: 11px;
+        font-weight: normal;
+        padding: 5px 10px;
+    }
+
+    .mihanblog_like_help_arrow_dislike {
+        background: url("http://kamyaranyan.mihanblog.com/public/public/images/icons/like_hover_top.png") no-repeat scroll 16px 0 transparent;
+        left: 0;
+        top: -4px;
+    }
+
+    .mihanblog_like_help_arrow_like {
+        background: url("http://kamyaranyan.mihanblog.com/public/public/images/icons/like_hover_top _2.png") no-repeat scroll 16px 0 transparent;
+        left: -10px;
+        top: 29px;
+    }
+
+    .mihanblog_like_help_arrow{
+        height: 6px;
+        position: absolute;
+        width: 100px;
+
+    }
+
+    .mihanblog_like_v2_help_dislike {
+        left: -15px;
+        top: 24px;
+    }
+    .mihanblog_like_v2_help_like {
+        left: 0;
+        top: -35px;
+
+    }
+    .mihanblog_like_v2_help{
+        display: none;
+        position: absolute;
+        white-space: nowrap;
+        z-index: 1;
+    }
+
+    .mihanblog_like_Cnt{
+        display: inline;
+        color: #ffffff;
+    }
+
+</style><script>
+
+	statInfo = new Array();
+	setStatVar = function(index,value){
+		statInfo[index] = value;
+	}
+	getStatVar = function(index){
+		if(statInfo[index]) document.write(statInfo[index]);
+	}
+	
+	setStatVar('total_post','18622');
+	setStatVar('total_author','0');
+	setStatVar('modify_date','سه شنبه 4 آذر 1399');
+	
+	setStatVar('today_view','186');
+	setStatVar('yesterday_view','265');
+	
+	setStatVar('this_month_view','12519');
+	setStatVar('last_month_view','7215');
+
+	setStatVar('total_view','3646945');
+	setStatVar('last_view_date','شنبه 22 آذر 1399 (15:46)');
+
+
+
+    
+    function setStatFromClient()
+    {
+        var url = 'http://kamyaranyan.mihanblog.com/statupdate/?data[refereruri]=http://kamyaranyan.mihanblog.com/post/11626&data[postid]=&data[requesturi]=/post/archive/1399/4&data[sdate]=1607775900&data[hash]=f48fe59bc7f0c823e5643bdeb0c028f0&data[resolution]='+screen.width+' X '+screen.height;
+
+//        alert(url);
+//        var newjs = document.createElement("SCRIPT");
+//        newjs.type = 'text/javascript';
+//        newjs.src = url;
+//
+//        var newdiv = document.createElement("DIV");
+//        newdiv.setAttribute("style","display:none");
+
+        document.write(unescape('%3Cscript src="'+url+'" type="text/javascript"%3E%3C/script%3E'));
+//        newdiv.appendChild (newjs);
+//        document.write(newjs);
+//        document.write(appendChild (newdiv);
+
+    };
+    setStatFromClient();
+        
+</script><script>
+	messageForm = function(post_id){
+		try{
+			window.open('/message','message','status=yes,scrollbars=yes,toolbar=no,menubar=no,location=no ,width=480px,height=550px');
+		} catch(e){}
+	}
+</script><script>
+	linkdailyForm = function(){
+		try{
+			window.open('/linkdaily/new','linkdaily','status=yes,scrollbars=yes,toolbar=no,menubar=no,location=no ,width=500px,height=460px');
+		} catch(e){}
+	}
+</script><script>
+
+var MihanblogShopAdsArray = new Array();
+
+function GetMihanBlogShowAds(){
+	if(MihanblogShopAdsArray.length){
+		var adsTarget = 'MihanblogShopAds';
+		var containerWidth = document.getElementById(adsTarget).offsetWidth;
+		if(containerWidth>=200){
+			var adsCnt = parseInt(containerWidth / 200) ;
+			if(adsCnt>MihanblogShopAdsArray.length){
+				adsCnt = MihanblogShopAdsArray.length ; 
+			}
+//			var OneAdsWidth = parseInt(containerWidth / adsCnt) ;
+			var OneAdsWidth = containerWidth / adsCnt ;
+			if(OneAdsWidth>400){
+				OneAdsWidth = 400 ;
+			}
+			var OutHtml = '';
+			var img = '';
+			var link = '';
+			var title = '';
+			var description = '';
+			var imgWidth = 70;
+			if(OneAdsWidth>230){
+				imgWidth = 80;
+			}
+			if(OneAdsWidth>300){
+				imgWidth = 90;
+			}
+			for(adsOne=0;adsOne<adsCnt;adsOne++){
+				
+				img = MihanblogShopAdsArray[adsOne]['img'];
+				link = MihanblogShopAdsArray[adsOne]['link'];
+				title = MihanblogShopAdsArray[adsOne]['title'];
+				description = MihanblogShopAdsArray[adsOne]['description'];
+				
+				OutHtml += '<td style="background-color:#FFF;width: '+OneAdsWidth+'px;border:1px solid #f00;margin:0px 0px;font-size:11px;font-family:tahoma;padding:2px;margin:0px 0px;font-size:11px;border: 1px solid BurlyWood; padding: 1px; height: '+(imgWidth+25)+'px;">';
+
+				OutHtml += '	<a href="http://kamyaranyan.mihanblog.com/post/archive/1399/'+link+'" target="_blank" style="text-decoration:none">';
+
+				OutHtml += '			<div style="width: '+(OneAdsWidth-16)+'px;cursor:pointer;font-size:12px;padding: 4px 1px 4px 7px; white-space: nowrap; text-align: center; font-weight: bold; color: blue;white-space:nowrap;overflow:hidden">';
+				OutHtml += 					title;
+				OutHtml += '			</div>';
+				OutHtml += '			<div style="cursor:pointer;padding: 1px; display: block; float: right; width: '+imgWidth+'px;">';
+				OutHtml += '				<img src="'+img+'.html" style="border:0px;padding:0px;margin:0px;width:'+imgWidth+'px;height:'+imgWidth+'px;">';
+				OutHtml += '			</div>';
+				OutHtml += '			<div style="padding: 1px; display: block; float: right; width: '+(OneAdsWidth-13-imgWidth)+'px; text-align: right;overflow:hidden">';
+				OutHtml += '				<div style="overflow:hidden;cursor:pointer;padding: 2px 3px; line-height: 17px; height: '+(imgWidth-3)+'px; text-align: justify;color:#000;direction:rtl">';
+				OutHtml += 						description;
+				OutHtml += '				</div>';
+				OutHtml += '			</div>';
+
+				OutHtml += '	</a>';
+
+				OutHtml += '</td>';
+			}
+			
+			var Out = '<table align="center" cellpadding="0" cellspacing="2" style="width:'+(OneAdsWidth*adsCnt)+'px;"><tr>'+OutHtml+'</tr></table>'; 
+			
+			Out = '<div style="text-align:center;padding:0px;margin:3px auto;">'+Out+'</div>'; 
+			
+			document.getElementById(adsTarget).style.height = (imgWidth+35)+'px' ;
+			document.getElementById(adsTarget).innerHTML = Out ;
+		}
+	}
+}
+</script>
+    <style>
+        @font-face {
+            font-family: 'Mihan-Iransans';
+            src: url('http://kamyaranyan.mihanblog.com/public/public/fonts/Iransans.eot');
+            src: url('http://kamyaranyan.mihanblog.com/public/public/fonts/Iransans.eot?') format('embedded-opentype'),
+            url('http://kamyaranyan.mihanblog.com/public/public/fonts/Iransans.woff2') format('woff2'),
+            url('http://kamyaranyan.mihanblog.com/public/public/fonts/Iransans.woff') format('woff'),
+            url('http://kamyaranyan.mihanblog.com/public/public/fonts/Iransans.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+        @font-face {
+            font-family: 'Mihan-IransansBold';
+            src: url('http://kamyaranyan.mihanblog.com/public/public/fonts/Iransans-Black.eot');
+            src: url('http://kamyaranyan.mihanblog.com/public/public/fonts/Iransans-Black.eot?') format('embedded-opentype'),
+            url('http://kamyaranyan.mihanblog.com/public/public/fonts/Iransans-Black.woff2') format('woff2'),
+            url('http://kamyaranyan.mihanblog.com/public/public/fonts/Iransans-Black.woff') format('woff'),
+            url('http://kamyaranyan.mihanblog.com/public/public/fonts/Iransans-Black.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+        @font-face {
+            font-family: 'Mihan-IransansLight';
+            src: url('http://kamyaranyan.mihanblog.com/public/public/fonts/Iransans-UltraLight.eot');
+            src: url('http://kamyaranyan.mihanblog.com/public/public/fonts/Iransans-UltraLight.eot?') format('embedded-opentype'),
+            url('http://kamyaranyan.mihanblog.com/public/public/fonts/Iransans-UltraLight.woff2') format('woff2'),
+            url('http://kamyaranyan.mihanblog.com/public/public/fonts/Iransans-UltraLight.woff') format('woff'),
+            url('http://kamyaranyan.mihanblog.com/public/public/fonts/Iransans-UltraLight.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+        @font-face {
+            font-family: 'Mihan-Nassim';
+            src: url('http://kamyaranyan.mihanblog.com/public/public/fonts/Nassim.eot');
+            src: url('http://kamyaranyan.mihanblog.com/public/public/fonts/Nassim.eot?') format('embedded-opentype'),
+            url('http://kamyaranyan.mihanblog.com/public/public/fonts/Nassim.woff2') format('woff2'),
+            url('http://kamyaranyan.mihanblog.com/public/public/fonts/Nassim.woff') format('woff'),
+            url('http://kamyaranyan.mihanblog.com/public/public/fonts/Nassim.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+        @font-face {
+            font-family: 'Mihan-Koodak';
+            src: url('http://kamyaranyan.mihanblog.com/public/public/fonts/Koodak.eot');
+            src: url('http://kamyaranyan.mihanblog.com/public/public/fonts/Koodak.eot?') format('embedded-opentype'),
+            url('http://kamyaranyan.mihanblog.com/public/public/fonts/Koodak.woff2') format('woff2'),
+            url('http://kamyaranyan.mihanblog.com/public/public/fonts/Koodak.woff') format('woff'),
+            url('http://kamyaranyan.mihanblog.com/public/public/fonts/Koodak.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+        @font-face {
+            font-family: 'Mihan-Yekan';
+            src: url('http://kamyaranyan.mihanblog.com/public/public/fonts/Yekan.eot');
+            src: url('http://kamyaranyan.mihanblog.com/public/public/fonts/Yekan.eot?') format('embedded-opentype'),
+            url('http://kamyaranyan.mihanblog.com/public/public/fonts/Yekan.woff2') format('woff2'),
+            url('http://kamyaranyan.mihanblog.com/public/public/fonts/Yekan.woff') format('woff'),
+            url('http://kamyaranyan.mihanblog.com/public/public/fonts/Yekan.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+        @font-face {
+            font-family: 'FontAwesome';
+            src: url('http://kamyaranyan.mihanblog.com/public/public/fonts/fontawesome_webfont.eot');
+            src: url('http://kamyaranyan.mihanblog.com/public/public/fonts/fontawesome_webfont.eot?') format('embedded-opentype'),
+            url('http://kamyaranyan.mihanblog.com/public/public/fonts/fontawesome_webfont.woff2') format('woff2'),
+            url('http://kamyaranyan.mihanblog.com/public/public/fonts/fontawesome_webfont.woff') format('woff'),
+            url('http://kamyaranyan.mihanblog.com/public/public/fonts/fontawesome_webfont.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+
+
+        
+
+        /* Smartphones (portrait and landscape) ----------- */
+
+        /*
+        @media only screen and (max-width : 480px) and (min-width : 320px) {
+            .sabaClick_advert__wrapper{
+                display:block;
+            }
+            .sabaClick_advert__inner{
+                max-width: 90%;
+                margin: 0 5%;
+            }
+        }
+        */
+
+    </style>
+
+
+
+
+
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+<meta name="designer" content="inventor_robot@yahoo.com"/>
+<meta name="author" content="کامیاران نیوز"/>
+<meta name="language" content="Farsi"/>
+<meta name="description" content="ما هستیم ویک قلب کوچک ودنیائی به بزرگی کامیاران شهری سرشار از عشق، عشق به خوبیها
+"/>
+<meta name="keywords" content="سلام بر کامیاران"/> 
+
+<link rel="alternate" type="application/rss+xml" title="وبسایت کامیاران نیوز صدای مردم گرانقدر کامیاران" href="../../rss/index.html" />
+<link rel="alternate" type="application/atom+xml" title="وبسایت کامیاران نیوز صدای مردم گرانقدر کامیاران" href="../../atom/index.html" />
+<link rel="stylesheet" type="text/css" href="../../../../static.mihanblog.com/public/user_data/user_files/153/458214/HideMenu/style.css" media="screen"/> 
+
+<title>وبسایت کامیاران نیوز صدای مردم گرانقدر کامیاران - مطالب  تیر 1399</title>
+<script type="text/javascript" src="../../../../static2.mihanblog.com/public/user_data/user_files/107/318819/Eideha/jquery-1.4.2.min.js"></script>
+<link rel="stylesheet" type="text/css" href="http://www.jonbeshnet.ir/sites/default/files/webtools/themeblog/hidemenu/iconmenu.css" />
+<script src="../../../../static.mihanblog.com/public/user_data/user_files/153/458214/HideMenu/jquery.min.js"></script>
+<script src="../../../../static.mihanblog.com/public/user_data/user_files/153/458214/HideMenu/iconmenu.js"></script>
+<script>
+
+ddiconmenu.docinit({ // initialize an Icon Menu
+	menuid:'myiconmenu', //main menu ID
+	easing:"easeInOutCirc",
+	dur:500 //<--no comma after last setting
+})
+
+
+</script>
+<link rel="stylesheet" type="text/css" href="http://www.jonbeshnet.ir/sites/default/files/webtools/themeblog/hidemenu/iconmenuleft.css" />
+<script src="../../../../static.mihanblog.com/public/user_data/user_files/153/458214/HideMenu/iconmenuleft.js"></script>
+<script>
+
+ddiconmenuleft.docinit({ // initialize an Icon Menu
+	menuid:'myiconmenuleft', //main menu ID
+	easing:"easeInOutCirc",
+	dur:500 //<--no comma after last setting
+})
+
+
+</script>
+<script>
+	 $(document).ready(function() {
+	 $('a[href=#top]').click(function(){
+	 $('html, body').animate({scrollTop:0}, 'slow');
+	 	return false;
+	});
+	});
+</script>
+
+
+</head>
+
+<body id="top">
+<!-- Start BG -->
+<div id="bg">
+<!-- Start Menu -->
+<div id="jquery-script-menu">
+<div class="nav">
+		    <div class="nav1"></div>
+		    <div class="nav2">
+		    <ul>
+		    <li><a href="../../../index.html">صفحه اول</a></li>|
+		    <li><a href="mailto:mr1968rm@yahoo.com">پست الكترونیك</a></li>|
+			<li><a href="javascript:messageForm()">تماس با مدیر وبلاگ</a></li>|
+			<li><a href="../../list.html">آرشیو مطالب</a>|</li>
+			<li><a href="http://kamyaranyan.mihanblog.com/m/">مشاهده در موبایل</a></li>|
+			<li><a href="../../rss/index.html" title="RSS">RSS</a></li>
+		    </ul>
+		    </div>
+		    <div class="nav3">
+			<form method="get" action="http://google.com/search" class="sch"><input name="sitesearch" value="http://kamyaranyan.mihanblog.com" type="hidden"/>
+			<input type="text" name="q" size="22" class="txt" style="color:#000000;"/> <input type="submit" value=" " class="btn"/>
+			</form>
+			</div>
+		    <div class="toppage">
+      <a href="4.html#top" title="بالای صفحه">
+	<img border="0" src="../../../../static.mihanblog.com/public/user_data/user_files/153/458214/HideMenu/top.png" width="32px" height="32px"/></a></div>
+   
+	        </div>
+	        </div>
+<!-- End Menu -->
+<!-- Start Header -->
+<div class="header" style="background: url('../../../../static.mihanblog.com/public/user_data/user_files/153/458214/HideMenu/Header.jpg') no-repeat top">
+  <h1><p><a href="../../../index.html">وبسایت کامیاران نیوز صدای مردم گرانقدر کامیاران</a></p></h1>
+</div>
+<!-- End Header -->
+
+<!-- Start Con-->
+<div class="con">
+<ul id="myiconmenu" class="iconmenu">
+<li><a class="icon-menu" href="4.html#" rel="right"></a></li>
+</ul>
+<ul id="myiconmenuleft" class="iconmenuleft">
+<li><a class="icon-menuleft" href="4.html#" rel="left"></a></li>
+</ul>
+
+<!-- Start scsl -->
+<div class="sc-all"><div class="sc">
+<!--Start Post-->
+		<div id="MihanblogShopAds" style="display:block;height:0px;width:100%;border:0px"></div>
+		            <div class="post clearfix">
+            <div class="p-head">
+            <div class="p-head1">
+            <div class="p-head2">		
+			<b><a href="http://kamyaranyan.mihanblog.com/post/20700">جدیدترین خبرهای عمومی کشور درکامیاران نیوز امروز</a></b>
+			</div>
+            </div>
+            </div>
+	        <div class="p-con clearfix">
+	        <div class="p-con1">
+	        <div class="p-con2">
+	        <div class="p-photo">
+	        </div>
+	        <div class="p-height">
+			<div id="InPost_MihanblogShopAds" style="display:block;height:0px;width:100%;border:0px"></div>
+
+
+<p style="text-align:center"><span style="font-size:14px"><span style="color:#ff0000"><strong><br></strong></span></span></p><p style="text-align:center"><span style="font-size:14px"><span style="color:#ff0000"><strong>جدیدترین خبرهای عمومی کشور درکامیاران نیوز امروز</strong></span></span></p><p style="text-align:center"><span style="font-size:16px"><strong><span style="color:#000099"><br></span></strong></span></p><p style="text-align:center"><span style="font-size:16px"><strong><span style="color:#000099">جهت مطالعه هرخبربرروی تیتر آن خبر کلیک نمائید</span></strong></span></p><p>&nbsp;</p><p><span style="font-size:12px"><span style="color:#000000"><strong><img alt="" src="https://rasanews.ir/files/fa/news/1399/4/29/299225_207.jpg" style="float:right" width="23" height="16"></strong></span></span></p><p><span style="font-size:12px"><strong><a href="http://kordira.blogfa.com/post/47325"><span style="color:#e74c3c">امام جمعه جدید کامیاران معرفی شد</span></a></strong></span></p><p>&nbsp;</p><p><span style="font-size:12px"><span style="color:#000000"><strong><img alt="نظام اسلامی در مقابله با تروریست‌ها موفق عمل کرد" src="https://media.farsnews.ir/Uploaded/Files/Images/1399/04/29/13990429000868_Test_PhotoN.JPG" style="float:right" width="29" height="15"></strong></span></span></p><p><span style="font-size:12px"><strong><a href="http://kordira.blogfa.com/post/47326"><span style="color:#000000">امام جمعه اهل تشیع کامیاران:نظام اسلامی در مقابله با تروریست‌ها موفق عمل کرد</span></a></strong></span></p><p>&nbsp;</p><p><span style="font-size:12px"><span style="color:#000000"><strong><img alt="" src="https://rasanews.ir/files/fa/news/1399/4/29/298950_845.jpg" style="float:right" width="28" height="19"></strong></span></span></p><p><span style="font-size:12px"><strong><a href="http://kordira.blogfa.com/post/47330"><span style="color:#000000">مدیر مدرسه علمیه کامیاران: آشوب، تحریم و ایجاد ناامنی بخشی از توطئه های دشمن برای نظام اسلامی است </span></a></strong></span></p><p>&nbsp;</p><p><span style="font-size:12px"><span style="color:#000000"><strong><img alt="روحانیون جامعه را به سمت آرامش هدایت کنند/کامیاران الگوی اتحاد در کردستان است" src="https://media.farsnews.ir/Uploaded/Files/Images/1399/04/29/13990429000914_Test_PhotoN.JPG" style="float:right" width="32" height="16"></strong></span></span></p><p><span style="font-size:12px"><strong><a href="http://kordira.blogfa.com/post/47327"><span style="color:#e74c3c">کامیاران الگوی اتحاد در کردستان است</span></a></strong></span></p><p>&nbsp;</p><p><span style="font-size:12px"><span style="color:#000000"><strong><img alt="«کوسالان»درآتش می سوزد/بسیج ظرفیت های دولتی و مردمی برای مهارحریق" title="«کوسالان»درآتش می سوزد/بسیج ظرفیت های دولتی و مردمی برای مهارحریق" src="https://media.mehrnews.com/d/2020/07/17/3/3501445.jpg" style="float:right" width="30" height="20"></strong></span></span></p><p><span style="font-size:12px"><strong><a href="http://kordira.blogfa.com/post/47329"><span style="color:#000000">«کوسالان»درآتش می سوزد بسیج ظرفیت های دولتی و مردمی برای مهارحریق</span></a></strong></span></p><p>&nbsp;</p><p><span style="font-size:12px"><span style="color:#000000"><strong><img alt="وقوع تصادف رانندگی در سنندج سه کشته و زخمی برجا گذاشت" title="وقوع تصادف رانندگی در سنندج سه کشته و زخمی برجا گذاشت" src="https://media.mehrnews.com/d/2020/07/13/3/3498536.jpg" style="float:right" width="34" height="26"></strong></span></span></p><p><span style="font-size:12px"><strong><a href="http://kordira.blogfa.com/post/47328"><span style="color:#000000">عصر یکشنبه؛ وقوع تصادف رانندگی در سنندج سه کشته و زخمی برجا گذاشت</span></a></strong></span></p><p>&nbsp;</p><p><span style="font-size:12px"><span style="color:#000000"><strong><img alt="ابوالقاسم طالبی: برای بهبود حال روحانی زندانی‌ام کنید!" src="https://media.farsnews.ir/Uploaded/Files/Images/1397/10/09/13971009000797_Test_PhotoN.jpg" style="float:right" width="29" height="15"></strong></span></span></p><p><span style="font-size:12px"><strong><a href="http://kordira.blogfa.com/post/47324"><span style="color:#e74c3c">ابوالقاسم طالبی: برای بهبود حال روحانی زندانی‌ام کنید!</span></a></strong></span></p><p>&nbsp;</p><p><span style="font-size:12px"><span style="color:#000000"><strong><img alt="تسهیلات یک میلیون تومانی به خانوارهای پنج نفره در پایان شهریور پرداخت می‌شود" src="https://media.farsnews.ir/Uploaded/Files/Images/1399/04/23/13990423000815_Test_PhotoN.jpg" style="float:right" width="32" height="16"></strong></span></span></p><p><span style="font-size:12px"><strong><a href="http://kordira.blogfa.com/post/47323"><span style="color:#000000">تسهیلات یک میلیون تومانی به خانوارهای پنج نفره در پایان شهریور پرداخت می‌شود</span></a></strong></span></p><p>&nbsp;</p><p><span style="font-size:12px"><span style="color:#000000"><strong><img alt="سرویس ایران- هادی نوروزی &nbsp;سردبیر روزنامه باختر در یادداشت زیر می نویسد: انتظار می رود که نسبت به مقوله دسترسی آسان به سلاح گرم در شهر کرمانشاه اقدامی عاجل صورت گیرد. &nbsp;" src="http://www.ziryanmukryan.ir/uploads/post/92056.jpg" style="float:right" width="31" height="22"></strong></span></span></p><p><span style="font-size:12px"><strong><a href="http://kordira.blogfa.com/post/47331"><span style="color:#e74c3c">قتل ۲ فرزند خانواده در شادگان توسط پدر</span></a></strong></span></p><p>&nbsp;</p><p><span style="font-size:12px"><span style="color:#000000"><strong><img alt="دفن 7167 نفر از مبتلایان به کرونا در بهشت زهرا (س)" src="https://media.farsnews.ir/Uploaded/Files/Images/1399/01/10/13990110000699637211032631121029_76652_PhotoN.jpg" style="float:right" width="32" height="16"></strong></span></span></p><p><span style="font-size:12px"><strong><a href="http://kordira.blogfa.com/post/47322"><span style="color:#000000">دفن 7167 نفر از مبتلایان به کرونا در بهشت زهرا (س)</span></a></strong></span></p><p>&nbsp;</p><p><span style="font-size:12px"><span style="color:#000000"><strong><img alt="آتش گرفتن دومین ناو جنگی آمریکا در یک هفته" src="https://media.farsnews.ir/Uploaded/Files/Images/1399/04/29/13990429000438_Test_PhotoN.jpg" style="float:right" width="36" height="18"></strong></span></span></p><p><span style="font-size:12px"><strong><a href="http://kordira.blogfa.com/post/47321"><span style="color:#e74c3c">آتش گرفتن دومین ناو جنگی آمریکا در یک هفته</span></a></strong></span></p></div><br><b></b>
+				
+			<br><br><font style="font-size:8pt;">
+<br>
+			داغ کن:
+			<a   target="_blank"  
+			href="http://www.cloob.com/share/link/add?url=http://kamyaranyan.mihanblog.com//post/20700&title=جدیدترین خبرهای عمومی کشور درکامیاران نیوز امروز"> 
+			<img alt="داغ کن - کلوب دات کام" src="../../../../static.mihanblog.com/public/user_data/user_files/153/458214/orangeZitova/100c.gif" style='border: none; padding: 0px'/> 
+			</a>
+			<br>
+								به اشتراک گذاری:
+								<!-- AddToAny BEGIN -->
+			<a class="a2a_dd" href="4.html#"><img src="http://static.addtoany.com/buttons/share_save_120_16.gif" width="120" height="16" border="0" title="Share"/></a>
+			<script type="text/javascript">
+			var a2a_config = a2a_config || {};
+			a2a_config.linkname = "جدیدترین خبرهای عمومی کشور درکامیاران نیوز امروز";
+			a2a_config.linkurl = "http://kamyaranyan.mihanblog.com/post/20700";
+			a2a_config.show_title = 1;
+			</script>
+			<script type="text/javascript" src="http://static.addtoany.com/menu/locale/fa.js" charset="utf-8"></script>
+			<script type="text/javascript" src="http://static.addtoany.com/menu/page.js"></script>
+			<!-- AddToAny END --><br><br>
+
+			</font>
+	        </div>
+	        </div>
+	        <div class="p-con3"><div class="p-con4">
+	        <div class="date">نوشته شده در تاریخ : سه شنبه 31 تیر 1399 توسط : <a href="../../author/712301.html">کامیاران نیوز</a></div>
+	        <div class="nazar"><a target="_self" href="javascript:newComment(20700)" >نظرات (<script>setCommentCnt(20700)</script>)</a></div>
+	        </div></div>
+	        </div>
+            </div>
+            <div class="post clearfix">
+            <div class="p-head">
+            <div class="p-head1">
+            <div class="p-head2">		
+			<b><a href="http://kamyaranyan.mihanblog.com/post/20695">جدیدترین خبرهای عمومی کشور درکامیاران نیوز امروز27تیرماه99</a></b>
+			</div>
+            </div>
+            </div>
+	        <div class="p-con clearfix">
+	        <div class="p-con1">
+	        <div class="p-con2">
+	        <div class="p-photo">
+	        </div>
+	        <div class="p-height">
+			
+
+
+<p style="text-align:center"><span style="font-size:14px"><span style="color:#ff0000"><strong><br></strong></span></span></p><p style="text-align:center"><span style="font-size:14px"><span style="color:#ff0000"><strong>جدیدترین خبرهای عمومی کشور درکامیاران نیوز امروز27تیرماه99</strong></span></span></p><p style="text-align:center"><br></p><p style="text-align:center">&nbsp;<span style="font-size:16px"><strong><span style="color:#000099">جهت مطالعه هرخبربرروی تیتر آن خبر کلیک نمائید</span></strong></span></p><p><img alt="تفحص پیکر مطهر سه شهید در منطقه چنگوله «مهران»" src="https://media.farsnews.ir/Uploaded/Files/Images/1399/04/24/13990424001064_Test_PhotoN.jpg" style="float:right" width="37" height="19"></p><p style="text-align:justify"><span style="font-size:12px"><strong><a href="http://kordira.blogfa.com/post/47267"><span style="color:#000000">تفحص پیکر مطهر سه شهید در منطقه چنگوله «مهران»</span></a></strong></span></p><p style="text-align:justify">&nbsp;</p><p><img alt="اعلام شعار اربعین ۹۹/ انتخاب شعار به معنی برگزاری مراسم اربعین نیست" src="https://media.farsnews.ir/Uploaded/Files/Images/1398/07/26/13980726000433_Test_PhotoN.jpg" style="float:right" width="32" height="16"></p><p style="text-align:justify"><span style="font-size:12px"><strong><a href="http://kordira.blogfa.com/post/47270"><span style="color:#000000">اعلام شعار اربعین ۹۹</span></a></strong></span></p><p>&nbsp;</p><p><img alt="" src="http://news.police.ir/NewsGallery/Images/News/Larg_Pic/1397-11-03/IMAGE11548233401288.jpg" style="float:right" width="38" height="17"></p><p style="text-align:justify"><span style="font-size:12px"><strong><a href="http://kordira.blogfa.com/post/47274"><span style="color:#000000">بیش از هفت هزار قلم لوازم خانگی قاچاق در کامیاران کشف شد</span></a></strong></span></p><p style="text-align:justify">&nbsp;</p><p style="text-align:justify"><span style="font-size:12px"><strong><span style="color:#000000"><img alt="https://www.upsara.com/images/f096168_____.jpg" src="https://www.upsara.com/images/f096168_____.jpg" style="float:right" width="16" height="19"></span><a href="http://kordira.blogfa.com/post/47268"><span style="color:#000000">درفقدان مرحوم مغفور علی اشرف باجلانی به سوگ نشسته ایم</span></a></strong></span></p><p style="text-align:justify">&nbsp;</p><p><img alt="شناسایی 69 بیمار جدید کرونایی در کردستان/6 نفر دیگر جان باختند" src="https://media.farsnews.ir/Uploaded/Files/Images/1399/04/25/13990425000033_Test_PhotoN.jpg" style="float:right" width="31" height="16"></p><p style="text-align:justify"><span style="font-size:12px"><strong><a href="http://kordira.blogfa.com/post/47286"><span style="color:#000000">شناسایی 69 بیمار جدید کرونایی در کردستان/6 نفر دیگر جان باختند</span></a></strong></span></p><p style="text-align:justify">&nbsp;</p><p><a rel="nofollow" href="https://www.tasnimnews.com/fa/news/1399/04/25/2305527/%D8%A2%D9%82%D8%A7%DB%8C-%D8%A7%D8%B3%D8%AA%D8%A7%D9%86%D8%AF%D8%A7%D8%B1-%DA%86%D8%B1%D8%A7-%D8%AF%D8%B1-%D8%A8%D8%B1%D8%A7%D8%A8%D8%B1-%D8%A7%D8%B3%D8%AA%D8%AE%D8%AF%D8%A7%D9%85-%D9%87%D8%A7%DB%8C-%D8%BA%DB%8C%D8%B1%D9%82%D8%A7%D9%86%D9%88%D9%86%DB%8C-%D8%AF%D8%B1-%D8%A7%D8%B3%D8%AA%D8%A7%D9%86%D8%AF%D8%A7%D8%B1%DB%8C-%DA%A9%D8%B1%D8%AF%D8%B3%D8%AA%D8%A7%D9%86-%D8%B3%DA%A9%D9%88%D8%AA-%DA%A9%D8%B1%D8%AF%D9%87-%D8%A7%DB%8C%D8%AF"><img alt="آقای استاندار؛ چرا در برابر استخدام‌های غیرقانونی در استانداری کردستان سکوت کرده‌اید؟" src="https://newsmedia.tasnimnews.com/Tasnim/Uploaded/Image/1397/09/10/1397091014541823016038324.jpg" style="float:right" width="21" height="15"></a></p><p style="text-align:justify"><span style="font-size:12px"><strong><a href="http://kordira.blogfa.com/post/47272"><span style="color:#000000">آقای استاندار؛ چرا در برابر استخدام‌های غیرقانونی در استانداری کردستان سکوت کرده‌اید؟ </span></a></strong></span></p><p style="text-align:justify">&nbsp;</p><p><img alt="موزه اتوبوس‌های قدیمی در پایتخت راه اندازی می‌شود+ عکس" src="https://media.farsnews.ir/Uploaded/Files/Images/1399/04/25/13990425000127_Test_PhotoN.jpg" style="float:right" width="32" height="16"></p><p style="text-align:justify"><span style="font-size:12px"><strong><a href="http://kordira.blogfa.com/post/47269"><span style="color:#000000">موزه اتوبوس‌های قدیمی در پایتخت راه اندازی می‌شود+ عکس</span></a></strong></span></p><p style="text-align:justify">&nbsp;</p><p>&nbsp;</p><p style="text-align:justify"><span style="font-size:12px"><strong><a href="http://kordira.blogfa.com/post/47271"><span style="color:#000000">پشت‌پرده انتخاب شهردار مریوان/"برادر نماینده مجلس" شهردار مریوان شد </span></a></strong></span></p><p style="text-align:justify">&nbsp;</p><p><img alt="۷۳ بیمار جدید مبتلا به ویروس کرونا در کردستان شناسایی شدند" title="۷۳ بیمار جدید مبتلا به ویروس کرونا در کردستان شناسایی شدند" src="https://media.mehrnews.com/d/2020/06/16/3/3477602.jpg" style="float:right" width="33" height="25"></p><p style="text-align:justify"><span style="font-size:12px"><strong><a href="http://kordira.blogfa.com/post/47273"><span style="color:#000000">۷۳ بیمار جدید مبتلا به ویروس کرونا در کردستان شناسایی شدند</span></a></strong></span></p><p style="text-align:justify">&nbsp;</p><p><img alt="انهدام و دستگیری تیم منافقین در شیراز توسط اطلاعات سپاه" src="https://media.farsnews.ir/Uploaded/Files/Images/1399/02/15/13990215000577_Test_PhotoN.jpg" style="float:right" width="30" height="15"></p><p style="text-align:justify"><span style="font-size:12px"><strong><a href="http://kordira.blogfa.com/post/47288"><span style="color:#e74c3c">انهدام و دستگیری تیم منافقین در شیراز توسط اطلاعات سپاه</span></a></strong></span><span style="font-size:14px"><strong><a href="http://kordira.blogfa.com/post/47288"><span style="color:#000000">(جدید)</span></a></strong></span></p><p style="text-align:justify">&nbsp;</p><p><img alt="سقوط هواپیمای شناسایی در ترکیه 7 کشته برجای گذاشت" src="https://media.farsnews.ir/Uploaded/Files/Images/1399/04/26/13990426000104_Test_PhotoN.jpg" style="float:right" width="32" height="16"></p><p style="text-align:justify"><span style="font-size:12px"><strong><a href="http://kordira.blogfa.com/post/47289"><span style="color:#e74c3c">سقوط هواپیمای شناسایی در ترکیه 7 کشته برجای گذاشت</span></a></strong></span><span style="font-size:14px"><strong><a href="http://kordira.blogfa.com/post/47288"><span style="color:#000000">(جدید)</span></a></strong></span></p><p style="text-align:justify">&nbsp;</p><p><img alt="" src="https://cdn.mashreghnews.ir/d/2020/07/15/4/2854677.jpg" style="float:right" width="26" height="26"></p><p style="text-align:justify"><span style="font-size:12px"><strong><a href="http://kordira.blogfa.com/post/47290"><span style="color:#e67e22">همدستان آدم‌کش‌ها را بشناسید</span></a></strong></span><span style="font-size:14px"><strong><a href="http://kordira.blogfa.com/post/47288"><span style="color:#000000">(جدیدترین)</span></a></strong></span></p><p style="text-align:justify">&nbsp;</p><p><img alt="ابراهیم داروغه‌زاده" title=" داروغه‌زاده با ضد انقلاب و سلطنت‌طلب‌ها همصدا شد" src="https://cdn.mashreghnews.ir/d/2018/11/25/2/2392410.jpg" style="float:right" width="30" height="15"></p><p style="text-align:justify"><span style="font-size:12px"><strong><a href="http://kordira.blogfa.com/post/47291"><span style="color:#e67e22">داروغه‌زاده با ضد انقلاب و سلطنت‌طلب‌ها همصدا شد</span></a></strong></span><span style="font-size:14px"><strong><a href="http://kordira.blogfa.com/post/47288"><span style="color:#000000">(جدیدترین)</span></a></strong></span></p><p style="text-align:justify">&nbsp;</p><p><img alt="" src="https://fararu.com/files/fa/news/1399/4/26/716054_240.jpg" style="float:right" width="34" height="19"></p><p style="text-align:justify"><span style="font-size:14px"><strong><a href="http://kordira.blogfa.com/post/47293"><span style="color:#27ae60">عادل فردوسی‌پور به شلاق محکوم شد؟! </span><span style="color:#000000">(جدیدترین)</span></a></strong></span></p></div><br><b></b>
+				
+			<br><br><font style="font-size:8pt;">
+<br>
+			داغ کن:
+			<a   target="_blank"  
+			href="http://www.cloob.com/share/link/add?url=http://kamyaranyan.mihanblog.com//post/20695&title=جدیدترین خبرهای عمومی کشور درکامیاران نیوز امروز27تیرماه99"> 
+			<img alt="داغ کن - کلوب دات کام" src="../../../../static.mihanblog.com/public/user_data/user_files/153/458214/orangeZitova/100c.gif" style='border: none; padding: 0px'/> 
+			</a>
+			<br>
+								به اشتراک گذاری:
+								<!-- AddToAny BEGIN -->
+			<a class="a2a_dd" href="4.html#"><img src="http://static.addtoany.com/buttons/share_save_120_16.gif" width="120" height="16" border="0" title="Share"/></a>
+			<script type="text/javascript">
+			var a2a_config = a2a_config || {};
+			a2a_config.linkname = "جدیدترین خبرهای عمومی کشور درکامیاران نیوز امروز27تیرماه99";
+			a2a_config.linkurl = "http://kamyaranyan.mihanblog.com/post/20695";
+			a2a_config.show_title = 1;
+			</script>
+			<script type="text/javascript" src="http://static.addtoany.com/menu/locale/fa.js" charset="utf-8"></script>
+			<script type="text/javascript" src="http://static.addtoany.com/menu/page.js"></script>
+			<!-- AddToAny END --><br><br>
+
+			</font>
+	        </div>
+	        </div>
+	        <div class="p-con3"><div class="p-con4">
+	        <div class="date">نوشته شده در تاریخ : پنجشنبه 26 تیر 1399 توسط : <a href="../../author/712301.html">کامیاران نیوز</a></div>
+	        <div class="nazar"><a target="_self" href="javascript:newComment(20695)" >نظرات (<script>setCommentCnt(20695)</script>)</a></div>
+	        </div></div>
+	        </div>
+            </div>
+            <div class="post clearfix">
+            <div class="p-head">
+            <div class="p-head1">
+            <div class="p-head2">		
+			<b><a href="http://kamyaranyan.mihanblog.com/post/20694">تمامی خبرهای شهدای حادثه  تروریستی سروآباد درکامیاران نیوز امروز</a></b>
+			</div>
+            </div>
+            </div>
+	        <div class="p-con clearfix">
+	        <div class="p-con1">
+	        <div class="p-con2">
+	        <div class="p-photo">
+	        </div>
+	        <div class="p-height">
+			
+
+
+
+<p style="text-align:center"><span style="font-size:14px"><span style="color:#ff0000"><strong><br></strong></span></span></p><p style="text-align:center"><span style="font-size:14px"><span style="color:#ff0000"><strong>تمامی خبرهای شهدای حادثه&nbsp; تروریستی سروآباد درکامیاران نیوز امروز</strong></span></span></p><p style="text-align:center"><br></p><p style="text-align:center">&nbsp;<span style="font-size:16px"><strong><span style="color:#000099">جهت مطالعه هرخبربرروی تیتر آن خبر کلیک نمائید</span></strong></span></p><p style="text-align:justify">&nbsp;</p><p><a rel="nofollow" href="https://www.tasnimnews.com/fa/news/1399/04/26/2308189/%D9%BE%DB%8C%DA%A9%D8%B1-%D9%85%D8%B7%D9%87%D8%B1-%D8%B4%D9%87%DB%8C%D8%AF%D8%A7%D9%86-%D8%AD%D8%A7%D8%AF%D8%AB%D9%87-%D8%AA%D8%B1%D9%88%D8%B1%DB%8C%D8%B3%D8%AA%DB%8C-%D8%B3%D8%B1%D9%88%D8%A2%D8%A8%D8%A7%D8%AF-%D8%A8%D9%87-%D8%AE%D8%A7%DA%A9-%D8%B3%D9%BE%D8%B1%D8%AF%D9%87-%D8%B4%D8%AF%D9%86%D8%AF"><img alt="پیکر مطهر شهیدان حادثه تروریستی سروآباد به خاک سپرده شدند" src="https://newsmedia.tasnimnews.com/Tasnim/Uploaded/Image/1398/11/09/1398110915022988819527324.jpg" style="float:right" width="30" height="22"></a></p><p style="text-align:justify"><span style="font-size:12px"><strong><a href="http://kordira.blogfa.com/post/47292"><span style="color:#e74c3c">پیکر مطهر شهیدان حادثه تروریستی سروآباد به خاک سپرده شدند </span><span style="color:#000000">(جدید)</span></a></strong></span></p><p style="text-align:justify">&nbsp;</p><p><a rel="nofollow" href="https://www.tasnimnews.com/fa/news/1399/04/26/2308119/%D9%81%D8%B1%D9%85%D8%A7%D9%86%D8%AF%D9%87-%D8%B3%D9%BE%D8%A7%D9%87-%DA%A9%D8%B1%D8%AF%D8%B3%D8%AA%D8%A7%D9%86-%D8%AF%D8%B1-%DA%AF%D9%81%D8%AA-%D9%88%DA%AF%D9%88-%D8%A8%D8%A7-%D8%AA%D8%B3%D9%86%DB%8C%D9%85-%D8%A7%D9%86%D8%AA%D9%82%D8%A7%D9%85-%D8%B3%D8%AE%D8%AA%DB%8C-%D8%AF%D8%B1-%D8%A7%D9%86%D8%AA%D8%B8%D8%A7%D8%B1-%D8%AA%D8%B1%D9%88%D8%B1%DB%8C%D8%B3%D8%AA-%D9%87%D8%A7%DB%8C-%D8%AD%D8%A7%D8%AF%D8%AB%D9%87-%D8%B3%D8%B1%D9%88%D8%A2%D8%A8%D8%A7%D8%AF-%D8%A7%D8%B3%D8%AA"><img alt="فرمانده سپاه کردستان در گفت‌وگو با تسنیم: انتقام سختی در انتظار تروریست‌های حادثه سروآباد است" src="https://newsmedia.tasnimnews.com/Tasnim/Uploaded/Image/1398/12/28/1398122801250620019937504.jpg" style="float:right" width="23" height="16"></a></p><p style="text-align:justify"><span style="font-size:12px"><strong><a href="http://kordira.blogfa.com/post/47284"><span style="color:#000000">فرمانده سپاه کردستان: انتقام سختی در انتظار تروریست‌های حادثه سروآباد است</span></a></strong></span></p><p style="text-align:justify">&nbsp;</p><p><a rel="nofollow" href="https://www.tasnimnews.com/fa/news/1399/04/26/2308099/%D9%85%D8%A7%D9%85%D9%88%D8%B3%D8%AA%D8%A7-%D8%B1%D8%B3%D8%AA%D9%85%DB%8C-%D8%AF%D8%B1-%DA%AF%D9%81%D8%AA-%D9%88%DA%AF%D9%88-%D8%A8%D8%A7-%D8%AA%D8%B3%D9%86%DB%8C%D9%85-%D8%A7%D9%82%D8%AF%D8%A7%D9%85-%D8%AA%D8%B1%D9%88%D8%B1%DB%8C%D8%B3%D8%AA%DB%8C-%D8%B6%D8%AF%D8%A7%D9%86%D9%82%D9%84%D8%A7%D8%A8-%D8%AF%D8%B1-%D8%B3%D8%B1%D9%88%D8%A2%D8%A8%D8%A7%D8%AF-%D8%AC%D9%86%D8%A7%DB%8C%D8%AA%DB%8C-%D8%B3%D9%86%DA%AF%DB%8C%D9%86-%D8%A8%D8%B1%D8%B9%D9%84%DB%8C%D9%87-%D8%A8%D8%B4%D8%B1%DB%8C%D8%AA-%D8%A7%D8%B3%D8%AA"><img alt="ماموستا رستمی در گفت‌وگو با تسنیم: اقدام تروریستی ضدانقلاب در سروآباد جنایتی سنگین برعلیه بشریت است" src="https://newsmedia.tasnimnews.com/Tasnim/Uploaded/Image/1398/12/12/1398121216561789819829454.jpg" style="float:right" width="26" height="18"></a></p><p style="text-align:justify"><span style="font-size:12px"><strong><a href="http://kordira.blogfa.com/post/47283"><span style="color:#000000">ماموستا رستمی: اقدام تروریستی ضدانقلاب در سروآباد جنایتی سنگین برعلیه بشریت است</span></a></strong></span></p><p style="text-align:justify">&nbsp;</p><p><img title="پیام تسلیت نماینده ولی فقیه در استان کردستان" alt="پیام تسلیت نماینده ولی فقیه در استان کردستان" src="https://www.iribnews.ir/files/fa/news/1399/4/26/5079310_933.jpg" style="float:right" width="24" height="15"></p><p style="text-align:justify"><span style="font-size:12px"><strong><a href="http://kordira.blogfa.com/post/47282"><span style="color:#000000">در پی شهادت خادمان ملت در سروآباد؛ پیام تسلیت نماینده ولی فقیه در استان کردستان </span></a></strong></span></p><p style="text-align:justify">&nbsp;</p><p><img alt="جهادگر بسیجی به چه جُرمی ترور شد + تصویر" src="https://www.dana.ir/File/ImageThumb_0_608_458/1891887" style="float:right" width="20" height="15"></p><p style="text-align:justify"><span style="font-size:12px"><strong><a href="http://kordira.blogfa.com/post/47281"><span style="color:#000000">جهادگر بسیجی به چه جُرمی ترور شد + تصویر</span></a></strong></span></p><p style="text-align:justify">&nbsp;</p><p><img title="پیام تسلیت در پی شهادت خادمان ملت" alt="پیام تسلیت در پی شهادت خادمان ملت" src="https://www.iribnews.ir/files/fa/news/1399/4/26/5078984_207.jpg" style="float:right" width="28" height="16"></p><p style="text-align:justify"><span style="font-size:12px"><strong><a href="http://kordira.blogfa.com/post/47280"><span style="color:#000000">فرماندار سروآباد؛ پیام تسلیت در پی شهادت خادمان ملت </span></a></strong></span></p><p style="text-align:justify">&nbsp;</p><p><a rel="nofollow" href="https://www.tasnimnews.com/fa/news/1399/04/26/2307949/%D9%84%D8%A8%DB%8C%DA%A9-%D8%B4%D9%87%DB%8C%D8%AF-%D8%AC%D9%85%D8%A7%D9%84-%DA%A9%D8%B1%DB%8C%D9%85%DB%8C-%D8%A8%D9%87-%D9%81%D8%B1%D9%85%D8%A7%D9%86-%D9%85%D9%82%D8%A7%D9%85-%D9%85%D8%B9%D8%B8%D9%85-%D8%B1%D9%87%D8%A8%D8%B1%DB%8C-%D9%82%D8%A8%D9%84-%D8%A7%D8%B2-%D8%B4%D9%87%D8%A7%D8%AF%D8%AA-%D9%81%DB%8C%D9%84%D9%85"><img alt="لبیک شهید جمال کریمی‌ به فرمان مقام معظم رهبری قبل از شهادت‌ + فیلم" src="https://newsmedia.tasnimnews.com/Tasnim/Uploaded/Image/1398/03/27/1398032709592712817668674.jpg" style="float:right" width="28" height="20"></a></p><p style="text-align:justify"><span style="font-size:12px"><strong><a href="http://kordira.blogfa.com/post/47279"><span style="color:#000000">لبیک شهید جمال کریمی‌ به فرمان مقام معظم رهبری قبل از شهادت‌ + فیلم </span></a></strong></span></p><p style="text-align:justify">&nbsp;</p><p><img alt="حکایت شهدای تروریستی اخیر کردستان/ از مردم یاری تا شهادت+فیلم و عکس" src="https://media.farsnews.ir/Uploaded/Files/Images/1399/04/26/13990426000391_Test_PhotoN.jpg" style="float:right" width="29" height="15"></p><p style="text-align:justify"><span style="font-size:12px"><strong><a href="http://kordira.blogfa.com/post/47278"><span style="color:#000000">حکایت شهدای تروریستی اخیر کردستان از مردم یاری تا شهادت+فیلم و عکس</span></a></strong></span></p><p style="text-align:justify">&nbsp;</p><p><img alt="" src="https://t.nasimonline.ir/FileRepository/2020/5/5/637243094763189927.gif?mode=crop&amp;w=840&amp;h=630" style="float:right" width="43" height="22"></p><p style="text-align:justify"><span style="font-size:12px"><strong><a href="http://kordira.blogfa.com/post/47276"><span style="color:#000000">اسامی شهدای حادثه تروریستی سروآباد</span></a></strong></span></p><p style="text-align:justify">&nbsp;</p><p><a rel="nofollow" href="https://www.tasnimnews.com/fa/news/1399/04/26/2307848/%D8%AA%D8%B5%D9%88%DB%8C%D8%B1-%D8%B4%D9%87%DB%8C%D8%AF-%D8%AA%D8%B1%D9%88%D8%B1%DB%8C%D8%B3%D8%AA%DB%8C-%D8%B3%D8%B1%D9%88%D8%A2%D8%A8%D8%A7%D8%AF-%D8%AD%DB%8C%D9%86-%D8%A2%D9%85%D8%A7%D8%AF%D9%87-%D8%B3%D8%A7%D8%B2%DB%8C-%DA%A9%D9%85%DA%A9-%D9%85%D9%88%D9%85%D9%86%D8%A7%D9%86%D9%87-%D9%85%D9%86%D8%AA%D8%B4%D8%B1-%D8%B4%D8%AF"><img alt="‌تصویر شهید تروریستی سروآباد ‌حین آماده‌سازی «کمک مومنانه»‌ منتشر شد" src="https://newsmedia.tasnimnews.com/Tasnim/Uploaded/Image/1399/04/26/1399042614303910420784254.jpg" style="float:right" width="21" height="15"></a></p><p style="text-align:justify"><span style="font-size:12px"><strong><a href="http://kordira.blogfa.com/post/47277"><span style="color:#000000">‌تصویر شهید تروریستی سروآباد ‌حین آماده‌سازی «کمک مومنانه»‌ منتشر شد </span></a></strong></span></p><p style="text-align:justify">&nbsp;</p><p><img title="ترور خادمان ملت در اورامانات توسط عوامل گروهک‌های تروریستی وابسته به استکبار جهانی" alt="ترور خادمان ملت در اورامانات توسط عوامل گروهک‌های تروریستی وابسته به استکبار جهانی" src="https://www.iribnews.ir/files/fa/news/1399/4/26/5078040_190.jpg" style="float:right" width="29" height="18"></p><p style="text-align:justify"><span style="font-size:12px"><strong><a href="http://kordira.blogfa.com/post/47275"><span style="color:#000000">ترور خادمان ملت در اورامانات توسط عوامل گروهک‌های تروریستی</span></a></strong></span></p>
+
+</div><br><b></b>
+				
+			<br><br><font style="font-size:8pt;">
+<br>
+			داغ کن:
+			<a   target="_blank"  
+			href="http://www.cloob.com/share/link/add?url=http://kamyaranyan.mihanblog.com//post/20694&title=تمامی خبرهای شهدای حادثه  تروریستی سروآباد درکامیاران نیوز امروز"> 
+			<img alt="داغ کن - کلوب دات کام" src="../../../../static.mihanblog.com/public/user_data/user_files/153/458214/orangeZitova/100c.gif" style='border: none; padding: 0px'/> 
+			</a>
+			<br>
+								به اشتراک گذاری:
+								<!-- AddToAny BEGIN -->
+			<a class="a2a_dd" href="4.html#"><img src="http://static.addtoany.com/buttons/share_save_120_16.gif" width="120" height="16" border="0" title="Share"/></a>
+			<script type="text/javascript">
+			var a2a_config = a2a_config || {};
+			a2a_config.linkname = "تمامی خبرهای شهدای حادثه  تروریستی سروآباد درکامیاران نیوز امروز";
+			a2a_config.linkurl = "http://kamyaranyan.mihanblog.com/post/20694";
+			a2a_config.show_title = 1;
+			</script>
+			<script type="text/javascript" src="http://static.addtoany.com/menu/locale/fa.js" charset="utf-8"></script>
+			<script type="text/javascript" src="http://static.addtoany.com/menu/page.js"></script>
+			<!-- AddToAny END --><br><br>
+
+			</font>
+	        </div>
+	        </div>
+	        <div class="p-con3"><div class="p-con4">
+	        <div class="date">نوشته شده در تاریخ : پنجشنبه 26 تیر 1399 توسط : <a href="../../author/712301.html">کامیاران نیوز</a></div>
+	        <div class="nazar"><a target="_self" href="javascript:newComment(20694)" >نظرات (<script>setCommentCnt(20694)</script>)</a></div>
+	        </div></div>
+	        </div>
+            </div>
+            <div class="post clearfix">
+            <div class="p-head">
+            <div class="p-head1">
+            <div class="p-head2">		
+			<b><a href="http://kamyaranyan.mihanblog.com/post/20693">درفقدان مرحوم مغفور علی اشرف باجلانی به سوگ  نشسته ایم</a></b>
+			</div>
+            </div>
+            </div>
+	        <div class="p-con clearfix">
+	        <div class="p-con1">
+	        <div class="p-con2">
+	        <div class="p-photo">
+	        </div>
+	        <div class="p-height">
+			<p style="text-align:center"><a rel="nofollow" href="https://en.wiktionary.org/wiki/File:Basmala.svg"><img alt="Basmala.svg" src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/27/Basmala.svg/220px-Basmala.svg.png" width="222" height="46"></a></p><p style="text-align:center"><span style="color:#800000; font-size:medium"><strong><em>سَلامٌ عَلَیْکُمْ بِما صَبَرْتُمْ فَنِعْمَ عُقْبَی الدَّارِ</em></strong></span></p><p style="text-align:center"><span style="font-size:16px"><span style="color:#008000"><strong>&nbsp; كُلُّ مَنْ عَلَیْهَا فَانٍ وَیَبْقَى وَجْهُ رَبِّكَ ذُو الْجَلالِ وَالإِكْرَامِ</strong></span></span></p><p style="text-align:center"><span style="font-size:16px"><span style="color:#800000"><strong><em><span style="color:#ff0000">درفقدان مرحوم مغفور علی اشرف باجلانی به سوگ&nbsp; نشسته ایم</span></em></strong></span></span></p><p style="text-align:center"><img alt="https://www.upsara.com/images/f096168_____.jpg" src="https://www.upsara.com/images/f096168_____.jpg" style="float:right" width="92" height="109"><span style="font-size:medium"><span style="color:#000099"><strong>دل می‌رود ز دستم صاحب دلان خدا را</strong></span></span><img alt="https://www.upsara.com/images/e201782____.jpg" src="https://www.upsara.com/images/e201782____.jpg" style="float:left" width="82" height="116"></p><p style="text-align:center"><span style="font-size:medium"><span style="color:#000099"><strong>دردا که راز پنهان خواهد شد آشکارا</strong></span></span></p><p style="text-align:center"><span style="font-size:medium"><span style="color:#000099"><strong>کشتی شکستگانیم ای باد شرطه برخیز</strong></span></span></p><p style="text-align:center"><span style="font-size:medium"><span style="color:#000099"><strong>باشد که بازبینم دیدار آشنا را</strong></span></span></p></div><br><b><a href='http://kamyaranyan.mihanblog.com/post/20693'>ادامه مطلب</a></b>
+				
+			<br><br><font style="font-size:8pt;">
+<br>
+			داغ کن:
+			<a   target="_blank"  
+			href="http://www.cloob.com/share/link/add?url=http://kamyaranyan.mihanblog.com//post/20693&title=درفقدان مرحوم مغفور علی اشرف باجلانی به سوگ  نشسته ایم"> 
+			<img alt="داغ کن - کلوب دات کام" src="../../../../static.mihanblog.com/public/user_data/user_files/153/458214/orangeZitova/100c.gif" style='border: none; padding: 0px'/> 
+			</a>
+			<br>
+								به اشتراک گذاری:
+								<!-- AddToAny BEGIN -->
+			<a class="a2a_dd" href="4.html#"><img src="http://static.addtoany.com/buttons/share_save_120_16.gif" width="120" height="16" border="0" title="Share"/></a>
+			<script type="text/javascript">
+			var a2a_config = a2a_config || {};
+			a2a_config.linkname = "درفقدان مرحوم مغفور علی اشرف باجلانی به سوگ  نشسته ایم";
+			a2a_config.linkurl = "http://kamyaranyan.mihanblog.com/post/20693";
+			a2a_config.show_title = 1;
+			</script>
+			<script type="text/javascript" src="http://static.addtoany.com/menu/locale/fa.js" charset="utf-8"></script>
+			<script type="text/javascript" src="http://static.addtoany.com/menu/page.js"></script>
+			<!-- AddToAny END --><br><br>
+
+			</font>
+	        </div>
+	        </div>
+	        <div class="p-con3"><div class="p-con4">
+	        <div class="date">نوشته شده در تاریخ : چهارشنبه 25 تیر 1399 توسط : <a href="../../author/712301.html">کامیاران نیوز</a></div>
+	        <div class="nazar"><a target="_self" href="javascript:newComment(20693)" >نظرات (<script>setCommentCnt(20693)</script>)</a></div>
+	        </div></div>
+	        </div>
+            </div>
+            <div class="post clearfix">
+            <div class="p-head">
+            <div class="p-head1">
+            <div class="p-head2">		
+			<b><a href="http://kamyaranyan.mihanblog.com/post/20686">خبرهای کامیاران،کردستان ومناطق کردنشین درکامیاران نیوز امروز</a></b>
+			</div>
+            </div>
+            </div>
+	        <div class="p-con clearfix">
+	        <div class="p-con1">
+	        <div class="p-con2">
+	        <div class="p-photo">
+	        </div>
+	        <div class="p-height">
+			
+
+
+
+<span data-cke-copybin-start="1">​</span><p style="text-align:center"><span style="font-size:14px"><span style="color:#ff0000"><strong>خبرهای کامیاران،کردستان ومناطق کردنشین درکامیاران نیوز امروز</strong></span></span></p><p style="text-align:center"><span style="font-size:14px"><span style="color:#ff0000"><strong><br></strong></span></span></p><p style="text-align:center">&nbsp;<span style="font-size:16px"><strong><span style="color:#000099">جهت مطالعه هرخبربرروی تیتر آن خبر کلیک نمائید</span></strong></span></p><p><span tabindex="-1" data-cke-widget-wrapper="1" data-cke-filter="off" class="cke_widget_wrapper cke_widget_inline cke_widget_image cke_image_nocaption cke_widget_selected" data-cke-display-name="تصویر" data-cke-widget-id="16" style="float: right;" role="region" aria-label="ابزارک کاروان خدام حرم مطهر رضوی وارد استان کردستان شدند+تصاویر تصویر" contenteditable="false"><a data-cke-saved-href="https://www.tasnimnews.com/fa/news/1399/04/09/2295961/%DA%A9%D8%A7%D8%B1%D9%88%D8%A7%D9%86-%D8%AE%D8%AF%D8%A7%D9%85-%D8%AD%D8%B1%D9%85-%D9%85%D8%B7%D9%87%D8%B1-%D8%B1%D8%B6%D9%88%DB%8C-%D9%88%D8%A7%D8%B1%D8%AF-%D8%A7%D8%B3%D8%AA%D8%A7%D9%86-%DA%A9%D8%B1%D8%AF%D8%B3%D8%AA%D8%A7%D9%86-%D8%B4%D8%AF%D9%86%D8%AF-%D8%AA%D8%B5%D8%A7%D9%88%DB%8C%D8%B1" href="https://www.tasnimnews.com/fa/news/1399/04/09/2295961/%DA%A9%D8%A7%D8%B1%D9%88%D8%A7%D9%86-%D8%AE%D8%AF%D8%A7%D9%85-%D8%AD%D8%B1%D9%85-%D9%85%D8%B7%D9%87%D8%B1-%D8%B1%D8%B6%D9%88%DB%8C-%D9%88%D8%A7%D8%B1%D8%AF-%D8%A7%D8%B3%D8%AA%D8%A7%D9%86-%DA%A9%D8%B1%D8%AF%D8%B3%D8%AA%D8%A7%D9%86-%D8%B4%D8%AF%D9%86%D8%AF-%D8%AA%D8%B5%D8%A7%D9%88%DB%8C%D8%B1" data-cke-widget-data="%7B%22hasCaption%22%3Afalse%2C%22src%22%3A%22https%3A%2F%2Fnewsmedia.tasnimnews.com%2FTasnim%2FUploaded%2FImage%2F1399%2F04%2F09%2F1399040915413495820687974.jpg%22%2C%22alt%22%3A%22%DA%A9%D8%A7%D8%B1%D9%88%D8%A7%D9%86%20%D8%AE%D8%AF%D8%A7%D9%85%20%D8%AD%D8%B1%D9%85%20%D9%85%D8%B7%D9%87%D8%B1%20%D8%B1%D8%B6%D9%88%DB%8C%20%D9%88%D8%A7%D8%B1%D8%AF%20%D8%A7%D8%B3%D8%AA%D8%A7%D9%86%20%DA%A9%D8%B1%D8%AF%D8%B3%D8%AA%D8%A7%D9%86%20%D8%B4%D8%AF%D9%86%D8%AF%2B%D8%AA%D8%B5%D8%A7%D9%88%DB%8C%D8%B1%22%2C%22width%22%3A%2225%22%2C%22height%22%3A%2218%22%2C%22lock%22%3Atrue%2C%22align%22%3A%22right%22%2C%22link%22%3A%7B%22type%22%3A%22url%22%2C%22url%22%3A%7B%22protocol%22%3A%22https%3A%2F%2F%22%2C%22url%22%3A%22www.tasnimnews.com%2Ffa%2Fnews%2F1399%2F04%2F09%2F2295961%2F%25DA%25A9%25D8%25A7%25D8%25B1%25D9%2588%25D8%25A7%25D9%2586-%25D8%25AE%25D8%25AF%25D8%25A7%25D9%2585-%25D8%25AD%25D8%25B1%25D9%2585-%25D9%2585%25D8%25B7%25D9%2587%25D8%25B1-%25D8%25B1%25D8%25B6%25D9%2588%25DB%258C-%25D9%2588%25D8%25A7%25D8%25B1%25D8%25AF-%25D8%25A7%25D8%25B3%25D8%25AA%25D8%25A7%25D9%2586-%25DA%25A9%25D8%25B1%25D8%25AF%25D8%25B3%25D8%25AA%25D8%25A7%25D9%2586-%25D8%25B4%25D8%25AF%25D9%2586%25D8%25AF-%25D8%25AA%25D8%25B5%25D8%25A7%25D9%2588%25DB%258C%25D8%25B1%22%7D%2C%22advanced%22%3A%7B%22advCSSClasses%22%3A%22%22%7D%7D%2C%22classes%22%3Anull%7D" data-cke-widget-upcasted="1" data-cke-widget-keep-attr="0" data-widget="image" class="cke_widget_element"><img alt="کاروان خدام حرم مطهر رضوی وارد استان کردستان شدند+تصاویر" data-cke-saved-src="https://newsmedia.tasnimnews.com/Tasnim/Uploaded/Image/1399/04/09/1399040915413495820687974.jpg" src="https://newsmedia.tasnimnews.com/Tasnim/Uploaded/Image/1399/04/09/1399040915413495820687974.jpg" width="25" height="18"></a><span class="cke_reset cke_widget_drag_handler_container" style="background:rgba(220,220,220,0.5);background-image:url(https://blogfa.com/Desktop/editor/9/plugins/widget/images/handle.png);display:none;"><img class="cke_reset cke_widget_drag_handler" data-cke-widget-drag-handler="1" src="data:image/gif;base64,R0lGODlhAQABAPABAP///wAAACH5BAEKAAAALAAAAAABAAEAAAICRAEAOw==" title="کلیک و کشیدن برای جابجایی" role="presentation" draggable="true" width="15" height="15"></span><span class="cke_image_resizer cke_image_resizer_left" title="کلیک و کشیدن برای تغییر اندازه">​</span></span></p><p><span style="font-size:12px"><strong><a href="http://kordira.blogfa.com/post/47082"><span style="color:#e74c3c">کاروان خدام حرم مطهر رضوی وارد شهرستان کامیاران شدند+تصاویر</span></a></strong></span></p><p>&nbsp;</p><p><span tabindex="-1" data-cke-widget-wrapper="1" data-cke-filter="off" class="cke_widget_wrapper cke_widget_inline cke_widget_image cke_image_nocaption cke_widget_selected" data-cke-display-name="تصویر" data-cke-widget-id="15" style="float: right;" role="region" aria-label="ابزارک خانواده‌های معظم شهدا مظهر ایثار و فداکاری هستند تصویر" contenteditable="false"><img alt="خانواده‌های معظم شهدا مظهر ایثار و فداکاری هستند" title="خانواده‌های معظم شهدا مظهر ایثار و فداکاری هستند" data-cke-saved-src="http://isaar.ir/images/docs/000341/n00341143-b.jpg" src="http://isaar.ir/images/docs/000341/n00341143-b.jpg" data-cke-widget-data="%7B%22hasCaption%22%3Afalse%2C%22src%22%3A%22http%3A%2F%2Fisaar.ir%2Fimages%2Fdocs%2F000341%2Fn00341143-b.jpg%22%2C%22alt%22%3A%22%D8%AE%D8%A7%D9%86%D9%88%D8%A7%D8%AF%D9%87%E2%80%8C%D9%87%D8%A7%DB%8C%20%D9%85%D8%B9%D8%B8%D9%85%20%D8%B4%D9%87%D8%AF%D8%A7%20%D9%85%D8%B8%D9%87%D8%B1%20%D8%A7%DB%8C%D8%AB%D8%A7%D8%B1%20%D9%88%20%D9%81%D8%AF%D8%A7%DA%A9%D8%A7%D8%B1%DB%8C%20%D9%87%D8%B3%D8%AA%D9%86%D8%AF%22%2C%22width%22%3A%2222%22%2C%22height%22%3A%2215%22%2C%22lock%22%3Atrue%2C%22align%22%3A%22right%22%2C%22classes%22%3Anull%7D" data-cke-widget-upcasted="1" data-cke-widget-keep-attr="0" data-widget="image" class="cke_widget_element" width="22" height="15"><span class="cke_reset cke_widget_drag_handler_container" style="background:rgba(220,220,220,0.5);background-image:url(https://blogfa.com/Desktop/editor/9/plugins/widget/images/handle.png);display:none;"><img class="cke_reset cke_widget_drag_handler" data-cke-widget-drag-handler="1" src="data:image/gif;base64,R0lGODlhAQABAPABAP///wAAACH5BAEKAAAALAAAAAABAAEAAAICRAEAOw==" title="کلیک و کشیدن برای جابجایی" role="presentation" draggable="true" width="15" height="15"></span><span class="cke_image_resizer cke_image_resizer_left" title="کلیک و کشیدن برای تغییر اندازه">​</span></span></p><p><span style="font-size:12px"><strong><a href="http://kordira.blogfa.com/post/47066"><span style="color:#000000">دردیدار با مادر 3شهید ازشهرستان کامیاران:خانواده‌های معظم شهدا مظهر ایثار و فداکاری هستند</span></a></strong></span></p><p>&nbsp;</p><p><span tabindex="-1" data-cke-widget-wrapper="1" data-cke-filter="off" class="cke_widget_wrapper cke_widget_inline cke_widget_image cke_image_nocaption cke_widget_selected" data-cke-display-name="تصویر" data-cke-widget-id="14" style="float: right;" role="region" aria-label="ابزارک با ستاره‌ها| شهید «مسعود محوری» رزمنده‌ای که تن دشمنان را به لرزه انداخته بود تصویر" contenteditable="false"><a data-cke-saved-href="https://www.tasnimnews.com/fa/news/1399/04/07/2294416/%D8%A8%D8%A7-%D8%B3%D8%AA%D8%A7%D8%B1%D9%87-%D9%87%D8%A7-%D8%B4%D9%87%DB%8C%D8%AF-%D9%85%D8%B3%D8%B9%D9%88%D8%AF-%D9%85%D8%AD%D9%88%D8%B1%DB%8C-%D8%B1%D8%B2%D9%85%D9%86%D8%AF%D9%87-%D8%A7%DB%8C-%DA%A9%D9%87-%D8%AA%D9%86-%D8%AF%D8%B4%D9%85%D9%86%D8%A7%D9%86-%D8%B1%D8%A7-%D8%A8%D9%87-%D9%84%D8%B1%D8%B2%D9%87-%D8%A7%D9%86%D8%AF%D8%A7%D8%AE%D8%AA%D9%87-%D8%A8%D9%88%D8%AF" href="https://www.tasnimnews.com/fa/news/1399/04/07/2294416/%D8%A8%D8%A7-%D8%B3%D8%AA%D8%A7%D8%B1%D9%87-%D9%87%D8%A7-%D8%B4%D9%87%DB%8C%D8%AF-%D9%85%D8%B3%D8%B9%D9%88%D8%AF-%D9%85%D8%AD%D9%88%D8%B1%DB%8C-%D8%B1%D8%B2%D9%85%D9%86%D8%AF%D9%87-%D8%A7%DB%8C-%DA%A9%D9%87-%D8%AA%D9%86-%D8%AF%D8%B4%D9%85%D9%86%D8%A7%D9%86-%D8%B1%D8%A7-%D8%A8%D9%87-%D9%84%D8%B1%D8%B2%D9%87-%D8%A7%D9%86%D8%AF%D8%A7%D8%AE%D8%AA%D9%87-%D8%A8%D9%88%D8%AF" data-cke-widget-data="%7B%22hasCaption%22%3Afalse%2C%22src%22%3A%22https%3A%2F%2Fnewsmedia.tasnimnews.com%2FTasnim%2FUploaded%2FImage%2F1399%2F02%2F21%2F1399022112001926420359844.jpg%22%2C%22alt%22%3A%22%D8%A8%D8%A7%20%D8%B3%D8%AA%D8%A7%D8%B1%D9%87%E2%80%8C%D9%87%D8%A7%7C%20%D8%B4%D9%87%DB%8C%D8%AF%20%C2%AB%D9%85%D8%B3%D8%B9%D9%88%D8%AF%20%D9%85%D8%AD%D9%88%D8%B1%DB%8C%C2%BB%20%D8%B1%D8%B2%D9%85%D9%86%D8%AF%D9%87%E2%80%8C%D8%A7%DB%8C%20%DA%A9%D9%87%20%D8%AA%D9%86%20%D8%AF%D8%B4%D9%85%D9%86%D8%A7%D9%86%20%D8%B1%D8%A7%20%D8%A8%D9%87%20%D9%84%D8%B1%D8%B2%D9%87%20%D8%A7%D9%86%D8%AF%D8%A7%D8%AE%D8%AA%D9%87%20%D8%A8%D9%88%D8%AF%22%2C%22width%22%3A%2223%22%2C%22height%22%3A%2218%22%2C%22lock%22%3Atrue%2C%22align%22%3A%22right%22%2C%22link%22%3A%7B%22type%22%3A%22url%22%2C%22url%22%3A%7B%22protocol%22%3A%22https%3A%2F%2F%22%2C%22url%22%3A%22www.tasnimnews.com%2Ffa%2Fnews%2F1399%2F04%2F07%2F2294416%2F%25D8%25A8%25D8%25A7-%25D8%25B3%25D8%25AA%25D8%25A7%25D8%25B1%25D9%2587-%25D9%2587%25D8%25A7-%25D8%25B4%25D9%2587%25DB%258C%25D8%25AF-%25D9%2585%25D8%25B3%25D8%25B9%25D9%2588%25D8%25AF-%25D9%2585%25D8%25AD%25D9%2588%25D8%25B1%25DB%258C-%25D8%25B1%25D8%25B2%25D9%2585%25D9%2586%25D8%25AF%25D9%2587-%25D8%25A7%25DB%258C-%25DA%25A9%25D9%2587-%25D8%25AA%25D9%2586-%25D8%25AF%25D8%25B4%25D9%2585%25D9%2586%25D8%25A7%25D9%2586-%25D8%25B1%25D8%25A7-%25D8%25A8%25D9%2587-%25D9%2584%25D8%25B1%25D8%25B2%25D9%2587-%25D8%25A7%25D9%2586%25D8%25AF%25D8%25A7%25D8%25AE%25D8%25AA%25D9%2587-%25D8%25A8%25D9%2588%25D8%25AF%22%7D%2C%22advanced%22%3A%7B%22advCSSClasses%22%3A%22%22%7D%7D%2C%22classes%22%3Anull%7D" data-cke-widget-upcasted="1" data-cke-widget-keep-attr="0" data-widget="image" class="cke_widget_element"><img alt="با ستاره‌ها| شهید «مسعود محوری» رزمنده‌ای که تن دشمنان را به لرزه انداخته بود" data-cke-saved-src="https://newsmedia.tasnimnews.com/Tasnim/Uploaded/Image/1399/02/21/1399022112001926420359844.jpg" src="https://newsmedia.tasnimnews.com/Tasnim/Uploaded/Image/1399/02/21/1399022112001926420359844.jpg" width="23" height="18"></a><span class="cke_reset cke_widget_drag_handler_container" style="background:rgba(220,220,220,0.5);background-image:url(https://blogfa.com/Desktop/editor/9/plugins/widget/images/handle.png);display:none;"><img class="cke_reset cke_widget_drag_handler" data-cke-widget-drag-handler="1" src="data:image/gif;base64,R0lGODlhAQABAPABAP///wAAACH5BAEKAAAALAAAAAABAAEAAAICRAEAOw==" title="کلیک و کشیدن برای جابجایی" role="presentation" draggable="true" width="15" height="15"></span><span class="cke_image_resizer cke_image_resizer_left" title="کلیک و کشیدن برای تغییر اندازه">​</span></span></p><p><span style="font-size:12px"><strong><a href="http://kordira.blogfa.com/post/47065"><span style="color:#000000">با ستاره‌هایی که درکردستان به شهادت رسیده اند</span></a></strong></span></p><p>&nbsp;</p><p><span tabindex="-1" data-cke-widget-wrapper="1" data-cke-filter="off" class="cke_widget_wrapper cke_widget_inline cke_widget_image cke_image_nocaption cke_widget_selected" data-cke-display-name="تصویر" data-cke-widget-id="13" style="float: right;" role="region" aria-label="ابزارک حزب منحله دمکرات کردستان ایران یکی از کشته شدگان حادثه آتش سوزی پاوه را نیروی تشکیلات مخفی خود معرفی کرد!+اسناد تصویر" contenteditable="false"><img title="حزب منحله دمکرات کردستان ایران یکی از کشته شدگان حادثه آتش سوزی پاوه را نیروی تشکیلات مخفی خود معرفی کرد!+اسناد" alt="حزب منحله دمکرات کردستان ایران یکی از کشته شدگان حادثه آتش سوزی پاوه را نیروی تشکیلات مخفی خود معرفی کرد!+اسناد" data-cke-saved-src="https://www.bultannews.com/files/fa/news/1399/4/9/1291107_886.jpg" src="https://www.bultannews.com/files/fa/news/1399/4/9/1291107_886.jpg" data-cke-widget-data="%7B%22hasCaption%22%3Afalse%2C%22src%22%3A%22https%3A%2F%2Fwww.bultannews.com%2Ffiles%2Ffa%2Fnews%2F1399%2F4%2F9%2F1291107_886.jpg%22%2C%22alt%22%3A%22%D8%AD%D8%B2%D8%A8%20%D9%85%D9%86%D8%AD%D9%84%D9%87%20%D8%AF%D9%85%DA%A9%D8%B1%D8%A7%D8%AA%20%DA%A9%D8%B1%D8%AF%D8%B3%D8%AA%D8%A7%D9%86%20%D8%A7%DB%8C%D8%B1%D8%A7%D9%86%20%DB%8C%DA%A9%DB%8C%20%D8%A7%D8%B2%20%DA%A9%D8%B4%D8%AA%D9%87%20%D8%B4%D8%AF%DA%AF%D8%A7%D9%86%20%D8%AD%D8%A7%D8%AF%D8%AB%D9%87%20%D8%A2%D8%AA%D8%B4%20%D8%B3%D9%88%D8%B2%DB%8C%20%D9%BE%D8%A7%D9%88%D9%87%20%D8%B1%D8%A7%20%D9%86%DB%8C%D8%B1%D9%88%DB%8C%20%D8%AA%D8%B4%DA%A9%DB%8C%D9%84%D8%A7%D8%AA%20%D9%85%D8%AE%D9%81%DB%8C%20%D8%AE%D9%88%D8%AF%20%D9%85%D8%B9%D8%B1%D9%81%DB%8C%20%DA%A9%D8%B1%D8%AF!%2B%D8%A7%D8%B3%D9%86%D8%A7%D8%AF%22%2C%22width%22%3A%2221%22%2C%22height%22%3A%2216%22%2C%22lock%22%3Atrue%2C%22align%22%3A%22right%22%2C%22classes%22%3Anull%7D" data-cke-widget-upcasted="1" data-cke-widget-keep-attr="0" data-widget="image" class="cke_widget_element" width="21" height="16"><span class="cke_reset cke_widget_drag_handler_container" style="background:rgba(220,220,220,0.5);background-image:url(https://blogfa.com/Desktop/editor/9/plugins/widget/images/handle.png);display:none;"><img class="cke_reset cke_widget_drag_handler" data-cke-widget-drag-handler="1" src="data:image/gif;base64,R0lGODlhAQABAPABAP///wAAACH5BAEKAAAALAAAAAABAAEAAAICRAEAOw==" title="کلیک و کشیدن برای جابجایی" role="presentation" draggable="true" width="15" height="15"></span><span class="cke_image_resizer cke_image_resizer_left" title="کلیک و کشیدن برای تغییر اندازه">​</span></span></p><p><span style="font-size:12px"><strong><a href="http://kordira.blogfa.com/post/47083"><span style="color:#e74c3c">حزب منحله دمکرات یکی از کشته شدگان حادثه آتش سوزی پاوه را نیروی تشکیلات مخفی خود معرفی کرد</span></a></strong></span></p><p>&nbsp;</p><p><span tabindex="-1" data-cke-widget-wrapper="1" data-cke-filter="off" class="cke_widget_wrapper cke_widget_inline cke_widget_image cke_image_nocaption cke_widget_selected" data-cke-display-name="تصویر" data-cke-widget-id="12" style="float: right;" role="region" aria-label="ابزارک دالاهو ایران دوست تصویر" contenteditable="false"><img alt="دالاهو ایران دوست" title="سوپرگل ۶۰متری بازیکن ایرانی‌الاصل تیم ملی سوئد +فیلم" data-cke-saved-src="https://cdn.mashreghnews.ir/d/2020/06/29/2/2839672.jpg" src="https://cdn.mashreghnews.ir/d/2020/06/29/2/2839672.jpg" data-cke-widget-data="%7B%22hasCaption%22%3Afalse%2C%22src%22%3A%22https%3A%2F%2Fcdn.mashreghnews.ir%2Fd%2F2020%2F06%2F29%2F2%2F2839672.jpg%22%2C%22alt%22%3A%22%D8%AF%D8%A7%D9%84%D8%A7%D9%87%D9%88%20%D8%A7%DB%8C%D8%B1%D8%A7%D9%86%20%D8%AF%D9%88%D8%B3%D8%AA%22%2C%22width%22%3A%2228%22%2C%22height%22%3A%2217%22%2C%22lock%22%3Atrue%2C%22align%22%3A%22right%22%2C%22classes%22%3Anull%7D" data-cke-widget-upcasted="1" data-cke-widget-keep-attr="0" data-widget="image" class="cke_widget_element" width="28" height="17"><span class="cke_reset cke_widget_drag_handler_container" style="background:rgba(220,220,220,0.5);background-image:url(https://blogfa.com/Desktop/editor/9/plugins/widget/images/handle.png);display:none;"><img class="cke_reset cke_widget_drag_handler" data-cke-widget-drag-handler="1" src="data:image/gif;base64,R0lGODlhAQABAPABAP///wAAACH5BAEKAAAALAAAAAABAAEAAAICRAEAOw==" title="کلیک و کشیدن برای جابجایی" role="presentation" draggable="true" width="15" height="15"></span><span class="cke_image_resizer cke_image_resizer_left" title="کلیک و کشیدن برای تغییر اندازه">​</span></span></p><p><span style="font-size:12px"><strong><a href="http://kordira.blogfa.com/post/47081"><span style="color:#000000">سوپرگل ۶۰متری بازیکن ایرانی‌الاصل تیم ملی سوئد +فیلم</span></a></strong></span></p><p>&nbsp;</p><p><span tabindex="-1" data-cke-widget-wrapper="1" data-cke-filter="off" class="cke_widget_wrapper cke_widget_inline cke_widget_image cke_image_nocaption cke_widget_selected" data-cke-display-name="تصویر" data-cke-widget-id="11" style="float: right;" role="region" aria-label="ابزارک  تصویر" contenteditable="false"><img alt="" data-cke-saved-src="https://newsroom.dana.ir/content/upload/d2a9b698-f780-4ee4-9a38-17313c08b4f8.jpg" src="https://newsroom.dana.ir/content/upload/d2a9b698-f780-4ee4-9a38-17313c08b4f8.jpg" data-cke-widget-data="%7B%22hasCaption%22%3Afalse%2C%22src%22%3A%22https%3A%2F%2Fnewsroom.dana.ir%2Fcontent%2Fupload%2Fd2a9b698-f780-4ee4-9a38-17313c08b4f8.jpg%22%2C%22alt%22%3A%22%22%2C%22width%22%3A%2225%22%2C%22height%22%3A%2217%22%2C%22lock%22%3Atrue%2C%22align%22%3A%22right%22%2C%22classes%22%3Anull%7D" data-cke-widget-upcasted="1" data-cke-widget-keep-attr="0" data-widget="image" class="cke_widget_element" width="25" height="17"><span class="cke_reset cke_widget_drag_handler_container" style="background:rgba(220,220,220,0.5);background-image:url(https://blogfa.com/Desktop/editor/9/plugins/widget/images/handle.png);display:none;"><img class="cke_reset cke_widget_drag_handler" data-cke-widget-drag-handler="1" src="data:image/gif;base64,R0lGODlhAQABAPABAP///wAAACH5BAEKAAAALAAAAAABAAEAAAICRAEAOw==" title="کلیک و کشیدن برای جابجایی" role="presentation" draggable="true" width="15" height="15"></span><span class="cke_image_resizer cke_image_resizer_left" title="کلیک و کشیدن برای تغییر اندازه">​</span></span></p><p><span style="font-size:12px"><strong><a href="http://kordira.blogfa.com/post/47075"><span style="color:#000000">مروری بر جنایات مدعیان «حقوق بشر» علیه بشریت؛ وقتی بمب شیمیایی "هناسه" ۷۲ شهید لرستان را برای همیشه</span></a></strong></span></p><p>&nbsp;</p><p><span tabindex="-1" data-cke-widget-wrapper="1" data-cke-filter="off" class="cke_widget_wrapper cke_widget_inline cke_widget_image cke_image_nocaption cke_widget_selected" data-cke-display-name="تصویر" data-cke-widget-id="10" style="float: right;" role="region" aria-label="ابزارک آتش‌سوزی تصویر" contenteditable="false"><img title="آتش‌سوزی" alt="آتش‌سوزی" data-cke-saved-src="https://rouydad24.ir/files/fa/news/1399/4/8/364713_408.jpg" src="https://rouydad24.ir/files/fa/news/1399/4/8/364713_408.jpg" data-cke-widget-data="%7B%22hasCaption%22%3Afalse%2C%22src%22%3A%22https%3A%2F%2Frouydad24.ir%2Ffiles%2Ffa%2Fnews%2F1399%2F4%2F8%2F364713_408.jpg%22%2C%22alt%22%3A%22%D8%A2%D8%AA%D8%B4%E2%80%8C%D8%B3%D9%88%D8%B2%DB%8C%22%2C%22width%22%3A%2237%22%2C%22height%22%3A%2216%22%2C%22lock%22%3Atrue%2C%22align%22%3A%22right%22%2C%22classes%22%3Anull%7D" data-cke-widget-upcasted="1" data-cke-widget-keep-attr="0" data-widget="image" class="cke_widget_element" width="37" height="16"><span class="cke_reset cke_widget_drag_handler_container" style="background:rgba(220,220,220,0.5);background-image:url(https://blogfa.com/Desktop/editor/9/plugins/widget/images/handle.png);display:none;"><img class="cke_reset cke_widget_drag_handler" data-cke-widget-drag-handler="1" src="data:image/gif;base64,R0lGODlhAQABAPABAP///wAAACH5BAEKAAAALAAAAAABAAEAAAICRAEAOw==" title="کلیک و کشیدن برای جابجایی" role="presentation" draggable="true" width="15" height="15"></span><span class="cke_image_resizer cke_image_resizer_left" title="کلیک و کشیدن برای تغییر اندازه">​</span></span></p><p><span style="font-size:12px"><strong><a href="http://kordira.blogfa.com/post/47074"><span style="color:#e74c3c">&nbsp;آتش‌سوزی، جانِ ۳ فعال محیط زیست را گرفت </span></a></strong></span></p><p style="text-align:justify">&nbsp;</p><p><span tabindex="-1" data-cke-widget-wrapper="1" data-cke-filter="off" class="cke_widget_wrapper cke_widget_inline cke_widget_image cke_image_nocaption cke_widget_selected" data-cke-display-name="تصویر" data-cke-widget-id="9" style="float: right;" role="region" aria-label="ابزارک روی کارآمدن دولت انقلابی و کارآمد اولویت اصلی شورای ائتلاف است تصویر" contenteditable="false"><img alt="روی کارآمدن دولت انقلابی و کارآمد اولویت اصلی شورای ائتلاف است" title="روی کارآمدن دولت انقلابی و کارآمد اولویت اصلی شورای ائتلاف است" data-cke-saved-src="https://media.mehrnews.com/d/2019/10/06/3/3258240.jpg" src="https://media.mehrnews.com/d/2019/10/06/3/3258240.jpg" data-cke-widget-data="%7B%22hasCaption%22%3Afalse%2C%22src%22%3A%22https%3A%2F%2Fmedia.mehrnews.com%2Fd%2F2019%2F10%2F06%2F3%2F3258240.jpg%22%2C%22alt%22%3A%22%D8%B1%D9%88%DB%8C%20%DA%A9%D8%A7%D8%B1%D8%A2%D9%85%D8%AF%D9%86%20%D8%AF%D9%88%D9%84%D8%AA%20%D8%A7%D9%86%D9%82%D9%84%D8%A7%D8%A8%DB%8C%20%D9%88%20%DA%A9%D8%A7%D8%B1%D8%A2%D9%85%D8%AF%20%D8%A7%D9%88%D9%84%D9%88%DB%8C%D8%AA%20%D8%A7%D8%B5%D9%84%DB%8C%20%D8%B4%D9%88%D8%B1%D8%A7%DB%8C%20%D8%A7%D8%A6%D8%AA%D9%84%D8%A7%D9%81%20%D8%A7%D8%B3%D8%AA%22%2C%22width%22%3A%2222%22%2C%22height%22%3A%2217%22%2C%22lock%22%3Atrue%2C%22align%22%3A%22right%22%2C%22classes%22%3Anull%7D" data-cke-widget-upcasted="1" data-cke-widget-keep-attr="0" data-widget="image" class="cke_widget_element" width="22" height="17"><span class="cke_reset cke_widget_drag_handler_container" style="background:rgba(220,220,220,0.5);background-image:url(https://blogfa.com/Desktop/editor/9/plugins/widget/images/handle.png);display:none;"><img class="cke_reset cke_widget_drag_handler" data-cke-widget-drag-handler="1" src="data:image/gif;base64,R0lGODlhAQABAPABAP///wAAACH5BAEKAAAALAAAAAABAAEAAAICRAEAOw==" title="کلیک و کشیدن برای جابجایی" role="presentation" draggable="true" width="15" height="15"></span><span class="cke_image_resizer cke_image_resizer_left" title="کلیک و کشیدن برای تغییر اندازه">​</span></span></p><p style="text-align:justify"><span style="font-size:12px"><strong><a href="http://kordira.blogfa.com/post/47073"><span style="color:#000000">رئیس شورای ائتلاف نیروهای انقلابی کردستان: روی کارآمدن دولت انقلابی و کارآمد اولویت اصلی شورای ائتلاف است</span></a></strong></span></p><p style="text-align:justify">&nbsp;</p><p><span tabindex="-1" data-cke-widget-wrapper="1" data-cke-filter="off" class="cke_widget_wrapper cke_widget_inline cke_widget_image cke_image_nocaption cke_widget_selected" data-cke-display-name="تصویر" data-cke-widget-id="8" style="float: right;" role="region" aria-label="ابزارک روایت عجیب سردار رستگارپناه از جلال طالبانی  تصویر" contenteditable="false"><img alt="روایت عجیب سردار رستگارپناه از جلال طالبانی " title="روایت عجیب سردار رستگارپناه از جلال طالبانی " data-cke-saved-src="https://cdn.isna.ir/d/2020/06/28/3/61668528.jpg" src="https://cdn.isna.ir/d/2020/06/28/3/61668528.jpg" data-cke-widget-data="%7B%22hasCaption%22%3Afalse%2C%22src%22%3A%22https%3A%2F%2Fcdn.isna.ir%2Fd%2F2020%2F06%2F28%2F3%2F61668528.jpg%22%2C%22alt%22%3A%22%D8%B1%D9%88%D8%A7%DB%8C%D8%AA%20%D8%B9%D8%AC%DB%8C%D8%A8%20%D8%B3%D8%B1%D8%AF%D8%A7%D8%B1%20%D8%B1%D8%B3%D8%AA%DA%AF%D8%A7%D8%B1%D9%BE%D9%86%D8%A7%D9%87%20%D8%A7%D8%B2%20%D8%AC%D9%84%D8%A7%D9%84%20%D8%B7%D8%A7%D9%84%D8%A8%D8%A7%D9%86%DB%8C%20%22%2C%22width%22%3A%2223%22%2C%22height%22%3A%2216%22%2C%22lock%22%3Atrue%2C%22align%22%3A%22right%22%2C%22classes%22%3Anull%7D" data-cke-widget-upcasted="1" data-cke-widget-keep-attr="0" data-widget="image" class="cke_widget_element" width="23" height="16"><span class="cke_reset cke_widget_drag_handler_container" style="background:rgba(220,220,220,0.5);background-image:url(https://blogfa.com/Desktop/editor/9/plugins/widget/images/handle.png);display:none;"><img class="cke_reset cke_widget_drag_handler" data-cke-widget-drag-handler="1" src="data:image/gif;base64,R0lGODlhAQABAPABAP///wAAACH5BAEKAAAALAAAAAABAAEAAAICRAEAOw==" title="کلیک و کشیدن برای جابجایی" role="presentation" draggable="true" width="15" height="15"></span><span class="cke_image_resizer cke_image_resizer_left" title="کلیک و کشیدن برای تغییر اندازه">​</span></span></p><p style="text-align:justify"><span style="font-size:12px"><strong><a href="http://kordira.blogfa.com/post/47071"><span style="color:#000000">روایت عجیب سردار رستگارپناه از جلال طالبانی</span></a></strong></span></p><p style="text-align:justify">&nbsp;</p><p><span tabindex="-1" data-cke-widget-wrapper="1" data-cke-filter="off" class="cke_widget_wrapper cke_widget_inline cke_widget_image cke_image_nocaption cke_widget_selected" data-cke-display-name="تصویر" data-cke-widget-id="7" style="float: right;" role="region" aria-label="ابزارک تاخت و تاز گرانی ها در کردستان تصویر" contenteditable="false"><img alt="تاخت و تاز گرانی ها در کردستان" data-cke-saved-src="https://static3.fartaknews.com/thumbnail/rIEePZhGThI2/BjsZgv1D2dmmJilBKQWxvhyudjuFs31HZnT8bY7n8F2fS-FPoPRcdIf0MZc5KEoQ98G30kwhHxM,/41NM3okKVNrm.jpg" src="https://static3.fartaknews.com/thumbnail/rIEePZhGThI2/BjsZgv1D2dmmJilBKQWxvhyudjuFs31HZnT8bY7n8F2fS-FPoPRcdIf0MZc5KEoQ98G30kwhHxM,/41NM3okKVNrm.jpg" data-cke-widget-data="%7B%22hasCaption%22%3Afalse%2C%22src%22%3A%22https%3A%2F%2Fstatic3.fartaknews.com%2Fthumbnail%2FrIEePZhGThI2%2FBjsZgv1D2dmmJilBKQWxvhyudjuFs31HZnT8bY7n8F2fS-FPoPRcdIf0MZc5KEoQ98G30kwhHxM%2C%2F41NM3okKVNrm.jpg%22%2C%22alt%22%3A%22%D8%AA%D8%A7%D8%AE%D8%AA%20%D9%88%20%D8%AA%D8%A7%D8%B2%20%DA%AF%D8%B1%D8%A7%D9%86%DB%8C%20%D9%87%D8%A7%20%D8%AF%D8%B1%20%DA%A9%D8%B1%D8%AF%D8%B3%D8%AA%D8%A7%D9%86%22%2C%22width%22%3A%2223%22%2C%22height%22%3A%2215%22%2C%22lock%22%3Atrue%2C%22align%22%3A%22right%22%2C%22classes%22%3Anull%7D" data-cke-widget-upcasted="1" data-cke-widget-keep-attr="0" data-widget="image" class="cke_widget_element" width="23" height="15"><span class="cke_reset cke_widget_drag_handler_container" style="background:rgba(220,220,220,0.5);background-image:url(https://blogfa.com/Desktop/editor/9/plugins/widget/images/handle.png);display:none;"><img class="cke_reset cke_widget_drag_handler" data-cke-widget-drag-handler="1" src="data:image/gif;base64,R0lGODlhAQABAPABAP///wAAACH5BAEKAAAALAAAAAABAAEAAAICRAEAOw==" title="کلیک و کشیدن برای جابجایی" role="presentation" draggable="true" width="15" height="15"></span><span class="cke_image_resizer cke_image_resizer_left" title="کلیک و کشیدن برای تغییر اندازه">​</span></span></p><p style="text-align:justify"><span style="font-size:12px"><strong><a href="http://kordira.blogfa.com/post/47070"><span style="color:#000000">تاخت و تاز گرانی ها در کردستان روح الله زرین</span></a></strong></span></p><p style="text-align:justify">&nbsp;</p><p><span tabindex="-1" data-cke-widget-wrapper="1" data-cke-filter="off" class="cke_widget_wrapper cke_widget_inline cke_widget_image cke_image_nocaption cke_widget_selected" data-cke-display-name="تصویر" data-cke-widget-id="6" style="float: right;" role="region" aria-label="ابزارک  تصویر" contenteditable="false"><img title="تورم" alt="" data-cke-saved-src="http://kurdpress.com/Docs/1/1/98/10/14/AVZatbxafii/XL_Atch_42_avzatbxafii.jpg" src="http://kurdpress.com/Docs/1/1/98/10/14/AVZatbxafii/XL_Atch_42_avzatbxafii.jpg" data-cke-widget-data="%7B%22hasCaption%22%3Afalse%2C%22src%22%3A%22http%3A%2F%2Fkurdpress.com%2FDocs%2F1%2F1%2F98%2F10%2F14%2FAVZatbxafii%2FXL_Atch_42_avzatbxafii.jpg%22%2C%22alt%22%3A%22%22%2C%22width%22%3A%2227%22%2C%22height%22%3A%2215%22%2C%22lock%22%3Atrue%2C%22align%22%3A%22right%22%2C%22classes%22%3Anull%7D" data-cke-widget-upcasted="1" data-cke-widget-keep-attr="0" data-widget="image" class="cke_widget_element" width="27" height="15"><span class="cke_reset cke_widget_drag_handler_container" style="background:rgba(220,220,220,0.5);background-image:url(https://blogfa.com/Desktop/editor/9/plugins/widget/images/handle.png);display:none;"><img class="cke_reset cke_widget_drag_handler" data-cke-widget-drag-handler="1" src="data:image/gif;base64,R0lGODlhAQABAPABAP///wAAACH5BAEKAAAALAAAAAABAAEAAAICRAEAOw==" title="کلیک و کشیدن برای جابجایی" role="presentation" draggable="true" width="15" height="15"></span><span class="cke_image_resizer cke_image_resizer_left" title="کلیک و کشیدن برای تغییر اندازه">​</span></span></p><p style="text-align:justify"><span style="font-size:12px"><strong><a href="http://kordira.blogfa.com/post/47068"><span style="color:#e74c3c">قیمت آب و برق و گاز در کردستان؛ 53 درصد بیشتر از میانگین کشوری است</span></a></strong></span></p><p style="text-align:justify">&nbsp;</p><p><span tabindex="-1" data-cke-widget-wrapper="1" data-cke-filter="off" class="cke_widget_wrapper cke_widget_inline cke_widget_image cke_image_nocaption cke_widget_selected" data-cke-display-name="تصویر" data-cke-widget-id="5" style="float: right;" role="region" aria-label="ابزارک شمار فوتی‌های کرونا در کردستان به عدد ۳۰۰ نزدیک شد تصویر" contenteditable="false"><img alt="شمار فوتی‌های کرونا در کردستان به عدد ۳۰۰ نزدیک شد" data-cke-saved-src="https://media.farsnews.ir/Uploaded/Files/Images/1399/02/02/13990202000358_Test_PhotoN.jpg" src="https://media.farsnews.ir/Uploaded/Files/Images/1399/02/02/13990202000358_Test_PhotoN.jpg" data-cke-widget-data="%7B%22hasCaption%22%3Afalse%2C%22src%22%3A%22https%3A%2F%2Fmedia.farsnews.ir%2FUploaded%2FFiles%2FImages%2F1399%2F02%2F02%2F13990202000358_Test_PhotoN.jpg%22%2C%22alt%22%3A%22%D8%B4%D9%85%D8%A7%D8%B1%20%D9%81%D9%88%D8%AA%DB%8C%E2%80%8C%D9%87%D8%A7%DB%8C%20%DA%A9%D8%B1%D9%88%D9%86%D8%A7%20%D8%AF%D8%B1%20%DA%A9%D8%B1%D8%AF%D8%B3%D8%AA%D8%A7%D9%86%20%D8%A8%D9%87%20%D8%B9%D8%AF%D8%AF%20%DB%B3%DB%B0%DB%B0%20%D9%86%D8%B2%D8%AF%DB%8C%DA%A9%20%D8%B4%D8%AF%22%2C%22width%22%3A%2232%22%2C%22height%22%3A%2216%22%2C%22lock%22%3Atrue%2C%22align%22%3A%22right%22%2C%22classes%22%3Anull%7D" data-cke-widget-upcasted="1" data-cke-widget-keep-attr="0" data-widget="image" class="cke_widget_element" width="32" height="16"><span class="cke_reset cke_widget_drag_handler_container" style="background:rgba(220,220,220,0.5);background-image:url(https://blogfa.com/Desktop/editor/9/plugins/widget/images/handle.png);display:none;"><img class="cke_reset cke_widget_drag_handler" data-cke-widget-drag-handler="1" src="data:image/gif;base64,R0lGODlhAQABAPABAP///wAAACH5BAEKAAAALAAAAAABAAEAAAICRAEAOw==" title="کلیک و کشیدن برای جابجایی" role="presentation" draggable="true" width="15" height="15"></span><span class="cke_image_resizer cke_image_resizer_left" title="کلیک و کشیدن برای تغییر اندازه">​</span></span></p><p style="text-align:justify"><span style="font-size:12px"><strong><a href="http://kordira.blogfa.com/post/47067"><span style="color:#000000">شمار فوتی‌های کرونا در کردستان به عدد ۳۰۰ نزدیک شد</span></a></strong></span></p><span data-cke-copybin-end="1"></span>
+
+</div><br><b></b>
+				
+			<br><br><font style="font-size:8pt;">
+<br>
+			داغ کن:
+			<a   target="_blank"  
+			href="http://www.cloob.com/share/link/add?url=http://kamyaranyan.mihanblog.com//post/20686&title=خبرهای کامیاران،کردستان ومناطق کردنشین درکامیاران نیوز امروز"> 
+			<img alt="داغ کن - کلوب دات کام" src="../../../../static.mihanblog.com/public/user_data/user_files/153/458214/orangeZitova/100c.gif" style='border: none; padding: 0px'/> 
+			</a>
+			<br>
+								به اشتراک گذاری:
+								<!-- AddToAny BEGIN -->
+			<a class="a2a_dd" href="4.html#"><img src="http://static.addtoany.com/buttons/share_save_120_16.gif" width="120" height="16" border="0" title="Share"/></a>
+			<script type="text/javascript">
+			var a2a_config = a2a_config || {};
+			a2a_config.linkname = "خبرهای کامیاران،کردستان ومناطق کردنشین درکامیاران نیوز امروز";
+			a2a_config.linkurl = "http://kamyaranyan.mihanblog.com/post/20686";
+			a2a_config.show_title = 1;
+			</script>
+			<script type="text/javascript" src="http://static.addtoany.com/menu/locale/fa.js" charset="utf-8"></script>
+			<script type="text/javascript" src="http://static.addtoany.com/menu/page.js"></script>
+			<!-- AddToAny END --><br><br>
+
+			</font>
+	        </div>
+	        </div>
+	        <div class="p-con3"><div class="p-con4">
+	        <div class="date">نوشته شده در تاریخ : چهارشنبه 11 تیر 1399 توسط : <a href="../../author/712301.html">کامیاران نیوز</a></div>
+	        <div class="nazar"><a target="_self" href="javascript:newComment(20686)" >نظرات (<script>setCommentCnt(20686)</script>)</a></div>
+	        </div></div>
+	        </div>
+            </div>
+            <div class="post clearfix">
+            <div class="p-head">
+            <div class="p-head1">
+            <div class="p-head2">		
+			<b><a href="http://kamyaranyan.mihanblog.com/post/20685">جدیدترین خبرهای عمومی کشور درکامیاران نیوز امروز</a></b>
+			</div>
+            </div>
+            </div>
+	        <div class="p-con clearfix">
+	        <div class="p-con1">
+	        <div class="p-con2">
+	        <div class="p-photo">
+	        </div>
+	        <div class="p-height">
+			
+
+
+
+<span data-cke-copybin-start="1">​</span><p style="text-align:center"><span style="font-size:14px"><span style="color:#ff0000"><strong>جدیدترین خبرهای عمومی کشور درکامیاران نیوز امروز</strong></span></span></p><p style="text-align:center"><span style="font-size:14px"><span style="color:#ff0000"><strong><br></strong></span></span></p><p style="text-align:center">&nbsp;<span style="font-size:16px"><strong><span style="color:#000099">جهت مطالعه هرخبربرروی تیتر آن خبر کلیک نمائید</span></strong></span></p><p style="text-align:justify">&nbsp;</p><p><span style="color:#000000"><span style="font-size:12px"><strong><span style="color:#000000"><span style="font-size:12px"><strong><span tabindex="-1" data-cke-widget-wrapper="1" data-cke-filter="off" class="cke_widget_wrapper cke_widget_inline cke_widget_image cke_image_nocaption cke_widget_selected" data-cke-display-name="تصویر" data-cke-widget-id="29" style="float: right;" role="region" aria-label="ابزارک  تصویر" contenteditable="false"><img alt="" title="" data-cke-saved-src="https://cdn.mashreghnews.ir/d/2020/06/29/4/2839845.jpg" src="https://cdn.mashreghnews.ir/d/2020/06/29/4/2839845.jpg" data-cke-widget-data="{" data-cke-widget-upcasted="1" data-cke-widget-keep-attr="0" data-widget="image" class="cke_widget_element" width="17" height="27"><span class="cke_image_resizer cke_image_resizer_left" title="کلیک و کشیدن برای تغییر اندازه">​</span></span></strong></span></span></strong></span></span></p><p style="text-align:justify"><span style="font-size:12px"><strong><a href="http://kordira.blogfa.com/post/47077"><span style="color:#000000">عکس/ جانشین ابومهدی المهندس در کنار حاج قاسم</span></a></strong></span></p><p style="text-align:justify">&nbsp;</p><p><span style="color:#000000"><span style="font-size:12px"><strong><span style="color:#000000"><span style="font-size:12px"><strong><span tabindex="-1" data-cke-widget-wrapper="1" data-cke-filter="off" class="cke_widget_wrapper cke_widget_inline cke_widget_image cke_image_nocaption cke_widget_selected" data-cke-display-name="تصویر" data-cke-widget-id="28" style="float: right;" role="region" aria-label="ابزارک  تصویر" contenteditable="false"><img alt="" title="" data-cke-saved-src="https://cdn.mashreghnews.ir/d/2020/06/29/4/2839852.jpg" src="https://cdn.mashreghnews.ir/d/2020/06/29/4/2839852.jpg" data-cke-widget-data="{" data-cke-widget-upcasted="1" data-cke-widget-keep-attr="0" data-widget="image" class="cke_widget_element" width="26" height="17"><span class="cke_image_resizer cke_image_resizer_left" title="کلیک و کشیدن برای تغییر اندازه">​</span></span></strong></span></span></strong></span></span></p><p style="text-align:justify"><span style="font-size:12px"><strong><a href="http://kordira.blogfa.com/post/47076"><span style="color:#000000">عکس/ وداع با پیکر شهید «نسیم افغانی»</span></a></strong></span></p><p style="text-align:justify">&nbsp;</p><p><span style="color:#000000"><span style="font-size:12px"><strong><span style="color:#000000"><span style="font-size:12px"><strong><span tabindex="-1" data-cke-widget-wrapper="1" data-cke-filter="off" class="cke_widget_wrapper cke_widget_inline cke_widget_image cke_image_nocaption cke_widget_selected" data-cke-display-name="تصویر" data-cke-widget-id="27" style="float: right;" role="region" aria-label="ابزارک فرزند شیخ زکزاکی: دولت نیجریه 6 فرزند شیخ را به قتل رساند تصویر" contenteditable="false"><img alt="فرزند شیخ زکزاکی: دولت نیجریه 6 فرزند شیخ را به قتل رساند" title="دولت نیجریه ۶ فرزند شیخ را به قتل رساند" data-cke-saved-src="https://cdn.mashreghnews.ir/d/2020/06/29/2/2839503.jpg" src="https://cdn.mashreghnews.ir/d/2020/06/29/2/2839503.jpg" data-cke-widget-data="{" data-cke-widget-upcasted="1" data-cke-widget-keep-attr="0" data-widget="image" class="cke_widget_element" width="32" height="16"><span class="cke_image_resizer cke_image_resizer_left" title="کلیک و کشیدن برای تغییر اندازه">​</span></span></strong></span></span></strong></span></span></p><p style="text-align:justify"><span style="font-size:12px"><strong><a href="http://kordira.blogfa.com/post/47079"><span style="color:#e74c3c">فرزند شیخ زکزاکی: دولت نیجریه ۶ فرزند شیخ را به قتل رساند</span></a></strong></span></p><p style="text-align:justify">&nbsp;</p><p><span style="color:#000000"><span style="font-size:12px"><strong><span style="color:#000000"><span style="font-size:12px"><strong><span tabindex="-1" data-cke-widget-wrapper="1" data-cke-filter="off" class="cke_widget_wrapper cke_widget_inline cke_widget_image cke_image_nocaption cke_widget_selected" data-cke-display-name="تصویر" data-cke-widget-id="26" style="float: right;" role="region" aria-label="ابزارک نمکی: واکسن  ایرانی کرونا تست مدل حیوانی را با موفقیت  گذراند تصویر" contenteditable="false"><img alt="نمکی: واکسن  ایرانی کرونا تست مدل حیوانی را با موفقیت  گذراند" data-cke-saved-src="https://media.farsnews.ir/Uploaded/Files/Images/1398/12/07/13981207000334_Test_PhotoN.jpg" src="https://media.farsnews.ir/Uploaded/Files/Images/1398/12/07/13981207000334_Test_PhotoN.jpg" data-cke-widget-data="{" data-cke-widget-upcasted="1" data-cke-widget-keep-attr="0" data-widget="image" class="cke_widget_element" width="32" height="16"><span class="cke_image_resizer cke_image_resizer_left" title="کلیک و کشیدن برای تغییر اندازه">​</span></span></strong></span></span></strong></span></span></p><p style="text-align:justify"><span style="font-size:12px"><strong><a href="http://kordira.blogfa.com/post/47087"><span style="color:#000000">سعید نمکی: واکسن ایرانی کرونا تست مدل حیوانی را با موفقیت گذراند</span></a></strong></span></p><p style="text-align:justify">&nbsp;</p><p><span style="color:#000000"><span style="font-size:12px"><strong><span style="color:#000000"><span style="font-size:12px"><strong><span tabindex="-1" data-cke-widget-wrapper="1" data-cke-filter="off" class="cke_widget_wrapper cke_widget_inline cke_widget_image cke_image_nocaption cke_widget_selected" data-cke-display-name="تصویر" data-cke-widget-id="25" style="float: right;" role="region" aria-label="ابزارک صادق زیباکلام: موسوی خوئینی‌ها متکبرترین فردی است که به عمرم دیده‌ام/ موسوی‌خوئینی‌ها خود باعث بسیاری از مشكلات كشور است/ او باید با استکبار درون خود مبارزه کند تصویر" contenteditable="false"><img alt="صادق زیباکلام: موسوی خوئینی‌ها متکبرترین فردی است که به عمرم دیده‌ام/ موسوی‌خوئینی‌ها خود باعث بسیاری از مشكلات كشور است/ او باید با استکبار درون خود مبارزه کند" title="زیباکلام: خوئینی‌ها خود باعث بسیاری از مشکلات کشور است" data-cke-saved-src="https://cdn.mashreghnews.ir/d/2020/06/28/2/2838307.jpg" src="https://cdn.mashreghnews.ir/d/2020/06/28/2/2838307.jpg" data-cke-widget-data="{" data-cke-widget-upcasted="1" data-cke-widget-keep-attr="0" data-widget="image" class="cke_widget_element" width="27" height="19"><span class="cke_image_resizer cke_image_resizer_left" title="کلیک و کشیدن برای تغییر اندازه">​</span></span></strong></span></span></strong></span></span></p><p style="text-align:justify"><span style="font-size:12px"><strong><a href="http://kordira.blogfa.com/post/47064"><span style="color:#e74c3c">صادق زیباکلام: خوئینی‌ها خود باعث بسیاری از مشکلات کشور است</span></a></strong></span></p><p style="text-align:justify">&nbsp;</p><p><span style="color:#000000"><span style="font-size:12px"><strong><span style="color:#000000"><span style="font-size:12px"><strong><span tabindex="-1" data-cke-widget-wrapper="1" data-cke-filter="off" class="cke_widget_wrapper cke_widget_inline cke_widget_image cke_image_nocaption cke_widget_selected" data-cke-display-name="تصویر" data-cke-widget-id="24" style="float: right;" role="region" aria-label="ابزارک تسهیلات یک میلیون تومانی فقط به خانوارهای 5 نفره و جامانده تعلق می‌گیرد تصویر" contenteditable="false"><img alt="تسهیلات یک میلیون تومانی فقط به خانوارهای 5 نفره و جامانده تعلق می‌گیرد" data-cke-saved-src="https://media.farsnews.ir/Uploaded/Files/Images/1398/10/11/13981011000286_Test_PhotoN.jpg" src="https://media.farsnews.ir/Uploaded/Files/Images/1398/10/11/13981011000286_Test_PhotoN.jpg" data-cke-widget-data="{" data-cke-widget-upcasted="1" data-cke-widget-keep-attr="0" data-widget="image" class="cke_widget_element" width="30" height="15"><span class="cke_image_resizer cke_image_resizer_left" title="کلیک و کشیدن برای تغییر اندازه">​</span></span></strong></span></span></strong></span></span></p><p style="text-align:justify"><span style="font-size:12px"><strong><a href="http://kordira.blogfa.com/post/47063"><span style="color:#000000">تسهیلات یک میلیون تومانی فقط به خانوارهای 5 نفره و جامانده تعلق می‌گیرد</span></a></strong></span></p><p style="text-align:justify">&nbsp;</p><p><span style="color:#000000"><span style="font-size:12px"><strong><span style="color:#000000"><span style="font-size:12px"><strong><span tabindex="-1" data-cke-widget-wrapper="1" data-cke-filter="off" class="cke_widget_wrapper cke_widget_inline cke_widget_image cke_image_nocaption cke_widget_selected" data-cke-display-name="تصویر" data-cke-widget-id="23" style="float: right;" role="region" aria-label="ابزارک نیما زم در دادگاه: بعد از مکرون سنگین‌ترین تیم حفاظت در فرانسه برای من بود تصویر" contenteditable="false"><img alt="نیما زم در دادگاه: بعد از مکرون سنگین‌ترین تیم حفاظت در فرانسه برای من بود" data-cke-saved-src="https://media.farsnews.ir/Uploaded/Files/Images/1398/11/27/13981127000653_Test_PhotoN.jpg" src="https://media.farsnews.ir/Uploaded/Files/Images/1398/11/27/13981127000653_Test_PhotoN.jpg" data-cke-widget-data="{" data-cke-widget-upcasted="1" data-cke-widget-keep-attr="0" data-widget="image" class="cke_widget_element" width="30" height="15"><span class="cke_image_resizer cke_image_resizer_left" title="کلیک و کشیدن برای تغییر اندازه">​</span></span></strong></span></span></strong></span></span></p><p style="text-align:justify"><span style="font-size:12px"><strong><a href="http://kordira.blogfa.com/post/47086"><span style="color:#e74c3c">حکم اعدام برای «روح الله زم»</span></a></strong></span></p><p style="text-align:justify">&nbsp;</p><p><span style="color:#000000"><span style="font-size:12px"><strong><span style="color:#000000"><span style="font-size:12px"><strong><span tabindex="-1" data-cke-widget-wrapper="1" data-cke-filter="off" class="cke_widget_wrapper cke_widget_inline cke_widget_image cke_image_nocaption cke_widget_selected" data-cke-display-name="تصویر" data-cke-widget-id="22" style="float: right;" role="region" aria-label="ابزارک وقوع انفجار در نزدیکی روستای گلوگاه در استان سیستان و بلوچستان تصویر" contenteditable="false"><img alt="وقوع انفجار در نزدیکی روستای گلوگاه در استان سیستان و بلوچستان" title="وقوع انفجار در نزدیکی روستای گلوگاه در استان سیستان و بلوچستان" data-cke-saved-src="https://media.mehrnews.com/d/2020/06/30/3/3488845.jpg" src="https://media.mehrnews.com/d/2020/06/30/3/3488845.jpg" data-cke-widget-data="{" data-cke-widget-upcasted="1" data-cke-widget-keep-attr="0" data-widget="image" class="cke_widget_element" width="29" height="16"><span class="cke_image_resizer cke_image_resizer_left" title="کلیک و کشیدن برای تغییر اندازه">​</span></span></strong></span></span></strong></span></span></p><p style="text-align:justify"><span style="font-size:12px"><strong><a href="http://kordira.blogfa.com/post/47084"><span style="color:#000000">وقوع انفجار در نزدیکی روستای گلوگاه در استان سیستان و بلوچستان</span></a></strong></span></p><p style="text-align:justify">&nbsp;</p><p><span style="color:#000000"><span style="font-size:12px"><strong><span style="color:#000000"><span style="font-size:12px"><strong><span tabindex="-1" data-cke-widget-wrapper="1" data-cke-filter="off" class="cke_widget_wrapper cke_widget_inline cke_widget_image cke_image_nocaption cke_widget_selected" data-cke-display-name="تصویر" data-cke-widget-id="21" style="float: right;" role="region" aria-label="ابزارک جزئیات تله انفجاری در محور کورین/حمله تروریستی به خودروی سپاه تلفات جانی نداشت تصویر" contenteditable="false"><img alt="جزئیات تله انفجاری در محور کورین/حمله تروریستی به خودروی سپاه تلفات جانی نداشت" data-cke-saved-src="https://media.farsnews.ir/Uploaded/Files/Images/1398/04/29/13980429000493_Test_PhotoN.jpg" src="https://media.farsnews.ir/Uploaded/Files/Images/1398/04/29/13980429000493_Test_PhotoN.jpg" data-cke-widget-data="{" data-cke-widget-upcasted="1" data-cke-widget-keep-attr="0" data-widget="image" class="cke_widget_element" width="38" height="19"><span class="cke_image_resizer cke_image_resizer_left" title="کلیک و کشیدن برای تغییر اندازه">​</span></span></strong></span></span></strong></span></span></p><p style="text-align:justify"><span style="font-size:12px"><strong><a href="http://kordira.blogfa.com/post/47085"><span style="color:#000000">جزئیات تله انفجاری در محور کورین/حمله تروریستی به خودروی سپاه تلفات جانی نداشت</span></a></strong></span></p><p style="text-align:justify">&nbsp;</p><p><span style="color:#000000"><span style="font-size:12px"><strong><span style="color:#000000"><span style="font-size:12px"><strong><span tabindex="-1" data-cke-widget-wrapper="1" data-cke-filter="off" class="cke_widget_wrapper cke_widget_inline cke_widget_image cke_image_nocaption cke_widget_selected" data-cke-display-name="تصویر" data-cke-widget-id="20" style="float: right;" role="region" aria-label="ابزارک انفجار تصویر" contenteditable="false"><img alt="انفجار" title="انفجار گاز یا انهدام تاسیسات موشکی؟" data-cke-saved-src="https://cdn.mashreghnews.ir/d/2020/06/29/2/2839630.jpg" src="https://cdn.mashreghnews.ir/d/2020/06/29/2/2839630.jpg" data-cke-widget-data="{" data-cke-widget-upcasted="1" data-cke-widget-keep-attr="0" data-widget="image" class="cke_widget_element" width="30" height="20"><span class="cke_image_resizer cke_image_resizer_left" title="کلیک و کشیدن برای تغییر اندازه">​</span></span></strong></span></span></strong></span></span></p><p style="text-align:justify"><span style="font-size:12px"><strong><a href="http://kordira.blogfa.com/post/47080"><span style="color:#000000">انفجار گاز یا انهدام تاسیسات موشکی؟</span></a></strong></span></p><p style="text-align:justify">&nbsp;</p><p><span style="color:#000000"><span style="font-size:12px"><strong><span style="color:#000000"><span style="font-size:12px"><strong><span tabindex="-1" data-cke-widget-wrapper="1" data-cke-filter="off" class="cke_widget_wrapper cke_widget_inline cke_widget_image cke_image_nocaption cke_widget_selected" data-cke-display-name="تصویر" data-cke-widget-id="19" style="float: right;" role="region" aria-label="ابزارک ماموران منابع طبیعی سپیدان مورد ضرب وشتم قرار گرفتند تصویر" contenteditable="false"><img alt="ماموران منابع طبیعی سپیدان مورد ضرب وشتم قرار گرفتند" title="ضرب و شتم ماموران منابع طبیعی" data-cke-saved-src="https://cdn.mashreghnews.ir/d/2020/06/29/2/2839820.jpg" src="https://cdn.mashreghnews.ir/d/2020/06/29/2/2839820.jpg" data-cke-widget-data="{" data-cke-widget-upcasted="1" data-cke-widget-keep-attr="0" data-widget="image" class="cke_widget_element" width="31" height="16"><span class="cke_image_resizer cke_image_resizer_left" title="کلیک و کشیدن برای تغییر اندازه">​</span></span></strong></span></span></strong></span></span></p><p style="text-align:justify"><span style="font-size:12px"><strong><a href="http://kordira.blogfa.com/post/47078"><span style="color:#e74c3c">ضرب و شتم ماموران منابع طبیعی</span></a></strong></span></p><p style="text-align:justify">&nbsp;</p><p><span style="color:#000000"><span style="font-size:12px"><strong><span style="color:#000000"><span style="font-size:12px"><strong><span tabindex="-1" data-cke-widget-wrapper="1" data-cke-filter="off" class="cke_widget_wrapper cke_widget_inline cke_widget_image cke_image_nocaption cke_widget_selected" data-cke-display-name="تصویر" data-cke-widget-id="18" style="float: right;" role="region" aria-label="ابزارک  تصویر" contenteditable="false"><img alt="" data-cke-saved-src="https://cdn.asriran.com/files/fa/news/1399/4/8/1112112_379.jpg" src="https://cdn.asriran.com/files/fa/news/1399/4/8/1112112_379.jpg" data-cke-widget-data="{" data-cke-widget-upcasted="1" data-cke-widget-keep-attr="0" data-widget="image" class="cke_widget_element" width="24" height="16"><span class="cke_image_resizer cke_image_resizer_left" title="کلیک و کشیدن برای تغییر اندازه">​</span></span></strong></span></span></strong></span></span></p><p style="text-align:justify"><span style="font-size:12px"><strong><a href="http://kordira.blogfa.com/post/47072"><span style="color:#000000">پیکان 1 – 3 پرسپولیس/ پرسپولیس به قهرمانی نزدیک شد (+جدول) </span></a></strong></span></p><p style="text-align:justify">&nbsp;</p><p><span style="color:#000000"><span style="font-size:12px"><strong><span style="color:#000000"><span style="font-size:12px"><strong><span tabindex="-1" data-cke-widget-wrapper="1" data-cke-filter="off" class="cke_widget_wrapper cke_widget_inline cke_widget_image cke_image_nocaption cke_widget_selected" data-cke-display-name="تصویر" data-cke-widget-id="17" style="float: right;" role="region" aria-label="ابزارک خیز مجدد کرونا در ایران با ثبت ۱۴۴ مورد فوتی در یک روز تصویر" contenteditable="false"><img alt="خیز مجدد کرونا در ایران با ثبت ۱۴۴ مورد فوتی در یک روز" title="خیز مجدد کرونا در ایران با ثبت ۱۴۴ مورد فوتی در یک روز" data-cke-saved-src="http://www.baharnews.ir/images/docs/000220/n00220713-b.jpg" src="http://www.baharnews.ir/images/docs/000220/n00220713-b.jpg" data-cke-widget-data="{" data-cke-widget-upcasted="1" data-cke-widget-keep-attr="0" data-widget="image" class="cke_widget_element" width="24" height="15"><span class="cke_image_resizer cke_image_resizer_left" title="کلیک و کشیدن برای تغییر اندازه">​</span></span></strong></span></span></strong></span></span></p><p style="text-align:justify"><span style="font-size:12px"><strong><a href="http://kordira.blogfa.com/post/47069"><span style="color:#000000">خیز مجدد کرونا در ایران با ثبت ۱۴۴ مورد فوتی در یک روز</span></a><br></strong></span></p><p style="text-align:justify"><span style="font-size:12px"><strong><br></strong></span></p><p><img alt="پنج باور غلط درباره ماسک + اینفوگرافیک" src="https://media.farsnews.ir/Uploaded/Files/Images/1399/03/26/13990326000215_Test_PhotoN.jpg" style="float:right" width="30" height="15"></p><p style="text-align:justify"><span style="font-size:12px"><strong><a href="http://kordira.blogfa.com/post/47095"><span style="color:#000000">پنج باور غلط درباره ماسک + اینفوگرافیک</span></a></strong></span></p><p style="text-align:justify">&nbsp;</p><p><span style="color:#000000"><span style="font-size:12px"><strong><img alt="برخورد سمند با اتوبوس 5 فوتی و 20 مجروح بر جا گذاشت + عکس" src="https://media.farsnews.ir/Uploaded/Files/Images/1398/06/23/13980623000218_Test_PhotoN.jpg" style="float:right" width="31" height="16"></strong></span></span></p><p style="text-align:justify"><span style="font-size:12px"><strong><a href="http://kordira.blogfa.com/post/47093"><span style="color:#e74c3c">برخورد سمند با اتوبوس 5 فوتی و 20 مجروح بر جا گذاشت + عکس</span></a></strong></span></p><p style="text-align:justify">&nbsp;</p><p><span style="color:#000000"><span style="font-size:12px"><strong><img alt="" src="http://media.shabestan.ir/Original/1399/03/20/IMG12080200.jpg" style="float:right" width="29" height="21"></strong></span></span></p><p style="text-align:justify"><span style="font-size:12px"><strong><a href="http://kordira.blogfa.com/post/47092"><span style="color:#000000">شناسایی ۱۵۰ بیمار جدید مبتلا به کرونا در کردستان</span></a><br></strong></span></p><p style="text-align:justify"><br><span style="font-size:12px"><strong></strong></span></p><p style="text-align:justify">&nbsp;</p><p><span style="font-size:12px"><strong><span style="color:#000000"><a rel="nofollow" href="https://img9.irna.ir/d/r2/2020/06/19/4/157178973.jpg"><img alt="پ. ک.ک مدعی کشته شدن یکصد نظامی ترکیه در شمال عراق شد" title="پ. ک.ک مدعی کشته شدن یکصد نظامی ترکیه در شمال عراق شد" src="https://img9.irna.ir/d/r2/2020/06/19/4/157178973.jpg" style="float:right" width="25" height="16"></a></span></strong></span></p><p style="text-align:justify"><span style="font-size:12px"><strong><a href="http://kordira.blogfa.com/post/47091"><span style="color:#e74c3c">پ. ک.ک مدعی کشته شدن یکصد نظامی ترکیه در شمال عراق شد</span></a></strong></span></p><p style="text-align:justify"><br><span style="font-size:12px"><strong></strong></span></p><span data-cke-copybin-end="1">​</span><span data-cke-copybin-end="1"></span>
+
+</div><br><b></b>
+				
+			<br><br><font style="font-size:8pt;">
+<br>
+			داغ کن:
+			<a   target="_blank"  
+			href="http://www.cloob.com/share/link/add?url=http://kamyaranyan.mihanblog.com//post/20685&title=جدیدترین خبرهای عمومی کشور درکامیاران نیوز امروز"> 
+			<img alt="داغ کن - کلوب دات کام" src="../../../../static.mihanblog.com/public/user_data/user_files/153/458214/orangeZitova/100c.gif" style='border: none; padding: 0px'/> 
+			</a>
+			<br>
+								به اشتراک گذاری:
+								<!-- AddToAny BEGIN -->
+			<a class="a2a_dd" href="4.html#"><img src="http://static.addtoany.com/buttons/share_save_120_16.gif" width="120" height="16" border="0" title="Share"/></a>
+			<script type="text/javascript">
+			var a2a_config = a2a_config || {};
+			a2a_config.linkname = "جدیدترین خبرهای عمومی کشور درکامیاران نیوز امروز";
+			a2a_config.linkurl = "http://kamyaranyan.mihanblog.com/post/20685";
+			a2a_config.show_title = 1;
+			</script>
+			<script type="text/javascript" src="http://static.addtoany.com/menu/locale/fa.js" charset="utf-8"></script>
+			<script type="text/javascript" src="http://static.addtoany.com/menu/page.js"></script>
+			<!-- AddToAny END --><br><br>
+
+			</font>
+	        </div>
+	        </div>
+	        <div class="p-con3"><div class="p-con4">
+	        <div class="date">نوشته شده در تاریخ : چهارشنبه 11 تیر 1399 توسط : <a href="../../author/712301.html">کامیاران نیوز</a></div>
+	        <div class="nazar"><a target="_self" href="javascript:newComment(20685)" >نظرات (<script>setCommentCnt(20685)</script>)</a></div>
+	        </div></div>
+	        </div>
+            </div>
+            <div class="post clearfix">
+            <div class="p-head">
+            <div class="p-head1">
+            <div class="p-head2">		
+			<b><a href="http://kamyaranyan.mihanblog.com/post/20683">جدیدترین خبرهای عمومی کشور درکامیاران نیوز امروز8تیرماه 99</a></b>
+			</div>
+            </div>
+            </div>
+	        <div class="p-con clearfix">
+	        <div class="p-con1">
+	        <div class="p-con2">
+	        <div class="p-photo">
+	        </div>
+	        <div class="p-height">
+			
+
+
+<p style="text-align:center"><span style="font-size:14px"><span style="color:#ff0000"><strong><br></strong></span></span></p><p style="text-align:center"><span style="font-size:14px"><span style="color:#ff0000"><strong>جدیدترین خبرهای عمومی کشور درکامیاران نیوز امروز8تیرماه 99<br></strong></span></span></p><p style="text-align:center"><br></p><p style="text-align:center">&nbsp;<span style="font-size:16px"><strong><span style="color:#000099">جهت مطالعه هرخبربرروی تیتر آن خبر کلیک نمائید</span></strong></span></p><p>&nbsp;</p><p><img alt="" src="https://cdn.yjc.ir/files/fa/news/1399/2/10/11806377_178.jpg" style="float:right" width="21" height="15"></p><p><span style="font-size:14px"><strong><a href="http://kordira.blogfa.com/post/47060"><span style="color:#000000">تصادف خونین در جاده مرگ ۸کشته بر جای گذاشت</span></a></strong></span></p><p>&nbsp;</p><p><img alt="" src="http://news.police.ir/NewsGallery/Images/News/Larg_Pic/1399-04-07/IMAGE11593282418611.jpg" style="float:right" width="23" height="15"></p><p><span style="font-size:14px"><strong><a href="http://kordira.blogfa.com/post/47059"><span style="color:#000000">4 کشته و یک مجروح بر اثر گازگرفتگی حین حفر چاه </span></a></strong></span></p><p>&nbsp;</p><p><img alt="" src="https://media.farsnews.ir/Uploaded/Files/Images/1399/01/26/13990126000496_Test_NewPhotoFree.jpg" style="float:right" width="24" height="15"></p><p><span style="font-size:14px"><strong><a href="http://kordira.blogfa.com/post/47058"><span style="color:#000000">۱۳۰ بیمار جدید مبتلا به کرونا در کردستان شناسایی شد فوت 7نفر دیگر</span></a></strong></span></p><p>&nbsp;</p><p><img title="پشت پرده  سوء قصد بجان عضو رهبری سابق حزب دمکرات کردستان ایران در هلند" alt="پشت پرده  سوء قصد بجان عضو رهبری سابق حزب دمکرات کردستان ایران در هلند" src="https://www.bultannews.com/files/fa/news/1399/4/7/1290683_409.jpg" style="float:right" width="25" height="19"></p><p><span style="font-size:14px"><strong><a href="http://kordira.blogfa.com/post/47057"><span style="color:#000000">پشت پرده سوء قصد به جان عضو رهبری سابق حزب دمکرات کردستان ایران در هلند+ تصاویر </span></a></strong></span></p><p>&nbsp;</p><p><img title="فردین کمانگر" alt="" src="http://kurdpress.com/Docs/1/1/99/4/4/ZHFvm3rnsxg/XL_Atch_10_zhfvm3rnsxg.jpg" style="float:right" width="33" height="19"></p><p><span style="font-size:14px"><strong><a href="http://kordira.blogfa.com/post/47056"><span style="color:#000000">گرانی افسار گسیخته فردین کمانگر</span></a></strong></span></p><p>&nbsp;</p><p><a rel="nofollow" href="https://img9.irna.ir/d/r2/2019/08/17/4/156556837.jpg"><img alt="چهار هزار لیتر بنزین از تانکر سوخت وارد طبیعت کامیاران شد" title="چهار هزار لیتر بنزین از تانکر سوخت وارد طبیعت کامیاران شد" src="https://img9.irna.ir/d/r2/2019/08/17/4/156556837.jpg" style="float:right" width="25" height="17"></a></p><p><span style="font-size:14px"><strong><a href="http://kordira.blogfa.com/post/47055"><span style="color:#000000">چهار هزار لیتر بنزین از تانکر سوخت وارد طبیعت کامیاران شد</span></a></strong></span></p><p>&nbsp;</p><p><img title="خوش خدمتی کومله و دمکرات به رژیم بعث عراق" alt="خوش خدمتی کومله و دمکرات به رژیم بعث عراق" src="https://www.bultannews.com/files/fa/news/1399/4/7/1290691_753.jpg" style="float:right" width="23" height="17"></p><p><span style="font-size:14px"><strong><a href="http://kordira.blogfa.com/post/47054"><span style="color:#000000">خوش خدمتی کومله و دمکرات به رژیم بعث عراق </span></a></strong></span></p></div><br><b></b>
+				
+			<br><br><font style="font-size:8pt;">
+<br>
+			داغ کن:
+			<a   target="_blank"  
+			href="http://www.cloob.com/share/link/add?url=http://kamyaranyan.mihanblog.com//post/20683&title=جدیدترین خبرهای عمومی کشور درکامیاران نیوز امروز8تیرماه 99"> 
+			<img alt="داغ کن - کلوب دات کام" src="../../../../static.mihanblog.com/public/user_data/user_files/153/458214/orangeZitova/100c.gif" style='border: none; padding: 0px'/> 
+			</a>
+			<br>
+								به اشتراک گذاری:
+								<!-- AddToAny BEGIN -->
+			<a class="a2a_dd" href="4.html#"><img src="http://static.addtoany.com/buttons/share_save_120_16.gif" width="120" height="16" border="0" title="Share"/></a>
+			<script type="text/javascript">
+			var a2a_config = a2a_config || {};
+			a2a_config.linkname = "جدیدترین خبرهای عمومی کشور درکامیاران نیوز امروز8تیرماه 99";
+			a2a_config.linkurl = "http://kamyaranyan.mihanblog.com/post/20683";
+			a2a_config.show_title = 1;
+			</script>
+			<script type="text/javascript" src="http://static.addtoany.com/menu/locale/fa.js" charset="utf-8"></script>
+			<script type="text/javascript" src="http://static.addtoany.com/menu/page.js"></script>
+			<!-- AddToAny END --><br><br>
+
+			</font>
+	        </div>
+	        </div>
+	        <div class="p-con3"><div class="p-con4">
+	        <div class="date">نوشته شده در تاریخ : یکشنبه 8 تیر 1399 توسط : <a href="../../author/712301.html">کامیاران نیوز</a></div>
+	        <div class="nazar"><a target="_self" href="javascript:newComment(20683)" >نظرات (<script>setCommentCnt(20683)</script>)</a></div>
+	        </div></div>
+	        </div>
+            </div>
+            <div class="post clearfix">
+            <div class="p-head">
+            <div class="p-head1">
+            <div class="p-head2">		
+			<b><a href="http://kamyaranyan.mihanblog.com/post/20682">جدیدترین خبرهای عمومی کشور درکامیاران نیوز امروز7تیرماه99</a></b>
+			</div>
+            </div>
+            </div>
+	        <div class="p-con clearfix">
+	        <div class="p-con1">
+	        <div class="p-con2">
+	        <div class="p-photo">
+	        </div>
+	        <div class="p-height">
+			
+
+
+<p style="text-align:center"><span style="font-size:14px"><span style="color:#ff0000"><strong><br></strong></span></span></p><p style="text-align:center"><span style="font-size:14px"><span style="color:#ff0000"><strong>جدیدترین خبرهای عمومی کشور درکامیاران نیوز امروز7تیرماه99</strong></span></span></p><p style="text-align:center"><br></p><p style="text-align:center">&nbsp;<span style="font-size:16px"><strong><span style="color:#000099">جهت مطالعه هرخبربرروی تیتر آن خبر کلیک نمائید</span></strong></span></p><p style="text-align:justify">&nbsp;</p><p><span style="color:#000000"><span style="font-size:12px"><strong><img alt="مبارزه با مفسدان، بدون ملاحظه ادامه یابد/ مقابله با فساد درون قوه قضاییه؛ مطالبه قضات متدیّن و عموم مردم" src="https://media.farsnews.ir/Uploaded/Files/Images/1399/04/07/13990407000479_Test_PhotoN.jpg" style="float:right" width="32" height="16"></strong></span></span></p><p style="text-align:justify"><span style="font-size:12px"><strong><a href="http://kordira.blogfa.com/post/47047"><span style="color:#000000">مبارزه با مفسدان، بدون ملاحظه ادامه یابد/ مقابله با فساد درون قوه قضاییه؛ مطالبه قضات متدیّن و عموم </span></a></strong></span></p><p style="text-align:justify">&nbsp;</p><p><span style="color:#000000"><span style="font-size:12px"><strong><img alt="شهید نمایه" title="شناسایی پیکر دو تن از شهدای مدافع حرم «خان طومان»" src="https://cdn.mashreghnews.ir/d/2019/11/03/2/2638663.jpg" style="float:right" width="26" height="17"></strong></span></span></p><p style="text-align:justify"><span style="font-size:12px"><strong><a href="http://kordira.blogfa.com/post/47052"><span style="color:#000000">شناسایی پیکر دو تن از شهدای مدافع حرم «خان طومان»</span></a></strong></span></p><p style="text-align:justify">&nbsp;</p><p><span style="color:#000000"><span style="font-size:12px"><strong><img alt="شهید سعید کمالی کفراتی" title="وعده صادق حاج قاسم به خانواده شهید مدافع حرم" src="https://cdn.mashreghnews.ir/d/2020/06/27/2/2837631.jpg" style="float:right" width="22" height="17"></strong></span></span></p><p style="text-align:justify"><span style="font-size:12px"><strong><a href="http://kordira.blogfa.com/post/47051"><span style="color:#000000">وعده صادق حاج قاسم به خانواده شهید مدافع حرم</span></a></strong></span></p><p style="text-align:justify">&nbsp;</p><p><span style="color:#000000"><span style="font-size:12px"><strong><img title="واژگونی تانکر سوخت " alt="واژگونی تانکر سوخت " src="https://cdn.yjc.ir/files/fa/news/1399/4/8/12137729_622.jpg" style="float:right" width="28" height="20"></strong></span></span></p><p style="text-align:justify"><span style="font-size:12px"><strong><a href="http://kordira.blogfa.com/post/47053"><span style="color:#000000">واژگونی تانکر سوخت در محورکامیاران - پالنگان </span></a></strong></span></p><p style="text-align:justify">&nbsp;</p><p><span style="color:#000000"><span style="font-size:12px"><strong><img alt="مصری" title="سلاطین گوشت میلیاردها تومان به جیب زدند" src="https://cdn.mashreghnews.ir/d/2020/06/21/2/2831423.jpg" style="float:right" width="22" height="15"></strong></span></span></p><p style="text-align:justify"><span style="font-size:12px"><strong><a href="http://kordira.blogfa.com/post/47042"><span style="color:#000000">قصد دارم در دادستانی استان از مدیران کشوری که وعده هایشان در رابطه با جاده کرمانشاه به کامیاران عمل نکرده اند شکایت کنم</span></a></strong></span></p><p style="text-align:justify">&nbsp;</p><p><span style="color:#000000"><span style="font-size:12px"><strong><img title="تورم " alt="" src="http://kurdpress.com/Docs/1/1/98/9/9/KSFpffioqm1/XL_Atch_14_ksfpffioqm1.jpg" style="float:right" width="31" height="17"></strong></span></span></p><p style="text-align:justify"><span style="font-size:12px"><strong><a href="http://kordira.blogfa.com/post/47041"><span style="color:#000000">کردستان باز هم در تورم اول شد/ کردستانی ها، پوشاک و کفش را 38 درصد گرانتر از کل کشور می خرند!</span></a></strong></span></p><p style="text-align:justify">&nbsp;</p><p><span style="color:#000000"><span style="font-size:12px"><strong><img alt="پیام تسلیت فوت مادر با انواع متن های رسمی و صمیمی Birthday Candles, Poem, Poems, Poetry" src="https://i.pinimg.com/originals/22/ec/ff/22ecff53103ddaa5302401d91377e5ad.jpg" style="float:right" width="16" height="24"></strong></span></span></p><p style="text-align:justify"><span style="font-size:12px"><strong><a href="http://kordira.blogfa.com/post/47050"><span style="color:#000000">برادران عزیز یزدانی؛ مارا درغم خود شریک بدانید</span></a></strong></span></p><p style="text-align:justify">&nbsp;</p><p><span style="color:#000000"><span style="font-size:12px"><strong><img alt="افشای شایعه‌سازی ضدانقلاب درباره «آتش‌سوزی در چهل‌چشمه»/تیر ضد انقلاب بازهم به سنگ خورد" src="https://media.farsnews.ir/Uploaded/Files/Images/1398/12/23/13981223000605_Test_PhotoN.jpg" style="float:right" width="29" height="15"></strong></span></span></p><p style="text-align:justify"><span style="font-size:12px"><strong><a href="http://kordira.blogfa.com/post/47040"><span style="color:#000000">افشای شایعه‌سازی ضدانقلاب درباره «آتش‌سوزی در چهل‌چشمه»/تیر ضد انقلاب بازهم به سنگ خورد</span></a></strong></span></p><p style="text-align:justify">&nbsp;</p><p><span style="color:#000000"><span style="font-size:12px"><strong><img title="کرونا" alt="" src="http://kurdpress.com/Docs/1/1/99/4/2/RXX1jiz4w2u/XL_Atch_35_rxx1jiz4w2u.jpg" style="float:right" width="28" height="16"></strong></span></span></p><p style="text-align:justify"><span style="font-size:12px"><strong><a href="http://kordira.blogfa.com/post/47039"><span style="color:#000000">افزایش شدید فوتی های کرونا در کردستان/ 11 نفر در یک روز جان باختند</span></a></strong></span></p><p style="text-align:justify">&nbsp;</p><p><span style="color:#000000"><span style="font-size:12px"><strong><img alt="جدول تورم استان‌ها در خرداد/ کردستان بیشترین تورم ماهانه را ثبت کرد" src="https://media.farsnews.ir/Uploaded/Files/Images/1398/08/05/13980805000655_Test_PhotoN.jpg" style="float:right" width="29" height="15"></strong></span></span></p><p style="text-align:justify"><span style="font-size:12px"><strong><a href="http://kordira.blogfa.com/post/47036"><span style="color:#000000">جدول تورم استان‌ها در خرداد/ کردستان بیشترین تورم ماهانه را ثبت کرد</span></a></strong></span></p><p style="text-align:justify">&nbsp;</p><p><span style="color:#000000"><span style="font-size:12px"><strong><img alt="«ماریا و اِکاترینا» دو دختر ولادیمیر پوتین" title="«ماریا و اِکاترینا» دو دختر ولادیمیر پوتین" src="https://cdn.mashreghnews.ir/d/2020/06/27/4/2836929.jpg" style="float:right" width="24" height="16"></strong></span></span></p><p style="text-align:justify"><span style="font-size:12px"><strong><a href="http://kordira.blogfa.com/post/47048"><span style="color:#000000">تصاویر فرزندان پوتین منتشر شد</span></a></strong></span></p><p style="text-align:justify">&nbsp;</p><p><span style="color:#000000"><span style="font-size:12px"><strong><img alt="کویتی‌پور آیا فرمان را چرخانده است؟" src="https://media.farsnews.ir/Uploaded/Files/Images/1399/04/05/13990405000388_Test_PhotoN.jpg" style="float:right" width="30" height="15"></strong></span></span></p><p style="text-align:justify"><span style="font-size:12px"><strong><a href="http://kordira.blogfa.com/post/47035"><span style="color:#000000">کویتی‌پور آیا فرمان را چرخانده است؟</span></a></strong></span></p><p style="text-align:justify">&nbsp;</p><p><span style="color:#000000"><span style="font-size:12px"><strong><img alt="شهید «سعید امیری مقدم" title="پنج روز از حقوقم در خدمت سپاه نبودم!" src="https://cdn.mashreghnews.ir/d/2020/06/25/2/2835583.jpg" style="float:right" width="26" height="16"></strong></span></span></p><p style="text-align:justify"><span style="font-size:12px"><strong><a href="http://kordira.blogfa.com/post/47037"><span style="color:#000000">پنج روز از حقوقم در خدمت سپاه نبودم!</span></a></strong></span></p><p style="text-align:justify">&nbsp;</p><p><span style="color:#000000"><span style="font-size:12px"><strong><img title="تصاویر| ماجرای خودکشی دختر و پسر عاشق در رودخانه کارون" alt="تصاویر| ماجرای خودکشی دختر و پسر عاشق در رودخانه کارون" src="https://aftabnews.ir/files/fa/news/1399/4/5/441789_824.jpg" style="float:right" width="19" height="16"></strong></span></span></p><p style="text-align:justify"><span style="font-size:12px"><strong><a href="http://kordira.blogfa.com/post/47038"><span style="color:#000000">تصاویر| ماجرای خودکشی دختر و پسر عاشق در رودخانه کارون </span></a></strong></span></p><p style="text-align:justify">&nbsp;</p><p><span style="color:#000000"><span style="font-size:12px"><strong><img alt="تیراندازی گارد ساحلی عربستان به صیادان بوشهری" src="https://media.farsnews.ir/Uploaded/Files/Images/1399/04/07/13990407000001_Test_PhotoN.jpeg" style="float:right" width="29" height="15"></strong></span></span></p><p style="text-align:justify"><span style="font-size:12px"><strong><a href="http://kordira.blogfa.com/post/47046"><span style="color:#000000">تیراندازی گارد ساحلی عربستان به صیادان بوشهری</span></a></strong></span></p><p style="text-align:justify">&nbsp;</p><p><span style="color:#000000"><span style="font-size:12px"><strong><img alt="شناسایی ۲۶۲۸ بیمار جدید مبتلا به کرونا/ وضعیت 6 استان قرمز است" src="https://media.farsnews.ir/Uploaded/Files/Images/1399/04/05/13990405000297_Test_PhotoN.jpg" style="float:right" width="30" height="15"></strong></span></span></p><p style="text-align:justify"><span style="font-size:12px"><strong><a href="http://kordira.blogfa.com/post/47045"><span style="color:#000000">شناسایی ۲۶۲۸ بیمار جدید مبتلا به کرونا/ وضعیت 6 استان قرمز اس</span></a></strong></span></p><p style="text-align:justify">&nbsp;</p><p><span style="color:#000000"><span style="font-size:12px"><strong><img alt="آمار درگذشتگان کرونا 5 رقمی شد/ افزایش بیماران بستری در تهران و فارس" src="https://media.farsnews.ir/Uploaded/Files/Images/1399/04/02/13990402000596_Test_PhotoN.jpg" style="float:right" width="29" height="15"></strong></span></span></p><p style="text-align:justify"><span style="font-size:12px"><strong><a href="http://kordira.blogfa.com/post/47034"><span style="color:#000000">آمار درگذشتگان کرونا 5 رقمی شد افزایش بیماران بستری در تهران و فارس</span></a></strong></span></p><p style="text-align:justify">&nbsp;</p><p><span style="color:#000000"><span style="font-size:12px"><strong><img alt="گزارش‌های تأییدنشده از یورش تروریست‌‌های آمریکایی به مقر الحشد الشعبی" src="https://media.farsnews.ir/Uploaded/Files/Images/1399/04/06/13990406000047_Test_PhotoN.jpg" style="float:right" width="30" height="15"></strong></span></span></p><p style="text-align:justify"><span style="font-size:12px"><strong><a href="http://kordira.blogfa.com/post/47044"><span style="color:#000000">گزارش‌های تأییدنشده از یورش تروریست‌‌های آمریکایی به مقر الحشد الشعبی</span></a></strong></span></p><p style="text-align:justify">&nbsp;</p><p><span style="color:#000000"><span style="font-size:12px"><strong><img alt="ادعای روزنامه سعودی درباره حزب‌الله" src="https://media.farsnews.ir/Uploaded/Files/Images/1398/04/20/13980420000574_Test_PhotoN.jpg" style="float:right" width="29" height="15"></strong></span></span></p><p style="text-align:justify"><span style="font-size:12px"><strong><a href="http://kordira.blogfa.com/post/47033"><span style="color:#000000">ادعای روزنامه سعودی درباره حزب‌الله</span></a></strong></span></p><p style="text-align:justify">&nbsp;</p><p><span style="color:#000000"><span style="font-size:12px"><strong><img alt="قتل نمایه" title="قتل مادر و سه فرزند به دست دایی کینه جو" src="https://cdn.mashreghnews.ir/d/2019/08/30/2/2588280.jpg" style="float:right" width="23" height="16"></strong></span></span></p><p style="text-align:justify"><span style="font-size:12px"><strong><a href="http://kordira.blogfa.com/post/47032"><span style="color:#000000">قتل مادر و سه فرزند به دست دایی کینه جو</span></a></strong></span></p><p style="text-align:justify">&nbsp;</p><p><span style="color:#000000"><span style="font-size:12px"><strong><img alt="در حال تکمیل| مشاهده نور نارنجی در شرق تهران / یک مخزن گاز صنعتی در محل خالی از سکنه منفجر شد" src="https://media.farsnews.ir/Uploaded/Files/Images/1399/04/06/13990406000019_Test_PhotoN.jpg" style="float:right" width="38" height="19"></strong></span></span></p><p style="text-align:justify"><span style="font-size:12px"><strong><a href="http://kordira.blogfa.com/post/47043"><span style="color:#000000">مشاهده نور نارنجی در شرق تهران یک مخزن گاز صنعتی در محل خالی از سکنه منفجر شد</span></a></strong></span></p></div><br><b></b>
+				
+			<br><br><font style="font-size:8pt;">
+<br>
+			داغ کن:
+			<a   target="_blank"  
+			href="http://www.cloob.com/share/link/add?url=http://kamyaranyan.mihanblog.com//post/20682&title=جدیدترین خبرهای عمومی کشور درکامیاران نیوز امروز7تیرماه99"> 
+			<img alt="داغ کن - کلوب دات کام" src="../../../../static.mihanblog.com/public/user_data/user_files/153/458214/orangeZitova/100c.gif" style='border: none; padding: 0px'/> 
+			</a>
+			<br>
+								به اشتراک گذاری:
+								<!-- AddToAny BEGIN -->
+			<a class="a2a_dd" href="4.html#"><img src="http://static.addtoany.com/buttons/share_save_120_16.gif" width="120" height="16" border="0" title="Share"/></a>
+			<script type="text/javascript">
+			var a2a_config = a2a_config || {};
+			a2a_config.linkname = "جدیدترین خبرهای عمومی کشور درکامیاران نیوز امروز7تیرماه99";
+			a2a_config.linkurl = "http://kamyaranyan.mihanblog.com/post/20682";
+			a2a_config.show_title = 1;
+			</script>
+			<script type="text/javascript" src="http://static.addtoany.com/menu/locale/fa.js" charset="utf-8"></script>
+			<script type="text/javascript" src="http://static.addtoany.com/menu/page.js"></script>
+			<!-- AddToAny END --><br><br>
+
+			</font>
+	        </div>
+	        </div>
+	        <div class="p-con3"><div class="p-con4">
+	        <div class="date">نوشته شده در تاریخ : شنبه 7 تیر 1399 توسط : <a href="../../author/712301.html">کامیاران نیوز</a></div>
+	        <div class="nazar"><a target="_self" href="javascript:newComment(20682)" >نظرات (<script>setCommentCnt(20682)</script>)</a></div>
+	        </div></div>
+	        </div>
+            </div>
+            <div class="post clearfix">
+            <div class="p-head">
+            <div class="p-head1">
+            <div class="p-head2">		
+			<b><a href="http://kamyaranyan.mihanblog.com/post/20684">جدیدترین خبرهای عمومی کشور درکامیاران نیوز امروز6تیرماه99</a></b>
+			</div>
+            </div>
+            </div>
+	        <div class="p-con clearfix">
+	        <div class="p-con1">
+	        <div class="p-con2">
+	        <div class="p-photo">
+	        </div>
+	        <div class="p-height">
+			
+
+
+<p style="text-align:center"><span style="font-size:14px"><span style="color:#ff0000"><strong><br></strong></span></span></p><p style="text-align:center"><span style="font-size:14px"><span style="color:#ff0000"><strong>جدیدترین خبرهای عمومی کشور درکامیاران نیوز امروز6تیرماه99</strong></span></span></p><p style="text-align:center"><br></p><p style="text-align:center">&nbsp;<span style="font-size:16px"><strong><span style="color:#000099">جهت مطالعه هرخبربرروی تیتر آن خبر کلیک نمائید</span></strong></span></p><p>&nbsp;</p><p><img alt="" src="https://rasanews.ir/files/fa/news/1399/4/4/289301_555.jpg" style="float:right" width="23" height="16"></p><p><span style="font-size:12px"><strong><a href="http://kordira.blogfa.com/post/47026"><span style="color:#000000">معاون تهذیب مدرسه علمیه امام باقر (ع) کامیاران: عمل نکردن نمایندگان به وعده‌ها زمینه‌ساز بی‌اعتمادی می شود</span></a></strong></span></p><p>&nbsp;</p><p><img title="کابل خودنگهداربرق" alt="کابل خودنگهداربرق" src="https://cdn.yjc.ir/files/fa/news/1399/4/4/12118539_688.jpg" style="float:right" width="24" height="17"></p><p><span style="font-size:12px"><strong><a href="http://kordira.blogfa.com/post/47030"><span style="color:#000000">تبدیل شبکه سیم مسی به کابل خودنگهدار در موچش کامیاران</span></a></strong></span></p><p>&nbsp;</p><p><a rel="nofollow" href="https://img9.irna.ir/d/r2/2020/06/24/4/157187041.jpg"><img alt="سوزاندن عمدی کاه و کلش مزارع ۲ سال حبس به همراه دارد" title="سوزاندن عمدی کاه و کلش مزارع ۲ سال حبس به همراه دارد" src="https://img9.irna.ir/d/r2/2020/06/24/4/157187041.jpg" style="float:right" width="22" height="15"></a></p><p><span style="font-size:12px"><strong><a href="http://kordira.blogfa.com/post/47029"><span style="color:#000000">مهندس کوشکی مدیرجهادکشاورزی کامیاران: سوزاندن عمدی کاه و کلش مزارع ۲ سال حبس به همراه دارد</span></a></strong></span></p><p>&nbsp;</p><p><img alt="شناسایی ۱۳۵ بیمار جدید مبتلا به کرونا در  کردستان/6 نفر دیگر جان باختند" src="https://media.farsnews.ir/Uploaded/Files/Images/1399/04/04/13990404000286_Test_PhotoN.png" style="float:right" width="30" height="15"></p><p><span style="font-size:12px"><strong><a href="http://kordira.blogfa.com/post/47028"><span style="color:#000000">شناسایی ۱۳۵ بیمار جدید مبتلا به کرونا در کردستان 6 نفر دیگر جان باختند</span></a></strong></span></p><p>&nbsp;</p><p><img title="تکذیب خبر محکومیت قضایی برخی کارگران شرکت پیمانکاری آذرآب" alt="تکذیب خبر محکومیت قضایی برخی کارگران شرکت پیمانکاری آذرآب" src="https://www.mizanonline.com/files/fa/news/1399/4/4/2641572_955.jpg" style="float:right" width="27" height="16"></p><p><span style="font-size:12px"><strong><a href="http://kordira.blogfa.com/post/47027"><span style="color:#000000">حکم حبس و شلاقِ کارگران آذرآب تکذیب شد</span></a><br></strong></span></p><p style="text-align:center"><span style="font-size:14px"><span style="color:#ff0000"><strong>جدیدترین خبرهای عمومی کشور درکامیاران نیوز امروز5تیرماه 99<br></strong></span></span></p><p style="text-align:center"><br><span style="font-size:16px"><strong><span style="color:#000099"></span></strong></span></p><p>&nbsp;</p><p><span style="color:#000000"><span style="font-size:12px"><strong><img alt="پیکر ۱۹۲  شهید دفاع مقدس از مرز شلمچه وارد کشور شد" src="https://media.farsnews.ir/Uploaded/Files/Images/1399/04/02/13990402000206_Test_PhotoN.jpg" style="float:right" width="32" height="16"></strong></span></span></p><p><span style="font-size:12px"><strong><a href="http://kordira.blogfa.com/post/46993"><span style="color:#000000">پیکر ۱۹۲ شهید دفاع مقدس از مرز شلمچه وارد کشور شد</span></a></strong></span></p><p>&nbsp;</p><p><span style="color:#000000"><span style="font-size:12px"><strong><img alt="روایت شهادت نسیم افغانی، آر پی جی زن شجاع «والفجر ۱»" title="روایت شهادت «نسیم افغانی» آرپی‌جی‌زن شجاع والفجر۱ " src="https://cdn.mashreghnews.ir/d/2020/06/23/2/2833181.jpg" style="float:right" width="30" height="21"></strong></span></span></p><p><span style="font-size:12px"><strong><a href="http://kordira.blogfa.com/post/46997"><span style="color:#000000">روایت شهادت «نسیم افغانی» آرپی‌جی‌زن شجاع والفجر۱</span></a></strong></span></p><p>&nbsp;</p><p><span style="color:#000000"><span style="font-size:12px"><strong><img alt="جمشید پژویان" title="جمشید پژویان درگذشت" src="https://cdn.mashreghnews.ir/d/2020/06/22/2/2832495.jpg" style="float:right" width="24" height="17"></strong></span></span></p><p><span style="font-size:12px"><strong><a href="http://kordira.blogfa.com/post/46996"><span style="color:#000000">جمشید پژویان درگذشت</span></a><br></strong></span></p><p><br><span style="font-size:12px"><strong></strong></span></p><p><span style="font-size:12px"><strong><span style="color:#000000"><img title="کرونا در کردستان" alt="کرونا در کردستان" src="https://cdn.yjc.ir/files/fa/news/1399/3/31/12096634_157.jpg" style="float:right" width="21" height="15"></span><a href="http://kordira.blogfa.com/post/46995"><span style="color:#000000">مرگ دختر ۱۱ ماهه بر اثر ابتلا به کرونا</span></a><br></strong></span></p><p><br><span style="font-size:12px"><strong></strong></span></p><p>&nbsp;</p><p><span style="color:#000000"><span style="font-size:12px"><strong><img alt="مرگبارترین هفته طی 19 سال گذشته در افغانستان؛ 291 نظامی کشته شدند" src="https://media.farsnews.ir/Uploaded/Files/Images/1399/02/25/13990225000543_Test_PhotoN.jpg" style="float:right" width="29" height="15"></strong></span></span></p><p><span style="font-size:12px"><strong><a href="http://kordira.blogfa.com/post/46994"><span style="color:#000000">مرگبارترین هفته طی 19 سال گذشته در افغانستان؛ 291 نظامی کشته شدند</span></a><br></strong></span></p><p><br><span style="font-size:12px"><strong></strong></span></p><p><span style="font-size:12px"><strong><span style="color:#000000"><img title="کرونا در کردستان" alt="کرونا در کردستان" src="https://cdn.yjc.ir/files/fa/news/1399/3/31/12096634_157.jpg" style="float:right" width="21" height="15"></span><a href="http://kordira.blogfa.com/post/46992"><span style="color:#000000">کرونا در کردستان همچنان در اوج/ شناسایی 221 بیمار جدید و فوت 3 نفر</span></a></strong></span></p><p>&nbsp;</p><p><span style="color:#000000"><span style="font-size:12px"><strong><img title="" alt="" src="http://kurdpress.com/Docs/1/1/1399/04/01/UTZheeemdhi/XL_Atch_54_utzheeemdhi.jpg" style="float:right" width="30" height="17"></strong></span></span></p><p><span style="font-size:12px"><strong><a href="http://kordira.blogfa.com/post/46990"><span style="color:#000000">تیراندازی به سوی دفترحزب دمکرات کردستان در سلیمانیه</span></a></strong></span></p><p>&nbsp;</p><p><span style="color:#000000"><span style="font-size:12px"><strong><img alt="شش کشته و مهاجرت ۱۰ روستا ماحصل یک هفته حمله ترکیه/ اشاره بغداد به رجوع به شورای امنیت " title="شش کشته و مهاجرت ۱۰ روستا ماحصل یک هفته حمله ترکیه/ اشاره بغداد به رجوع به شورای امنیت " src="https://cdn.isna.ir/d/2020/06/21/3/61663075.jpg" style="float:right" width="27" height="15"></strong></span></span></p><p><span style="font-size:12px"><strong><a href="http://kordira.blogfa.com/post/46989"><span style="color:#000000">شش کشته و مهاجرت ۱۰ روستا ماحصل یک هفته حمله ترکیه/ اشاره بغداد به رجوع به شورای امنیت</span></a></strong></span></p><p>&nbsp;</p><p><span style="color:#000000"><span style="font-size:12px"><strong><img alt="یک واحد آلاینده زیست محیطی در کامیاران پلمب شد" title="یک واحد آلاینده زیست محیطی در کامیاران پلمب شد" src="https://media.mehrnews.com/d/2020/04/19/3/3430187.jpg" style="float:right" width="23" height="15"></strong></span></span></p><p><span style="font-size:12px"><strong><a href="http://kordira.blogfa.com/post/46988"><span style="color:#000000">یک واحد آلاینده زیست محیطی در کامیاران پلمب شد</span></a></strong></span></p><p>&nbsp;</p><p><span style="color:#000000"><span style="font-size:12px"><strong><img title="کرونا در کردستان" alt="کرونا در کردستان" src="https://cdn.yjc.ir/files/fa/news/1399/3/31/12096634_157.jpg" style="float:right" width="21" height="15"></strong></span></span></p><p><span style="font-size:12px"><strong><a href="http://kordira.blogfa.com/post/46986"><span style="color:#000000">۲۵۹ تن دیگر در کردستان گرفتار کرونا شدند هشدارشدید به مردم کامیاران</span></a></strong></span></p><p>&nbsp;</p><p><span style="color:#000000"><span style="font-size:12px"><strong><img title="گروهک تروریستی موسوم به کودار مسئولیت شهادت نیروهای سپاه پاسداران در دیواندره را بر عهده گرفت" alt="گروهک تروریستی موسوم به کودار مسئولیت شهادت نیروهای سپاه پاسداران در دیواندره را بر عهده گرفت" src="https://www.bultannews.com/files/fa/news/1399/4/1/1288406_149.jpg" style="float:right" width="21" height="15"></strong></span></span></p><p><span style="font-size:12px"><strong><a href="http://kordira.blogfa.com/post/46987"><span style="color:#000000">گروهک تروریستی موسوم به کودار مسئولیت شهادت نیروهای سپاه پاسداران در دیواندره را بر عهده گرفت</span></a></strong></span></p><p>&nbsp;</p><p><span style="color:#000000"><span style="font-size:12px"><strong><img alt="" src="https://rasanews.ir/files/fa/news/1399/4/1/288186_942.jpg" style="float:right" width="22" height="15"></strong></span></span></p><p><span style="font-size:12px"><strong><a href="http://kordira.blogfa.com/post/46991"><span style="color:#000000">امام جمعه همدان خطاب به مسؤولان: اگر نمی‌توانید مشکلات را حل کنید حداقل با مردم صادق باشید </span></a></strong></span></p><p>&nbsp;</p><p><span style="color:#000000"><span style="font-size:12px"><strong><img alt="توکلی: به اعتبارنامه تاجگردون رأی ندهید/ اسناد چه می‌گویند؟" title="توکلی: به اعتبارنامه تاجگردون رأی ندهید" src="https://cdn.mashreghnews.ir/d/2020/06/20/2/2830337.jpg" style="float:right" width="29" height="15"></strong></span></span></p><p><span style="font-size:12px"><strong><a href="http://kordira.blogfa.com/post/46985"><span style="color:#000000">توکلی: به اعتبارنامه تاجگردون رأی ندهید</span></a></strong></span></p><p><br><span style="font-size:12px"><strong></strong></span></p></div><br><b></b>
+				
+			<br><br><font style="font-size:8pt;">
+<br>
+			داغ کن:
+			<a   target="_blank"  
+			href="http://www.cloob.com/share/link/add?url=http://kamyaranyan.mihanblog.com//post/20684&title=جدیدترین خبرهای عمومی کشور درکامیاران نیوز امروز6تیرماه99"> 
+			<img alt="داغ کن - کلوب دات کام" src="../../../../static.mihanblog.com/public/user_data/user_files/153/458214/orangeZitova/100c.gif" style='border: none; padding: 0px'/> 
+			</a>
+			<br>
+								به اشتراک گذاری:
+								<!-- AddToAny BEGIN -->
+			<a class="a2a_dd" href="4.html#"><img src="http://static.addtoany.com/buttons/share_save_120_16.gif" width="120" height="16" border="0" title="Share"/></a>
+			<script type="text/javascript">
+			var a2a_config = a2a_config || {};
+			a2a_config.linkname = "جدیدترین خبرهای عمومی کشور درکامیاران نیوز امروز6تیرماه99";
+			a2a_config.linkurl = "http://kamyaranyan.mihanblog.com/post/20684";
+			a2a_config.show_title = 1;
+			</script>
+			<script type="text/javascript" src="http://static.addtoany.com/menu/locale/fa.js" charset="utf-8"></script>
+			<script type="text/javascript" src="http://static.addtoany.com/menu/page.js"></script>
+			<!-- AddToAny END --><br><br>
+
+			</font>
+	        </div>
+	        </div>
+	        <div class="p-con3"><div class="p-con4">
+	        <div class="date">نوشته شده در تاریخ : جمعه 6 تیر 1399 توسط : <a href="../../author/712301.html">کامیاران نیوز</a></div>
+	        <div class="nazar"><a target="_self" href="javascript:newComment(20684)" >نظرات (<script>setCommentCnt(20684)</script>)</a></div>
+	        </div></div>
+	        </div>
+            </div>
+            <div class="post clearfix">
+            <div class="p-head">
+            <div class="p-head1">
+            <div class="p-head2">		
+			<b><a href="http://kamyaranyan.mihanblog.com/post/20679">جدیدترین خبرهای عمومی کشور درکامیاران نیوز امروز</a></b>
+			</div>
+            </div>
+            </div>
+	        <div class="p-con clearfix">
+	        <div class="p-con1">
+	        <div class="p-con2">
+	        <div class="p-photo">
+	        </div>
+	        <div class="p-height">
+			
+<p style="text-align:center"><span style="font-size:14px"><span style="color:#ff0000"><strong><br></strong></span></span></p><p style="text-align:center"><span style="font-size:14px"><span style="color:#ff0000"><strong>جدیدترین خبرهای عمومی کشور درکامیاران نیوز امروز</strong></span></span></p><p style="text-align:center"><br></p><p style="text-align:center">&nbsp;<span style="font-size:16px"><strong><span style="color:#000099">جهت مطالعه هرخبربرروی تیتر آن خبر کلیک نمائید</span></strong></span></p><p>&nbsp;</p><p><img alt="زندگی امام صادق از ولادت تا شهادت/ سفارش لحظه آخر امام به شیعیان" src="https://media.farsnews.ir/Uploaded/Files/Images/1399/03/24/13990324000188_Test_PhotoN.jpg" style="float:right" width="29" height="15"></p><p><span style="font-size:12px"><strong><a href="http://kordira.blogfa.com/post/46970"><span style="color:#000000">زندگی امام صادق از ولادت تا شهادت/ سفارش لحظه آخر امام به شیعیان</span></a></strong></span></p><p>&nbsp;</p><p><img title="مدافع سلامت" alt="" src="http://kurdpress.com/Docs/1/1/99/3/30/YYQvgleozmw/XL_Atch_87_yyqvgleozmw.jpg" style="float:right" width="29" height="16"></p><p><span style="font-size:12px"><strong><a href="http://kordira.blogfa.com/post/46980"><span style="color:#000000">دومین مدافع سلامت در کردستان به شهادت رسید</span></a></strong></span></p><p>&nbsp;</p><p><img alt="بخش های مارب.jpg" title="نقره‌داغ شدن دوباره مزدوران سعودی در مرکز یمن/ رزمندگان یمنی در آستانه فتح شاه کلید استان مأرب + نقشه میدانی و عکس" src="https://cdn.mashreghnews.ir/d/2020/06/17/2/2828239.jpg" style="float:right" width="21" height="16"></p><p><span style="font-size:12px"><strong><a href="http://kordira.blogfa.com/post/46977"><span style="color:#000000">نقره‌داغ شدن دوباره مزدوران سعودی در مرکز یمن</span></a></strong></span></p><p>&nbsp;</p><p><img alt="" src="https://cdn.mashreghnews.ir/d/2020/06/12/4/2822979.jpg" style="float:right" width="21" height="16"></p><p><span style="font-size:12px"><strong><a href="http://kordira.blogfa.com/post/46973"><span style="color:#000000">فیلمی برای آقای جلال جلالی زاده نویسنده:مجتبی باجلانی کامیارانی </span></a></strong></span></p><p>&nbsp;</p><p><img alt="تکذیب مرگ یک زندانی بر اثر ضرب و شتم مأموران در سقز" src="https://static3.ilna.news/thumbnail/FYBi8VYnqGlb/zD2ly951Lbe1X4vBXmeYxnwvBKd2o-upCBoRpuXWWQ3xVYIwBtE8SJc5CgG8w1SR1HhaeHPcWe7Z4QQxwQ5aCQuC6bW65Yo2vzNA1A_oYcME-xuDHnCGIL88GkvFaMums2lp5Xzk-eErjUYezqJx1w96qHB4I0VpXuOejRjZDSys4NdjIqNZJEQ6csj1vAj0ktTheP94bqo,/%D8%AC%D8%B3%D8%AF.jpg" style="float:right" width="22" height="15"></p><p><span style="font-size:12px"><strong><a href="http://kordira.blogfa.com/post/46972"><span style="color:#000000">تکذیب مرگ یک زندانی بر اثر ضرب و شتم مأموران در سقز </span></a></strong></span></p><p>&nbsp;</p><p><img alt="۲۳۶ بیمار جدید مبتلا به کرونا در استان کردستان شناسایی شدند" title="۲۳۶ بیمار جدید مبتلا به کرونا در استان کردستان شناسایی شدند" src="https://media.mehrnews.com/d/2020/06/16/3/3477602.jpg" style="float:right" width="26" height="20"></p><p><span style="font-size:12px"><strong><a href="http://kordira.blogfa.com/post/46983"><span style="color:#000000">طی ۲۴ ساعت گذشته؛ ۲۳۶ بیمار جدید مبتلا به کرونا در استان کردستان شناسایی شدند</span></a></strong></span></p><p>&nbsp;</p><p><img title="کرونا" alt="" src="http://kurdpress.com/Docs/1/1/99/3/27/AXTcwbioqky/XL_Atch_11_axtcwbioqky.jpg" style="float:right" width="27" height="15"></p><p><span style="font-size:12px"><strong><a href="http://kordira.blogfa.com/post/46982"><span style="color:#000000">فوت 17 نفر در سنندج ظرف 3 روز</span></a></strong></span></p><p>&nbsp;</p><p><img title="فرار عناصر حزب دمکرات کردستان ایران و کومله از آلانه و چومان" alt="فرار عناصر حزب دمکرات کردستان ایران و کومله از آلانه و چومان" src="https://www.bultannews.com/files/fa/news/1399/3/29/1287252_472.jpg" style="float:right" width="20" height="15"></p><p><span style="font-size:12px"><strong><a href="http://kordira.blogfa.com/post/46971"><span style="color:#000000">فرار عناصر حزب دمکرات کردستان ایران و کومله از آلانه و چومان </span></a></strong></span></p><p>&nbsp;</p><p><img title="حسین یزدان پناه از احزاب کردستان عراق خواست از بارزانی و حکومت اقلیم تبعیت کنند!" alt="حسین یزدان پناه از احزاب کردستان عراق خواست از بارزانی و حکومت اقلیم تبعیت کنند!" src="https://www.bultannews.com/files/fa/news/1399/3/30/1287652_420.jpg" style="float:right" width="21" height="16"></p><p><span style="font-size:12px"><strong><a href="http://kordira.blogfa.com/post/46981"><span style="color:#000000">حسین یزدان پناه از احزاب کردستان عراق خواست از بارزانی و حکومت اقلیم تبعیت کنند! </span></a></strong></span></p><p>&nbsp;</p><p><img alt="حمید بقایی تصادف کرد +عکس" src="https://static1.eghtesadonline.com/thumbnail/dDfSn0jjHuVB/BGmQaTBpfAytX4aLRhq9RaAF56YLGeYkA7k-s32CnKblttBjvNVHIKfqEWc1mk5D1gDYrWUUxpJ8csm-_V9yRCNcdp1QsQZ6ZiJ7Sotb69varlBNVV4Emw,,/%D8%AD%D9%85%DB%8C%D8%AF+%D8%A8%D9%82%D8%A7%DB%8C%DB%8C.jpg" style="float:right" width="28" height="15"></p><p><span style="font-size:12px"><strong><a href="http://kordira.blogfa.com/post/46979"><span style="color:#000000">حمید بقایی تصادف کرد +عکس </span></a></strong></span></p><p>&nbsp;</p><p><img alt="اینترپل بخارست، خودکشی و مرگ غلامرضا منصوری را تائید کرد" src="https://media.farsnews.ir/Uploaded/Files/Images/1399/03/30/13990330000423_Test_PhotoN.jpg" style="float:right" width="29" height="15"></p><p><span style="font-size:12px"><strong><a href="http://kordira.blogfa.com/post/46976"><span style="color:#000000">اینترپل بخارست، خودکشی و مرگ غلامرضا منصوری را تائید کرد</span></a></strong></span></p><p>&nbsp;</p><p><img alt="جنگنده" title="سقوط جنگنده« اف-۱۸» ناو هواپیمابر «تئودور روزولت» آمریکا" src="https://cdn.mashreghnews.ir/d/2020/06/19/2/2829804.jpg" style="float:right" width="22" height="15"></p><p><span style="font-size:12px"><strong><a href="http://kordira.blogfa.com/post/46978"><span style="color:#000000">سقوط جنگنده« اف-۱۸» ناو هواپیمابر «تئودور روزولت» آمریکا</span></a></strong></span></p><p>&nbsp;</p><p><img alt="پشت پرده انحلال جهاد سازندگی توطئه بود" src="https://media.farsnews.ir/Uploaded/Files/Images/1397/07/07/13970707000268_Test_PhotoN.jpg" style="float:right" width="29" height="15"></p><p><span style="font-size:12px"><strong><a href="http://kordira.blogfa.com/post/46969"><span style="color:#000000">پشت پرده انحلال جهاد سازندگی توطئه بود</span></a></strong></span></p>
+
+</div><br><b></b>
+				
+			<br><br><font style="font-size:8pt;">
+<br>
+			داغ کن:
+			<a   target="_blank"  
+			href="http://www.cloob.com/share/link/add?url=http://kamyaranyan.mihanblog.com//post/20679&title=جدیدترین خبرهای عمومی کشور درکامیاران نیوز امروز"> 
+			<img alt="داغ کن - کلوب دات کام" src="../../../../static.mihanblog.com/public/user_data/user_files/153/458214/orangeZitova/100c.gif" style='border: none; padding: 0px'/> 
+			</a>
+			<br>
+								به اشتراک گذاری:
+								<!-- AddToAny BEGIN -->
+			<a class="a2a_dd" href="4.html#"><img src="http://static.addtoany.com/buttons/share_save_120_16.gif" width="120" height="16" border="0" title="Share"/></a>
+			<script type="text/javascript">
+			var a2a_config = a2a_config || {};
+			a2a_config.linkname = "جدیدترین خبرهای عمومی کشور درکامیاران نیوز امروز";
+			a2a_config.linkurl = "http://kamyaranyan.mihanblog.com/post/20679";
+			a2a_config.show_title = 1;
+			</script>
+			<script type="text/javascript" src="http://static.addtoany.com/menu/locale/fa.js" charset="utf-8"></script>
+			<script type="text/javascript" src="http://static.addtoany.com/menu/page.js"></script>
+			<!-- AddToAny END --><br><br>
+
+			</font>
+	        </div>
+	        </div>
+	        <div class="p-con3"><div class="p-con4">
+	        <div class="date">نوشته شده در تاریخ : دوشنبه 2 تیر 1399 توسط : <a href="../../author/712301.html">کامیاران نیوز</a></div>
+	        <div class="nazar"><a target="_self" href="javascript:newComment(20679)" >نظرات (<script>setCommentCnt(20679)</script>)</a></div>
+	        </div></div>
+	        </div>
+            </div>
+            <div class="post clearfix">
+            <div class="p-head">
+            <div class="p-head1">
+            <div class="p-head2">		
+			<b><a href="http://kamyaranyan.mihanblog.com/post/20680">جدیدترین خبرهای عمومی کشور درکامیاران نیوز امروز</a></b>
+			</div>
+            </div>
+            </div>
+	        <div class="p-con clearfix">
+	        <div class="p-con1">
+	        <div class="p-con2">
+	        <div class="p-photo">
+	        </div>
+	        <div class="p-height">
+			
+
+
+<p style="text-align:center"><span style="font-size:14px"><span style="color:#ff0000"><strong><br></strong></span></span></p><p style="text-align:center"><span style="font-size:14px"><span style="color:#ff0000"><strong>جدیدترین خبرهای عمومی کشور درکامیاران نیوز امروز</strong></span></span></p><p style="text-align:center"><br></p><p style="text-align:center">&nbsp;<span style="font-size:16px"><strong><span style="color:#000099">جهت مطالعه هرخبربرروی تیتر آن خبر کلیک نمائید</span></strong></span></p><p>&nbsp;</p><p><img title="فرشادان " alt="" src="http://kurdpress.com/Docs/1/1/99/3/29/HFZ2zkvgg2i/XL_Atch_82_hfz2zkvgg2i.jpg" style="float:right" width="27" height="15"></p><p><span style="font-size:12px"><strong><a href="http://kordira.blogfa.com/post/46968"><span style="color:#000000">پس از نامه هفته قبل به رییس جمهور؛ فرشادان دست به دامن وزیر بهداشت برای قرنطینه سنندج شد</span></a></strong></span></p><p>&nbsp;</p><p><img title="کرونا" alt="" src="http://kurdpress.com/Docs/1/1/99/3/27/AXTcwbioqky/XL_Atch_11_axtcwbioqky.jpg" style="float:right" width="26" height="15"></p><p><span style="font-size:12px"><strong><a href="http://kordira.blogfa.com/post/46964"><span style="color:#000000">چنگال کرونا همچنان بر گلوی کردستان 217 بیمار جدید مبتلا به کرونا در کردستان شناسایی شد/ 6 نفر در سندج فوت کردند</span></a></strong></span></p><p>&nbsp;</p><p><a rel="nofollow" href="http://www.taghribnews.com/fa/interview/466284/امام-صادق-ع-نقش-مهمی-ترویج-اندیشه-های-دینی"><img alt="امام صادق(ع) نقش مهمی در ترویج اندیشه های دینی داشت" title="امام صادق(ع) نقش مهمی در ترویج اندیشه های دینی داشت" src="http://www.taghribnews.com/images/docs/000466/n00466284-b.jpg" style="float:right" width="28" height="22"></a></p><p><span style="font-size:12px"><strong><a href="http://kordira.blogfa.com/post/46965"><span style="color:#000000">امام جمعه کامیاران: امام صادق(ع) نقش مهمی در ترویج اندیشه های دینی داشت</span></a></strong></span></p><p>&nbsp;</p><p><img alt="" src="http://news.police.ir/NewsGallery/Images/News/Larg_Pic/1399-03-29/IMAGE11592471396697.jpg" style="float:right" width="28" height="19"></p><p><span style="font-size:12px"><strong><a href="http://kordira.blogfa.com/post/46963"><span style="color:#000000">جان باختن 2 کودک هرسینی در داخل خودرو کودکانی که قربانی غفلت والدین می شوند </span></a></strong></span></p><p>&nbsp;</p><p><img alt="" src="https://rasanews.ir/files/fa/news/1399/3/27/286307_975.jpg" style="float:right" width="25" height="17"></p><p><span style="font-size:12px"><strong><a href="http://kordira.blogfa.com/post/46966"><span style="color:#000000">مدیر مدرسه علمیه امام باقر(ع) کامیاران مطرح کرد؛ مذاهب مختلف اسلامی پای سفره مکتب امام صادق </span></a></strong></span></p><p>&nbsp;</p><p><img alt="" src="https://medu.ir/portal/fileLoader.php?code=cfd469c509be551f8ee9cf1592288107" style="float:right" width="25" height="16"></p><p><span style="font-size:12px"><strong><a href="http://kordira.blogfa.com/post/46967"><span style="color:#e74c3c">پیام تسلیت مدیر کل آموزش و پرورش کردستان به مناسبت درگذشت همکار فرهنگی مرحوم «سیف الله محمدیان»</span></a></strong></span></p><p>&nbsp;</p><p><img alt="پیام فرماندار کامیاران به مناسبت فرارسیدن روز جهاد کشاورزی" src="http://kamyaran.gov.ir/images/thumbs/FW680/L3VwbG9hZC85OC9raG9yZGFkLzI3LzI2LkpQRw==" style="float:right" width="23" height="23"></p><p><span style="font-size:12px"><strong><a href="http://kordira.blogfa.com/post/46960"><span style="color:#000000">پیام فرماندار کامیاران به مناسبت فرارسیدن روز جهاد کشاورزی</span></a></strong></span></p><p>&nbsp;</p><p><img alt="" src="http://kamyaran.gov.ir/images/thumbs/FW1280/L3VwbG9hZC85OS9raG9yZGFkLzI3LzIuanBn?1592429359644" style="float:right" width="22" height="24"></p><p><span style="font-size:12px"><strong><a href="http://kordira.blogfa.com/post/46959"><span style="color:#000000">برگزاری جلسه ستاد بحران شهرستان کامیاران با موضوع مقابله با کرونا</span></a></strong></span></p><p>&nbsp;</p><p><img alt="مرگ 2 کودک بر اثر افتادن در تنور نان" title="مرگ ۲ کودک بر اثر افتادن در تنور نان" src="https://cdn.mashreghnews.ir/d/2020/06/18/2/2828552.jpg" style="float:right" width="24" height="18"></p><p><span style="font-size:12px"><strong><a href="http://kordira.blogfa.com/post/46958"><span style="color:#000000">مرگ ۲ کودک بر اثر افتادن در تنور نان</span></a></strong></span></p></div><br><b></b>
+				
+			<br><br><font style="font-size:8pt;">
+<br>
+			داغ کن:
+			<a   target="_blank"  
+			href="http://www.cloob.com/share/link/add?url=http://kamyaranyan.mihanblog.com//post/20680&title=جدیدترین خبرهای عمومی کشور درکامیاران نیوز امروز"> 
+			<img alt="داغ کن - کلوب دات کام" src="../../../../static.mihanblog.com/public/user_data/user_files/153/458214/orangeZitova/100c.gif" style='border: none; padding: 0px'/> 
+			</a>
+			<br>
+								به اشتراک گذاری:
+								<!-- AddToAny BEGIN -->
+			<a class="a2a_dd" href="4.html#"><img src="http://static.addtoany.com/buttons/share_save_120_16.gif" width="120" height="16" border="0" title="Share"/></a>
+			<script type="text/javascript">
+			var a2a_config = a2a_config || {};
+			a2a_config.linkname = "جدیدترین خبرهای عمومی کشور درکامیاران نیوز امروز";
+			a2a_config.linkurl = "http://kamyaranyan.mihanblog.com/post/20680";
+			a2a_config.show_title = 1;
+			</script>
+			<script type="text/javascript" src="http://static.addtoany.com/menu/locale/fa.js" charset="utf-8"></script>
+			<script type="text/javascript" src="http://static.addtoany.com/menu/page.js"></script>
+			<!-- AddToAny END --><br><br>
+
+			</font>
+	        </div>
+	        </div>
+	        <div class="p-con3"><div class="p-con4">
+	        <div class="date">نوشته شده در تاریخ : دوشنبه 2 تیر 1399 توسط : <a href="../../author/712301.html">کامیاران نیوز</a></div>
+	        <div class="nazar"><a target="_self" href="javascript:newComment(20680)" >نظرات (<script>setCommentCnt(20680)</script>)</a></div>
+	        </div></div>
+	        </div>
+            </div>
+<!--End Post-->
+</div></div>
+<div id="left" class="iconsubmenuleft mixedcontentleft">
+ <!-- Start sl -->
+<div class="sl">
+            <div class="menul">
+            <div class="tmenulanguage">
+	        <div class="tmenu2">
+	        <b>انتخاب زبان</b></div></div>
+	        <div class="xmenu"><div class="menu-txt">
+			<center>
+			<a href="http://translate.google.com/translate?u=http://kamyaranyan.mihanblog.com&sl=fa&tl=ar&hl=en&ie=UTF-8">
+			العربیة</a>&nbsp;&nbsp;   
+			<a href="http://translate.google.com/translate?u=http://kamyaranyan.mihanblog.com&sl=fa&tl=en&hl=en&ie=UTF-8">
+			English</a>&nbsp;&nbsp;  
+			<a href="http://translate.google.com/translate?u=http://kamyaranyan.mihanblog.com&sl=fa&tl=fr&hl=en&ie=UTF-8">
+			French</a> <br>
+			<br>
+			امروز : <script>setTodayDate()</script>			</center></div></div>
+			<div class="s"></div></div>
+			<div class="menul">
+			<div class=tmenufriends>
+			<div class=tmenu2>
+			<b>وبلاگ دوستان</b></div></div>
+			<div class=xmenu><marquee scrollamount=1 scrolldelay=1 onmouseover='this.stop()' onmouseout='this.start()' direction=up style="height: 200px">			<div class=menu-txt>
+			<a target="_blank" href="../../../../1000freemoney.mihanblog.com/post/6.html#commentlist">کسب درآمد</a></div>			<div class=menu-txt>
+			<a target="_blank" href="http://www.mardomdar.blogsky.com/">مردم دار</a></div>			<div class=menu-txt>
+			<a target="_blank" href="../../16632.html">دشمن بداند ما همچنان ایستاده ایم/روابط عمومی کامیاران نیوز</a></div>			<div class=menu-txt>
+			<a target="_blank" href="../../16633.html">برجام وایرادی بر نیروهای انقلاب روابط عمومی کامیاران نیوز</a></div>			<div class=menu-txt>
+			<a target="_blank" href="../../16631.html">مردم قدرشناس وفهیم کامیاران منتظرحماسه ای دیگر از شما هستیم</a></div>			<div class=menu-txt>
+			<a target="_blank" href="http://hamedmoradi.blogfa.com">حامدمرادی نمونه دولتی شهیدمطهری</a></div>			<div class=menu-txt>
+			<a target="_blank" href="../../13990.html">یک استعفای حاشیه دار،درکامیاران</a></div>			<div class=menu-txt>
+			<a target="_blank" href="../../../../shakar.mihanblog.com/index.html">شکاروصید</a></div>			<div class=menu-txt>
+			<a target="_blank" href="http://kamyaran1390.blogfa.com/">وبلاگ دکتر اکبرویسی</a></div>			<div class=menu-txt>
+			<a target="_blank" href="http://www.nastaliqe2000.blogfa.com/">پایگاه خوشنویسی فرشید علیمرادی از کامیاران</a></div>			<div class=menu-txt>
+			<a target="_blank" href="http://flashkhor.com">دایرکتوری تبادل لینک خودکار اتوماتیک هوشمند (فلش خور)</a></div>			<div class=menu-txt>
+			<a target="_blank" href="http://bighararemahdi.ir/">اشک منتظران   اَللّهُمَ عَجِّل لِوَلِیِّکَ الفَرَج</a></div>			<div class=menu-txt>
+			<a target="_blank" href="http://shohada2015.blogfa.com/">پایگاه شهدای کردستان به مدیریت فرزند شهید وبرادر شهید دادگر عزیزم</a></div>			<div class=menu-txt>
+			<a target="_blank" href="http://syrvannews.blogfa.com/">سیروان نیوز</a></div>			<div class=menu-txt>
+			<a target="_blank" href="http://hamidrezaghanbary.blogfa.com">تهویه ی مطبوع را از پیشروصنعت ساوه بخواهید</a></div>			<div class=menu-txt>
+			<a target="_blank" href="http://hamidrezaghanbary.blogfa.com/">تهویه ی مطبوع را از پیشروصنعت ساوه بخواهید</a></div>			<div class=menu-txt>
+			<a target="_blank" href="http://www.yalaver.com/">حامیان منابع طبیعی و دوستداران محیط زیست روانسر (یه له ور)</a></div>			<div class=menu-txt>
+			<a target="_blank" href="http://www.webhex.ir/?section=blogManager&amp;blogID=1224">کامیاران نیوز وب هکس2</a></div>			<div class=menu-txt>
+			<a target="_blank" href="http://kamyarannews.webhex.ir">کامیاران نیوز وب هکس</a></div>			<div class=menu-txt>
+			<a target="_blank" href="http://www.kurdnoor.ir">کردنورآقای عبدالسلام کریمی</a></div>			<div class=menu-txt>
+			<a target="_blank" href="http://www.kamyaran.gov.ir">فرمانداری کامیاران</a></div>			<div class=menu-txt>
+			<a target="_blank" href="http://www.shahokhabar.com">شاهوخبرکامیاران</a></div>			<div class=menu-txt>
+			<a target="_blank" href="http://kurdpress.com">خبرگزاری کردپرس</a></div>			<div class=menu-txt>
+			<a target="_blank" href="http://www.farsnews.com">خبرگزاری فارس</a></div>			<div class=menu-txt>
+			<a target="_blank" href="http://www.rajanews.com">رجانیوز</a></div>			<div class=menu-txt>
+			<a target="_blank" href="http://www.mashreghnews.ir">مشرق نیوز</a></div>			<div class=menu-txt>
+			<a target="_blank" href="http://www.kurdnoor.ir/">کردنور آقای عبدالسلام کریمی=====</a></div>			<div class=menu-txt>
+			<a target="_blank" href="http://politicaleconomic.blogfa.com/">اخبارسیاسی واقتصادی===</a></div>			<div class=menu-txt>
+			<a target="_blank" href="http://kameran.blogfa.com/">کامیران شاری خوشه ویستان</a></div>			<div class=menu-txt>
+			<a target="_blank" href="http://www.kordira.blogfa.com">کامیاران نیوز</a></div>			<div class=menu-txt>
+			<a target="_blank" href="http://www.iran.sc/">کامیاران نیوز</a></div>			<div class=menu-txt>
+			<a target="_blank" href=" http://iranarena.net">--تبادل لینک--</a></div>			<div class=menu-txt>
+			<a target="_blank" href=" http://pesmal.net">////تبادل لینک////</a></div>			<div class=menu-txt>
+			<a target="_blank" href=" http://nimdar.nethttp">///تبادل لینک رایگان///</a></div>			<div class=menu-txt>
+			<a target="_blank" href="../../../../aloneboy17.mihanblog.com/%253A/index.html">//دلنوشته های یه پسر تنها //</a></div>			<div class=menu-txt>
+			<a target="_blank" href="../../../../hamsellooli.mihanblog.com/index.html">همسلولی              /</a></div>			<div class=menu-txt>
+			<a target="_blank" href="http://azadeganekamyaran.blogfa.com/">وبلاگ آزادگان کامیاران/</a></div>			<div class=menu-txt>
+			<a target="_blank" href="http://http://sedayar.blogfa.com">صدایار/</a></div></marquee><br><br><a href="../../../link/index.html"><b style="padding: 10px"><font color="red">»</font>&nbsp;همه لینک ها </b></a><br></div>
+			<div class=s></div></div>
+          
+			<div class=menul>
+			<div class=tmenulinks>
+			<div class=tmenu2>
+			<b>پیوندهای مفید </b></div></div>
+			<div class=xmenu> <div class=menu-txt>
+			<a target="_blank" href="http://7themes.ir" title="با سلام....
+ 
+خواهان تبادل لینک با وبلاگ زیبای شما هستیم.در صورت تمایل لینک رو تایید و اطلاع بدید.
+
+سون تم - مرجع تخصصی قالب وردپرس">
+			قالب وردپرس</a></div> <div class=menu-txt>
+			<a target="_blank" href="http://www.roshantab.com" title="با سلام.
+ممنون میشم بهم سر بزنین
+ممنون
+http://www.roshantab.com">
+			بیوگرافی</a></div> <div class=menu-txt>
+			<a target="_blank" href="http://7themes.ir/" title="با سلام....
+ 
+خواهان تبادل لینک با وبلاگ زیبای شما هستیم.در صورت تمایل لینک رو تایید و اطلاع بدید.
+
+محمد - سون تم مرجع قالب های وردپرس فارسی">
+			قالب وردپرس</a></div> <div class=menu-txt>
+			<a target="_blank" href="http://www.book.i20.ir" title="دروب
+i20.ir
+و در کانال
+https://telegram.me/i20ir
+ما را دنبال کنید
+وبه دیگران معرفی کنید و در نشر معارف دین سهیم شوید">
+			کتابخانه آنلاین</a></div> <div class=menu-txt>
+			<a target="_blank" href="../../../../esteva.mihanblog.com/post/2793.html" title="با این زیر می توانید تبلیغات بالای وبلاگتان (سمت چپ) را بلافاصله ببندید.
+
+ادامه مطلب در 
+http://esteva.mihanblog.com/post/2793
+
+لطفا این لینک را تایید کنید">
+			حذف تبلیغات میهن بلاگ</a></div><br><a href="../../../linkdaily/index.html"><b style="padding: 10px"><font color="red">»</font>&nbsp;آرشیو پیوندهای روزانه</b></a><br>
+            <br><a href="javascript:linkdailyForm()"><b style="padding: 10px"><font color="red">»</font>&nbsp;ارسال لینک به ما</b></a><br> </div>
+			<div class=s></div></div>
+ 
+			<div class=menul>
+			<div class=tmenutags>
+			<div class=tmenu2>
+			<b>ابر برچسب ها</b></div></div>
+			<div class=xmenu> <div class=menu-txt2>  
+          					
+	        <a href="../../tag/نوری+مالکی.html" 
+	        style="font-size:1em">
+	        نوری مالکی 
+	        </a>
+	        				
+	        <a href="../../tag/اخبارکامیاران.html" 
+	        style="font-size:1em">
+	        اخبارکامیاران 
+	        </a>
+	        				
+	        <a href="../../tag/سپاه+پاسداران.html" 
+	        style="font-size:1em">
+	        سپاه پاسداران 
+	        </a>
+	        				
+	        <a href="../../tag/محمد+مایلی+کهن.html" 
+	        style="font-size:1em">
+	        محمد مایلی کهن 
+	        </a>
+	        				
+	        <a href="../../tag/توافق+هسته+ای.html" 
+	        style="font-size:1em">
+	        توافق هسته ای 
+	        </a>
+	        				
+	        <a href="../../tag/اخبارکمیته+امدادکامیاران.html" 
+	        style="font-size:1em">
+	        اخبارکمیته امدادکامیاران 
+	        </a>
+	        				
+	        <a href="../../tag/دانشمندان+هسته+ای+ایران.html" 
+	        style="font-size:1em">
+	        دانشمندان هسته ای ایران 
+	        </a>
+	        				
+	        <a href="../../tag/مرگ+آشپزچینی.html" 
+	        style="font-size:1em">
+	        مرگ آشپزچینی 
+	        </a>
+	        				
+	        <a href="../../tag/جان+کری.html" 
+	        style="font-size:1em">
+	        جان کری 
+	        </a>
+	        				
+	        <a href="../../tag/کیک+بوکسینگ.html" 
+	        style="font-size:1em">
+	        کیک بوکسینگ 
+	        </a>
+	        				
+	        <a href="../../tag/شهدای+کامیاران.html" 
+	        style="font-size:1.03em">
+	        شهدای کامیاران 
+	        </a>
+	        				
+	        <a href="../../tag/تیمورر+ضائی.html" 
+	        style="font-size:1.09em">
+	        تیمورر ضائی 
+	        </a>
+	        				
+	        <a href="../../tag/عملیات+استشهادی.html" 
+	        style="font-size:1em">
+	        عملیات استشهادی 
+	        </a>
+	        				
+	        <a href="../../tag/پهباد+RQ+۱۷۰+ایرانی.html" 
+	        style="font-size:1em">
+	        پهباد RQ ۱۷۰ ایرانی 
+	        </a>
+	        				
+	        <a href="../../tag/استعفای.html" 
+	        style="font-size:1em">
+	        استعفای 
+	        </a>
+	        				
+	        <a href="../../tag/ظریف+وزیرامورخارجه+ایران.html" 
+	        style="font-size:1em">
+	        ظریف وزیرامورخارجه ایران 
+	        </a>
+	        				
+	        <a href="../../tag/مارکبری.html" 
+	        style="font-size:1em">
+	        مارکبری 
+	        </a>
+	        				
+	        <a href="../../tag/موشک+ایرانی+قاره+پیما.html" 
+	        style="font-size:1em">
+	        موشک ایرانی قاره پیما 
+	        </a>
+	        				
+	        <a href="../../tag/امام+خامنه+ای.html" 
+	        style="font-size:1em">
+	        امام خامنه ای 
+	        </a>
+	        				
+	        <a href="../../tag/مهران+ویسی.html" 
+	        style="font-size:1em">
+	        مهران ویسی 
+	        </a>
+	        				
+	        <a href="../../tag/خواننده+محبوب+کشور.html" 
+	        style="font-size:1em">
+	        خواننده محبوب کشور 
+	        </a>
+	        				
+	        <a href="../../tag/نیروی+انتظامی.html" 
+	        style="font-size:1em">
+	        نیروی انتظامی 
+	        </a>
+	        				
+	        <a href="../../tag/سیداحسن+علوی.html" 
+	        style="font-size:1.06em">
+	        سیداحسن علوی 
+	        </a>
+	        				
+	        <a href="../../tag/هلاکت+صهیونیست+ها.html" 
+	        style="font-size:1em">
+	        هلاکت صهیونیست ها 
+	        </a>
+	        				
+	        <a href="../../tag/حاشیه+دار.html" 
+	        style="font-size:1em">
+	        حاشیه دار 
+	        </a>
+	        				
+	        <a href="../../tag/انرژی+هسته+ای+ایران.html" 
+	        style="font-size:1em">
+	        انرژی هسته ای ایران 
+	        </a>
+	        				
+	        <a href="../../tag/شهیدتهرانی+مقدم.html" 
+	        style="font-size:1em">
+	        شهیدتهرانی مقدم 
+	        </a>
+	        				
+	        <a href="../../tag/محمدرضاکوشکی.html" 
+	        style="font-size:1.09em">
+	        محمدرضاکوشکی 
+	        </a>
+	        				
+	        <a href="../../tag/روژان+نیوز.html" 
+	        style="font-size:1.03em">
+	        روژان نیوز 
+	        </a>
+	        				
+	        <a href="../../tag/حماس.html" 
+	        style="font-size:1em">
+	        حماس 
+	        </a>
+	        				
+	        <a href="../../tag/تروریسم+درسوریه.html" 
+	        style="font-size:1em">
+	        تروریسم درسوریه 
+	        </a>
+	        				
+	        <a href="../../tag/رضا+باجلانی.html" 
+	        style="font-size:1.03em">
+	        رضا باجلانی 
+	        </a>
+	        				
+	        <a href="../../tag/اقلیم+کردستان.html" 
+	        style="font-size:1em">
+	        اقلیم کردستان 
+	        </a>
+	        				
+	        <a href="../../tag/پرش+ازهلی+کوپتر.html" 
+	        style="font-size:1em">
+	        پرش ازهلی کوپتر 
+	        </a>
+	        				
+	        <a href="../../tag/فساداقتصادی+دراقلیم+کردستان.html" 
+	        style="font-size:1em">
+	        فساداقتصادی دراقلیم کردستان 
+	        </a>
+	        				
+	        <a href="../../tag/پیرزن+چترباز.html" 
+	        style="font-size:1em">
+	        پیرزن چترباز 
+	        </a>
+	        				
+	        <a href="../../tag/نچیروان+بارزانی.html" 
+	        style="font-size:1em">
+	        نچیروان بارزانی 
+	        </a>
+	        				
+	        <a href="../../tag/مدار36000کیلومتری+ژئو.html" 
+	        style="font-size:1em">
+	        مدار36000کیلومتری ژئو 
+	        </a>
+	        				
+	        <a href="../../tag/داوران+کامیارانی.html" 
+	        style="font-size:1.03em">
+	        داوران کامیارانی 
+	        </a>
+	        				
+	        <a href="../../tag/درگذشت+مرتضی+پاشایی.html" 
+	        style="font-size:1em">
+	        درگذشت مرتضی پاشایی 
+	        </a>
+	        				
+	        <a href="../../tag/قاچاقچیان.html" 
+	        style="font-size:1em">
+	        قاچاقچیان 
+	        </a>
+	        				
+	        <a href="../../tag/کامیاران++نیوز.html" 
+	        style="font-size:1em">
+	        کامیاران  نیوز 
+	        </a>
+	        				
+	        <a href="../../tag/مرتضی+پاشایی.html" 
+	        style="font-size:1em">
+	        مرتضی پاشایی 
+	        </a>
+	        				
+	        <a href="../../tag/گروه+1+5.html" 
+	        style="font-size:1em">
+	        گروه 1+5 
+	        </a>
+	        				
+	        <a href="../../tag/مجتبی+باجلانی.html" 
+	        style="font-size:1.43em">
+	        مجتبی باجلانی 
+	        </a>
+	        				
+	        <a href="../../tag/جهادکشاورزی+کامیاران.html" 
+	        style="font-size:1.09em">
+	        جهادکشاورزی کامیاران 
+	        </a>
+	        				
+	        <a href="../../tag/روابط+حسنه+ایران+وعراق.html" 
+	        style="font-size:1em">
+	        روابط حسنه ایران وعراق 
+	        </a>
+	        				
+	        <a href="../../tag/کامیاران+نیوز.html" 
+	        style="font-size:2em">
+	        کامیاران نیوز 
+	        </a>
+	        				
+	        <a href="../../tag/صداوسیما.html" 
+	        style="font-size:1.03em">
+	        صداوسیما 
+	        </a>
+	        				
+	        <a href="../../tag/علی+دایی.html" 
+	        style="font-size:1em">
+	        علی دایی 
+	        </a>
+	        	
+            </div></div>
+			<div class=s></div></div>
+            <div class=menul>
+			<div class=tmenuvisit>
+			<div class=tmenu2>
+			<b>آماروبلاگ </b></div></div>
+			<div class=xmenu><div class="menu-txta">
+							کل بازدید:<script>getStatVar('total_view');</script><br/>
+				بازدید امروز :<script>getStatVar('today_view');</script><br/>
+				بازدید دیروز : <script>getStatVar('yesterday_view');</script><br/>
+				بازدید این ماه : <script>getStatVar('this_month_view');</script><br/>
+				بازدید ماه قبل : <script>getStatVar('last_month_view');</script><br/>
+				تعداد کل مطالب : <script>getStatVar('total_post');</script><br/>
+				آخرین بازدید : <script>getStatVar('last_view_date');</script><br/>
+				آخرین بروز رسانی : <script>getStatVar('modify_date');</script><br/>
+            </div>
+            <center>
+<!-- Begin ToolsIR.com counter code -->
+<script type="text/javascript" src="http://counter.toolsir.com/secure.js"></script>
+<script type="text/javascript">
+  var _torder = 'visit,total,today,yesterday,online,monthly,link&color=003366,ECF6FE,BCE3FD&visit=15&pic=0&width=120';
+  var _turl = 'http://kamyaranyan.mihanblog.com';
+  _tCounter (_torder,_turl);
+</script><div style="display:none;"><h2><a href="http://www.toolsir.com/">دریافت کد آمارگیر سایت</a></h2></div>
+<!-- End ToolsIR.com counter code -->
+</center>
+            </div>
+			<div class=s></div></div>     
+</div>
+<!--End Dynamic SL -->
+</div>
+<!-- End scs1 -->
+<!-- Start SR -->
+<div id="right" class="iconsubmenu mixedcontent">
+
+<div class="sr">
+<div class=menur>
+			<div class=tmenuabout>
+			<div class=tmenu2>
+			<b>درباره وبلاگ</b></div></div>
+			<div class=xmenu><div class=menu-txt2>  
+            <div style="text-align:center;"><img src="../../../../static.mihanblog.com/public/user_data/web_photo/284/850222.jpg@3014"  /></div>
+            <br><div class="descri">کامیاران نیوز با هدف کمک به اطلاع رسانی شفاف ومنطقی با استفاده از دمکراسی مردم سالاری دینی در نظام مقدس جمهوری اسلامی ایران راه اندازی شده است.<br />
+<br />
+سعی این پایگاه خبری براین است به هیچ حزب وگروهی وابسته نباشد ومنافع مردم کامیاران را برهر مطلب دیگری ترجیح می دهد ودر این راه با بسط فرهنگ انتقاد دلسوزانه به پیشرفت وآبادانی هرچه بیشتر کامیاران کمک نماید.<br />
+<br />
+روابط عمومی کامیاران نیوز</div></div></div>
+			<div class=s></div></div>
+<div class=menur>
+<div class=tmenuwriter>
+<div class=tmenu2>
+<b>نویسندگان وبلاگ</b></div></div>
+<div class=xmenu>
+<div class=menu-txt>
+<a href="../../author/712301.html"><img src="../../../../static.mihanblog.com/public/user_data/user_photo/238/712301.jpg" style="width:16px;" /></a><a href="../../author/712301.html">
+کامیاران نیوز(18622) مطالب منابعی وبلاگ از خبرگزاری ها وسایت های مشرق رجانیوز جهان ایرنا ایسنا دانشجویان ایران فارس کیهان جام جم واحد مرکزی خبر می با</div>
+</div>
+<div class=s></div></div>
+
+		            <div class=menur>
+			<div class=tmenurecententries>
+			<div class=tmenu2>
+			<b>آخرین مطالب</b></div></div>
+			<div class=xmenu>
+			<div class=menu-txt>
+			<a href="../../20782.html">مهمترین اخبارایران وجهان درکامیاران نیوز امروز4آذرماه99</a></div><div class=menu-txt>
+			<a href="../../20783.html"> مهمترین اخبارایران وجهان درکامیاران نیوز امروز3آذرماه 99</a></div><div class=menu-txt>
+			<a href="../../20781.html">مهمترین اخبارایران وجهان درکامیاران نیوز امروز</a></div><div class=menu-txt>
+			<a href="../../20776.html">اخبارکامیاران درکامیاران نیوز امروز11آبان ماه 99</a></div><div class=menu-txt>
+			<a href="../../20775.html">مهمترین اخبارکشور درکامیاران نیوز امروز11آبان ماه 99</a></div><div class=menu-txt>
+			<a href="../../20777.html">اخباراستان کردستان درکامیاران نیوز امروز11آبان ماه 99</a></div><div class=menu-txt>
+			<a href="../../20779.html">اخبارزلزله ازمیرترکیه  درکامیاران نیوز </a></div><div class=menu-txt>
+			<a href="../../20778.html">مهمترین اخبارجهان درکامیاران نیوز امروز11آبان ماه 99</a></div><div class=menu-txt>
+			<a href="../../20780.html">اخبارکامیاران،ایران وجهان درکامیاران نیوز امروز08آبان ماه 99</a></div><div class=menu-txt>
+			<a href="../../20774.html">انتقاد صریح وبی پرده مجتبی باجلانی کامیارانی از هوشیارزیباری</a></div><div class=menu-txt>
+			<a href="../../20770.html"> اخبارشهادت دلاوران خان طومان درکامیاران نیوز امروز23مهرماه 99</a></div><div class=menu-txt>
+			<a href="../../20768.html">اخبارشهادت؛جبهه مقاومت وایثارگری درکامیاران نیوز امروز23مهرماه 99</a></div><div class=menu-txt>
+			<a href="../../20773.html">جدیدترین اخبارکامیاران  درکامیاران نیوز امروز23مهرماه 99</a></div><div class=menu-txt>
+			<a href="../../20771.html">اخبارکرونا  در کامیاران نیوز امروز</a></div><div class=menu-txt>
+			<a href="../../20772.html">جدیدترین اخبارحوادث ایران وجهان درکامیاران نیوز امروز23مهرماه 99</a></div><div class=menu-txt>
+			<a href="../../20767.html">جدیدترین اخبارایران وجهان درکامیاران نیوز امروز16مهرماه 99</a></div><div class=menu-txt>
+			<a href="../../20766.html">جدیدترین اخبار جنگ قره باغ درکامیاران نیوز امروز14و15مهرماه99</a></div><div class=menu-txt>
+			<a href="../../20763.html">جدیدترین اخبارایران وجهان درکامیاران نیوز امروز</a></div><div class=menu-txt>
+			<a href="../../20764.html">جدیدترین اخبار کامیاران درکامیاران نیوز امروز14مهرماه99</a></div><div class=menu-txt>
+			<a href="../../20765.html">مهم ترین اخبار پیروزی پرسپولیس درکامیاران نیوز امروز13مهرماه 99</a></div><div class=menu-txt>
+			<a href="../../20762.html">بازیگر نجیبی که با اثبات خود به مردم، مورد توجه رهبری قرار گرفت</a></div><div class=menu-txt>
+			<a href="../../20761.html">صدور حکم اعدام برای ترامپ و شاه سعودی</a></div><div class=menu-txt>
+			<a href="../../20760.html">اصابت 5 خمپاره جنگ قره باغ به خاک ایران / یک زخمی</a></div><div class=menu-txt>
+			<a href="../../20758.html">در‌گیری‌های قره‌باغ| باکو: ۱۴ غیر‌نظامی کشته و ۴۶ نفر زخمی شده‌اند</a></div><div class=menu-txt>
+			<a href="../../20757.html">قاتل پیرزن و پیرمرد پیرانشهری دستگیر شد</a></div><div class=menu-txt>
+			<a href="../../20756.html">شهادت ۳ نفر از نیروهای سپاه در جنوب سیستان و بلوچستان</a></div><div class=menu-txt>
+			<a href="../../20755.html">امیر کویت درگذشت</a></div><div class=menu-txt>
+			<a href="../../20754.html">ترکیه یک فروند جنگنده «سوخو ۲۵» ارمنستان را سر‌نگون کرد</a></div><div class=menu-txt>
+			<a href="../../20750.html">کشته و زخمی شدن تعدادی از پیشمرگان و هواداران گروهک تروریستی کومله در سلیمانیه </a></div><div class=menu-txt>
+			<a href="../../20743.html">جدیدترین اخبار ایران وجهان درکامیاران نیوز امروز</a></div></div>
+			<div class=s></div></div>
+            <div class=menur>
+			<div class=tmenuarchive>
+			<div class=tmenu2>
+			<b>آرشیو مطالب</b></div></div>
+			<div class=xmenu>
+			<div class=menu-txt>
+			<a href="9.html"> آذر 1399(2)</a></div><div class=menu-txt>
+			<a href="8.html"> آبان 1399(7)</a></div><div class=menu-txt>
+			<a href="7.html"> مهر 1399(21)</a></div><div class=menu-txt>
+			<a href="6.html"> شهریور 1399(15)</a></div><div class=menu-txt>
+			<a href="5.html"> مرداد 1399(24)</a></div><div class=menu-txt>
+			<a href="4.html"> تیر 1399(8)</a></div><div class=menu-txt>
+			<a href="3.html"> خرداد 1399(5)</a></div><div class=menu-txt>
+			<a href="2.html"> اردیبهشت 1399(3)</a></div><div class=menu-txt>
+			<a href="1.html"> فروردین 1399(26)</a></div><div class=menu-txt>
+			<a href="../1398/12.html"> اسفند 1398(14)</a></div><div class=menu-txt>
+			<a href="../1398/11.html"> بهمن 1398(5)</a></div><div class=menu-txt>
+			<a href="../1398/10.html"> دی 1398(26)</a></div><div class=menu-txt>
+			<a href="../1398/9.html"> آذر 1398(30)</a></div><div class=menu-txt>
+			<a href="../1398/8.html"> آبان 1398(12)</a></div><div class=menu-txt>
+			<a href="../1398/7.html"> مهر 1398(19)</a></div><div class=menu-txt>
+			<a href="../1398/6.html"> شهریور 1398(16)</a></div><div class=menu-txt>
+			<a href="../1398/5.html"> مرداد 1398(21)</a></div><div class=menu-txt>
+			<a href="../1398/4.html"> تیر 1398(11)</a></div><div class=menu-txt>
+			<a href="../1398/3.html"> خرداد 1398(12)</a></div><div class=menu-txt>
+			<a href="../1398/2.html"> اردیبهشت 1398(49)</a></div><div class=menu-txt>
+			<a href="../1398/1.html"> فروردین 1398(62)</a></div><div class=menu-txt>
+			<a href="../1397/12.html"> اسفند 1397(49)</a></div><div class=menu-txt>
+			<a href="../1397/11.html"> بهمن 1397(50)</a></div><div class=menu-txt>
+			<a href="../1397/10.html"> دی 1397(7)</a></div><div class=menu-txt>
+			<a href="../1397/9.html"> آذر 1397(15)</a></div><div class=menu-txt>
+			<a href="../1397/8.html"> آبان 1397(17)</a></div><div class=menu-txt>
+			<a href="../1397/7.html"> مهر 1397(11)</a></div><div class=menu-txt>
+			<a href="../1397/6.html"> شهریور 1397(22)</a></div><div class=menu-txt>
+			<a href="../1397/4.html"> تیر 1397(3)</a></div><div class=menu-txt>
+			<a href="../1397/3.html"> خرداد 1397(7)</a></div><div class=menu-txt>
+			<a href="../1397/2.html"> اردیبهشت 1397(3)</a></div><div class=menu-txt>
+			<a href="../1397/1.html"> فروردین 1397(6)</a></div><div class=menu-txt>
+			<a href="../1396/12.html"> اسفند 1396(5)</a></div><div class=menu-txt>
+			<a href="../1396/11.html"> بهمن 1396(24)</a></div><div class=menu-txt>
+			<a href="../1396/10.html"> دی 1396(10)</a></div><div class=menu-txt>
+			<a href="../1396/9.html"> آذر 1396(5)</a></div><div class=menu-txt>
+			<a href="../1396/8.html"> آبان 1396(8)</a></div><div class=menu-txt>
+			<a href="../1396/7.html"> مهر 1396(16)</a></div><div class=menu-txt>
+			<a href="../1396/6.html"> شهریور 1396(15)</a></div><div class=menu-txt>
+			<a href="../1396/5.html"> مرداد 1396(18)</a></div><div class=menu-txt>
+			<a href="../1396/4.html"> تیر 1396(6)</a></div><div class=menu-txt>
+			<a href="../1396/3.html"> خرداد 1396(18)</a></div><div class=menu-txt>
+			<a href="../1396/2.html"> اردیبهشت 1396(6)</a></div><div class=menu-txt>
+			<a href="../1396/1.html"> فروردین 1396(3)</a></div><div class=menu-txt>
+			<a href="../1395/11.html"> بهمن 1395(2)</a></div><div class=menu-txt>
+			<a href="../1395/10.html"> دی 1395(1)</a></div><div class=menu-txt>
+			<a href="../1395/9.html"> آذر 1395(8)</a></div><div class=menu-txt>
+			<a href="../1395/8.html"> آبان 1395(6)</a></div><div class=menu-txt>
+			<a href="../1395/7.html"> مهر 1395(17)</a></div><div class=menu-txt>
+			<a href="../1395/6.html"> شهریور 1395(5)</a></div><div class=menu-txt>
+			<a href="../1395/5.html"> مرداد 1395(70)</a></div><div class=menu-txt>
+			<a href="../1395/4.html"> تیر 1395(116)</a></div><div class=menu-txt>
+			<a href="../1395/3.html"> خرداد 1395(96)</a></div><div class=menu-txt>
+			<a href="../1395/2.html"> اردیبهشت 1395(103)</a></div><div class=menu-txt>
+			<a href="../1395/1.html"> فروردین 1395(110)</a></div><div class=menu-txt>
+			<a href="../1394/12.html"> اسفند 1394(101)</a></div><div class=menu-txt>
+			<a href="../1394/11.html"> بهمن 1394(211)</a></div><div class=menu-txt>
+			<a href="../1394/10.html"> دی 1394(390)</a></div><div class=menu-txt>
+			<a href="../1394/9.html"> آذر 1394(397)</a></div><div class=menu-txt>
+			<a href="../1394/8.html"> آبان 1394(589)</a></div></div>
+			<div class=s></div></div>
+			
+</div>
+</div>
+<!--End Dynamic SR -->
+</div>
+<!-- End Con -->
+<!-- Start Footer -->
+           <div class="footer">
+           <p><strong>طراحی و اجرا توسط گروه اینترنتی 
+           <a target="_blank" href="http://www.jonbeshnet.ir/category/539">رهروان ولایت</a></strong></p>
+           </div>
+<!-- End Footer -->
+</div>
+<!-- End BG -->
+</body>
+</html><script>
+//    setTimeout(function () {
+//        GetMihanBlogShowAds();
+//    }, 1000);
+</script>
+<!--NEW SERVER--><!--;)-->
+
+<!--SabaVision Ads Handler--><!--<script type="text/javascript">(function (d) {var url =   location.protocol+'//api.sabavision.com/pox/poxjs.js';d.write('<script type="text/javascript" src="' + url + '" async></scri' + 'pt>');})(document);</script>-->
+
+
+<script type="text/javascript">
+
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-153829-9']);
+    _gaq.push(['_setDomainName', 'kamyaranyan.mihanblog.com']);
+    _gaq.push(['_trackPageview']);
+
+    (function() {
+        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+
+</script>
+
+
+<div id='mediaad-Kvcm'></div>
+<meta name="sabavision_zone" content="2500-Z499" />
+<center>
+    <div style="background-color:white;width:90%;padding:20px;margin-top:50px;margin-bottom:50px;">
+        <a href="https://www.cloob.com">شبکه اجتماعی فارسی کلوب</a> | <a href="https://www.seo25.com/product/buy-mobile-traffic-and-get-cheap-targeted-mobile-traffic/" target="_blank">Buy Mobile Traffic</a> | <a href="https://www.soalaat.com">سایت سوالات</a>
+    </div>
+</center>

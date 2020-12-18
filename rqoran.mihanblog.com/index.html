@@ -1,0 +1,1487 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" /><link rel="EditURI" type="application/rsd+xml" title="RSD" href="http://rqoran.mihanblog.com/xmlrpc?rsd" />
+<script type="text/javascript" src="../static.mihanblog.com/public/scripts/run/g.other.v3.js"></script>
+<script>
+
+	function c_$(id){
+        return document.getElementById(id);
+    }
+    
+			//if (parent.frames.length) top.location.href= document.location;
+		
+	setTodayDate = function(){
+		document.write('یکشنبه 23 آذر 1399');
+		/*818755*/	}
+
+</script>
+
+
+
+        <script type="text/javascript">
+            (function(){
+            var now = new Date();
+            var head = document.getElementsByTagName('head')[0];
+            var script = document.createElement('script');
+            script.async = true;
+            var script_address = 'https://cdn.yektanet.com/js/mihanblog.com/native-mihanblog.com-6531.js';
+            script.src = script_address + '?v=' + now.getFullYear().toString() + '0' + now.getMonth() + '0' + now.getDate() + '0' + now.getHours();
+            head.appendChild(script);
+            })();
+        </script>
+
+        <!--<script type="text/javascript">
+            var head = document.getElementsByTagName("head")[0];
+            var script = document.createElement("script");
+            script.type = "text/javascript";
+            script.async=1;
+            script.src = "https://s1.mediaad.org/serve/mihanblog.com/loader.js" ;
+            head.appendChild(script);
+        </script>-->
+        
+        <script>
+            var sabaVisionWebsiteID = "9bab9dac-041d-4bdb-b39a-1ed789f65eed"; var sabaVisionWebsitePage = "ALL"
+        </script>
+        <link rel="stylesheet" href="https://plus.sabavision.com/dox/dox.min.css">
+        <script src="https://plus.sabavision.com/dox/dox.min.js"></script>
+        
+        <script>
+	try{
+		var commentCnt = new Array();
+		commentCnt[2588]='0';commentCnt[2589]='4';commentCnt[2590]='0';commentCnt[2591]='0';commentCnt[2592]='0';commentCnt[2593]='1';commentCnt[2594]='0';commentCnt[2595]='0';commentCnt[2596]='1';commentCnt[2597]='0';	} catch(e){}
+	
+	newComment = function(post_id){
+		try{
+			window.open('/post/comment/'+post_id,'comment','status=yes,scrollbars=yes,toolbar=no,menubar=no,location=no ,width=480px,height=540px');
+		} catch(e){}
+	}
+	setCommentCnt = function(post_id){
+		try{
+			if(commentCnt[post_id]){
+				document.write(commentCnt[post_id]);
+			} else {
+				document.write(0);
+			}
+		} catch(e){}
+	}
+</script><script>
+
+
+	mihanblogUpdateLike = function(postid,type){
+		var url = '/post/like/'+postid+'/'+type;
+		mihanblogGetAjax(url,function(){});
+	};
+	try{
+        mihanblogGetAjax = function (url,callback) {
+    		var req;
+			if (window.XMLHttpRequest)
+            {
+                // code for IE7+, Firefox, Chrome, Opera, Safari
+			  	req = new XMLHttpRequest();
+			}else{	// code for IE6, IE5
+			  	req = new ActiveXObject("Microsoft.XMLHTTP");
+		  	}
+		    req.open("GET", url, 1);
+		    req.onreadystatechange = function () {
+		        if (req.readyState == 4) {
+		            if (req.status == 200) {
+		            	var response = eval(req.responseText);
+		            	callback();
+		            }else{
+	            		return ;
+		            }
+		        }else{
+					return ;
+		        }
+		    }
+		    req.send(null);
+		}
+	}catch(e){}
+
+	try{
+		var mihanblogLikeArrCnt = new Array();
+		var mihanblogDisLikeArrCnt = new Array();
+
+		mihanblogLikeArrCnt[2588]='0';
+mihanblogDisLikeArrCnt[2588]='0';
+mihanblogLikeArrCnt[2589]='0';
+mihanblogDisLikeArrCnt[2589]='0';
+mihanblogLikeArrCnt[2590]='0';
+mihanblogDisLikeArrCnt[2590]='0';
+mihanblogLikeArrCnt[2591]='0';
+mihanblogDisLikeArrCnt[2591]='0';
+mihanblogLikeArrCnt[2592]='0';
+mihanblogDisLikeArrCnt[2592]='0';
+mihanblogLikeArrCnt[2593]='0';
+mihanblogDisLikeArrCnt[2593]='0';
+mihanblogLikeArrCnt[2594]='0';
+mihanblogDisLikeArrCnt[2594]='0';
+mihanblogLikeArrCnt[2595]='0';
+mihanblogDisLikeArrCnt[2595]='0';
+mihanblogLikeArrCnt[2596]='0';
+mihanblogDisLikeArrCnt[2596]='0';
+mihanblogLikeArrCnt[2597]='0';
+mihanblogDisLikeArrCnt[2597]='0';
+	} catch(e){}
+
+
+
+    mihanblogPostLike = function(post_id){
+
+        mihanblogLikeCnt = (mihanblogLikeArrCnt[post_id]? mihanblogLikeArrCnt[post_id] : 0);
+        mihanblogDisLikeCnt = (mihanblogDisLikeArrCnt[post_id]? mihanblogDisLikeArrCnt[post_id] : 0);
+        mihanblogLikeCnt = parseInt(mihanblogLikeCnt);
+        mihanblogDisLikeCnt = parseInt(mihanblogDisLikeCnt);
+
+        document.write(
+                '<div class="mihanblog_like_wrapper ">'+
+                       '<div id="dislikeBar_'+post_id+'" onclick="mihanblogUpdateLike('+post_id+',\'dislike\')"   class="mihanblog_like_bar mihanblog_like_dislikeBar mihanblog_like_show_help ">-<div class="mihanblog_like_Cnt" id="disLikeCnt_'+post_id+'">'+mihanblogDisLikeCnt+'</div>'+
+                            '<span  class="mihanblog_like_v2_help mihanblog_like_v2_help_dislike clearfix"> '+
+                                '<span class="mihanblog_like_help_arrow mihanblog_like_help_arrow_dislike clearfix"></span>'+
+                                '<span class="mihanblog_like_help_text">نمی پسندم</span>'+
+                            '</span>'+
+                        '</div>'+
+                       '<div id="Like_'+post_id+'" class="mihanblog_like_border"></div>'+
+                       '<div id="likeBar_'+post_id+'" onclick="mihanblogUpdateLike('+post_id+',\'like\')"  class="mihanblog_like_bar mihanblog_like_likeBar mihanblog_like_show_help" >+<div class="mihanblog_like_Cnt" id="likeCnt_'+post_id+'">'+mihanblogLikeCnt+'</div>'+
+                            '<span  class="mihanblog_like_v2_help mihanblog_like_v2_help_like clearfix"> '+
+                                '<span class="mihanblog_like_help_arrow mihanblog_like_help_arrow_like clearfix"></span>'+
+                                '<span class="mihanblog_like_help_text">می پسندم</span>'+
+                            '</span>'+
+                        '</div>'+
+
+                '</div>'
+        );
+
+
+
+        mihanblogDisplayeLike(post_id);
+    }
+
+
+    mihanblogDisplayeLike = function(post_id){
+
+        mihanblogLikeCnt = (mihanblogLikeArrCnt[post_id]? mihanblogLikeArrCnt[post_id] : 0);
+        mihanblogDisLikeCnt = (mihanblogDisLikeArrCnt[post_id]? mihanblogDisLikeArrCnt[post_id] : 0);
+        mihanblogLikeCnt = parseInt(mihanblogLikeCnt);
+        mihanblogDisLikeCnt = parseInt(mihanblogDisLikeCnt);
+
+
+
+        sum = mihanblogLikeCnt - mihanblogDisLikeCnt;
+        backgroundBorder =  document.getElementById('Like_'+post_id);
+        var likeObj = document.getElementById('likeCnt_'+post_id);
+        var disLikeObj = document.getElementById('disLikeCnt_'+post_id);
+
+
+
+
+
+        likeObj.innerHTML =  mihanblogLikeCnt ;
+        disLikeObj.innerHTML =  mihanblogDisLikeCnt;
+
+        if(sum == 0){
+            backgroundBorder.style.backgroundImage = "url('/public/public/images/icons/like_likedislike.png')";
+            document.getElementById('dislikeBar_'+post_id).style.width = '19px';
+            document.getElementById('likeBar_'+post_id).style.width = '19px';
+        }else{
+             if(sum > 0){
+                 backgroundBorder.style.backgroundImage = "url('/public/public/images/icons/like_like.png')";
+                 document.getElementById('likeBar_'+post_id).style.width = '23px';
+                 document.getElementById('dislikeBar_'+post_id).style.width = '15px';
+             }else{
+                 backgroundBorder.style.backgroundImage = "url('/public/public/images/icons/like_dislike.png')";
+                 document.getElementById('likeBar_'+post_id).style.width = '15px';
+                 document.getElementById('dislikeBar_'+post_id).style.width = '23px';
+             }
+        }
+
+    }
+
+
+
+
+</script>
+
+<style type="text/css">
+
+
+    .clearfix {display: inline-block;}
+    .clearfix:after {
+        content: ".";
+        display: block;
+        height: 0;
+        clear: both;
+        visibility: hidden;
+    }
+
+    .mihanblog_like_wrapper {
+        color: #ffffff;
+        direction: ltr;
+        position: relative;
+    }
+    .mihanblog_like_wrapper span{
+        display: none;
+    }
+    .mihanblog_like_bar {
+        color: #FFFFFF;
+        cursor: pointer;
+        float: left;
+        font-size: 10px;
+        height: 20px;
+        line-height: 19px;
+        margin: 5px 0;
+    }
+    .mihanblog_like_likeBar {
+        background-color: #88B131;
+        padding-right: 5px;
+        border-top-right-radius: 2px;
+        border-bottom-right-radius: 2px;
+        text-align: right;
+    }
+    .mihanblog_like_likeBar:hover{
+        background-color: #699017;
+    }
+    .mihanblog_like_border {
+        background-color: #666666;
+        border: 1px solid #666666;
+        float: left;
+        font-size: 12px;
+        height: 20px;
+        margin-top: 2px;
+        width: 25px;
+        padding: 3px 5px 2px 0;
+        text-align: center;
+        border-radius: 2px;
+        color: #ffffff;
+        direction: ltr;
+        background-repeat: no-repeat ;
+        background-position: 4px center;
+    }
+    .mihanblog_like_border img {
+        margin-left: 2px;
+        margin-top: 2px;
+        width: 22px;
+    }
+    .mihanblog_like_dislikeBar {
+        background-color: #FF6F31;
+        padding-left: 5px;
+        border-top-left-radius: 2px;
+        border-bottom-left-radius: 2px;
+        text-align:left ;
+    }
+    .mihanblog_like_dislikeBar:hover{
+        background-color: #D54B10;
+    }
+
+
+
+    .mihanblog_like_show_help {
+        position: relative;
+    }
+    .mihanblog_like_show_help:hover span {
+        display: block;
+    }
+    .mihanblog_like_help_text {
+        background-color: white;
+        border: 1px solid #555555;
+        border-radius: 3px 3px 3px 3px;
+        color: #303030;
+        float: left;
+        font-size: 11px;
+        font-weight: normal;
+        padding: 5px 10px;
+    }
+
+    .mihanblog_like_help_arrow_dislike {
+        background: url("http://rqoran.mihanblog.com/public/public/images/icons/like_hover_top.png") no-repeat scroll 16px 0 transparent;
+        left: 0;
+        top: -4px;
+    }
+
+    .mihanblog_like_help_arrow_like {
+        background: url("http://rqoran.mihanblog.com/public/public/images/icons/like_hover_top _2.png") no-repeat scroll 16px 0 transparent;
+        left: -10px;
+        top: 29px;
+    }
+
+    .mihanblog_like_help_arrow{
+        height: 6px;
+        position: absolute;
+        width: 100px;
+
+    }
+
+    .mihanblog_like_v2_help_dislike {
+        left: -15px;
+        top: 24px;
+    }
+    .mihanblog_like_v2_help_like {
+        left: 0;
+        top: -35px;
+
+    }
+    .mihanblog_like_v2_help{
+        display: none;
+        position: absolute;
+        white-space: nowrap;
+        z-index: 1;
+    }
+
+    .mihanblog_like_Cnt{
+        display: inline;
+        color: #ffffff;
+    }
+
+</style><script>
+
+	statInfo = new Array();
+	setStatVar = function(index,value){
+		statInfo[index] = value;
+	}
+	getStatVar = function(index){
+		if(statInfo[index]) document.write(statInfo[index]);
+	}
+	
+	setStatVar('total_post','2032');
+	setStatVar('total_author','11');
+	setStatVar('modify_date','یکشنبه 22 اردیبهشت 1398');
+	
+	setStatVar('today_view','30');
+	setStatVar('yesterday_view','168');
+	
+	setStatVar('this_month_view','8809');
+	setStatVar('last_month_view','6242');
+
+	setStatVar('total_view','2052857');
+	setStatVar('last_view_date','یکشنبه 23 آذر 1399 (07:12)');
+
+
+
+    
+    function setStatFromClient()
+    {
+        var url = 'http://rqoran.mihanblog.com/statupdate/?data[refereruri]=http://shahadat-ir.mihanblog.com/&data[postid]=&data[requesturi]=/&data[sdate]=1607831856&data[hash]=5228913637a20a5cd741335638f65e70&data[resolution]='+screen.width+' X '+screen.height;
+
+//        alert(url);
+//        var newjs = document.createElement("SCRIPT");
+//        newjs.type = 'text/javascript';
+//        newjs.src = url;
+//
+//        var newdiv = document.createElement("DIV");
+//        newdiv.setAttribute("style","display:none");
+
+        document.write(unescape('%3Cscript src="'+url+'" type="text/javascript"%3E%3C/script%3E'));
+//        newdiv.appendChild (newjs);
+//        document.write(newjs);
+//        document.write(appendChild (newdiv);
+
+    };
+    setStatFromClient();
+        
+</script><script>
+	messageForm = function(post_id){
+		try{
+			window.open('/message','message','status=yes,scrollbars=yes,toolbar=no,menubar=no,location=no ,width=480px,height=550px');
+		} catch(e){}
+	}
+</script><script>
+	linkdailyForm = function(){
+		try{
+			window.open('/linkdaily/new','linkdaily','status=yes,scrollbars=yes,toolbar=no,menubar=no,location=no ,width=500px,height=460px');
+		} catch(e){}
+	}
+</script><script>
+
+var MihanblogShopAdsArray = new Array();
+
+function GetMihanBlogShowAds(){
+	if(MihanblogShopAdsArray.length){
+		var adsTarget = 'MihanblogShopAds';
+		var containerWidth = document.getElementById(adsTarget).offsetWidth;
+		if(containerWidth>=200){
+			var adsCnt = parseInt(containerWidth / 200) ;
+			if(adsCnt>MihanblogShopAdsArray.length){
+				adsCnt = MihanblogShopAdsArray.length ; 
+			}
+//			var OneAdsWidth = parseInt(containerWidth / adsCnt) ;
+			var OneAdsWidth = containerWidth / adsCnt ;
+			if(OneAdsWidth>400){
+				OneAdsWidth = 400 ;
+			}
+			var OutHtml = '';
+			var img = '';
+			var link = '';
+			var title = '';
+			var description = '';
+			var imgWidth = 70;
+			if(OneAdsWidth>230){
+				imgWidth = 80;
+			}
+			if(OneAdsWidth>300){
+				imgWidth = 90;
+			}
+			for(adsOne=0;adsOne<adsCnt;adsOne++){
+				
+				img = MihanblogShopAdsArray[adsOne]['img'];
+				link = MihanblogShopAdsArray[adsOne]['link'];
+				title = MihanblogShopAdsArray[adsOne]['title'];
+				description = MihanblogShopAdsArray[adsOne]['description'];
+				
+				OutHtml += '<td style="background-color:#FFF;width: '+OneAdsWidth+'px;border:1px solid #f00;margin:0px 0px;font-size:11px;font-family:tahoma;padding:2px;margin:0px 0px;font-size:11px;border: 1px solid BurlyWood; padding: 1px; height: '+(imgWidth+25)+'px;">';
+
+				OutHtml += '	<a href="http://rqoran.mihanblog.com/'+link+'" target="_blank" style="text-decoration:none">';
+
+				OutHtml += '			<div style="width: '+(OneAdsWidth-16)+'px;cursor:pointer;font-size:12px;padding: 4px 1px 4px 7px; white-space: nowrap; text-align: center; font-weight: bold; color: blue;white-space:nowrap;overflow:hidden">';
+				OutHtml += 					title;
+				OutHtml += '			</div>';
+				OutHtml += '			<div style="cursor:pointer;padding: 1px; display: block; float: right; width: '+imgWidth+'px;">';
+				OutHtml += '				<img src="'+img+'.html" style="border:0px;padding:0px;margin:0px;width:'+imgWidth+'px;height:'+imgWidth+'px;">';
+				OutHtml += '			</div>';
+				OutHtml += '			<div style="padding: 1px; display: block; float: right; width: '+(OneAdsWidth-13-imgWidth)+'px; text-align: right;overflow:hidden">';
+				OutHtml += '				<div style="overflow:hidden;cursor:pointer;padding: 2px 3px; line-height: 17px; height: '+(imgWidth-3)+'px; text-align: justify;color:#000;direction:rtl">';
+				OutHtml += 						description;
+				OutHtml += '				</div>';
+				OutHtml += '			</div>';
+
+				OutHtml += '	</a>';
+
+				OutHtml += '</td>';
+			}
+			
+			var Out = '<table align="center" cellpadding="0" cellspacing="2" style="width:'+(OneAdsWidth*adsCnt)+'px;"><tr>'+OutHtml+'</tr></table>'; 
+			
+			Out = '<div style="text-align:center;padding:0px;margin:3px auto;">'+Out+'</div>'; 
+			
+			document.getElementById(adsTarget).style.height = (imgWidth+35)+'px' ;
+			document.getElementById(adsTarget).innerHTML = Out ;
+		}
+	}
+}
+</script>
+    <style>
+        @font-face {
+            font-family: 'Mihan-Iransans';
+            src: url('http://rqoran.mihanblog.com/public/public/fonts/Iransans.eot');
+            src: url('http://rqoran.mihanblog.com/public/public/fonts/Iransans.eot?') format('embedded-opentype'),
+            url('http://rqoran.mihanblog.com/public/public/fonts/Iransans.woff2') format('woff2'),
+            url('http://rqoran.mihanblog.com/public/public/fonts/Iransans.woff') format('woff'),
+            url('http://rqoran.mihanblog.com/public/public/fonts/Iransans.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+        @font-face {
+            font-family: 'Mihan-IransansBold';
+            src: url('http://rqoran.mihanblog.com/public/public/fonts/Iransans-Black.eot');
+            src: url('http://rqoran.mihanblog.com/public/public/fonts/Iransans-Black.eot?') format('embedded-opentype'),
+            url('http://rqoran.mihanblog.com/public/public/fonts/Iransans-Black.woff2') format('woff2'),
+            url('http://rqoran.mihanblog.com/public/public/fonts/Iransans-Black.woff') format('woff'),
+            url('http://rqoran.mihanblog.com/public/public/fonts/Iransans-Black.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+        @font-face {
+            font-family: 'Mihan-IransansLight';
+            src: url('http://rqoran.mihanblog.com/public/public/fonts/Iransans-UltraLight.eot');
+            src: url('http://rqoran.mihanblog.com/public/public/fonts/Iransans-UltraLight.eot?') format('embedded-opentype'),
+            url('http://rqoran.mihanblog.com/public/public/fonts/Iransans-UltraLight.woff2') format('woff2'),
+            url('http://rqoran.mihanblog.com/public/public/fonts/Iransans-UltraLight.woff') format('woff'),
+            url('http://rqoran.mihanblog.com/public/public/fonts/Iransans-UltraLight.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+        @font-face {
+            font-family: 'Mihan-Nassim';
+            src: url('http://rqoran.mihanblog.com/public/public/fonts/Nassim.eot');
+            src: url('http://rqoran.mihanblog.com/public/public/fonts/Nassim.eot?') format('embedded-opentype'),
+            url('http://rqoran.mihanblog.com/public/public/fonts/Nassim.woff2') format('woff2'),
+            url('http://rqoran.mihanblog.com/public/public/fonts/Nassim.woff') format('woff'),
+            url('http://rqoran.mihanblog.com/public/public/fonts/Nassim.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+        @font-face {
+            font-family: 'Mihan-Koodak';
+            src: url('http://rqoran.mihanblog.com/public/public/fonts/Koodak.eot');
+            src: url('http://rqoran.mihanblog.com/public/public/fonts/Koodak.eot?') format('embedded-opentype'),
+            url('http://rqoran.mihanblog.com/public/public/fonts/Koodak.woff2') format('woff2'),
+            url('http://rqoran.mihanblog.com/public/public/fonts/Koodak.woff') format('woff'),
+            url('http://rqoran.mihanblog.com/public/public/fonts/Koodak.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+        @font-face {
+            font-family: 'Mihan-Yekan';
+            src: url('http://rqoran.mihanblog.com/public/public/fonts/Yekan.eot');
+            src: url('http://rqoran.mihanblog.com/public/public/fonts/Yekan.eot?') format('embedded-opentype'),
+            url('http://rqoran.mihanblog.com/public/public/fonts/Yekan.woff2') format('woff2'),
+            url('http://rqoran.mihanblog.com/public/public/fonts/Yekan.woff') format('woff'),
+            url('http://rqoran.mihanblog.com/public/public/fonts/Yekan.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+        @font-face {
+            font-family: 'FontAwesome';
+            src: url('http://rqoran.mihanblog.com/public/public/fonts/fontawesome_webfont.eot');
+            src: url('http://rqoran.mihanblog.com/public/public/fonts/fontawesome_webfont.eot?') format('embedded-opentype'),
+            url('http://rqoran.mihanblog.com/public/public/fonts/fontawesome_webfont.woff2') format('woff2'),
+            url('http://rqoran.mihanblog.com/public/public/fonts/fontawesome_webfont.woff') format('woff'),
+            url('http://rqoran.mihanblog.com/public/public/fonts/fontawesome_webfont.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+
+
+        
+
+        /* Smartphones (portrait and landscape) ----------- */
+
+        /*
+        @media only screen and (max-width : 480px) and (min-width : 320px) {
+            .sabaClick_advert__wrapper{
+                display:block;
+            }
+            .sabaClick_advert__inner{
+                max-width: 90%;
+                margin: 0 5%;
+            }
+        }
+        */
+
+    </style>
+
+
+
+
+
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+<meta name="designer" content="inventor_robot@yahoo.com"/>
+<meta name="author" content=". ."/>
+<meta name="language" content="Farsi"/>
+<meta name="description" content="رهپویان قرآن"/>
+<meta name="keywords" content="رهپویان قرآن"/> 
+
+<link rel="alternate" type="application/rss+xml" title="رهپویان قرآن " href="http://rqoran.mihanblog.com/post/rss/" />
+<link rel="alternate" type="application/atom+xml" title="رهپویان قرآن " href="http://rqoran.mihanblog.com/post/atom/" />
+<link rel="stylesheet" type="text/css" href="../static.mihanblog.com/public/user_data/user_files/153/458214/orangeZitova/style.css" media="screen"/> 
+
+<title>رهپویان قرآن </title>
+
+<style type="text/css">
+.nav2{color:red;}
+.nav2 a:link{color:#080808;margin:0px 5px 0px 5px;} 
+.nav2 a:visited{color:#080808;margin:0px 5px 0px 5px;}
+.nav2 a:hover{color:maroon;margin:0px -2px 0px 3px;}
+</style>
+
+<script type="text/javascript" src="../static2.mihanblog.com/public/user_data/user_files/153/458214/NiceMenuOrange/jquery-1.4.2.min.js"></script>
+<link rel="stylesheet" href="../static2.mihanblog.com/public/user_data/user_files/153/458214/NiceMenuOrange/niceMenu.css" type="text/css">
+<script type="text/javascript" src="../static2.mihanblog.com/public/user_data/user_files/153/458214/NiceMenuOrange/niceMenu.class.min.js"></script>
+
+<script type="text/javascript">
+    $(document).ready(function() {
+        // niceMenu init. Send custom option
+        niceMenu.init({
+            element : "#niceMenu",
+            hideStep	: 199, // next step in size
+            duration	: 250, // animation speed in miliseconds. 1000 = 1 second
+            nextIcon	: 'http://static2.mihanblog.com//public/user_data/user_files/153/458214/NiceMenuOrange/menu_arraw.gif', // url to next icon from menu
+            backBtn 	: 'a#niceMenu-backBtn', // back element menu
+            lastId 		: 0, // autoincrement in script
+            lastelm		: 0, // autoincrement in script
+            currentStep	: 0, // default 0. Autoincrement in script
+            running		: false // prevent duble click colision
+        });
+    });
+</script>
+
+</head>
+
+<body>
+<!-- Start BG -->
+<div id="bg">
+<!-- Start Header -->
+<div class="header" style="background: url('../static.mihanblog.com/public/user_data/user_files/153/458214/Baner/rqoranB.jpg') no-repeat top;">
+	        <div class="nav">
+		    <div class="nav1" style="width:62px;"></div>
+		    <div class="nav2" style="width:710px;">
+		    <ul>
+		    <li><a href="index.html">صفحه اول</a></li>|
+		    <li><a href="mailto:rquran114@gmail.com">پست الكترونیك</a></li>|
+			<li><a href="javascript:messageForm()">تماس با مدیر </a></li>|
+			<li><a href="http://rqoran.mihanblog.com/post/list">آرشیو مطالب</a>|</li>
+			<li><a href="http://rqoran.mihanblog.com/m/">مشاهده در موبایل</a></li>|
+			<li><a href="http://rqoran.mihanblog.com/post/rss/" title="RSS">RSS</a></li>
+		    </ul>
+		    </div>
+		    <div class="nav3">
+			<form method="get" action="http://google.com/search" class="sch"><input name="sitesearch" value="http://rqoran.mihanblog.com" type="hidden"/>
+			<input type="text" name="q" size="22" class="txt" style="color:#000000;"/> <input type="submit" value=" " class="btn"/>
+			</form>
+		    </div>   
+	        </div>
+</div>
+<!-- End Header -->
+
+<!-- Start Con-->
+<div class="con">
+<!-- Start scsl -->
+<div class="scs1">
+<div class="sc-all"><div class="sc">
+<!--Start Post-->
+		<div id="MihanblogShopAds" style="display:block;height:0px;width:100%;border:0px"></div>
+		            <div class="post clearfix">
+            <div class="p-head">
+            <div class="p-head1">
+            <div class="p-head2">		
+			<b><a href="http://rqoran.mihanblog.com/post/2597">رمضان، میدان مسابقه</a></b>
+            </div>
+            </div>
+            </div>
+	        <div class="p-con clearfix">
+	        <div class="p-con1">
+	        <div class="p-con2">
+	        <div class="p-photo">
+	        </div>
+	        <div class="p-height">
+			<div id="InPost_MihanblogShopAds" style="display:block;height:0px;width:100%;border:0px"></div><div>این دنیا پر است
+ از میدان‌های مسابقه. مسابقه در میدان کسب پول و ثروت یا به دست آوردن 
+شهرت و مقام یا مسابقات ورزشی و... از اطفال خردسال گرفته تا کهنسالانی در 
+آستانه مرگ، همگی برای خود مسابقه‌ای دارند و در آن شرکت کرده و در تلاش و 
+تکاپو هستند...</div><div>لطفا برای مطالعه ادامه مطلب <a href="https://www.welayatnet.com/fa/news/109480" target="_blank" title="رمضان، میدان مسابقه">اینجا کلیک کنید</a></div><div><br></div><div><br></div><div align="center"><a href="https://www.welayatnet.com/fa/news/109480" target="_blank" title="رمضان، میدان مسابقه"><img src="http://mb7.ir/wp-content/uploads/2019/02/www.mb7_.ir-4.gif" alt="" width="219" vspace="0" hspace="0" height="78" border="0" align="bottom"></a></div></div><br><b></b>
+			<br><br><font style="font-size:8pt;">
+<br>
+			طبقه بندی: 			<a href="http://rqoran.mihanblog.com/post/category/62">
+			قرآن شناسی</a>،&nbsp;			<a href="http://rqoran.mihanblog.com/post/category/26">
+			4)علوم قرآنی</a>،&nbsp;<br>
+			برچسب ها:
+						<a href="http://rqoran.mihanblog.com/post/tag/%D8%B1%D9%85%D8%B6%D8%A7%D9%86" >رمضان</a>، 
+			<br>
+			داغ کن:
+			<a   target="_blank"  
+			href="http://www.cloob.com/share/link/add?url=http://rqoran.mihanblog.com//post/2597&title=رمضان، میدان مسابقه"> 
+			<img alt="داغ کن - کلوب دات کام" src="../static.mihanblog.com/public/user_data/user_files/153/458214/orangeZitova/100c.gif" style='border: none; padding: 0px'/> 
+			</a>
+
+			</font>
+	        </div>
+	        </div>
+	        <div class="p-con3"><div class="p-con4">
+	        <div class="date">نوشته شده در تاریخ یکشنبه 22 اردیبهشت 1398 توسط : 
+<a href="http://rqoran.mihanblog.com/post/author/1576080">میهن بلاگ</a></div>
+	        <div class="nazar"><a target="_self" href="javascript:newComment(2597)" >نظرات (<script>setCommentCnt(2597)</script>)</a></div>
+	        </div></div>
+	        </div>
+            </div>
+            <div class="post clearfix">
+            <div class="p-head">
+            <div class="p-head1">
+            <div class="p-head2">		
+			<b><a href="http://rqoran.mihanblog.com/post/2596">باز شدن درهای آسمان</a></b>
+            </div>
+            </div>
+            </div>
+	        <div class="p-con clearfix">
+	        <div class="p-con1">
+	        <div class="p-con2">
+	        <div class="p-photo">
+	        </div>
+	        <div class="p-height">
+			<div>یکی از اعمال و 
+کارهای بسیار ارزشمندی که در ماه رمضان باید نسبت به آن اهتمام جدی داشت، 
+توبه و استغفار به در گاه الهی است؛ چراکه ماه مبارک رمضان، ماه اجابت دعا و
+ زمان گشوده شدن درهای رحمت و مغفرت به سوی بندگان است: «إنّ أبوابَ 
+السماءِ تُفتَحُ فی أوَّلِ لیلةٍ مِن شَهرِرَمَضانَ و لا تُغلَقُ‏ إلى‏ 
+آخِرِ لیلةٍ مِنه‏؛ درهاى آسمان در نخستین شب ماه رمضان گشوده مى‏‌شود و تا
+ آخرین شب آن بسته نمى‏‌شود.»(بحار الأنوار، ج‏93، ص 344)...</div><div>لطفا برای مطالعه ادامه مطلب <a href="https://www.welayatnet.com/fa/news/109111" target="_blank" title="باز شدن درهای آسمان">اینجا کلیک کنید</a></div><div><br></div><div align="center"><a href="https://www.welayatnet.com/fa/news/109111" target="_blank" title="باز شدن درهای آسمان"><img src="http://mb7.ir/wp-content/uploads/2019/02/www.mb7_.ir-4.gif" alt="" vspace="0" hspace="0" border="0" align="bottom"></a></div></div><br><b></b>
+			<br><br><font style="font-size:8pt;">
+<br>
+			طبقه بندی: 			<a href="http://rqoran.mihanblog.com/post/category/34">
+			تازه ترین ها</a>،&nbsp;			<a href="http://rqoran.mihanblog.com/post/category/3">
+			1) بررسی موضوعی</a>،&nbsp;<br>
+			برچسب ها:
+						<a href="http://rqoran.mihanblog.com/post/tag/%D9%82%D8%B1%D8%A2%D9%86" >قرآن</a>، 
+			<br>
+			داغ کن:
+			<a   target="_blank"  
+			href="http://www.cloob.com/share/link/add?url=http://rqoran.mihanblog.com//post/2596&title=باز شدن درهای آسمان"> 
+			<img alt="داغ کن - کلوب دات کام" src="../static.mihanblog.com/public/user_data/user_files/153/458214/orangeZitova/100c.gif" style='border: none; padding: 0px'/> 
+			</a>
+
+			</font>
+	        </div>
+	        </div>
+	        <div class="p-con3"><div class="p-con4">
+	        <div class="date">نوشته شده در تاریخ یکشنبه 22 اردیبهشت 1398 توسط : 
+<a href="http://rqoran.mihanblog.com/post/author/1576080">میهن بلاگ</a></div>
+	        <div class="nazar"><a target="_self" href="javascript:newComment(2596)" >نظرات (<script>setCommentCnt(2596)</script>)</a></div>
+	        </div></div>
+	        </div>
+            </div>
+            <div class="post clearfix">
+            <div class="p-head">
+            <div class="p-head1">
+            <div class="p-head2">		
+			<b><a href="http://rqoran.mihanblog.com/post/2595">سکوت سکولارها و غرب زده های داخلی در توحش جهان سرمایه داری</a></b>
+            </div>
+            </div>
+            </div>
+	        <div class="p-con clearfix">
+	        <div class="p-con1">
+	        <div class="p-con2">
+	        <div class="p-photo">
+	        </div>
+	        <div class="p-height">
+			<div>اعدام
+ بیش از 30 تن از بهترین فرزندان شیعه قطیف در عربستان سعودی نشانه استیصال
+ این رژیم صهیونیستی است. دولت سعودی با اعمال شدیدترین نوع اعدام که با 
+شمشیر در ملأعام انجام شد و برخی از پیکرهای پاک پس از سر بریدن در خیابان 
+های شهر به دار آویخته شدند تا رعب و وحشت در دل های مردم ایجاد کنند و 
+انقلابیون را بترسانند و چند صباحی دیگر در قدرت بمانند و این نشانه اوج 
+ضعف وذلت آنها است...</div><div>لطفا برای مطالعه ادامه مطلب<a href="https://www.welayatnet.com/fa/news/143174" target="_blank" title="سکوت سکولارها و غرب زده های داخلی در توحش جهان سرمایه داری"> اینجا کلیک کنید</a></div><div><br></div><div><br></div><div align="center"><a href="https://www.welayatnet.com/fa/news/143174" target="_blank" title="سکوت سکولارها و غرب زده های داخلی در توحش جهان سرمایه داری"><img src="http://mb7.ir/wp-content/uploads/2019/02/www.mb7_.ir-4.gif " alt="" width="244" vspace="0" hspace="0" height="86" border="0" align="bottom"></a></div></div><br><b></b>
+			<br><br><font style="font-size:8pt;">
+<br>
+			طبقه بندی: 			<a href="http://rqoran.mihanblog.com/post/category/3">
+			1) بررسی موضوعی</a>،&nbsp;			<a href="http://rqoran.mihanblog.com/post/category/60">
+			علوم روز</a>،&nbsp;<br>
+			برچسب ها:
+						<a href="http://rqoran.mihanblog.com/post/tag/%D8%B3%DA%A9%D9%88%D8%AA%20%D8%A7%D9%86%D8%B3%D8%A7%D9%86%DB%8C%D8%AA" >سکوت انسانیت</a>، 
+			<br>
+			داغ کن:
+			<a   target="_blank"  
+			href="http://www.cloob.com/share/link/add?url=http://rqoran.mihanblog.com//post/2595&title=سکوت سکولارها و غرب زده های داخلی در توحش جهان سرمایه داری"> 
+			<img alt="داغ کن - کلوب دات کام" src="../static.mihanblog.com/public/user_data/user_files/153/458214/orangeZitova/100c.gif" style='border: none; padding: 0px'/> 
+			</a>
+
+			</font>
+	        </div>
+	        </div>
+	        <div class="p-con3"><div class="p-con4">
+	        <div class="date">نوشته شده در تاریخ پنجشنبه 19 اردیبهشت 1398 توسط : 
+<a href="http://rqoran.mihanblog.com/post/author/1576080">میهن بلاگ</a></div>
+	        <div class="nazar"><a target="_self" href="javascript:newComment(2595)" >نظرات (<script>setCommentCnt(2595)</script>)</a></div>
+	        </div></div>
+	        </div>
+            </div>
+            <div class="post clearfix">
+            <div class="p-head">
+            <div class="p-head1">
+            <div class="p-head2">		
+			<b><a href="http://rqoran.mihanblog.com/post/2594">چرا نیروهای جهادی ریا کاری می کنند؟!</a></b>
+            </div>
+            </div>
+            </div>
+	        <div class="p-con clearfix">
+	        <div class="p-con1">
+	        <div class="p-con2">
+	        <div class="p-photo">
+	        </div>
+	        <div class="p-height">
+			<div>وقتی
+ سرگذشت شیطان را مورد مطالعه و بررسی قرار می دهیم به این سکانس از زندگی 
+او می رسیم که به خدای متعال قسم یاد می کند که همه بندگان را از مسیر صحیح
+ زندگی خارج نماید: «قالَ فَبِعِزَّتِكَ لَأُغْوِیَنَّهُمْ أَجْمَعینَ [ص: 
+82] گفت: به عزّتت سوگند، همه آنان را گمراه خواهم كرد» شیطان از همان 
+ابتدای گمراهی خود، به خدای متعال قسم یاد می کند که همه ی بندگان را 
+همانند خود از راه صحیح خارج کند! حال سؤال اینجاست که شیطان با چه اهرمی 
+به دنبال این هدف است؟! پاسخ این سؤال پیچیده و طولانی می‌باشد چرا که 
+ترفند و حیله های شیطان متعدد است،..</div><div>لطفا برای مطالعه ادامهمطلب <a href="https://www.welayatnet.com/fa/news/142680" target="_blank" title="چرا نیروهای جهادی ریا کاری می کنند؟!">اینجا کلیک کنید</a></div><div><br></div><div align="center"><a href="https://www.welayatnet.com/fa/news/142680" target="" title="چرا نیروهای جهادی ریا کاری می کنند؟!"><img src="http://mb7.ir/wp-content/uploads/2019/02/www.mb7_.ir-4.gif " alt="" width="228" vspace="0" hspace="0" height="80" border="0" align="bottom"></a></div></div><br><b></b>
+			<br><br><font style="font-size:8pt;">
+<br>
+			طبقه بندی: 			<a href="http://rqoran.mihanblog.com/post/category/57">
+			جهاد و دفاع</a>،&nbsp;<br>
+			برچسب ها:
+						<a href="http://rqoran.mihanblog.com/post/tag/%D8%B1%DB%8C%D8%A7%20%DA%A9%D8%A7%D8%B1" >ریا کار</a>، 
+						<a href="http://rqoran.mihanblog.com/post/tag/%D9%86%DB%8C%D8%B1%D9%88%DB%8C%20%D8%AC%D9%87%D8%A7%D8%AF%DB%8C" >نیروی جهادی</a>، 
+			<br>
+			داغ کن:
+			<a   target="_blank"  
+			href="http://www.cloob.com/share/link/add?url=http://rqoran.mihanblog.com//post/2594&title=چرا نیروهای جهادی ریا کاری می کنند؟!"> 
+			<img alt="داغ کن - کلوب دات کام" src="../static.mihanblog.com/public/user_data/user_files/153/458214/orangeZitova/100c.gif" style='border: none; padding: 0px'/> 
+			</a>
+
+			</font>
+	        </div>
+	        </div>
+	        <div class="p-con3"><div class="p-con4">
+	        <div class="date">نوشته شده در تاریخ پنجشنبه 19 اردیبهشت 1398 توسط : 
+<a href="http://rqoran.mihanblog.com/post/author/1576080">میهن بلاگ</a></div>
+	        <div class="nazar"><a target="_self" href="javascript:newComment(2594)" >نظرات (<script>setCommentCnt(2594)</script>)</a></div>
+	        </div></div>
+	        </div>
+            </div>
+            <div class="post clearfix">
+            <div class="p-head">
+            <div class="p-head1">
+            <div class="p-head2">		
+			<b><a href="http://rqoran.mihanblog.com/post/2593">حدیث خدمت و دلدادگی در سیره حسینی</a></b>
+            </div>
+            </div>
+            </div>
+	        <div class="p-con clearfix">
+	        <div class="p-con1">
+	        <div class="p-con2">
+	        <div class="p-photo">
+	        </div>
+	        <div class="p-height">
+			<div>همگان
+ خود را شیفته و دلداده حضرت اباعبدالله الحسین(علیه‌السلام) می‌دانند؛ پیر
+ و جوان، کوچک و بزرگ، مذهبی و غیر مذهبی ندارد؛ نقطه اشتراک همه در نوکری 
+امام حسین(علیه‌السلام) است و خدمت به دستگاه حسینی را افتخاری برای خود به
+ شمار می‌آورند. در این میان و با بررسی سیره و فرموده‌های نورانی خامس آل 
+عبا(علیه‌السلام) می‌فهمیم که حضرت خود خدمتگزار دین و مکتب اسلام است؛ 
+مطلبی که در این یادداشت به آن می‌پردازیم. <br></div><div>لطفا برای مطالعه ادامه مطلب<a href="https://www.welayatnet.com/fa/news/107471" target="_blank" title="حدیث خدمت و دلدادگی در سیره حسینی"> اینجا کلیک کنید</a></div><div><br></div><div><br></div><div align="center"><a href="https://www.welayatnet.com/fa/news/107471" target="_blank" title="حدیث خدمت و دلدادگی در سیره حسینی"><img src="http://mb7.ir/wp-content/uploads/2019/02/www.mb7_.ir-4.gif " alt="" vspace="0" hspace="0" border="0" align="bottom"></a></div></div><br><b></b>
+			<br><br><font style="font-size:8pt;">
+<br>
+			طبقه بندی: 			<a href="http://rqoran.mihanblog.com/post/category/73">
+			فقه الحدیث(متن شناسی)</a>،&nbsp;			<a href="http://rqoran.mihanblog.com/post/category/35">
+			متفرقه</a>،&nbsp;<br>
+			برچسب ها:
+						<a href="http://rqoran.mihanblog.com/post/tag/%D8%AD%D8%AF%DB%8C%D8%AB" >حدیث</a>، 
+			<br>
+			داغ کن:
+			<a   target="_blank"  
+			href="http://www.cloob.com/share/link/add?url=http://rqoran.mihanblog.com//post/2593&title=حدیث خدمت و دلدادگی در سیره حسینی"> 
+			<img alt="داغ کن - کلوب دات کام" src="../static.mihanblog.com/public/user_data/user_files/153/458214/orangeZitova/100c.gif" style='border: none; padding: 0px'/> 
+			</a>
+
+			</font>
+	        </div>
+	        </div>
+	        <div class="p-con3"><div class="p-con4">
+	        <div class="date">نوشته شده در تاریخ یکشنبه 25 فروردین 1398 توسط : 
+<a href="http://rqoran.mihanblog.com/post/author/1576080">میهن بلاگ</a></div>
+	        <div class="nazar"><a target="_self" href="javascript:newComment(2593)" >نظرات (<script>setCommentCnt(2593)</script>)</a></div>
+	        </div></div>
+	        </div>
+            </div>
+            <div class="post clearfix">
+            <div class="p-head">
+            <div class="p-head1">
+            <div class="p-head2">		
+			<b><a href="http://rqoran.mihanblog.com/post/2592"> امید به آینده و نشاط در بین سیل‌زدگان جاریست</a></b>
+            </div>
+            </div>
+            </div>
+	        <div class="p-con clearfix">
+	        <div class="p-con1">
+	        <div class="p-con2">
+	        <div class="p-photo">
+	        </div>
+	        <div class="p-height">
+			<p>یا أَیُّهَا اَلَّذِینَ آمَنُوا اِسْتَعِینُوا بِالصَّبْرِ وَ اَلصَّلاٰةِ إِنَّ اَللّٰهَ مَعَ اَلصّٰابِرِینَ</p>
+<p>&nbsp;ای اهل ایمان (در پیشرفت کار خود) از صبر و مقاومت کمک گیرید و به ذکر خدا و نماز توسّل جویید که خدا با صابران است.</p><p>لطفا برای مطالعه ادامه مطلب<a href="https://www.welayatnet.com/fa/news/142398" target="_blank" title=" امید به آینده و نشاط در بین سیل‌زدگان جاریست"> اینجا کلیک کنید</a></p><p><br></p><p align="center"><a href="https://www.welayatnet.com/fa/news/142398" target="_blank" title="امید به آینده و نشاط در بین سیل‌زدگان جاریست"><img src="http://mb7.ir/wp-content/uploads/2019/02/www.mb7_.ir-4.gif " alt="" vspace="0" hspace="0" border="0" align="bottom"></a></p>
+
+
+</div><br><b></b>
+			<br><br><font style="font-size:8pt;">
+<br>
+			طبقه بندی: 			<a href="http://rqoran.mihanblog.com/post/category/10">
+			2)سبك زندگی اسلامی </a>،&nbsp;			<a href="http://rqoran.mihanblog.com/post/category/35">
+			متفرقه</a>،&nbsp;<br>
+			برچسب ها:
+						<a href="http://rqoran.mihanblog.com/post/tag/%D8%A7%D9%85%DB%8C%D8%AF%20%D8%A8%D9%87%20%D8%A2%DB%8C%D9%86%D8%AF%D9%87" >امید به آینده</a>، 
+						<a href="http://rqoran.mihanblog.com/post/tag/%D9%86%D8%B4%D8%A7%D8%B7" >نشاط</a>، 
+						<a href="http://rqoran.mihanblog.com/post/tag/%D8%B2%D9%86%D8%AF%DA%AF%DB%8C" >زندگی</a>، 
+						<a href="http://rqoran.mihanblog.com/post/tag/%D8%B3%DB%8C%D9%84" >سیل</a>، 
+			<br>
+			داغ کن:
+			<a   target="_blank"  
+			href="http://www.cloob.com/share/link/add?url=http://rqoran.mihanblog.com//post/2592&title= امید به آینده و نشاط در بین سیل‌زدگان جاریست"> 
+			<img alt="داغ کن - کلوب دات کام" src="../static.mihanblog.com/public/user_data/user_files/153/458214/orangeZitova/100c.gif" style='border: none; padding: 0px'/> 
+			</a>
+
+			</font>
+	        </div>
+	        </div>
+	        <div class="p-con3"><div class="p-con4">
+	        <div class="date">نوشته شده در تاریخ یکشنبه 25 فروردین 1398 توسط : 
+<a href="http://rqoran.mihanblog.com/post/author/1576080">میهن بلاگ</a></div>
+	        <div class="nazar"><a target="_self" href="javascript:newComment(2592)" >نظرات (<script>setCommentCnt(2592)</script>)</a></div>
+	        </div></div>
+	        </div>
+            </div>
+            <div class="post clearfix">
+            <div class="p-head">
+            <div class="p-head1">
+            <div class="p-head2">		
+			<b><a href="http://rqoran.mihanblog.com/post/2591">به کمک سیل زدگان بشتابیم</a></b>
+            </div>
+            </div>
+            </div>
+	        <div class="p-con clearfix">
+	        <div class="p-con1">
+	        <div class="p-con2">
+	        <div class="p-photo">
+	        </div>
+	        <div class="p-height">
+			<div>در روزهای
+ اخیر ایران اسلامی عزیز با حوادث طبیعی بزرگی مواجه شد. باران و سیلی که 
+نقاط مختلف کشور را در برگرفت و عده‌ی زیادی را دچار بحران و سختی کرد، هر 
+چند منافع و برکات این بارش رحمت الهی بیش از خسارتهای آن بود، ولی با این 
+حال عدم زیرساخت‌های مناسب و اصولی باعث تحمیل خسارت های فراوانی به 
+کشاورزان و روستا نشینان و همچنین ساکنین حواشی رودخانه‌ها شد. <br></div><div>لطفا برای مطالعه ادامه مطلب<a href="http://mb7.ir/wp-content/uploads/2019/02/www.mb7_.ir-4.gif " target="_blank" title="به کمک سیل زدگان بشتابیم"> اینجا کلیک کنید</a></div><div><br></div><div><br></div><div align="center"><a href="https://www.welayatnet.com/fa/news/142314" target="_blank" title="به کمک سیل زدگان بشتابیم"><img src="http://mb7.ir/wp-content/uploads/2019/02/www.mb7_.ir-4.gif " alt="" vspace="0" hspace="0" border="0" align="bottom"></a></div></div><br><b></b>
+			<br><br><font style="font-size:8pt;">
+<br>
+			طبقه بندی: 			<a href="http://rqoran.mihanblog.com/post/category/35">
+			متفرقه</a>،&nbsp;<br>
+			برچسب ها:
+						<a href="http://rqoran.mihanblog.com/post/tag/%D8%B3%DB%8C%D9%84" >سیل</a>، 
+			<br>
+			داغ کن:
+			<a   target="_blank"  
+			href="http://www.cloob.com/share/link/add?url=http://rqoran.mihanblog.com//post/2591&title=به کمک سیل زدگان بشتابیم"> 
+			<img alt="داغ کن - کلوب دات کام" src="../static.mihanblog.com/public/user_data/user_files/153/458214/orangeZitova/100c.gif" style='border: none; padding: 0px'/> 
+			</a>
+
+			</font>
+	        </div>
+	        </div>
+	        <div class="p-con3"><div class="p-con4">
+	        <div class="date">نوشته شده در تاریخ یکشنبه 25 فروردین 1398 توسط : 
+<a href="http://rqoran.mihanblog.com/post/author/1576080">میهن بلاگ</a></div>
+	        <div class="nazar"><a target="_self" href="javascript:newComment(2591)" >نظرات (<script>setCommentCnt(2591)</script>)</a></div>
+	        </div></div>
+	        </div>
+            </div>
+            <div class="post clearfix">
+            <div class="p-head">
+            <div class="p-head1">
+            <div class="p-head2">		
+			<b><a href="http://rqoran.mihanblog.com/post/2590">قطره ای از سبک زندگی امام موسی کاظم (ع)</a></b>
+            </div>
+            </div>
+            </div>
+	        <div class="p-con clearfix">
+	        <div class="p-con1">
+	        <div class="p-con2">
+	        <div class="p-photo">
+	        </div>
+	        <div class="p-height">
+			
+
+
+<strong>شرح مختصر زندگی امام موسی کاظم(علیه السلام)</strong><br><div>
+امام موسی بن جعفر(علیه السلام) ملقب به کاظم، امام هفتم شیعیان، متولد سال
+ ۱۲۸ قمری در قریه «ابواء» (میان مکه و مدینه). آن حضرت پس از شهادت پدرش 
+امام جعفر صادق(علیه السلام)، از سال ۱۴۸ تا ۱۸۳، به مدت ۳۵ سال امامت 
+شیعیان را بر عهده داشت و در بیست و پنجم رجب سال ۱۸۳ در زندان بغداد به 
+دست سندی بن شاهک مسموم شد و به شهادت رسید.[1]امام موسی کاظم(علیه السلام)
+ همچون امامان دیگر شیعیان برای تبلیغ و ترویج آموزه های اسلامی و شیعی از 
+هیچ تلاش و کوششی دریغ نفرمودند، و در این مسیر مرارت ها و سختیهای فراوانی
+ را به جان خریدند، دوره امامت این امام همام با خلفای مستبد و خودکامه ای&nbsp;
+ همچون: منصور دوانقی، محمد معروف به مهدی، هادی، هارون. مصادف بود. <br></div><div>لطفا برای مطالعه ادامه مطلب <a href="https://www.welayatnet.com/fa/news/90758" target="_blank" title="قطره ای از سبک زندگی امام موسی کاظم (ع)">اینجا کلیک کنید</a></div><div><br></div><div align="center"><a href="https://www.welayatnet.com/fa/news/90758" target="_blank" title="قطره ای از سبک زندگی امام موسی کاظم (ع)"><img src="http://mb7.ir/wp-content/uploads/2019/02/www.mb7_.ir-4.gif " alt="" vspace="0" hspace="0" border="0" align="bottom"></a></div></div><br><b></b>
+			<br><br><font style="font-size:8pt;">
+<br>
+			طبقه بندی: 			<a href="http://rqoran.mihanblog.com/post/category/10">
+			2)سبك زندگی اسلامی </a>،&nbsp;<br>
+			برچسب ها:
+						<a href="http://rqoran.mihanblog.com/post/tag/%D8%B3%D8%A8%DA%A9%20%D8%B2%D9%86%D8%AF%DA%AF%DB%8C" >سبک زندگی</a>، 
+						<a href="http://rqoran.mihanblog.com/post/tag/%D8%A7%D9%85%D8%A7%D9%85%20%D9%85%D9%88%D8%B3%DB%8C%20%DA%A9%D8%A7%D8%B8%D9%85(%D8%B9)" >امام موسی کاظم(ع)</a>، 
+			<br>
+			داغ کن:
+			<a   target="_blank"  
+			href="http://www.cloob.com/share/link/add?url=http://rqoran.mihanblog.com//post/2590&title=قطره ای از سبک زندگی امام موسی کاظم (ع)"> 
+			<img alt="داغ کن - کلوب دات کام" src="../static.mihanblog.com/public/user_data/user_files/153/458214/orangeZitova/100c.gif" style='border: none; padding: 0px'/> 
+			</a>
+
+			</font>
+	        </div>
+	        </div>
+	        <div class="p-con3"><div class="p-con4">
+	        <div class="date">نوشته شده در تاریخ یکشنبه 25 فروردین 1398 توسط : 
+<a href="http://rqoran.mihanblog.com/post/author/1576080">میهن بلاگ</a></div>
+	        <div class="nazar"><a target="_self" href="javascript:newComment(2590)" >نظرات (<script>setCommentCnt(2590)</script>)</a></div>
+	        </div></div>
+	        </div>
+            </div>
+            <div class="post clearfix">
+            <div class="p-head">
+            <div class="p-head1">
+            <div class="p-head2">		
+			<b><a href="http://rqoran.mihanblog.com/post/2589">دردناک تر از سیل 98 چیست؟</a></b>
+            </div>
+            </div>
+            </div>
+	        <div class="p-con clearfix">
+	        <div class="p-con1">
+	        <div class="p-con2">
+	        <div class="p-photo">
+	        </div>
+	        <div class="p-height">
+			<div>یکی از 
+حوادث طبیعی که اخیرا بسیاری از مردم و مسئولان را غافل گیر و مردم را 
+داغدار کرد؛ سیل وسیعی بود که در بعضی از مناطق کشور به وقوع پیوست؛ 
+متأسفانه سوء مدیریت و عدم تدبیر مسئولان ذی ربط موجب داغ دار شدن خانواده 
+های بیشمار و از بین رفتن امکانات زیر ساختی همچون جاده ها، پل ها و 
+ساختمان ها و زمین های کشاورزی شد. تا کنون آمار دقیقی از خسارت های مالی 
+این سیل آب ها منتشر نشده است، ولی گستردگی وقوع آن در مناطق مختلف کشور 
+حاکی از خسارت چند صد میلیاردی به دارایی های ملی و مردمی است که وسعت این 
+سیلاب ها در برخی مناطق کشور همچون مازندارن، لرستان، خوزستان و شیراز 
+چشمگیرتر می‌باشد.</div><div>لطفا برای مطالعه ادامه مطلب <a href="https://www.welayatnet.com/fa/news/142229" target="_blank" title="دردناک تر از سیل 98 چیست؟">اینجا کلیک کنید</a></div><div><br></div><div align="center"><a href="https://www.welayatnet.com/fa/news/142229" target="_blank" title="دردناک تر از سیل 98 چیست؟"><img src="http://mb7.ir/wp-content/uploads/2019/02/www.mb7_.ir-4.gif " alt="" vspace="0" hspace="0" border="0" align="bottom"></a>
+
+
+</div></div><br><b></b>
+			<br><br><font style="font-size:8pt;">
+<br>
+			طبقه بندی: 			<a href="http://rqoran.mihanblog.com/post/category/35">
+			متفرقه</a>،&nbsp;<br>
+			برچسب ها:
+						<a href="http://rqoran.mihanblog.com/post/tag/%D8%B3%DB%8C%D9%84" >سیل</a>، 
+						<a href="http://rqoran.mihanblog.com/post/tag/%D9%88%DB%8C%D8%B1%D8%A7%D9%86%DB%8C" >ویرانی</a>، 
+			<br>
+			داغ کن:
+			<a   target="_blank"  
+			href="http://www.cloob.com/share/link/add?url=http://rqoran.mihanblog.com//post/2589&title=دردناک تر از سیل 98 چیست؟"> 
+			<img alt="داغ کن - کلوب دات کام" src="../static.mihanblog.com/public/user_data/user_files/153/458214/orangeZitova/100c.gif" style='border: none; padding: 0px'/> 
+			</a>
+
+			</font>
+	        </div>
+	        </div>
+	        <div class="p-con3"><div class="p-con4">
+	        <div class="date">نوشته شده در تاریخ پنجشنبه 22 فروردین 1398 توسط : 
+<a href="http://rqoran.mihanblog.com/post/author/1576080">میهن بلاگ</a></div>
+	        <div class="nazar"><a target="_self" href="javascript:newComment(2589)" >نظرات (<script>setCommentCnt(2589)</script>)</a></div>
+	        </div></div>
+	        </div>
+            </div>
+            <div class="post clearfix">
+            <div class="p-head">
+            <div class="p-head1">
+            <div class="p-head2">		
+			<b><a href="http://rqoran.mihanblog.com/post/2588">مواردی از اخلاق اجتماعی امام علی(ع)</a></b>
+            </div>
+            </div>
+            </div>
+	        <div class="p-con clearfix">
+	        <div class="p-con1">
+	        <div class="p-con2">
+	        <div class="p-photo">
+	        </div>
+	        <div class="p-height">
+			<div>یکی
+ از زیباترین ابعاد زندگی امام علی(علیه السلام) شیوه زندگی اجتماعی ایشان 
+است. آداب و اخلاق اجتماعی که امام علی(علیه السلام) در سبک و سیاق زندگی 
+خود رعایت می نمودند، زیباترین و با ارزش ترین شاخص های زندگی اسلامی را به
+ نمایش گذاشته است. شیوه تعامل و برخورد با دشمنان در روابط اجتماعی، نوع 
+برخورد با از کار افتادگان و درماندگان و حتی نوع برخورد با همسایگان، همگی
+ گویای اوج اخلاق مداری قرآنی و اسلامی است. در این نوشتار کوتاه سعی داریم
+ به دریچه کوچکی از ابعاد زندگی اجتماعی امام(علیه السلام) اشاره کنیم. <br></div><div>لطفا برای مطالعه ادامه مطلب <a href="https://www.welayatnet.com/fa/news/90049" target="_blank" title="مواردی از اخلاق اجتماعی امام علی(ع)">اینجا کلیک کنید</a></div><div><br></div><div align="center"><a href="https://www.welayatnet.com/fa/news/90049" target="_blank" title="مواردی از اخلاق اجتماعی امام علی(ع)"><img src="http://mb7.ir/wp-content/uploads/2019/02/www.mb7_.ir-4.gif " alt="" vspace="0" hspace="0" border="0" align="bottom"></a></div><div><br></div></div><br><b></b>
+			<br><br><font style="font-size:8pt;">
+<br>
+			طبقه بندی: 			<a href="http://rqoran.mihanblog.com/post/category/19">
+			10)لطایف قرآنی و حدیثی</a>،&nbsp;			<a href="http://rqoran.mihanblog.com/post/category/35">
+			متفرقه</a>،&nbsp;<br>
+			برچسب ها:
+						<a href="http://rqoran.mihanblog.com/post/tag/%D8%AD%D8%B6%D8%B1%D8%AA%20%D8%B9%D9%84%DB%8C%20(%D8%B9)" >حضرت علی (ع)</a>، 
+						<a href="http://rqoran.mihanblog.com/post/tag/%D8%A7%D8%AE%D9%84%D8%A7%D9%82%20%D8%A7%D8%AC%D8%AA%D9%85%D8%A7%D8%B9%DB%8C" >اخلاق اجتماعی</a>، 
+			<br>
+			داغ کن:
+			<a   target="_blank"  
+			href="http://www.cloob.com/share/link/add?url=http://rqoran.mihanblog.com//post/2588&title=مواردی از اخلاق اجتماعی امام علی(ع)"> 
+			<img alt="داغ کن - کلوب دات کام" src="../static.mihanblog.com/public/user_data/user_files/153/458214/orangeZitova/100c.gif" style='border: none; padding: 0px'/> 
+			</a>
+
+			</font>
+	        </div>
+	        </div>
+	        <div class="p-con3"><div class="p-con4">
+	        <div class="date">نوشته شده در تاریخ پنجشنبه 22 فروردین 1398 توسط : 
+<a href="http://rqoran.mihanblog.com/post/author/1576080">میهن بلاگ</a></div>
+	        <div class="nazar"><a target="_self" href="javascript:newComment(2588)" >نظرات (<script>setCommentCnt(2588)</script>)</a></div>
+	        </div></div>
+	        </div>
+            </div>
+<!--End Post-->
+			<div class="cb_page_box clearfix"><ul>
+			<li>تعداد کل صفحات :&nbsp;<font color="#ba3526"><b>204</b></font>&nbsp; صفحات :</li> 
+			<li><a href="http://rqoran.mihanblog.com/page/1"><b>1</b></a>&nbsp;&nbsp;</li><li><a href="http://rqoran.mihanblog.com/page/2"><span>2</span></a>&nbsp;&nbsp;</li><li><a href="http://rqoran.mihanblog.com/page/3"><span>3</span></a>&nbsp;&nbsp;</li><li><a href="http://rqoran.mihanblog.com/page/4"><span>4</span></a>&nbsp;&nbsp;</li><li><a href="http://rqoran.mihanblog.com/page/5"><span>5</span></a>&nbsp;&nbsp;</li><li><a href="http://rqoran.mihanblog.com/page/6"><span>6</span></a>&nbsp;&nbsp;</li><li><a href="http://rqoran.mihanblog.com/page/7"><span>7</span></a>&nbsp;&nbsp;</li><li><a href="http://rqoran.mihanblog.com/page/8"><i>...</i></a>&nbsp;&nbsp;</li>			</ul>
+			</div>
+</div></div>
+
+ <!-- Start sl -->
+<div class="sl">
+            <div class="menul">
+            <div class="tmenu">
+	        <div class="tmenu2">
+	        <b>وبلاگ انگلیسی رهپویان </b></div></div>
+	        <div class="xmenu"><div class="menu-txt">
+			<center>
+			<a href="http://en-rqoran.mihanblog.com">
+			English</a>
+			<br>
+			<br>
+			امروز : <script>setTodayDate()</script>			</center></div></div>
+			<div class="s"></div></div>
+			            <div class=menul>
+			<div class=tmenu>
+			<div class=tmenu2>
+			<b>آخرین مطالب</b></div></div>
+			<div class=xmenu>
+			<div class=menu-txt>
+			<a href="http://rqoran.mihanblog.com/post/2597">رمضان، میدان مسابقه</a></div><div class=menu-txt>
+			<a href="http://rqoran.mihanblog.com/post/2596">باز شدن درهای آسمان</a></div><div class=menu-txt>
+			<a href="http://rqoran.mihanblog.com/post/2595">سکوت سکولارها و غرب زده های داخلی در توحش جهان سرمایه داری</a></div><div class=menu-txt>
+			<a href="http://rqoran.mihanblog.com/post/2594">چرا نیروهای جهادی ریا کاری می کنند؟!</a></div><div class=menu-txt>
+			<a href="http://rqoran.mihanblog.com/post/2593">حدیث خدمت و دلدادگی در سیره حسینی</a></div><div class=menu-txt>
+			<a href="http://rqoran.mihanblog.com/post/2592"> امید به آینده و نشاط در بین سیل‌زدگان جاریست</a></div><div class=menu-txt>
+			<a href="http://rqoran.mihanblog.com/post/2591">به کمک سیل زدگان بشتابیم</a></div><div class=menu-txt>
+			<a href="http://rqoran.mihanblog.com/post/2590">قطره ای از سبک زندگی امام موسی کاظم (ع)</a></div><div class=menu-txt>
+			<a href="http://rqoran.mihanblog.com/post/2589">دردناک تر از سیل 98 چیست؟</a></div><div class=menu-txt>
+			<a href="http://rqoran.mihanblog.com/post/2588">مواردی از اخلاق اجتماعی امام علی(ع)</a></div><div class=menu-txt>
+			<a href="http://rqoran.mihanblog.com/post/2587">پنج فضیلت از حضرت باقر(علیه‌السلام)</a></div><div class=menu-txt>
+			<a href="http://rqoran.mihanblog.com/post/2586">جامعه ای زیبا با محبت</a></div><div class=menu-txt>
+			<a href="http://rqoran.mihanblog.com/post/2585">نظر قرآن در مور بینایی و نابینایی قیامت</a></div><div class=menu-txt>
+			<a href="http://rqoran.mihanblog.com/post/2584"> قرآن و برابری عذاب با گناه، و فزونی ثواب بر کار نیک</a></div><div class=menu-txt>
+			<a href="http://rqoran.mihanblog.com/post/2583">مناظره ای در باره شادی در قرآن</a></div><div class=menu-txt>
+			<a href="http://rqoran.mihanblog.com/post/2582">قرآن و چگونگی رفتار با خویشان مشرک</a></div><div class=menu-txt>
+			<a href="http://rqoran.mihanblog.com/post/2581">منافات داشتن ضرب المثل «عیسی به دین خود و موسی به دین خود» با قرآن</a></div><div class=menu-txt>
+			<a href="http://rqoran.mihanblog.com/post/2580">جایگاه ویژه حضرت محمد (ص) در قرآن </a></div><div class=menu-txt>
+			<a href="http://rqoran.mihanblog.com/post/2579">نیکی کن چون خدا</a></div><div class=menu-txt>
+			<a href="http://rqoran.mihanblog.com/post/2578">نسخه قرآن مجید و پیامبر اعظم برای افراد عصبانی</a></div></div>
+			<div class=s></div></div>
+			<div class="menul">
+			<div class=tmenu>
+			<div class=tmenu2>
+			<b>وبلاگ های قرآنی </b></div></div>
+			<div class=xmenu><marquee scrollamount=1 scrolldelay=1 onmouseover='this.stop()' onmouseout='this.start()' direction=up style="height: 200px">			<div class=menu-txt>
+			<a target="_blank" href="http://q-nategh.mihanblog.com/">قرآن ناطق</a></div>			<div class=menu-txt>
+			<a target="_blank" href="http://yareavval.mihanblog.com/">یار اول</a></div>			<div class=menu-txt>
+			<a target="_blank" href="../mehraveh503.mihanblog.com/index.html">ساحل</a></div>			<div class=menu-txt>
+			<a target="_blank" href="http://www.netdarnet.ir">مجله اینترنتی نت در نت</a></div>			<div class=menu-txt>
+			<a target="_blank" href="http://ghoranonline.blogfa.com/">110)قرآن و عترت</a></div>			<div class=menu-txt>
+			<a target="_blank" href="http://kanoonequran.mihanblog.com/">109)عطر قرآن</a></div>			<div class=menu-txt>
+			<a target="_blank" href="http://shobheha.blogfa.com/">108)نقد شبهات قرآن</a></div>			<div class=menu-txt>
+			<a target="_blank" href="http://www.iranpardis.com/forumdisplay.php?s=3771dda63402466f9c1623daaa3c16bc&amp;f=213">107)انجمن ایران پردیس</a></div>			<div class=menu-txt>
+			<a target="_blank" href="http://www.asemoniha.com/f277/">106)تالار گفتگوی آسمونی ها</a></div>			<div class=menu-txt>
+			<a target="_blank" href="http://goftomanedini.com/forumdisplay.php?f=31">105)تالار گفتگوی گفتمان دینی</a></div>			<div class=menu-txt>
+			<a target="_blank" href="http://www.azad-andishan.com/forum229.html">104)تالار گفتگوی آزاد اندیشان</a></div>			<div class=menu-txt>
+			<a target="_blank" href="http://www.nooreaseman.com/forum79/">103)تالار گفتگوی نور آسمان</a></div>			<div class=menu-txt>
+			<a target="_blank" href="http://barayeayeha.persianblog.ir/">102)برای خاطر آیه ها</a></div>			<div class=menu-txt>
+			<a target="_blank" href="http://quranpajooh.blogfa.com/">101)قرآن پژوه</a></div>			<div class=menu-txt>
+			<a target="_blank" href="http://soud.mihanblog.com/">100)وبلاگ فرهنگی قرآنی صعود</a></div></marquee><br><br><a href="http://rqoran.mihanblog.com/link/"><b style="padding: 10px"><font color="red">»</font>&nbsp;همه لینک ها </b></a><br></div>
+			<div class=s></div></div>
+          
+			<div class=menul>
+			<div class=tmenu>
+			<div class=tmenu2>
+			<b>دوستان </b></div></div>
+			<div class=xmenu><marquee scrollamount=2 scrolldelay=1 onmouseover='this.stop()' onmouseout='this.start()' direction=up style="height: 200px"> <div class=menu-txt>
+			<a target="_blank" href="http://www.quranmp3.ir/" title="">
+			قرآن</a></div> <div class=menu-txt>
+			<a target="_blank" href="http://noorallah.blog.ir/" title="">
+			نورالله2</a></div> <div class=menu-txt>
+			<a target="_blank" href="http://parvaz113.mihanblog.com/" title="">
+			از خود غافل نباشیم</a></div> <div class=menu-txt>
+			<a target="_blank" href="http://partove-ghoran.blogfa.com/" title="">
+			در پرتو قرآن </a></div> <div class=menu-txt>
+			<a target="_blank" href="http://www.netdarnet.ir" title="مجله اینترنتی نت در نت">
+			مجله اینترنتی نت در نت</a></div> <div class=menu-txt>
+			<a target="_blank" href="http://www.51372.blogfa.com/" title="">
+			ملكوت هشتم </a></div> <div class=menu-txt>
+			<a target="_blank" href="http://avayetelavat.blogfa.com/" title="">
+			آوای تلاوت </a></div> <div class=menu-txt>
+			<a target="_blank" href="http://saman1348.blogfa.com/" title="">
+			مظهر قدرت ایران شهدا’ هستند</a></div> <div class=menu-txt>
+			<a target="_blank" href="../sarbazanemobarez.mihanblog.com/index.html" title="">
+			سرباز امام زمان (عج )</a></div> <div class=menu-txt>
+			<a target="_blank" href="http://deathkaiser.blogfa.com/" title="">
+			deathkaise</a></div> <div class=menu-txt>
+			<a target="_blank" href="http://herisepooya.ir/" title="">
+			پایگاه اطلاع رسانی هریس پویا</a></div> <div class=menu-txt>
+			<a target="_blank" href="http://asgari91.mihanblog.com/" title="">
+			صراط الأقوم</a></div> <div class=menu-txt>
+			<a target="_blank" href="http://atryas2424.mihanblog.com/" title="">
+			عطر گل یاس</a></div> <div class=menu-txt>
+			<a target="_blank" href="http://ketabonaziz.blogfa.com/" title="">
+			نور الله1</a></div> <div class=menu-txt>
+			<a target="_blank" href="http://katibeye-e6gh.blogfa.com/" title="">
+			تمنای بودن </a></div></marquee><br><a href="http://rqoran.mihanblog.com/linkdaily/"><b style="padding: 10px"><font color="red">»</font>&nbsp;آرشیو
+پیوندها</b></a><br>
+            <br><a href="javascript:linkdailyForm()"><b style="padding: 10px"><font color="red">»</font>&nbsp;ارسال لینک به ما</b></a><br> </div>
+			<div class=s></div></div>
+ 
+            <div class=menul>
+			<div class=tmenu>
+			<div class=tmenu2>
+			<b>آماربازدید </b></div></div>
+			<div class=xmenu><div class="menu-txta">
+							کل بازدید:<script>getStatVar('total_view');</script><br/>
+				بازدید امروز :<script>getStatVar('today_view');</script><br/>
+				بازدید دیروز : <script>getStatVar('yesterday_view');</script><br/>
+				بازدید این ماه : <script>getStatVar('this_month_view');</script><br/>
+				بازدید ماه قبل : <script>getStatVar('last_month_view');</script><br/>
+				تعداد کل مطالب : <script>getStatVar('total_post');</script><br/>
+				آخرین بازدید : <script>getStatVar('last_view_date');</script><br/>
+				آخرین بروز رسانی : <script>getStatVar('modify_date');</script><br/>
+            <center><SCRIPT language=JavaScript type=text/javascript src="http://www.welayatnet.com/sites/default/files/webtools/telgram.js"></SCRIPT></center></div></div>
+			<div class=s></div></div>     
+</div>
+<!--End Dynamic SL -->
+</div>
+<!-- End scs1 -->
+<!-- Start SR -->
+<div class="sr">
+
+			<div class=menul>
+			<div class=tmenu>
+			<div class=tmenu2>
+			<b>معرفی گروه رهپویان</b></div></div>
+			<div class=xmenu><div class=menu-txt>  
+            <a href="http://rqoran.mihanblog.com/extrapage/rquran" target="_blank">رهپویان در شبكه های اجتماعی</a></div><div class=menu-txt>  
+            <a href="http://rqoran.mihanblog.com/extrapage/news" target="_blank">پایگاه خبری رهپویان قرآن</a></div><div class=menu-txt>  
+            <a href="http://rqoran.mihanblog.com/extrapage/map" target="_blank">رهپویان در یک نگاه</a></div><div class=menu-txt>  
+            <a href="http://rqoran.mihanblog.com/extrapage/memories" target="_blank">آموزش آنلاین حفظ</a></div><div class=menu-txt>  
+            <a href="http://rqoran.mihanblog.com/extrapage/user" target="_blank">دعوت به همكاری</a></div></div>
+			<div class=s></div></div>
+<div class=menur>
+			<div class=tmenu>
+			<div class=tmenu2><div style="margin-right:-3px">
+			<b>پاسخگویان آنلاین قرآن</b></div></div></div>
+			<div class=xmenu><div class=menu-txt2>  
+            <div style="margin:0 auto;width:172px"><div style="width:86px;float:right;text-align:center"><!-- 
+
+Begin http://zitova.ir ‍Yahoo Status --><a  target="_self" title="http://zitova.ir" href = "ymsgr:sendim?
+
+zitova1"><img src="http://www.zitova.com/YState/ystat.php?id=zitova1&mod=5" border="0"></a><br/><!-- 
+
+End  http://zitova.ir Yahoo Status -->
+            <div style="padding-top:20px"><a href='ymsgr:addfriend?zitova1'>اضافه کردن</a></div></div>
+				<div style="width:86px; float:right;text-align:center"><a href="javascript:l4imsg(l4imsg:sendim?moballegh1)"><script type=text/javascript src=http://messenger.l4i.ir/checkstatus.aspx?u=moballegh1></script><script type=text/javascript>
+document.write("<img style=border:0; alt=وضعیت در ال فور آی مسنجر src="+(chkstatus?"http://www.zitova.com/zitova/l4i/online_48x48x32.png":"http://www.zitova.com/zitova/l4i/offline_48x48x32.png")+" />");
+</script></a><br/><a href="l4imsg:addfriend?moballegh1">اضافه کردن</a></div></div>
+            </div></div>
+			<div class=s></div></div>
+<div class=menur>
+<div class=tmenu>
+<div class=tmenu2>
+<b>نویسندگان وبلاگ</b></div></div>
+<div class=xmenu>
+<!-- نام نویسنده اول -->
+<div class=menu-txt>
+<a href="http://rqoran.mihanblog.com/post/author/358383">امین ادریسی</a></div>
+<!-- نام نویسنده دوم -->
+<div class=menu-txt>
+<a href="http://rqoran.mihanblog.com/post/author/708032">علی</a></div> 
+<!-- نام نویسنده سوم -->
+<div class=menu-txt>
+<a href="http://rqoran.mihanblog.com/post/author/769411">یونس</a></div>
+<!-- نام نویسنده چهارم -->
+<div class=menu-txt>
+<a href="http://rqoran.mihanblog.com/post/author/750871">سجاد</a></div>
+<!--نام نویسنده پنجم -->
+<div class=menu-txt>
+<a href="http://rqoran.mihanblog.com/post/author/811241">گروه رهپویان</a></div>
+</div>
+<div class=s></div></div>
+			<div class=menur>
+			<div class=tmenu>
+			<div class=tmenu2>
+			<b>موضوعات اصلی</b></div></div>
+			<div class=xmenu>
+			<div style="margin-right:15px;direction:ltr;float:right">
+                <!-- niceMenu box -->
+                <div class="niceMenu">
+                    <!-- niceMenu back button -->
+                    <a href="index.html#back" class="niceMenu-backBtn" id="niceMenu-backBtn"></a>
+                    <div class="niceMenu-top"></div>
+                    <div class="niceMenu-middle">
+                        <div class="niceMenu-wrapper" id="niceMenu">
+                            <ul>
+                                <li><a href="http://rquran.ir/post/category/34">تازه ترین ها</a></li>
+                                
+                                <li>
+                                  <a href="index.html#">بررسی موضوعی</a>
+                                    <ul>
+                                            <li><a href="http://rquran.ir/post/category/56">مسائل زنان</a></li>
+	                                        <li><a href="http://rquran.ir/post/category/57">جهاد و دفاع</a></li>
+	                                        <li><a href="http://rquran.ir/post/category/61">گناه</a></li>
+									</ul>
+                                </li>
+                                <li>
+                                    <a href="index.html#">سبك زندگی اسلامی</a>
+                                    <ul>
+                                            <li><a href="http://rquran.ir/post/category/54">مدیریت زمان</a></li>
+	                                        <li><a href="http://rquran.ir/post/category/55">مدیریت گفتار</a></li>
+	                                        <li><a href="http://rquran.ir/post/category/53">کنترل خشم</a></li>
+	                                        <li><a href="http://rquran.ir/post/category/50">ارتباط موثر</a></li>
+	                                        <li><a href="http://rquran.ir/post/category/51">تفکر خلاق</a></li>
+	                                        <li><a href="http://rquran.ir/post/category/47">خوشبختی</a></li>
+	                                        <li><a href="http://rquran.ir/post/category/46">موفقیت</a></li>
+	                                        <li><a href="http://rquran.ir/post/category/59">تندرستی</a></li>
+	                                        <li><a href="http://rquran.ir/post/category/48">آرامش</a></li>
+	                                        <li><a href="http://rquran.ir/post/category/49">ثروت</a></li>
+									</ul>
+	                            </li>
+                                <li>
+                                    <a href="index.html#">نقد و انتقاد</a>
+                                     <ul>
+                                            <li><a href="http://rquran.ir/post/category/43">فیلم</a></li>
+	                                    	<li><a href="http://rquran.ir/post/category/44">سریال</a></li>
+											<li><a href="http://rquran.ir/post/category/45">مقاله</a></li>
+									</ul>
+	                            </li>
+                                <li>
+                                    <a href="index.html">علوم قرآنی</a>
+                                     <ul>
+                                            <li><a href="http://rquran.ir/post/category/62">قرآن شناسی</a></li>
+	                                        <li><a href="http://rquran.ir/post/category/63">تاریخ قرآن</a></li>
+	                                        <li><a href="http://rquran.ir/post/category/29">تحریف</a></li>
+	                                        <li><a href="http://rquran.ir/post/category/28">اعجاز</a></li>
+	                                        <li><a href="http://rquran.ir/post/category/64">وحی</a></li>
+	                                        <li><a href="http://rquran.ir/post/category/60">علوم روز</a></li>
+	                                        <li><a href="http://rquran.ir/post/category/53">موضوعات دیگر</a></li>
+								  	 </ul>
+	                            </li>
+                                <li>
+                                    <a href="index.html#">چند رسانه ای</a>
+                                     <ul>
+
+                                            <li><a href="http://rquran.ir/post/category/21">سخنرانی آنلاین</a></li>
+	                                        <li><a href="http://rquran.ir/post/category/15">فتو بلاگ</a></li>
+	                                        <li><a href="http://rquran.ir/post/category/11">نرم افزار</a></li>
+								 	 </ul>
+	                            </li>
+                                <li>
+                                    <a href="index.html#">آموزش</a>
+                                     <ul>
+	                                        <li><a href="http://rquran.ir/post/category/65">حفظ قرآن</a></li>
+	                                        <li><a href="http://rquran.ir/post/category/31">تجوید</a></li>
+	                                        <li><a href="http://rquran.ir/post/category/9">احکام</a></li>
+	                                 </ul>
+	                            </li>
+	                            <li>
+                                    <a href="index.html#">سامانه پاسخگویی</a>
+                                     <ul>
+	                                        <li><a href="http://rquran.ir/post/category/67">پرسش و پاسخ كوتاه</a></li>
+	                                        <li><a href="http://rquran.ir/post/category/66">كرسی آزاد اندیشی</a></li>
+	                                        <li><a href="http://rquran.ir/post/category/40">مناظره</a></li>
+	                                        <li><a href="http://rquran.ir/post/category/24">مقالات</a></li>
+	                                 </ul>
+	                            </li>
+	                            <li>
+                                    <a href="index.html#">ویژه نامه ها</a>
+                                     <ul>
+	                                        <li><a href="http://rquran.ir/post/category/69">پیامبر اعظم (ص)</a></li>
+	                                 </ul>
+	                            </li>
+								<li><a href="http://rquran.ir/post/category/19">لطایف قرآنی و حدیثی</a></li>
+								<li><a href="http://rquran.ir/post/category/35">متفرقه</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="niceMenu-bottom"></div>
+                </div>
+            </div>
+			
+			</div>
+			<div class=s></div></div>
+            <div class=menur>
+			<div class=tmenu>
+			<div class=tmenu2>
+			<b>عضویت ! </b></div></div>
+			<div class=xmenu><div class=menu-txt2>  
+            <div style="text-align:center;"><form style="border:0px solid #ccc;padding:3px;text-align:justify;" action="http://feedburner.google.com/fb/a/mailverify" method="post" target="popupwindow" onsubmit="window.open('http://feedburner.google.com/fb/a/mailverify?uri=mihanblog/omGp', 'popupwindow', 'scrollbars=yes,width=550,height=520');return true"><p>آدرس ایمیل خودتان را وارد كنید تا آخرین نوشته ها برایتان ارسال شود :</p><p align="center" style="direction:ltr"><input style="margin:5px" type="text"  style="width:167px" style="text-align:left" name="email" /></p><input type="hidden" value="mihanblog/omGp" name="uri"/><input type="hidden" name="loc" value="en_US"/><center><input style="margin:5px;padding:2px;cursor:pointer;outline:none" type="submit" value="اشتراک" /></center></form></div>
+            </div></div>
+			<div class=s></div></div>
+
+		<form id="frm-16077722735fd4a871c5ff2" method="post" action="http://rqoran.mihanblog.com/poll/new/fid/16077722735fd4a871c5ff2/atrty/1607772273/avrvy/0/key/f285c4d95e0ac47887cad98ce7a0954f/"  onsubmit="window.open('', 'poll', 'toolbar=0,location=0,status=0,menubar=0,scrollbars=1,resizable=0,width=505,height=315')" target="poll"><input type="hidden" name="data[pollid]" value="161133" id="data[pollid]" />		
+			<div class=menur>
+			<div class=tmenu>
+			<div class=tmenu2>
+			<b>نظرسنجی</b></div></div>
+			<div class=xmenu><div class=menu-txt2>  
+            <br><div class="descri">بهترین بخش سایت از دیدگاه شما؟؟<br><label><input type="radio" name="data[answer]" value="v1">تفاسیر</label><br><label><input type="radio" name="data[answer]" value="v2">مهارت های زندگی</label><br><label><input type="radio" name="data[answer]" value="v3">نقد های قرآنی</label><br><label><input type="radio" name="data[answer]" value="v4">علوم قرآنی</label><br><label><input type="radio" name="data[answer]" value="v5">چند رسانه ای</label><br><label><input type="radio" name="data[answer]" value="v6">شبهات روز</label><br><label><input type="radio" name="data[answer]" value="v7">آموزش</label><br><label><input type="radio" name="data[answer]" value="v8">ویژه نامه های قرآنی</label><br><br><center><input type="submit" value="ثبت"></center></div></div></div>
+			<div class=s></div></div>
+
+		<input type="hidden" name="frm-id" value="16077722735fd4a871c5ff2" id="frm-id" /></form>            <div class=menur>
+			<div class=tmenu>
+			<div class=tmenu2>
+			<b>آرشیو مطالب</b></div></div>
+			<div class=xmenu>
+			<div class=menu-txt>
+			<a href="http://rqoran.mihanblog.com/post/archive/1398/2"> اردیبهشت 1398(4)</a></div><div class=menu-txt>
+			<a href="http://rqoran.mihanblog.com/post/archive/1398/1"> فروردین 1398(6)</a></div><div class=menu-txt>
+			<a href="http://rqoran.mihanblog.com/post/archive/1397/12"> اسفند 1397(7)</a></div><div class=menu-txt>
+			<a href="http://rqoran.mihanblog.com/post/archive/1397/11"> بهمن 1397(4)</a></div><div class=menu-txt>
+			<a href="http://rqoran.mihanblog.com/post/archive/1396/1"> فروردین 1396(52)</a></div><div class=menu-txt>
+			<a href="http://rqoran.mihanblog.com/post/archive/1395/12"> اسفند 1395(61)</a></div><div class=menu-txt>
+			<a href="http://rqoran.mihanblog.com/post/archive/1395/11"> بهمن 1395(77)</a></div><div class=menu-txt>
+			<a href="http://rqoran.mihanblog.com/post/archive/1395/10"> دی 1395(83)</a></div><div class=menu-txt>
+			<a href="http://rqoran.mihanblog.com/post/archive/1395/9"> آذر 1395(73)</a></div><div class=menu-txt>
+			<a href="http://rqoran.mihanblog.com/post/archive/1395/8"> آبان 1395(100)</a></div></div>
+			<div class=s></div></div>
+			
+</div>
+<!--End Dynamic SR -->
+</div>
+<!-- End Con -->
+<!-- Start Footer -->
+           <div class="footer">
+           <p><strong>تمام حقوق این وبلاگ و مطالب آن متعلق به 
+           <a href="index.html">رهپویان قرآن </a> می باشد.</strong></p>
+           </div>
+<!-- End Footer -->
+</div>
+<!-- End BG -->
+ <script type="text/javascript" src="http://radarurl.com/js/radarurl_widget.js"></script><script type="text/javascript">radarurl_call_radar_widgetv2({edition:"Dynamic",location:"leftcenter"})</script><noscript><a href="http://radarurl.com/" _fcksavedurl="http://radarurl.com/">radarurl - Monitor Visitors</a></noscript>
+
+<div id="seo">
+<!-- Begin WebGozar.com Counter code -->
+<script type="text/javascript" language="javascript" src="http://www.webgozar.ir/c.aspx?Code=2447465&amp;t=counter" ></script>
+<noscript><a href="http://www.webgozar.com/counter/stats.aspx?code=2447465" target="_blank">&#1570;&#1605;&#1575;&#1585;</a></noscript>
+<!-- End WebGozar.com Counter code -->
+</div>
+<!-- Piwik -->
+<script type="text/javascript">
+  var _paq = _paq || [];
+  _paq.push(['trackPageView']);
+  _paq.push(['enableLinkTracking']);
+  (function() {
+    var u="//analytics.welayatnet.com/";
+    _paq.push(['setTrackerUrl', u+'piwik.php']);
+    _paq.push(['setSiteId', 5]);
+    var d=document, g=d.createElement('script'), s=d.getElementsByTagName('script')[0];
+    g.type='text/javascript'; g.async=true; g.defer=true; g.src=u+'piwik.js'; s.parentNode.insertBefore(g,s);
+  })();
+</script>
+<noscript><p><img src="http://analytics.welayatnet.com/piwik.php?idsite=5" style="border:0;" alt="" /></p></noscript>
+<!-- End Piwik Code -->
+</body>
+</html><script>
+//    setTimeout(function () {
+//        GetMihanBlogShowAds();
+//    }, 1000);
+</script>
+<!--NEW SERVER--><!--;)-->
+
+<!--SabaVision Ads Handler--><!--<script type="text/javascript">(function (d) {var url =   location.protocol+'//api.sabavision.com/pox/poxjs.js';d.write('<script type="text/javascript" src="' + url + '" async></scri' + 'pt>');})(document);</script>-->
+
+
+<script type="text/javascript">
+
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-153829-9']);
+    _gaq.push(['_setDomainName', 'rqoran.mihanblog.com']);
+    _gaq.push(['_trackPageview']);
+
+    (function() {
+        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+
+</script>
+
+
+<div id='mediaad-Kvcm'></div>
+<meta name="sabavision_zone" content="2500-Z499" />
+<center>
+    <div style="background-color:white;width:90%;padding:20px;margin-top:50px;margin-bottom:50px;">
+        <a href="https://www.cloob.com">شبکه اجتماعی فارسی کلوب</a> | <a href="https://www.seo25.com/product/buy-mobile-traffic-and-get-cheap-targeted-mobile-traffic/" target="_blank">Buy Mobile Traffic</a> | <a href="https://www.soalaat.com">سایت سوالات</a>
+    </div>
+</center>

@@ -1,0 +1,1294 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" /><link rel="EditURI" type="application/rsd+xml" title="RSD" href="http://safiran12.mihanblog.com/xmlrpc?rsd" />
+<script type="text/javascript" src="../static.mihanblog.com/public/scripts/run/g.other.v3.js"></script>
+<script>
+
+	function c_$(id){
+        return document.getElementById(id);
+    }
+    
+			//if (parent.frames.length) top.location.href= document.location;
+		
+	setTodayDate = function(){
+		document.write('یکشنبه 23 آذر 1399');
+		/*840913*/	}
+
+</script>
+
+
+
+        <script type="text/javascript">
+            (function(){
+            var now = new Date();
+            var head = document.getElementsByTagName('head')[0];
+            var script = document.createElement('script');
+            script.async = true;
+            var script_address = 'https://cdn.yektanet.com/js/mihanblog.com/native-mihanblog.com-6531.js';
+            script.src = script_address + '?v=' + now.getFullYear().toString() + '0' + now.getMonth() + '0' + now.getDate() + '0' + now.getHours();
+            head.appendChild(script);
+            })();
+        </script>
+
+        <!--<script type="text/javascript">
+            var head = document.getElementsByTagName("head")[0];
+            var script = document.createElement("script");
+            script.type = "text/javascript";
+            script.async=1;
+            script.src = "https://s1.mediaad.org/serve/mihanblog.com/loader.js" ;
+            head.appendChild(script);
+        </script>-->
+        
+        <script>
+            var sabaVisionWebsiteID = "9bab9dac-041d-4bdb-b39a-1ed789f65eed"; var sabaVisionWebsitePage = "ALL"
+        </script>
+        <link rel="stylesheet" href="https://plus.sabavision.com/dox/dox.min.css">
+        <script src="https://plus.sabavision.com/dox/dox.min.js"></script>
+        
+        <script>
+	try{
+		var commentCnt = new Array();
+		commentCnt[678]='-';commentCnt[1057]='0';commentCnt[1058]='0';commentCnt[1059]='0';commentCnt[1060]='0';commentCnt[1061]='0';commentCnt[1062]='0';commentCnt[1063]='0';	} catch(e){}
+	
+	newComment = function(post_id){
+		try{
+			window.open('/post/comment/'+post_id,'comment','status=yes,scrollbars=yes,toolbar=no,menubar=no,location=no ,width=480px,height=540px');
+		} catch(e){}
+	}
+	setCommentCnt = function(post_id){
+		try{
+			if(commentCnt[post_id]){
+				document.write(commentCnt[post_id]);
+			} else {
+				document.write(0);
+			}
+		} catch(e){}
+	}
+</script><script>
+
+
+	mihanblogUpdateLike = function(postid,type){
+		var url = '/post/like/'+postid+'/'+type;
+		mihanblogGetAjax(url,function(){});
+	};
+	try{
+        mihanblogGetAjax = function (url,callback) {
+    		var req;
+			if (window.XMLHttpRequest)
+            {
+                // code for IE7+, Firefox, Chrome, Opera, Safari
+			  	req = new XMLHttpRequest();
+			}else{	// code for IE6, IE5
+			  	req = new ActiveXObject("Microsoft.XMLHTTP");
+		  	}
+		    req.open("GET", url, 1);
+		    req.onreadystatechange = function () {
+		        if (req.readyState == 4) {
+		            if (req.status == 200) {
+		            	var response = eval(req.responseText);
+		            	callback();
+		            }else{
+	            		return ;
+		            }
+		        }else{
+					return ;
+		        }
+		    }
+		    req.send(null);
+		}
+	}catch(e){}
+
+	try{
+		var mihanblogLikeArrCnt = new Array();
+		var mihanblogDisLikeArrCnt = new Array();
+
+		mihanblogLikeArrCnt[678]='0';
+mihanblogDisLikeArrCnt[678]='0';
+mihanblogLikeArrCnt[1057]='0';
+mihanblogDisLikeArrCnt[1057]='0';
+mihanblogLikeArrCnt[1058]='0';
+mihanblogDisLikeArrCnt[1058]='0';
+mihanblogLikeArrCnt[1059]='0';
+mihanblogDisLikeArrCnt[1059]='0';
+mihanblogLikeArrCnt[1060]='0';
+mihanblogDisLikeArrCnt[1060]='0';
+mihanblogLikeArrCnt[1061]='0';
+mihanblogDisLikeArrCnt[1061]='0';
+mihanblogLikeArrCnt[1062]='0';
+mihanblogDisLikeArrCnt[1062]='0';
+mihanblogLikeArrCnt[1063]='0';
+mihanblogDisLikeArrCnt[1063]='0';
+	} catch(e){}
+
+
+
+    mihanblogPostLike = function(post_id){
+
+        mihanblogLikeCnt = (mihanblogLikeArrCnt[post_id]? mihanblogLikeArrCnt[post_id] : 0);
+        mihanblogDisLikeCnt = (mihanblogDisLikeArrCnt[post_id]? mihanblogDisLikeArrCnt[post_id] : 0);
+        mihanblogLikeCnt = parseInt(mihanblogLikeCnt);
+        mihanblogDisLikeCnt = parseInt(mihanblogDisLikeCnt);
+
+        document.write(
+                '<div class="mihanblog_like_wrapper ">'+
+                       '<div id="dislikeBar_'+post_id+'" onclick="mihanblogUpdateLike('+post_id+',\'dislike\')"   class="mihanblog_like_bar mihanblog_like_dislikeBar mihanblog_like_show_help ">-<div class="mihanblog_like_Cnt" id="disLikeCnt_'+post_id+'">'+mihanblogDisLikeCnt+'</div>'+
+                            '<span  class="mihanblog_like_v2_help mihanblog_like_v2_help_dislike clearfix"> '+
+                                '<span class="mihanblog_like_help_arrow mihanblog_like_help_arrow_dislike clearfix"></span>'+
+                                '<span class="mihanblog_like_help_text">نمی پسندم</span>'+
+                            '</span>'+
+                        '</div>'+
+                       '<div id="Like_'+post_id+'" class="mihanblog_like_border"></div>'+
+                       '<div id="likeBar_'+post_id+'" onclick="mihanblogUpdateLike('+post_id+',\'like\')"  class="mihanblog_like_bar mihanblog_like_likeBar mihanblog_like_show_help" >+<div class="mihanblog_like_Cnt" id="likeCnt_'+post_id+'">'+mihanblogLikeCnt+'</div>'+
+                            '<span  class="mihanblog_like_v2_help mihanblog_like_v2_help_like clearfix"> '+
+                                '<span class="mihanblog_like_help_arrow mihanblog_like_help_arrow_like clearfix"></span>'+
+                                '<span class="mihanblog_like_help_text">می پسندم</span>'+
+                            '</span>'+
+                        '</div>'+
+
+                '</div>'
+        );
+
+
+
+        mihanblogDisplayeLike(post_id);
+    }
+
+
+    mihanblogDisplayeLike = function(post_id){
+
+        mihanblogLikeCnt = (mihanblogLikeArrCnt[post_id]? mihanblogLikeArrCnt[post_id] : 0);
+        mihanblogDisLikeCnt = (mihanblogDisLikeArrCnt[post_id]? mihanblogDisLikeArrCnt[post_id] : 0);
+        mihanblogLikeCnt = parseInt(mihanblogLikeCnt);
+        mihanblogDisLikeCnt = parseInt(mihanblogDisLikeCnt);
+
+
+
+        sum = mihanblogLikeCnt - mihanblogDisLikeCnt;
+        backgroundBorder =  document.getElementById('Like_'+post_id);
+        var likeObj = document.getElementById('likeCnt_'+post_id);
+        var disLikeObj = document.getElementById('disLikeCnt_'+post_id);
+
+
+
+
+
+        likeObj.innerHTML =  mihanblogLikeCnt ;
+        disLikeObj.innerHTML =  mihanblogDisLikeCnt;
+
+        if(sum == 0){
+            backgroundBorder.style.backgroundImage = "url('/public/public/images/icons/like_likedislike.png')";
+            document.getElementById('dislikeBar_'+post_id).style.width = '19px';
+            document.getElementById('likeBar_'+post_id).style.width = '19px';
+        }else{
+             if(sum > 0){
+                 backgroundBorder.style.backgroundImage = "url('/public/public/images/icons/like_like.png')";
+                 document.getElementById('likeBar_'+post_id).style.width = '23px';
+                 document.getElementById('dislikeBar_'+post_id).style.width = '15px';
+             }else{
+                 backgroundBorder.style.backgroundImage = "url('/public/public/images/icons/like_dislike.png')";
+                 document.getElementById('likeBar_'+post_id).style.width = '15px';
+                 document.getElementById('dislikeBar_'+post_id).style.width = '23px';
+             }
+        }
+
+    }
+
+
+
+
+</script>
+
+<style type="text/css">
+
+
+    .clearfix {display: inline-block;}
+    .clearfix:after {
+        content: ".";
+        display: block;
+        height: 0;
+        clear: both;
+        visibility: hidden;
+    }
+
+    .mihanblog_like_wrapper {
+        color: #ffffff;
+        direction: ltr;
+        position: relative;
+    }
+    .mihanblog_like_wrapper span{
+        display: none;
+    }
+    .mihanblog_like_bar {
+        color: #FFFFFF;
+        cursor: pointer;
+        float: left;
+        font-size: 10px;
+        height: 20px;
+        line-height: 19px;
+        margin: 5px 0;
+    }
+    .mihanblog_like_likeBar {
+        background-color: #88B131;
+        padding-right: 5px;
+        border-top-right-radius: 2px;
+        border-bottom-right-radius: 2px;
+        text-align: right;
+    }
+    .mihanblog_like_likeBar:hover{
+        background-color: #699017;
+    }
+    .mihanblog_like_border {
+        background-color: #666666;
+        border: 1px solid #666666;
+        float: left;
+        font-size: 12px;
+        height: 20px;
+        margin-top: 2px;
+        width: 25px;
+        padding: 3px 5px 2px 0;
+        text-align: center;
+        border-radius: 2px;
+        color: #ffffff;
+        direction: ltr;
+        background-repeat: no-repeat ;
+        background-position: 4px center;
+    }
+    .mihanblog_like_border img {
+        margin-left: 2px;
+        margin-top: 2px;
+        width: 22px;
+    }
+    .mihanblog_like_dislikeBar {
+        background-color: #FF6F31;
+        padding-left: 5px;
+        border-top-left-radius: 2px;
+        border-bottom-left-radius: 2px;
+        text-align:left ;
+    }
+    .mihanblog_like_dislikeBar:hover{
+        background-color: #D54B10;
+    }
+
+
+
+    .mihanblog_like_show_help {
+        position: relative;
+    }
+    .mihanblog_like_show_help:hover span {
+        display: block;
+    }
+    .mihanblog_like_help_text {
+        background-color: white;
+        border: 1px solid #555555;
+        border-radius: 3px 3px 3px 3px;
+        color: #303030;
+        float: left;
+        font-size: 11px;
+        font-weight: normal;
+        padding: 5px 10px;
+    }
+
+    .mihanblog_like_help_arrow_dislike {
+        background: url("http://safiran12.mihanblog.com/public/public/images/icons/like_hover_top.png") no-repeat scroll 16px 0 transparent;
+        left: 0;
+        top: -4px;
+    }
+
+    .mihanblog_like_help_arrow_like {
+        background: url("http://safiran12.mihanblog.com/public/public/images/icons/like_hover_top _2.png") no-repeat scroll 16px 0 transparent;
+        left: -10px;
+        top: 29px;
+    }
+
+    .mihanblog_like_help_arrow{
+        height: 6px;
+        position: absolute;
+        width: 100px;
+
+    }
+
+    .mihanblog_like_v2_help_dislike {
+        left: -15px;
+        top: 24px;
+    }
+    .mihanblog_like_v2_help_like {
+        left: 0;
+        top: -35px;
+
+    }
+    .mihanblog_like_v2_help{
+        display: none;
+        position: absolute;
+        white-space: nowrap;
+        z-index: 1;
+    }
+
+    .mihanblog_like_Cnt{
+        display: inline;
+        color: #ffffff;
+    }
+
+</style><script>
+
+	statInfo = new Array();
+	setStatVar = function(index,value){
+		statInfo[index] = value;
+	}
+	getStatVar = function(index){
+		if(statInfo[index]) document.write(statInfo[index]);
+	}
+	
+	setStatVar('total_post','924');
+	setStatVar('total_author','11');
+	setStatVar('modify_date','دوشنبه 14 فروردین 1396');
+	
+	setStatVar('today_view','32');
+	setStatVar('yesterday_view','167');
+	
+	setStatVar('this_month_view','6546');
+	setStatVar('last_month_view','5839');
+
+	setStatVar('total_view','1071939');
+	setStatVar('last_view_date','یکشنبه 23 آذر 1399 (05:42)');
+
+
+
+    
+    function setStatFromClient()
+    {
+        var url = 'http://safiran12.mihanblog.com/statupdate/?data[refereruri]=http://naafas.mihanblog.com/&data[postid]=&data[requesturi]=/&data[sdate]=1607827310&data[hash]=b545eced39cedd53858d6de6fddc11ac&data[resolution]='+screen.width+' X '+screen.height;
+
+//        alert(url);
+//        var newjs = document.createElement("SCRIPT");
+//        newjs.type = 'text/javascript';
+//        newjs.src = url;
+//
+//        var newdiv = document.createElement("DIV");
+//        newdiv.setAttribute("style","display:none");
+
+        document.write(unescape('%3Cscript src="'+url+'" type="text/javascript"%3E%3C/script%3E'));
+//        newdiv.appendChild (newjs);
+//        document.write(newjs);
+//        document.write(appendChild (newdiv);
+
+    };
+    setStatFromClient();
+        
+</script><script>
+	messageForm = function(post_id){
+		try{
+			window.open('/message','message','status=yes,scrollbars=yes,toolbar=no,menubar=no,location=no ,width=480px,height=550px');
+		} catch(e){}
+	}
+</script><script>
+	linkdailyForm = function(){
+		try{
+			window.open('/linkdaily/new','linkdaily','status=yes,scrollbars=yes,toolbar=no,menubar=no,location=no ,width=500px,height=460px');
+		} catch(e){}
+	}
+</script><script>
+
+var MihanblogShopAdsArray = new Array();
+
+function GetMihanBlogShowAds(){
+	if(MihanblogShopAdsArray.length){
+		var adsTarget = 'MihanblogShopAds';
+		var containerWidth = document.getElementById(adsTarget).offsetWidth;
+		if(containerWidth>=200){
+			var adsCnt = parseInt(containerWidth / 200) ;
+			if(adsCnt>MihanblogShopAdsArray.length){
+				adsCnt = MihanblogShopAdsArray.length ; 
+			}
+//			var OneAdsWidth = parseInt(containerWidth / adsCnt) ;
+			var OneAdsWidth = containerWidth / adsCnt ;
+			if(OneAdsWidth>400){
+				OneAdsWidth = 400 ;
+			}
+			var OutHtml = '';
+			var img = '';
+			var link = '';
+			var title = '';
+			var description = '';
+			var imgWidth = 70;
+			if(OneAdsWidth>230){
+				imgWidth = 80;
+			}
+			if(OneAdsWidth>300){
+				imgWidth = 90;
+			}
+			for(adsOne=0;adsOne<adsCnt;adsOne++){
+				
+				img = MihanblogShopAdsArray[adsOne]['img'];
+				link = MihanblogShopAdsArray[adsOne]['link'];
+				title = MihanblogShopAdsArray[adsOne]['title'];
+				description = MihanblogShopAdsArray[adsOne]['description'];
+				
+				OutHtml += '<td style="background-color:#FFF;width: '+OneAdsWidth+'px;border:1px solid #f00;margin:0px 0px;font-size:11px;font-family:tahoma;padding:2px;margin:0px 0px;font-size:11px;border: 1px solid BurlyWood; padding: 1px; height: '+(imgWidth+25)+'px;">';
+
+				OutHtml += '	<a href="http://safiran12.mihanblog.com/'+link+'" target="_blank" style="text-decoration:none">';
+
+				OutHtml += '			<div style="width: '+(OneAdsWidth-16)+'px;cursor:pointer;font-size:12px;padding: 4px 1px 4px 7px; white-space: nowrap; text-align: center; font-weight: bold; color: blue;white-space:nowrap;overflow:hidden">';
+				OutHtml += 					title;
+				OutHtml += '			</div>';
+				OutHtml += '			<div style="cursor:pointer;padding: 1px; display: block; float: right; width: '+imgWidth+'px;">';
+				OutHtml += '				<img src="'+img+'.html" style="border:0px;padding:0px;margin:0px;width:'+imgWidth+'px;height:'+imgWidth+'px;">';
+				OutHtml += '			</div>';
+				OutHtml += '			<div style="padding: 1px; display: block; float: right; width: '+(OneAdsWidth-13-imgWidth)+'px; text-align: right;overflow:hidden">';
+				OutHtml += '				<div style="overflow:hidden;cursor:pointer;padding: 2px 3px; line-height: 17px; height: '+(imgWidth-3)+'px; text-align: justify;color:#000;direction:rtl">';
+				OutHtml += 						description;
+				OutHtml += '				</div>';
+				OutHtml += '			</div>';
+
+				OutHtml += '	</a>';
+
+				OutHtml += '</td>';
+			}
+			
+			var Out = '<table align="center" cellpadding="0" cellspacing="2" style="width:'+(OneAdsWidth*adsCnt)+'px;"><tr>'+OutHtml+'</tr></table>'; 
+			
+			Out = '<div style="text-align:center;padding:0px;margin:3px auto;">'+Out+'</div>'; 
+			
+			document.getElementById(adsTarget).style.height = (imgWidth+35)+'px' ;
+			document.getElementById(adsTarget).innerHTML = Out ;
+		}
+	}
+}
+</script>
+    <style>
+        @font-face {
+            font-family: 'Mihan-Iransans';
+            src: url('http://safiran12.mihanblog.com/public/public/fonts/Iransans.eot');
+            src: url('http://safiran12.mihanblog.com/public/public/fonts/Iransans.eot?') format('embedded-opentype'),
+            url('http://safiran12.mihanblog.com/public/public/fonts/Iransans.woff2') format('woff2'),
+            url('http://safiran12.mihanblog.com/public/public/fonts/Iransans.woff') format('woff'),
+            url('http://safiran12.mihanblog.com/public/public/fonts/Iransans.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+        @font-face {
+            font-family: 'Mihan-IransansBold';
+            src: url('http://safiran12.mihanblog.com/public/public/fonts/Iransans-Black.eot');
+            src: url('http://safiran12.mihanblog.com/public/public/fonts/Iransans-Black.eot?') format('embedded-opentype'),
+            url('http://safiran12.mihanblog.com/public/public/fonts/Iransans-Black.woff2') format('woff2'),
+            url('http://safiran12.mihanblog.com/public/public/fonts/Iransans-Black.woff') format('woff'),
+            url('http://safiran12.mihanblog.com/public/public/fonts/Iransans-Black.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+        @font-face {
+            font-family: 'Mihan-IransansLight';
+            src: url('http://safiran12.mihanblog.com/public/public/fonts/Iransans-UltraLight.eot');
+            src: url('http://safiran12.mihanblog.com/public/public/fonts/Iransans-UltraLight.eot?') format('embedded-opentype'),
+            url('http://safiran12.mihanblog.com/public/public/fonts/Iransans-UltraLight.woff2') format('woff2'),
+            url('http://safiran12.mihanblog.com/public/public/fonts/Iransans-UltraLight.woff') format('woff'),
+            url('http://safiran12.mihanblog.com/public/public/fonts/Iransans-UltraLight.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+        @font-face {
+            font-family: 'Mihan-Nassim';
+            src: url('http://safiran12.mihanblog.com/public/public/fonts/Nassim.eot');
+            src: url('http://safiran12.mihanblog.com/public/public/fonts/Nassim.eot?') format('embedded-opentype'),
+            url('http://safiran12.mihanblog.com/public/public/fonts/Nassim.woff2') format('woff2'),
+            url('http://safiran12.mihanblog.com/public/public/fonts/Nassim.woff') format('woff'),
+            url('http://safiran12.mihanblog.com/public/public/fonts/Nassim.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+        @font-face {
+            font-family: 'Mihan-Koodak';
+            src: url('http://safiran12.mihanblog.com/public/public/fonts/Koodak.eot');
+            src: url('http://safiran12.mihanblog.com/public/public/fonts/Koodak.eot?') format('embedded-opentype'),
+            url('http://safiran12.mihanblog.com/public/public/fonts/Koodak.woff2') format('woff2'),
+            url('http://safiran12.mihanblog.com/public/public/fonts/Koodak.woff') format('woff'),
+            url('http://safiran12.mihanblog.com/public/public/fonts/Koodak.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+        @font-face {
+            font-family: 'Mihan-Yekan';
+            src: url('http://safiran12.mihanblog.com/public/public/fonts/Yekan.eot');
+            src: url('http://safiran12.mihanblog.com/public/public/fonts/Yekan.eot?') format('embedded-opentype'),
+            url('http://safiran12.mihanblog.com/public/public/fonts/Yekan.woff2') format('woff2'),
+            url('http://safiran12.mihanblog.com/public/public/fonts/Yekan.woff') format('woff'),
+            url('http://safiran12.mihanblog.com/public/public/fonts/Yekan.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+        @font-face {
+            font-family: 'FontAwesome';
+            src: url('http://safiran12.mihanblog.com/public/public/fonts/fontawesome_webfont.eot');
+            src: url('http://safiran12.mihanblog.com/public/public/fonts/fontawesome_webfont.eot?') format('embedded-opentype'),
+            url('http://safiran12.mihanblog.com/public/public/fonts/fontawesome_webfont.woff2') format('woff2'),
+            url('http://safiran12.mihanblog.com/public/public/fonts/fontawesome_webfont.woff') format('woff'),
+            url('http://safiran12.mihanblog.com/public/public/fonts/fontawesome_webfont.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+
+
+        
+
+        /* Smartphones (portrait and landscape) ----------- */
+
+        /*
+        @media only screen and (max-width : 480px) and (min-width : 320px) {
+            .sabaClick_advert__wrapper{
+                display:block;
+            }
+            .sabaClick_advert__inner{
+                max-width: 90%;
+                margin: 0 5%;
+            }
+        }
+        */
+
+    </style>
+
+
+
+
+
+
+<script language='JavaScript' type='text/javascript' src='http://www.jonbeshnet.ir/sites/default/files/webtools/jonbeshnet.js'></script>
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+<meta name="designer" content="inventor_robot@yahoo.com"/>
+<meta name="author" content=". ."/>
+<meta name="language" content="Farsi"/>
+<meta name="description" content=""/>
+<meta name="keywords" content="پیامبر"امام"امامت"کلیپ"دانلود"راهنما"راهبر" سفیران"هدایت"سفیران هدایت" معصوم"نور"عصمت"علم"انوار"نور الهی"عدالت امام"شجاعت"کلمه"نشانه"کلمه الله"بقیه الله"بصیرت""/> 
+
+<link rel="alternate" type="application/rss+xml" title="سفیران نور" href="http://safiran12.mihanblog.com/post/rss/" />
+<link rel="alternate" type="application/atom+xml" title="سفیران نور" href="http://safiran12.mihanblog.com/post/atom/" />
+<link rel="stylesheet" type="text/css" href="../static.mihanblog.com/public/user_data/user_files/153/458214/orangeZitova/style.css" media="screen"/> 
+
+<title>سفیران نور</title>
+
+<style type="text/css">
+.nav2{color:red;}
+.nav2 a:link{color:blue;margin:0px 5px 0px 5px;} 
+.nav2 a:visited{color:blue;margin:0px 5px 0px 5px;}
+.nav2 a:hover{color:maroon;margin:0px -2px 0px 3px;}
+</style>
+
+</head>
+
+<body>
+<!-- Start BG -->
+<div id="bg">
+<!-- Start Header -->
+<div class="header" style="background: url('../static.mihanblog.com/public/user_data/user_files/153/458214/Baner/safiran12B.jpg') no-repeat top;">
+	        <div class="nav">
+		    <div class="nav1" style="width:32px;"></div>
+		    <div class="nav2" style="width:740px;">
+		    <ul>
+		    <li><a href="index.html">صفحه اول</a></li>|
+		    <li><a href="mailto:safiran12@gmail.com">پست الكترونیك</a></li>|
+			<li><a href="javascript:messageForm()">تماس با مدیر وبلاگ</a></li>|
+			<li><a href="http://safiran12.mihanblog.com/post/list">آرشیو مطالب</a>|</li>
+			<li><a href="http://safiran12.mihanblog.com/m/">مشاهده در موبایل</a></li>|
+			<li><a href="http://safiran12.mihanblog.com/post/rss/" title="RSS">RSS</a></li>
+		    </ul>
+		    </div>
+		    <div class="nav3">
+			<form method="get" action="http://google.com/search" class="sch"><input name="sitesearch" value="http://safiran12.mihanblog.com" type="hidden"/>
+			<input type="text" name="q" size="22" class="txt" style="color:#e47300;"/> <input type="submit" value=" " class="btn"/>
+			</form>
+		    </div>   
+	        </div>
+</div>
+<!-- End Header -->
+
+<!-- Start Con-->
+<div class="con">
+<!-- Start scsl -->
+<div class="scs1">
+<div class="sc-all"><div class="sc">
+<!--Start Post-->
+		<div id="MihanblogShopAds" style="display:block;height:0px;width:100%;border:0px"></div>
+		            <div class="post clearfix">
+            <div class="p-head">
+            <div class="p-head1">
+            <div class="p-head2">
+			<b><a href="http://safiran12.mihanblog.com/post/678">كانال سپهر دینداری</a></b><div style="float:left"
+<span>تعداد بازدید : <b> <script src="http://fastwebcounter.com/secure.php?s=safiran12.mihanblog.com/post/678"></script> </b> مرتبه</span></div>	
+			</div>
+            </div>
+            </div>
+	        <div class="p-con clearfix">
+	        <div class="p-con1">
+	        <div class="p-con2">
+	        <div class="p-photo">
+	        </div>
+	        <div class="p-height">
+			<div id="InPost_MihanblogShopAds" style="display:block;height:0px;width:100%;border:0px"></div><div align="center"><img src="http://mn120.persiangig.com/photo_2015-11-09_10-45-56.jpg" alt="" align="texttop" border="0" hspace="0" vspace="0"><br></div><div align="center"><font color="#339999" size="3" face="Mihan-IransansBold">كانال سپهر دینداری، محلّی برای آرامش ذهن‌های گرفتار سوالات و شبهات</font><br></div><div align="center"><font color="#993300" size="4">@sepehredindari1</font></div>
+
+
+
+
+
+</div><br><b></b>
+			<br><br><font style="font-size:8pt;">
+<br>
+			داغ کن:
+			<a   target="_blank"  
+			href="http://www.cloob.com/share/link/add?url=http://safiran12.mihanblog.com//post/678&title=كانال سپهر دینداری"> 
+			<img alt="داغ کن - کلوب دات کام" src="../static.mihanblog.com/public/user_data/user_files/153/458214/orangeZitova/100c.gif" style='border: none; padding: 0px'/> 
+			</a>
+			</font>
+	        </div>
+	        </div>
+	        <div class="p-con3"><div class="p-con4">
+	        <div class="date">نوشته شده در تاریخ دوشنبه 18 آبان 1394 توسط : 
+<a href="http://safiran12.mihanblog.com/post/author/228526">محمد مهدی قربانی</a></div>
+	        <div class="nazar"><a target="_self" href="javascript:newComment(678)" >نظرات (<script>setCommentCnt(678)</script>)</a></div>
+	        </div></div>
+	        </div>
+            </div>
+            <div class="post clearfix">
+            <div class="p-head">
+            <div class="p-head1">
+            <div class="p-head2">
+			<b><a href="http://safiran12.mihanblog.com/post/1063"> رضایت عائشه به دشنام دادن به امیرالمومنین(ع) </a></b><div style="float:left"
+<span>تعداد بازدید : <b> <script src="http://fastwebcounter.com/secure.php?s=safiran12.mihanblog.com/post/1063"></script> </b> مرتبه</span></div>	
+			</div>
+            </div>
+            </div>
+	        <div class="p-con clearfix">
+	        <div class="p-con1">
+	        <div class="p-con2">
+	        <div class="p-photo">
+	        </div>
+	        <div class="p-height">
+			    
+  <div class="views-row views-row-7 views-row-odd">
+      
+  <div class="views-field views-field-field-image">        <div class="field-content" align="center"><img src="http://www.welayatnet.com/sites/default/files/styles/article_list/public/media/image/226_70994_0.jpg?itok=Dm2Tp0cf" alt="رضایت عائشه به ناسزا گفتن به علی در محضر او" title="دشمنی عائشه با امیرالمومنین" width="400" height="280"></div>  </div><br><div class="views-field views-field-body">        <div class="field-content">عائشه
+ همسر رسول گرامی اسلام(صلی‌‌الله‌‌علیه‌وآله) نقش بسزایی در تحولات صدر 
+اسلام ایفا نمود.&nbsp;عملکردهای وی در وقایع صدر اسلام، در ترازوی&nbsp;داوری دو طیف
+ شیعه و سنی باعث اختلاف دیدگاه شده است. شیعه به‌واسطه پیروی از خط ولایت 
+امیرالمومنین(علیه‌السلام) و دیگر اهل بیت(علیهم‌السلام) هر جا که 
+عملکرد...<br><br><span class="views-field views-field-title"><span class="field-content"><a href="http://www.welayatnet.com/fa/news/105692">ادامه مطلب</a></span></span><br><br><br></div>  </div>  </div>
+
+
+</div><br><b></b>
+			<br><br><font style="font-size:8pt;">
+<br>
+			داغ کن:
+			<a   target="_blank"  
+			href="http://www.cloob.com/share/link/add?url=http://safiran12.mihanblog.com//post/1063&title= رضایت عائشه به دشنام دادن به امیرالمومنین(ع) "> 
+			<img alt="داغ کن - کلوب دات کام" src="../static.mihanblog.com/public/user_data/user_files/153/458214/orangeZitova/100c.gif" style='border: none; padding: 0px'/> 
+			</a>
+			</font>
+	        </div>
+	        </div>
+	        <div class="p-con3"><div class="p-con4">
+	        <div class="date">نوشته شده در تاریخ دوشنبه 14 فروردین 1396 توسط : 
+<a href="http://safiran12.mihanblog.com/post/author/1576080">میهن بلاگ</a></div>
+	        <div class="nazar"><a target="_self" href="javascript:newComment(1063)" >نظرات (<script>setCommentCnt(1063)</script>)</a></div>
+	        </div></div>
+	        </div>
+            </div>
+            <div class="post clearfix">
+            <div class="p-head">
+            <div class="p-head1">
+            <div class="p-head2">
+			<b><a href="http://safiran12.mihanblog.com/post/1062"> خشم مقدس حضرت زهرا(س) </a></b><div style="float:left"
+<span>تعداد بازدید : <b> <script src="http://fastwebcounter.com/secure.php?s=safiran12.mihanblog.com/post/1062"></script> </b> مرتبه</span></div>	
+			</div>
+            </div>
+            </div>
+	        <div class="p-con clearfix">
+	        <div class="p-con1">
+	        <div class="p-con2">
+	        <div class="p-photo">
+	        </div>
+	        <div class="p-height">
+			    
+  <div class="views-row views-row-8 views-row-even">
+      
+  <div class="views-field views-field-field-image">        <div class="field-content" align="center"><img src="http://www.welayatnet.com/sites/default/files/styles/article_list/public/media/image/hazrate-fateme22_0.jpg?itok=-6VVXqVR" alt="خشم مقدس فاطمه(علیهاالسلام)" title="خشم مقدس فاطمه(علیهاالسلام)" width="400" height="280"></div>  </div><br><div class="views-field views-field-body">        <div class="field-content">یکی
+ از روایات متواتر مشهور در منابع فریقین&nbsp;که امکان ندارد به اعتبار آن 
+خدشه‌ای وارد کرد[1] روایت «فاطمه پاره تن من است هر کس او را بیازارد مرا 
+آزرده است و هر که او را به خشم آورد مرا به خشم آورده است» 
+می‌باشد&nbsp;چنان‌که&nbsp;در منابع اهل سنت آمده است: «فاطمة&nbsp;بضعة منی، فمن أغضبها 
+فقد...<br><br><span class="views-field views-field-title"><span class="field-content"><a href="http://www.welayatnet.com/fa/news/105756">ادامه مطلب</a></span></span><br></div>  </div>  </div>
+
+
+</div><br><b></b>
+			<br><br><font style="font-size:8pt;">
+<br>
+			داغ کن:
+			<a   target="_blank"  
+			href="http://www.cloob.com/share/link/add?url=http://safiran12.mihanblog.com//post/1062&title= خشم مقدس حضرت زهرا(س) "> 
+			<img alt="داغ کن - کلوب دات کام" src="../static.mihanblog.com/public/user_data/user_files/153/458214/orangeZitova/100c.gif" style='border: none; padding: 0px'/> 
+			</a>
+			</font>
+	        </div>
+	        </div>
+	        <div class="p-con3"><div class="p-con4">
+	        <div class="date">نوشته شده در تاریخ دوشنبه 14 فروردین 1396 توسط : 
+<a href="http://safiran12.mihanblog.com/post/author/1576080">میهن بلاگ</a></div>
+	        <div class="nazar"><a target="_self" href="javascript:newComment(1062)" >نظرات (<script>setCommentCnt(1062)</script>)</a></div>
+	        </div></div>
+	        </div>
+            </div>
+            <div class="post clearfix">
+            <div class="p-head">
+            <div class="p-head1">
+            <div class="p-head2">
+			<b><a href="http://safiran12.mihanblog.com/post/1061"> تفاوت سحر و معجزه </a></b><div style="float:left"
+<span>تعداد بازدید : <b> <script src="http://fastwebcounter.com/secure.php?s=safiran12.mihanblog.com/post/1061"></script> </b> مرتبه</span></div>	
+			</div>
+            </div>
+            </div>
+	        <div class="p-con clearfix">
+	        <div class="p-con1">
+	        <div class="p-con2">
+	        <div class="p-photo">
+	        </div>
+	        <div class="p-height">
+			    
+  <div class="views-row views-row-9 views-row-odd">
+      
+  <div class="views-field views-field-field-image">        <div class="field-content" align="center"><img src="http://www.welayatnet.com/sites/default/files/styles/article_list/public/media/image/713-1764536321_0.jpg?itok=_xyX7cv6" alt="سحر" title="سحر و معجزه" width="400" height="280"></div>  </div><br><div class="views-field views-field-body">        <div class="field-content">معجزه
+ یکی از نشانه‌ هایی است که از سوی خداوند متعال به پیامبران الهی داده شده
+ است، تا حقانیت ایشان برای مردم آشکار شود. متکلمان و اندیشمندان مسلمان 
+معجزه را این گونه گفته اند: «معجزه، امر خارق العاده‌اى است كه با اراده 
+خداى متعال از شخص مدّعى نبوت، ظاهر می‌شود و نشانه صدق ادّعاى وى است و با
+ تحدی...<br><br><span class="views-field views-field-title"><span class="field-content"><a href="http://www.welayatnet.com/fa/news/106077">ادامه مطلب</a></span></span><br></div>  </div>  </div>
+
+
+</div><br><b></b>
+			<br><br><font style="font-size:8pt;">
+<br>
+			داغ کن:
+			<a   target="_blank"  
+			href="http://www.cloob.com/share/link/add?url=http://safiran12.mihanblog.com//post/1061&title= تفاوت سحر و معجزه "> 
+			<img alt="داغ کن - کلوب دات کام" src="../static.mihanblog.com/public/user_data/user_files/153/458214/orangeZitova/100c.gif" style='border: none; padding: 0px'/> 
+			</a>
+			</font>
+	        </div>
+	        </div>
+	        <div class="p-con3"><div class="p-con4">
+	        <div class="date">نوشته شده در تاریخ دوشنبه 14 فروردین 1396 توسط : 
+<a href="http://safiran12.mihanblog.com/post/author/1576080">میهن بلاگ</a></div>
+	        <div class="nazar"><a target="_self" href="javascript:newComment(1061)" >نظرات (<script>setCommentCnt(1061)</script>)</a></div>
+	        </div></div>
+	        </div>
+            </div>
+            <div class="post clearfix">
+            <div class="p-head">
+            <div class="p-head1">
+            <div class="p-head2">
+			<b><a href="http://safiran12.mihanblog.com/post/1060"> اسلام به همه انبیای الهی ایمان دارد! </a></b><div style="float:left"
+<span>تعداد بازدید : <b> <script src="http://fastwebcounter.com/secure.php?s=safiran12.mihanblog.com/post/1060"></script> </b> مرتبه</span></div>	
+			</div>
+            </div>
+            </div>
+	        <div class="p-con clearfix">
+	        <div class="p-con1">
+	        <div class="p-con2">
+	        <div class="p-photo">
+	        </div>
+	        <div class="p-height">
+			    
+  <div class="views-row views-row-10 views-row-even views-row-last">
+      
+  <div class="views-field views-field-field-image">        <div class="field-content" align="center"><img src="http://www.welayatnet.com/sites/default/files/styles/article_list/public/media/image/123_75.jpg?itok=6cQqMnvP" alt="اسلام مومن به جمیع انبیا" title="اسلام مومن به جمیع انبیا" width="400" height="280"></div>  </div><br><div class="views-field views-field-body">        <div class="field-content">خداوند
+ متعال برای هدایت بشر و راهنمایی او برای رسیدن به سعادت و خوش‌بختی در 
+دنیا و آخرت؛ انسان‌های برجسته‌ای را برگزید و با نور هدایت خود پرورش داد،
+ سپس آن‌ها را واسطه میان خود و مخلوقاتش قرار داد تا آنان، معلم بشریت 
+گردیده و انسان را از جهل و گمراهی و ضلالت نجات داده و به انسانیت و 
+معنویت رهنمود...<br><br><span class="views-field views-field-title"><span class="field-content"><a href="http://www.welayatnet.com/fa/news/106285">ادامه مطلب</a></span></span><br></div>  </div>  </div>
+
+
+</div><br><b></b>
+			<br><br><font style="font-size:8pt;">
+<br>
+			داغ کن:
+			<a   target="_blank"  
+			href="http://www.cloob.com/share/link/add?url=http://safiran12.mihanblog.com//post/1060&title= اسلام به همه انبیای الهی ایمان دارد! "> 
+			<img alt="داغ کن - کلوب دات کام" src="../static.mihanblog.com/public/user_data/user_files/153/458214/orangeZitova/100c.gif" style='border: none; padding: 0px'/> 
+			</a>
+			</font>
+	        </div>
+	        </div>
+	        <div class="p-con3"><div class="p-con4">
+	        <div class="date">نوشته شده در تاریخ دوشنبه 14 فروردین 1396 توسط : 
+<a href="http://safiran12.mihanblog.com/post/author/1576080">میهن بلاگ</a></div>
+	        <div class="nazar"><a target="_self" href="javascript:newComment(1060)" >نظرات (<script>setCommentCnt(1060)</script>)</a></div>
+	        </div></div>
+	        </div>
+            </div>
+            <div class="post clearfix">
+            <div class="p-head">
+            <div class="p-head1">
+            <div class="p-head2">
+			<b><a href="http://safiran12.mihanblog.com/post/1059"> شادی و سجده‌ی شکر عائشه از خبر شهادت امیرالمومنین </a></b><div style="float:left"
+<span>تعداد بازدید : <b> <script src="http://fastwebcounter.com/secure.php?s=safiran12.mihanblog.com/post/1059"></script> </b> مرتبه</span></div>	
+			</div>
+            </div>
+            </div>
+	        <div class="p-con clearfix">
+	        <div class="p-con1">
+	        <div class="p-con2">
+	        <div class="p-photo">
+	        </div>
+	        <div class="p-height">
+			
+                        <div class="block block-system block-main block-system-main odd block-without-title" id="block-system-main">
+  <div class="block-inner clearfix">
+                
+    <div class="content clearfix">
+      <div class="view view-taxonomy-term view-id-taxonomy_term view-display-id-page view-list-articles view-dom-id-80f33ac3fd707c2bb26dae681df41c9a">
+        
+  
+  
+      <div class="view-content">
+        <div class="views-row views-row-1 views-row-odd views-row-first">
+      
+  <div class="views-field views-field-field-image">        <div class="field-content" align="center"><img src="http://www.welayatnet.com/sites/default/files/styles/article_list/public/media/image/download_23.jpg?itok=ashMd4FF" alt="شادی عائشه از شنیدن خبر شهادت امیرالمومنین" title="سجده شکر عائشه از شنیدن خبر شهادت امیرالمومنین" width="400" height="280"></div>  </div><br><div class="views-field views-field-body">        <div class="field-content">پس
+ از آن‌که شیعه انگلیسی در توهین و بی حرمتی به عائشه همسر رسول گرامی 
+اسلام(صلی‌الله‌علیه‌وآله) پا را از حد، فراتر گذاشتند، در مقابل، طیف 
+وهابیت نیز در تبرئه و پاک‌سازی چهره عائشه، بسیاری از وقایع تاریخی را 
+تحریف کرده و بر حقایق تاریخی سرپوش می‌گذارند و آن را به&nbsp;‌گونه‌ای دیگر 
+جلوه می‌دهند. هم‌...<br><br><span class="views-field views-field-title"><span class="field-content"><a href="http://www.welayatnet.com/fa/news/105657">ادامه مطلب</a></span></span><br></div>  </div>  </div></div></div></div></div></div>
+
+
+</div><br><b></b>
+			<br><br><font style="font-size:8pt;">
+<br>
+			داغ کن:
+			<a   target="_blank"  
+			href="http://www.cloob.com/share/link/add?url=http://safiran12.mihanblog.com//post/1059&title= شادی و سجده‌ی شکر عائشه از خبر شهادت امیرالمومنین "> 
+			<img alt="داغ کن - کلوب دات کام" src="../static.mihanblog.com/public/user_data/user_files/153/458214/orangeZitova/100c.gif" style='border: none; padding: 0px'/> 
+			</a>
+			</font>
+	        </div>
+	        </div>
+	        <div class="p-con3"><div class="p-con4">
+	        <div class="date">نوشته شده در تاریخ دوشنبه 14 فروردین 1396 توسط : 
+<a href="http://safiran12.mihanblog.com/post/author/1576080">میهن بلاگ</a></div>
+	        <div class="nazar"><a target="_self" href="javascript:newComment(1059)" >نظرات (<script>setCommentCnt(1059)</script>)</a></div>
+	        </div></div>
+	        </div>
+            </div>
+            <div class="post clearfix">
+            <div class="p-head">
+            <div class="p-head1">
+            <div class="p-head2">
+			<b><a href="http://safiran12.mihanblog.com/post/1058"> بررسی سند حدیث «سجده شکر عائشه از شنیدن خبر شهادت امیرالمومنین» </a></b><div style="float:left"
+<span>تعداد بازدید : <b> <script src="http://fastwebcounter.com/secure.php?s=safiran12.mihanblog.com/post/1058"></script> </b> مرتبه</span></div>	
+			</div>
+            </div>
+            </div>
+	        <div class="p-con clearfix">
+	        <div class="p-con1">
+	        <div class="p-con2">
+	        <div class="p-photo">
+	        </div>
+	        <div class="p-height">
+			    
+  <div class="views-row views-row-2 views-row-even">
+      
+  <div class="views-field views-field-field-image">        <div class="field-content" align="center"><img src="http://www.welayatnet.com/sites/default/files/styles/article_list/public/media/image/download_3_2.jpg?itok=tgYRskaO" alt="سجده شکر عائشه از شنیدن خبر شهادت حضرت علی" title="بغض عائشه نسبت به حضرت علی" width="400" height="280"></div>  </div><br><div class="views-field views-field-body">        <div class="field-content">دشمنی
+ عائشه با امیرالمومنین(علیه‌السلام) از چیزهایی نیست که بتوان بر آن سرپوش
+ گذاشت و این حقیقت تاریخی را تحریف کرد. بلکه، از این موضوع، آن‌قدر در 
+کتابهای مختلف تاریخی و روایی معتبر فریقین سخن به میان آمده که فوق حد 
+تواتر است.&nbsp;
+اما وهابیت که غالبا این حقیقت‌ها را نادیده می‌انگارد در صدد تحریف...<br><br><span class="views-field views-field-title"><span class="field-content"><a href="http://www.welayatnet.com/fa/news/105656"> ادامه مطلب</a></span></span><br></div>  </div>  </div>
+
+
+</div><br><b></b>
+			<br><br><font style="font-size:8pt;">
+<br>
+			داغ کن:
+			<a   target="_blank"  
+			href="http://www.cloob.com/share/link/add?url=http://safiran12.mihanblog.com//post/1058&title= بررسی سند حدیث «سجده شکر عائشه از شنیدن خبر شهادت امیرالمومنین» "> 
+			<img alt="داغ کن - کلوب دات کام" src="../static.mihanblog.com/public/user_data/user_files/153/458214/orangeZitova/100c.gif" style='border: none; padding: 0px'/> 
+			</a>
+			</font>
+	        </div>
+	        </div>
+	        <div class="p-con3"><div class="p-con4">
+	        <div class="date">نوشته شده در تاریخ دوشنبه 14 فروردین 1396 توسط : 
+<a href="http://safiran12.mihanblog.com/post/author/1576080">میهن بلاگ</a></div>
+	        <div class="nazar"><a target="_self" href="javascript:newComment(1058)" >نظرات (<script>setCommentCnt(1058)</script>)</a></div>
+	        </div></div>
+	        </div>
+            </div>
+            <div class="post clearfix">
+            <div class="p-head">
+            <div class="p-head1">
+            <div class="p-head2">
+			<b><a href="http://safiran12.mihanblog.com/post/1057"> شادی همسر پیامبر(ص) از شهادت حضرت زهرا(س) </a></b><div style="float:left"
+<span>تعداد بازدید : <b> <script src="http://fastwebcounter.com/secure.php?s=safiran12.mihanblog.com/post/1057"></script> </b> مرتبه</span></div>	
+			</div>
+            </div>
+            </div>
+	        <div class="p-con clearfix">
+	        <div class="p-con1">
+	        <div class="p-con2">
+	        <div class="p-photo">
+	        </div>
+	        <div class="p-height">
+			    
+  <div class="views-row views-row-3 views-row-odd">
+      
+  <div class="views-field views-field-field-image">        <div class="field-content" align="center"><img src="http://www.welayatnet.com/sites/default/files/styles/article_list/public/media/image/957aa96221d0.jpg?itok=VskRWOO1" alt="شهادت حضرت زهرا" title="شادی عائشه از شهادت حضرت زهرا" width="400" height="280"></div>  </div><br><div class="views-field views-field-body">        <div class="field-content">یکی
+ از همسران پیامبر(صلی‌الله‌علیه‌وآله) عائشه است که در تاریخ صدر اسلام 
+نقشی بسیار پررنگ داشته است. عائشه در نزد اهل سنت از جایگاه بسیار خاص و 
+ویژه‌ای برخوردار است، به گونه‌ای که وی را «ام المومنین» نام نهاده و 
+بسیاری از عالمان اهل سنت او را افضل و برتر از همه همسران 
+پیامبر(صلی‌الله‌علیه‌وآله) می‌...<br><br><span class="views-field views-field-title"><span class="field-content"><a href="http://www.welayatnet.com/fa/news/105398">ادامه مطلب</a></span></span><br></div>  </div>  </div>
+
+
+</div><br><b></b>
+			<br><br><font style="font-size:8pt;">
+<br>
+			داغ کن:
+			<a   target="_blank"  
+			href="http://www.cloob.com/share/link/add?url=http://safiran12.mihanblog.com//post/1057&title= شادی همسر پیامبر(ص) از شهادت حضرت زهرا(س) "> 
+			<img alt="داغ کن - کلوب دات کام" src="../static.mihanblog.com/public/user_data/user_files/153/458214/orangeZitova/100c.gif" style='border: none; padding: 0px'/> 
+			</a>
+			</font>
+	        </div>
+	        </div>
+	        <div class="p-con3"><div class="p-con4">
+	        <div class="date">نوشته شده در تاریخ دوشنبه 14 فروردین 1396 توسط : 
+<a href="http://safiran12.mihanblog.com/post/author/1576080">میهن بلاگ</a></div>
+	        <div class="nazar"><a target="_self" href="javascript:newComment(1057)" >نظرات (<script>setCommentCnt(1057)</script>)</a></div>
+	        </div></div>
+	        </div>
+            </div>
+<!--End Post-->
+			<div class="cb_page_box clearfix"><ul>
+			<li>تعداد کل صفحات :&nbsp;<font color="#ba3526"><b>132</b></font>&nbsp; صفحات :</li> 
+			<li><a href="http://safiran12.mihanblog.com/page/1"><b>1</b></a>&nbsp;&nbsp;</li><li><a href="http://safiran12.mihanblog.com/page/2"><span>2</span></a>&nbsp;&nbsp;</li><li><a href="http://safiran12.mihanblog.com/page/3"><span>3</span></a>&nbsp;&nbsp;</li><li><a href="http://safiran12.mihanblog.com/page/4"><span>4</span></a>&nbsp;&nbsp;</li><li><a href="http://safiran12.mihanblog.com/page/5"><span>5</span></a>&nbsp;&nbsp;</li><li><a href="http://safiran12.mihanblog.com/page/6"><span>6</span></a>&nbsp;&nbsp;</li><li><a href="http://safiran12.mihanblog.com/page/7"><span>7</span></a>&nbsp;&nbsp;</li><li><a href="http://safiran12.mihanblog.com/page/8"><i>...</i></a>&nbsp;&nbsp;</li>			</ul>
+			</div>
+</div></div>
+
+ <!-- Start sl -->
+<div class="sl">
+            <div class="menul">
+            <div class="tmenu">
+	        <div class="tmenu2">
+	        <b>انتخاب زبان</b></div></div>
+	        <div class="xmenu"><div class="menu-txt">
+			<center>
+						<a href="http://en-safiran12.mihanblog.com">
+			English</a><br>
+			<br>
+			امروز : <script>setTodayDate()</script>			</center></div></div>
+			<div class="s"></div></div>
+			<div class="menul">
+			<div class=tmenu>
+			<div class=tmenu2>
+			<b>وبلاگ دوستان</b></div></div>
+			<div class=xmenu><marquee scrollamount=1 scrolldelay=1 onmouseover='this.stop()' onmouseout='this.start()' direction=up style="height: 200px">			<div class=menu-txt>
+			<a target="_blank" href="http://http://bandeganekhoda.mihanblog.com/">زندگی با خدا</a></div>			<div class=menu-txt>
+			<a target="_blank" href="http://zaydiyya.mihanblog.com/">مطالعات زیدیه</a></div>			<div class=menu-txt>
+			<a target="_blank" href="http://ma2doost94.mihanblog.com/">عشقـ ♥ــمون فقط خدا</a></div>			<div class=menu-txt>
+			<a target="_blank" href="http://hoseinalifaali.blogfa.com/">وبلاگ شخصی حجت الاسلام حسینعلی فعالی</a></div>			<div class=menu-txt>
+			<a target="_blank" href="http://m-r2015.mihanblog.com/#">صدف مشکی،مروارید آبی</a></div>			<div class=menu-txt>
+			<a target="_blank" href="http://jomehaye-entezar.blogfa.com/">منتظران منتقم فاطمه(س)</a></div>			<div class=menu-txt>
+			<a target="_blank" href="http://manyekiraniyam.blogfa.com/">عاشق شهدا &quot;مثل عقیق</a></div>			<div class=menu-txt>
+			<a target="_blank" href="http://www.janbaz-8.blogsky.com/">سـاعـتـی پـای درددل جـــانـبـازان</a></div>			<div class=menu-txt>
+			<a target="_blank" href="http://www.yaabasaleh-mola.blogsky.com/">یا اباصالح ادرکنی</a></div>			<div class=menu-txt>
+			<a target="_blank" href="http://sedayeirani.mihanblog.com/">عشق یعنی انتظار منتظر</a></div>			<div class=menu-txt>
+			<a target="_blank" href="http://www.rasanews.ir/">خبر گزاری رسا</a></div>			<div class=menu-txt>
+			<a target="_blank" href="http://www.adyannet.com/">فرق، ادیان و مذاهب</a></div>			<div class=menu-txt>
+			<a target="_blank" href="http://wwwmazhabi.blogfa.com/">شیعیان عالم</a></div>			<div class=menu-txt>
+			<a target="_blank" href="http://aramesh.mihanblog.com/">آرامش کجاست</a></div>			<div class=menu-txt>
+			<a target="_blank" href="http://www.hejab-eshg-ast.blogfa.com/#">حجاب آسمانی ترین راه</a></div>			<div class=menu-txt>
+			<a target="_blank" href="http://maadshenasi.mihanblog.com/">آخرت</a></div>			<div class=menu-txt>
+			<a target="_blank" href="http://www.roozbeh-bakhtiari2.blogfa.com/">سردار خیبر</a></div>			<div class=menu-txt>
+			<a target="_blank" href="http://jahanshenasi.mihanblog.com/">جهان شناسی</a></div>			<div class=menu-txt>
+			<a target="_blank" href="../dinpajoohan.mihanblog.com/index.html">دین پژوهان</a></div>			<div class=menu-txt>
+			<a target="_blank" href="../khodashenasi.mihanblog.com/index.html">خداشناسی</a></div></marquee><br><br><a href="http://safiran12.mihanblog.com/link/"><b style="padding: 10px"><font color="red">»</font>&nbsp;همه لینک ها </b></a><br></div>
+			<div class=s></div></div>
+          
+			<div class=menul>
+			<div class=tmenu>
+			<div class=tmenu2>
+			<b>پیوندهای مفید </b></div></div>
+			<div class=xmenu> <div class=menu-txt>
+			<a target="_blank" href="http://yagot.dayanshop.com/products/category/69/" title="با سلام اگر ممکنه لینک من رو تائید کنی ممنون میشم">
+			ساعت دیواری</a></div> <div class=menu-txt>
+			<a target="_blank" href="http://www.jonbeshnet.ir" title="">
+			جنبش نت</a></div> <div class=menu-txt>
+			<a target="_blank" href="http://www.leader.ir/" title="">
+			پایگاه اطلاع رسانی دفترمقام معظم رهبری</a></div> <div class=menu-txt>
+			<a target="_blank" href="http://www.bahjat.ir/persian/" title="">
+			پایگاه اطلاع رسانی ایت الله بهجت</a></div> <div class=menu-txt>
+			<a target="_blank" href="http://www.lankarani.org/" title="">
+			پایگاه اطلاع رسانی ایت الله فاضل لنکرانی</a></div> <div class=menu-txt>
+			<a target="_blank" href="http://www.makarem.ir/" title="">
+			پایگاه اطلاع رسانی ایت الله مکارم شیرازی</a></div> <div class=menu-txt>
+			<a target="_blank" href="http://www.saafi.ir/" title="">
+			پایگاه اطلاع رسانی ایت الله صافی گلپایگانی</a></div> <div class=menu-txt>
+			<a target="_blank" href="http://www.esraco.net/" title="">
+			پایگاه اطلاع رسانی ایت الله جوادی آملی</a></div><br><a href="http://safiran12.mihanblog.com/linkdaily/"><b style="padding: 10px"><font color="red">»</font>&nbsp;آرشیو پیوندهای روزانه</b></a><br>
+            <br><a href="javascript:linkdailyForm()"><b style="padding: 10px"><font color="red">»</font>&nbsp;ارسال لینک به ما</b></a><br> </div>
+			<div class=s></div></div>
+ 
+            <div class=menul>
+			<div class=tmenu>
+			<div class=tmenu2>
+			<b>آماروبلاگ </b></div></div>
+			<div class=xmenu><div class="menu-txta">
+							کل بازدید:<script>getStatVar('total_view');</script><br/>
+				بازدید امروز :<script>getStatVar('today_view');</script><br/>
+				بازدید دیروز : <script>getStatVar('yesterday_view');</script><br/>
+				بازدید این ماه : <script>getStatVar('this_month_view');</script><br/>
+				بازدید ماه قبل : <script>getStatVar('last_month_view');</script><br/>
+				تعداد کل مطالب : <script>getStatVar('total_post');</script><br/>
+				آخرین بازدید : <script>getStatVar('last_view_date');</script><br/>
+				آخرین بروز رسانی : <script>getStatVar('modify_date');</script><br/>
+            <center><SCRIPT language=JavaScript type=text/javascript src="http://www.welayatnet.com/sites/default/files/webtools/telgram.js"></SCRIPT></center></div></div>
+			<div class=s></div></div>
+			     
+</div>
+<!--End Dynamic SL -->
+</div>
+<!-- End scs1 -->
+<!-- Start SR -->
+<div class="sr">
+            <div class=menur>
+			<div class=tmenu>
+			<div class=tmenu2>
+			<b>درباره وبلاگ</b></div></div>
+			<div class=xmenu><div class=menu-txt2>  
+            <div style="text-align:center;"><img src="../static.mihanblog.com/public/user_data/web_photo/281/840913.jpg@1226"  /></div>
+            <br><div class="descri">بــه نــام خـــدا<br />
+<br />
+ما چند نفر طلبه هستیم که احساس کردیم می تونیم تو زمینۀ شناسوندن پیامبران و ائمه (علیهم السلام) به شما کابران عزیز، قــدمــی برداریم.<br />
+در همین راستا اگر سوالی و یا شبهه ای تو زمینه مسائل مربوط به پیامبران خدا و امامان معصوم (علیهم السلام) داشته باشید، تا اونجایی که بلد باشیم، در خدمت دوستان عزیز هستیم.<br />
+<br />
+در ضمن قابل ذکر است که دوستان نویسندۀ وبلاگ، از متخصصین حوزه قم هستند و در زمینه مباحث اعتقادی از تـخصص لازم برخوردار می باشند.<br />
+<br />
+دوستان اگه مایل باشند که با متخصصین اعتقادی، گفتگوی مستقیم داشته باشند، می تونند از قسمت &quot;پاسخگویـان آنــلایـن اعتـقـادات&quot; که در ساعت ۱۷ الی ۱۹ آنلاین می باشند، به گفتگو بنشینند.<br />
+<br />
+با تشــــکر</div></div></div>
+			<div class=s></div></div>
+			            <div class=menur>
+			<div class=tmenu>
+			<div class=tmenu2>
+			<b>آخرین مطالب</b></div></div>
+			<div class=xmenu>
+			<div class=menu-txt>
+			<a href="http://safiran12.mihanblog.com/post/1063"> رضایت عائشه به دشنام دادن به امیرالمومنین(ع) </a></div><div class=menu-txt>
+			<a href="http://safiran12.mihanblog.com/post/1062"> خشم مقدس حضرت زهرا(س) </a></div><div class=menu-txt>
+			<a href="http://safiran12.mihanblog.com/post/1061"> تفاوت سحر و معجزه </a></div><div class=menu-txt>
+			<a href="http://safiran12.mihanblog.com/post/1060"> اسلام به همه انبیای الهی ایمان دارد! </a></div><div class=menu-txt>
+			<a href="http://safiran12.mihanblog.com/post/1059"> شادی و سجده‌ی شکر عائشه از خبر شهادت امیرالمومنین </a></div><div class=menu-txt>
+			<a href="http://safiran12.mihanblog.com/post/1058"> بررسی سند حدیث «سجده شکر عائشه از شنیدن خبر شهادت امیرالمومنین» </a></div><div class=menu-txt>
+			<a href="http://safiran12.mihanblog.com/post/1057"> شادی همسر پیامبر(ص) از شهادت حضرت زهرا(س) </a></div><div class=menu-txt>
+			<a href="http://safiran12.mihanblog.com/post/1056"> جوان‌مردی امیرالمومنین در جنگ خندق </a></div><div class=menu-txt>
+			<a href="http://safiran12.mihanblog.com/post/1055"> گاهی تکبر فضیلت است! </a></div><div class=menu-txt>
+			<a href="http://safiran12.mihanblog.com/post/1054"> جهالت و نادانی در مورد قرآن تا کجا! </a></div><div class=menu-txt>
+			<a href="http://safiran12.mihanblog.com/post/1053"> سبّ و فحش، فرهنگِ افرادِ بی منطق </a></div><div class=menu-txt>
+			<a href="http://safiran12.mihanblog.com/post/1052"> اکراه عائشه از به زبان آوردن نام حضرت علی(ع) </a></div><div class=menu-txt>
+			<a href="http://safiran12.mihanblog.com/post/1051"> قرآن کتاب اهانت نیست! </a></div><div class=menu-txt>
+			<a href="http://safiran12.mihanblog.com/post/1048"> معجزه دلیلی بر صدق انبیا </a></div><div class=menu-txt>
+			<a href="http://safiran12.mihanblog.com/post/1047"> خود امیرالمومنین نیز به حدیث «غدیر» استناد کرد </a></div><div class=menu-txt>
+			<a href="http://safiran12.mihanblog.com/post/1046"> احتجاج امیرالمومنین به حدیث غدیر در منابع شیعی </a></div><div class=menu-txt>
+			<a href="http://safiran12.mihanblog.com/post/1045"> دلیل تکریم عالمان دینی </a></div><div class=menu-txt>
+			<a href="http://safiran12.mihanblog.com/post/1044"> دفاع از حریم اهل بیت وظیفه شیعه </a></div><div class=menu-txt>
+			<a href="http://safiran12.mihanblog.com/post/1043"> فرجام خانه ای بافضیلت تر از خانه انبیا</a></div><div class=menu-txt>
+			<a href="http://safiran12.mihanblog.com/post/1042"> چرا امیرالمومنین، معاویه را عزل کرد؟ </a></div></div>
+			<div class=s></div></div>
+
+<div class=menur>
+			<div class=tmenu>
+			<div class=tmenu2><div style="margin-right:-11px">
+			<b>پاسخگویان آنلاین اعتقادات</b></div></div></div>
+			<div class=xmenu><div class=menu-txt2>  
+            <div style="margin:0 auto;width:172px"><div style="width:86px;float:right;text-align:center"><!-- 
+
+Begin http://zitova.ir ‍Yahoo Status --><a  target="_self" title="http://zitova.ir" href = "ymsgr:sendim?
+
+zitova8"><img src="http://www.zitova.com/YState/ystat.php?id=zitova8&mod=5" border="0"></a><br/><!-- 
+
+End  http://zitova.ir Yahoo Status -->
+            <div style="padding-top:20px"><a href='ymsgr:addfriend?zitova8'>اضافه کردن</a></div></div>
+				<div style="width:86px; float:right;text-align:center"><a href="javascript:l4imsg(l4imsg:sendim?moballegh8)"><script type=text/javascript src=http://messenger.l4i.ir/checkstatus.aspx?u=moballegh8></script><script type=text/javascript>
+document.write("<img style=border:0; alt=وضعیت در ال فور آی مسنجر src="+(chkstatus?"http://www.zitova.com/zitova/l4i/online_48x48x32.png":"http://www.zitova.com/zitova/l4i/offline_48x48x32.png")+" />");
+</script></a><br/><a href="l4imsg:addfriend?moballegh8">اضافه کردن</a></div></div>
+            </div></div>
+			<div class=s></div></div>
+
+
+<div class=menur>
+<div class=tmenu>
+<div class=tmenu2>
+<b>نویسندگان وبلاگ</b></div></div>
+<div class=xmenu>
+
+<!-- نام نویسنده اول -->
+<div class=menu-txt>
+<a href="http://safiran12.mihanblog.com/post/author/522350">ابواحمد توسلی</a></div>
+<!-- نام نویسنده دوم -->
+<div class=menu-txt>
+<a href="http://safiran12.mihanblog.com/post/author/388548">عبدالله جوانمرد</a></div>
+<!-- نام نویسنده سوم -->
+<div class=menu-txt>
+<a href="http://safiran12.mihanblog.com/post/author/1214460">علی سیّدی</a></div>
+<!-- نام نویسنده چهارم-->
+<div class=menu-txt>
+<a href="http://safiran12.mihanblog.com/post/author/782744">محمد فرضی پوریان</a></div>
+<!-- نام نویسنده پنجم-->
+<div class=menu-txt>
+<a href="http://safiran12.mihanblog.com/post/author/228526">محمدمهدی قربانی</a></div>
+<!-- نام نویسنده ششم-->
+<div class=menu-txt>
+<a href="http://safiran12.mihanblog.com/post/author/789764">غلامرضا مومنی</a></div>
+<!-- نام نویسنده هفتم-->
+<div class=menu-txt>
+<a href="http://safiran12.mihanblog.com/post/author/1308559">محمدحسین كاظمی</a>
+</div>
+<!-- نام نویسنده هشتم-->
+<div class=menu-txt>
+<a href="http://safiran12.mihanblog.com/post/author/1306002">علی احمدی فریدنی</a>
+</div>
+<!-- نام نویسنده نهم-->
+<div class=menu-txt>
+<a href="http://safiran12.mihanblog.com/post/author/1202121">كمیل شمس‌الدینی</a></div>
+
+<div class=menu-txt>
+<a href="http://safiran12.mihanblog.com/post/author/1311740">سلمان خلیلی</a></div>
+<!-- نام نویسنده یازدهم-->
+<div class=menu-txt>
+<a href="http://safiran12.mihanblog.com/post/author/1325868">مصطفی عباسی</a></div>
+<div class=s></div></div>
+
+			<div class=menur>
+			<div class=tmenu>
+			<div class=tmenu2>
+			<b>موضوعات وبلاگ</b></div></div>
+			<div class=xmenu><div class=menu-txt>
+			<a href="http://safiran12.mihanblog.com/post/category/12">سیره رفتاری پیشوایان(97)</a></div><div class=menu-txt>
+			<a href="http://safiran12.mihanblog.com/post/category/11">سیره سیاسی پیشوایان(64)</a></div><div class=menu-txt>
+			<a href="http://safiran12.mihanblog.com/post/category/10">سیره اقتصادی پیشوایان(14)</a></div><div class=menu-txt>
+			<a href="http://safiran12.mihanblog.com/post/category/1">پیامبر شناسی(127)</a></div><div class=menu-txt>
+			<a href="http://safiran12.mihanblog.com/post/category/2">امام شناسی(138)</a></div><div class=menu-txt>
+			<a href="http://safiran12.mihanblog.com/post/category/5">شجاعت(16)</a></div><div class=menu-txt>
+			<a href="http://safiran12.mihanblog.com/post/category/6">عصمت(39)</a></div><div class=menu-txt>
+			<a href="http://safiran12.mihanblog.com/post/category/3">عدالت(7)</a></div><div class=menu-txt>
+			<a href="http://safiran12.mihanblog.com/post/category/4">علم(28)</a></div><div class=menu-txt>
+			<a href="http://safiran12.mihanblog.com/post/category/8">مناسبتها(40)</a></div><div class=menu-txt>
+			<a href="http://safiran12.mihanblog.com/post/category/7">پرسش و پاسخ(23)</a></div></div>
+			<div class=s></div></div>
+            <div class=menur>
+			<div class=tmenu>
+			<div class=tmenu2>
+			<b>عضویت ! </b></div></div>
+			<div class=xmenu><div class=menu-txt2>  
+            <div style="text-align:center;"><form style="border:0px solid #ccc;padding:3px;text-align:justify;" action="http://feedburner.google.com/fb/a/mailverify" method="post" target="popupwindow" onsubmit="window.open('http://feedburner.google.com/fb/a/mailverify?uri=mihanblog/GCeb', 'popupwindow', 'scrollbars=yes,width=550,height=520');return true"><p>آدرس ایمیل خودتان را وارد كنید تا آخرین نوشته ها برایتان ارسال شود :</p><p align="center" style="direction:ltr"><input style="margin:5px" type="text"  style="width:167px" style="text-align:left" name="email" /></p><input type="hidden" value="mihanblog/GCeb" name="uri"/><input type="hidden" name="loc" value="en_US"/><center><input style="margin:5px;padding:2px;cursor:pointer;outline:none" type="submit" value="اشتراک" /></center></form></div>
+            </div></div>
+			<div class=s></div></div>
+<div class=menur>
+			<div class=tmenu>
+			<div class=tmenu2>
+			<b>عضویت در گروه سفیران نور</b></div></div>
+			<div class=xmenu><div class=menu-txt2>  
+            <div style="text-align:center;"><form style="border:0px solid #ccc;padding:3px;text-align:justify;" action="http://groups.google.com/group/safiranenoor/boxsubscribe"><p style="padding-bottom:8px">آدرس ایمیل خودتان را وارد نمایید :</p><p align="center" style="direction:ltr"><input style="margin:5px" type="text"  style="width:167px" style="text-align:left" name="email" /></p><center><input style="margin:5px;padding:2px;cursor:pointer;outline:none" type="submit" value="تأیید عضویت" /></center></form>
+            </div>
+            <a target="_blank" href="https://groups.google.com/forum/?fromgroups&hl=fa#!forum/safiranenoor"><font color="red">»</font>&nbsp;بازدید از این گروه</a>
+            </div></div>
+			<div class=s></div></div>
+
+		            <div class=menur>
+			<div class=tmenu>
+			<div class=tmenu2>
+			<b>آرشیو مطالب</b></div></div>
+			<div class=xmenu>
+			<div class=menu-txt>
+			<a href="http://safiran12.mihanblog.com/post/archive/1396/1"> فروردین 1396(10)</a></div><div class=menu-txt>
+			<a href="http://safiran12.mihanblog.com/post/archive/1395/12"> اسفند 1395(24)</a></div><div class=menu-txt>
+			<a href="http://safiran12.mihanblog.com/post/archive/1395/11"> بهمن 1395(50)</a></div><div class=menu-txt>
+			<a href="http://safiran12.mihanblog.com/post/archive/1395/10"> دی 1395(21)</a></div><div class=menu-txt>
+			<a href="http://safiran12.mihanblog.com/post/archive/1395/9"> آذر 1395(20)</a></div><div class=menu-txt>
+			<a href="http://safiran12.mihanblog.com/post/archive/1395/8"> آبان 1395(21)</a></div><div class=menu-txt>
+			<a href="http://safiran12.mihanblog.com/post/archive/1395/7"> مهر 1395(12)</a></div><div class=menu-txt>
+			<a href="http://safiran12.mihanblog.com/post/archive/1395/6"> شهریور 1395(19)</a></div><div class=menu-txt>
+			<a href="http://safiran12.mihanblog.com/post/archive/1395/5"> مرداد 1395(30)</a></div><div class=menu-txt>
+			<a href="http://safiran12.mihanblog.com/post/archive/1395/4"> تیر 1395(12)</a></div><div class=menu-txt>
+			<a href="http://safiran12.mihanblog.com/post/archive/1395/3"> خرداد 1395(18)</a></div><div class=menu-txt>
+			<a href="http://safiran12.mihanblog.com/post/archive/1395/2"> اردیبهشت 1395(20)</a></div><div class=menu-txt>
+			<a href="http://safiran12.mihanblog.com/post/archive/1395/1"> فروردین 1395(29)</a></div><div class=menu-txt>
+			<a href="http://safiran12.mihanblog.com/post/archive/1394/12"> اسفند 1394(18)</a></div><div class=menu-txt>
+			<a href="http://safiran12.mihanblog.com/post/archive/1394/11"> بهمن 1394(22)</a></div><div class=menu-txt>
+			<a href="http://safiran12.mihanblog.com/post/archive/1394/10"> دی 1394(15)</a></div><div class=menu-txt>
+			<a href="http://safiran12.mihanblog.com/post/archive/1394/9"> آذر 1394(12)</a></div><div class=menu-txt>
+			<a href="http://safiran12.mihanblog.com/post/archive/1394/8"> آبان 1394(14)</a></div><div class=menu-txt>
+			<a href="http://safiran12.mihanblog.com/post/archive/1394/7"> مهر 1394(17)</a></div><div class=menu-txt>
+			<a href="http://safiran12.mihanblog.com/post/archive/1394/6"> شهریور 1394(32)</a></div></div>
+			<div class=s></div></div>
+			
+</div>
+<!--End Dynamic SR -->
+</div>
+<!-- End Con -->
+<!-- Start Footer -->
+           <div class="footer">
+           <p><strong>تمام حقوق این وبلاگ و مطالب آن متعلق به 
+           <a href="index.html">سفیران نور</a> می باشد.</strong></p>
+           </div>
+<!-- End Footer -->
+</div>
+<!-- End BG -->
+<!-- Piwik -->
+<script type="text/javascript">
+  var _paq = _paq || [];
+  _paq.push(['trackPageView']);
+  _paq.push(['enableLinkTracking']);
+  (function() {
+    var u="//analytics.welayatnet.com/";
+    _paq.push(['setTrackerUrl', u+'piwik.php']);
+    _paq.push(['setSiteId', 5]);
+    var d=document, g=d.createElement('script'), s=d.getElementsByTagName('script')[0];
+    g.type='text/javascript'; g.async=true; g.defer=true; g.src=u+'piwik.js'; s.parentNode.insertBefore(g,s);
+  })();
+</script>
+<noscript><p><img src="http://analytics.welayatnet.com/piwik.php?idsite=5" style="border:0;" alt="" /></p></noscript>
+<!-- End Piwik Code -->
+</body>
+</html><script>
+//    setTimeout(function () {
+//        GetMihanBlogShowAds();
+//    }, 1000);
+</script>
+<!--NEW SERVER--><!--;)-->
+
+<!--SabaVision Ads Handler--><!--<script type="text/javascript">(function (d) {var url =   location.protocol+'//api.sabavision.com/pox/poxjs.js';d.write('<script type="text/javascript" src="' + url + '" async></scri' + 'pt>');})(document);</script>-->
+
+
+<script type="text/javascript">
+
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-153829-9']);
+    _gaq.push(['_setDomainName', 'safiran12.mihanblog.com']);
+    _gaq.push(['_trackPageview']);
+
+    (function() {
+        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+
+</script>
+
+
+<div id='mediaad-Kvcm'></div>
+<meta name="sabavision_zone" content="2500-Z499" />
+<center>
+    <div style="background-color:white;width:90%;padding:20px;margin-top:50px;margin-bottom:50px;">
+        <a href="https://www.cloob.com">شبکه اجتماعی فارسی کلوب</a> | <a href="https://www.seo25.com/product/buy-mobile-traffic-and-get-cheap-targeted-mobile-traffic/" target="_blank">Buy Mobile Traffic</a> | <a href="https://www.soalaat.com">سایت سوالات</a>
+    </div>
+</center>

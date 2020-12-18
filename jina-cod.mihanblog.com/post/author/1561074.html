@@ -1,0 +1,887 @@
+<!DOCTYPE html PUBLIC  "-//W3C//DTD XHTML 1.0 Transitional//EN"  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" /><link rel="EditURI" type="application/rsd+xml" title="RSD" href="../../xmlrpc@rsd.html" />
+<script type="text/javascript" src="../../../static.mihanblog.com/public/scripts/run/g.other.v3.js"></script>
+<script>
+
+	function c_$(id){
+        return document.getElementById(id);
+    }
+    
+			//if (parent.frames.length) top.location.href= document.location;
+		
+	setTodayDate = function(){
+		document.write('یکشنبه 23 آذر 1399');
+		/*1890345*/	}
+
+</script>
+
+
+
+        <script type="text/javascript">
+            (function(){
+            var now = new Date();
+            var head = document.getElementsByTagName('head')[0];
+            var script = document.createElement('script');
+            script.async = true;
+            var script_address = 'https://cdn.yektanet.com/js/mihanblog.com/native-mihanblog.com-6531.js';
+            script.src = script_address + '?v=' + now.getFullYear().toString() + '0' + now.getMonth() + '0' + now.getDate() + '0' + now.getHours();
+            head.appendChild(script);
+            })();
+        </script>
+
+        <!--<script type="text/javascript">
+            var head = document.getElementsByTagName("head")[0];
+            var script = document.createElement("script");
+            script.type = "text/javascript";
+            script.async=1;
+            script.src = "https://s1.mediaad.org/serve/mihanblog.com/loader.js" ;
+            head.appendChild(script);
+        </script>-->
+        
+        <script>
+            var sabaVisionWebsiteID = "9bab9dac-041d-4bdb-b39a-1ed789f65eed"; var sabaVisionWebsitePage = "ALL"
+        </script>
+        <link rel="stylesheet" href="https://plus.sabavision.com/dox/dox.min.css">
+        <script src="https://plus.sabavision.com/dox/dox.min.js"></script>
+        
+        <script>
+	try{
+		var commentCnt = new Array();
+		commentCnt[298]='0';commentCnt[300]='0';commentCnt[301]='-';commentCnt[302]='-';commentCnt[303]='-';commentCnt[319]='-';commentCnt[342]='-';commentCnt[349]='0';commentCnt[366]='-';commentCnt[367]='-';commentCnt[369]='-';commentCnt[389]='-';commentCnt[390]='2';commentCnt[402]='-';commentCnt[466]='3';commentCnt[478]='-';commentCnt[488]='2';commentCnt[490]='5';commentCnt[516]='13';	} catch(e){}
+	
+	newComment = function(post_id){
+		try{
+			window.open('/post/comment/'+post_id,'comment','status=yes,scrollbars=yes,toolbar=no,menubar=no,location=no ,width=480px,height=540px');
+		} catch(e){}
+	}
+	setCommentCnt = function(post_id){
+		try{
+			if(commentCnt[post_id]){
+				document.write(commentCnt[post_id]);
+			} else {
+				document.write(0);
+			}
+		} catch(e){}
+	}
+</script><script>
+
+
+	mihanblogUpdateLike = function(postid,type){
+		var url = '/post/like/'+postid+'/'+type;
+		mihanblogGetAjax(url,function(){});
+	};
+	try{
+        mihanblogGetAjax = function (url,callback) {
+    		var req;
+			if (window.XMLHttpRequest)
+            {
+                // code for IE7+, Firefox, Chrome, Opera, Safari
+			  	req = new XMLHttpRequest();
+			}else{	// code for IE6, IE5
+			  	req = new ActiveXObject("Microsoft.XMLHTTP");
+		  	}
+		    req.open("GET", url, 1);
+		    req.onreadystatechange = function () {
+		        if (req.readyState == 4) {
+		            if (req.status == 200) {
+		            	var response = eval(req.responseText);
+		            	callback();
+		            }else{
+	            		return ;
+		            }
+		        }else{
+					return ;
+		        }
+		    }
+		    req.send(null);
+		}
+	}catch(e){}
+
+	try{
+		var mihanblogLikeArrCnt = new Array();
+		var mihanblogDisLikeArrCnt = new Array();
+
+		mihanblogLikeArrCnt[298]='0';
+mihanblogDisLikeArrCnt[298]='0';
+mihanblogLikeArrCnt[300]='0';
+mihanblogDisLikeArrCnt[300]='0';
+mihanblogLikeArrCnt[301]='0';
+mihanblogDisLikeArrCnt[301]='0';
+mihanblogLikeArrCnt[303]='0';
+mihanblogDisLikeArrCnt[303]='0';
+mihanblogLikeArrCnt[319]='0';
+mihanblogDisLikeArrCnt[319]='0';
+mihanblogLikeArrCnt[366]='0';
+mihanblogDisLikeArrCnt[366]='0';
+mihanblogLikeArrCnt[369]='0';
+mihanblogDisLikeArrCnt[369]='0';
+mihanblogLikeArrCnt[390]='0';
+mihanblogDisLikeArrCnt[390]='0';
+mihanblogLikeArrCnt[402]='0';
+mihanblogDisLikeArrCnt[402]='0';
+mihanblogLikeArrCnt[466]='3';
+mihanblogDisLikeArrCnt[466]='0';
+mihanblogLikeArrCnt[478]='4';
+mihanblogDisLikeArrCnt[478]='0';
+mihanblogLikeArrCnt[488]='4';
+mihanblogDisLikeArrCnt[488]='0';
+mihanblogLikeArrCnt[490]='3';
+mihanblogDisLikeArrCnt[490]='0';
+mihanblogLikeArrCnt[516]='0';
+mihanblogDisLikeArrCnt[516]='0';
+	} catch(e){}
+
+
+
+    mihanblogPostLike = function(post_id){
+
+        mihanblogLikeCnt = (mihanblogLikeArrCnt[post_id]? mihanblogLikeArrCnt[post_id] : 0);
+        mihanblogDisLikeCnt = (mihanblogDisLikeArrCnt[post_id]? mihanblogDisLikeArrCnt[post_id] : 0);
+        mihanblogLikeCnt = parseInt(mihanblogLikeCnt);
+        mihanblogDisLikeCnt = parseInt(mihanblogDisLikeCnt);
+
+        document.write(
+                '<div class="mihanblog_like_wrapper ">'+
+                       '<div id="dislikeBar_'+post_id+'" onclick="mihanblogUpdateLike('+post_id+',\'dislike\')"   class="mihanblog_like_bar mihanblog_like_dislikeBar mihanblog_like_show_help ">-<div class="mihanblog_like_Cnt" id="disLikeCnt_'+post_id+'">'+mihanblogDisLikeCnt+'</div>'+
+                            '<span  class="mihanblog_like_v2_help mihanblog_like_v2_help_dislike clearfix"> '+
+                                '<span class="mihanblog_like_help_arrow mihanblog_like_help_arrow_dislike clearfix"></span>'+
+                                '<span class="mihanblog_like_help_text">نمی پسندم</span>'+
+                            '</span>'+
+                        '</div>'+
+                       '<div id="Like_'+post_id+'" class="mihanblog_like_border"></div>'+
+                       '<div id="likeBar_'+post_id+'" onclick="mihanblogUpdateLike('+post_id+',\'like\')"  class="mihanblog_like_bar mihanblog_like_likeBar mihanblog_like_show_help" >+<div class="mihanblog_like_Cnt" id="likeCnt_'+post_id+'">'+mihanblogLikeCnt+'</div>'+
+                            '<span  class="mihanblog_like_v2_help mihanblog_like_v2_help_like clearfix"> '+
+                                '<span class="mihanblog_like_help_arrow mihanblog_like_help_arrow_like clearfix"></span>'+
+                                '<span class="mihanblog_like_help_text">می پسندم</span>'+
+                            '</span>'+
+                        '</div>'+
+
+                '</div>'
+        );
+
+
+
+        mihanblogDisplayeLike(post_id);
+    }
+
+
+    mihanblogDisplayeLike = function(post_id){
+
+        mihanblogLikeCnt = (mihanblogLikeArrCnt[post_id]? mihanblogLikeArrCnt[post_id] : 0);
+        mihanblogDisLikeCnt = (mihanblogDisLikeArrCnt[post_id]? mihanblogDisLikeArrCnt[post_id] : 0);
+        mihanblogLikeCnt = parseInt(mihanblogLikeCnt);
+        mihanblogDisLikeCnt = parseInt(mihanblogDisLikeCnt);
+
+
+
+        sum = mihanblogLikeCnt - mihanblogDisLikeCnt;
+        backgroundBorder =  document.getElementById('Like_'+post_id);
+        var likeObj = document.getElementById('likeCnt_'+post_id);
+        var disLikeObj = document.getElementById('disLikeCnt_'+post_id);
+
+
+
+
+
+        likeObj.innerHTML =  mihanblogLikeCnt ;
+        disLikeObj.innerHTML =  mihanblogDisLikeCnt;
+
+        if(sum == 0){
+            backgroundBorder.style.backgroundImage = "url('/public/public/images/icons/like_likedislike.png')";
+            document.getElementById('dislikeBar_'+post_id).style.width = '19px';
+            document.getElementById('likeBar_'+post_id).style.width = '19px';
+        }else{
+             if(sum > 0){
+                 backgroundBorder.style.backgroundImage = "url('/public/public/images/icons/like_like.png')";
+                 document.getElementById('likeBar_'+post_id).style.width = '23px';
+                 document.getElementById('dislikeBar_'+post_id).style.width = '15px';
+             }else{
+                 backgroundBorder.style.backgroundImage = "url('/public/public/images/icons/like_dislike.png')";
+                 document.getElementById('likeBar_'+post_id).style.width = '15px';
+                 document.getElementById('dislikeBar_'+post_id).style.width = '23px';
+             }
+        }
+
+    }
+
+
+
+
+</script>
+
+<style type="text/css">
+
+
+    .clearfix {display: inline-block;}
+    .clearfix:after {
+        content: ".";
+        display: block;
+        height: 0;
+        clear: both;
+        visibility: hidden;
+    }
+
+    .mihanblog_like_wrapper {
+        color: #ffffff;
+        direction: ltr;
+        position: relative;
+    }
+    .mihanblog_like_wrapper span{
+        display: none;
+    }
+    .mihanblog_like_bar {
+        color: #FFFFFF;
+        cursor: pointer;
+        float: left;
+        font-size: 10px;
+        height: 20px;
+        line-height: 19px;
+        margin: 5px 0;
+    }
+    .mihanblog_like_likeBar {
+        background-color: #88B131;
+        padding-right: 5px;
+        border-top-right-radius: 2px;
+        border-bottom-right-radius: 2px;
+        text-align: right;
+    }
+    .mihanblog_like_likeBar:hover{
+        background-color: #699017;
+    }
+    .mihanblog_like_border {
+        background-color: #666666;
+        border: 1px solid #666666;
+        float: left;
+        font-size: 12px;
+        height: 20px;
+        margin-top: 2px;
+        width: 25px;
+        padding: 3px 5px 2px 0;
+        text-align: center;
+        border-radius: 2px;
+        color: #ffffff;
+        direction: ltr;
+        background-repeat: no-repeat ;
+        background-position: 4px center;
+    }
+    .mihanblog_like_border img {
+        margin-left: 2px;
+        margin-top: 2px;
+        width: 22px;
+    }
+    .mihanblog_like_dislikeBar {
+        background-color: #FF6F31;
+        padding-left: 5px;
+        border-top-left-radius: 2px;
+        border-bottom-left-radius: 2px;
+        text-align:left ;
+    }
+    .mihanblog_like_dislikeBar:hover{
+        background-color: #D54B10;
+    }
+
+
+
+    .mihanblog_like_show_help {
+        position: relative;
+    }
+    .mihanblog_like_show_help:hover span {
+        display: block;
+    }
+    .mihanblog_like_help_text {
+        background-color: white;
+        border: 1px solid #555555;
+        border-radius: 3px 3px 3px 3px;
+        color: #303030;
+        float: left;
+        font-size: 11px;
+        font-weight: normal;
+        padding: 5px 10px;
+    }
+
+    .mihanblog_like_help_arrow_dislike {
+        background: url("http://jina-cod.mihanblog.com/public/public/images/icons/like_hover_top.png") no-repeat scroll 16px 0 transparent;
+        left: 0;
+        top: -4px;
+    }
+
+    .mihanblog_like_help_arrow_like {
+        background: url("http://jina-cod.mihanblog.com/public/public/images/icons/like_hover_top _2.png") no-repeat scroll 16px 0 transparent;
+        left: -10px;
+        top: 29px;
+    }
+
+    .mihanblog_like_help_arrow{
+        height: 6px;
+        position: absolute;
+        width: 100px;
+
+    }
+
+    .mihanblog_like_v2_help_dislike {
+        left: -15px;
+        top: 24px;
+    }
+    .mihanblog_like_v2_help_like {
+        left: 0;
+        top: -35px;
+
+    }
+    .mihanblog_like_v2_help{
+        display: none;
+        position: absolute;
+        white-space: nowrap;
+        z-index: 1;
+    }
+
+    .mihanblog_like_Cnt{
+        display: inline;
+        color: #ffffff;
+    }
+
+</style><script>
+
+	statInfo = new Array();
+	setStatVar = function(index,value){
+		statInfo[index] = value;
+	}
+	getStatVar = function(index){
+		if(statInfo[index]) document.write(statInfo[index]);
+	}
+	
+	setStatVar('total_post','360');
+	setStatVar('total_author','14');
+	setStatVar('modify_date','دوشنبه 28 اسفند 1396');
+	
+	setStatVar('today_view','3');
+	setStatVar('yesterday_view','9');
+	
+	setStatVar('this_month_view','764');
+	setStatVar('last_month_view','590');
+
+	setStatVar('total_view','89922');
+	setStatVar('last_view_date','یکشنبه 23 آذر 1399 (04:34)');
+
+
+
+    
+    function setStatFromClient()
+    {
+        var url = 'http://jina-cod.mihanblog.com/statupdate/?data[refereruri]=http://jina-cod.mihanblog.com/&data[postid]=&data[requesturi]=/post/author/1561074&data[sdate]=1607826147&data[hash]=ba38634eeb15a3ccb3b411d0f74efa07&data[resolution]='+screen.width+' X '+screen.height;
+
+//        alert(url);
+//        var newjs = document.createElement("SCRIPT");
+//        newjs.type = 'text/javascript';
+//        newjs.src = url;
+//
+//        var newdiv = document.createElement("DIV");
+//        newdiv.setAttribute("style","display:none");
+
+        document.write(unescape('%3Cscript src="'+url+'" type="text/javascript"%3E%3C/script%3E'));
+//        newdiv.appendChild (newjs);
+//        document.write(newjs);
+//        document.write(appendChild (newdiv);
+
+    };
+    setStatFromClient();
+        
+</script><script>
+	messageForm = function(post_id){
+		try{
+			window.open('/message','message','status=yes,scrollbars=yes,toolbar=no,menubar=no,location=no ,width=480px,height=550px');
+		} catch(e){}
+	}
+</script><script>
+	linkdailyForm = function(){
+		try{
+			window.open('/linkdaily/new','linkdaily','status=yes,scrollbars=yes,toolbar=no,menubar=no,location=no ,width=500px,height=460px');
+		} catch(e){}
+	}
+</script><script>
+
+var MihanblogShopAdsArray = new Array();
+
+function GetMihanBlogShowAds(){
+	if(MihanblogShopAdsArray.length){
+		var adsTarget = 'MihanblogShopAds';
+		var containerWidth = document.getElementById(adsTarget).offsetWidth;
+		if(containerWidth>=200){
+			var adsCnt = parseInt(containerWidth / 200) ;
+			if(adsCnt>MihanblogShopAdsArray.length){
+				adsCnt = MihanblogShopAdsArray.length ; 
+			}
+//			var OneAdsWidth = parseInt(containerWidth / adsCnt) ;
+			var OneAdsWidth = containerWidth / adsCnt ;
+			if(OneAdsWidth>400){
+				OneAdsWidth = 400 ;
+			}
+			var OutHtml = '';
+			var img = '';
+			var link = '';
+			var title = '';
+			var description = '';
+			var imgWidth = 70;
+			if(OneAdsWidth>230){
+				imgWidth = 80;
+			}
+			if(OneAdsWidth>300){
+				imgWidth = 90;
+			}
+			for(adsOne=0;adsOne<adsCnt;adsOne++){
+				
+				img = MihanblogShopAdsArray[adsOne]['img'];
+				link = MihanblogShopAdsArray[adsOne]['link'];
+				title = MihanblogShopAdsArray[adsOne]['title'];
+				description = MihanblogShopAdsArray[adsOne]['description'];
+				
+				OutHtml += '<td style="background-color:#FFF;width: '+OneAdsWidth+'px;border:1px solid #f00;margin:0px 0px;font-size:11px;font-family:tahoma;padding:2px;margin:0px 0px;font-size:11px;border: 1px solid BurlyWood; padding: 1px; height: '+(imgWidth+25)+'px;">';
+
+				OutHtml += '	<a href="http://jina-cod.mihanblog.com/post/author/'+link+'" target="_blank" style="text-decoration:none">';
+
+				OutHtml += '			<div style="width: '+(OneAdsWidth-16)+'px;cursor:pointer;font-size:12px;padding: 4px 1px 4px 7px; white-space: nowrap; text-align: center; font-weight: bold; color: blue;white-space:nowrap;overflow:hidden">';
+				OutHtml += 					title;
+				OutHtml += '			</div>';
+				OutHtml += '			<div style="cursor:pointer;padding: 1px; display: block; float: right; width: '+imgWidth+'px;">';
+				OutHtml += '				<img src="'+img+'.html" style="border:0px;padding:0px;margin:0px;width:'+imgWidth+'px;height:'+imgWidth+'px;">';
+				OutHtml += '			</div>';
+				OutHtml += '			<div style="padding: 1px; display: block; float: right; width: '+(OneAdsWidth-13-imgWidth)+'px; text-align: right;overflow:hidden">';
+				OutHtml += '				<div style="overflow:hidden;cursor:pointer;padding: 2px 3px; line-height: 17px; height: '+(imgWidth-3)+'px; text-align: justify;color:#000;direction:rtl">';
+				OutHtml += 						description;
+				OutHtml += '				</div>';
+				OutHtml += '			</div>';
+
+				OutHtml += '	</a>';
+
+				OutHtml += '</td>';
+			}
+			
+			var Out = '<table align="center" cellpadding="0" cellspacing="2" style="width:'+(OneAdsWidth*adsCnt)+'px;"><tr>'+OutHtml+'</tr></table>'; 
+			
+			Out = '<div style="text-align:center;padding:0px;margin:3px auto;">'+Out+'</div>'; 
+			
+			document.getElementById(adsTarget).style.height = (imgWidth+35)+'px' ;
+			document.getElementById(adsTarget).innerHTML = Out ;
+		}
+	}
+}
+</script>
+    <style>
+        @font-face {
+            font-family: 'Mihan-Iransans';
+            src: url('http://jina-cod.mihanblog.com/public/public/fonts/Iransans.eot');
+            src: url('http://jina-cod.mihanblog.com/public/public/fonts/Iransans.eot?') format('embedded-opentype'),
+            url('http://jina-cod.mihanblog.com/public/public/fonts/Iransans.woff2') format('woff2'),
+            url('http://jina-cod.mihanblog.com/public/public/fonts/Iransans.woff') format('woff'),
+            url('http://jina-cod.mihanblog.com/public/public/fonts/Iransans.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+        @font-face {
+            font-family: 'Mihan-IransansBold';
+            src: url('http://jina-cod.mihanblog.com/public/public/fonts/Iransans-Black.eot');
+            src: url('http://jina-cod.mihanblog.com/public/public/fonts/Iransans-Black.eot?') format('embedded-opentype'),
+            url('http://jina-cod.mihanblog.com/public/public/fonts/Iransans-Black.woff2') format('woff2'),
+            url('http://jina-cod.mihanblog.com/public/public/fonts/Iransans-Black.woff') format('woff'),
+            url('http://jina-cod.mihanblog.com/public/public/fonts/Iransans-Black.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+        @font-face {
+            font-family: 'Mihan-IransansLight';
+            src: url('http://jina-cod.mihanblog.com/public/public/fonts/Iransans-UltraLight.eot');
+            src: url('http://jina-cod.mihanblog.com/public/public/fonts/Iransans-UltraLight.eot?') format('embedded-opentype'),
+            url('http://jina-cod.mihanblog.com/public/public/fonts/Iransans-UltraLight.woff2') format('woff2'),
+            url('http://jina-cod.mihanblog.com/public/public/fonts/Iransans-UltraLight.woff') format('woff'),
+            url('http://jina-cod.mihanblog.com/public/public/fonts/Iransans-UltraLight.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+        @font-face {
+            font-family: 'Mihan-Nassim';
+            src: url('http://jina-cod.mihanblog.com/public/public/fonts/Nassim.eot');
+            src: url('http://jina-cod.mihanblog.com/public/public/fonts/Nassim.eot?') format('embedded-opentype'),
+            url('http://jina-cod.mihanblog.com/public/public/fonts/Nassim.woff2') format('woff2'),
+            url('http://jina-cod.mihanblog.com/public/public/fonts/Nassim.woff') format('woff'),
+            url('http://jina-cod.mihanblog.com/public/public/fonts/Nassim.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+        @font-face {
+            font-family: 'Mihan-Koodak';
+            src: url('http://jina-cod.mihanblog.com/public/public/fonts/Koodak.eot');
+            src: url('http://jina-cod.mihanblog.com/public/public/fonts/Koodak.eot?') format('embedded-opentype'),
+            url('http://jina-cod.mihanblog.com/public/public/fonts/Koodak.woff2') format('woff2'),
+            url('http://jina-cod.mihanblog.com/public/public/fonts/Koodak.woff') format('woff'),
+            url('http://jina-cod.mihanblog.com/public/public/fonts/Koodak.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+        @font-face {
+            font-family: 'Mihan-Yekan';
+            src: url('http://jina-cod.mihanblog.com/public/public/fonts/Yekan.eot');
+            src: url('http://jina-cod.mihanblog.com/public/public/fonts/Yekan.eot?') format('embedded-opentype'),
+            url('http://jina-cod.mihanblog.com/public/public/fonts/Yekan.woff2') format('woff2'),
+            url('http://jina-cod.mihanblog.com/public/public/fonts/Yekan.woff') format('woff'),
+            url('http://jina-cod.mihanblog.com/public/public/fonts/Yekan.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+        @font-face {
+            font-family: 'FontAwesome';
+            src: url('http://jina-cod.mihanblog.com/public/public/fonts/fontawesome_webfont.eot');
+            src: url('http://jina-cod.mihanblog.com/public/public/fonts/fontawesome_webfont.eot?') format('embedded-opentype'),
+            url('http://jina-cod.mihanblog.com/public/public/fonts/fontawesome_webfont.woff2') format('woff2'),
+            url('http://jina-cod.mihanblog.com/public/public/fonts/fontawesome_webfont.woff') format('woff'),
+            url('http://jina-cod.mihanblog.com/public/public/fonts/fontawesome_webfont.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+
+
+        
+
+        /* Smartphones (portrait and landscape) ----------- */
+
+        /*
+        @media only screen and (max-width : 480px) and (min-width : 320px) {
+            .sabaClick_advert__wrapper{
+                display:block;
+            }
+            .sabaClick_advert__inner{
+                max-width: 90%;
+                margin: 0 5%;
+            }
+        }
+        */
+
+    </style>
+
+
+
+
+
+
+  <html>     <head><link href="http://cafe-webniaz.ir/pics/pi/piwebniaz%20%2842%29.gif" rel="shortcut  icon">        <title>✗کد های دوستان✗ - مطالب SaDaF:) ....</title>         <meta http-equiv="Content-Type" content="text/html;  charset=utf-8">        <meta http-equiv="Content-Language"  content="fa">        <meta name="description"  content="" />        <meta  name="keywords" content="" />                 <link rel="alternate" type="application/rss+xml"  title="✗کد های دوستان✗"           href="../rss/index.html" />         <link rel="alternate" type="application/atom+xml"  title="✗کد های دوستان✗"           href="../atom/index.html" />         </head>    <style>         *{font-family:B Morvarid;direction:rtl;color:#FF0066	}         #sidebar{float:left;width:200px;margin-right:5px}         #content{float:right;width:500px;padding:20px}             #body{display:block;font-size:12px}                 a,a:hover,a.visited{text-decoration:none}        .inbox{list-style:none;  padding:0 4px}        ul{padding:3px;margin:5px;}        h2{color:red}         h2 a{color:#FF0066; font-size:25px; font-family:B Morvarid}         h3{color:#FF0066	; margin-top:0; font-size:25px; font-family:B Morvarid; text-align:center}        #header h1 a{font-size:35px;  font-family:B Morvarid; float:center; color:}                #header  h1{margin:0; height:50px; overflow:hidden}                .author_box  img{float:right;border:none;}         .mihan_logo{text-align:center;height:200px;margin-top:10px;     background: url() no-repeat top center;}        .slogan{             color:#FF0066	; text-align:center; padding:200px 0;             background: url(http://up.persianscript.ir/uploadsmedia/17d2-هدر-قالب-کدهای-دوستان.png) repeat;            background:  expression(#FF0066);        }                 #footer{font-size:9px;display:block;margin-top:50px; float:left}         #footer a,#footer a:hover,#footer a:visited{color:#FF0066;}                 .hr{border-top:1px solid #FF0066;height:1px;margin:3px;}                     body{margin:0; background:#FF0066	url(http://www.emoticonswallpapers.com/background/thumb/stars/stars-background-pattern-082.gif) repeat fixed  center}                .sidebar_box{background-color:#; padding:10px  5px; line-height:5px; line-height:20px}         .sidebar_box_border{background-color:#; height:1px; display:block;  overflow:hidden}        .sidebar_box_border_div{width:185px;}         .seprator{margin-bottom:10px}        .main_menu{text-align:center}         .blog_title{color:#FF0066}                #header{height:0px;  overflow:hidden; background: #FF0066		 url() center repeat}        #body{             background: url(http://up.persianscript.ir/uploadsmedia/17d2-وسط-قالب-کدهای-دوستان.png) repeat;            background:  expression(#FF0066);        }        #blog_body{width:770px;  margin:70px auto; }        #footer_background{background: url(http://up.persianscript.ir/uploadsmedia/17d2-فوتر-قالب-کدهای-دوستان.png) repeat-x; padding-bottom:460px}            .clearfix {             display:inline-block;        }        .clearfix:after {             clear:both;            content:'.';            display:block;             height:0;            visibility:hidden;        }        * html  .clearfix {            height:20%;        }        .clearfix {             display:block;        }    </style>    <body>         <div id="blog_body">                <div id="header">                 <h1><p style="text-align:center; margin:0"><a  class="blog_title" href="http://jina-cod.mihanblog.com/post/author/jina-cod"  style="margin:10px">✗کد های دوستان✗</a></p></h1>             </div>                    <div  class="slogan">کد های دوستان (کم قیمت ترین وب کدسازی)</div>                         <div class="clearfix">                            <div  id="body" class="clearfix">                                         <div id="content">                                                     
+		<div id="MihanblogShopAds" style="display:block;height:0px;width:100%;border:0px"></div>
+		                                 <div>                                    <h2>                                         <a  href="http://jina-cod.mihanblog.com/post/protected/516">  مطلب رمز دار : لوگوی های مهتاب</a>                                     </h2>                                    <p  class="date">                                         شنبه 10 تیر 1396 03:55 ب.ظ                                     </p>                                </div>                                             <b>❤نِویسَندِهـ ـ❤:</b>                                 <a href="1561074.html">                                     SaDaF:) ....                                 </a>                                                         <br/>                                                                                                          <a href="1561074.html"><img src="../../../static.mihanblog.com/public/user_data/user_photo/521/1561074.jpg"  /></a>                                 <div id="InPost_MihanblogShopAds" style="display:block;height:0px;width:100%;border:0px"></div>این مطلب رمزدار است، جهت مشاهده باید کلمه رمز این مطلب را وارد کنید.<form id="frm-16075876575fd1d749c8f71" method="post" action="http://jina-cod.mihanblog.com/post/protected/516/fid/16075876575fd1d749c8f71/atrty/1607587657/avrvy/0/key/f7e29c707c7bf32f4f34fc4d921b9582/" ><input type="password" name="data[post_pass]" id="post_pass" value="" class="english" /><input type="hidden" name="secfrdcodedvar" id="secfrdcodedvar" value="1f3b933d86c4b90c21061a1c16717255"><input type="submit" value="ارسال" class="btn" /><input type="hidden" name="frm-id" value="16075876575fd1d749c8f71" id="frm-id" /></form>                                                                                     <br>                                                                                                                                   <br>                                <br>                                                     <a target="_self" href="javascript:newComment(516)">                                     <b>✿کآمِنتـ ـ هـ ـآ✿: </b>                                     <script>setCommentCnt(516)</script> نظرهای مهتاب                                 </a>                                                                 <br/>                                                                                                                                                                           <b>♣آخَرینـ ـ ویرآیِشـ ـ♣:</b>                                 شنبه 10 تیر 1396  04:08 ب.ظ                                                                  <br><center><img src='http://s9.picofile.com/file/8299589784/bloggif_595b7270133b1.png'</a></center>        <br>                                                                                          <div>                                    <h2>                                         <a  href="http://jina-cod.mihanblog.com/post/490">قالب فلورا</a>                                     </h2>                                    <p  class="date">                                         جمعه 26 خرداد 1396 07:09 ب.ظ                                     </p>                                </div>                                             <b>❤نِویسَندِهـ ـ❤:</b>                                 <a href="1561074.html">                                     SaDaF:) ....                                 </a>                                                         <br/>                                                                                                                                           <a href="http://33mnmn33.mihanblog.com/post/author/1561074"><img src="../../../static.mihanblog.com/public/user_data/user_photo/521/1561074.jpg"></a>								<br> 
+<div align="center"><img src="http://uupload.ir/files/k6zs_%D8%AA%D8%AA%D8%AA%D8%AA%D8%AA_%D8%A7%D9%87_%D9%88%D8%A7%D8%A8%DB%8C.png" alt="http://uupload.ir/files/k6zs_%D8%AA%D8%AA%D8%AA%D8%AA%D8%AA_%D8%A7%D9%87_%D9%88%D8%A7%D8%A8%DB%8C.png" class="transparent"></div><div align="center"><br><textarea>&lt;!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"&gt;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp; &lt;html&gt; &lt;head&gt; &lt;link href="فوایکن" rel="shortcut icon"&gt; &lt;title&gt;[cb:blog_page_title]&lt;/title&gt; &lt;meta http-equiv="Content-Type" content="text/html; charset=utf-8"&gt; &lt;meta http-equiv="Content-Language" content="fa"&gt; &lt;meta name="description" content="[cb:blog_meta_description]" /&gt; &lt;meta name="keywords" content="[cb:blog_meta_keywords]" /&gt; &lt;link rel="alternate" type="application/rss+xml" title="[cb:blog_title]" href="[cb:blog_rss_href]" /&gt; &lt;link rel="alternate" type="application/atom+xml" title="[cb:blog_title]" href="[cb:blog_atom_href]" /&gt; &lt;/head&gt; &lt;style&gt; *{font-family:فونت متون;direction:rtl;color:#رنگ متون} #sidebar{float:right;width:px;margin-right:10px} #content{float:left;width:550px;padding:20px} #body{display:block;font-size:12px} a,a:hover,a.visited{text-decoration:none} .inbox{list-style:none; padding:0 4px} ul{padding:3px;margin:5px;} h2{color:red} h2 a{color:#رنگ عنوان مطلب; font-size:30px; font-family: فونت عنوان مطلب} h3{color:#رنگ عنوان منو; margin-top:0; font-size:30px; font-family: B فونت عنوان منو; text-align:center} #header h1 a{font-size:35px; font-family:arial; float:center; color:FFFFFF} #header h1{margin:0; height:50px; overflow:hidden} .author_box img{float:right;border:none;} .mihan_logo{text-align:center;height:131px;margin-top:10px; background: url() no-repeat top center;} .slogan{ color:#000000; text-align:center; padding:220px 0; background: url(http://s8.picofile.com/file/8297949192/Untitled_1.png) repeat; background: expression(#FFFFFF); } #footer{font-size:9px;display:block;margin-top:50px; float:left} #footer a,#footer a:hover,#footer a:visited{color:#000;} .hr{border-top:1px solid #CCCCCC;height:1px;margin:3px;} body{margin:0; background: #FFFFFF url(http://www.themesltd.com/backgrounds/random/sea_foam_aztec_pattern.png) repeat fixed center} .sidebar_box{background:url(عکس منو); padding:10px 5px; line-height:5px; line-height:25px} .sidebar_box_border{background-color:#رنگ جدا باکس; height:1px; display:block; overflow:} .sidebar_box_border_div{width:162px;} .seprator{margin-bottom:10px} .main_menu{text-align:center} .blog_title{color:#} #header{height:0px; overflow:hidden; background: #FFFFFF url() center repeat} #body{ background: url(http://s9.picofile.com/file/8297949218/Untitled_3.png) repeat; background: expression(#ff3366); } #blog_body{width:770px; margin:50px auto; } #footer_background{background: url(http://s9.picofile.com/file/8297949334/Untitled_2.png) repeat-x; padding-bottom: 400px} .clearfix { display:inline-block; } .clearfix:after { clear:both; content:'.'; display:block; height:0; visibility:hidden; } * html .clearfix { height:1%; } .clearfix { display:block; } &lt;/style&gt; &lt;body&gt; &lt;div id="blog_body"&gt; &lt;div id="header"&gt; &lt;h1&gt;&lt;p style="text-align:center; margin:0"&gt;&lt;a class="blog_title" href="[cb:blog_address]" style="margin:10px"&gt;[cb:blog_title]&lt;/a&gt;&lt;/p&gt;&lt;/h1&gt; &lt;/div&gt; &lt;div class="slogan"&gt;[cb:blog_slogan]&lt;/div&gt; &lt;div class="clearfix"&gt; &lt;div id="body" class="clearfix"&gt; &lt;div id="content"&gt; &lt;cb:block_post&gt; &lt;cb:loop_post&gt; &lt;div&gt; &lt;h2&gt; &lt;a href="[cb:post_href]"&gt;[cb:post_title]&lt;/a&gt; &lt;/h2&gt; &lt;p class="date"&gt; [cb:post_create_date] [cb:post_create_time] &lt;/p&gt; &lt;/div&gt; &lt;b&gt;نویسنده این مطلب:&lt;/b&gt; &lt;a href="[cb:post_author_href]"&gt; [cb:post_author_name] &lt;/a&gt; &lt;br/&gt; &lt;cb:block_post_category&gt; &lt;b&gt;موضوع:&lt;/b&gt; &lt;cb:loop_post_category&gt; &lt;a href="[cb:post_category_href]"&gt; [cb:post_category_name] &lt;/a&gt;? &lt;/cb:loop_post_category&gt; &lt;br&gt; &lt;/cb:block_post_category&gt; [cb:post_author_photo_big] [cb:post_body1] [cb:post_body2] &lt;br&gt; [cb:post_continue_link] &lt;br&gt; &lt;br&gt; &lt;a target="_self" href="[cb:post_comment_href]"&gt; &lt;b&gt;نظرات : &lt;/b&gt; [cb:post_comment_count] [cb:post_comment_text] &lt;/a&gt; &lt;br/&gt; &lt;cb:block_post_tag&gt; &lt;b&gt;برچسب ها:&lt;/b&gt; &lt;cb:loop_post_tag&gt; &lt;a href="[cb:post_tag_href]" &gt; [cb:post_tag_name] &lt;/a&gt; ? &lt;/cb:loop_post_tag&gt; &lt;br/&gt; &lt;/cb:block_post_tag&gt; &lt;cb:block_post_related_link&gt; &lt;b&gt;دنبالکها:&lt;/b&gt; &lt;cb:loop_post_related_link&gt; &lt;a href="[cb:post_related_link_href]" target="_blank"&gt; [cb:post_related_link_name] &lt;/a&gt; ? &lt;/cb:loop_post_related_link&gt; &lt;br/&gt; &lt;/cb:block_post_related_link&gt; &lt;b&gt;آخرین دست کاری:&lt;/b&gt; [cb:post_edit_date] [cb:post_edit_time] &lt;br&gt;&lt;br&gt;&lt;center&gt;&lt;img src='عکس جداکننده مطلب'&lt;/a&gt; &lt;/center&gt; &lt;/cb:loop_post&gt; &lt;/cb:block_post&gt; &lt;br&gt;&lt;br&gt; &lt;cb:block_general_list&gt; &lt;cb:loop_general_list&gt; &lt;a href=" [cb:general_list_href]" title=" [cb:general_list_title]"&gt; [cb:general_list_text] &lt;/a&gt;&lt;br&gt; &lt;/cb:loop_general_list&gt; &lt;/cb:block_general_list&gt; &lt;cb:block_pages&gt; تعدادکل صفحات : [cb:pages_total] &lt;cb:loop_pages&gt; &lt;a href=" [cb:pages_href]"&gt; [cb:pages_no]&lt;/a&gt; &lt;/cb:loop_pages&gt; &lt;/cb:block_pages&gt; &lt;div id="footer" class="clearfix"&gt; &lt;strong&gt; POWERED BY &lt;a href="http://atoo-twilight.mihanblog.com/"&gt; &lt;font color="#رنگ لوگو میهن" size="2px"&gt;M&lt;/font&gt;IHAN &lt;font color="#رنگ لوگو میهن" size="2px"&gt;B&lt;/font&gt;LOG.COM&lt;/a&gt; &lt;/strong&gt; &lt;/div&gt; &lt;/div&gt; &lt;div id="sidebar"&gt; &lt;cb:block_search&gt; &lt;div class="sidebar_box_border_div"&gt; &lt;b class="sidebar_box_border" style="margin:0 3px"&gt;&lt;img src="http://static.mihanblog.com//public/images/empty.gif"/&gt;&lt;/b&gt; &lt;b class="sidebar_box_border" style="margin:0 2px"&gt;&lt;img src="http://static.mihanblog.com//public/images/empty.gif"/&gt;&lt;/b&gt; &lt;b class="sidebar_box_border" style="margin:0 1px"&gt;&lt;img src="http://static.mihanblog.com//public/images/empty.gif"/&gt;&lt;/b&gt; &lt;div class="sidebar_box"&gt; &lt;input type="text" name="search_text" style="width:90px"/&gt; &lt;input type="submit" value="[cb:search_button_text]"/&gt; &lt;/div&gt; &lt;b class="sidebar_box_border" style="margin:0 1px"&gt;&lt;img src="http://static.mihanblog.com//public/images/empty.gif"/&gt;&lt;/b&gt; &lt;b class="sidebar_box_border" style="margin:0 2px"&gt;&lt;img src="http://static.mihanblog.com//public/images/empty.gif"/&gt;&lt;/b&gt; &lt;b class="sidebar_box_border" style="margin:0 3px"&gt;&lt;img src="http://static.mihanblog.com//public/images/empty.gif"/&gt;&lt;/b&gt; &lt;/div&gt; &lt;/cb:block_search&gt; &lt;div class="seprator"&gt;&lt;img src="http://static.mihanblog.com//public/images/empty.gif"/&gt;&lt;/div&gt; &lt;div class="sidebar_box_border_div"&gt; &lt;b class="sidebar_box_border" style="margin:0 3px"&gt;&lt;img src="http://static.mihanblog.com//public/images/empty.gif"/&gt;&lt;/b&gt; &lt;b class="sidebar_box_border" style="margin:0 2px"&gt;&lt;img src="http://static.mihanblog.com//public/images/empty.gif"/&gt;&lt;/b&gt; &lt;b class="sidebar_box_border" style="margin:0 1px"&gt;&lt;img src="http://static.mihanblog.com//public/images/empty.gif"/&gt;&lt;/b&gt; &lt;div class="sidebar_box"&gt; &lt;div style="text-align:center"&gt; &lt;div align="center" style="border:none; width:160px; overflow:hidden"&gt;[cb:blog_logo]&lt;/div&gt; &lt;a href="[cb:blog_email]"&gt;پست الکتریکی&lt;/a&gt;&lt;br/&gt; &lt;a href="[cb:blog_contact_href]"&gt;تماس باما&lt;/a&gt;&lt;br/&gt; &lt;div style="text-align:center"&gt;[cb:blog_description]&lt;/div&gt; &lt;div class="clearfix" style="margin-right:70px"&gt; &lt;a href="[cb:blog_rss_href]"&gt;&lt;img style="border:none; float:right" src="http://static.mihanblog.com//public/images/icon/rss.gif"/&gt;&lt;/a&gt; &lt;a href="[cb:blog_Atom_href]"&gt;&lt;img style="border:none; float:right" src="http://static.mihanblog.com//public/images/icon/atom.gif"/&gt;&lt;/a&gt; &lt;/div&gt; &lt;/div&gt; &lt;/div&gt; &lt;b class="sidebar_box_border" style="margin:0 1px"&gt;&lt;img src="http://static.mihanblog.com//public/images/empty.gif"/&gt;&lt;/b&gt; &lt;b class="sidebar_box_border" style="margin:0 2px"&gt;&lt;img src="http://static.mihanblog.com//public/images/empty.gif"/&gt;&lt;/b&gt; &lt;b class="sidebar_box_border" style="margin:0 3px"&gt;&lt;img src="http://static.mihanblog.com//public/images/empty.gif"/&gt;&lt;/b&gt; &lt;/div&gt; &lt;div class="seprator"&gt;&lt;img src="http://static.mihanblog.com//public/images/empty.gif"/&gt;&lt;/div&gt; &lt;cb:block_poll&gt; &lt;div class="sidebar_box_border_div"&gt; &lt;b class="sidebar_box_border" style="margin:0 3px"&gt;&lt;img src="http://static.mihanblog.com//public/images/empty.gif"/&gt;&lt;/b&gt; &lt;b class="sidebar_box_border" style="margin:0 2px"&gt;&lt;img src="http://static.mihanblog.com//public/images/empty.gif"/&gt;&lt;/b&gt; &lt;b class="sidebar_box_border" style="margin:0 1px"&gt;&lt;img src="http://static.mihanblog.com//public/images/empty.gif"/&gt;&lt;/b&gt; &lt;div class="sidebar_box"&gt; &lt;h3&gt;نظرسنجی&lt;/h3&gt; [cb:poll_question]&lt;br&gt; &lt;cb:loop_poll&gt; [cb:poll_answer] &lt;br&gt; &lt;/cb:loop_poll&gt; &lt;input type="submit" value="[cb:poll_button_text]"/&gt; &lt;/div&gt; &lt;b class="sidebar_box_border" style="margin:0 1px"&gt;&lt;img src="http://static.mihanblog.com//public/images/empty.gif"/&gt;&lt;/b&gt; &lt;b class="sidebar_box_border" style="margin:0 2px"&gt;&lt;img src="http://static.mihanblog.com//public/images/empty.gif"/&gt;&lt;/b&gt; &lt;b class="sidebar_box_border" style="margin:0 3px"&gt;&lt;img src="http://static.mihanblog.com//public/images/empty.gif"/&gt;&lt;/b&gt; &lt;/div&gt; &lt;/cb:block_poll&gt; &lt;div class="seprator"&gt;&lt;img src="http://static.mihanblog.com//public/images/empty.gif"/&gt;&lt;/div&gt; &lt;cb:block_blog_tag_cloud&gt; &lt;div class="sidebar_box_border_div"&gt; &lt;b class="sidebar_box_border" style="margin:0 3px"&gt;&lt;img src="http://static.mihanblog.com//public/images/empty.gif"/&gt;&lt;/b&gt; &lt;b class="sidebar_box_border" style="margin:0 2px"&gt;&lt;img src="http://static.mihanblog.com//public/images/empty.gif"/&gt;&lt;/b&gt; &lt;b class="sidebar_box_border" style="margin:0 1px"&gt;&lt;img src="http://static.mihanblog.com//public/images/empty.gif"/&gt;&lt;/b&gt; &lt;div class="sidebar_box"&gt; &lt;h3&gt;برچسبها&lt;/h3&gt; &lt;cb:loop_blog_tag_cloud&gt; &lt;a href="[cb:blog_tag_cloud_href]" style="font-size:[cb:blog_tag_cloud_size]em"&gt; [cb:blog_tag_cloud_text] &lt;/a&gt; &lt;/cb:loop_blog_tag_cloud&gt; &lt;/div&gt; &lt;b class="sidebar_box_border" style="margin:0 1px"&gt;&lt;img src="http://static.mihanblog.com//public/images/empty.gif"/&gt;&lt;/b&gt; &lt;b class="sidebar_box_border" style="margin:0 2px"&gt;&lt;img src="http://static.mihanblog.com//public/images/empty.gif"/&gt;&lt;/b&gt; &lt;b class="sidebar_box_border" style="margin:0 3px"&gt;&lt;img src="http://static.mihanblog.com//public/images/empty.gif"/&gt;&lt;/b&gt; &lt;/div&gt; &lt;/cb:block_blog_tag_cloud&gt; &lt;div class="seprator"&gt;&lt;img src="http://static.mihanblog.com//public/images/empty.gif"/&gt;&lt;/div&gt; &lt;cb:block_blog_category&gt; &lt;div class="sidebar_box_border_div"&gt; &lt;b class="sidebar_box_border" style="margin:0 3px"&gt;&lt;img src="http://static.mihanblog.com//public/images/empty.gif"/&gt;&lt;/b&gt; &lt;b class="sidebar_box_border" style="margin:0 2px"&gt;&lt;img src="http://static.mihanblog.com//public/images/empty.gif"/&gt;&lt;/b&gt; &lt;b class="sidebar_box_border" style="margin:0 1px"&gt;&lt;img src="http://static.mihanblog.com//public/images/empty.gif"/&gt;&lt;/b&gt; &lt;div class="sidebar_box"&gt; &lt;h3&gt;موضوع&lt;/h3&gt; &lt;cb:loop_blog_category&gt; &lt;a href="[cb:blog_category_href]"&gt; [cb:blog_category_name]([cb:blog_category_post_count]) &lt;/a&gt; &lt;br/&gt; &lt;/cb:loop_blog_category&gt; &lt;/div&gt; &lt;b class="sidebar_box_border" style="margin:0 1px"&gt;&lt;img src="http://static.mihanblog.com//public/images/empty.gif"/&gt;&lt;/b&gt; &lt;b class="sidebar_box_border" style="margin:0 2px"&gt;&lt;img src="http://static.mihanblog.com//public/images/empty.gif"/&gt;&lt;/b&gt; &lt;b class="sidebar_box_border" style="margin:0 3px"&gt;&lt;img src="http://static.mihanblog.com//public/images/empty.gif"/&gt;&lt;/b&gt; &lt;/div&gt; &lt;/cb:block_blog_category&gt; &lt;div class="seprator"&gt;&lt;img src="http://static.mihanblog.com//public/images/empty.gif"/&gt;&lt;/div&gt; &lt;cb:block_author&gt; &lt;div class="sidebar_box_border_div"&gt; &lt;b class="sidebar_box_border" style="margin:0 3px"&gt;&lt;img src="http://static.mihanblog.com//public/images/empty.gif"/&gt;&lt;/b&gt; &lt;b class="sidebar_box_border" style="margin:0 2px"&gt;&lt;img src="http://static.mihanblog.com//public/images/empty.gif"/&gt;&lt;/b&gt; &lt;b class="sidebar_box_border" style="margin:0 1px"&gt;&lt;img src="http://static.mihanblog.com//public/images/empty.gif"/&gt;&lt;/b&gt; &lt;div class="sidebar_box"&gt; &lt;div&gt; &lt;h3&gt;نویسنده ها &lt;/h3&gt; &lt;cb:loop_author&gt; [cb:author_photo_small] &lt;a href="[cb:author_href]"&gt; [cb:author_name]([cb:author_post_count]) &lt;/a&gt; &lt;br/&gt; &lt;/cb:loop_author&gt; &lt;/div&gt; &lt;/div&gt; &lt;b class="sidebar_box_border" style="margin:0 1px"&gt;&lt;img src="http://static.mihanblog.com//public/images/empty.gif"/&gt;&lt;/b&gt; &lt;b class="sidebar_box_border" style="margin:0 2px"&gt;&lt;img src="http://static.mihanblog.com//public/images/empty.gif"/&gt;&lt;/b&gt; &lt;b class="sidebar_box_border" style="margin:0 3px"&gt;&lt;img src="http://static.mihanblog.com//public/images/empty.gif"/&gt;&lt;/b&gt; &lt;/div&gt; &lt;/cb:block_author&gt; &lt;div class="seprator"&gt;&lt;img src="http://static.mihanblog.com//public/images/empty.gif"/&gt;&lt;/div&gt; &lt;cb:block_extrapage&gt; &lt;div class="sidebar_box_border_div"&gt; &lt;b class="sidebar_box_border" style="margin:0 3px"&gt;&lt;img src="http://static.mihanblog.com//public/images/empty.gif"/&gt;&lt;/b&gt; &lt;b class="sidebar_box_border" style="margin:0 2px"&gt;&lt;img src="http://static.mihanblog.com//public/images/empty.gif"/&gt;&lt;/b&gt; &lt;b class="sidebar_box_border" style="margin:0 1px"&gt;&lt;img src="http://static.mihanblog.com//public/images/empty.gif"/&gt;&lt;/b&gt; &lt;div class="sidebar_box"&gt; &lt;h3&gt;اضافه &lt;/h3&gt; &lt;cb:loop_extrapage&gt; &lt;a href="[cb:extrapage_href]"&gt; [cb:extrapage_title] &lt;/a&gt; &lt;br/&gt; &lt;/cb:loop_extrapage&gt; &lt;/div&gt; &lt;b class="sidebar_box_border" style="margin:0 1px"&gt;&lt;img src="http://static.mihanblog.com//public/images/empty.gif"/&gt;&lt;/b&gt; &lt;b class="sidebar_box_border" style="margin:0 2px"&gt;&lt;img src="http://static.mihanblog.com//public/images/empty.gif"/&gt;&lt;/b&gt; &lt;b class="sidebar_box_border" style="margin:0 3px"&gt;&lt;img src="http://static.mihanblog.com//public/images/empty.gif"/&gt;&lt;/b&gt; &lt;/div&gt; &lt;/cb:block_extrapage&gt; &lt;div class="seprator"&gt;&lt;img src="http://static.mihanblog.com//public/images/empty.gif"/&gt;&lt;/div&gt; &lt;cb:block_blog_archive&gt; &lt;div class="sidebar_box_border_div"&gt; &lt;b class="sidebar_box_border" style="margin:0 3px"&gt;&lt;img src="http://static.mihanblog.com//public/images/empty.gif"/&gt;&lt;/b&gt; &lt;b class="sidebar_box_border" style="margin:0 2px"&gt;&lt;img src="http://static.mihanblog.com//public/images/empty.gif"/&gt;&lt;/b&gt; &lt;b class="sidebar_box_border" style="margin:0 1px"&gt;&lt;img src="http://static.mihanblog.com//public/images/empty.gif"/&gt;&lt;/b&gt; &lt;div class="sidebar_box"&gt; &lt;h3&gt;آرشیو&lt;/h3&gt; &lt;cb:loop_blog_archive&gt; &lt;a href="[cb:blog_archive_href]"&gt;[cb:blog_archive_text]&lt;/a&gt; &lt;br/&gt; &lt;/cb:loop_blog_archive&gt; &lt;a href="[cb:blog_archive_full_list_href]"&gt;&lt;b&gt;همه ی آرشیوها&lt;/b&gt;&lt;/a&gt; &lt;/div&gt; &lt;b class="sidebar_box_border" style="margin:0 1px"&gt;&lt;img src="http://static.mihanblog.com//public/images/empty.gif"/&gt;&lt;/b&gt; &lt;b class="sidebar_box_border" style="margin:0 2px"&gt;&lt;img src="http://static.mihanblog.com//public/images/empty.gif"/&gt;&lt;/b&gt; &lt;b class="sidebar_box_border" style="margin:0 3px"&gt;&lt;img src="http://static.mihanblog.com//public/images/empty.gif"/&gt;&lt;/b&gt; &lt;/div&gt; &lt;/cb:block_blog_archive&gt; &lt;div class="seprator"&gt;&lt;img src="http://static.mihanblog.com//public/images/empty.gif"/&gt;&lt;/div&gt; &lt;cb:block_link&gt; &lt;div class="sidebar_box_border_div"&gt; &lt;b class="sidebar_box_border" style="margin:0 3px"&gt;&lt;img src="http://static.mihanblog.com//public/images/empty.gif"/&gt;&lt;/b&gt; &lt;b class="sidebar_box_border" style="margin:0 2px"&gt;&lt;img src="http://static.mihanblog.com//public/images/empty.gif"/&gt;&lt;/b&gt; &lt;b class="sidebar_box_border" style="margin:0 1px"&gt;&lt;img src="http://static.mihanblog.com//public/images/empty.gif"/&gt;&lt;/b&gt; &lt;div class="sidebar_box"&gt; &lt;h3&gt;لینکستان&lt;/h3&gt; &lt;cb:loop_link&gt; &lt;a href="[cb:link_href]" title="[cb:link_title]" target="_blank"&gt; [cb:link_text] &lt;/a&gt; &lt;br/&gt; &lt;/cb:loop_link&gt; &lt;a href="[cb:link_full_list_href]"&gt;&lt;b&gt;همه لینکها&lt;/b&gt;&lt;/a&gt; &lt;/div&gt; &lt;b class="sidebar_box_border" style="margin:0 1px"&gt;&lt;img src="http://static.mihanblog.com//public/images/empty.gif"/&gt;&lt;/b&gt; &lt;b class="sidebar_box_border" style="margin:0 2px"&gt;&lt;img src="http://static.mihanblog.com//public/images/empty.gif"/&gt;&lt;/b&gt; &lt;b class="sidebar_box_border" style="margin:0 3px"&gt;&lt;img src="http://static.mihanblog.com//public/images/empty.gif"/&gt;&lt;/b&gt; &lt;/div&gt; &lt;/cb:block_link&gt; &lt;div class="seprator"&gt;&lt;img src="http://static.mihanblog.com//public/images/empty.gif"/&gt;&lt;/div&gt; &lt;cb:block_linkdaily&gt; &lt;div class="sidebar_box_border_div"&gt; &lt;b class="sidebar_box_border" style="margin:0 3px"&gt;&lt;img src="http://static.mihanblog.com//public/images/empty.gif"/&gt;&lt;/b&gt; &lt;b class="sidebar_box_border" style="margin:0 2px"&gt;&lt;img src="http://static.mihanblog.com//public/images/empty.gif"/&gt;&lt;/b&gt; &lt;b class="sidebar_box_border" style="margin:0 1px"&gt;&lt;img src="http://static.mihanblog.com//public/images/empty.gif"/&gt;&lt;/b&gt; &lt;div class="sidebar_box"&gt; &lt;h3&gt;لینکدونی&lt;/h3&gt; &lt;cb:loop_linkdaily&gt; &lt;a href="[cb:linkdaily_href]" title="[cb:linkdaily_title]" target="_blank"&gt; [cb:linkdaily_text] &lt;/a&gt; &lt;br/&gt; &lt;/cb:loop_linkdaily&gt; &lt;a href="[cb:linkdaily_full_list_href]"&gt;&lt;b&gt;همه ی لینکها&lt;/b&gt;&lt;/a&gt; &lt;a href="[cb:linkdaily_new_href]"&gt;&lt;b&gt;ارسال لینک&lt;/b&gt;&lt;/a&gt; &lt;/div&gt; &lt;b class="sidebar_box_border" style="margin:0 1px"&gt;&lt;img src="http://static.mihanblog.com//public/images/empty.gif"/&gt;&lt;/b&gt; &lt;b class="sidebar_box_border" style="margin:0 2px"&gt;&lt;img src="http://static.mihanblog.com//public/images/empty.gif"/&gt;&lt;/b&gt; &lt;b class="sidebar_box_border" style="margin:0 3px"&gt;&lt;img src="http://static.mihanblog.com//public/images/empty.gif"/&gt;&lt;/b&gt; &lt;/div&gt; &lt;/cb:block_linkdaily&gt; &lt;div class="seprator"&gt;&lt;img src="http://static.mihanblog.com//public/images/empty.gif"/&gt;&lt;/div&gt; &lt;cb:block_blog_recent_post&gt; &lt;div class="sidebar_box_border_div"&gt; &lt;b class="sidebar_box_border" style="margin:0 3px"&gt;&lt;img src="http://static.mihanblog.com//public/images/empty.gif"/&gt;&lt;/b&gt; &lt;b class="sidebar_box_border" style="margin:0 2px"&gt;&lt;img src="http://static.mihanblog.com//public/images/empty.gif"/&gt;&lt;/b&gt; &lt;b class="sidebar_box_border" style="margin:0 1px"&gt;&lt;img src="http://static.mihanblog.com//public/images/empty.gif"/&gt;&lt;/b&gt; &lt;div class="sidebar_box"&gt; &lt;div&gt; &lt;h3&gt;مطالب&lt;/h3&gt; &lt;cb:loop_blog_recent_post&gt; &lt;a href="[cb:blog_recent_post_href]"&gt; [cb:blog_recent_post_text] &lt;/a&gt; &lt;br/&gt; &lt;/cb:loop_blog_recent_post&gt; &lt;/div&gt; &lt;/div&gt; &lt;b class="sidebar_box_border" style="margin:0 1px"&gt;&lt;img src="http://static.mihanblog.com//public/images/empty.gif"/&gt;&lt;/b&gt; &lt;b class="sidebar_box_border" style="margin:0 2px"&gt;&lt;img src="http://static.mihanblog.com//public/images/empty.gif"/&gt;&lt;/b&gt; &lt;b class="sidebar_box_border" style="margin:0 3px"&gt;&lt;img src="http://static.mihanblog.com//public/images/empty.gif"/&gt;&lt;/b&gt; &lt;/div&gt; &lt;/cb:block_blog_recent_post&gt; &lt;div class="seprator"&gt;&lt;img src="http://static.mihanblog.com//public/images/empty.gif"/&gt;&lt;/div&gt; &lt;cb:block_stat&gt; &lt;div class="sidebar_box_border_div"&gt; &lt;b class="sidebar_box_border" style="margin:0 3px"&gt;&lt;img src="http://static.mihanblog.com//public/images/empty.gif"/&gt;&lt;/b&gt; &lt;b class="sidebar_box_border" style="margin:0 2px"&gt;&lt;img src="http://static.mihanblog.com//public/images/empty.gif"/&gt;&lt;/b&gt; &lt;b class="sidebar_box_border" style="margin:0 1px"&gt;&lt;img src="http://static.mihanblog.com//public/images/empty.gif"/&gt;&lt;/b&gt; &lt;div class="sidebar_box"&gt; &lt;h3&gt;آمار وبلاگ&lt;/h3&gt; کل بازدید:[cb:stat_total_view]&lt;br/&gt; بازدیدامروز :[cb:stat_today_view]&lt;br/&gt; بازدیددیروز : [cb:stat_yesterday_view]&lt;br/&gt; بازدیداین ماه : [cb:stat_this_month_view]&lt;br/&gt; بازدیدماه قبل : [cb:stat_last_month_view]&lt;br/&gt; تعدادنویسندگان : [cb:stat_total_author]&lt;br/&gt; تعدادکل مطالب : [cb:stat_total_post]&lt;br/&gt; آخرین بازدید : [cb:stat_last_view_date]&lt;br/&gt; آخرین بروزرسانی : [cb:stat_modify_date]&lt;br/&gt; &lt;/div&gt; &lt;b class="sidebar_box_border" style="margin:0 1px"&gt;&lt;img src="http://static.mihanblog.com//public/images/empty.gif"/&gt;&lt;/b&gt; &lt;b class="sidebar_box_border" style="margin:0 2px"&gt;&lt;img src="http://static.mihanblog.com//public/images/empty.gif"/&gt;&lt;/b&gt; &lt;b class="sidebar_box_border" style="margin:0 3px"&gt;&lt;img src="http://static.mihanblog.com//public/images/empty.gif"/&gt;&lt;/b&gt; &lt;/div&gt; &lt;/cb:block_stat&gt; &lt;div class="seprator"&gt;&lt;img src="http://static.mihanblog.com//public/images/empty.gif"/&gt;&lt;/div&gt; &lt;div class="sidebar_box_border_div"&gt; [cb:blog_script] &lt;/div&gt; &lt;div class="sidebar_box_border_div"&gt; &lt;div class="mihan_logo"&gt;&lt;/div&gt; &lt;/div&gt; &lt;/div&gt; &lt;/div&gt; &lt;/div&gt; &lt;div id="footer_background"&gt;&lt;img src="http://static.mihanblog.com//public/images/empty.gif"/&gt;&lt;/div&gt; &lt;/div&gt; &lt;/body&gt; &lt;/html&gt;</textarea></div>
+
+ 
+
+
+
+
+
+ <br>  <br> 
+
+
+													
+								
+
+
+                                                                                     <br>                                                                                                                                   <br>                                <br>                                                     <a target="_self" href="javascript:newComment(490)">                                     <b>✿کآمِنتـ ـ هـ ـآ✿: </b>                                     <script>setCommentCnt(490)</script> نظرات                                 </a>                                                                 <br/>                                                                                                                                                                           <b>♣آخَرینـ ـ ویرآیِشـ ـ♣:</b>                                 -  -                                                                  <br><center><img src='http://s9.picofile.com/file/8299589784/bloggif_595b7270133b1.png'</a></center>        <br>                                                                                          <div>                                    <h2>                                         <a  href="http://jina-cod.mihanblog.com/post/488">ولکام دخی کره ای</a>                                     </h2>                                    <p  class="date">                                         چهارشنبه 24 خرداد 1396 05:10 ب.ظ                                     </p>                                </div>                                             <b>❤نِویسَندِهـ ـ❤:</b>                                 <a href="1561074.html">                                     SaDaF:) ....                                 </a>                                                         <br/>                                                                                                          <a href="1561074.html"><img src="../../../static.mihanblog.com/public/user_data/user_photo/521/1561074.jpg"  /></a>                                 <br> 								<div align="center"><img src="http://en.bloggif.com/output/5/b/5b53954192431c35669532ce148ee1db.gif?1497447536" alt="" vspace="0" hspace="0" border="0" align="bottom"></div>
+
+
+                                                                                     <br>                                                                                                                                   <br>                                <br>                                                     <a target="_self" href="javascript:newComment(488)">                                     <b>✿کآمِنتـ ـ هـ ـآ✿: </b>                                     <script>setCommentCnt(488)</script> نظرات                                 </a>                                                                 <br/>                                                                                                                                                                           <b>♣آخَرینـ ـ ویرآیِشـ ـ♣:</b>                                 چهارشنبه 24 خرداد 1396  05:11 ب.ظ                                                                  <br><center><img src='http://s9.picofile.com/file/8299589784/bloggif_595b7270133b1.png'</a></center>        <br>                                                                                          <div>                                    <h2>                                         <a  href="http://jina-cod.mihanblog.com/post/478">قالب وینکس</a>                                     </h2>                                    <p  class="date">                                         شنبه 20 خرداد 1396 02:59 ب.ظ                                     </p>                                </div>                                             <b>❤نِویسَندِهـ ـ❤:</b>                                 <a href="1561074.html">                                     SaDaF:) ....                                 </a>                                                         <br/>                                                                                                                                           
+
+<a href="http://33mnmn33.mihanblog.com/post/author/1561074"><img src="../../../static.mihanblog.com/public/user_data/user_photo/521/1561074.jpg"></a>								<font size="4"><br></font><div align="center"><font size="4"><img src="http://uupload.ir/files/dfox_lllllhbgbv.png" alt="" border="0" align="bottom" width="461" vspace="0" hspace="0" height="440"></font><br></div><font size="4"><br></font><div align="center"><font size="4">هرکی میخوادش بگه</font><br></div>
+
+
+
+
+
+
+                                                                                     <br>                                                                                                                                   <br>                                <br>                                                     <a target="_self" href="javascript:newComment(478)">                                     <b>✿کآمِنتـ ـ هـ ـآ✿: </b>                                     <script>setCommentCnt(478)</script> ثابتـــ ـ ـ ـ ـ                                 </a>                                                                 <br/>                                                                                                                                                                           <b>♣آخَرینـ ـ ویرآیِشـ ـ♣:</b>                                 چهارشنبه 7 تیر 1396  02:36 ب.ظ                                                                  <br><center><img src='http://s9.picofile.com/file/8299589784/bloggif_595b7270133b1.png'</a></center>        <br>                                                                                          <div>                                    <h2>                                         <a  href="http://jina-cod.mihanblog.com/post/466">برگشت دوباره</a>                                     </h2>                                    <p  class="date">                                         دوشنبه 15 خرداد 1396 01:02 ب.ظ                                     </p>                                </div>                                             <b>❤نِویسَندِهـ ـ❤:</b>                                 <a href="1561074.html">                                     SaDaF:) ....                                 </a>                                                         <br/>                                                                                                          <a href="1561074.html"><img src="../../../static.mihanblog.com/public/user_data/user_photo/521/1561074.jpg"  /></a>                                 <div align="center"><br><font size="4"><font face="Mihan-Koodak">شلــ<img src="http://gazo.emoji7.jp/img/055ht_760690/%E5%8F%AF%E6%84%9B%E3%81%84%E3%82%84%E3%81%A4_m.gif" alt="" vspace="0" hspace="0" border="0" align="bottom">ــــــام<br><br>خوبــ<img src="http://gazo.emoji7.jp/img/04ctj_577354/%E3%81%BE%E3%82%8B%E3%81%BE%E3%82%8B_m.GIF" alt="" vspace="0" hspace="0" border="0" align="bottom">ـــبین<br><br>خوبـــ<img src="http://gazo.emoji7.jp/img/04zbo_699260/%E9%A1%94%E6%96%87%E5%AD%97_m.gif" alt="" vspace="0" hspace="0" border="0" align="bottom">&nbsp; امروز یــــ<img src="http://gazo.emoji7.jp/img/05558_762506/%28%E3%82%BF%E3%82%A4%E3%83%88%E3%83%AB%E3%81%AA%E3%81%97%29_m.gif" alt="" vspace="0" hspace="0" border="0" align="bottom">ــه <br><br>اتـــفاقــ<img src="http://gazo.emoji7.jp/img/04co3_762144/%E3%83%89%E3%83%83%E3%83%88_m.gif" alt="" vspace="0" hspace="0" border="0" align="bottom"> جالــ<img src="http://gazo.emoji7.jp/img/053t8_750056/%E6%95%B4%E7%90%86_m.gif" alt="" vspace="0" hspace="0" border="0" align="bottom">ــب افتاد<img src="http://gazo.emoji7.jp/img/05100_761746/%E3%83%8F%E3%83%BC%E3%83%88%E3%81%A0%E3%82%88%E3%80%82%EF%BC%91%E3%81%A4_m.GIF" alt="" vspace="0" hspace="0" border="0" align="bottom"><br><br>امــ<img src="http://gazo.emoji7.jp/img/04ctj_577352/%E3%81%BE%E3%82%8B%E3%81%BE%E3%82%8B_m.GIF" alt="" vspace="0" hspace="0" border="0" align="bottom">ــروز روزه جـــ<img src="http://gazo.emoji7.jp/img/04lx8_729339/%E2%98%86%E3%81%8D%E3%82%83%E3%82%8F%E2%98%85_m.gif" alt="" vspace="0" hspace="0" border="0" align="bottom">ون گرفتنــ<img src="http://gazo.emoji7.jp/img/052bf_731544/%28%E3%81%84%E3%82%8D%E3%81%84%E3%82%8D%29_m.gif" alt="" vspace="0" hspace="0" border="0" align="bottom"> وبه<br><br>امــ<img src="http://gazo.emoji7.jp/img/04ctj_481684/%E9%A1%94%E6%96%87%E5%AD%97_m.GIF" alt="" vspace="0" hspace="0" border="0" align="bottom">ــروز آجـــ<img src="http://gazo.emoji7.jp/img/04zd0_704135/%E6%95%B0%E5%AD%97_m.gif" alt="" vspace="0" hspace="0" border="0" align="bottom">ی ژینا اومد هورااااااااااااا<img src="http://gazo.emoji7.jp/img/02mhv_138502/no+title+%E3%83%87%E3%82%B3%E3%83%A1%E3%83%87%E3%82%B3%E3%83%A1%E6%95%B4%E7%90%86%E7%B5%B5%E6%96%87%E5%AD%97%E6%9E%9C%E7%89%A9%E3%81%8F%E3%81%A0%E3%82%82%E3%81%AE%E3%82%8A%E3%82%93%E3%81%94%E3%83%AA%E3%83%B3%E3%82%B4%E3%83%AA%E3%83%B3%E3%82%B4%E3%81%BC%E3%81%8B%E3%81%97%E3%83%95%E3%83%AB_m.gif" alt="" vspace="0" hspace="0" border="0" align="bottom"><br><br>تاریــ<img src="http://gazo.emoji7.jp/img/04c0h_430824/%E3%82%B0%E3%83%BC%E3%83%9F%E3%83%BC%E3%82%BA+%E8%A6%8B%E3%81%A6%E3%81%AD%28%5E%E2%97%87%5E%29%E2%94%9B_m.gif" alt="" vspace="0" hspace="0" border="0" align="bottom">ـــخ:<img src="http://gazo.emoji7.jp/img/04zd0_704139/%E6%95%B0%E5%AD%97_m.gif" alt="" vspace="0" hspace="0" border="0" align="bottom"><img src="http://gazo.emoji7.jp/img/04zd0_704135/%E6%95%B0%E5%AD%97_m.gif" alt="" vspace="0" hspace="0" border="0" align="bottom">/<img src="http://gazo.emoji7.jp/img/04zd0_704137/%E6%95%B0%E5%AD%97_m.gif" alt="" vspace="0" hspace="0" border="0" align="bottom">/<img src="http://gazo.emoji7.jp/img/04zd0_704140/%E6%95%B0%E5%AD%97_m.gif" alt="" vspace="0" hspace="0" border="0" align="bottom"><img src="http://gazo.emoji7.jp/img/04zd0_704143/%E6%95%B0%E5%AD%97_m.gif" alt="" vspace="0" hspace="0" border="0" align="bottom"><img src="../../../taranomyektaraneh6.mihanblog.com/index.html#" alt="" vspace="0" hspace="0" border="0" align="bottom"><img src="http://webniaz.blogfa.com/page/posticon" alt="" vspace="0" hspace="0" border="0" align="bottom"></font></font></div>
+
+
+                                                                                     <br>                                                                                                                                   <br>                                <br>                                                     <a target="_self" href="javascript:newComment(466)">                                     <b>✿کآمِنتـ ـ هـ ـآ✿: </b>                                     <script>setCommentCnt(466)</script> تبریک گفتن                                 </a>                                                                 <br/>                                                                                                                                                                           <b>♣آخَرینـ ـ ویرآیِشـ ـ♣:</b>                                 دوشنبه 15 خرداد 1396  01:19 ب.ظ                                                                  <br><center><img src='http://s9.picofile.com/file/8299589784/bloggif_595b7270133b1.png'</a></center>        <br>                                                                                          <div>                                    <h2>                                         <a  href="http://jina-cod.mihanblog.com/post/402">بالابر سانستـــ</a>                                     </h2>                                    <p  class="date">                                         دوشنبه 30 اسفند 1395 04:06 ب.ظ                                     </p>                                </div>                                             <b>❤نِویسَندِهـ ـ❤:</b>                                 <a href="1561074.html">                                     SaDaF:) ....                                 </a>                                                         <br/>                                                                                  <b>♫اِرسآلـ ـ شُدِهـ ـ دَر♫:</b>                                                                              <a href="../category/8.html">                                             بالابر                                         </a>،                                                                                                  <br>                                                                                              <a href="1561074.html"><img src="../../../static.mihanblog.com/public/user_data/user_photo/521/1561074.jpg"  /></a>                                 
+<br>                           
+     <div align="center"><img src="http://uupload.ir/files/tb1v_2525.png" alt="" hspace="0" height="220" border="0" align="bottom" width="347" vspace="0"><br><br><br><br>&lt;!-- Start Code By Love-skin.ir --&gt;<br>&lt;script type="text/javascript" src="http://up.love-skin.ir/up/l-skin/tools/maker/top/top.jquery-min.js"&gt;&lt;/script&gt;<br>&lt;script&gt;var abzar = "&lt;img src=http://uupload.ir/files/tb1v_2525.png /&gt;";&lt;/script&gt;<br>&lt;script type="text/javascript" src="http://up.love-skin.ir/up/l-skin/tools/maker/top/scroll-topcontrol.js"&gt;&lt;/script&gt;<br>&lt;!-- End Code By Love-skin.ir --&gt;<br></div>
+
+
+                                     
+
+
+
+
+
+                                                                                     <br>                                                                                                                                   <br>                                <br>                                                     <a target="_self" href="javascript:newComment(402)">                                     <b>✿کآمِنتـ ـ هـ ـآ✿: </b>                                     <script>setCommentCnt(402)</script> نظرات                                 </a>                                                                 <br/>                                                                                                                                                                           <b>♣آخَرینـ ـ ویرآیِشـ ـ♣:</b>                                 دوشنبه 30 اسفند 1395  04:07 ب.ظ                                                                  <br><center><img src='http://s9.picofile.com/file/8299589784/bloggif_595b7270133b1.png'</a></center>        <br>                                                                                          <div>                                    <h2>                                         <a  href="http://jina-cod.mihanblog.com/post/390">سلامــــــ </a>                                     </h2>                                    <p  class="date">                                         شنبه 28 اسفند 1395 11:55 ب.ظ                                     </p>                                </div>                                             <b>❤نِویسَندِهـ ـ❤:</b>                                 <a href="1561074.html">                                     SaDaF:) ....                                 </a>                                                         <br/>                                                                                                          <a href="1561074.html"><img src="../../../static.mihanblog.com/public/user_data/user_photo/521/1561074.jpg"  /></a>                                 <div align="center"><font size="5">سلامــــ<br><br>من صدفـ هستمـ<br><br>تا زمانی که ژینا <br><br>نباشهـ من براشـ<br><br>پست میزارمـ<br><br>من عاشقمـ<br><br>عاشق <br><br><font size="6">ژینا</font><br></font></div>
+
+
+                                                                                     <br>                                                                                                                                   <br>                                <br>                                                     <a target="_self" href="javascript:newComment(390)">                                     <b>✿کآمِنتـ ـ هـ ـآ✿: </b>                                     <script>setCommentCnt(390)</script> نظرات                                 </a>                                                                 <br/>                                                                                                                                                                           <b>♣آخَرینـ ـ ویرآیِشـ ـ♣:</b>                                 یکشنبه 29 اسفند 1395  12:01 ق.ظ                                                                  <br><center><img src='http://s9.picofile.com/file/8299589784/bloggif_595b7270133b1.png'</a></center>        <br>                                                                                          <div>                                    <h2>                                         <a  href="http://jina-cod.mihanblog.com/post/389">ارم گوگل پونی ها</a>                                     </h2>                                    <p  class="date">                                         شنبه 28 اسفند 1395 11:48 ب.ظ                                     </p>                                </div>                                             <b>❤نِویسَندِهـ ـ❤:</b>                                 <a href="1561074.html">                                     SaDaF:) ....                                 </a>                                                         <br/>                                                                                  <b>♫اِرسآلـ ـ شُدِهـ ـ دَر♫:</b>                                                                              <a href="../category/1.html">                                             فروشگاه                                         </a>،                                                                                                  <br>                                                                                              <a href="1561074.html"><img src="../../../static.mihanblog.com/public/user_data/user_photo/521/1561074.jpg"  /></a>                                 
+<div align="justify"><br></div><div align="center">&nbsp;
+                   <img src="http://orig03.deviantart.net/c127/f/2013/167/1/7/17d6e0b816ee3222daeb305c5513f237-d699f9k.png" alt="" hspace="0" height="194" border="0" align="bottom" width="480" vspace="0"><br></div><br><br>
+                
+                        
+                    <div align="center"><img src="http://orig00.deviantart.net/77b0/f/2013/174/b/e/be378f83110fa4a6f6b6b2dcf2a0ef2c-d6a56c4.png" data-embed-type="deviation" data-embed-format="thumb" data-embed-id="379834708" alt="Pinkie Pie is the best pony by Axelerr3" class="dev-content-normal " style="top: 0px;" height="198" width="488"><br></div><br><br><br><div align="center"><img src="http://orig07.deviantart.net/9dd3/f/2013/168/9/d/9dcca6429547665540e366e3069f4991-d69fqd6.png" alt="" hspace="0" height="194" border="0" align="bottom" width="477" vspace="0"><br></div><br><br><div align="center"><img src="http://orig02.deviantart.net/4e49/f/2013/168/b/8/b8a4b855cd37e2f91137a6160e6f1905-d69fk2m.png" alt="" hspace="0" height="202" border="0" align="bottom" width="496" vspace="0"><br></div><br><br><div align="center"><img src="http://orig00.deviantart.net/d94d/f/2013/167/f/e/fead2820ec4ced46f76e16a9c15f70ad-d699adk.png" alt="" hspace="0" height="191" border="0" align="bottom" width="469" vspace="0"><br></div><br><br><font size="4">کپی ممنوع</font><br>
+
+
+                                     
+<div align="center"><br></div>
+                                                 
+
+
+
+
+
+
+                                                                                     <br>                                                                                                                                   <br>                                <br>                                                     <a target="_self" href="javascript:newComment(389)">                                     <b>✿کآمِنتـ ـ هـ ـآ✿: </b>                                     <script>setCommentCnt(389)</script> ثابت                                 </a>                                                                 <br/>                                                                                                                                                                           <b>♣آخَرینـ ـ ویرآیِشـ ـ♣:</b>                                 شنبه 28 اسفند 1395  11:50 ب.ظ                                                                  <br><center><img src='http://s9.picofile.com/file/8299589784/bloggif_595b7270133b1.png'</a></center>        <br>                                                                                          <div>                                    <h2>                                         <a  href="http://jina-cod.mihanblog.com/post/369">قالب دازلینگ ها</a>                                     </h2>                                    <p  class="date">                                         یکشنبه 22 اسفند 1395 02:23 ب.ظ                                     </p>                                </div>                                             <b>❤نِویسَندِهـ ـ❤:</b>                                 <a href="1561074.html">                                     SaDaF:) ....                                 </a>                                                         <br/>                                                                                  <b>♫اِرسآلـ ـ شُدِهـ ـ دَر♫:</b>                                                                              <a href="../category/12.html">                                             قالب ها                                         </a>،                                                                                                  <br>                                                                                              <a href="1561074.html"><img src="../../../static.mihanblog.com/public/user_data/user_photo/521/1561074.jpg"  /></a>                                 
+
+
+<br><div align="center">&nbsp;
+                   <img src="http://uupload.ir/files/3nh_5.png" alt="" hspace="0" height="463" border="0" align="bottom" width="458" vspace="0"><br></div><br><font size="4">اگه کدشو میخوای بگین که بهتون بدم</font>
+
+
+
+
+
+
+                                                                                     <br>                                                                                                                                   <br>                                <br>                                                     <a target="_self" href="javascript:newComment(369)">                                     <b>✿کآمِنتـ ـ هـ ـآ✿: </b>                                     <script>setCommentCnt(369)</script> ثابت همین                                 </a>                                                                 <br/>                                                                                                                                                                           <b>♣آخَرینـ ـ ویرآیِشـ ـ♣:</b>                                 یکشنبه 22 اسفند 1395  02:25 ب.ظ                                                                  <br><center><img src='http://s9.picofile.com/file/8299589784/bloggif_595b7270133b1.png'</a></center>        <br>                                                                                          <div>                                    <h2>                                         <a  href="http://jina-cod.mihanblog.com/post/367">قالب پونی</a>                                     </h2>                                    <p  class="date">                                         شنبه 21 اسفند 1395 02:01 ب.ظ                                     </p>                                </div>                                             <b>❤نِویسَندِهـ ـ❤:</b>                                 <a href="1561074.html">                                     SaDaF:) ....                                 </a>                                                         <br/>                                                                                  <b>♫اِرسآلـ ـ شُدِهـ ـ دَر♫:</b>                                                                              <a href="../category/12.html">                                             قالب ها                                         </a>،                                                                              <a href="../category/1.html">                                             فروشگاه                                         </a>،                                                                                                  <br>                                                                                              <a href="1561074.html"><img src="../../../static.mihanblog.com/public/user_data/user_photo/521/1561074.jpg"  /></a>                                 
+&nbsp;
+<img src="http://uupload.ir/files/yhna_fb.png" alt="" hspace="0" height="396" align="bottom" border="0" width="414" vspace="0"><br><br><font size="5">کپی ممنوع<br>قیمت=20 نظر به پست ثابت!بگید میخوایی&nbsp; قالب پونی از صدف رو بگیرید<br></font>
+
+
+                                     
+
+
+
+
+
+                                                                                     <br>                                                                                                                                   <br>                                <br>                                                     <a target="_self" href="javascript:newComment(367)">                                     <b>✿کآمِنتـ ـ هـ ـآ✿: </b>                                     <script>setCommentCnt(367)</script> خوشتیپ تو ثابت بگو:)                                 </a>                                                                 <br/>                                                                                                                                                                           <b>♣آخَرینـ ـ ویرآیِشـ ـ♣:</b>                                 شنبه 21 اسفند 1395  09:51 ب.ظ                                                                  <br><center><img src='http://s9.picofile.com/file/8299589784/bloggif_595b7270133b1.png'</a></center>        <br>                                                                                          <div>                                    <h2>                                         <a  href="http://jina-cod.mihanblog.com/post/366">قالب وینک قالب حرفه ای یاد گرفتم هوراااا</a>                                     </h2>                                    <p  class="date">                                         شنبه 21 اسفند 1395 02:00 ب.ظ                                     </p>                                </div>                                             <b>❤نِویسَندِهـ ـ❤:</b>                                 <a href="1561074.html">                                     SaDaF:) ....                                 </a>                                                         <br/>                                                                                  <b>♫اِرسآلـ ـ شُدِهـ ـ دَر♫:</b>                                                                              <a href="../category/12.html">                                             قالب ها                                         </a>،                                                                              <a href="../category/1.html">                                             فروشگاه                                         </a>،                                                                                                  <br>                                                                                              <a href="1561074.html"><img src="../../../static.mihanblog.com/public/user_data/user_photo/521/1561074.jpg"  /></a>                                 
+&nbsp;
+<br>&nbsp;
+                   <img src="http://uupload.ir/files/qcq_444444444444444444.png" alt="" hspace="0" height="408" align="bottom" border="0" width="478" vspace="0"><br><br><br><br><font size="5">کپی ممنوع اولین قالبمه<br><br>راستی قیمت 40 نظر به پست ثابته تا بهتون کدشو بدم<br></font>
+
+
+
+
+                                     
+
+
+
+
+
+                                                                                     <br>                                                                                                                                   <br>                                <br>                                                     <a target="_self" href="javascript:newComment(366)">                                     <b>✿کآمِنتـ ـ هـ ـآ✿: </b>                                     <script>setCommentCnt(366)</script> ثابت پلیز:)                                 </a>                                                                 <br/>                                                                                                                                                                           <b>♣آخَرینـ ـ ویرآیِشـ ـ♣:</b>                                 شنبه 21 اسفند 1395  09:51 ب.ظ                                                                  <br><center><img src='http://s9.picofile.com/file/8299589784/bloggif_595b7270133b1.png'</a></center>        <br>                                                                                          <div>                                    <h2>                                         <a  href="http://jina-cod.mihanblog.com/post/349">بالابر اداجیو دازل</a>                                     </h2>                                    <p  class="date">                                         جمعه 20 اسفند 1395 11:43 ق.ظ                                     </p>                                </div>                                             <b>❤نِویسَندِهـ ـ❤:</b>                                 <a href="1561074.html">                                     SaDaF:) ....                                 </a>                                                         <br/>                                                                                  <b>♫اِرسآلـ ـ شُدِهـ ـ دَر♫:</b>                                                                              <a href="../category/8.html">                                             بالابر                                         </a>،                                                                                                  <br>                                                                                              <a href="1561074.html"><img src="../../../static.mihanblog.com/public/user_data/user_photo/521/1561074.jpg"  /></a>                                 <br>                           
+     <div align="center"><img src="http://uupload.ir/files/ojz1_565457878777.png" alt="" hspace="0" height="425" align="bottom" border="0" width="312" vspace="0"><br><br><div style="color: rgb(237, 69, 192); font-family: Tahoma; line-height: 16px;" align="center"><div style="border: 1px solid rgb(0, 0, 0); width: 228px; height: 98px; color: rgb(0, 0, 0); overflow: auto; font-family: Arial; background-image: url( http://fantasyflash.ru/anime/pix/image/pix172.gif);"><font size="3"><p style="margin-top: 10px; margin-bottom: 0px;" align="center"><b><br></b></p><div><b>&lt;!-- Start Code By Love-skin.ir --&gt;<br>&lt;script type="text/javascript" src="http://up.love-skin.ir/up/l-skin/tools/maker/top/top.jquery-min.js"&gt;&lt;/script&gt;<br>&lt;script&gt;var abzar = "&lt;img src=http://uupload.ir/files/ojz1_565457878777.png /&gt;";&lt;/script&gt;<br>&lt;script type="text/javascript" src="http://up.love-skin.ir/up/l-skin/tools/maker/top/scroll-topcontrol.js"&gt;&lt;/script&gt;<br>&lt;!-- End Code By Love-skin.ir --&gt;<br></b></div></font></div></div></div>
+
+
+                                     
+<br>
+                                                 
+<br>
+
+
+                                                                                     <br>                                                                                                                                   <br>                                <br>                                                     <a target="_self" href="javascript:newComment(349)">                                     <b>✿کآمِنتـ ـ هـ ـآ✿: </b>                                     <script>setCommentCnt(349)</script> نظرات                                 </a>                                                                 <br/>                                                                                                                                                                           <b>♣آخَرینـ ـ ویرآیِشـ ـ♣:</b>                                 جمعه 20 اسفند 1395  11:44 ق.ظ                                                                  <br><center><img src='http://s9.picofile.com/file/8299589784/bloggif_595b7270133b1.png'</a></center>        <br>                                                                                          <div>                                    <h2>                                         <a  href="http://jina-cod.mihanblog.com/post/342">بالابر اسنونپی</a>                                     </h2>                                    <p  class="date">                                         چهارشنبه 18 اسفند 1395 01:02 ب.ظ                                     </p>                                </div>                                             <b>❤نِویسَندِهـ ـ❤:</b>                                 <a href="1561074.html">                                     SaDaF:) ....                                 </a>                                                         <br/>                                                                                  <b>♫اِرسآلـ ـ شُدِهـ ـ دَر♫:</b>                                                                              <a href="../category/1.html">                                             فروشگاه                                         </a>،                                                                              <a href="../category/8.html">                                             بالابر                                         </a>،                                                                                                  <br>                                                                                              <a href="1561074.html"><img src="../../../static.mihanblog.com/public/user_data/user_photo/521/1561074.jpg"  /></a>                                 
+
+<h2>
+</h2><div align="center">&nbsp;
+                   <img src="http://www.pngall.com/wp-content/uploads/2016/03/Snoopy-Cartoon-PNG-180x180.png" alt="" vspace="0" align="bottom" hspace="0" border="0"></div><div><br><span style="color: rgb(237, 69, 192); font-family: Tahoma; line-height: 16px; text-align: center;"></span></div><div><br></div><div style="color: rgb(237, 69, 192); font-family: Tahoma; line-height: 16px;" align="center"><div style="border: 1px solid rgb(0, 0, 0); width: 228px; height: 98px; color: rgb(0, 0, 0); overflow: auto; font-family: Arial; background-image: url(http://static.mihanblog.com//public/user_data/user_photo/305/913329.jpg);"><font size="3"><p style="margin-top: 10px; margin-bottom: 0px;" align="center"><b>&lt;!-- Start Code By Love-skin.ir --&gt;<br>&lt;script type="text/javascript" src="http://up.love-skin.ir/up/l-skin/tools/maker/top/top.jquery-min.js"&gt;&lt;/script&gt;<br>&lt;script&gt;var
+ abzar = "&lt;img 
+src=http://www.pngall.com/wp-content/uploads/2016/03/Snoopy-Cartoon-PNG-180x180.png
+ /&gt;";&lt;/script&gt;<br>&lt;script type="text/javascript" src="http://up.love-skin.ir/up/l-skin/tools/maker/top/scroll-topcontrol.js"&gt;&lt;/script&gt;<br>&lt;!-- End Code By Love-skin.ir --&gt;</b><br></p></font></div></div>
+
+
+                                     
+<br>
+                                                 
+<br>
+
+
+
+
+
+
+                                                                                     <br>                                                                                                                                   <br>                                <br>                                                     <a target="_self" href="javascript:newComment(342)">                                     <b>✿کآمِنتـ ـ هـ ـآ✿: </b>                                     <script>setCommentCnt(342)</script> نظرات                                 </a>                                                                 <br/>                                                                                                                                                                           <b>♣آخَرینـ ـ ویرآیِشـ ـ♣:</b>                                 پنجشنبه 19 اسفند 1395  01:47 ب.ظ                                                                  <br><center><img src='http://s9.picofile.com/file/8299589784/bloggif_595b7270133b1.png'</a></center>        <br>                                                                                          <div>                                    <h2>                                         <a  href="http://jina-cod.mihanblog.com/post/319">دکمه ی پونی</a>                                     </h2>                                    <p  class="date">                                         چهارشنبه 11 اسفند 1395 01:06 ب.ظ                                     </p>                                </div>                                             <b>❤نِویسَندِهـ ـ❤:</b>                                 <a href="1561074.html">                                     SaDaF:) ....                                 </a>                                                         <br/>                                                                                  <b>♫اِرسآلـ ـ شُدِهـ ـ دَر♫:</b>                                                                              <a href="../category/1.html">                                             فروشگاه                                         </a>،                                                                              <a href="../category/9.html">                                             دکمه وب                                         </a>،                                                                                                  <br>                                                                                              <a href="1561074.html"><img src="../../../static.mihanblog.com/public/user_data/user_photo/521/1561074.jpg"  /></a>                                 
+
+
+
+
+<div align="center"><font size="3">خیلی نازه<br><img src="http://www.upsara.com/images/53p2_a_simpler_time_by_russiankolz-d5xv0cz.png" alt="" vspace="0" align="bottom" hspace="0" height="242" border="0" width="313"><br>کپی هم ممنوع<br></font></div><font size="3"></font><div align="center"><font size="3"><br></font></div><div align="left"><br></div>                           
+     
+
+
+
+
+
+
+
+
+
+
+                                                                                     <br>                                                                                                                                   <br>                                <br>                                                     <a target="_self" href="javascript:newComment(319)">                                     <b>✿کآمِنتـ ـ هـ ـآ✿: </b>                                     <script>setCommentCnt(319)</script> خوشتیپ تو ثابت بگو:)                                 </a>                                                                 <br/>                                                                                                                                                                           <b>♣آخَرینـ ـ ویرآیِشـ ـ♣:</b>                                 پنجشنبه 19 اسفند 1395  01:55 ب.ظ                                                                  <br><center><img src='http://s9.picofile.com/file/8299589784/bloggif_595b7270133b1.png'</a></center>        <br>                                                                                          <div>                                    <h2>                                         <a  href="http://jina-cod.mihanblog.com/post/303">بالابر انیمه</a>                                     </h2>                                    <p  class="date">                                         جمعه 6 اسفند 1395 12:33 ب.ظ                                     </p>                                </div>                                             <b>❤نِویسَندِهـ ـ❤:</b>                                 <a href="1561074.html">                                     SaDaF:) ....                                 </a>                                                         <br/>                                                                                  <b>♫اِرسآلـ ـ شُدِهـ ـ دَر♫:</b>                                                                              <a href="../category/8.html">                                             بالابر                                         </a>،                                                                              <a href="../category/1.html">                                             فروشگاه                                         </a>،                                                                                                  <br>                                                                                                                               
+
+<br>                           
+     <div style="text-align: center;"><img src="http://girlygifs.com/wp-content/uploads/2011/04/1010.gif" alt="" vspace="0" align="bottom" hspace="0" border="0"></div>
+
+
+
+<br><br><br><div><div style="color: rgb(237, 69, 192); font-family: Tahoma; line-height: 
+16px;" align="center"><div style="border: 1px solid rgb(0, 0, 0); width: 228px; 
+height: 98px; color: rgb(0, 0, 0); overflow: auto; font-family: Arial; 
+background-image: 
+url(http://girlygifs.com/wp-content/uploads/2011/04/458.gif);"><font size="3"><p style="margin-top: 10px; margin-bottom: 
+0px;" align="center"><b><br></b></p><div><br>Start Code By Love-skin.ir --&gt;<br>&lt;script type="text/javascript" src="http://up.love-skin.ir/up/l-skin/tools/maker/top/top.jquery-min.js"&gt;&lt;/script&gt;<br>&lt;script&gt;var abzar = "&lt;img src=http://girlygifs.com/wp-content/uploads/2011/04/1010.gif /&gt;";&lt;/script&gt;<br>&lt;script type="text/javascript" src="http://up.love-skin.ir/up/l-skin/tools/maker/top/scroll-topcontrol.js"&gt;&lt;/script&gt;<br>&lt;!-- End Code By Love-skin.ir --&gt;</div></font></div></div><span style="color: rgb(237, 69, 192); font-family: Tahoma; line-height: 
+16px; text-align: center;"></span></div>
+
+
+
+
+
+
+<br>
+
+
+
+
+
+
+
+
+
+
+                                     
+
+
+
+
+
+
+
+                                                                                     <br>                                                                                                                                   <br>                                <br>                                                     <a target="_self" href="javascript:newComment(303)">                                     <b>✿کآمِنتـ ـ هـ ـآ✿: </b>                                     <script>setCommentCnt(303)</script> خوشتیپ تو ثابت بگو:)                                 </a>                                                                 <br/>                                                                                                                                                                           <b>♣آخَرینـ ـ ویرآیِشـ ـ♣:</b>                                 پنجشنبه 19 اسفند 1395  01:59 ب.ظ                                                                  <br><center><img src='http://s9.picofile.com/file/8299589784/bloggif_595b7270133b1.png'</a></center>        <br>                                                                                          <div>                                    <h2>                                         <a  href="http://jina-cod.mihanblog.com/post/302">صفحه ورودی پرنسس های دریایی</a>                                     </h2>                                    <p  class="date">                                         جمعه 6 اسفند 1395 12:31 ب.ظ                                     </p>                                </div>                                             <b>❤نِویسَندِهـ ـ❤:</b>                                 <a href="1561074.html">                                     SaDaF:) ....                                 </a>                                                         <br/>                                                                                  <b>♫اِرسآلـ ـ شُدِهـ ـ دَر♫:</b>                                                                              <a href="../category/1.html">                                             فروشگاه                                         </a>،                                                                              <a href="../category/7.html">                                             صفحه ورودی                                         </a>،                                                                                                  <br>                                                                                                                               
+<div style="text-align: center;"><font size="3"><br></font></div>
+
+<font size="3"><div style="text-align: center;"><br></div><span style="background-image: url(http://girlygifs.com/wp-content/uploads/2011/04/multimini7.gif);"><div style="text-align: center;"><img src="http://pre00.deviantart.net/4f7f/th/pre/f/2008/049/f/d/6_princess_mermaids_by_wildluna.jpg" alt="" vspace="0" align="bottom" hspace="0" height="202" border="0" width="363"></div><div style="text-align: center;"><br></div></span></font><div style="text-align: center;"><br></div><div><div style="color: rgb(237, 69, 192); font-family: Tahoma; line-height: 16px;" align="center"><div style="border: 1px solid rgb(0, 0, 0); width: 228px; height: 98px; color: rgb(0, 0, 0); overflow: auto; font-family: Arial; background-image: url(http://girlygifs.com/wp-content/uploads/2011/05/1856904uv22zzwxdm.gif);"><font size="3"><p style="margin-top: 10px; margin-bottom: 0px;" align="center"><font size="3"><span style="background-image: url(http://girlygifs.com/wp-content/uploads/2011/04/multimini7.gif);"></span></font><br><font size="3"><span style="background-image: url(http://girlygifs.com/wp-content/uploads/2011/04/multimini7.gif);"></span></font></p></font><font size="3"><div><font size="3"><span style="background-image: url(http://girlygifs.com/wp-content/uploads/2011/04/multimini7.gif);">&lt;!-- Start Code By Love-skin.ir --&gt;<br>&lt;div
+ id="first_p" style="text-align:center;margin-top:5px;"&gt;&lt;a 
+onclick="document.getElementById('main_p').style.display = 
+'block';document.getElementById('first_p').style.display = 'none';" 
+href="#"&gt;&lt;img 
+src="http://pre00.deviantart.net/4f7f/th/pre/f/2008/049/f/d/6_princess_mermaids_by_wildluna.jpg"
+ border="0"&gt;&lt;/a&gt;&lt;/div&gt;&lt;div id="main_p" 
+style="display:none;"&gt;<br>&lt;!-- End Code By Love-skin.ir</span></font></div></font></div></div><span style="color: rgb(237, 69, 192); font-family: Tahoma; line-height: 16px; text-align: center;"></span></div><div style="text-align: center;"><br></div>
+
+
+
+
+
+
+
+
+                                                                                     <br>                                                                                                                                   <br>                                <br>                                                     <a target="_self" href="javascript:newComment(302)">                                     <b>✿کآمِنتـ ـ هـ ـآ✿: </b>                                     <script>setCommentCnt(302)</script> نظرات                                 </a>                                                                 <br/>                                                                                                                                                                           <b>♣آخَرینـ ـ ویرآیِشـ ـ♣:</b>                                 پنجشنبه 19 اسفند 1395  02:00 ب.ظ                                                                  <br><center><img src='http://s9.picofile.com/file/8299589784/bloggif_595b7270133b1.png'</a></center>        <br>                                                                                          <div>                                    <h2>                                         <a  href="http://jina-cod.mihanblog.com/post/301">بالابر وینکس میوسا</a>                                     </h2>                                    <p  class="date">                                         جمعه 6 اسفند 1395 12:30 ب.ظ                                     </p>                                </div>                                             <b>❤نِویسَندِهـ ـ❤:</b>                                 <a href="1561074.html">                                     SaDaF:) ....                                 </a>                                                         <br/>                                                                                  <b>♫اِرسآلـ ـ شُدِهـ ـ دَر♫:</b>                                                                              <a href="../category/1.html">                                             فروشگاه                                         </a>،                                                                              <a href="../category/8.html">                                             بالابر                                         </a>،                                                                                                  <br>                                                                                                                               
+<div style="text-align: center;"><br></div>
+<div style="text-align: center;"><img src="http://s6.picofile.com/file/8209966234/articolo_musa_1_.png" alt="" vspace="0" align="bottom" hspace="0" border="0"></div><div><div style="color: rgb(237, 69, 192); font-family: Tahoma; line-height: 16px;" align="center"><div style="border: 1px solid rgb(0, 0, 0); width: 228px; height: 98px; color: rgb(0, 0, 0); overflow: auto; font-family: Arial; background-image: url( http://fantasyflash.ru/grafic/pixels/image/pixel14.gif);"><font size="3"><p style="margin-top: 10px; margin-bottom: 0px;" align="center"><b>&lt;!-- Start Code By Love-skin.ir --&gt;<br>&lt;script type="text/javascript" src="http://up.love-skin.ir/up/l-skin/tools/maker/top/top.jquery-min.js"&gt;&lt;/script&gt;<br>&lt;script&gt;var abzar = "&lt;img src=http://s6.picofile.com/file/8209966234/articolo_musa_1_.png /&gt;";&lt;/script&gt;<br>&lt;script type="text/javascript" src="http://up.love-skin.ir/up/l-skin/tools/maker/top/scroll-topcontrol.js"&gt;&lt;/script&gt;<br>&lt;!-- End Code By Love-skin.ir --&gt;<br></b></p></font></div></div><span style="color: rgb(237, 69, 192); font-family: Tahoma; line-height: 16px; text-align: center;"></span></div><div style="text-align: center;"><br></div><font size="3"><p style="margin-top: 10px; margin-bottom: 0px;" align="center"><br></p></font><div style="text-align: center;"><br></div>
+
+                                     
+
+                                                 
+
+
+
+
+
+
+
+                                                                                     <br>                                                                                                                                   <br>                                <br>                                                     <a target="_self" href="javascript:newComment(301)">                                     <b>✿کآمِنتـ ـ هـ ـآ✿: </b>                                     <script>setCommentCnt(301)</script> خوشتیپ تو ثابت بگو:)                                 </a>                                                                 <br/>                                                                                                                                                                           <b>♣آخَرینـ ـ ویرآیِشـ ـ♣:</b>                                 پنجشنبه 19 اسفند 1395  02:00 ب.ظ                                                                  <br><center><img src='http://s9.picofile.com/file/8299589784/bloggif_595b7270133b1.png'</a></center>        <br>                                                                                          <div>                                    <h2>                                         <a  href="http://jina-cod.mihanblog.com/post/300">صفحه ی ورودی ایمه</a>                                     </h2>                                    <p  class="date">                                         جمعه 6 اسفند 1395 12:27 ب.ظ                                     </p>                                </div>                                             <b>❤نِویسَندِهـ ـ❤:</b>                                 <a href="1561074.html">                                     SaDaF:) ....                                 </a>                                                         <br/>                                                                                  <b>♫اِرسآلـ ـ شُدِهـ ـ دَر♫:</b>                                                                              <a href="../category/1.html">                                             فروشگاه                                         </a>،                                                                              <a href="../category/7.html">                                             صفحه ورودی                                         </a>،                                                                                                  <br>                                                                                              <a href="1561074.html"><img src="../../../static.mihanblog.com/public/user_data/user_photo/521/1561074.jpg"  /></a>                                 
+
+&nbsp;<img src="http://www.pngall.com/wp-content/uploads/2016/07/Anime-PNG-Clipart.png" alt="" vspace="0" align="bottom" hspace="0" height="390" border="0" width="339"><br><div><br><span style="color: rgb(237, 69, 192); font-family: Tahoma; line-height: 16px; text-align: center;"></span></div><div><br></div><div><div style="color: rgb(237, 69, 192); font-family: Tahoma; line-height: 16px;" align="center"><div style="border: 1px solid rgb(0, 0, 0); width: 228px; height: 98px; color: rgb(0, 0, 0); overflow: auto; font-family: Arial; background-image: url(http://static.mihanblog.com//public/user_data/user_photo/305/913329.jpg);"><font size="3"><p style="margin-top: 10px; margin-bottom: 0px;" align="center"><b>&lt;!-- Start Code By Love-skin.ir --&gt;<br>&lt;div
+ id="first_p" style="text-align:center;margin-top:5px;"&gt;&lt;a 
+onclick="document.getElementById('main_p').style.display = 
+'block';document.getElementById('first_p').style.display = 'none';" 
+href="#"&gt;&lt;img 
+src="http://www.pngall.com/wp-content/uploads/2016/07/Anime-PNG-Clipart.png"
+ border="0"&gt;&lt;/a&gt;&lt;/div&gt;&lt;div id="main_p" 
+style="display:none;"&gt;<br>&lt;!-- End Code By Love-skin.ir --&gt;</b><br></p></font></div></div><span style="color: rgb(237, 69, 192); font-family: Tahoma; line-height: 16px; text-align: center;"></span></div><div><br></div><br><br>
+
+
+
+
+
+
+                                                                                     <br>                                                                                                                                   <br>                                <br>                                                     <a target="_self" href="javascript:newComment(300)">                                     <b>✿کآمِنتـ ـ هـ ـآ✿: </b>                                     <script>setCommentCnt(300)</script> نظرات                                 </a>                                                                 <br/>                                                                                                                                                                           <b>♣آخَرینـ ـ ویرآیِشـ ـ♣:</b>                                 پنجشنبه 19 اسفند 1395  02:01 ب.ظ                                                                  <br><center><img src='http://s9.picofile.com/file/8299589784/bloggif_595b7270133b1.png'</a></center>        <br>                                                                                          <div>                                    <h2>                                         <a  href="http://jina-cod.mihanblog.com/post/298">سلام حوشملا نویسنده ی جدید هستم:))</a>                                     </h2>                                    <p  class="date">                                         جمعه 6 اسفند 1395 12:15 ب.ظ                                     </p>                                </div>                                             <b>❤نِویسَندِهـ ـ❤:</b>                                 <a href="1561074.html">                                     SaDaF:) ....                                 </a>                                                         <br/>                                                                                                          <a href="1561074.html"><img src="../../../static.mihanblog.com/public/user_data/user_photo/521/1561074.jpg"  /></a>                                 <div style="text-align: center;"><font face="Mihan-Nassim" size="4"><img src="http://gazo.emoji7.jp/img/04c0h_565748/%E3%81%AB%E3%82%83%E5%AD%90+%E3%83%8F%E3%83%BC%E3%83%88%E3%81%A8%E3%81%8B%E6%98%9F%E8%BC%89%E3%81%9B%E3%81%9F%E3%82%88%28%E2%89%A7%E2%88%87%E2%89%A6%29_m.gif" alt="" vspace="0" align="bottom" hspace="0" border="0">من نویسنده ی جدیدم<img src="http://gazo.emoji7.jp/img/04c0h_565748/%E3%81%AB%E3%82%83%E5%AD%90+%E3%83%8F%E3%83%BC%E3%83%88%E3%81%A8%E3%81%8B%E6%98%9F%E8%BC%89%E3%81%9B%E3%81%9F%E3%82%88%28%E2%89%A7%E2%88%87%E2%89%A6%29_m.gif" alt="" vspace="0" align="bottom" hspace="0" border="0"></font></div>
+
+<font face="Mihan-Nassim" size="4"><div style="text-align: center;"><br></div><div style="text-align: center;"><img src="http://uupload.ir/files/mgib_5.gif" alt="" vspace="0" align="bottom" hspace="0" border="0">اسمم صدف است<img src="http://uupload.ir/files/mgib_5.gif" alt="" vspace="0" align="bottom" hspace="0" border="0"></div><div style="text-align: center;"><br></div><div style="text-align: center;"><img src="http://gazo.emoji7.jp/img/04qzz_698622/%E6%98%A5+%E3%81%8B%E3%82%8F%E3%81%84%E3%81%84+%E3%81%A9%E3%81%86%E3%81%B6%E3%81%A4_m.gif" alt="" vspace="0" align="bottom" hspace="0" border="0">از مدیر این وب خیلی خیلی ممنونم که من رو نویسنده وب</div><div style="text-align: center;"><br></div><div style="text-align: center;">&nbsp;خوشملش کرد<img src="http://gazo.emoji7.jp/img/04qzz_698622/%E6%98%A5+%E3%81%8B%E3%82%8F%E3%81%84%E3%81%84+%E3%81%A9%E3%81%86%E3%81%B6%E3%81%A4_m.gif" alt="" vspace="0" align="bottom" hspace="0" border="0"></div><div style="text-align: center;"><br></div><div style="text-align: center;"><img src="http://gazo.emoji7.jp/img/04dbl_378342/%E6%A3%AE%E3%82%AC%E3%83%BC%E3%83%AB_m.gif" alt="" vspace="0" align="bottom" hspace="0" border="0">این هم وب حودمه<a href="../../../33mnmn33.mihanblog.com/index.html" target="_blank"><img src="33mnmn33.mihanblog.com.html" alt="" vspace="0" align="bottom" hspace="0" border="0"></a></div><div style="text-align: center;"><br></div><div style="text-align: center;"><a href="../../../33mnmn33.mihanblog.com/index.html" target="_blank">کلیک</a></div><div style="text-align: center;"><br></div><div style="text-align: center;"><a href="../../../33mnmn33.mihanblog.com/index.html" target="_blank">33mnmn33.mihanblog.com</a></div></font>                                                                                     <br>                                                                                                                                   <br>                                <br>                                                     <a target="_self" href="javascript:newComment(298)">                                     <b>✿کآمِنتـ ـ هـ ـآ✿: </b>                                     <script>setCommentCnt(298)</script> نظرات                                 </a>                                                                 <br/>                                                                                                                                                                           <b>♣آخَرینـ ـ ویرآیِشـ ـ♣:</b>                                 جمعه 6 اسفند 1395  12:24 ب.ظ                                                                  <br><center><img src='http://s9.picofile.com/file/8299589784/bloggif_595b7270133b1.png'</a></center>        <br>                                                                                                                              <br><br>                                                                                                                                                               <div id="footer"  class="clearfix">                            <strong>                                 POWERED BY <a  href="../../../224339.mihanblog.com/index.html">                                 <font color="#FF0000" size="2px">M</font>IHAN                                 <font color="#FF0000"  size="2px">B</font>LOG.COM</a>                             </strong>                        </div>                     </div>                                            <div  id="sidebar">                            <form id="frm-16075876575fd1d749caacf" method="get" action="http://jina-cod.mihanblog.com/post/search/fid/16075876575fd1d749caacf"  onsubmit="window.open('', 'search', 'toolbar=0,location=0,status=0,menubar=0,scrollbars=1,resizable=0,width=400,height=310')" target="search">                                  <div class="sidebar_box_border_div">                                     <b class="sidebar_box_border"  style="margin:0 3px"><img  src="../../../static.mihanblog.com/public/images/empty.gif"/></b>                                     <b class="sidebar_box_border"  style="margin:0 2px"><img  src="../../../static.mihanblog.com/public/images/empty.gif"/></b>                                     <b class="sidebar_box_border"  style="margin:0 1px"><img  src="../../../static.mihanblog.com/public/images/empty.gif"/></b>                                     <div class="sidebar_box">                                         <input type="text"  name="search_text" style="width:90px"/>                                         <input type="submit" value="**جستجو**"/>                                     </div>                                     <b class="sidebar_box_border" style="margin:0  1px"><img  src="../../../static.mihanblog.com/public/images/empty.gif"/></b>                                     <b class="sidebar_box_border"  style="margin:0 2px"><img  src="../../../static.mihanblog.com/public/images/empty.gif"/></b>                                     <b class="sidebar_box_border"  style="margin:0 3px"><img  src="../../../static.mihanblog.com/public/images/empty.gif"/></b>                                 </div>                             <input type="hidden" name="frm-id" value="16075876575fd1d749caacf" id="frm-id" /></form>                                                     <div class="seprator"><img  src="../../../static.mihanblog.com/public/images/empty.gif"/></div>                                                 <div  class="sidebar_box_border_div">                                <b  class="sidebar_box_border" style="margin:0 3px"><img  src="../../../static.mihanblog.com/public/images/empty.gif"/></b>                                 <b class="sidebar_box_border"  style="margin:0 2px"><img  src="../../../static.mihanblog.com/public/images/empty.gif"/></b>                                 <b class="sidebar_box_border"  style="margin:0 1px"><img  src="../../../static.mihanblog.com/public/images/empty.gif"/></b>                                 <div class="sidebar_box">                                     <div style="text-align:center">                                         <div align="center"  style="border:none; width:160px;  overflow:hidden"></div>                                         <a  href="http://jina-cod.mihanblog.com/post/author/jinahamehvisi@gmail.com">✉پُستِـ  اِلِکتِرونیکیـ✉</a><br/>                                         <a  href="javascript:messageForm()">☎تَمآسـ ـ بآ مـ ـآ☎</a><br/><div  style="text-align:center">کد های دوستان،18 مرداد 1395 ساخته شد:)<br />
+<br />
+و به عنوان کم قیمت ترین وب کدسازی لقب گرفت:)<br />
+<br />
+سازندهـــ: ژینــآ<br />
+<br />
+معاونینــ:شَبنَمــ-ارورآ-دیانا<br />
+<br />
+***<br />
+<br />
+1-اولین و با وفا ترین نویسنده:شَبنَمـــ<br />
+<br />
+2- دومینـــ وفعالــ ترینـــ نویسندهـ:بــآرآنـــ<br />
+<br />
+3-نویسنده ای خلــآقـــ و  پر از ایدهــ برایـــ وبــ :گُلبَهـــآر<br />
+<br />
+<br />
+4-حرفهــ ایــ ترینـــ نویسندهـــ:سِلـــنـــآتُور<br />
+<br />
+<br />
+5-نویسندهــ ایــ کهــ وبــ رو نجاتـــ داد(خیلیــ م حرفهــ):ارورآ _شــــــبنــــم_دیانا <br />
+<br />
+6-یهــ نویسندهــ یــ قَدیمیـــ:نگینـــ<br />
+<br />
+7-نویسندهیــ خوبــ دیگهـــ:ملیکــآ<br />
+<br />
+8-نویسندهــ خوب دیگهــ:تینـــآ<br />
+<br />
+9-نویسندهـــ ی خوبـــ دیگهـــ:فینــیــآ<br />
+<br />
+10-نویسندهــ یــ خوبــ دیگهـــ:لونـــآ<br />
+<br />
+11-نویسندهــ یــ خوبــ دیگهـــ: آکــآنهـــ</div>                                         <div class="clearfix"  style="margin-right:70px">                                             <a href="../rss/index.html"><img style="border:none;  float:right"  src="../../../static.mihanblog.com/public/images/icon/rss.gif"/></a>                                             <a  href="../atom/index.html"><img style="border:none; float:right"  src="../../../static.mihanblog.com/public/images/icon/atom.gif"/></a>                                         </div>                                     </div>                                </div>                                 <b class="sidebar_box_border"  style="margin:0 1px"><img  src="../../../static.mihanblog.com/public/images/empty.gif"/></b>                                 <b class="sidebar_box_border"  style="margin:0 2px"><img  src="../../../static.mihanblog.com/public/images/empty.gif"/></b>                                 <b class="sidebar_box_border"  style="margin:0 3px"><img  src="../../../static.mihanblog.com/public/images/empty.gif"/></b>                             </div>                             <div class="seprator"><img  src="../../../static.mihanblog.com/public/images/empty.gif"/></div>                                                          
+		<form id="frm-16075876575fd1d749cb2a2" method="post" action="http://jina-cod.mihanblog.com/poll/new/fid/16075876575fd1d749cb2a2/atrty/1607587657/avrvy/0/key/0308535198179ccf88e498216dfff155/"  onsubmit="window.open('', 'poll', 'toolbar=0,location=0,status=0,menubar=0,scrollbars=1,resizable=0,width=505,height=315')" target="poll"><input type="hidden" name="data[pollid]" value="365067" id="data[pollid]" />		                                <div  class="sidebar_box_border_div">                                     <b class="sidebar_box_border" style="margin:0 3px"><img  src="../../../static.mihanblog.com/public/images/empty.gif"/></b>                                     <b class="sidebar_box_border"  style="margin:0 2px"><img  src="../../../static.mihanblog.com/public/images/empty.gif"/></b>                                     <b class="sidebar_box_border"  style="margin:0 1px"><img  src="../../../static.mihanblog.com/public/images/empty.gif"/></b>                                     <div class="sidebar_box">                                         <h3>♚نَظَرسَنجیـ ـ♚</h3>                                         نظرت راجب برخورد نویسنده ها و مدیران با خودت شما چیه؟<br>                                                                                      <label><input type="radio" name="data[answer]" value="v1">عشقَنــ:)</label>                                             <br>                                                                                      <label><input type="radio" name="data[answer]" value="v2">بَ نیس حـآلآ</label>                                             <br>                                                                                      <label><input type="radio" name="data[answer]" value="v3">افتزوح:|</label>                                             <br>                                                                                      <label><input type="radio" name="data[answer]" value="v4">نظری ندارم:|</label>                                             <br>                                                                                      <input type="submit" value="ثبت"/>                                     </div>                                     <b class="sidebar_box_border" style="margin:0 1px"><img  src="../../../static.mihanblog.com/public/images/empty.gif"/></b>                                     <b class="sidebar_box_border"  style="margin:0 2px"><img  src="../../../static.mihanblog.com/public/images/empty.gif"/></b>                                     <b class="sidebar_box_border"  style="margin:0 3px"><img  src="../../../static.mihanblog.com/public/images/empty.gif"/></b>                                 </div>                             
+		<input type="hidden" name="frm-id" value="16075876575fd1d749cb2a2" id="frm-id" /></form>                                                                                     <div class="seprator"><img  src="../../../static.mihanblog.com/public/images/empty.gif"/></div>                                                                                                               <div class="sidebar_box_border_div">                                     <b class="sidebar_box_border" style="margin:0 3px"><img  src="../../../static.mihanblog.com/public/images/empty.gif"/></b>                                     <b class="sidebar_box_border"  style="margin:0 2px"><img  src="../../../static.mihanblog.com/public/images/empty.gif"/></b>                                     <b class="sidebar_box_border"  style="margin:0 1px"><img  src="../../../static.mihanblog.com/public/images/empty.gif"/></b>                                     <div class="sidebar_box">                                         <h3>☻اَبَر بَرچَسبـ ـ هآ☻</h3>                                                                                                      <a  href="../tag/قالب+رایگان.html"  style="font-size:1em">                                                 قالب رایگان                                              </a>                                                                                  </div>                                        <b  class="sidebar_box_border" style="margin:0 1px"><img  src="../../../static.mihanblog.com/public/images/empty.gif"/></b>                                     <b class="sidebar_box_border"  style="margin:0 2px"><img  src="../../../static.mihanblog.com/public/images/empty.gif"/></b>                                     <b class="sidebar_box_border"  style="margin:0 3px"><img  src="../../../static.mihanblog.com/public/images/empty.gif"/></b>                                 </div>                                                         <div  class="seprator"><img  src="../../../static.mihanblog.com/public/images/empty.gif"/></div>                                                                                                               <div class="sidebar_box_border_div">                                     <b class="sidebar_box_border" style="margin:0 3px"><img  src="../../../static.mihanblog.com/public/images/empty.gif"/></b>                                     <b class="sidebar_box_border"  style="margin:0 2px"><img  src="../../../static.mihanblog.com/public/images/empty.gif"/></b>                                     <b class="sidebar_box_border"  style="margin:0 1px"><img  src="../../../static.mihanblog.com/public/images/empty.gif"/></b>                                     <div class="sidebar_box">                                         <h3>✮آرشیـ ـو موضوعیـ ـ✮</h3>                                                                                      <a  href="../category/12.html">                                                 قالب ها(28)                                             </a>                                             <br/>                                                                              <a  href="../category/11.html">                                                 جعبه اخبار(2)                                             </a>                                             <br/>                                                                              <a  href="../category/10.html">                                                 عکس نوشته(3)                                             </a>                                             <br/>                                                                              <a  href="../category/1.html">                                                 فروشگاه(74)                                             </a>                                             <br/>                                                                              <a  href="../category/2.html">                                                 کدهایی که تحویل دادیم(38)                                             </a>                                             <br/>                                                                              <a  href="../category/4.html">                                                 متن الکترونیک(3)                                             </a>                                             <br/>                                                                              <a  href="../category/7.html">                                                 صفحه ورودی(15)                                             </a>                                             <br/>                                                                              <a  href="../category/8.html">                                                 بالابر(19)                                             </a>                                             <br/>                                                                              <a  href="../category/6.html">                                                 موس(13)                                             </a>                                             <br/>                                                                              <a  href="../category/5.html">                                                 ولکام(8)                                             </a>                                             <br/>                                                                              <a  href="../category/3.html">                                                 امضا(1)                                             </a>                                             <br/>                                                                              <a  href="../category/9.html">                                                 دکمه وب(18)                                             </a>                                             <br/>                                                                      </div>                                    <b  class="sidebar_box_border" style="margin:0 1px"><img  src="../../../static.mihanblog.com/public/images/empty.gif"/></b>                                     <b class="sidebar_box_border"  style="margin:0 2px"><img  src="../../../static.mihanblog.com/public/images/empty.gif"/></b>                                     <b class="sidebar_box_border"  style="margin:0 3px"><img  src="../../../static.mihanblog.com/public/images/empty.gif"/></b>                                 </div>                                                                                      <div class="seprator"><img  src="../../../static.mihanblog.com/public/images/empty.gif"/></div>                                                                                                                       <div class="sidebar_box_border_div">                                                             <b class="sidebar_box_border"  style="margin:0 3px"><img  src="../../../static.mihanblog.com/public/images/empty.gif"/></b>                                     <b class="sidebar_box_border"  style="margin:0 2px"><img  src="../../../static.mihanblog.com/public/images/empty.gif"/></b>                                     <b class="sidebar_box_border"  style="margin:0 1px"><img  src="../../../static.mihanblog.com/public/images/empty.gif"/></b>                                     <div class="sidebar_box">                                         <div>                                             <h3>❂نِویسَندِگآنـ ـ❂</h3>                                                                                                  <a href="1533006.html"><img src="../../../static.mihanblog.com/public/user_data/user_photo/512/1533006.jpg" style="width:16px;" /></a>                                                 <a href="1533006.html">                                                      نار نجی(87)                                                 </a>                                             <br/>                                                                                                  <a href="1349761.html"><img src="../../../static.mihanblog.com/public/user_data/user_photo/450/1349761.jpg" style="width:16px;" /></a>                                                 <a href="1349761.html">                                                      ღ☤ṧṧ ß@я@ᾔ (39)                                                 </a>                                             <br/>                                                                                                  <a href="1524388.html"><img src="../../../static.mihanblog.com/public/user_data/user_photo/509/1524388.jpg" style="width:16px;" /></a>                                                 <a href="1524388.html">                                                      { نــــــــگار } °(76)                                                 </a>                                             <br/>                                                                                                  <a href="1561325.html"><img src="../../../static.mihanblog.com/public/user_data/user_photo/521/1561325.jpg" style="width:16px;" /></a>                                                 <a href="1561325.html">                                                      میس گل بهار (12)                                                 </a>                                             <br/>                                                                                                  <a href="1565384.html"></a>                                                 <a href="1565384.html">                                                      میســــ نگینـــــ**(7)                                                 </a>                                             <br/>                                                                                                  <a href="1592346.html"><img src="../../../static.mihanblog.com/public/user_data/user_photo/531/1592346.jpg" style="width:16px;" /></a>                                                 <a href="1592346.html">                                                      Harley♣️Quinn (3)                                                 </a>                                             <br/>                                                                                                  <a href="1590548.html"></a>                                                 <a href="1590548.html">                                                      ♛fatemehp♛ (29)                                                 </a>                                             <br/>                                                                                                  <a href="1561074.html"><img src="../../../static.mihanblog.com/public/user_data/user_photo/521/1561074.jpg" style="width:16px;" /></a>                                                 <a href="1561074.html">                                                      SaDaF:) ....(19)                                                 </a>                                             <br/>                                                                                                  <a href="1571880.html"><img src="../../../static.mihanblog.com/public/user_data/user_photo/524/1571880.jpg" style="width:16px;" /></a>                                                 <a href="1571880.html">                                                      ro jae(28)                                                 </a>                                             <br/>                                                                                                  <a href="1553106.html"><img src="../../../static.mihanblog.com/public/user_data/user_photo/518/1553106.jpg" style="width:16px;" /></a>                                                 <a href="1553106.html">                                                      *miss elsa* .(2)                                                 </a>                                             <br/>                                                                                                  <a href="1553335.html"><img src="../../../static.mihanblog.com/public/user_data/user_photo/518/1553335.jpg" style="width:16px;" /></a>                                                 <a href="1553335.html">                                                      تی تی* ti ty :|  (دخی خیالیـــ)(1)                                                 </a>                                             <br/>                                                                                      </div>                                    </div>                                     <b class="sidebar_box_border" style="margin:0  1px"><img  src="../../../static.mihanblog.com/public/images/empty.gif"/></b>                                     <b class="sidebar_box_border"  style="margin:0 2px"><img  src="../../../static.mihanblog.com/public/images/empty.gif"/></b>                                     <b class="sidebar_box_border"  style="margin:0 3px"><img  src="../../../static.mihanblog.com/public/images/empty.gif"/></b>                                 </div>                                                                                      <div class="seprator"><img  src="../../../static.mihanblog.com/public/images/empty.gif"/></div>                                                                                                              <div  class="sidebar_box_border_div">                                     <b class="sidebar_box_border" style="margin:0 3px"><img  src="../../../static.mihanblog.com/public/images/empty.gif"/></b>                                     <b class="sidebar_box_border"  style="margin:0 2px"><img  src="../../../static.mihanblog.com/public/images/empty.gif"/></b>                                     <b class="sidebar_box_border"  style="margin:0 1px"><img  src="../../../static.mihanblog.com/public/images/empty.gif"/></b>                                     <div class="sidebar_box">                                         <h3>❀صَفَحآتـ ـ جآنِبیـ ـ❀</h3>                                                                                          <a href="../../extrapage/jkjk.html">                                                 ✗lدربارهـیــ مــآ✗                                             </a>                                             <br/>                                                                                          <a href="../../extrapage/kkk.html">                                                  ❤جُزوِهـ هـآ❤                                               </a>                                             <br/>                                                                                          <a href="../../extrapage/22.html">                                                 ✘  دزدان گرامی! ✘                                             </a>                                             <br/>                                                                                  </div>                                        <b  class="sidebar_box_border" style="margin:0 1px"><img  src="../../../static.mihanblog.com/public/images/empty.gif"/></b>                                     <b class="sidebar_box_border"  style="margin:0 2px"><img  src="../../../static.mihanblog.com/public/images/empty.gif"/></b>                                     <b class="sidebar_box_border"  style="margin:0 3px"><img  src="../../../static.mihanblog.com/public/images/empty.gif"/></b>                                 </div>                                                                                      <div class="seprator"><img  src="../../../static.mihanblog.com/public/images/empty.gif"/></div>                                                                                                                                               <div class="sidebar_box_border_div">                                     <b class="sidebar_box_border"  style="margin:0 3px"><img  src="../../../static.mihanblog.com/public/images/empty.gif"/></b>                                     <b class="sidebar_box_border"  style="margin:0 2px"><img  src="../../../static.mihanblog.com/public/images/empty.gif"/></b>                                     <b class="sidebar_box_border"  style="margin:0 1px"><img  src="../../../static.mihanblog.com/public/images/empty.gif"/></b>                                     <div class="sidebar_box">                                         <h3>✔آرشیـ ـو✔</h3>                                                                                      <a  href="../archive/1396/9.html"> آذر 1396</a>                                             <br/>                                                                                      <a  href="../archive/1396/5.html"> مرداد 1396</a>                                             <br/>                                                                                      <a  href="../archive/1396/4.html"> تیر 1396</a>                                             <br/>                                                                                      <a  href="../archive/1396/3.html"> خرداد 1396</a>                                             <br/>                                                                                      <a  href="../archive/1396/2.html"> اردیبهشت 1396</a>                                             <br/>                                                                                      <a  href="../archive/1396/1.html"> فروردین 1396</a>                                             <br/>                                                                                      <a  href="../archive/1395/12.html"> اسفند 1395</a>                                             <br/>                                                                                      <a  href="../archive/1395/11.html"> بهمن 1395</a>                                             <br/>                                                                                      <a  href="../archive/1395/10.html"> دی 1395</a>                                             <br/>                                                                                      <a  href="../archive/1395/9.html"> آذر 1395</a>                                             <br/>                                                                                      <a  href="../archive/1395/7.html"> مهر 1395</a>                                             <br/>                                                                                      <a  href="../archive/1395/6.html"> شهریور 1395</a>                                             <br/>                                                                                      <a  href="../archive/1395/5.html"> مرداد 1395</a>                                             <br/>                                                                                  <a  href="../archive.html"><b>✤هَمِه آرشیـ ـوهآ✤</b></a>                                     </div>                                    <b  class="sidebar_box_border" style="margin:0 1px"><img  src="../../../static.mihanblog.com/public/images/empty.gif"/></b>                                     <b class="sidebar_box_border"  style="margin:0 2px"><img  src="../../../static.mihanblog.com/public/images/empty.gif"/></b>                                     <b class="sidebar_box_border"  style="margin:0 3px"><img  src="../../../static.mihanblog.com/public/images/empty.gif"/></b>                                 </div>                                                                                                                                                           <div class="seprator"><img  src="../../../static.mihanblog.com/public/images/empty.gif"/></div>                                                                                                                                       <div class="seprator"><img  src="../../../static.mihanblog.com/public/images/empty.gif"/></div>                                                                                                              <div  class="sidebar_box_border_div">                                     <b class="sidebar_box_border" style="margin:0 3px"><img  src="../../../static.mihanblog.com/public/images/empty.gif"/></b>                                     <b class="sidebar_box_border"  style="margin:0 2px"><img  src="../../../static.mihanblog.com/public/images/empty.gif"/></b>                                     <b class="sidebar_box_border"  style="margin:0 1px"><img  src="../../../static.mihanblog.com/public/images/empty.gif"/></b>                                     <div class="sidebar_box">                                         <h3>☘لینکدونیـ ـ☘</h3>                                                                                          <a href="../../../asal44-cod.mihanblog.com/index.html"  title="" target="_blank">                                                 وب کدنویسان(نویسنده عسل)                                             </a>                                             <br/>                                                                                          <a href="../../../does.mihanblog.com/index.html"  title="" target="_blank">                                                 کدهای پونی کوچوول(وب معاون لونا)                                             </a>                                             <br/>                                                                                          <a href="../../../33mnmn33.mihanblog.com/index.html"  title="" target="_blank">                                                 کد ها و سفارشات صدف(وب نویسنده صدف جونم)                                             </a>                                             <br/>                                                                                          <a href="../../../1everafterhigh1.mihanblog.com/index.html"  title="" target="_blank">                                                 کلوپ اور افتر های(وب نوینسده ی خوب مون)                                             </a>                                             <br/>                                                                                          <a href="../../../codeshopcenter.mihanblog.com/index.html"  title="" target="_blank">                                                 کارگاه کد نویسی(وب مل مل جونم)                                             </a>                                             <br/>                                                                                          <a href="../../../golbahar83.mihanblog.com/index.html"  title="" target="_blank">                                                 بچه سمپادی(وب میس گلبهار)                                             </a>                                             <br/>                                                                                          <a href="http://worldofcode.mihanblog.com/"  title="" target="_blank">                                                 یه وب برای دخملا(وب سلناتور)                                             </a>                                             <br/>                                                                                          <a href="../../../baran2k5.mihanblog.com/index.html"  title="" target="_blank">                                                 دنیای فانتزی من(وب باران)                                             </a>                                             <br/>                                                                                          <a href="http://negar-m.mihanblog.com"  title="" target="_blank">                                                 صدای بی صدا(وب معاون نگار)                                             </a>                                             <br/>                                                                                          <a href="http://dafatarkhatratportghali.mihanblog.com"  title="" target="_blank">                                                 دفتر خاطرات پرتقالی(وب سازنده)                                             </a>                                             <br/>                                                                                 <a  href="../../linkdaily/index.html"><b>☯هَمِهـ ـ لینکـ ـ هآ☯</b></a>                                        <a  href="javascript:linkdailyForm()"><b>♞اِرسآلـ ـ لینکـ ـ♞</b></a>                                    </div>                                     <b class="sidebar_box_border"  style="margin:0 1px"><img  src="../../../static.mihanblog.com/public/images/empty.gif"/></b>                                     <b class="sidebar_box_border"  style="margin:0 2px"><img  src="../../../static.mihanblog.com/public/images/empty.gif"/></b>                                     <b class="sidebar_box_border"  style="margin:0 3px"><img  src="../../../static.mihanblog.com/public/images/empty.gif"/></b>                                 </div>                                                                                                                                                   <div class="seprator"><img  src="../../../static.mihanblog.com/public/images/empty.gif"/></div>                                                                                                               <div class="sidebar_box_border_div">                                     <b class="sidebar_box_border" style="margin:0 3px"><img  src="../../../static.mihanblog.com/public/images/empty.gif"/></b>                                     <b class="sidebar_box_border"  style="margin:0 2px"><img  src="../../../static.mihanblog.com/public/images/empty.gif"/></b>                                     <b class="sidebar_box_border"  style="margin:0 1px"><img  src="../../../static.mihanblog.com/public/images/empty.gif"/></b>                                         <div class="sidebar_box">                                         <div>                                             <h3>☕مَطآلِبـ ـ☕</h3>                                                                                                  <a  href="../564.html">                                                     امضـــآهای متهاب ژووونم قسمت 2:)                                                 </a>                                                 <br/>                                                                                                  <a  href="../563.html">                                                     امضـــاهـای مهتاب ژوونم:) قسمت 1                                                 </a>                                                 <br/>                                                                                                  <a  href="../562.html">                                                     تینتاکس-ماکی یور-سوپر استیکر  مهتاب ژوونم:)                                                 </a>                                                 <br/>                                                                                                  <a  href="../555.html">                                                     سفارش رایگان ولکام                                                 </a>                                                 <br/>                                                                                                  <a  href="../554.html">                                                     2 تا دکمهـ                                                 </a>                                                 <br/>                                                                                                  <a  href="../550.html">                                                     جزوه هایــِ فاطمه جونمــ(:                                                 </a>                                                 <br/>                                                                                                  <a  href="../551.html">                                                     سفارشـ ساجده جونــ(:                                                 </a>                                                 <br/>                                                                                                  <a  href="../543.html">                                                     جزوه قالب شیشه ای برای باران                                                 </a>                                                 <br/>                                                                                                  <a  href="../542.html">                                                     جِزوهـِ  جعبهـ اخبـار توآیلـاتـ(:                                                 </a>                                                 <br/>                                                                                                  <a  href="../541.html">                                                     اموزش فوتوشاپ برای باران                                                 </a>                                                 <br/>                                                                                                  <a  href="../540.html">                                                     دکمه ناز                                                 </a>                                                 <br/>                                                                                                  <a  href="../538.html">                                                      ولکام نایس                                                 </a>                                                 <br/>                                                                                                  <a  href="../537.html">                                                     بنر مهتاب جان                                                 </a>                                                 <br/>                                                                                                  <a  href="../536.html">                                                     اموزش مقدماتی فوتوشاپ برای مبینا                                                 </a>                                                 <br/>                                                                                                  <a  href="../535.html">                                                     صفحه ورودی نایس                                                 </a>                                                 <br/>                                                                                      </div>                                    </div>                                     <b class="sidebar_box_border"  style="margin:0 1px"><img  src="../../../static.mihanblog.com/public/images/empty.gif"/></b>                                     <b class="sidebar_box_border"  style="margin:0 2px"><img  src="../../../static.mihanblog.com/public/images/empty.gif"/></b>                                     <b class="sidebar_box_border"  style="margin:0 3px"><img  src="../../../static.mihanblog.com/public/images/empty.gif"/></b>                                 </div>                                                                                      <div class="seprator"><img  src="../../../static.mihanblog.com/public/images/empty.gif"/></div>                                                                                                                                                   <div class="sidebar_box_border_div">                                     <b class="sidebar_box_border"  style="margin:0 3px"><img  src="../../../static.mihanblog.com/public/images/empty.gif"/></b>                                     <b class="sidebar_box_border"  style="margin:0 2px"><img  src="../../../static.mihanblog.com/public/images/empty.gif"/></b>                                     <b class="sidebar_box_border"  style="margin:0 1px"><img  src="../../../static.mihanblog.com/public/images/empty.gif"/></b>                                 <div class="sidebar_box">                                         <h3>☮آمآرِ وِبـ ـ☮</h3>                                         ✘کُلِـ ـ بآزدید✘:<script>getStatVar('total_view');</script><br/>                                         ✘بآزدیـ ـدِ اِمروز✘:<script>getStatVar('today_view');</script><br/>                                         ✘بآزدیـ ـدِ دیروز✘: <script>getStatVar('yesterday_view');</script><br/>                                         ✘بآزدیدِ اینـ ـ مآه✘: <script>getStatVar('this_month_view');</script><br/>                                          ✘بآزدیدِ مآه قَبلـ ـ✘:  <script>getStatVar('last_month_view');</script><br/>                                         ✘تِعدآد نِویسَندِگآنـ ـ✘: <script>getStatVar('total_author');</script><br/>                                         ✘تِعدآد کُلِـ ـ مَطآلِبـ ـ✘: <script>getStatVar('total_post');</script><br/>                                         ✘آخَرینـ ـ بآزدید✘:  <script>getStatVar('last_view_date');</script><br/>                                         ✘آخَرینـ ـ بِروزرِسآنیـ ـ✘: <script>getStatVar('modify_date');</script><br/><!-- Start Code By Love skin -->
+<!-- Start Code Banner By http://sefareshatehmahshid.mihanblog.com/ -->
+<p style="text-align:center"><a title="سفارشات مهشید" href="../../../sefareshatehmahshid.mihanblog.com/index.html" target="_blank"><img src="http://up.persianscript.ir/uploadsmedia/17d2-9614.png" alt="سفارشات مهشید" width="150" height="100"></a><br>
+<textarea style="resize:none;overflow:hidden;width:140px;height:22px;text-align:left;background:#FF99D6;" onclick="javascript:this.select();"><!-- Start Code Banner By http://sefareshatehmahshid.mihanblog.com/ -->
+<p style="text-align:center"><a title="سفارشات مهشید" href="../../../sefareshatehmahshid.mihanblog.com/index.html" target="_blank"><img src="http://up.persianscript.ir/uploadsmedia/17d2-9614.png" alt="سفارشات مهشید" width="150" height="100"></a></p>
+<!-- End Code Banner By http://sefareshatehmahshid.mihanblog.com/ --></textarea></p>
+<!-- End Code Banner By http://sefareshatehmahshid.mihanblog.com/ -->
+<!-- End Code By Love skin -->
+
+
+                                     </div>                                         <b class="sidebar_box_border" style="margin:0 1px"><img  src="../../../static.mihanblog.com/public/images/empty.gif"/></b>                                     <b class="sidebar_box_border"  style="margin:0 2px"><img  src="../../../static.mihanblog.com/public/images/empty.gif"/></b>                                     <b class="sidebar_box_border"  style="margin:0 3px"><img  src="../../../static.mihanblog.com/public/images/empty.gif"/></b>                                 </div>                                                                                                                                          <div  class="seprator"><img  src="../../../static.mihanblog.com/public/images/empty.gif"/></div>                                                 <div  class="sidebar_box_border_div">                                 <!-- Start Code By Love-skin.ir -->
+<style>body, a:hover{cursor:url(http://up.persianscript.ir/uploadsmedia/1524-موس-کدهای-دوستان.png), url(http://up.persianscript.ir/uploadsmedia/1524-موس-کدهای-دوستان.png), progress !important;}</style>
+<!-- End Code By Love-skin.ir -->
+
+<!-- Start Code By Love-skin.ir -->
+<script type="text/javascript" src="http://up.love-skin.ir/up/l-skin/tools/maker/top/top.jquery-min.js"></script>
+<script>var abzar = "<img src=http://up.persianscript.ir/uploadsmedia/1524-بالابر-سفارشات-دخترونه.png />";</script>
+<script type="text/javascript" src="http://up.love-skin.ir/up/l-skin/tools/maker/top/scroll-topcontrol.js"></script>
+<!-- End Code By Love-skin.ir -->
+                            </div>                             <div class="sidebar_box_border_div">                                 <div class="mihan_logo"></div>                             </div>                    </div>                 </div>            </div>                        <div  id="footer_background"><img  src="../../../static.mihanblog.com/public/images/empty.gif"/></div>                                         </div>                             </body></html>  
+<script>
+//    setTimeout(function () {
+//        GetMihanBlogShowAds();
+//    }, 1000);
+</script>
+<!--NEW SERVER--><!--;)-->
+
+<!--SabaVision Ads Handler--><!--<script type="text/javascript">(function (d) {var url =   location.protocol+'//api.sabavision.com/pox/poxjs.js';d.write('<script type="text/javascript" src="' + url + '" async></scri' + 'pt>');})(document);</script>-->
+
+
+<script type="text/javascript">
+
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-153829-9']);
+    _gaq.push(['_setDomainName', 'jina-cod.mihanblog.com']);
+    _gaq.push(['_trackPageview']);
+
+    (function() {
+        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+
+</script>
+
+
+<div id='mediaad-Kvcm'></div>
+<meta name="sabavision_zone" content="2500-Z499" />
+<center>
+    <div style="background-color:white;width:90%;padding:20px;margin-top:50px;margin-bottom:50px;">
+        <a href="https://www.cloob.com">شبکه اجتماعی فارسی کلوب</a> | <a href="https://www.seo25.com/product/buy-mobile-traffic-and-get-cheap-targeted-mobile-traffic/" target="_blank">Buy Mobile Traffic</a> | <a href="https://www.soalaat.com">سایت سوالات</a>
+    </div>
+</center>

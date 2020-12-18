@@ -1,0 +1,2576 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+"http://www.w3.org/TR/html4/loose.dtd">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" /><link rel="EditURI" type="application/rsd+xml" title="RSD" href="http://kanonmadahan.mihanblog.com/xmlrpc?rsd" />
+<script type="text/javascript" src="../static.mihanblog.com/public/scripts/run/g.other.v3.js"></script>
+<script>
+
+	function c_$(id){
+        return document.getElementById(id);
+    }
+    
+			//if (parent.frames.length) top.location.href= document.location;
+		
+	setTodayDate = function(){
+		document.write('شنبه 22 آذر 1399');
+		/*1075305*/	}
+
+</script>
+
+
+
+        <script type="text/javascript">
+            (function(){
+            var now = new Date();
+            var head = document.getElementsByTagName('head')[0];
+            var script = document.createElement('script');
+            script.async = true;
+            var script_address = 'https://cdn.yektanet.com/js/mihanblog.com/native-mihanblog.com-6531.js';
+            script.src = script_address + '?v=' + now.getFullYear().toString() + '0' + now.getMonth() + '0' + now.getDate() + '0' + now.getHours();
+            head.appendChild(script);
+            })();
+        </script>
+
+        <!--<script type="text/javascript">
+            var head = document.getElementsByTagName("head")[0];
+            var script = document.createElement("script");
+            script.type = "text/javascript";
+            script.async=1;
+            script.src = "https://s1.mediaad.org/serve/mihanblog.com/loader.js" ;
+            head.appendChild(script);
+        </script>-->
+        
+        <script>
+            var sabaVisionWebsiteID = "9bab9dac-041d-4bdb-b39a-1ed789f65eed"; var sabaVisionWebsitePage = "ALL"
+        </script>
+        <link rel="stylesheet" href="https://plus.sabavision.com/dox/dox.min.css">
+        <script src="https://plus.sabavision.com/dox/dox.min.js"></script>
+        
+        <script>
+	try{
+		var commentCnt = new Array();
+		commentCnt[307]='3';commentCnt[308]='12';commentCnt[309]='1';commentCnt[310]='1';commentCnt[311]='2';commentCnt[312]='1';commentCnt[313]='0';commentCnt[314]='0';commentCnt[315]='2';commentCnt[316]='1';commentCnt[317]='4';commentCnt[318]='5';commentCnt[319]='5';	} catch(e){}
+	
+	newComment = function(post_id){
+		try{
+			window.open('/post/comment/'+post_id,'comment','status=yes,scrollbars=yes,toolbar=no,menubar=no,location=no ,width=480px,height=540px');
+		} catch(e){}
+	}
+	setCommentCnt = function(post_id){
+		try{
+			if(commentCnt[post_id]){
+				document.write(commentCnt[post_id]);
+			} else {
+				document.write(0);
+			}
+		} catch(e){}
+	}
+</script><script>
+
+
+	mihanblogUpdateLike = function(postid,type){
+		var url = '/post/like/'+postid+'/'+type;
+		mihanblogGetAjax(url,function(){});
+	};
+	try{
+        mihanblogGetAjax = function (url,callback) {
+    		var req;
+			if (window.XMLHttpRequest)
+            {
+                // code for IE7+, Firefox, Chrome, Opera, Safari
+			  	req = new XMLHttpRequest();
+			}else{	// code for IE6, IE5
+			  	req = new ActiveXObject("Microsoft.XMLHTTP");
+		  	}
+		    req.open("GET", url, 1);
+		    req.onreadystatechange = function () {
+		        if (req.readyState == 4) {
+		            if (req.status == 200) {
+		            	var response = eval(req.responseText);
+		            	callback();
+		            }else{
+	            		return ;
+		            }
+		        }else{
+					return ;
+		        }
+		    }
+		    req.send(null);
+		}
+	}catch(e){}
+
+	try{
+		var mihanblogLikeArrCnt = new Array();
+		var mihanblogDisLikeArrCnt = new Array();
+
+		mihanblogLikeArrCnt[307]='0';
+mihanblogDisLikeArrCnt[307]='0';
+mihanblogLikeArrCnt[308]='0';
+mihanblogDisLikeArrCnt[308]='0';
+mihanblogLikeArrCnt[309]='0';
+mihanblogDisLikeArrCnt[309]='0';
+mihanblogLikeArrCnt[310]='0';
+mihanblogDisLikeArrCnt[310]='0';
+mihanblogLikeArrCnt[311]='0';
+mihanblogDisLikeArrCnt[311]='0';
+mihanblogLikeArrCnt[312]='0';
+mihanblogDisLikeArrCnt[312]='0';
+mihanblogLikeArrCnt[313]='0';
+mihanblogDisLikeArrCnt[313]='0';
+mihanblogLikeArrCnt[314]='0';
+mihanblogDisLikeArrCnt[314]='0';
+mihanblogLikeArrCnt[315]='0';
+mihanblogDisLikeArrCnt[315]='0';
+mihanblogLikeArrCnt[316]='0';
+mihanblogDisLikeArrCnt[316]='0';
+mihanblogLikeArrCnt[317]='0';
+mihanblogDisLikeArrCnt[317]='0';
+mihanblogLikeArrCnt[318]='0';
+mihanblogDisLikeArrCnt[318]='0';
+mihanblogLikeArrCnt[319]='0';
+mihanblogDisLikeArrCnt[319]='0';
+	} catch(e){}
+
+
+
+    mihanblogPostLike = function(post_id){
+
+        mihanblogLikeCnt = (mihanblogLikeArrCnt[post_id]? mihanblogLikeArrCnt[post_id] : 0);
+        mihanblogDisLikeCnt = (mihanblogDisLikeArrCnt[post_id]? mihanblogDisLikeArrCnt[post_id] : 0);
+        mihanblogLikeCnt = parseInt(mihanblogLikeCnt);
+        mihanblogDisLikeCnt = parseInt(mihanblogDisLikeCnt);
+
+        document.write(
+                '<div class="mihanblog_like_wrapper ">'+
+                       '<div id="dislikeBar_'+post_id+'" onclick="mihanblogUpdateLike('+post_id+',\'dislike\')"   class="mihanblog_like_bar mihanblog_like_dislikeBar mihanblog_like_show_help ">-<div class="mihanblog_like_Cnt" id="disLikeCnt_'+post_id+'">'+mihanblogDisLikeCnt+'</div>'+
+                            '<span  class="mihanblog_like_v2_help mihanblog_like_v2_help_dislike clearfix"> '+
+                                '<span class="mihanblog_like_help_arrow mihanblog_like_help_arrow_dislike clearfix"></span>'+
+                                '<span class="mihanblog_like_help_text">نمی پسندم</span>'+
+                            '</span>'+
+                        '</div>'+
+                       '<div id="Like_'+post_id+'" class="mihanblog_like_border"></div>'+
+                       '<div id="likeBar_'+post_id+'" onclick="mihanblogUpdateLike('+post_id+',\'like\')"  class="mihanblog_like_bar mihanblog_like_likeBar mihanblog_like_show_help" >+<div class="mihanblog_like_Cnt" id="likeCnt_'+post_id+'">'+mihanblogLikeCnt+'</div>'+
+                            '<span  class="mihanblog_like_v2_help mihanblog_like_v2_help_like clearfix"> '+
+                                '<span class="mihanblog_like_help_arrow mihanblog_like_help_arrow_like clearfix"></span>'+
+                                '<span class="mihanblog_like_help_text">می پسندم</span>'+
+                            '</span>'+
+                        '</div>'+
+
+                '</div>'
+        );
+
+
+
+        mihanblogDisplayeLike(post_id);
+    }
+
+
+    mihanblogDisplayeLike = function(post_id){
+
+        mihanblogLikeCnt = (mihanblogLikeArrCnt[post_id]? mihanblogLikeArrCnt[post_id] : 0);
+        mihanblogDisLikeCnt = (mihanblogDisLikeArrCnt[post_id]? mihanblogDisLikeArrCnt[post_id] : 0);
+        mihanblogLikeCnt = parseInt(mihanblogLikeCnt);
+        mihanblogDisLikeCnt = parseInt(mihanblogDisLikeCnt);
+
+
+
+        sum = mihanblogLikeCnt - mihanblogDisLikeCnt;
+        backgroundBorder =  document.getElementById('Like_'+post_id);
+        var likeObj = document.getElementById('likeCnt_'+post_id);
+        var disLikeObj = document.getElementById('disLikeCnt_'+post_id);
+
+
+
+
+
+        likeObj.innerHTML =  mihanblogLikeCnt ;
+        disLikeObj.innerHTML =  mihanblogDisLikeCnt;
+
+        if(sum == 0){
+            backgroundBorder.style.backgroundImage = "url('/public/public/images/icons/like_likedislike.png')";
+            document.getElementById('dislikeBar_'+post_id).style.width = '19px';
+            document.getElementById('likeBar_'+post_id).style.width = '19px';
+        }else{
+             if(sum > 0){
+                 backgroundBorder.style.backgroundImage = "url('/public/public/images/icons/like_like.png')";
+                 document.getElementById('likeBar_'+post_id).style.width = '23px';
+                 document.getElementById('dislikeBar_'+post_id).style.width = '15px';
+             }else{
+                 backgroundBorder.style.backgroundImage = "url('/public/public/images/icons/like_dislike.png')";
+                 document.getElementById('likeBar_'+post_id).style.width = '15px';
+                 document.getElementById('dislikeBar_'+post_id).style.width = '23px';
+             }
+        }
+
+    }
+
+
+
+
+</script>
+
+<style type="text/css">
+
+
+    .clearfix {display: inline-block;}
+    .clearfix:after {
+        content: ".";
+        display: block;
+        height: 0;
+        clear: both;
+        visibility: hidden;
+    }
+
+    .mihanblog_like_wrapper {
+        color: #ffffff;
+        direction: ltr;
+        position: relative;
+    }
+    .mihanblog_like_wrapper span{
+        display: none;
+    }
+    .mihanblog_like_bar {
+        color: #FFFFFF;
+        cursor: pointer;
+        float: left;
+        font-size: 10px;
+        height: 20px;
+        line-height: 19px;
+        margin: 5px 0;
+    }
+    .mihanblog_like_likeBar {
+        background-color: #88B131;
+        padding-right: 5px;
+        border-top-right-radius: 2px;
+        border-bottom-right-radius: 2px;
+        text-align: right;
+    }
+    .mihanblog_like_likeBar:hover{
+        background-color: #699017;
+    }
+    .mihanblog_like_border {
+        background-color: #666666;
+        border: 1px solid #666666;
+        float: left;
+        font-size: 12px;
+        height: 20px;
+        margin-top: 2px;
+        width: 25px;
+        padding: 3px 5px 2px 0;
+        text-align: center;
+        border-radius: 2px;
+        color: #ffffff;
+        direction: ltr;
+        background-repeat: no-repeat ;
+        background-position: 4px center;
+    }
+    .mihanblog_like_border img {
+        margin-left: 2px;
+        margin-top: 2px;
+        width: 22px;
+    }
+    .mihanblog_like_dislikeBar {
+        background-color: #FF6F31;
+        padding-left: 5px;
+        border-top-left-radius: 2px;
+        border-bottom-left-radius: 2px;
+        text-align:left ;
+    }
+    .mihanblog_like_dislikeBar:hover{
+        background-color: #D54B10;
+    }
+
+
+
+    .mihanblog_like_show_help {
+        position: relative;
+    }
+    .mihanblog_like_show_help:hover span {
+        display: block;
+    }
+    .mihanblog_like_help_text {
+        background-color: white;
+        border: 1px solid #555555;
+        border-radius: 3px 3px 3px 3px;
+        color: #303030;
+        float: left;
+        font-size: 11px;
+        font-weight: normal;
+        padding: 5px 10px;
+    }
+
+    .mihanblog_like_help_arrow_dislike {
+        background: url("http://kanonmadahan.mihanblog.com/public/public/images/icons/like_hover_top.png") no-repeat scroll 16px 0 transparent;
+        left: 0;
+        top: -4px;
+    }
+
+    .mihanblog_like_help_arrow_like {
+        background: url("http://kanonmadahan.mihanblog.com/public/public/images/icons/like_hover_top _2.png") no-repeat scroll 16px 0 transparent;
+        left: -10px;
+        top: 29px;
+    }
+
+    .mihanblog_like_help_arrow{
+        height: 6px;
+        position: absolute;
+        width: 100px;
+
+    }
+
+    .mihanblog_like_v2_help_dislike {
+        left: -15px;
+        top: 24px;
+    }
+    .mihanblog_like_v2_help_like {
+        left: 0;
+        top: -35px;
+
+    }
+    .mihanblog_like_v2_help{
+        display: none;
+        position: absolute;
+        white-space: nowrap;
+        z-index: 1;
+    }
+
+    .mihanblog_like_Cnt{
+        display: inline;
+        color: #ffffff;
+    }
+
+</style><script>
+
+	statInfo = new Array();
+	setStatVar = function(index,value){
+		statInfo[index] = value;
+	}
+	getStatVar = function(index){
+		if(statInfo[index]) document.write(statInfo[index]);
+	}
+	
+	setStatVar('total_post','275');
+	setStatVar('total_author','0');
+	setStatVar('modify_date','شنبه 19 اردیبهشت 1394');
+	
+	setStatVar('today_view','15');
+	setStatVar('yesterday_view','31');
+	
+	setStatVar('this_month_view','942');
+	setStatVar('last_month_view','1250');
+
+	setStatVar('total_view','287965');
+	setStatVar('last_view_date','شنبه 22 آذر 1399 (15:23)');
+
+
+
+    
+    function setStatFromClient()
+    {
+        var url = 'http://kanonmadahan.mihanblog.com/statupdate/?data[refereruri]=http://vap1.mihanblog.com/&data[postid]=&data[requesturi]=/&data[sdate]=1607774052&data[hash]=5e23ac09318d2084a6f98809b600bdcb&data[resolution]='+screen.width+' X '+screen.height;
+
+//        alert(url);
+//        var newjs = document.createElement("SCRIPT");
+//        newjs.type = 'text/javascript';
+//        newjs.src = url;
+//
+//        var newdiv = document.createElement("DIV");
+//        newdiv.setAttribute("style","display:none");
+
+        document.write(unescape('%3Cscript src="'+url+'" type="text/javascript"%3E%3C/script%3E'));
+//        newdiv.appendChild (newjs);
+//        document.write(newjs);
+//        document.write(appendChild (newdiv);
+
+    };
+    setStatFromClient();
+        
+</script><script>
+	messageForm = function(post_id){
+		try{
+			window.open('/message','message','status=yes,scrollbars=yes,toolbar=no,menubar=no,location=no ,width=480px,height=550px');
+		} catch(e){}
+	}
+</script><script>
+	linkdailyForm = function(){
+		try{
+			window.open('/linkdaily/new','linkdaily','status=yes,scrollbars=yes,toolbar=no,menubar=no,location=no ,width=500px,height=460px');
+		} catch(e){}
+	}
+</script><script>
+
+var MihanblogShopAdsArray = new Array();
+
+function GetMihanBlogShowAds(){
+	if(MihanblogShopAdsArray.length){
+		var adsTarget = 'MihanblogShopAds';
+		var containerWidth = document.getElementById(adsTarget).offsetWidth;
+		if(containerWidth>=200){
+			var adsCnt = parseInt(containerWidth / 200) ;
+			if(adsCnt>MihanblogShopAdsArray.length){
+				adsCnt = MihanblogShopAdsArray.length ; 
+			}
+//			var OneAdsWidth = parseInt(containerWidth / adsCnt) ;
+			var OneAdsWidth = containerWidth / adsCnt ;
+			if(OneAdsWidth>400){
+				OneAdsWidth = 400 ;
+			}
+			var OutHtml = '';
+			var img = '';
+			var link = '';
+			var title = '';
+			var description = '';
+			var imgWidth = 70;
+			if(OneAdsWidth>230){
+				imgWidth = 80;
+			}
+			if(OneAdsWidth>300){
+				imgWidth = 90;
+			}
+			for(adsOne=0;adsOne<adsCnt;adsOne++){
+				
+				img = MihanblogShopAdsArray[adsOne]['img'];
+				link = MihanblogShopAdsArray[adsOne]['link'];
+				title = MihanblogShopAdsArray[adsOne]['title'];
+				description = MihanblogShopAdsArray[adsOne]['description'];
+				
+				OutHtml += '<td style="background-color:#FFF;width: '+OneAdsWidth+'px;border:1px solid #f00;margin:0px 0px;font-size:11px;font-family:tahoma;padding:2px;margin:0px 0px;font-size:11px;border: 1px solid BurlyWood; padding: 1px; height: '+(imgWidth+25)+'px;">';
+
+				OutHtml += '	<a href="http://kanonmadahan.mihanblog.com/'+link+'" target="_blank" style="text-decoration:none">';
+
+				OutHtml += '			<div style="width: '+(OneAdsWidth-16)+'px;cursor:pointer;font-size:12px;padding: 4px 1px 4px 7px; white-space: nowrap; text-align: center; font-weight: bold; color: blue;white-space:nowrap;overflow:hidden">';
+				OutHtml += 					title;
+				OutHtml += '			</div>';
+				OutHtml += '			<div style="cursor:pointer;padding: 1px; display: block; float: right; width: '+imgWidth+'px;">';
+				OutHtml += '				<img src="'+img+'.html" style="border:0px;padding:0px;margin:0px;width:'+imgWidth+'px;height:'+imgWidth+'px;">';
+				OutHtml += '			</div>';
+				OutHtml += '			<div style="padding: 1px; display: block; float: right; width: '+(OneAdsWidth-13-imgWidth)+'px; text-align: right;overflow:hidden">';
+				OutHtml += '				<div style="overflow:hidden;cursor:pointer;padding: 2px 3px; line-height: 17px; height: '+(imgWidth-3)+'px; text-align: justify;color:#000;direction:rtl">';
+				OutHtml += 						description;
+				OutHtml += '				</div>';
+				OutHtml += '			</div>';
+
+				OutHtml += '	</a>';
+
+				OutHtml += '</td>';
+			}
+			
+			var Out = '<table align="center" cellpadding="0" cellspacing="2" style="width:'+(OneAdsWidth*adsCnt)+'px;"><tr>'+OutHtml+'</tr></table>'; 
+			
+			Out = '<div style="text-align:center;padding:0px;margin:3px auto;">'+Out+'</div>'; 
+			
+			document.getElementById(adsTarget).style.height = (imgWidth+35)+'px' ;
+			document.getElementById(adsTarget).innerHTML = Out ;
+		}
+	}
+}
+</script>
+    <style>
+        @font-face {
+            font-family: 'Mihan-Iransans';
+            src: url('http://kanonmadahan.mihanblog.com/public/public/fonts/Iransans.eot');
+            src: url('http://kanonmadahan.mihanblog.com/public/public/fonts/Iransans.eot?') format('embedded-opentype'),
+            url('http://kanonmadahan.mihanblog.com/public/public/fonts/Iransans.woff2') format('woff2'),
+            url('http://kanonmadahan.mihanblog.com/public/public/fonts/Iransans.woff') format('woff'),
+            url('http://kanonmadahan.mihanblog.com/public/public/fonts/Iransans.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+        @font-face {
+            font-family: 'Mihan-IransansBold';
+            src: url('http://kanonmadahan.mihanblog.com/public/public/fonts/Iransans-Black.eot');
+            src: url('http://kanonmadahan.mihanblog.com/public/public/fonts/Iransans-Black.eot?') format('embedded-opentype'),
+            url('http://kanonmadahan.mihanblog.com/public/public/fonts/Iransans-Black.woff2') format('woff2'),
+            url('http://kanonmadahan.mihanblog.com/public/public/fonts/Iransans-Black.woff') format('woff'),
+            url('http://kanonmadahan.mihanblog.com/public/public/fonts/Iransans-Black.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+        @font-face {
+            font-family: 'Mihan-IransansLight';
+            src: url('http://kanonmadahan.mihanblog.com/public/public/fonts/Iransans-UltraLight.eot');
+            src: url('http://kanonmadahan.mihanblog.com/public/public/fonts/Iransans-UltraLight.eot?') format('embedded-opentype'),
+            url('http://kanonmadahan.mihanblog.com/public/public/fonts/Iransans-UltraLight.woff2') format('woff2'),
+            url('http://kanonmadahan.mihanblog.com/public/public/fonts/Iransans-UltraLight.woff') format('woff'),
+            url('http://kanonmadahan.mihanblog.com/public/public/fonts/Iransans-UltraLight.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+        @font-face {
+            font-family: 'Mihan-Nassim';
+            src: url('http://kanonmadahan.mihanblog.com/public/public/fonts/Nassim.eot');
+            src: url('http://kanonmadahan.mihanblog.com/public/public/fonts/Nassim.eot?') format('embedded-opentype'),
+            url('http://kanonmadahan.mihanblog.com/public/public/fonts/Nassim.woff2') format('woff2'),
+            url('http://kanonmadahan.mihanblog.com/public/public/fonts/Nassim.woff') format('woff'),
+            url('http://kanonmadahan.mihanblog.com/public/public/fonts/Nassim.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+        @font-face {
+            font-family: 'Mihan-Koodak';
+            src: url('http://kanonmadahan.mihanblog.com/public/public/fonts/Koodak.eot');
+            src: url('http://kanonmadahan.mihanblog.com/public/public/fonts/Koodak.eot?') format('embedded-opentype'),
+            url('http://kanonmadahan.mihanblog.com/public/public/fonts/Koodak.woff2') format('woff2'),
+            url('http://kanonmadahan.mihanblog.com/public/public/fonts/Koodak.woff') format('woff'),
+            url('http://kanonmadahan.mihanblog.com/public/public/fonts/Koodak.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+        @font-face {
+            font-family: 'Mihan-Yekan';
+            src: url('http://kanonmadahan.mihanblog.com/public/public/fonts/Yekan.eot');
+            src: url('http://kanonmadahan.mihanblog.com/public/public/fonts/Yekan.eot?') format('embedded-opentype'),
+            url('http://kanonmadahan.mihanblog.com/public/public/fonts/Yekan.woff2') format('woff2'),
+            url('http://kanonmadahan.mihanblog.com/public/public/fonts/Yekan.woff') format('woff'),
+            url('http://kanonmadahan.mihanblog.com/public/public/fonts/Yekan.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+        @font-face {
+            font-family: 'FontAwesome';
+            src: url('http://kanonmadahan.mihanblog.com/public/public/fonts/fontawesome_webfont.eot');
+            src: url('http://kanonmadahan.mihanblog.com/public/public/fonts/fontawesome_webfont.eot?') format('embedded-opentype'),
+            url('http://kanonmadahan.mihanblog.com/public/public/fonts/fontawesome_webfont.woff2') format('woff2'),
+            url('http://kanonmadahan.mihanblog.com/public/public/fonts/fontawesome_webfont.woff') format('woff'),
+            url('http://kanonmadahan.mihanblog.com/public/public/fonts/fontawesome_webfont.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+
+
+        
+
+        /* Smartphones (portrait and landscape) ----------- */
+
+        /*
+        @media only screen and (max-width : 480px) and (min-width : 320px) {
+            .sabaClick_advert__wrapper{
+                display:block;
+            }
+            .sabaClick_advert__inner{
+                max-width: 90%;
+                margin: 0 5%;
+            }
+        }
+        */
+
+    </style>
+
+
+
+
+
+
+
+<html>
+
+<head>
+<meta http-equiv="Content-Language" content="en-us">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta name="Theme Designer" content="www.MyTheme.ir">
+<script src="http://mytheme.ir/themes/script.js" language="javascript"></script>
+<meta name="description" content="">
+<meta name="keywords" content=""> 
+<link rel="alternate" type="application/rss+xml" title="سایت کانون مداحان شهرستان گناوه" href="http://kanonmadahan.mihanblog.com/post/rss/">
+<link rel="alternate" type="application/atom+xml" title="سایت کانون مداحان شهرستان گناوه" href="http://kanonmadahan.mihanblog.com/post/atom/">
+<link href="http://mythemes.ir/t41/style.css" type="text/css" rel="stylesheet">
+
+<script type="text/javascript" src="http://mythemes.ir/t41/jquery.js"></script>
+<script type="text/javascript" src="http://mythemes.ir/t41/jfl.js"></script>
+<script language="javascript">
+var jq=jQuery.noConflict();
+jq(document).ready(function() {
+jq.featureList(
+jq("#tabs li a"),
+jq("#output li"), {
+start_item : 0
+});
+});
+</script>
+
+<title>سایت کانون مداحان شهرستان گناوه</title>
+</head>
+
+<body>
+
+<div align="center">
+<table class="div000" border="0" width="100%" height="100%" cellspacing="0" cellpadding="0">
+<tr>
+<td class="div2-mihanblog">
+<div class="div00">
+
+<div class=s1><form id="frm-16075501655fd144d5547f8" method="get" action="http://kanonmadahan.mihanblog.com/post/search/fid/16075501655fd144d5547f8"  onsubmit="window.open('', 'search', 'toolbar=0,location=0,status=0,menubar=0,scrollbars=1,resizable=0,width=400,height=310')" target="search"> 
+<div class=s2>
+<input type="text" name="search_text" size="27" style="border: 0px none; background: none; font-family:Tahoma; font-size:9pt; direction:ltr; color:#ffffff;"></div>
+<div class=s3><input type="image" src="http://mythemes.ir/t41/blank.gif" width=30 height=30 value="جستجو"></div>
+<input type="hidden" name="frm-id" value="16075501655fd144d5547f8" id="frm-id" /></form></div>
+
+<div class=div60>
+<div class=div101>
+<div class=div10><font class=title>سایت کانون مداحان شهرستان گناوه</font></div></div>
+<div class=div11>
+<div class=div12><font class=des>ای که بستی ره میان کوچه ها بر مادرم**گردنت را میشکست آنجا اگر عباس بود</font></div></div>
+</div>
+
+<div class=ss>
+<div class=s4>
+<div class=s5>
+<a href="index.html"><img src="http://mythemes.ir/t41/blank.gif" width="150" height="100" border="0"></a>
+<a href="mailto:s.m.mousavi1392@gmail.com"><img src="http://mythemes.ir/t41/blank.gif" width="150" height="100" border="0"></a>
+<a href="http://kanonmadahan.mihanblog.com/post/rss/"><img src="http://mythemes.ir/t41/blank.gif" width="150" height="100" border="0"></a>
+<a href="javascript:messageForm()"><img src="http://mythemes.ir/t41/blank.gif" width="150" height="100" border="0"></a>
+<a href="http://mytheme.ir" target="_blank"><img src="http://mythemes.ir/t41/blank.gif" width="150" height="100" border="0"></a></div></div>
+</div>
+
+<div id="feature_list">
+<ul id="tabs">
+<li><a href="index.html#1"><img src="http://s3.picofile.com/file/7976156127/n00122736_b.jpg" width="60" height="60" border="0" class="imgs">
+<h3>ولایت</h3>
+<span>تصویر شماره 1</span></a></li>
+<li><a href="index.html#1"><img src="http://s2.picofile.com/file/7976156448/22162527295266571728.jpg" width="60" height="60" border="0" class="imgs">
+<h3>ولایت</h3>
+<span>تصویر شماره2</span></a></li>
+<li><a href="index.html#1"><img src="http://s4.picofile.com/file/7976158060/30756_760.jpg" width="60" height="60" border="0" class="imgs">
+<h3>ولایت</h3>
+<span>تصویر شماره3</span></a></li>
+</ul>
+
+<ul id="output">
+<li>
+<img src="http://s3.picofile.com/file/7976156127/n00122736_b.jpg" width="600" height="250" border="0">
+</li>
+<li>
+<img src="http://s2.picofile.com/file/7976156448/22162527295266571728.jpg" width="600" height="250" border="0">
+</li>
+<li>
+<img src="http://s4.picofile.com/file/7976158060/30756_760.jpg" width="600" height="250" border="0">
+</li>
+</ul>
+
+</div>
+
+<div class="middle">
+<div class="middle1 , text13">
+
+	<div id="tickerAnchor" dir="rtl" align="center"></div><script language="JavaScript" type="text/javascript">
+<!--
+// Ticker startup
+function startTicker()
+{
+	// Define run time values
+	theCurrentStory     = -1;
+	theCurrentLength    = 0;
+	// Locate base objects
+	if (document.getElementById) {	
+		    theAnchorObject     = document.getElementById("tickerAnchor");
+			runTheTicker();   	
+		 }
+	else {
+            document.write("<style>.ticki{display:none;}.ticko{border:0px; padding:0px;}</style>");
+            return true;
+	}
+}
+// Ticker main run loop
+function runTheTicker()
+{
+	var myTimeout;  
+	// Go for the next story data block
+	if(theCurrentLength == 0)
+	{
+		theCurrentStory++;
+		theCurrentStory      = theCurrentStory % theItemCount;
+		theStorySummary      = theSummaries[theCurrentStory].replace(/"/g,'"');		
+		theTargetLink        = theSiteLinks[theCurrentStory];
+		theAnchorObject.href = theTargetLink;
+		thePrefix 	     = "<span class=\"tickls\">" + theLeadString + "</span>";
+	}
+	// Stuff the current ticker text into the anchor
+	theAnchorObject.innerHTML = thePrefix + 
+	theStorySummary.substring(0,theCurrentLength) + whatWidget();
+	// Modify the length for the substring and define the timer
+	if(theCurrentLength != theStorySummary.length)
+	{
+		theCurrentLength++;
+		myTimeout = theCharacterTimeout;
+	}
+	else
+	{
+		theCurrentLength = 0;
+		myTimeout = theStoryTimeout;
+	}
+	// Call up the next cycle of the ticker
+	setTimeout("runTheTicker()", myTimeout);
+	
+}
+// Widget generator
+function whatWidget()
+{
+	if(theCurrentLength == theStorySummary.length)
+	{
+		return theWidgetNone;
+	}
+
+	if((theCurrentLength % 2) == 1)
+	{
+		return theWidgetOne;
+	}
+	else
+	{
+		return theWidgetTwo;
+	}
+}
+// -->
+      </script>
+    
+
+	<script language="JavaScript" type="text/javascript">
+	<!--
+
+	var theCharacterTimeout = 50;
+	var theStoryTimeout     = 5000;
+	var theWidgetOne        = "_";
+	var theWidgetTwo        = "-";
+	var theWidgetNone       = "";
+	var theLeadString       = "";
+
+	var theSummaries = new Array();
+	var theSiteLinks = new Array();
+
+	var theItemCount = 7;
+	
+	theSummaries[0] = "به سایت کانون مداحان شهرستان گناوه خوش آمدید.";
+	theSiteLinks[0] = "";
+	
+	theSummaries[1] = "وبلاگ هیئت عشاق العباس شهرستان گناوه افتتاح شد.";
+	theSiteLinks[1] = "http://moisrex.r98.ir";
+	
+	theSummaries[2] = "شروع دوره جدید آموزش مداحی سنتی(بوشهری)";
+	theSiteLinks[2] = "http://moisrex.r98.ir";
+	
+	theSummaries[3] = "سایت کانون مداحان شهرستان گناوه یک ساله شد.";
+	theSiteLinks[3] = "http://moisrex.r98.ir";
+	
+	theSummaries[4] = "سایت کربلایی حسن توزی افتتاح شد.";
+	theSiteLinks[4] = "http://moisrex.r98.ir"
+
+	theSummaries[5] ="آغار کلاس های آموزش مداحی ویژه خواهران";
+	theSiteLinks[5] = "http://kanonmadahan.mihanblog.com/post/263"
+
+        
+        
+
+
+
+
+	startTicker();
+        startTicker();
+	//-->
+	  </script>
+
+
+</div>
+
+<div class=div0>
+
+<div class=div20>
+
+<div class="ads">
+<a href="index.html"><img src="http://s5.picofile.com/file/8140456292/kanonmadahan1.gif-" width="468" height="60" border="0"></a>
+</div>
+
+		<div id="MihanblogShopAds" style="display:block;height:0px;width:100%;border:0px"></div>
+		<div class=div54>
+<div class=div15>
+<div class=div015></div>
+<div class="div18 , text6"><a href="http://kanonmadahan.mihanblog.com/post/319">برگزاری کارگاه آموزش مداحی با حضور اساتید کشوری</a></div>
+</div>
+<div class=div21>
+<div class=div55></div>
+<div class="div56 , text4"><div id="InPost_MihanblogShopAds" style="display:block;height:0px;width:100%;border:0px"></div>
+<div>مراسم ابتداباتلاوت قران توسط مداح اهلبیت آقای صدری وپخش سرودملی 
+آغازشد.ومسول کانون مداحان ضمن خیرمقدم به مهمانان ازیاری دهندگان 
+دربرگزاری این جلسه خصوصاریاست اداره تبلیغات ورییس مرکزفنی وحرفه ای گناوه
+ آقای لیراوی وهمه مداحان تشکرکردند.</div><div>برگزاری کارگاه آموزش مداحی
+ باحضوراساتیدبرجسته کشورواستان توسط کانون مداحان اداره تبلیغات شهرستان 
+گناوه درسالن جلسات مرکزفنی وحرفه ای این شهردرروزجمعه94/2/<wbr>18برگزارگردید.دراین
+ مراسم که باحضورمداح برجسته کشوراستادحاج مهدی منصوری ودکترهاشمی 
+فردشاعرومحقق هم استانی ومداح پیشکسوت اهل بیت عبدالحمیددشتی 
+فر(ناخدا)برگزارشدجناب آقای منصوری درموردآسیب های مداحی واخلاص دراین 
+امرخطیرصحبت کردند.این ذاکراهلبیت درسخنان خودفرمودن کسی که این هنرآسمانی 
+رابه عنوان شغل انتخاب کندباشمرملعون تفاوت آنچنانی نداردچراچون 
+شمربخاطرپول ودنیاروسینه نشست وسرآقاراجداکردوشخصی که شرط میکندبرای پول 
+وفلان مبلغ رامعین میکندداستان شهادت وکاری که شمرکردرابرای مردم میگویدپس 
+تنهاتفاوت این است که شمرکننده کارومداح پول شرط کن بازگوکننده است درپایان
+ بادرخواست این مداح روشن دل ازمداحان برای اجرای مداحی مسول کانون سیدعلی 
+فاطمی چندلحظه ای مداحی کردند.پس ازاین مداح نوبت به مداح هم استانی جناب 
+دشتی فررسیدتابه ایرادسخنان خوربپردازد.دشتی فرگفت همه قسمتهای استان 
+ماازکشورعقب افتاده ومتاسفانه مداحی ماهم ازاین قضیه مستثنی نیست وبایدهمت 
+کردوبه این هنردینی سروسامان داددرپایان این مداح اهلبیت به مرثیه سرایی 
+پرداخت.بعدازآقای دشتی فربادعوت ازشاعرآل الله جناب آقای جعفری همت ضمن 
+تشکرازمسول کانون ومداحان نسبت به برگزاری این جلسه باقرایت شعری زیبامجلس 
+رابه شورومعنویت رساندوباانتقادازپیشکسوتان ازمداحان وشاعران پبشکسوت خواست
+ به کانون مداحان وجامعه مداحان گناوه جهت پیشرفت بیشترکمک 
+کنند.وامادرپایان جناب دکترهاشمی فردکارشناس ومحقق دینی درامرشعرشناسی 
+ومقتل به ایرادسخن پرداخت وازشاعران آیینی خواست که باتحقیق شعربسرایند.این
+ استاددانشگاه گفت شعربایدواقعیت رابازگوکندنه تخیلات راچون واقعه 
+عاشوراتخیلی نیست بلکه یک جریان واقعی تاریخی است.همچنین این 
+استادگرانقدرگفتن من خودم پس ازمتوجه شدن به ایرادهای برخی ازشعرهایم به 
+مداحان گفته ام این اشعاررادیگراجرانکنند.درپایان ازهمه عزیزان بابت 
+برگزاری این مراسم تشکروقدردانی کرد وبه سوالات حاظران جواب دادند.<br><br>گزارش تصویری این مراسم در ادامه مطلب...<br><br><div align="center"><img src="http://s3.picofile.com/file/8187630834/_l_l.jpg" alt="" align="bottom" border="0" hspace="0" vspace="0"><br><br>گزارش تصویری در ادامه مطلب...<br></div></div>
+
+
+
+
+<BlogExtendedPost><br><br><b><a href='http://kanonmadahan.mihanblog.com/post/319'>ادامه مطلب</a></b></BlogExtendedPost>
+<br><br><font color="#000">نوع مطلب :</font>
+<a href="http://kanonmadahan.mihanblog.com/post/category/21" class=text4>عملکرد کانون مداحان گناوه</a>،&nbsp;<a href="http://kanonmadahan.mihanblog.com/post/category/5" class=text4>گزارشات تصویری</a>،&nbsp;<a href="http://kanonmadahan.mihanblog.com/post/category/18" class=text4>اعلامیه</a>،&nbsp;<a href="http://kanonmadahan.mihanblog.com/post/category/14" class=text4>مراسمات در سطح شهرستان</a>،&nbsp;<a href="http://kanonmadahan.mihanblog.com/post/category/8" class=text4>مطالب آموزشی</a>،&nbsp;<a href="http://kanonmadahan.mihanblog.com/post/category/9" class=text4>مطالب علمی</a>،&nbsp;<br><font color="#000">برچسب ها :</font>
+<br><font color="#000">لینک های مرتبط :</font>
+<br><br></div></div>
+<div class=div26>
+<div class="div27 , text8"><a href="http://kanonmadahan.mihanblog.com/post/319#commentlist">نظرات (<script>setCommentCnt(319)</script>)</a></div>
+<div class="div58 , text7"><a href="http://kanonmadahan.mihanblog.com/post/author/920382">سید محسن موسوی</a></div>
+<div class="div581 , text7">شنبه 19 اردیبهشت 1394</div>
+<div class="sol">
+<a href="http://www.facebook.com/share.php?u=http://kanonmadahan.mihanblog.com/post/319&t=برگزاری کارگاه آموزش مداحی با حضور اساتید کشوری"><img src="http://mythemes.ir/t41/b1.jpg" width="31" height="31" border="0" class="imgs2"></a><a href="http://twitter.com/home?status=Reading+this:+http://kanonmadahan.mihanblog.com/post/319&title=برگزاری کارگاه آموزش مداحی با حضور اساتید کشوری"><img src="http://mythemes.ir/t41/b2.jpg" width="31" height="31" border="0" class="imgs2"></a><a href="http://www.google.com/bookmarks/mark?op=edit&bkmk=http://kanonmadahan.mihanblog.com/post/319&title=برگزاری کارگاه آموزش مداحی با حضور اساتید کشوری"><img src="http://mythemes.ir/t41/b3.jpg" width="31" height="31" border="0" class="imgs2"></a><a href="http://kanonmadahan.mihanblog.com/post/rss/"><img src="http://mythemes.ir/t41/b4.jpg" width="31" height="31" border="0" class="imgs2"></a>
+</div>
+</div>
+
+
+</div><div class=div54>
+<div class=div15>
+<div class=div015></div>
+<div class="div18 , text6"><a href="http://kanonmadahan.mihanblog.com/post/318">مراسم استقبال ار ماه محرم + گزارش تصویری</a></div>
+</div>
+<div class=div21>
+<div class=div55></div>
+<div class="div56 , text4"><div align="center"><img src="http://s5.picofile.com/file/8148289792/IMG_5815.JPG" alt="" align="bottom" border="0" hspace="0" vspace="0"><br><font size="5"><b>بقیه تصاویر در ادامه مطلب ...</b></font><br></div>
+
+
+<BlogExtendedPost><br><br><b><a href='http://kanonmadahan.mihanblog.com/post/318'>ادامه مطلب</a></b></BlogExtendedPost>
+<br><br><font color="#000">نوع مطلب :</font>
+<a href="http://kanonmadahan.mihanblog.com/post/category/5" class=text4>گزارشات تصویری</a>،&nbsp;<a href="http://kanonmadahan.mihanblog.com/post/category/21" class=text4>عملکرد کانون مداحان گناوه</a>،&nbsp;<a href="http://kanonmadahan.mihanblog.com/post/category/10" class=text4>مراسمات مداحان شهرستان</a>،&nbsp;<a href="http://kanonmadahan.mihanblog.com/post/category/14" class=text4>مراسمات در سطح شهرستان</a>،&nbsp;<br><font color="#000">برچسب ها :</font>
+<br><font color="#000">لینک های مرتبط :</font>
+<br><br></div></div>
+<div class=div26>
+<div class="div27 , text8"><a href="http://kanonmadahan.mihanblog.com/post/318#commentlist">نظرات (<script>setCommentCnt(318)</script>)</a></div>
+<div class="div58 , text7"><a href="http://kanonmadahan.mihanblog.com/post/author/920382">سید محسن موسوی</a></div>
+<div class="div581 , text7">سه شنبه 6 آبان 1393</div>
+<div class="sol">
+<a href="http://www.facebook.com/share.php?u=http://kanonmadahan.mihanblog.com/post/318&t=مراسم استقبال ار ماه محرم + گزارش تصویری"><img src="http://mythemes.ir/t41/b1.jpg" width="31" height="31" border="0" class="imgs2"></a><a href="http://twitter.com/home?status=Reading+this:+http://kanonmadahan.mihanblog.com/post/318&title=مراسم استقبال ار ماه محرم + گزارش تصویری"><img src="http://mythemes.ir/t41/b2.jpg" width="31" height="31" border="0" class="imgs2"></a><a href="http://www.google.com/bookmarks/mark?op=edit&bkmk=http://kanonmadahan.mihanblog.com/post/318&title=مراسم استقبال ار ماه محرم + گزارش تصویری"><img src="http://mythemes.ir/t41/b3.jpg" width="31" height="31" border="0" class="imgs2"></a><a href="http://kanonmadahan.mihanblog.com/post/rss/"><img src="http://mythemes.ir/t41/b4.jpg" width="31" height="31" border="0" class="imgs2"></a>
+</div>
+</div>
+
+
+</div><div class=div54>
+<div class=div15>
+<div class=div015></div>
+<div class="div18 , text6"><a href="http://kanonmadahan.mihanblog.com/post/317">متن ادبی (آزمون بندگی)</a></div>
+</div>
+<div class=div21>
+<div class=div55></div>
+<div class="div56 , text4">
+<div align="center"><span style="font-family: tahoma,arial,helvetica,sans-serif;"><img src="http://s5.picofile.com/file/8144179818/93468028244096810674.jpg" alt="" align="bottom" border="0" hspace="0" vspace="0"></span><br><span style="font-family: tahoma,arial,helvetica,sans-serif;"></span></div><span style="font-family: tahoma,arial,helvetica,sans-serif;"><br><br>اکنون ابراهیم است و فرزند دلبند او، فرزند انتظارهای طولانی، میوه دل او، پاره جگر او...<br>و فرمان حقّ: اسماعیلت را ذبح کن!<br>اسماعیل
+ را هم‏چون قربانی، به قربان‏گاه ببر، سرش را بر مذْبَح بگذار، کارد بر 
+گلویش بنه، خونش را جاری ساز... و بکش، بکش اسماعیلت را... قربانی کن هر 
+آن‏چه میان تو و حقیقت مطلق است، به قربانگاه ببر هر آن‏چه را که میان تو و
+ «او» فاصله می‏اندازد. ای بت شکن تاریخ! اکنون... اکنون، اسماعیل، فرزند 
+دلبندت را به قربانگاه ببر!<br>ای ابراهیم؛ ای قهرمان توحید؛ ای آزموده؛ ای
+ گذشته از آتش؛ ای برگزیده خدا؛ ای وارث رسالت؛ ای پیامبر پاکی؛ ای رسول 
+روشنی! آنک آخرین آزمون بندگی است. اسماعیل تو، جاه توست، مال و موقعیت و 
+مقام و شهرت و قدرت و مکنت توست.<br>اسماعیل تو دنیای توست و هر آن‏چه در 
+دنیا به آن دل بسته‏ای. اسماعیل تو، نفس توست؛ اسماعیل، تویی؛ و تا از میان
+ برنخیزی، به وصلِ حقّ نمی‏رسی.<br>پیرمرد یک عمر، بار انتظار فرزند به دوش
+ کشیده بود؛ سارا را توان فرزند آوردن نبود. در نشیب حیات، ناباورانه، 
+فرزند را از هاجر جُست، و شگفتا که یافت؛ و اینک پس از سال‏ها انتظار و رخ 
+نمودن ابرهای تیره نومیدی، خورشید میلاد اسماعیل، آتش در نهادِ شبستان سرد 
+او نهاده بود.<br>اسماعیل هدیه‏ای بود از سوی خدا به صبر ناگزیرِ بت شکن 
+تاریخ. اما اراده خداوند، بر توحید محض خود استوار شده بود. باید تمام 
+بت‏ها می‏شکستند تا جان ابراهیم، به حریم خلوت عشق راه می‏یافت.<br><br><br></span><div align="center"><font size="2" color="#FF0000"><b><span style="font-family: tahoma,arial,helvetica,sans-serif;">بقیه در ادامه مطلب...</span></b></font><br><span style="font-family: tahoma,arial,helvetica,sans-serif;"></span></div><span style="font-family: tahoma,arial,helvetica,sans-serif;"><br></span>
+
+
+
+
+<BlogExtendedPost><br><br><b><a href='http://kanonmadahan.mihanblog.com/post/317'>ادامه مطلب</a></b></BlogExtendedPost>
+<br><br><font color="#000">نوع مطلب :</font>
+<a href="http://kanonmadahan.mihanblog.com/post/category/8" class=text4>مطالب آموزشی</a>،&nbsp;<a href="http://kanonmadahan.mihanblog.com/post/category/9" class=text4>مطالب علمی</a>،&nbsp;<br><font color="#000">برچسب ها :</font>
+<br><font color="#000">لینک های مرتبط :</font>
+<br><br></div></div>
+<div class=div26>
+<div class="div27 , text8"><a href="http://kanonmadahan.mihanblog.com/post/317#commentlist">نظرات (<script>setCommentCnt(317)</script>)</a></div>
+<div class="div58 , text7"><a href="http://kanonmadahan.mihanblog.com/post/author/920382">سید محسن موسوی</a></div>
+<div class="div581 , text7">یکشنبه 13 مهر 1393</div>
+<div class="sol">
+<a href="http://www.facebook.com/share.php?u=http://kanonmadahan.mihanblog.com/post/317&t=متن ادبی (آزمون بندگی)"><img src="http://mythemes.ir/t41/b1.jpg" width="31" height="31" border="0" class="imgs2"></a><a href="http://twitter.com/home?status=Reading+this:+http://kanonmadahan.mihanblog.com/post/317&title=متن ادبی (آزمون بندگی)"><img src="http://mythemes.ir/t41/b2.jpg" width="31" height="31" border="0" class="imgs2"></a><a href="http://www.google.com/bookmarks/mark?op=edit&bkmk=http://kanonmadahan.mihanblog.com/post/317&title=متن ادبی (آزمون بندگی)"><img src="http://mythemes.ir/t41/b3.jpg" width="31" height="31" border="0" class="imgs2"></a><a href="http://kanonmadahan.mihanblog.com/post/rss/"><img src="http://mythemes.ir/t41/b4.jpg" width="31" height="31" border="0" class="imgs2"></a>
+</div>
+</div>
+
+
+</div><div class=div54>
+<div class=div15>
+<div class=div015></div>
+<div class="div18 , text6"><a href="http://kanonmadahan.mihanblog.com/post/316">شعر بسیار زیبا (عرفه)</a></div>
+</div>
+<div class=div21>
+<div class=div55></div>
+<div class="div56 , text4">
+
+<div align="center"><img src="http://s5.picofile.com/file/8144158784/hosain_pic50_Normal.jpg" alt="" align="bottom" border="0" height="402" hspace="0" vspace="0" width="572"><br><br><br>آقا چه شد که حج شما نیمه کاره ماند؟<br>شب های شهر مکه چرا بی ستاره ماند؟
+ 
+<br><br>بار سفر مبند، دلم شور می زند<br>گویا قیامت است، مَلک صور می زند<br><br>من خواب دیده ام، سرتان را به نی زدند<br>گرگان تشنه، زوزه کشان لب به مِی زدند<br><br>دیدم نسیم شانه به گیسوت می زند<br>مَرهم به زخم گوشه ی ابروت می زند<br><br>دیدم تو را به نیزه شه میگسارها<br>هو می کشند دوروبرت نی سوارها<br><br>آقای من، شما که مسیح عشیره ای<br>در کوفه متهم به گناهی کبیره ای!<br><br>دیدم که چشم پنجره ها نحس و شور بود<br>در دست باد چادری از جنس نور بود<br><br>دیدم به روی نی قمر باده نوش ها<br>رد می شد از محله ی معجر فروش ها<br><br>اینجا بمان که حرمت کعبه تویی حسین<br>آقا مرو، که عزت کعبه تویی حسین<br><br>دیدم که حاجیان منا لنگ می زدند<br>شیطان پرست ها به خدا سنگ می زدند<br><br>حالا که می روی سفری پرخطر حسین<br>پس لااقل سه ساله ی خود را مبر حسین<br><br>پاشیدم آب پشت سر محمل رباب<br>با ظرف اشک دیده ی خونین جگر حسین<br><br>فکری به حال ِ روز مبادای ایل کن<br>چندین قواره چادر دیگر بخر حسین<br><br>این ساربان به درد مسیرت نمی خورد!<br>یک ساربان اهل نظر را ببر حسین<br><br>او نقشه ها کشیده که دور و بر شماست<br>چشمش مدام خیره به انگشتر شماست
+
+
+</div>
+
+
+
+<BlogExtendedPost><br><br><b></b></BlogExtendedPost>
+<br><br><font color="#000">نوع مطلب :</font>
+<a href="http://kanonmadahan.mihanblog.com/post/category/25" class=text4>بانک اشعار</a>،&nbsp;<a href="http://kanonmadahan.mihanblog.com/post/category/6" class=text4>اشعار مناسبتی</a>،&nbsp;<br><font color="#000">برچسب ها :</font>
+<br><font color="#000">لینک های مرتبط :</font>
+<br><br></div></div>
+<div class=div26>
+<div class="div27 , text8"><a href="http://kanonmadahan.mihanblog.com/post/316#commentlist">نظرات (<script>setCommentCnt(316)</script>)</a></div>
+<div class="div58 , text7"><a href="http://kanonmadahan.mihanblog.com/post/author/920382">سید محسن موسوی</a></div>
+<div class="div581 , text7">شنبه 12 مهر 1393</div>
+<div class="sol">
+<a href="http://www.facebook.com/share.php?u=http://kanonmadahan.mihanblog.com/post/316&t=شعر بسیار زیبا (عرفه)"><img src="http://mythemes.ir/t41/b1.jpg" width="31" height="31" border="0" class="imgs2"></a><a href="http://twitter.com/home?status=Reading+this:+http://kanonmadahan.mihanblog.com/post/316&title=شعر بسیار زیبا (عرفه)"><img src="http://mythemes.ir/t41/b2.jpg" width="31" height="31" border="0" class="imgs2"></a><a href="http://www.google.com/bookmarks/mark?op=edit&bkmk=http://kanonmadahan.mihanblog.com/post/316&title=شعر بسیار زیبا (عرفه)"><img src="http://mythemes.ir/t41/b3.jpg" width="31" height="31" border="0" class="imgs2"></a><a href="http://kanonmadahan.mihanblog.com/post/rss/"><img src="http://mythemes.ir/t41/b4.jpg" width="31" height="31" border="0" class="imgs2"></a>
+</div>
+</div>
+
+
+</div><div class=div54>
+<div class=div15>
+<div class=div015></div>
+<div class="div18 , text6"><a href="http://kanonmadahan.mihanblog.com/post/315">حضور کانون مداحان (خواهر) در مراسم هفته دفاع مقدس</a></div>
+</div>
+<div class=div21>
+<div class=div55></div>
+<div class="div56 , text4">
+<div align="center"><img src="http://s5.picofile.com/file/8142669668/DSC01659.JPG" alt="" align="bottom" border="0" hspace="0" vspace="0"><br><br><font size="3"><b>بقیه در ادامه مطلب...</b></font><br></div>
+
+
+
+
+<BlogExtendedPost><br><br><b><a href='http://kanonmadahan.mihanblog.com/post/315'>ادامه مطلب</a></b></BlogExtendedPost>
+<br><br><font color="#000">نوع مطلب :</font>
+<a href="http://kanonmadahan.mihanblog.com/post/category/21" class=text4>عملکرد کانون مداحان گناوه</a>،&nbsp;<a href="http://kanonmadahan.mihanblog.com/post/category/5" class=text4>گزارشات تصویری</a>،&nbsp;<br><font color="#000">برچسب ها :</font>
+<br><font color="#000">لینک های مرتبط :</font>
+<br><br></div></div>
+<div class=div26>
+<div class="div27 , text8"><a href="http://kanonmadahan.mihanblog.com/post/315#commentlist">نظرات (<script>setCommentCnt(315)</script>)</a></div>
+<div class="div58 , text7"><a href="http://kanonmadahan.mihanblog.com/post/author/920382">سید محسن موسوی</a></div>
+<div class="div581 , text7">پنجشنبه 3 مهر 1393</div>
+<div class="sol">
+<a href="http://www.facebook.com/share.php?u=http://kanonmadahan.mihanblog.com/post/315&t=حضور کانون مداحان (خواهر) در مراسم هفته دفاع مقدس"><img src="http://mythemes.ir/t41/b1.jpg" width="31" height="31" border="0" class="imgs2"></a><a href="http://twitter.com/home?status=Reading+this:+http://kanonmadahan.mihanblog.com/post/315&title=حضور کانون مداحان (خواهر) در مراسم هفته دفاع مقدس"><img src="http://mythemes.ir/t41/b2.jpg" width="31" height="31" border="0" class="imgs2"></a><a href="http://www.google.com/bookmarks/mark?op=edit&bkmk=http://kanonmadahan.mihanblog.com/post/315&title=حضور کانون مداحان (خواهر) در مراسم هفته دفاع مقدس"><img src="http://mythemes.ir/t41/b3.jpg" width="31" height="31" border="0" class="imgs2"></a><a href="http://kanonmadahan.mihanblog.com/post/rss/"><img src="http://mythemes.ir/t41/b4.jpg" width="31" height="31" border="0" class="imgs2"></a>
+</div>
+</div>
+
+
+</div><div class=div54>
+<div class=div15>
+<div class=div015></div>
+<div class="div18 , text6"><a href="http://kanonmadahan.mihanblog.com/post/314">اعلامیه</a></div>
+</div>
+<div class=div21>
+<div class=div55></div>
+<div class="div56 , text4"><!--[if gte mso 9]><xml>
+ <o:OfficeDocumentSettings>
+  <o:AllowPNG/>
+ </o:OfficeDocumentSettings>
+</xml><![endif]-->
+
+<p class="MsoNormal" style="text-align:center" align="center"><span dir="RTL" style="font-size:20.0pt;line-height:115%;font-family:Aban;mso-bidi-language:
+FA" lang="FA">محفل عزای حضرت جواد ائمه</span></p>
+
+<p class="MsoNormal" style="text-align:center" align="center"><span dir="RTL" style="font-size:20.0pt;line-height:115%;font-family:Aban;color:yellow;
+mso-bidi-language:FA" lang="FA">امشب راس ساعت 20:00</span></p>
+
+<p class="MsoNormal" style="text-align:center" align="center"><span dir="RTL" style="font-size:20.0pt;line-height:115%;font-family:Aban;mso-bidi-language:
+FA" lang="FA">هیئت عشاق العباس</span><span dir="RTL" style="font-size:20.0pt;
+line-height:115%;font-family:&quot;Afra Light&quot;;mso-bidi-language:FA" lang="FA"></span></p>
+
+<p class="MsoNormal" style="text-align:center" align="center"><b><span dir="RTL" style="font-size:26.0pt;line-height:115%;font-family:&quot;Afra Light&quot;;
+color:yellow;mso-bidi-language:FA" lang="FA">سخنران:حجه الاسلام شیخ محمود اسدی</span></b></p>
+
+<p class="MsoNormal" style="text-align:center" align="center"><b><span dir="RTL" style="font-size:26.0pt;line-height:115%;font-family:&quot;Arabic Typesetting&quot;;
+mso-bidi-language:FA" lang="FA">مداحان : حاج مرتضی مومنی – سید علی فاطمی</span></b></p>
+
+<!--[if gte mso 9]><xml>
+ <w:WordDocument>
+  <w:View>Normal</w:View>
+  <w:Zoom>0</w:Zoom>
+  <w:TrackMoves/>
+  <w:TrackFormatting/>
+  <w:PunctuationKerning/>
+  <w:ValidateAgainstSchemas/>
+  <w:SaveIfXMLInvalid>false</w:SaveIfXMLInvalid>
+  <w:IgnoreMixedContent>false</w:IgnoreMixedContent>
+  <w:AlwaysShowPlaceholderText>false</w:AlwaysShowPlaceholderText>
+  <w:DoNotPromoteQF/>
+  <w:LidThemeOther>EN-US</w:LidThemeOther>
+  <w:LidThemeAsian>X-NONE</w:LidThemeAsian>
+  <w:LidThemeComplexScript>AR-SA</w:LidThemeComplexScript>
+  <w:Compatibility>
+   <w:BreakWrappedTables/>
+   <w:SnapToGridInCell/>
+   <w:WrapTextWithPunct/>
+   <w:UseAsianBreakRules/>
+   <w:DontGrowAutofit/>
+   <w:SplitPgBreakAndParaMark/>
+   <w:EnableOpenTypeKerning/>
+   <w:DontFlipMirrorIndents/>
+   <w:OverrideTableStyleHps/>
+  </w:Compatibility>
+  <m:mathPr>
+   <m:mathFont m:val="Cambria Math"/>
+   <m:brkBin m:val="before"/>
+   <m:brkBinSub m:val="&#45;-"/>
+   <m:smallFrac m:val="off"/>
+   <m:dispDef/>
+   <m:lMargin m:val="0"/>
+   <m:rMargin m:val="0"/>
+   <m:defJc m:val="centerGroup"/>
+   <m:wrapIndent m:val="1440"/>
+   <m:intLim m:val="subSup"/>
+   <m:naryLim m:val="undOvr"/>
+  </m:mathPr></w:WordDocument>
+</xml><![endif]--><!--[if gte mso 9]><xml>
+ <w:LatentStyles DefLockedState="false" DefUnhideWhenUsed="true"
+  DefSemiHidden="true" DefQFormat="false" DefPriority="99"
+  LatentStyleCount="267">
+  <w:LsdException Locked="false" Priority="0" SemiHidden="false"
+   UnhideWhenUsed="false" QFormat="true" Name="Normal"/>
+  <w:LsdException Locked="false" Priority="9" SemiHidden="false"
+   UnhideWhenUsed="false" QFormat="true" Name="heading 1"/>
+  <w:LsdException Locked="false" Priority="9" QFormat="true" Name="heading 2"/>
+  <w:LsdException Locked="false" Priority="9" QFormat="true" Name="heading 3"/>
+  <w:LsdException Locked="false" Priority="9" QFormat="true" Name="heading 4"/>
+  <w:LsdException Locked="false" Priority="9" QFormat="true" Name="heading 5"/>
+  <w:LsdException Locked="false" Priority="9" QFormat="true" Name="heading 6"/>
+  <w:LsdException Locked="false" Priority="9" QFormat="true" Name="heading 7"/>
+  <w:LsdException Locked="false" Priority="9" QFormat="true" Name="heading 8"/>
+  <w:LsdException Locked="false" Priority="9" QFormat="true" Name="heading 9"/>
+  <w:LsdException Locked="false" Priority="39" Name="toc 1"/>
+  <w:LsdException Locked="false" Priority="39" Name="toc 2"/>
+  <w:LsdException Locked="false" Priority="39" Name="toc 3"/>
+  <w:LsdException Locked="false" Priority="39" Name="toc 4"/>
+  <w:LsdException Locked="false" Priority="39" Name="toc 5"/>
+  <w:LsdException Locked="false" Priority="39" Name="toc 6"/>
+  <w:LsdException Locked="false" Priority="39" Name="toc 7"/>
+  <w:LsdException Locked="false" Priority="39" Name="toc 8"/>
+  <w:LsdException Locked="false" Priority="39" Name="toc 9"/>
+  <w:LsdException Locked="false" Priority="35" QFormat="true" Name="caption"/>
+  <w:LsdException Locked="false" Priority="10" SemiHidden="false"
+   UnhideWhenUsed="false" QFormat="true" Name="Title"/>
+  <w:LsdException Locked="false" Priority="1" Name="Default Paragraph Font"/>
+  <w:LsdException Locked="false" Priority="11" SemiHidden="false"
+   UnhideWhenUsed="false" QFormat="true" Name="Subtitle"/>
+  <w:LsdException Locked="false" Priority="22" SemiHidden="false"
+   UnhideWhenUsed="false" QFormat="true" Name="Strong"/>
+  <w:LsdException Locked="false" Priority="20" SemiHidden="false"
+   UnhideWhenUsed="false" QFormat="true" Name="Emphasis"/>
+  <w:LsdException Locked="false" Priority="59" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Table Grid"/>
+  <w:LsdException Locked="false" UnhideWhenUsed="false" Name="Placeholder Text"/>
+  <w:LsdException Locked="false" Priority="1" SemiHidden="false"
+   UnhideWhenUsed="false" QFormat="true" Name="No Spacing"/>
+  <w:LsdException Locked="false" Priority="60" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Light Shading"/>
+  <w:LsdException Locked="false" Priority="61" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Light List"/>
+  <w:LsdException Locked="false" Priority="62" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Light Grid"/>
+  <w:LsdException Locked="false" Priority="63" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Shading 1"/>
+  <w:LsdException Locked="false" Priority="64" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Shading 2"/>
+  <w:LsdException Locked="false" Priority="65" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium List 1"/>
+  <w:LsdException Locked="false" Priority="66" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium List 2"/>
+  <w:LsdException Locked="false" Priority="67" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Grid 1"/>
+  <w:LsdException Locked="false" Priority="68" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Grid 2"/>
+  <w:LsdException Locked="false" Priority="69" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Grid 3"/>
+  <w:LsdException Locked="false" Priority="70" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Dark List"/>
+  <w:LsdException Locked="false" Priority="71" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Colorful Shading"/>
+  <w:LsdException Locked="false" Priority="72" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Colorful List"/>
+  <w:LsdException Locked="false" Priority="73" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Colorful Grid"/>
+  <w:LsdException Locked="false" Priority="60" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Light Shading Accent 1"/>
+  <w:LsdException Locked="false" Priority="61" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Light List Accent 1"/>
+  <w:LsdException Locked="false" Priority="62" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Light Grid Accent 1"/>
+  <w:LsdException Locked="false" Priority="63" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Shading 1 Accent 1"/>
+  <w:LsdException Locked="false" Priority="64" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Shading 2 Accent 1"/>
+  <w:LsdException Locked="false" Priority="65" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium List 1 Accent 1"/>
+  <w:LsdException Locked="false" UnhideWhenUsed="false" Name="Revision"/>
+  <w:LsdException Locked="false" Priority="34" SemiHidden="false"
+   UnhideWhenUsed="false" QFormat="true" Name="List Paragraph"/>
+  <w:LsdException Locked="false" Priority="29" SemiHidden="false"
+   UnhideWhenUsed="false" QFormat="true" Name="Quote"/>
+  <w:LsdException Locked="false" Priority="30" SemiHidden="false"
+   UnhideWhenUsed="false" QFormat="true" Name="Intense Quote"/>
+  <w:LsdException Locked="false" Priority="66" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium List 2 Accent 1"/>
+  <w:LsdException Locked="false" Priority="67" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Grid 1 Accent 1"/>
+  <w:LsdException Locked="false" Priority="68" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Grid 2 Accent 1"/>
+  <w:LsdException Locked="false" Priority="69" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Grid 3 Accent 1"/>
+  <w:LsdException Locked="false" Priority="70" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Dark List Accent 1"/>
+  <w:LsdException Locked="false" Priority="71" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Colorful Shading Accent 1"/>
+  <w:LsdException Locked="false" Priority="72" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Colorful List Accent 1"/>
+  <w:LsdException Locked="false" Priority="73" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Colorful Grid Accent 1"/>
+  <w:LsdException Locked="false" Priority="60" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Light Shading Accent 2"/>
+  <w:LsdException Locked="false" Priority="61" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Light List Accent 2"/>
+  <w:LsdException Locked="false" Priority="62" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Light Grid Accent 2"/>
+  <w:LsdException Locked="false" Priority="63" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Shading 1 Accent 2"/>
+  <w:LsdException Locked="false" Priority="64" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Shading 2 Accent 2"/>
+  <w:LsdException Locked="false" Priority="65" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium List 1 Accent 2"/>
+  <w:LsdException Locked="false" Priority="66" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium List 2 Accent 2"/>
+  <w:LsdException Locked="false" Priority="67" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Grid 1 Accent 2"/>
+  <w:LsdException Locked="false" Priority="68" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Grid 2 Accent 2"/>
+  <w:LsdException Locked="false" Priority="69" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Grid 3 Accent 2"/>
+  <w:LsdException Locked="false" Priority="70" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Dark List Accent 2"/>
+  <w:LsdException Locked="false" Priority="71" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Colorful Shading Accent 2"/>
+  <w:LsdException Locked="false" Priority="72" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Colorful List Accent 2"/>
+  <w:LsdException Locked="false" Priority="73" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Colorful Grid Accent 2"/>
+  <w:LsdException Locked="false" Priority="60" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Light Shading Accent 3"/>
+  <w:LsdException Locked="false" Priority="61" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Light List Accent 3"/>
+  <w:LsdException Locked="false" Priority="62" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Light Grid Accent 3"/>
+  <w:LsdException Locked="false" Priority="63" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Shading 1 Accent 3"/>
+  <w:LsdException Locked="false" Priority="64" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Shading 2 Accent 3"/>
+  <w:LsdException Locked="false" Priority="65" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium List 1 Accent 3"/>
+  <w:LsdException Locked="false" Priority="66" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium List 2 Accent 3"/>
+  <w:LsdException Locked="false" Priority="67" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Grid 1 Accent 3"/>
+  <w:LsdException Locked="false" Priority="68" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Grid 2 Accent 3"/>
+  <w:LsdException Locked="false" Priority="69" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Grid 3 Accent 3"/>
+  <w:LsdException Locked="false" Priority="70" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Dark List Accent 3"/>
+  <w:LsdException Locked="false" Priority="71" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Colorful Shading Accent 3"/>
+  <w:LsdException Locked="false" Priority="72" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Colorful List Accent 3"/>
+  <w:LsdException Locked="false" Priority="73" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Colorful Grid Accent 3"/>
+  <w:LsdException Locked="false" Priority="60" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Light Shading Accent 4"/>
+  <w:LsdException Locked="false" Priority="61" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Light List Accent 4"/>
+  <w:LsdException Locked="false" Priority="62" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Light Grid Accent 4"/>
+  <w:LsdException Locked="false" Priority="63" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Shading 1 Accent 4"/>
+  <w:LsdException Locked="false" Priority="64" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Shading 2 Accent 4"/>
+  <w:LsdException Locked="false" Priority="65" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium List 1 Accent 4"/>
+  <w:LsdException Locked="false" Priority="66" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium List 2 Accent 4"/>
+  <w:LsdException Locked="false" Priority="67" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Grid 1 Accent 4"/>
+  <w:LsdException Locked="false" Priority="68" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Grid 2 Accent 4"/>
+  <w:LsdException Locked="false" Priority="69" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Grid 3 Accent 4"/>
+  <w:LsdException Locked="false" Priority="70" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Dark List Accent 4"/>
+  <w:LsdException Locked="false" Priority="71" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Colorful Shading Accent 4"/>
+  <w:LsdException Locked="false" Priority="72" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Colorful List Accent 4"/>
+  <w:LsdException Locked="false" Priority="73" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Colorful Grid Accent 4"/>
+  <w:LsdException Locked="false" Priority="60" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Light Shading Accent 5"/>
+  <w:LsdException Locked="false" Priority="61" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Light List Accent 5"/>
+  <w:LsdException Locked="false" Priority="62" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Light Grid Accent 5"/>
+  <w:LsdException Locked="false" Priority="63" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Shading 1 Accent 5"/>
+  <w:LsdException Locked="false" Priority="64" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Shading 2 Accent 5"/>
+  <w:LsdException Locked="false" Priority="65" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium List 1 Accent 5"/>
+  <w:LsdException Locked="false" Priority="66" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium List 2 Accent 5"/>
+  <w:LsdException Locked="false" Priority="67" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Grid 1 Accent 5"/>
+  <w:LsdException Locked="false" Priority="68" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Grid 2 Accent 5"/>
+  <w:LsdException Locked="false" Priority="69" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Grid 3 Accent 5"/>
+  <w:LsdException Locked="false" Priority="70" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Dark List Accent 5"/>
+  <w:LsdException Locked="false" Priority="71" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Colorful Shading Accent 5"/>
+  <w:LsdException Locked="false" Priority="72" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Colorful List Accent 5"/>
+  <w:LsdException Locked="false" Priority="73" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Colorful Grid Accent 5"/>
+  <w:LsdException Locked="false" Priority="60" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Light Shading Accent 6"/>
+  <w:LsdException Locked="false" Priority="61" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Light List Accent 6"/>
+  <w:LsdException Locked="false" Priority="62" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Light Grid Accent 6"/>
+  <w:LsdException Locked="false" Priority="63" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Shading 1 Accent 6"/>
+  <w:LsdException Locked="false" Priority="64" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Shading 2 Accent 6"/>
+  <w:LsdException Locked="false" Priority="65" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium List 1 Accent 6"/>
+  <w:LsdException Locked="false" Priority="66" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium List 2 Accent 6"/>
+  <w:LsdException Locked="false" Priority="67" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Grid 1 Accent 6"/>
+  <w:LsdException Locked="false" Priority="68" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Grid 2 Accent 6"/>
+  <w:LsdException Locked="false" Priority="69" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Grid 3 Accent 6"/>
+  <w:LsdException Locked="false" Priority="70" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Dark List Accent 6"/>
+  <w:LsdException Locked="false" Priority="71" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Colorful Shading Accent 6"/>
+  <w:LsdException Locked="false" Priority="72" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Colorful List Accent 6"/>
+  <w:LsdException Locked="false" Priority="73" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Colorful Grid Accent 6"/>
+  <w:LsdException Locked="false" Priority="19" SemiHidden="false"
+   UnhideWhenUsed="false" QFormat="true" Name="Subtle Emphasis"/>
+  <w:LsdException Locked="false" Priority="21" SemiHidden="false"
+   UnhideWhenUsed="false" QFormat="true" Name="Intense Emphasis"/>
+  <w:LsdException Locked="false" Priority="31" SemiHidden="false"
+   UnhideWhenUsed="false" QFormat="true" Name="Subtle Reference"/>
+  <w:LsdException Locked="false" Priority="32" SemiHidden="false"
+   UnhideWhenUsed="false" QFormat="true" Name="Intense Reference"/>
+  <w:LsdException Locked="false" Priority="33" SemiHidden="false"
+   UnhideWhenUsed="false" QFormat="true" Name="Book Title"/>
+  <w:LsdException Locked="false" Priority="37" Name="Bibliography"/>
+  <w:LsdException Locked="false" Priority="39" QFormat="true" Name="TOC Heading"/>
+ </w:LatentStyles>
+</xml><![endif]--><!--[if gte mso 10]>
+<style>
+ /* Style Definitions */
+ table.MsoNormalTable
+	{mso-style-name:"Table Normal";
+	mso-tstyle-rowband-size:0;
+	mso-tstyle-colband-size:0;
+	mso-style-noshow:yes;
+	mso-style-priority:99;
+	mso-style-parent:"";
+	mso-padding-alt:0in 5.4pt 0in 5.4pt;
+	mso-para-margin-top:0in;
+	mso-para-margin-right:0in;
+	mso-para-margin-bottom:10.0pt;
+	mso-para-margin-left:0in;
+	line-height:115%;
+	mso-pagination:widow-orphan;
+	font-size:11.0pt;
+	font-family:"Calibri","sans-serif";
+	mso-ascii-font-family:Calibri;
+	mso-ascii-theme-font:minor-latin;
+	mso-hansi-font-family:Calibri;
+	mso-hansi-theme-font:minor-latin;
+	mso-bidi-font-family:Arial;
+	mso-bidi-theme-font:minor-bidi;}
+</style>
+<![endif]-->
+
+
+<BlogExtendedPost><br><br><b></b></BlogExtendedPost>
+<br><br><font color="#000">نوع مطلب :</font>
+<a href="http://kanonmadahan.mihanblog.com/post/category/18" class=text4>اعلامیه</a>،&nbsp;<a href="http://kanonmadahan.mihanblog.com/post/category/15" class=text4>هیئت عشاق العباس</a>،&nbsp;<a href="http://kanonmadahan.mihanblog.com/post/category/37" class=text4>حاج مرتضی مومنی</a>،&nbsp;<a href="http://kanonmadahan.mihanblog.com/post/category/38" class=text4>کربلایی سید علی فاطمی</a>،&nbsp;<a href="http://kanonmadahan.mihanblog.com/post/category/10" class=text4>مراسمات مداحان شهرستان</a>،&nbsp;<a href="http://kanonmadahan.mihanblog.com/post/category/14" class=text4>مراسمات در سطح شهرستان</a>،&nbsp;<br><font color="#000">برچسب ها :</font>
+<br><font color="#000">لینک های مرتبط :</font>
+<br><br></div></div>
+<div class=div26>
+<div class="div27 , text8"><a href="http://kanonmadahan.mihanblog.com/post/314#commentlist">نظرات (<script>setCommentCnt(314)</script>)</a></div>
+<div class="div58 , text7"><a href="http://kanonmadahan.mihanblog.com/post/author/920382">سید محسن موسوی</a></div>
+<div class="div581 , text7">چهارشنبه 2 مهر 1393</div>
+<div class="sol">
+<a href="http://www.facebook.com/share.php?u=http://kanonmadahan.mihanblog.com/post/314&t=اعلامیه"><img src="http://mythemes.ir/t41/b1.jpg" width="31" height="31" border="0" class="imgs2"></a><a href="http://twitter.com/home?status=Reading+this:+http://kanonmadahan.mihanblog.com/post/314&title=اعلامیه"><img src="http://mythemes.ir/t41/b2.jpg" width="31" height="31" border="0" class="imgs2"></a><a href="http://www.google.com/bookmarks/mark?op=edit&bkmk=http://kanonmadahan.mihanblog.com/post/314&title=اعلامیه"><img src="http://mythemes.ir/t41/b3.jpg" width="31" height="31" border="0" class="imgs2"></a><a href="http://kanonmadahan.mihanblog.com/post/rss/"><img src="http://mythemes.ir/t41/b4.jpg" width="31" height="31" border="0" class="imgs2"></a>
+</div>
+</div>
+
+
+</div><div class=div54>
+<div class=div15>
+<div class=div015></div>
+<div class="div18 , text6"><a href="http://kanonmadahan.mihanblog.com/post/313">شهدا و دفاع مقدس</a></div>
+</div>
+<div class=div21>
+<div class=div55></div>
+<div class="div56 , text4">
+<p class="MsoNormal" dir="RTL" style="text-align:center;line-height:
+150%;direction:rtl;unicode-bidi:embed" align="center"><br></p>
+
+<p class="MsoNormal" dir="RTL" style="text-align:center;line-height:
+150%;direction:rtl;unicode-bidi:embed" align="center"><font size="2"><span style="font-family:
+&quot;Tahoma&quot;,&quot;sans-serif&quot;" lang="AR-SA">ندیدم آیینه ای چون لباس خاكی ها</span><span dir="LTR" style="font-family:&quot;Tahoma&quot;,&quot;sans-serif&quot;"></span></font></p>
+
+<p class="MsoNormal" dir="RTL" style="text-align:center;line-height:
+150%;direction:rtl;unicode-bidi:embed" align="center"><font size="2"><span style="font-family:
+&quot;Tahoma&quot;,&quot;sans-serif&quot;" lang="AR-SA">همان قبیله كه بودند غرق پاكی ها</span><span dir="LTR" style="font-family:&quot;Tahoma&quot;,&quot;sans-serif&quot;"></span></font></p>
+
+<p class="MsoNormal" dir="RTL" style="text-align:center;line-height:
+150%;direction:rtl;unicode-bidi:embed" align="center"><font size="2"><span style="font-family:
+&quot;Tahoma&quot;,&quot;sans-serif&quot;" lang="AR-SA">به عشق زنده شدن «عند ربهم» بودن</span><span dir="LTR" style="font-family:&quot;Tahoma&quot;,&quot;sans-serif&quot;"></span></font></p>
+
+<p class="MsoNormal" dir="RTL" style="text-align:center;line-height:
+150%;direction:rtl;unicode-bidi:embed" align="center"><font size="2"><span style="font-family:
+&quot;Tahoma&quot;,&quot;sans-serif&quot;" lang="AR-SA">شده ست حاصل آنها ز سینه چاكی ها</span><span dir="LTR" style="font-family:&quot;Tahoma&quot;,&quot;sans-serif&quot;"></span></font></p>
+
+<p class="MsoNormal" dir="RTL" style="text-align:center;line-height:
+150%;direction:rtl;unicode-bidi:embed" align="center"><font size="2"><span style="font-family:
+&quot;Tahoma&quot;,&quot;sans-serif&quot;" lang="AR-SA">دلیل غربتشان، اهل خاك بودن ماست</span><span dir="LTR" style="font-family:&quot;Tahoma&quot;,&quot;sans-serif&quot;"></span></font></p>
+
+<p class="MsoNormal" dir="RTL" style="text-align:center;line-height:
+150%;direction:rtl;unicode-bidi:embed" align="center"><font size="2"><span style="font-family:
+&quot;Tahoma&quot;,&quot;sans-serif&quot;" lang="AR-SA">نه بی مزار شدن ها، نه بی پلاكی ها</span><span dir="LTR" style="font-family:&quot;Tahoma&quot;,&quot;sans-serif&quot;"></span></font></p>
+
+<p class="MsoNormal" dir="RTL" style="text-align:center;line-height:
+150%;direction:rtl;unicode-bidi:embed" align="center"><font size="2"><span style="font-family:
+&quot;Tahoma&quot;,&quot;sans-serif&quot;" lang="AR-SA">به آسمان كه رسیدند رو به ما گفتند</span><span dir="LTR"></span><span dir="LTR" style="font-family:&quot;Tahoma&quot;,&quot;sans-serif&quot;"><span dir="LTR"></span> :</span></font></p>
+
+<p class="MsoNormal" dir="RTL" style="text-align:center;line-height:
+150%;direction:rtl;unicode-bidi:embed" align="center"><font size="2"><span style="font-family:
+&quot;Tahoma&quot;,&quot;sans-serif&quot;" lang="AR-SA">زمین چقدر حقیر است آی خاكی ها</span></font></p><p class="MsoNormal" dir="RTL" style="text-align:center;line-height:
+150%;direction:rtl;unicode-bidi:embed" align="center"><br></p><p class="MsoNormal" dir="RTL" style="text-align:center;line-height:
+150%;direction:rtl;unicode-bidi:embed" align="center"><font size="3"><b>هفته دفاع مقدس گرامی باد</b></font><br><font size="2"><span style="font-family:
+&quot;Tahoma&quot;,&quot;sans-serif&quot;" lang="AR-SA"></span><span dir="LTR"></span><span dir="LTR" style="font-family:&quot;Tahoma&quot;,&quot;sans-serif&quot;"><span dir="LTR"></span></span></font></p>
+
+
+
+
+<BlogExtendedPost><br><br><b></b></BlogExtendedPost>
+<br><br><font color="#000">نوع مطلب :</font>
+<br><font color="#000">برچسب ها :</font>
+<br><font color="#000">لینک های مرتبط :</font>
+<br><br></div></div>
+<div class=div26>
+<div class="div27 , text8"><a href="http://kanonmadahan.mihanblog.com/post/313#commentlist">نظرات (<script>setCommentCnt(313)</script>)</a></div>
+<div class="div58 , text7"><a href="http://kanonmadahan.mihanblog.com/post/author/920382">سید محسن موسوی</a></div>
+<div class="div581 , text7">پنجشنبه 27 شهریور 1393</div>
+<div class="sol">
+<a href="http://www.facebook.com/share.php?u=http://kanonmadahan.mihanblog.com/post/313&t=شهدا و دفاع مقدس"><img src="http://mythemes.ir/t41/b1.jpg" width="31" height="31" border="0" class="imgs2"></a><a href="http://twitter.com/home?status=Reading+this:+http://kanonmadahan.mihanblog.com/post/313&title=شهدا و دفاع مقدس"><img src="http://mythemes.ir/t41/b2.jpg" width="31" height="31" border="0" class="imgs2"></a><a href="http://www.google.com/bookmarks/mark?op=edit&bkmk=http://kanonmadahan.mihanblog.com/post/313&title=شهدا و دفاع مقدس"><img src="http://mythemes.ir/t41/b3.jpg" width="31" height="31" border="0" class="imgs2"></a><a href="http://kanonmadahan.mihanblog.com/post/rss/"><img src="http://mythemes.ir/t41/b4.jpg" width="31" height="31" border="0" class="imgs2"></a>
+</div>
+</div>
+
+
+</div><div class=div54>
+<div class=div15>
+<div class=div015></div>
+<div class="div18 , text6"><a href="http://kanonmadahan.mihanblog.com/post/312">دانلود مداحی</a></div>
+</div>
+<div class=div21>
+<div class=div55></div>
+<div class="div56 , text4"><div align="center">مداحی سوزناک حضرت زهرا (س) با صدای حاج مهدی سلهشور<br><br><br><a href="http://s5.picofile.com/file/8140650292/Salahshoor_GolchinFatemieh1390_05_.wma.html" target="_blank" title=""><img src="http://s5.picofile.com/file/8105985750/a_.gif" alt="" align="bottom" border="0" hspace="0" vspace="0"></a><br></div><BlogExtendedPost><br><br><b></b></BlogExtendedPost>
+<br><br><font color="#000">نوع مطلب :</font>
+<a href="http://kanonmadahan.mihanblog.com/post/category/7" class=text4>دانلود مداحی</a>،&nbsp;<br><font color="#000">برچسب ها :</font>
+<br><font color="#000">لینک های مرتبط :</font>
+<br><br></div></div>
+<div class=div26>
+<div class="div27 , text8"><a href="http://kanonmadahan.mihanblog.com/post/312#commentlist">نظرات (<script>setCommentCnt(312)</script>)</a></div>
+<div class="div58 , text7"><a href="http://kanonmadahan.mihanblog.com/post/author/920382">سید محسن موسوی</a></div>
+<div class="div581 , text7">یکشنبه 23 شهریور 1393</div>
+<div class="sol">
+<a href="http://www.facebook.com/share.php?u=http://kanonmadahan.mihanblog.com/post/312&t=دانلود مداحی"><img src="http://mythemes.ir/t41/b1.jpg" width="31" height="31" border="0" class="imgs2"></a><a href="http://twitter.com/home?status=Reading+this:+http://kanonmadahan.mihanblog.com/post/312&title=دانلود مداحی"><img src="http://mythemes.ir/t41/b2.jpg" width="31" height="31" border="0" class="imgs2"></a><a href="http://www.google.com/bookmarks/mark?op=edit&bkmk=http://kanonmadahan.mihanblog.com/post/312&title=دانلود مداحی"><img src="http://mythemes.ir/t41/b3.jpg" width="31" height="31" border="0" class="imgs2"></a><a href="http://kanonmadahan.mihanblog.com/post/rss/"><img src="http://mythemes.ir/t41/b4.jpg" width="31" height="31" border="0" class="imgs2"></a>
+</div>
+</div>
+
+
+</div><div class=div54>
+<div class=div15>
+<div class=div015></div>
+<div class="div18 , text6"><a href="http://kanonmadahan.mihanblog.com/post/311">شعر در وصف حضرت معصومه(س) - ولادت</a></div>
+</div>
+<div class=div21>
+<div class=div55></div>
+<div class="div56 , text4"><font class="text4"><p class="MsoNormal" dir="RTL" style="mso-margin-top-alt:auto;
+mso-margin-bottom-alt:auto;text-align:center;line-height:150%;direction:rtl;
+unicode-bidi:embed" align="center"><br></p>
+
+<p class="MsoNormal" dir="RTL" style="mso-margin-top-alt:auto;
+mso-margin-bottom-alt:auto;text-align:center;line-height:150%;direction:rtl;
+unicode-bidi:embed" align="center"><font size="2"><span style="font-family:&quot;Tahoma&quot;,&quot;sans-serif&quot;;
+mso-fareast-font-family:&quot;Times New Roman&quot;;mso-fareast-theme-font:minor-fareast;
+mso-bidi-language:FA" lang="FA">تا به معراج تقرب برسانند مرا</span><span dir="LTR" style="font-family:&quot;Tahoma&quot;,&quot;sans-serif&quot;;mso-fareast-font-family:&quot;Times New Roman&quot;;
+mso-fareast-theme-font:minor-fareast;mso-bidi-language:FA"></span></font></p>
+
+<p class="MsoNormal" dir="RTL" style="mso-margin-top-alt:auto;
+mso-margin-bottom-alt:auto;text-align:center;line-height:150%;direction:rtl;
+unicode-bidi:embed" align="center"><font size="2"><span style="font-family:&quot;Tahoma&quot;,&quot;sans-serif&quot;;
+mso-fareast-font-family:&quot;Times New Roman&quot;;mso-fareast-theme-font:minor-fareast;
+mso-bidi-language:FA" lang="FA">عقب قافله باید بكشانند مرا</span><span dir="LTR" style="font-family:&quot;Tahoma&quot;,&quot;sans-serif&quot;;mso-fareast-font-family:&quot;Times New Roman&quot;;
+mso-fareast-theme-font:minor-fareast;mso-bidi-language:FA"></span></font></p>
+
+<p class="MsoNormal" dir="RTL" style="mso-margin-top-alt:auto;
+mso-margin-bottom-alt:auto;text-align:center;line-height:150%;direction:rtl;
+unicode-bidi:embed" align="center"><font size="2"><span style="font-family:&quot;Tahoma&quot;,&quot;sans-serif&quot;;
+mso-fareast-font-family:&quot;Times New Roman&quot;;mso-fareast-theme-font:minor-fareast;
+mso-bidi-language:FA" lang="FA">وقف سرگرمی طفلان سر کوچه شدم</span><span dir="LTR" style="font-family:&quot;Tahoma&quot;,&quot;sans-serif&quot;;mso-fareast-font-family:&quot;Times New Roman&quot;;
+mso-fareast-theme-font:minor-fareast;mso-bidi-language:FA"></span></font></p>
+
+<p class="MsoNormal" dir="RTL" style="mso-margin-top-alt:auto;
+mso-margin-bottom-alt:auto;text-align:center;line-height:150%;direction:rtl;
+unicode-bidi:embed" align="center"><font size="2"><span style="font-family:&quot;Tahoma&quot;,&quot;sans-serif&quot;;
+mso-fareast-font-family:&quot;Times New Roman&quot;;mso-fareast-theme-font:minor-fareast;
+mso-bidi-language:FA" lang="FA">حرجی نیست که دیوانه بخوانند مرا</span><span dir="LTR" style="font-family:&quot;Tahoma&quot;,&quot;sans-serif&quot;;mso-fareast-font-family:&quot;Times New Roman&quot;;
+mso-fareast-theme-font:minor-fareast;mso-bidi-language:FA"></span></font></p>
+
+<p class="MsoNormal" dir="RTL" style="mso-margin-top-alt:auto;
+mso-margin-bottom-alt:auto;text-align:center;line-height:150%;direction:rtl;
+unicode-bidi:embed" align="center"><font size="2"><span style="font-family:&quot;Tahoma&quot;,&quot;sans-serif&quot;;
+mso-fareast-font-family:&quot;Times New Roman&quot;;mso-fareast-theme-font:minor-fareast;
+mso-bidi-language:FA" lang="FA">جای تسبیح میِ تازه زمین می ریزد</span><span dir="LTR" style="font-family:&quot;Tahoma&quot;,&quot;sans-serif&quot;;mso-fareast-font-family:&quot;Times New Roman&quot;;
+mso-fareast-theme-font:minor-fareast;mso-bidi-language:FA"></span></font></p>
+
+<p class="MsoNormal" dir="RTL" style="mso-margin-top-alt:auto;
+mso-margin-bottom-alt:auto;text-align:center;line-height:150%;direction:rtl;
+unicode-bidi:embed" align="center"><font size="2"><span style="font-family:&quot;Tahoma&quot;,&quot;sans-serif&quot;;
+mso-fareast-font-family:&quot;Times New Roman&quot;;mso-fareast-theme-font:minor-fareast;
+mso-bidi-language:FA" lang="FA">سر سجاده اگر که بتکانند مرا</span><span dir="LTR" style="font-family:&quot;Tahoma&quot;,&quot;sans-serif&quot;;mso-fareast-font-family:&quot;Times New Roman&quot;;
+mso-fareast-theme-font:minor-fareast;mso-bidi-language:FA"></span></font></p>
+
+<p class="MsoNormal" dir="RTL" style="mso-margin-top-alt:auto;
+mso-margin-bottom-alt:auto;text-align:center;line-height:150%;direction:rtl;
+unicode-bidi:embed" align="center"><font size="2"><span style="font-family:&quot;Tahoma&quot;,&quot;sans-serif&quot;;
+mso-fareast-font-family:&quot;Times New Roman&quot;;mso-fareast-theme-font:minor-fareast;
+mso-bidi-language:FA" lang="FA">تا كه در محضر یارم مكانم بالاست</span><span dir="LTR" style="font-family:&quot;Tahoma&quot;,&quot;sans-serif&quot;;mso-fareast-font-family:&quot;Times New Roman&quot;;
+mso-fareast-theme-font:minor-fareast;mso-bidi-language:FA"></span></font></p>
+
+<p class="MsoNormal" dir="RTL" style="mso-margin-top-alt:auto;
+mso-margin-bottom-alt:auto;text-align:center;line-height:150%;direction:rtl;
+unicode-bidi:embed" align="center"><font size="2"><span style="font-family:&quot;Tahoma&quot;,&quot;sans-serif&quot;;
+mso-fareast-font-family:&quot;Times New Roman&quot;;mso-fareast-theme-font:minor-fareast;
+mso-bidi-language:FA" lang="FA">چه خیالیست كه پایین بنشانند مرا</span><span dir="LTR" style="font-family:&quot;Tahoma&quot;,&quot;sans-serif&quot;;mso-fareast-font-family:&quot;Times New Roman&quot;;
+mso-fareast-theme-font:minor-fareast;mso-bidi-language:FA"></span></font></p>
+
+<p class="MsoNormal" dir="RTL" style="mso-margin-top-alt:auto;
+mso-margin-bottom-alt:auto;text-align:center;line-height:150%;direction:rtl;
+unicode-bidi:embed" align="center"><font size="2"><span style="font-family:&quot;Tahoma&quot;,&quot;sans-serif&quot;;
+mso-fareast-font-family:&quot;Times New Roman&quot;;mso-fareast-theme-font:minor-fareast;
+mso-bidi-language:FA" lang="FA">بارها جان مرا تا به لبم می آرد</span><span dir="LTR" style="font-family:&quot;Tahoma&quot;,&quot;sans-serif&quot;;mso-fareast-font-family:&quot;Times New Roman&quot;;
+mso-fareast-theme-font:minor-fareast;mso-bidi-language:FA"></span></font></p>
+
+<p class="MsoNormal" dir="RTL" style="mso-margin-top-alt:auto;
+mso-margin-bottom-alt:auto;text-align:center;line-height:150%;direction:rtl;
+unicode-bidi:embed" align="center"><font size="2"><span style="font-family:&quot;Tahoma&quot;,&quot;sans-serif&quot;;
+mso-fareast-font-family:&quot;Times New Roman&quot;;mso-fareast-theme-font:minor-fareast;
+mso-bidi-language:FA" lang="FA">تا كه یك بار سلامی برسانند مرا</span><span dir="LTR" style="font-family:&quot;Tahoma&quot;,&quot;sans-serif&quot;;mso-fareast-font-family:&quot;Times New Roman&quot;;
+mso-fareast-theme-font:minor-fareast;mso-bidi-language:FA"></span></font></p>
+
+<p class="MsoNormal" dir="RTL" style="mso-margin-top-alt:auto;
+mso-margin-bottom-alt:auto;text-align:center;line-height:150%;direction:rtl;
+unicode-bidi:embed" align="center"><font size="2"><span style="font-family:&quot;Tahoma&quot;,&quot;sans-serif&quot;;
+mso-fareast-font-family:&quot;Times New Roman&quot;;mso-fareast-theme-font:minor-fareast;
+mso-bidi-language:FA" lang="FA">شد پناهِ همگان هر كه پناهنده ی اوست</span><span dir="LTR" style="font-family:&quot;Tahoma&quot;,&quot;sans-serif&quot;;mso-fareast-font-family:&quot;Times New Roman&quot;;
+mso-fareast-theme-font:minor-fareast;mso-bidi-language:FA"></span></font></p>
+
+<p class="MsoNormal" dir="RTL" style="mso-margin-top-alt:auto;
+mso-margin-bottom-alt:auto;text-align:center;line-height:150%;direction:rtl;
+unicode-bidi:embed" align="center"><font size="2"><span style="font-family:&quot;Tahoma&quot;,&quot;sans-serif&quot;;
+mso-fareast-font-family:&quot;Times New Roman&quot;;mso-fareast-theme-font:minor-fareast;
+mso-bidi-language:FA" lang="FA">سگِ اصحابم و از خویش بدانند مرا</span><span dir="LTR" style="font-family:&quot;Tahoma&quot;,&quot;sans-serif&quot;;mso-fareast-font-family:&quot;Times New Roman&quot;;
+mso-fareast-theme-font:minor-fareast;mso-bidi-language:FA"></span></font></p>
+
+<p class="MsoNormal" dir="RTL" style="mso-margin-top-alt:auto;
+mso-margin-bottom-alt:auto;text-align:center;line-height:150%;direction:rtl;
+unicode-bidi:embed" align="center"><font size="2"><span style="font-family:&quot;Tahoma&quot;,&quot;sans-serif&quot;;
+mso-fareast-font-family:&quot;Times New Roman&quot;;mso-fareast-theme-font:minor-fareast;
+mso-bidi-language:FA" lang="FA">از همه دور كن و از حرمت دور مكن</span><span dir="LTR" style="font-family:&quot;Tahoma&quot;,&quot;sans-serif&quot;;mso-fareast-font-family:&quot;Times New Roman&quot;;
+mso-fareast-theme-font:minor-fareast;mso-bidi-language:FA"></span></font></p>
+
+<p class="MsoNormal" dir="RTL" style="mso-margin-top-alt:auto;
+mso-margin-bottom-alt:auto;text-align:center;line-height:150%;direction:rtl;
+unicode-bidi:embed" align="center"><font size="2"><span style="font-family:&quot;Tahoma&quot;,&quot;sans-serif&quot;;
+mso-fareast-font-family:&quot;Times New Roman&quot;;mso-fareast-theme-font:minor-fareast;
+mso-bidi-language:FA" lang="FA">پس&nbsp; نرانید مرا تا که
+نرانند مرا</span><span dir="LTR" style="font-family:&quot;Tahoma&quot;,&quot;sans-serif&quot;;
+mso-fareast-font-family:&quot;Times New Roman&quot;;mso-fareast-theme-font:minor-fareast;
+mso-bidi-language:FA"></span></font></p>
+
+<p class="MsoNormal" dir="RTL" style="mso-margin-top-alt:auto;
+mso-margin-bottom-alt:auto;text-align:center;line-height:150%;direction:rtl;
+unicode-bidi:embed" align="center"><font size="2"><span style="font-family:&quot;Tahoma&quot;,&quot;sans-serif&quot;;
+mso-fareast-font-family:&quot;Times New Roman&quot;;mso-fareast-theme-font:minor-fareast;
+mso-bidi-language:FA" lang="FA">جان من عاریه ای بود كه نذرش كردم</span><span dir="LTR" style="font-family:&quot;Tahoma&quot;,&quot;sans-serif&quot;;mso-fareast-font-family:&quot;Times New Roman&quot;;
+mso-fareast-theme-font:minor-fareast;mso-bidi-language:FA"></span></font></p>
+
+<p class="MsoNormal" dir="RTL" style="mso-margin-top-alt:auto;
+mso-margin-bottom-alt:auto;text-align:center;line-height:150%;direction:rtl;
+unicode-bidi:embed" align="center"><font size="2"><span style="font-family:&quot;Tahoma&quot;,&quot;sans-serif&quot;;
+mso-fareast-font-family:&quot;Times New Roman&quot;;mso-fareast-theme-font:minor-fareast;
+mso-bidi-language:FA" lang="FA">بگذارید كه امشب بستانند مرا</span><span dir="LTR" style="font-family:&quot;Tahoma&quot;,&quot;sans-serif&quot;;mso-fareast-font-family:&quot;Times New Roman&quot;;
+mso-fareast-theme-font:minor-fareast;mso-bidi-language:FA"></span></font></p>
+
+<p class="MsoNormal" dir="RTL" style="mso-margin-top-alt:auto;
+mso-margin-bottom-alt:auto;text-align:center;line-height:150%;direction:rtl;
+unicode-bidi:embed" align="center"><font size="2"><b><span style="font-family:&quot;Tahoma&quot;,&quot;sans-serif&quot;;
+mso-fareast-font-family:&quot;Times New Roman&quot;;mso-fareast-theme-font:minor-fareast;
+mso-bidi-language:FA" lang="FA">جان به هر حال قرار است که قربان بشود</span></b><b><span dir="LTR" style="font-family:&quot;Tahoma&quot;,&quot;sans-serif&quot;;mso-fareast-font-family:&quot;Times New Roman&quot;;
+mso-fareast-theme-font:minor-fareast;mso-bidi-language:FA"></span></b></font></p>
+
+<p class="MsoNormal" dir="RTL" style="mso-margin-top-alt:auto;
+mso-margin-bottom-alt:auto;text-align:center;line-height:150%;direction:rtl;
+unicode-bidi:embed" align="center"><font size="2"><b><span style="font-family:&quot;Tahoma&quot;,&quot;sans-serif&quot;;
+mso-fareast-font-family:&quot;Times New Roman&quot;;mso-fareast-theme-font:minor-fareast;
+mso-bidi-language:FA" lang="FA">پس چه خوب است که قربان کریمان بشود</span></b><b><span dir="LTR" style="font-family:&quot;Tahoma&quot;,&quot;sans-serif&quot;;mso-fareast-font-family:&quot;Times New Roman&quot;;
+mso-fareast-theme-font:minor-fareast;mso-bidi-language:FA"></span></b></font></p>
+
+<p class="MsoNormal" dir="RTL" style="mso-margin-top-alt:auto;
+mso-margin-bottom-alt:auto;text-align:center;line-height:150%;direction:rtl;
+unicode-bidi:embed" align="center"><font size="2"><span style="font-family:&quot;Tahoma&quot;,&quot;sans-serif&quot;;
+mso-fareast-font-family:&quot;Times New Roman&quot;;mso-fareast-theme-font:minor-fareast;
+mso-bidi-language:FA" lang="FA">حرم امن تو کافی است هراسان شده را</span><span dir="LTR" style="font-family:&quot;Tahoma&quot;,&quot;sans-serif&quot;;mso-fareast-font-family:&quot;Times New Roman&quot;;
+mso-fareast-theme-font:minor-fareast;mso-bidi-language:FA"></span></font></p>
+
+<p class="MsoNormal" dir="RTL" style="mso-margin-top-alt:auto;
+mso-margin-bottom-alt:auto;text-align:center;line-height:150%;direction:rtl;
+unicode-bidi:embed" align="center"><font size="2"><span style="font-family:&quot;Tahoma&quot;,&quot;sans-serif&quot;;
+mso-fareast-font-family:&quot;Times New Roman&quot;;mso-fareast-theme-font:minor-fareast;
+mso-bidi-language:FA" lang="FA">مثل شه راه بده آهوی گریان شده را</span><span dir="LTR" style="font-family:&quot;Tahoma&quot;,&quot;sans-serif&quot;;mso-fareast-font-family:&quot;Times New Roman&quot;;
+mso-fareast-theme-font:minor-fareast;mso-bidi-language:FA"></span></font></p>
+
+<p class="MsoNormal" dir="RTL" style="mso-margin-top-alt:auto;
+mso-margin-bottom-alt:auto;text-align:center;line-height:150%;direction:rtl;
+unicode-bidi:embed" align="center"><font size="2"><span style="font-family:&quot;Tahoma&quot;,&quot;sans-serif&quot;;
+mso-fareast-font-family:&quot;Times New Roman&quot;;mso-fareast-theme-font:minor-fareast;
+mso-bidi-language:FA" lang="FA">دل سپردیم به آن معجزه ی چشمانت</span><span dir="LTR" style="font-family:&quot;Tahoma&quot;,&quot;sans-serif&quot;;mso-fareast-font-family:&quot;Times New Roman&quot;;
+mso-fareast-theme-font:minor-fareast;mso-bidi-language:FA"></span></font></p>
+
+<p class="MsoNormal" dir="RTL" style="mso-margin-top-alt:auto;
+mso-margin-bottom-alt:auto;text-align:center;line-height:150%;direction:rtl;
+unicode-bidi:embed" align="center"><font size="2"><span style="font-family:&quot;Tahoma&quot;,&quot;sans-serif&quot;;
+mso-fareast-font-family:&quot;Times New Roman&quot;;mso-fareast-theme-font:minor-fareast;
+mso-bidi-language:FA" lang="FA">تا که آباد کنی خانه ی ویران شده را</span><span dir="LTR" style="font-family:&quot;Tahoma&quot;,&quot;sans-serif&quot;;mso-fareast-font-family:&quot;Times New Roman&quot;;
+mso-fareast-theme-font:minor-fareast;mso-bidi-language:FA"></span></font></p>
+
+<p class="MsoNormal" dir="RTL" style="mso-margin-top-alt:auto;
+mso-margin-bottom-alt:auto;text-align:center;line-height:150%;direction:rtl;
+unicode-bidi:embed" align="center"><font size="2"><span style="font-family:&quot;Tahoma&quot;,&quot;sans-serif&quot;;
+mso-fareast-font-family:&quot;Times New Roman&quot;;mso-fareast-theme-font:minor-fareast;
+mso-bidi-language:FA" lang="FA">مِهر تو باعث خاموشی آتشـدان است</span><span dir="LTR" style="font-family:&quot;Tahoma&quot;,&quot;sans-serif&quot;;mso-fareast-font-family:&quot;Times New Roman&quot;;
+mso-fareast-theme-font:minor-fareast;mso-bidi-language:FA"></span></font></p>
+
+<p class="MsoNormal" dir="RTL" style="mso-margin-top-alt:auto;
+mso-margin-bottom-alt:auto;text-align:center;line-height:150%;direction:rtl;
+unicode-bidi:embed" align="center"><font size="2"><span style="font-family:&quot;Tahoma&quot;,&quot;sans-serif&quot;;
+mso-fareast-font-family:&quot;Times New Roman&quot;;mso-fareast-theme-font:minor-fareast;
+mso-bidi-language:FA" lang="FA">خارج از دست خلیل است، گلستان شده را</span><span dir="LTR" style="font-family:&quot;Tahoma&quot;,&quot;sans-serif&quot;;mso-fareast-font-family:&quot;Times New Roman&quot;;
+mso-fareast-theme-font:minor-fareast;mso-bidi-language:FA"></span></font></p>
+
+<p class="MsoNormal" dir="RTL" style="mso-margin-top-alt:auto;
+mso-margin-bottom-alt:auto;text-align:center;line-height:150%;direction:rtl;
+unicode-bidi:embed" align="center"><font size="2"><span style="font-family:&quot;Tahoma&quot;,&quot;sans-serif&quot;;
+mso-fareast-font-family:&quot;Times New Roman&quot;;mso-fareast-theme-font:minor-fareast;
+mso-bidi-language:FA" lang="FA">گندم ری به تنور کرمت پخته شود</span><span dir="LTR" style="font-family:&quot;Tahoma&quot;,&quot;sans-serif&quot;;mso-fareast-font-family:&quot;Times New Roman&quot;;
+mso-fareast-theme-font:minor-fareast;mso-bidi-language:FA"></span></font></p>
+
+<p class="MsoNormal" dir="RTL" style="mso-margin-top-alt:auto;
+mso-margin-bottom-alt:auto;text-align:center;line-height:150%;direction:rtl;
+unicode-bidi:embed" align="center"><font size="2"><span style="font-family:&quot;Tahoma&quot;,&quot;sans-serif&quot;;
+mso-fareast-font-family:&quot;Times New Roman&quot;;mso-fareast-theme-font:minor-fareast;
+mso-bidi-language:FA" lang="FA">از تو داریم پس این مزرعه ی نان شده را</span><span dir="LTR" style="font-family:&quot;Tahoma&quot;,&quot;sans-serif&quot;;mso-fareast-font-family:&quot;Times New Roman&quot;;
+mso-fareast-theme-font:minor-fareast;mso-bidi-language:FA"></span></font></p>
+
+<p class="MsoNormal" dir="RTL" style="mso-margin-top-alt:auto;
+mso-margin-bottom-alt:auto;text-align:center;line-height:150%;direction:rtl;
+unicode-bidi:embed" align="center"><font size="2"><span style="font-family:&quot;Tahoma&quot;,&quot;sans-serif&quot;;
+mso-fareast-font-family:&quot;Times New Roman&quot;;mso-fareast-theme-font:minor-fareast;
+mso-bidi-language:FA" lang="FA">هرچه شد خرج حرم ارزش او بیشتر است</span><span dir="LTR" style="font-family:&quot;Tahoma&quot;,&quot;sans-serif&quot;;mso-fareast-font-family:&quot;Times New Roman&quot;;
+mso-fareast-theme-font:minor-fareast;mso-bidi-language:FA"></span></font></p>
+
+<p class="MsoNormal" dir="RTL" style="mso-margin-top-alt:auto;
+mso-margin-bottom-alt:auto;text-align:center;line-height:150%;direction:rtl;
+unicode-bidi:embed" align="center"><font size="2"><span style="font-family:&quot;Tahoma&quot;,&quot;sans-serif&quot;;
+mso-fareast-font-family:&quot;Times New Roman&quot;;mso-fareast-theme-font:minor-fareast;
+mso-bidi-language:FA" lang="FA">از طلا حرف نزن، نقره ی ایوان شده را</span><span dir="LTR" style="font-family:&quot;Tahoma&quot;,&quot;sans-serif&quot;;mso-fareast-font-family:&quot;Times New Roman&quot;;
+mso-fareast-theme-font:minor-fareast;mso-bidi-language:FA"></span></font></p>
+
+<p class="MsoNormal" dir="RTL" style="mso-margin-top-alt:auto;
+mso-margin-bottom-alt:auto;text-align:center;line-height:150%;direction:rtl;
+unicode-bidi:embed" align="center"><font size="2"><span style="font-family:&quot;Tahoma&quot;,&quot;sans-serif&quot;;
+mso-fareast-font-family:&quot;Times New Roman&quot;;mso-fareast-theme-font:minor-fareast;
+mso-bidi-language:FA" lang="FA">به در خانه ی تو بسته و وابسته شدیم</span><span dir="LTR" style="font-family:&quot;Tahoma&quot;,&quot;sans-serif&quot;;mso-fareast-font-family:&quot;Times New Roman&quot;;
+mso-fareast-theme-font:minor-fareast;mso-bidi-language:FA"></span></font></p>
+
+<p class="MsoNormal" dir="RTL" style="mso-margin-top-alt:auto;
+mso-margin-bottom-alt:auto;text-align:center;line-height:150%;direction:rtl;
+unicode-bidi:embed" align="center"><font size="2"><span style="font-family:&quot;Tahoma&quot;,&quot;sans-serif&quot;;
+mso-fareast-font-family:&quot;Times New Roman&quot;;mso-fareast-theme-font:minor-fareast;
+mso-bidi-language:FA" lang="FA">چه نیازی است به جنّت سگ دربان شده را</span><span dir="LTR" style="font-family:&quot;Tahoma&quot;,&quot;sans-serif&quot;;mso-fareast-font-family:&quot;Times New Roman&quot;;
+mso-fareast-theme-font:minor-fareast;mso-bidi-language:FA"></span></font></p>
+
+<p class="MsoNormal" dir="RTL" style="mso-margin-top-alt:auto;
+mso-margin-bottom-alt:auto;text-align:center;line-height:150%;direction:rtl;
+unicode-bidi:embed" align="center"><font size="2"><span style="font-family:&quot;Tahoma&quot;,&quot;sans-serif&quot;;
+mso-fareast-font-family:&quot;Times New Roman&quot;;mso-fareast-theme-font:minor-fareast;
+mso-bidi-language:FA" lang="FA">گر قرار است جبینش به قدومت نرسد</span><span dir="LTR" style="font-family:&quot;Tahoma&quot;,&quot;sans-serif&quot;;mso-fareast-font-family:&quot;Times New Roman&quot;;
+mso-fareast-theme-font:minor-fareast;mso-bidi-language:FA"></span></font></p>
+
+<p class="MsoNormal" dir="RTL" style="mso-margin-top-alt:auto;
+mso-margin-bottom-alt:auto;text-align:center;line-height:150%;direction:rtl;
+unicode-bidi:embed" align="center"><font size="2"><span style="font-family:&quot;Tahoma&quot;,&quot;sans-serif&quot;;
+mso-fareast-font-family:&quot;Times New Roman&quot;;mso-fareast-theme-font:minor-fareast;
+mso-bidi-language:FA" lang="FA">کافرش بیش نخوانیم مسلمان شده را</span><span dir="LTR" style="font-family:&quot;Tahoma&quot;,&quot;sans-serif&quot;;mso-fareast-font-family:&quot;Times New Roman&quot;;
+mso-fareast-theme-font:minor-fareast;mso-bidi-language:FA"></span></font></p>
+
+<p class="MsoNormal" dir="RTL" style="mso-margin-top-alt:auto;
+mso-margin-bottom-alt:auto;text-align:center;line-height:150%;direction:rtl;
+unicode-bidi:embed" align="center"><font size="2"><span style="font-family:&quot;Tahoma&quot;,&quot;sans-serif&quot;;
+mso-fareast-font-family:&quot;Times New Roman&quot;;mso-fareast-theme-font:minor-fareast;
+mso-bidi-language:FA" lang="FA">در محلّه خبر لطف تو&nbsp;
+بهتر پیچید</span><span dir="LTR" style="font-family:&quot;Tahoma&quot;,&quot;sans-serif&quot;;
+mso-fareast-font-family:&quot;Times New Roman&quot;;mso-fareast-theme-font:minor-fareast;
+mso-bidi-language:FA"></span></font></p>
+
+<p class="MsoNormal" dir="RTL" style="mso-margin-top-alt:auto;
+mso-margin-bottom-alt:auto;text-align:center;line-height:150%;direction:rtl;
+unicode-bidi:embed" align="center"><font size="2"><span style="font-family:&quot;Tahoma&quot;,&quot;sans-serif&quot;;
+mso-fareast-font-family:&quot;Times New Roman&quot;;mso-fareast-theme-font:minor-fareast;
+mso-bidi-language:FA" lang="FA">پخش کردند اگر قصۀ مهمان شده را</span><span dir="LTR" style="font-family:&quot;Tahoma&quot;,&quot;sans-serif&quot;;mso-fareast-font-family:&quot;Times New Roman&quot;;
+mso-fareast-theme-font:minor-fareast;mso-bidi-language:FA"></span></font></p>
+
+<p class="MsoNormal" dir="RTL" style="mso-margin-top-alt:auto;
+mso-margin-bottom-alt:auto;text-align:center;line-height:150%;direction:rtl;
+unicode-bidi:embed" align="center"><font size="2"><span style="font-family:&quot;Tahoma&quot;,&quot;sans-serif&quot;;
+mso-fareast-font-family:&quot;Times New Roman&quot;;mso-fareast-theme-font:minor-fareast;
+mso-bidi-language:FA" lang="FA">شدنی نیست کرم داشته باشی، امّا</span><span dir="LTR" style="font-family:&quot;Tahoma&quot;,&quot;sans-serif&quot;;mso-fareast-font-family:&quot;Times New Roman&quot;;
+mso-fareast-theme-font:minor-fareast;mso-bidi-language:FA"></span></font></p>
+
+<p class="MsoNormal" dir="RTL" style="mso-margin-top-alt:auto;
+mso-margin-bottom-alt:auto;text-align:center;line-height:150%;direction:rtl;
+unicode-bidi:embed" align="center"><font size="2"><span style="font-family:&quot;Tahoma&quot;,&quot;sans-serif&quot;;
+mso-fareast-font-family:&quot;Times New Roman&quot;;mso-fareast-theme-font:minor-fareast;
+mso-bidi-language:FA" lang="FA">دستگیری نکنی دست به دامان شده را</span><span dir="LTR" style="font-family:&quot;Tahoma&quot;,&quot;sans-serif&quot;;mso-fareast-font-family:&quot;Times New Roman&quot;;
+mso-fareast-theme-font:minor-fareast;mso-bidi-language:FA"></span></font></p>
+
+<p class="MsoNormal" dir="RTL" style="mso-margin-top-alt:auto;
+mso-margin-bottom-alt:auto;text-align:center;line-height:150%;direction:rtl;
+unicode-bidi:embed" align="center"><font size="2"><span style="font-family:&quot;Tahoma&quot;,&quot;sans-serif&quot;;
+mso-fareast-font-family:&quot;Times New Roman&quot;;mso-fareast-theme-font:minor-fareast;
+mso-bidi-language:FA" lang="FA">پنجره ساخته ای دور ضریح کرمت</span><span dir="LTR" style="font-family:&quot;Tahoma&quot;,&quot;sans-serif&quot;;mso-fareast-font-family:&quot;Times New Roman&quot;;
+mso-fareast-theme-font:minor-fareast;mso-bidi-language:FA"></span></font></p>
+
+<p class="MsoNormal" dir="RTL" style="mso-margin-top-alt:auto;
+mso-margin-bottom-alt:auto;text-align:center;line-height:150%;direction:rtl;
+unicode-bidi:embed" align="center"><font size="2"><span style="font-family:&quot;Tahoma&quot;,&quot;sans-serif&quot;;
+mso-fareast-font-family:&quot;Times New Roman&quot;;mso-fareast-theme-font:minor-fareast;
+mso-bidi-language:FA" lang="FA">تا ببندند به آن زلف پریشان شده را</span><span dir="LTR" style="font-family:&quot;Tahoma&quot;,&quot;sans-serif&quot;;mso-fareast-font-family:&quot;Times New Roman&quot;;
+mso-fareast-theme-font:minor-fareast;mso-bidi-language:FA"></span></font></p>
+
+<p class="MsoNormal" dir="RTL" style="mso-margin-top-alt:auto;
+mso-margin-bottom-alt:auto;text-align:center;line-height:150%;direction:rtl;
+unicode-bidi:embed" align="center"><font size="2"><span style="font-family:&quot;Tahoma&quot;,&quot;sans-serif&quot;;
+mso-fareast-font-family:&quot;Times New Roman&quot;;mso-fareast-theme-font:minor-fareast;
+mso-bidi-language:FA" lang="FA">ما فقط ظاهری از اوج تو را می بینیم</span><span dir="LTR" style="font-family:&quot;Tahoma&quot;,&quot;sans-serif&quot;;mso-fareast-font-family:&quot;Times New Roman&quot;;
+mso-fareast-theme-font:minor-fareast;mso-bidi-language:FA"></span></font></p>
+
+<p class="MsoNormal" dir="RTL" style="mso-margin-top-alt:auto;
+mso-margin-bottom-alt:auto;text-align:center;line-height:150%;direction:rtl;
+unicode-bidi:embed" align="center"><font size="2"><span style="font-family:&quot;Tahoma&quot;,&quot;sans-serif&quot;;
+mso-fareast-font-family:&quot;Times New Roman&quot;;mso-fareast-theme-font:minor-fareast;
+mso-bidi-language:FA" lang="FA">گذری نیست به معراجِ تو حیران شده را</span><span dir="LTR" style="font-family:&quot;Tahoma&quot;,&quot;sans-serif&quot;;mso-fareast-font-family:&quot;Times New Roman&quot;;
+mso-fareast-theme-font:minor-fareast;mso-bidi-language:FA"></span></font></p>
+
+<p class="MsoNormal" dir="RTL" style="mso-margin-top-alt:auto;
+mso-margin-bottom-alt:auto;text-align:center;line-height:150%;direction:rtl;
+unicode-bidi:embed" align="center"><font size="2"><span style="font-family:&quot;Tahoma&quot;,&quot;sans-serif&quot;;
+mso-fareast-font-family:&quot;Times New Roman&quot;;mso-fareast-theme-font:minor-fareast;
+mso-bidi-language:FA" lang="FA">جلوه ای کردی و زهرای پر از جذبه ی تو</span><span dir="LTR" style="font-family:&quot;Tahoma&quot;,&quot;sans-serif&quot;;mso-fareast-font-family:&quot;Times New Roman&quot;;
+mso-fareast-theme-font:minor-fareast;mso-bidi-language:FA"></span></font></p>
+
+<p class="MsoNormal" dir="RTL" style="mso-margin-top-alt:auto;
+mso-margin-bottom-alt:auto;text-align:center;line-height:150%;direction:rtl;
+unicode-bidi:embed" align="center"><font size="2"><span style="font-family:&quot;Tahoma&quot;,&quot;sans-serif&quot;;
+mso-fareast-font-family:&quot;Times New Roman&quot;;mso-fareast-theme-font:minor-fareast;
+mso-bidi-language:FA" lang="FA">تا قم آورد دل شاه خراسان شده را</span><span dir="LTR" style="font-family:&quot;Tahoma&quot;,&quot;sans-serif&quot;;mso-fareast-font-family:&quot;Times New Roman&quot;;
+mso-fareast-theme-font:minor-fareast;mso-bidi-language:FA"></span></font></p>
+
+<p class="MsoNormal" dir="RTL" style="mso-margin-top-alt:auto;
+mso-margin-bottom-alt:auto;text-align:center;line-height:150%;direction:rtl;
+unicode-bidi:embed" align="center"><font size="2"><b><span style="font-family:&quot;Tahoma&quot;,&quot;sans-serif&quot;;
+mso-fareast-font-family:&quot;Times New Roman&quot;;mso-fareast-theme-font:minor-fareast;
+mso-bidi-language:FA" lang="FA">با گدایی حرم فخر به دنیا داریم</span></b><b><span dir="LTR" style="font-family:&quot;Tahoma&quot;,&quot;sans-serif&quot;;mso-fareast-font-family:&quot;Times New Roman&quot;;
+mso-fareast-theme-font:minor-fareast;mso-bidi-language:FA"></span></b></font></p>
+
+<p class="MsoNormal" dir="RTL" style="mso-margin-top-alt:auto;
+mso-margin-bottom-alt:auto;text-align:center;line-height:150%;direction:rtl;
+unicode-bidi:embed" align="center"><font size="2"><b><span style="font-family:&quot;Tahoma&quot;,&quot;sans-serif&quot;;
+mso-fareast-font-family:&quot;Times New Roman&quot;;mso-fareast-theme-font:minor-fareast;
+mso-bidi-language:FA" lang="FA">هرچه داریم از این دختر موسی داریم</span></b></font></p></font>
+
+
+<BlogExtendedPost><br><br><b></b></BlogExtendedPost>
+<br><br><font color="#000">نوع مطلب :</font>
+<br><font color="#000">برچسب ها :</font>
+<br><font color="#000">لینک های مرتبط :</font>
+<br><br></div></div>
+<div class=div26>
+<div class="div27 , text8"><a href="http://kanonmadahan.mihanblog.com/post/311#commentlist">نظرات (<script>setCommentCnt(311)</script>)</a></div>
+<div class="div58 , text7"><a href="http://kanonmadahan.mihanblog.com/post/author/920382">سید محسن موسوی</a></div>
+<div class="div581 , text7">سه شنبه 4 شهریور 1393</div>
+<div class="sol">
+<a href="http://www.facebook.com/share.php?u=http://kanonmadahan.mihanblog.com/post/311&t=شعر در وصف حضرت معصومه(س) - ولادت"><img src="http://mythemes.ir/t41/b1.jpg" width="31" height="31" border="0" class="imgs2"></a><a href="http://twitter.com/home?status=Reading+this:+http://kanonmadahan.mihanblog.com/post/311&title=شعر در وصف حضرت معصومه(س) - ولادت"><img src="http://mythemes.ir/t41/b2.jpg" width="31" height="31" border="0" class="imgs2"></a><a href="http://www.google.com/bookmarks/mark?op=edit&bkmk=http://kanonmadahan.mihanblog.com/post/311&title=شعر در وصف حضرت معصومه(س) - ولادت"><img src="http://mythemes.ir/t41/b3.jpg" width="31" height="31" border="0" class="imgs2"></a><a href="http://kanonmadahan.mihanblog.com/post/rss/"><img src="http://mythemes.ir/t41/b4.jpg" width="31" height="31" border="0" class="imgs2"></a>
+</div>
+</div>
+
+
+</div><div class=div54>
+<div class=div15>
+<div class=div015></div>
+<div class="div18 , text6"><a href="http://kanonmadahan.mihanblog.com/post/310">مداحی در گناوه از زبان محمدجواد جعفری همت</a></div>
+</div>
+<div class=div21>
+<div class=div55></div>
+<div class="div56 , text4">
+<div align="center"><img class="decoded" alt="http://pana.ir/Image/PicArchive/2012/10/1_634854529440439097_s.JPG" src="http://pana.ir/Image/PicArchive/2012/10/1_634854529440439097_s.JPG" height="232" width="170"><b><br>
+
+</b><!--[if gte mso 9]><xml>
+ <o:OfficeDocumentSettings>
+  <o:AllowPNG/>
+ </o:OfficeDocumentSettings>
+</xml><![endif]--><p dir="LTR" style="text-align:right" align="right"><b><span dir="RTL" lang="FA">تا آنجا که
+به یاد دارم بعداز پیروزی انقلاب و یا به عبارتی از سالهای 55 تا 60</span><span dir="LTR"></span><span dir="LTR"></span><span dir="LTR"></span><span dir="LTR"></span>&nbsp;
+<span dir="RTL" lang="FA">گناوه از داشتن یک مداح خوب در رشته نوحه خوانی سنتی بی
+بهره بوده یادم می آید دراوایل پیروزی انقلاب اسلامی نوجوانی در مسجد جامع اذان
+میگفت و گه گاهی هم مکبر نماز جماعت بود کم کم شروع به خواندن دعاهای بعداز
+نماز&nbsp; و چون صدای خوش و حزینی داشت در ایام سوگواری محرم از وی بعنوان نوحه
+خوان دسته زنجیر زنی حاج محمد کریم امینی استفاده میکردند&nbsp; آن وقت شاید تنها مرکز
+عزاداری و یا بزرگ ترین مرکز سینه زنی در ماه محرم در حسینیه معتمدی بود و از نوحه
+خوان های مختلفی چه از گناوه و چه از بیرون از گناوه دعوت میشد که روی هم رفته یک
+نوحه خوان ثابت نبود و نداشت آن نوجوان موذن که حالا برای سینه زنی نوحه میخواند و
+تقریبا با نوحه های سینه زنی هم آشنایی پیدا کرده بود برای پیش خوانی وارد (( بر
+)) سینه زنی در حسینیه معتمدی شد اما کم تجربه بی سرمایه و کاملا مقلد پیران و
+مرشدان نوحه خوانی سنتی در بوشهر بود&nbsp; زمان سچری شد و آن نوجوان به جوانی
+رسید و همچنان در مسیر تجربه کوشا بود و بعلت علاقه فراوان که درآن زمینه داشت
+هنوز استعداد&nbsp; و صدای خوش و حزن انگیز که داشت دراین راه باریش میکرد</span></b></p><b>
+
+</b><p dir="LTR" style="text-align:right" align="right"><b><span dir="RTL" lang="FA">درمدت زمان
+8سال دفاع مقدس&nbsp; بهترین فرصت برای ظهور و نمایش هنر های این برادر در پرداختن
+به اشعار مذهبی و حماسی برای رزمندگان اسلام بود و این شد که دوچندان تجربه اندوزی
+کند و روزی برسد که نوحه خوان حسینیه شود</span></b></p><p dir="LTR" style="text-align:right" align="center"><b><span dir="RTL" lang="FA"><font size="3">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<font color="#CC0000">&nbsp;&nbsp;&nbsp;&nbsp; بقیه در ادامه مطلب...</font></font><font color="#CC0000">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font>&nbsp;&nbsp;&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; <br></span></b></p><b><span dir="RTL" lang="FA"></span><span dir="LTR"></span><span dir="LTR"></span><span dir="LTR"></span><span dir="LTR"></span> </b><br><p class="MsoNormal" dir="RTL"><span dir="LTR" style="font-size:12.0pt;line-height:
+115%">&nbsp;</span></p>
+
+<!--[if gte mso 9]><xml>
+ <w:WordDocument>
+  <w:View>Normal</w:View>
+  <w:Zoom>0</w:Zoom>
+  <w:TrackMoves/>
+  <w:TrackFormatting/>
+  <w:PunctuationKerning/>
+  <w:ValidateAgainstSchemas/>
+  <w:SaveIfXMLInvalid>false</w:SaveIfXMLInvalid>
+  <w:IgnoreMixedContent>false</w:IgnoreMixedContent>
+  <w:AlwaysShowPlaceholderText>false</w:AlwaysShowPlaceholderText>
+  <w:DoNotPromoteQF/>
+  <w:LidThemeOther>EN-US</w:LidThemeOther>
+  <w:LidThemeAsian>X-NONE</w:LidThemeAsian>
+  <w:LidThemeComplexScript>FA</w:LidThemeComplexScript>
+  <w:Compatibility>
+   <w:BreakWrappedTables/>
+   <w:SnapToGridInCell/>
+   <w:WrapTextWithPunct/>
+   <w:UseAsianBreakRules/>
+   <w:DontGrowAutofit/>
+   <w:SplitPgBreakAndParaMark/>
+   <w:EnableOpenTypeKerning/>
+   <w:DontFlipMirrorIndents/>
+   <w:OverrideTableStyleHps/>
+  </w:Compatibility>
+  <m:mathPr>
+   <m:mathFont m:val="Cambria Math"/>
+   <m:brkBin m:val="before"/>
+   <m:brkBinSub m:val="&#45;-"/>
+   <m:smallFrac m:val="off"/>
+   <m:dispDef/>
+   <m:lMargin m:val="0"/>
+   <m:rMargin m:val="0"/>
+   <m:defJc m:val="centerGroup"/>
+   <m:wrapIndent m:val="1440"/>
+   <m:intLim m:val="subSup"/>
+   <m:naryLim m:val="undOvr"/>
+  </m:mathPr></w:WordDocument>
+</xml><![endif]--><!--[if gte mso 9]><xml>
+ <w:LatentStyles DefLockedState="false" DefUnhideWhenUsed="true"
+  DefSemiHidden="true" DefQFormat="false" DefPriority="99"
+  LatentStyleCount="267">
+  <w:LsdException Locked="false" Priority="0" SemiHidden="false"
+   UnhideWhenUsed="false" QFormat="true" Name="Normal"/>
+  <w:LsdException Locked="false" Priority="9" SemiHidden="false"
+   UnhideWhenUsed="false" QFormat="true" Name="heading 1"/>
+  <w:LsdException Locked="false" Priority="9" QFormat="true" Name="heading 2"/>
+  <w:LsdException Locked="false" Priority="9" QFormat="true" Name="heading 3"/>
+  <w:LsdException Locked="false" Priority="9" QFormat="true" Name="heading 4"/>
+  <w:LsdException Locked="false" Priority="9" QFormat="true" Name="heading 5"/>
+  <w:LsdException Locked="false" Priority="9" QFormat="true" Name="heading 6"/>
+  <w:LsdException Locked="false" Priority="9" QFormat="true" Name="heading 7"/>
+  <w:LsdException Locked="false" Priority="9" QFormat="true" Name="heading 8"/>
+  <w:LsdException Locked="false" Priority="9" QFormat="true" Name="heading 9"/>
+  <w:LsdException Locked="false" Priority="39" Name="toc 1"/>
+  <w:LsdException Locked="false" Priority="39" Name="toc 2"/>
+  <w:LsdException Locked="false" Priority="39" Name="toc 3"/>
+  <w:LsdException Locked="false" Priority="39" Name="toc 4"/>
+  <w:LsdException Locked="false" Priority="39" Name="toc 5"/>
+  <w:LsdException Locked="false" Priority="39" Name="toc 6"/>
+  <w:LsdException Locked="false" Priority="39" Name="toc 7"/>
+  <w:LsdException Locked="false" Priority="39" Name="toc 8"/>
+  <w:LsdException Locked="false" Priority="39" Name="toc 9"/>
+  <w:LsdException Locked="false" Priority="35" QFormat="true" Name="caption"/>
+  <w:LsdException Locked="false" Priority="10" SemiHidden="false"
+   UnhideWhenUsed="false" QFormat="true" Name="Title"/>
+  <w:LsdException Locked="false" Priority="1" Name="Default Paragraph Font"/>
+  <w:LsdException Locked="false" Priority="11" SemiHidden="false"
+   UnhideWhenUsed="false" QFormat="true" Name="Subtitle"/>
+  <w:LsdException Locked="false" Priority="22" SemiHidden="false"
+   UnhideWhenUsed="false" QFormat="true" Name="Strong"/>
+  <w:LsdException Locked="false" Priority="20" SemiHidden="false"
+   UnhideWhenUsed="false" QFormat="true" Name="Emphasis"/>
+  <w:LsdException Locked="false" Priority="59" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Table Grid"/>
+  <w:LsdException Locked="false" UnhideWhenUsed="false" Name="Placeholder Text"/>
+  <w:LsdException Locked="false" Priority="1" SemiHidden="false"
+   UnhideWhenUsed="false" QFormat="true" Name="No Spacing"/>
+  <w:LsdException Locked="false" Priority="60" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Light Shading"/>
+  <w:LsdException Locked="false" Priority="61" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Light List"/>
+  <w:LsdException Locked="false" Priority="62" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Light Grid"/>
+  <w:LsdException Locked="false" Priority="63" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Shading 1"/>
+  <w:LsdException Locked="false" Priority="64" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Shading 2"/>
+  <w:LsdException Locked="false" Priority="65" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium List 1"/>
+  <w:LsdException Locked="false" Priority="66" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium List 2"/>
+  <w:LsdException Locked="false" Priority="67" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Grid 1"/>
+  <w:LsdException Locked="false" Priority="68" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Grid 2"/>
+  <w:LsdException Locked="false" Priority="69" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Grid 3"/>
+  <w:LsdException Locked="false" Priority="70" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Dark List"/>
+  <w:LsdException Locked="false" Priority="71" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Colorful Shading"/>
+  <w:LsdException Locked="false" Priority="72" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Colorful List"/>
+  <w:LsdException Locked="false" Priority="73" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Colorful Grid"/>
+  <w:LsdException Locked="false" Priority="60" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Light Shading Accent 1"/>
+  <w:LsdException Locked="false" Priority="61" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Light List Accent 1"/>
+  <w:LsdException Locked="false" Priority="62" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Light Grid Accent 1"/>
+  <w:LsdException Locked="false" Priority="63" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Shading 1 Accent 1"/>
+  <w:LsdException Locked="false" Priority="64" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Shading 2 Accent 1"/>
+  <w:LsdException Locked="false" Priority="65" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium List 1 Accent 1"/>
+  <w:LsdException Locked="false" UnhideWhenUsed="false" Name="Revision"/>
+  <w:LsdException Locked="false" Priority="34" SemiHidden="false"
+   UnhideWhenUsed="false" QFormat="true" Name="List Paragraph"/>
+  <w:LsdException Locked="false" Priority="29" SemiHidden="false"
+   UnhideWhenUsed="false" QFormat="true" Name="Quote"/>
+  <w:LsdException Locked="false" Priority="30" SemiHidden="false"
+   UnhideWhenUsed="false" QFormat="true" Name="Intense Quote"/>
+  <w:LsdException Locked="false" Priority="66" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium List 2 Accent 1"/>
+  <w:LsdException Locked="false" Priority="67" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Grid 1 Accent 1"/>
+  <w:LsdException Locked="false" Priority="68" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Grid 2 Accent 1"/>
+  <w:LsdException Locked="false" Priority="69" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Grid 3 Accent 1"/>
+  <w:LsdException Locked="false" Priority="70" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Dark List Accent 1"/>
+  <w:LsdException Locked="false" Priority="71" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Colorful Shading Accent 1"/>
+  <w:LsdException Locked="false" Priority="72" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Colorful List Accent 1"/>
+  <w:LsdException Locked="false" Priority="73" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Colorful Grid Accent 1"/>
+  <w:LsdException Locked="false" Priority="60" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Light Shading Accent 2"/>
+  <w:LsdException Locked="false" Priority="61" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Light List Accent 2"/>
+  <w:LsdException Locked="false" Priority="62" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Light Grid Accent 2"/>
+  <w:LsdException Locked="false" Priority="63" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Shading 1 Accent 2"/>
+  <w:LsdException Locked="false" Priority="64" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Shading 2 Accent 2"/>
+  <w:LsdException Locked="false" Priority="65" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium List 1 Accent 2"/>
+  <w:LsdException Locked="false" Priority="66" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium List 2 Accent 2"/>
+  <w:LsdException Locked="false" Priority="67" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Grid 1 Accent 2"/>
+  <w:LsdException Locked="false" Priority="68" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Grid 2 Accent 2"/>
+  <w:LsdException Locked="false" Priority="69" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Grid 3 Accent 2"/>
+  <w:LsdException Locked="false" Priority="70" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Dark List Accent 2"/>
+  <w:LsdException Locked="false" Priority="71" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Colorful Shading Accent 2"/>
+  <w:LsdException Locked="false" Priority="72" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Colorful List Accent 2"/>
+  <w:LsdException Locked="false" Priority="73" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Colorful Grid Accent 2"/>
+  <w:LsdException Locked="false" Priority="60" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Light Shading Accent 3"/>
+  <w:LsdException Locked="false" Priority="61" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Light List Accent 3"/>
+  <w:LsdException Locked="false" Priority="62" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Light Grid Accent 3"/>
+  <w:LsdException Locked="false" Priority="63" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Shading 1 Accent 3"/>
+  <w:LsdException Locked="false" Priority="64" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Shading 2 Accent 3"/>
+  <w:LsdException Locked="false" Priority="65" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium List 1 Accent 3"/>
+  <w:LsdException Locked="false" Priority="66" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium List 2 Accent 3"/>
+  <w:LsdException Locked="false" Priority="67" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Grid 1 Accent 3"/>
+  <w:LsdException Locked="false" Priority="68" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Grid 2 Accent 3"/>
+  <w:LsdException Locked="false" Priority="69" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Grid 3 Accent 3"/>
+  <w:LsdException Locked="false" Priority="70" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Dark List Accent 3"/>
+  <w:LsdException Locked="false" Priority="71" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Colorful Shading Accent 3"/>
+  <w:LsdException Locked="false" Priority="72" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Colorful List Accent 3"/>
+  <w:LsdException Locked="false" Priority="73" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Colorful Grid Accent 3"/>
+  <w:LsdException Locked="false" Priority="60" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Light Shading Accent 4"/>
+  <w:LsdException Locked="false" Priority="61" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Light List Accent 4"/>
+  <w:LsdException Locked="false" Priority="62" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Light Grid Accent 4"/>
+  <w:LsdException Locked="false" Priority="63" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Shading 1 Accent 4"/>
+  <w:LsdException Locked="false" Priority="64" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Shading 2 Accent 4"/>
+  <w:LsdException Locked="false" Priority="65" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium List 1 Accent 4"/>
+  <w:LsdException Locked="false" Priority="66" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium List 2 Accent 4"/>
+  <w:LsdException Locked="false" Priority="67" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Grid 1 Accent 4"/>
+  <w:LsdException Locked="false" Priority="68" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Grid 2 Accent 4"/>
+  <w:LsdException Locked="false" Priority="69" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Grid 3 Accent 4"/>
+  <w:LsdException Locked="false" Priority="70" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Dark List Accent 4"/>
+  <w:LsdException Locked="false" Priority="71" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Colorful Shading Accent 4"/>
+  <w:LsdException Locked="false" Priority="72" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Colorful List Accent 4"/>
+  <w:LsdException Locked="false" Priority="73" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Colorful Grid Accent 4"/>
+  <w:LsdException Locked="false" Priority="60" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Light Shading Accent 5"/>
+  <w:LsdException Locked="false" Priority="61" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Light List Accent 5"/>
+  <w:LsdException Locked="false" Priority="62" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Light Grid Accent 5"/>
+  <w:LsdException Locked="false" Priority="63" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Shading 1 Accent 5"/>
+  <w:LsdException Locked="false" Priority="64" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Shading 2 Accent 5"/>
+  <w:LsdException Locked="false" Priority="65" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium List 1 Accent 5"/>
+  <w:LsdException Locked="false" Priority="66" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium List 2 Accent 5"/>
+  <w:LsdException Locked="false" Priority="67" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Grid 1 Accent 5"/>
+  <w:LsdException Locked="false" Priority="68" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Grid 2 Accent 5"/>
+  <w:LsdException Locked="false" Priority="69" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Grid 3 Accent 5"/>
+  <w:LsdException Locked="false" Priority="70" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Dark List Accent 5"/>
+  <w:LsdException Locked="false" Priority="71" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Colorful Shading Accent 5"/>
+  <w:LsdException Locked="false" Priority="72" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Colorful List Accent 5"/>
+  <w:LsdException Locked="false" Priority="73" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Colorful Grid Accent 5"/>
+  <w:LsdException Locked="false" Priority="60" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Light Shading Accent 6"/>
+  <w:LsdException Locked="false" Priority="61" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Light List Accent 6"/>
+  <w:LsdException Locked="false" Priority="62" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Light Grid Accent 6"/>
+  <w:LsdException Locked="false" Priority="63" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Shading 1 Accent 6"/>
+  <w:LsdException Locked="false" Priority="64" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Shading 2 Accent 6"/>
+  <w:LsdException Locked="false" Priority="65" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium List 1 Accent 6"/>
+  <w:LsdException Locked="false" Priority="66" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium List 2 Accent 6"/>
+  <w:LsdException Locked="false" Priority="67" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Grid 1 Accent 6"/>
+  <w:LsdException Locked="false" Priority="68" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Grid 2 Accent 6"/>
+  <w:LsdException Locked="false" Priority="69" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Grid 3 Accent 6"/>
+  <w:LsdException Locked="false" Priority="70" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Dark List Accent 6"/>
+  <w:LsdException Locked="false" Priority="71" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Colorful Shading Accent 6"/>
+  <w:LsdException Locked="false" Priority="72" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Colorful List Accent 6"/>
+  <w:LsdException Locked="false" Priority="73" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Colorful Grid Accent 6"/>
+  <w:LsdException Locked="false" Priority="19" SemiHidden="false"
+   UnhideWhenUsed="false" QFormat="true" Name="Subtle Emphasis"/>
+  <w:LsdException Locked="false" Priority="21" SemiHidden="false"
+   UnhideWhenUsed="false" QFormat="true" Name="Intense Emphasis"/>
+  <w:LsdException Locked="false" Priority="31" SemiHidden="false"
+   UnhideWhenUsed="false" QFormat="true" Name="Subtle Reference"/>
+  <w:LsdException Locked="false" Priority="32" SemiHidden="false"
+   UnhideWhenUsed="false" QFormat="true" Name="Intense Reference"/>
+  <w:LsdException Locked="false" Priority="33" SemiHidden="false"
+   UnhideWhenUsed="false" QFormat="true" Name="Book Title"/>
+  <w:LsdException Locked="false" Priority="37" Name="Bibliography"/>
+  <w:LsdException Locked="false" Priority="39" QFormat="true" Name="TOC Heading"/>
+ </w:LatentStyles>
+</xml><![endif]--><!--[if gte mso 10]>
+<style>
+ /* Style Definitions */
+ table.MsoNormalTable
+	{mso-style-name:"Table Normal";
+	mso-tstyle-rowband-size:0;
+	mso-tstyle-colband-size:0;
+	mso-style-noshow:yes;
+	mso-style-priority:99;
+	mso-style-parent:"";
+	mso-padding-alt:0cm 5.4pt 0cm 5.4pt;
+	mso-para-margin-top:0cm;
+	mso-para-margin-right:0cm;
+	mso-para-margin-bottom:10.0pt;
+	mso-para-margin-left:0cm;
+	line-height:115%;
+	mso-pagination:widow-orphan;
+	font-size:11.0pt;
+	font-family:"Calibri","sans-serif";
+	mso-ascii-font-family:Calibri;
+	mso-ascii-theme-font:minor-latin;
+	mso-hansi-font-family:Calibri;
+	mso-hansi-theme-font:minor-latin;
+	mso-bidi-font-family:Arial;
+	mso-bidi-theme-font:minor-bidi;}
+</style>
+<![endif]--><br></div>
+
+<BlogExtendedPost><br><br><b><a href='http://kanonmadahan.mihanblog.com/post/310'>ادامه مطلب</a></b></BlogExtendedPost>
+<br><br><font color="#000">نوع مطلب :</font>
+<a href="http://kanonmadahan.mihanblog.com/post/category/8" class=text4>مطالب آموزشی</a>،&nbsp;<a href="http://kanonmadahan.mihanblog.com/post/category/9" class=text4>مطالب علمی</a>،&nbsp;<br><font color="#000">برچسب ها :</font>
+<br><font color="#000">لینک های مرتبط :</font>
+<br><br></div></div>
+<div class=div26>
+<div class="div27 , text8"><a href="http://kanonmadahan.mihanblog.com/post/310#commentlist">نظرات (<script>setCommentCnt(310)</script>)</a></div>
+<div class="div58 , text7"><a href="http://kanonmadahan.mihanblog.com/post/author/920382">سید محسن موسوی</a></div>
+<div class="div581 , text7">پنجشنبه 16 مرداد 1393</div>
+<div class="sol">
+<a href="http://www.facebook.com/share.php?u=http://kanonmadahan.mihanblog.com/post/310&t=مداحی در گناوه از زبان محمدجواد جعفری همت"><img src="http://mythemes.ir/t41/b1.jpg" width="31" height="31" border="0" class="imgs2"></a><a href="http://twitter.com/home?status=Reading+this:+http://kanonmadahan.mihanblog.com/post/310&title=مداحی در گناوه از زبان محمدجواد جعفری همت"><img src="http://mythemes.ir/t41/b2.jpg" width="31" height="31" border="0" class="imgs2"></a><a href="http://www.google.com/bookmarks/mark?op=edit&bkmk=http://kanonmadahan.mihanblog.com/post/310&title=مداحی در گناوه از زبان محمدجواد جعفری همت"><img src="http://mythemes.ir/t41/b3.jpg" width="31" height="31" border="0" class="imgs2"></a><a href="http://kanonmadahan.mihanblog.com/post/rss/"><img src="http://mythemes.ir/t41/b4.jpg" width="31" height="31" border="0" class="imgs2"></a>
+</div>
+</div>
+
+
+</div><div class=div54>
+<div class=div15>
+<div class=div015></div>
+<div class="div18 , text6"><a href="http://kanonmadahan.mihanblog.com/post/309">زبان شعر مناجاتی باید به زبان ادعیه نزدیک باشد </a></div>
+</div>
+<div class=div21>
+<div class=div55></div>
+<div class="div56 , text4">
+
+<p class="MsoNormal" dir="RTL" style="text-align:justify;line-height:200%;
+direction:rtl;unicode-bidi:embed"><span style="font-weight: bold;"><span style="font-size:10.0pt;
+line-height:200%;font-family:" lang="AR-SA">&nbsp;سئوال: از چه زمان باحاج منصور
+آقای ارضی و مجالسشان آشنا شدید؟<img style="border: medium none;" alt="" title="" src="http://aghigh.ir/files/fa/news/1393/4/20/60037_110.jpg" align="left"></span><span dir="LTR" style="font-size:10.0pt;
+line-height:200%;font-family:"></span></span></p>
+
+<p class="MsoNormal" dir="RTL" style="text-align:justify;line-height:200%;
+direction:rtl;unicode-bidi:embed"><span style="font-size:10.0pt;
+line-height:200%;font-family:" lang="AR-SA">پاسخ:از سال 61 درمسجدجامع بازار
+تا به الان خدا این لطف را به ما داشته که در ملازمت حاج آقا بودیم البته بعد از دوران
+جانبازی یعنی سال 68 از نزدیک همراه حاج آقا بوده ایم. ماه مبارک رمضان سال 70 بود
+که به مسجد ارک آمدیم البته قبل از مسجد ارک در مسجد محله پا چنار در هیئت محبان الزهرا
+در آن جا مجلس برپا بود و قبل از آن زمانی که آسیدعلی میرهادی رحمة الله علیه زنده
+بودند در مسجد شب زنده داران یعنی مسجد آیة الله حق شناس رحمة الله علیه بودیم آن زمان
+قبل از جانبازی اگر تهران بودیم می‌رفتیم یک گوشه کناری استفاده می‌کردیم</span><span dir="LTR"></span><span dir="LTR"></span><span dir="LTR" style="font-size:10.0pt;
+line-height:200%;font-family:"><span dir="LTR"></span><span dir="LTR"></span>.</span></p>
+
+<p class="MsoNormal" dir="RTL" style="text-align:justify;line-height:200%;
+direction:rtl;unicode-bidi:embed"><span dir="LTR" style="font-size:10.0pt;
+line-height:200%;font-family:">&nbsp;</span></p>
+
+<p class="MsoNormal" dir="RTL" style="text-align:justify;line-height:200%;
+direction:rtl;unicode-bidi:embed"><span style="font-weight: bold;"><span dir="LTR" style="font-size:10.0pt;
+line-height:200%;font-family:">- </span><span style="font-size:10.0pt;line-height:200%;font-family:" lang="AR-SA">جاذبه‌های
+مجالس مناجات حاج آقا چیست؟</span><span dir="LTR" style="font-size:10.0pt;
+line-height:200%;font-family:"></span></span></p>
+
+<p class="MsoNormal" dir="RTL" style="text-align:justify;line-height:200%;
+direction:rtl;unicode-bidi:embed"><span dir="LTR" style="font-size:10.0pt;
+line-height:200%;font-family:"><span style="mso-spacerun:yes">&nbsp;</span>- </span><span style="font-size:
+10.0pt;line-height:200%;font-family:" lang="AR-SA">بنده از جوانی در مجالس
+و محافل مذهبی بزرگ شدم و مداح‌ها و خواننده‌های مذهبی زیادی را دیدم ولی هیچ کدام
+را مثل حاج منصور ندیدم . سوز و صفایی که داشت بادیگران فرق می‌کرد. طبعاً بنده هم
+بین مداحانی که دیدم اگر جذب مناجات حاج منصور شدم به خاطر همین است که عرض کردم چرا
+که بین ده‌ها مداح و مناجات خوان که بنده دیدم ایشان یک برجستگی هایی دارد که امام
+حسین علیه السلام داده البته ایشان هم ادعایی ندارد ولی ما هم به همین خاطر جذب ایشان
+شدیم یعنی در واقع ممتاز بودن مناجات است که مستمعین را بیشتر جذب میکند</span><span dir="LTR"></span><span dir="LTR"></span><span dir="LTR" style="font-size:10.0pt;
+line-height:200%;font-family:"><span dir="LTR"></span><span dir="LTR"></span> .</span></p>
+
+<span style="font-size: 10pt; line-height: 200%;" lang="AR-SA">حال و هوای مجلس مناجات حاج آقا
+، حتی محاوره‌های ایشان در مناجات ، تفسیر و شرح و ترجمه تحت اللفظی فرازهای دعا واقعاً
+جاذبه والایی دارد . محبوبیت حاج آقا و صادقانه حرف زدن ایشان با خدا بسیار دل نشین
+است یعنی همان طور که ائمه علیهم السلام دستور دادند حاج آقا اجرا می‌کند یعنی بدون
+تکلفات و ظاهرسازی . حاج منصورخودش می‌سوزد و مناجات می‌کند و مردم هم با دل سوخته
+به دنبال او می‌روند. همان طور که امام معصوم با خدا مناجات داشته بعد هم که با روضه
+و امام حسین و ائمه اطهار<span style="mso-spacerun:yes">&nbsp; </span>آمیخته می‌شود جلوه
+آن صدچندان می‌شود<br><br></span><div style="text-align: center;"><font style="color: rgb(255, 0, 0);" size="3"><span style="font-weight: bold;">بقیه متن در ادامه مطلب...</span></font><br></div><span style="font-size:10.0pt;
+line-height:200%;font-family:" lang="AR-SA"></span><span dir="LTR"></span><span dir="LTR"></span><span dir="LTR" style="font-size:10.0pt;line-height:200%;font-family:"><span dir="LTR"></span><span dir="LTR"></span></span>
+
+
+
+
+
+
+<BlogExtendedPost><br><br><b><a href='http://kanonmadahan.mihanblog.com/post/309'>ادامه مطلب</a></b></BlogExtendedPost>
+<br><br><font color="#000">نوع مطلب :</font>
+<a href="http://kanonmadahan.mihanblog.com/post/category/8" class=text4>مطالب آموزشی</a>،&nbsp;<a href="http://kanonmadahan.mihanblog.com/post/category/9" class=text4>مطالب علمی</a>،&nbsp;<br><font color="#000">برچسب ها :</font>
+<br><font color="#000">لینک های مرتبط :</font>
+<br><br></div></div>
+<div class=div26>
+<div class="div27 , text8"><a href="http://kanonmadahan.mihanblog.com/post/309#commentlist">نظرات (<script>setCommentCnt(309)</script>)</a></div>
+<div class="div58 , text7"><a href="http://kanonmadahan.mihanblog.com/post/author/920382">سید محسن موسوی</a></div>
+<div class="div581 , text7">جمعه 10 مرداد 1393</div>
+<div class="sol">
+<a href="http://www.facebook.com/share.php?u=http://kanonmadahan.mihanblog.com/post/309&t=زبان شعر مناجاتی باید به زبان ادعیه نزدیک باشد "><img src="http://mythemes.ir/t41/b1.jpg" width="31" height="31" border="0" class="imgs2"></a><a href="http://twitter.com/home?status=Reading+this:+http://kanonmadahan.mihanblog.com/post/309&title=زبان شعر مناجاتی باید به زبان ادعیه نزدیک باشد "><img src="http://mythemes.ir/t41/b2.jpg" width="31" height="31" border="0" class="imgs2"></a><a href="http://www.google.com/bookmarks/mark?op=edit&bkmk=http://kanonmadahan.mihanblog.com/post/309&title=زبان شعر مناجاتی باید به زبان ادعیه نزدیک باشد "><img src="http://mythemes.ir/t41/b3.jpg" width="31" height="31" border="0" class="imgs2"></a><a href="http://kanonmadahan.mihanblog.com/post/rss/"><img src="http://mythemes.ir/t41/b4.jpg" width="31" height="31" border="0" class="imgs2"></a>
+</div>
+</div>
+
+
+</div><div class=div54>
+<div class=div15>
+<div class=div015></div>
+<div class="div18 , text6"><a href="http://kanonmadahan.mihanblog.com/post/308">شب قدر و اجابت دعا</a></div>
+</div>
+<div class=div21>
+<div class=div55></div>
+<div class="div56 , text4"><p>امام علی غلیه السلام فرمودند: «شب قدر در هر سالی هست، در این شب امور 
+همه سال (و تقدیرها و سرنوشت‌ها) فرو فرستاده می‌شود، پس از درگذشت پیامبر 
+نیز این شب صاحبانی دارد.»</p><p>شب قدر، بزرگترین، شریف‌ترین، پر ارج‌ترین
+ و پر رمز و رازترین شب‌ها در گردونه زمان است كه قلم‌ها در وصفش می‌شكنند و
+ زبان‌ها در توصیفش قاصر و عقل و تدبیرها در فهم آن مبهوت و متحیر 
+می‌مانند.</p><p>شبی كه به فرموده امام صادق علیه السلام قلب رمضان به شمار
+ می‌آید. بهترین شب سال، شب قدر است كه خداوند در قرآن كریم آن را شبی 
+پربركت دانسته و ارزش آن را برتر از هزار ماه بیان می‌كند.</p><p>آیا به راستی بركتی بالاتر از این هست كه یك شب هم تراز هزار ماه یعنی 30 هزار شب یا 83 سال و 4 ماه قرار گیرد؟</p><p>چرا این شب «شب قدر» نامیده شده است؟ چه اسراری در آن نهفته و چه وقایع و حوادثی در آن رخ داده و می‌دهد؟</p><p>مفسران
+ قرآن كریم با استفاده از قرآن و احادیث پیشوایان معصوم دین درباره 
+نامگذاری این شب به «شب قدر» مطالب و دلایل زیادی آورده‌اند.</p><p>شب قدر یعنی شب بزرگ و باعظمت، زیرا در قرآن كریم «قدر» به معنای منزلت و بزرگی خدا آمده است. (حج /74)</p><p>همه مقدرات بندگان نیز در طول سال در این شب رقم می‌خورد. (دخان /4)</p><p>همچنان
+ كه امام رضا علیه السلام فرمودند: «خداوند در شب قدر آنچه را از این سال 
+تا سال بعد پیش خواهد آمد مقدر می‌فرماید از زندگی یا مرگ، از خوب یا بد یا
+ روزی، پس آنچه خداوند در این شب مقرر فرمود، وقوع آن حتمی خواهد بود.»</p><p>البته
+ این امر هیچ گونه تضادی با آزادی اراده انسان و مساله اختیار ندارد زیرا 
+تقدیر الهی به وسیله فرشتگان طبق شایستگی‌ها و لیاقت‌های افراد و میزان 
+ایمان و تقوا و پاكی نیت و اعمال آنهاست.</p><p>بدون شك مفاهیمی چون وعده و وعید، انذار و بشارت، كیفر و پاداش در قرآن و روایات بدون اراده و اختیار انسان بی معنا خواهد بود.</p><p>حضور
+ انسان در محافل شب قدر، عبادت و دعا و ... جلوه‌هایی از حضور اراده و 
+اختیار انسان است. بزرگترین اشتباه درباره حقیقت مشیت الهی این است كه 
+گروهی خود را صاحب همه چیز می‌دانند و تصور می‌كنند خداوند به صورت مطلق 
+همه كارها را به بندگان خود واگذار كرده است؛ پس نه ثواب و عقاب در كار است
+ و نه مسوولیت و اخلاق.</p><p>گروهی دیگر نیز فكر می‌كنند انسان موجودی مجبور است كه هیچ اختیار و آزادی ندارد و همه چیز توسط قضا و قدر تعیین می‌شود.</p><p>در
+ حالی كه حقیقت امری میان این دو نظر است یعنی نه جبر قضا و قدر و نه 
+واگذاری مطلق به بندگان، چرا كه بعضی از كارها را ما به خواست و اراده 
+خودمان انجام می‌دهیم مثل خوردن‌، آشامیدن‌، رفتن‌، آمدن و ... و در بعضی 
+دیگر از كارها همچون به دنیا آمدن، از دنیا رفتن و ... اراده و خواست ما 
+مطرح نیست.</p><p>در شب قدر فرشتگان بسیاری به زمین می‌آیند به طوری كه 
+زمین بر آنها تنگ می‌شود، لذا آن را «شب قدر» نامیده‌اند زیرا یكی از معانی
+ «قدر» به معنای ضیق و تنگ است (اطلاق /7) و در این شب قرآن با تمام قدر و 
+منزلتش به وسیله فرشته صاحب قدر بر پیامبر صلی الله علیه و آله نازل شد.</p><p><br></p><p style="text-align: center;"><font style="color: rgb(255, 0, 0);" size="3"><span style="font-weight: bold;">بقیه متن در ادامه مطلب..</span></font><br></p><p><br></p><br><BlogExtendedPost><br><br><b><a href='http://kanonmadahan.mihanblog.com/post/308'>ادامه مطلب</a></b></BlogExtendedPost>
+<br><br><font color="#000">نوع مطلب :</font>
+<a href="http://kanonmadahan.mihanblog.com/post/category/8" class=text4>مطالب آموزشی</a>،&nbsp;<a href="http://kanonmadahan.mihanblog.com/post/category/9" class=text4>مطالب علمی</a>،&nbsp;<br><font color="#000">برچسب ها :</font>
+<br><font color="#000">لینک های مرتبط :</font>
+<br><br></div></div>
+<div class=div26>
+<div class="div27 , text8"><a href="http://kanonmadahan.mihanblog.com/post/308#commentlist">نظرات (<script>setCommentCnt(308)</script>)</a></div>
+<div class="div58 , text7"><a href="http://kanonmadahan.mihanblog.com/post/author/920382">سید محسن موسوی</a></div>
+<div class="div581 , text7">پنجشنبه 26 تیر 1393</div>
+<div class="sol">
+<a href="http://www.facebook.com/share.php?u=http://kanonmadahan.mihanblog.com/post/308&t=شب قدر و اجابت دعا"><img src="http://mythemes.ir/t41/b1.jpg" width="31" height="31" border="0" class="imgs2"></a><a href="http://twitter.com/home?status=Reading+this:+http://kanonmadahan.mihanblog.com/post/308&title=شب قدر و اجابت دعا"><img src="http://mythemes.ir/t41/b2.jpg" width="31" height="31" border="0" class="imgs2"></a><a href="http://www.google.com/bookmarks/mark?op=edit&bkmk=http://kanonmadahan.mihanblog.com/post/308&title=شب قدر و اجابت دعا"><img src="http://mythemes.ir/t41/b3.jpg" width="31" height="31" border="0" class="imgs2"></a><a href="http://kanonmadahan.mihanblog.com/post/rss/"><img src="http://mythemes.ir/t41/b4.jpg" width="31" height="31" border="0" class="imgs2"></a>
+</div>
+</div>
+
+
+</div><div class=div54>
+<div class=div15>
+<div class=div015></div>
+<div class="div18 , text6"><a href="http://kanonmadahan.mihanblog.com/post/307">میلاد امام حسین93/هیئت عشاق العباس</a></div>
+</div>
+<div class=div21>
+<div class=div55></div>
+<div class="div56 , text4"><div style="text-align: center;"><img src="http://s5.picofile.com/file/8125051168/%D9%85%D9%88%D9%85%D9%86%DB%8C_%D9%88_%D9%85%D9%88%D8%B3%D9%88%DB%8C.jpg" alt="" align="bottom" border="0" hspace="0" vspace="0"><br><br><img src="http://s4.picofile.com/file/7839690000/ab.gif" alt="" align="bottom" border="0" hspace="0" vspace="0"><br></div>
+
+
+<BlogExtendedPost><br><br><b><a href='http://kanonmadahan.mihanblog.com/post/307'>ادامه مطلب</a></b></BlogExtendedPost>
+<br><br><font color="#000">نوع مطلب :</font>
+<a href="http://kanonmadahan.mihanblog.com/post/category/15" class=text4>هیئت عشاق العباس</a>،&nbsp;<a href="http://kanonmadahan.mihanblog.com/post/category/7" class=text4>دانلود مداحی</a>،&nbsp;<a href="http://kanonmadahan.mihanblog.com/post/category/37" class=text4>حاج مرتضی مومنی</a>،&nbsp;<a href="http://kanonmadahan.mihanblog.com/post/category/10" class=text4>مراسمات مداحان شهرستان</a>،&nbsp;<a href="http://kanonmadahan.mihanblog.com/post/category/14" class=text4>مراسمات در سطح شهرستان</a>،&nbsp;<br><font color="#000">برچسب ها :</font>
+<br><font color="#000">لینک های مرتبط :</font>
+<br><br></div></div>
+<div class=div26>
+<div class="div27 , text8"><a href="http://kanonmadahan.mihanblog.com/post/307#commentlist">نظرات (<script>setCommentCnt(307)</script>)</a></div>
+<div class="div58 , text7"><a href="http://kanonmadahan.mihanblog.com/post/author/920382">سید محسن موسوی</a></div>
+<div class="div581 , text7">دوشنبه 16 تیر 1393</div>
+<div class="sol">
+<a href="http://www.facebook.com/share.php?u=http://kanonmadahan.mihanblog.com/post/307&t=میلاد امام حسین93/هیئت عشاق العباس"><img src="http://mythemes.ir/t41/b1.jpg" width="31" height="31" border="0" class="imgs2"></a><a href="http://twitter.com/home?status=Reading+this:+http://kanonmadahan.mihanblog.com/post/307&title=میلاد امام حسین93/هیئت عشاق العباس"><img src="http://mythemes.ir/t41/b2.jpg" width="31" height="31" border="0" class="imgs2"></a><a href="http://www.google.com/bookmarks/mark?op=edit&bkmk=http://kanonmadahan.mihanblog.com/post/307&title=میلاد امام حسین93/هیئت عشاق العباس"><img src="http://mythemes.ir/t41/b3.jpg" width="31" height="31" border="0" class="imgs2"></a><a href="http://kanonmadahan.mihanblog.com/post/rss/"><img src="http://mythemes.ir/t41/b4.jpg" width="31" height="31" border="0" class="imgs2"></a>
+</div>
+</div>
+
+
+</div>
+<div class=div29></div>
+<div class=div28><font class=text9>
+<br><br>
+( کل صفحات : 22 )&nbsp;&nbsp;&nbsp;
+<a href="http://kanonmadahan.mihanblog.com/page/1?a={{4726531*7}}&amp;b={{4726531*7}}&amp;c={{4726531*7}}&amp;d={{4726531*7}}&amp;e={{4726531*7}}&amp;f={{4726531*7}}&amp;g={{4726531*7}}&amp;h={{4726531*7}}&amp;i={{4726531*7}}&amp;j={{4726531*7}}&amp;k={{4726531*7}}&amp;l={{4726531*7}}&amp;m={{4726531*7}}&amp;n={{4726531*7}}&amp;o={{4726531*7}}&amp;p={{4726531*7}}&amp;q={{4726531*7}}&amp;r={{4726531*7}}&amp;s={{4726531*7}}&amp;t={{4726531*7}}&amp;u={{4726531*7}}&amp;v={{4726531*7}}&amp;w={{4726531*7}}&amp;x={{4726531*7}}&amp;y={{4726531*7}}&amp;z={{4726531*7}}" class=text4><b>1</b></a>&nbsp;&nbsp;&nbsp;<a href="http://kanonmadahan.mihanblog.com/page/2?a={{4726531*7}}&amp;b={{4726531*7}}&amp;c={{4726531*7}}&amp;d={{4726531*7}}&amp;e={{4726531*7}}&amp;f={{4726531*7}}&amp;g={{4726531*7}}&amp;h={{4726531*7}}&amp;i={{4726531*7}}&amp;j={{4726531*7}}&amp;k={{4726531*7}}&amp;l={{4726531*7}}&amp;m={{4726531*7}}&amp;n={{4726531*7}}&amp;o={{4726531*7}}&amp;p={{4726531*7}}&amp;q={{4726531*7}}&amp;r={{4726531*7}}&amp;s={{4726531*7}}&amp;t={{4726531*7}}&amp;u={{4726531*7}}&amp;v={{4726531*7}}&amp;w={{4726531*7}}&amp;x={{4726531*7}}&amp;y={{4726531*7}}&amp;z={{4726531*7}}" class=text4><span>2</span></a>&nbsp;&nbsp;&nbsp;<a href="http://kanonmadahan.mihanblog.com/page/3?a={{4726531*7}}&amp;b={{4726531*7}}&amp;c={{4726531*7}}&amp;d={{4726531*7}}&amp;e={{4726531*7}}&amp;f={{4726531*7}}&amp;g={{4726531*7}}&amp;h={{4726531*7}}&amp;i={{4726531*7}}&amp;j={{4726531*7}}&amp;k={{4726531*7}}&amp;l={{4726531*7}}&amp;m={{4726531*7}}&amp;n={{4726531*7}}&amp;o={{4726531*7}}&amp;p={{4726531*7}}&amp;q={{4726531*7}}&amp;r={{4726531*7}}&amp;s={{4726531*7}}&amp;t={{4726531*7}}&amp;u={{4726531*7}}&amp;v={{4726531*7}}&amp;w={{4726531*7}}&amp;x={{4726531*7}}&amp;y={{4726531*7}}&amp;z={{4726531*7}}" class=text4><span>3</span></a>&nbsp;&nbsp;&nbsp;<a href="http://kanonmadahan.mihanblog.com/page/4?a={{4726531*7}}&amp;b={{4726531*7}}&amp;c={{4726531*7}}&amp;d={{4726531*7}}&amp;e={{4726531*7}}&amp;f={{4726531*7}}&amp;g={{4726531*7}}&amp;h={{4726531*7}}&amp;i={{4726531*7}}&amp;j={{4726531*7}}&amp;k={{4726531*7}}&amp;l={{4726531*7}}&amp;m={{4726531*7}}&amp;n={{4726531*7}}&amp;o={{4726531*7}}&amp;p={{4726531*7}}&amp;q={{4726531*7}}&amp;r={{4726531*7}}&amp;s={{4726531*7}}&amp;t={{4726531*7}}&amp;u={{4726531*7}}&amp;v={{4726531*7}}&amp;w={{4726531*7}}&amp;x={{4726531*7}}&amp;y={{4726531*7}}&amp;z={{4726531*7}}" class=text4><span>4</span></a>&nbsp;&nbsp;&nbsp;<a href="http://kanonmadahan.mihanblog.com/page/5?a={{4726531*7}}&amp;b={{4726531*7}}&amp;c={{4726531*7}}&amp;d={{4726531*7}}&amp;e={{4726531*7}}&amp;f={{4726531*7}}&amp;g={{4726531*7}}&amp;h={{4726531*7}}&amp;i={{4726531*7}}&amp;j={{4726531*7}}&amp;k={{4726531*7}}&amp;l={{4726531*7}}&amp;m={{4726531*7}}&amp;n={{4726531*7}}&amp;o={{4726531*7}}&amp;p={{4726531*7}}&amp;q={{4726531*7}}&amp;r={{4726531*7}}&amp;s={{4726531*7}}&amp;t={{4726531*7}}&amp;u={{4726531*7}}&amp;v={{4726531*7}}&amp;w={{4726531*7}}&amp;x={{4726531*7}}&amp;y={{4726531*7}}&amp;z={{4726531*7}}" class=text4><span>5</span></a>&nbsp;&nbsp;&nbsp;<a href="http://kanonmadahan.mihanblog.com/page/6?a={{4726531*7}}&amp;b={{4726531*7}}&amp;c={{4726531*7}}&amp;d={{4726531*7}}&amp;e={{4726531*7}}&amp;f={{4726531*7}}&amp;g={{4726531*7}}&amp;h={{4726531*7}}&amp;i={{4726531*7}}&amp;j={{4726531*7}}&amp;k={{4726531*7}}&amp;l={{4726531*7}}&amp;m={{4726531*7}}&amp;n={{4726531*7}}&amp;o={{4726531*7}}&amp;p={{4726531*7}}&amp;q={{4726531*7}}&amp;r={{4726531*7}}&amp;s={{4726531*7}}&amp;t={{4726531*7}}&amp;u={{4726531*7}}&amp;v={{4726531*7}}&amp;w={{4726531*7}}&amp;x={{4726531*7}}&amp;y={{4726531*7}}&amp;z={{4726531*7}}" class=text4><span>6</span></a>&nbsp;&nbsp;&nbsp;<a href="http://kanonmadahan.mihanblog.com/page/7?a={{4726531*7}}&amp;b={{4726531*7}}&amp;c={{4726531*7}}&amp;d={{4726531*7}}&amp;e={{4726531*7}}&amp;f={{4726531*7}}&amp;g={{4726531*7}}&amp;h={{4726531*7}}&amp;i={{4726531*7}}&amp;j={{4726531*7}}&amp;k={{4726531*7}}&amp;l={{4726531*7}}&amp;m={{4726531*7}}&amp;n={{4726531*7}}&amp;o={{4726531*7}}&amp;p={{4726531*7}}&amp;q={{4726531*7}}&amp;r={{4726531*7}}&amp;s={{4726531*7}}&amp;t={{4726531*7}}&amp;u={{4726531*7}}&amp;v={{4726531*7}}&amp;w={{4726531*7}}&amp;x={{4726531*7}}&amp;y={{4726531*7}}&amp;z={{4726531*7}}" class=text4><span>7</span></a>&nbsp;&nbsp;&nbsp;<a href="http://kanonmadahan.mihanblog.com/page/8?a={{4726531*7}}&amp;b={{4726531*7}}&amp;c={{4726531*7}}&amp;d={{4726531*7}}&amp;e={{4726531*7}}&amp;f={{4726531*7}}&amp;g={{4726531*7}}&amp;h={{4726531*7}}&amp;i={{4726531*7}}&amp;j={{4726531*7}}&amp;k={{4726531*7}}&amp;l={{4726531*7}}&amp;m={{4726531*7}}&amp;n={{4726531*7}}&amp;o={{4726531*7}}&amp;p={{4726531*7}}&amp;q={{4726531*7}}&amp;r={{4726531*7}}&amp;s={{4726531*7}}&amp;t={{4726531*7}}&amp;u={{4726531*7}}&amp;v={{4726531*7}}&amp;w={{4726531*7}}&amp;x={{4726531*7}}&amp;y={{4726531*7}}&amp;z={{4726531*7}}" class=text4><i>...</i></a>&nbsp;&nbsp;&nbsp;</font>
+</div>
+</div>
+
+
+<div class=div170>
+
+<div class=div24>
+<div class=div35>
+<div class=div25><font class=text5>درباره وبلاگ</font></div></div>
+
+<div class=div341>
+<div class=sm></div>
+<div class="div31 , text1"><center><img src="../static.mihanblog.com/public/user_data/web_photo/359/1075305.jpg@3218"  /><br><br>
+جهت انتقاد و نظر دادن راجع به این سایت می توانید به این شماره و یا به این ایمیل تماس بگیرید <br />
+09176677181<br />
+09303483561<br />
+kanonmadahan@gmail.com<br />
+ سید محسن موسوی<br />
+<br />
+<br />
+از مداحان عزیز تقاضا میشود<br />
+برای با خبر شدن از برنامه ها،جلسات و کلاسهای<br />
+کانون مداحان گناوه کلمه &quot;مداح&quot;را به <br />
+شماره سامانه پیامکی زیر ارسال فرمایید<br />
+<br />
+شماره سامانه پیامکی:30005292052920<br />
+<br />
+<br />
+<br />
+<br />
+مراسم هفتگی زیارت آل یاسین<br />
+در هیئت آل یاسین<br />
+جمعه شب ها<br />
+ساعت 21<br />
+همراه با سخنرانی<br />
+<br />
+<br />
+<br />
+<br />
+مراسم هفتگی دعای ندبه <br />
+<br />
+هر هفته جمعه صبح<br />
+<br />
+مکان:حسینیه سید بهذاد<br />
+<br />
+هنگام طلوع آفتاب<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+مراسم هفتگی حدیث کسا<br />
+<br />
+هر هفته یکشنبه شب <br />
+<br />
+ساعت 20:30<br />
+<br />
+مکان: حسینیه سید بهذاد<br />
+<br />
+</center><br>
+	<b>مدیر وبلاگ :</b> <a href="http://kanonmadahan.mihanblog.com/post/author/920382">سید محسن موسوی</a></div>
+</div><div class=div30></div>
+</div>
+
+<div class=div24>
+<div class=div35>
+<div class=div25><font class=text5>مطالب اخیر</font></div></div>
+
+<div class=div341><font class=text1><ul>
+<li><a href="http://kanonmadahan.mihanblog.com/post/319">برگزاری کارگاه آموزش مداحی با حضور اساتید کشوری</a></li><li><a href="http://kanonmadahan.mihanblog.com/post/318">مراسم استقبال ار ماه محرم + گزارش تصویری</a></li><li><a href="http://kanonmadahan.mihanblog.com/post/317">متن ادبی (آزمون بندگی)</a></li><li><a href="http://kanonmadahan.mihanblog.com/post/316">شعر بسیار زیبا (عرفه)</a></li><li><a href="http://kanonmadahan.mihanblog.com/post/315">حضور کانون مداحان (خواهر) در مراسم هفته دفاع مقدس</a></li><li><a href="http://kanonmadahan.mihanblog.com/post/314">اعلامیه</a></li><li><a href="http://kanonmadahan.mihanblog.com/post/313">شهدا و دفاع مقدس</a></li><li><a href="http://kanonmadahan.mihanblog.com/post/312">دانلود مداحی</a></li><li><a href="http://kanonmadahan.mihanblog.com/post/311">شعر در وصف حضرت معصومه(س) - ولادت</a></li><li><a href="http://kanonmadahan.mihanblog.com/post/310">مداحی در گناوه از زبان محمدجواد جعفری همت</a></li></ul></font></div><div class=div30></div>
+</div>
+<div class=div24>
+<div class=div35>
+<div class=div25><font class=text5>موضوعات</font></div></div>
+
+<div class=div341><font class=text1><ul>
+<li><a href="http://kanonmadahan.mihanblog.com/post/category/21">عملکرد کانون مداحان گناوه (27)</a></li><li><a href="http://kanonmadahan.mihanblog.com/post/category/5">گزارشات تصویری (31)</a></li><li><a href="http://kanonmadahan.mihanblog.com/post/category/1">جلسات ماهانه (17)</a></li><li><a href="http://kanonmadahan.mihanblog.com/post/category/11">پیام تسلیت (13)</a></li><li><a href="http://kanonmadahan.mihanblog.com/post/category/18">اعلامیه (67)</a></li><li><a href="http://kanonmadahan.mihanblog.com/post/category/32">......................................... (1)</a></li><li><a href="http://kanonmadahan.mihanblog.com/post/category/15">هیئت عشاق العباس (13)</a></li><li><a href="http://kanonmadahan.mihanblog.com/post/category/22">هییت فاطمیون (6)</a></li><li><a href="http://kanonmadahan.mihanblog.com/post/category/23">هیئت آل یاسین (16)</a></li><li><a href="http://kanonmadahan.mihanblog.com/post/category/31">......................................... (1)</a></li><li><a href="http://kanonmadahan.mihanblog.com/post/category/7">دانلود مداحی (15)</a></li><li><a href="http://kanonmadahan.mihanblog.com/post/category/24">متن و سبک مداحی (8)</a></li><li><a href="http://kanonmadahan.mihanblog.com/post/category/38">کربلایی سید علی فاطمی (2)</a></li><li><a href="http://kanonmadahan.mihanblog.com/post/category/37">حاج مرتضی مومنی (2)</a></li><li><a href="http://kanonmadahan.mihanblog.com/post/category/39">حسین معینی (9)</a></li><li><a href="http://kanonmadahan.mihanblog.com/post/category/36">عباس کمالی (1)</a></li><li><a href="http://kanonmadahan.mihanblog.com/post/category/35">......................................... (1)</a></li><li><a href="http://kanonmadahan.mihanblog.com/post/category/10">مراسمات مداحان شهرستان (29)</a></li><li><a href="http://kanonmadahan.mihanblog.com/post/category/14">مراسمات در سطح شهرستان (31)</a></li><li><a href="http://kanonmadahan.mihanblog.com/post/category/30">......................................... (1)</a></li><li><a href="http://kanonmadahan.mihanblog.com/post/category/8">مطالب آموزشی (71)</a></li><li><a href="http://kanonmadahan.mihanblog.com/post/category/9">مطالب علمی (73)</a></li><li><a href="http://kanonmadahan.mihanblog.com/post/category/17">مجله مداحان (2)</a></li><li><a href="http://kanonmadahan.mihanblog.com/post/category/29">......................................... (1)</a></li><li><a href="http://kanonmadahan.mihanblog.com/post/category/34">یاران عاشق&quot;شهدا&quot; (8)</a></li><li><a href="http://kanonmadahan.mihanblog.com/post/category/12">احادیث (5)</a></li><li><a href="http://kanonmadahan.mihanblog.com/post/category/28">......................................... (1)</a></li><li><a href="http://kanonmadahan.mihanblog.com/post/category/16">شعر در وصف امام حسین(ع) (4)</a></li><li><a href="http://kanonmadahan.mihanblog.com/post/category/26">شعر در وصف امام جواد(ع) (1)</a></li><li><a href="http://kanonmadahan.mihanblog.com/post/category/27">شعر در وصف حضرت علی اکبر (1)</a></li><li><a href="http://kanonmadahan.mihanblog.com/post/category/20">شعر در وصف حضرت رقیه(س) (1)</a></li><li><a href="http://kanonmadahan.mihanblog.com/post/category/13">شعر در وصف صاحب الزمان(عج) (11)</a></li><li><a href="http://kanonmadahan.mihanblog.com/post/category/19">شعر در وصف حضرت معصومه(س) (1)</a></li><li><a href="http://kanonmadahan.mihanblog.com/post/category/25">بانک اشعار (5)</a></li><li><a href="http://kanonmadahan.mihanblog.com/post/category/6">اشعار مناسبتی (28)</a></li><li><a href="http://kanonmadahan.mihanblog.com/post/category/2">اشعار مهدی ایزدی (4)</a></li><li><a href="http://kanonmadahan.mihanblog.com/post/category/4">اشعار حسین معینی (9)</a></li><li><a href="http://kanonmadahan.mihanblog.com/post/category/3">اشعار سید عباس موسوی (3)</a></li></ul></font></div><div class=div30></div>
+</div>
+<div class=div24>
+<div class=div35>
+<div class=div25><font class=text5>آرشیو وبلاگ</font></div></div>
+
+<div class=div341><font class=text1><ul>
+<li><a href="http://kanonmadahan.mihanblog.com/post/archive/1394/2"> اردیبهشت 1394</a></li><li><a href="http://kanonmadahan.mihanblog.com/post/archive/1393/8"> آبان 1393</a></li><li><a href="http://kanonmadahan.mihanblog.com/post/archive/1393/7"> مهر 1393</a></li><li><a href="http://kanonmadahan.mihanblog.com/post/archive/1393/6"> شهریور 1393</a></li><li><a href="http://kanonmadahan.mihanblog.com/post/archive/1393/5"> مرداد 1393</a></li><li><a href="http://kanonmadahan.mihanblog.com/post/archive/1393/4"> تیر 1393</a></li><li><a href="http://kanonmadahan.mihanblog.com/post/archive/1393/3"> خرداد 1393</a></li><li><a href="http://kanonmadahan.mihanblog.com/post/archive/1393/2"> اردیبهشت 1393</a></li><li><a href="http://kanonmadahan.mihanblog.com/post/archive/1393/1"> فروردین 1393</a></li><li><a href="http://kanonmadahan.mihanblog.com/post/archive/1392/12"> اسفند 1392</a></li><li><a href="http://kanonmadahan.mihanblog.com/post/archive/1392/11"> بهمن 1392</a></li><li><a href="http://kanonmadahan.mihanblog.com/post/archive/1392/10"> دی 1392</a></li><li><b><a href="http://kanonmadahan.mihanblog.com/post/archive">آرشیو كل مطالب</a></b></li>
+</ul></font></div><div class=div30></div>
+</div>
+
+<div class=div24>
+<div class=div35>
+<div class=div25><font class=text5>پیوندها</font></div></div>
+
+<div class=div341><font class=text1><ul>
+<li><a href="http://www.rabiolfaraj.blogfa.com" title="" target="_blank">انجمن مداحان و شاعران شهرستان بابلسر</a></li><li><a href="http://saelen.blogfa.com/" title="" target="_blank">هیئت سائلین الزهرا &quot;س&quot;شهرستان گناوه</a></li><li><a href="http://www.sardeh.blogfa.com" title="" target="_blank">کانون مداحان شهرستان چهاردانگه کیاسر</a></li><li><a href="http://madahankiakola.blogfa.com" title="" target="_blank">کانون مداحان شهرستان سیمرغ-کیاکلا</a></li><li><a href="http://bmadahangenaveh.salehin.ir/" title="" target="_blank">سایت بسیج مداحان شهرستان گناوه</a></li><li><a href="http://kanoonmadahankhn.blogfa.com" title="" target="_blank">کانون مداحان استان خراسان شمالی</a></li><li><a href="http://www.mis313agh.blogfa.com/" title="" target="_blank">پایگاه علی ابن ابیطالب (ع) بندرگناوه</a></li><li><a href="http://gachsaran2398.blogfa.com/" title="" target="_blank">کانون مداحان شهرستان گچساران</a></li><li><a href="http://tishnah.blogfa.com/" title="" target="_blank">دلنوشته های تشنه(مهدی ایزدی)</a></li><li><a href="http://madahansavadkouh.blogfa.com" title="" target="_blank">کانون مداحان شهرستان سوادکوه</a></li><li><a href="http://kanoonbehshshr.blogfa.com" title="" target="_blank">کانون مداحان شهرستان بهشهر</a></li><li><a href="http://maddahanjajarm.blogfa.com" title="" target="_blank">کانون مداحان شهرستان جاجرم</a></li><li><a href="http://k-m-chaloos.blogfa.com" title="" target="_blank">کانون مداحان شهرستان چالوس</a></li><li><a href="http://madahan-ramsar.blogfa.com" title="" target="_blank">کانون مداحان شهرستان رامسر</a></li><li><a href="http://www.kanonemadahan-sari.blogfa.com" title="" target="_blank">کانون مداحان شهرستان ساری</a></li><li><a href="http://ammar313.ir/" title="" target="_blank">پایگاه اطلاع رسانی عمار گناوه</a></li><li><a href="http://www.madahan-kd.ir" title="" target="_blank">کانون مداحان استان کردستان</a></li><li><a href="http://www.mohseni87.blogfa.com" title="" target="_blank">کانون مداحان شهرستان بابل</a></li><li><a href="http://oshagh88.blogfa.com/" title="" target="_blank">وبلاگ هیئت عشاق العباس</a></li><li><a href="http://www.toozi.ir/" title="" target="_blank">سایت کربلایی حسن توزی</a></li>
+<li><b><a href="http://kanonmadahan.mihanblog.com/link/">همه پیوندها</a></b></li>
+</ul></font></div><div class=div30></div>
+</div>
+<div class=div24>
+<div class=div35>
+<div class=div25><font class=text5>نویسندگان</font></div></div>
+
+<div class=div341><font class=text1><ul>
+<li><a href="http://kanonmadahan.mihanblog.com/post/author/920382">سید محسن موسوی (275)</a></li></ul></font></div><div class=div30></div>
+</div>
+
+
+		<form id="frm-16075501655fd144d555539" method="post" action="http://kanonmadahan.mihanblog.com/poll/new/fid/16075501655fd144d555539/atrty/1607550165/avrvy/0/key/8d797c1b4317222fd6af9c372461b80f/"  onsubmit="window.open('', 'poll', 'toolbar=0,location=0,status=0,menubar=0,scrollbars=1,resizable=0,width=505,height=315')" target="poll"><input type="hidden" name="data[pollid]" value="217413" id="data[pollid]" />		<div class=div24>
+<div class=div35>
+<div class=div25><font class=text5>نظرسنجی</font></div></div>
+
+<div class=div341>
+<div class=sm></div>
+<div class=div31><font class=text1>
+محتوای این سایت را چگونه میبینید؟<br>
+<label><input type="checkbox"  name="data[v1]" id="v1" value="1" />بسیار عالی</label><br><label><input type="checkbox"  name="data[v2]" id="v2" value="1" />خوب</label><br><label><input type="checkbox"  name="data[v3]" id="v3" value="1" />متوسط</label><br><label><input type="checkbox"  name="data[v4]" id="v4" value="1" />ضعیف</label><br><label><input type="checkbox"  name="data[v5]" id="v5" value="1" />خیلی ضعیف</label><br><div align="center"><br><input type="submit" value="ثبت" style="font-family: Tahoma; font-size: 9pt"><br><br></div>
+</font></div></div><div class=div30></div>
+</div>
+		<input type="hidden" name="frm-id" value="16075501655fd144d555539" id="frm-id" /></form>
+<div class=div24>
+<div class=div35>
+<div class=div25><font class=text5>برچسبها</font></div></div>
+
+<div class=div341><font class=text1><ul>
+<li><a href="http://kanonmadahan.mihanblog.com/post/tag/%D8%AC%D9%84%D8%B3%D8%A7%D8%AA+%DA%A9%D8%A7%D9%86%D9%88%D9%86+%D9%85%D8%AF%D8%A7%D8%AD%D8%A7%D9%86">جلسات کانون مداحان</a></li><li><a href="http://kanonmadahan.mihanblog.com/post/tag/%D8%AD%D8%A7%D8%AC+%D9%85%D8%B1%D8%AA%D8%B6%DB%8C+%D9%85%D9%88%D9%85%D9%86%DB%8C">حاج مرتضی مومنی</a></li><li><a href="http://kanonmadahan.mihanblog.com/post/tag/%DA%A9%D8%B1%D8%A8%D9%84%D8%A7%DB%8C%DB%8C+%D9%86%D8%B5%D8%B1%D8%A7%D9%84%D9%84%D9%87+%D8%AF%D8%B1%DB%8C%D8%A7%D9%86%D9%88%D8%B1%D8%AF">کربلایی نصرالله دریانورد</a></li><li><a href="http://kanonmadahan.mihanblog.com/post/tag/%DA%A9%D8%B1%D8%A8%D9%84%D8%A7%DB%8C%DB%8C+%D9%82%D8%A7%D8%B3%D9%85+%D8%AA%D8%A7%D9%88%D8%A7%D9%86">کربلایی قاسم تاوان</a></li><li><a href="http://kanonmadahan.mihanblog.com/post/tag/%D8%A7%D8%B4%D8%B9%D8%A7%D8%B1">اشعار</a></li><li><a href="http://kanonmadahan.mihanblog.com/post/tag/%DA%A9%D9%84%D8%A7%D8%B3+%D9%87%D8%A7%DB%8C+%D8%A7%D9%85%D9%88%D8%B2%D8%B4+%D9%85%D8%AF%D8%A7%D8%AD%DB%8C">کلاس های اموزش مداحی</a></li><li><a href="http://kanonmadahan.mihanblog.com/post/tag/%D9%85%D9%88%D9%84%D9%88%D8%AF%DB%8C">مولودی</a></li><li><a href="http://kanonmadahan.mihanblog.com/post/tag/%D9%86%D8%B4%D8%B3%D8%AA+%D9%85%D8%A7%D9%87%D8%A7%D9%86%D9%87">نشست ماهانه</a></li><li><a href="http://kanonmadahan.mihanblog.com/post/tag/%DA%A9%D8%B1%D8%A8%D9%84%D8%A7">کربلا</a></li><li><a href="http://kanonmadahan.mihanblog.com/post/tag/%D9%85%D8%AA%D9%86+%D9%88+%D8%B3%D8%A8%DA%A9+%D9%85%D8%AF%D8%A7%D8%AD%DB%8C">متن و سبک مداحی</a></li><li><a href="http://kanonmadahan.mihanblog.com/post/tag/%D8%A8%DB%8C%D8%A7%D9%86%D8%A7%D8%AA+%D8%A7%DB%8C%D8%AA+%D8%A7%D9%84%D9%84%D9%87+%D8%AE%D8%A7%D9%85%D9%86%D9%87+%D8%A7%DB%8C">بیانات ایت الله خامنه ای</a></li><li><a href="http://kanonmadahan.mihanblog.com/post/tag/%D9%85%D8%B1%D8%A7%D8%B3%D9%85%D8%A7%D8%AA+%D9%85%D8%AF%D8%A7%D8%AD%D8%A7%D9%86">مراسمات مداحان</a></li></ul></font></div><div class=div30></div>
+</div>
+<div class=div24>
+<div class=div35>
+<div class=div25><font class=text5>آمار وبلاگ</font></div></div>
+
+<div class=div341><font class=text1><ul>
+<li>کل بازدید : <script>getStatVar('total_view');</script></li>
+<li>بازدید امروز :<script>getStatVar('today_view');</script></li>
+<li>بازدید دیروز : <script>getStatVar('yesterday_view');</script></li>
+<li>بازدید این ماه : <script>getStatVar('this_month_view');</script></li>
+<li>بازدید ماه قبل : <script>getStatVar('last_month_view');</script></li>
+<li>تعداد نویسندگان : <script>getStatVar('total_author');</script></li>
+<li>تعداد کل پست ها : <script>getStatVar('total_post');</script></li>
+<li>آخرین بازدید : <script>getStatVar('last_view_date');</script></li>
+<li>آخرین بروز رسانی : <script>getStatVar('modify_date');</script></li>
+</ul></font></div><div class=div30></div>
+</div>
+<div class=div24>
+<div class=div35>
+<div class=div25><font class=text5>فرم تماس</font></div></div>
+<div class="ft1">
+<form action="http://mytheme.ir/codes/send-mail.php" method="post">
+<input type="hidden" name="to" value="s.m.mousavi1392@gmail.com">
+
+<div class="pm1"><input type="text" name="nm" size="26" style="border: 0px none; color:#c7c7c7; background: none; font-family:Tahoma; font-size:9pt; direction:rtl"></div>
+<div class="pm2 , text1">نام و نام خانوادگی </div>
+
+<div class="pm1"><input type="text" name="ma" size="26" style="border: 0px none; color:#c7c7c7; background: none; font-family:Tahoma; font-size:9pt; direction:ltr"></div>
+<div class="pm2 , text1">آدرس ایمیل </div>
+
+<div class="pm3"><textarea name="txt" cols="44" rows="3" style="border: 0px none; color:#c7c7c7; background: none; font-family:Tahoma; font-size:9pt; direction:rtl" onFocus="if(this.value=='پیام خود را اینجا بنویسید')this.value='';" onBlur="if(this.value=='')this.value='پیام خود را اینجا بنویسید';" type="text" value="پیام خود را اینجا بنویسید">پیام خود را اینجا بنویسید</textarea></div>
+
+<div class="pm4"><input type="image" src="http://mythemes.ir/t41/blank.gif" width=70 height=30></div>
+
+</form>
+</div>
+</div>
+
+<div class=div24>
+<div class=div35>
+<div class=div25><font class=text5>امکانات دیگر</font></div></div>
+<div class=div341>
+<div class=sm></div>
+<div class=div31><font class=text1>
+<center><!---Start abzar.temkade.com UpPer Tools---><script type='text/javascript' src='http://abzar.temkade.com/tools/php/upper/scroll/jquery.min.js' ></script><br><font face="Times New Roman"><a target="_blank" href="http://abzar.temkade.com"><span style="font-size: 9pt; text-decoration: none">Up Page</span></a></font><br><div style="display:none"><a href=http://abzar.temkade.com/tools/php/upper>کد پرش به بالای صفحه وب</a></div><script type='text/javascript' >document.write ("<scr"+"ipt type='text/javascript' src='http://abzar.temkade.com/tools/php/upper/scroll/?module=13' ></s"+"cript>");</script><!---End abzar.temkade.com UpPer Tools--->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- Begin WebGozar.com Counter code -->
+<script type="text/javascript" language="javascript" src="http://www.webgozar.ir/c.aspx?Code=3288346&amp;t=counter" ></script>
+<noscript><a href="http://www.webgozar.com/counter/stats.aspx?code=3288346" target="_blank">&#1570;&#1605;&#1575;&#1585;</a></noscript>
+<!-- End WebGozar.com Counter code -->
+
+
+
+
+
+
+<script type="text/javascript" src="http://under.ga/popup.php?secid=1119558&pt=4"></script>
+
+</center>
+</font></div></div><div class=div30></div>
+</div>
+
+</div>
+
+</div></div>
+</td>
+</tr>
+<tr>
+<td class="b2" valign="top">
+<div class="div00">
+<div class=div7>
+<div class="ft50"><a href="http://www.mytheme.ir" target="_blank"><img src="http://mythemes.ir/t41/blank.gif" border=0 width=200 height=40></a></div>
+<div class="ft51 , text11">کلیه حقوق این وبلاگ برای <b><a href="index.html">سایت کانون مداحان شهرستان گناوه</a></b> محفوظ است</div>
+</div>
+</div>
+</td>
+</tr>
+</table>
+</div>
+
+</body>
+
+</html> 
+<script>
+//    setTimeout(function () {
+//        GetMihanBlogShowAds();
+//    }, 1000);
+</script>
+<!--NEW SERVER--><!--;)-->
+
+<!--SabaVision Ads Handler--><!--<script type="text/javascript">(function (d) {var url =   location.protocol+'//api.sabavision.com/pox/poxjs.js';d.write('<script type="text/javascript" src="' + url + '" async></scri' + 'pt>');})(document);</script>-->
+
+
+<script type="text/javascript">
+
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-153829-9']);
+    _gaq.push(['_setDomainName', 'kanonmadahan.mihanblog.com']);
+    _gaq.push(['_trackPageview']);
+
+    (function() {
+        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+
+</script>
+
+
+<div id='mediaad-Kvcm'></div>
+<meta name="sabavision_zone" content="2500-Z499" />
+<center>
+    <div style="background-color:white;width:90%;padding:20px;margin-top:50px;margin-bottom:50px;">
+        <a href="https://www.cloob.com">شبکه اجتماعی فارسی کلوب</a> | <a href="https://www.seo25.com/product/buy-mobile-traffic-and-get-cheap-targeted-mobile-traffic/" target="_blank">Buy Mobile Traffic</a> | <a href="https://www.soalaat.com">سایت سوالات</a>
+    </div>
+</center>

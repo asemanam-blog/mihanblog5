@@ -1,0 +1,733 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" /><link rel="EditURI" type="application/rsd+xml" title="RSD" href="../../xmlrpc@rsd.html" />
+<script type="text/javascript" src="../../../static.mihanblog.com/public/scripts/run/g.other.v3.js"></script>
+<script>
+
+	function c_$(id){
+        return document.getElementById(id);
+    }
+    
+			//if (parent.frames.length) top.location.href= document.location;
+		
+	setTodayDate = function(){
+		document.write('یکشنبه 23 آذر 1399');
+		/*1751176*/	}
+
+</script>
+
+
+
+        <script type="text/javascript">
+            (function(){
+            var now = new Date();
+            var head = document.getElementsByTagName('head')[0];
+            var script = document.createElement('script');
+            script.async = true;
+            var script_address = 'https://cdn.yektanet.com/js/mihanblog.com/native-mihanblog.com-6531.js';
+            script.src = script_address + '?v=' + now.getFullYear().toString() + '0' + now.getMonth() + '0' + now.getDate() + '0' + now.getHours();
+            head.appendChild(script);
+            })();
+        </script>
+
+        <!--<script type="text/javascript">
+            var head = document.getElementsByTagName("head")[0];
+            var script = document.createElement("script");
+            script.type = "text/javascript";
+            script.async=1;
+            script.src = "https://s1.mediaad.org/serve/mihanblog.com/loader.js" ;
+            head.appendChild(script);
+        </script>-->
+        
+        <script>
+            var sabaVisionWebsiteID = "9bab9dac-041d-4bdb-b39a-1ed789f65eed"; var sabaVisionWebsitePage = "ALL"
+        </script>
+        <link rel="stylesheet" href="https://plus.sabavision.com/dox/dox.min.css">
+        <script src="https://plus.sabavision.com/dox/dox.min.js"></script>
+        
+        <script>
+	linkdailyForm = function(){
+		try{
+			window.open('/linkdaily/new','linkdaily','status=yes,scrollbars=yes,toolbar=no,menubar=no,location=no ,width=500px,height=460px');
+		} catch(e){}
+	}
+</script><script>
+
+	statInfo = new Array();
+	setStatVar = function(index,value){
+		statInfo[index] = value;
+	}
+	getStatVar = function(index){
+		if(statInfo[index]) document.write(statInfo[index]);
+	}
+	
+	setStatVar('total_post','169');
+	setStatVar('total_author','2');
+	setStatVar('modify_date','شنبه 19 خرداد 1397');
+	
+	setStatVar('today_view','17');
+	setStatVar('yesterday_view','138');
+	
+	setStatVar('this_month_view','3458');
+	setStatVar('last_month_view','2496');
+
+	setStatVar('total_view','434941');
+	setStatVar('last_view_date','یکشنبه 23 آذر 1399 (05:32)');
+
+
+
+    
+    function setStatFromClient()
+    {
+        var url = 'http://ryomawithme.mihanblog.com/statupdate/?data[refereruri]=http://ryomawithme.mihanblog.com/&data[postid]=&data[requesturi]=/post/tag/%D8%AF%D8%A7%D9%86%D9%84%D9%88%D8%AF%20%D8%A7%D9%86%DB%8C%D9%85%D9%87%20Wotaku%20ni%20Koi%20wa%20Muzukashii&data[sdate]=1607826314&data[hash]=40c0ebe0f72cd9a9163321a96a9967e7&data[resolution]='+screen.width+' X '+screen.height;
+
+//        alert(url);
+//        var newjs = document.createElement("SCRIPT");
+//        newjs.type = 'text/javascript';
+//        newjs.src = url;
+//
+//        var newdiv = document.createElement("DIV");
+//        newdiv.setAttribute("style","display:none");
+
+        document.write(unescape('%3Cscript src="'+url+'" type="text/javascript"%3E%3C/script%3E'));
+//        newdiv.appendChild (newjs);
+//        document.write(newjs);
+//        document.write(appendChild (newdiv);
+
+    };
+    setStatFromClient();
+        
+</script><script>
+	messageForm = function(post_id){
+		try{
+			window.open('/message','message','status=yes,scrollbars=yes,toolbar=no,menubar=no,location=no ,width=480px,height=550px');
+		} catch(e){}
+	}
+</script><script>
+	try{
+		var commentCnt = new Array();
+		commentCnt[275]='-';	} catch(e){}
+	
+	newComment = function(post_id){
+		try{
+			window.open('/post/comment/'+post_id,'comment','status=yes,scrollbars=yes,toolbar=no,menubar=no,location=no ,width=480px,height=540px');
+		} catch(e){}
+	}
+	setCommentCnt = function(post_id){
+		try{
+			if(commentCnt[post_id]){
+				document.write(commentCnt[post_id]);
+			} else {
+				document.write(0);
+			}
+		} catch(e){}
+	}
+</script><script>
+
+
+	mihanblogUpdateLike = function(postid,type){
+		var url = '/post/like/'+postid+'/'+type;
+		mihanblogGetAjax(url,function(){});
+	};
+	try{
+        mihanblogGetAjax = function (url,callback) {
+    		var req;
+			if (window.XMLHttpRequest)
+            {
+                // code for IE7+, Firefox, Chrome, Opera, Safari
+			  	req = new XMLHttpRequest();
+			}else{	// code for IE6, IE5
+			  	req = new ActiveXObject("Microsoft.XMLHTTP");
+		  	}
+		    req.open("GET", url, 1);
+		    req.onreadystatechange = function () {
+		        if (req.readyState == 4) {
+		            if (req.status == 200) {
+		            	var response = eval(req.responseText);
+		            	callback();
+		            }else{
+	            		return ;
+		            }
+		        }else{
+					return ;
+		        }
+		    }
+		    req.send(null);
+		}
+	}catch(e){}
+
+	try{
+		var mihanblogLikeArrCnt = new Array();
+		var mihanblogDisLikeArrCnt = new Array();
+
+		mihanblogLikeArrCnt[275]='0';
+mihanblogDisLikeArrCnt[275]='0';
+	} catch(e){}
+
+
+
+    mihanblogPostLike = function(post_id){
+
+        mihanblogLikeCnt = (mihanblogLikeArrCnt[post_id]? mihanblogLikeArrCnt[post_id] : 0);
+        mihanblogDisLikeCnt = (mihanblogDisLikeArrCnt[post_id]? mihanblogDisLikeArrCnt[post_id] : 0);
+        mihanblogLikeCnt = parseInt(mihanblogLikeCnt);
+        mihanblogDisLikeCnt = parseInt(mihanblogDisLikeCnt);
+
+        document.write(
+                '<div class="mihanblog_like_wrapper ">'+
+                       '<div id="dislikeBar_'+post_id+'" onclick="mihanblogUpdateLike('+post_id+',\'dislike\')"   class="mihanblog_like_bar mihanblog_like_dislikeBar mihanblog_like_show_help ">-<div class="mihanblog_like_Cnt" id="disLikeCnt_'+post_id+'">'+mihanblogDisLikeCnt+'</div>'+
+                            '<span  class="mihanblog_like_v2_help mihanblog_like_v2_help_dislike clearfix"> '+
+                                '<span class="mihanblog_like_help_arrow mihanblog_like_help_arrow_dislike clearfix"></span>'+
+                                '<span class="mihanblog_like_help_text">نمی پسندم</span>'+
+                            '</span>'+
+                        '</div>'+
+                       '<div id="Like_'+post_id+'" class="mihanblog_like_border"></div>'+
+                       '<div id="likeBar_'+post_id+'" onclick="mihanblogUpdateLike('+post_id+',\'like\')"  class="mihanblog_like_bar mihanblog_like_likeBar mihanblog_like_show_help" >+<div class="mihanblog_like_Cnt" id="likeCnt_'+post_id+'">'+mihanblogLikeCnt+'</div>'+
+                            '<span  class="mihanblog_like_v2_help mihanblog_like_v2_help_like clearfix"> '+
+                                '<span class="mihanblog_like_help_arrow mihanblog_like_help_arrow_like clearfix"></span>'+
+                                '<span class="mihanblog_like_help_text">می پسندم</span>'+
+                            '</span>'+
+                        '</div>'+
+
+                '</div>'
+        );
+
+
+
+        mihanblogDisplayeLike(post_id);
+    }
+
+
+    mihanblogDisplayeLike = function(post_id){
+
+        mihanblogLikeCnt = (mihanblogLikeArrCnt[post_id]? mihanblogLikeArrCnt[post_id] : 0);
+        mihanblogDisLikeCnt = (mihanblogDisLikeArrCnt[post_id]? mihanblogDisLikeArrCnt[post_id] : 0);
+        mihanblogLikeCnt = parseInt(mihanblogLikeCnt);
+        mihanblogDisLikeCnt = parseInt(mihanblogDisLikeCnt);
+
+
+
+        sum = mihanblogLikeCnt - mihanblogDisLikeCnt;
+        backgroundBorder =  document.getElementById('Like_'+post_id);
+        var likeObj = document.getElementById('likeCnt_'+post_id);
+        var disLikeObj = document.getElementById('disLikeCnt_'+post_id);
+
+
+
+
+
+        likeObj.innerHTML =  mihanblogLikeCnt ;
+        disLikeObj.innerHTML =  mihanblogDisLikeCnt;
+
+        if(sum == 0){
+            backgroundBorder.style.backgroundImage = "url('/public/public/images/icons/like_likedislike.png')";
+            document.getElementById('dislikeBar_'+post_id).style.width = '19px';
+            document.getElementById('likeBar_'+post_id).style.width = '19px';
+        }else{
+             if(sum > 0){
+                 backgroundBorder.style.backgroundImage = "url('/public/public/images/icons/like_like.png')";
+                 document.getElementById('likeBar_'+post_id).style.width = '23px';
+                 document.getElementById('dislikeBar_'+post_id).style.width = '15px';
+             }else{
+                 backgroundBorder.style.backgroundImage = "url('/public/public/images/icons/like_dislike.png')";
+                 document.getElementById('likeBar_'+post_id).style.width = '15px';
+                 document.getElementById('dislikeBar_'+post_id).style.width = '23px';
+             }
+        }
+
+    }
+
+
+
+
+</script>
+
+<style type="text/css">
+
+
+    .clearfix {display: inline-block;}
+    .clearfix:after {
+        content: ".";
+        display: block;
+        height: 0;
+        clear: both;
+        visibility: hidden;
+    }
+
+    .mihanblog_like_wrapper {
+        color: #ffffff;
+        direction: ltr;
+        position: relative;
+    }
+    .mihanblog_like_wrapper span{
+        display: none;
+    }
+    .mihanblog_like_bar {
+        color: #FFFFFF;
+        cursor: pointer;
+        float: left;
+        font-size: 10px;
+        height: 20px;
+        line-height: 19px;
+        margin: 5px 0;
+    }
+    .mihanblog_like_likeBar {
+        background-color: #88B131;
+        padding-right: 5px;
+        border-top-right-radius: 2px;
+        border-bottom-right-radius: 2px;
+        text-align: right;
+    }
+    .mihanblog_like_likeBar:hover{
+        background-color: #699017;
+    }
+    .mihanblog_like_border {
+        background-color: #666666;
+        border: 1px solid #666666;
+        float: left;
+        font-size: 12px;
+        height: 20px;
+        margin-top: 2px;
+        width: 25px;
+        padding: 3px 5px 2px 0;
+        text-align: center;
+        border-radius: 2px;
+        color: #ffffff;
+        direction: ltr;
+        background-repeat: no-repeat ;
+        background-position: 4px center;
+    }
+    .mihanblog_like_border img {
+        margin-left: 2px;
+        margin-top: 2px;
+        width: 22px;
+    }
+    .mihanblog_like_dislikeBar {
+        background-color: #FF6F31;
+        padding-left: 5px;
+        border-top-left-radius: 2px;
+        border-bottom-left-radius: 2px;
+        text-align:left ;
+    }
+    .mihanblog_like_dislikeBar:hover{
+        background-color: #D54B10;
+    }
+
+
+
+    .mihanblog_like_show_help {
+        position: relative;
+    }
+    .mihanblog_like_show_help:hover span {
+        display: block;
+    }
+    .mihanblog_like_help_text {
+        background-color: white;
+        border: 1px solid #555555;
+        border-radius: 3px 3px 3px 3px;
+        color: #303030;
+        float: left;
+        font-size: 11px;
+        font-weight: normal;
+        padding: 5px 10px;
+    }
+
+    .mihanblog_like_help_arrow_dislike {
+        background: url("http://ryomawithme.mihanblog.com/public/public/images/icons/like_hover_top.png") no-repeat scroll 16px 0 transparent;
+        left: 0;
+        top: -4px;
+    }
+
+    .mihanblog_like_help_arrow_like {
+        background: url("http://ryomawithme.mihanblog.com/public/public/images/icons/like_hover_top _2.png") no-repeat scroll 16px 0 transparent;
+        left: -10px;
+        top: 29px;
+    }
+
+    .mihanblog_like_help_arrow{
+        height: 6px;
+        position: absolute;
+        width: 100px;
+
+    }
+
+    .mihanblog_like_v2_help_dislike {
+        left: -15px;
+        top: 24px;
+    }
+    .mihanblog_like_v2_help_like {
+        left: 0;
+        top: -35px;
+
+    }
+    .mihanblog_like_v2_help{
+        display: none;
+        position: absolute;
+        white-space: nowrap;
+        z-index: 1;
+    }
+
+    .mihanblog_like_Cnt{
+        display: inline;
+        color: #ffffff;
+    }
+
+</style>
+    <style>
+        @font-face {
+            font-family: 'Mihan-Iransans';
+            src: url('http://ryomawithme.mihanblog.com/public/public/fonts/Iransans.eot');
+            src: url('http://ryomawithme.mihanblog.com/public/public/fonts/Iransans.eot?') format('embedded-opentype'),
+            url('http://ryomawithme.mihanblog.com/public/public/fonts/Iransans.woff2') format('woff2'),
+            url('http://ryomawithme.mihanblog.com/public/public/fonts/Iransans.woff') format('woff'),
+            url('http://ryomawithme.mihanblog.com/public/public/fonts/Iransans.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+        @font-face {
+            font-family: 'Mihan-IransansBold';
+            src: url('http://ryomawithme.mihanblog.com/public/public/fonts/Iransans-Black.eot');
+            src: url('http://ryomawithme.mihanblog.com/public/public/fonts/Iransans-Black.eot?') format('embedded-opentype'),
+            url('http://ryomawithme.mihanblog.com/public/public/fonts/Iransans-Black.woff2') format('woff2'),
+            url('http://ryomawithme.mihanblog.com/public/public/fonts/Iransans-Black.woff') format('woff'),
+            url('http://ryomawithme.mihanblog.com/public/public/fonts/Iransans-Black.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+        @font-face {
+            font-family: 'Mihan-IransansLight';
+            src: url('http://ryomawithme.mihanblog.com/public/public/fonts/Iransans-UltraLight.eot');
+            src: url('http://ryomawithme.mihanblog.com/public/public/fonts/Iransans-UltraLight.eot?') format('embedded-opentype'),
+            url('http://ryomawithme.mihanblog.com/public/public/fonts/Iransans-UltraLight.woff2') format('woff2'),
+            url('http://ryomawithme.mihanblog.com/public/public/fonts/Iransans-UltraLight.woff') format('woff'),
+            url('http://ryomawithme.mihanblog.com/public/public/fonts/Iransans-UltraLight.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+        @font-face {
+            font-family: 'Mihan-Nassim';
+            src: url('http://ryomawithme.mihanblog.com/public/public/fonts/Nassim.eot');
+            src: url('http://ryomawithme.mihanblog.com/public/public/fonts/Nassim.eot?') format('embedded-opentype'),
+            url('http://ryomawithme.mihanblog.com/public/public/fonts/Nassim.woff2') format('woff2'),
+            url('http://ryomawithme.mihanblog.com/public/public/fonts/Nassim.woff') format('woff'),
+            url('http://ryomawithme.mihanblog.com/public/public/fonts/Nassim.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+        @font-face {
+            font-family: 'Mihan-Koodak';
+            src: url('http://ryomawithme.mihanblog.com/public/public/fonts/Koodak.eot');
+            src: url('http://ryomawithme.mihanblog.com/public/public/fonts/Koodak.eot?') format('embedded-opentype'),
+            url('http://ryomawithme.mihanblog.com/public/public/fonts/Koodak.woff2') format('woff2'),
+            url('http://ryomawithme.mihanblog.com/public/public/fonts/Koodak.woff') format('woff'),
+            url('http://ryomawithme.mihanblog.com/public/public/fonts/Koodak.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+        @font-face {
+            font-family: 'Mihan-Yekan';
+            src: url('http://ryomawithme.mihanblog.com/public/public/fonts/Yekan.eot');
+            src: url('http://ryomawithme.mihanblog.com/public/public/fonts/Yekan.eot?') format('embedded-opentype'),
+            url('http://ryomawithme.mihanblog.com/public/public/fonts/Yekan.woff2') format('woff2'),
+            url('http://ryomawithme.mihanblog.com/public/public/fonts/Yekan.woff') format('woff'),
+            url('http://ryomawithme.mihanblog.com/public/public/fonts/Yekan.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+        @font-face {
+            font-family: 'FontAwesome';
+            src: url('http://ryomawithme.mihanblog.com/public/public/fonts/fontawesome_webfont.eot');
+            src: url('http://ryomawithme.mihanblog.com/public/public/fonts/fontawesome_webfont.eot?') format('embedded-opentype'),
+            url('http://ryomawithme.mihanblog.com/public/public/fonts/fontawesome_webfont.woff2') format('woff2'),
+            url('http://ryomawithme.mihanblog.com/public/public/fonts/fontawesome_webfont.woff') format('woff'),
+            url('http://ryomawithme.mihanblog.com/public/public/fonts/fontawesome_webfont.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+
+
+        
+
+        /* Smartphones (portrait and landscape) ----------- */
+
+        /*
+        @media only screen and (max-width : 480px) and (min-width : 320px) {
+            .sabaClick_advert__wrapper{
+                display:block;
+            }
+            .sabaClick_advert__inner{
+                max-width: 90%;
+                margin: 0 5%;
+            }
+        }
+        */
+
+    </style>
+
+
+
+
+
+
+<!-- Start Code By tools_lovesib.ir --><div id="first_p" style="text-align:center;margin-top:5px;"><a onclick="document.getElementById('main_p').style.display = 'block';document.getElementById('first_p').style.display = 'none';" href="دانلود&#32;انیمه&#32;Wotaku&#32;ni&#32;Koi&#32;wa&#32;Muzukashii.html#"><img src="http://s8.picofile.com/file/8299877376/%DB%8C%D9%88%D8%B1%DB%8C_%D8%A7%D9%86_%D8%A2%DB%8C%D8%B35.png" border="0"></a><div style="position: fixed; right: 0px; bottom: 0px; z-index: 300;"><a href="http://www.tools.lovesib.ir/post/165/%D8%B3%D8%A7%D8%AE%D8%AA-%DA%A9%D8%AF-%D8%B5%D9%81%D8%AD%D9%87-%D9%88%D8%B1%D9%88%D8%AF%DB%8C-%D8%A8%D8%B1%D8%A7%DB%8C-%D9%88%D8%A8%D9%84%D8%A7%DA%AF-%D9%88-%D8%B3%D8%A7%DB%8C%D8%AA.html" target="_blank">&#1587;&#1575;&#1582;&#1578; &#1603;&#1583; &#1589;&#1601;&#1581;&#1607; &#1608;&#1585;&#1608;&#1583;&#1609;</a></div></div><div id="main_p" style="display:none;"><div style="display: none;"><a href="http://www.lovesib.ir" target="_blank">&#1587;&#1575;&#1609;&#1578; &#1593;&#1575;&#1588;&#1602;&#1575;&#1606;&#1607;</a></div> <!-- End Code By tools.lovesib.ir -->
+     		
+ <html>  	
+<head> <link href="http://cafe-webniaz.ir/pics/pi/piwebniaz%20%2812%29.gif" rel="shortcut icon"> 	
+	<title>✿✿✿رمان های انیمه ای من✿✿✿ - مطالب ابر دانلود انیمه Wotaku ni Koi wa Muzukashii</title> 		
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"> 		
+<meta http-equiv="Content-Language" content="fa"> 		
+<meta name="description" content="" /> 		
+<meta name="keywords" content="" /> 		
+ 		<link rel="alternate"
+ type="application/rss+xml" title="✿✿✿رمان های انیمه ای من✿✿✿"  	
+	  href="../rss/index.html" /> 		
+<link rel="alternate" type="application/atom+xml" title="✿✿✿رمان های انیمه ای من✿✿✿"  	
+href="../atom/index.html" /> 	
+	</head> 	
+<style>
+*{font-family:gognoss;direction:rtl;color:#000 ;text-shadow: 0px 1px 3px #676767;}
+ 		#sidebar{float:left;width:px;margin-left:19px} 	
+	#content{float:right;width:800px;padding:50px}	 	
+	#body{display:block;font-size:12px} 		
+ 		a,a:hover,a.visited{text-decoration:none}
+ 		.inbox{list-style:none; padding:0 4px} 		
+ul{padding:3px;margin:5px;} 		h2{color:red} 		
+h2 a{color:#b2fffa; font-size:25px; font-family:} 		
+h3{color:#ffb2dc; margin-top:0; font-size:24px; font-family:; text-align:center} 		
+#header h1 a{font-size:20px; font-family:arial; float:center; color:}		 		
+#header h1{margin:0; height:50px; overflow:hidden} 		 		
+.author_box img{float:right;border:none;} 		
+.mihan_logo{text-align:center;height:299px;margin-top:10px; 	
+background: url() no-repeat top center;} 		
+.slogan{ 			color:#008c91; text-align:center; padding:330px 0; 	
+ 		background: url(http://s8.picofile.com/file/8299792950/%DB%8C%D9%88%D8%B1%DB%8C_%D8%A7%D9%86_%D8%A2%DB%8C%D8%B31.png) repeat; 		 	
+background: expression(#FFFFFF); 		} 		 		   
+#footer{font-size:9px;display:block;margin-top:50px; float:left} 		
+#footer a,#footer a:hover,#footer a:visited{color:#00;} 		
+ 		.hr{border-top:1px solid #CCCCCC;height:1px;margin:3px;}	 		 		
+body{margin:0; background: #FFFFFF url(http://s9.picofile.com/file/8299787900/0003900_yuri_on_ice_mappa_x_movic_calendar.jpeg) repeat fixed center} 		 		
+.sidebar_box{background:url(); padding:10px 5px; line-height:5px; line-height:25px} 		
+.sidebar_box_border{background-color:#; height:1px; display:block; overflow:} 		
+ 		
+.sidebar_box_border_div{width:200px;} 		.seprator{margin-bottom:50px} 	.main_menu{text-align:center} 		.blog_title{color:#} 		 		
+#header{height:0px; overflow:hidden; background: #FFFFFF url() center repeat} 		
+#body{ 			background: url(http://s8.picofile.com/file/8299792976/%DB%8C%D9%88%D8%B1%DB%8C_%D8%A7%D9%86_%D8%A2%DB%8C%D8%B33.png) repeat; 			
+
+background: expression(#FFFFFF); 		} 		
+#blog_body{width:1300px; margin:150px auto; } 		
+#footer_background{background: url(http://s9.picofile.com/file/8299793000/%DB%8C%D9%88%D8%B1%DB%8C_%D8%A7%D9%86_%D8%A2%DB%8C%D8%B34.png) repeat-x; padding-bottom:600px} 	 		.clearfix { 			display:inline-block; 		} 		.clearfix:after { 			clear:both; 			content:'.'; 			display:block; 			height:0; 			visibility:hidden; 		} 		*html .clearfix { 			height:0%; 		} 		.clearfix { 			display:block; 		} 	</style> 	<body>  		<div id="blog_body"> 	 			<div id="header"> 				<h1><p style="text-align:center; margin:0"><a class="blog_title" href="http://ryomawithme.mihanblog.com/post/tag/ryomawithme" style="margin:10px">✿✿✿رمان های انیمه ای من✿✿✿</a></p></h1> 			</div> 		 			<div class="slogan">اوتاکو بودن یعنی تـــــــــه خاصــــــی</div> 			 			<div class="clearfix"> 			 				<div id="body" class="clearfix"> 					 					<div id="content"> 						 							
+		<div id="MihanblogShopAds" style="display:block;height:0px;width:100%;border:0px"></div>
+		 								<div> 									<h2> 										<a href="../275.html">
+
+
+
+دانلود انیمه Wotaku ni Koi wa Muzukashii
+
+
+
+		</h2> 									<p class="date"> 										شنبه 19 خرداد 1397 06:04 ب.ظ 									</p> 								</div> 			 								<b>نویسنده این مطلب:</b> 								<a href="../author/1424307.html"> 									miss golden 								</a> 						 								<br/> 			 								 									<b>موضوع:</b> 									 										<a href="../category/9.html"> 											انیمه 										</a>? 									 										<a href="../category/2.html"> 											دانلودی ها 										</a>? 									 						 									<br> 								 							 								<a href="../author/1424307.html"><img src="../../../static.mihanblog.com/public/user_data/user_photo/475/1424307.jpg"  /></a> 								<div id="InPost_MihanblogShopAds" style="display:block;height:0px;width:100%;border:0px"></div>
+<div align="center"><font size="4"><font face="Mihan-Iransans">به نام خدا<br>سلام پس از صد سال برگشتم و طبق معمول<br>با دانلود یه انیمه جدید و در حال پخش<br></font></font><h1 itemprop="name">Wotaku ni Koi wa Muzukashii</h1><font size="4"><font face="Mihan-IransansBold">برای دانلود به ادامه مطلب مراجعه نمایید</font></font><br><h1 itemprop="name"><img itemprop="image" src="http://www.takanime1.pro/wp-content/uploads/Wotaku-ni-Koi-wa-Muzukashii.jpg" alt="دانلود انیمه Wotaku ni Koi wa Muzukashii با لینک مستقیم قسمت ۹ اضافه شد" title="دانلود انیمه Wotaku ni Koi wa Muzukashii با لینک مستقیم قسمت ۹ اضافه شد"></h1></div>
+
+
+
+
+ 								 					 								<br> 								 								<a href='../275.html'>ادامه مطلب</a> 								 								<br> 								<br> 					 								<a target="_self" href="javascript:newComment(275)"> 									<b>دیدگاه : </b> 									<script>setCommentCnt(275)</script> پست ثابت 								</a> 								 								<br/> 			 								 									<b>*Poolbutton*</b> 									 									<a href="دانلود&#32;انیمه.html" > 										دانلود انیمه 									</a> ? 									 									<a href="انیمه&#32;در&#32;حال&#32;پخش.html" > 										انیمه در حال پخش 									</a> ? 									 									<a href="انیمه.html" > 										انیمه 									</a> ? 									 									<a href="انیمه&#32;جدید.html" > 										انیمه جدید 									</a> ? 									 									<a href="انیمه&#32;2018.html" > 										انیمه 2018 									</a> ? 									 									<a href="دانلود&#32;انیمه&#32;Wotaku&#32;ni&#32;Koi&#32;wa&#32;Muzukashii.html" > 										دانلود انیمه Wotaku ni Koi wa Muzukashii 									</a> ? 									 									<a href="Wotaku&#32;ni&#32;Koi&#32;wa&#32;Muzukashii.html" > 										Wotaku ni Koi wa Muzukashii 									</a> ? 									 								 									<br/> 								 					 								 										 								<b>آخرین ویرایش:</b> 								شنبه 19 خرداد 1397  06:16 ب.ظ 								 								<br><br><center><img src='http://s9.picofile.com/file/8299476568/letsmagics05.png'</a> </center> 							 							 						 					 						<br><br> 						 								 					 						 			 					 						<div id="footer" class="clearfix"> 							<strong> 								POWERED BY <a href="../../../mathandtheother.mihanblog.com/index.html"> 								<font color="#FF0000" size="2px">M</font>agic 								<font color="#FF0000" size="2px">W</font>orld</a> 							</strong> 						</div> 					</div>		 				 					<div id="sidebar"> 							<form id="frm-16078263145fd57b8aba12c" method="get" action="http://ryomawithme.mihanblog.com/post/search/fid/16078263145fd57b8aba12c"  onsubmit="window.open('', 'search', 'toolbar=0,location=0,status=0,menubar=0,scrollbars=1,resizable=0,width=400,height=310')" target="search">  								<div class="sidebar_box_border_div"> 									<b class="sidebar_box_border" style="margin:0 3px"><img src="../../../static.mihanblog.com/public/images/empty.gif"/></b> 									<b class="sidebar_box_border" style="margin:0 2px"><img src="../../../static.mihanblog.com/public/images/empty.gif"/></b> 									<b class="sidebar_box_border" style="margin:0 1px"><img src="../../../static.mihanblog.com/public/images/empty.gif"/></b> 									<div class="sidebar_box"> 										<input type="text" name="search_text" style="width:90px"/> 										<input type="submit" value="جستجو"/> 									</div> 									<b class="sidebar_box_border" style="margin:0 1px"><img src="../../../static.mihanblog.com/public/images/empty.gif"/></b> 									<b class="sidebar_box_border" style="margin:0 2px"><img src="../../../static.mihanblog.com/public/images/empty.gif"/></b> 									<b class="sidebar_box_border" style="margin:0 3px"><img src="../../../static.mihanblog.com/public/images/empty.gif"/></b> 								</div> 							<input type="hidden" name="frm-id" value="16078263145fd57b8aba12c" id="frm-id" /></form> 						 							<div class="seprator"><img src="../../../static.mihanblog.com/public/images/empty.gif"/></div> 					 							<div class="sidebar_box_border_div"> 								<b class="sidebar_box_border" style="margin:0 3px"><img src="../../../static.mihanblog.com/public/images/empty.gif"/></b> 								<b class="sidebar_box_border" style="margin:0 2px"><img src="../../../static.mihanblog.com/public/images/empty.gif"/></b> 								<b class="sidebar_box_border" style="margin:0 1px"><img src="../../../static.mihanblog.com/public/images/empty.gif"/></b> 								<div class="sidebar_box"> 									<div style="text-align:center"> 										<div align="center" style="border:none; width:160px; overflow:hidden"><img src="../../../static.mihanblog.com/public/user_data/web_photo/584/1751176.jpg@1376"  /></div> 										<a href="http://ryomawithme.mihanblog.com/post/tag/musa_ryoma@mailfa.com">پست الکتریکی</a><br/> 										<a href="javascript:messageForm()">تماس باما</a><br/><!-- 
+start logo cod off http://mathandtheother.mihanblog.com/ --><p 
+align="center"><p align="center"><a 
+href="../../../mathandtheother.mihanblog.com/index.html" target="_blank"><img 
+border="0" src="http://s9.picofile.com/file/8297200542/auv1ral6_png44.png"  width="170" height="170" 
+alt="magic world"></a></p><!--finish logo cod off 
+http:/http://mathandtheother.mihanblog.com/ --> 										<div style="text-align:center">با سلام من مدیر این وب هستم امیدوارم از داستان های وبمون لذت تمام رو ببرید <br />
+<br />
+دیگه حرفی نیست فقط همین<br />
+…..............…,•’``’•,•’``’•, <br />
+...........…...…’•,`’•,*,•’`,•’ <br />
+..............……....`’•,,•’` <br />
+…..............…,•’``’•,•’``’•, <br />
+...........…...…’•,`’•,*,•’`,•’ <br />
+..............……....`’•,,•’` <br />
+…...…,•’``’•,•’``’•, <br />
+…...…’•,`’•,*,•’`,•’ <br />
+...……....`’•,,•’` <br />
+,•’``’•,•’``’•, <br />
+’•,`’•,*,•’`,•’ <br />
+.....`’•,,•’ <br />
+,•’``’•,•’``’•, <br />
+’•,`’•,*,•’`,•’ <br />
+,•’``’•,•’``’•,. <br />
+’•,`’•,*,•’`,•’ <br />
+.....`’•,,•......’ <br />
+…...…,•’``’•,•’``’•, <br />
+…...…’•,`’•,*,•’`,•’ <br />
+...……....`’•,,•’` <br />
+…..............…,•’``’•,•’``’•, <br />
+...........…...…’•,`’•,*,•’`,•’ <br />
+..............……....`’•,,•’` <br />
+…..............…,•’``’•,•’``’•, <br />
+...........…...…’•,`’•,*,•’`,•’ <br />
+..............……....`’•,,•’` <br />
+…..............…,•’``’•,•’``’•, <br />
+...........…...…’•,`’•,*,•’`,•’ <br />
+..............……....`’•,,•’` <br />
+…...…,•’``’•,•’``’•, <br />
+…...…’•,`’•,*,•’`,•’ <br />
+...……....`’•,,•’` <br />
+,•’``’•,•’``’•, <br />
+’•,`’•,*,•’`,•’ <br />
+.....`’•,,•’ <br />
+,•’``’•,•’``’•, <br />
+’•,`’•,*,•’`,•’ <br />
+,•’``’•,•’``’•,. <br />
+’•,`’•,*,•’`,•’ <br />
+.....`’•,,•......’ <br />
+…...…,•’``’•,•’``’•, <br />
+…...…’•,`’•,*,•’`,•’ <br />
+...……....`’•,,•’` <br />
+私はあなたが満足している願っています<br />
+パスを過ごします<br />
+次へベイ<br />
+☪　N　i　n　a　*デㇲ<br />
+<br />
+色々なアニメの沖田さんが（新選組）大好きです♥<br />
+作るパーツは↴<br />
+主に サンリオ/Disney/ボカロ/ゆるかわ/ナチュラル/パステル 系デㇲ　　　みんなに気に入ってもらえるようなかわぃぃパーツを作っていくので、　　　コメント、アドバイス、評価、リクエストくれると助かります(●´ω｀●)ゞ<br />
+☆☆☆☆☆☆☆☆<br />
+✿✿✿✿✿✿✿<br />
+☆☆☆☆☆☆☆☆<br />
+✿✿✿✿✿✿✿<br />
+___0♥0♥_____♥0♥0,*-:¦:-*<br />
+_0♥0000♥___♥0000♥0,*-:¦:-*<br />
+0♥0000000♥000000♥0,*-:¦:-*<br />
+0♥00000000000000♥0,*-:¦:-*<br />
+_0♥000000000000♥0,*-:¦:-*<br />
+___0♥00000000♥0,*-:¦:-*<br />
+_____0♥000♥0,*-:¦:-*<br />
+_______0♥0,*-:¦:-*<br />
+_____0,*-:¦:-*<br />
+____*-:¦:-*_____0♥0♥____♥0♥0<br />
+__*-:¦:-*____0♥0000♥___♥000♥0<br />
+_*-:¦:-*____0♥0000000♥000000♥0<br />
+_*-:¦:-*____0♥00000000000000♥0<br />
+__*-:¦:-*____0♥000000000000♥0<br />
+____*-:¦:-*____0♥00000000♥0<br />
+______*-:¦:-*_____0♥000♥0<br />
+_________*-:¦:-*____0♥0<br />
+______________,*-:¦:-*<br />
+_______________,*-:¦:-*<br />
+___0♥0♥_____♥0♥0,*-:¦:-*<br />
+_0♥0000♥___♥0000♥0,*-:¦:-*<br />
+0♥0000000♥000000♥0,*-:¦:-*<br />
+0♥00000000000000♥0,*-:¦:-*<br />
+_0♥000000000000♥0,*-:¦:-*<br />
+___0♥00000000♥0,*-:¦:-*<br />
+_____0♥000♥0,*-:¦:-*<br />
+_______0♥0,*-:¦:-*<br />
+_____0,*-:¦:-*<br />
+____*-:¦:-*_____0♥0♥____♥0♥0<br />
+__*-:¦:-*____0♥0000♥___♥000♥0<br />
+_*-:¦:-*____0♥0000000♥000000♥0<br />
+_*-:¦:-*____0♥00000000000000♥0<br />
+__*-:¦:-*____0♥000000000000♥0<br />
+____*-:¦:-*____0♥00000000♥0<br />
+______*-:¦:-*_____0♥000♥0<br />
+_________*-:¦:-*____0♥0<br />
+______________,*-:¦:-*<br />
+_______________,*-:¦:-*<br />
+___0♥0♥_____♥0♥0,*-:¦:-*<br />
+_0♥0000♥___♥0000♥0,*-:¦:-*<br />
+0♥0000000♥000000♥0,*-:¦:-*<br />
+0♥00000000000000♥0,*-:¦:-*<br />
+_0♥000000000000♥0,*-:¦:-*<br />
+___0♥00000000♥0,*-:¦:-*<br />
+_____0♥000♥0,*-:¦:-*<br />
+_______0♥0,*-:¦:-*<br />
+_____0,*-:¦:-*<br />
+<br />
+</div> 										<div class="clearfix" style="margin-right:70px"> 											<a href="../rss/index.html"><img style="border:none; float:right" src="http://cafe-webniaz.ir/pics/pi/piwebniaz%20%2842%29.gif"/></a> 											<a href="../atom/index.html"><img style="border:none; float:right" src="http://cafe-webniaz.ir/pics/pi/piwebniaz%20%2842%29.gif"/></a> 										</div> 									</div> 								</div> 								<b class="sidebar_box_border" style="margin:0 1px"><img src="../../../static.mihanblog.com/public/images/empty.gif"/></b> 								<b class="sidebar_box_border" style="margin:0 2px"><img src="../../../static.mihanblog.com/public/images/empty.gif"/></b> 								<b class="sidebar_box_border" style="margin:0 3px"><img src="../../../static.mihanblog.com/public/images/empty.gif"/></b> 							</div>  							<div class="seprator"><img src="../../../static.mihanblog.com/public/images/empty.gif"/></div> 							 							
+		<form id="frm-16078263145fd57b8aba8fa" method="post" action="http://ryomawithme.mihanblog.com/poll/new/fid/16078263145fd57b8aba8fa/atrty/1607826314/avrvy/0/key/f72b08aca29664a6e8f2afc0d5d3da2f/"  onsubmit="window.open('', 'poll', 'toolbar=0,location=0,status=0,menubar=0,scrollbars=1,resizable=0,width=505,height=315')" target="poll"><input type="hidden" name="data[pollid]" value="373968" id="data[pollid]" />		 								<div class="sidebar_box_border_div"> 									<b class="sidebar_box_border" style="margin:0 3px"><img src="../../../static.mihanblog.com/public/images/empty.gif"/></b> 									<b class="sidebar_box_border" style="margin:0 2px"><img src="../../../static.mihanblog.com/public/images/empty.gif"/></b> 									<b class="sidebar_box_border" style="margin:0 1px"><img src="../../../static.mihanblog.com/public/images/empty.gif"/></b> 									<div class="sidebar_box"> 										<h3>☆Poolbutton☆</h3> 										سال کی گذشت چجور بود؟<br> 										 											<label><input type="radio" name="data[answer]" value="v1">بد</label> 											<br> 										 											<label><input type="radio" name="data[answer]" value="v2">خوب</label> 											<br> 											 										<input type="submit" value="ثبت"/> 									</div> 									<b class="sidebar_box_border" style="margin:0 1px"><img src="../../../static.mihanblog.com/public/images/empty.gif"/></b> 									<b class="sidebar_box_border" style="margin:0 2px"><img src="../../../static.mihanblog.com/public/images/empty.gif"/></b> 									<b class="sidebar_box_border" style="margin:0 3px"><img src="../../../static.mihanblog.com/public/images/empty.gif"/></b> 								</div> 							
+		<input type="hidden" name="frm-id" value="16078263145fd57b8aba8fa" id="frm-id" /></form> 														 							<div class="seprator"><img src="../../../static.mihanblog.com/public/images/empty.gif"/></div>					 							 							 								<div class="sidebar_box_border_div"> 									<b class="sidebar_box_border" style="margin:0 3px"><img src="../../../static.mihanblog.com/public/images/empty.gif"/></b> 									<b class="sidebar_box_border" style="margin:0 2px"><img src="../../../static.mihanblog.com/public/images/empty.gif"/></b> 									<b class="sidebar_box_border" style="margin:0 1px"><img src="../../../static.mihanblog.com/public/images/empty.gif"/></b> 									<div class="sidebar_box"> 		
+
+																<h3>♪ barchasbs ♪</h3> 														 											<a href="دانلود+انیمه+سینمایی.html" style="font-size:1em"> 												دانلود انیمه سینمایی  											</a> 														 											<a href="دانلود.html" style="font-size:1.25em"> 												دانلود  											</a> 														 											<a href="دانلود+انیمه.html" style="font-size:1.38em"> 												دانلود انیمه  											</a> 														 											<a href="اوتاکو.html" style="font-size:1.06em"> 												اوتاکو  											</a> 														 											<a href="انیمه+سینمایی.html" style="font-size:1.12em"> 												انیمه سینمایی  											</a> 														 											<a href="انیمه.html" style="font-size:2em"> 												انیمه  											</a> 														 											<a href="رمان.html" style="font-size:1.12em"> 												رمان  											</a> 														 											<a href="رمان+عشق+ناپایدار.html" style="font-size:1.06em"> 												رمان عشق ناپایدار  											</a> 														 											<a href="مانگا.html" style="font-size:1.23em"> 												مانگا  											</a> 														 											<a href="دانلود+انیمه+با+زیرنویس+فارسی.html" style="font-size:1.02em"> 												دانلود انیمه با زیرنویس فارسی  											</a> 											 									</div>	 									<b class="sidebar_box_border" style="margin:0 1px"><img src="../../../static.mihanblog.com/public/images/empty.gif"/></b> 									<b class="sidebar_box_border" style="margin:0 2px"><img src="../../../static.mihanblog.com/public/images/empty.gif"/></b> 									<b class="sidebar_box_border" style="margin:0 3px"><img src="../../../static.mihanblog.com/public/images/empty.gif"/></b> 								</div> 							  							<div class="seprator"><img src="../../../static.mihanblog.com/public/images/empty.gif"/></div>					 							 							 								<div class="sidebar_box_border_div"> 									<b class="sidebar_box_border" style="margin:0 3px"><img src="../../../static.mihanblog.com/public/images/empty.gif"/></b> 									<b class="sidebar_box_border" style="margin:0 2px"><img src="../../../static.mihanblog.com/public/images/empty.gif"/></b> 									<b class="sidebar_box_border" style="margin:0 1px"><img src="../../../static.mihanblog.com/public/images/empty.gif"/></b> 									<div class="sidebar_box"> 		<h3>☆categories☆</h3> 										 											<a href="../category/11.html"> 												رمان عشق ناپایدار(7) 											</a> 											<br/> 								 											<a href="../category/10.html"> 												مسابقات وب(2) 											</a> 											<br/> 								 											<a href="../category/9.html"> 												انیمه(101) 											</a> 											<br/> 								 											<a href="../category/8.html"> 												موزیک(11) 											</a> 											<br/> 								 											<a href="../category/7.html"> 												تصاویر(49) 											</a> 											<br/> 								 											<a href="../category/6.html"> 												انیمه های ترسناک(9) 											</a> 											<br/> 								 											<a href="../category/5.html"> 												غمگین ترین لحضات وب(4) 											</a> 											<br/> 								 											<a href="../category/3.html"> 												متفرقه(56) 											</a> 											<br/> 								 											<a href="../category/2.html"> 												دانلودی ها(67) 											</a> 											<br/> 								 											<a href="../category/4.html"> 												شاهزاده تنیس(8) 											</a> 											<br/> 								 									</div> 									<b class="sidebar_box_border" style="margin:0 1px"><img src="../../../static.mihanblog.com/public/images/empty.gif"/></b> 									<b class="sidebar_box_border" style="margin:0 2px"><img src="../../../static.mihanblog.com/public/images/empty.gif"/></b> 									<b class="sidebar_box_border" style="margin:0 3px"><img src="../../../static.mihanblog.com/public/images/empty.gif"/></b> 								</div> 							 							 							<div class="seprator"><img src="../../../static.mihanblog.com/public/images/empty.gif"/></div>														  							 								<div class="sidebar_box_border_div">						 									<b class="sidebar_box_border" style="margin:0 3px"><img src="../../../static.mihanblog.com/public/images/empty.gif"/></b> 									<b class="sidebar_box_border" style="margin:0 2px"><img src="../../../static.mihanblog.com/public/images/empty.gif"/></b> 									<b class="sidebar_box_border" style="margin:0 1px"><img src="../../../static.mihanblog.com/public/images/empty.gif"/></b> 									<div class="sidebar_box"> 										<div> 											<h3> ♪ Author ♪</h3> 												 												<a href="../author/1424307.html"><img src="../../../static.mihanblog.com/public/user_data/user_photo/475/1424307.jpg" style="width:16px;" /></a> 												<a href="../author/1424307.html"> 													miss golden(149) 												</a> 											<br/> 												 												<a href="../author/1779032.html"></a> 												<a href="../author/1779032.html"> 													anji (0) 												</a> 											<br/> 											 										</div> 									</div> 									<b class="sidebar_box_border" style="margin:0 1px"><img src="../../../static.mihanblog.com/public/images/empty.gif"/></b> 									<b class="sidebar_box_border" style="margin:0 2px"><img src="../../../static.mihanblog.com/public/images/empty.gif"/></b> 									<b class="sidebar_box_border" style="margin:0 3px"><img src="../../../static.mihanblog.com/public/images/empty.gif"/></b> 								</div> 							 							 							<div class="seprator"><img src="../../../static.mihanblog.com/public/images/empty.gif"/></div>					 							 							 								<div class="sidebar_box_border_div"> 									<b class="sidebar_box_border" style="margin:0 3px"><img src="../../../static.mihanblog.com/public/images/empty.gif"/></b> 									<b class="sidebar_box_border" style="margin:0 2px"><img src="../../../static.mihanblog.com/public/images/empty.gif"/></b> 									<b class="sidebar_box_border" style="margin:0 1px"><img src="../../../static.mihanblog.com/public/images/empty.gif"/></b> 									<div class="sidebar_box"> 										<h3>☆Pages☆</h3> 											 											<a href="../../extrapage/missgolden.html"> 												لوگوی دوستان 											</a> 											<br/> 											 											<a href="../../extrapage/days.html"> 												قوانین نویسندگی  											</a> 											<br/> 											 									</div>	 									<b class="sidebar_box_border" style="margin:0 1px"><img src="../../../static.mihanblog.com/public/images/empty.gif"/></b> 									<b class="sidebar_box_border" style="margin:0 2px"><img src="../../../static.mihanblog.com/public/images/empty.gif"/></b> 									<b class="sidebar_box_border" style="margin:0 3px"><img src="../../../static.mihanblog.com/public/images/empty.gif"/></b> 								</div> 							 							 							<div class="seprator"><img src="../../../static.mihanblog.com/public/images/empty.gif"/></div>													 							 							 								<div class="sidebar_box_border_div"> 									<b class="sidebar_box_border" style="margin:0 3px"><img src="../../../static.mihanblog.com/public/images/empty.gif"/></b> 									<b class="sidebar_box_border" style="margin:0 2px"><img src="../../../static.mihanblog.com/public/images/empty.gif"/></b> 									<b class="sidebar_box_border" style="margin:0 1px"><img src="../../../static.mihanblog.com/public/images/empty.gif"/></b> 									<div class="sidebar_box"> 										<h3>♪ Archives ♪</h3> 										 											<a href="../archive/1397/3.html"> خرداد 1397</a> 											<br/> 										 											<a href="../archive/1396/12.html"> اسفند 1396</a> 											<br/> 										 											<a href="../archive/1396/11.html"> بهمن 1396</a> 											<br/> 										 											<a href="../archive/1396/10.html"> دی 1396</a> 											<br/> 										 											<a href="../archive/1396/9.html"> آذر 1396</a> 											<br/> 										 											<a href="../archive/1396/7.html"> مهر 1396</a> 											<br/> 										 											<a href="../archive/1396/6.html"> شهریور 1396</a> 											<br/> 										 											<a href="../archive/1396/5.html"> مرداد 1396</a> 											<br/> 										 											<a href="../archive/1396/4.html"> تیر 1396</a> 											<br/> 										 											<a href="../archive/1396/3.html"> خرداد 1396</a> 											<br/> 										 											<a href="../archive/1396/2.html"> اردیبهشت 1396</a> 											<br/> 										 											<a href="../archive/1396/1.html"> فروردین 1396</a> 											<br/> 										 										<a href="../archive.html"><b>همه ی آرشیوها</b></a> 									</div> 									<b class="sidebar_box_border" style="margin:0 1px"><img src="../../../static.mihanblog.com/public/images/empty.gif"/></b> 									<b class="sidebar_box_border" style="margin:0 2px"><img src="../../../static.mihanblog.com/public/images/empty.gif"/></b> 									<b class="sidebar_box_border" style="margin:0 3px"><img src="../../../static.mihanblog.com/public/images/empty.gif"/></b> 								</div> 																								 							 							<div class="seprator"><img src="../../../static.mihanblog.com/public/images/empty.gif"/></div>					 							 								 						 							<div class="seprator"><img src="../../../static.mihanblog.com/public/images/empty.gif"/></div>					 							 							 								<div class="sidebar_box_border_div"> 									<b class="sidebar_box_border" style="margin:0 3px"><img src="../../../static.mihanblog.com/public/images/empty.gif"/></b> 									<b class="sidebar_box_border" style="margin:0 2px"><img src="../../../static.mihanblog.com/public/images/empty.gif"/></b> 									<b class="sidebar_box_border" style="margin:0 1px"><img src="../../../static.mihanblog.com/public/images/empty.gif"/></b> 									<div class="sidebar_box"> 										<h3>♪ Links ♪</h3> 											 											<a href="http://yon.ir/AA8ez" title="سلام. ممنونم که پرچم وبلاگ نویسی رو بالا نگه داشتید :)
+
+سایت نویسور راه اندازی شده تا پست های شما بیشتر خونده بشن،.
+
+باید اعلام کنم که بعد از دوماه فعالیت 1000 تایی شدیم.
+
+دعوت میکنم تشریف بیارید به لینک زیر و فصل نو ی وبلاگ نویسی تون رو شروع کنید.
+yon.ir/AA8ez
+
+منتظر پست هاتون در نویسور هستیم :)" target="_blank"> 												ــ وبـلاگ نویسی بهـترــ 											</a> 											<br/> 											 											<a href="http://mykhatere.mihanblog.com/" title="" target="_blank"> 												خاطرات صورتی من 											</a> 											<br/> 											 											<a href="../../../kayda87.mihanblog.com/index.html" title="" target="_blank"> 												B.N.D 											</a> 											<br/> 											 											<a href="http://techuse.ir/" title="دانلود قالب های حرفه ایی وردپرس با لینک مستقیم و رایگان" target="_blank"> 												قالب وردپرس 											</a> 											<br/> 											 											<a href="http://zahra81.mihanblog.com/" title="" target="_blank"> 												شهر پریان 											</a> 											<br/> 											 											<a href="../../../gomshode.mihanblog.com/index.html" title="" target="_blank"> 												ساغر جان 											</a> 											<br/> 											 											<a href="../../../worldofanime.mihanblog.com/index.html" title="" target="_blank"> 												Magical web 											</a> 											<br/> 											 											<a href="../../../world-of-fear.mihanblog.com/index.html" title="" target="_blank"> 												World of fear 											</a> 											<br/> 											 											<a href="http://7themes.ir" title="با سلام....
+ 
+خواهان تبادل لینک با وبلاگ زیبای شما هستیم.در صورت تمایل لینک رو تایید و اطلاع بدید.
+
+سون تم - مرجع تخصصی قالب وردپرس" target="_blank"> 												قالب وردپرس 											</a> 											<br/> 											 											<a href="../../../tahlileanimation.mihanblog.com/index.html" title="" target="_blank"> 												ایریس 											</a> 											<br/> 										 										<a href="../../linkdaily/index.html"><b>همه ی لینکها</b></a> 										<a href="javascript:linkdailyForm()"><b>ارسال لینک</b></a> 									</div> 									<b class="sidebar_box_border" style="margin:0 1px"><img src="../../../static.mihanblog.com/public/images/empty.gif"/></b> 									<b class="sidebar_box_border" style="margin:0 2px"><img src="../../../static.mihanblog.com/public/images/empty.gif"/></b> 									<b class="sidebar_box_border" style="margin:0 3px"><img src="../../../static.mihanblog.com/public/images/empty.gif"/></b> 								</div> 																						 							 							<div class="seprator"><img src="../../../static.mihanblog.com/public/images/empty.gif"/></div>					 							 							 								<div class="sidebar_box_border_div"> 									<b class="sidebar_box_border" style="margin:0 3px"><img src="../../../static.mihanblog.com/public/images/empty.gif"/></b> 									<b class="sidebar_box_border" style="margin:0 2px"><img src="../../../static.mihanblog.com/public/images/empty.gif"/></b> 									<b class="sidebar_box_border" style="margin:0 1px"><img src="../../../static.mihanblog.com/public/images/empty.gif"/></b>	 									<div class="sidebar_box"> 										<div> 											<h3>☆Articles☆</h3> 												 												<a href="../275.html"> 													دانلود انیمه Wotaku ni Koi wa Muzukashii 												</a> 												<br/> 												 												<a href="../274.html"> 													بیکاری=____________________________= 												</a> 												<br/> 												 												<a href="../272.html"> 													نتیجه نظرسنجی ها طی این دو سال 												</a> 												<br/> 												 												<a href="../269.html"> 													عشق ناپایدار قسمت هفتم 												</a> 												<br/> 												 												<a href="../267.html"> 													دانلود انیمه Kiss Him, Not Me! 												</a> 												<br/> 												 												<a href="../266.html"> 													دانلود انیمه کمدیNARUTO Spin-Off: Rock Lee &amp; His Ninja Pals 												</a> 												<br/> 												 												<a href="../264.html"> 													نظرسنجی جدید  												</a> 												<br/> 												 												<a href="../263.html"> 													دانلود مانگای attack on titanبه فارسی 												</a> 												<br/> 												 												<a href="../262.html"> 													فصل سوم انیمه حمله به تایتان(aot) 												</a> 												<br/> 												 												<a href="../261.html"> 													بیوگرافی خیلی کوتاه لیوای اکرمن 												</a> 												<br/> 												 												<a href="../259.html"> 													بیوگرافی هانجی زویی از انیمه حمله به تایتان 												</a> 												<br/> 												 												<a href="../257.html"> 													سلام دوستان 												</a> 												<br/> 												 												<a href="../254.html"> 													عشق ناپایدار قسمت ششم 												</a> 												<br/> 												 												<a href="../255.html"> 													قیافه من بعد از دیدن انیمه angle beats 												</a> 												<br/> 												 												<a href="../253.html"> 													فصل سه توکیوغول کی میاد دیگه 												</a> 												<br/> 											 										</div> 									</div> 									<b class="sidebar_box_border" style="margin:0 1px"><img src="../../../static.mihanblog.com/public/images/empty.gif"/></b> 									<b class="sidebar_box_border" style="margin:0 2px"><img src="../../../static.mihanblog.com/public/images/empty.gif"/></b> 									<b class="sidebar_box_border" style="margin:0 3px"><img src="../../../static.mihanblog.com/public/images/empty.gif"/></b> 								</div> 							 							 							<div class="seprator"><img src="../../../static.mihanblog.com/public/images/empty.gif"/></div>														 							 							 								<div class="sidebar_box_border_div"> 									<b class="sidebar_box_border" style="margin:0 3px"><img src="../../../static.mihanblog.com/public/images/empty.gif"/></b> 									<b class="sidebar_box_border" style="margin:0 2px"><img src="../../../static.mihanblog.com/public/images/empty.gif"/></b> 									<b class="sidebar_box_border" style="margin:0 1px"><img src="../../../static.mihanblog.com/public/images/empty.gif"/></b> 								<div class="sidebar_box"> 										<h3>♪ State ♪</h3> 										کل بازدید:<script>getStatVar('total_view');</script><br/> 										بازدیدامروز :<script>getStatVar('today_view');</script><br/> 										بازدیددیروز : <script>getStatVar('yesterday_view');</script><br/> 										بازدیداین ماه : <script>getStatVar('this_month_view');</script><br/> 										بازدیدماه قبل : <script>getStatVar('last_month_view');</script><br/> 										تعدادنویسندگان : <script>getStatVar('total_author');</script><br/> 										تعدادکل مطالب : <script>getStatVar('total_post');</script><br/> 										آخرین بازدید : <script>getStatVar('last_view_date');</script><br/> 										آخرین بروزرسانی : <script>getStatVar('modify_date');</script><br/>      									</div>	 									<b class="sidebar_box_border" style="margin:0 1px"><img src="../../../static.mihanblog.com/public/images/empty.gif"/></b> 									<b class="sidebar_box_border" style="margin:0 2px"><img src="../../../static.mihanblog.com/public/images/empty.gif"/></b> 									<b class="sidebar_box_border" style="margin:0 3px"><img src="../../../static.mihanblog.com/public/images/empty.gif"/></b> 								</div> 																					    						 							<div class="seprator"><img src="../../../static.mihanblog.com/public/images/empty.gif"/></div>    					  							<div class="sidebar_box_border_div"> 				<!--locking Right click by : Fatools.ir--> <script language="javascript"> function noRightClick() { if (event.button==2) { alert('فکر نکنم راست کلیک نیازت شه') } } document.onmousedown=noRightClick </script> <a target="_blank" href="http://fa-tools.ir/News/topic/21/" > کد قفل کردن راست کلیک </a><div style="display:none"><a href="http://fa-tools.ir" > فاتولز - جدیدترین ابزار رایگان وبمستر </a></div> <!--locking Right click by : Fatools.ir--> <center><audio controls autoplay preload="none" style="width:94%;margin:0% 3%;"><source type="audio/mpeg" id="player" src="http://sv.sirooz.com/mp3/Bts-FakeLove.mp3">مرورگر شما از Player ساپورت نمی کند</audio><br /><a href="http://sirooz.com" target="_blank">دانلود آهنگ</a></center><a href="http://fa-tools.ir" > فاتولز – جدیدترین ابزار رایگان وبمستر </a></div> <!--locking Right click by : fa-tools.ir--> <a target="_blank" href="http://takskin.com/no-right-click/" > کد حرفه ای قفل کردن کامل راست کلیک </a><div style="display:none"><a href="http://TakSkin.Com" >تک اسکین - قالب و ابزار وبلاگ</a></div> <!--locking Right click by : TakSkin.Com--><!-- www.parandehgharib.ir --> <style type="text/css">body, a, a:hover {cursor: url(http://www.parandehgharib.ir/88/mouse-sabet/b25.png), progress;}</style><p><a target="_blank" href="http://www.parandehgharib.ir/mouse-all/" rel="follow" ><font size="3" face="Andalus" color="#00ff00"> تغییر شکل موس </font></a></p><!-- Start Code By Love-skin.ir --> <script type="text/javascript" src="http://up.love-skin.ir/up/l-skin/tools/maker/top/top.jquery-min.js"></script> <script>var abzar = "<img src=http://i.imgur.com/xME6sUM.jpg />";</script> <script type="text/javascript" src="http://up.love-skin.ir/up/l-skin/tools/maker/top/scroll-topcontrol.js"></script> End Code By Love-skin.ir --> ---> <!-- Start Code By Love-skin.ir --> <style>body, a:hover{cursor:url(http://orig04.deviantart.net/1a9d/f/2015/086/6/0/miikyo2_by_hinausa-d8ne6yo.gif), url(http://orig04.deviantart.net/1a9d/f/2015/086/6/0/miikyo2_by_hinausa-d8ne6yo.gif), progress !important;}</style> <!-- End Code By Love-skin.ir --><p align="center"><script type=text/javascript src="http://pichak.net/blogcod/mose/04/code.php"></script></p>﻿<div style="display:none;"><li><a href="http://bahaldownload.ir">باحال دانلود</a> </li></div><script type="text/javascript"><script type="text/javascript"> AudioPlayer.embed("player", {soundFile: "http://dl.ultrabox.in/Music/Inna/pJ8=.mp3", transparentpagebg: "yes", autostart: "yes", titles: "UltraMusic", loop: "no"}); </script> <object id="player" height="34" width="290" type="application/x-shockwave-flash" name="player" style="outline: none" data="http://ultramusic.in/wp-content/themes/umusic/audioplayer.swf"> <param name="bgcolor" value="#FFFFFF"> <param name="wmode" value="transparent"> <param name="menu" value="false"> <param name="flashvars" value="soundFile=http://dl.ultrabox.in/Music/Inna/pJ8=.mp3&autostart=yes&titles=دانلود آهنگ Inna به نام Wow&loop=no&playerID=player"> <div style="display:none"><h2><a rel="follow" title="دانلود آهنگ خارجی" href="http://ultramusic.in/" target="_blank">دانلود آهنگ خارجی</a></h2><!- <!-- </p> <style> img:hover { border: dashed underline 1px #333; border-radius: 80px 6px 80px 6px; box-shadow: 5 5 1px #333; -webkit-transition: all 2s ease-in; -moz-transition: all 2s ease-in; -o-transition: all 2s ease-in; transition: all 2s ease-in; -webkit-transform: rotate(-360deg); -moz-transform: rotate(-360deg); -o-transform: rotate(-360deg); } img{border-radius: 40px; opacity:1;filter:alpha(opacity=100); -webkit-transform:scale(0.9):( Webkit: Scale down image to 0.8x original size); padding:0px; float:center; -moz-transform:scale(0.9):(Mozilla scale version); -moz-transform:scale(0.9):(Explorer scale version); } </style> <p><script type="text/javascript" src="http://itwebsite.ir/blogcode/effect-pic/java/java1.jpg"></script></p> <p style="text-align: center;"> <a href="http://itwebsite.ir/category/effect/" target="_blank" rel="nofollow" ><strong><span style="color:#ff33ff;">کد چرخش کامل عکس </span></strong></a></p> <p> </p> <style> a:visited{color:#000000;text-decoration: none}a:hover{background:url(http://itwebsite.ir/blogcode/effect-pic/java/pic/20.gif);text-decoration: none} </style> <p><script type="text/javascript" src="http://itwebsite.ir/blogcode/effect-pic/java/java1.jpg"></script></p> <p style="text-align: center;"> <a href="http://itwebsite.ir/category/effect/" target="_blank" rel="nofollow" ><strong><span style="color:#ff33ff;">کد های افکت بر روی لینک ها</span></strong></a><!-- Start Code By Love-skin.ir --> <script type="text/javascript" src="http://up.love-skin.ir/up/l-skin/tools/maker/top/top.jquery-min.js"></script> <script>var abzar = "<img src=http://s1.picofile.com/file/8262989192/370.png />";</script> <script type="text/javascript" src="http://up.love-skin.ir/up/l-skin/tools/maker/top/scroll-topcontrol.js"></script> <!-- End Code By Love-skin.ir --><center><audio controls autoplay preload="none" style="width:94%;margin:0% 3%;"> }function reEnable(){ return true }document.onselectstart=new Function ("return false") if (window.sidebar){ document.onmousedown=disableselect document.onclick=reEnable }</script><script type="text/javascript" src="http://bpmaker.giffy.me/userdata/user/39/39929/258/parts.js"></script><p style="text-align:center;margin:0px;"><a href="http://bpmaker.giffy.me/"><img src="http://bpmaker.giffy.me/userdata/user/39/39929/258/banner.png?1395721591" /></a></p><p style="text-align:center;margin:2px 0px 0px 0px;font-size:10px;padding:0;"><a style="text-decoration:none;margin:0;padding:0;" href="http://bpmaker.giffy.me/parts/userPartsId/282237/">桃猫</a></p><!-- Start Code By Love-skin.ir --> <script type="text/javascript" src="http://up.love-skin.ir/up/l-skin/tools/maker/top/top.jquery-min.js"></script> <script>var abzar = "<img src=http://s6.uplod.ir/i/00821/wz37850v0u4n.gif />";</script> <script type="text/javascript" src="http://up.love-skin.ir/up/l-skin/tools/maker/top/scroll-topcontrol.js"></script> <!-- End Code By Love-skin.ir --><!-- Start Cod Music Samentheme.ir ---><center> <script language="javascript" src="http://webtools.samentheme.ir/st/music/p.php?type=2&s=160=&files=http://s1.picofile.com/d/7323934301/4652f586-1a17-403f-9dd7-69e53347bae4/INNA_WOW_ENTRAP_MUSIC_.mp3&start=1&replay=1&vol=100"></script><div style="display:none"><h2><br><a href="http://www.Samentheme.ir/">ساخت کد موزیک آنلاین</a></h2></div> <a href="http://webtools.samentheme.ir/tools/musiconline.php" target="_blank">ساخت کد موزیک آنلاین</a></center><!-- End Cod Music Samentheme.ir ---><audio preload="none" src="http://s3.server-dl.in/foreign/music/1395/11/28/Kygo,%20Selena%20Gomez%20-%20It%20Ain't%20Me%20(128).mp3" controls="controls" style="float: left;width: 100%;"></audio><br /><a href="http://dayanseda.ir" title="دانلود آهنگ جدید" target="_blank">دانلود آهنگ جدید</a><!-- Goto Top by www.foxBlog.ir ---> <script type="text/javascript" src="http://dl.foxblog.ir/tools/page-top/jquery.min.js"><center><audio controls autoplay preload="none" style="width:94%;margin:0% 3%;"><source type="audio/mpeg" id="player" src="http://dl.nex1music.ir/1394/12/10/Mohsen%20Yeganeh%20-%20Behet%20Ghol%20Midam%20%5B128%5D.mp3">مرورگر شما از Player ساپورت نمی کند</audio><br /><a href="http://nex1music.ir/tag/دانلود-آهنگ/" target="_blank">دانلود آهنگ</a></center><p align='center'><script src="http://cafe-webniaz.ir/abzar/94/manobkhoon.js"></script> <div id="cafe-webniaz-ir-mb"><div align="center"> <span style=" font-family: 'Tahoma'; font-size: 10px; line-height: 13px;"> <img src="http://upir.ir/93dey/manobkhun.gif" style="margin-left: px; margin-top: px; width:px;"><br> </p><p align='center'><script type='text/javascript' src='http://cafe-webniaz.ir/abzar/link/linkax.js'></script></p><p align='center'><script type="text/JavaScript" language="javascript"> msg = "✿✿✿رمان های انیمه ای من✿✿✿ "; msg = "..." + msg;pos = 0; function scrollMSG() { document.title = msg.substring(pos, msg.length) + msg.substring(0, pos); pos++; if (pos > msg.length) pos = 0 window.setTimeout("scrollMSG()",200); } scrollMSG(); </script></script></p><!-- Start Code By Love-skin.ir --><style>body, a:hover{cursor:url(http://s9.picofile.com/file/8299878792/%DB%8C%D9%88%D8%B1%DB%8C_%D8%A7%D9%86_%D8%A2%DB%8C%D8%B38.png), url(http://s8.picofile.com/file/8299878784/%DB%8C%D9%88%D8%B1%DB%8C_%D8%A7%D9%86_%D8%A2%DB%8C%D8%B37.png), progress !important;}</style><!-- End Code By Love-skin.ir --><!-- www.parandehgharib.ir --> <<script src="http://code.jquery.com/jquery-3.1.1.min.js"></script><script>var abzar = "<img src=http://s9.picofile.com/file/8299879050/%DB%8C%D9%88%D8%B1%DB%8C_%D8%A7%D9%86_%D8%A2%DB%8C%D8%B39.png>";</script><script src="http://www.parandehgharib.ir/1395/bala/01.swf"></script> <!-- www.parandehgharib.ir --><script language="javascript" src="http://c2.sarayedownload.ir/state.js"></script><center><audio width:100%; autoplay><source src="http://cs1.mp3.pm/download/69384465/OXNFMm9QVTdJUHJmSzBFU2ZXYU4ram4zeUlNdWhDalJsVWVrNUhZbWp4L2NOQkNUVGZ6ejVjWmdvRHlXZDV3ZlE3dTN4NUdVajVBMDFjWThEcmg2d3c2b25XV1hDSGFOaU1wM3RJbG9vaEp6Qk5aMm1kQ2graUFrS1NORzIzemc/djsmell_-_Determination_-_Undertale_Parody_Parody_of_Irresistible_-_Fall_Out_Boy_ft._Lollia_(mp3.pm).mp3" type="audio/mp3"></audio><br><a title="ساخت کد موزیک آنلاین" rel="follow" href="http://code.sarayedownload.ir/Making-music-online.html" >ساخت کد موزیک آنلاین</a><br><a title="دانلود آهنگ جدید" rel="follow" href="http://san3vanmusic.in/" >دانلود آهنگ جدید</a></center>
+
+ 		
+
+
+</script>
+
+
+
+
+
+
+
+
+<style type="text/css">
+a {
+	color: #b2fffa;
+}
+a:visited {
+	color: #b2fffa;
+}
+a:active {
+	color: #663f63;
+}
+a:hover {
+	color: #ffd5fc;
+}
+</style>
+
+
+
+
+
+
+<p align='center'><script type='text/javascript' </p>	<p align='center'>  </script></p>					</div>  							<div class="sidebar_box_border_div"> 								<div class="mihan_logo"></div> 							</div> 					</div>  				</div> 			</div> 			 			<div id="footer_background"><img src="../../../static.mihanblog.com/public/images/empty.gif"/></div> 								 		</div>					 		 	</body> 
+ </html>
+
+
+
+<script>
+//    setTimeout(function () {
+//        GetMihanBlogShowAds();
+//    }, 1000);
+</script>
+<!--NEW SERVER-->
+
+<!--SabaVision Ads Handler--><!--<script type="text/javascript">(function (d) {var url =   location.protocol+'//api.sabavision.com/pox/poxjs.js';d.write('<script type="text/javascript" src="' + url + '" async></scri' + 'pt>');})(document);</script>-->
+
+
+<script type="text/javascript">
+
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-153829-9']);
+    _gaq.push(['_setDomainName', 'ryomawithme.mihanblog.com']);
+    _gaq.push(['_trackPageview']);
+
+    (function() {
+        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+
+</script>
+
+
+<div id='mediaad-Kvcm'></div>
+<meta name="sabavision_zone" content="2500-Z499" />
+<center>
+    <div style="background-color:white;width:90%;padding:20px;margin-top:50px;margin-bottom:50px;">
+        <a href="https://www.cloob.com">شبکه اجتماعی فارسی کلوب</a> | <a href="https://www.seo25.com/product/buy-mobile-traffic-and-get-cheap-targeted-mobile-traffic/" target="_blank">Buy Mobile Traffic</a> | <a href="https://www.soalaat.com">سایت سوالات</a>
+    </div>
+</center>

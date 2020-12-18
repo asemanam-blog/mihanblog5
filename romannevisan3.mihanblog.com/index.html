@@ -1,0 +1,1184 @@
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" /><link rel="EditURI" type="application/rsd+xml" title="RSD" href="http://romannevisan3.mihanblog.com/xmlrpc?rsd" />
+<script type="text/javascript" src="../static.mihanblog.com/public/scripts/run/g.other.v3.js"></script>
+<script>
+
+	function c_$(id){
+        return document.getElementById(id);
+    }
+    
+			//if (parent.frames.length) top.location.href= document.location;
+		
+	setTodayDate = function(){
+		document.write('یکشنبه 23 آذر 1399');
+		/*1863920*/	}
+
+</script>
+
+
+
+        <script type="text/javascript">
+            (function(){
+            var now = new Date();
+            var head = document.getElementsByTagName('head')[0];
+            var script = document.createElement('script');
+            script.async = true;
+            var script_address = 'https://cdn.yektanet.com/js/mihanblog.com/native-mihanblog.com-6531.js';
+            script.src = script_address + '?v=' + now.getFullYear().toString() + '0' + now.getMonth() + '0' + now.getDate() + '0' + now.getHours();
+            head.appendChild(script);
+            })();
+        </script>
+
+        <!--<script type="text/javascript">
+            var head = document.getElementsByTagName("head")[0];
+            var script = document.createElement("script");
+            script.type = "text/javascript";
+            script.async=1;
+            script.src = "https://s1.mediaad.org/serve/mihanblog.com/loader.js" ;
+            head.appendChild(script);
+        </script>-->
+        
+        <script>
+            var sabaVisionWebsiteID = "9bab9dac-041d-4bdb-b39a-1ed789f65eed"; var sabaVisionWebsitePage = "ALL"
+        </script>
+        <link rel="stylesheet" href="https://plus.sabavision.com/dox/dox.min.css">
+        <script src="https://plus.sabavision.com/dox/dox.min.js"></script>
+        
+        <script>
+	try{
+		var commentCnt = new Array();
+		commentCnt[1]='700';commentCnt[14]='48';commentCnt[15]='16';commentCnt[16]='10';commentCnt[17]='14';commentCnt[20]='44';commentCnt[21]='9';commentCnt[22]='77';commentCnt[23]='21';commentCnt[24]='59';commentCnt[25]='9';	} catch(e){}
+	
+	newComment = function(post_id){
+		try{
+			window.open('/post/comment/'+post_id,'comment','status=yes,scrollbars=yes,toolbar=no,menubar=no,location=no ,width=480px,height=540px');
+		} catch(e){}
+	}
+	setCommentCnt = function(post_id){
+		try{
+			if(commentCnt[post_id]){
+				document.write(commentCnt[post_id]);
+			} else {
+				document.write(0);
+			}
+		} catch(e){}
+	}
+</script><script>
+
+
+	mihanblogUpdateLike = function(postid,type){
+		var url = '/post/like/'+postid+'/'+type;
+		mihanblogGetAjax(url,function(){});
+	};
+	try{
+        mihanblogGetAjax = function (url,callback) {
+    		var req;
+			if (window.XMLHttpRequest)
+            {
+                // code for IE7+, Firefox, Chrome, Opera, Safari
+			  	req = new XMLHttpRequest();
+			}else{	// code for IE6, IE5
+			  	req = new ActiveXObject("Microsoft.XMLHTTP");
+		  	}
+		    req.open("GET", url, 1);
+		    req.onreadystatechange = function () {
+		        if (req.readyState == 4) {
+		            if (req.status == 200) {
+		            	var response = eval(req.responseText);
+		            	callback();
+		            }else{
+	            		return ;
+		            }
+		        }else{
+					return ;
+		        }
+		    }
+		    req.send(null);
+		}
+	}catch(e){}
+
+	try{
+		var mihanblogLikeArrCnt = new Array();
+		var mihanblogDisLikeArrCnt = new Array();
+
+		mihanblogLikeArrCnt[1]='0';
+mihanblogDisLikeArrCnt[1]='0';
+mihanblogLikeArrCnt[14]='0';
+mihanblogDisLikeArrCnt[14]='0';
+mihanblogLikeArrCnt[15]='0';
+mihanblogDisLikeArrCnt[15]='0';
+mihanblogLikeArrCnt[16]='0';
+mihanblogDisLikeArrCnt[16]='0';
+mihanblogLikeArrCnt[17]='0';
+mihanblogDisLikeArrCnt[17]='0';
+mihanblogLikeArrCnt[20]='0';
+mihanblogDisLikeArrCnt[20]='0';
+mihanblogLikeArrCnt[21]='0';
+mihanblogDisLikeArrCnt[21]='0';
+mihanblogLikeArrCnt[22]='0';
+mihanblogDisLikeArrCnt[22]='0';
+mihanblogLikeArrCnt[23]='0';
+mihanblogDisLikeArrCnt[23]='0';
+mihanblogLikeArrCnt[24]='0';
+mihanblogDisLikeArrCnt[24]='0';
+mihanblogLikeArrCnt[25]='0';
+mihanblogDisLikeArrCnt[25]='0';
+	} catch(e){}
+
+
+
+    mihanblogPostLike = function(post_id){
+
+        mihanblogLikeCnt = (mihanblogLikeArrCnt[post_id]? mihanblogLikeArrCnt[post_id] : 0);
+        mihanblogDisLikeCnt = (mihanblogDisLikeArrCnt[post_id]? mihanblogDisLikeArrCnt[post_id] : 0);
+        mihanblogLikeCnt = parseInt(mihanblogLikeCnt);
+        mihanblogDisLikeCnt = parseInt(mihanblogDisLikeCnt);
+
+        document.write(
+                '<div class="mihanblog_like_wrapper ">'+
+                       '<div id="dislikeBar_'+post_id+'" onclick="mihanblogUpdateLike('+post_id+',\'dislike\')"   class="mihanblog_like_bar mihanblog_like_dislikeBar mihanblog_like_show_help ">-<div class="mihanblog_like_Cnt" id="disLikeCnt_'+post_id+'">'+mihanblogDisLikeCnt+'</div>'+
+                            '<span  class="mihanblog_like_v2_help mihanblog_like_v2_help_dislike clearfix"> '+
+                                '<span class="mihanblog_like_help_arrow mihanblog_like_help_arrow_dislike clearfix"></span>'+
+                                '<span class="mihanblog_like_help_text">نمی پسندم</span>'+
+                            '</span>'+
+                        '</div>'+
+                       '<div id="Like_'+post_id+'" class="mihanblog_like_border"></div>'+
+                       '<div id="likeBar_'+post_id+'" onclick="mihanblogUpdateLike('+post_id+',\'like\')"  class="mihanblog_like_bar mihanblog_like_likeBar mihanblog_like_show_help" >+<div class="mihanblog_like_Cnt" id="likeCnt_'+post_id+'">'+mihanblogLikeCnt+'</div>'+
+                            '<span  class="mihanblog_like_v2_help mihanblog_like_v2_help_like clearfix"> '+
+                                '<span class="mihanblog_like_help_arrow mihanblog_like_help_arrow_like clearfix"></span>'+
+                                '<span class="mihanblog_like_help_text">می پسندم</span>'+
+                            '</span>'+
+                        '</div>'+
+
+                '</div>'
+        );
+
+
+
+        mihanblogDisplayeLike(post_id);
+    }
+
+
+    mihanblogDisplayeLike = function(post_id){
+
+        mihanblogLikeCnt = (mihanblogLikeArrCnt[post_id]? mihanblogLikeArrCnt[post_id] : 0);
+        mihanblogDisLikeCnt = (mihanblogDisLikeArrCnt[post_id]? mihanblogDisLikeArrCnt[post_id] : 0);
+        mihanblogLikeCnt = parseInt(mihanblogLikeCnt);
+        mihanblogDisLikeCnt = parseInt(mihanblogDisLikeCnt);
+
+
+
+        sum = mihanblogLikeCnt - mihanblogDisLikeCnt;
+        backgroundBorder =  document.getElementById('Like_'+post_id);
+        var likeObj = document.getElementById('likeCnt_'+post_id);
+        var disLikeObj = document.getElementById('disLikeCnt_'+post_id);
+
+
+
+
+
+        likeObj.innerHTML =  mihanblogLikeCnt ;
+        disLikeObj.innerHTML =  mihanblogDisLikeCnt;
+
+        if(sum == 0){
+            backgroundBorder.style.backgroundImage = "url('/public/public/images/icons/like_likedislike.png')";
+            document.getElementById('dislikeBar_'+post_id).style.width = '19px';
+            document.getElementById('likeBar_'+post_id).style.width = '19px';
+        }else{
+             if(sum > 0){
+                 backgroundBorder.style.backgroundImage = "url('/public/public/images/icons/like_like.png')";
+                 document.getElementById('likeBar_'+post_id).style.width = '23px';
+                 document.getElementById('dislikeBar_'+post_id).style.width = '15px';
+             }else{
+                 backgroundBorder.style.backgroundImage = "url('/public/public/images/icons/like_dislike.png')";
+                 document.getElementById('likeBar_'+post_id).style.width = '15px';
+                 document.getElementById('dislikeBar_'+post_id).style.width = '23px';
+             }
+        }
+
+    }
+
+
+
+
+</script>
+
+<style type="text/css">
+
+
+    .clearfix {display: inline-block;}
+    .clearfix:after {
+        content: ".";
+        display: block;
+        height: 0;
+        clear: both;
+        visibility: hidden;
+    }
+
+    .mihanblog_like_wrapper {
+        color: #ffffff;
+        direction: ltr;
+        position: relative;
+    }
+    .mihanblog_like_wrapper span{
+        display: none;
+    }
+    .mihanblog_like_bar {
+        color: #FFFFFF;
+        cursor: pointer;
+        float: left;
+        font-size: 10px;
+        height: 20px;
+        line-height: 19px;
+        margin: 5px 0;
+    }
+    .mihanblog_like_likeBar {
+        background-color: #88B131;
+        padding-right: 5px;
+        border-top-right-radius: 2px;
+        border-bottom-right-radius: 2px;
+        text-align: right;
+    }
+    .mihanblog_like_likeBar:hover{
+        background-color: #699017;
+    }
+    .mihanblog_like_border {
+        background-color: #666666;
+        border: 1px solid #666666;
+        float: left;
+        font-size: 12px;
+        height: 20px;
+        margin-top: 2px;
+        width: 25px;
+        padding: 3px 5px 2px 0;
+        text-align: center;
+        border-radius: 2px;
+        color: #ffffff;
+        direction: ltr;
+        background-repeat: no-repeat ;
+        background-position: 4px center;
+    }
+    .mihanblog_like_border img {
+        margin-left: 2px;
+        margin-top: 2px;
+        width: 22px;
+    }
+    .mihanblog_like_dislikeBar {
+        background-color: #FF6F31;
+        padding-left: 5px;
+        border-top-left-radius: 2px;
+        border-bottom-left-radius: 2px;
+        text-align:left ;
+    }
+    .mihanblog_like_dislikeBar:hover{
+        background-color: #D54B10;
+    }
+
+
+
+    .mihanblog_like_show_help {
+        position: relative;
+    }
+    .mihanblog_like_show_help:hover span {
+        display: block;
+    }
+    .mihanblog_like_help_text {
+        background-color: white;
+        border: 1px solid #555555;
+        border-radius: 3px 3px 3px 3px;
+        color: #303030;
+        float: left;
+        font-size: 11px;
+        font-weight: normal;
+        padding: 5px 10px;
+    }
+
+    .mihanblog_like_help_arrow_dislike {
+        background: url("http://romannevisan3.mihanblog.com/public/public/images/icons/like_hover_top.png") no-repeat scroll 16px 0 transparent;
+        left: 0;
+        top: -4px;
+    }
+
+    .mihanblog_like_help_arrow_like {
+        background: url("http://romannevisan3.mihanblog.com/public/public/images/icons/like_hover_top _2.png") no-repeat scroll 16px 0 transparent;
+        left: -10px;
+        top: 29px;
+    }
+
+    .mihanblog_like_help_arrow{
+        height: 6px;
+        position: absolute;
+        width: 100px;
+
+    }
+
+    .mihanblog_like_v2_help_dislike {
+        left: -15px;
+        top: 24px;
+    }
+    .mihanblog_like_v2_help_like {
+        left: 0;
+        top: -35px;
+
+    }
+    .mihanblog_like_v2_help{
+        display: none;
+        position: absolute;
+        white-space: nowrap;
+        z-index: 1;
+    }
+
+    .mihanblog_like_Cnt{
+        display: inline;
+        color: #ffffff;
+    }
+
+</style><script>
+
+	statInfo = new Array();
+	setStatVar = function(index,value){
+		statInfo[index] = value;
+	}
+	getStatVar = function(index){
+		if(statInfo[index]) document.write(statInfo[index]);
+	}
+	
+	setStatVar('total_post','22');
+	setStatVar('total_author','3');
+	setStatVar('modify_date','یکشنبه 23 آبان 1395');
+	
+	setStatVar('today_view','2');
+	setStatVar('yesterday_view','4');
+	
+	setStatVar('this_month_view','130');
+	setStatVar('last_month_view','141');
+
+	setStatVar('total_view','18893');
+	setStatVar('last_view_date','یکشنبه 23 آذر 1399 (02:53)');
+
+
+
+    
+    function setStatFromClient()
+    {
+        var url = 'http://romannevisan3.mihanblog.com/statupdate/?data[refereruri]=http://0-0-7-8.mihanblog.com/&data[postid]=&data[requesturi]=/&data[sdate]=1607826991&data[hash]=159d3366db0c387a3268b1b363791b72&data[resolution]='+screen.width+' X '+screen.height;
+
+//        alert(url);
+//        var newjs = document.createElement("SCRIPT");
+//        newjs.type = 'text/javascript';
+//        newjs.src = url;
+//
+//        var newdiv = document.createElement("DIV");
+//        newdiv.setAttribute("style","display:none");
+
+        document.write(unescape('%3Cscript src="'+url+'" type="text/javascript"%3E%3C/script%3E'));
+//        newdiv.appendChild (newjs);
+//        document.write(newjs);
+//        document.write(appendChild (newdiv);
+
+    };
+    setStatFromClient();
+        
+</script><script>
+	messageForm = function(post_id){
+		try{
+			window.open('/message','message','status=yes,scrollbars=yes,toolbar=no,menubar=no,location=no ,width=480px,height=550px');
+		} catch(e){}
+	}
+</script><script>
+	linkdailyForm = function(){
+		try{
+			window.open('/linkdaily/new','linkdaily','status=yes,scrollbars=yes,toolbar=no,menubar=no,location=no ,width=500px,height=460px');
+		} catch(e){}
+	}
+</script><script>
+
+var MihanblogShopAdsArray = new Array();
+
+function GetMihanBlogShowAds(){
+	if(MihanblogShopAdsArray.length){
+		var adsTarget = 'MihanblogShopAds';
+		var containerWidth = document.getElementById(adsTarget).offsetWidth;
+		if(containerWidth>=200){
+			var adsCnt = parseInt(containerWidth / 200) ;
+			if(adsCnt>MihanblogShopAdsArray.length){
+				adsCnt = MihanblogShopAdsArray.length ; 
+			}
+//			var OneAdsWidth = parseInt(containerWidth / adsCnt) ;
+			var OneAdsWidth = containerWidth / adsCnt ;
+			if(OneAdsWidth>400){
+				OneAdsWidth = 400 ;
+			}
+			var OutHtml = '';
+			var img = '';
+			var link = '';
+			var title = '';
+			var description = '';
+			var imgWidth = 70;
+			if(OneAdsWidth>230){
+				imgWidth = 80;
+			}
+			if(OneAdsWidth>300){
+				imgWidth = 90;
+			}
+			for(adsOne=0;adsOne<adsCnt;adsOne++){
+				
+				img = MihanblogShopAdsArray[adsOne]['img'];
+				link = MihanblogShopAdsArray[adsOne]['link'];
+				title = MihanblogShopAdsArray[adsOne]['title'];
+				description = MihanblogShopAdsArray[adsOne]['description'];
+				
+				OutHtml += '<td style="background-color:#FFF;width: '+OneAdsWidth+'px;border:1px solid #f00;margin:0px 0px;font-size:11px;font-family:tahoma;padding:2px;margin:0px 0px;font-size:11px;border: 1px solid BurlyWood; padding: 1px; height: '+(imgWidth+25)+'px;">';
+
+				OutHtml += '	<a href="http://romannevisan3.mihanblog.com/'+link+'" target="_blank" style="text-decoration:none">';
+
+				OutHtml += '			<div style="width: '+(OneAdsWidth-16)+'px;cursor:pointer;font-size:12px;padding: 4px 1px 4px 7px; white-space: nowrap; text-align: center; font-weight: bold; color: blue;white-space:nowrap;overflow:hidden">';
+				OutHtml += 					title;
+				OutHtml += '			</div>';
+				OutHtml += '			<div style="cursor:pointer;padding: 1px; display: block; float: right; width: '+imgWidth+'px;">';
+				OutHtml += '				<img src="'+img+'.html" style="border:0px;padding:0px;margin:0px;width:'+imgWidth+'px;height:'+imgWidth+'px;">';
+				OutHtml += '			</div>';
+				OutHtml += '			<div style="padding: 1px; display: block; float: right; width: '+(OneAdsWidth-13-imgWidth)+'px; text-align: right;overflow:hidden">';
+				OutHtml += '				<div style="overflow:hidden;cursor:pointer;padding: 2px 3px; line-height: 17px; height: '+(imgWidth-3)+'px; text-align: justify;color:#000;direction:rtl">';
+				OutHtml += 						description;
+				OutHtml += '				</div>';
+				OutHtml += '			</div>';
+
+				OutHtml += '	</a>';
+
+				OutHtml += '</td>';
+			}
+			
+			var Out = '<table align="center" cellpadding="0" cellspacing="2" style="width:'+(OneAdsWidth*adsCnt)+'px;"><tr>'+OutHtml+'</tr></table>'; 
+			
+			Out = '<div style="text-align:center;padding:0px;margin:3px auto;">'+Out+'</div>'; 
+			
+			document.getElementById(adsTarget).style.height = (imgWidth+35)+'px' ;
+			document.getElementById(adsTarget).innerHTML = Out ;
+		}
+	}
+}
+</script>
+    <style>
+        @font-face {
+            font-family: 'Mihan-Iransans';
+            src: url('http://romannevisan3.mihanblog.com/public/public/fonts/Iransans.eot');
+            src: url('http://romannevisan3.mihanblog.com/public/public/fonts/Iransans.eot?') format('embedded-opentype'),
+            url('http://romannevisan3.mihanblog.com/public/public/fonts/Iransans.woff2') format('woff2'),
+            url('http://romannevisan3.mihanblog.com/public/public/fonts/Iransans.woff') format('woff'),
+            url('http://romannevisan3.mihanblog.com/public/public/fonts/Iransans.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+        @font-face {
+            font-family: 'Mihan-IransansBold';
+            src: url('http://romannevisan3.mihanblog.com/public/public/fonts/Iransans-Black.eot');
+            src: url('http://romannevisan3.mihanblog.com/public/public/fonts/Iransans-Black.eot?') format('embedded-opentype'),
+            url('http://romannevisan3.mihanblog.com/public/public/fonts/Iransans-Black.woff2') format('woff2'),
+            url('http://romannevisan3.mihanblog.com/public/public/fonts/Iransans-Black.woff') format('woff'),
+            url('http://romannevisan3.mihanblog.com/public/public/fonts/Iransans-Black.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+        @font-face {
+            font-family: 'Mihan-IransansLight';
+            src: url('http://romannevisan3.mihanblog.com/public/public/fonts/Iransans-UltraLight.eot');
+            src: url('http://romannevisan3.mihanblog.com/public/public/fonts/Iransans-UltraLight.eot?') format('embedded-opentype'),
+            url('http://romannevisan3.mihanblog.com/public/public/fonts/Iransans-UltraLight.woff2') format('woff2'),
+            url('http://romannevisan3.mihanblog.com/public/public/fonts/Iransans-UltraLight.woff') format('woff'),
+            url('http://romannevisan3.mihanblog.com/public/public/fonts/Iransans-UltraLight.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+        @font-face {
+            font-family: 'Mihan-Nassim';
+            src: url('http://romannevisan3.mihanblog.com/public/public/fonts/Nassim.eot');
+            src: url('http://romannevisan3.mihanblog.com/public/public/fonts/Nassim.eot?') format('embedded-opentype'),
+            url('http://romannevisan3.mihanblog.com/public/public/fonts/Nassim.woff2') format('woff2'),
+            url('http://romannevisan3.mihanblog.com/public/public/fonts/Nassim.woff') format('woff'),
+            url('http://romannevisan3.mihanblog.com/public/public/fonts/Nassim.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+        @font-face {
+            font-family: 'Mihan-Koodak';
+            src: url('http://romannevisan3.mihanblog.com/public/public/fonts/Koodak.eot');
+            src: url('http://romannevisan3.mihanblog.com/public/public/fonts/Koodak.eot?') format('embedded-opentype'),
+            url('http://romannevisan3.mihanblog.com/public/public/fonts/Koodak.woff2') format('woff2'),
+            url('http://romannevisan3.mihanblog.com/public/public/fonts/Koodak.woff') format('woff'),
+            url('http://romannevisan3.mihanblog.com/public/public/fonts/Koodak.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+        @font-face {
+            font-family: 'Mihan-Yekan';
+            src: url('http://romannevisan3.mihanblog.com/public/public/fonts/Yekan.eot');
+            src: url('http://romannevisan3.mihanblog.com/public/public/fonts/Yekan.eot?') format('embedded-opentype'),
+            url('http://romannevisan3.mihanblog.com/public/public/fonts/Yekan.woff2') format('woff2'),
+            url('http://romannevisan3.mihanblog.com/public/public/fonts/Yekan.woff') format('woff'),
+            url('http://romannevisan3.mihanblog.com/public/public/fonts/Yekan.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+        @font-face {
+            font-family: 'FontAwesome';
+            src: url('http://romannevisan3.mihanblog.com/public/public/fonts/fontawesome_webfont.eot');
+            src: url('http://romannevisan3.mihanblog.com/public/public/fonts/fontawesome_webfont.eot?') format('embedded-opentype'),
+            url('http://romannevisan3.mihanblog.com/public/public/fonts/fontawesome_webfont.woff2') format('woff2'),
+            url('http://romannevisan3.mihanblog.com/public/public/fonts/fontawesome_webfont.woff') format('woff'),
+            url('http://romannevisan3.mihanblog.com/public/public/fonts/fontawesome_webfont.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+
+
+        
+
+        /* Smartphones (portrait and landscape) ----------- */
+
+        /*
+        @media only screen and (max-width : 480px) and (min-width : 320px) {
+            .sabaClick_advert__wrapper{
+                display:block;
+            }
+            .sabaClick_advert__inner{
+                max-width: 90%;
+                margin: 0 5%;
+            }
+        }
+        */
+
+    </style>
+
+
+
+
+
+
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<META NAME="description" CONTENT="">
+<META NAME="keywords" CONTENT="">
+<META NAME="DesignerUrl" CONTENT="http://Avazak.ir">
+<META NAME="Designer" CONTENT="AVAZAK">
+<link rel="alternate" type="application/rss+xml" title="♥رُمآن‍....♥نِویسآن♥" href="http://romannevisan3.mihanblog.com/post/rss/" />
+<title>♥رُمآن‍....♥نِویسآن♥</title>
+<link href="http://avazak.ir/Theme/style/750.css" type="text/css" rel="stylesheet">
+</style>
+
+</head>
+
+<body>
+
+<div align="center">
+
+<div style="width:860px">	
+
+
+<div id="paper">
+
+<div class="contact">
+
+<div id="header">
+<div class="description">
+<h1 class="title">♥رُمآن‍....♥نِویسآن♥</h1>
+<p class="subtitle"></p>
+</div></div>
+
+<!-- end header -->
+
+		<div id="MihanblogShopAds" style="display:block;height:0px;width:100%;border:0px"></div>
+		<div class="post">
+<h2 class="posttitle"><a href="http://romannevisan3.mihanblog.com/post/1">معرفی وبلاگ</a></h2>
+<div class="text">
+<div id="InPost_MihanblogShopAds" style="display:block;height:0px;width:100%;border:0px"></div>
+
+
+
+
+
+
+
+<div style="text-align: center;"><font size="4"><img src="http://s7.picofile.com/file/8253824468/1351313778.gif" alt="" align="bottom" border="0" hspace="0" vspace="0"></font></div><div style="text-align: center;"><font size="4"><br></font></div><div style="text-align: center;"><font size="4">سلام دوستان خوبین؟<img src="http://mihanblog.com/public/public/rte/images_new/smiles/3.gif"></font></div><div style="text-align: center;"><font size="4"><br></font></div><div style="text-align: center;"><font size="4">به وبلاگ رمان نویسان خوش اومدید&nbsp;<img src="http://mihanblog.com/public/public/rte/images_new/smiles/4.gif"></font></div><div style="text-align: center;"><font size="4"><br></font></div><div style="text-align: center;"><font size="4">اول اینکه اسپیکرها رو روشن کن و صداشو</font></div><div style="text-align: center;"><font size="4"><br></font></div><div style="text-align: center;"><font size="4"><img src="http://mihanblog.com/public/public/rte/images_new/smiles/102.gif">ببر بالا و آهنگ وب رو پلی کن<img src="http://mihanblog.com/public/public/rte/images_new/smiles/102.gif"></font></div><div style="text-align: center;"><font size="4"><br></font></div><div style="text-align: center;"><font size="4">دوم اینکه من مبینا هستم مدیر اصلی وبلاگ که به همراه</font></div><div style="text-align: center;"><font size="4"><br></font></div><div style="text-align: center;"><font size="4">دو تا از دوستام(هستی و مریم) وب رو می چرخونیم<img src="http://mihanblog.com/public/public/rte/images_new/smiles/1.gif"></font></div><div style="text-align: center;"><font size="4"><br></font></div><div style="text-align: center;"><font size="4">سوم همون طور که از اسم وبلاگ پیداس اینجا</font></div><div style="text-align: center;"><font size="4"><br></font></div><div style="text-align: center;"><font size="4">رمان قرار می گیره اما هر رمانی نه...<img src="http://mihanblog.com/public/public/rte/images_new/smiles/68.gif"></font></div><div style="text-align: center;"><font size="4"><br></font></div><div style="text-align: center;"><font size="4">رمانی که دست نوشته ی ما سه نفره<img src="http://mihanblog.com/public/public/rte/images_new/smiles/5.gif"></font></div><div style="text-align: center;"><font size="4"><br></font></div><div style="text-align: center;"><font size="4">هر رمان به صورت قسمت قسمت قرار می گیره</font></div><div style="text-align: center;"><font size="4"><br></font></div><div style="text-align: center;"><font size="4">و در پایان به صورت یک فایل برای دانلود قرار می گیره<img src="http://mihanblog.com/public/public/rte/images_new/smiles/103.gif"></font></div><div style="text-align: center;"><font size="4"><br></font></div><div style="text-align: center;"><font size="4">در پایان هر رمان نظر سنجی جدید قرار میگیره<img src="http://mihanblog.com/public/public/rte/images_new/smiles/100.gif"></font></div><div style="text-align: center;"><font size="4"><br></font></div><div style="text-align: center;"><font size="4">که نظر شما رو درباره ی اون رمان بیان میکنه</font></div><div style="text-align: center;"><font size="4"><br></font></div><div style="text-align: center;"><font size="4">چند تا قانون هم هست که باید رعایت بشه:</font></div><div style="text-align: center;"><font size="4"><br></font></div><div style="text-align: center;"><font size="4">۱_نظر فراموش نشه<img src="http://mihanblog.com/public/public/rte/images_new/smiles/68.gif"></font></div><div style="text-align: center;"><font size="4"><br></font></div><div style="text-align: center;"><font size="4">۲_توهین بی توهین<img src="http://mihanblog.com/public/public/rte/images_new/smiles/68.gif"></font></div><div style="text-align: center;"><font size="4"><br></font></div><div style="text-align: center;"><font size="4">۳_ما همگی انتقاد پذیریم ولی مودبانه باشه<img src="http://mihanblog.com/public/public/rte/images_new/smiles/1.gif"></font></div><div style="text-align: center;"><font size="4"><br></font></div><div style="text-align: center;"><font size="4">۴_ما خوشحال میشیم رمان های ما در وبلاگ و وبسایت</font></div><div style="text-align: center;"><font size="4"><br></font></div><div style="text-align: center;"><font size="4">های دیگه قرار بگیره ولی شرطش ذکر منبع و نام هر سه</font></div><div style="text-align: center;"><font size="4"><br></font></div><div style="text-align: center;"><font size="4">نویسنده بوده در غیر این صورت سر پل صراط حسابتون</font></div><div style="text-align: center;"><font size="4"><br></font></div><div style="text-align: center;"><font size="4">رو میرسیم خخخ<img src="http://mihanblog.com/public/public/rte/images_new/smiles/21.gif"></font></div><div style="text-align: center;"><font size="4"><br></font></div><div style="text-align: center;"><font size="4">۵_از نظر جبرانی خبری نیس<img src="http://mihanblog.com/public/public/rte/images_new/smiles/33.gif"></font></div><div style="text-align: center;"><font size="4"><br></font></div><div style="text-align: center;"><font size="4">۶_</font><font size="4">با تبادل لینک و بنر موافقم<img src="http://mihanblog.com/public/public/rte/images_new/smiles/65.gif"></font><div style="text-align: center;"><font size="4"><br></font></div><div style="text-align: center;"><font size="4">اینم لوگوی وب هست کپی کنید بزارید تو وبتون</font></div><div style="text-align: center;"><font size="4"><br></font></div><div style="text-align: center;"><font size="4"><br></font><p style="text-align:center"><font size="4"><a title="✖رمان نویسان✖" href="http://www.romannevisan3.mihanblog.com" target="_blank"><img src="http://s6.uplod.ir/i/00783/63h479az1eov.jpg" alt="✖رمان نویسان✖" height="400" width="300"></a><br><textarea style="resize:none;overflow:hidden;width:140px;height:22px;text-align:left;background:#FFFFFF;">&lt;!-- Start Code Banner By http://www.romannevisan3.mihanblog.com --&gt;&lt;p style="text-align:center"&gt;&lt;a title="✖رمان نویسان✖" href="http://www.romannevisan3.mihanblog.com" target="_blank"&gt;&lt;img src="http://s6.uplod.ir/i/00783/63h479az1eov.jpg" alt="✖رمان نویسان✖" width="300" height="400"&gt;&lt;/a&gt;&lt;/p&gt;&lt;!-- End Code Banner By http://www.romannevisan3.mihanblog.com --&gt;</textarea></font></p><p style="text-align:center"><font size="4"><br></font></p><p style="text-align:center"><font size="4">اینم جعبه ی اخباره..جدیدترین اخبار وب</font></p><p style="text-align:center"><font size="4">در این جعبه قرار می گیرد<br></font></p></div><font color="#666666"><br></font><div align="center"><font size="4"><div style="background-image: url(&quot; http://s2.picofile.com/file/8263728842/bloggif_57b042a426a53.jpeg&quot;);
+border-bottom: 1px solid rgb(0, 0, 0); border-left: 1px solid rgb(0, 0, 0);
+background-color: rgb(255, 255, 255); width: 200px; height: 200px; font-size:
+20px; overflow: auto; border-right: 1px solid rgb(0, 0, 0);"><font color="#66FFFF"><font color="#FFCC00">اخبار وب:</font><br><br><font color="#CC0000">1</font><font color="#FF0000">.</font><font color="#FF0000">قسمت 15 رمان سایه بان تنهایی قرار گرفت</font><br><font color="#000099">2.معرفی بیماری </font><font color="#000099">بردیا(پارانویا) قرار گرفت<font color="#009900"><br>3.</font><font color="#009900">کانال تلگرام وب تغییر آدرس داد.</font><br></font></font><br>
+</div></font></div><div style="text-align: center;"><font size="4"><br><br>این جدول رمان های ماست</font></div><div style="text-align: center;"><span style="font-size: large;"><br></span></div><div style="text-align: center;"><a href="http://romannevisan3.mihanblog.com/extrapage/novels" target="" title=""><img src="http://s1.picofile.com/file/8263470292/bloggif_57ad9245860f5.png" alt="" align="bottom" border="0" hspace="0" vspace="0"></a></div><div style="text-align: center;"><br></div><div style="text-align: center;"><font size="4">اینم پروفایل</font></div><div style="text-align: center;"><br></div><div style="text-align: center;"><br></div><div style="text-align: center;"><a href="http://romannevisan3.mihanblog.com/extrapage/profile" target="" title=""><img src="http://s1.picofile.com/file/8263470268/bloggif_57ad91a0ef0db.png" alt="" align="bottom" border="0" hspace="0" vspace="0"></a></div><div style="text-align: center;"><br></div><div style="text-align: center;"><font size="4">و این هم بنر دوستان</font></div><div style="text-align: center;"><br></div><div style="text-align: center;"><a href="http://romannevisan3.mihanblog.com/extrapage/friends" target="" title=""><img src="http://s1.picofile.com/file/8263470276/bloggif_57ad92e124fe5.png" alt="" align="bottom" border="0" hspace="0" vspace="0"></a></div><div style="text-align: center;"><span style="font-size: large;"><br></span></div><div style="text-align: center;"><span style="font-size: large;">اینم کانال تلگرام وب هست</span></div><div style="text-align: center;"><font size="4"><br></font></div><font size="4">خوشحال میشیم عضو شید</font></div><div style="text-align: center;"><font size="4"><br></font></div><div style="text-align: center;"><font size="4">Telegram.me/saybantanhaee</font></div><div style="text-align: center;"><font size="4"><br></font></div><div style="text-align: center;"><font size="4">اگر هم پیشنهادی داشتید بگید ممنون&nbsp;میشیم<img src="http://mihanblog.com/public/public/rte/images_new/smiles/25.gif"></font></div><div style="text-align: center;"><font size="4"><br></font></div><div style="text-align: center;"><font size="4">همین دیگه خوش بگذره<img src="http://mihanblog.com/public/public/rte/images_new/smiles/69.gif"></font></div><div style="text-align: center;"><font size="4"><br></font></div><div style="text-align: center;"><font size="4">خداحافظ<img src="http://mihanblog.com/public/public/rte/images_new/smiles/83.gif"></font></div><div style="text-align: center;"></div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<br/>
+<b></b><br/>
+<br><br>
+موضوع: <a title="خبر" href="http://romannevisan3.mihanblog.com/post/category/6">خبر</a>، <br/>
+برچسب ها:
+<a title="خبر" href="http://romannevisan3.mihanblog.com/post/tag/%D8%AE%D8%A8%D8%B1">خبر</a>، <a title="آشنایی با وب" href="http://romannevisan3.mihanblog.com/post/tag/%D8%A2%D8%B4%D9%86%D8%A7%DB%8C%DB%8C%20%D8%A8%D8%A7%20%D9%88%D8%A8">آشنایی با وب</a>، <a title="رمان" href="http://romannevisan3.mihanblog.com/post/tag/%D8%B1%D9%85%D8%A7%D9%86">رمان</a>، <a title="رمان نویسان" href="http://romannevisan3.mihanblog.com/post/tag/%D8%B1%D9%85%D8%A7%D9%86%20%D9%86%D9%88%DB%8C%D8%B3%D8%A7%D9%86">رمان نویسان</a>، <a title="بهترین رمان ها" href="http://romannevisan3.mihanblog.com/post/tag/%D8%A8%D9%87%D8%AA%D8%B1%DB%8C%D9%86%20%D8%B1%D9%85%D8%A7%D9%86%20%D9%87%D8%A7">بهترین رمان ها</a>، </br>
+</div>
+<div class="footerpost">[ سه شنبه 11 خرداد 1395 ]  [ 09:03 ب.ظ ]  [ Mobina  ] [ <a target="_self" href="javascript:newComment(1)">نظرات(<script>setCommentCnt(1)</script>)</a> ]</div>
+</div>
+<div class="post">
+<h2 class="posttitle"><a href="http://romannevisan3.mihanblog.com/post/25">....</a></h2>
+<div class="text">
+<font size="5">با سلام به تمامی &nbsp;رمان دوستان</font><div><font size="5"><br></font></div><div><font size="5">از اونجایی ما خیلی درس داریم و نمیتونیم فعالیت&nbsp;</font></div><div><font size="5"><br></font></div><div><font size="5">داشته باشیم بنابراین تصمیم گرفتیم که وبلاگ رو تا تابستون بعدی&nbsp;</font></div><div><font size="5"><br></font></div><div><font size="5">آپ نکنیم&nbsp;</font></div><div><font size="5"><br></font></div><div><font size="5">خودمون دوس نداریم ولی به علت زیاد بودن درس ها واقعا</font></div><div><font size="5"><br></font></div><div><font size="5">نمیتونیم</font></div><div><font size="5"><br></font></div><div><font size="5">و چون میخوایم یک رمان خوبی از آب دربیاد</font></div><div><font size="5"><br></font></div><div><font size="5">نمیتونیم با عجله اونو بنویسیم</font></div><div><font size="5"><br></font></div><div><font size="5">پس تا تابستون بعدی خدافظ</font></div><div><font size="5"><br></font></div><div><font size="5">پ.ن:جواب کامنت ها داده میشه اما وبلاگ آپ نمیشه</font></div><div><br></div><br/>
+<b></b><br/>
+<br><br>
+موضوع: <a title="خبر" href="http://romannevisan3.mihanblog.com/post/category/6">خبر</a>، <br/>
+برچسب ها:
+<a title="رمان" href="http://romannevisan3.mihanblog.com/post/tag/%D8%B1%D9%85%D8%A7%D9%86">رمان</a>، <a title="رمان نویسان" href="http://romannevisan3.mihanblog.com/post/tag/%D8%B1%D9%85%D8%A7%D9%86%20%D9%86%D9%88%DB%8C%D8%B3%D8%A7%D9%86">رمان نویسان</a>، <a title="بهترین رمان ها" href="http://romannevisan3.mihanblog.com/post/tag/%D8%A8%D9%87%D8%AA%D8%B1%DB%8C%D9%86%20%D8%B1%D9%85%D8%A7%D9%86%20%D9%87%D8%A7">بهترین رمان ها</a>، </br>
+</div>
+<div class="footerpost">[ یکشنبه 23 آبان 1395 ]  [ 08:36 ب.ظ ]  [ Mobina  ] [ <a target="_self" href="javascript:newComment(25)">نظرات(<script>setCommentCnt(25)</script>)</a> ]</div>
+</div>
+<div class="post">
+<h2 class="posttitle"><a href="http://romannevisan3.mihanblog.com/post/24">رمان سایبان تنهایی،قسمت ۱۶</a></h2>
+<div class="text">
+
+<div style="text-align: center;"><span style="font-size: x-large;">سلام به همگی</span><img src="http://mihanblog.com/public/public/rte/images_new/smiles/65.gif"></div><div style="text-align: center;"><font size="5"><br></font></div><div style="text-align: center;"><font size="5">سال تحصیلی جدید با یه هفته تاخیر تسلیت</font><img src="http://mihanblog.com/public/public/rte/images_new/smiles/4.gif"></div><div style="text-align: center;"><font size="5"><br></font></div><div style="text-align: center;"><font size="5">دیگه از این به بعد یکم قسمت ها دیر تر قرار میگیره&nbsp;</font></div><div style="text-align: center;"><font size="5"><br></font></div><div style="text-align: center;"><font size="5">طبیعی هم هست چون مدارسه</font><img src="http://mihanblog.com/public/public/rte/images_new/smiles/37.gif"></div><div style="text-align: center;"><font size="5"><br></font></div><div style="text-align: center;"><font size="5">خب برید ادامه با قسمتی دیگر از من....</font></div>
+
+<br/>
+<b><a href='http://romannevisan3.mihanblog.com/post/24'>ادامه مطلب</a></b><br/>
+<br><br>
+موضوع: <a title="رمان سایه بان تنهایی" href="http://romannevisan3.mihanblog.com/post/category/12">رمان سایه بان تنهایی</a>، <a title="رمان های غمگین" href="http://romannevisan3.mihanblog.com/post/category/5">رمان های غمگین</a>، <a title="رمان های عاشقانه" href="http://romannevisan3.mihanblog.com/post/category/2">رمان های عاشقانه</a>، <br/>
+برچسب ها:
+<a title="رمان غمگین" href="http://romannevisan3.mihanblog.com/post/tag/%D8%B1%D9%85%D8%A7%D9%86%20%D8%BA%D9%85%DA%AF%DB%8C%D9%86">رمان غمگین</a>، <a title="رمان عاشقانه" href="http://romannevisan3.mihanblog.com/post/tag/%D8%B1%D9%85%D8%A7%D9%86%20%D8%B9%D8%A7%D8%B4%D9%82%D8%A7%D9%86%D9%87">رمان عاشقانه</a>، <a title="سایبان تنهایی" href="http://romannevisan3.mihanblog.com/post/tag/%D8%B3%D8%A7%DB%8C%D8%A8%D8%A7%D9%86%20%D8%AA%D9%86%D9%87%D8%A7%DB%8C%DB%8C">سایبان تنهایی</a>، <a title="قسمت شانزدهم رمان سایبان تنهایی" href="http://romannevisan3.mihanblog.com/post/tag/%D9%82%D8%B3%D9%85%D8%AA%20%D8%B4%D8%A7%D9%86%D8%B2%D8%AF%D9%87%D9%85%20%D8%B1%D9%85%D8%A7%D9%86%20%D8%B3%D8%A7%DB%8C%D8%A8%D8%A7%D9%86%20%D8%AA%D9%86%D9%87%D8%A7%DB%8C%DB%8C">قسمت شانزدهم رمان سایبان تنهایی</a>، <a title="رمان" href="http://romannevisan3.mihanblog.com/post/tag/%D8%B1%D9%85%D8%A7%D9%86">رمان</a>، <a title="رمان نویسان" href="http://romannevisan3.mihanblog.com/post/tag/%D8%B1%D9%85%D8%A7%D9%86%20%D9%86%D9%88%DB%8C%D8%B3%D8%A7%D9%86">رمان نویسان</a>، <a title="بهترین رمان ها" href="http://romannevisan3.mihanblog.com/post/tag/%D8%A8%D9%87%D8%AA%D8%B1%DB%8C%D9%86%20%D8%B1%D9%85%D8%A7%D9%86%20%D9%87%D8%A7">بهترین رمان ها</a>، </br>
+</div>
+<div class="footerpost">[ پنجشنبه 8 مهر 1395 ]  [ 11:21 ق.ظ ]  [ Mobina  ] [ <a target="_self" href="javascript:newComment(24)">نظرات(<script>setCommentCnt(24)</script>)</a> ]</div>
+</div>
+<div class="post">
+<h2 class="posttitle"><a href="http://romannevisan3.mihanblog.com/post/23">رمان سایبان تنهایی،قسمت ۱۵</a></h2>
+<div class="text">
+
+<div style="text-align: center;"><font size="5"><img width="383" height="254" align="bottom" alt="" src="http://s2.picofile.com/file/8263885792/PicsArt_%DB%B0%DB%B8_%DB%B0%DB%B5_%DB%B1%DB%B1_%DB%B4%DB%B0_%DB%B1%DB%B4.jpg" border="0" vspace="0" hspace="0"></font></div><div style="text-align: center;"><font size="5"><br></font></div><div style="text-align: center;"><font size="5">سلام به دوستای گل خودم</font><img src="http://mihanblog.com/public/public/rte/images_new/smiles/53.gif"></div><div style="text-align: center;"><font size="5"><br></font></div><div style="text-align: center;"><font size="5">خوبید؟؟</font><img src="http://mihanblog.com/public/public/rte/images_new/smiles/1.gif"></div><div style="text-align: center;"><font size="5"><br></font></div><div style="text-align: center;"><font size="5">تازه رمان داغ شده&nbsp;</font><img src="http://mihanblog.com/public/public/rte/images_new/smiles/4.gif"></div><div style="text-align: center;"><font size="5"><br></font></div><div style="text-align: center;"><font size="5">پس بپرید ادامه...</font></div><div style="text-align: center;"><br></div>
+
+
+
+
+<br/>
+<b><a href='http://romannevisan3.mihanblog.com/post/23'>ادامه مطلب</a></b><br/>
+<br><br>
+موضوع: <a title="رمان سایه بان تنهایی" href="http://romannevisan3.mihanblog.com/post/category/12">رمان سایه بان تنهایی</a>، <a title="رمان های غمگین" href="http://romannevisan3.mihanblog.com/post/category/5">رمان های غمگین</a>، <a title="رمان های عاشقانه" href="http://romannevisan3.mihanblog.com/post/category/2">رمان های عاشقانه</a>، <br/>
+برچسب ها:
+<a title="رمان غمگین" href="http://romannevisan3.mihanblog.com/post/tag/%D8%B1%D9%85%D8%A7%D9%86%20%D8%BA%D9%85%DA%AF%DB%8C%D9%86">رمان غمگین</a>، <a title="رمان عاشقانه" href="http://romannevisan3.mihanblog.com/post/tag/%D8%B1%D9%85%D8%A7%D9%86%20%D8%B9%D8%A7%D8%B4%D9%82%D8%A7%D9%86%D9%87">رمان عاشقانه</a>، <a title="سایبان تنهایی" href="http://romannevisan3.mihanblog.com/post/tag/%D8%B3%D8%A7%DB%8C%D8%A8%D8%A7%D9%86%20%D8%AA%D9%86%D9%87%D8%A7%DB%8C%DB%8C">سایبان تنهایی</a>، <a title="قسمت پانزدهم رمان سایبان تنهایی" href="http://romannevisan3.mihanblog.com/post/tag/%D9%82%D8%B3%D9%85%D8%AA%20%D9%BE%D8%A7%D9%86%D8%B2%D8%AF%D9%87%D9%85%20%D8%B1%D9%85%D8%A7%D9%86%20%D8%B3%D8%A7%DB%8C%D8%A8%D8%A7%D9%86%20%D8%AA%D9%86%D9%87%D8%A7%DB%8C%DB%8C">قسمت پانزدهم رمان سایبان تنهایی</a>، <a title="رمان" href="http://romannevisan3.mihanblog.com/post/tag/%D8%B1%D9%85%D8%A7%D9%86">رمان</a>، <a title="رمان نویسان" href="http://romannevisan3.mihanblog.com/post/tag/%D8%B1%D9%85%D8%A7%D9%86%20%D9%86%D9%88%DB%8C%D8%B3%D8%A7%D9%86">رمان نویسان</a>، <a title="بهترین رمان ها" href="http://romannevisan3.mihanblog.com/post/tag/%D8%A8%D9%87%D8%AA%D8%B1%DB%8C%D9%86%20%D8%B1%D9%85%D8%A7%D9%86%20%D9%87%D8%A7">بهترین رمان ها</a>، </br>
+</div>
+<div class="footerpost">[ دوشنبه 29 شهریور 1395 ]  [ 02:43 ب.ظ ]  [ Mobina  ] [ <a target="_self" href="javascript:newComment(23)">نظرات(<script>setCommentCnt(23)</script>)</a> ]</div>
+</div>
+<div class="post">
+<h2 class="posttitle"><a href="http://romannevisan3.mihanblog.com/post/22">رمان سایبان تنهایی،قسمت ۱۴</a></h2>
+<div class="text">
+
+
+
+<div style="text-align: center;"><font size="5"><img width="383" height="254" align="bottom" alt="" src="http://s2.picofile.com/file/8263885792/PicsArt_%DB%B0%DB%B8_%DB%B0%DB%B5_%DB%B1%DB%B1_%DB%B4%DB%B0_%DB%B1%DB%B4.jpg" border="0" vspace="0" hspace="0"></font></div><div style="text-align: center;"><font size="5"><br></font></div><div style="text-align: center;"><font size="5"><br></font></div><div style="text-align: center;"><font size="5">سلام به همگی</font></div><div style="text-align: center;"><font size="5"><br></font></div><div style="text-align: center;"><font size="5">خوبید؟؟</font></div><div style="text-align: center;"><font size="5"><br></font></div><div style="text-align: center;"><font size="5">اینم قسمتی که من نوشتم</font></div><div style="text-align: center;"><font size="5"><br></font></div><div style="text-align: center;"><font size="5">برید ادامه....</font></div>
+
+
+
+
+
+
+
+
+<br/>
+<b><a href='http://romannevisan3.mihanblog.com/post/22'>ادامه مطلب</a></b><br/>
+<br><br>
+موضوع: <a title="رمان سایه بان تنهایی" href="http://romannevisan3.mihanblog.com/post/category/12">رمان سایه بان تنهایی</a>، <a title="رمان های غمگین" href="http://romannevisan3.mihanblog.com/post/category/5">رمان های غمگین</a>، <a title="رمان های عاشقانه" href="http://romannevisan3.mihanblog.com/post/category/2">رمان های عاشقانه</a>، <br/>
+برچسب ها:
+<a title="رمان غمگین" href="http://romannevisan3.mihanblog.com/post/tag/%D8%B1%D9%85%D8%A7%D9%86%20%D8%BA%D9%85%DA%AF%DB%8C%D9%86">رمان غمگین</a>، <a title="رمان عاشقانه" href="http://romannevisan3.mihanblog.com/post/tag/%D8%B1%D9%85%D8%A7%D9%86%20%D8%B9%D8%A7%D8%B4%D9%82%D8%A7%D9%86%D9%87">رمان عاشقانه</a>، <a title="سایبان تنهایی" href="http://romannevisan3.mihanblog.com/post/tag/%D8%B3%D8%A7%DB%8C%D8%A8%D8%A7%D9%86%20%D8%AA%D9%86%D9%87%D8%A7%DB%8C%DB%8C">سایبان تنهایی</a>، <a title="قسمت چهاردهم رمان سایبان تنهایی" href="http://romannevisan3.mihanblog.com/post/tag/%D9%82%D8%B3%D9%85%D8%AA%20%DA%86%D9%87%D8%A7%D8%B1%D8%AF%D9%87%D9%85%20%D8%B1%D9%85%D8%A7%D9%86%20%D8%B3%D8%A7%DB%8C%D8%A8%D8%A7%D9%86%20%D8%AA%D9%86%D9%87%D8%A7%DB%8C%DB%8C">قسمت چهاردهم رمان سایبان تنهایی</a>، <a title="رمان" href="http://romannevisan3.mihanblog.com/post/tag/%D8%B1%D9%85%D8%A7%D9%86">رمان</a>، <a title="رمان نویسان" href="http://romannevisan3.mihanblog.com/post/tag/%D8%B1%D9%85%D8%A7%D9%86%20%D9%86%D9%88%DB%8C%D8%B3%D8%A7%D9%86">رمان نویسان</a>، <a title="بهترین رمان ها" href="http://romannevisan3.mihanblog.com/post/tag/%D8%A8%D9%87%D8%AA%D8%B1%DB%8C%D9%86%20%D8%B1%D9%85%D8%A7%D9%86%20%D9%87%D8%A7">بهترین رمان ها</a>، </br>
+</div>
+<div class="footerpost">[ پنجشنبه 25 شهریور 1395 ]  [ 01:40 ب.ظ ]  [ Hasti  ] [ <a target="_self" href="javascript:newComment(22)">نظرات(<script>setCommentCnt(22)</script>)</a> ]</div>
+</div>
+<div class="post">
+<h2 class="posttitle"><a href="http://romannevisan3.mihanblog.com/post/21">رمان سایبان تنهایی،قسمت ۱۳</a></h2>
+<div class="text">
+
+
+<div style="text-align: center;"><br><font size="5"><img src="http://s2.picofile.com/file/8263885792/PicsArt_%DB%B0%DB%B8_%DB%B0%DB%B5_%DB%B1%DB%B1_%DB%B4%DB%B0_%DB%B1%DB%B4.jpg" alt="" height="254" align="bottom" border="0" hspace="0" vspace="0" width="383"><br><br>سلام به همگی&nbsp;</font></div><div style="text-align: center;"><font size="5"><br></font></div><div style="text-align: center;"><font size="5">خوبید؟؟</font></div><div style="text-align: center;"><font size="5"><br></font></div><div style="text-align: center;"><font size="5">قبول دارم قسمت قبلی خیلی کم بود</font></div><div style="text-align: center;"><font size="5"><br></font></div><div style="text-align: center;"><font size="5">در عوضش این قسمت&nbsp;</font></div><div style="text-align: center;"><font size="5"><br></font></div><div style="text-align: center;"><font size="5">بیشتره</font></div><div style="text-align: center;"><font size="5"><br></font></div><div style="text-align: center;"><font size="5">بدویید برید ادامه.....</font></div>
+
+
+
+
+
+
+<br/>
+<b><a href='http://romannevisan3.mihanblog.com/post/21'>ادامه مطلب</a></b><br/>
+<br><br>
+موضوع: <a title="رمان سایه بان تنهایی" href="http://romannevisan3.mihanblog.com/post/category/12">رمان سایه بان تنهایی</a>، <a title="رمان های غمگین" href="http://romannevisan3.mihanblog.com/post/category/5">رمان های غمگین</a>، <a title="رمان های عاشقانه" href="http://romannevisan3.mihanblog.com/post/category/2">رمان های عاشقانه</a>، <br/>
+برچسب ها:
+<a title="رمان غمگین" href="http://romannevisan3.mihanblog.com/post/tag/%D8%B1%D9%85%D8%A7%D9%86%20%D8%BA%D9%85%DA%AF%DB%8C%D9%86">رمان غمگین</a>، <a title="رمان عاشقانه" href="http://romannevisan3.mihanblog.com/post/tag/%D8%B1%D9%85%D8%A7%D9%86%20%D8%B9%D8%A7%D8%B4%D9%82%D8%A7%D9%86%D9%87">رمان عاشقانه</a>، <a title="سایبان تنهایی" href="http://romannevisan3.mihanblog.com/post/tag/%D8%B3%D8%A7%DB%8C%D8%A8%D8%A7%D9%86%20%D8%AA%D9%86%D9%87%D8%A7%DB%8C%DB%8C">سایبان تنهایی</a>، <a title="قسمت سیزدهم رمان سایبان تنهایی" href="http://romannevisan3.mihanblog.com/post/tag/%D9%82%D8%B3%D9%85%D8%AA%20%D8%B3%DB%8C%D8%B2%D8%AF%D9%87%D9%85%20%D8%B1%D9%85%D8%A7%D9%86%20%D8%B3%D8%A7%DB%8C%D8%A8%D8%A7%D9%86%20%D8%AA%D9%86%D9%87%D8%A7%DB%8C%DB%8C">قسمت سیزدهم رمان سایبان تنهایی</a>، <a title="رمان" href="http://romannevisan3.mihanblog.com/post/tag/%D8%B1%D9%85%D8%A7%D9%86">رمان</a>، <a title="رمان نویسان" href="http://romannevisan3.mihanblog.com/post/tag/%D8%B1%D9%85%D8%A7%D9%86%20%D9%86%D9%88%DB%8C%D8%B3%D8%A7%D9%86">رمان نویسان</a>، <a title="بهترین رمان ها" href="http://romannevisan3.mihanblog.com/post/tag/%D8%A8%D9%87%D8%AA%D8%B1%DB%8C%D9%86%20%D8%B1%D9%85%D8%A7%D9%86%20%D9%87%D8%A7">بهترین رمان ها</a>، </br>
+</div>
+<div class="footerpost">[ یکشنبه 21 شهریور 1395 ]  [ 11:53 ق.ظ ]  [ Maryam  ] [ <a target="_self" href="javascript:newComment(21)">نظرات(<script>setCommentCnt(21)</script>)</a> ]</div>
+</div>
+<div class="post">
+<h2 class="posttitle"><a href="http://romannevisan3.mihanblog.com/post/20">رمان سایبان تنهایی،قسمت ۱۲</a></h2>
+<div class="text">
+
+
+
+
+<div style="text-align: center;"><br><font size="5"><img src="http://s2.picofile.com/file/8263885792/PicsArt_%DB%B0%DB%B8_%DB%B0%DB%B5_%DB%B1%DB%B1_%DB%B4%DB%B0_%DB%B1%DB%B4.jpg" alt="" align="bottom" border="0" height="254" hspace="0" vspace="0" width="383"><br><br>سلام به همگی</font></div><div style="text-align: center;"><font size="5"><br></font></div><div style="text-align: center;"><font size="5">با قسمت ۱۲ اومدم</font></div><div style="text-align: center;"><font size="5"><br></font></div><div style="text-align: center;"><font size="5">سریع برید ادامه&nbsp;</font></div><div style="text-align: center;"><font size="5"><br></font></div><div style="text-align: center;"><font size="5">نظر فراموش نشه....</font><img src="http://mihanblog.com/public/public/rte/images_new/smiles/5.gif"></div>
+
+
+
+
+
+
+
+
+
+
+<br/>
+<b><a href='http://romannevisan3.mihanblog.com/post/20'>ادامه مطلب</a></b><br/>
+<br><br>
+موضوع: <a title="رمان سایه بان تنهایی" href="http://romannevisan3.mihanblog.com/post/category/12">رمان سایه بان تنهایی</a>، <a title="رمان های غمگین" href="http://romannevisan3.mihanblog.com/post/category/5">رمان های غمگین</a>، <a title="رمان های عاشقانه" href="http://romannevisan3.mihanblog.com/post/category/2">رمان های عاشقانه</a>، <br/>
+برچسب ها:
+<a title="رمان عاشقانه" href="http://romannevisan3.mihanblog.com/post/tag/%D8%B1%D9%85%D8%A7%D9%86%20%D8%B9%D8%A7%D8%B4%D9%82%D8%A7%D9%86%D9%87">رمان عاشقانه</a>، <a title="رمان غمگین" href="http://romannevisan3.mihanblog.com/post/tag/%D8%B1%D9%85%D8%A7%D9%86%20%D8%BA%D9%85%DA%AF%DB%8C%D9%86">رمان غمگین</a>، <a title="سایبان تنهایی" href="http://romannevisan3.mihanblog.com/post/tag/%D8%B3%D8%A7%DB%8C%D8%A8%D8%A7%D9%86%20%D8%AA%D9%86%D9%87%D8%A7%DB%8C%DB%8C">سایبان تنهایی</a>، <a title="قسمت دوازدهم رمان سایبان تنهایی" href="http://romannevisan3.mihanblog.com/post/tag/%D9%82%D8%B3%D9%85%D8%AA%20%D8%AF%D9%88%D8%A7%D8%B2%D8%AF%D9%87%D9%85%20%D8%B1%D9%85%D8%A7%D9%86%20%D8%B3%D8%A7%DB%8C%D8%A8%D8%A7%D9%86%20%D8%AA%D9%86%D9%87%D8%A7%DB%8C%DB%8C">قسمت دوازدهم رمان سایبان تنهایی</a>، <a title="رمان" href="http://romannevisan3.mihanblog.com/post/tag/%D8%B1%D9%85%D8%A7%D9%86">رمان</a>، <a title="رمان نویسان" href="http://romannevisan3.mihanblog.com/post/tag/%D8%B1%D9%85%D8%A7%D9%86%20%D9%86%D9%88%DB%8C%D8%B3%D8%A7%D9%86">رمان نویسان</a>، <a title="بهترین رمان ها" href="http://romannevisan3.mihanblog.com/post/tag/%D8%A8%D9%87%D8%AA%D8%B1%DB%8C%D9%86%20%D8%B1%D9%85%D8%A7%D9%86%20%D9%87%D8%A7">بهترین رمان ها</a>، </br>
+</div>
+<div class="footerpost">[ چهارشنبه 17 شهریور 1395 ]  [ 12:10 ق.ظ ]  [ Maryam  ] [ <a target="_self" href="javascript:newComment(20)">نظرات(<script>setCommentCnt(20)</script>)</a> ]</div>
+</div>
+<div class="post">
+<h2 class="posttitle"><a href="http://romannevisan3.mihanblog.com/post/17">رمان سایبان تنهایی،قسمت ۱۱</a></h2>
+<div class="text">
+<div align="center"><br><font size="5"><img src="http://s2.picofile.com/file/8263885792/PicsArt_%DB%B0%DB%B8_%DB%B0%DB%B5_%DB%B1%DB%B1_%DB%B4%DB%B0_%DB%B1%DB%B4.jpg" alt="" align="bottom" border="0" height="254" hspace="0" vspace="0" width="383"><br><br>درود بر همگی</font></div><div style="text-align: center;"><font size="5"><br></font></div><div style="text-align: center;"><font size="5">خب شرمنده یکم این قسمت دیر شد</font></div><div style="text-align: center;"><font size="5"><br></font></div><div style="text-align: center;"><font size="5">ولی بالاخره قرار گرفت</font></div><div style="text-align: center;"><font size="5"><br></font></div><div style="text-align: center;"><font size="5">بپرید ادامه....</font><img src="http://mihanblog.com/public/public/rte/images_new/smiles/4.gif"></div>
+
+
+
+
+
+
+<br/>
+<b><a href='http://romannevisan3.mihanblog.com/post/17'>ادامه مطلب</a></b><br/>
+<br><br>
+موضوع: <a title="رمان سایه بان تنهایی" href="http://romannevisan3.mihanblog.com/post/category/12">رمان سایه بان تنهایی</a>، <a title="رمان های غمگین" href="http://romannevisan3.mihanblog.com/post/category/5">رمان های غمگین</a>، <a title="رمان های عاشقانه" href="http://romannevisan3.mihanblog.com/post/category/2">رمان های عاشقانه</a>، <br/>
+برچسب ها:
+<a title="رمان عاشقانه" href="http://romannevisan3.mihanblog.com/post/tag/%D8%B1%D9%85%D8%A7%D9%86%20%D8%B9%D8%A7%D8%B4%D9%82%D8%A7%D9%86%D9%87">رمان عاشقانه</a>، <a title="رمان غمگین" href="http://romannevisan3.mihanblog.com/post/tag/%D8%B1%D9%85%D8%A7%D9%86%20%D8%BA%D9%85%DA%AF%DB%8C%D9%86">رمان غمگین</a>، <a title="سایبان تنهایی" href="http://romannevisan3.mihanblog.com/post/tag/%D8%B3%D8%A7%DB%8C%D8%A8%D8%A7%D9%86%20%D8%AA%D9%86%D9%87%D8%A7%DB%8C%DB%8C">سایبان تنهایی</a>، <a title="قسمت یازدهم رمان سایبان تنهایی" href="http://romannevisan3.mihanblog.com/post/tag/%D9%82%D8%B3%D9%85%D8%AA%20%DB%8C%D8%A7%D8%B2%D8%AF%D9%87%D9%85%20%D8%B1%D9%85%D8%A7%D9%86%20%D8%B3%D8%A7%DB%8C%D8%A8%D8%A7%D9%86%20%D8%AA%D9%86%D9%87%D8%A7%DB%8C%DB%8C">قسمت یازدهم رمان سایبان تنهایی</a>، <a title="رمان" href="http://romannevisan3.mihanblog.com/post/tag/%D8%B1%D9%85%D8%A7%D9%86">رمان</a>، <a title="رمان نویسان" href="http://romannevisan3.mihanblog.com/post/tag/%D8%B1%D9%85%D8%A7%D9%86%20%D9%86%D9%88%DB%8C%D8%B3%D8%A7%D9%86">رمان نویسان</a>، <a title="بهترین رمان ها" href="http://romannevisan3.mihanblog.com/post/tag/%D8%A8%D9%87%D8%AA%D8%B1%DB%8C%D9%86%20%D8%B1%D9%85%D8%A7%D9%86%20%D9%87%D8%A7">بهترین رمان ها</a>، </br>
+</div>
+<div class="footerpost">[ جمعه 12 شهریور 1395 ]  [ 01:33 ق.ظ ]  [ Maryam  ] [ <a target="_self" href="javascript:newComment(17)">نظرات(<script>setCommentCnt(17)</script>)</a> ]</div>
+</div>
+<div class="post">
+<h2 class="posttitle"><a href="http://romannevisan3.mihanblog.com/post/16">رمان سایه بان تنهایی،قسمت ۱۰</a></h2>
+<div class="text">
+
+
+
+
+
+
+<div style="text-align: center;"><br><font size="5"><img src="http://s2.picofile.com/file/8263885792/PicsArt_%DB%B0%DB%B8_%DB%B0%DB%B5_%DB%B1%DB%B1_%DB%B4%DB%B0_%DB%B1%DB%B4.jpg" alt="" align="bottom" border="0" height="254" hspace="0" vspace="0" width="383"><br><br>سلوم بکس فرند های گل</font></div><div style="text-align: center;"><font size="5"><br></font></div><div style="text-align: center;"><font size="5">خوبین؟؟</font></div><div style="text-align: center;"><font size="5"><br></font></div><div style="text-align: center;"><font size="5">الحمدالله منم خوبم</font><img src="http://mihanblog.com/public/public/rte/images_new/smiles/67.gif"></div><div style="text-align: center;"><font size="5"><br></font></div><div style="text-align: center;"><font size="5">خب لطفا فحش ندید که چرا قسمت ۱۰ اینقدر دیر</font></div><div style="text-align: center;"><font size="5"><br></font></div><div style="text-align: center;"><font size="5">&nbsp;قرار گرفت</font></div><div style="text-align: center;"><font size="5"><br></font></div><div style="text-align: center;"><font size="5">من الان مسافرتم</font><img src="http://mihanblog.com/public/public/rte/images_new/smiles/16.gif"></div><div style="text-align: center;"><font size="5"><br></font></div><div style="text-align: center;"><font size="5">به زور هم دارم این پست رو میزارم&nbsp;</font><img src="http://mihanblog.com/public/public/rte/images_new/smiles/4.gif"></div><div style="text-align: center;"><font size="5"><br></font></div><div style="text-align: center;"><font size="5">پس کسی اعتراض کرد&nbsp;</font></div><div style="text-align: center;"><font size="5"><br></font></div><div style="text-align: center;"><font size="5">چک میخوره</font><img src="http://mihanblog.com/public/public/rte/images_new/smiles/71.gif"></div><div style="text-align: center;"><font size="5"><br></font></div><div style="text-align: center;"><font size="5">اوکی؟؟</font></div><div style="text-align: center;"><font size="5"><br></font></div><div style="text-align: center;"><font size="5">خب حالا میتونید برید ادامه....</font><img src="http://mihanblog.com/public/public/rte/images_new/smiles/4.gif"></div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<br/>
+<b><a href='http://romannevisan3.mihanblog.com/post/16'>ادامه مطلب</a></b><br/>
+<br><br>
+موضوع: <a title="رمان سایه بان تنهایی" href="http://romannevisan3.mihanblog.com/post/category/12">رمان سایه بان تنهایی</a>، <a title="رمان های غمگین" href="http://romannevisan3.mihanblog.com/post/category/5">رمان های غمگین</a>، <a title="رمان های عاشقانه" href="http://romannevisan3.mihanblog.com/post/category/2">رمان های عاشقانه</a>، <br/>
+برچسب ها:
+<a title="رمان غمگین" href="http://romannevisan3.mihanblog.com/post/tag/%D8%B1%D9%85%D8%A7%D9%86%20%D8%BA%D9%85%DA%AF%DB%8C%D9%86">رمان غمگین</a>، <a title="رمان عاشقانه" href="http://romannevisan3.mihanblog.com/post/tag/%D8%B1%D9%85%D8%A7%D9%86%20%D8%B9%D8%A7%D8%B4%D9%82%D8%A7%D9%86%D9%87">رمان عاشقانه</a>، <a title="سایه بان تنهایی" href="http://romannevisan3.mihanblog.com/post/tag/%D8%B3%D8%A7%DB%8C%D9%87%20%D8%A8%D8%A7%D9%86%20%D8%AA%D9%86%D9%87%D8%A7%DB%8C%DB%8C">سایه بان تنهایی</a>، <a title="قسمت دهم رمان سایه بان تنهایی" href="http://romannevisan3.mihanblog.com/post/tag/%D9%82%D8%B3%D9%85%D8%AA%20%D8%AF%D9%87%D9%85%20%D8%B1%D9%85%D8%A7%D9%86%20%D8%B3%D8%A7%DB%8C%D9%87%20%D8%A8%D8%A7%D9%86%20%D8%AA%D9%86%D9%87%D8%A7%DB%8C%DB%8C">قسمت دهم رمان سایه بان تنهایی</a>، <a title="رمان" href="http://romannevisan3.mihanblog.com/post/tag/%D8%B1%D9%85%D8%A7%D9%86">رمان</a>، <a title="رمان نویسان" href="http://romannevisan3.mihanblog.com/post/tag/%D8%B1%D9%85%D8%A7%D9%86%20%D9%86%D9%88%DB%8C%D8%B3%D8%A7%D9%86">رمان نویسان</a>، <a title="بهترین رمان ها" href="http://romannevisan3.mihanblog.com/post/tag/%D8%A8%D9%87%D8%AA%D8%B1%DB%8C%D9%86%20%D8%B1%D9%85%D8%A7%D9%86%20%D9%87%D8%A7">بهترین رمان ها</a>، </br>
+</div>
+<div class="footerpost">[ سه شنبه 2 شهریور 1395 ]  [ 02:03 ب.ظ ]  [ Mobina  ] [ <a target="_self" href="javascript:newComment(16)">نظرات(<script>setCommentCnt(16)</script>)</a> ]</div>
+</div>
+<div class="post">
+<h2 class="posttitle"><a href="http://romannevisan3.mihanblog.com/post/15">رمان سایه بان تنهایی،قسمت ۹</a></h2>
+<div class="text">
+
+
+
+<div style="text-align: center;"><br><font size="5"><img src="http://s2.picofile.com/file/8263885792/PicsArt_%DB%B0%DB%B8_%DB%B0%DB%B5_%DB%B1%DB%B1_%DB%B4%DB%B0_%DB%B1%DB%B4.jpg" alt="" align="bottom" border="0" height="254" hspace="0" vspace="0" width="383"><br><br>سلام به همگی</font></div><div style="text-align: center;"><font size="5"><br></font></div><div style="text-align: center;"><font size="5">بالاخره نوبت قسمت من رسید</font><img src="http://mihanblog.com/public/public/rte/images_new/smiles/4.gif"></div><div style="text-align: center;"><font size="5"><br></font></div><div style="text-align: center;"><br></div><div style="text-align: center;"><font size="5">خب برید ادامه با قسمت ۹...</font><img src="http://mihanblog.com/public/public/rte/images_new/smiles/65.gif"></div><div style="text-align: center;"><br></div>
+
+
+
+
+
+
+
+
+<br/>
+<b><a href='http://romannevisan3.mihanblog.com/post/15'>ادامه مطلب</a></b><br/>
+<br><br>
+موضوع: <a title="رمان سایه بان تنهایی" href="http://romannevisan3.mihanblog.com/post/category/12">رمان سایه بان تنهایی</a>، <a title="رمان های غمگین" href="http://romannevisan3.mihanblog.com/post/category/5">رمان های غمگین</a>، <a title="رمان های عاشقانه" href="http://romannevisan3.mihanblog.com/post/category/2">رمان های عاشقانه</a>، <br/>
+برچسب ها:
+<a title="رمان غمگین" href="http://romannevisan3.mihanblog.com/post/tag/%D8%B1%D9%85%D8%A7%D9%86%20%D8%BA%D9%85%DA%AF%DB%8C%D9%86">رمان غمگین</a>، <a title="رمان عاشقانه" href="http://romannevisan3.mihanblog.com/post/tag/%D8%B1%D9%85%D8%A7%D9%86%20%D8%B9%D8%A7%D8%B4%D9%82%D8%A7%D9%86%D9%87">رمان عاشقانه</a>، <a title="سایه بان تنهایی" href="http://romannevisan3.mihanblog.com/post/tag/%D8%B3%D8%A7%DB%8C%D9%87%20%D8%A8%D8%A7%D9%86%20%D8%AA%D9%86%D9%87%D8%A7%DB%8C%DB%8C">سایه بان تنهایی</a>، <a title="قسمت نهم رمان سایه بان تنهایی" href="http://romannevisan3.mihanblog.com/post/tag/%D9%82%D8%B3%D9%85%D8%AA%20%D9%86%D9%87%D9%85%20%D8%B1%D9%85%D8%A7%D9%86%20%D8%B3%D8%A7%DB%8C%D9%87%20%D8%A8%D8%A7%D9%86%20%D8%AA%D9%86%D9%87%D8%A7%DB%8C%DB%8C">قسمت نهم رمان سایه بان تنهایی</a>، <a title="رمان" href="http://romannevisan3.mihanblog.com/post/tag/%D8%B1%D9%85%D8%A7%D9%86">رمان</a>، <a title="رمان نویسان" href="http://romannevisan3.mihanblog.com/post/tag/%D8%B1%D9%85%D8%A7%D9%86%20%D9%86%D9%88%DB%8C%D8%B3%D8%A7%D9%86">رمان نویسان</a>، <a title="بهترین رمان ها" href="http://romannevisan3.mihanblog.com/post/tag/%D8%A8%D9%87%D8%AA%D8%B1%DB%8C%D9%86%20%D8%B1%D9%85%D8%A7%D9%86%20%D9%87%D8%A7">بهترین رمان ها</a>، </br>
+</div>
+<div class="footerpost">[ دوشنبه 25 مرداد 1395 ]  [ 01:10 ب.ظ ]  [ Mobina  ] [ <a target="_self" href="javascript:newComment(15)">نظرات(<script>setCommentCnt(15)</script>)</a> ]</div>
+</div>
+<div class="post">
+<h2 class="posttitle"><a href="http://romannevisan3.mihanblog.com/post/14">رمان سایه بان تنهایی،قسمت ۸</a></h2>
+<div class="text">
+
+
+
+<div style="text-align: center;"><br><font size="5"><img src="http://s2.picofile.com/file/8263885792/PicsArt_%DB%B0%DB%B8_%DB%B0%DB%B5_%DB%B1%DB%B1_%DB%B4%DB%B0_%DB%B1%DB%B4.jpg" alt="" align="bottom" border="0" height="254" hspace="0" vspace="0" width="383"><br><br>سلام دوستان</font></div><div style="text-align: center;"><font size="5"><br></font></div><div style="text-align: center;"><font size="5">با قسمت ۸ اومدم</font></div><div style="text-align: center;"><font size="5"><br></font></div><div style="text-align: center;"><font size="5">برای خوندن رمان قسمت ۸</font></div><div style="text-align: center;"><font size="5"><br></font></div><div style="text-align: center;"><font size="5">به ادامه مطلب برید..‌.</font></div>
+
+
+
+
+
+
+
+
+<br/>
+<b><a href='http://romannevisan3.mihanblog.com/post/14'>ادامه مطلب</a></b><br/>
+<br><br>
+موضوع: <a title="رمان سایه بان تنهایی" href="http://romannevisan3.mihanblog.com/post/category/12">رمان سایه بان تنهایی</a>، <a title="رمان های غمگین" href="http://romannevisan3.mihanblog.com/post/category/5">رمان های غمگین</a>، <a title="رمان های عاشقانه" href="http://romannevisan3.mihanblog.com/post/category/2">رمان های عاشقانه</a>، <br/>
+برچسب ها:
+<a title="رمان غمگین" href="http://romannevisan3.mihanblog.com/post/tag/%D8%B1%D9%85%D8%A7%D9%86%20%D8%BA%D9%85%DA%AF%DB%8C%D9%86">رمان غمگین</a>، <a title="رمان عاشقانه" href="http://romannevisan3.mihanblog.com/post/tag/%D8%B1%D9%85%D8%A7%D9%86%20%D8%B9%D8%A7%D8%B4%D9%82%D8%A7%D9%86%D9%87">رمان عاشقانه</a>، <a title="سایه بان تنهایی" href="http://romannevisan3.mihanblog.com/post/tag/%D8%B3%D8%A7%DB%8C%D9%87%20%D8%A8%D8%A7%D9%86%20%D8%AA%D9%86%D9%87%D8%A7%DB%8C%DB%8C">سایه بان تنهایی</a>، <a title="قسمت هشتم رمان سایه بان تنهایی" href="http://romannevisan3.mihanblog.com/post/tag/%D9%82%D8%B3%D9%85%D8%AA%20%D9%87%D8%B4%D8%AA%D9%85%20%D8%B1%D9%85%D8%A7%D9%86%20%D8%B3%D8%A7%DB%8C%D9%87%20%D8%A8%D8%A7%D9%86%20%D8%AA%D9%86%D9%87%D8%A7%DB%8C%DB%8C">قسمت هشتم رمان سایه بان تنهایی</a>، <a title="رمان" href="http://romannevisan3.mihanblog.com/post/tag/%D8%B1%D9%85%D8%A7%D9%86">رمان</a>، <a title="رمان نویسان" href="http://romannevisan3.mihanblog.com/post/tag/%D8%B1%D9%85%D8%A7%D9%86%20%D9%86%D9%88%DB%8C%D8%B3%D8%A7%D9%86">رمان نویسان</a>، <a title="بهترین رمان ها" href="http://romannevisan3.mihanblog.com/post/tag/%D8%A8%D9%87%D8%AA%D8%B1%DB%8C%D9%86%20%D8%B1%D9%85%D8%A7%D9%86%20%D9%87%D8%A7">بهترین رمان ها</a>، </br>
+</div>
+<div class="footerpost">[ پنجشنبه 21 مرداد 1395 ]  [ 03:29 ب.ظ ]  [ Maryam  ] [ <a target="_self" href="javascript:newComment(14)">نظرات(<script>setCommentCnt(14)</script>)</a> ]</div>
+</div>
+
+<!-- end post -->
+
+<div class="pagination">
+ .: تعداد کل صفحات 3 :. 
+<a href="http://romannevisan3.mihanblog.com/page/1"><b>1</b></a>
+<a href="http://romannevisan3.mihanblog.com/page/2"><span>2</span></a>
+<a href="http://romannevisan3.mihanblog.com/page/3"><span>3</span></a>
+</div>
+
+<div id="footer">
+<div class="space"></div>
+<a title="قالب وبلاگ" href="http://avazak.ir"><img src="http://Avazak.ir/Theme/style/image/750-8.png" title="قالب وبلاگ" /></a>
+</div>
+
+</div>
+
+
+<div class="sidebar">
+
+<div class="menu">
+<a href="index.html">صفحه اصلی</a>
+<a href="http://romannevisan3.mihanblog.com/post/list">عناوین مطالب</a>
+<a title"ابزار تماس با ما" href="http://www.avazak.ir/abzar/contact1/mail/?email=javascript:messageForm()">تماس با من</a>
+<a title="قالب وبلاگ رایگان" href="http://avazak.ir/">قالب وبلاگ</a>
+</div>
+
+<h3 class="h3">درباره وبلاگ</h3>
+<div class="sidebar-y">
+<center>
+</center><br><br>
+<div class="About">تاریخ تولد وب: <br />
+۱۳۹۵/۳/۱۱</div>
+</div><div class="FooterSid"></div>
+
+<!--Design By : Avazak.ir-->
+
+<h3 class="h3">نویسندگان</h3>
+<div class="sidebar-y">
+<div class="Link"><a href="http://romannevisan3.mihanblog.com/post/author/1289203">Mobina </a></div>
+<div class="Link"><a href="http://romannevisan3.mihanblog.com/post/author/1541766">Hasti </a></div>
+<div class="Link"><a href="http://romannevisan3.mihanblog.com/post/author/1541767">Maryam </a></div>
+</div><div class="FooterSid"></div>
+
+<!--Design By : Avazak.ir-->
+
+<h3 class="h3">پیوندهای روزانه</h3>
+<div class="sidebar-y">
+<div class="Link"><a href="http://www.one-direction-music.loxblog.com/" target="_blank" title="وبلاگ دایرکشنرا:)" >One Direction</a></div>
+<div class="Link"><a href="http://b-a-d.mihanblog.com/" target="_blank" title="" >I.C.U</a></div>
+<div class="Link"><a href="../romanhayemn.mihanblog.com/index.html" target="_blank" title="" >I Am Anime Lover</a></div>
+<div class="Link"><a href="http://onedirectionmusic.blogfa.com" target="_blank" title="وبلاگ موسیقی" >One Direction</a></div>
+<div class="Link"><a href="../heliastories.mihanblog.com/index.html" target="_blank" title="وبلاگ مسابقه ای" >Photo gallery</a></div>
+<div class="Link"><a href="../www.dream-girls.mihanblog.com/index.html" target="_blank" title="وبلاگ کارتونی" >کلوب دخترا</a></div>
+<div class="Link"><a href="../ketab9595.mihanblog.com/index.html" target="_blank" title="" >یار مهربان من</a></div>
+<div class="Link"><a href="http://dorehamidokh81.mihanblog.com" target="_blank" title="وبلاگ دخترونه" >دورهمی دخترونه</a></div>
+<div class="Link"><a href="../farnaz200.mihanblog.com/index.html" target="_blank" title="وبلاگ مسابقه ای" >مسابقات فری</a></div>
+<div class="Link"><a href="http://hilda24.loxblog.com" target="_blank" title="وبلاگ دخترونه" >دختر خیآل پردآز</a></div>
+<div class="Link"><a href="../kolbehdoostan.mihanblog.com/index.html" target="_blank" title="وبلاگ تفریحی" >♥♥دنیای زیبایی ها♥♥</a></div>
+<div class="Link"><a href="../sefareshatehmahshid.mihanblog.com/index.html" target="_blank" title="وبلاگ سفارشی" >سفارشات مهشید</a></div>
+<div class="Link"><a href="../amin2002.mihanblog.com/index.html" target="_blank" title="وبلاگ داستانی" >یک قدم تا قلم</a></div>
+<div class="Link"><a href="http://cafe-dokhtaroone1.mihanblog.com" target="_blank" title="وبلاگ دخترونه" >کافه دخترونه</a></div>
+<div class="Link"><a href="http://danie-radcliffe.mihanblog.com" target="_blank" title="وبلاگ طرفداران دنیل رادکلیف" >رادکلیفی ها</a></div>
+<div class="Link"><a href="../atrincomplex.mihanblog.com/index.html" target="_blank" title="وبلاگ سفارشی" >مجتمع عطرین</a></div>
+<div class="Link"><a href="../www.melina80.mihanblog.com/index.html" target="_blank" title="وبلاگ دخترونه" >رویای دخترونه</a></div>
+<div class="Link"><a href="../magichighschool.mihanblog.com/index.html" target="_blank" title="وبلاگ کارتونی" >زیرنویس و دوبله برای کارتون ها</a></div>
+<div class="Link"><a href="../rihan.mihanblog.com/index.html" target="_blank" title="وبلاگ تفریحی" >لطیفه های دوستی</a></div>
+<div class="Link"><a href="http://sefareshi2013.mihanblog.com" target="_blank" title="وبلاگ شخصی" >Nero ST</a></div>
+<div class="Link"><a href="http://melika-story.mihanblog.com" target="_blank" title="وبلاگ داستانی" >دآستآن هآی میس ملیکآ</a></div>
+<div class="Link"><a href="http://my-st0ry1.mihanblog.com" target="_blank" title="وبلاگ داستانی" >دآستآن هآی میس بآرآن</a></div>
+<div class="Link"><a href="../melina12.mihanblog.com/index.html" target="_blank" title="وبلاگ دهه هشتادی ها" >♀ پاتوق دهـہ هشتادیــا ♀</a></div>
+<div class="Link"><a href="../www.alone.mihanblog.com/index.html" target="_blank" title="وبلاگ تنهایی" >نیمکت تنهایی</a></div>
+<div class="Link"><a href="http://cafe-novels.blogfa.com" target="_blank" title="وبلاگ داستانی" >کآفه ی رُمآن</a></div>
+<div class="Link"><a href="../countrygirl.mihanblog.com/index.html" target="_blank" title="وبلاگ تفریحی و دخترونه" >کشور دخترونه</a></div>
+<div class="Link"><a href="http://sefareshat-m-mobina.mihanblog.com" target="_blank" title="وبلاگ سفارشی" >سفارشات میس مبینا</a></div>
+<div class="Link"><a href="../www.fazilat4.mihanblog.com/index.html" target="_blank" title="وبلاگ دخترونه" >♥یه دخمل خل و چل♥</a></div>
+<div class="Link"><a href="http://s-r78.mihanblog.com" target="_blank" title="وبلاگ دخترونه و مسابقه ای" >تیم صورتی</a></div>
+<div class="Link"><a href="../0-0-7-8.mihanblog.com/index.html" target="_blank" title="وبلاگ تفریحی" >✖همینی‍...که هَست‍✖</a></div>
+<div class="Link"><a href="../www.tmntningaturtle.mihanblog.com/index.html" target="_blank" title="وبلاگ کارتونی" >لاکپشت های نینجا نوجوان</a></div>
+<div class="Link"><a href="http://f-f-f-f11.blogsky.com" target="_blank" title="وبلاگ شخصی" >نوشته های دردانه</a></div>
+<div class="Link"><a href="../1380kolahghermezi.mihanblog.com/index.html" target="_blank" title="وبلاگ کارتونی" >کلاه قرمزی(وب اولم)</a></div>
+<div class="Link"><a href="http://romannevisan3.mihanblog.com/linkdaily/">آرشیو پیوندهای روزانه</a></div>
+</div><div class="FooterSid"></div>
+
+<!--Design By : Avazak.ir-->
+
+<h3 class="h3">صفحات جانبی</h3>
+<div class="sidebar-y">
+<div class="Link"><a href="http://romannevisan3.mihanblog.com/extrapage/novels">رمان ها</a></div>
+<div class="Link"><a href="http://romannevisan3.mihanblog.com/extrapage/friends">بنرهای دوستان</a></div>
+<div class="Link"><a href="http://romannevisan3.mihanblog.com/extrapage/profile">پروفایل</a></div>
+</div><div class="FooterSid"></div>
+
+<!--Design By : Avazak.ir-->
+
+<h3 class="h3">آرشیو ماهانه</h3>
+<div class="sidebar-y">
+<div class="Link"><a href="http://romannevisan3.mihanblog.com/post/archive/1395/8"> آبان 1395</a></div>
+<div class="Link"><a href="http://romannevisan3.mihanblog.com/post/archive/1395/7"> مهر 1395</a></div>
+<div class="Link"><a href="http://romannevisan3.mihanblog.com/post/archive/1395/6"> شهریور 1395</a></div>
+<div class="Link"><a href="http://romannevisan3.mihanblog.com/post/archive/1395/5"> مرداد 1395</a></div>
+<div class="Link"><a href="http://romannevisan3.mihanblog.com/post/archive/1395/4"> تیر 1395</a></div>
+<div class="Link"><a href="http://romannevisan3.mihanblog.com/post/archive">لیست آرشیوها</a></div>
+</div><div class="FooterSid"></div>
+
+<!--Design By : Avazak.ir-->
+
+<h3 class="h3">آرشیو موضوعی</h3>
+<div class="sidebar-y">
+<div class="Link"><a href="http://romannevisan3.mihanblog.com/post/category/12">رمان سایه بان تنهایی - 17</a></div>
+<div class="Link"><a href="http://romannevisan3.mihanblog.com/post/category/10">اطلاعات - 1</a></div>
+<div class="Link"><a href="http://romannevisan3.mihanblog.com/post/category/6">خبر - 2</a></div>
+<div class="Link"><a href="http://romannevisan3.mihanblog.com/post/category/5">رمان های غمگین - 17</a></div>
+<div class="Link"><a href="http://romannevisan3.mihanblog.com/post/category/2">رمان های عاشقانه - 17</a></div>
+</div><div class="FooterSid"></div>
+
+<!--Design By : Avazak.ir-->
+
+<h3 class="h3">پیوندها</h3>
+<div class="sidebar-y">
+<div class="Link" style="font-size:7pt">
+<a title="قالب میهن بلاگ" href="http://avazak.ir/tag/قالب-میهن-بلاگ/" target="_blank">قالب میهن بلاگ</a>|<a href="http://tools.avazak.ir/theme/avazak/750/قالب-وبلاگ-دو-ستونه-عاشقانه.php" title="قالب وبلاگ عاشقانه" target="_blank">قالب وبلاگ عاشقانه</a></div>
+<div class="Link" style="font-size:7pt"><a href="http://gallery.avazak.ir/thumbnails.php?album=891" title="دانلود عکس عاشقانه" target="_blank">دانلود عکس عاشقانه</a>|<a href="http://kosargasht.ir" title="چارتر" target="_blank">چارتر</a>|﻿<a href="http://www.madakto-security.com/" title="قیمت دستگاه حضور و غیاب" target="_blank">قیمت دستگاه حضور و غیاب</a></div>
+<div class="Link" style="font-size:7pt">﻿|﻿<a href="http://netkara.ir/%D8%AF%D9%88%D8%B1%D8%A8%DB%8C%D9%86-%D9%85%D8%AF
+
+%D8%A7%D8%B1-%D8%A8%D8%B3%D8%AA%D9%87/" title="دوربین مدار بسته" target="_blank">دوربین مدار بسته</a></div>
+<div class="Link" style="font-size:7pt"><a href="http://tebpars.com/green-beans/" title="" target="_blank">خرید قهوه سبز</a>|<a href="http://avazak.ir/abzar/fal" title="فال حافظ" target="_blank">فال حافظ</a>|﻿<a href="http://billboardiran.com/" title="بیلبورد تبلیغاتی" target="_blank">بیلبورد تبلیغاتی</a></div>
+<div class="Link" style="font-size:7pt"><a href="http://www.majazishop.site/item-cat/html/" title="قالب html" target="_blank">قالب html</a>|<a href="http://www.mobinhost.com/%D8%B3%D8%B1%D9%88%D8%B1-%D8%A7%D8%AE%D8%AA%D8%B5%D8%A7%D8%B5%DB%8C/%D8%B3%D8%B1%D9%88%D8%B1-%D8%A7%D8%AE%D8%AA%D8%B5%D8%A7%D8%B5%DB%8C-%D8%A7%DB%8C%D8%B1%D8%A7%D9%86.html" title="خرید سرور اختصاصی ایران از مبین هاست" target="_blank">خرید سرور اختصاصی ایران از مبین هاست</a></div>
+<div class="Link" style="font-size:7pt"><a href="http://shopkaspersky.com/" rel="nofollow" title="خرید لایسنس کسپرسکی" target="_blank">خرید لایسنس کسپرسکی</a>|<a href="http://mihandadeh.com/" title="دامنه" target="_blank">دامنه</a></div></div><div class="FooterSid"></div>
+
+<!--Design By : Avazak.ir-->
+
+
+		<form id="frm-16077721745fd4a80e8b8b9" method="post" action="http://romannevisan3.mihanblog.com/poll/new/fid/16077721745fd4a80e8b8b9/atrty/1607772174/avrvy/0/key/6c15e15303e0078bc537aeba2a23292c/"  onsubmit="window.open('', 'poll', 'toolbar=0,location=0,status=0,menubar=0,scrollbars=1,resizable=0,width=505,height=315')" target="poll"><input type="hidden" name="data[pollid]" value="361110" id="data[pollid]" />		
+<h3 class="h3">نظر سنجی</h3>
+<div class="sidebar-y">
+<center>بیشتر چه نوع رمانی بزاریم؟</center><br>
+<div style="text-align: Right;margin-right:10px" dir="rtl" ><label><input type="radio" name="data[answer]" value="v1">جنایی و پلیسی</label><br> 
+<label><input type="radio" name="data[answer]" value="v2">عاشقانه</label><br> 
+<label><input type="radio" name="data[answer]" value="v3">طنز و کل کلی</label><br> 
+<label><input type="radio" name="data[answer]" value="v4">ترسناک</label><br> 
+<label><input type="radio" name="data[answer]" value="v5">غمگین</label><br> 
+</div>
+<center><input type="submit" value="♥از این نوع بیشتر بزارین♥" class="btn"/></center>
+</div><div class="FooterSid"></div>
+
+		<input type="hidden" name="frm-id" value="16077721745fd4a80e8b8b9" id="frm-id" /></form>
+<!--Design By : Avazak.ir-->
+
+<h3 class="h3">سایت آوازک</h3>
+<div class="sidebar-y">
+<div class="Link" style="font-size:7pt"><a href="http://iransub.tv/" title="دانلود زیرنویس" target="_blank">دانلود زیرنویس</a>|﻿<a href="http://www.atisam.com/fa/services/33/252" title="آتلیه نوزاد و بارداری" target="_blank">آتلیه نوزاد و بارداری</a></div>
+<div class="Link" style="font-size:7pt"><a href="http://parstina.com/fashion/hat/tehrancap" title="کلاه کپ طهران" target="_blank">کلاه کپ طهران</a>|<a href="http://parstina.com/jewelry/necklaces/morghamin" title="خرید گردنبند شهرزاد" target="_blank">خرید گردنبند شهرزاد</a></div>
+<div class="Link" style="font-size:7pt"><a href="http://www.sakhtemoon.com/list/fadini-jack/" rel="nofollow" title="جک فادینی ساختمون دات کام" target="_blank">جک فادینی ساختمون دات کام</a>|<a href="http://iranarchitects.com/companies/switches-sockets" title="قیمت کلید و پریز" target="_blank">قیمت کلید و پریز</a></div>
+<div class="Link" style="font-size:7pt"><a href="http://doorgoo.chat/" title="تلگرام" target="_blank">تلگرام</a>|﻿<a href="http://www.meshopfarsi.ir/%D8%AE%D8%B1%DB%8C%D8%AF-%D8%AF%D8%B3%D8%AA%DA%AF%D8%A7%D9%87-%D8%AF%D9%84%D9%85%D9%87-%D9%BE%DB%8C%DA%86-%D8%B3%D8%A7%D8%B2-%D9%85%DB%8C%DA%A9%D8%B1-%D8%AE%D8%A7%D9%86%DA%AF%DB%8C-%D8%B1%D9%88%D9%84-%DA%A9%D9%86" title="دلمه پیچ" target="_blank">دلمه پیچ</a></div>
+<div class="Link" style="font-size:7pt">﻿<a href="http://dubaikadeh.net/" title="تور ارزان دبی" target="_blank">تور ارزان دبی</a>|﻿<a href="http://tehranrepair.com" title="تعمیر یخچال سای بای ساید" target="_blank">تعمیر یخچال سای بای ساید</a></div>
+<div class="Link" style="font-size:7pt">﻿<a href="http://rentacars.ir/" title="اجاره خودرو" target="_blank">اجاره خودرو</a>|<a href="http://www.music-irooni.org" rel="nofollow" title="دانلود آهنگ جدید" target="_blank">دانلود آهنگ جدید</a></div>
+<div class="Link" style="font-size:7pt"><a href="http://www.apple360.ir/55-handsfree" rel="nofollow" title="هدفون" target="_blank">هدفون</a>|<a href="http://www.chizdownload.com/movie/" rel="nofollow" title="دانلود فیلم جدید" target="_blank">دانلود فیلم جدید</a></div></div><div class="FooterSid"></div>
+
+<!--Design By : Avazak.ir-->
+
+<h3 class="h3">دیگر امکانات</h3>
+<div class="sidebar-y">
+<center><center><audio controls autoplay preload="none" style="width:94%;margin:0% 3%;"><source type="audio/mpeg" id="player" src="http://dl.nex1music.ir/1394/05/19/Ashvan%20-%20Chera%20Gerye%20Kardam%20%5B128%5D.mp3">مرورگر شما از Player ساپورت نمی کند</audio><br /><a href="http://nex1music.ir/tag/دانلود-آهنگ/" target="_blank">دانلود آهنگ</a></center>
+
+
+
+<!-- Online Support by www.1abzar.com --->
+<script>
+ var offline_text="نیستم :(";
+ var online_text="هستم :)";
+ var first_text="کاربر گرامی ، بخش پشتیبانی سایت آماده پاسخگویی به شما می باشد. جهت شروع گفتگو نام خود را وارد کنید :";
+ var rangbg="3C1575"; var rangtxt="F2F2F2";
+</script><script type="text/javascript" src="http://online.1abzar.com/1abzar-mini.php?admin=3051177&mail=1&poz=left"></script><div style="display:none"><h3><a href="http://www.1abzar.com">&#1662;&#1588;&#1578;&#1740;&#1576;&#1575;&#1606;&#1740;</a></h3></div>
+<!-- Online Support by www.1abzar.com --->
+
+
+
+
+
+
+<script type="text/javascript" src="http://1abzaar.ir/abzar/tools/top-page/jquery.min.js"></script><script>var abzar = "<img src=http://s2.picofile.com/file/8263385676/bloggif_57ac87fadcd9d.png/>";</script><script type="text/javascript" src="http://1abzaar.ir/abzar/tools/top-page/scrolltopcontrol.js"></script>
+
+</center>
+</div><div class="FooterSid"></div>
+
+<!--Design By : Avazak.ir-->
+
+<h3 class="h3">طراح قالب: آوازک</h3>
+<div class="sidebar-y">
+<center>
+[ <a title="قالب" href="http://Avazak.ir/">طراح قالب: <a tite="قالب وبلاگ" href="http://Avazak.ir">آوازک</a> ]<br>
+</center>
+</div><div class="FooterSid"></div>
+
+</div></div>
+
+<!-- end sidebar -->
+
+</div></div>
+
+</body>
+
+</html>
+<script>
+//    setTimeout(function () {
+//        GetMihanBlogShowAds();
+//    }, 1000);
+</script>
+<!--NEW SERVER--><!--;)-->
+
+<!--SabaVision Ads Handler--><!--<script type="text/javascript">(function (d) {var url =   location.protocol+'//api.sabavision.com/pox/poxjs.js';d.write('<script type="text/javascript" src="' + url + '" async></scri' + 'pt>');})(document);</script>-->
+
+
+<script type="text/javascript">
+
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-153829-9']);
+    _gaq.push(['_setDomainName', 'romannevisan3.mihanblog.com']);
+    _gaq.push(['_trackPageview']);
+
+    (function() {
+        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+
+</script>
+
+
+<div id='mediaad-Kvcm'></div>
+<meta name="sabavision_zone" content="2500-Z499" />
+<center>
+    <div style="background-color:white;width:90%;padding:20px;margin-top:50px;margin-bottom:50px;">
+        <a href="https://www.cloob.com">شبکه اجتماعی فارسی کلوب</a> | <a href="https://www.seo25.com/product/buy-mobile-traffic-and-get-cheap-targeted-mobile-traffic/" target="_blank">Buy Mobile Traffic</a> | <a href="https://www.soalaat.com">سایت سوالات</a>
+    </div>
+</center>

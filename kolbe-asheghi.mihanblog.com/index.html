@@ -1,0 +1,1534 @@
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" /><link rel="EditURI" type="application/rsd+xml" title="RSD" href="http://kolbe-asheghi.mihanblog.com/xmlrpc?rsd" />
+<script type="text/javascript" src="../static.mihanblog.com/public/scripts/run/g.other.v3.js"></script>
+<script>
+
+	function c_$(id){
+        return document.getElementById(id);
+    }
+    
+			//if (parent.frames.length) top.location.href= document.location;
+		
+	setTodayDate = function(){
+		document.write('1399/09/23');
+		/*864512*/	}
+
+</script>
+
+
+
+        <script type="text/javascript">
+            (function(){
+            var now = new Date();
+            var head = document.getElementsByTagName('head')[0];
+            var script = document.createElement('script');
+            script.async = true;
+            var script_address = 'https://cdn.yektanet.com/js/mihanblog.com/native-mihanblog.com-6531.js';
+            script.src = script_address + '?v=' + now.getFullYear().toString() + '0' + now.getMonth() + '0' + now.getDate() + '0' + now.getHours();
+            head.appendChild(script);
+            })();
+        </script>
+
+        <!--<script type="text/javascript">
+            var head = document.getElementsByTagName("head")[0];
+            var script = document.createElement("script");
+            script.type = "text/javascript";
+            script.async=1;
+            script.src = "https://s1.mediaad.org/serve/mihanblog.com/loader.js" ;
+            head.appendChild(script);
+        </script>-->
+        
+        <script>
+            var sabaVisionWebsiteID = "9bab9dac-041d-4bdb-b39a-1ed789f65eed"; var sabaVisionWebsitePage = "ALL"
+        </script>
+        <link rel="stylesheet" href="https://plus.sabavision.com/dox/dox.min.css">
+        <script src="https://plus.sabavision.com/dox/dox.min.js"></script>
+        
+        <script>
+	try{
+		var commentCnt = new Array();
+		commentCnt[216]='16';commentCnt[217]='10';commentCnt[218]='31';commentCnt[219]='30';commentCnt[220]='14';commentCnt[227]='11';commentCnt[228]='12';commentCnt[229]='4';commentCnt[230]='11';commentCnt[231]='17';commentCnt[232]='4';commentCnt[233]='0';	} catch(e){}
+	
+	newComment = function(post_id){
+		try{
+			window.open('/post/comment/'+post_id,'comment','status=yes,scrollbars=yes,toolbar=no,menubar=no,location=no ,width=480px,height=540px');
+		} catch(e){}
+	}
+	setCommentCnt = function(post_id){
+		try{
+			if(commentCnt[post_id]){
+				document.write(commentCnt[post_id]);
+			} else {
+				document.write(0);
+			}
+		} catch(e){}
+	}
+</script><script>
+
+
+	mihanblogUpdateLike = function(postid,type){
+		var url = '/post/like/'+postid+'/'+type;
+		mihanblogGetAjax(url,function(){});
+	};
+	try{
+        mihanblogGetAjax = function (url,callback) {
+    		var req;
+			if (window.XMLHttpRequest)
+            {
+                // code for IE7+, Firefox, Chrome, Opera, Safari
+			  	req = new XMLHttpRequest();
+			}else{	// code for IE6, IE5
+			  	req = new ActiveXObject("Microsoft.XMLHTTP");
+		  	}
+		    req.open("GET", url, 1);
+		    req.onreadystatechange = function () {
+		        if (req.readyState == 4) {
+		            if (req.status == 200) {
+		            	var response = eval(req.responseText);
+		            	callback();
+		            }else{
+	            		return ;
+		            }
+		        }else{
+					return ;
+		        }
+		    }
+		    req.send(null);
+		}
+	}catch(e){}
+
+	try{
+		var mihanblogLikeArrCnt = new Array();
+		var mihanblogDisLikeArrCnt = new Array();
+
+		mihanblogLikeArrCnt[216]='0';
+mihanblogDisLikeArrCnt[216]='0';
+mihanblogLikeArrCnt[217]='0';
+mihanblogDisLikeArrCnt[217]='0';
+mihanblogLikeArrCnt[218]='0';
+mihanblogDisLikeArrCnt[218]='0';
+mihanblogLikeArrCnt[219]='0';
+mihanblogDisLikeArrCnt[219]='0';
+mihanblogLikeArrCnt[220]='0';
+mihanblogDisLikeArrCnt[220]='0';
+mihanblogLikeArrCnt[227]='0';
+mihanblogDisLikeArrCnt[227]='0';
+mihanblogLikeArrCnt[228]='0';
+mihanblogDisLikeArrCnt[228]='0';
+mihanblogLikeArrCnt[229]='0';
+mihanblogDisLikeArrCnt[229]='0';
+mihanblogLikeArrCnt[230]='0';
+mihanblogDisLikeArrCnt[230]='0';
+mihanblogLikeArrCnt[231]='0';
+mihanblogDisLikeArrCnt[231]='0';
+mihanblogLikeArrCnt[232]='0';
+mihanblogDisLikeArrCnt[232]='0';
+mihanblogLikeArrCnt[233]='0';
+mihanblogDisLikeArrCnt[233]='0';
+	} catch(e){}
+
+
+
+    mihanblogPostLike = function(post_id){
+
+        mihanblogLikeCnt = (mihanblogLikeArrCnt[post_id]? mihanblogLikeArrCnt[post_id] : 0);
+        mihanblogDisLikeCnt = (mihanblogDisLikeArrCnt[post_id]? mihanblogDisLikeArrCnt[post_id] : 0);
+        mihanblogLikeCnt = parseInt(mihanblogLikeCnt);
+        mihanblogDisLikeCnt = parseInt(mihanblogDisLikeCnt);
+
+        document.write(
+                '<div class="mihanblog_like_wrapper ">'+
+                       '<div id="dislikeBar_'+post_id+'" onclick="mihanblogUpdateLike('+post_id+',\'dislike\')"   class="mihanblog_like_bar mihanblog_like_dislikeBar mihanblog_like_show_help ">-<div class="mihanblog_like_Cnt" id="disLikeCnt_'+post_id+'">'+mihanblogDisLikeCnt+'</div>'+
+                            '<span  class="mihanblog_like_v2_help mihanblog_like_v2_help_dislike clearfix"> '+
+                                '<span class="mihanblog_like_help_arrow mihanblog_like_help_arrow_dislike clearfix"></span>'+
+                                '<span class="mihanblog_like_help_text">نمی پسندم</span>'+
+                            '</span>'+
+                        '</div>'+
+                       '<div id="Like_'+post_id+'" class="mihanblog_like_border"></div>'+
+                       '<div id="likeBar_'+post_id+'" onclick="mihanblogUpdateLike('+post_id+',\'like\')"  class="mihanblog_like_bar mihanblog_like_likeBar mihanblog_like_show_help" >+<div class="mihanblog_like_Cnt" id="likeCnt_'+post_id+'">'+mihanblogLikeCnt+'</div>'+
+                            '<span  class="mihanblog_like_v2_help mihanblog_like_v2_help_like clearfix"> '+
+                                '<span class="mihanblog_like_help_arrow mihanblog_like_help_arrow_like clearfix"></span>'+
+                                '<span class="mihanblog_like_help_text">می پسندم</span>'+
+                            '</span>'+
+                        '</div>'+
+
+                '</div>'
+        );
+
+
+
+        mihanblogDisplayeLike(post_id);
+    }
+
+
+    mihanblogDisplayeLike = function(post_id){
+
+        mihanblogLikeCnt = (mihanblogLikeArrCnt[post_id]? mihanblogLikeArrCnt[post_id] : 0);
+        mihanblogDisLikeCnt = (mihanblogDisLikeArrCnt[post_id]? mihanblogDisLikeArrCnt[post_id] : 0);
+        mihanblogLikeCnt = parseInt(mihanblogLikeCnt);
+        mihanblogDisLikeCnt = parseInt(mihanblogDisLikeCnt);
+
+
+
+        sum = mihanblogLikeCnt - mihanblogDisLikeCnt;
+        backgroundBorder =  document.getElementById('Like_'+post_id);
+        var likeObj = document.getElementById('likeCnt_'+post_id);
+        var disLikeObj = document.getElementById('disLikeCnt_'+post_id);
+
+
+
+
+
+        likeObj.innerHTML =  mihanblogLikeCnt ;
+        disLikeObj.innerHTML =  mihanblogDisLikeCnt;
+
+        if(sum == 0){
+            backgroundBorder.style.backgroundImage = "url('/public/public/images/icons/like_likedislike.png')";
+            document.getElementById('dislikeBar_'+post_id).style.width = '19px';
+            document.getElementById('likeBar_'+post_id).style.width = '19px';
+        }else{
+             if(sum > 0){
+                 backgroundBorder.style.backgroundImage = "url('/public/public/images/icons/like_like.png')";
+                 document.getElementById('likeBar_'+post_id).style.width = '23px';
+                 document.getElementById('dislikeBar_'+post_id).style.width = '15px';
+             }else{
+                 backgroundBorder.style.backgroundImage = "url('/public/public/images/icons/like_dislike.png')";
+                 document.getElementById('likeBar_'+post_id).style.width = '15px';
+                 document.getElementById('dislikeBar_'+post_id).style.width = '23px';
+             }
+        }
+
+    }
+
+
+
+
+</script>
+
+<style type="text/css">
+
+
+    .clearfix {display: inline-block;}
+    .clearfix:after {
+        content: ".";
+        display: block;
+        height: 0;
+        clear: both;
+        visibility: hidden;
+    }
+
+    .mihanblog_like_wrapper {
+        color: #ffffff;
+        direction: ltr;
+        position: relative;
+    }
+    .mihanblog_like_wrapper span{
+        display: none;
+    }
+    .mihanblog_like_bar {
+        color: #FFFFFF;
+        cursor: pointer;
+        float: left;
+        font-size: 10px;
+        height: 20px;
+        line-height: 19px;
+        margin: 5px 0;
+    }
+    .mihanblog_like_likeBar {
+        background-color: #88B131;
+        padding-right: 5px;
+        border-top-right-radius: 2px;
+        border-bottom-right-radius: 2px;
+        text-align: right;
+    }
+    .mihanblog_like_likeBar:hover{
+        background-color: #699017;
+    }
+    .mihanblog_like_border {
+        background-color: #666666;
+        border: 1px solid #666666;
+        float: left;
+        font-size: 12px;
+        height: 20px;
+        margin-top: 2px;
+        width: 25px;
+        padding: 3px 5px 2px 0;
+        text-align: center;
+        border-radius: 2px;
+        color: #ffffff;
+        direction: ltr;
+        background-repeat: no-repeat ;
+        background-position: 4px center;
+    }
+    .mihanblog_like_border img {
+        margin-left: 2px;
+        margin-top: 2px;
+        width: 22px;
+    }
+    .mihanblog_like_dislikeBar {
+        background-color: #FF6F31;
+        padding-left: 5px;
+        border-top-left-radius: 2px;
+        border-bottom-left-radius: 2px;
+        text-align:left ;
+    }
+    .mihanblog_like_dislikeBar:hover{
+        background-color: #D54B10;
+    }
+
+
+
+    .mihanblog_like_show_help {
+        position: relative;
+    }
+    .mihanblog_like_show_help:hover span {
+        display: block;
+    }
+    .mihanblog_like_help_text {
+        background-color: white;
+        border: 1px solid #555555;
+        border-radius: 3px 3px 3px 3px;
+        color: #303030;
+        float: left;
+        font-size: 11px;
+        font-weight: normal;
+        padding: 5px 10px;
+    }
+
+    .mihanblog_like_help_arrow_dislike {
+        background: url("http://kolbe-asheghi.mihanblog.com/public/public/images/icons/like_hover_top.png") no-repeat scroll 16px 0 transparent;
+        left: 0;
+        top: -4px;
+    }
+
+    .mihanblog_like_help_arrow_like {
+        background: url("http://kolbe-asheghi.mihanblog.com/public/public/images/icons/like_hover_top _2.png") no-repeat scroll 16px 0 transparent;
+        left: -10px;
+        top: 29px;
+    }
+
+    .mihanblog_like_help_arrow{
+        height: 6px;
+        position: absolute;
+        width: 100px;
+
+    }
+
+    .mihanblog_like_v2_help_dislike {
+        left: -15px;
+        top: 24px;
+    }
+    .mihanblog_like_v2_help_like {
+        left: 0;
+        top: -35px;
+
+    }
+    .mihanblog_like_v2_help{
+        display: none;
+        position: absolute;
+        white-space: nowrap;
+        z-index: 1;
+    }
+
+    .mihanblog_like_Cnt{
+        display: inline;
+        color: #ffffff;
+    }
+
+</style><script>
+
+	statInfo = new Array();
+	setStatVar = function(index,value){
+		statInfo[index] = value;
+	}
+	getStatVar = function(index){
+		if(statInfo[index]) document.write(statInfo[index]);
+	}
+	
+	setStatVar('total_post','198');
+	setStatVar('total_author','0');
+	setStatVar('modify_date','1393/11/23');
+	
+	setStatVar('today_view','8');
+	setStatVar('yesterday_view','59');
+	
+	setStatVar('this_month_view','2138');
+	setStatVar('last_month_view','1700');
+
+	setStatVar('total_view','658372');
+	setStatVar('last_view_date','1399/09/23 (04:31)');
+
+
+
+    
+    function setStatFromClient()
+    {
+        var url = 'http://kolbe-asheghi.mihanblog.com/statupdate/?data[refereruri]=http://leader.mihanblog.com/&data[postid]=&data[requesturi]=/&data[sdate]=1607828525&data[hash]=fc86716862994f404c8d694f835c440d&data[resolution]='+screen.width+' X '+screen.height;
+
+//        alert(url);
+//        var newjs = document.createElement("SCRIPT");
+//        newjs.type = 'text/javascript';
+//        newjs.src = url;
+//
+//        var newdiv = document.createElement("DIV");
+//        newdiv.setAttribute("style","display:none");
+
+        document.write(unescape('%3Cscript src="'+url+'" type="text/javascript"%3E%3C/script%3E'));
+//        newdiv.appendChild (newjs);
+//        document.write(newjs);
+//        document.write(appendChild (newdiv);
+
+    };
+    setStatFromClient();
+        
+</script><script>
+	messageForm = function(post_id){
+		try{
+			window.open('/message','message','status=yes,scrollbars=yes,toolbar=no,menubar=no,location=no ,width=480px,height=550px');
+		} catch(e){}
+	}
+</script><script>
+	linkdailyForm = function(){
+		try{
+			window.open('/linkdaily/new','linkdaily','status=yes,scrollbars=yes,toolbar=no,menubar=no,location=no ,width=500px,height=460px');
+		} catch(e){}
+	}
+</script><script>
+
+var MihanblogShopAdsArray = new Array();
+
+function GetMihanBlogShowAds(){
+	if(MihanblogShopAdsArray.length){
+		var adsTarget = 'MihanblogShopAds';
+		var containerWidth = document.getElementById(adsTarget).offsetWidth;
+		if(containerWidth>=200){
+			var adsCnt = parseInt(containerWidth / 200) ;
+			if(adsCnt>MihanblogShopAdsArray.length){
+				adsCnt = MihanblogShopAdsArray.length ; 
+			}
+//			var OneAdsWidth = parseInt(containerWidth / adsCnt) ;
+			var OneAdsWidth = containerWidth / adsCnt ;
+			if(OneAdsWidth>400){
+				OneAdsWidth = 400 ;
+			}
+			var OutHtml = '';
+			var img = '';
+			var link = '';
+			var title = '';
+			var description = '';
+			var imgWidth = 70;
+			if(OneAdsWidth>230){
+				imgWidth = 80;
+			}
+			if(OneAdsWidth>300){
+				imgWidth = 90;
+			}
+			for(adsOne=0;adsOne<adsCnt;adsOne++){
+				
+				img = MihanblogShopAdsArray[adsOne]['img'];
+				link = MihanblogShopAdsArray[adsOne]['link'];
+				title = MihanblogShopAdsArray[adsOne]['title'];
+				description = MihanblogShopAdsArray[adsOne]['description'];
+				
+				OutHtml += '<td style="background-color:#FFF;width: '+OneAdsWidth+'px;border:1px solid #f00;margin:0px 0px;font-size:11px;font-family:tahoma;padding:2px;margin:0px 0px;font-size:11px;border: 1px solid BurlyWood; padding: 1px; height: '+(imgWidth+25)+'px;">';
+
+				OutHtml += '	<a href="http://kolbe-asheghi.mihanblog.com/'+link+'" target="_blank" style="text-decoration:none">';
+
+				OutHtml += '			<div style="width: '+(OneAdsWidth-16)+'px;cursor:pointer;font-size:12px;padding: 4px 1px 4px 7px; white-space: nowrap; text-align: center; font-weight: bold; color: blue;white-space:nowrap;overflow:hidden">';
+				OutHtml += 					title;
+				OutHtml += '			</div>';
+				OutHtml += '			<div style="cursor:pointer;padding: 1px; display: block; float: right; width: '+imgWidth+'px;">';
+				OutHtml += '				<img src="'+img+'.html" style="border:0px;padding:0px;margin:0px;width:'+imgWidth+'px;height:'+imgWidth+'px;">';
+				OutHtml += '			</div>';
+				OutHtml += '			<div style="padding: 1px; display: block; float: right; width: '+(OneAdsWidth-13-imgWidth)+'px; text-align: right;overflow:hidden">';
+				OutHtml += '				<div style="overflow:hidden;cursor:pointer;padding: 2px 3px; line-height: 17px; height: '+(imgWidth-3)+'px; text-align: justify;color:#000;direction:rtl">';
+				OutHtml += 						description;
+				OutHtml += '				</div>';
+				OutHtml += '			</div>';
+
+				OutHtml += '	</a>';
+
+				OutHtml += '</td>';
+			}
+			
+			var Out = '<table align="center" cellpadding="0" cellspacing="2" style="width:'+(OneAdsWidth*adsCnt)+'px;"><tr>'+OutHtml+'</tr></table>'; 
+			
+			Out = '<div style="text-align:center;padding:0px;margin:3px auto;">'+Out+'</div>'; 
+			
+			document.getElementById(adsTarget).style.height = (imgWidth+35)+'px' ;
+			document.getElementById(adsTarget).innerHTML = Out ;
+		}
+	}
+}
+</script>
+    <style>
+        @font-face {
+            font-family: 'Mihan-Iransans';
+            src: url('http://kolbe-asheghi.mihanblog.com/public/public/fonts/Iransans.eot');
+            src: url('http://kolbe-asheghi.mihanblog.com/public/public/fonts/Iransans.eot?') format('embedded-opentype'),
+            url('http://kolbe-asheghi.mihanblog.com/public/public/fonts/Iransans.woff2') format('woff2'),
+            url('http://kolbe-asheghi.mihanblog.com/public/public/fonts/Iransans.woff') format('woff'),
+            url('http://kolbe-asheghi.mihanblog.com/public/public/fonts/Iransans.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+        @font-face {
+            font-family: 'Mihan-IransansBold';
+            src: url('http://kolbe-asheghi.mihanblog.com/public/public/fonts/Iransans-Black.eot');
+            src: url('http://kolbe-asheghi.mihanblog.com/public/public/fonts/Iransans-Black.eot?') format('embedded-opentype'),
+            url('http://kolbe-asheghi.mihanblog.com/public/public/fonts/Iransans-Black.woff2') format('woff2'),
+            url('http://kolbe-asheghi.mihanblog.com/public/public/fonts/Iransans-Black.woff') format('woff'),
+            url('http://kolbe-asheghi.mihanblog.com/public/public/fonts/Iransans-Black.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+        @font-face {
+            font-family: 'Mihan-IransansLight';
+            src: url('http://kolbe-asheghi.mihanblog.com/public/public/fonts/Iransans-UltraLight.eot');
+            src: url('http://kolbe-asheghi.mihanblog.com/public/public/fonts/Iransans-UltraLight.eot?') format('embedded-opentype'),
+            url('http://kolbe-asheghi.mihanblog.com/public/public/fonts/Iransans-UltraLight.woff2') format('woff2'),
+            url('http://kolbe-asheghi.mihanblog.com/public/public/fonts/Iransans-UltraLight.woff') format('woff'),
+            url('http://kolbe-asheghi.mihanblog.com/public/public/fonts/Iransans-UltraLight.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+        @font-face {
+            font-family: 'Mihan-Nassim';
+            src: url('http://kolbe-asheghi.mihanblog.com/public/public/fonts/Nassim.eot');
+            src: url('http://kolbe-asheghi.mihanblog.com/public/public/fonts/Nassim.eot?') format('embedded-opentype'),
+            url('http://kolbe-asheghi.mihanblog.com/public/public/fonts/Nassim.woff2') format('woff2'),
+            url('http://kolbe-asheghi.mihanblog.com/public/public/fonts/Nassim.woff') format('woff'),
+            url('http://kolbe-asheghi.mihanblog.com/public/public/fonts/Nassim.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+        @font-face {
+            font-family: 'Mihan-Koodak';
+            src: url('http://kolbe-asheghi.mihanblog.com/public/public/fonts/Koodak.eot');
+            src: url('http://kolbe-asheghi.mihanblog.com/public/public/fonts/Koodak.eot?') format('embedded-opentype'),
+            url('http://kolbe-asheghi.mihanblog.com/public/public/fonts/Koodak.woff2') format('woff2'),
+            url('http://kolbe-asheghi.mihanblog.com/public/public/fonts/Koodak.woff') format('woff'),
+            url('http://kolbe-asheghi.mihanblog.com/public/public/fonts/Koodak.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+        @font-face {
+            font-family: 'Mihan-Yekan';
+            src: url('http://kolbe-asheghi.mihanblog.com/public/public/fonts/Yekan.eot');
+            src: url('http://kolbe-asheghi.mihanblog.com/public/public/fonts/Yekan.eot?') format('embedded-opentype'),
+            url('http://kolbe-asheghi.mihanblog.com/public/public/fonts/Yekan.woff2') format('woff2'),
+            url('http://kolbe-asheghi.mihanblog.com/public/public/fonts/Yekan.woff') format('woff'),
+            url('http://kolbe-asheghi.mihanblog.com/public/public/fonts/Yekan.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+        @font-face {
+            font-family: 'FontAwesome';
+            src: url('http://kolbe-asheghi.mihanblog.com/public/public/fonts/fontawesome_webfont.eot');
+            src: url('http://kolbe-asheghi.mihanblog.com/public/public/fonts/fontawesome_webfont.eot?') format('embedded-opentype'),
+            url('http://kolbe-asheghi.mihanblog.com/public/public/fonts/fontawesome_webfont.woff2') format('woff2'),
+            url('http://kolbe-asheghi.mihanblog.com/public/public/fonts/fontawesome_webfont.woff') format('woff'),
+            url('http://kolbe-asheghi.mihanblog.com/public/public/fonts/fontawesome_webfont.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+
+
+        
+
+        /* Smartphones (portrait and landscape) ----------- */
+
+        /*
+        @media only screen and (max-width : 480px) and (min-width : 320px) {
+            .sabaClick_advert__wrapper{
+                display:block;
+            }
+            .sabaClick_advert__inner{
+                max-width: 90%;
+                margin: 0 5%;
+            }
+        }
+        */
+
+    </style>
+
+
+
+
+
+
+<html><head>
+<title>با من حرف بزن</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta name="designer" content="temkade">
+<meta name="designerUrl" content="http://www.temkade.com/">
+<meta name="language" content="Farsi">
+<meta name="author" content="زهرا ">
+<meta name="description" content="با من حرف بزن - این وبلاگ حاوی دلنوشته ورمان وتحلیل سیاسی وفرهنگی واجتماعی میباشد ">
+<meta name="keywords" content="با من حرف بزن, رمان،رمان بامن حرف بزن، رمان جنگ، ولایتمداری،دلنوشته،شهید چمران، دستنوسته های چمران">
+<link rel="alternate" type="application/rss+xml" title="با من حرف بزن" href="http://kolbe-asheghi.mihanblog.com/post/rss/" />
+<script type="text/javascript" src="http://temkade.com/tem/45/jquery.min.js"></script>
+<script type="text/javascript" src="http://temkade.com/tem/45/scrolltopcontrol.js"></script> 
+<script language="javascript" type="text/javascript" src="http://temkade.com/tem/45/temkade.js"></script>
+</head>
+<!--- template40-mihanblog-Version: 2.0 --->
+<!--- Design By : wWw.temkade.Com --->
+<body bgcolor="#FFFFFF">
+<div align="center">
+<table border="0" width="975" cellspacing="0" cellpadding="0" dir="rtl">
+<tr>
+<td>
+
+<div class="bb" ><div class="blogtitle2"><div class="title"><h1><p dir="rtl"><a href="index.html">با من حرف بزن</a></h1></div></div>
+<div class="blogdescription"><p dir="rtl">ما همچنان ایستاده ایم</div></div>
+</div>
+
+<!---------- he ---------------------------->
+<!---------- address-image --------->
+<div style="width:975px; overflow:hidden; height:255px; overflow:hidden; background-image:url('http://temkade.com/tem/45/1.jpg'); background-repeat:no-repeat">
+<!---------- address-image --------->
+<div class="search"><form method="Get" target="_blank" action="http://google.com/search" class=sch><input name="sitesearch" value="http://kolbe-asheghi.mihanblog.com" type="hidden">
+<p dir="rtl"></a><input type="text" name="q" size="21" class=txt ><input type="submit" value=" " class=but>
+</p></form></div>
+</div>
+<!---------- he ---------------------------->
+<div class="m-b-link2"><div style="width:100%">
+<div align="right"><div class="ali-behnamfar"></div></div>
+<div class="menu-b-1"></div>
+<div class="menu-b-2"><div class="vmenu" ><a href="index.html">صفحه ی نخست </a></div></div>
+<div class="menu-b-3"></div>
+<div class="menu-b-2"><div class="vmenu"><a href="mailto:sokotst@yahoo.com">پست الکترونیک</a></div></div>
+<div class="menu-b-3"></div>
+<div class="menu-b-2"><div class="vmenu"><a href="http://kolbe-asheghi.mihanblog.com/post/archive">آرشیو مطالب</a></div></div>
+<div class="menu-b-3"></div>
+<div class="menu-b-2"><div class="vmenu"><a href="javascript:messageForm()">تماس با ما</a></div></div>
+<div class="menu-b-3"></div>
+<div class="menu-b-2"><div class="vmenu"><a href="http://kolbe-asheghi.mihanblog.com/m/">نسخه موبایل</a></div></div>
+<div class="menu-b-3"></div>
+<div class="menu-b-2"><div class="vmenu">
+<a target="_blank" href="http://kolbe-asheghi.mihanblog.com/post/rss/">لینك rss</a></div></div>
+<div class="menu-b-5"></div>
+<div class="menu-b-4"></div>
+</div></div>
+
+<table border="0" width="100%" height="17" cellspacing="0" cellpadding="0">
+<tr>
+<td> </td>
+</tr>
+</table>
+
+<table border="0" width="975" cellspacing="0" cellpadding="0" >
+<tr>
+<td valign="top" width="197">
+
+<div class="menu-ali1"></div>
+<div class="menu-ali2"><div class="menu-pic"><img border="0" src="http://temkade.com/tem/45/13.gif" ></div>
+<div class="m-t">وب سایت من</div></div>
+<div class="menu-ali3"><div class="menu-padding">
+<center><img src="../static.mihanblog.com/public/user_data/web_photo/289/864512.jpg@3341"  /></center>
+<div class="text">من ممکن است نتوانم این تاریکی را از بین ببرم، ولی با همین روشنایی کوچک فرق ظلمت و نور و حق و باطل را نشان می‌دهم و کسیکه بدنبال نور است این نور هرچقدر کوچک باشد در قلب او بزرگ خواهد بود( شهید چمران)<br />
+<br />
+من زهرا متولد شصت کرمونی متاهل وخانه دارم این وبلاگ مجالی است تا از افکارم با شما حرف بزنم به هیچ حزب وگروهی وابسته نیستم وشخصیت مورد علاقم اول امام سید علی وبعد شهید چمرانه کلا ادم شوخ طبعیم وهیچ منظور دیگه ای ندارم ...یه فهرست موضوعی دارم کنار وب که پستای مختلف رو دسته بندی کردم تا دسترسی بهش راحت باشه ،دوست داشتین یه نگاهی بندازین ودیگه اینکه لینک دانلود رمانم:<br />
+ http://kolbe-asheghi.mihanblog.com/extrapage/nilofar<br />
+دیگر هیچ ....</div>
+<div class="vmenu2"><a target="_blank" href="http://kolbe-asheghi.mihanblog.com/post/author/725638">مدیر وب سایت  : زهرا </a></div>
+</div></div>
+<div class="menu-ali4"></div>
+
+<div class="menu-ali1"></div>
+<div class="menu-ali2"><div class="menu-pic"><img border="0" src="http://temkade.com/tem/45/14.gif" ></div>
+<div class="m-t">لینك دوستان</div></div>
+<div class="menu-ali3"><div class="menu-padding">
+<div class="vmenu2"><a target="_blank" title="تم کده : قالب وبلاگ" href="http://www.temkade.com" >قالب وبلاگ</a></div>
+<div class="vmenu2"><a target="_blank" title="بازی آنلاین" href="http://game.temkade.com" >بازی آنلاین</a></div>
+<div class="vmenu2"><a target="_blank" href="http://letter4u.blog.ir/" title="" >جنبش  پیام  رهبری</a></div><div class="vmenu2"><a target="_blank" href="http://tabib271.blog.ir/" title="" >طبیب</a></div><div class="vmenu2"><a target="_blank" href="http://tofanevajeha.mihanblog.com/" title="" >طوفان واژه ها</a></div><div class="vmenu2"><a target="_blank" href="http://light-hearted.blog.ir/" title="" >تبری می باید</a></div><div class="vmenu2"><a target="_blank" href="http://talabe14sale.blogfa.com" title="" >طلبه 14 ساله</a></div><div class="vmenu2"><a target="_blank" href="http://sedayeirani.mihanblog.com/" title="" >صدای ایرانی</a></div><div class="vmenu2"><a target="_blank" href="http://bishtarbedanim.ir/" title="" >بیشتر بدانیم</a></div><div class="vmenu2"><a target="_blank" href="http://www.rahkarnews.ir/" title="" >راهکار نیوز</a></div><div class="vmenu2"><a target="_blank" href="http://besuyezohur.ir/" title="" >به  سوی ظهور</a></div><div class="vmenu2"><a target="_blank" href="http://shahedismailzadeh.blog.ir/" title="" >حلقه صالحین روحانی شهید اسماعیل زاده تسوجی</a></div><div class="vmenu2"><a target="_blank" href="http://istgah3a.blogfa.com" title="" >ایستگاه بیداری</a></div><div class="vmenu2"><a target="_blank" href="http://farmandeh.blog.ir/" title="" >فرمانده</a></div><div class="vmenu2"><a target="_blank" href="http://mfhmiademoghan.blogfa.com/" title="" >موسسه فرهنگی هنری میعاد</a></div><div class="vmenu2"><a target="_blank" href="http://yas90.ir/" title="" >صدای باران</a></div><div class="vmenu2"><a target="_blank" href="http://shalamcha.blogfa.com/" title="" >شهیدان زنده اند</a></div><div class="vmenu2"><a target="_blank" href="http://abdolah44.blogfa.com" title="" >جا مانده</a></div><div class="vmenu2"><a target="_blank" href="http://majnounolhosein.mihanblog.com/" title="" >علی منصور دهقان</a></div><div class="vmenu2"><a target="_blank" href="http://www.hamasi.rozblog.com" title="" >حماسی</a></div><div class="vmenu2"><a target="_blank" href="../delshad-st.mihanblog.com/index.html" title="" >ابراهیم دلشاد</a></div><div class="vmenu2"><a target="_blank" href="http://setaregan57.blogfa.com/" title="" >ستارگان</a></div><div class="vmenu2"><a target="_blank" href="http://abzangiova.blogfa.com/" title="" >طنز کرمونی</a></div><div class="vmenu2"><a target="_blank" href="http://moola115.blogfa.com/" title="" >سنی 22</a></div><div class="vmenu2"><a target="_blank" href="http://nocutpress.com/" title="" >نکات ( حامی احمدی)</a></div><div class="vmenu2"><a target="_blank" href="http://yasekaboudd.mihanblog.com/" title="" >رهپویان خورشید</a></div><div class="vmenu2"><a target="_blank" href="http://javanenghelabi.ir/" title="" >جوان انقلابی پاتوق دختران و پسران انقلابی</a></div><div class="vmenu2"><a target="_blank" href="http://goletaha12.blogfa.com" title="" >ترمه</a></div><div class="vmenu2"><a target="_blank" href="../www.mehrdadsalafzoon.mihanblog.com/index.html" title="" >مطالب حکمت اموز</a></div><div class="vmenu2"><a target="_blank" href="http://www.danehaye-tasbih.blogfa.com/" title="" >دانه های تسبیح</a></div><div class="vmenu2"><a target="_blank" href="http://sarbazekhoda2.samenblog.com/" title="" >سرباز خدا</a></div><div class="vmenu2"><a target="_blank" href="http://razemashreq.blogfa.com" title="" >رازی در منتهی علیه مشرق</a></div><div class="vmenu2"><a target="_blank" href="http://shohada-dargah.blogfa.com/" title="" >افلاکیان</a></div><div class="vmenu2"><a target="_blank" href="http://fawzolazim.mihanblog.com/" title="" >فوز عظیم</a></div><div class="vmenu2"><a target="_blank" href="http://pishipink.mihanblog.com" title="" >حرف دل</a></div><div class="vmenu2"><a target="_blank" href="http://karamad.info/" title="" >انعکاس</a></div><div class="vmenu2"><a target="_blank" href="http://8sal-shahadat.blogfa.com/" title="" >یادگار جنوب</a></div><div class="vmenu2"><a target="_blank" href="http://isco20.blog.ir/" title="" >ببین تا کجا ایستاده ام</a></div><div class="vmenu2"><a target="_blank" href="http://vella.blogfa.com" title="" >میثم</a></div><div class="vmenu2"><a target="_blank" href="http://taba110.rozblog.com/" title="" >تبا</a></div><div class="vmenu2"><a target="_blank" href="http://sharaberohani.loxblog.com" title="" >شراب روحانی</a></div><div class="vmenu2"><a target="_blank" href="http://khatereh313.mihanblog.com/" title="" >خاطره</a></div><div class="vmenu2"><a target="_blank" href="http://sabrbasirat.ir/" title="" >قافله صبر و بصیرت</a></div><div class="vmenu2"><a target="_blank" href="http://www.parvaze-sefid14.blogfa.com/" title="" >خونین شهر تا خرمشهر</a></div><div class="vmenu2"><a target="_blank" href="http://talabe-bazigoosh.blogfa.com/" title="" >یادداشتهای یک طلبه بازیگوش</a></div><div class="vmenu2"><a target="_blank" href="http://www.antivahhabi.blogfa.com/" title="" >انتی وهابیت</a></div><div class="vmenu2"><a target="_blank" href="http://wahhabinews.blogfa.com/" title="" >پایگاه اطلاع رسانی وهابیت</a></div><div class="vmenu2"><a target="_blank" href="http://antivahabism.blogfa.com/" title="" >وهابیت فرقه ای شیشه ای</a></div><div class="vmenu2"><a target="_blank" href="http://mimvanon.blogfa.com" title="" >نقطه سر خط</a></div><div class="vmenu2"><a target="_blank" href="http://aavijeh.blogfa.com/" title="" >اویژه</a></div><div class="vmenu2"><a target="_blank" href="http://daravish.blogfa.com" title="" >نی نامه سکوت درویش</a></div><div class="vmenu2"><a target="_blank" href="http://elit-ordibehesht.blogfa.com/" title="" >زندگی شاید همین باشد</a></div><div class="vmenu2"><a target="_blank" href="../leader.mihanblog.com/index.html" title="" >ولایت فقیه و حکومت اسلامی</a></div><div class="vmenu2"><a target="_blank" href="http://etedal92.mihanblog.com" title="" >اعتدال</a></div><div class="vmenu2"><a target="_blank" href="http://mersad255.blog.ir" title="" >مرصاد</a></div><div class="vmenu2"><a target="_blank" href="http://taranomehaghayegh.blogfa.com/" title="" >ترنم حقایق</a></div><div class="vmenu2"><a target="_blank" href="http://basirat.hamiblog.ir/" title="" >صامدون</a></div><div class="vmenu2"><a target="_blank" href="http://www.ali-khamenaei.blogfa.com/" title="" >رهبری</a></div><div class="vmenu2"><a target="_blank" href="http://kalametalabe.blogfa.com/" title="" >دستنوشته های یک طلبه شیطون</a></div><div class="vmenu2"><a target="_blank" href="http://noentery92.blogfa.com" title="" >ورود ازاد</a></div><div class="vmenu2"><a target="_blank" href="http://y313.rzb.ir" title="" >قلم عاشقان</a></div><div class="vmenu2"><a target="_blank" href="http://baran313.blog.ir" title="" >در دفتر دلت نام خدا را حک کن</a></div><div class="vmenu2"><a target="_blank" href="http://www.takhoda.blog.ir" title="" >تا خدا باید راهها پیمود ورفت</a></div><div class="vmenu2"><a target="_blank" href="http://adabestan1400.mihanblog.com/" title="" >رنگارنگ</a></div><div class="vmenu2"><a target="_blank" href="http://eslamic110.blogfa.com/" title="" >جامعه اسلامی</a></div><div class="vmenu2"><a target="_blank" href="http://kabotar1372.blogfa.com/" title="" >کبوتر</a></div><div class="vmenu2"><a target="_blank" href="http://rooozane.mihanblog.com" title="" >روزنه</a></div><div class="vmenu2"><a target="_blank" href="http://www.aza14.blogfa.com" title="" >هر که دارد هوس کرببلا بسم الله</a></div><div class="vmenu2"><a target="_blank" href="http://ansarclip.ir/" title="" >انصار کلیپ</a></div><div class="vmenu2"><a target="_blank" href="http://delabad.ir/" title="" >دل آباد</a></div><div class="vmenu2"><a target="_blank" href="http://www.ostadnaser.ir/" title="" >آتش پنهان ( استاد صارمی عزیز)</a></div><div class="vmenu2"><a target="_blank" href="http://seyyedanjavi.persianblog.ir/" title="" >بازمانده تنها( اقا سید عزیز)</a></div><div class="vmenu2"><a target="_blank" href="http://khakryz.blogfa.com/" title="" >خاکریزهای مقدم</a></div><div class="vmenu2"><a target="_blank" href="http://www.alghos.mihanblog.com " title="" >الغوث</a></div><div class="vmenu2"><a target="_blank" href="http:////www.sarbazekhoda2.blogfa.com/ " title="" >سرباز خدا</a></div><div class="vmenu2"><a target="_blank" href="http://www.adabibiadabi1.blogfa.com" title="" >مهرداد-بی رودروایسی</a></div><div class="vmenu2"><a target="_blank" href="http://barangol.persianblog.i" title="" >گل باران</a></div><div class="vmenu2"><a target="_blank" href="http://www.ReadBook.ir" title="" >وبسایت دانلود کتاب و مقاله</a></div><div class="vmenu2"><a target="_blank" href="http://yadoon.persianblog.ir/1391/4" title="" >اسلام دین جاودانه</a></div><div class="vmenu2"><a target="_blank" href="http://www.fanus90.blogfa.com" title="" >فانوس 90</a></div><div class="vmenu2"><a target="_blank" href="http://montazeran-k.blogfa.com" title="" >منتظران ظهور</a></div><div class="vmenu2"><a target="_blank" href="http://loveleader.tk" title="" >رهبر عشق</a></div><div class="vmenu2"><a target="_blank" href="http://settr.blogfa.com" title="" >تجلی اندیشه</a></div><div class="vmenu2"><a target="_blank" href="http://www.valayat2.mihanblog.com" title="" >پایگاه جامع ولایت</a></div><div class="vmenu2"><a target="_blank" href="http://hasht-sal.blogfa.com" title="" >هشت سال دفاع مقدس</a></div><div class="vmenu2"><a target="_blank" href="http://www.77hossein.blogfa.com" title="" >امام زمان</a></div><div class="vmenu2"><a target="_blank" href="http://babayi-ke-shahid-shod.blogsky.com" title="" >کجایی سبزترین بابای دنیا؟</a></div><div class="vmenu2"><a target="_blank" href="http://8sal-shahadat.blogfa.com" title="" >یادگار جنوب</a></div><div class="vmenu2"><a target="_blank" href="http://ayatedaneha.persianblog.ir" title="" >ومن ان طفل بازیگوش گستاخم</a></div><div class="vmenu2"><a target="_blank" href="http://shahidbipelak.blogfa.com" title="" >شهید بی پلاک</a></div><div class="vmenu2"><a target="_blank" href="http://mahdi760.blogfa.com" title="" >رفاقت برا همیشه تعطیل</a></div><div class="vmenu2"><a target="_blank" href="http://www.hemmat3229.blogfa.com" title="" >حجاب</a></div><div class="vmenu2"><a target="_blank" href="http://khademoshohada1.blogfa.com" title="" >خادم الشهدا(برقبانی)</a></div><div class="vmenu2"><a target="_blank" href="http://najmolsageb.mihanblog.com" title="" >نجم الثابق</a></div><div class="vmenu2"><a target="_blank" href="http://www.just-my-god.blogfa.com" title="" >only god</a></div><div class="vmenu2"><a target="_blank" href="http://moteahedin.blogfa.com" title="" >زیباترین دستنوشته های شهدا</a></div><div class="vmenu2"><a target="_blank" href="http://j-ashrafipnu.blogfa.com" title="" >بسیج دانشجویی</a></div><div class="vmenu2"><a target="_blank" href="http://bonvari.blogfa.com" title="" >بنواری مهاجر</a></div><div class="vmenu2"><a target="_blank" href="http://mobinmedia.ir/3811" title="" >آؤشیو مستند ( خیلی مفیده)</a></div><div class="vmenu2"><a target="_blank" href="http://www.zahra-media.ir" title="" >دانلود فیلم و...</a></div><div class="vmenu2"><a target="_blank" href="http://www.chemicalmazlom.blogfa.com" title="" >مظلومین شیمیایی ایران</a></div><div class="vmenu2"><a target="_blank" title="تم کده : قالب میهن بلاگ" href="http://mihanblog.temkade.com" >قالب میهن بلاگ</a></div>
+<div class="vmenu2"><a href="http://kolbe-asheghi.mihanblog.com/link/" >مشاهده لیست کامل پیوندها</a></div>
+</div></div>
+<div class="menu-ali4"></div>
+
+
+
+<div class="menu-ali1"></div>
+<div class="menu-ali2"><div class="menu-pic"><img border="0" src="http://temkade.com/tem/45/14.gif" ></div>
+<div class="m-t">لینك های مفید</div></div>
+<div class="menu-ali3"><div class="menu-padding">
+<div class="vmenu2"><a target="_blank" title="قالب وبلاگ" href="http://www.temkade.com/" >قالب وبلاگ</a></div>
+<div class="vmenu2"><a target="_blank" title="تم کده" href="http://www.temkade.com/" >تم کده</a></div>
+<div class="vmenu2"><a target="_blank" title="قالب میهن بلاگ" href="http://mihanblog.temkade.com/" >قالب میهن بلاگ</a></div>
+<div class="vmenu2"><a target="_blank" title="بازی آنلاین" href="http://game.temkade.com/" >بازی آنلاین</a></div>
+<div class="vmenu2"><a target="_blank" title="چت روم" href="http://chat.temkade.com/" >چت روم</a></div>
+<div class="vmenu2"><a target="_blank" title="ابزار وبلاگ" href="http://abzar.temkade.com/" >ابزار وبلاگ</a></div>
+<div class="vmenu2"><a target="_blank" title="تالار گفتمان" href="http://forum.temkade.com/" >تالار گفتمان</a></div>
+<div class="vmenu2"><a target="_blank" title="فال و طالع بینی" href="http://fal.temkade.com/" >فال و طالع بینی</a></div>
+<div class="vmenu2"><a target="_blank" title="آپلود عکس" href="http://up.temkade.com/" >آپلود عکس</a></div>
+<div class="vmenu2"><a target="_blank" title="آپلود" href="http://up.temkade.com/" >آپلود</a></div>
+<div class="vmenu2"><a target="_blank" title="کارت شارژ" href="http://sharj.temkade.com/" >کارت شارژ</a></div>
+<div class="vmenu2"><a target="_blank" title="گالری عکس" href="http://pic.temkade.com/" >گالری عکس</a></div>
+<div class="vmenu2"><a target="_blank" title="عکس بازیگران" href="http://pic.temkade.com/" >عکس بازیگران</a></div>
+<div class="vmenu2"><a target="_blank" title="شارژ آنلاین" href="http://sharj.temkade.com/" >شارژ آنلاین</a></div>
+<div class="vmenu2"><a target="_blank" title="دانلود آهنگ جدید" href="http://www.musicfars.com/" >دانلود آهنگ جدید</a></div>
+</div></div>
+<div class="menu-ali4"></div>
+
+
+
+<div class="menu-ali1"></div>
+<div class="menu-ali2"><div class="menu-pic"><img border="0" src="http://temkade.com/tem/45/16.gif" ></div>
+<div class="m-t">صفحات</div></div>
+<div class="menu-ali3"><div class="menu-padding">
+<div class="vmenu2" ><a target="_blank" href="http://kolbe-asheghi.mihanblog.com/extrapage/delshad">خاطرات اقای دلشاد</a></div><div class="vmenu2" ><a target="_blank" href="http://kolbe-asheghi.mihanblog.com/extrapage/nilofar">دانلود رمان با من حرف بزن</a></div><div class="vmenu2" ><a target="_blank" href="http://kolbe-asheghi.mihanblog.com/extrapage/delveshte">دلم برایت تنگ است</a></div><div class="vmenu2" ><a target="_blank" href="http://kolbe-asheghi.mihanblog.com/extrapage/dastan">قصه انگشتر سلیمان</a></div><div class="vmenu2" ><a target="_blank" href="http://kolbe-asheghi.mihanblog.com/extrapage/asheghaneha">دریا مرا دریاب</a></div></div></div>
+<div class="menu-ali4"></div>
+
+
+		<form id="frm-16077227655fd3e70d91ca0" method="post" action="http://kolbe-asheghi.mihanblog.com/poll/new/fid/16077227655fd3e70d91ca0/atrty/1607722765/avrvy/0/key/7050b24132a4f5411ec574c9efde87b3/"  onsubmit="window.open('', 'poll', 'toolbar=0,location=0,status=0,menubar=0,scrollbars=1,resizable=0,width=505,height=315')" target="poll"><input type="hidden" name="data[pollid]" value="297961" id="data[pollid]" />		
+<div class="menu-ali1"></div>
+<div class="menu-ali2"><div class="menu-pic"><img border="0" src="http://temkade.com/tem/45/32.gif" ></div>
+<div class="m-t">نظر سنجی</div></div>
+<div class="menu-ali3"><div class="menu-padding">
+رمان جادوی عشق رو چطوری ارزیابی میکنین؟(امکان انتخاب چند گزینه  هست)<br>
+<label><input type="checkbox"  name="data[v1]" id="v1" value="1" />حرف نداره</label><br><label><input type="checkbox"  name="data[v2]" id="v2" value="1" />خیلی خوبه  به جزئیات بیشتر بپرداز</label><br><label><input type="checkbox"  name="data[v3]" id="v3" value="1" />خیلی خوبه  زیاد  وارد جزئیات نشو</label><br><label><input type="checkbox"  name="data[v4]" id="v4" value="1" />اصلا خوشم نیومد</label><br><label><input type="checkbox"  name="data[v5]" id="v5" value="1" />با واقعیت  جور درنمیاد </label><br><center><br><input type="submit" value="ثبت رای" style="height: 20; width:130px;"/></center>
+</div></div>
+<div class="menu-ali4"></div>
+
+		<input type="hidden" name="frm-id" value="16077227655fd3e70d91ca0" id="frm-id" /></form>
+<div class="menu-ali1"></div>
+<div class="menu-ali2"><div class="menu-pic"><img border="0" src="http://temkade.com/tem/45/18.gif" ></div>
+<div class="m-t">دیگر موراد</div></div>
+<div class="menu-ali3">
+<div class="menu-padding">
+ » تعداد مطالب : <script>getStatVar('total_post');</script><br>
+ » تعداد نویسندگان : <script>getStatVar('total_author');</script><br>
+ » آخرین بروز رسانی : <script>getStatVar('modify_date');</script><br>
+ » بازدید امروز : <script>getStatVar('today_view');</script><br>
+ » بازدید دیروز : <script>getStatVar('yesterday_view');</script><br>
+ » بازدید این ماه : <script>getStatVar('this_month_view');</script><br>
+ » بازدید ماه قبل : <script>getStatVar('last_month_view');</script><br>
+ » بازدید کل : <script>getStatVar('total_view');</script><br>
+ » آخرین بازدید : <script>getStatVar('last_view_date');</script><br><br>
+</div><div align="center"><div style="width:188px; overflow:hidden; padding-top:13px;"><P><A href="http://rahkarnews.ir/" target=_blank><IMG 
+style="WIDTH: 160px; HEIGHT: 63px" 
+alt="ÑÇå˜ÇÑäíæÒ" hspace=0 
+src="http://www.uplooder.net/img/image/53/af68dd6efa57a24520111e2bf35ec820/200-80---4.jpg" border=1></A> </P>
+
+
+
+
+
+
+
+<!-- PersianStat -->
+<script language='javascript' type='text/javascript' src='http://www.persianstat.com/service/stat.js'></script>
+<script language='javascript' type='text/javascript'>
+persianstat(10167450, 0);
+</script>
+<!-- /PersianStat -->
+
+
+
+<!-- Begin WebGozar.com Counter code -->
+<script type="text/javascript" language="javascript" src="http://www.webgozar.ir/c.aspx?Code=2705618&amp;t=counter" ></script>
+<noscript><a href="http://www.webgozar.com/counter/stats.aspx?code=2705618" target="_blank">&#1570;&#1605;&#1575;&#1585;</a></noscript>
+<!-- End WebGozar.com Counter code -->
+
+
+
+
+
+
+
+
+
+
+<a target='_blank' href='http://www.iranskin.com/online'><span style='text-decoration: none'>Online</span></a>
+<script type='text/JavaScript'>
+var oulb= 'http://www.iranskin.com/online/';
+function CheckBrowser(){
+if(navigator.appName == "Microsoft Internet Explorer")	{
+document.write('<scrip'+'t src="'+oulb+'js/jquery.min.js"></s'+'cript><scrip'+'t src="'+oulb+'js/js.php?c=5&t=3"></s'+'cript>');return true;}document.write('<scrip'+'t src="'+oulb+'cod.php?c=5&t=3"></s'+'cript>');
+return false; }</script>
+<script type='text/JavaScript'>CheckBrowser()</script>
+<a target='_blank' href='http://www.iranskin.com'><span style='text-decoration: none'>User</span></a>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<script   type="text/javascript"   src="http://www.rahpouyan.net/newstj.php"   charset="utf-8"></script>
+
+
+
+
+<script language='JavaScript' type='text/javascript' src='http://www.jonbeshnet.ir/sites/default/files/logo/entekhab/entekhab_8.js'></script>
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- start logo cod off http://ghadeer313.blogfa.com/ --><p align="center"><p align="center"><a href="http://ghadeer313.blogfa.com/" target="_blank"><img border="0" src="http://s3.picofile.com/file/7709496662/78957418_e70c_4887_ade1_c7462c93515f_gifwwwwwwwwwwwwwwwwwwwwwwww.gif" width="115" height="200" alt=""></a></p><!--finish logo cod off http://ghadeer313.blogfa.com/ -->
+
+
+
+
+
+ 
+
+
+
+
+
+
+
+
+
+<SPAN>
+<a target=_blank href="http://www.harfeto.ir" >
+<embed id="flash" width="120" height="240" wmode="transparent" type="application/x-shockwave-flash" src="http://up-mazloum.ir/farakhun/1.swf" quality="high" pluginspage="http://www.adobe.com" name="obj1" menu="false">
+</embed></a>
+</span>
+
+
+
+
+<!-- start logo cod off http://javanenghelabi.ir/ --><p align="center"><p align="center"><a href="http://javanenghelabi.ir/" target="_blank"><img border="0" src="http://javanenghelabi.ir/wp-content/uploads/javanenghelabi-logo-2.gif" width="125" height="125" alt="وبگاه جوان انقلابی"></a></p><!--finish logo cod off http://javanenghelabi.ir/ -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- start logo cod off http://isco20.blog.ir --><p align="center"><p align="center"><a href="http://isco20.blog.ir" target="_blank"><img border="0" src="http://bayanbox.ir/id/6663678476656755464?view" width="140" height="90" alt="موج های زیرزمینی"></a></p><!--finish logo cod off http://isco20.blog.ir -->
+
+
+
+
+<script language=”JavaScript” src="”http%253A/reba.ir/portal/wp-content/uploads/Banner/Right.js”.html" type=”text/javascript”></script><script language=”JavaScript” type=”text/javascript”> cot(“http://reba.ir/portal/wp-content/uploads/Banner/far.png”)</script>
+</div></div>
+</div>
+<div class="menu-ali4"></div>
+
+</td>
+<td valign="top" width="9"> </td>
+<td valign="top" width="564">
+
+
+<!---------- block sabet ------------------------>
+<div class="post-b"></div>
+<div class="post-v">
+<div align="center"><div class="post-v2"><div align="center">
+<a target="_blank" title="جهت اطلاع از تنظیمات و ویرایش این قالب اینجا را کلیک کنید " 
+href="http://www.temkade.com">
+جهت اطلاع از تنظیمات و ویــــرایش این قالب اینجا را کلیک کنید.
+</a></div></div></div>
+</div>
+<div class="post-p2"></div>
+<!---------- block sabet ------------------------>
+
+<div class="space1" ></div>
+<div class="q1" ></div>
+<div class="space1" ></div>
+
+		<div id="MihanblogShopAds" style="display:block;height:0px;width:100%;border:0px"></div>
+		<div class="post-b"></div>
+<div class="post-v">
+<div class="title-post"><div class="link-title-post"><a href="http://kolbe-asheghi.mihanblog.com/post/233">برگهای برنده تان  را  نسوزانید </a></div></div>
+<div class="post-b2"></div>
+<div align="center"><div class="post-v2"><div align="right" >
+<BlogComment><a target="_self" href="javascript:newComment(233)" >نظرات (<script>setCommentCnt(233)</script>)</a></BlogComment>
+ | <br><br>
+<div id="InPost_MihanblogShopAds" style="display:block;height:0px;width:100%;border:0px"></div><div><img hspace="0" border="0" align="baseline" vspace="0" src="http://ths.parsijoo.ir/th?id=965d607c79172bab2d2dc9649db029d" alt=""></div>امریکایی ها &nbsp;با &nbsp;گستاخی تمام &nbsp;گفته &nbsp;بودند &nbsp;ایران &nbsp;دستش بسته است &nbsp; و &nbsp;ایران &nbsp;دستش خالی است &nbsp;!!!!!!!!<div>اقای رو حانی روز 22 بهمت &nbsp;امدیم &nbsp; تا &nbsp;با &nbsp;دست &nbsp;پر &nbsp;به &nbsp;مذاکره بروید &nbsp;</div><div>به انها &nbsp;بگویید &nbsp;این &nbsp;ملت &nbsp;هیچ &nbsp;گونه &nbsp;کوتاه &nbsp;نخواهد &nbsp;امد &nbsp;</div><div>به &nbsp;انها &nbsp;بگویید &nbsp;این &nbsp;ملت &nbsp; از عزت &nbsp;خود &nbsp;از منافع &nbsp;ملی خود &nbsp;نخواهد &nbsp;گذشت &nbsp;</div><div>اقای روحانی &nbsp;ممکنه &nbsp;ما &nbsp;منتقد &nbsp;شما &nbsp;باشیم &nbsp;اما &nbsp;بدانید که منتقدان &nbsp;شما &nbsp;برگهای برنده &nbsp;شما &nbsp;هستند &nbsp; شما &nbsp;باید &nbsp;بجای اینکه &nbsp; منتقدان &nbsp;خود &nbsp;را &nbsp;مورد &nbsp;شماتت &nbsp;و بی احترامی قرار دهید &nbsp; انها &nbsp;رو &nbsp;برگهای برنده خود &nbsp;در مذاکرات &nbsp;بدانید &nbsp;به &nbsp;انها بگویید در ایران &nbsp; کسانی هستند &nbsp;که &nbsp;از منافع &nbsp;ملی شان &nbsp;نخواهند &nbsp;گشت &nbsp; محکم &nbsp; ایستادگی کنید &nbsp;ذلت &nbsp;نپذیرید &nbsp;و &nbsp;سربلند &nbsp;از این &nbsp;امتحان &nbsp;بیرون &nbsp;ایید &nbsp;و &nbsp;خدا &nbsp;نصرتش را &nbsp;شامل &nbsp;حال &nbsp;شما &nbsp;و ما &nbsp;خواهد &nbsp;کرد &nbsp;.</div> <br><br>
+<!--- category ---><!--- /category --->
+<!--- link ---><!--- /link --->
+<!--- tag ---><!--- /tag --->
+</div></div></div>
+<div class="post-b2"></div>
+</div>
+<div class="post-p">
+<div style="width:100%; padding:8px 15px 10px 0px; color:#666666; ">
+<div class="icon1" ><img border="0" src="http://temkade.com/tem/45/27.gif" ></div>
+<div class="icon3" style="width: 10px; height: 1px" ></div>
+<div class="icon2" >نویسنده : زهرا </div>
+<div class="icon3" ></div>
+<div class="icon2" >تاریخ : 1393/11/23</div>
+<div class="icon3" ></div>
+<div class="icon2" >زمان : 06:43 بعد از ظهر</div>
+</div>
+</div>
+<div class="post-b"></div>
+<div class="post-v">
+<div class="title-post"><div class="link-title-post"><a href="http://kolbe-asheghi.mihanblog.com/post/232">دهه  فجر مبارک</a></div></div>
+<div class="post-b2"></div>
+<div align="center"><div class="post-v2"><div align="right" >
+<BlogComment><a target="_self" href="javascript:newComment(232)" >نظرات (<script>setCommentCnt(232)</script>)</a></BlogComment>
+ | <br><br>
+
+<div style="text-align: center;"><br></div><div style="text-align: center;"><br></div><div style="text-align: center;"><img hspace="0" border="0" align="baseline" vspace="0" src="http://bayanbox.ir/id/892991121199651197?preview" alt=""></div><div style="text-align: center;"><br></div><div style="text-align: center;"><font size="4"><br></font></div><div style="text-align: center;"><font size="4">سلام &nbsp;دهه &nbsp;فجر بر همتون &nbsp;مبارک &nbsp;</font><img src="http://mihanblog.com/public/public/rte/images_new/smiles/53.gif"><img src="http://mihanblog.com/public/public/rte/images_new/smiles/1.gif"></div><div style="text-align: center;"><font size="3" color="#ff0000"><b><br></b></font></div><div style="text-align: center;"><a href="http://www.ahmadinejad.ir/" target="_blank" title=""><font size="3" color="#ff0000"><b>راستی سایت &nbsp;احمدی نژاد &nbsp; هم &nbsp;افتتاح &nbsp;شد&nbsp;</b></font></a></div>
+
+ <br><br>
+<!--- category ---><!--- /category --->
+<!--- link ---><!--- /link --->
+<!--- tag ---><!--- /tag --->
+</div></div></div>
+<div class="post-b2"></div>
+</div>
+<div class="post-p">
+<div style="width:100%; padding:8px 15px 10px 0px; color:#666666; ">
+<div class="icon1" ><img border="0" src="http://temkade.com/tem/45/27.gif" ></div>
+<div class="icon3" style="width: 10px; height: 1px" ></div>
+<div class="icon2" >نویسنده : زهرا </div>
+<div class="icon3" ></div>
+<div class="icon2" >تاریخ : 1393/11/13</div>
+<div class="icon3" ></div>
+<div class="icon2" >زمان : 08:46 قبل از ظهر</div>
+</div>
+</div>
+<div class="post-b"></div>
+<div class="post-v">
+<div class="title-post"><div class="link-title-post"><a href="http://kolbe-asheghi.mihanblog.com/post/231">چرا دلشون میخواد  فتنه  زنده بمونه؟؟</a></div></div>
+<div class="post-b2"></div>
+<div align="center"><div class="post-v2"><div align="right" >
+<BlogComment><a target="_self" href="javascript:newComment(231)" >نظرات (<script>setCommentCnt(231)</script>)</a></BlogComment>
+ | <br><br>
+
+<div><br></div><div><img hspace="0" border="0" align="baseline" vspace="0" src="http://media.snn.ir/medium/archive/26-9-1391/IMAGE634912451560070794.jpg" alt=""></div>برگزاری دادگاه &nbsp;سران &nbsp;فتنه &nbsp;خواست &nbsp;همه ماست &nbsp;همه ما &nbsp;دلمون میخواد اونا در یک دادگاه &nbsp;عادلانه محاکمه بشن &nbsp;منتها &nbsp;اولا &nbsp;چه &nbsp;تضمینی وجود داره &nbsp;افرادیکه &nbsp; رای مردم رو به &nbsp;رسمیت &nbsp;نشناختن &nbsp;رای دادگاه رو به &nbsp;رسمیت &nbsp;بشناسن &nbsp;!!!<div>چه &nbsp;تضمینی &nbsp;وجود &nbsp;داره تا &nbsp;مجددا &nbsp;جامعه &nbsp;رو &nbsp;به &nbsp;تشنج نکشن؟؟ چه &nbsp;تضمینی وجود &nbsp;داره &nbsp;که &nbsp;دوباره &nbsp;شورش خیابانی راه نندازن؟؟</div><div><br></div><div><br></div><div>چرا &nbsp;حصر امروز بهترین &nbsp;گزینه هست؟؟ &nbsp;درحالیکه اقایون &nbsp;باید اعدام &nbsp;بشن &nbsp;!!!</div><div><br></div><div>چون &nbsp;امروز در کشور ما &nbsp;افرادی هستن که با هر بهانه ای کشور رو &nbsp;به اشوب &nbsp;میکشن &nbsp; چون امروز &nbsp;در وانفسای تحریمها &nbsp;و &nbsp;در وانفسای پایین &nbsp;کشیدن &nbsp;قیمت نفت &nbsp;در این &nbsp;وضعیت &nbsp;اقتصادی &nbsp;فقط &nbsp;همین &nbsp;رو کم &nbsp;داریم &nbsp; که &nbsp;چنین &nbsp;موضوع &nbsp;تنش زایی هم &nbsp;در دستور کار &nbsp;نظام &nbsp;قرار بگیره!!!!!! ایا &nbsp;نمیدونن ما &nbsp;در حال &nbsp;مذاکره ایم &nbsp;و &nbsp;برگ &nbsp;برنده ما &nbsp;اقتدار ملی ماست؟؟؟ چرا مجددا &nbsp;میخوان این &nbsp;ارامش و اقتدار رو بشکنن &nbsp;تا &nbsp;کی ما باید &nbsp;تاوان &nbsp;خودکامگی و &nbsp;دیکتاتوری این &nbsp;ادما رو &nbsp;بپردازیم &nbsp;!!!</div><div><br></div><div><br></div><div>واقعا &nbsp;دنبال &nbsp;چین؟؟</div><div><br></div><div>گیریم &nbsp;موسوی و &nbsp;کروبی تا &nbsp;زمان &nbsp;دادگاه &nbsp;ازاد &nbsp;باشن &nbsp; اقای مطهری شما &nbsp;تضمین &nbsp;میدید &nbsp;که &nbsp;ضد انقلاب &nbsp;اینا &nbsp;رو &nbsp;ترور نکنن؟؟ تا &nbsp;بعد &nbsp;از مرگ اینها &nbsp;دوباره &nbsp;جنجال &nbsp;سازی و &nbsp;اغتشاش به پا &nbsp;نکنن &nbsp;و خون اینا &nbsp;رو پای نظام نذارن؟؟؟</div><div><br></div><div>واقعا &nbsp;اینا &nbsp;دلسوز مردمن؟؟؟؟ چرا &nbsp;منافع &nbsp;فتنه گرها &nbsp;با &nbsp;این &nbsp;اقایون جوری پیوند خورده که &nbsp;حاضر میشن از گناه به این &nbsp;بزرگی چشم پوشی کنن؟؟</div><div><br></div><div>اقایون &nbsp;قوه &nbsp;قضاییه &nbsp;بخدا &nbsp;جلوی شما رو روز قیامت &nbsp;خواهیم &nbsp;گرفت &nbsp;چون &nbsp;این شما بودید که &nbsp;با &nbsp;سستی در وظیفتون گذاشتید &nbsp;امثال &nbsp;پسر هاشمی سالها &nbsp;خون این مردم رو &nbsp;بمکند &nbsp;و چاق بشند &nbsp;و اینقدر دادگاهشون رو &nbsp;لفت میدید &nbsp; تا &nbsp;مردم از &nbsp;رای عدالانه &nbsp;شما &nbsp;نا امید بشن!!!! شما باید به &nbsp;امام &nbsp;و شهدا &nbsp;پاسخگو باشید&nbsp;</div><div><br></div><div>چرا باید بعد از بیست سال &nbsp;جرم &nbsp;یه ادم &nbsp;بررسی بشه!!! اگه &nbsp;همون &nbsp;بیست سال پیش این ادما &nbsp;به دادگاه &nbsp;کشیده شده بودن &nbsp;الان &nbsp;وضع ما &nbsp;این &nbsp;بود؟؟؟ الان مفسدا اینقدر زیاد &nbsp;و پر رو &nbsp;بودن؟؟؟</div>
+
+ <br><br>
+<!--- category ---><!--- /category --->
+<!--- link ---><!--- /link --->
+<!--- tag ---><!--- /tag --->
+</div></div></div>
+<div class="post-b2"></div>
+</div>
+<div class="post-p">
+<div style="width:100%; padding:8px 15px 10px 0px; color:#666666; ">
+<div class="icon1" ><img border="0" src="http://temkade.com/tem/45/27.gif" ></div>
+<div class="icon3" style="width: 10px; height: 1px" ></div>
+<div class="icon2" >نویسنده : زهرا </div>
+<div class="icon3" ></div>
+<div class="icon2" >تاریخ : 1393/10/23</div>
+<div class="icon3" ></div>
+<div class="icon2" >زمان : 09:04 قبل از ظهر</div>
+</div>
+</div>
+<div class="post-b"></div>
+<div class="post-v">
+<div class="title-post"><div class="link-title-post"><a href="http://kolbe-asheghi.mihanblog.com/post/230">چرا  رفراندوم؟؟؟!!!!!</a></div></div>
+<div class="post-b2"></div>
+<div align="center"><div class="post-v2"><div align="right" >
+<BlogComment><a target="_self" href="javascript:newComment(230)" >نظرات (<script>setCommentCnt(230)</script>)</a></BlogComment>
+ | <br><br>
+
+<div style="text-align: center;"><img hspace="0" border="0" align="baseline" vspace="0" src="data:image/jpeg;base64,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" alt=""></div>همه &nbsp;میدونیم &nbsp;اقای حسن &nbsp;روحانی &nbsp;ظاهرا &nbsp;رئیییس جمهور ماست &nbsp;و &nbsp;در واقع &nbsp; ایشون &nbsp;بلند &nbsp;گوی هاشمی هستن &nbsp; اما &nbsp;چرا &nbsp;قضیه &nbsp;رفراندوم &nbsp;رو مطرح &nbsp;میکنه؟؟ اگه &nbsp;یادتون &nbsp;باشه &nbsp; قبال &nbsp;از انتخابات &nbsp;همه &nbsp;تقصیر تحریمها &nbsp; افتاده &nbsp;بود گردن &nbsp;بی تدبیری &nbsp;دولت &nbsp;قبل و &nbsp;به &nbsp;این &nbsp;بهانه &nbsp;تا &nbsp;تونستن &nbsp;اقای جلیلی رو کوبوندن &nbsp;که &nbsp;شما &nbsp;طالبان &nbsp;هستی !!!! و &nbsp;شما &nbsp;با &nbsp;گفتمان &nbsp;مقاومت &nbsp;نتونستی &nbsp;کاری بکنی و &nbsp;باعث تحریمها &nbsp;شدی!!!! اقای روحانی دقیقا &nbsp;در &nbsp;مناظره &nbsp;ها &nbsp;گفتن &nbsp;میتوان &nbsp;کاری کرد &nbsp;هم &nbsp;چرخ &nbsp;هسته ای بچرخه &nbsp; هم &nbsp;تحریمها &nbsp;برطرف &nbsp;بشه &nbsp;و &nbsp;چرخ &nbsp;زندگی مردم &nbsp;بچرخه &nbsp;!!! و &nbsp;خیلی ماهرانه &nbsp; اقتصاد &nbsp;زو &nbsp;کاملا &nbsp;وابسته کردن &nbsp;به &nbsp;تحریمها &nbsp;!!! و &nbsp;بعدم &nbsp;گفتن &nbsp;چاره &nbsp;کار مذاکره &nbsp;هست &nbsp;!!!<div><br></div><div>اما &nbsp;بعد &nbsp;از اینکه &nbsp;مردم &nbsp;فریب &nbsp;این &nbsp;حرف &nbsp;زیبا &nbsp;رو خوردن &nbsp;و &nbsp;به &nbsp;ایشون &nbsp;رای دادن &nbsp; و &nbsp;مذاکره &nbsp;هم &nbsp;انجام &nbsp;شد خود ایشون &nbsp;فهمیدن که &nbsp;امریکا &nbsp;هیچ &nbsp;جوری حاضر به &nbsp;کوتاه &nbsp;اومدن &nbsp;نیست &nbsp;و &nbsp;تا &nbsp;کل &nbsp;هسته ای رو &nbsp;به &nbsp;باد &nbsp;نده &nbsp;ول &nbsp;کن &nbsp;نیست &nbsp;!! از طرفی خط قرمزهای رهبری نمیذاره &nbsp;روحانی هسته ای رو &nbsp; به باد &nbsp;بده &nbsp; پس چه &nbsp;بهتر از این که &nbsp;مردم &nbsp;رو &nbsp;در برابر رهبری قرار بده &nbsp; طرح &nbsp;رفراندوم &nbsp;برای این &nbsp;چیزا &nbsp;فقط از راه &nbsp; تصویب &nbsp;مجلس و &nbsp;اجازه &nbsp;رهبری امکان &nbsp;داره &nbsp; &nbsp;و &nbsp;چون &nbsp;این &nbsp;مجلس &nbsp;چنین &nbsp;کاری نخواهد &nbsp;کرد &nbsp;اونا &nbsp;اول &nbsp;هیاهو &nbsp;راه &nbsp;خواهند نداخت &nbsp;که &nbsp; افراد &nbsp;تندرو &nbsp;مجلس جلوی خواست &nbsp;مردم &nbsp;وایسادن!!!!! تا &nbsp;بعد &nbsp;اکثریت &nbsp;مجلس رو &nbsp;بدست &nbsp;بیارن &nbsp; اگه این &nbsp;اتفاق &nbsp;بیفته &nbsp; بعد &nbsp;طرحی مبنی بر &nbsp;همه پرسی &nbsp;تصویب &nbsp;میکنن &nbsp;و از رهبری خواهند &nbsp;خواست &nbsp; !!! و &nbsp;اینجوری رهبری رو &nbsp;در برابر مردم &nbsp;قرار میدن &nbsp;و &nbsp;قطعا &nbsp;تبلیغات &nbsp;گسترده &nbsp;خودشون &nbsp;مبنی بر اینکه &nbsp;ما &nbsp;اصلا &nbsp;نیاز به &nbsp;هسته ای نداریم &nbsp; راه &nbsp;خواهند &nbsp;انداخت &nbsp;و &nbsp;از شرایط اقتصادی سخت &nbsp;بهره &nbsp;میبرند &nbsp;تا &nbsp;دوباره مردم &nbsp;رو فریب &nbsp;بدن &nbsp; و &nbsp;امثال &nbsp;ما &nbsp;هم &nbsp;که &nbsp;هر چی فریاد &nbsp;بزنیم &nbsp;یا &nbsp;تندرو هستیم &nbsp;یا &nbsp;بیسواد!!!!&nbsp;</div><div><br></div><div>دوستان &nbsp;من &nbsp;هاشمی میخواد &nbsp;به &nbsp;هر قیمتی افکار پوچ &nbsp;و &nbsp;پوسیده خودش رو &nbsp;به &nbsp;رهبرمون &nbsp;تحمیل &nbsp;کنه &nbsp;و &nbsp;این &nbsp;وسط روحانی &nbsp;یک &nbsp;ابزار دست &nbsp;هاشمی و &nbsp;بچه هاشه &nbsp; اون &nbsp;جام &nbsp;زهر &nbsp; مزبور &nbsp;به خوبی در حال &nbsp;تدارکه &nbsp; و &nbsp;من &nbsp;خیلی متاسفم &nbsp;که &nbsp;هیچ &nbsp;کس کاری نمیکنه &nbsp;</div><div><br></div><div>اعوذ بالله &nbsp;من &nbsp;همزات &nbsp;هاشمی&nbsp;</div>
+
+ <br><br>
+<!--- category ---><b>مرتبط با :</b><a href="http://kolbe-asheghi.mihanblog.com/post/category/4">
+سیاست به روش خودم</a><br><!--- /category --->
+<!--- link ---><!--- /link --->
+<!--- tag ---><b>برچسب ها : </b><a href="http://kolbe-asheghi.mihanblog.com/post/tag/%D8%B1%D9%81%D8%B1%D8%A7%D9%86%D8%AF%D9%88%D9%85">رفراندوم</a>-<a href="http://kolbe-asheghi.mihanblog.com/post/tag/%D9%87%D8%A7%D8%B4%D9%85%DB%8C">هاشمی</a>-<a href="http://kolbe-asheghi.mihanblog.com/post/tag/%D8%B1%D9%88%D8%AD%D8%A7%D9%86%DB%8C">روحانی</a>-<!--- /tag --->
+</div></div></div>
+<div class="post-b2"></div>
+</div>
+<div class="post-p">
+<div style="width:100%; padding:8px 15px 10px 0px; color:#666666; ">
+<div class="icon1" ><img border="0" src="http://temkade.com/tem/45/27.gif" ></div>
+<div class="icon3" style="width: 10px; height: 1px" ></div>
+<div class="icon2" >نویسنده : زهرا </div>
+<div class="icon3" ></div>
+<div class="icon2" >تاریخ : 1393/10/17</div>
+<div class="icon3" ></div>
+<div class="icon2" >زمان : 03:25 بعد از ظهر</div>
+</div>
+</div>
+<div class="post-b"></div>
+<div class="post-v">
+<div class="title-post"><div class="link-title-post"><a href="http://kolbe-asheghi.mihanblog.com/post/229">هفته  وحدت </a></div></div>
+<div class="post-b2"></div>
+<div align="center"><div class="post-v2"><div align="right" >
+<BlogComment><a target="_self" href="javascript:newComment(229)" >نظرات (<script>setCommentCnt(229)</script>)</a></BlogComment>
+ | <br><br>
+<div style="text-align: center;"><img hspace="0" border="0" align="baseline" vspace="0" src="data:image/jpeg;base64,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" alt=""></div><div><br></div>&nbsp;تولد پیامبر عزیز مون &nbsp;و &nbsp;هفته &nbsp;وحدت &nbsp;بر همه &nbsp;مبارک &nbsp;ان &nbsp;شالله &nbsp;بصیرت &nbsp;کافی داشته باشیم &nbsp;تا &nbsp;رازهای به &nbsp;وحدت &nbsp;رسیدن &nbsp;رو &nbsp;بفهمبم &nbsp;<img src="http://mihanblog.com/public/public/rte/images_new/smiles/1.gif"> <br><br>
+<!--- category ---><!--- /category --->
+<!--- link ---><!--- /link --->
+<!--- tag ---><!--- /tag --->
+</div></div></div>
+<div class="post-b2"></div>
+</div>
+<div class="post-p">
+<div style="width:100%; padding:8px 15px 10px 0px; color:#666666; ">
+<div class="icon1" ><img border="0" src="http://temkade.com/tem/45/27.gif" ></div>
+<div class="icon3" style="width: 10px; height: 1px" ></div>
+<div class="icon2" >نویسنده : زهرا </div>
+<div class="icon3" ></div>
+<div class="icon2" >تاریخ : 1393/10/15</div>
+<div class="icon3" ></div>
+<div class="icon2" >زمان : 11:42 قبل از ظهر</div>
+</div>
+</div>
+<div class="post-b"></div>
+<div class="post-v">
+<div class="title-post"><div class="link-title-post"><a href="http://kolbe-asheghi.mihanblog.com/post/228">9 دی در رفسنجان  چه  گذشت  ؟؟</a></div></div>
+<div class="post-b2"></div>
+<div align="center"><div class="post-v2"><div align="right" >
+<BlogComment><a target="_self" href="javascript:newComment(228)" >نظرات (<script>setCommentCnt(228)</script>)</a></BlogComment>
+ | <br><br>
+
+<div><br></div><div style="text-align: center;"><br></div><div style="text-align: center;"><br></div><div style="text-align: center;"><img hspace="0" border="0" align="baseline" vspace="0" src="data:image/jpeg;base64,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" alt=""></div><div><font size="2"><br></font></div><div><span style="font-size: small;">&nbsp;بنده &nbsp;شاهد &nbsp;عینی &nbsp;این &nbsp;مطلب &nbsp;هستم &nbsp;...</span></div><div><font size="2">در نه &nbsp;دی امسال &nbsp; گروهی از جوانان &nbsp;شهر &nbsp;اقدام &nbsp;به &nbsp;پخش مطلبی کردند که &nbsp;در این &nbsp;مطلب &nbsp;اقدامات &nbsp;اقای هاشمی و &nbsp;سخنان &nbsp;اقای هاشمی در زمان &nbsp;فتنه &nbsp;رو &nbsp;بررسی کرده &nbsp;بود &nbsp;و &nbsp;هیچ &nbsp;مطلبی فراتر &nbsp;از اون چیزی که &nbsp;حتی در صدا &nbsp;سیما &nbsp;مطرح &nbsp;میشه &nbsp;عنوان &nbsp;نشده &nbsp;بود &nbsp; با &nbsp;این &nbsp;وجود &nbsp;این &nbsp;جوانان &nbsp;رو &nbsp;به &nbsp;اداره &nbsp;اطلاعات &nbsp;فراخوانده &nbsp;بودن &nbsp;و &nbsp;گفته &nbsp;میشه &nbsp;حتی فرماندار برای پاسخگویی &nbsp;به &nbsp;تهران &nbsp;احضار شده!!!! ( البته &nbsp;در این &nbsp;مطلب &nbsp;کاملا &nbsp;مطمئن &nbsp;نیستم &nbsp;) اما &nbsp;این &nbsp;کار دوستان &nbsp;بازتاب &nbsp;عجیبی داشت &nbsp;که &nbsp;اصلا &nbsp;برای خود &nbsp;من باور کردنی نیست !!</font></div><div><font size="2">برای مطلبی عادی که &nbsp;حتی در صدا &nbsp;سیما &nbsp;عنوان &nbsp;میشه و&nbsp;اظهر من الشمس هست &nbsp;اینهمه &nbsp;عکس العمل &nbsp;لازمه ؟؟؟ این &nbsp;در حالیه &nbsp;که</font><span style="font-size: small;">&nbsp; چند &nbsp;ماه &nbsp;پیش وقتی &nbsp;هاشمی میخواست &nbsp;بیاد &nbsp;رفسنجان &nbsp;اداره &nbsp;اطلاعات &nbsp;رفسنجان &nbsp;گروهی از بچه های دلسوز و &nbsp;انقلابی رو &nbsp;احضار کرد &nbsp;</span></div><div><font size="2"><br></font></div><div><font size="2">و &nbsp;خیلی محترمانه &nbsp;از اونها &nbsp;خواهش کردند &nbsp;بخاطر شرایط خاص و &nbsp;نیاز جامعه &nbsp;به &nbsp;ارامش و &nbsp;امنیت &nbsp;سعی کنند &nbsp;هیچ &nbsp;حاشیه &nbsp;سازی نشه &nbsp;و &nbsp;این &nbsp;گروه &nbsp;به &nbsp;شرط اینکه &nbsp;جناب هاشمی مطلب &nbsp;تنش زایی عنوان &nbsp;نکنه &nbsp;پذیرفتند &nbsp;که &nbsp;از طرف &nbsp;اونها &nbsp;اقدامی نشه &nbsp;. &nbsp;با &nbsp;مقایسه &nbsp;کردن &nbsp;این &nbsp;دو &nbsp;رفتار در عرض یکسال &nbsp;متوجه &nbsp;میشیم &nbsp;سخت &nbsp;گیری &nbsp;ارگانها و &nbsp;حساسیت &nbsp;اونها &nbsp;با &nbsp;گذشت &nbsp;زمان &nbsp;داره &nbsp;بیشتر میشه &nbsp;!! من &nbsp;پیش بینی میکنم &nbsp;بزودی &nbsp;خاندان &nbsp;و &nbsp;عمله &nbsp; اکله &nbsp; &nbsp;هاشمی موفق &nbsp;میشن &nbsp;مجددا &nbsp;دیکتاتوری قبلی خودشون &nbsp;رو &nbsp;تشکیل &nbsp;بدن &nbsp;</font></div><div><font size="2"><br></font></div><div><font size="2">ما &nbsp;در شهر رفسنجان &nbsp;اشنایی دیرینه ای با &nbsp;دیکتاتوری اقایون &nbsp; داریم &nbsp;اونا &nbsp;در زمان &nbsp;رای اوردن &nbsp;اقای دکتر بهرامی که &nbsp;با &nbsp;اقای حسین &nbsp;هاشمیان &nbsp;رقابت &nbsp;میکرد &nbsp;با نفوذ از منابع &nbsp;خودشون با &nbsp; &nbsp;پرونده &nbsp;سازی برای ایشون &nbsp; موجب &nbsp;رد &nbsp;صلاحیت &nbsp;ایشون &nbsp;بعد &nbsp;از &nbsp;رای اوردنش شدن &nbsp;!!!!!!!!! و &nbsp;مردم &nbsp;رو &nbsp;مورد &nbsp;ضرب &nbsp;شتم &nbsp;قرار داده &nbsp;بودن &nbsp;که &nbsp;چرا &nbsp;پای حرفای بهرامی نشستن!!!!!!!!!!!! &nbsp;و &nbsp;جالب &nbsp;اینجاست &nbsp;که &nbsp;دکتر بهرامی در دو &nbsp;دور بعد &nbsp;مجددا &nbsp;تایید صلاحیت &nbsp;شد!!!!!!!!&nbsp;</font></div><div><font size="2"><br></font></div><div><font size="2">ایا &nbsp;با &nbsp;گذشت &nbsp;زمان &nbsp;دیکتاتوری هاشمی دوباره &nbsp;به &nbsp;شکل &nbsp;فجیع تری شکل &nbsp;خواهد &nbsp;گرفت؟؟؟ &nbsp;</font></div><div><font size="2"><br></font></div><div><font size="2">اقای هاشمی که اینهمه &nbsp;در رسانه ها &nbsp;به &nbsp;ازادی بیان &nbsp;و &nbsp;اعتدال &nbsp;تاکید میکنه با این &nbsp;نوع &nbsp;اقدامات &nbsp;موافق هستن؟؟؟</font></div><div><font size="2"><br></font></div><div><font size="2">کاش ایشون ابتدا &nbsp;دور بری های خودش رو &nbsp;به &nbsp;اعتدال &nbsp;و &nbsp;تحمل &nbsp;مخالف &nbsp;دعوت &nbsp;میکرد &nbsp;..</font></div><div><font size="2"><br></font></div><div><font size="2">میتونید محتوای اون نشریه &nbsp;رو &nbsp;در &nbsp;این &nbsp; قسمت &nbsp;بخونید :</font></div><div><font size="2"><br></font></div><div><a href="http://jahannews.com/vdchw6nxi23nwwd.tft2.html" target="_blank" title=""><font size="4" color="#ff0000">مسؤولان نشریه محلی رفسنجان به دلیل بازخوانی مواضع هاشمی رفسنجانی در سال ۸۸ احضار شدند!</font></a></div><div><br></div>
+
+ <br><br>
+<!--- category ---><b>مرتبط با :</b><a href="http://kolbe-asheghi.mihanblog.com/post/category/4">
+سیاست به روش خودم</a><br><!--- /category --->
+<!--- link ---><!--- /link --->
+<!--- tag ---><b>برچسب ها : </b><a href="http://kolbe-asheghi.mihanblog.com/post/tag/%D9%86%D9%87%20%20%D8%AF%DB%8C%20%D8%AF%D8%B1%20%D8%B1%D9%81%D8%B3%D9%86%D8%AC%D8%A7%D9%86">نه  دی در رفسنجان</a>-<a href="http://kolbe-asheghi.mihanblog.com/post/tag/%D9%87%D8%A7%D8%B4%D9%85%DB%8C%20%D9%88%20%20%D8%A8%DA%86%D9%87%20%D9%87%D8%A7%D8%B4">هاشمی و  بچه هاش</a>-<a href="http://kolbe-asheghi.mihanblog.com/post/tag/%D9%87%D8%A7%D8%B4%D9%85%DB%8C%20%D9%88%20%20%D9%86%D9%87%20%20%D8%AF%DB%8C">هاشمی و  نه  دی</a>-<!--- /tag --->
+</div></div></div>
+<div class="post-b2"></div>
+</div>
+<div class="post-p">
+<div style="width:100%; padding:8px 15px 10px 0px; color:#666666; ">
+<div class="icon1" ><img border="0" src="http://temkade.com/tem/45/27.gif" ></div>
+<div class="icon3" style="width: 10px; height: 1px" ></div>
+<div class="icon2" >نویسنده : زهرا </div>
+<div class="icon3" ></div>
+<div class="icon2" >تاریخ : 1393/10/12</div>
+<div class="icon3" ></div>
+<div class="icon2" >زمان : 12:16 بعد از ظهر</div>
+</div>
+</div>
+<div class="post-b"></div>
+<div class="post-v">
+<div class="title-post"><div class="link-title-post"><a href="http://kolbe-asheghi.mihanblog.com/post/227">چرا محافظه کاری ....؟؟</a></div></div>
+<div class="post-b2"></div>
+<div align="center"><div class="post-v2"><div align="right" >
+<BlogComment><a target="_self" href="javascript:newComment(227)" >نظرات (<script>setCommentCnt(227)</script>)</a></BlogComment>
+ | <br><br>
+<div style="text-align: center;"><img hspace="0" border="0" align="baseline" vspace="0" src="http://rahkarnews.ir/wp-content/themes/News-world-2/thumbopen.php?src=http%3A%2F%2Frahkarnews.ir%2Fwp-content%2Fuploads%2Femam-khamenei.jpg&amp;w=240&amp;h=137&amp;zc=1&amp;a=t&amp;q=100" alt=""></div><font size="2"><div><font size="2"><br></font></div>متن &nbsp;زیر پیام &nbsp;رهبر عزیزمون &nbsp; به &nbsp;سمینار مبارزه &nbsp;با &nbsp;فساد اقتصادی هست &nbsp;</font><div><font size="2" face="tahoma, arial, helvetica, sans-serif"><br></font></div><div><span style="color: rgb(255, 0, 0); line-height: 11px; text-align: justify;"><font size="2" face="tahoma, arial, helvetica, sans-serif">&nbsp;این سمینار و امثال آن بناست چه معجزه ای بکند؟ مگر وضعیت برای شما مسئولان سه قوه روشن نیست؟…چرا اقدام قاطع و اساسی انجام نمی گیرد که نتیجه را همه به طور ملموس مشاهده کنند. توقع من از آقایان محترم این است که چه با سمینار و چه بدون آن، تصمیمات قاطع و عملی بدون هر گونه ملاحظه ای بگیرند و اجرا کنند.»</font></span></div><div><span style="color: rgb(255, 0, 0); line-height: 11px; text-align: justify;"><font size="2"><br></font></span></div><div><span style="line-height: 11px; text-align: justify;"><font size="2">واقعا مسئولین &nbsp;گرامی دنبال &nbsp;چی هستن؟؟ اینهمه اهمال &nbsp;و سستی نشونه &nbsp;چیه؟؟؟ یعنی حیف &nbsp;خاااک</font></span></div><div><span style="color: rgb(255, 0, 0); line-height: 11px; text-align: justify;"><font size="2"><br></font></span></div> <br><br>
+<!--- category ---><!--- /category --->
+<!--- link ---><!--- /link --->
+<!--- tag ---><!--- /tag --->
+</div></div></div>
+<div class="post-b2"></div>
+</div>
+<div class="post-p">
+<div style="width:100%; padding:8px 15px 10px 0px; color:#666666; ">
+<div class="icon1" ><img border="0" src="http://temkade.com/tem/45/27.gif" ></div>
+<div class="icon3" style="width: 10px; height: 1px" ></div>
+<div class="icon2" >نویسنده : زهرا </div>
+<div class="icon3" ></div>
+<div class="icon2" >تاریخ : 1393/09/22</div>
+<div class="icon3" ></div>
+<div class="icon2" >زمان : 08:59 بعد از ظهر</div>
+</div>
+</div>
+<div class="post-b"></div>
+<div class="post-v">
+<div class="title-post"><div class="link-title-post"><a href="http://kolbe-asheghi.mihanblog.com/post/220">نمیخوایم  فکرررر کنیم ؟؟؟</a></div></div>
+<div class="post-b2"></div>
+<div align="center"><div class="post-v2"><div align="right" >
+<BlogComment><a target="_self" href="javascript:newComment(220)" >نظرات (<script>setCommentCnt(220)</script>)</a></BlogComment>
+ | <br><br>
+
+<div style="text-align: center;"><br></div><div style="text-align: center;"><img hspace="0" border="0" align="baseline" vspace="0" src="data:image/jpeg;base64,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" alt=""></div><div style="text-align: center;"><font size="3">شهید چمران :</font></div><div style="text-align: right;"><span style="color: rgb(98, 77, 67); font-family: Tahoma; line-height: 17.0666675567627px; text-align: justify; background-color: rgb(234, 234, 234);"><font size="2">راستی بیایید انقلابی باشیم، از گذشته ها هم می گذرم،انتظاری ندارم که کسی در گذشته انقلابی گری خود را ثابت کرده باشد،بیایید از امروز ما انقلابی باشیم،من حاضرم،اگر شما هم حاضرید بسم الله. بیایید از نظر اخلاقی معیارهای اسلامی را اجرا کنیم. از نظر فداکاری،همه وجود خود را برای خدا و مردم بدانیم و همه مصالح خود را فدا کنیم. از نظر زندگی،همه تعلاقات مادی حیات زندگی اشرافی ،اسراف بازی،تجملات و همه زرق و برق زندگی را فراموش کنیم و با درویشی و علی وار زندگی کنیم. بیایید کار کنیم،فداکاری کنیم،شعار ندهیم ،تهمت نزنیم. عقب ماندگی خود را سرکوفت به دیگران نزنیم،به جای آنکه خود را مواخذه کنیم،دیگران را متهم ننماییم.</font></span></div>
+
+ <br><br>
+<!--- category ---><b>مرتبط با :</b><a href="http://kolbe-asheghi.mihanblog.com/post/category/2">
+هر چی از شهید چمران نوشتم</a><br><!--- /category --->
+<!--- link ---><!--- /link --->
+<!--- tag ---><!--- /tag --->
+</div></div></div>
+<div class="post-b2"></div>
+</div>
+<div class="post-p">
+<div style="width:100%; padding:8px 15px 10px 0px; color:#666666; ">
+<div class="icon1" ><img border="0" src="http://temkade.com/tem/45/27.gif" ></div>
+<div class="icon3" style="width: 10px; height: 1px" ></div>
+<div class="icon2" >نویسنده : زهرا </div>
+<div class="icon3" ></div>
+<div class="icon2" >تاریخ : 1393/09/5</div>
+<div class="icon3" ></div>
+<div class="icon2" >زمان : 01:02 بعد از ظهر</div>
+</div>
+</div>
+<div class="post-b"></div>
+<div class="post-v">
+<div class="title-post"><div class="link-title-post"><a href="http://kolbe-asheghi.mihanblog.com/post/219">گاهی خیلی زود  دیر میشود</a></div></div>
+<div class="post-b2"></div>
+<div align="center"><div class="post-v2"><div align="right" >
+<BlogComment><a target="_self" href="javascript:newComment(219)" >ارادت به اقا (<script>setCommentCnt(219)</script>)</a></BlogComment>
+ | <br><br>
+<div><img hspace="0" border="0" align="baseline" vspace="0" src="http://farsi.khamenei.ir/ndata/news/27421/smpf.jpg" alt=""></div><font face="tahoma, arial, helvetica, sans-serif" size="2">بیماری امام سید علی عزیزم &nbsp; مثل &nbsp;یک شوک بزرگ برای من بود &nbsp;. &nbsp;همش با خودم میگم &nbsp;اگه &nbsp;اتفاقی برا اقامون میفتاد &nbsp;چی میشد؟؟ چه خاکیبه سر میکردم؟ حتی تصورش برام &nbsp;فاجعه است &nbsp;خدایا &nbsp; اگه &nbsp;یک &nbsp;دقیقه هم &nbsp;که &nbsp;شده &nbsp;من زودتر از اقام &nbsp;بمیرم &nbsp;هیچ وقت &nbsp;تلخی این &nbsp;فاجعه رو متوجه نشم&nbsp;<img src="http://mihanblog.com/public/public/rte/images_new/smiles/20.gif"></font><div><font face="tahoma, arial, helvetica, sans-serif" size="2"><br></font></div><div><font face="tahoma, arial, helvetica, sans-serif" size="2">میخوام &nbsp;یه &nbsp;چیزی بگم &nbsp;خطاب به همه &nbsp;کسایی که &nbsp;به هر نحوی اقام رو اذیت &nbsp;کردن &nbsp; اقای هاشمی &nbsp;با &nbsp;اون &nbsp;جریانی که &nbsp;سال 88 راه انداخت اقایون &nbsp;اصلاح طلبان ،&nbsp;</font><span style="font-family: tahoma, arial, helvetica, sans-serif; font-size: small;">بعضی از اصولگراها &nbsp;که متوجه &nbsp;اشاره های اقام &nbsp;نمیشن &nbsp;و &nbsp;بصیرت &nbsp;کافی ندارن &nbsp;به &nbsp;خودم &nbsp;و تک تک افراد &nbsp;جامعه &nbsp;...بخدا &nbsp;اگه &nbsp;اتفاقی برای &nbsp;اقامون بیفته &nbsp;هممون با هم &nbsp;اسیب &nbsp;میبینیم &nbsp; کاش قدر این &nbsp;ابر مرد &nbsp;رو &nbsp;بدونیم &nbsp;و اینهمه &nbsp;خون &nbsp;به دلش نکنیم &nbsp;</span><img src="http://mihanblog.com/public/public/rte/images_new/smiles/20.gif" style="font-family: tahoma, arial, helvetica, sans-serif; font-size: small;"></div><div><font face="tahoma, arial, helvetica, sans-serif" size="2"><br></font></div><div><font face="tahoma, arial, helvetica, sans-serif" size="2"><br></font></div><div><font face="tahoma, arial, helvetica, sans-serif" size="2">جوونای مسجد &nbsp;محل &nbsp;ما &nbsp;پول &nbsp;گذاشتن رو هم برای طول عمر رهبرمون &nbsp;قربونی کنن &nbsp;...دانشجویان &nbsp;هم &nbsp;دارن تدارک میگیرن &nbsp;پنجشبه همه برای سلامتی&nbsp;</font><span style="font-family: tahoma, arial, helvetica, sans-serif; font-size: small;">همیشگی اقامون و طول عمر ایشون روزه &nbsp;بگیرن &nbsp;منم میخوام یه &nbsp;قدمی بردارم هرچند &nbsp;اندک &nbsp; میخوام یه &nbsp;ختم &nbsp;صلوات &nbsp;بذارم برای سلامتی عزیز دلمون &nbsp;و برای&nbsp;</span><font face="tahoma, arial, helvetica, sans-serif" size="2">طول عمر &nbsp;همراه با عزت و عافیت ایشون &nbsp; هر کی هر &nbsp;چقدر میتونه &nbsp;صلوات &nbsp;بفرسته &nbsp;و بگه &nbsp;تعدادش رو </font>&nbsp;</div> <br><br>
+<!--- category ---><!--- /category --->
+<!--- link ---><!--- /link --->
+<!--- tag ---><b>برچسب ها : </b><a href="http://kolbe-asheghi.mihanblog.com/post/tag/%D8%A8%DB%8C%D9%85%D8%A7%D8%B1%DB%8C%20%D8%B1%D9%87%D8%A8%D8%B1%DB%8C">بیماری رهبری</a>-<!--- /tag --->
+</div></div></div>
+<div class="post-b2"></div>
+</div>
+<div class="post-p">
+<div style="width:100%; padding:8px 15px 10px 0px; color:#666666; ">
+<div class="icon1" ><img border="0" src="http://temkade.com/tem/45/27.gif" ></div>
+<div class="icon3" style="width: 10px; height: 1px" ></div>
+<div class="icon2" >نویسنده : زهرا </div>
+<div class="icon3" ></div>
+<div class="icon2" >تاریخ : 1393/06/19</div>
+<div class="icon3" ></div>
+<div class="icon2" >زمان : 01:19 بعد از ظهر</div>
+</div>
+</div>
+<div class="post-b"></div>
+<div class="post-v">
+<div class="title-post"><div class="link-title-post"><a href="http://kolbe-asheghi.mihanblog.com/post/218">مقاومت  تحریمها را  شکست  </a></div></div>
+<div class="post-b2"></div>
+<div align="center"><div class="post-v2"><div align="right" >
+<BlogComment><a target="_self" href="javascript:newComment(218)" >نظرات (<script>setCommentCnt(218)</script>)</a></BlogComment>
+ | <br><br>
+<div style="text-align: center;"><img hspace="0" border="0" align="baseline" vspace="0" src="http://www.mashreghnews.ir/files/fa/news_albums/339133/16515/resized/resized_696579_517.jpg" alt=""></div><font face="tahoma, arial, helvetica, sans-serif" size="2"><div><font face="tahoma, arial, helvetica, sans-serif" size="2"><br></font></div><font color="#ff0000"><b>مذاکرات &nbsp;ژنو اگه &nbsp;برا &nbsp;ما فایده &nbsp; &nbsp;نداشت &nbsp;برای فلسطینی ها &nbsp;خیلی پر سود &nbsp;بود &nbsp;چون اونا &nbsp;فهمیدن &nbsp;با &nbsp;شیطان &nbsp;بزرگ &nbsp;مذاکره &nbsp;سودی ندارد &nbsp; و &nbsp;رمز پیروزی مقاومت &nbsp;است &nbsp; در &nbsp;واقع &nbsp;ما عبرتی شدیم &nbsp;برای جهانیان !!!!</b></font></font><div><font face="tahoma, arial, helvetica, sans-serif" size="2"><br></font></div><div><font face="tahoma, arial, helvetica, sans-serif" size="2">اقای روحانی در &nbsp;دیدار رهبری بالاخره &nbsp;حرفای اقای جلیلی رو &nbsp;تایید کرد &nbsp; ایشون &nbsp;گفتند &nbsp;اگر مذاکرات &nbsp;نتیجه &nbsp;نده &nbsp;دلیلش زیاده خواهی امریکاست &nbsp;و این &nbsp;درحالیه &nbsp;که اونا تهمتهای زیادی به &nbsp;جلیلی &nbsp;زده بودند &nbsp;و &nbsp;با ادبیات &nbsp;سخیفی این &nbsp; مرد &nbsp;مظلوم &nbsp;رو &nbsp;تخریب &nbsp;کرده بودند &nbsp;واژه هایی مثل &nbsp;طالبان &nbsp;که خودم &nbsp;با گوش خودم &nbsp;از &nbsp;دهان &nbsp;نماینده &nbsp;رروحانی که وزیر &nbsp;وقت &nbsp;مخابرات &nbsp;هست &nbsp;خطاب &nbsp;به ایشون &nbsp;صادر &nbsp;شده بود &nbsp;</font></div><div><font face="tahoma, arial, helvetica, sans-serif" size="2"><br></font></div><div><font face="tahoma, arial, helvetica, sans-serif" size="2">اقای روحانی برای همه تهمتایی که &nbsp;زدی و گفته بودی که ادبیات &nbsp;دولت &nbsp;قبلی باعث تحریمها &nbsp;شده !!! باید &nbsp;عذر &nbsp;خواهی کنی . هر چند &nbsp;از ادمی که اونهمه &nbsp;بی ادبی میکنه &nbsp;بعید &nbsp;هست &nbsp;چنین &nbsp;کاری&nbsp;</font></div><div><font face="tahoma, arial, helvetica, sans-serif" size="2"><br></font></div><div><font face="tahoma, arial, helvetica, sans-serif" size="2"><b><font color="#990000">پیروزی مقاومت &nbsp;مبارک &nbsp;باد</font></b> &nbsp;</font><img src="http://mihanblog.com/public/public/rte/images_new/smiles/8.gif"></div> <br><br>
+<!--- category ---><!--- /category --->
+<!--- link ---><!--- /link --->
+<!--- tag ---><b>برچسب ها : </b><a href="http://kolbe-asheghi.mihanblog.com/post/tag/%D9%BE%DB%8C%D8%B1%D9%88%D8%B2%DB%8C%20%D9%85%D9%82%D8%A7%D9%88%D9%85%D8%AA%20%20%D8%BA%D8%B2%D9%87">پیروزی مقاومت  غزه</a>-<a href="http://kolbe-asheghi.mihanblog.com/post/tag/%D9%85%D8%B0%D8%A7%DA%A9%D8%B1%D8%A7%D8%AA%20%20%DA%98%D9%86%D9%88">مذاکرات  ژنو</a>-<a href="http://kolbe-asheghi.mihanblog.com/post/tag/%D9%85%D9%82%D8%A7%D9%88%D9%85%D8%AA">مقاومت</a>-<!--- /tag --->
+</div></div></div>
+<div class="post-b2"></div>
+</div>
+<div class="post-p">
+<div style="width:100%; padding:8px 15px 10px 0px; color:#666666; ">
+<div class="icon1" ><img border="0" src="http://temkade.com/tem/45/27.gif" ></div>
+<div class="icon3" style="width: 10px; height: 1px" ></div>
+<div class="icon2" >نویسنده : زهرا </div>
+<div class="icon3" ></div>
+<div class="icon2" >تاریخ : 1393/06/6</div>
+<div class="icon3" ></div>
+<div class="icon2" >زمان : 08:26 قبل از ظهر</div>
+</div>
+</div>
+<div class="post-b"></div>
+<div class="post-v">
+<div class="title-post"><div class="link-title-post"><a href="http://kolbe-asheghi.mihanblog.com/post/217">چاهی که  زمان  احمدی نژاد  کندن  هنوز سرش بازه </a></div></div>
+<div class="post-b2"></div>
+<div align="center"><div class="post-v2"><div align="right" >
+<BlogComment><a target="_self" href="javascript:newComment(217)" >نظرات (<script>setCommentCnt(217)</script>)</a></BlogComment>
+ | <br><br>
+<font size="2">
+یه &nbsp;ویژگی بچه &nbsp;حزب اللهی ها &nbsp;دارن &nbsp;اونم &nbsp;غیرت &nbsp;زیاد &nbsp;روی مسائل &nbsp;فرهنگی و &nbsp;وقتی &nbsp;کارای ضد فرهنگی میبینیم &nbsp;جوری امپر میچسبونیم &nbsp;که &nbsp;گاها &nbsp;احساسمون به عقلمون غلبه میکنه &nbsp;</font><div><font size="2"><br></font></div><div><font size="2">میخوام &nbsp;بدونید &nbsp;که &nbsp;دشمنان &nbsp;شما &nbsp;از این &nbsp;ویژگی خیلیییییییییییییی داره &nbsp;بهره میبره &nbsp;ماها &nbsp;بلد نیستیم &nbsp;مسائل &nbsp;رو &nbsp;اصلی فرعی کنیم &nbsp; وزیر علوم &nbsp;به &nbsp;سلامتی برداشته &nbsp;شد اما &nbsp;بدونید &nbsp;راهش در دولت &nbsp;ادامه &nbsp;خواهد &nbsp;داشت &nbsp;</font></div><div><font size="2"><br></font></div><div><font size="2">برنامه &nbsp;دقیق اونا &nbsp;اینه &nbsp;که &nbsp;ماها &nbsp;که &nbsp;خیلییییییی ناراحتیم &nbsp; خیلیییییی &nbsp;داغونیم &nbsp;با &nbsp;دیدن &nbsp;کارای دولت &nbsp;رو &nbsp;عصبانی کنن &nbsp;و &nbsp;سعی کنن &nbsp;دوباره مردم &nbsp;رو &nbsp;فریب بدن &nbsp;همون فریبی که &nbsp;تو انتخابات &nbsp;قبلی کردن &nbsp;</font></div><div><font size="2"><br></font></div><div><font size="2">دوستااااااان &nbsp;میخوان کاری کنن مردم &nbsp;فکر کنن که این &nbsp;حزب الله بود &nbsp;که &nbsp;نذاشت روحانی کار کنه!!!!!! کاش یه &nbsp;مسئولی از این &nbsp;جا &nbsp;رد میشد &nbsp;میدید جملات منو&nbsp;</font></div><div><font size="2"><br></font></div><div><font size="2">بخدا &nbsp; برخورد &nbsp;مجلس با &nbsp;دولت &nbsp;دوباره به &nbsp;ضرر خودمون میشه &nbsp;اخرش همه کاسه &nbsp;کوزه ها رو &nbsp;سر شما میشکنن &nbsp; و خودشون ماهی مطلوب &nbsp;خودشون &nbsp;رو از این &nbsp;اب &nbsp;گل الود &nbsp;میگیرن &nbsp;یعنی اونا &nbsp;مجلس رو تحریک میکنن &nbsp;تا &nbsp;عکس العمل &nbsp;نشون &nbsp;بده و بعد &nbsp;جلوشون &nbsp;رو بگیره و بعد &nbsp;بگن مجلس نذاشت ما کار کنیم !!!!!!!!!!!!!!</font></div>
+
+ <br><br>
+<!--- category ---><!--- /category --->
+<!--- link ---><!--- /link --->
+<!--- tag ---><!--- /tag --->
+</div></div></div>
+<div class="post-b2"></div>
+</div>
+<div class="post-p">
+<div style="width:100%; padding:8px 15px 10px 0px; color:#666666; ">
+<div class="icon1" ><img border="0" src="http://temkade.com/tem/45/27.gif" ></div>
+<div class="icon3" style="width: 10px; height: 1px" ></div>
+<div class="icon2" >نویسنده : زهرا </div>
+<div class="icon3" ></div>
+<div class="icon2" >تاریخ : 1393/06/1</div>
+<div class="icon3" ></div>
+<div class="icon2" >زمان : 11:25 قبل از ظهر</div>
+</div>
+</div>
+<div class="post-b"></div>
+<div class="post-v">
+<div class="title-post"><div class="link-title-post"><a href="http://kolbe-asheghi.mihanblog.com/post/216">یک  هشدار بزرگ </a></div></div>
+<div class="post-b2"></div>
+<div align="center"><div class="post-v2"><div align="right" >
+<BlogComment><a target="_self" href="javascript:newComment(216)" >نظرات (<script>setCommentCnt(216)</script>)</a></BlogComment>
+ | <br><br>
+<div><font size="2"><br></font></div>
+
+<font size="2"><div style="text-align: center;"><img hspace="0" border="0" align="baseline" vspace="0" src="data:image/jpeg;base64,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" alt=""></div>یادمه &nbsp;قبل &nbsp;از انتخابات &nbsp; ریاست &nbsp;جمهوری &nbsp;توی برنامه &nbsp;دیروز امروز فردا &nbsp; امثال &nbsp;اصغر زاده و مطهری رو &nbsp;دعوت &nbsp; میکردند &nbsp;که اونا &nbsp;القا &nbsp;میکردند &nbsp;ادبیات &nbsp;بد &nbsp;احمدی نژاد &nbsp; باعث تحریمها &nbsp;شده!!!! اثبات &nbsp;این &nbsp;دروغ &nbsp;بزرگ &nbsp;به مردم تو &nbsp;شرایط سخت اونروز کار &nbsp;تقریبا &nbsp;ناشدنی بود &nbsp;چون همه &nbsp;قزائن &nbsp;بر &nbsp;ضد مقاومت &nbsp;چیده &nbsp;شده بود &nbsp;و فهمیدن &nbsp;این &nbsp;شگرد &nbsp;دشمنان ما &nbsp;به &nbsp;بصیرت &nbsp;سطح &nbsp;بالا &nbsp;نیاز داشت &nbsp;.</font><div><font size="2"><br></font></div><div><font size="2">این &nbsp;هفته &nbsp;تو درنامه &nbsp;دیروز امروز فردا &nbsp;یک &nbsp;پروژه &nbsp;جدید &nbsp;کلید خورد &nbsp;اونم &nbsp;مطرح شدن &nbsp;این &nbsp;موضوع &nbsp;که &nbsp;چه &nbsp;لزومی داره &nbsp;اینهمه برا &nbsp;امام حسین &nbsp;خرج کنیم!!!!! اقای &nbsp;نجف قلی حبیبی</font><span style="font-size: small;">&nbsp; افاضات &nbsp;نمودند &nbsp;چه لزومی داره برای دو روز عزاداری اینهمه &nbsp;هزینه کنیم &nbsp;و &nbsp;چند &nbsp;قطره اشک &nbsp;بریزیم!!!!!!!!!</span></div><div><font size="2"><br></font></div><div><font size="2">نمیدونم &nbsp;چجوری میشه &nbsp;دهان های شبهه &nbsp;افکن &nbsp;رو &nbsp;که &nbsp;از شرایط سخت &nbsp;اقتصادی که &nbsp;یک پای قضیه هم خودشونن &nbsp;سو استفاده میکنن &nbsp;تا &nbsp;راه &nbsp;قدرت &nbsp;طلبی خودشون رو هموار کنن &nbsp;رو بست &nbsp;</font></div><div><font size="2"><br></font></div><div><font size="2">میخوان &nbsp;با &nbsp;این &nbsp;حرفا &nbsp;همین &nbsp; عزای حسین &nbsp;رو هم &nbsp;از مردم &nbsp;بگیرن &nbsp;چه &nbsp;جشنی بگیره &nbsp;شیطان &nbsp;</font></div><div><font size="2"><br></font></div><div><font size="2">خدمت تهیه کننده &nbsp;این &nbsp;برنامه &nbsp;عرض میکنم &nbsp;چه بدانید &nbsp;چه ندانید &nbsp; دارید &nbsp;به پیشبرد &nbsp;اهداف اونا &nbsp;کمک میکنید</font></div>
+
+
+
+ <br><br>
+<!--- category ---><!--- /category --->
+<!--- link ---><!--- /link --->
+<!--- tag ---><!--- /tag --->
+</div></div></div>
+<div class="post-b2"></div>
+</div>
+<div class="post-p">
+<div style="width:100%; padding:8px 15px 10px 0px; color:#666666; ">
+<div class="icon1" ><img border="0" src="http://temkade.com/tem/45/27.gif" ></div>
+<div class="icon3" style="width: 10px; height: 1px" ></div>
+<div class="icon2" >نویسنده : زهرا </div>
+<div class="icon3" ></div>
+<div class="icon2" >تاریخ : 1393/05/26</div>
+<div class="icon3" ></div>
+<div class="icon2" >زمان : 12:31 بعد از ظهر</div>
+</div>
+</div>
+
+
+<div class="q1" ></div>
+<div class="space2" ></div>
+
+<div class="post-b"></div>
+<div class="post-v">
+<div align="center"><div class="post-v2"><div align="right">
+<a href="http://kolbe-asheghi.mihanblog.com/post/233" title="1393/11/23" >:: برگهای برنده تان  را  نسوزانید  </a><br><a href="http://kolbe-asheghi.mihanblog.com/post/232" title="1393/11/13" >:: دهه  فجر مبارک </a><br><a href="http://kolbe-asheghi.mihanblog.com/post/231" title="1393/10/23" >:: چرا دلشون میخواد  فتنه  زنده بمونه؟؟ </a><br><a href="http://kolbe-asheghi.mihanblog.com/post/230" title="1393/10/17" >:: چرا  رفراندوم؟؟؟!!!!! </a><br><a href="http://kolbe-asheghi.mihanblog.com/post/229" title="1393/10/15" >:: هفته  وحدت  </a><br><a href="http://kolbe-asheghi.mihanblog.com/post/228" title="1393/10/12" >:: 9 دی در رفسنجان  چه  گذشت  ؟؟ </a><br><a href="http://kolbe-asheghi.mihanblog.com/post/227" title="1393/09/22" >:: چرا محافظه کاری ....؟؟ </a><br><a href="http://kolbe-asheghi.mihanblog.com/post/220" title="1393/09/5" >:: نمیخوایم  فکرررر کنیم ؟؟؟ </a><br><a href="http://kolbe-asheghi.mihanblog.com/post/219" title="1393/06/19" >:: گاهی خیلی زود  دیر میشود </a><br><a href="http://kolbe-asheghi.mihanblog.com/post/218" title="1393/06/6" >:: مقاومت  تحریمها را  شکست   </a><br><a href="http://kolbe-asheghi.mihanblog.com/post/217" title="1393/06/1" >:: چاهی که  زمان  احمدی نژاد  کندن  هنوز سرش بازه  </a><br><a href="http://kolbe-asheghi.mihanblog.com/post/216" title="1393/05/26" >:: یک  هشدار بزرگ  </a><br><a href="http://kolbe-asheghi.mihanblog.com/post/215" title="1393/05/21" >:: لقمان  جان  کجایی جات  خالیه </a><br><a href="http://kolbe-asheghi.mihanblog.com/post/214" title="1393/04/22" >:: درباره  رمان جادوی عشق </a><br><a href="http://kolbe-asheghi.mihanblog.com/post/211" title="1393/04/8" >:: رمان جادوی عشق ( قسمت اخر)(1) </a><br><a href="http://kolbe-asheghi.mihanblog.com/post/212" title="1393/04/8" >:: رمان جادوی عشق ( قسمت اخر)(2) </a><br><a href="http://kolbe-asheghi.mihanblog.com/post/208" title="1393/03/29" >:: وبگردی( پست ثابت) </a><br><a href="http://kolbe-asheghi.mihanblog.com/post/206" title="1393/03/29" >:: قبلش چی میگفتن  حالا  چی میگن!!!! </a><br><a href="http://kolbe-asheghi.mihanblog.com/post/205" title="1393/03/20" >:: دولت  راستگویان  ایا پاسخگو هست؟؟؟ </a><br><a href="http://kolbe-asheghi.mihanblog.com/post/204" title="1393/03/16" >:: ازادی یواشکی یا  طغیان  در برابر خدا </a><br><a href="http://kolbe-asheghi.mihanblog.com/post/203" title="1393/03/12" >:: رمان جادوی عشق ( قسمت سی و  دوم ) </a><br><a href="http://kolbe-asheghi.mihanblog.com/post/202" title="1393/03/7" >:: رمان جادوی عشق ( قسمت سی و یک) </a><br><a href="http://kolbe-asheghi.mihanblog.com/post/201" title="1393/02/30" >:: رمان جادوی عشق ( قسمت سی ام) </a><br><a href="http://kolbe-asheghi.mihanblog.com/post/200" title="1393/02/26" >:: وبگردی( پست ثابت) </a><br><a href="http://kolbe-asheghi.mihanblog.com/post/199" title="1393/02/24" >:: سلام  صداو  سیما </a><br><a href="http://kolbe-asheghi.mihanblog.com/post/198" title="1393/02/21" >:: رمان جادوی عشق ( قسمت بیست ونهم) </a><br><a href="http://kolbe-asheghi.mihanblog.com/post/197" title="1393/02/15" >:: رمان جادوی عشق ( قسمت بیست وهشتم ) </a><br><a href="http://kolbe-asheghi.mihanblog.com/post/196" title="1393/02/7" >:: در سر اقای هاشمی چه میگذرد؟؟؟ </a><br><a href="http://kolbe-asheghi.mihanblog.com/post/195" title="1393/01/31" >:: رمان جادوی عشق ( قسمت بیست وششم) </a><br><a href="http://kolbe-asheghi.mihanblog.com/post/194" title="1393/01/24" >:: رمان جادوی عشق ( قسمت بیست و پنجم) </a><br></a></div></div></div>
+</div>
+<div class="post-p2"></div><br><br>
+
+<br><table border="0" width="100%" id="table3" cellspacing="0" cellpadding="0"><tr>
+<td width="30"><br></td><td><table border="0" width="100%" id="table4" cellspacing="0" cellpadding="0">
+<tr><td width="161" align="center"><p><b>
+<font color="#000000">( تعداد کل صفحات: 17 )</font></b></td>
+<td align="center"><p align="right"><a href="http://kolbe-asheghi.mihanblog.com/page/1">[ <b>1</b> ]</a>  <a href="http://kolbe-asheghi.mihanblog.com/page/2">[ <span>2</span> ]</a>  <a href="http://kolbe-asheghi.mihanblog.com/page/3">[ <span>3</span> ]</a>  <a href="http://kolbe-asheghi.mihanblog.com/page/4">[ <span>4</span> ]</a>  <a href="http://kolbe-asheghi.mihanblog.com/page/5">[ <span>5</span> ]</a>  <a href="http://kolbe-asheghi.mihanblog.com/page/6">[ <span>6</span> ]</a>  <a href="http://kolbe-asheghi.mihanblog.com/page/7">[ <span>7</span> ]</a>  <a href="http://kolbe-asheghi.mihanblog.com/page/8">[ <i>...</i> ]</a>  </td>
+</tr></table></td><td width="30"><br></td></tr></table><br><br>
+</td>
+<td valign="top" width="9"> </td>
+<td valign="top" width="197">
+
+<div class="menu-ali1"></div>
+<div class="menu-ali2"><div class="menu-pic"><img border="0" src="http://temkade.com/tem/45/20.gif" ></div>
+<div class="m-t">موضوعات</div></div>
+<div class="menu-ali3"><div class="menu-padding">
+<div class="vmenu2"><a href="http://kolbe-asheghi.mihanblog.com/post/category/9" title="35" >
+رمان جادوی عشق</a></div><div class="vmenu2"><a href="http://kolbe-asheghi.mihanblog.com/post/category/8" title="2" >
+چرا خلقم کردی؟</a></div><div class="vmenu2"><a href="http://kolbe-asheghi.mihanblog.com/post/category/7" title="14" >
+ارشیو وبگردی</a></div><div class="vmenu2"><a href="http://kolbe-asheghi.mihanblog.com/post/category/6" title="10" >
+مشکل کجاست؟</a></div><div class="vmenu2"><a href="http://kolbe-asheghi.mihanblog.com/post/category/5" title="7" >
+چرا دیندار باشیم؟</a></div><div class="vmenu2"><a href="http://kolbe-asheghi.mihanblog.com/post/category/4" title="23" >
+سیاست به روش خودم</a></div><div class="vmenu2"><a href="http://kolbe-asheghi.mihanblog.com/post/category/3" title="6" >
+بررسی حجاب</a></div><div class="vmenu2"><a href="http://kolbe-asheghi.mihanblog.com/post/category/2" title="15" >
+هر چی از شهید چمران نوشتم</a></div><div class="vmenu2"><a href="http://kolbe-asheghi.mihanblog.com/post/category/1" title="18" >
+رمان با من حرف بزن</a></div></div></div>
+<div class="menu-ali4"></div>
+
+<div class="menu-ali1"></div>
+<div class="menu-ali2"><div class="menu-pic"><img border="0" src="http://temkade.com/tem/45/21.gif" ></div>
+<div class="m-t">آرشیو مطالب</div></div>
+<div class="menu-ali3"><div class="menu-padding">
+<div class="vmenu2"><a href="http://kolbe-asheghi.mihanblog.com/post/archive/1393/11" title="2">
+ بهمن 1393</a></div><div class="vmenu2"><a href="http://kolbe-asheghi.mihanblog.com/post/archive/1393/10" title="4">
+ دی 1393</a></div><div class="vmenu2"><a href="http://kolbe-asheghi.mihanblog.com/post/archive/1393/9" title="1">
+ آذر 1393</a></div><div class="vmenu2"><a href="http://kolbe-asheghi.mihanblog.com/post/archive/1393/6" title="3">
+ شهریور 1393</a></div><div class="vmenu2"><a href="http://kolbe-asheghi.mihanblog.com/post/archive/1393/5" title="2">
+ مرداد 1393</a></div><div class="vmenu2"><a href="http://kolbe-asheghi.mihanblog.com/post/archive/1393/4" title="3">
+ تیر 1393</a></div><div class="vmenu2"><a href="http://kolbe-asheghi.mihanblog.com/post/archive/1393/3" title="5">
+ خرداد 1393</a></div><div class="vmenu2"><a href="http://kolbe-asheghi.mihanblog.com/post/archive/1393/2" title="6">
+ اردیبهشت 1393</a></div><div class="vmenu2"><a href="http://kolbe-asheghi.mihanblog.com/post/archive/1393/1" title="5">
+ فروردین 1393</a></div><div class="vmenu2"><a href="http://kolbe-asheghi.mihanblog.com/post/archive/1392/12" title="1">
+ اسفند 1392</a></div><div class="vmenu2"><a href="http://kolbe-asheghi.mihanblog.com/post/archive/1392/11" title="5">
+ بهمن 1392</a></div><div class="vmenu2"><a href="http://kolbe-asheghi.mihanblog.com/post/archive/1392/10" title="7">
+ دی 1392</a></div><div class="vmenu2"><a href="http://kolbe-asheghi.mihanblog.com/post/archive/1392/9" title="8">
+ آذر 1392</a></div><div class="vmenu2"><a href="http://kolbe-asheghi.mihanblog.com/post/archive/1392/8" title="4">
+ آبان 1392</a></div><div class="vmenu2"><a href="http://kolbe-asheghi.mihanblog.com/post/archive/1392/7" title="6">
+ مهر 1392</a></div><div class="vmenu2"><a href="http://kolbe-asheghi.mihanblog.com/post/archive/1392/6" title="5">
+ شهریور 1392</a></div><div class="vmenu2"><a href="http://kolbe-asheghi.mihanblog.com/post/archive/1392/5" title="4">
+ مرداد 1392</a></div><div class="vmenu2"><a href="http://kolbe-asheghi.mihanblog.com/post/archive/1392/4" title="5">
+ تیر 1392</a></div><div class="vmenu2"><a href="http://kolbe-asheghi.mihanblog.com/post/archive/1392/3" title="11">
+ خرداد 1392</a></div><div class="vmenu2"><a href="http://kolbe-asheghi.mihanblog.com/post/archive/1392/2" title="5">
+ اردیبهشت 1392</a></div><div class="vmenu2"><a href="http://kolbe-asheghi.mihanblog.com/post/archive/1392/1" title="8">
+ فروردین 1392</a></div><div class="vmenu2"><a href="http://kolbe-asheghi.mihanblog.com/post/archive/1391/12" title="7">
+ اسفند 1391</a></div><div class="vmenu2"><a href="http://kolbe-asheghi.mihanblog.com/post/archive/1391/11" title="10">
+ بهمن 1391</a></div><div class="vmenu2"><a href="http://kolbe-asheghi.mihanblog.com/post/archive/1391/10" title="7">
+ دی 1391</a></div><div class="vmenu2"><a href="http://kolbe-asheghi.mihanblog.com/post/archive/1391/9" title="3">
+ آذر 1391</a></div><div class="vmenu2"><a href="http://kolbe-asheghi.mihanblog.com/post/archive/1391/8" title="7">
+ آبان 1391</a></div><div class="vmenu2"><a href="http://kolbe-asheghi.mihanblog.com/post/archive/1391/7" title="6">
+ مهر 1391</a></div><div class="vmenu2"><a href="http://kolbe-asheghi.mihanblog.com/post/archive/1391/6" title="6">
+ شهریور 1391</a></div><div class="vmenu2"><a href="http://kolbe-asheghi.mihanblog.com/post/archive/1391/5" title="4">
+ مرداد 1391</a></div><div class="vmenu2"><a href="http://kolbe-asheghi.mihanblog.com/post/archive/1391/4" title="8">
+ تیر 1391</a></div></div></div>
+<div class="menu-ali4"></div>
+
+<div class="menu-ali1"></div>
+<div class="menu-ali2"><div class="menu-pic"><img border="0" src="http://temkade.com/tem/45/33.gif" ></div>
+<div class="m-t">پیوند های روزانه</div></div>
+<div class="menu-ali3"><div class="menu-padding">
+<div class="vmenu2"><a target="_blank" href="http://nekoonam.ir/fa/Connection/Estekhareh/" title="" >
+حجه الاسلام نکونام </a></div><div class="vmenu2"><a target="_blank" href="../www.dadabeyglu.mihanblog.com/index.html" title="سلامـ دوست من...
+وبلاگ خوبی داری...
+روستای ما در دامنه سرسبز سبلان واقع شده...
+خوشحال میشیمـ به وبلاگ روستایی ما سر بزنی...
+در پناه حق" >
+❀یه وبلاگ روستایی❀</a></div><div class="vmenu2"><a target="_blank" href="../laugh-pic.mihanblog.com/index.html" title="سلام امیدوارم هر روز پست های مفید بزارین که یکی مثل من همیشه استفاده بکنه 
+وقتی لینک رو تایید کردین نظر بدین منم لینکت میکنم" >
+هر روز عکس خنده دار </a></div><div class="vmenu2"><a target="_blank" href="http://www.masudrahemi.blogfa.com" title="با سلام....
+ 
+اگه حال کردی به ما هم سر بزن 
+ممنون از اینکه به ما هم سر می زنی....
+دنیای اطلاعات جالب و با حال مسعود" >
+مسعود</a></div><div class="vmenu2"><a target="_blank" href="http://serialdownload.in" title="سلام وب جلبی داری!
+اگر دوست داری مارو لینک کن!
+
+سریال دانلود
+http://serialdownload.in" >
+دانلود سریال</a></div><div class="vmenu2"><a target="_blank" href="http://ghatre-kocholoo.blogfa.com/" title="" >
+قطره کوچولو</a></div><div class="vmenu2"><a target="_blank" href="http://jangenatamam.blogfa.com/" title="" >
+جنگ ناتمام</a></div><div class="vmenu2"><a target="_blank" href="http://razemashreq.blogfa.com/" title="" >
+رازی در منتهی علیه شرق</a></div><div class="vmenu2"><a target="_blank" href="http://sangarban313.blogfa.com/" title="" >
+سنگرهای خالی</a></div><div class="vmenu2"><a target="_blank" href="http://www.hemasesiasi-92.blogfa.com/" title="" >
+حماسه سیاسی( مصطفی)</a></div><div class="vmenu2"><a target="_blank" href="http://oceanglob.blogfa.com" title="" >
+قطره ای از اقیانوس..</a></div><div class="vmenu2"><a target="_blank" href="http://zendeginameshohada.blogfa.com" title="وبلاگی باتصاویر،خاطرات ،وصیت نامه شهداوتصاویری برای تلنگربه خودمان" >
+شهدا</a></div><div class="vmenu2"><a target="_blank" href="http://pnuba.ir" title="با سلام
+من مدیریت وب سایت دانشجویان پیام نور بندرعباس هستم
+سایت جالب و پر محتوایی دارید
+نظرتون راجع به تبادل لینک چیه؟
+امیدوارم این آخرین دیدار نباشه
+pnuba.ir
+با تشکر" >
+پیام نور بندرعباس</a></div><div class="vmenu2"><a target="_blank" href="http://salamsokahriz.blogfa.com/" title="" >
+سوکهریز بهشت موعود</a></div><div class="vmenu2"><a target="_blank" href="http://www.eporsesh.com/" title="" >
+پاسخگویی انلاین به احکام</a></div><div class="vmenu2"><a target="_blank" href="http://albeyatolellah.blogfa.com" title="با سلام
+
+از شما دوست عزیز درخواست می شود تا با نشان دادن عمق ارادت و پیروی تان از امام عصر، حضرت صاحب الزمان (ع) با امضا ذیل بیعت نامه با آن امام عزیز، در این حرکت عظیم به خیل سپاهیان مهدی فاطمه (عج) بپیوندید.
+
+این چالشی است برای همه ما که بسنجیم چقدر برای یاری امام زمان (ع) آماده ایم.
+
+http://albeyatolellah.blogfa.com/post/56
+
+در انتظار حضور و عزم جزم شما هستیم.
+
+یا مهدی" >
+حسام</a></div><div class="vmenu2"><a target="_blank" href="http://taajil.ir/" title="" >
+تعجیل</a></div><div class="vmenu2"><a target="_blank" href="http://www.p-roobekhoda.rozblog.com" title="" >
+پنجره ای رو به خدا</a></div><div class="vmenu2"><a target="_blank" href="http://khodkareenghelabe.blog.ir/" title="" >
+خودکار انقلابی</a></div><div class="vmenu2"><a target="_blank" href="http://khoshfahm.blogfa.com" title="" >
+خوش فهم</a></div><div class="vmenu2"><a target="_blank" href="http://aw2s.mihanblog.com/" title="" >
+پنجره ای رو به اسمان</a></div><div class="vmenu2"><a target="_blank" href="http://sharaf-al-shams.mihanblog.com/ " title="" >
+شرف الشمس</a></div><div class="vmenu2"><a target="_blank" href="http://bimesaman-basir.blogfa.com" title="" >
+بیمه سامان</a></div><div class="vmenu2"><a target="_blank" href="http://sandiskhor.blog.ir/" title="با یک جهش ژنتیکی یک شبه ولایتمدار شوید
+
+موسسه خدمات ژنتیکی همگام با واقعه ارائه می دهد: روییدن محاسن در نقاط دلخواه، تقویت حنجره، ادای صحیح حروف حلقی، ظهور پینه بر پیشانی( بدون درد) و...
+
+با مطلب آگهی های جدید انتخاباتی بروزم" >
+ساندیس خور</a></div><div class="vmenu2"><a target="_blank" href="../www.montazeranmahdimoud.mihanblog.com/index.html" title="سلام
+خوبی ؟
+وبلاگ قشنگی داری . . .
+اگر دوست داری به منم سر بزن
+راستی اگر افتخار میدی منو لینک کن و اطلاع بده تا لینکت کنم یا اینکه بگو اول من لینکت کنم
+موفق باشی دوست خوبم" >
+منتظران ظهور</a></div><div class="vmenu2"><a target="_blank" href="http://dehnamaki.blogfa.com/" title="" >
+مسعود ده نمکی </a></div><div class="vmenu2"><a target="_blank" href="http://amirihosain.blogfa.com/" title="" >
+دستنوشته های یک دانشجو</a></div><div class="vmenu2"><a target="_blank" href="http://shamim-eslam.blogfa.com/" title="" >
+اسلام پنجره ای زیبا به سوی دو</a></div><div class="vmenu2"><a target="_blank" href="http://porseman.blog.ir/" title="" >
+پرسش</a></div><div class="vmenu2"><a target="_blank" href="http://kabotar1372.blogfa.com/" title="" >
+کبوتر</a></div><div class="vmenu2"><a target="_blank" href="http://spring-revolution.blogfa.com/" title="" >
+حقایق را بیابید</a></div><div class="vmenu2"><a target="_blank" href="http://fati3041373.blogfa.com " title="" >
+غریب قریب</a></div><div class="vmenu2"><a target="_blank" href="http://imamasr313.blogfa.com " title="" >
+صبح ظهور</a></div><div class="vmenu2"><a target="_blank" href="http://mostazafin.tv/" title="" >
+صوت المستضعفین</a></div><div class="vmenu2"><a target="_blank" href="http://newbirth.rozblog.com" title="" >
+سایت دانشگاه کرمان</a></div><div class="vmenu2"><a target="_blank" href="http://zohoore-monji.mihanblog.com " title="" >
+مهدویت ودجال</a></div><div class="vmenu2"><a target="_blank" href="http://fly1391.blogfa.com " title="" >
+روی ابرهای اسمان</a></div><div class="vmenu2"><a target="_blank" href="http://www.bana57.ir " title="" >
+بچه انقلاب</a></div><div class="vmenu2"><a target="_blank" href="http://habib47.blogfa.com " title="" >
+پایگاه مباحث قرانی</a></div><div class="vmenu2"><a target="_blank" href="http://ojeeshgh14.blogfa.com/" title="" >
+جا مانده ام</a></div><div class="vmenu2"><a target="_blank" href="http://www.vurud-mamnu90.blogfa.com/" title="" >
+**تلنگر**</a></div><div class="vmenu2"><a target="_blank" href="http://ishlugh.blogfa.com/" title="" >
+آی شلوغ</a></div><div class="vmenu2"><a target="_blank" href="http://blugh.ir/" title="" >
+بلوغ راهی به سوی اسمان</a></div><div class="vmenu2"><a target="_blank" href="http://roshangaronline.blogfa.com/ " title="" >
+روشنگر</a></div><div class="vmenu2"><a target="_blank" href="http://zambur.blogfa.com/" title="" >
+زمبور</a></div><div class="vmenu2"><a target="_blank" href="http://www.emtedademehr.com/" title="" >
+امتداد مهر</a></div><div class="vmenu2"><a target="_blank" href="http://m-d.ir/" title="" >
+وبلاگهای حامی احمدی نژاد</a></div><div class="vmenu2"><a target="_blank" href="http://sam104.blogfa.com " title="" >
+آتش سوزان وطن ( سام)</a></div><div class="vmenu2"><a target="_blank" href="http://www.mahdiyar1993.blogfa.com " title="" >
+پدری مهربان</a></div><div class="vmenu2"><a target="_blank" href="http://pishtazanmosalmanand.blogfa.com " title="" >
+من مسلمانم نه تروریست</a></div><div class="vmenu2"><a target="_blank" href="http://www.ghotbnama1404.blogfa.com/" title="" >
+قطب نما</a></div><div class="vmenu2"><a target="_blank" href="http://bachehaye-balla.blogfa.com/ " title="" >
+بچه های بالا</a></div><div class="vmenu2"><a target="_blank" href="http://seraat.blog.ir/" title="" >
+صراط</a></div><div class="vmenu2"><a target="_blank" href="http://peirovanevelayat.blogfa.com/" title="" >
+در انتظار منجی</a></div><div class="vmenu2"><a target="_blank" href="http://shalamcha.blogfa.com/ " title="" >
+شهیدان زنده اند</a></div><div class="vmenu2"><a target="_blank" href="http://www.doktoratena.blogfa.com " title="" >
+نورون</a></div><div class="vmenu2"><a target="_blank" href="http://sarmeh.blogfa.com/" title="" >
+خدایا شکرت</a></div><div class="vmenu2"><a target="_blank" href="http://eskandari-mohsen.blogfa.com/ " title="" >
+سفیر هدایت</a></div><div class="vmenu2"><a target="_blank" href="http://vahhabi2012.blogfa.com/" title="" >
+وهابیت...</a></div><div class="vmenu2"><a target="_blank" href="http://iranherb.blogfa.com/ " title="" >
+هادی</a></div><div class="vmenu2"><a target="_blank" href="http://www.mohammadiyeh.blogfa.com " title="" >
+محمدیه</a></div><div class="vmenu2"><a target="_blank" href="http://rahebipayan72.blogfa.com " title="" >
+حسام ( دلنوشته)</a></div><div class="vmenu2"><a target="_blank" href="http://khoda-ba-mast90.blogfa.com " title="" >
+فطرس</a></div><div class="vmenu2"><a target="_blank" href="http://www.clever.blogfa.com " title="" >
+صبر وبصیرت(رضا)</a></div><div class="vmenu2"><a target="_blank" href="http://fadak20.mihanblog.com/" title="" >
+پرده اسرار</a></div><div class="vmenu2"><a target="_blank" href="http://zaminvaaseman.mihanblog.com " title="" >
+سما</a></div><div class="vmenu2"><a target="_blank" href="http://www.jarchlo.blogfa.com/" title="" >
+به دنبال حقیقت</a></div><div class="vmenu2"><a target="_blank" href="http://zahrapoor.blogfa.com/ " title="" >
+زمزم اندیشه</a></div><div class="vmenu2"><a target="_blank" href="http://zohoore-monji.rozblog.com" title="" >
+مهدویت و دجال</a></div><div class="vmenu2"><a target="_blank" href="http://www.1khalvat.blogfa.com/" title="" >
+خلوتی با خویشتن</a></div><div class="vmenu2"><a target="_blank" href="http://cokoteziba.blogfa.com " title="" >
+انتظار زیبا</a></div><div class="vmenu2"><a target="_blank" href="http://www.eslamiat91.blogfa.com " title="" >
+اسلامیت</a></div><div class="vmenu2"><a target="_blank" href="http://2cheshmejang.blogfa.com/" title="" >
+چشم جنگ 2</a></div><div class="vmenu2"><a target="_blank" href="http://mehman25.blogfa.com" title="" >
+اینک طوفان دیگری در راه است</a></div><div class="vmenu2"><a target="_blank" href="http://www.shiaa.blogfa.com/" title="" >
+دفاع از اسلام وتشیع</a></div><div class="vmenu2"><a target="_blank" href="http://www.daszarrin.ir " title="" >
+من یک مسافرم</a></div><div class="vmenu2"><a target="_blank" href="http://www.shahedeasemany2.blogfa.com " title="" >
+شهدا را یاد کنید</a></div><div class="vmenu2"><a target="_blank" href="http://12145.blogfa.com/#" title="" >
+منتظران مصلح</a></div><div class="vmenu2"><a target="_blank" href="http://oldman.ir/" title="" >
+پیرمرد</a></div><div class="vmenu2"><a target="_blank" href="http://afsaaranejavan.blogfa.com/" title="" >
+افسران جوان</a></div><div class="vmenu2"><a target="_blank" href="http://shamimehyas.blogfa.com/" title="" >
+کوچه باغ انتظار</a></div><div class="vmenu2"><a target="_blank" href="http://kajrahe.blogfa.com/" title="" >
+کجراهه</a></div><div class="vmenu2"><a target="_blank" href="http://sokoot110z.blogfa.com " title="" >
+دلتنگ</a></div><div class="vmenu2"><a target="_blank" href="http://allatt.persianblog.ir/" title="" >
+گلهای بهشتی</a></div><div class="vmenu2"><a target="_blank" href="http://www.manokhodam91.blogfa.com " title="" >
+عشق یعنی مادر</a></div><div class="vmenu2"><a target="_blank" href="http://www.taasnim.persianblog.ir " title="" >
+تسنیم</a></div><div class="vmenu2"><a target="_blank" href="http://arshadabedifar.blogfa.com " title="" >
+خاطرات پر پر شده</a></div><div class="vmenu2"><a target="_blank" href="http://azbisimchee.blogfa.com " title="" >
+بیسیمچی</a></div><div class="vmenu2"><a target="_blank" href="http://yaranemammahdi.blogfa.com " title="" >
+طلایه داران ظهور</a></div><div class="vmenu2"><a target="_blank" href="http://www.yafateme.blogfa.com " title="" >
+یا فاطمه</a></div><div class="vmenu2"><a target="_blank" href="http://taghisamiei.blogfa.com/ " title="" >
+حدیث عاشقی</a></div><div class="vmenu2"><a target="_blank" href="http://www.komeil64.blogfa.com" title="" >
+شهدا شرمنده ایم</a></div><div class="vmenu2"><a target="_blank" href=" http://yaskabod11.blogfa.com" title="" >
+یازدهمین دلشکسته</a></div><div class="vmenu2"><a target="_blank" href="http://atenasm.persianblog.i" title="" >
+جام صبوحی</a></div><div class="vmenu2"><a target="_blank" href="http://badiyeroozegar.blogfa.com" title="" >
+لطفا دو تا بلیط واسه بهشت</a></div><div class="vmenu2"><a target="_blank" href="http://shoghedarya.blogfa.com" title="" >
+شوق دریا</a></div><div class="vmenu2"><a target="_blank" href="http://alcazar.blogfa.com" title="" >
+منتظران ظهور</a></div><div class="vmenu2"><a target="_blank" href="http://marsuos.blogfa.com" title="" >
+جنبش مرصوص</a></div><div class="vmenu2"><a target="_blank" href="http://1talabedamghan.mihanblog.com" title="" >
+یک طلبه دامغانی</a></div><br>
+<div class="vmenu2"><a  target="_blank" href="http://kolbe-asheghi.mihanblog.com/linkdaily/" >لیست کامل پیوندهای روزانه</a></div>
+<div class="vmenu2"><a  href="javascript:linkdailyForm()" >ارسال پیوند</a></div>
+</div></div>
+<div class="menu-ali4"></div>
+
+<div class="menu-ali1"></div>
+<div class="menu-ali2"><div class="menu-pic"><img border="0" src="http://temkade.com/tem/45/17.gif" ></div>
+<div class="m-t">نویسندگان</div></div>
+<div class="menu-ali3"><div class="menu-padding">
+<div class="vmenu2"><a href="http://kolbe-asheghi.mihanblog.com/post/author/725638" title="198" >زهرا </a></div></div></div>
+<div class="menu-ali4"></div>
+
+<div class="menu-ali1"></div>
+<div class="menu-ali2"><div class="menu-pic"><img border="0" src="http://temkade.com/tem/45/34.gif" ></div>
+<div class="m-t">برچسب ها</div></div>
+<div class="menu-ali3"><div class="menu-padding">
+<a href="http://kolbe-asheghi.mihanblog.com/post/tag/%D8%B4%D8%A8%D9%87%D9%87" style="font-size:1em">
+شبهه</a> , <a href="http://kolbe-asheghi.mihanblog.com/post/tag/%D8%B1%D9%85%D8%A7%D9%86+%D8%AC%D8%A7%D8%AF%D9%88%DB%8C+%D8%B9%D8%B4%D9%82" style="font-size:1em">
+رمان جادوی عشق</a> , <a href="http://kolbe-asheghi.mihanblog.com/post/tag/%D8%AF%DA%A9%D8%AA%D8%B1+%D8%AC%D9%84%DB%8C%D9%84%DB%8C" style="font-size:1.34em">
+دکتر جلیلی</a> , <a href="http://kolbe-asheghi.mihanblog.com/post/tag/%D8%A7%D8%AD%D9%85%D8%AF%DB%8C+%D9%86%DA%98%D8%A7%D8%AF" style="font-size:1.34em">
+احمدی نژاد</a> , <a href="http://kolbe-asheghi.mihanblog.com/post/tag/%D8%B1%D9%85%D8%A7%D9%86" style="font-size:2em">
+رمان</a> , <a href="http://kolbe-asheghi.mihanblog.com/post/tag/%D8%B1%D9%88%D8%AD%D8%A7%D9%86%DB%8C" style="font-size:1em">
+روحانی</a> , <a href="http://kolbe-asheghi.mihanblog.com/post/tag/%D9%85%D9%82%D8%A7%D9%88%D9%85%D8%AA" style="font-size:1.34em">
+مقاومت</a> , <a href="http://kolbe-asheghi.mihanblog.com/post/tag/%D8%B9%D8%A8%D9%88%D8%AF%DB%8C%D8%AA" style="font-size:1em">
+عبودیت</a> , <a href="http://kolbe-asheghi.mihanblog.com/post/tag/%DA%AF%D9%81%D8%AA+%D9%88%D8%B4%D9%86%D9%88%D8%AF" style="font-size:1em">
+گفت وشنود</a> , <a href="http://kolbe-asheghi.mihanblog.com/post/tag/%D8%A7%D9%86%D8%AA%D8%AE%D8%A7%D8%A8%D8%A7%D8%AA" style="font-size:1em">
+انتخابات</a> , <a href="http://kolbe-asheghi.mihanblog.com/post/tag/%D9%87%D8%A7%D8%B4%D9%85%DB%8C" style="font-size:1em">
+هاشمی</a> , <a href="http://kolbe-asheghi.mihanblog.com/post/tag/%D9%87%D8%AF%D9%81+%D8%AE%D9%84%D9%82%D8%AA" style="font-size:1.34em">
+هدف خلقت</a> , <a href="http://kolbe-asheghi.mihanblog.com/post/tag/%D8%A7%D9%85%D8%B1+%D8%A8%D9%87+%D9%85%D8%B9%D8%B1%D9%88%D9%81" style="font-size:1em">
+امر به معروف</a> , <a href="http://kolbe-asheghi.mihanblog.com/post/tag/%D8%AD%D8%AC%D8%A7%D8%A8" style="font-size:1em">
+حجاب</a> , <a href="http://kolbe-asheghi.mihanblog.com/post/tag/%DA%86%D8%B1%D8%A7+%D8%AE%D9%84%D9%82%D9%85+%DA%A9%D8%B1%D8%AF%DB%8C" style="font-size:1em">
+چرا خلقم کردی</a> , <a href="http://kolbe-asheghi.mihanblog.com/post/tag/%D8%B1%D8%A7%D9%87%DA%A9%D8%A7%D8%B1%D9%87%D8%A7" style="font-size:1em">
+راهکارها</a> , <a href="http://kolbe-asheghi.mihanblog.com/post/tag/%D8%A8%D8%B5%DB%8C%D8%B1%D8%AA" style="font-size:1.67em">
+بصیرت</a> , <a href="http://kolbe-asheghi.mihanblog.com/post/tag/%D8%A7%D9%86%D8%AA%D8%AE%D8%A7%D8%A8%D8%A7%D8%AA+92" style="font-size:1.34em">
+انتخابات 92</a> , <a href="http://kolbe-asheghi.mihanblog.com/post/tag/%D8%B4%D9%86%D8%A7%D8%AE%D8%AA+%D8%AF%D9%86%DB%8C%D8%A7" style="font-size:1em">
+شناخت دنیا</a> , <a href="http://kolbe-asheghi.mihanblog.com/post/tag/%D8%AF%D8%A7%D8%B3%D8%AA%D8%A7%D9%86" style="font-size:1.34em">
+داستان</a> , </div></div>
+<div class="menu-ali4"></div>
+
+<!---------- block left ------------------------->
+<div class="menu-ali1"></div>
+<div class="menu-ali2"><div class="menu-pic"><img border="0" src="http://temkade.com/tem/45/22.gif" ></div>
+<div class="m-t">امكانات جانبی</div></div>
+<div class="menu-ali3">
+<div align="center"><div style="width:188px; overflow:hidden; padding-top:13px;">
+
+جهت اطلاع از تنظیمات و ویــــرایش این قالب اینجا را کلیک کنید.<br><br>
+<center><a target="_blank" title="جهت اطلاع از تنظیمات و ویرایش این قالب اینجا را کلیک کنید " 
+href="http://www.temkade.com">.:: کلیک کنید ::.</a></center>
+
+</div>
+</div></div>
+<div class="menu-ali4"></div>
+<!---------- block left ------------------------->
+</td>
+</tr>
+</table>
+
+</td>
+</tr>
+</table>
+</div>
+
+<div class="footer"></div>
+<div align="center">
+<table border="0" width="1003" cellspacing="0" cellpadding="0" dir="rtl">
+<tr>
+<td valign="top" >
+<div class="alibehnamfar" >
+<div class="copyright" style="line-height: 25px">
+تمام حقوق این وب سایت و مطالب آن متعلق به <a href="index.html"><b> با من حرف بزن </b></a>می باشد.
+<br>
+كد نویسی و گرافیك قالب توسط : <a target="_blank" href="http://www.temkade.com/">تم کده</a>
+</div>
+</div>
+</td>
+<td width="104" valign="top" ><div class="top"><a href="index.html#top"><img border="0" src="http://temkade.com/tem/45/31.gif"></a></div></td>
+</tr>
+</table>
+</div>
+<div style="height:1px; overflow:hidden; width:100%;"><br>
+<h1><a href="http://www.temkade.com" >قالب وبلاگ</a></h1>
+<h1><a href="http://mihanblog.temkade.com/" >قالب میهن بلاگ</a></h1>
+<h1><a href="http://game.temkade.com" >بازی آنلاین</a></h1>
+<h1><a href="http://up.temkade.com/" >آپلود سنتر</a></h1>
+<h1><a href="http://up.temkade.com/" >آپلود عکس</a></h1>
+</div>
+</body></html><script>
+//    setTimeout(function () {
+//        GetMihanBlogShowAds();
+//    }, 1000);
+</script>
+<!--NEW SERVER--><!--;)-->
+
+<!--SabaVision Ads Handler--><!--<script type="text/javascript">(function (d) {var url =   location.protocol+'//api.sabavision.com/pox/poxjs.js';d.write('<script type="text/javascript" src="' + url + '" async></scri' + 'pt>');})(document);</script>-->
+
+
+<script type="text/javascript">
+
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-153829-9']);
+    _gaq.push(['_setDomainName', 'kolbe-asheghi.mihanblog.com']);
+    _gaq.push(['_trackPageview']);
+
+    (function() {
+        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+
+</script>
+
+
+<div id='mediaad-Kvcm'></div>
+<meta name="sabavision_zone" content="2500-Z499" />
+<center>
+    <div style="background-color:white;width:90%;padding:20px;margin-top:50px;margin-bottom:50px;">
+        <a href="https://www.cloob.com">شبکه اجتماعی فارسی کلوب</a> | <a href="https://www.seo25.com/product/buy-mobile-traffic-and-get-cheap-targeted-mobile-traffic/" target="_blank">Buy Mobile Traffic</a> | <a href="https://www.soalaat.com">سایت سوالات</a>
+    </div>
+</center>

@@ -1,0 +1,2480 @@
+<!DOCTYPE html>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" /><link rel="EditURI" type="application/rsd+xml" title="RSD" href="http://lindsalimi.mihanblog.com/xmlrpc?rsd" />
+<script type="text/javascript" src="../static.mihanblog.com/public/scripts/run/g.other.v3.js"></script>
+<script>
+
+	function c_$(id){
+        return document.getElementById(id);
+    }
+    
+			//if (parent.frames.length) top.location.href= document.location;
+		
+	setTodayDate = function(){
+		document.write('یکشنبه 23 آذر 1399');
+		/*828436*/	}
+
+</script>
+
+
+
+        <script type="text/javascript">
+            (function(){
+            var now = new Date();
+            var head = document.getElementsByTagName('head')[0];
+            var script = document.createElement('script');
+            script.async = true;
+            var script_address = 'https://cdn.yektanet.com/js/mihanblog.com/native-mihanblog.com-6531.js';
+            script.src = script_address + '?v=' + now.getFullYear().toString() + '0' + now.getMonth() + '0' + now.getDate() + '0' + now.getHours();
+            head.appendChild(script);
+            })();
+        </script>
+
+        <!--<script type="text/javascript">
+            var head = document.getElementsByTagName("head")[0];
+            var script = document.createElement("script");
+            script.type = "text/javascript";
+            script.async=1;
+            script.src = "https://s1.mediaad.org/serve/mihanblog.com/loader.js" ;
+            head.appendChild(script);
+        </script>-->
+        
+        <script>
+            var sabaVisionWebsiteID = "9bab9dac-041d-4bdb-b39a-1ed789f65eed"; var sabaVisionWebsitePage = "ALL"
+        </script>
+        <link rel="stylesheet" href="https://plus.sabavision.com/dox/dox.min.css">
+        <script src="https://plus.sabavision.com/dox/dox.min.js"></script>
+        
+        <script>
+	try{
+		var commentCnt = new Array();
+		commentCnt[193]='95';commentCnt[208]='7';commentCnt[209]='10';commentCnt[210]='23';commentCnt[211]='9';commentCnt[212]='5';commentCnt[213]='0';commentCnt[214]='1';commentCnt[215]='2';commentCnt[216]='5';	} catch(e){}
+	
+	newComment = function(post_id){
+		try{
+			window.open('/post/comment/'+post_id,'comment','status=yes,scrollbars=yes,toolbar=no,menubar=no,location=no ,width=480px,height=540px');
+		} catch(e){}
+	}
+	setCommentCnt = function(post_id){
+		try{
+			if(commentCnt[post_id]){
+				document.write(commentCnt[post_id]);
+			} else {
+				document.write(0);
+			}
+		} catch(e){}
+	}
+</script><script>
+
+
+	mihanblogUpdateLike = function(postid,type){
+		var url = '/post/like/'+postid+'/'+type;
+		mihanblogGetAjax(url,function(){});
+	};
+	try{
+        mihanblogGetAjax = function (url,callback) {
+    		var req;
+			if (window.XMLHttpRequest)
+            {
+                // code for IE7+, Firefox, Chrome, Opera, Safari
+			  	req = new XMLHttpRequest();
+			}else{	// code for IE6, IE5
+			  	req = new ActiveXObject("Microsoft.XMLHTTP");
+		  	}
+		    req.open("GET", url, 1);
+		    req.onreadystatechange = function () {
+		        if (req.readyState == 4) {
+		            if (req.status == 200) {
+		            	var response = eval(req.responseText);
+		            	callback();
+		            }else{
+	            		return ;
+		            }
+		        }else{
+					return ;
+		        }
+		    }
+		    req.send(null);
+		}
+	}catch(e){}
+
+	try{
+		var mihanblogLikeArrCnt = new Array();
+		var mihanblogDisLikeArrCnt = new Array();
+
+		mihanblogLikeArrCnt[193]='35';
+mihanblogDisLikeArrCnt[193]='1';
+mihanblogLikeArrCnt[208]='18';
+mihanblogDisLikeArrCnt[208]='0';
+mihanblogLikeArrCnt[209]='19';
+mihanblogDisLikeArrCnt[209]='0';
+mihanblogLikeArrCnt[210]='21';
+mihanblogDisLikeArrCnt[210]='0';
+mihanblogLikeArrCnt[211]='15';
+mihanblogDisLikeArrCnt[211]='0';
+mihanblogLikeArrCnt[212]='11';
+mihanblogDisLikeArrCnt[212]='0';
+mihanblogLikeArrCnt[213]='8';
+mihanblogDisLikeArrCnt[213]='0';
+mihanblogLikeArrCnt[214]='7';
+mihanblogDisLikeArrCnt[214]='0';
+mihanblogLikeArrCnt[215]='9';
+mihanblogDisLikeArrCnt[215]='0';
+mihanblogLikeArrCnt[216]='9';
+mihanblogDisLikeArrCnt[216]='0';
+	} catch(e){}
+
+
+
+    mihanblogPostLike = function(post_id){
+
+        mihanblogLikeCnt = (mihanblogLikeArrCnt[post_id]? mihanblogLikeArrCnt[post_id] : 0);
+        mihanblogDisLikeCnt = (mihanblogDisLikeArrCnt[post_id]? mihanblogDisLikeArrCnt[post_id] : 0);
+        mihanblogLikeCnt = parseInt(mihanblogLikeCnt);
+        mihanblogDisLikeCnt = parseInt(mihanblogDisLikeCnt);
+
+        document.write(
+                '<div class="mihanblog_like_wrapper ">'+
+                       '<div id="dislikeBar_'+post_id+'" onclick="mihanblogUpdateLike('+post_id+',\'dislike\')"   class="mihanblog_like_bar mihanblog_like_dislikeBar mihanblog_like_show_help ">-<div class="mihanblog_like_Cnt" id="disLikeCnt_'+post_id+'">'+mihanblogDisLikeCnt+'</div>'+
+                            '<span  class="mihanblog_like_v2_help mihanblog_like_v2_help_dislike clearfix"> '+
+                                '<span class="mihanblog_like_help_arrow mihanblog_like_help_arrow_dislike clearfix"></span>'+
+                                '<span class="mihanblog_like_help_text">نمی پسندم</span>'+
+                            '</span>'+
+                        '</div>'+
+                       '<div id="Like_'+post_id+'" class="mihanblog_like_border"></div>'+
+                       '<div id="likeBar_'+post_id+'" onclick="mihanblogUpdateLike('+post_id+',\'like\')"  class="mihanblog_like_bar mihanblog_like_likeBar mihanblog_like_show_help" >+<div class="mihanblog_like_Cnt" id="likeCnt_'+post_id+'">'+mihanblogLikeCnt+'</div>'+
+                            '<span  class="mihanblog_like_v2_help mihanblog_like_v2_help_like clearfix"> '+
+                                '<span class="mihanblog_like_help_arrow mihanblog_like_help_arrow_like clearfix"></span>'+
+                                '<span class="mihanblog_like_help_text">می پسندم</span>'+
+                            '</span>'+
+                        '</div>'+
+
+                '</div>'
+        );
+
+
+
+        mihanblogDisplayeLike(post_id);
+    }
+
+
+    mihanblogDisplayeLike = function(post_id){
+
+        mihanblogLikeCnt = (mihanblogLikeArrCnt[post_id]? mihanblogLikeArrCnt[post_id] : 0);
+        mihanblogDisLikeCnt = (mihanblogDisLikeArrCnt[post_id]? mihanblogDisLikeArrCnt[post_id] : 0);
+        mihanblogLikeCnt = parseInt(mihanblogLikeCnt);
+        mihanblogDisLikeCnt = parseInt(mihanblogDisLikeCnt);
+
+
+
+        sum = mihanblogLikeCnt - mihanblogDisLikeCnt;
+        backgroundBorder =  document.getElementById('Like_'+post_id);
+        var likeObj = document.getElementById('likeCnt_'+post_id);
+        var disLikeObj = document.getElementById('disLikeCnt_'+post_id);
+
+
+
+
+
+        likeObj.innerHTML =  mihanblogLikeCnt ;
+        disLikeObj.innerHTML =  mihanblogDisLikeCnt;
+
+        if(sum == 0){
+            backgroundBorder.style.backgroundImage = "url('/public/public/images/icons/like_likedislike.png')";
+            document.getElementById('dislikeBar_'+post_id).style.width = '19px';
+            document.getElementById('likeBar_'+post_id).style.width = '19px';
+        }else{
+             if(sum > 0){
+                 backgroundBorder.style.backgroundImage = "url('/public/public/images/icons/like_like.png')";
+                 document.getElementById('likeBar_'+post_id).style.width = '23px';
+                 document.getElementById('dislikeBar_'+post_id).style.width = '15px';
+             }else{
+                 backgroundBorder.style.backgroundImage = "url('/public/public/images/icons/like_dislike.png')";
+                 document.getElementById('likeBar_'+post_id).style.width = '15px';
+                 document.getElementById('dislikeBar_'+post_id).style.width = '23px';
+             }
+        }
+
+    }
+
+
+
+
+</script>
+
+<style type="text/css">
+
+
+    .clearfix {display: inline-block;}
+    .clearfix:after {
+        content: ".";
+        display: block;
+        height: 0;
+        clear: both;
+        visibility: hidden;
+    }
+
+    .mihanblog_like_wrapper {
+        color: #ffffff;
+        direction: ltr;
+        position: relative;
+    }
+    .mihanblog_like_wrapper span{
+        display: none;
+    }
+    .mihanblog_like_bar {
+        color: #FFFFFF;
+        cursor: pointer;
+        float: left;
+        font-size: 10px;
+        height: 20px;
+        line-height: 19px;
+        margin: 5px 0;
+    }
+    .mihanblog_like_likeBar {
+        background-color: #88B131;
+        padding-right: 5px;
+        border-top-right-radius: 2px;
+        border-bottom-right-radius: 2px;
+        text-align: right;
+    }
+    .mihanblog_like_likeBar:hover{
+        background-color: #699017;
+    }
+    .mihanblog_like_border {
+        background-color: #666666;
+        border: 1px solid #666666;
+        float: left;
+        font-size: 12px;
+        height: 20px;
+        margin-top: 2px;
+        width: 25px;
+        padding: 3px 5px 2px 0;
+        text-align: center;
+        border-radius: 2px;
+        color: #ffffff;
+        direction: ltr;
+        background-repeat: no-repeat ;
+        background-position: 4px center;
+    }
+    .mihanblog_like_border img {
+        margin-left: 2px;
+        margin-top: 2px;
+        width: 22px;
+    }
+    .mihanblog_like_dislikeBar {
+        background-color: #FF6F31;
+        padding-left: 5px;
+        border-top-left-radius: 2px;
+        border-bottom-left-radius: 2px;
+        text-align:left ;
+    }
+    .mihanblog_like_dislikeBar:hover{
+        background-color: #D54B10;
+    }
+
+
+
+    .mihanblog_like_show_help {
+        position: relative;
+    }
+    .mihanblog_like_show_help:hover span {
+        display: block;
+    }
+    .mihanblog_like_help_text {
+        background-color: white;
+        border: 1px solid #555555;
+        border-radius: 3px 3px 3px 3px;
+        color: #303030;
+        float: left;
+        font-size: 11px;
+        font-weight: normal;
+        padding: 5px 10px;
+    }
+
+    .mihanblog_like_help_arrow_dislike {
+        background: url("http://lindsalimi.mihanblog.com/public/public/images/icons/like_hover_top.png") no-repeat scroll 16px 0 transparent;
+        left: 0;
+        top: -4px;
+    }
+
+    .mihanblog_like_help_arrow_like {
+        background: url("http://lindsalimi.mihanblog.com/public/public/images/icons/like_hover_top _2.png") no-repeat scroll 16px 0 transparent;
+        left: -10px;
+        top: 29px;
+    }
+
+    .mihanblog_like_help_arrow{
+        height: 6px;
+        position: absolute;
+        width: 100px;
+
+    }
+
+    .mihanblog_like_v2_help_dislike {
+        left: -15px;
+        top: 24px;
+    }
+    .mihanblog_like_v2_help_like {
+        left: 0;
+        top: -35px;
+
+    }
+    .mihanblog_like_v2_help{
+        display: none;
+        position: absolute;
+        white-space: nowrap;
+        z-index: 1;
+    }
+
+    .mihanblog_like_Cnt{
+        display: inline;
+        color: #ffffff;
+    }
+
+</style><script>
+
+	statInfo = new Array();
+	setStatVar = function(index,value){
+		statInfo[index] = value;
+	}
+	getStatVar = function(index){
+		if(statInfo[index]) document.write(statInfo[index]);
+	}
+	
+	setStatVar('total_post','37');
+	setStatVar('total_author','1');
+	setStatVar('modify_date','پنجشنبه 25 مرداد 1397');
+	
+	setStatVar('today_view','14');
+	setStatVar('yesterday_view','86');
+	
+	setStatVar('this_month_view','650');
+	setStatVar('last_month_view','1087');
+
+	setStatVar('total_view','189268');
+	setStatVar('last_view_date','یکشنبه 23 آذر 1399 (06:06)');
+
+
+
+    
+    function setStatFromClient()
+    {
+        var url = 'http://lindsalimi.mihanblog.com/statupdate/?data[refereruri]=http://tahchin30ni.mihanblog.com/&data[postid]=&data[requesturi]=/&data[sdate]=1607828481&data[hash]=6938965b9bd02573815e864c86a3c5ee&data[resolution]='+screen.width+' X '+screen.height;
+
+//        alert(url);
+//        var newjs = document.createElement("SCRIPT");
+//        newjs.type = 'text/javascript';
+//        newjs.src = url;
+//
+//        var newdiv = document.createElement("DIV");
+//        newdiv.setAttribute("style","display:none");
+
+        document.write(unescape('%3Cscript src="'+url+'" type="text/javascript"%3E%3C/script%3E'));
+//        newdiv.appendChild (newjs);
+//        document.write(newjs);
+//        document.write(appendChild (newdiv);
+
+    };
+    setStatFromClient();
+        
+</script><script>
+	messageForm = function(post_id){
+		try{
+			window.open('/message','message','status=yes,scrollbars=yes,toolbar=no,menubar=no,location=no ,width=480px,height=550px');
+		} catch(e){}
+	}
+</script><script>
+	linkdailyForm = function(){
+		try{
+			window.open('/linkdaily/new','linkdaily','status=yes,scrollbars=yes,toolbar=no,menubar=no,location=no ,width=500px,height=460px');
+		} catch(e){}
+	}
+</script><script>
+
+var MihanblogShopAdsArray = new Array();
+
+function GetMihanBlogShowAds(){
+	if(MihanblogShopAdsArray.length){
+		var adsTarget = 'MihanblogShopAds';
+		var containerWidth = document.getElementById(adsTarget).offsetWidth;
+		if(containerWidth>=200){
+			var adsCnt = parseInt(containerWidth / 200) ;
+			if(adsCnt>MihanblogShopAdsArray.length){
+				adsCnt = MihanblogShopAdsArray.length ; 
+			}
+//			var OneAdsWidth = parseInt(containerWidth / adsCnt) ;
+			var OneAdsWidth = containerWidth / adsCnt ;
+			if(OneAdsWidth>400){
+				OneAdsWidth = 400 ;
+			}
+			var OutHtml = '';
+			var img = '';
+			var link = '';
+			var title = '';
+			var description = '';
+			var imgWidth = 70;
+			if(OneAdsWidth>230){
+				imgWidth = 80;
+			}
+			if(OneAdsWidth>300){
+				imgWidth = 90;
+			}
+			for(adsOne=0;adsOne<adsCnt;adsOne++){
+				
+				img = MihanblogShopAdsArray[adsOne]['img'];
+				link = MihanblogShopAdsArray[adsOne]['link'];
+				title = MihanblogShopAdsArray[adsOne]['title'];
+				description = MihanblogShopAdsArray[adsOne]['description'];
+				
+				OutHtml += '<td style="background-color:#FFF;width: '+OneAdsWidth+'px;border:1px solid #f00;margin:0px 0px;font-size:11px;font-family:tahoma;padding:2px;margin:0px 0px;font-size:11px;border: 1px solid BurlyWood; padding: 1px; height: '+(imgWidth+25)+'px;">';
+
+				OutHtml += '	<a href="http://lindsalimi.mihanblog.com/'+link+'" target="_blank" style="text-decoration:none">';
+
+				OutHtml += '			<div style="width: '+(OneAdsWidth-16)+'px;cursor:pointer;font-size:12px;padding: 4px 1px 4px 7px; white-space: nowrap; text-align: center; font-weight: bold; color: blue;white-space:nowrap;overflow:hidden">';
+				OutHtml += 					title;
+				OutHtml += '			</div>';
+				OutHtml += '			<div style="cursor:pointer;padding: 1px; display: block; float: right; width: '+imgWidth+'px;">';
+				OutHtml += '				<img src="'+img+'.html" style="border:0px;padding:0px;margin:0px;width:'+imgWidth+'px;height:'+imgWidth+'px;">';
+				OutHtml += '			</div>';
+				OutHtml += '			<div style="padding: 1px; display: block; float: right; width: '+(OneAdsWidth-13-imgWidth)+'px; text-align: right;overflow:hidden">';
+				OutHtml += '				<div style="overflow:hidden;cursor:pointer;padding: 2px 3px; line-height: 17px; height: '+(imgWidth-3)+'px; text-align: justify;color:#000;direction:rtl">';
+				OutHtml += 						description;
+				OutHtml += '				</div>';
+				OutHtml += '			</div>';
+
+				OutHtml += '	</a>';
+
+				OutHtml += '</td>';
+			}
+			
+			var Out = '<table align="center" cellpadding="0" cellspacing="2" style="width:'+(OneAdsWidth*adsCnt)+'px;"><tr>'+OutHtml+'</tr></table>'; 
+			
+			Out = '<div style="text-align:center;padding:0px;margin:3px auto;">'+Out+'</div>'; 
+			
+			document.getElementById(adsTarget).style.height = (imgWidth+35)+'px' ;
+			document.getElementById(adsTarget).innerHTML = Out ;
+		}
+	}
+}
+</script>
+    <style>
+        @font-face {
+            font-family: 'Mihan-Iransans';
+            src: url('http://lindsalimi.mihanblog.com/public/public/fonts/Iransans.eot');
+            src: url('http://lindsalimi.mihanblog.com/public/public/fonts/Iransans.eot?') format('embedded-opentype'),
+            url('http://lindsalimi.mihanblog.com/public/public/fonts/Iransans.woff2') format('woff2'),
+            url('http://lindsalimi.mihanblog.com/public/public/fonts/Iransans.woff') format('woff'),
+            url('http://lindsalimi.mihanblog.com/public/public/fonts/Iransans.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+        @font-face {
+            font-family: 'Mihan-IransansBold';
+            src: url('http://lindsalimi.mihanblog.com/public/public/fonts/Iransans-Black.eot');
+            src: url('http://lindsalimi.mihanblog.com/public/public/fonts/Iransans-Black.eot?') format('embedded-opentype'),
+            url('http://lindsalimi.mihanblog.com/public/public/fonts/Iransans-Black.woff2') format('woff2'),
+            url('http://lindsalimi.mihanblog.com/public/public/fonts/Iransans-Black.woff') format('woff'),
+            url('http://lindsalimi.mihanblog.com/public/public/fonts/Iransans-Black.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+        @font-face {
+            font-family: 'Mihan-IransansLight';
+            src: url('http://lindsalimi.mihanblog.com/public/public/fonts/Iransans-UltraLight.eot');
+            src: url('http://lindsalimi.mihanblog.com/public/public/fonts/Iransans-UltraLight.eot?') format('embedded-opentype'),
+            url('http://lindsalimi.mihanblog.com/public/public/fonts/Iransans-UltraLight.woff2') format('woff2'),
+            url('http://lindsalimi.mihanblog.com/public/public/fonts/Iransans-UltraLight.woff') format('woff'),
+            url('http://lindsalimi.mihanblog.com/public/public/fonts/Iransans-UltraLight.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+        @font-face {
+            font-family: 'Mihan-Nassim';
+            src: url('http://lindsalimi.mihanblog.com/public/public/fonts/Nassim.eot');
+            src: url('http://lindsalimi.mihanblog.com/public/public/fonts/Nassim.eot?') format('embedded-opentype'),
+            url('http://lindsalimi.mihanblog.com/public/public/fonts/Nassim.woff2') format('woff2'),
+            url('http://lindsalimi.mihanblog.com/public/public/fonts/Nassim.woff') format('woff'),
+            url('http://lindsalimi.mihanblog.com/public/public/fonts/Nassim.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+        @font-face {
+            font-family: 'Mihan-Koodak';
+            src: url('http://lindsalimi.mihanblog.com/public/public/fonts/Koodak.eot');
+            src: url('http://lindsalimi.mihanblog.com/public/public/fonts/Koodak.eot?') format('embedded-opentype'),
+            url('http://lindsalimi.mihanblog.com/public/public/fonts/Koodak.woff2') format('woff2'),
+            url('http://lindsalimi.mihanblog.com/public/public/fonts/Koodak.woff') format('woff'),
+            url('http://lindsalimi.mihanblog.com/public/public/fonts/Koodak.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+        @font-face {
+            font-family: 'Mihan-Yekan';
+            src: url('http://lindsalimi.mihanblog.com/public/public/fonts/Yekan.eot');
+            src: url('http://lindsalimi.mihanblog.com/public/public/fonts/Yekan.eot?') format('embedded-opentype'),
+            url('http://lindsalimi.mihanblog.com/public/public/fonts/Yekan.woff2') format('woff2'),
+            url('http://lindsalimi.mihanblog.com/public/public/fonts/Yekan.woff') format('woff'),
+            url('http://lindsalimi.mihanblog.com/public/public/fonts/Yekan.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+        @font-face {
+            font-family: 'FontAwesome';
+            src: url('http://lindsalimi.mihanblog.com/public/public/fonts/fontawesome_webfont.eot');
+            src: url('http://lindsalimi.mihanblog.com/public/public/fonts/fontawesome_webfont.eot?') format('embedded-opentype'),
+            url('http://lindsalimi.mihanblog.com/public/public/fonts/fontawesome_webfont.woff2') format('woff2'),
+            url('http://lindsalimi.mihanblog.com/public/public/fonts/fontawesome_webfont.woff') format('woff'),
+            url('http://lindsalimi.mihanblog.com/public/public/fonts/fontawesome_webfont.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+
+
+        
+
+        /* Smartphones (portrait and landscape) ----------- */
+
+        /*
+        @media only screen and (max-width : 480px) and (min-width : 320px) {
+            .sabaClick_advert__wrapper{
+                display:block;
+            }
+            .sabaClick_advert__inner{
+                max-width: 90%;
+                margin: 0 5%;
+            }
+        }
+        */
+
+    </style>
+
+
+
+
+
+
+
+<html lang="fa" dir="rtl">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="Content-Type" content="text html">
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1.0">
+    <meta name="description" content="" />
+    <meta name="keywords" content="" />
+    <title>ღᶫᵒᵛᵉᵧₒᵤ❤فـ ـاصـ ـلـ ـهـ قـ ـلــ ـبــــ ـهـ ـا❤ᶫᵒᵛᵉᵧₒᵤღ&quot;</title>
+    <link rel="stylesheet" href="../file.mihanblog.com/public/user_data/user_files/649/1944575/css/global.css">
+    <link rel="stylesheet" href="../file.mihanblog.com/public/user_data/user_files/649/1944575/theme21/css/style.css">
+    <link rel="stylesheet" href="../file.mihanblog.com/public/user_data/user_files/649/1944575/css/mihanblog_theme_icons.css">
+
+    <style>
+    </style>
+</head>
+
+
+<body>
+
+
+<div class="page-container" id="pageContainer">
+    <div class="menu-sidbar" id="menuSidbar">
+        <div class="logo-media">
+            <img src="../static.mihanblog.com/public/user_data/web_photo/277/828436.jpg@8195"  />        </div>
+
+
+        <div class="menu-wrapper">
+            <ul class="sm-item">
+                <li><a class="sid-menu-item" href="index.html">صفحه اصلی</a></li>
+                <li><a class="sid-menu-item" href="mailto:turkmanchai@gmail.com"> پست الکترونیک</a></li>
+                <li><a class="sid-menu-item" href="javascript:messageForm()">تماس با ما</a></li>
+                <li><a class="sid-menu-item" href="http://lindsalimi.mihanblog.com/post/rss/">RSS</a></li>
+            </ul>
+            <ul class="menu-social-network">
+                <li class="social-networks-icons">
+                    <a href="index.html"><i class="icon icon-facebook"></i></a>
+                </li>
+                <li class="social-networks-icons">
+                    <a href="index.html"><i class="icon icon-twitter"></i></a>
+                </li>
+                <li class="social-networks-icons">
+                    <a href="index.html"><i class="icon icon-instagram"></i></a>
+                </li>
+                <li class="social-networks-icons">
+                    <a href="index.html"><i class="icon icon-gplus"></i></a>
+                <li class="social-networks-icons">
+                    <a href="index.html"><i class="icon icon-telegram"></i></a>
+                </li>
+            </ul>
+
+        </div>
+
+    </div>
+
+
+    <div class="wrap" id="Wrapper">
+        <div class="sidemenu">
+            <div class="exit-rot" onclick="exitMenu()" id="exitRot"></div>
+            <div id="js--rot-menu-icon" class="rot-menu-icon" onclick="openSiteMenu()">
+                <span class="menu-name" id="mName"> منوی اصلی </span>
+                <span class="m-line m-line1" id="mLine1"></span>
+                <span class="m-line m-line2" id="mLine2"></span>
+                <span class="m-line m-line3" id="mLine3"></span>
+            </div>
+
+            <span class="blog-logo">
+                <img src="../static.mihanblog.com/public/user_data/web_photo/277/828436.jpg@8605"  />            </span>
+
+
+            <div class="header-field container clearfix">
+
+                <button onclick="openSiteMenu()" class="menu-button">
+                    <span class="icon-barss"></span>
+                    <span class="icon-barss"></span>
+                    <span class="icon-barss"></span>
+                </button>
+
+            </div>
+
+        </div>
+
+
+        <div class="opac" id="pageBd" onclick="exitMenu()"></div>
+
+
+        <div class="header-section">
+            <div class="header-container">
+                <div class="header-wrapper">
+                    <div class="header-content">
+                        <div class="site-title">
+                            ღᶫᵒᵛᵉᵧₒᵤ❤فـ ـاصـ ـلـ ـهـ قـ ـلــ ـبــــ ـهـ ـا❤ᶫᵒᵛᵉᵧₒᵤღ&quot;                        </div>
+                        <div class="blog-slogan">
+                            27% ███████████████▒▒▒▒ ...Loading                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="page-section">
+            <div class="gotop" id="goTop" onclick="moveToTop()">
+                <div class="gotop-org"></div>
+                <div class="gotop-hov"></div>
+            </div>
+
+
+            <div class="page clearfix">
+
+
+                <div class="post-column">
+
+                                            <div class="post-field clearfix">
+                            <ul>
+                                
+		<div id="MihanblogShopAds" style="display:block;height:0px;width:100%;border:0px"></div>
+		                                    <li id="193" class="post container clearfix">
+                                        <div class="post-content">
+
+                                            <div class="title clearfix">
+                                                <h2 class="post-header">
+                                                    <a href="http://lindsalimi.mihanblog.com/post/193">ღᶫᵒᵛᵉᵧₒᵤ❤فـ ـاصـ ـلـ ـهـ قـ ـلــ ـبــــ ـهـ ـا❤ᶫᵒᵛᵉᵧₒᵤღ&quot;</a>
+                                                </h2>
+                                            </div>
+
+
+
+
+
+                                            <div>
+
+
+                                                <div class="name-and-date">
+                                                    <span class="author-name"><i class="icon icon-user"></i><a href="http://lindsalimi.mihanblog.com/post/author/691916">MASH mehti</a></span>
+                                                    <span class="date"><i class="icon icon-calendar"></i> دوشنبه 19 دی 1390 03:37 ب.ظ</span>
+                                                    <a class="comment-number" target="_self" href="http://lindsalimi.mihanblog.com/post/193#commentlist"><i class="icon icon-comments"></i> دیدگاه (<script>setCommentCnt(193)</script>) </a>
+                                                </div>
+
+
+                                            </div>
+
+
+                                            <div class="content">
+                                                <div class="content-body">
+                                                    <div id="InPost_MihanblogShopAds" style="display:block;height:0px;width:100%;border:0px"></div><div align="right"><font face="tahoma, arial, helvetica, sans-serif" size="3"><sub><span style="background-color: rgb(204, 255, 255);"><font color="#FF6666"><font face="tahoma, arial, helvetica, sans-serif" size="3"><font face="tahoma, arial, helvetica, sans-serif" size="3">❤&nbsp;</font></font></font></span><b><span style="color: rgb(204, 51, 204); background-color: rgb(51, 255, 51);"> آ </span><span style="color: rgb(204, 51, 204); background-color: rgb(51, 204, 255);">ل</span><span style="color: rgb(204, 51, 204); background-color: rgb(255, 153, 255);">ب</span><span style="color: rgb(204, 51, 204); background-color: rgb(255, 204, 153);">و</span><span style="color: rgb(204, 51, 204); background-color: rgb(204, 204, 204);">م</span><font style="background-color: rgb(255, 102, 102);" color="#ff6666"> </font><font style="background-color: rgb(255, 255, 102);" color="#cc33cc">م</font><span style="color: rgb(204, 51, 204); background-color: rgb(204, 204, 255);">ن</span><span style="background-color: rgb(204, 204, 255);"><font color="#ff0000"> »</font></span><span style="background-color: rgb(204, 204, 255);"></span></b></sub></font><b><font size="3"><sub><a href="http://www.lenzor.com/eror" target="" title="">کلیک</a></sub></font></b><font face="tahoma, arial, helvetica, sans-serif" size="3"><sub><b><span style="background-color: rgb(204, 204, 255);"><font color="#ff0000">«<font color="#999999"><span style="background-color: rgb(204, 204, 204);"><font color="#999900">تو</font><font color="#339999">سایت</font> <font color="#FF9900"><font color="#009900">لنزور</font></font></span></font></font></span></b></sub></font><font face="tahoma, arial, helvetica, sans-serif" size="3"><sub><b><font size="2"><span style="background-color: rgb(204, 204, 255);"><font color="#ff0000"><font color="#999999"><span style="background-color: rgb(204, 204, 204);"><font color="#666666"><font color="#FF6666" face="tahoma, arial, helvetica, sans-serif"><span style="background-color: rgb(204, 204, 255);"><span style="background-color: rgb(204, 204, 204);">❤</span></span></font><font color="#CC33CC" face="tahoma, arial, helvetica, sans-serif"><span style="background-color: rgb(51, 255, 51);"><font face="tahoma, arial, helvetica, sans-serif"><span style="background-color: rgb(204, 204, 255);"><span style="background-color: rgb(204, 204, 204);"></span></span></font></span></font></font></span></font></font></span></font></b></sub></font><br></div><div align="center"><font face="tahoma, arial, helvetica, sans-serif" size="3"><sub><font size="1"><font color="#999999"><img src="../static.mihanblog.com/public/user_data/user_files/277/828436/download.jpg" alt="تاریخ تولد خودم : 73" align="bottom" border="0" hspace="0" vspace="0"></font></font></sub></font></div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                                                </div>
+                                            </div>
+
+                                            <div class="read-more">
+                                                                                            </div>
+                                        </div>
+
+
+                                        <div class="bottom-post-side clearfix">
+                                            <div class="clearfix btmpost">
+
+                                                <span class="last-edit"><i class="icon icon-edit"></i>  آخرین ویرایش: پنجشنبه 19 تیر 1393 05:43 ب.ظ </span>
+                                            </div>
+
+                                            
+                                            
+
+                                            
+
+                                            <a class="send-comment" target="_self" href="http://lindsalimi.mihanblog.com/post/193#commentform"><span> <i class="icon icon-comment"></i> ارسال دیدگاه </span> </a>
+
+
+                                            <div class="post-like clearfix">
+                                                <script>mihanblogPostLike('193','like')</script>                                            </div>
+
+                                        </div>
+
+                                    </li>
+
+
+                                                                                                        <li id="216" class="post container clearfix">
+                                        <div class="post-content">
+
+                                            <div class="title clearfix">
+                                                <h2 class="post-header">
+                                                    <a href="http://lindsalimi.mihanblog.com/post/216">ای روزگار صبر کن من تو گذشته جا موندم</a>
+                                                </h2>
+                                            </div>
+
+
+
+
+
+                                            <div>
+
+
+                                                <div class="name-and-date">
+                                                    <span class="author-name"><i class="icon icon-user"></i><a href="http://lindsalimi.mihanblog.com/post/author/691916">MASH mehti</a></span>
+                                                    <span class="date"><i class="icon icon-calendar"></i> پنجشنبه 25 مرداد 1397 06:28 ب.ظ</span>
+                                                    <a class="comment-number" target="_self" href="http://lindsalimi.mihanblog.com/post/216#commentlist"><i class="icon icon-comments"></i> نظرات (<script>setCommentCnt(216)</script>) </a>
+                                                </div>
+
+
+                                            </div>
+
+
+                                            <div class="content">
+                                                <div class="content-body">
+                                                    <div class="comment_row-body" style="margin: 10px 0px 0px; padding: 0px; line-height: 17px; text-align: right;"><img src="http://mihanblog.com/public/public/rte/images_new/smiles/53.gif"><img src="http://mihanblog.com/public/public/rte/images_new/smiles/53.gif">سلام به هرکی که حوصله اش میکشه وقتی به یه وبلاگ برسه یه پست اول حداقل بخونه&nbsp;<img src="http://mihanblog.com/public/public/rte/images_new/smiles/53.gif"><img src="http://mihanblog.com/public/public/rte/images_new/smiles/53.gif"></div><div class="comment_row-body" style="margin: 10px 0px 0px; padding: 0px; line-height: 17px; text-align: right;">من واقعا احساساتمو تو اینجور مواقع نمیتونم کنترل کنم&nbsp;<img src="http://mihanblog.com/public/public/rte/images_new/smiles/20.gif"></div><div class="comment_row-body" style="margin: 10px 0px 0px; padding: 0px; line-height: 17px; text-align: right;">هفت سال پیش یه کامنت گذاشتم یجایی نمیدونم کجا&nbsp; بعد هفت سال یکی<img src="http://mihanblog.com/public/public/rte/images_new/smiles/53.gif">&nbsp;کامنتمو خونده&nbsp;</div><div class="comment_row-body" style="margin: 10px 0px 0px; padding: 0px; line-height: 17px; text-align: right;">کاش میگفتی کجا خوندی و چی نوشته بودمو اینا<img src="http://mihanblog.com/public/public/rte/images_new/smiles/20.gif"></div><div class="comment_row-body" style="margin: 10px 0px 0px; padding: 0px; line-height: 17px; text-align: right;"><br></div><div class="comment_row-body" style="margin: 10px 0px 0px; padding: 0px; line-height: 17px; text-align: right;"><img src="http://mihanblog.com/public/public/rte/images_new/smiles/53.gif"><img src="http://mihanblog.com/public/public/rte/images_new/smiles/53.gif"><img src="http://mihanblog.com/public/public/rte/images_new/smiles/53.gif"><img src="http://mihanblog.com/public/public/rte/images_new/smiles/53.gif"><img src="http://mihanblog.com/public/public/rte/images_new/smiles/53.gif"><img src="http://mihanblog.com/public/public/rte/images_new/smiles/53.gif"><img src="http://mihanblog.com/public/public/rte/images_new/smiles/53.gif"><img src="http://mihanblog.com/public/public/rte/images_new/smiles/53.gif"><img src="http://mihanblog.com/public/public/rte/images_new/smiles/53.gif"><img src="http://mihanblog.com/public/public/rte/images_new/smiles/53.gif"><img src="http://mihanblog.com/public/public/rte/images_new/smiles/53.gif"><img src="http://mihanblog.com/public/public/rte/images_new/smiles/53.gif"><img src="http://mihanblog.com/public/public/rte/images_new/smiles/53.gif"><img src="http://mihanblog.com/public/public/rte/images_new/smiles/53.gif"><img src="http://mihanblog.com/public/public/rte/images_new/smiles/53.gif"><img src="http://mihanblog.com/public/public/rte/images_new/smiles/53.gif"></div><div class="comment_row-body" style="margin: 10px 0px 0px; padding: 0px; line-height: 17px; text-align: right;">سلام<br style="margin: 0px; padding: 0px;">لینک وبتون رو تو یه سایتی دیدم ک سال نود نظری گذاشته بودین..‌.و گفته بودین هفده سالتونه.همینجوری اتفاقی گفتم ببینم هنوز وبلاگش هست یا ن.اخه دیگ خیلی وقته وبلاگ نویسی رو همه فراموش کردن...<br style="margin: 0px; padding: 0px;">و از اون نظری ک گذاشتین هفت سال گذشته،و زندگی چقدر عجیبه...شما هفت سال پیش نظری میذاری یکی هفت سال بعد میبینه...<br style="margin: 0px; padding: 0px;">درحالی ک زندگیاشون طی هفت سال چ تغییراتی ک نکرده...<br style="margin: 0px; padding: 0px;">و بعد این هفت سال میای و میبینی ععع اتفاقا هنوز وب نویسی رو ادامه داده‌...<br style="margin: 0px; padding: 0px;">اتفاق جالبی بود،برام دورانی رو زنده کرد ک وبلاگ داشتم و دوستان خوبی ک هرگز ندیدمشون...و وبلاگی ک پاک کردنش...<br style="margin: 0px; padding: 0px;">ب هرحال زندگی پر این ماجراهای کوچیک و ساده اما جالبه.<br style="margin: 0px; padding: 0px;">موفق باشید</div><div class="clearfix" style="margin: 0px; padding: 0px; text-align: right;"><div class="reply" id="reply_1980974" style="margin: 5px 0px; padding: 5px; background: rgb(237, 237, 237); border-radius: 5px; float: right;"><b style="margin: 0px; padding: 0px;">پاسخ شما :&nbsp;</b><span id="reply_text_1980974" style="margin: 0px; padding: 0px;">سلام ... چقدر من از این اتفاقا دوست دارم ...عاشق همینجوری بودنام که جالبو عجیبه و برام یه دنیا ارزش دارن مرسی ازت<img src="http://mihanblog.com/public/public/rte/images_new/smiles/53.gif" style="margin: 0px; padding: 0px; border-width: 0px;"><img src="http://mihanblog.com/public/public/rte/images_new/smiles/20.gif" style="margin: 0px; padding: 0px; border-width: 0px;"></span></div></div>
+
+
+                                                </div>
+                                            </div>
+
+                                            <div class="read-more">
+                                                                                            </div>
+                                        </div>
+
+
+                                        <div class="bottom-post-side clearfix">
+                                            <div class="clearfix btmpost">
+
+                                                <span class="last-edit"><i class="icon icon-edit"></i>  آخرین ویرایش: پنجشنبه 25 مرداد 1397 06:34 ب.ظ </span>
+                                            </div>
+
+                                                                                            <div class="post-tag">
+                                                    <!--<span class="">برچسب ها:</span>-->
+                                                    <ul>
+                                                        <i class="icon icon-tags"></i>
+                                                                                                                    <li class="tags">
+                                                                <a class="" href="http://lindsalimi.mihanblog.com/post/tag/%D8%B9%D9%85%D8%B1%20%D8%B9%D8%AC%D8%A8%20%D8%B2%D9%88%D8%AF%20%D9%85%DB%8C%DA%AF%D8%B0%D8%B1%D8%AF">
+                                                                    عمر عجب زود میگذرد                                                                </a>
+                                                            </li>
+                                                                                                            </ul>
+                                                </div>
+                                            
+                                            
+
+                                                                                            <ul class="post-category">
+                                                    <i class="icon icon-folder-open"></i>
+                                                                                                            <li class="post-category-floor"><a href="http://lindsalimi.mihanblog.com/post/category/4">بیان احساساتم</a></li>
+                                                                                                            <li class="post-category-floor"><a href="http://lindsalimi.mihanblog.com/post/category/8">شرح حال و احوالات</a></li>
+                                                                                                    </ul>
+                                            
+
+                                            <a class="send-comment" target="_self" href="http://lindsalimi.mihanblog.com/post/216#commentform"><span> <i class="icon icon-comment"></i> ارسال دیدگاه </span> </a>
+
+
+                                            <div class="post-like clearfix">
+                                                <script>mihanblogPostLike('216','like')</script>                                            </div>
+
+                                        </div>
+
+                                    </li>
+
+
+                                                                                                        <li id="215" class="post container clearfix">
+                                        <div class="post-content">
+
+                                            <div class="title clearfix">
+                                                <h2 class="post-header">
+                                                    <a href="http://lindsalimi.mihanblog.com/post/215">(= سلام به همه =)</a>
+                                                </h2>
+                                            </div>
+
+
+
+
+
+                                            <div>
+
+
+                                                <div class="name-and-date">
+                                                    <span class="author-name"><i class="icon icon-user"></i><a href="http://lindsalimi.mihanblog.com/post/author/691916">MASH mehti</a></span>
+                                                    <span class="date"><i class="icon icon-calendar"></i> سه شنبه 25 اردیبهشت 1397 10:30 ق.ظ</span>
+                                                    <a class="comment-number" target="_self" href="http://lindsalimi.mihanblog.com/post/215#commentlist"><i class="icon icon-comments"></i> کامنت (<script>setCommentCnt(215)</script>) </a>
+                                                </div>
+
+
+                                            </div>
+
+
+                                            <div class="content">
+                                                <div class="content-body">
+                                                    سلام<div>خیلی خوشحالم از دوباره دیدن دوستانی که قبلا خیلی فعال بودن تو وبلاگ نویسی و در ارتباط بودیمو اینا ...</div><div>من کلا ادم احساساتی ایم و چون گوشه گیر و خجالتی و هیچ دوستی هم ندارم و نداشتم و حتی بچه های فامیلامونو هم اسماشون یادم میره بعضی وقتا&nbsp;</div><div>...الان یه سال میشه یکم بیرون زیاد میرمو با پسر عموم زیاد میگردم&nbsp; ...(من تو یه شهر کوچولو موچولو زندگی میکنم همه همدیگرو میشناسن)</div><div>یکم با جامعه و ادما&nbsp; نمیتونم ارتباط برقرار کنم ...</div><div>واسه همین قبلا که بیشتر میومدم وبلاگم و وب گردی میکردم ...الان از دیدن دوستا خوشحال میشم خیلی</div><div>و اینکه :</div><div>امیدوارم یه روزی بشه که تو دنیا نگیم</div><div>&nbsp;کشور ایران&nbsp; یا کشور امریکا و ... و...&nbsp;</div><div>یا سیاه پوست و سفید و زرد و ...</div><div>&nbsp;یا مسلمان و مسیحی و یهودی و ... و...&nbsp;</div><div>یروزی برسه که ...</div><div>دید و فکر و افکار بشر اونقدری پیشرفت بکنه که بفهمه همه ادم هستن</div><div>&nbsp; همه حق&nbsp; هر انچه که تو حقشو داری رو دارن&nbsp;</div><div>اگه یکی اونقدر پولداره که نمیدونه چیکارش کنه&nbsp;</div><div>و یکی نون شب محتاج&nbsp;</div><div>این هیچ ربطی به تلاش و پشتکار و ادم خوب یا بد بودن و مسلمان و غیره و اینا نداره&nbsp;</div><div>....</div><div>و بنظر من دین و مذهب و آیین و ... همش تدابیر برخی ادمای باهوش سیاه&nbsp; هست که مردم دیگرو کنترل کنن&nbsp;</div><div>وگرنه اگه اعتقاد دارین که خدا یکتاس پس رو این زمین من چیزی برای پرستش نمیبینم&nbsp; چه رهبر یک جامعه باشه یا چه مکانی به اصطلاح مقدس یا فرستاده ای اسمانی</div><div>&nbsp;...</div><div>به امید روزی که همه ادما بدون هیچ وابستگی به درک وجود خودشون برسن و بفهمن که هیچ بنی بشری نسبت به دیگری برتری نداره&nbsp;</div><div>چه میخواد دانشمند باشه یا فیلسوف و غیر چه گدا باشه و قاتل و روانی&nbsp;&nbsp;</div><div>همشون ادم هستن&nbsp;</div><div>فکر کنیم ببینیم چرا یه نفر میشه دانشمند و یکی میشه قاتل یا هر چیز دیگه&nbsp;</div><div>هر وقت همه ادم ها تونستن از شر حرص و طمع و ... خلاص بشن&nbsp;&nbsp;</div><div>دنیا جای خوبی میشه</div><div>یه عده زنده نمیمونن که یه عده دیگه زندگی کنن&nbsp;</div><div>همه در کنار هم خوشمیگذرونیم&nbsp;</div><div>و کلی حرف و حدیث دیگه که حوصله ندارم دیگه اعصابم ریخت بهم .....</div><div>..........</div><div>....</div><div>و یه چی دیگه از این ادمایی هم که چرت و پرت میگن ...بهشون میگم که مغزتون شستشو شده&nbsp;&nbsp;</div><div>از همون بچگی&nbsp; توسط پدر و مادر و خانواده ..دوستا ..جامعه ..مدرسه ..کتاب&nbsp; و ....</div><div>و این مربوط به کشور خودمون نیست یا دین خودمون&nbsp;</div><div>هر دین و مذهب و هر کشوری تو دنیا&nbsp;</div><div>رهبران و سیاست مداران و قدرتمندان اون جامعه این دیکته هارو مدام&nbsp; همچون نیاکانشون تو گوش هم دیگه خوندن و میخونن که عده ای همیشه اون بالا بمونن و بقیه اطاعت گر&nbsp;</div><div>در حالی که همه مردم همه ادم ها&nbsp; همه نژاد ها همه و همه و هر کسی که روی زمین هست&nbsp; نسبت به اون یکی حق یکسانی داره&nbsp;</div><div>.......</div>                                                </div>
+                                            </div>
+
+                                            <div class="read-more">
+                                                                                            </div>
+                                        </div>
+
+
+                                        <div class="bottom-post-side clearfix">
+                                            <div class="clearfix btmpost">
+
+                                                <span class="last-edit"><i class="icon icon-edit"></i>  آخرین ویرایش: سه شنبه 25 اردیبهشت 1397 10:59 ق.ظ </span>
+                                            </div>
+
+                                                                                            <div class="post-tag">
+                                                    <!--<span class="">برچسب ها:</span>-->
+                                                    <ul>
+                                                        <i class="icon icon-tags"></i>
+                                                                                                                    <li class="tags">
+                                                                <a class="" href="http://lindsalimi.mihanblog.com/post/tag/%D8%A2%DB%8C%D9%86%D8%AF%D9%87">
+                                                                    آینده                                                                </a>
+                                                            </li>
+                                                                                                                    <li class="tags">
+                                                                <a class="" href="http://lindsalimi.mihanblog.com/post/tag/%D8%A2%D8%AF%D9%85">
+                                                                    آدم                                                                </a>
+                                                            </li>
+                                                                                                                    <li class="tags">
+                                                                <a class="" href="http://lindsalimi.mihanblog.com/post/tag/%D8%A8%D8%B4%D8%B1">
+                                                                    بشر                                                                </a>
+                                                            </li>
+                                                                                                                    <li class="tags">
+                                                                <a class="" href="http://lindsalimi.mihanblog.com/post/tag/%D8%B9%D8%AF%D8%A7%D9%84%D8%AA">
+                                                                    عدالت                                                                </a>
+                                                            </li>
+                                                                                                                    <li class="tags">
+                                                                <a class="" href="http://lindsalimi.mihanblog.com/post/tag/%D8%A7%D8%B9%D8%AA%D9%82%D8%A7%D8%AF%D8%A7%D8%AA">
+                                                                    اعتقادات                                                                </a>
+                                                            </li>
+                                                                                                                    <li class="tags">
+                                                                <a class="" href="http://lindsalimi.mihanblog.com/post/tag/%DA%A9%D8%B4%D9%88%D8%B1">
+                                                                    کشور                                                                </a>
+                                                            </li>
+                                                                                                                    <li class="tags">
+                                                                <a class="" href="http://lindsalimi.mihanblog.com/post/tag/%D8%AF%D9%88%D9%84%D8%AA">
+                                                                    دولت                                                                </a>
+                                                            </li>
+                                                                                                            </ul>
+                                                </div>
+                                            
+                                            
+
+                                                                                            <ul class="post-category">
+                                                    <i class="icon icon-folder-open"></i>
+                                                                                                            <li class="post-category-floor"><a href="http://lindsalimi.mihanblog.com/post/category/10">عــقایـد و انـدیـشه هام</a></li>
+                                                                                                            <li class="post-category-floor"><a href="http://lindsalimi.mihanblog.com/post/category/5">آینده دوست داشتنی من</a></li>
+                                                                                                    </ul>
+                                            
+
+                                            <a class="send-comment" target="_self" href="http://lindsalimi.mihanblog.com/post/215#commentform"><span> <i class="icon icon-comment"></i> ارسال دیدگاه </span> </a>
+
+
+                                            <div class="post-like clearfix">
+                                                <script>mihanblogPostLike('215','like')</script>                                            </div>
+
+                                        </div>
+
+                                    </li>
+
+
+                                                                                                        <li id="214" class="post container clearfix">
+                                        <div class="post-content">
+
+                                            <div class="title clearfix">
+                                                <h2 class="post-header">
+                                                    <a href="http://lindsalimi.mihanblog.com/post/214">کلافه ام</a>
+                                                </h2>
+                                            </div>
+
+
+
+
+
+                                            <div>
+
+
+                                                <div class="name-and-date">
+                                                    <span class="author-name"><i class="icon icon-user"></i><a href="http://lindsalimi.mihanblog.com/post/author/691916">MASH mehti</a></span>
+                                                    <span class="date"><i class="icon icon-calendar"></i> شنبه 25 فروردین 1397 01:22 ق.ظ</span>
+                                                    <a class="comment-number" target="_self" href="http://lindsalimi.mihanblog.com/post/214#commentlist"><i class="icon icon-comments"></i> نظرات (<script>setCommentCnt(214)</script>) </a>
+                                                </div>
+
+
+                                            </div>
+
+
+                                            <div class="content">
+                                                <div class="content-body">
+                                                    سلام&nbsp;<div>ببخشید تموم پست های بلاگم نیمه کاره میمونن....</div><div>......................................................................من بدجور کلافه ام ......</div><div>نمیدونم باید با این وضعیت چیکار کرد؟ بیکاری ، بی پولیو در به دری بیچارم کرده ....</div><div>یکی کمک کنه</div><div>&nbsp;بیلیاردر ،تریلیونر، میلیاردر خوب و خیر هست ؟آیا................؟؟؟!!!!</div><div>&nbsp;من حساب کردم&nbsp; سه سال کار کنم بدون تعطیلی&nbsp;</div><div>میتونم سه سال دیگه اگه از الان هیچی نخرمو نخورم و خرج نکنم</div><div>&nbsp;یه پژو 405 بخرم</div><div>&nbsp;البته اگه گرون نشه و&nbsp;</div><div>اگه بعدش 25 سال هم کار کنم با حقوق دو یا حتی سه میلیون</div><div>&nbsp;که یک و دویسته میتونم 28 سال دیگه هم ماشین هم خونه داشته باشم&nbsp;</div><div>که دوسال بعدشم بازنشست میشم&nbsp;</div><div>تازه پول اون دوسال هم میرم زن میگیرم و زندگی رو اغاز میکنم و تو سن 60 70 شاید بتونم زندگی کنم یکی دو روز و خوش و بی دغدغه و حداقل راحت بمیرم</div><div>البته تا اون موقع اگه سرطان نگیرم&nbsp;</div><div>یا سکته مغزی و قلبی باهم نکنم&nbsp;</div><div>یا سنکوب یا ....</div><div>.................................................................خداوند روح مارا غرین رحمت بفرماید ..............................................</div><div>.............................................................................................................................آمین</div>                                                </div>
+                                            </div>
+
+                                            <div class="read-more">
+                                                                                            </div>
+                                        </div>
+
+
+                                        <div class="bottom-post-side clearfix">
+                                            <div class="clearfix btmpost">
+
+                                                <span class="last-edit"><i class="icon icon-edit"></i>  آخرین ویرایش: شنبه 25 فروردین 1397 01:30 ق.ظ </span>
+                                            </div>
+
+                                            
+                                            
+
+                                            
+
+                                            <a class="send-comment" target="_self" href="http://lindsalimi.mihanblog.com/post/214#commentform"><span> <i class="icon icon-comment"></i> ارسال دیدگاه </span> </a>
+
+
+                                            <div class="post-like clearfix">
+                                                <script>mihanblogPostLike('214','like')</script>                                            </div>
+
+                                        </div>
+
+                                    </li>
+
+
+                                                                                                        <li id="213" class="post container clearfix">
+                                        <div class="post-content">
+
+                                            <div class="title clearfix">
+                                                <h2 class="post-header">
+                                                    <a href="http://lindsalimi.mihanblog.com/post/213">خاطرات سربازی</a>
+                                                </h2>
+                                            </div>
+
+
+
+
+
+                                            <div>
+
+
+                                                <div class="name-and-date">
+                                                    <span class="author-name"><i class="icon icon-user"></i><a href="http://lindsalimi.mihanblog.com/post/author/691916">MASH mehti</a></span>
+                                                    <span class="date"><i class="icon icon-calendar"></i> یکشنبه 12 فروردین 1397 12:07 ق.ظ</span>
+                                                    <a class="comment-number" target="_self" href="http://lindsalimi.mihanblog.com/post/213#commentlist"><i class="icon icon-comments"></i> کامنت نمیدی ؟؟؟ :( (<script>setCommentCnt(213)</script>) </a>
+                                                </div>
+
+
+                                            </div>
+
+
+                                            <div class="content">
+                                                <div class="content-body">
+                                                    سلام...<div>سال نو مبارک همگی ...امیدوارم زندگی به کام همه شیرین باشه و هرسال و ماه و روز و ساعت و دقیقه و ثانیه و تک تک لحظاتتون خوش و سلامت باشین&nbsp;</div><div>و از زندگی لذت ببرین و افسوس هم نخورین و خلاصه .....</div><div>القصه:</div><div>...</div><div>الان نصفه شبه بعدا میگم فعلا میرم بخوابم ...شبتون پرستاره ...خوابای خوب ببینین ...و هرچیزی که تو دنیا ندارین و آرزوی داشتنشو دارین سعی کنین تو خواب تجربه کنین&nbsp; حداقل ناکام نمیرین ....</div><div>....</div><div>از این به بعد کلی خاطره و تجربه و ... دارم که تعریف کنم ....امیدوارم یروزی کتابش کنن ...زندگی نامه و سرگذشت مش مهتی&nbsp;</div><div>بوس بوس بای</div>                                                </div>
+                                            </div>
+
+                                            <div class="read-more">
+                                                                                            </div>
+                                        </div>
+
+
+                                        <div class="bottom-post-side clearfix">
+                                            <div class="clearfix btmpost">
+
+                                                <span class="last-edit"><i class="icon icon-edit"></i>  آخرین ویرایش: یکشنبه 12 فروردین 1397 12:18 ق.ظ </span>
+                                            </div>
+
+                                                                                            <div class="post-tag">
+                                                    <!--<span class="">برچسب ها:</span>-->
+                                                    <ul>
+                                                        <i class="icon icon-tags"></i>
+                                                                                                                    <li class="tags">
+                                                                <a class="" href="http://lindsalimi.mihanblog.com/post/tag/%D8%B3%D8%B1%D8%A8%D8%A7%D8%B2%DB%8C">
+                                                                    سربازی                                                                </a>
+                                                            </li>
+                                                                                                                    <li class="tags">
+                                                                <a class="" href="http://lindsalimi.mihanblog.com/post/tag/%D8%B3%D8%B1%D8%A8%D8%A7%D8%B2">
+                                                                    سرباز                                                                </a>
+                                                            </li>
+                                                                                                                    <li class="tags">
+                                                                <a class="" href="http://lindsalimi.mihanblog.com/post/tag/%D9%BE%D8%A7%D8%AF%DA%AF%D8%A7%D9%86">
+                                                                    پادگان                                                                </a>
+                                                            </li>
+                                                                                                                    <li class="tags">
+                                                                <a class="" href="http://lindsalimi.mihanblog.com/post/tag/%D8%AE%D8%A7%D8%B7%D8%B1%D8%A7%D8%AA">
+                                                                    خاطرات                                                                </a>
+                                                            </li>
+                                                                                                                    <li class="tags">
+                                                                <a class="" href="http://lindsalimi.mihanblog.com/post/tag/%D8%B2%DB%8C%D8%B1%20%D8%AE%D8%A7%DA%A9%DB%8C">
+                                                                    زیر خاکی                                                                </a>
+                                                            </li>
+                                                                                                                    <li class="tags">
+                                                                <a class="" href="http://lindsalimi.mihanblog.com/post/tag/%D8%AA%D9%84%D8%B3%D9%85">
+                                                                    تلسم                                                                </a>
+                                                            </li>
+                                                                                                                    <li class="tags">
+                                                                <a class="" href="http://lindsalimi.mihanblog.com/post/tag/%D9%81%D9%84%D8%B2%DB%8C%D8%A7%D8%A8">
+                                                                    فلزیاب                                                                </a>
+                                                            </li>
+                                                                                                            </ul>
+                                                </div>
+                                            
+                                            
+
+                                                                                            <ul class="post-category">
+                                                    <i class="icon icon-folder-open"></i>
+                                                                                                            <li class="post-category-floor"><a href="http://lindsalimi.mihanblog.com/post/category/2">تجربه های  آموختنی</a></li>
+                                                                                                    </ul>
+                                            
+
+                                            <a class="send-comment" target="_self" href="http://lindsalimi.mihanblog.com/post/213#commentform"><span> <i class="icon icon-comment"></i> ارسال دیدگاه </span> </a>
+
+
+                                            <div class="post-like clearfix">
+                                                <script>mihanblogPostLike('213','like')</script>                                            </div>
+
+                                        </div>
+
+                                    </li>
+
+
+                                                                                                        <li id="212" class="post container clearfix">
+                                        <div class="post-content">
+
+                                            <div class="title clearfix">
+                                                <h2 class="post-header">
+                                                    <a href="http://lindsalimi.mihanblog.com/post/212">❤زندگی سرگذشت درگذشت خاطره هاست❤JENAZE %100</a>
+                                                </h2>
+                                            </div>
+
+
+
+
+
+                                            <div>
+
+
+                                                <div class="name-and-date">
+                                                    <span class="author-name"><i class="icon icon-user"></i><a href="http://lindsalimi.mihanblog.com/post/author/691916">MASH mehti</a></span>
+                                                    <span class="date"><i class="icon icon-calendar"></i> سه شنبه 8 اسفند 1396 05:38 ب.ظ</span>
+                                                    <a class="comment-number" target="_self" href="http://lindsalimi.mihanblog.com/post/212#commentlist"><i class="icon icon-comments"></i> نظرات (<script>setCommentCnt(212)</script>) </a>
+                                                </div>
+
+
+                                            </div>
+
+
+                                            <div class="content">
+                                                <div class="content-body">
+                                                    <div style="text-align: center;"><img src="http://mihanblog.com/public/public/rte/images_new/smiles/36.gif"><b><font color="#333399">سلام</font></b><img src="http://mihanblog.com/public/public/rte/images_new/smiles/6.gif"></div><div style="text-align: center;"><b><font color="#333399"><br></font></b></div><div style="text-align: center;"><b><font color="#333399">زود میگم&nbsp;</font></b></div><div style="text-align: center;"><font color="#339999"><br></font></div><div style="text-align: center;"><img src="http://mihanblog.com/public/public/rte/images_new/smiles/53.gif"><font color="#339999"><b>سلام به همه به همه اونایی که منو یادشون بوده بهم سر میزدن&nbsp;</b></font><img src="http://mihanblog.com/public/public/rte/images_new/smiles/8.gif"></div><div style="text-align: center;"><font color="#339999"><b>من همه نظراتی که تو این مدت خیلی طولانی داشتمو&nbsp; خوندمو به همشون جواب دادم و به همتونم سر زدم و نظر گذاشتم...</b></font></div><div style="text-align: center;"><font color="#339999"><b>میخوام باز بنویسم ....</b></font></div><div style="text-align: center;"><br></div><div style="text-align: center;"><b>****************************</b></div><div style="text-align: center;"><font color="#663366"><b>و یه چیزی ...</b></font></div><div style="text-align: center;"><font color="#663366"><b>فاطمه ؟&nbsp;</b></font></div><div style="text-align: center;"><font color="#663366"><b>&nbsp;http://jenazee.blogfa.com</b></font></div><div style="text-align: center;"><font color="#663366"><b>&nbsp;گفتی رمزتو یادت رفته&nbsp;</b></font></div><div style="text-align: center;"><font color="#663366"><b>کلی نظر گذاشتم برات و اخرش گفتم اینجا بگم شاید بازم اومدی&nbsp;</b></font></div><div style="text-align: center;"><font color="#663366"><b>و منتظرم</b></font><img src="http://mihanblog.com/public/public/rte/images_new/smiles/53.gif"></div><div style="text-align: center;"><font color="#663366"><b>====================================</b></font></div><div style="text-align: center;"><br></div>                                                </div>
+                                            </div>
+
+                                            <div class="read-more">
+                                                                                            </div>
+                                        </div>
+
+
+                                        <div class="bottom-post-side clearfix">
+                                            <div class="clearfix btmpost">
+
+                                                <span class="last-edit"><i class="icon icon-edit"></i>  آخرین ویرایش: سه شنبه 8 اسفند 1396 05:53 ب.ظ </span>
+                                            </div>
+
+                                            
+                                            
+
+                                                                                            <ul class="post-category">
+                                                    <i class="icon icon-folder-open"></i>
+                                                                                                            <li class="post-category-floor"><a href="http://lindsalimi.mihanblog.com/post/category/7">روز نـــگار</a></li>
+                                                                                                    </ul>
+                                            
+
+                                            <a class="send-comment" target="_self" href="http://lindsalimi.mihanblog.com/post/212#commentform"><span> <i class="icon icon-comment"></i> ارسال دیدگاه </span> </a>
+
+
+                                            <div class="post-like clearfix">
+                                                <script>mihanblogPostLike('212','like')</script>                                            </div>
+
+                                        </div>
+
+                                    </li>
+
+
+                                                                                                        <li id="211" class="post container clearfix">
+                                        <div class="post-content">
+
+                                            <div class="title clearfix">
+                                                <h2 class="post-header">
+                                                    <a href="http://lindsalimi.mihanblog.com/post/211">سلام</a>
+                                                </h2>
+                                            </div>
+
+
+
+
+
+                                            <div>
+
+
+                                                <div class="name-and-date">
+                                                    <span class="author-name"><i class="icon icon-user"></i><a href="http://lindsalimi.mihanblog.com/post/author/691916">MASH mehti</a></span>
+                                                    <span class="date"><i class="icon icon-calendar"></i> یکشنبه 19 مهر 1394 05:37 ق.ظ</span>
+                                                    <a class="comment-number" target="_self" href="http://lindsalimi.mihanblog.com/post/211#commentlist"><i class="icon icon-comments"></i> نظرات (<script>setCommentCnt(211)</script>) </a>
+                                                </div>
+
+
+                                            </div>
+
+
+                                            <div class="content">
+                                                <div class="content-body">
+                                                    ساعت رو نیگا 
+الان دقیقا ده ماه خدمتم تموم شده و رفتم تو یازده ماه ایشاا.. سال دیگر اگه این یکی دوماه اضافام بخشیده بشن
+هجده شهریور تمومه
+الانم تا روز بعد عاشورا مرخصی دارم چه دلچسب این روزا 
+ولی باز باید برم مشهد پادگان زهرماری تیپ 377 گردان 161 پیاده گروهان 3 پیاده پیاده پیاده پیاده کوفت درد زهر مار 
+خدا کنه انتقالیم درست بشه برگردم شهرمون
+الان فقط میخوام خدمت تموم بشه این برهه زمانی زندگیم رو از ذهنم پاک کنم هیچ وقت هم بهش افتخار نمیکنم.
+فعلا... خدانگهدار 
+صبح شده صدای کلاغا میاد                                                </div>
+                                            </div>
+
+                                            <div class="read-more">
+                                                                                            </div>
+                                        </div>
+
+
+                                        <div class="bottom-post-side clearfix">
+                                            <div class="clearfix btmpost">
+
+                                                <span class="last-edit"><i class="icon icon-edit"></i>  آخرین ویرایش: - - </span>
+                                            </div>
+
+                                            
+                                            
+
+                                            
+
+                                            <a class="send-comment" target="_self" href="http://lindsalimi.mihanblog.com/post/211#commentform"><span> <i class="icon icon-comment"></i> ارسال دیدگاه </span> </a>
+
+
+                                            <div class="post-like clearfix">
+                                                <script>mihanblogPostLike('211','like')</script>                                            </div>
+
+                                        </div>
+
+                                    </li>
+
+
+                                                                                                        <li id="210" class="post container clearfix">
+                                        <div class="post-content">
+
+                                            <div class="title clearfix">
+                                                <h2 class="post-header">
+                                                    <a href="http://lindsalimi.mihanblog.com/post/210">30 | روزهای خوبی منتظرم نبودن!</a>
+                                                </h2>
+                                            </div>
+
+
+
+
+
+                                            <div>
+
+
+                                                <div class="name-and-date">
+                                                    <span class="author-name"><i class="icon icon-user"></i><a href="http://lindsalimi.mihanblog.com/post/author/691916">MASH mehti</a></span>
+                                                    <span class="date"><i class="icon icon-calendar"></i> پنجشنبه 3 مهر 1393 08:26 ب.ظ</span>
+                                                    <a class="comment-number" target="_self" href="http://lindsalimi.mihanblog.com/post/210#commentlist"><i class="icon icon-comments"></i> نظرات (<script>setCommentCnt(210)</script>) </a>
+                                                </div>
+
+
+                                            </div>
+
+
+                                            <div class="content">
+                                                <div class="content-body">
+                                                    
+<i><font color="#FF6600" size="3">سلام ...</font></i><br><br><font color="#006600">از هیچکدوم اینا ناراحت نیستم:</font><br><br><font color="#993399"><font color="#663366"><font color="#993399">از اینکه روز های خوبی منتظرم نبودن <br>از اینکه دانشگاه ثبت نام کردم و دوباره انصراف دادم<br>از اینکه میخوام زودتر برم سربازی کوفتی رو زود تر پایان خدمتمو بگیرم و جونمو راحت کنم و از اینکه خوش به حال دخترا..<br>و یا دو روزه میرم سرکار بیچارم کردن و ادامه داره شاید یک هفته ای<br>از اینکه دیگه امیدی به ادامه تحصیل بعد خدمت ندارم..<br>از اینکه چرا به شانس&nbsp; اعتقاد دارم شدیدا..</font><br></font><br></font><font color="#339999">از شاید خیلی چیزای دیگه هم ناراحت نباشم و یا دلخور اصلا نباشم . چون پیش میاد برای هرکسی شاید...</font><br><br><font color="#993300">فقط از این هیکل بیریختم بیشتر از هرچیزی متنفرم </font><br>
+
+
+
+                                                </div>
+                                            </div>
+
+                                            <div class="read-more">
+                                                                                            </div>
+                                        </div>
+
+
+                                        <div class="bottom-post-side clearfix">
+                                            <div class="clearfix btmpost">
+
+                                                <span class="last-edit"><i class="icon icon-edit"></i>  آخرین ویرایش: شنبه 12 مهر 1393 08:58 ب.ظ </span>
+                                            </div>
+
+                                            
+                                            
+
+                                                                                            <ul class="post-category">
+                                                    <i class="icon icon-folder-open"></i>
+                                                                                                            <li class="post-category-floor"><a href="http://lindsalimi.mihanblog.com/post/category/7">روز نـــگار</a></li>
+                                                                                                    </ul>
+                                            
+
+                                            <a class="send-comment" target="_self" href="http://lindsalimi.mihanblog.com/post/210#commentform"><span> <i class="icon icon-comment"></i> ارسال دیدگاه </span> </a>
+
+
+                                            <div class="post-like clearfix">
+                                                <script>mihanblogPostLike('210','like')</script>                                            </div>
+
+                                        </div>
+
+                                    </li>
+
+
+                                                                                                        <li id="209" class="post container clearfix">
+                                        <div class="post-content">
+
+                                            <div class="title clearfix">
+                                                <h2 class="post-header">
+                                                    <a href="http://lindsalimi.mihanblog.com/post/209">شاید روز های خوبی منتظرم باشه !</a>
+                                                </h2>
+                                            </div>
+
+
+
+
+
+                                            <div>
+
+
+                                                <div class="name-and-date">
+                                                    <span class="author-name"><i class="icon icon-user"></i><a href="http://lindsalimi.mihanblog.com/post/author/691916">MASH mehti</a></span>
+                                                    <span class="date"><i class="icon icon-calendar"></i> پنجشنبه 3 مهر 1393 07:14 ب.ظ</span>
+                                                    <a class="comment-number" target="_self" href="http://lindsalimi.mihanblog.com/post/209#commentlist"><i class="icon icon-comments"></i> نظرات (<script>setCommentCnt(209)</script>) </a>
+                                                </div>
+
+
+                                            </div>
+
+
+                                            <div class="content">
+                                                <div class="content-body">
+                                                    
+<font color="#CC6600"><b><font size="3">سلام به همه آدمای خوب و یکم خوب و یه ذره خوب</font></b></font><br>دیروز که چهارشنبه بود. رفتم دانشگاه شهر خودمون . بپرسم که ثبت نام تو رشته مکانیک خودرو میکنن!!!یا نه!!!<br>که گفتن تعداد دانش آموزاش کمه (3 نفر ) وکلاس نمیشه تشکیل داد....<br>باید شنبه برم شهرستان اونجا بپرسم .....نمیدونم خونه قبول میکنن برم یا میفرستنم سربازی ...خدا کنه شهریه و خوابگاه و غذا و اینا پولش کم باشه یا من که از تجربی تغییر رشته دادم واحدای درسیم کم باشه <br>اگه بشه یه کار نیم وقت هم پیدا میکنم یا تو مکانیکی جایی میرم شاگردی ...<br><font color="#009900">..............................<br>................</font><font color="#666666"><i>پایینو اگه حوصله ندارین لطفا نخونین</i></font><font color="#009900">...................<br>........................................................</font><br>بعدش امشب شبکه دو زنده باد زندگی که اولش که تازه داشت نشونش میداد باحال بود و بعد چند هفته کلا همش برنامه چرتی شده داشت با یه روحانی صحبت میکرد ..گفت که دستور پیامبر مون هست که دختر تو سن 13 سالگی شوهر کنه وپسرا هم تو سن بلوغشون بعد گفت رهبرمونم گفته جمعیتمون داره پیر میشه باید زود همه بچه دار بشن و دختر پسر تو سن پایین نامزد کنن&nbsp; زیر چتر خانواده هاشون باشن یه مدت و بعد که تونستن از عهده خودشون بر بیان مستقل بشن<br>طی همین سخنان 3 ،4 ساعته که بحث حول همین محوری میگشت که گفتم منم در فکر فرو رفتم و تصمیم گرفتم تا دانشگام جور شد برم خواستگاری و تو دانشگاهم دنبال دوست دختر بازی و چشم چرانی و این چیزا نباشم واقعا اگه اینطوری بشه هیچکسی نه شکست عشقی میخوره نه طلاق نه اجتماع آلوده به مواد مخدر و یا معتادی و نه دزدی کلا جامعه پر آرامشی میشه(هر کی موافقه باید بره خواستگاری یا بگه من بیام خواستگاریش خخ<img src="http://mihanblog.com/public/public/rte/images_new/smiles/4.gif">)<br>اگه دختری که 13 سالشه و دوست داره با یه پسری ارتباط داشته باشه چرا از راه دوستی خب پسره اگه واقعا مردشه بیاد خواستگاریش<br>اینطوری همه زود ازدواج کنن اصلا مشکلات جامعه حل میشه درسشونو بهتر میخونن سر به زیر میشن&nbsp; به بلوغ فکری بهتری میرسن و....<br>
+
+
+
+
+                                                </div>
+                                            </div>
+
+                                            <div class="read-more">
+                                                                                            </div>
+                                        </div>
+
+
+                                        <div class="bottom-post-side clearfix">
+                                            <div class="clearfix btmpost">
+
+                                                <span class="last-edit"><i class="icon icon-edit"></i>  آخرین ویرایش: پنجشنبه 3 مهر 1393 07:58 ب.ظ </span>
+                                            </div>
+
+                                                                                            <div class="post-tag">
+                                                    <!--<span class="">برچسب ها:</span>-->
+                                                    <ul>
+                                                        <i class="icon icon-tags"></i>
+                                                                                                                    <li class="tags">
+                                                                <a class="" href="http://lindsalimi.mihanblog.com/post/tag/%D8%A7%D8%B2%D8%AF%D9%88%D8%A7%D8%AC">
+                                                                    ازدواج                                                                </a>
+                                                            </li>
+                                                                                                                    <li class="tags">
+                                                                <a class="" href="http://lindsalimi.mihanblog.com/post/tag/%D8%A8%D9%84%D9%88%D8%BA">
+                                                                    بلوغ                                                                </a>
+                                                            </li>
+                                                                                                                    <li class="tags">
+                                                                <a class="" href="http://lindsalimi.mihanblog.com/post/tag/%D8%B4%D8%A8%DA%A9%D9%87%20%D8%AF%D9%88">
+                                                                    شبکه دو                                                                </a>
+                                                            </li>
+                                                                                                                    <li class="tags">
+                                                                <a class="" href="http://lindsalimi.mihanblog.com/post/tag/%D8%B2%D9%86%D8%AF%D9%87%20%D8%A8%D8%A7%D8%AF%20%D8%B2%D9%86%D8%AF%DA%AF%DB%8C">
+                                                                    زنده باد زندگی                                                                </a>
+                                                            </li>
+                                                                                                                    <li class="tags">
+                                                                <a class="" href="http://lindsalimi.mihanblog.com/post/tag/%D8%AC%D9%88%D8%A7%D9%86%20%DA%AF%D8%B1%D8%A7%DB%8C%DB%8C">
+                                                                    جوان گرایی                                                                </a>
+                                                            </li>
+                                                                                                            </ul>
+                                                </div>
+                                            
+                                            
+
+                                                                                            <ul class="post-category">
+                                                    <i class="icon icon-folder-open"></i>
+                                                                                                            <li class="post-category-floor"><a href="http://lindsalimi.mihanblog.com/post/category/10">عــقایـد و انـدیـشه هام</a></li>
+                                                                                                    </ul>
+                                            
+
+                                            <a class="send-comment" target="_self" href="http://lindsalimi.mihanblog.com/post/209#commentform"><span> <i class="icon icon-comment"></i> ارسال دیدگاه </span> </a>
+
+
+                                            <div class="post-like clearfix">
+                                                <script>mihanblogPostLike('209','like')</script>                                            </div>
+
+                                        </div>
+
+                                    </li>
+
+
+                                                                                                        <li id="208" class="post container clearfix">
+                                        <div class="post-content">
+
+                                            <div class="title clearfix">
+                                                <h2 class="post-header">
+                                                    <a href="http://lindsalimi.mihanblog.com/post/208">یهویی</a>
+                                                </h2>
+                                            </div>
+
+
+
+
+
+                                            <div>
+
+
+                                                <div class="name-and-date">
+                                                    <span class="author-name"><i class="icon icon-user"></i><a href="http://lindsalimi.mihanblog.com/post/author/691916">MASH mehti</a></span>
+                                                    <span class="date"><i class="icon icon-calendar"></i> پنجشنبه 30 مرداد 1393 10:25 ق.ظ</span>
+                                                    <a class="comment-number" target="_self" href="http://lindsalimi.mihanblog.com/post/208#commentlist"><i class="icon icon-comments"></i> نظرات (<script>setCommentCnt(208)</script>) </a>
+                                                </div>
+
+
+                                            </div>
+
+
+                                            <div class="content">
+                                                <div class="content-body">
+                                                    
+
+
+
+
+
+<font color="#006600"><b><font color="#FF6600" size="2"><i>سلام</i></font></b></font><br><b><i><font color="#FF6666">....................یچی بسرایم همینطوری</font><font color="#339999">..................</font></i></b><br><div><br></div><div><b style=""><font size="2"><font color="#cc33cc" style="">روزای</font><font color="#3366ff" style=""> سرد</font><font color="#cc33cc" style=""> و </font><font color="#666666" style="">بی روح</font><font color="#cc33cc" style=""> و سال و ماه و ساعت ها گذشت</font></font></b></div><div><b style=""><font size="2"><font color="#cc33cc">چه زود میرسد </font><font color="#009900">بهاری</font><font color="#cc33cc"> که</font><font color="#339999"> زمستانش</font><font color="#cc33cc"> سال پیش بود</font></font></b></div><div><b style=""><font size="2"><font color="#cc33cc">چه زود میگذرد </font><font color="#333333">عمر من</font><font color="#cc33cc"> و تو&nbsp; در این</font><font color="#ff0000"> دنیای</font><font color="#cc33cc"> تو خالی</font></font></b></div><div><b style=""><font size="2"><font color="#cc33cc" style="">چه زود میشود</font><font color="#ff6600" style=""> دیر</font><font color="#cc33cc" style=""> و میشود آن </font><font color="#ff6666" style="">اشتباهی</font><font color="#cc33cc" style=""> که تکرارش تکرار </font><font color="#999900" style="">زنده ماندن</font><font color="#cc33cc" style=""> است...</font></font></b></div><div><font color="#cc33cc" size="2"><b><br></b></font></div><div><b style=""><font color="#ff99ff" size="1"><u>"خودمم نفهمیدم چی گفتم"</u></font></b></div>
+
+
+
+                                                </div>
+                                            </div>
+
+                                            <div class="read-more">
+                                                                                            </div>
+                                        </div>
+
+
+                                        <div class="bottom-post-side clearfix">
+                                            <div class="clearfix btmpost">
+
+                                                <span class="last-edit"><i class="icon icon-edit"></i>  آخرین ویرایش: سه شنبه 8 اسفند 1396 05:37 ب.ظ </span>
+                                            </div>
+
+                                            
+                                            
+
+                                                                                            <ul class="post-category">
+                                                    <i class="icon icon-folder-open"></i>
+                                                                                                            <li class="post-category-floor"><a href="http://lindsalimi.mihanblog.com/post/category/12">فرموده هام</a></li>
+                                                                                                    </ul>
+                                            
+
+                                            <a class="send-comment" target="_self" href="http://lindsalimi.mihanblog.com/post/208#commentform"><span> <i class="icon icon-comment"></i> ارسال دیدگاه </span> </a>
+
+
+                                            <div class="post-like clearfix">
+                                                <script>mihanblogPostLike('208','like')</script>                                            </div>
+
+                                        </div>
+
+                                    </li>
+
+
+                                                                                                </ul>
+                        </div>
+
+
+                        
+                    
+
+                                            <div class="page-count container">
+                            <span class="page-total"> تعداد  صفحات : 5</span>
+                                                            <a href="http://lindsalimi.mihanblog.com/page/1"> <b>1</b></a>
+                                                            <a href="http://lindsalimi.mihanblog.com/page/2"> <span>2</span></a>
+                                                            <a href="http://lindsalimi.mihanblog.com/page/3"> <span>3</span></a>
+                                                            <a href="http://lindsalimi.mihanblog.com/page/4"> <span>4</span></a>
+                                                            <a href="http://lindsalimi.mihanblog.com/page/5"> <span>5</span></a>
+                                                    </div>
+                    
+
+                </div>
+
+
+                <div class="left-sidebar container">
+                    <div class="inside-sidebar">
+
+                        <form id="frm-16077757835fd4b6277b51f" method="get" action="http://lindsalimi.mihanblog.com/post/search/fid/16077757835fd4b6277b51f"  onsubmit="window.open('', 'search', 'toolbar=0,location=0,status=0,menubar=0,scrollbars=1,resizable=0,width=400,height=310')" target="search"> 
+                            <div class="search brpdbottom">
+                                <input class="search-input" type="text" name="search_text" placeholder="جستجو">
+                                <button class="search-button" type="submit" value="جستجو">
+                                    <i class="icon icon-search"></i>
+                                </button>
+                            </div>
+                        <input type="hidden" name="frm-id" value="16077757835fd4b6277b51f" id="frm-id" /></form>
+
+                        
+
+                                                    <div class="title-sidebar">آرشیو موضوعی</div>
+                            <div class="inside-border">
+                                <ul>
+                                                                            <li class="link-in-sidebar-float">
+                                            <a class="clearfix category-10" href="http://lindsalimi.mihanblog.com/post/category/10">
+                                                عــقایـد و انـدیـشه هام                                                <span class="sidebar-dez">
+
+                                        4                                        مطلب
+                                            </span>
+                                            </a>
+                                        </li>
+                                                                            <li class="link-in-sidebar-float">
+                                            <a class="clearfix category-8" href="http://lindsalimi.mihanblog.com/post/category/8">
+                                                شرح حال و احوالات                                                <span class="sidebar-dez">
+
+                                        7                                        مطلب
+                                            </span>
+                                            </a>
+                                        </li>
+                                                                            <li class="link-in-sidebar-float">
+                                            <a class="clearfix category-4" href="http://lindsalimi.mihanblog.com/post/category/4">
+                                                بیان احساساتم                                                <span class="sidebar-dez">
+
+                                        3                                        مطلب
+                                            </span>
+                                            </a>
+                                        </li>
+                                                                            <li class="link-in-sidebar-float">
+                                            <a class="clearfix category-12" href="http://lindsalimi.mihanblog.com/post/category/12">
+                                                فرموده هام                                                <span class="sidebar-dez">
+
+                                        4                                        مطلب
+                                            </span>
+                                            </a>
+                                        </li>
+                                                                            <li class="link-in-sidebar-float">
+                                            <a class="clearfix category-9" href="http://lindsalimi.mihanblog.com/post/category/9">
+                                                متـفرقــات                                                <span class="sidebar-dez">
+
+                                        3                                        مطلب
+                                            </span>
+                                            </a>
+                                        </li>
+                                                                            <li class="link-in-sidebar-float">
+                                            <a class="clearfix category-7" href="http://lindsalimi.mihanblog.com/post/category/7">
+                                                روز نـــگار                                                <span class="sidebar-dez">
+
+                                        11                                        مطلب
+                                            </span>
+                                            </a>
+                                        </li>
+                                                                            <li class="link-in-sidebar-float">
+                                            <a class="clearfix category-11" href="http://lindsalimi.mihanblog.com/post/category/11">
+                                                عـیـد نـوروز                                                <span class="sidebar-dez">
+
+                                        1                                        مطلب
+                                            </span>
+                                            </a>
+                                        </li>
+                                                                            <li class="link-in-sidebar-float">
+                                            <a class="clearfix category-3" href="http://lindsalimi.mihanblog.com/post/category/3">
+                                                فکر و خیالات                                                <span class="sidebar-dez">
+
+                                        2                                        مطلب
+                                            </span>
+                                            </a>
+                                        </li>
+                                                                            <li class="link-in-sidebar-float">
+                                            <a class="clearfix category-1" href="http://lindsalimi.mihanblog.com/post/category/1">
+                                                خاطرات عیدنوروز                                                <span class="sidebar-dez">
+
+                                        1                                        مطلب
+                                            </span>
+                                            </a>
+                                        </li>
+                                                                            <li class="link-in-sidebar-float">
+                                            <a class="clearfix category-2" href="http://lindsalimi.mihanblog.com/post/category/2">
+                                                تجربه های  آموختنی                                                <span class="sidebar-dez">
+
+                                        4                                        مطلب
+                                            </span>
+                                            </a>
+                                        </li>
+                                                                            <li class="link-in-sidebar-float">
+                                            <a class="clearfix category-5" href="http://lindsalimi.mihanblog.com/post/category/5">
+                                                آینده دوست داشتنی من                                                <span class="sidebar-dez">
+
+                                        3                                        مطلب
+                                            </span>
+                                            </a>
+                                        </li>
+                                                                    </ul>
+                            </div>
+                        
+
+                                                    <div class="title-sidebar">آخرین پست ها</div>
+                            <div class="inside-border">
+                                <ul>
+                                                                            <li class="link-in-sidebar">
+                                            <a href="http://lindsalimi.mihanblog.com/post/216">
+                                                <span class="last-posts-asp">ای روزگار صبر کن من تو گذشته جا موندم</span>
+                                                <span class="last-posts-dez">پنجشنبه 25 مرداد 1397</span>
+                                            </a>
+                                        </li>
+                                                                            <li class="link-in-sidebar">
+                                            <a href="http://lindsalimi.mihanblog.com/post/215">
+                                                <span class="last-posts-asp">(= سلام به همه =)</span>
+                                                <span class="last-posts-dez">سه شنبه 25 اردیبهشت 1397</span>
+                                            </a>
+                                        </li>
+                                                                            <li class="link-in-sidebar">
+                                            <a href="http://lindsalimi.mihanblog.com/post/214">
+                                                <span class="last-posts-asp">کلافه ام</span>
+                                                <span class="last-posts-dez">شنبه 25 فروردین 1397</span>
+                                            </a>
+                                        </li>
+                                                                            <li class="link-in-sidebar">
+                                            <a href="http://lindsalimi.mihanblog.com/post/213">
+                                                <span class="last-posts-asp">خاطرات سربازی</span>
+                                                <span class="last-posts-dez">یکشنبه 12 فروردین 1397</span>
+                                            </a>
+                                        </li>
+                                                                            <li class="link-in-sidebar">
+                                            <a href="http://lindsalimi.mihanblog.com/post/212">
+                                                <span class="last-posts-asp">❤زندگی سرگذشت درگذشت خاطره هاست❤JENAZE %100</span>
+                                                <span class="last-posts-dez">سه شنبه 8 اسفند 1396</span>
+                                            </a>
+                                        </li>
+                                                                        <li class="link-in-sidebar">
+                                        <a class="clearfix" href="http://lindsalimi.mihanblog.com/post/list">لیست پست ها</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        
+                                                    <div class="title-sidebar">نویسندگان</div>
+                            <div class="inside-border block-author">
+                                <ul>
+                                                                            <li>
+                                            <div class="block-author-photo">
+                                                <i class="icon icon-user"></i>
+                                                <a href="http://lindsalimi.mihanblog.com/post/author/691916"><img src="../static.mihanblog.com/public/user_data/user_photo/231/691916.jpg" style="width:16px;" /></a>                                            </div>
+                                            <a href="http://lindsalimi.mihanblog.com/post/author/691916">
+                                                <div>MASH mehti</div><div>مطالب ارسالی: (36)</div>
+                                            </a>
+                                            <div style="clear: both">درباره نویسنده :..........I LOVE YOU...........<br />
+توضیحات اینجا جا نمیشد<br />
+پایینه پایینه صفحه رو نیگا کن ! <br />
+(=</div>
+                                        </li>
+                                                                    </ul>
+                            </div>
+                        
+
+                                                    <div class="title-sidebar">لینکدونی</div>
+                            <div class="inside-border clearfix">
+                                <ul>
+                                                                            <li class="link-in-sidebar">
+                                            <a href="../moshavere-tmt92.mihanblog.com/index.html" title="سلام ممنون میشم لینک بنده رو تایید بزنید
+
+دانشجوی مشاوره ام و مشاوره تحصیلی میدم به بچه های کنکوری
+تشکر میکنم از شما بابت تایید لینک بنده" target="_blank">
+                                                مشاوره کنکوری و تحصیلی                                            </a>
+                                        </li>
+                                                                            <li class="link-in-sidebar">
+                                            <a href="http://downloadketab.com" title="" target="_blank">
+                                                دانلود کتاب                                            </a>
+                                        </li>
+                                                                            <li class="link-in-sidebar">
+                                            <a href="http://persiangig.com" title="پس از سال‌ها سرویس‌دهی، اکنون پرشین‌گیگ با سرویس ابری پذیرای شماست. پرشین‌گیگ با بکارگیری از سرورهای قدرتمند، اکانت فضای ابری قابل اطمینان، این فرصت را به شما می دهد تا تنها با داشتن یک اکانت در سرویس ابری پرشین‌گیگ همه این قابلیت‌ها را به خدمت بگیرید، از جمله:
+
+    8GB فضاى ذخیره سازی فایل
+    قابلیت دسترسی به فایل های خود از همه جا
+    سقف آپلود هر فایل تا 500 مگابایت
+    پهنای باند مناسب
+    سرعت دسترسى(upload , download ) مطلوب با محیط كنترل قوى و ساده
+    و هم چنین حضور در جمع دیگر دوستان پارسى زبان خود." target="_blank">
+                                                 سرویس ابری پرشین گیگ                                            </a>
+                                        </li>
+                                                                            <li class="link-in-sidebar">
+                                            <a href="http://www.picofile.com" title="بهترین جا برای اپلود هرگونه فایلی که میخواهید" target="_blank">
+                                                پیکو فایل                                            </a>
+                                        </li>
+                                                                            <li class="link-in-sidebar">
+                                            <a href="http://heratcenter.blogfa.com/post/52" title="بهترین مکان دانلود آهنگ از سایت های دانلود هم بهتره" target="_blank">
+                                                هرات سنتر                                            </a>
+                                        </li>
+                                                                            <li class="link-in-sidebar">
+                                            <a href="http://www.freesmile.ir/" title="دنیای شکلک" target="_blank">
+                                                دنیای شکلک                                            </a>
+                                        </li>
+                                                                            <li class="link-in-sidebar">
+                                            <a href="http://P30MORORGAR.IR" title="بهترین سایت برای دریافت مرورگر و افزونه های مخصوص آن واطلاعات کاربردی" target="_blank">
+                                                پی30 مرورگر                                            </a>
+                                        </li>
+                                                                            <li class="link-in-sidebar">
+                                            <a href="http://www.sarzamindownload.com/" title="بهترین سایتی که تو عمرم دیدم سایت دانلود نرم افزار از لحاظ امنیتی و کاربری بی نظیره و مدیرای سایت هم خیلی خوبن و مهربون" target="_blank">
+                                                سرزمین دانلود                                            </a>
+                                        </li>
+                                                                            <li class="link-in-sidebar">
+                                            <a href="http://jomalatziba.blogfa.com/" title="ادبیات ایران و جهان" target="_blank">
+                                                حکیمانه                                            </a>
+                                        </li>
+                                                                            <li class="link-in-sidebar">
+                                            <a href="http://fars3da.ir" title="دانلود آهنگ" target="_blank">
+                                                fars3da                                            </a>
+                                        </li>
+                                                                            <li class="link-in-sidebar">
+                                            <a href="http://dehkadeyedownload.ir" title="گالری عکس و والپیپر سایت دانلود گالری عکس و والپیپر" target="_blank">
+                                                 kənd Yükle                                            </a>
+                                        </li>
+                                                                            <li class="link-in-sidebar">
+                                            <a href="http://www.alamto.com" title="یکی از جاهایی که من خیلی ازش عکس و مطلب میدزدم" target="_blank">
+                                                alamto                                            </a>
+                                        </li>
+                                                                            <li class="link-in-sidebar">
+                                            <a href="http://ketabnak.com" title="منبع کتاب" target="_blank">
+                                                Ketabnak                                            </a>
+                                        </li>
+                                                                            <li class="link-in-sidebar">
+                                            <a href="http://www.diamusic.com" title="all about music" target="_blank">
+                                                Dia Musiqi                                            </a>
+                                        </li>
+                                                                        <li class="link-in-sidebar">
+                                        <a class="clearfix" href="http://lindsalimi.mihanblog.com/linkdaily/">همه لینکها</a>
+                                    </li>
+                                    <a class="button-cc" href="javascript:linkdailyForm()">ارسال لینک</a>
+                                </ul>
+                            </div>
+                        
+
+                                                    <div class="title-sidebar">لینکستان</div>
+                            <div class="inside-border">
+                                <ul>
+                                                                            <li class="link-in-sidebar">
+                                            <a href="http://sanipaver.mihanblog.com" title="یه وبلاگ جالب"  target="_blank">
+                                                دنـ♛ـیـایـ◕‿◕پـღـرشـ♕ـور مـღـنـ♕                                            </a>
+                                        </li>
+                                                                            <li class="link-in-sidebar">
+                                            <a href="http://dokhmalajon.mihanblog.com" title="یه وبلاگ دخترونه عالی"  target="_blank">
+                                                *دخملا جون*                                            </a>
+                                        </li>
+                                                                            <li class="link-in-sidebar">
+                                            <a href="http://fayamingirl.mihanblog.com/" title=""  target="_blank">
+                                                كلبه سكوت                                            </a>
+                                        </li>
+                                                                            <li class="link-in-sidebar">
+                                            <a href="http://idontknowwhy.mihanblog.com/" title=""  target="_blank">
+                                                منو کاغذ و قلم....                                            </a>
+                                        </li>
+                                                                            <li class="link-in-sidebar">
+                                            <a href="http://my-pretty-world.mihanblog.com" title=""  target="_blank">
+                                                My Pretty World                                            </a>
+                                        </li>
+                                                                            <li class="link-in-sidebar">
+                                            <a href="http://girly-r.mihanblog.com/" title=""  target="_blank">
+                                                وب اصلی نورا                                            </a>
+                                        </li>
+                                                                            <li class="link-in-sidebar">
+                                            <a href="http://template-n.mihanblog.com/" title="ســـــــــــــلام:)
+خــــوشـ اومدی:)
+این جا یه دنیا پرا از کد قراره بشه:)
+امیدوارم کدها به دردتون بخوره:)
+بــــــای:)"  target="_blank">
+                                                best template                                            </a>
+                                        </li>
+                                                                            <li class="link-in-sidebar">
+                                            <a href="http://saba1392.mihanblog.com/" title=""  target="_blank">
+                                                Yeki Ye doone                                            </a>
+                                        </li>
+                                                                            <li class="link-in-sidebar">
+                                            <a href="http://shermehrdad.mihanblog.com/" title=""  target="_blank">
+                                                شعر مهرداد                                            </a>
+                                        </li>
+                                                                            <li class="link-in-sidebar">
+                                            <a href="../joockdownload.mihanblog.com/index.html" title="نداریم"  target="_blank">
+                                                همه چی                                            </a>
+                                        </li>
+                                                                            <li class="link-in-sidebar">
+                                            <a href="../hejran7.mihanblog.com/index.html" title="آرام گام بردار .. اینجا منطقه ایست اختصاصے .. برای کسے شـاید مثل خودم !!"  target="_blank">
+                                                بهشت غربت                                            </a>
+                                        </li>
+                                                                            <li class="link-in-sidebar">
+                                            <a href="http://u-for-me.mihanblog.com" title=""  target="_blank">
+                                                تــ♥ــو برای منی                                            </a>
+                                        </li>
+                                                                            <li class="link-in-sidebar">
+                                            <a href="http://behnamaryam.mihanblog.com/" title="روزگــــــــــــــار مـــــن و تــــــــو
+
+یه جا درست کردم برای همه زندگیم دوست دارم عمرم فقط من و تو"  target="_blank">
+                                                روزگــــــــــــــار مـــــن و تــــــــو                                            </a>
+                                        </li>
+                                                                            <li class="link-in-sidebar">
+                                            <a href="http://bacheporroo.mihanblog.com/" title="اسمم نازی
+
+محل سکوت : نمیشه بگم
+
+دیگه ... همینا ..."  target="_blank">
+                                                نــاز نــازی                                            </a>
+                                        </li>
+                                                                            <li class="link-in-sidebar">
+                                            <a href="http://pani-theme.blogfa.com/" title="+ Hi gUyS +
+sKin,lOg0,icOnE,...gO0d lUcK ;)"  target="_blank">
+                                                مـــآتیـ:)ــک تــمـ                                            </a>
+                                        </li>
+                                                                            <li class="link-in-sidebar">
+                                            <a href="http://hamishehyekihast.mihanblog.com/" title="ღسحرღ ...وsepideh"  target="_blank">
+                                                [̲̲̅̅☼̲̲̅̅.̲̲̅̅.̲̲̅̅.̲̲̅̅ه̲̲̅̅م̲̲̅̅ی̲̲̅̅ش̲̲̅̅ه̲̲̅̅ ̲̲̅̅ی̲̲̅̅ک̲̲̅̅ی̲̲̅̅ ̲̲̅̅ه̲̲̅̅س̲̲̅̅ت̲̲̅̅.̲̲̅̅.̲̲̅̅.̲̲̅̅☼̲̲̅̅]                                            </a>
+                                        </li>
+                                                                            <li class="link-in-sidebar">
+                                            <a href="http://gfffr.mihanblog.com/" title=""  target="_blank">
+                                                آیدینلار-AYDINLAR                                            </a>
+                                        </li>
+                                                                            <li class="link-in-sidebar">
+                                            <a href="http://ladykin-76.blogfa.com/" title=""  target="_blank">
+                                                ladykin                                            </a>
+                                        </li>
+                                                                            <li class="link-in-sidebar">
+                                            <a href="http://khorshidtalae.mihanblog.com/" title=""  target="_blank">
+                                                خورشید طلایی                                            </a>
+                                        </li>
+                                                                            <li class="link-in-sidebar">
+                                            <a href="http://aastareh.mihanblog.com/" title=""  target="_blank">
+                                                شـــــــــــــــعر                                            </a>
+                                        </li>
+                                                                            <li class="link-in-sidebar">
+                                            <a href="http://pat-mat2.mihanblog.com/" title="خدا!حافظ دستانت باشد وقتی از دور برایم دست تکان میدهی."  target="_blank">
+                                                من نه منم ! ! !                                            </a>
+                                        </li>
+                                                                            <li class="link-in-sidebar">
+                                            <a href="http://shahrivaria.mihanblog.com/" title=""  target="_blank">
+                                                SaFa CiTy                                            </a>
+                                        </li>
+                                                                            <li class="link-in-sidebar">
+                                            <a href="http://vahid-baran.mihanblog.com/" title=""  target="_blank">
+                                                زندگی شیرین من و تو                                            </a>
+                                        </li>
+                                                                            <li class="link-in-sidebar">
+                                            <a href="http://sara-code.blogfa.com/" title=""  target="_blank">
+                                                | سـآرا ـتِــم |                                            </a>
+                                        </li>
+                                                                            <li class="link-in-sidebar">
+                                            <a href="http://mylove79.blogfa.com/" title=""  target="_blank">
+                                                عشق یخی                                            </a>
+                                        </li>
+                                                                            <li class="link-in-sidebar">
+                                            <a href="http://abvm.blogfa.com" title=""  target="_blank">
+                                                عکس وشعر و هزارتا چیز دیگه                                            </a>
+                                        </li>
+                                                                            <li class="link-in-sidebar">
+                                            <a href="http://raghebestan.mihanblog.com/" title="بگذار سرنوشت هر راهی که می خواهد برود، راه من جداست! بگذار این ابرها تا می توانند ببارند، چتر من خداست..."  target="_blank">
+                                                راغبستان وبلاگ دانشجویان راغب اصفهانی                                            </a>
+                                        </li>
+                                                                            <li class="link-in-sidebar">
+                                            <a href="http://olum92kau.mihanblog.com/" title="هیچكس نمی دانست كه حتی خدا هم تنهایی اش را فریاد میزند(قل هو الله احد)"  target="_blank">
+                                                علوم آزمایشگاهی92کاشان                                            </a>
+                                        </li>
+                                                                            <li class="link-in-sidebar">
+                                            <a href="http://midwifery27tums.mihanblog.com/" title=""  target="_blank">
+                                                وبلاگ گروهی دانشجویان مامایی دانشگاه تهران ورودی 89                                            </a>
+                                        </li>
+                                                                            <li class="link-in-sidebar">
+                                            <a href="http://various-world.mihanblog.com/" title="هرچی دوست داریم اینجا میذارم..."  target="_blank">
+                                                دنیای رنگارنگ کوثر و رها                                            </a>
+                                        </li>
+                                                                            <li class="link-in-sidebar">
+                                            <a href="http://kimia79.blogsky.com/" title="لطفا تا اخرش بخون"  target="_blank">
+                                                My LOVE                                            </a>
+                                        </li>
+                                                                            <li class="link-in-sidebar">
+                                            <a href="http://feelingtoyoumylovelyday.mihanblog.com" title="My Feeling(احساس من)
+Stand up even if your legs fall down"  target="_blank">
+                                                My Feeling(احساس من)                                            </a>
+                                        </li>
+                                                                            <li class="link-in-sidebar">
+                                            <a href="http://bbkf-kh-family.mihanblog.com/" title="با حال ترین ها فقط واسه شما دوستای با حالم درست شده!!!!!"  target="_blank">
+                                                باحالترین ها                                            </a>
+                                        </li>
+                                                                            <li class="link-in-sidebar">
+                                            <a href="../prince1369-2.mihanblog.com/index.html" title=""  target="_blank">
+                                                Prince News                                            </a>
+                                        </li>
+                                                                            <li class="link-in-sidebar">
+                                            <a href="http://parsimehr.mihanblog.com/" title="خدایا آن گونه زنده ام بدار که نشکند دلی از زنده بودنم و آن گونه بمیرانم که به وجد نیاید کسی از نبودنم."  target="_blank">
+                                                کیمیای مهر                                            </a>
+                                        </li>
+                                                                            <li class="link-in-sidebar">
+                                            <a href="http://lotoflol.mihanblog.com/" title="مطالب طنز ، مطالب خنده دار ، مطالب جدید ، جوک ، جک ، عکس خنده دار ، ترول ، مطالب فیسبوکی ، داستان طنز ، شعر طنز"  target="_blank">
+                                                ☛ W مطالب طنز ، امپراطوری خنده W ☚                                            </a>
+                                        </li>
+                                                                            <li class="link-in-sidebar">
+                                            <a href="http://shiloot.mihanblog.com/" title="تو رفاقت کمیت مهم نیست کیفیت مهمه"  target="_blank">
+                                                دو دوست                                            </a>
+                                        </li>
+                                                                            <li class="link-in-sidebar">
+                                            <a href="http://pezeshkesalamat.mihanblog.com" title="Aryan raouf Shenas"  target="_blank">
+                                                پزشک تندرستی                                            </a>
+                                        </li>
+                                                                            <li class="link-in-sidebar">
+                                            <a href="http://afgirl1991.blogfa.com/" title="او مدتی درزندگی ام بودشاید اگر او نبود &quot;حقایق زندگی یک مهاجر &quot;هم نبود"  target="_blank">
+                                                حقایق زندگی یک مهاجر                                            </a>
+                                        </li>
+                                                                            <li class="link-in-sidebar">
+                                            <a href="http://jangale-tarik.mihanblog.com/" title=""  target="_blank">
+                                                سکوت پرسرو صدا                                            </a>
+                                        </li>
+                                                                            <li class="link-in-sidebar">
+                                            <a href="http://dokhtareatash.mihanblog.com/" title=""  target="_blank">
+                                                عشق...نفرت...انتقام                                            </a>
+                                        </li>
+                                                                            <li class="link-in-sidebar">
+                                            <a href="http://jahan3.mihanblog.com" title=""  target="_blank">
+                                                &quot;جهان سومی ها&quot;                                            </a>
+                                        </li>
+                                                                            <li class="link-in-sidebar">
+                                            <a href="http://farshidjigar0261.mihanblog.com/" title=""  target="_blank">
+                                                ( سه به علاوه یک تفنگدار )R.A.F.S                                            </a>
+                                        </li>
+                                                                            <li class="link-in-sidebar">
+                                            <a href="http://smilehome.mihanblog.com/" title=""  target="_blank">
+                                                لبخندکده والیبالی                                            </a>
+                                        </li>
+                                                                            <li class="link-in-sidebar">
+                                            <a href="http://zan-zendegi.mihanblog.com" title="آری این منم...
+منی كه...
+زنانگی ام...
+حوا بودنم...
+از پس واژه های بی نقاب
+فریاد می کشد"  target="_blank">
+                                                مــــــــــ ن زنـــــــــــــ م                                            </a>
+                                        </li>
+                                                                            <li class="link-in-sidebar">
+                                            <a href="../faramars18.mihanblog.com/index.html" title=""  target="_blank">
+                                                عشق پفکی                                            </a>
+                                        </li>
+                                                                            <li class="link-in-sidebar">
+                                            <a href="http://hamrazedel.mihanblog.com" title="زندگی یعنی یک نگاه ساده تنها چند خاطره.. و تنها چند لحظه… زندگی یعنی نگاهی به یک عکس ساده"  target="_blank">
+                                                ♥ همرازدل ♥                                            </a>
+                                        </li>
+                                                                            <li class="link-in-sidebar">
+                                            <a href="http://stopbanned.mihanblog.com/" title=""  target="_blank">
+                                                stop banned                                            </a>
+                                        </li>
+                                                                            <li class="link-in-sidebar">
+                                            <a href="http://hamdardetanhayi.mihanblog.com/" title="دیوونگی عیب نیست!!!!!!روش زندگیه"  target="_blank">
+                                                جملات عاشقانه                                            </a>
+                                        </li>
+                                                                            <li class="link-in-sidebar">
+                                            <a href="http://www.radepayegol.blogfa.com/" title="بامن تماس بگیرخدایا/حتی هزاربار/وقتی که نیستم/لطفا پیام خودت را روی پیام گیردلم بگذار"  target="_blank">
+                                                خیال کن که غزالم                                            </a>
+                                        </li>
+                                                                            <li class="link-in-sidebar">
+                                            <a href="http://mohamadofahimeh91.blogfa.com/" title="... بسم الله الرحمن الرحیم : فالله خیرحافظا وهو الرحم الراحمین ...
+من وهمسرم تو یه مراسم خواستگاری با هم آشنا شدیم و بعد از پشت سرگذاشتن دوماه مراسم نامزدی در یک روز زیباوبارانی درزمستان در پرتو مهر یزدان به عقد هم دراومدیم و در یک روز خاطره انگیز تابستانی"  target="_blank">
+                                                جاودانه های من + تو = ما                                            </a>
+                                        </li>
+                                                                            <li class="link-in-sidebar">
+                                            <a href="http://setayesh11.mihanblog.com/" title="اینجا یه وبلاگ ،واسه خاطرات منه. میدونم که نوشته هام فقط به درد خودم میخوره
+اینجا وبلاگ یه انسان معمولی با خاطراته معمولیه که خودم دوسش دارم"  target="_blank">
+                                                دفترچه خاطرات این روزهای من1                                            </a>
+                                        </li>
+                                                                            <li class="link-in-sidebar">
+                                            <a href="http://seti11.blogfa.com/" title="ستایش بانو هستم
+از جمله دخترهایی که زندگی الانش زمین تا آسمون با تخیلات بچگیش فرق میکنه"  target="_blank">
+                                                دفترچه خاطرات این روزهای من                                            </a>
+                                        </li>
+                                                                            <li class="link-in-sidebar">
+                                            <a href="http://www.bahary72.blogfa.com/" title=""  target="_blank">
+                                                همیشه بهار                                            </a>
+                                        </li>
+                                                                            <li class="link-in-sidebar">
+                                            <a href="../30gar-qam.mihanblog.com/index.html" title="قداست اشکهایت را حفظ کن..."  target="_blank">
+                                                آخرین سیگار...                                            </a>
+                                        </li>
+                                                                            <li class="link-in-sidebar">
+                                            <a href="http://serenegirls.mihanblog.com" title="آرامــش ، رهایی ازطوفان نیست بلکه آرام زندگی کردن در میان طوفــان است ..."  target="_blank">
+                                                آسمــان صـــــــــــــاف                                            </a>
+                                        </li>
+                                                                            <li class="link-in-sidebar">
+                                            <a href="http://donyatanhast.mihanblog.com/" title="این روزها بی عنوانی مد است...."  target="_blank">
+                                                بی عنوان                                            </a>
+                                        </li>
+                                                                            <li class="link-in-sidebar">
+                                            <a href="http://endofsad.mihanblog.com/" title="بـــهـ نـــامـــ زیـــبـــایـــ پـــردهـــ نـــشـــیـــنـــ"  target="_blank">
+                                                پــــــــــایــــــــــانــــ غـــــــمـــ . . .                                            </a>
+                                        </li>
+                                                                            <li class="link-in-sidebar">
+                                            <a href="../baran-nataly.mihanblog.com/index.html" title=""  target="_blank">
+                                                نقطه چین تا خدا                                            </a>
+                                        </li>
+                                                                            <li class="link-in-sidebar">
+                                            <a href="http://ainenaskan.mihanblog.com/" title=""  target="_blank">
+                                                در کلبه ما رونق اگر نیست...صفا هست                                            </a>
+                                        </li>
+                                                                            <li class="link-in-sidebar">
+                                            <a href="http://helgirl.mihanblog.com" title=""  target="_blank">
+                                                باران                                            </a>
+                                        </li>
+                                                                            <li class="link-in-sidebar">
+                                            <a href="http://dokhmalooneh-man.mihanblog.com/" title=""  target="_blank">
+                                                ♛❤☆دنیای دخترونه☆❤♛                                            </a>
+                                        </li>
+                                                                            <li class="link-in-sidebar">
+                                            <a href="http://sabanm.blogfa.com" title="شاید مانند کودکی باشیم که در کنار دریا با سنگ ریزه ها و صدفهای زیبا بازی می کند اما غافل ار آنیم که"  target="_blank">
+                                                یه هم نفس                                            </a>
+                                        </li>
+                                                                            <li class="link-in-sidebar">
+                                            <a href="http://kolbehehsas.mihanblog.com" title=""  target="_blank">
+                                                کلبه احساس                                            </a>
+                                        </li>
+                                                                            <li class="link-in-sidebar">
+                                            <a href="http://www.highschoolgirl-76.blogfa.com/" title=""  target="_blank">
+                                                High School Girl                                            </a>
+                                        </li>
+                                                                            <li class="link-in-sidebar">
+                                            <a href="http://bidhendi.mihanblog.com/" title="سایت شخصی حسین شریفی"  target="_blank">
+                                                حسین شریفی                                            </a>
+                                        </li>
+                                                                            <li class="link-in-sidebar">
+                                            <a href="http://h-newjavan.mihanblog.com/" title="ما زنده به آنیم که آرام نگیریم **** موجیم که آسودگی ما عدم ماست"  target="_blank">
+                                                *°•♥•°*همسفر جوانی*°•♥•°*                                            </a>
+                                        </li>
+                                                                            <li class="link-in-sidebar">
+                                            <a href="http://raha1232.mihanblog.com/" title=""  target="_blank">
+                                                عاشقم باش                                            </a>
+                                        </li>
+                                                                            <li class="link-in-sidebar">
+                                            <a href="http://sabanm.mihanblog.com/" title="نظر یادتون نــــــــــــــــــــــــــــــــــــــــــــــره!!!"  target="_blank">
+                                                به آشیونم خوش اومدی!                                            </a>
+                                        </li>
+                                                                            <li class="link-in-sidebar">
+                                            <a href="http://manoasemoon.mihanblog.com/" title="اگـہ پـرواز بلدنیستے هیچوقـت عاشق یڪ پرستو نشو چراڪـہ پـرستو زیبـایے خودرا בر پـرواز نشـان میدهد,جاییڪـہ تو هیچـوقت حضورندارے"  target="_blank">
+                                                مـــטּ و آωـمـــوטּ                                            </a>
+                                        </li>
+                                                                            <li class="link-in-sidebar">
+                                            <a href="http://shahrivaria.mihanblog.com" title="بخند تا دنیا بهت بخنده!!!"  target="_blank">
+                                                کافه تریا                                            </a>
+                                        </li>
+                                                                            <li class="link-in-sidebar">
+                                            <a href="http://daftarezendegieman.mihanblog.com/" title=""  target="_blank">
+                                                دفتر زندگی من                                            </a>
+                                        </li>
+                                                                            <li class="link-in-sidebar">
+                                            <a href="../sefideporrang.mihanblog.com/index.html" title=""  target="_blank">
+                                                سِفـیـد پـُـررَنــگــ                                            </a>
+                                        </li>
+                                                                            <li class="link-in-sidebar">
+                                            <a href="http://naime.mihanblog.com" title="اسم وبلاگم خاطرات مدرسس ولی بیش تر درباره چیزی متفرقه میذارم...دوستان نظر فراموش نشه :-)"  target="_blank">
+                                                しѲ√乇خاطرات مدرسه しѲ√乇                                            </a>
+                                        </li>
+                                                                            <li class="link-in-sidebar">
+                                            <a href="http://baranweb1.mihanblog.com" title="ادعانمی کنم بهترینم اما خرسندم که بهترین ها وبلاگ من را برگزیده اند."  target="_blank">
+                                                باران وب تک                                            </a>
+                                        </li>
+                                                                            <li class="link-in-sidebar">
+                                            <a href="http://khasteghi.mihanblog.com/" title="اینجا کلبه غم های من است ..."  target="_blank">
+                                                از چی بگم ...                                            </a>
+                                        </li>
+                                                                            <li class="link-in-sidebar">
+                                            <a href="http://fortlovers.mihanblog.com/" title="قلــــــــــ♥ــــــب ها شیشه های احساسند؛ تقدیم به وجودی که احساس قلــــــــ♥ـــــبش منم."  target="_blank">
+                                                امپراطوری قلب ها                                            </a>
+                                        </li>
+                                                                            <li class="link-in-sidebar">
+                                            <a href="http://shekofai2.mihanblog.com" title="*** خانم شیرویه زاد***"  target="_blank">
+                                                وبلاگ تخصصی کلاس اول دبستان امام محمد باقر(ع)                                            </a>
+                                        </li>
+                                                                            <li class="link-in-sidebar">
+                                            <a href="http://tanhaae.mihanblog.com" title="اوج تنهایی وقتیه که همه دور و برت باشن اما نتونی با هیچ کدومشون حرف بزنی و درد دل کنی...!"  target="_blank">
+                                                دختر تنهایی                                            </a>
+                                        </li>
+                                                                            <li class="link-in-sidebar">
+                                            <a href="http://a134.mihanblog.com" title="(سلام دوستان کپــــــــی نمیکنم )"  target="_blank">
+                                                ☻☺♣ رونـــوشــتـــــــــــــــ ☺♣♥                                            </a>
+                                        </li>
+                                                                            <li class="link-in-sidebar">
+                                            <a href="http://xx-lover-xx.blogfa.com/" title=""  target="_blank">
+                                                آیکن های شکر ونمک                                            </a>
+                                        </li>
+                                                                            <li class="link-in-sidebar">
+                                            <a href="http://photo-moghaddam.mihanblog.com/" title="امین"  target="_blank">
+                                                خونه قشنگ من                                            </a>
+                                        </li>
+                                                                            <li class="link-in-sidebar">
+                                            <a href="../havayebihadaf.mihanblog.com/index.html" title=""  target="_blank">
+                                                هوای بی هدف                                            </a>
+                                        </li>
+                                                                            <li class="link-in-sidebar">
+                                            <a href="http://anahitajan.mihanblog.com" title=""  target="_blank">
+                                                عشق ابدی                                            </a>
+                                        </li>
+                                                                            <li class="link-in-sidebar">
+                                            <a href="http://asheghaneha7.mihanblog.com/" title=""  target="_blank">
+                                                احساس آرامش                                            </a>
+                                        </li>
+                                                                            <li class="link-in-sidebar">
+                                            <a href="../chakavack01.mihanblog.com/index.html" title="شكسته هاى دلت را به بازار خدا ببر ... خدا خود بهاى شكسته دلان است"  target="_blank">
+                                                ღ پرسـﮧ פֿــیــــال בَر ڪـפּچـﮧ تنـــہایـے ღ                                            </a>
+                                        </li>
+                                                                            <li class="link-in-sidebar">
+                                            <a href="http://sokoot2013.mihanblog.com" title=""  target="_blank">
+                                                ♂ •*♥ بوی باران                                            </a>
+                                        </li>
+                                                                            <li class="link-in-sidebar">
+                                            <a href="../alitaksetareh.mihanblog.com/index.html" title=""  target="_blank">
+                                                دل نوشته ها و درد دل ها                                            </a>
+                                        </li>
+                                                                            <li class="link-in-sidebar">
+                                            <a href="../aliaram.mihanblog.com/index.html" title="بهانه ای برای بودن"  target="_blank">
+                                                ابجدخوان                                            </a>
+                                        </li>
+                                                                            <li class="link-in-sidebar">
+                                            <a href="http://sums-medicalstudents.mihanblog.com" title=""  target="_blank">
+                                                Medical Science Students Official                                            </a>
+                                        </li>
+                                                                            <li class="link-in-sidebar">
+                                            <a href="http://lahzeasheghi.mihanblog.com/" title=""  target="_blank">
+                                                تراوش دل                                            </a>
+                                        </li>
+                                                                            <li class="link-in-sidebar">
+                                            <a href="../shamsipoor.mihanblog.com/index.html" title=""  target="_blank">
+                                                عاشقانه وعارفانه وجملات زیبا                                            </a>
+                                        </li>
+                                                                            <li class="link-in-sidebar">
+                                            <a href="http://barobaxfarsi.blogfa.com/" title="شعر متن  جمله"  target="_blank">
+                                                آوای زندگی                                            </a>
+                                        </li>
+                                                                            <li class="link-in-sidebar">
+                                            <a href="../pinkxoxo.mihanblog.com/index.html" title="عرفان"  target="_blank">
+                                                ♠xoxo♠                                            </a>
+                                        </li>
+                                                                            <li class="link-in-sidebar">
+                                            <a href="http://sedayebaran-20.blogfa.com/" title="کسی که یک سخن شنید و در همه عمر از آن سوخت جان من فدای او باد"  target="_blank">
+                                                برای فهمیدن باید اندیشید ...                                            </a>
+                                        </li>
+                                                                            <li class="link-in-sidebar">
+                                            <a href="http://sogand376.blogfa.com/" title=""  target="_blank">
+                                                سوگند376                                            </a>
+                                        </li>
+                                                                            <li class="link-in-sidebar">
+                                            <a href="http://elmirah.blogfa.com" title=""  target="_blank">
+                                                Famous Celebrities(☆_☆)★彡                                            </a>
+                                        </li>
+                                                                            <li class="link-in-sidebar">
+                                            <a href="http://marzieh86-gh.blogfa.com" title=""  target="_blank">
+                                                دلتنگیهای باران                                            </a>
+                                        </li>
+                                                                            <li class="link-in-sidebar">
+                                            <a href="http://we2sister.mihanblog.com/" title=""  target="_blank">
+                                                دوقلو های افسانه ای                                            </a>
+                                        </li>
+                                                                        <li class="link-in-sidebar">
+                                        <a class="clearfix" href="http://lindsalimi.mihanblog.com/link/"> همه اینک ها </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        
+
+                                                    <div class="block-extrapage inside-border">
+                                <div class="title-sidebar">صفحات جانبی</div>
+                                <ul>
+                                                                            <li class="link-in-sidebar">
+                                            <a href="http://lindsalimi.mihanblog.com/extrapage/police">امنیت اینترنت</a>
+                                        </li>
+                                                                            <li class="link-in-sidebar">
+                                            <a href="http://lindsalimi.mihanblog.com/extrapage/molana">م.ج.ب</a>
+                                        </li>
+                                                                            <li class="link-in-sidebar">
+                                            <a href="http://lindsalimi.mihanblog.com/extrapage/aflaton">ف . ی</a>
+                                        </li>
+                                                                    </ul>
+                            </div>
+                        
+
+                        
+		<form id="frm-16077757835fd4b6277bd37" method="post" action="http://lindsalimi.mihanblog.com/poll/new/fid/16077757835fd4b6277bd37/atrty/1607775783/avrvy/0/key/821329f5a1e37f8f38cb5d12afdb464c/"  onsubmit="window.open('', 'poll', 'toolbar=0,location=0,status=0,menubar=0,scrollbars=1,resizable=0,width=505,height=315')" target="poll"><input type="hidden" name="data[pollid]" value="293932" id="data[pollid]" />		
+                            <div class="title-sidebar">نظرسنجی</div>
+                            <div class="inside-border clearfix">
+                                <div class="nolink-sidbar">
+                                    <div class="hr-dashed-rule">نظرتون راجع به وبلاگم چیه ؟</div>
+                                    <ul>
+                                                                                    <li>
+                                                <a href="index.html#"><label><input type="radio" name="data[answer]" value="v1">خیلی خوبه</label></a>
+                                            </li>
+                                                                                    <li>
+                                                <a href="index.html#"><label><input type="radio" name="data[answer]" value="v2">خب بدک نیست</label></a>
+                                            </li>
+                                                                                    <li>
+                                                <a href="index.html#"><label><input type="radio" name="data[answer]" value="v3">خوشم نمیاد</label></a>
+                                            </li>
+                                                                                    <li>
+                                                <a href="index.html#"><label><input type="radio" name="data[answer]" value="v4">خیلی بده</label></a>
+                                            </li>
+                                                                                    <li>
+                                                <a href="index.html#"><label><input type="radio" name="data[answer]" value="v5">کدوم وبلاگ(من که وبلاگی ندیدم)</label></a>
+                                            </li>
+                                                                            </ul>
+                                </div>
+                                <input type="submit" class="button-cc"  value="اینم نظر من"/>
+                            </div>
+                        
+		<input type="hidden" name="frm-id" value="16077757835fd4b6277bd37" id="frm-id" /></form>
+
+                        <div class="block-user-script">
+                            <center><script language="javascript" src="http://PichAk.Net/musics.php?type=5&files=http://slideskin.ir/sund/134.mp3&start=1&random=0&replay=1&vol=100"></script></center><div style="display:none"><ul><li><a href="http://slideskin.ir/">قالب وبلاگ</a></li><li><a title="قالب وبلاگ" href="http://slideskin.ir/">اسلاید اسکین</a></li></ul></div>                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer-section">
+            <div class="footer container">
+                <div class="bottombar clearfix">
+
+                    <div class="blog-statistics inside-bottombar">
+                                                    <div class="title-bottombar">آمار وبلاگ</div>
+                            <ul>
+                                <li class="hr-dashed-rule clearfix"><span class="stat-nums"><script>getStatVar('total_view');</script></span><span class="stat-subs">کل بازدید : </span></li>
+                                <li class="hr-dashed-rule clearfix"><span class="stat-nums"> <script>getStatVar('today_view');</script></span><span class="stat-subs">بازدید امروز : </span></li>
+                                <li class="hr-dashed-rule clearfix"><span class="stat-nums"><script>getStatVar('yesterday_view');</script></span><span class="stat-subs"> بازدید دیروز : </span></li>
+                                <li class="hr-dashed-rule clearfix"><span class="stat-nums"><script>getStatVar('this_month_view');</script></span><span class="stat-subs"> بازدید این ماه : </span> </li>
+                                <li class="hr-dashed-rule clearfix"><span class="stat-nums"><script>getStatVar('last_month_view');</script></span><span class="stat-subs">بازدید ماه قبل : </span> </li>
+                                <li class="hr-dashed-rule clearfix"><span class="stat-nums"> <script>getStatVar('total_author');</script></span><span class="stat-subs">تعداد نویسندگان : </span></li>
+                                <li class="hr-dashed-rule clearfix"><span class="stat-nums"><script>getStatVar('total_post');</script></span><span class="stat-subs">تعداد کل مطالب : </span> </li>
+                                <li class="hr-dashed-rule clearfix"><span class="stat-nums"><script>getStatVar('last_view_date');</script></span><span class="stat-subs">آخرین بازدید : </span></li>
+                                <li class="hr-dashed-rule clearfix"><span class="stat-nums"><script>getStatVar('modify_date');</script></span><span class="stat-subs">آخرین بروز رسانی : </span> </li>
+                            </ul>
+                                            </div>
+
+                    <div class="inside-bottombar insbtm-archive">
+                                                    <div class="title-bottombar">آرشیو</div>
+                            <ul>
+                                                                    <li class="link-in-bottombar">
+                                        <a class="clearfix" href="http://lindsalimi.mihanblog.com/post/archive/1397/5">
+                                             مرداد 1397 <span class="bottombar-dez"> 1 پست </span>
+                                        </a>
+                                    </li>
+                                                                    <li class="link-in-bottombar">
+                                        <a class="clearfix" href="http://lindsalimi.mihanblog.com/post/archive/1397/2">
+                                             اردیبهشت 1397 <span class="bottombar-dez"> 1 پست </span>
+                                        </a>
+                                    </li>
+                                                                    <li class="link-in-bottombar">
+                                        <a class="clearfix" href="http://lindsalimi.mihanblog.com/post/archive/1397/1">
+                                             فروردین 1397 <span class="bottombar-dez"> 2 پست </span>
+                                        </a>
+                                    </li>
+                                                                    <li class="link-in-bottombar">
+                                        <a class="clearfix" href="http://lindsalimi.mihanblog.com/post/archive/1396/12">
+                                             اسفند 1396 <span class="bottombar-dez"> 1 پست </span>
+                                        </a>
+                                    </li>
+                                                                    <li class="link-in-bottombar">
+                                        <a class="clearfix" href="http://lindsalimi.mihanblog.com/post/archive/1394/7">
+                                             مهر 1394 <span class="bottombar-dez"> 1 پست </span>
+                                        </a>
+                                    </li>
+                                                                    <li class="link-in-bottombar">
+                                        <a class="clearfix" href="http://lindsalimi.mihanblog.com/post/archive/1393/7">
+                                             مهر 1393 <span class="bottombar-dez"> 2 پست </span>
+                                        </a>
+                                    </li>
+                                                                    <li class="link-in-bottombar">
+                                        <a class="clearfix" href="http://lindsalimi.mihanblog.com/post/archive/1393/5">
+                                             مرداد 1393 <span class="bottombar-dez"> 2 پست </span>
+                                        </a>
+                                    </li>
+                                                                    <li class="link-in-bottombar">
+                                        <a class="clearfix" href="http://lindsalimi.mihanblog.com/post/archive/1393/4">
+                                             تیر 1393 <span class="bottombar-dez"> 3 پست </span>
+                                        </a>
+                                    </li>
+                                                                    <li class="link-in-bottombar">
+                                        <a class="clearfix" href="http://lindsalimi.mihanblog.com/post/archive/1393/3">
+                                             خرداد 1393 <span class="bottombar-dez"> 2 پست </span>
+                                        </a>
+                                    </li>
+                                                                    <li class="link-in-bottombar">
+                                        <a class="clearfix" href="http://lindsalimi.mihanblog.com/post/archive/1393/2">
+                                             اردیبهشت 1393 <span class="bottombar-dez"> 2 پست </span>
+                                        </a>
+                                    </li>
+                                                                    <li class="link-in-bottombar">
+                                        <a class="clearfix" href="http://lindsalimi.mihanblog.com/post/archive/1393/1">
+                                             فروردین 1393 <span class="bottombar-dez"> 2 پست </span>
+                                        </a>
+                                    </li>
+                                                                    <li class="link-in-bottombar">
+                                        <a class="clearfix" href="http://lindsalimi.mihanblog.com/post/archive/1392/12">
+                                             اسفند 1392 <span class="bottombar-dez"> 4 پست </span>
+                                        </a>
+                                    </li>
+                                                                    <li class="link-in-bottombar">
+                                        <a class="clearfix" href="http://lindsalimi.mihanblog.com/post/archive/1392/11">
+                                             بهمن 1392 <span class="bottombar-dez"> 1 پست </span>
+                                        </a>
+                                    </li>
+                                                                    <li class="link-in-bottombar">
+                                        <a class="clearfix" href="http://lindsalimi.mihanblog.com/post/archive/1392/10">
+                                             دی 1392 <span class="bottombar-dez"> 7 پست </span>
+                                        </a>
+                                    </li>
+                                                                    <li class="link-in-bottombar">
+                                        <a class="clearfix" href="http://lindsalimi.mihanblog.com/post/archive/1392/9">
+                                             آذر 1392 <span class="bottombar-dez"> 1 پست </span>
+                                        </a>
+                                    </li>
+                                                                    <li class="link-in-bottombar">
+                                        <a class="clearfix" href="http://lindsalimi.mihanblog.com/post/archive/1392/1">
+                                             فروردین 1392 <span class="bottombar-dez"> 1 پست </span>
+                                        </a>
+                                    </li>
+                                                                    <li class="link-in-bottombar">
+                                        <a class="clearfix" href="http://lindsalimi.mihanblog.com/post/archive/1391/11">
+                                             بهمن 1391 <span class="bottombar-dez"> 2 پست </span>
+                                        </a>
+                                    </li>
+                                                                    <li class="link-in-bottombar">
+                                        <a class="clearfix" href="http://lindsalimi.mihanblog.com/post/archive/1390/11">
+                                             بهمن 1390 <span class="bottombar-dez"> 1 پست </span>
+                                        </a>
+                                    </li>
+                                                                    <li class="link-in-bottombar">
+                                        <a class="clearfix" href="http://lindsalimi.mihanblog.com/post/archive/1390/10">
+                                             دی 1390 <span class="bottombar-dez"> 1 پست </span>
+                                        </a>
+                                    </li>
+                                                                <li class="link-in-bottombar">
+                                    <a class="clearfix" href="http://lindsalimi.mihanblog.com/post/archive"><span>همه آرشیوها</span></a>
+                                </li>
+                            </ul>
+                                            </div>
+
+                    <div class="inside-bottombar">
+                        <div class="about-blog">
+                            <div class="blog-creator">ایجاد شده توسط:
+                                <a href="http://lindsalimi.mihanblog.com/post/author/691916">MASH mehti</a>
+                            </div>
+                            <div class="blog-desc">lindsalimi_73@YAHOO.com<br />
+Salimi_73@OUTLOOK.com<br />
+CLOOB.com/name/mUGGEr<br />
+LENZOR.com/eror<br />
+<br />
+***<br />
+Dreamer_95@<br />
+تلگرام<br />
+***<br />
+<br />
+زگهواره تا گور...حِسش نبود...^_+<br />
+<br />
+دلم باغی پر از ریحان و گل بود<br />
+به روی رود عشقت مثل پل بود<br />
+تو لایکم کردی و ویران شد این دل<br />
+مگر ماوس تو از قوم مغول بود<br />
+<br />
+اسمم مهدی<br />
+متولد1373</div>
+                        </div>
+                        <div class="social-networks-footer">
+                            <ul class="icons">
+                                <li class="social-networks-icons">
+                                    <a href="https://www.facebook.com/"><i class="icon icon-facebook"></i></a>
+                                </li>
+                                <li class="social-networks-icons">
+                                    <a href="https://www.pinterest.com/"><i class="icon icon-pinterest"></i></a>
+                                </li>
+                                <li class="social-networks-icons">
+                                    <a href="https://twitter.com/"><i class="icon icon-twitter"></i></a>
+                                </li>
+                                <li class="social-networks-icons">
+                                    <a href="https://www.instagram.com/"><i class="icon icon-instagram"></i></a>
+                                </li>
+                                <li class="social-networks-icons">
+                                    <a href="https://plus.google.com/"><i class="icon icon-gplus"></i></a>
+                                </li>
+                                <li class="social-networks-icons">
+                                    <a href="https://web.telegram.org"><i class="icon icon-telegram"></i></a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="footer-copyright">
+                    <div class="footer-text">
+                        قدرت گرفته با
+                        <!--<span class="heart">♥</span>-->
+                        <i class="icon icon-heart"></i>
+                        از
+                        <a href="../www.mihanblog.com/index.html">
+                            MihanBlog.com
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+
+
+
+<script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+<script>
+    function openSiteMenu() {
+        document.getElementById("pageContainer").className += " menu-active";
+    }
+
+    function exitMenu() {
+        document.getElementById("pageContainer").classList.remove("menu-active");
+    }
+
+
+        window.onscroll = function() {
+
+            if (document.body.scrollTop > 500 || document.documentElement.scrollTop > 500) {
+                document.getElementById("goTop").style.display = 'block';
+            }
+            else {
+                document.getElementById("goTop").style.display = 'none';
+            }
+
+        };
+
+    function moveToTop() {
+        $('html,body').animate({ scrollTop: 0 }, 'slow');
+    };
+
+</script>
+
+
+
+
+</body>
+</html><script>
+//    setTimeout(function () {
+//        GetMihanBlogShowAds();
+//    }, 1000);
+</script>
+<!--NEW SERVER--><!--;)-->
+
+<!--SabaVision Ads Handler--><!--<script type="text/javascript">(function (d) {var url =   location.protocol+'//api.sabavision.com/pox/poxjs.js';d.write('<script type="text/javascript" src="' + url + '" async></scri' + 'pt>');})(document);</script>-->
+
+
+<script type="text/javascript">
+
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-153829-9']);
+    _gaq.push(['_setDomainName', 'lindsalimi.mihanblog.com']);
+    _gaq.push(['_trackPageview']);
+
+    (function() {
+        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+
+</script>
+
+
+<div id='mediaad-Kvcm'></div>
+<meta name="sabavision_zone" content="2500-Z499" />
+<center>
+    <div style="background-color:white;width:90%;padding:20px;margin-top:50px;margin-bottom:50px;">
+        <a href="https://www.cloob.com">شبکه اجتماعی فارسی کلوب</a> | <a href="https://www.seo25.com/product/buy-mobile-traffic-and-get-cheap-targeted-mobile-traffic/" target="_blank">Buy Mobile Traffic</a> | <a href="https://www.soalaat.com">سایت سوالات</a>
+    </div>
+</center>

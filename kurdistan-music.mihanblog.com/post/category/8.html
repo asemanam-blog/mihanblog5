@@ -1,0 +1,1707 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+"http://www.w3.org/TR/html4/loose.dtd">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" /><link rel="EditURI" type="application/rsd+xml" title="RSD" href="../../xmlrpc@rsd" />
+<script type="text/javascript" src="../../../static.mihanblog.com/public/scripts/run/g.other.v3.js"></script>
+<script>
+
+	function c_$(id){
+        return document.getElementById(id);
+    }
+    
+			//if (parent.frames.length) top.location.href= document.location;
+		
+	setTodayDate = function(){
+		document.write('شنبه 22 آذر 1399');
+		/*825685*/	}
+
+</script>
+
+
+
+        <script type="text/javascript">
+            (function(){
+            var now = new Date();
+            var head = document.getElementsByTagName('head')[0];
+            var script = document.createElement('script');
+            script.async = true;
+            var script_address = 'https://cdn.yektanet.com/js/mihanblog.com/native-mihanblog.com-6531.js';
+            script.src = script_address + '?v=' + now.getFullYear().toString() + '0' + now.getMonth() + '0' + now.getDate() + '0' + now.getHours();
+            head.appendChild(script);
+            })();
+        </script>
+
+        <!--<script type="text/javascript">
+            var head = document.getElementsByTagName("head")[0];
+            var script = document.createElement("script");
+            script.type = "text/javascript";
+            script.async=1;
+            script.src = "https://s1.mediaad.org/serve/mihanblog.com/loader.js" ;
+            head.appendChild(script);
+        </script>-->
+        
+        <script>
+            var sabaVisionWebsiteID = "9bab9dac-041d-4bdb-b39a-1ed789f65eed"; var sabaVisionWebsitePage = "ALL"
+        </script>
+        <link rel="stylesheet" href="https://plus.sabavision.com/dox/dox.min.css">
+        <script src="https://plus.sabavision.com/dox/dox.min.js"></script>
+        
+        <script>
+	try{
+		var commentCnt = new Array();
+		commentCnt[145]='5';commentCnt[153]='7';commentCnt[157]='11';commentCnt[159]='12';commentCnt[170]='14';commentCnt[171]='13';commentCnt[175]='2';	} catch(e){}
+	
+	newComment = function(post_id){
+		try{
+			window.open('/post/comment/'+post_id,'comment','status=yes,scrollbars=yes,toolbar=no,menubar=no,location=no ,width=480px,height=540px');
+		} catch(e){}
+	}
+	setCommentCnt = function(post_id){
+		try{
+			if(commentCnt[post_id]){
+				document.write(commentCnt[post_id]);
+			} else {
+				document.write(0);
+			}
+		} catch(e){}
+	}
+</script><script>
+
+
+	mihanblogUpdateLike = function(postid,type){
+		var url = '/post/like/'+postid+'/'+type;
+		mihanblogGetAjax(url,function(){});
+	};
+	try{
+        mihanblogGetAjax = function (url,callback) {
+    		var req;
+			if (window.XMLHttpRequest)
+            {
+                // code for IE7+, Firefox, Chrome, Opera, Safari
+			  	req = new XMLHttpRequest();
+			}else{	// code for IE6, IE5
+			  	req = new ActiveXObject("Microsoft.XMLHTTP");
+		  	}
+		    req.open("GET", url, 1);
+		    req.onreadystatechange = function () {
+		        if (req.readyState == 4) {
+		            if (req.status == 200) {
+		            	var response = eval(req.responseText);
+		            	callback();
+		            }else{
+	            		return ;
+		            }
+		        }else{
+					return ;
+		        }
+		    }
+		    req.send(null);
+		}
+	}catch(e){}
+
+	try{
+		var mihanblogLikeArrCnt = new Array();
+		var mihanblogDisLikeArrCnt = new Array();
+
+		mihanblogLikeArrCnt[145]='1';
+mihanblogDisLikeArrCnt[145]='0';
+mihanblogLikeArrCnt[153]='0';
+mihanblogDisLikeArrCnt[153]='0';
+mihanblogLikeArrCnt[157]='17';
+mihanblogDisLikeArrCnt[157]='1';
+mihanblogLikeArrCnt[159]='12';
+mihanblogDisLikeArrCnt[159]='3';
+mihanblogLikeArrCnt[170]='14';
+mihanblogDisLikeArrCnt[170]='6';
+mihanblogLikeArrCnt[171]='4';
+mihanblogDisLikeArrCnt[171]='0';
+mihanblogLikeArrCnt[175]='29';
+mihanblogDisLikeArrCnt[175]='3';
+	} catch(e){}
+
+
+
+    mihanblogPostLike = function(post_id){
+
+        mihanblogLikeCnt = (mihanblogLikeArrCnt[post_id]? mihanblogLikeArrCnt[post_id] : 0);
+        mihanblogDisLikeCnt = (mihanblogDisLikeArrCnt[post_id]? mihanblogDisLikeArrCnt[post_id] : 0);
+        mihanblogLikeCnt = parseInt(mihanblogLikeCnt);
+        mihanblogDisLikeCnt = parseInt(mihanblogDisLikeCnt);
+
+        document.write(
+                '<div class="mihanblog_like_wrapper ">'+
+                       '<div id="dislikeBar_'+post_id+'" onclick="mihanblogUpdateLike('+post_id+',\'dislike\')"   class="mihanblog_like_bar mihanblog_like_dislikeBar mihanblog_like_show_help ">-<div class="mihanblog_like_Cnt" id="disLikeCnt_'+post_id+'">'+mihanblogDisLikeCnt+'</div>'+
+                            '<span  class="mihanblog_like_v2_help mihanblog_like_v2_help_dislike clearfix"> '+
+                                '<span class="mihanblog_like_help_arrow mihanblog_like_help_arrow_dislike clearfix"></span>'+
+                                '<span class="mihanblog_like_help_text">نمی پسندم</span>'+
+                            '</span>'+
+                        '</div>'+
+                       '<div id="Like_'+post_id+'" class="mihanblog_like_border"></div>'+
+                       '<div id="likeBar_'+post_id+'" onclick="mihanblogUpdateLike('+post_id+',\'like\')"  class="mihanblog_like_bar mihanblog_like_likeBar mihanblog_like_show_help" >+<div class="mihanblog_like_Cnt" id="likeCnt_'+post_id+'">'+mihanblogLikeCnt+'</div>'+
+                            '<span  class="mihanblog_like_v2_help mihanblog_like_v2_help_like clearfix"> '+
+                                '<span class="mihanblog_like_help_arrow mihanblog_like_help_arrow_like clearfix"></span>'+
+                                '<span class="mihanblog_like_help_text">می پسندم</span>'+
+                            '</span>'+
+                        '</div>'+
+
+                '</div>'
+        );
+
+
+
+        mihanblogDisplayeLike(post_id);
+    }
+
+
+    mihanblogDisplayeLike = function(post_id){
+
+        mihanblogLikeCnt = (mihanblogLikeArrCnt[post_id]? mihanblogLikeArrCnt[post_id] : 0);
+        mihanblogDisLikeCnt = (mihanblogDisLikeArrCnt[post_id]? mihanblogDisLikeArrCnt[post_id] : 0);
+        mihanblogLikeCnt = parseInt(mihanblogLikeCnt);
+        mihanblogDisLikeCnt = parseInt(mihanblogDisLikeCnt);
+
+
+
+        sum = mihanblogLikeCnt - mihanblogDisLikeCnt;
+        backgroundBorder =  document.getElementById('Like_'+post_id);
+        var likeObj = document.getElementById('likeCnt_'+post_id);
+        var disLikeObj = document.getElementById('disLikeCnt_'+post_id);
+
+
+
+
+
+        likeObj.innerHTML =  mihanblogLikeCnt ;
+        disLikeObj.innerHTML =  mihanblogDisLikeCnt;
+
+        if(sum == 0){
+            backgroundBorder.style.backgroundImage = "url('/public/public/images/icons/like_likedislike.png')";
+            document.getElementById('dislikeBar_'+post_id).style.width = '19px';
+            document.getElementById('likeBar_'+post_id).style.width = '19px';
+        }else{
+             if(sum > 0){
+                 backgroundBorder.style.backgroundImage = "url('/public/public/images/icons/like_like.png')";
+                 document.getElementById('likeBar_'+post_id).style.width = '23px';
+                 document.getElementById('dislikeBar_'+post_id).style.width = '15px';
+             }else{
+                 backgroundBorder.style.backgroundImage = "url('/public/public/images/icons/like_dislike.png')";
+                 document.getElementById('likeBar_'+post_id).style.width = '15px';
+                 document.getElementById('dislikeBar_'+post_id).style.width = '23px';
+             }
+        }
+
+    }
+
+
+
+
+</script>
+
+<style type="text/css">
+
+
+    .clearfix {display: inline-block;}
+    .clearfix:after {
+        content: ".";
+        display: block;
+        height: 0;
+        clear: both;
+        visibility: hidden;
+    }
+
+    .mihanblog_like_wrapper {
+        color: #ffffff;
+        direction: ltr;
+        position: relative;
+    }
+    .mihanblog_like_wrapper span{
+        display: none;
+    }
+    .mihanblog_like_bar {
+        color: #FFFFFF;
+        cursor: pointer;
+        float: left;
+        font-size: 10px;
+        height: 20px;
+        line-height: 19px;
+        margin: 5px 0;
+    }
+    .mihanblog_like_likeBar {
+        background-color: #88B131;
+        padding-right: 5px;
+        border-top-right-radius: 2px;
+        border-bottom-right-radius: 2px;
+        text-align: right;
+    }
+    .mihanblog_like_likeBar:hover{
+        background-color: #699017;
+    }
+    .mihanblog_like_border {
+        background-color: #666666;
+        border: 1px solid #666666;
+        float: left;
+        font-size: 12px;
+        height: 20px;
+        margin-top: 2px;
+        width: 25px;
+        padding: 3px 5px 2px 0;
+        text-align: center;
+        border-radius: 2px;
+        color: #ffffff;
+        direction: ltr;
+        background-repeat: no-repeat ;
+        background-position: 4px center;
+    }
+    .mihanblog_like_border img {
+        margin-left: 2px;
+        margin-top: 2px;
+        width: 22px;
+    }
+    .mihanblog_like_dislikeBar {
+        background-color: #FF6F31;
+        padding-left: 5px;
+        border-top-left-radius: 2px;
+        border-bottom-left-radius: 2px;
+        text-align:left ;
+    }
+    .mihanblog_like_dislikeBar:hover{
+        background-color: #D54B10;
+    }
+
+
+
+    .mihanblog_like_show_help {
+        position: relative;
+    }
+    .mihanblog_like_show_help:hover span {
+        display: block;
+    }
+    .mihanblog_like_help_text {
+        background-color: white;
+        border: 1px solid #555555;
+        border-radius: 3px 3px 3px 3px;
+        color: #303030;
+        float: left;
+        font-size: 11px;
+        font-weight: normal;
+        padding: 5px 10px;
+    }
+
+    .mihanblog_like_help_arrow_dislike {
+        background: url("http://kurdistan-music.mihanblog.com/public/public/images/icons/like_hover_top.png") no-repeat scroll 16px 0 transparent;
+        left: 0;
+        top: -4px;
+    }
+
+    .mihanblog_like_help_arrow_like {
+        background: url("http://kurdistan-music.mihanblog.com/public/public/images/icons/like_hover_top _2.png") no-repeat scroll 16px 0 transparent;
+        left: -10px;
+        top: 29px;
+    }
+
+    .mihanblog_like_help_arrow{
+        height: 6px;
+        position: absolute;
+        width: 100px;
+
+    }
+
+    .mihanblog_like_v2_help_dislike {
+        left: -15px;
+        top: 24px;
+    }
+    .mihanblog_like_v2_help_like {
+        left: 0;
+        top: -35px;
+
+    }
+    .mihanblog_like_v2_help{
+        display: none;
+        position: absolute;
+        white-space: nowrap;
+        z-index: 1;
+    }
+
+    .mihanblog_like_Cnt{
+        display: inline;
+        color: #ffffff;
+    }
+
+</style><script>
+
+	statInfo = new Array();
+	setStatVar = function(index,value){
+		statInfo[index] = value;
+	}
+	getStatVar = function(index){
+		if(statInfo[index]) document.write(statInfo[index]);
+	}
+	
+	setStatVar('total_post','242');
+	setStatVar('total_author','1');
+	setStatVar('modify_date','دوشنبه 2 مهر 1397');
+	
+	setStatVar('today_view','99');
+	setStatVar('yesterday_view','162');
+	
+	setStatVar('this_month_view','3980');
+	setStatVar('last_month_view','4788');
+
+	setStatVar('total_view','3432374');
+	setStatVar('last_view_date','شنبه 22 آذر 1399 (15:13)');
+
+
+
+    
+    function setStatFromClient()
+    {
+        var url = 'http://kurdistan-music.mihanblog.com/statupdate/?data[refereruri]=http://kurdistan-music.mihanblog.com/&data[postid]=&data[requesturi]=/post/category/8&data[sdate]=1607773481&data[hash]=40632514d0b36ae38457e0abec752613&data[resolution]='+screen.width+' X '+screen.height;
+
+//        alert(url);
+//        var newjs = document.createElement("SCRIPT");
+//        newjs.type = 'text/javascript';
+//        newjs.src = url;
+//
+//        var newdiv = document.createElement("DIV");
+//        newdiv.setAttribute("style","display:none");
+
+        document.write(unescape('%3Cscript src="'+url+'" type="text/javascript"%3E%3C/script%3E'));
+//        newdiv.appendChild (newjs);
+//        document.write(newjs);
+//        document.write(appendChild (newdiv);
+
+    };
+    setStatFromClient();
+        
+</script><script>
+	messageForm = function(post_id){
+		try{
+			window.open('/message','message','status=yes,scrollbars=yes,toolbar=no,menubar=no,location=no ,width=480px,height=550px');
+		} catch(e){}
+	}
+</script><script>
+	linkdailyForm = function(){
+		try{
+			window.open('/linkdaily/new','linkdaily','status=yes,scrollbars=yes,toolbar=no,menubar=no,location=no ,width=500px,height=460px');
+		} catch(e){}
+	}
+</script><script>
+
+var MihanblogShopAdsArray = new Array();
+
+function GetMihanBlogShowAds(){
+	if(MihanblogShopAdsArray.length){
+		var adsTarget = 'MihanblogShopAds';
+		var containerWidth = document.getElementById(adsTarget).offsetWidth;
+		if(containerWidth>=200){
+			var adsCnt = parseInt(containerWidth / 200) ;
+			if(adsCnt>MihanblogShopAdsArray.length){
+				adsCnt = MihanblogShopAdsArray.length ; 
+			}
+//			var OneAdsWidth = parseInt(containerWidth / adsCnt) ;
+			var OneAdsWidth = containerWidth / adsCnt ;
+			if(OneAdsWidth>400){
+				OneAdsWidth = 400 ;
+			}
+			var OutHtml = '';
+			var img = '';
+			var link = '';
+			var title = '';
+			var description = '';
+			var imgWidth = 70;
+			if(OneAdsWidth>230){
+				imgWidth = 80;
+			}
+			if(OneAdsWidth>300){
+				imgWidth = 90;
+			}
+			for(adsOne=0;adsOne<adsCnt;adsOne++){
+				
+				img = MihanblogShopAdsArray[adsOne]['img'];
+				link = MihanblogShopAdsArray[adsOne]['link'];
+				title = MihanblogShopAdsArray[adsOne]['title'];
+				description = MihanblogShopAdsArray[adsOne]['description'];
+				
+				OutHtml += '<td style="background-color:#FFF;width: '+OneAdsWidth+'px;border:1px solid #f00;margin:0px 0px;font-size:11px;font-family:tahoma;padding:2px;margin:0px 0px;font-size:11px;border: 1px solid BurlyWood; padding: 1px; height: '+(imgWidth+25)+'px;">';
+
+				OutHtml += '	<a href="http://kurdistan-music.mihanblog.com/post/category/'+link+'" target="_blank" style="text-decoration:none">';
+
+				OutHtml += '			<div style="width: '+(OneAdsWidth-16)+'px;cursor:pointer;font-size:12px;padding: 4px 1px 4px 7px; white-space: nowrap; text-align: center; font-weight: bold; color: blue;white-space:nowrap;overflow:hidden">';
+				OutHtml += 					title;
+				OutHtml += '			</div>';
+				OutHtml += '			<div style="cursor:pointer;padding: 1px; display: block; float: right; width: '+imgWidth+'px;">';
+				OutHtml += '				<img src="'+img+'.html" style="border:0px;padding:0px;margin:0px;width:'+imgWidth+'px;height:'+imgWidth+'px;">';
+				OutHtml += '			</div>';
+				OutHtml += '			<div style="padding: 1px; display: block; float: right; width: '+(OneAdsWidth-13-imgWidth)+'px; text-align: right;overflow:hidden">';
+				OutHtml += '				<div style="overflow:hidden;cursor:pointer;padding: 2px 3px; line-height: 17px; height: '+(imgWidth-3)+'px; text-align: justify;color:#000;direction:rtl">';
+				OutHtml += 						description;
+				OutHtml += '				</div>';
+				OutHtml += '			</div>';
+
+				OutHtml += '	</a>';
+
+				OutHtml += '</td>';
+			}
+			
+			var Out = '<table align="center" cellpadding="0" cellspacing="2" style="width:'+(OneAdsWidth*adsCnt)+'px;"><tr>'+OutHtml+'</tr></table>'; 
+			
+			Out = '<div style="text-align:center;padding:0px;margin:3px auto;">'+Out+'</div>'; 
+			
+			document.getElementById(adsTarget).style.height = (imgWidth+35)+'px' ;
+			document.getElementById(adsTarget).innerHTML = Out ;
+		}
+	}
+}
+</script>
+    <style>
+        @font-face {
+            font-family: 'Mihan-Iransans';
+            src: url('http://kurdistan-music.mihanblog.com/public/public/fonts/Iransans.eot');
+            src: url('http://kurdistan-music.mihanblog.com/public/public/fonts/Iransans.eot?') format('embedded-opentype'),
+            url('http://kurdistan-music.mihanblog.com/public/public/fonts/Iransans.woff2') format('woff2'),
+            url('http://kurdistan-music.mihanblog.com/public/public/fonts/Iransans.woff') format('woff'),
+            url('http://kurdistan-music.mihanblog.com/public/public/fonts/Iransans.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+        @font-face {
+            font-family: 'Mihan-IransansBold';
+            src: url('http://kurdistan-music.mihanblog.com/public/public/fonts/Iransans-Black.eot');
+            src: url('http://kurdistan-music.mihanblog.com/public/public/fonts/Iransans-Black.eot?') format('embedded-opentype'),
+            url('http://kurdistan-music.mihanblog.com/public/public/fonts/Iransans-Black.woff2') format('woff2'),
+            url('http://kurdistan-music.mihanblog.com/public/public/fonts/Iransans-Black.woff') format('woff'),
+            url('http://kurdistan-music.mihanblog.com/public/public/fonts/Iransans-Black.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+        @font-face {
+            font-family: 'Mihan-IransansLight';
+            src: url('http://kurdistan-music.mihanblog.com/public/public/fonts/Iransans-UltraLight.eot');
+            src: url('http://kurdistan-music.mihanblog.com/public/public/fonts/Iransans-UltraLight.eot?') format('embedded-opentype'),
+            url('http://kurdistan-music.mihanblog.com/public/public/fonts/Iransans-UltraLight.woff2') format('woff2'),
+            url('http://kurdistan-music.mihanblog.com/public/public/fonts/Iransans-UltraLight.woff') format('woff'),
+            url('http://kurdistan-music.mihanblog.com/public/public/fonts/Iransans-UltraLight.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+        @font-face {
+            font-family: 'Mihan-Nassim';
+            src: url('http://kurdistan-music.mihanblog.com/public/public/fonts/Nassim.eot');
+            src: url('http://kurdistan-music.mihanblog.com/public/public/fonts/Nassim.eot?') format('embedded-opentype'),
+            url('http://kurdistan-music.mihanblog.com/public/public/fonts/Nassim.woff2') format('woff2'),
+            url('http://kurdistan-music.mihanblog.com/public/public/fonts/Nassim.woff') format('woff'),
+            url('http://kurdistan-music.mihanblog.com/public/public/fonts/Nassim.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+        @font-face {
+            font-family: 'Mihan-Koodak';
+            src: url('http://kurdistan-music.mihanblog.com/public/public/fonts/Koodak.eot');
+            src: url('http://kurdistan-music.mihanblog.com/public/public/fonts/Koodak.eot?') format('embedded-opentype'),
+            url('http://kurdistan-music.mihanblog.com/public/public/fonts/Koodak.woff2') format('woff2'),
+            url('http://kurdistan-music.mihanblog.com/public/public/fonts/Koodak.woff') format('woff'),
+            url('http://kurdistan-music.mihanblog.com/public/public/fonts/Koodak.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+        @font-face {
+            font-family: 'Mihan-Yekan';
+            src: url('http://kurdistan-music.mihanblog.com/public/public/fonts/Yekan.eot');
+            src: url('http://kurdistan-music.mihanblog.com/public/public/fonts/Yekan.eot?') format('embedded-opentype'),
+            url('http://kurdistan-music.mihanblog.com/public/public/fonts/Yekan.woff2') format('woff2'),
+            url('http://kurdistan-music.mihanblog.com/public/public/fonts/Yekan.woff') format('woff'),
+            url('http://kurdistan-music.mihanblog.com/public/public/fonts/Yekan.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+        @font-face {
+            font-family: 'FontAwesome';
+            src: url('http://kurdistan-music.mihanblog.com/public/public/fonts/fontawesome_webfont.eot');
+            src: url('http://kurdistan-music.mihanblog.com/public/public/fonts/fontawesome_webfont.eot?') format('embedded-opentype'),
+            url('http://kurdistan-music.mihanblog.com/public/public/fonts/fontawesome_webfont.woff2') format('woff2'),
+            url('http://kurdistan-music.mihanblog.com/public/public/fonts/fontawesome_webfont.woff') format('woff'),
+            url('http://kurdistan-music.mihanblog.com/public/public/fonts/fontawesome_webfont.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+
+
+        
+
+        /* Smartphones (portrait and landscape) ----------- */
+
+        /*
+        @media only screen and (max-width : 480px) and (min-width : 320px) {
+            .sabaClick_advert__wrapper{
+                display:block;
+            }
+            .sabaClick_advert__inner{
+                max-width: 90%;
+                margin: 0 5%;
+            }
+        }
+        */
+
+    </style>
+
+
+
+
+
+
+
+<html>
+<!-- Begin http://poppop.ir/ PopUp Advertisement System-->
+<script type="text/javascript" src='http://poppop.ir/pop.php?user=4981&poptimes=4'></script>
+<!-- End http://poppop.ir/ PopUp Advertisement System-->
+<head>
+    <meta http-equiv="Content-Language" content="en-us">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta name="Theme Designer" content="www.MyTheme.ir">
+
+    <meta name="description" content="دانلودآهنگ جدید كردی (كوردی)
+دانلودآهنگ كردی
+دانلودآهنگ كوردی
+كردی
+كوردی
+آهنگ ناب كردی
+كردوكردستان
+دانلودآهنگ كردی جدیدوقدیمی
+كردستان
+كوردستان
+ناصررزازی
+آهنگ
+دانلود
+www.kurdistan-music.mihanblog.com
+www.google.com
+kurdistan
+گالری عکس, دخالت, مدل لباس کردی, نوری مالکی, ضرب المثل های کردی, روزنامه های کردی،شادترین آهنگهای کردی،جدیدترین آهنگ, جدیدترین آهنگهای کردی،معرفی تاریخ کرد, گالری عکس هنرمندان کرد, دختر همراه محسن لرستانی, محسن لرستانی،ایوب قلعه،حمید حمیدی،واحد تنها, رضا نظری،رضا مرادیان" />
+    <meta name="keywords" content="دانلودآهنگ کردی" />
+    <link rel="alternate" type="application/rss+xml" title="دانلودآهنگ جدید كردی (كوردی)" href="../rss/index.html" />
+    <link rel="alternate" type="application/atom+xml" title="دانلودآهنگ جدید كردی (كوردی)" href="../atom/index.html" />
+    <link href="http://mihanblog.com/public/public/user_data/template/2099937/style.css" type="text/css" rel="stylesheet">
+
+    <title>دانلودآهنگ جدید كردی (كوردی) - مطالب اشعاركوردی(كردی)</title>
+</head>
+
+<body>
+
+<div align="center">
+<table border="0" width="100%" cellspacing="0" cellpadding="0">
+<tr>
+<td>&nbsp;</td>
+<td class=div2 valign=top>
+<div class=div00>
+<div class=div1></div>
+
+<div class=div17>
+
+    <div class=div80>
+        <form id="frm-16075502155fd14507b67cd" method="get" action="http://kurdistan-music.mihanblog.com/post/search/fid/16075502155fd14507b67cd"  onsubmit="window.open('', 'search', 'toolbar=0,location=0,status=0,menubar=0,scrollbars=1,resizable=0,width=400,height=310')" target="search"> 
+            <div class=div038>
+                <input type="image" src="http://mihanblog.com/public/public/user_data/template/2099937/blank.gif" width=48 height=32></div>
+            <div class=div037>
+                <input type="text" name="search_text" size="18" style="border: 0px none; background: none; font-family:Tahoma; font-size:10pt; color:#FFFFFF"></div>
+        <input type="hidden" name="frm-id" value="16075502155fd14507b67cd" id="frm-id" /></form>    </div>
+    <div class=div81></div>
+
+    <div class=div24>
+        <div class=div35>
+            <div class=div25><font class=text5>درباره وبلاگ</font></div></div>
+
+        <div class=div341>
+            <div class=div31><center><img src="../../../static.mihanblog.com/public/user_data/web_photo/276/825685.jpg@6082"  /></center><br><br>
+                <font class=text1>دانلودآهنگ كردی<br />
+دانلودآهنگ جدید كردی (كوردی)<br />
+دانلودآهنگ كوردی<br />
+كردی<br />
+كوردی<br />
+آهنگ ناب كردی<br />
+كردوكردستان<br><br>
+                    <b>مدیر وبلاگ :</b> <a href="../author/689246.html">كاك میثم </a></font></div>
+        </div><div class=div30></div>
+    </div>
+
+    <div class=div24>
+        <div class=div35>
+            <div class=div25><font class=text5>موضوعات</font></div></div>
+
+        <div class=div341><font class=text1><ul>
+            <li><a href="96.html">اوژین نوزاد (1)</a></li><li><a href="95.html">فریدون کریمی (1)</a></li><li><a href="94.html">بابک محمدی (1)</a></li><li><a href="93.html">عادل نادری (1)</a></li><li><a href="92.html">کریم کابان (1)</a></li><li><a href="91.html">سامان مرادیان (1)</a></li><li><a href="90.html">دلسوزخالدی (2)</a></li><li><a href="89.html">فرزاداسدی (1)</a></li><li><a href="88.html">اسدمریوانی (1)</a></li><li><a href="87.html">حسن کرمی (1)</a></li><li><a href="86.html">نازدار (1)</a></li><li><a href="85.html">شاخوان احمدی (1)</a></li><li><a href="84.html">عزت کنعانی (1)</a></li><li><a href="83.html">مظهرخالقی (2)</a></li><li><a href="82.html">هیوامحمدی (1)</a></li><li><a href="81.html">نوری احمدی (1)</a></li><li><a href="80.html">شهین طالبانی (1)</a></li><li><a href="79.html">نویدزردی (1)</a></li><li><a href="78.html">پیشروهورامی (1)</a></li><li><a href="77.html">رئیس جمهور (1)</a></li><li><a href="76.html">فرهادبزله (1)</a></li><li><a href="75.html">خالدسیروان (1)</a></li><li><a href="74.html">سیدعلی اصغرکردستانی (1)</a></li><li><a href="73.html">پیوندجاف (1)</a></li><li><a href="72.html">تبریک (1)</a></li><li><a href="71.html">عزیزویسی (4)</a></li><li><a href="70.html">شهید (1)</a></li><li><a href="69.html">جمشید (1)</a></li><li><a href="68.html">ئاوات هورامی (1)</a></li><li><a href="67.html">هورامی (3)</a></li><li><a href="66.html">هوره (1)</a></li><li><a href="65.html">اشعار (1)</a></li><li><a href="64.html">رحمت رستم پور (1)</a></li><li><a href="63.html">کنسرت ناصررزازی (2)</a></li><li><a href="62.html">کمال فدوی (1)</a></li><li><a href="61.html">زندگی نامه هنرمندان کورد (1)</a></li><li><a href="60.html">مناسبت (3)</a></li><li><a href="59.html">كاك میثم (8)</a></li><li><a href="58.html">سنندج(سنه) (6)</a></li><li><a href="56.html">بلوچی (1)</a></li><li><a href="55.html">نجمه الدین غلامی (1)</a></li><li><a href="54.html">هیرش هورامی (1)</a></li><li><a href="52.html">شهین طالبانی (3)</a></li><li><a href="51.html">خبات گاگلی (1)</a></li><li><a href="50.html">جمال محمودی (1)</a></li><li><a href="49.html">خلیل مولانایی (1)</a></li><li><a href="48.html">قاله مه ره (1)</a></li><li><a href="47.html">چوپی فتاح (1)</a></li><li><a href="46.html">ئه یاد حسین (1)</a></li><li><a href="45.html">هوال ابراهیم (2)</a></li><li><a href="44.html">نوید زردی (1)</a></li><li><a href="43.html">سجادسهرابی راد (1)</a></li><li><a href="42.html">فرشاد امینی-فرشاد نیک رفتار (1)</a></li><li><a href="41.html">ئازاد غه فوری (1)</a></li><li><a href="40.html">نتایج نظرسنجی (4)</a></li><li><a href="39.html">خواننده های نا آشنا (2)</a></li><li><a href="38.html">شاملو (1)</a></li><li><a href="37.html">تیموربزله (2)</a></li><li><a href="36.html">شهیداسماعیل سردشتی (7)</a></li><li><a href="35.html">حسن زیرك (2)</a></li><li><a href="34.html">فرمیسك (1)</a></li><li><a href="33.html">کـاوه کیوانی (1)</a></li><li><a href="32.html">سیاوش ناظری (1)</a></li><li><a href="31.html">مریوان صفادین (2)</a></li><li><a href="30.html">حسن زیرك (3)</a></li><li><a href="29.html">پیام عزیزی (2)</a></li><li><a href="28.html">شهرام سردار (1)</a></li><li><a href="27.html">به رهام حه سن (1)</a></li><li><a href="26.html">نه ریمان بابان (1)</a></li><li><a href="24.html">زكریا عبدالله (1)</a></li><li><a href="23.html">میكائیل مهابادی(سابلاغی) (3)</a></li><li><a href="22.html">جمشید (1)</a></li><li><a href="21.html">حسین صفامنش (2)</a></li><li><a href="20.html">بژدار (1)</a></li><li><a href="19.html">علی یارا (1)</a></li><li><a href="18.html">شوان پرور (6)</a></li><li><a href="17.html">حسن شریفی (1)</a></li><li><a href="16.html">ملك روژهات (2)</a></li><li><a href="15.html">حسن ضیافتی (1)</a></li><li><a href="14.html">کردستان (27)</a></li><li><a href="13.html">آیت احمدنژاد (2)</a></li><li><a href="12.html">موزیک ویدئو (3)</a></li><li><a href="11.html">شهرام ناظری (1)</a></li><li><a href="10.html">کامکارها (5)</a></li><li><a href="9.html">عباس کمندی (1)</a></li><li><a href="8.html">اشعاركوردی(كردی) (7)</a></li><li><a href="7.html">عادل هورامی (2)</a></li><li><a href="5.html">عدنان كریم (2)</a></li><li><a href="4.html">اسماعیل صابور (4)</a></li><li><a href="3.html">عزیزشاهرخ (6)</a></li><li><a href="2.html">استاد ناصررزازی (20)</a></li><li><a href="1.html">نورالدین بزله (28)</a></li>        </ul></font></div><div class=div30></div>
+    </div>
+    <div class=div24>
+        <div class=div35>
+            <div class=div25><font class=text5>آرشیو وبلاگ</font></div></div>
+
+        <div class=div341><font class=text1><ul>
+            <li><a href="../archive/1397/7/1.html"> هفته اول مهر 1397</a></li><li><a href="../archive/1396/11/1.html"> هفته اول بهمن 1396</a></li><li><a href="../archive/1396/4/2.html"> هفته دوم تیر 1396</a></li><li><a href="../archive/1395/4/2.html"> هفته دوم تیر 1395</a></li><li><a href="../archive/1394/6/3.html"> هفته سوم شهریور 1394</a></li><li><a href="../archive/1394/5/2.html"> هفته دوم مرداد 1394</a></li><li><a href="../archive/1394/3/4.html"> هفته چهارم خرداد 1394</a></li><li><a href="../archive/1394/2/4.html"> هفته چهارم اردیبهشت 1394</a></li><li><a href="../archive/1393/12/3.html"> هفته سوم اسفند 1393</a></li><li><a href="../archive/1393/12/1.html"> هفته اول اسفند 1393</a></li><li><a href="../archive/1393/11/4.html"> هفته چهارم بهمن 1393</a></li>            <li><b><a href="../archive.html">آرشیو كل مطالب</a></b></li>
+        </ul></font></div><div class=div30></div>
+    </div>
+    
+    <div class=div24>
+        <div class=div35>
+            <div class=div25><font class=text5>نویسندگان</font></div></div>
+
+        <div class=div341><font class=text1><ul>
+            <li><a href="../author/689246.html">كاك میثم  (240)</a></li>        </ul></font></div><div class=div30></div>
+    </div>
+    <div class=div24>
+        <div class=div35>
+            <div class=div25><font class=text5>صفحات جانبی</font></div></div>
+
+        <div class=div341><font class=text1><ul>
+            <li><a href="../../extrapage/softwere.html">مرورگر موزیلا فایرفاکس جدید</a></li><li><a href="../../extrapage/a.html">دانلودآهنگ کردی</a></li><li><a href="../../extrapage/akbar1.html">پیروزی شیعیان در انتخابات مجلس کویت</a></li><li><a href="../../extrapage/khabar.html">کلیات طرح اصلاح قانون انتخابات ریاست‌جمهوری ایران تصویب شد</a></li><li><a href="../../extrapage/khabar1.html">بەردەوامی پشێوی و ئاڵۆزیی لەشارەكانی كوردستانی باكوور</a></li><li><a href="../../extrapage/jang.html">باید به جنگ ادامه دهیم (واکنش پ.ک.ک به مواضع لیلا زانا: )</a></li><li><a href="../../extrapage/hezb.html">تاسیس حزب جدید کُردهای ترکیه</a></li><li><a href="../../extrapage/folkolor.html">نگاهی به فولكلور كردی</a></li><li><a href="../../extrapage/kordestan.html">قاضی محمد</a></li><li><a href="../../extrapage/kurdi4.html">متن آهنگ گول ونوشه ی با خانمی  از استاد ناصر رزازی</a></li><li><a href="../../extrapage/kurdi3.html">متن شعر گول نیشان</a></li><li><a href="../../extrapage/kurdi2.html">شعر خانمیلی  كه استاد اسماعیل صابوری خوانده است</a></li><li><a href="../../extrapage/kurdi.html">نه سیمه که ی سه ردی پائیزی</a></li>        </ul></font></div><div class=div30></div>
+    </div>
+    
+		<form id="frm-16075502155fd14507b6c75" method="post" action="http://kurdistan-music.mihanblog.com/poll/new/fid/16075502155fd14507b6c75/atrty/1607550215/avrvy/0/key/496d63feb2d93da33409d90578707a12/"  onsubmit="window.open('', 'poll', 'toolbar=0,location=0,status=0,menubar=0,scrollbars=1,resizable=0,width=505,height=315')" target="poll"><input type="hidden" name="data[pollid]" value="362516" id="data[pollid]" />		<div class=div24>
+        <div class=div35>
+            <div class=div25><font class=text5>نظرسنجی</font></div></div>
+
+        <div class=div341>
+            <div class=div31><font class=text1>
+                بیشترازچه شهری به این وبلاگ سرمیزنین؟<br>
+                <label><input type="radio" name="data[answer]" value="v1">سنندج</label><br><label><input type="radio" name="data[answer]" value="v2">کرمانشاه</label><br><label><input type="radio" name="data[answer]" value="v3">مهاباد</label><br><label><input type="radio" name="data[answer]" value="v4">ایلام</label><br><label><input type="radio" name="data[answer]" value="v5">روانسر و جوانرود</label><br><label><input type="radio" name="data[answer]" value="v6">کردستان عراق</label><br><label><input type="radio" name="data[answer]" value="v7">مریوان</label><br><label><input type="radio" name="data[answer]" value="v8">سقز</label><br><label><input type="radio" name="data[answer]" value="v9">بانه</label><br><label><input type="radio" name="data[answer]" value="v10">پاوه</label><br>                <div align="center"><br><input type="submit" value="ثبت" style="font-family: Tahoma; font-size: 9pt"><br><br></div>
+            </font></div></div><div class=div30></div>
+    </div>
+		<input type="hidden" name="frm-id" value="16075502155fd14507b6c75" id="frm-id" /></form>
+    <div class=div24>
+        <div class=div35>
+            <div class=div25><font class=text5>آمار وبلاگ</font></div></div>
+
+        <div class=div341><font class=text1><ul>
+            <li>کل بازدید : <script>getStatVar('total_view');</script></li>
+            <li>بازدید امروز :<script>getStatVar('today_view');</script></li>
+            <li>بازدید دیروز : <script>getStatVar('yesterday_view');</script></li>
+            <li>بازدید این ماه : <script>getStatVar('this_month_view');</script></li>
+            <li>بازدید ماه قبل : <script>getStatVar('last_month_view');</script></li>
+            <li>تعداد نویسندگان : <script>getStatVar('total_author');</script></li>
+            <li>تعداد کل پست ها : <script>getStatVar('total_post');</script></li>
+            <li>آخرین بازدید : <script>getStatVar('last_view_date');</script></li>
+            <li>آخرین بروز رسانی : <script>getStatVar('modify_date');</script></li>
+        </ul></font></div><div class=div30></div>
+    </div>
+    <div class=div024><center></center>
+
+        <style>
+            .mihan_logo {
+                background: url("http://mihanblog.com/public/public/images/logo/poweredby.gif") no-repeat scroll center top transparent;
+                height: 131px;
+                margin-top: 10px;
+                text-align: center;
+            }
+        </style>
+        <div class="mihan_logo"></div>
+    </div>
+</div>
+
+<div class=div20>
+
+    <div class=div60>
+        <div class=div101>
+            <div class=div10><font class=title>دانلودآهنگ جدید كردی (كوردی)</font></div></div>
+        <div class=div11>
+            <div class=div12><font class=des>دانلودآهنگ کردی</font></div></div>
+    </div>
+
+    <div class=div0052>
+        <div class=div052><font class=text3>
+            <a href="../../../www.kurdistan-music.mihanblog.com/index.html">صفحه نخست</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;
+            <a href="javascript:messageForm()">تماس با مدیر</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;
+            <a href="mailto:mosavisagezchi@gmail.com">پست الکترونیک</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;
+            <a href="../rss/index.html">RSS</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;
+            <a href="../atom/index.html">ATOM</a></font></div></div>
+
+    <div class=div081></div>
+
+    		<div id="MihanblogShopAds" style="display:block;height:0px;width:100%;border:0px"></div>
+		<div class=div54>
+        <div class=div15>
+            <div class=div015></div>
+            <div class=div18><font class=text6><a href="http://kurdistan-music.mihanblog.com/post/175">متن آهنگ آفرین قاضی محمد از کاک ناصررزازی(ئافەرین قازی موحەممەد ئافەرین)</a></font></div>
+            <div class=div58><font class=text7>پنجشنبه 19 بهمن 1391 :: نویسنده : <a href="../author/689246.html">كاك میثم </a></font></div>
+        </div>
+        <div class=div21>
+            <div class=div55></div>
+            <div class=div56><font class=text4><div id="InPost_MihanblogShopAds" style="display:block;height:0px;width:100%;border:0px"></div><DIV id=co3016656 class=comment-body align=center><FONT size=3>بۆ گەلی کوردی هەژار، بوویی بە داری ڕیشە دار</FONT></DIV>
+<DIV class=comment-body align=center><FONT size=3></FONT>&nbsp;</DIV>
+<DIV class=comment-body align=center><FONT size=3>&nbsp;کوردستان بە ناوی تۆ دەرکەوت لە هەر دیار</FONT></DIV>
+<DIV class=comment-body align=center><FONT size=3></FONT>&nbsp;</DIV>
+<DIV class=comment-body align=center><FONT size=3>&nbsp;کوردستان بە ناوی تۆ دەرکەوت لە هەر دیار</FONT></DIV>
+<DIV class=comment-body align=center><FONT size=3></FONT>&nbsp;</DIV>
+<DIV class=comment-body align=center><FONT size=3>تا وێنەی تۆمان هەبێ نامرین، ئافەرین قازی موحەممەد ئافەرین</FONT></DIV>
+<DIV class=comment-body align=center><FONT size=3></FONT>&nbsp;</DIV>
+<DIV class=comment-body align=center><FONT size=3>&nbsp;ئافەرین ئەی پێشەوای کورد ئافەرین</FONT></DIV>
+<DIV class=comment-body align=center><FONT size=3></FONT>&nbsp;</DIV>
+<DIV class=comment-body align=center><FONT size=3>&nbsp;بۆ خەباتی خەڵکی کورد، گیانی خۆتت کردە پرد</FONT></DIV>
+<DIV class=comment-body align=center><FONT size=3></FONT>&nbsp;</DIV>
+<DIV class=comment-body align=center><FONT size=3>&nbsp;ناوی تۆ لە مێژوودا، ناوی کوردی زیندوو کرد</FONT></DIV>
+<DIV class=comment-body align=center><FONT size=3></FONT>&nbsp;</DIV>
+<DIV class=comment-body align=center><FONT size=3>&nbsp;تا وێنەی تۆمان... هەبێ نامرین، ئافەرین قازی موحەممەد ئافەرین</FONT></DIV>
+<DIV class=comment-body align=center><FONT size=3></FONT>&nbsp;</DIV>
+<DIV class=comment-body align=center><FONT size=3>&nbsp;ئافەرین ئەی پێشەوای کورد ئافەرین </FONT></DIV>                <BlogExtendedPost><br><br><b></b></BlogExtendedPost>
+                <br><br><font color="#c70900">نوع مطلب :</font>
+                <a href="14.html" class=text4>کردستان</a>،&nbsp;<a href="8.html" class=text4>اشعاركوردی(كردی)</a>،&nbsp;<a href="2.html" class=text4>استاد ناصررزازی</a>،&nbsp;                <br><font color="#c70900">برچسب ها :</font>
+                <a href="http://kurdistan-music.mihanblog.com/post/tag/%D8%A6%D8%A7%D9%81%DB%95%D8%B1%DB%8C%D9%86%20%D9%82%D8%A7%D8%B2%DB%8C%20%D9%85%D9%88%D8%AD%DB%95%D9%85%D9%85%DB%95%D8%AF%20%D8%A6%D8%A7%D9%81%DB%95%D8%B1%DB%8C%D9%86" class=text4>ئافەرین قازی موحەممەد ئافەرین</a>،                 <br><font color="#c70900">لینک های مرتبط :</font>
+                            </font><br><br>
+
+
+
+
+
+
+            </div></div>
+        <div class=div26>
+            <div class=div27>
+                <font class=text8><a href="http://kurdistan-music.mihanblog.com/post/175#commentlist">نظرات (<script>setCommentCnt(175)</script>)</a></font>
+            </div>
+            <div style="float: left;margin-left: 36px;margin-top: 3px;"><script>mihanblogPostLike('175','like')</script></div>
+        </div>
+        <style>
+
+            .mihanblog_like_likeCnt{
+                right: 0;
+            }
+
+
+            .clearfix {display: inline-block;}
+            .clearfix:after {
+                content: ".";
+                display: block;
+                height: 0;
+                clear: both;
+                visibility: hidden;
+            }
+
+
+
+
+            .cblike{
+                margin:4px 55px;
+                float: left;
+            }
+            .cblike a {
+                float:left;
+                padding:3px;
+                text-align:center;
+                font-size:12px;
+                color:#FFF;
+                display:block;
+                line-height:15px;
+                text-decoration: none;
+            }
+
+
+
+
+            .cblike a.clike_plus {
+                background-color:#009900 ; /*green #039B03*/
+
+                border-radius: 5px ;
+
+                border-top-right-radius: 0px;
+                border-bottom-right-radius: 0px;
+
+                /*border:1px solid green;
+                border-right:0px;*/
+            }
+            .cblike a.clike_minus {
+                background-color:#CC0000;
+                border-radius: 5px ;
+                border-top-left-radius: 0px;
+                border-bottom-left-radius: 0px;
+
+                /*border:1px solid red;
+                border-left:0px;*/
+            }
+            .cblike a.clike_minus:hover {
+                background-color:red;
+                text-decoration: none;
+            }
+            .cblike a.clike_plus:hover {
+                background-color:green;
+                text-decoration: none;
+            }
+            .cblike a span{
+                font-weight:bold;
+                font-size:13px;
+
+                color:#fff;
+            }
+
+
+
+
+            .text100 , .text100 a{color:#FFF; font-size:8pt;-moz-text-shadow: #444 1px 1px 0px;-webkit-text-shadow: #444 1px 1px 0px;text-shadow: #444 1px 1px 0px;}
+            .text101 , .text101 a{color:#444444; font-size:8pt;-moz-text-shadow: #fff 1px 1px 0px;-webkit-text-shadow: #fff 1px 1px 0px;text-shadow: #fff 1px 1px 0px;}
+            .text102 , .text102 a{color:#000; font-size:8pt;-moz-text-shadow: #fff 1px 1px 0px;-webkit-text-shadow: #fff 1px 1px 0px;text-shadow: #fff 1px 1px 0px;}
+
+            .com{ width:600px; float:left; background:#e6e6e6; -webkit-border-radius: 5px;-moz-border-radius: 5px;border-radius: 5px; margin: 0px 7px 0px 62px; padding:0 0 10px 0;}
+            .com1{ width:582px; float:left; background:#0166aa; -webkit-border-radius: 5px;-moz-border-radius: 5px;border-radius: 5px; margin: 10px 20px 0 10px; padding:0 0 3px 0;}
+            .com3{ width:355px; float:left; text-align:right; direction:rtl; line-height:27px;}
+            .com2{ width:190px; float:left; height:30px; text-align:left; direction:rtl; line-height:27px; padding-left:10px; opacity:0.6;}
+            .com4{ width:562px; float:left; background:#FFF; -webkit-border-radius: 5px;-moz-border-radius: 5px;border-radius: 5px; margin: 3px 3px 0 3px; padding: 7px; direction:rtl; text-align:right; -moz-box-shadow: inset #444 0px 0px 5px;-webkit-box-shadow:inset  #444 0px 0px 5px;box-shadow: inset #444 0px 0px 5px;}
+            .com5{ width:562px; float:left; background:#cfcfcf; -webkit-border-radius: 5px;-moz-border-radius: 5px;border-radius: 5px; margin:  3px 3px 0 3px; padding: 7px; direction:rtl; text-align:right; -moz-box-shadow:inset  #444 0px 0px 5px;-webkit-box-shadow: inset #444 0px 0px 5px;box-shadow: inset #444 0px 0px 5px;}
+            .com6{ width:572px; float:left; background:#fff; -webkit-border-radius: 5px;-moz-border-radius: 5px;border-radius: 5px; margin: 5px 20px 0 10px; padding: 5px 5px 5px 5px; direction:rtl; }
+            .com7{width:25px; padding:5px 0 0 0; float:right; text-align:center;}
+        </style>
+        
+    </div><div class=div54>
+        <div class=div15>
+            <div class=div015></div>
+            <div class=div18><font class=text6><a href="http://kurdistan-music.mihanblog.com/post/171">هفته وحدت مبارک</a></font></div>
+            <div class=div58><font class=text7>دوشنبه 9 بهمن 1391 :: نویسنده : <a href="../author/689246.html">كاك میثم </a></font></div>
+        </div>
+        <div class=div21>
+            <div class=div55></div>
+            <div class=div56><font class=text4><P align=center><FONT size=3><STRONG><FONT color=#008000>میلاد نور <SPAN style="COLOR: #008000">حضرت </SPAN></FONT><SPAN style="COLOR: #008000">رسول اکرم</SPAN> <SPAN style="COLOR: #008000">محمد مصطفی (ص)</SPAN></STRONG> <SPAN style="COLOR: #008000"><STRONG>و امام جعفر صادق (ع)</STRONG></SPAN><BR><SPAN style="COLOR: #008000"></SPAN><SPAN style="COLOR: #008000"><STRONG><IMG title="پیام تبریک هفته وحدت" border=0 alt="پیام تبریک هفته وحدت" src="http://www.lailatolgadr.ir/images/stories/014akhbar/kalamroz/hafteh-vahdat03.gif"></STRONG></SPAN><BR></FONT><FONT size=3><SPAN style="COLOR: #008000">میلاد نور ؛ پیام آور توحید ، رسول وحدت ، حضرت ختمی مرتبت ، محمد مصطفی (ص) هفته ی وحدت و میلاد امام جعفر صادق (ع)<BR>مبارک و خجسته باد<BR></SPAN>خجسته باد هفته ی وحدت ، که درآن میثاق ها تحکیم می شود ، پیمان ها استوارتر می گردد ، خون ها در هم می جوشد ، دست ها و بازوها درکنار هم قرار می گیرد ، چهره ها بر یکدیگر لبخند پیروزی و صفا می زند ، قشرها همه باهمند ، امت، یکپارچه و منسجم است و شیعه و سنی ، به یاد سالروز میلاد رسول گرامی اسلام ، با هم و در کنار هم، در یک راه و به سوی یک هدف سرود وحدت می خوانند.<BR><SPAN style="COLOR: #008000"><STRONG>کینه های کهنه</STRONG></SPAN><BR>بدون شک، نیاز مسلمین به اتحاد و اتفاق ، از مبرم ترین نیازهاست، و درد اساسی جهان اسلام، همین کینه های کهنه میان مردم مسلمان است. دشمن همواره از همین شکاف ها سود می جوید. البته مفهوم اتحاد اسلامی که در صد سال اخیر ، میان علما و فضلای مؤمن و روشن فکر اسلامی مطرح است.<BR></P></FONT>                <BlogExtendedPost><br><br><b></b></BlogExtendedPost>
+                <br><br><font color="#c70900">نوع مطلب :</font>
+                <a href="60.html" class=text4>مناسبت</a>،&nbsp;<a href="59.html" class=text4>كاك میثم</a>،&nbsp;<a href="58.html" class=text4>سنندج(سنه)</a>،&nbsp;<a href="14.html" class=text4>کردستان</a>،&nbsp;<a href="8.html" class=text4>اشعاركوردی(كردی)</a>،&nbsp;                <br><font color="#c70900">برچسب ها :</font>
+                <a href="http://kurdistan-music.mihanblog.com/post/tag/%D9%87%D9%81%D8%AA%D9%87%20%D9%88%D8%AD%D8%AF%D8%AA" class=text4>هفته وحدت</a>،                 <br><font color="#c70900">لینک های مرتبط :</font>
+                            </font><br><br>
+
+
+
+
+
+
+            </div></div>
+        <div class=div26>
+            <div class=div27>
+                <font class=text8><a href="http://kurdistan-music.mihanblog.com/post/171#commentlist">نظرات (<script>setCommentCnt(171)</script>)</a></font>
+            </div>
+            <div style="float: left;margin-left: 36px;margin-top: 3px;"><script>mihanblogPostLike('171','like')</script></div>
+        </div>
+        <style>
+
+            .mihanblog_like_likeCnt{
+                right: 0;
+            }
+
+
+            .clearfix {display: inline-block;}
+            .clearfix:after {
+                content: ".";
+                display: block;
+                height: 0;
+                clear: both;
+                visibility: hidden;
+            }
+
+
+
+
+            .cblike{
+                margin:4px 55px;
+                float: left;
+            }
+            .cblike a {
+                float:left;
+                padding:3px;
+                text-align:center;
+                font-size:12px;
+                color:#FFF;
+                display:block;
+                line-height:15px;
+                text-decoration: none;
+            }
+
+
+
+
+            .cblike a.clike_plus {
+                background-color:#009900 ; /*green #039B03*/
+
+                border-radius: 5px ;
+
+                border-top-right-radius: 0px;
+                border-bottom-right-radius: 0px;
+
+                /*border:1px solid green;
+                border-right:0px;*/
+            }
+            .cblike a.clike_minus {
+                background-color:#CC0000;
+                border-radius: 5px ;
+                border-top-left-radius: 0px;
+                border-bottom-left-radius: 0px;
+
+                /*border:1px solid red;
+                border-left:0px;*/
+            }
+            .cblike a.clike_minus:hover {
+                background-color:red;
+                text-decoration: none;
+            }
+            .cblike a.clike_plus:hover {
+                background-color:green;
+                text-decoration: none;
+            }
+            .cblike a span{
+                font-weight:bold;
+                font-size:13px;
+
+                color:#fff;
+            }
+
+
+
+
+            .text100 , .text100 a{color:#FFF; font-size:8pt;-moz-text-shadow: #444 1px 1px 0px;-webkit-text-shadow: #444 1px 1px 0px;text-shadow: #444 1px 1px 0px;}
+            .text101 , .text101 a{color:#444444; font-size:8pt;-moz-text-shadow: #fff 1px 1px 0px;-webkit-text-shadow: #fff 1px 1px 0px;text-shadow: #fff 1px 1px 0px;}
+            .text102 , .text102 a{color:#000; font-size:8pt;-moz-text-shadow: #fff 1px 1px 0px;-webkit-text-shadow: #fff 1px 1px 0px;text-shadow: #fff 1px 1px 0px;}
+
+            .com{ width:600px; float:left; background:#e6e6e6; -webkit-border-radius: 5px;-moz-border-radius: 5px;border-radius: 5px; margin: 0px 7px 0px 62px; padding:0 0 10px 0;}
+            .com1{ width:582px; float:left; background:#0166aa; -webkit-border-radius: 5px;-moz-border-radius: 5px;border-radius: 5px; margin: 10px 20px 0 10px; padding:0 0 3px 0;}
+            .com3{ width:355px; float:left; text-align:right; direction:rtl; line-height:27px;}
+            .com2{ width:190px; float:left; height:30px; text-align:left; direction:rtl; line-height:27px; padding-left:10px; opacity:0.6;}
+            .com4{ width:562px; float:left; background:#FFF; -webkit-border-radius: 5px;-moz-border-radius: 5px;border-radius: 5px; margin: 3px 3px 0 3px; padding: 7px; direction:rtl; text-align:right; -moz-box-shadow: inset #444 0px 0px 5px;-webkit-box-shadow:inset  #444 0px 0px 5px;box-shadow: inset #444 0px 0px 5px;}
+            .com5{ width:562px; float:left; background:#cfcfcf; -webkit-border-radius: 5px;-moz-border-radius: 5px;border-radius: 5px; margin:  3px 3px 0 3px; padding: 7px; direction:rtl; text-align:right; -moz-box-shadow:inset  #444 0px 0px 5px;-webkit-box-shadow: inset #444 0px 0px 5px;box-shadow: inset #444 0px 0px 5px;}
+            .com6{ width:572px; float:left; background:#fff; -webkit-border-radius: 5px;-moz-border-radius: 5px;border-radius: 5px; margin: 5px 20px 0 10px; padding: 5px 5px 5px 5px; direction:rtl; }
+            .com7{width:25px; padding:5px 0 0 0; float:right; text-align:center;}
+        </style>
+        
+    </div><div class=div54>
+        <div class=div15>
+            <div class=div015></div>
+            <div class=div18><font class=text6><a href="http://kurdistan-music.mihanblog.com/post/170">دانلود آهنگ عه زیزم تو گوله که می(عزیزم توگلکمی) ازگروه کامکاران همرا با ترجمه ومتن</a></font></div>
+            <div class=div58><font class=text7>شنبه 30 دی 1391 :: نویسنده : <a href="../author/689246.html">كاك میثم </a></font></div>
+        </div>
+        <div class=div21>
+            <div class=div55></div>
+            <div class=div56><font class=text4><P align=center><FONT size=2>ترانه &nbsp;شاد و&nbsp; زیبای کردی عزیزم تو گلکمی از گروه کامکار&nbsp;<IMG class=inlineimg title="" border=0 alt="" src="http://www.my.3eke.ir/threads/images/smilies/67.gif"><BR><BR></FONT><A href="http://s1.picofile.com/file/7464616876/azizam_to_golakami.mp3.html" target=_blank><FONT size=2>دانلود ترانه عزیزم تو گلکمی&nbsp;&nbsp;</FONT></A><BR><BR><BR><FONT size=2>متن ترانه &nbsp;و ترجمه آن<BR><BR><BR>آی چن خوشه بزمی اواران عزیزم تو گلکمی<BR><BR>وای چقدر دلنشین و زیباست آهنگ غروب عزیزم تو گل منی<BR><BR>لناو باغچکه هناران عزیزم تو گلکمی<BR><BR>توی باغچه ی انارها عزیزم تو گل منی <BR><BR>آی چن خوشه بزمی اواران عزیزم تو گلکمی<BR><BR>وای چقدر دلنشین و زیباست آهنگ غروب عزیزم تو گل منی<BR><BR>لناو باغچکه هناران عزیزم تو گلکمی<BR><BR>توی باغچه ی انارها عزیزم تو گل منی <BR><BR>لناو باغچه هناران لناو باغچه هناران<BR><BR>توی باغچه ی انارها توی باغچه ی انارها <BR><BR>لناو باغچه هناران لناو باغچه هناران<BR><BR>توی باغچه ی انارها توی باغچه ی انارها <BR><BR>هناران هناران هناران<BR><BR>انارها انارها انارها <BR><BR>عزیزم تو گلکمی<BR><BR>عزیزم تو گل منی <BR><BR>چن خوشه بزمی اواران عزیزم تو گلکمی<BR><BR>چقدر دلنشین و زیباست آهنگ غروب عزیزم تو گل منی<BR><BR>لناو باغچکه هناران عزیزم تو گلکمی<BR><BR>توی باغچه ی انارها عزیزم تو گل منی<BR><BR>گیان عزیزم تو گلکمی<BR><BR>جان عزیزم تو گل منی<BR><BR>آی به تو دلم چاو استران گیان عزیزم تو گلکمی <BR><BR>به تو می گم چشم هات مثل ستاره است عزیزم تو گل منی<BR><BR>خز متکمان پبسپره گیان عزیزم تو گلکمی <BR><BR>کاری را به من بسپار تا برایت انجام دهم عزیزم تو گل منی<BR><BR>به تو دلم چاو استران گیان عزیزم تو گلکمی<BR><BR>به تو می گم چشم هات مثل ستاره است عزیزم تو گل منی <BR><BR>هر آورومان ما گه لرا عزیزم تو گلکمی <BR><BR>که فقط آبرویم اینجا (پیش تو) باقی بمونه عزیزم تو گل منی<BR><BR>لناو باغچه هناران لناو باغچه هناران<BR><BR>توی باغچه ی انارها توی باغچه ی انارها <BR><BR>لناو باغچه هناران لناو باغچه هناران<BR><BR>توی باغچه ی انارها توی باغچه ی انارها <BR><BR>هناران هناران هناران<BR><BR>انارها انارها انارها <BR><BR>عزیزم تو گلکمی <BR><BR>عزیزم تو گل منی<BR><BR>آی به تو دلم چاو استران گیان عزیزم تو گلکمی<BR><BR>به تو می گم چشم هات مثل ستاره است عزیزم تو گل منی<BR><BR>هر آورومان ما گه لرا عزیزم تو گلکمی <BR><BR>که فقط آبرویم اینجا (پیش تو) باقی بمونه عزیزم تو گل منی<BR><BR>گیان عزیزم تو گلکمی<BR><BR>جان عزیزم تو گل منی<BR><BR>آی وک بلبلان فصل بهار عزیزم تو گلکمی <BR><BR>وای مانند بلبل ها در فصل بهار عزیزم تو گل منی <BR><BR>شو و روژ و لیل و نهار عزیزم تو گلکمی <BR><BR>شب و روز و لیل و نهار عزیزم تو گل منی<BR><BR>وک بلبلان فصل بهار عزیزم تو گلکمی <BR><BR>مانند بلبل ها در فصل بهار عزیزم تو گل منی<BR><BR>دنا لنم به وصل یار عزیزم تو گلکمی <BR><BR>می نالم برای وصل یار عزیزم تو گل منی <BR><BR>گیان فصل بهاره عزیز فصل بهاره <BR><BR>جانا فصل بهاره عزیز فصل بهاره<BR><BR>گیان فصل بهاره عزیز فصل بهاره <BR><BR>جانا فصل بهاره عزیز فصل بهاره<BR><BR>آی چن خوشه بزمی اواران عزیزم تو گلکمی<BR><BR>وای چقدر دلنشین و زیباست آهنگ غروب عزیزم تو گل منی<BR><BR>لناو باغچکه هناران عزیزم تو گلکمی<BR><BR>توی باغچه ی انارها عزیزم تو گل منی </FONT></P>
+<P align=center><FONT size=2>کاک میثم</FONT></P>
+<P align=center><FONT size=2>شاری جوانه که ی سنه</FONT></P>
+<P align=center><FONT size=2>له سالی1391 هه تاوی</FONT></P>
+<P align=center><FONT size=2>برداشت فقط باذکرمنبع مجازمی باشد</FONT></P>                <BlogExtendedPost><br><br><b></b></BlogExtendedPost>
+                <br><br><font color="#c70900">نوع مطلب :</font>
+                <a href="59.html" class=text4>كاك میثم</a>،&nbsp;<a href="58.html" class=text4>سنندج(سنه)</a>،&nbsp;<a href="10.html" class=text4>کامکارها</a>،&nbsp;<a href="8.html" class=text4>اشعاركوردی(كردی)</a>،&nbsp;                <br><font color="#c70900">برچسب ها :</font>
+                <a href="http://kurdistan-music.mihanblog.com/post/tag/%D8%AA%D8%B1%D8%AC%D9%85%D9%87%20%D8%B9%D8%B2%DB%8C%D8%B2%D9%85%20%D8%AA%D9%88%DA%AF%D9%84%DA%A9%D9%85%DB%8C" class=text4>ترجمه عزیزم توگلکمی</a>،                 <br><font color="#c70900">لینک های مرتبط :</font>
+                            </font><br><br>
+
+
+
+
+
+
+            </div></div>
+        <div class=div26>
+            <div class=div27>
+                <font class=text8><a href="http://kurdistan-music.mihanblog.com/post/170#commentlist">نظرات (<script>setCommentCnt(170)</script>)</a></font>
+            </div>
+            <div style="float: left;margin-left: 36px;margin-top: 3px;"><script>mihanblogPostLike('170','like')</script></div>
+        </div>
+        <style>
+
+            .mihanblog_like_likeCnt{
+                right: 0;
+            }
+
+
+            .clearfix {display: inline-block;}
+            .clearfix:after {
+                content: ".";
+                display: block;
+                height: 0;
+                clear: both;
+                visibility: hidden;
+            }
+
+
+
+
+            .cblike{
+                margin:4px 55px;
+                float: left;
+            }
+            .cblike a {
+                float:left;
+                padding:3px;
+                text-align:center;
+                font-size:12px;
+                color:#FFF;
+                display:block;
+                line-height:15px;
+                text-decoration: none;
+            }
+
+
+
+
+            .cblike a.clike_plus {
+                background-color:#009900 ; /*green #039B03*/
+
+                border-radius: 5px ;
+
+                border-top-right-radius: 0px;
+                border-bottom-right-radius: 0px;
+
+                /*border:1px solid green;
+                border-right:0px;*/
+            }
+            .cblike a.clike_minus {
+                background-color:#CC0000;
+                border-radius: 5px ;
+                border-top-left-radius: 0px;
+                border-bottom-left-radius: 0px;
+
+                /*border:1px solid red;
+                border-left:0px;*/
+            }
+            .cblike a.clike_minus:hover {
+                background-color:red;
+                text-decoration: none;
+            }
+            .cblike a.clike_plus:hover {
+                background-color:green;
+                text-decoration: none;
+            }
+            .cblike a span{
+                font-weight:bold;
+                font-size:13px;
+
+                color:#fff;
+            }
+
+
+
+
+            .text100 , .text100 a{color:#FFF; font-size:8pt;-moz-text-shadow: #444 1px 1px 0px;-webkit-text-shadow: #444 1px 1px 0px;text-shadow: #444 1px 1px 0px;}
+            .text101 , .text101 a{color:#444444; font-size:8pt;-moz-text-shadow: #fff 1px 1px 0px;-webkit-text-shadow: #fff 1px 1px 0px;text-shadow: #fff 1px 1px 0px;}
+            .text102 , .text102 a{color:#000; font-size:8pt;-moz-text-shadow: #fff 1px 1px 0px;-webkit-text-shadow: #fff 1px 1px 0px;text-shadow: #fff 1px 1px 0px;}
+
+            .com{ width:600px; float:left; background:#e6e6e6; -webkit-border-radius: 5px;-moz-border-radius: 5px;border-radius: 5px; margin: 0px 7px 0px 62px; padding:0 0 10px 0;}
+            .com1{ width:582px; float:left; background:#0166aa; -webkit-border-radius: 5px;-moz-border-radius: 5px;border-radius: 5px; margin: 10px 20px 0 10px; padding:0 0 3px 0;}
+            .com3{ width:355px; float:left; text-align:right; direction:rtl; line-height:27px;}
+            .com2{ width:190px; float:left; height:30px; text-align:left; direction:rtl; line-height:27px; padding-left:10px; opacity:0.6;}
+            .com4{ width:562px; float:left; background:#FFF; -webkit-border-radius: 5px;-moz-border-radius: 5px;border-radius: 5px; margin: 3px 3px 0 3px; padding: 7px; direction:rtl; text-align:right; -moz-box-shadow: inset #444 0px 0px 5px;-webkit-box-shadow:inset  #444 0px 0px 5px;box-shadow: inset #444 0px 0px 5px;}
+            .com5{ width:562px; float:left; background:#cfcfcf; -webkit-border-radius: 5px;-moz-border-radius: 5px;border-radius: 5px; margin:  3px 3px 0 3px; padding: 7px; direction:rtl; text-align:right; -moz-box-shadow:inset  #444 0px 0px 5px;-webkit-box-shadow: inset #444 0px 0px 5px;box-shadow: inset #444 0px 0px 5px;}
+            .com6{ width:572px; float:left; background:#fff; -webkit-border-radius: 5px;-moz-border-radius: 5px;border-radius: 5px; margin: 5px 20px 0 10px; padding: 5px 5px 5px 5px; direction:rtl; }
+            .com7{width:25px; padding:5px 0 0 0; float:right; text-align:center;}
+        </style>
+        
+    </div><div class=div54>
+        <div class=div15>
+            <div class=div015></div>
+            <div class=div18><font class=text6><a href="http://kurdistan-music.mihanblog.com/post/159">دانلود گومه شین از كاك ناصر رزازی اگر كرد هستی حتما باید گوش كنی!!</a></font></div>
+            <div class=div58><font class=text7>یکشنبه 21 آبان 1391 :: نویسنده : <a href="../author/689246.html">كاك میثم </a></font></div>
+        </div>
+        <div class=div21>
+            <div class=div55></div>
+            <div class=div56><font class=text4><P align=center><FONT size=3>این آهنگ را به درخواست روله ی كورد در وبلاگ قرار می دهم ،من توصیه می كنم حتما دانلود كنید.</FONT></P>
+<P align=center><FONT size=3>برای دانلود روی اسم آهنگ كلیك كنید</FONT></P><FONT color=#ff0000 size=3><A title="گومه شین" href="http://s3.picofile.com/file/7553126341/gomashin.mp3.html" target=_blank>
+<P align=center><FONT color=#ff0000 size=3>گومه شین</FONT></P>
+<P align=center></A></FONT><FONT color=#000000 size=3>برداشت بدون ذكر منبع وبلاگ&nbsp;بلامانع است</FONT></P><FONT color=#000000 size=3><A title="" href="../../../www.kurdistan-music.mihanblog.com/index.html" target=_blank>
+<P align=center><FONT color=#000000 size=3>دانلود آهنگ كردی</FONT></P></A></FONT>                <BlogExtendedPost><br><br><b></b></BlogExtendedPost>
+                <br><br><font color="#c70900">نوع مطلب :</font>
+                <a href="2.html" class=text4>استاد ناصررزازی</a>،&nbsp;<a href="8.html" class=text4>اشعاركوردی(كردی)</a>،&nbsp;                <br><font color="#c70900">برچسب ها :</font>
+                <a href="http://kurdistan-music.mihanblog.com/post/tag/%DA%AF%D9%88%D9%85%D9%87%20%D8%B4%DB%8C%D9%86" class=text4>گومه شین</a>،                 <br><font color="#c70900">لینک های مرتبط :</font>
+                            </font><br><br>
+
+
+
+
+
+
+            </div></div>
+        <div class=div26>
+            <div class=div27>
+                <font class=text8><a href="http://kurdistan-music.mihanblog.com/post/159#commentlist">نظرات (<script>setCommentCnt(159)</script>)</a></font>
+            </div>
+            <div style="float: left;margin-left: 36px;margin-top: 3px;"><script>mihanblogPostLike('159','like')</script></div>
+        </div>
+        <style>
+
+            .mihanblog_like_likeCnt{
+                right: 0;
+            }
+
+
+            .clearfix {display: inline-block;}
+            .clearfix:after {
+                content: ".";
+                display: block;
+                height: 0;
+                clear: both;
+                visibility: hidden;
+            }
+
+
+
+
+            .cblike{
+                margin:4px 55px;
+                float: left;
+            }
+            .cblike a {
+                float:left;
+                padding:3px;
+                text-align:center;
+                font-size:12px;
+                color:#FFF;
+                display:block;
+                line-height:15px;
+                text-decoration: none;
+            }
+
+
+
+
+            .cblike a.clike_plus {
+                background-color:#009900 ; /*green #039B03*/
+
+                border-radius: 5px ;
+
+                border-top-right-radius: 0px;
+                border-bottom-right-radius: 0px;
+
+                /*border:1px solid green;
+                border-right:0px;*/
+            }
+            .cblike a.clike_minus {
+                background-color:#CC0000;
+                border-radius: 5px ;
+                border-top-left-radius: 0px;
+                border-bottom-left-radius: 0px;
+
+                /*border:1px solid red;
+                border-left:0px;*/
+            }
+            .cblike a.clike_minus:hover {
+                background-color:red;
+                text-decoration: none;
+            }
+            .cblike a.clike_plus:hover {
+                background-color:green;
+                text-decoration: none;
+            }
+            .cblike a span{
+                font-weight:bold;
+                font-size:13px;
+
+                color:#fff;
+            }
+
+
+
+
+            .text100 , .text100 a{color:#FFF; font-size:8pt;-moz-text-shadow: #444 1px 1px 0px;-webkit-text-shadow: #444 1px 1px 0px;text-shadow: #444 1px 1px 0px;}
+            .text101 , .text101 a{color:#444444; font-size:8pt;-moz-text-shadow: #fff 1px 1px 0px;-webkit-text-shadow: #fff 1px 1px 0px;text-shadow: #fff 1px 1px 0px;}
+            .text102 , .text102 a{color:#000; font-size:8pt;-moz-text-shadow: #fff 1px 1px 0px;-webkit-text-shadow: #fff 1px 1px 0px;text-shadow: #fff 1px 1px 0px;}
+
+            .com{ width:600px; float:left; background:#e6e6e6; -webkit-border-radius: 5px;-moz-border-radius: 5px;border-radius: 5px; margin: 0px 7px 0px 62px; padding:0 0 10px 0;}
+            .com1{ width:582px; float:left; background:#0166aa; -webkit-border-radius: 5px;-moz-border-radius: 5px;border-radius: 5px; margin: 10px 20px 0 10px; padding:0 0 3px 0;}
+            .com3{ width:355px; float:left; text-align:right; direction:rtl; line-height:27px;}
+            .com2{ width:190px; float:left; height:30px; text-align:left; direction:rtl; line-height:27px; padding-left:10px; opacity:0.6;}
+            .com4{ width:562px; float:left; background:#FFF; -webkit-border-radius: 5px;-moz-border-radius: 5px;border-radius: 5px; margin: 3px 3px 0 3px; padding: 7px; direction:rtl; text-align:right; -moz-box-shadow: inset #444 0px 0px 5px;-webkit-box-shadow:inset  #444 0px 0px 5px;box-shadow: inset #444 0px 0px 5px;}
+            .com5{ width:562px; float:left; background:#cfcfcf; -webkit-border-radius: 5px;-moz-border-radius: 5px;border-radius: 5px; margin:  3px 3px 0 3px; padding: 7px; direction:rtl; text-align:right; -moz-box-shadow:inset  #444 0px 0px 5px;-webkit-box-shadow: inset #444 0px 0px 5px;box-shadow: inset #444 0px 0px 5px;}
+            .com6{ width:572px; float:left; background:#fff; -webkit-border-radius: 5px;-moz-border-radius: 5px;border-radius: 5px; margin: 5px 20px 0 10px; padding: 5px 5px 5px 5px; direction:rtl; }
+            .com7{width:25px; padding:5px 0 0 0; float:right; text-align:center;}
+        </style>
+        
+    </div><div class=div54>
+        <div class=div15>
+            <div class=div015></div>
+            <div class=div18><font class=text6><a href="http://kurdistan-music.mihanblog.com/post/157">کاک ناصر رزازی</a></font></div>
+            <div class=div58><font class=text7>شنبه 20 آبان 1391 :: نویسنده : <a href="../author/689246.html">كاك میثم </a></font></div>
+        </div>
+        <div class=div21>
+            <div class=div55></div>
+            <div class=div56><font class=text4><FONT size=4 face=Arial>غرش صدای <FONT color=#ff0000>کاک ناصر</FONT> به جوانان کورد غیرت می دهد و آنها را از سستی می رهاند </FONT>
+<P></P>
+<H3 style="TEXT-ALIGN: center; MARGIN: 12pt 0in 3pt" dir=rtl align=center><SPAN style="COLOR: red; FONT-SIZE: 16pt; mso-bidi-language: FA" lang=FA><FONT face="Tahoma, Arial, Helvetica, sans-serif"><FONT size=2>گومه شین<?xml:namespace prefix = o ns = "urn:schemas-microsoft-com:office:office" /><o:p></o:p></FONT></FONT></SPAN></H3>
+<H3 style="MARGIN: 12pt 0in 3pt; tab-stops: 82.45pt center 212.6pt" dir=rtl align=center><SPAN style="COLOR: #993366; mso-bidi-language: FA" lang=FA><FONT face="Tahoma, Arial, Helvetica, sans-serif"><FONT size=2><SPAN style="mso-tab-count: 1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </SPAN>ــ <SPAN style="mso-tab-count: 1"></SPAN>پیت <SPAN style="mso-spacerun: yes">&nbsp;</SPAN>ناخنکیندریم <SPAN style="mso-spacerun: yes">&nbsp;</SPAN>گومه شین، له خوبایی <SPAN style="mso-spacerun: yes">&nbsp;</SPAN>ئه ی <SPAN style="mso-spacerun: yes">&nbsp;</SPAN>گومه شین<o:p></o:p></FONT></FONT></SPAN></H3>
+<H3 style="TEXT-ALIGN: center; MARGIN: 12pt 0in 3pt" dir=rtl align=center><SPAN style="COLOR: #993366; mso-bidi-language: FA" lang=FA><FONT face="Tahoma, Arial, Helvetica, sans-serif"><FONT size=2>ره نگه <SPAN style="mso-spacerun: yes">&nbsp;</SPAN>به وه ی <SPAN style="mso-spacerun: yes">&nbsp;</SPAN>شه پوله کانت <SPAN style="mso-spacerun: yes">&nbsp;</SPAN>به <SPAN style="mso-spacerun: yes">&nbsp;</SPAN>گرمه و <SPAN style="mso-spacerun: yes">&nbsp;</SPAN>لرفه و <SPAN style="mso-spacerun: yes">&nbsp;</SPAN>هاوار <SPAN style="mso-spacerun: yes">&nbsp;</SPAN>و <SPAN style="mso-spacerun: yes">&nbsp;</SPAN>هه ره شه ن<o:p></o:p></FONT></FONT></SPAN></H3>
+<H3 style="TEXT-ALIGN: center; MARGIN: 12pt 0in 3pt" dir=rtl align=center><SPAN style="COLOR: #993366; mso-bidi-language: FA" lang=FA><FONT face="Tahoma, Arial, Helvetica, sans-serif"><FONT size=2>گیژ <SPAN style="mso-spacerun: yes">&nbsp;</SPAN>ده خون <SPAN style="mso-spacerun: yes">&nbsp;</SPAN>خو <SPAN style="mso-spacerun: yes">&nbsp;</SPAN>به <SPAN style="mso-spacerun: yes">&nbsp;</SPAN>دیواری <SPAN style="mso-spacerun: yes">&nbsp;</SPAN>هه رولی <SPAN style="mso-spacerun: yes">&nbsp;</SPAN>شاخا <SPAN style="mso-spacerun: yes">&nbsp;</SPAN>ده ده ن<o:p></o:p></FONT></FONT></SPAN></H3>
+<H3 style="TEXT-ALIGN: center; MARGIN: 12pt 0in 3pt" dir=rtl align=center><SPAN style="COLOR: #993366; mso-bidi-language: FA" lang=FA><FONT face="Tahoma, Arial, Helvetica, sans-serif"><FONT size=2>بایی <SPAN style="mso-spacerun: yes">&nbsp;</SPAN>بوبی <SPAN style="mso-spacerun: yes">&nbsp;</SPAN>و <SPAN style="mso-spacerun: yes">&nbsp;</SPAN>رفاند بیتت،<o:p></o:p></FONT></FONT></SPAN></H3>
+<H3 style="TEXT-ALIGN: center; MARGIN: 12pt 0in 3pt" dir=rtl align=center><SPAN style="COLOR: #993366; mso-bidi-language: FA" lang=FA><FONT face="Tahoma, Arial, Helvetica, sans-serif"><FONT size=2>ئه و <SPAN style="mso-spacerun: yes">&nbsp;</SPAN>هاوری، <SPAN style="mso-spacerun: yes">&nbsp;</SPAN>ئاو <SPAN style="mso-spacerun: yes">&nbsp;</SPAN>هاو <SPAN style="mso-spacerun: yes">&nbsp;</SPAN>سه نگه ر، <SPAN style="mso-spacerun: yes">&nbsp;</SPAN>ئاو <SPAN style="mso-spacerun: yes">&nbsp;</SPAN>روله ی <SPAN style="mso-spacerun: yes">&nbsp;</SPAN>شیرین<o:p></o:p></FONT></FONT></SPAN></H3>
+<H3 style="TEXT-ALIGN: center; MARGIN: 12pt 0in 3pt" dir=rtl align=center><SPAN style="COLOR: #993366; mso-bidi-language: FA" lang=FA><FONT face="Tahoma, Arial, Helvetica, sans-serif"><FONT size=2>ئه ی <SPAN style="mso-spacerun: yes">&nbsp;</SPAN>وه یشوومه ی <SPAN style="mso-spacerun: yes">&nbsp;</SPAN>نه هات <SPAN style="mso-spacerun: yes">&nbsp;</SPAN>به س <SPAN style="mso-spacerun: yes">&nbsp;</SPAN>له <SPAN style="mso-spacerun: yes">&nbsp;</SPAN>پیش چاوی<o:p></o:p></FONT></FONT></SPAN></H3>
+<H3 style="TEXT-ALIGN: center; MARGIN: 12pt 0in 3pt" dir=rtl align=center><SPAN style="COLOR: #993366; mso-bidi-language: FA" lang=FA><FONT face="Tahoma, Arial, Helvetica, sans-serif"><FONT size=2>جاندارو <SPAN style="mso-spacerun: yes">&nbsp;</SPAN>په له وه ری <SPAN style="mso-spacerun: yes">&nbsp;</SPAN>به سته زمان <SPAN style="mso-spacerun: yes">&nbsp;</SPAN>ده ورو و <SPAN style="mso-spacerun: yes">&nbsp;</SPAN>پشتت <SPAN style="mso-spacerun: yes">&nbsp;</SPAN>خوبایی <SPAN style="mso-spacerun: yes">&nbsp;</SPAN>که<o:p></o:p></FONT></FONT></SPAN></H3>
+<H3 style="TEXT-ALIGN: center; MARGIN: 12pt 0in 3pt" dir=rtl align=center><SPAN style="COLOR: #993366; mso-bidi-language: FA" lang=FA><FONT face="Tahoma, Arial, Helvetica, sans-serif"><FONT size=2>به <SPAN style="mso-spacerun: yes">&nbsp;</SPAN>قاقای <SPAN style="mso-spacerun: yes">&nbsp;</SPAN>ره ش <SPAN style="mso-spacerun: yes">&nbsp;</SPAN>به <SPAN style="mso-spacerun: yes">&nbsp;</SPAN>نیو <SPAN style="mso-spacerun: yes">&nbsp;</SPAN>چاوانی <SPAN style="mso-spacerun: yes">&nbsp;</SPAN>واگرژت ،<o:p></o:p></FONT></FONT></SPAN></H3>
+<H3 style="TEXT-ALIGN: center; MARGIN: 12pt 0in 3pt" dir=rtl align=center><SPAN style="COLOR: #993366; mso-bidi-language: FA" lang=FA><FONT face="Tahoma, Arial, Helvetica, sans-serif"><FONT size=2>ئاوازی <SPAN style="mso-spacerun: yes">&nbsp;</SPAN>ده لووشم <SPAN style="mso-spacerun: yes">&nbsp;</SPAN>ده گوژم <SPAN style="mso-spacerun: yes">&nbsp;</SPAN>به ست <SPAN style="mso-spacerun: yes">&nbsp;</SPAN>خوین<o:p></o:p></FONT></FONT></SPAN></H3>
+<H3 style="TEXT-ALIGN: left; MARGIN: 12pt 0in 3pt" dir=rtl align=center><SPAN style="COLOR: #993366; mso-bidi-language: FA" lang=FA><FONT face="Tahoma, Arial, Helvetica, sans-serif"><FONT size=2>– وست <SPAN style="mso-spacerun: yes">&nbsp;</SPAN>به <SPAN style="mso-spacerun: yes">&nbsp;</SPAN>تاویک <SPAN style="mso-spacerun: yes">&nbsp;</SPAN>مه لوورینه <SPAN style="mso-spacerun: yes">&nbsp;</SPAN>گوی <SPAN style="mso-spacerun: yes">&nbsp;</SPAN>رادیره <SPAN style="mso-spacerun: yes">&nbsp;</SPAN>بزانه <SPAN style="mso-spacerun: yes">&nbsp;</SPAN>به <SPAN style="mso-spacerun: yes">&nbsp;</SPAN>گژکی <SPAN style="mso-spacerun: yes">&nbsp;</SPAN>داهاتووی<SPAN style="mso-spacerun: yes">&nbsp; </SPAN><SPAN style="mso-spacerun: yes">&nbsp;</SPAN>بمناسه <SPAN style="mso-spacerun: yes">&nbsp;</SPAN>و <SPAN style="mso-spacerun: yes">&nbsp;</SPAN>به <SPAN style="mso-spacerun: yes">&nbsp;</SPAN><o:p></o:p></FONT></FONT></SPAN></H3>
+<H3 style="TEXT-ALIGN: center; MARGIN: 12pt 0in 3pt" dir=rtl align=center><SPAN style="COLOR: #993366; mso-bidi-language: FA" lang=FA><FONT face="Tahoma, Arial, Helvetica, sans-serif"><FONT size=2>هه موو <SPAN style="mso-spacerun: yes">&nbsp;</SPAN>چومان <SPAN style="mso-spacerun: yes">&nbsp;</SPAN>و <SPAN style="mso-spacerun: yes">&nbsp;</SPAN>خه لیج <SPAN style="mso-spacerun: yes">&nbsp;</SPAN>و <SPAN style="mso-spacerun: yes">&nbsp;</SPAN>روخم <SPAN style="mso-spacerun: yes">&nbsp;</SPAN>بناسینه<o:p></o:p></FONT></FONT></SPAN></H3>
+<H3 style="TEXT-ALIGN: center; MARGIN: 12pt 0in 3pt" dir=rtl align=center><SPAN style="COLOR: #993366; mso-bidi-language: FA" lang=FA><FONT face="Tahoma, Arial, Helvetica, sans-serif"><FONT size=2>- له مپه ره که ی <SPAN style="mso-spacerun: yes">&nbsp;</SPAN>ده ریای دووکان <SPAN style="mso-spacerun: yes">&nbsp;</SPAN>که <SPAN style="mso-spacerun: yes">&nbsp;</SPAN>پیش <SPAN style="mso-spacerun: yes">&nbsp;</SPAN>به <SPAN style="mso-spacerun: yes">&nbsp;</SPAN>تو <SPAN style="mso-spacerun: yes">&nbsp;</SPAN>چه ن رووباری <SPAN style="mso-spacerun: yes">&nbsp;</SPAN>له<SPAN style="mso-spacerun: yes">&nbsp; </SPAN>تو <SPAN style="mso-spacerun: yes">&nbsp;</SPAN>به <SPAN style="mso-spacerun: yes">&nbsp;</SPAN>لرفه تر <SPAN style="mso-spacerun: yes">&nbsp;</SPAN>ده گری ده سکردم<o:p></o:p></FONT></FONT></SPAN></H3>
+<H3 style="TEXT-ALIGN: center; MARGIN: 12pt 0in 3pt" dir=rtl align=center><SPAN style="COLOR: #993366; mso-bidi-language: FA" lang=FA><FONT face="Tahoma, Arial, Helvetica, sans-serif"><FONT size=2>- ئه و <SPAN style="mso-spacerun: yes">&nbsp;</SPAN>که شتیه <SPAN style="mso-spacerun: yes">&nbsp;</SPAN>مه زنانه ی <SPAN style="mso-spacerun: yes">&nbsp;</SPAN>هه زار <SPAN style="mso-spacerun: yes">&nbsp;</SPAN>شه پولی<SPAN style="mso-spacerun: yes">&nbsp; </SPAN><SPAN style="mso-spacerun: yes">&nbsp;</SPAN>سه رکیشی <SPAN style="mso-spacerun: yes">&nbsp;</SPAN>تو <SPAN style="mso-spacerun: yes">&nbsp;</SPAN>ده شیلی، <SPAN style="mso-spacerun: yes">&nbsp;</SPAN>ده سکردم<o:p></o:p></FONT></FONT></SPAN></H3>
+<H3 style="TEXT-ALIGN: center; MARGIN: 12pt 0in 3pt" dir=rtl align=center><SPAN style="COLOR: #993366; mso-bidi-language: FA" lang=FA><FONT face="Tahoma, Arial, Helvetica, sans-serif"><FONT size=2>- ئه و <SPAN style="mso-spacerun: yes">&nbsp;</SPAN>ئاگره ی <SPAN style="mso-spacerun: yes">&nbsp;</SPAN>که <SPAN style="mso-spacerun: yes">&nbsp;</SPAN><SPAN style="mso-spacerun: yes">&nbsp;</SPAN>سته مکا ر هه لده قرچینی <SPAN style="mso-spacerun: yes">&nbsp;</SPAN>ده سکردم،<o:p></o:p></FONT></FONT></SPAN></H3>
+<H3 style="TEXT-ALIGN: center; MARGIN: 12pt 0in 3pt" dir=rtl align=center><SPAN style="COLOR: #993366; mso-bidi-language: FA" lang=FA><FONT face="Tahoma, Arial, Helvetica, sans-serif"><FONT size=2>- من <SPAN style="mso-spacerun: yes">&nbsp;</SPAN>کارگه رم <SPAN style="mso-spacerun: yes">&nbsp;</SPAN>من ره نجبه رم <SPAN style="mso-spacerun: yes">&nbsp;</SPAN>من <SPAN style="mso-spacerun: yes">&nbsp;</SPAN>ئینسانی <SPAN style="mso-spacerun: yes">&nbsp;</SPAN>تیکوشه ری <SPAN style="mso-spacerun: yes">&nbsp;</SPAN>جه نگاوه رم<o:p></o:p></FONT></FONT></SPAN></H3>
+<H3 style="TEXT-ALIGN: center; MARGIN: 12pt 0in 3pt" dir=rtl align=center><SPAN style="COLOR: #993366; mso-bidi-language: FA" lang=FA><FONT face="Tahoma, Arial, Helvetica, sans-serif"><FONT size=2>پاش وه ی <SPAN style="mso-spacerun: yes">&nbsp;</SPAN>سه ری <SPAN style="mso-spacerun: yes">&nbsp;</SPAN>سه رکوتگه رم <SPAN style="mso-spacerun: yes">&nbsp;</SPAN>پان کردووه، ئه مجار <SPAN style="mso-spacerun: yes">&nbsp;</SPAN>دیمه <SPAN style="mso-spacerun: yes">&nbsp;</SPAN>سه رینی <SPAN style="mso-spacerun: yes">&nbsp;</SPAN>تو <SPAN style="mso-spacerun: yes">&nbsp;</SPAN>له خوبایی<o:p></o:p></FONT></FONT></SPAN></H3>
+<H3 style="TEXT-ALIGN: center; MARGIN: 12pt 0in 3pt" dir=rtl align=center><SPAN style="COLOR: #993366; mso-bidi-language: FA" lang=FA><FONT face="Tahoma, Arial, Helvetica, sans-serif"><FONT size=2>شه رت <SPAN style="mso-spacerun: yes">&nbsp;</SPAN>بی <SPAN style="mso-spacerun: yes">&nbsp;</SPAN>وه ها <SPAN style="mso-spacerun: yes">&nbsp;</SPAN>بتبه ستمه وه <SPAN style="mso-spacerun: yes">&nbsp;</SPAN>به هاورازا <SPAN style="mso-spacerun: yes">&nbsp;</SPAN>به نشیوا<o:p></o:p></FONT></FONT></SPAN></H3>
+<H3 style="TEXT-ALIGN: center; MARGIN: 12pt 0in 3pt" dir=rtl align=center><SPAN style="COLOR: #993366; mso-bidi-language: FA" lang=FA><FONT face="Tahoma, Arial, Helvetica, sans-serif"><FONT size=2>وینه ی <SPAN style="mso-spacerun: yes">&nbsp;</SPAN>ئه سپیکی <SPAN style="mso-spacerun: yes">&nbsp;</SPAN>ده سته مو <SPAN style="mso-spacerun: yes">&nbsp;</SPAN>به ده شت <SPAN style="mso-spacerun: yes">&nbsp;</SPAN>و <SPAN style="mso-spacerun: yes">&nbsp;</SPAN>ده را <SPAN style="mso-spacerun: yes">&nbsp;</SPAN>خوش <SPAN style="mso-spacerun: yes">&nbsp;</SPAN>ئازو<o:p></o:p></FONT></FONT></SPAN></H3>
+<H3 style="TEXT-ALIGN: center; MARGIN: 12pt 0in 3pt" dir=rtl align=center><SPAN style="COLOR: #993366; mso-bidi-language: FA" lang=FA><FONT face="Tahoma, Arial, Helvetica, sans-serif"><FONT size=2>وابتبه م <SPAN style="mso-spacerun: yes">&nbsp;</SPAN>و <SPAN style="mso-spacerun: yes">&nbsp;</SPAN>بتگیرمه وه، <SPAN style="mso-spacerun: yes">&nbsp;</SPAN>له <SPAN style="mso-spacerun: yes">&nbsp;</SPAN>بن <SPAN style="mso-spacerun: yes">&nbsp;</SPAN>هه موو<SPAN style="mso-spacerun: yes">&nbsp; </SPAN><SPAN style="mso-spacerun: yes">&nbsp;</SPAN>داریک <SPAN style="mso-spacerun: yes">&nbsp;</SPAN>هه موو <SPAN style="mso-spacerun: yes">&nbsp;</SPAN>بنچکیک دا،<o:p></o:p></FONT></FONT></SPAN></H3>
+<H3 style="TEXT-ALIGN: center; MARGIN: 12pt 0in 3pt" dir=rtl align=center><SPAN style="COLOR: #993366; mso-bidi-language: FA" lang=FA><FONT face="Tahoma, Arial, Helvetica, sans-serif"><FONT size=2>چوک<SPAN style="mso-spacerun: yes">&nbsp; </SPAN>دابده ی <SPAN style="mso-spacerun: yes">&nbsp;</SPAN>سوجده <SPAN style="mso-spacerun: yes">&nbsp;</SPAN>ببه ی <SPAN style="mso-spacerun: yes">&nbsp;</SPAN>بو <SPAN style="mso-spacerun: yes">&nbsp;</SPAN>دار <SPAN style="mso-spacerun: yes">&nbsp;</SPAN>بو <SPAN style="mso-spacerun: yes">&nbsp;</SPAN>گول <SPAN style="mso-spacerun: yes">&nbsp;</SPAN>بو <SPAN style="mso-spacerun: yes">&nbsp;</SPAN>گه نم <SPAN style="mso-spacerun: yes">&nbsp;</SPAN>بو <SPAN style="mso-spacerun: yes">&nbsp;</SPAN>ئاوه دانی،<o:p></o:p></FONT></FONT></SPAN></H3>
+<H3 style="TEXT-ALIGN: center; MARGIN: 12pt 0in 3pt" dir=rtl align=center><SPAN style="COLOR: #993366; mso-bidi-language: FA" lang=FA><FONT face="Tahoma, Arial, Helvetica, sans-serif"><FONT size=2>ده ستی <SPAN style="mso-spacerun: yes">&nbsp;</SPAN>ماندوو <SPAN style="mso-spacerun: yes">&nbsp;</SPAN>پر <SPAN style="mso-spacerun: yes">&nbsp;</SPAN>بکه ی <SPAN style="mso-spacerun: yes">&nbsp;</SPAN>له <SPAN style="mso-spacerun: yes">&nbsp;</SPAN>هه رزانی<o:p></o:p></FONT></FONT></SPAN></H3>
+<H3 style="TEXT-ALIGN: center; MARGIN: 12pt 0in 3pt" dir=rtl align=center><SPAN style="COLOR: #993366; mso-bidi-language: FA" lang=FA><FONT size=2 face="Tahoma, Arial, Helvetica, sans-serif">له سه ر <SPAN style="mso-spacerun: yes">&nbsp;</SPAN>ده رکه ی <SPAN style="mso-spacerun: yes">&nbsp;</SPAN>خه یالی <SPAN style="mso-spacerun: yes">&nbsp;</SPAN>زیانه خوری <SPAN style="mso-spacerun: yes">&nbsp;</SPAN>و <SPAN style="mso-spacerun: yes">&nbsp;</SPAN>خنکاندن <SPAN style="mso-spacerun: yes">&nbsp;</SPAN>و <SPAN style="mso-spacerun: yes">&nbsp;</SPAN>مال<SPAN style="mso-spacerun: yes">&nbsp; </SPAN><SPAN style="mso-spacerun: yes">&nbsp;</SPAN>ویرانی.............</FONT></SPAN><SPAN style="COLOR: red; mso-bidi-language: FA" dir=ltr><o:p></o:p></SPAN></H3>
+<P>&nbsp;.......................................................................................................</P>
+<P align=center><STRONG>تو چیای ده نگ دانه وه ی ده نگی کپی چاوسانه وه ی </STRONG></P>
+<P align=center><STRONG>بو مه له رزه ی لاپه رینی سه رده می بووژانه وه ی</STRONG></P>
+<P align=center><STRONG>تو ئه ژیت هه ر وه ک&nbsp; ئه وانه ی بی گومانم نامرن</STRONG></P>
+<P align=center><STRONG>*******************************************</STRONG></P>
+<P align=center> </P>
+<TABLE class=TableText border=0 cellSpacing=2 cellPadding=2 width=500 align=center>
+<TBODY>
+<TR>
+<TD bgColor=#ccccff align=middle></TD></TR>
+<TR>
+<TD>
+<P>Mr. Nasir Rezazí was born in June 1955 in Sine, Easter <FONT size=6><FONT color=#ff0000>Kurdistan</FONT>. </FONT>After completing his secondary education in literature, he become the primary school teacher. <BR>Nasir is a famous Kurdish singer in all sector of Kurdistan. He has released 33 music tapes in Kurdistan including love songs, folklore and patriotic ballad, which have made him a household name. Nasir's resistance songs and nationalist ballads with their emotive lyrics have been a source of encouragement for the Kurds in their struggle against tyranny and repression and for national liberation</P></TD></TR></TBODY></TABLE>
+<P></P>
+<P><FONT color=#ff0000 size=2>|||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||</FONT></P>
+<P><FONT color=#ff0000 size=2></FONT>&nbsp;</P>
+<P align=center><STRONG><FONT size=2></FONT></STRONG>&nbsp;</P>
+<P dir=rtl align=center><FONT color=#990000 size=5><EM>تو نامری</EM></FONT> </P>
+<P dir=rtl align=center><FONT color=#ff0000 size=3><STRONG>تو نامری چاوه کانم </STRONG></FONT></P>
+<P dir=rtl align=center><FONT color=#ff0000 size=3><STRONG>له هه ر کوی بی </STRONG></FONT></P>
+<P dir=rtl align=center><FONT color=#ff0000 size=3><STRONG>له سه ر&nbsp; عه رز </STRONG></FONT></P>
+<P dir=rtl align=center><FONT color=#ff0000 size=3><STRONG>له ژیر &nbsp;گلکو</STRONG></FONT></P>
+<P dir=rtl align=center><FONT color=#ff0000 size=3><STRONG>له گه لمانی</STRONG></FONT></P>
+<P dir=rtl align=center><FONT color=#ff0000 size=3><STRONG>&nbsp; له خه باتی گه لی چاو ساوه ی شورشگیر </STRONG></FONT></P>
+<P dir=rtl align=center><FONT color=#ff0000 size=3><STRONG>له شورشی کول نه ده رانه ی کوردستان </STRONG></FONT></P>
+<P dir=rtl align=center><FONT color=#ff0000 size=3><STRONG>تو نامری چاوه کانم&nbsp;&nbsp;</STRONG></FONT></P>
+<P dir=rtl align=center><FONT color=#ff0000 size=3><STRONG>&nbsp;&nbsp;له گه لمانی</STRONG></FONT></P>
+<P dir=rtl align=center><FONT color=#ff0000 size=3><STRONG>&nbsp;له په لاماری ئاگرین</STRONG></FONT></P>
+<P dir=rtl align=center><FONT color=#ff0000 size=3><STRONG>له هه لسوورانی بی وچان</STRONG></FONT></P>
+<P dir=rtl align=center><FONT color=#ff0000 size=3><STRONG>تو نامری چاوه کانم&nbsp;</STRONG></FONT></P>
+<P dir=rtl align=center><FONT color=#ff0000 size=3><STRONG>&nbsp;له هه ر &nbsp;کوی بی </STRONG></FONT></P>
+<P dir=rtl align=center><FONT color=#ff0000 size=3><STRONG>له سه ر عه رز </STRONG></FONT></P>
+<P dir=rtl align=center><FONT color=#ff0000 size=3><STRONG>له ژیر گلکو </STRONG></FONT></P>
+<P dir=rtl align=center><FONT color=#ff0000 size=3><STRONG>له گه لمانی &nbsp;.......</STRONG></FONT></P>                <BlogExtendedPost><br><br><b></b></BlogExtendedPost>
+                <br><br><font color="#c70900">نوع مطلب :</font>
+                <a href="8.html" class=text4>اشعاركوردی(كردی)</a>،&nbsp;<a href="2.html" class=text4>استاد ناصررزازی</a>،&nbsp;                <br><font color="#c70900">برچسب ها :</font>
+                <a href="http://kurdistan-music.mihanblog.com/post/tag/%DA%AF%D9%88%D9%85%D9%87%20%D8%B4%DB%8C%D9%86" class=text4>گومه شین</a>،                 <br><font color="#c70900">لینک های مرتبط :</font>
+                            </font><br><br>
+
+
+
+
+
+
+            </div></div>
+        <div class=div26>
+            <div class=div27>
+                <font class=text8><a href="http://kurdistan-music.mihanblog.com/post/157#commentlist">نظرات (<script>setCommentCnt(157)</script>)</a></font>
+            </div>
+            <div style="float: left;margin-left: 36px;margin-top: 3px;"><script>mihanblogPostLike('157','like')</script></div>
+        </div>
+        <style>
+
+            .mihanblog_like_likeCnt{
+                right: 0;
+            }
+
+
+            .clearfix {display: inline-block;}
+            .clearfix:after {
+                content: ".";
+                display: block;
+                height: 0;
+                clear: both;
+                visibility: hidden;
+            }
+
+
+
+
+            .cblike{
+                margin:4px 55px;
+                float: left;
+            }
+            .cblike a {
+                float:left;
+                padding:3px;
+                text-align:center;
+                font-size:12px;
+                color:#FFF;
+                display:block;
+                line-height:15px;
+                text-decoration: none;
+            }
+
+
+
+
+            .cblike a.clike_plus {
+                background-color:#009900 ; /*green #039B03*/
+
+                border-radius: 5px ;
+
+                border-top-right-radius: 0px;
+                border-bottom-right-radius: 0px;
+
+                /*border:1px solid green;
+                border-right:0px;*/
+            }
+            .cblike a.clike_minus {
+                background-color:#CC0000;
+                border-radius: 5px ;
+                border-top-left-radius: 0px;
+                border-bottom-left-radius: 0px;
+
+                /*border:1px solid red;
+                border-left:0px;*/
+            }
+            .cblike a.clike_minus:hover {
+                background-color:red;
+                text-decoration: none;
+            }
+            .cblike a.clike_plus:hover {
+                background-color:green;
+                text-decoration: none;
+            }
+            .cblike a span{
+                font-weight:bold;
+                font-size:13px;
+
+                color:#fff;
+            }
+
+
+
+
+            .text100 , .text100 a{color:#FFF; font-size:8pt;-moz-text-shadow: #444 1px 1px 0px;-webkit-text-shadow: #444 1px 1px 0px;text-shadow: #444 1px 1px 0px;}
+            .text101 , .text101 a{color:#444444; font-size:8pt;-moz-text-shadow: #fff 1px 1px 0px;-webkit-text-shadow: #fff 1px 1px 0px;text-shadow: #fff 1px 1px 0px;}
+            .text102 , .text102 a{color:#000; font-size:8pt;-moz-text-shadow: #fff 1px 1px 0px;-webkit-text-shadow: #fff 1px 1px 0px;text-shadow: #fff 1px 1px 0px;}
+
+            .com{ width:600px; float:left; background:#e6e6e6; -webkit-border-radius: 5px;-moz-border-radius: 5px;border-radius: 5px; margin: 0px 7px 0px 62px; padding:0 0 10px 0;}
+            .com1{ width:582px; float:left; background:#0166aa; -webkit-border-radius: 5px;-moz-border-radius: 5px;border-radius: 5px; margin: 10px 20px 0 10px; padding:0 0 3px 0;}
+            .com3{ width:355px; float:left; text-align:right; direction:rtl; line-height:27px;}
+            .com2{ width:190px; float:left; height:30px; text-align:left; direction:rtl; line-height:27px; padding-left:10px; opacity:0.6;}
+            .com4{ width:562px; float:left; background:#FFF; -webkit-border-radius: 5px;-moz-border-radius: 5px;border-radius: 5px; margin: 3px 3px 0 3px; padding: 7px; direction:rtl; text-align:right; -moz-box-shadow: inset #444 0px 0px 5px;-webkit-box-shadow:inset  #444 0px 0px 5px;box-shadow: inset #444 0px 0px 5px;}
+            .com5{ width:562px; float:left; background:#cfcfcf; -webkit-border-radius: 5px;-moz-border-radius: 5px;border-radius: 5px; margin:  3px 3px 0 3px; padding: 7px; direction:rtl; text-align:right; -moz-box-shadow:inset  #444 0px 0px 5px;-webkit-box-shadow: inset #444 0px 0px 5px;box-shadow: inset #444 0px 0px 5px;}
+            .com6{ width:572px; float:left; background:#fff; -webkit-border-radius: 5px;-moz-border-radius: 5px;border-radius: 5px; margin: 5px 20px 0 10px; padding: 5px 5px 5px 5px; direction:rtl; }
+            .com7{width:25px; padding:5px 0 0 0; float:right; text-align:center;}
+        </style>
+        
+    </div><div class=div54>
+        <div class=div15>
+            <div class=div015></div>
+            <div class=div18><font class=text6><a href="http://kurdistan-music.mihanblog.com/post/153">لة ثةسنی خؤشةویستی خوادا</a></font></div>
+            <div class=div58><font class=text7>شنبه 13 آبان 1391 :: نویسنده : <a href="../author/689246.html">كاك میثم </a></font></div>
+        </div>
+        <div class=div21>
+            <div class=div55></div>
+            <div class=div56><font class=text4><DIV align=right><FONT color=#000000><FONT size=6><B><FONT face=Ali_Web_Malper>لة ثةسنی خؤشةویستی خوادا</FONT></B></FONT></FONT></DIV><BR><BR>
+<BLOCKQUOTE><FONT face=Ali_Web_Malper><FONT color=#000000><FONT size=4><FONT size=3><FONT face=Ali_Web_Malper><FONT size=5><FONT color=darkgreen>ئةی خصــری خودا ، سوورطوپی بص‌خـاری منی تؤ*</FONT></FONT></FONT><BR><FONT face=Ali_Web_Malper><FONT size=5><FONT color=darkgreen>ئةی بةختی کةوی ، خؤری شةوی تاری منی تؤ</FONT></FONT></FONT><BR><BR><FONT face=Ali_Web_Malper><FONT size=5><FONT color=darkgreen>خةلكی هةموو تـیـنـوون و تـراویـلکةیة بـةشیان *</FONT></FONT></FONT><BR><FONT face=Ali_Web_Malper><FONT size=5><FONT color=darkgreen>بــاخـی بـةبـةر و سصـبــةر و جــؤبــاری مـنی تؤ</FONT></FONT></FONT><BR><BR><FONT face=Ali_Web_Malper><FONT size=5><FONT color=darkgreen>بـصـضارةیـة هــةرکـةس دپـی نـامــؤ لـة ئـةوین بـص * </FONT></FONT></FONT><BR><FONT face=Ali_Web_Malper><FONT size=5><FONT color=darkgreen>لــةم سـةردةمـی نـامـؤیـی‌یـةدا ،‌ ضـاری مـنی تؤ</FONT></FONT></FONT><BR><BR><FONT color=darkgreen><B><FONT face=Ali_Web_Malper>سـةرمـةستم ودةربــةستی طــرص و بـةرطـری أص نیم</FONT></B><FONT face=Ali_Web_Malper><FONT size=5> *</FONT></FONT></FONT><BR><FONT face=Ali_Web_Malper><FONT size=5><FONT color=darkgreen>بــاوی قــةدةمـم خـؤشـة کة وشیـاری منی تؤ</FONT></FONT></FONT><BR><BR><FONT face=Ali_Web_Malper><FONT size=5><FONT color=darkgreen>ســـةد أا بـــة‌ ثــةلامــاری بــةپا أصــکی زةوی بـــم * </FONT></FONT></FONT><BR><FONT face=Ali_Web_Malper><FONT size=5><FONT color=darkgreen>بــؤ کــؤشـشـی أابــوونــةوة بـأیـاری مـنی تؤ</FONT></FONT></FONT><BR><BR><FONT face=Ali_Web_Malper><FONT size=5><FONT color=darkgreen>بــا بــةردی أک و کـیــنـة لــة هــةرلاوة بــبــارص * </FONT></FONT></FONT><BR><FONT size=5><FONT color=darkgreen><FONT face=Ali_Web_Malper>شـووشـةی دپـةکـةم ســاغــة کـة دپـداری منی تؤ</FONT></FONT></FONT><BR><BR><FONT face=Ali_Web_Malper><FONT size=5><FONT color=darkgreen>طــوص نــادةمــة زستــان کـة وپاتی سـأ و کـأ کـرد *</FONT></FONT></FONT><BR><FONT face=Ali_Web_Malper><FONT size=5><FONT color=darkgreen>واتــةت طــوپـة ، زارت طـوپــة ، ‌طـوپـزاری منی تؤ</FONT></FONT></FONT><BR><BR><BR><FONT face="B Yagut"><FONT size=5><FONT color=red>ترجمه :</FONT></FONT></FONT><BR><BR><BR><FONT face="B Yagut"><FONT face="B Yagut"><FONT size=5><FONT color=blue>موهبت الهی</FONT></FONT></FONT><BR></FONT></FONT></FONT></FONT></FONT><BR></BLOCKQUOTE>
+<BLOCKQUOTE><B><FONT face="B Yagut"><FONT size=5><FONT color=purple>ای موهبت ا لهی ، ،گل بی‌خار منی تو</FONT></FONT></FONT></B><BR>
+<DIV align=right><B><FONT face="B Yagut"><FONT size=5><FONT color=purple>ای بخت موافق ، خورشید شب تار منی تو</FONT></FONT></FONT></B><BR><B><FONT face="B Yagut"><FONT size=5><FONT color=purple>دیگران تشنه‌اند و نصیبشان سراب است1</FONT></FONT></FONT></B><BR><B><FONT face="B Yagut"><FONT size=5><FONT color=purple>باغ پربار و سایه‌سار و جویبار منی تو</FONT></FONT></FONT></B><BR><B><FONT face="B Yagut"><FONT size=5><FONT color=purple>بیچاره‌است هركه دلش با عشق بیگانه‌است</FONT></FONT></FONT></B><BR><B><FONT face="B Yagut"><FONT size=5><FONT color=purple>در این عصر بیگانگی چارة كار منی تو</FONT></FONT></FONT></B><BR><B><FONT face="B Yagut"><FONT size=5><FONT color=purple>سرمستم و ازدرشتی و ناهمواری راه غم ندارم</FONT></FONT></FONT></B><BR><B><FONT face="B Yagut"><FONT size=5><FONT color=purple>خوش گام برمی‌دارم چراكه هشیار منی تو2</FONT></FONT></FONT></B><BR><B><FONT face="B Yagut"><FONT size=5><FONT color=purple>بگذار از هرسو سنگ كینه و دشمنی ببارد</FONT></FONT></FONT></B><BR><B><FONT face="B Yagut"><FONT size=5><FONT color=purple>آبگینة دلم در امان است زیراكه دلدار منی تو</FONT></FONT></FONT></B><BR><B><FONT face="B Yagut"><FONT size=5><FONT color=purple>گوشم بدهكار زمستان نیست كه افسردگی و خموشی می‌آورد</FONT></FONT></FONT></B><BR><B><FONT face="B Yagut"><FONT size=5><FONT color=purple>كلامت گل است ، دهانت گل است ، گلزار منی تو</FONT></FONT></FONT></B><BR><B><FONT face="B Yagut"><FONT size=5><FONT color=purple>صدبار اگر از هجوم بلا نقش زمین گردم</FONT></FONT></FONT></B><BR><B><FONT face="B Yagut"><FONT size=5><FONT color=purple>باردگر برخاستن را ، عزم استوار منی تو</FONT></FONT></FONT></B></DIV></BLOCKQUOTE><!-- / message --><!-- sig -->                <BlogExtendedPost><br><br><b></b></BlogExtendedPost>
+                <br><br><font color="#c70900">نوع مطلب :</font>
+                <a href="8.html" class=text4>اشعاركوردی(كردی)</a>،&nbsp;                <br><font color="#c70900">برچسب ها :</font>
+                                <br><font color="#c70900">لینک های مرتبط :</font>
+                            </font><br><br>
+
+
+
+
+
+
+            </div></div>
+        <div class=div26>
+            <div class=div27>
+                <font class=text8><a href="http://kurdistan-music.mihanblog.com/post/153#commentlist">نظرات (<script>setCommentCnt(153)</script>)</a></font>
+            </div>
+            <div style="float: left;margin-left: 36px;margin-top: 3px;"><script>mihanblogPostLike('153','like')</script></div>
+        </div>
+        <style>
+
+            .mihanblog_like_likeCnt{
+                right: 0;
+            }
+
+
+            .clearfix {display: inline-block;}
+            .clearfix:after {
+                content: ".";
+                display: block;
+                height: 0;
+                clear: both;
+                visibility: hidden;
+            }
+
+
+
+
+            .cblike{
+                margin:4px 55px;
+                float: left;
+            }
+            .cblike a {
+                float:left;
+                padding:3px;
+                text-align:center;
+                font-size:12px;
+                color:#FFF;
+                display:block;
+                line-height:15px;
+                text-decoration: none;
+            }
+
+
+
+
+            .cblike a.clike_plus {
+                background-color:#009900 ; /*green #039B03*/
+
+                border-radius: 5px ;
+
+                border-top-right-radius: 0px;
+                border-bottom-right-radius: 0px;
+
+                /*border:1px solid green;
+                border-right:0px;*/
+            }
+            .cblike a.clike_minus {
+                background-color:#CC0000;
+                border-radius: 5px ;
+                border-top-left-radius: 0px;
+                border-bottom-left-radius: 0px;
+
+                /*border:1px solid red;
+                border-left:0px;*/
+            }
+            .cblike a.clike_minus:hover {
+                background-color:red;
+                text-decoration: none;
+            }
+            .cblike a.clike_plus:hover {
+                background-color:green;
+                text-decoration: none;
+            }
+            .cblike a span{
+                font-weight:bold;
+                font-size:13px;
+
+                color:#fff;
+            }
+
+
+
+
+            .text100 , .text100 a{color:#FFF; font-size:8pt;-moz-text-shadow: #444 1px 1px 0px;-webkit-text-shadow: #444 1px 1px 0px;text-shadow: #444 1px 1px 0px;}
+            .text101 , .text101 a{color:#444444; font-size:8pt;-moz-text-shadow: #fff 1px 1px 0px;-webkit-text-shadow: #fff 1px 1px 0px;text-shadow: #fff 1px 1px 0px;}
+            .text102 , .text102 a{color:#000; font-size:8pt;-moz-text-shadow: #fff 1px 1px 0px;-webkit-text-shadow: #fff 1px 1px 0px;text-shadow: #fff 1px 1px 0px;}
+
+            .com{ width:600px; float:left; background:#e6e6e6; -webkit-border-radius: 5px;-moz-border-radius: 5px;border-radius: 5px; margin: 0px 7px 0px 62px; padding:0 0 10px 0;}
+            .com1{ width:582px; float:left; background:#0166aa; -webkit-border-radius: 5px;-moz-border-radius: 5px;border-radius: 5px; margin: 10px 20px 0 10px; padding:0 0 3px 0;}
+            .com3{ width:355px; float:left; text-align:right; direction:rtl; line-height:27px;}
+            .com2{ width:190px; float:left; height:30px; text-align:left; direction:rtl; line-height:27px; padding-left:10px; opacity:0.6;}
+            .com4{ width:562px; float:left; background:#FFF; -webkit-border-radius: 5px;-moz-border-radius: 5px;border-radius: 5px; margin: 3px 3px 0 3px; padding: 7px; direction:rtl; text-align:right; -moz-box-shadow: inset #444 0px 0px 5px;-webkit-box-shadow:inset  #444 0px 0px 5px;box-shadow: inset #444 0px 0px 5px;}
+            .com5{ width:562px; float:left; background:#cfcfcf; -webkit-border-radius: 5px;-moz-border-radius: 5px;border-radius: 5px; margin:  3px 3px 0 3px; padding: 7px; direction:rtl; text-align:right; -moz-box-shadow:inset  #444 0px 0px 5px;-webkit-box-shadow: inset #444 0px 0px 5px;box-shadow: inset #444 0px 0px 5px;}
+            .com6{ width:572px; float:left; background:#fff; -webkit-border-radius: 5px;-moz-border-radius: 5px;border-radius: 5px; margin: 5px 20px 0 10px; padding: 5px 5px 5px 5px; direction:rtl; }
+            .com7{width:25px; padding:5px 0 0 0; float:right; text-align:center;}
+        </style>
+        
+    </div><div class=div54>
+        <div class=div15>
+            <div class=div015></div>
+            <div class=div18><font class=text6><a href="http://kurdistan-music.mihanblog.com/post/145">بةهاری کوصستان( بهار درکوهساران)</a></font></div>
+            <div class=div58><font class=text7>شنبه 6 آبان 1391 :: نویسنده : <a href="../author/689246.html">كاك میثم </a></font></div>
+        </div>
+        <div class=div21>
+            <div class=div55></div>
+            <div class=div56><font class=text4><DIV align=right>
+<DIV align=right><FONT size=5><B><FONT color=blue><FONT face=Ali_Web_Malper>شاعر : استاد هیمن</FONT></FONT></B></FONT></DIV></DIV><BR>
+<DIV align=right>
+<DIV align=right><FONT size=4><FONT color=darkgreen><FONT face=Ali_Web_Malper>بة لةنطصزة بة باران </FONT></FONT></FONT><FONT face=&amp;quot><FONT size=4><BR></FONT></FONT><FONT size=4><FONT color=darkgreen><FONT face=Ali_Web_Malper>بة شنةبای بةهاران</FONT></FONT></FONT><FONT face=&amp;quot><FONT size=4><BR></FONT></FONT><FONT size=4><FONT color=darkgreen><FONT face=Ali_Web_Malper>توانةوة وةک جاران </FONT></FONT></FONT><FONT face=&amp;quot><FONT size=4><BR></FONT></FONT><FONT size=4><FONT color=darkgreen><FONT face=Ali_Web_Malper>کةوی بةفری نیساران</FONT></FONT></FONT><FONT face=&amp;quot><FONT size=4><BR></FONT></FONT><FONT size=4><FONT color=darkgreen><FONT face=&amp;quot>· </FONT></FONT></FONT><FONT face=&amp;quot><FONT size=4><BR></FONT></FONT><FONT size=4><FONT color=darkgreen><FONT face=Ali_Web_Malper>دةشت وضیمةن رازاوة </FONT></FONT></FONT><FONT face=&amp;quot><FONT size=4><BR></FONT></FONT><FONT size=4><FONT color=darkgreen><FONT face=Ali_Web_Malper>کصو و بةندةن نةخشاوة</FONT></FONT></FONT><FONT face=&amp;quot><FONT size=4><BR></FONT></FONT><FONT size=4><FONT color=darkgreen><FONT face=Ali_Web_Malper>زؤنط و ضصنکة ذیاوة </FONT></FONT></FONT><FONT face=&amp;quot><FONT size=4><BR></FONT></FONT><FONT size=4><FONT color=darkgreen><FONT face=Ali_Web_Malper>طیا سةری ثصوة ناوة</FONT></FONT></FONT><FONT face=&amp;quot><FONT size=4><BR></FONT></FONT><FONT size=4><FONT color=darkgreen><FONT face=&amp;quot>· </FONT></FONT></FONT><FONT face=&amp;quot><FONT size=4><BR></FONT></FONT><FONT size=4><FONT color=darkgreen><FONT face=Ali_Web_Malper>وةنةوشةی جوانی خؤشبؤ </FONT></FONT></FONT><FONT face=&amp;quot><FONT size=4><BR></FONT></FONT><FONT size=4><FONT color=darkgreen><FONT face=Ali_Web_Malper>هاتة دةر لة لصوی جؤ</FONT></FONT></FONT><FONT face=&amp;quot><FONT size=4><BR></FONT></FONT><FONT size=4><FONT color=darkgreen><FONT face=Ali_Web_Malper>دار دةری کردووة ضرؤ </FONT></FONT></FONT><FONT face=&amp;quot><FONT size=4><BR></FONT></FONT><FONT size=4><FONT color=darkgreen><FONT face=Ali_Web_Malper>کةروصشکةی کرد طةنم و جؤ</FONT></FONT></FONT><FONT face=&amp;quot><FONT size=4><BR></FONT></FONT><FONT size=4><FONT color=darkgreen><FONT face=&amp;quot>· </FONT></FONT></FONT><FONT face=&amp;quot><FONT size=4><BR></FONT></FONT><FONT size=4><FONT color=darkgreen><FONT face=Ali_Web_Malper>سوصسن و بةیبوون و شلصر </FONT></FONT></FONT><FONT face=&amp;quot><FONT size=4><BR></FONT></FONT><FONT size=4><FONT color=darkgreen><FONT face=Ali_Web_Malper>رواون لة جصطةی زةنوصر</FONT></FONT></FONT><FONT face=&amp;quot><FONT size=4><BR></FONT></FONT><FONT size=4><FONT color=darkgreen><FONT face=Ali_Web_Malper>قةپبةزی بةست ئاوهةپدصر </FONT></FONT></FONT><FONT face=&amp;quot><FONT size=4><BR></FONT></FONT><FONT size=4><FONT color=darkgreen><FONT face=Ali_Web_Malper>شةثؤلان دةدا ئةستصر</FONT></FONT></FONT><FONT face=&amp;quot><FONT size=4><BR></FONT></FONT><FONT size=4><FONT color=darkgreen><FONT face=&amp;quot>· </FONT></FONT></FONT><FONT face=&amp;quot><FONT size=4><BR></FONT></FONT><FONT size=4><FONT color=darkgreen><FONT face=Ali_Web_Malper>بذوصنة هةموو وپات </FONT></FONT></FONT><FONT face=&amp;quot><FONT size=4><BR></FONT></FONT><FONT size=4><FONT color=darkgreen><FONT face=Ali_Web_Malper>زیندوو بؤتةوة ماپات</FONT></FONT></FONT><FONT face=&amp;quot><FONT size=4><BR></FONT></FONT><FONT size=4><FONT color=darkgreen><FONT face=Ali_Web_Malper>جةنطةی بانةمةأص هات </FONT></FONT></FONT><FONT face=&amp;quot><FONT size=4><BR></FONT></FONT><FONT size=4><FONT color=darkgreen><FONT face=Ali_Web_Malper>بةرةو کوصستان ضوو خصپات</FONT></FONT></FONT><FONT face=&amp;quot><FONT size=4><BR></FONT></FONT><FONT size=4><FONT color=darkgreen><FONT face=&amp;quot>· </FONT></FONT></FONT><FONT face=&amp;quot><FONT size=4><BR></FONT></FONT><FONT size=4><FONT color=darkgreen><FONT face=Ali_Web_Malper>ئةو ترؤثک و نشیوة </FONT></FONT></FONT><FONT face=&amp;quot><FONT size=4><BR></FONT></FONT><FONT size=4><FONT color=darkgreen><FONT face=Ali_Web_Malper>ئةو یاپ و خأ و شیوة</FONT></FONT></FONT><FONT face=&amp;quot><FONT size=4><BR></FONT></FONT><FONT size=4><FONT color=darkgreen><FONT face=Ali_Web_Malper>لة طوصن بةهةشت خةمپیوة </FONT></FONT></FONT><FONT face=&amp;quot><FONT size=4><BR></FONT></FONT><FONT size=4><FONT color=darkgreen><FONT face=Ali_Web_Malper>کص مةپبةندی وای دیوة؟</FONT></FONT></FONT></DIV></DIV><FONT size=4><BR></FONT><BR><BR><FONT size=6><FONT color=red>ترجمه :</FONT></FONT><BR><BR><BR><BR>
+<DIV align=right><FONT face="B Yagut"><FONT size=5><FONT color=darkorchid>رگبارها و باران‌‌های پیاپی</FONT></FONT></FONT><BR><FONT face="B Yagut"><FONT size=5><FONT color=darkorchid>و نفس نسیم بهاری</FONT></FONT></FONT><BR><FONT face="B Yagut"><FONT size=5><FONT color=darkorchid>پوشش ستبر برف کوهساران را</FONT></FONT></FONT><BR><FONT face="B Yagut"><FONT size=5><FONT color=darkorchid>بار دیگر آب کرد</FONT></FONT></FONT><BR><FONT size=5><FONT face=Symbol><FONT color=darkorchid>· </FONT></FONT></FONT><BR><FONT face="B Yagut"><FONT size=5><FONT color=darkorchid>دشت و دمن آراسته شد</FONT></FONT></FONT><BR><FONT face="B Yagut"><FONT size=5><FONT color=darkorchid>کوه و صخره نقش‌ و نگار گرفت</FONT></FONT></FONT><BR><FONT face="B Yagut"><FONT size=5><FONT color=darkorchid>مرداب‌ها و تالاب‌ها باز جان‌گرفتند</FONT></FONT></FONT><BR><FONT face="B Yagut"><FONT size=5><FONT color=darkorchid>و گیاهان خودرو از هر سو بردمیدند</FONT></FONT></FONT></DIV><BR>
+<DIV align=right><FONT size=5><FONT face=Symbol><FONT color=darkorchid>· </FONT></FONT></FONT><BR><FONT face="B Yagut"><FONT size=5><FONT color=darkorchid>بنفشة زیبای خوشبو</FONT></FONT></FONT><BR><FONT face="B Yagut"><FONT size=5><FONT color=darkorchid>بر لب جوی خودنمایی می‌کند</FONT></FONT></FONT><BR><FONT face="B Yagut"><FONT size=5><FONT color=darkorchid>درختان جوانه زد‌ه‌اند</FONT></FONT></FONT><BR><FONT face="B Yagut"><FONT size=5><FONT color=darkorchid>و کشتزارهای گندم و جو موج می‌زنند</FONT></FONT></FONT><BR><FONT size=5><FONT face=Symbol><FONT color=darkorchid>· </FONT></FONT></FONT><BR><FONT face="B Yagut"><FONT size=5><FONT color=darkorchid>سوسن و بابونه و شقایق</FONT></FONT></FONT><BR><FONT face="B Yagut"><FONT size=5><FONT color=darkorchid>در دامنه‌های سرسبز شکفته‌اند</FONT></FONT></FONT><BR><FONT face="B Yagut"><FONT size=5><FONT color=darkorchid>آبشارها کف‌آلود و خروشانند</FONT></FONT></FONT><BR><FONT face="B Yagut"><FONT size=5><FONT color=darkorchid>و برکه‌ها و آبگیرها سرشارند.</FONT></FONT></FONT><BR><FONT size=5><FONT face=Symbol><FONT color=darkorchid>· </FONT></FONT></FONT></DIV><BR>
+<DIV align=right><FONT face="B Yagut"><FONT size=5><FONT color=darkorchid>همه‌جا سرسبز است</FONT></FONT></FONT><BR><FONT face="B Yagut"><FONT size=5><FONT color=darkorchid>دامها زندگی را از سرگرفته‌اند</FONT></FONT></FONT><BR><FONT face="B Yagut"><FONT size=5><FONT color=darkorchid>موسم رفتن به ییلاق فرارسیده</FONT></FONT></FONT><BR><FONT face="B Yagut"><FONT size=5><FONT color=darkorchid>و عشایر راهی کوهستان شده‌اند.</FONT></FONT></FONT><BR><FONT size=5><FONT face=Symbol><FONT color=darkorchid>· </FONT></FONT></FONT><BR><FONT face="B Yagut"><FONT size=5><FONT color=darkorchid>هرچه بلندی و پستی است</FONT></FONT></FONT><BR><FONT face="B Yagut"><FONT size=5><FONT color=darkorchid>هرچه دامنه و گردنه و دره است</FONT></FONT></FONT><BR><FONT face="B Yagut"><FONT size=5><FONT color=darkorchid>همانند بهشت آراسته شده است</FONT></FONT></FONT><BR><FONT face="B Yagut"><FONT size=5><FONT color=darkorchid>چه‌کسی چنین سرزمینی دیده‌است؟</FONT></FONT></FONT></DIV><BR>                <BlogExtendedPost><br><br><b></b></BlogExtendedPost>
+                <br><br><font color="#c70900">نوع مطلب :</font>
+                <a href="8.html" class=text4>اشعاركوردی(كردی)</a>،&nbsp;                <br><font color="#c70900">برچسب ها :</font>
+                                <br><font color="#c70900">لینک های مرتبط :</font>
+                            </font><br><br>
+
+
+
+
+
+
+            </div></div>
+        <div class=div26>
+            <div class=div27>
+                <font class=text8><a href="http://kurdistan-music.mihanblog.com/post/145#commentlist">نظرات (<script>setCommentCnt(145)</script>)</a></font>
+            </div>
+            <div style="float: left;margin-left: 36px;margin-top: 3px;"><script>mihanblogPostLike('145','like')</script></div>
+        </div>
+        <style>
+
+            .mihanblog_like_likeCnt{
+                right: 0;
+            }
+
+
+            .clearfix {display: inline-block;}
+            .clearfix:after {
+                content: ".";
+                display: block;
+                height: 0;
+                clear: both;
+                visibility: hidden;
+            }
+
+
+
+
+            .cblike{
+                margin:4px 55px;
+                float: left;
+            }
+            .cblike a {
+                float:left;
+                padding:3px;
+                text-align:center;
+                font-size:12px;
+                color:#FFF;
+                display:block;
+                line-height:15px;
+                text-decoration: none;
+            }
+
+
+
+
+            .cblike a.clike_plus {
+                background-color:#009900 ; /*green #039B03*/
+
+                border-radius: 5px ;
+
+                border-top-right-radius: 0px;
+                border-bottom-right-radius: 0px;
+
+                /*border:1px solid green;
+                border-right:0px;*/
+            }
+            .cblike a.clike_minus {
+                background-color:#CC0000;
+                border-radius: 5px ;
+                border-top-left-radius: 0px;
+                border-bottom-left-radius: 0px;
+
+                /*border:1px solid red;
+                border-left:0px;*/
+            }
+            .cblike a.clike_minus:hover {
+                background-color:red;
+                text-decoration: none;
+            }
+            .cblike a.clike_plus:hover {
+                background-color:green;
+                text-decoration: none;
+            }
+            .cblike a span{
+                font-weight:bold;
+                font-size:13px;
+
+                color:#fff;
+            }
+
+
+
+
+            .text100 , .text100 a{color:#FFF; font-size:8pt;-moz-text-shadow: #444 1px 1px 0px;-webkit-text-shadow: #444 1px 1px 0px;text-shadow: #444 1px 1px 0px;}
+            .text101 , .text101 a{color:#444444; font-size:8pt;-moz-text-shadow: #fff 1px 1px 0px;-webkit-text-shadow: #fff 1px 1px 0px;text-shadow: #fff 1px 1px 0px;}
+            .text102 , .text102 a{color:#000; font-size:8pt;-moz-text-shadow: #fff 1px 1px 0px;-webkit-text-shadow: #fff 1px 1px 0px;text-shadow: #fff 1px 1px 0px;}
+
+            .com{ width:600px; float:left; background:#e6e6e6; -webkit-border-radius: 5px;-moz-border-radius: 5px;border-radius: 5px; margin: 0px 7px 0px 62px; padding:0 0 10px 0;}
+            .com1{ width:582px; float:left; background:#0166aa; -webkit-border-radius: 5px;-moz-border-radius: 5px;border-radius: 5px; margin: 10px 20px 0 10px; padding:0 0 3px 0;}
+            .com3{ width:355px; float:left; text-align:right; direction:rtl; line-height:27px;}
+            .com2{ width:190px; float:left; height:30px; text-align:left; direction:rtl; line-height:27px; padding-left:10px; opacity:0.6;}
+            .com4{ width:562px; float:left; background:#FFF; -webkit-border-radius: 5px;-moz-border-radius: 5px;border-radius: 5px; margin: 3px 3px 0 3px; padding: 7px; direction:rtl; text-align:right; -moz-box-shadow: inset #444 0px 0px 5px;-webkit-box-shadow:inset  #444 0px 0px 5px;box-shadow: inset #444 0px 0px 5px;}
+            .com5{ width:562px; float:left; background:#cfcfcf; -webkit-border-radius: 5px;-moz-border-radius: 5px;border-radius: 5px; margin:  3px 3px 0 3px; padding: 7px; direction:rtl; text-align:right; -moz-box-shadow:inset  #444 0px 0px 5px;-webkit-box-shadow: inset #444 0px 0px 5px;box-shadow: inset #444 0px 0px 5px;}
+            .com6{ width:572px; float:left; background:#fff; -webkit-border-radius: 5px;-moz-border-radius: 5px;border-radius: 5px; margin: 5px 20px 0 10px; padding: 5px 5px 5px 5px; direction:rtl; }
+            .com7{width:25px; padding:5px 0 0 0; float:right; text-align:center;}
+        </style>
+        
+    </div>
+    <div class=div29></div>
+    <div class=div28><font class=text9>
+                <br><br>
+            </font>
+    </div>
+</div>
+</div>
+
+</td>
+<td>&nbsp;</td>
+</tr>
+<tr>
+    <td>&nbsp;</td>
+    <td><div class=div121>
+        <div class=div122></div>
+        <div class=div123><font class=text5>برچسب ها</font></div>
+        <div class=div122></div><div class=div122></div>
+        <div class=div123><font class=text5>پیوندها</font></div>
+        <div class=div122></div><div class=div122></div>
+        <div class=div123><font class=text5>آخرین مطالب</font></div>
+        <div class=div122></div><div class=div122></div>
+        <div class=div122></div>
+
+        <div class=div-24>            <div class=div-341><font class=text-1><ul>
+                <li><a href="../tag/کردی.html">کردی</a></li><li><a href="../tag/سابلاغ.html">سابلاغ</a></li><li><a href="../tag/آهنگ+کوردی.html">آهنگ کوردی</a></li><li><a href="../tag/ناصررزازی.html">ناصررزازی</a></li><li><a href="../tag/مظهرخالقی.html">مظهرخالقی</a></li><li><a href="../tag/رزازی.html">رزازی</a></li><li><a href="../tag/کریمی.html">کریمی</a></li><li><a href="../tag/شوان+پرور.html">شوان پرور</a></li><li><a href="../tag/فریدون+کریمی.html">فریدون کریمی</a></li><li><a href="../tag/دانلودآهنگ+کردی.html">دانلودآهنگ کردی</a></li><li><a href="../tag/نورالدین+بزله.html">نورالدین بزله</a></li><li><a href="../tag/کوردی.html">کوردی</a></li><li><a href="../tag/هورامان.html">هورامان</a></li><li><a href="../tag/آهنگ.html">آهنگ</a></li><li><a href="../tag/شهین+طالبانی.html">شهین طالبانی</a></li><li><a href="../tag/موزیک.html">موزیک</a></li><li><a href="../tag/دلسوزخالدی.html">دلسوزخالدی</a></li><li><a href="../tag/مهاباد.html">مهاباد</a></li><li><a href="../tag/اسماعیل+سردشتی.html">اسماعیل سردشتی</a></li><li><a href="../tag/شادکردی.html">شادکردی</a></li><li><a href="../tag/كردستان.html">كردستان</a></li><li><a href="../tag/آهنگ+كردی.html">آهنگ كردی</a></li><li><a href="../tag/میکائیل+مهابادی.html">میکائیل مهابادی</a></li><li><a href="../tag/عزیزویسی.html">عزیزویسی</a></li><li><a href="../tag/aziz+weisi.html">aziz weisi</a></li><li><a href="../tag/دانلودآهنگ+كردی.html">دانلودآهنگ كردی</a></li><li><a href="../tag/کورد.html">کورد</a></li><li><a href="../tag/میکائیل.html">میکائیل</a></li><li><a href="../tag/آهنگ+کردی.html">آهنگ کردی</a></li><li><a href="../tag/فریدون.html">فریدون</a></li>            </ul></font></div><div class=div-30></div>
+        </div>
+
+        <div class=div124></div>
+
+        <div class=div-24>            <div class=div-341><font class=text-1><ul>
+                <li><a href="http://www.noryaw.ir" title="" target="_blank">پایگاه خبری نوریاو</a></li><li><a href="http://hanapress.ir" title="" target="_blank">پایگاه خبری تحلیلی هاناپرس</a></li><li><a href="http://kord4.blogfa.com/" title="" target="_blank">کوردوستانه که م(کوردفور)</a></li><li><a href="http://hawramanat.com/" title="" target="_blank">سایت خبری تحلیلی اورامانات</a></li><li><a href="http://djfardin.blogfa.com/" title="" target="_blank">سرگرمی</a></li><li><a href="http://www.armanmirzaie.blogfa.com/" title="" target="_blank">هنرمندکوردآرمان میرزایی</a></li><li><a href="http://www.babak32.blogfa.com/" title="" target="_blank">بابک دانلود</a></li><li><a href="../../../kurdilam.mihanblog.com/index.html" title="ئیلام آلامتو" target="_blank">کورد ایلام</a></li><li><a href="http://abadaniroosta.blogfa.com" title="" target="_blank">saghezchi</a></li><li><a href="http://taknavazaneney.blogfa.com" title="" target="_blank">تکنوازان نــــــــــــــــــــــــــی</a></li><li><a href="../../../kosofsana.mihanblog.com/index.html" title="" target="_blank">سنندج(سنه دژ)</a></li><li><a href="http://www.samad-444.blogfa.com/" title="::.وشین وبلاگ فرهنگی سراوان .::" target="_blank">::.وشین وبلاگ فرهنگی سراوان .::</a></li><li><a href="http://kurdistanshop.mizbanshop.com/" title="مال خود وبلاگه" target="_blank">فروشگاه اینترنتی کردستان شاپ</a></li><li><a href="http://kabootar-baran.blogfa.com/" title="" target="_blank">کبوترباران</a></li><li><a href="../../../kurdsat-vm.mihanblog.com/index.html" title="" target="_blank">کوردسات</a></li><li><a href="http://www.almas75.blogfa.com/" title="" target="_blank">دخترباران</a></li><li><a href="http://www.hanasai-baran.blogfa.com/" title="" target="_blank">هه ناسه ی باران</a></li><li><a href="../../../www.hawramanktab.mihanblog.com/index.html" title="" target="_blank">کتابخانه هه ورامان ؛یانه وکتێبۆ هه ورامانی</a></li><li><a href="http://fabner.biz/products/slimming" title="" target="_blank">خرید گن لاغری</a></li><li><a href="../../../worldarmy.mihanblog.com/index.html" title="" target="_blank">جنگ افزارها</a></li><li><a href="http://www.kivan3.blogfa.com/" title="" target="_blank">بی همتا</a></li><li><a href="http://www.srusht.blogsky.com/" title="سروشت (طبیعت)" target="_blank">سروشت (طبیعت)</a></li><li><a href="../../../nooredinbazleh2012.mihanblog.com/index.html" title="" target="_blank">وبلاگ رسمی طرفداران نورالدین بزله</a></li><li><a href="http://toro-doost-daram.blogfa.com/" title="" target="_blank">مشروط چشمانت</a></li><li><a href="../../../afrazeh.mihanblog.com/index.html" title="پایگاه اطلاع رسانی شهرستان ایرانشهر" target="_blank">ایرانشهر نیوز</a></li><li><a href="http://www.smailsardashti.blogfa.com/" title="" target="_blank">♪ وبلاگ اسماعیل سردشتی</a></li><li><a href="http://www.dastanekotah91.blogfa.com/" title="" target="_blank">داستانک</a></li><li><a href="http://eq67.blogfa.com/" title="" target="_blank">پسر آفتاب مریوان</a></li><li><a href="../../../jahanbaneh.mihanblog.com/index.html" title="" target="_blank">جهان بانه</a></li><li><a href="../../../love3tan.mihanblog.com/index.html" title="" target="_blank">:::...عاشقانه ها...:::</a></li><li><a href="http://bia2sedayesahra.rozblog.com/" title="" target="_blank">صدای صحرا</a></li><li><a href="../../../moran.mihanblog.com/index.html" title="" target="_blank">وطنیم ایران آنایوردوم آذربایجان</a></li><li><a href="http://www.footballiran.net/" title="" target="_blank">فوتبال ایران</a></li><li><a href="../../../javanroodcity.mihanblog.com/index.html" title="" target="_blank">جوانرود سیتی</a></li><li><a href="../../../50centboukan.mihanblog.com/index.html" title="بوكان" target="_blank">50cent(خه لكی بوكان)</a></li><li><a href="../../../www.pari0080.mihanblog.com/index.html" title="" target="_blank">از هر گلشنی ؛ گلی</a></li><li><a href="../../../varzesh-33.mihanblog.com/index.html" title="" target="_blank">ورزش3</a></li><li><a href="http://persianhit.ir/?section=user&amp;action=register&amp;t=pub&amp;fer=7509" title="" target="_blank">درآمدرایگان باكلیك كردن</a></li><li><a href="http://www.kord-soft.kurd.ir/" title="" target="_blank">كورسافت</a></li><li><a href="../../../www.bekhontabedoni.mihanblog.com/index.html" title="" target="_blank">بخون تا بدونی</a></li><li><a href="http://www.abdolsatarraisi.blogfa.com/" title="" target="_blank">๑۩۞۩๑ شب تنهایی ستار ๑۩۞۩๑</a></li><li><a href="http://sarbazitk.10r.ir/" title="" target="_blank">سرباز ایتک بلوچستان</a></li><li><a href="http://sarias18.blogfa.com/" title="" target="_blank">ئه کره م حه سه ن زاده(سه ریاس)</a></li><li><a href="../../../shetana.mihanblog.com/index.html" title="" target="_blank">ماڵپه‌ڕی کچانی کوردستان</a></li><li><a href="http://lawansaqez.blogfa.com/" title="" target="_blank">كوهستان</a></li><li><a href="http://kamyaranian.blogfa.com/" title="" target="_blank">كامیاران وكامیارانی ها</a></li><li><a href="http://denguhawramani.blogfa.com/" title="" target="_blank">ده‌نگ</a></li><li><a href="../../../www.haneberchem.mihanblog.com/index.html" title="" target="_blank">هورامان هانه به رچه م</a></li><li><a href="../../../www.sarpole-zahab.mihanblog.com/index.html" title="" target="_blank">ایل کلهر(کلهرستان)-دانلود آهنگ های کردی کلهری،معرفی شهرهای کلهر نشین،داستان-لطیفه-چیستان کلهری-عکس های قدیمی-تقویم کلهری</a></li><li><a href="http://weblogsanandaj.blogfa.com/" title="" target="_blank">جامعه وبلاگ نویسان شهر سنندج</a></li><li><a href="http://rabat.blogfa.com/" title="" target="_blank">وبلاگ جوانان ره به ت</a></li><li><a href="http://4rank.ir/?ref=14618" title="" target="_blank">افزایش آماربازدید وبلاگ حتما سربزنید</a></li><li><a href="http://layal2012.blogfa.com/" title="" target="_blank">tooop pictur</a></li><li><a href="../../../pavmi.mihanblog.com/index.html" title="" target="_blank">pav(جك برای خنده)</a></li><li><a href="../../../www.zhwange.mihanblog.com/index.html" title="" target="_blank">ژوانگه</a></li><li><a href="../../../www.javanrood-2000.mihanblog.com/index.html" title="" target="_blank">مــالپه ری گــورانی کوردی...مــالپه ری جــوانرو 2000</a></li><li><a href="http://www.sherko.blogfa.com/" title="" target="_blank">وبلاگ لینك كردستان</a></li><li><a href="http://kordawari.blogfa.com/" title="کورده واری" target="_blank">کورده واری</a></li><li><a href="http://kurd1986s.blogfa.com/" title="کردستان سرزمین نیکی ها" target="_blank">کردستان سرزمین نیکی ها</a></li><li><a href="http://ghasemronaldo7.blogfa.com" title="" target="_blank">قاسم پسر کردنشین</a></li><li><a href="../../../sedayesahra.mihanblog.com/index.html" title="وب سایت رسمی صدای ترکمن صحرا" target="_blank">صدای ترکمن صحرا</a></li><li><a href="http://www.varnayan.ir/" title="پرتال اجتماعی فرهنگی اموزشی بلوچستان" target="_blank">سایت ورنایان</a></li><li><a href="http://radio-golha.mihanblog.com/" title="" target="_blank">رادیو گلها</a></li><li><a href="http://www.sharsna.blogfa.com/" title="" target="_blank">ئاویەر سنه</a></li><li><a href="http://galte.blogfa.com/" title="" target="_blank">جۆک واس ام اس کوردی (Kurdish Sms)</a></li><li><a href="http://blogku.ir/" title="" target="_blank">سایت فرهنگی هنری بلاگ كورد(سردشت)</a></li><li><a href="http://kholya.blogfa.com/" title="" target="_blank">هه تاو</a></li><li><a href="http://kurdishmusic.blogfa.com/" title="" target="_blank">سایتێکی هونه‌رییه‌ سه‌باره‌ت به‌ موزیک له‌ کوردوستان</a></li><li><a href="../../../16boy-saghez.mihanblog.com/index.html" title="" target="_blank">دخترپسرای سقز</a></li><li><a href="http://kurdishmusic90.blogfa.com/" title="" target="_blank">دانلود آهنگهای کردی قدیمی و جدید</a></li><li><a href="http://aryadeni.persianblog.ir/" title="" target="_blank">سه روز مانده به پاییز (شلیر)</a></li><li><a href="../../../gulan-media.mihanblog.com/index.html" title="" target="_blank">نودشه گولان میدیا</a></li><li><a href="http://joanshir.persianblog.ir/" title="" target="_blank">کرمانشاه دیار کرد</a></li><li><a href="http://www.mehrangh69.blogfa.com/" title="" target="_blank">ئاگرین</a></li><li><a href="http://kurdistannewmusic.kurdeblog.ir/" title="" target="_blank">دانلودآهنگ جدید کوردی(کردی)</a></li><li><a href="http://kurdishzone.blogfa.com/" title="" target="_blank">كردوكردستان</a></li><li><a href="http://nooredinbazleh.com" title="" target="_blank">وبسایت هنرمند نورالدین بزله</a></li><li><a href="http://abadaniroosta.blogfa.com" title="" target="_blank">روستای توریستی سقزچی</a></li>                <li><a target="_blank" href="http://www.mytheme.ir">بهترین قالب های وبلاگ</a></li>
+                <li><b><a href="../../link/index.html">همه پیوندها</a></b></li>
+            </ul></font></div><div class=div-30></div>
+        </div>
+
+        <div class=div124></div>
+
+        <div class=div-24>            <div class=div-341><font class=text-1><ul>
+                <li><a href="../250.html">(خیانتی تو) دانلود آهنگ خیانه تی تو از اوژین نوزاد</a></li><li><a href="../249.html">دانلود آهنگ کوردی تنیا و به که‌س از فریدون کریمی</a></li><li><a href="../248.html">دانلود آهنگ کوردی زینه عزیز ویسی </a></li><li><a href="../247.html">دانلود آهنگ کوردی هه ی نابه نابه از مظهر خالقی</a></li><li><a href="../246.html">اجرای سه آهنگ زیبا و دلنشین توسط هنرمندان ارجمندنورالدین بزله و بابک محمدی</a></li><li><a href="../244.html">گورانی زورخوش بوهاتی بوهاتی ده لسوز خالیدی</a></li><li><a href="../243.html">هه لپه رکی زور زور خوش</a></li><li><a href="../242.html">اثر جدید ( هه جرانی یار ) از استاد و هنرمند نورالدین بزله</a></li><li><a href="../241.html">گه رده چیوچان(گردباد،طوفان)اجراء تک آهنگ نورالدین بزله 2015 باشعر بسیارزیبایی از استادعلی الفتی کلهر</a></li><li><a href="../238.html">یک موزیک ویدیوی غمگین از میکائیل مهابادی </a></li><li><a href="../237.html">دانلود موزیک ویدیوی سیروان از عادل نادری</a></li><li><a href="../236.html">شه م سوتا و بولبول و په روانه بی ده نگن/ناصررزازی</a></li><li><a href="../235.html">دیسان-کلیپ جدید۲۰۱۴ نورالدین بزله</a></li><li><a href="../234.html">اجراء جدید آهنگ و ملودی فولکلوریک بسیار زیبای از نورالدین بزله به نام ریگای کانی</a></li><li><a href="../233.html">6آهنگ شادکوردی</a></li>            </ul></font></div><div class=div-30></div>
+        </div>
+
+    </div></td>
+    <td>&nbsp;</td>
+</tr>
+<tr>
+    <td>&nbsp;</td>
+    <td><div class=div06>
+        <div class=div7>
+            <a href="http://www.mytheme.ir" target="_blank">
+                <img src="http://mihanblog.com/public/public/user_data/template/2099937/blank.gif" border=0 width=182 height=35></a></div>
+    </div></td>
+    <td>&nbsp;</td>
+</tr>
+</table>
+</div>
+<style>
+    img{
+        max-width : 620px;
+    }
+</style>
+</body>
+
+</html><script>
+//    setTimeout(function () {
+//        GetMihanBlogShowAds();
+//    }, 1000);
+</script>
+<!--NEW SERVER--><!--;)-->
+
+<!--SabaVision Ads Handler--><!--<script type="text/javascript">(function (d) {var url =   location.protocol+'//api.sabavision.com/pox/poxjs.js';d.write('<script type="text/javascript" src="' + url + '" async></scri' + 'pt>');})(document);</script>-->
+
+
+<script type="text/javascript">
+
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-153829-9']);
+    _gaq.push(['_setDomainName', 'kurdistan-music.mihanblog.com']);
+    _gaq.push(['_trackPageview']);
+
+    (function() {
+        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+
+</script>
+
+
+<div id='mediaad-Kvcm'></div>
+<meta name="sabavision_zone" content="2500-Z499" />
+<center>
+    <div style="background-color:white;width:90%;padding:20px;margin-top:50px;margin-bottom:50px;">
+        <a href="https://www.cloob.com">شبکه اجتماعی فارسی کلوب</a> | <a href="https://www.seo25.com/product/buy-mobile-traffic-and-get-cheap-targeted-mobile-traffic/" target="_blank">Buy Mobile Traffic</a> | <a href="https://www.soalaat.com">سایت سوالات</a>
+    </div>
+</center>

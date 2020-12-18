@@ -1,0 +1,994 @@
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" /><link rel="EditURI" type="application/rsd+xml" title="RSD" href="../xmlrpc%3Frsd" />
+<script type="text/javascript" src="http://static.mihanblog.com//public/scripts/run/g.other.v3.js"></script>
+<script>
+
+	function c_$(id){
+        return document.getElementById(id);
+    }
+    
+			//if (parent.frames.length) top.location.href= document.location;
+		
+	setTodayDate = function(){
+		document.write('پنجشنبه 27 آذر 1399');
+		/*777780*/	}
+
+</script>
+
+
+
+        <script type="text/javascript">
+            (function(){
+            var now = new Date();
+            var head = document.getElementsByTagName('head')[0];
+            var script = document.createElement('script');
+            script.async = true;
+            var script_address = 'https://cdn.yektanet.com/js/mihanblog.com/native-mihanblog.com-6531.js';
+            script.src = script_address + '?v=' + now.getFullYear().toString() + '0' + now.getMonth() + '0' + now.getDate() + '0' + now.getHours();
+            head.appendChild(script);
+            })();
+        </script>
+
+        <!--<script type="text/javascript">
+            var head = document.getElementsByTagName("head")[0];
+            var script = document.createElement("script");
+            script.type = "text/javascript";
+            script.async=1;
+            script.src = "https://s1.mediaad.org/serve/mihanblog.com/loader.js" ;
+            head.appendChild(script);
+        </script>-->
+        
+        <script>
+            var sabaVisionWebsiteID = "9bab9dac-041d-4bdb-b39a-1ed789f65eed"; var sabaVisionWebsitePage = "ALL"
+        </script>
+        <link rel="stylesheet" href="https://plus.sabavision.com/dox/dox.min.css">
+        <script src="https://plus.sabavision.com/dox/dox.min.js"></script>
+        
+        <script>
+	linkdailyForm = function(){
+		try{
+			window.open('/linkdaily/new','linkdaily','status=yes,scrollbars=yes,toolbar=no,menubar=no,location=no ,width=500px,height=460px');
+		} catch(e){}
+	}
+</script><script>
+
+	statInfo = new Array();
+	setStatVar = function(index,value){
+		statInfo[index] = value;
+	}
+	getStatVar = function(index){
+		if(statInfo[index]) document.write(statInfo[index]);
+	}
+	
+	setStatVar('total_post','90');
+	setStatVar('total_author','0');
+	setStatVar('modify_date','یکشنبه 7 تیر 1394');
+	
+	setStatVar('today_view','3');
+	setStatVar('yesterday_view','2');
+	
+	setStatVar('this_month_view','483');
+	setStatVar('last_month_view','206');
+
+	setStatVar('total_view','97853');
+	setStatVar('last_view_date','پنجشنبه 27 آذر 1399 (19:55)');
+
+
+
+    
+    function setStatFromClient()
+    {
+        var url = 'http://kafshhaiemaah.mihanblog.com/statupdate/?data[refereruri]=http://kafshhaiemaah.mihanblog.com/post/category/4&data[postid]=43&data[requesturi]=/post/43&data[sdate]=1608229407&data[hash]=5e54517d580b0028a016a92da0efb532&data[resolution]='+screen.width+' X '+screen.height;
+
+//        alert(url);
+//        var newjs = document.createElement("SCRIPT");
+//        newjs.type = 'text/javascript';
+//        newjs.src = url;
+//
+//        var newdiv = document.createElement("DIV");
+//        newdiv.setAttribute("style","display:none");
+
+        document.write(unescape('%3Cscript src="'+url+'" type="text/javascript"%3E%3C/script%3E'));
+//        newdiv.appendChild (newjs);
+//        document.write(newjs);
+//        document.write(appendChild (newdiv);
+
+    };
+    setStatFromClient();
+        
+</script><script>
+	messageForm = function(post_id){
+		try{
+			window.open('/message','message','status=yes,scrollbars=yes,toolbar=no,menubar=no,location=no ,width=480px,height=550px');
+		} catch(e){}
+	}
+</script><script>
+	try{
+		var commentCnt = new Array();
+		commentCnt[43]='14';	} catch(e){}
+	
+	newComment = function(post_id){
+		try{
+			window.open('/post/comment/'+post_id,'comment','status=yes,scrollbars=yes,toolbar=no,menubar=no,location=no ,width=480px,height=540px');
+		} catch(e){}
+	}
+	setCommentCnt = function(post_id){
+		try{
+			if(commentCnt[post_id]){
+				document.write(commentCnt[post_id]);
+			} else {
+				document.write(0);
+			}
+		} catch(e){}
+	}
+</script><script>
+
+
+	mihanblogUpdateLike = function(postid,type){
+		var url = '/post/like/'+postid+'/'+type;
+		mihanblogGetAjax(url,function(){});
+	};
+	try{
+        mihanblogGetAjax = function (url,callback) {
+    		var req;
+			if (window.XMLHttpRequest)
+            {
+                // code for IE7+, Firefox, Chrome, Opera, Safari
+			  	req = new XMLHttpRequest();
+			}else{	// code for IE6, IE5
+			  	req = new ActiveXObject("Microsoft.XMLHTTP");
+		  	}
+		    req.open("GET", url, 1);
+		    req.onreadystatechange = function () {
+		        if (req.readyState == 4) {
+		            if (req.status == 200) {
+		            	var response = eval(req.responseText);
+		            	callback();
+		            }else{
+	            		return ;
+		            }
+		        }else{
+					return ;
+		        }
+		    }
+		    req.send(null);
+		}
+	}catch(e){}
+
+	try{
+		var mihanblogLikeArrCnt = new Array();
+		var mihanblogDisLikeArrCnt = new Array();
+
+		mihanblogLikeArrCnt[43]='0';
+mihanblogDisLikeArrCnt[43]='0';
+	} catch(e){}
+
+
+
+    mihanblogPostLike = function(post_id){
+
+        mihanblogLikeCnt = (mihanblogLikeArrCnt[post_id]? mihanblogLikeArrCnt[post_id] : 0);
+        mihanblogDisLikeCnt = (mihanblogDisLikeArrCnt[post_id]? mihanblogDisLikeArrCnt[post_id] : 0);
+        mihanblogLikeCnt = parseInt(mihanblogLikeCnt);
+        mihanblogDisLikeCnt = parseInt(mihanblogDisLikeCnt);
+
+        document.write(
+                '<div class="mihanblog_like_wrapper ">'+
+                       '<div id="dislikeBar_'+post_id+'" onclick="mihanblogUpdateLike('+post_id+',\'dislike\')"   class="mihanblog_like_bar mihanblog_like_dislikeBar mihanblog_like_show_help ">-<div class="mihanblog_like_Cnt" id="disLikeCnt_'+post_id+'">'+mihanblogDisLikeCnt+'</div>'+
+                            '<span  class="mihanblog_like_v2_help mihanblog_like_v2_help_dislike clearfix"> '+
+                                '<span class="mihanblog_like_help_arrow mihanblog_like_help_arrow_dislike clearfix"></span>'+
+                                '<span class="mihanblog_like_help_text">نمی پسندم</span>'+
+                            '</span>'+
+                        '</div>'+
+                       '<div id="Like_'+post_id+'" class="mihanblog_like_border"></div>'+
+                       '<div id="likeBar_'+post_id+'" onclick="mihanblogUpdateLike('+post_id+',\'like\')"  class="mihanblog_like_bar mihanblog_like_likeBar mihanblog_like_show_help" >+<div class="mihanblog_like_Cnt" id="likeCnt_'+post_id+'">'+mihanblogLikeCnt+'</div>'+
+                            '<span  class="mihanblog_like_v2_help mihanblog_like_v2_help_like clearfix"> '+
+                                '<span class="mihanblog_like_help_arrow mihanblog_like_help_arrow_like clearfix"></span>'+
+                                '<span class="mihanblog_like_help_text">می پسندم</span>'+
+                            '</span>'+
+                        '</div>'+
+
+                '</div>'
+        );
+
+
+
+        mihanblogDisplayeLike(post_id);
+    }
+
+
+    mihanblogDisplayeLike = function(post_id){
+
+        mihanblogLikeCnt = (mihanblogLikeArrCnt[post_id]? mihanblogLikeArrCnt[post_id] : 0);
+        mihanblogDisLikeCnt = (mihanblogDisLikeArrCnt[post_id]? mihanblogDisLikeArrCnt[post_id] : 0);
+        mihanblogLikeCnt = parseInt(mihanblogLikeCnt);
+        mihanblogDisLikeCnt = parseInt(mihanblogDisLikeCnt);
+
+
+
+        sum = mihanblogLikeCnt - mihanblogDisLikeCnt;
+        backgroundBorder =  document.getElementById('Like_'+post_id);
+        var likeObj = document.getElementById('likeCnt_'+post_id);
+        var disLikeObj = document.getElementById('disLikeCnt_'+post_id);
+
+
+
+
+
+        likeObj.innerHTML =  mihanblogLikeCnt ;
+        disLikeObj.innerHTML =  mihanblogDisLikeCnt;
+
+        if(sum == 0){
+            backgroundBorder.style.backgroundImage = "url('/public/public/images/icons/like_likedislike.png')";
+            document.getElementById('dislikeBar_'+post_id).style.width = '19px';
+            document.getElementById('likeBar_'+post_id).style.width = '19px';
+        }else{
+             if(sum > 0){
+                 backgroundBorder.style.backgroundImage = "url('/public/public/images/icons/like_like.png')";
+                 document.getElementById('likeBar_'+post_id).style.width = '23px';
+                 document.getElementById('dislikeBar_'+post_id).style.width = '15px';
+             }else{
+                 backgroundBorder.style.backgroundImage = "url('/public/public/images/icons/like_dislike.png')";
+                 document.getElementById('likeBar_'+post_id).style.width = '15px';
+                 document.getElementById('dislikeBar_'+post_id).style.width = '23px';
+             }
+        }
+
+    }
+
+
+
+
+</script>
+
+<style type="text/css">
+
+
+    .clearfix {display: inline-block;}
+    .clearfix:after {
+        content: ".";
+        display: block;
+        height: 0;
+        clear: both;
+        visibility: hidden;
+    }
+
+    .mihanblog_like_wrapper {
+        color: #ffffff;
+        direction: ltr;
+        position: relative;
+    }
+    .mihanblog_like_wrapper span{
+        display: none;
+    }
+    .mihanblog_like_bar {
+        color: #FFFFFF;
+        cursor: pointer;
+        float: left;
+        font-size: 10px;
+        height: 20px;
+        line-height: 19px;
+        margin: 5px 0;
+    }
+    .mihanblog_like_likeBar {
+        background-color: #88B131;
+        padding-right: 5px;
+        border-top-right-radius: 2px;
+        border-bottom-right-radius: 2px;
+        text-align: right;
+    }
+    .mihanblog_like_likeBar:hover{
+        background-color: #699017;
+    }
+    .mihanblog_like_border {
+        background-color: #666666;
+        border: 1px solid #666666;
+        float: left;
+        font-size: 12px;
+        height: 20px;
+        margin-top: 2px;
+        width: 25px;
+        padding: 3px 5px 2px 0;
+        text-align: center;
+        border-radius: 2px;
+        color: #ffffff;
+        direction: ltr;
+        background-repeat: no-repeat ;
+        background-position: 4px center;
+    }
+    .mihanblog_like_border img {
+        margin-left: 2px;
+        margin-top: 2px;
+        width: 22px;
+    }
+    .mihanblog_like_dislikeBar {
+        background-color: #FF6F31;
+        padding-left: 5px;
+        border-top-left-radius: 2px;
+        border-bottom-left-radius: 2px;
+        text-align:left ;
+    }
+    .mihanblog_like_dislikeBar:hover{
+        background-color: #D54B10;
+    }
+
+
+
+    .mihanblog_like_show_help {
+        position: relative;
+    }
+    .mihanblog_like_show_help:hover span {
+        display: block;
+    }
+    .mihanblog_like_help_text {
+        background-color: white;
+        border: 1px solid #555555;
+        border-radius: 3px 3px 3px 3px;
+        color: #303030;
+        float: left;
+        font-size: 11px;
+        font-weight: normal;
+        padding: 5px 10px;
+    }
+
+    .mihanblog_like_help_arrow_dislike {
+        background: url("http://kafshhaiemaah.mihanblog.com/public/public/images/icons/like_hover_top.png") no-repeat scroll 16px 0 transparent;
+        left: 0;
+        top: -4px;
+    }
+
+    .mihanblog_like_help_arrow_like {
+        background: url("http://kafshhaiemaah.mihanblog.com/public/public/images/icons/like_hover_top _2.png") no-repeat scroll 16px 0 transparent;
+        left: -10px;
+        top: 29px;
+    }
+
+    .mihanblog_like_help_arrow{
+        height: 6px;
+        position: absolute;
+        width: 100px;
+
+    }
+
+    .mihanblog_like_v2_help_dislike {
+        left: -15px;
+        top: 24px;
+    }
+    .mihanblog_like_v2_help_like {
+        left: 0;
+        top: -35px;
+
+    }
+    .mihanblog_like_v2_help{
+        display: none;
+        position: absolute;
+        white-space: nowrap;
+        z-index: 1;
+    }
+
+    .mihanblog_like_Cnt{
+        display: inline;
+        color: #ffffff;
+    }
+
+</style>
+    <style>
+        @font-face {
+            font-family: 'Mihan-Iransans';
+            src: url('http://kafshhaiemaah.mihanblog.com/public/public/fonts/Iransans.eot');
+            src: url('http://kafshhaiemaah.mihanblog.com/public/public/fonts/Iransans.eot?') format('embedded-opentype'),
+            url('http://kafshhaiemaah.mihanblog.com/public/public/fonts/Iransans.woff2') format('woff2'),
+            url('http://kafshhaiemaah.mihanblog.com/public/public/fonts/Iransans.woff') format('woff'),
+            url('http://kafshhaiemaah.mihanblog.com/public/public/fonts/Iransans.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+        @font-face {
+            font-family: 'Mihan-IransansBold';
+            src: url('http://kafshhaiemaah.mihanblog.com/public/public/fonts/Iransans-Black.eot');
+            src: url('http://kafshhaiemaah.mihanblog.com/public/public/fonts/Iransans-Black.eot?') format('embedded-opentype'),
+            url('http://kafshhaiemaah.mihanblog.com/public/public/fonts/Iransans-Black.woff2') format('woff2'),
+            url('http://kafshhaiemaah.mihanblog.com/public/public/fonts/Iransans-Black.woff') format('woff'),
+            url('http://kafshhaiemaah.mihanblog.com/public/public/fonts/Iransans-Black.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+        @font-face {
+            font-family: 'Mihan-IransansLight';
+            src: url('http://kafshhaiemaah.mihanblog.com/public/public/fonts/Iransans-UltraLight.eot');
+            src: url('http://kafshhaiemaah.mihanblog.com/public/public/fonts/Iransans-UltraLight.eot?') format('embedded-opentype'),
+            url('http://kafshhaiemaah.mihanblog.com/public/public/fonts/Iransans-UltraLight.woff2') format('woff2'),
+            url('http://kafshhaiemaah.mihanblog.com/public/public/fonts/Iransans-UltraLight.woff') format('woff'),
+            url('http://kafshhaiemaah.mihanblog.com/public/public/fonts/Iransans-UltraLight.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+        @font-face {
+            font-family: 'Mihan-Nassim';
+            src: url('http://kafshhaiemaah.mihanblog.com/public/public/fonts/Nassim.eot');
+            src: url('http://kafshhaiemaah.mihanblog.com/public/public/fonts/Nassim.eot?') format('embedded-opentype'),
+            url('http://kafshhaiemaah.mihanblog.com/public/public/fonts/Nassim.woff2') format('woff2'),
+            url('http://kafshhaiemaah.mihanblog.com/public/public/fonts/Nassim.woff') format('woff'),
+            url('http://kafshhaiemaah.mihanblog.com/public/public/fonts/Nassim.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+        @font-face {
+            font-family: 'Mihan-Koodak';
+            src: url('http://kafshhaiemaah.mihanblog.com/public/public/fonts/Koodak.eot');
+            src: url('http://kafshhaiemaah.mihanblog.com/public/public/fonts/Koodak.eot?') format('embedded-opentype'),
+            url('http://kafshhaiemaah.mihanblog.com/public/public/fonts/Koodak.woff2') format('woff2'),
+            url('http://kafshhaiemaah.mihanblog.com/public/public/fonts/Koodak.woff') format('woff'),
+            url('http://kafshhaiemaah.mihanblog.com/public/public/fonts/Koodak.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+        @font-face {
+            font-family: 'Mihan-Yekan';
+            src: url('http://kafshhaiemaah.mihanblog.com/public/public/fonts/Yekan.eot');
+            src: url('http://kafshhaiemaah.mihanblog.com/public/public/fonts/Yekan.eot?') format('embedded-opentype'),
+            url('http://kafshhaiemaah.mihanblog.com/public/public/fonts/Yekan.woff2') format('woff2'),
+            url('http://kafshhaiemaah.mihanblog.com/public/public/fonts/Yekan.woff') format('woff'),
+            url('http://kafshhaiemaah.mihanblog.com/public/public/fonts/Yekan.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+        @font-face {
+            font-family: 'FontAwesome';
+            src: url('http://kafshhaiemaah.mihanblog.com/public/public/fonts/fontawesome_webfont.eot');
+            src: url('http://kafshhaiemaah.mihanblog.com/public/public/fonts/fontawesome_webfont.eot?') format('embedded-opentype'),
+            url('http://kafshhaiemaah.mihanblog.com/public/public/fonts/fontawesome_webfont.woff2') format('woff2'),
+            url('http://kafshhaiemaah.mihanblog.com/public/public/fonts/fontawesome_webfont.woff') format('woff'),
+            url('http://kafshhaiemaah.mihanblog.com/public/public/fonts/fontawesome_webfont.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+
+
+        
+
+        /* Smartphones (portrait and landscape) ----------- */
+
+        /*
+        @media only screen and (max-width : 480px) and (min-width : 320px) {
+            .sabaClick_advert__wrapper{
+                display:block;
+            }
+            .sabaClick_advert__inner{
+                max-width: 90%;
+                margin: 0 5%;
+            }
+        }
+        */
+
+    </style>
+
+
+
+
+
+
+<html>
+<head>
+<title>کفش های ماه - هل من محیص؟</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta name="language" content="Farsi">
+<meta name="description" content="کفش های ماه - هل من محیص؟ - کفش های ماه را به پا کرده ام...دوباره عازم تو ام... - کفش های ماه">
+<meta name="keywords" content="کفش های ماه - هل من محیص؟,kafshhaiemaah, Blog, Weblog, Persian,Iran, Iranian, Farsi, Weblogs">
+<link rel="alternate" type="application/rss+xml" title="کفش های ماه" href="rss/index.html" />
+<link href="http://template.pichak.net/pichak/92/style.css" type="text/css" rel="stylesheet">
+<style>
+#header{background:#010101 url(http://template.pichak.net/pichak/92/header.jpg) no-repeat top right;height:400;width:100%;color:#838383;font-size:8pt;text-align:right}
+</style>
+</head>
+
+<body>
+
+<div align=center><div style="width:1000">
+
+<div class=Pichak>
+
+<div id=header>
+<div class=top-BlogTitle></div>
+<div class=top-menu><div class=BlogTitle>کفش های ماه</div><div class=Description>کفش های ماه را به پا کرده ام...دوباره عازم تو ام...</div></div>
+
+<div class=top-menu2>
+<div style="float:right;width:0px;direction:rtl; height:20px"></div>
+<div style="float:right;width:500">
+<a href="../index.html">صفحه اصلی</a> |
+<a rel="nofollow" href="mailto:starry_sky1994@yahoo.com">ایمیل مدیر</a> |
+<a rel="nofollow" href="javascript:messageForm()">تماس با من</a> |
+<a title="پیچک" href="http://pichak.net/template" target="_blank" >قالب وبلاگ</a> |
+<a rel="nofollow" href="rss/index.html" target="_blank" >Feed</a>
+</div></div></div>
+
+<div id=main-back>
+
+<div class=Sid>
+<div id=Sidebar> 
+
+<div class="TopSid"><div class=TopSid2>نویسندگان</div></div>
+<div class=CenterSid>
+<div class=li-Sid>
+<a href="author/605580.html">Starry Sky  90 </a></div></div>
+<div class=LowSid></div>
+
+		
+<BlogLinksBlock>
+<div class=TopSid><div class=TopSid2>
+<b>لینک دوستان</b></div></div>
+<div class=CenterSid><div class=li-Sid>
+<a target="_blank" href="http://pichak.net">قالب میهن بلاگ</a></div><div class=li-Sid>
+<a rel="nofollow" target="_blank" href="http://ravis1379.blogfa.com/">دلم تنگ شده واسه دریا</a></div><div class=li-Sid>
+<a rel="nofollow" target="_blank" href="http://www.toloo.org/">موسسه نیکوکاری طلوع بی نشان ها</a></div><div class=li-Sid>
+<a rel="nofollow" target="_blank" href="http://www.celalettin.ir/">celalettin Erduş</a></div><div class=li-Sid>
+<a rel="nofollow" target="_blank" href="http://r-o-m-ina-ch.blogfa.com/">دنیای خاکستری</a></div><div class=li-Sid>
+<a rel="nofollow" target="_blank" href="http://rs64.mihanblog.com/">مشاوره عمومی</a></div><div class=li-Sid>
+<a rel="nofollow" target="_blank" href="http://tiktaak.org">ساعت دیواری فانتزی</a></div><div class=li-Sid>
+<a rel="nofollow" target="_blank" href="http://www.davidplan.blogfa.com/">((معماری هاااااا بشتابید... ، معماران بزرگ))</a></div><div class=li-Sid>
+<a rel="nofollow" target="_blank" href="http://koohe-sisyphe.blogfa.com/">جاده ایست زیر پای من!</a></div><div class=li-Sid>
+<a rel="nofollow" target="_blank" href="http://koalli.mihanblog.com/">کولی عشق</a></div><div class=li-Sid>
+<a rel="nofollow" target="_blank" href="http://danealdavoodi1379.mihanblog.com/">DANI.D</a></div><div class=li-Sid>
+<a rel="nofollow" target="_blank" href="http://www.royemahekhoda.blogfa.com/">روی ماه خداوند را ببوس</a></div><div class=li-Sid>
+<a rel="nofollow" target="_blank" href="http://shia-patogh.blogfa.com/">پاتوق بچه شیعه ها</a></div><div class=li-Sid>
+<a rel="nofollow" target="_blank" href="http://hadisss1.mihanblog.com/">کلوب</a></div><div class=li-Sid>
+<a rel="nofollow" target="_blank" href="http://samira17.blogfa.com/">کوچه شهر دلم</a></div><div class=li-Sid>
+<a rel="nofollow" target="_blank" href="http://nargeseaashegh.blogfa.com/">نرگس عاشق</a></div><div class=li-Sid>
+<a rel="nofollow" target="_blank" href="http://a-m-like.blogfa.com">جاده ی من.....تو.....</a></div><div class=li-Sid>
+<a rel="nofollow" target="_blank" href="http://love-4-over.persianblog.ir/">♥♥♂♥♥☺☻LOVE☻☺♥♥♀♥♥</a></div><div class=li-Sid>
+<a rel="nofollow" target="_blank" href="http://irani-vs-irani.mihanblog.com/">یه تعریف جامع از ایرانی ها به من بده؟!!</a></div><div class=li-Sid>
+<a rel="nofollow" target="_blank" href="http://nasser-abdollahi.mihanblog.com/">عاشقان ناصریا</a></div><div class=li-Sid>
+<a rel="nofollow" target="_blank" href="http://minooa.mihanblog.com">عینک آفتابی</a></div><div class=li-Sid>
+<a rel="nofollow" target="_blank" href="http://http://shahrbano1.mihanblog.com/">شهربانو</a></div><div class=li-Sid>
+<a rel="nofollow" target="_blank" href="http://raybanarena.ir">عینک ریبن 2013</a></div><div class=li-Sid>
+<a rel="nofollow" target="_blank" href="http://icehell.mihanblog.com/">ICE HELL</a></div><div class=li-Sid>
+<a rel="nofollow" target="_blank" href="http://ahamadbaloch.mihanblog.com/">ساحل مکران</a></div><div class=li-Sid>
+<a rel="nofollow" target="_blank" href="http://www.arezoo1371.blogfa.com/">شب مهتاب</a></div><div class=li-Sid>
+<a rel="nofollow" target="_blank" href="http://22ashegheto22.blogfa.com/">love</a></div><div class=li-Sid>
+<a rel="nofollow" target="_blank" href="http://baraye1eshgh.blogfa.com">ßαяα¥ê ê§ħgħ</a></div><div class=li-Sid>
+<a rel="nofollow" target="_blank" href="http://ebrahimi20.ir">اشعار و سخنان زیبا</a></div><div class=li-Sid>
+<a rel="nofollow" target="_blank" href="http://animal2013.blogfa.com/">دامپزشکان(خانم دکتر رعیت!)</a></div><div class=li-Sid>
+<a rel="nofollow" target="_blank" href="http://panelgames.ir/">پنل گیمز</a></div><div class=li-Sid>
+<a rel="nofollow" target="_blank" href="http://www.jazireroyaha.blogfa.com/">جزیره رویاها</a></div><div class=li-Sid>
+<a rel="nofollow" target="_blank" href="http://mylonely.mihanblog.com/">خلوت من</a></div><div class=li-Sid>
+<a rel="nofollow" target="_blank" href="http://maa95.mihanblog.com/">بیا همه چیز هست!</a></div><div class=li-Sid>
+<a rel="nofollow" target="_blank" href="http://welcome2hell.mihanblog.com/">all hope is gone</a></div><div class=li-Sid>
+<a rel="nofollow" target="_blank" href="http://rjm2.mihanblog.com">♥عشق+غرور=تنهایی♥</a></div><div class=li-Sid>
+<a rel="nofollow" target="_blank" href="http://homelandfun.mihanblog.com">.::.:سرزمین شادی:.::.</a></div><div class=li-Sid>
+<a rel="nofollow" target="_blank" href="http://pandababy.mihanblog.com">**❤**❤**❤**gaty paty **❤**❤**❤**</a></div><div class=li-Sid>
+<a rel="nofollow" target="_blank" href="http://jute.mihanblog.com">jute</a></div><div class=li-Sid>
+<a rel="nofollow" target="_blank" href="http://yasarallah-hosein.rozblog.com/">ثارالله</a></div><div class=li-Sid>
+<a rel="nofollow" target="_blank" href="http://alone0in0the0world.blogfa.com/">alone</a></div><div class=li-Sid>
+<a rel="nofollow" target="_blank" href="http://berozfa.ir">بروزفا</a></div><div class=li-Sid>
+<a rel="nofollow" target="_blank" href="http://alghos.mihanblog.com">الغوث</a></div><div class=li-Sid>
+<a rel="nofollow" target="_blank" href="http://antiwest.mihanblog.com">بیراهه</a></div><div class=li-Sid>
+<a rel="nofollow" target="_blank" href="http://www.ali-khamenaei.blogfa.com/">رهبری</a></div><div class=li-Sid>
+<a rel="nofollow" target="_blank" href="http://besharat1354.mihanblog.com">بشارت</a></div><div class=li-Sid>
+<a rel="nofollow" target="_blank" href="http://guitar30.blogfa.com/">آکورد30</a></div><div class=li-Sid>
+<a rel="nofollow" target="_blank" href="http://alaleha59.blogfa.com">آلاله ها</a></div><div class=li-Sid>
+<a rel="nofollow" target="_blank" href="http://www.mano-mahdi.mihanblog.com">حرف دل</a></div><div class=li-Sid>
+<a rel="nofollow" target="_blank" href="http://dehkadeye-eshgh.blogfa.com/">پشیمون</a></div><div class=li-Sid>
+<a rel="nofollow" target="_blank" href="http://booyedin.mihanblog.com/">بوی دین</a></div><div class=li-Sid>
+<a rel="nofollow" target="_blank" href="http://safiredell.blogfa.com/">سفیر دل</a></div><div class=li-Sid>
+<a rel="nofollow" target="_blank" href="http://loving.blogfa.com/">love +2</a></div><div class=li-Sid>
+<a rel="nofollow" target="_blank" href="http://meraj62.mihanblog.com">طواف یار</a></div><div class=li-Sid>
+<a rel="nofollow" target="_blank" href="http://Www.sootedellan.mihanblog.com">سوته دل</a></div><div class=li-Sid>
+<a rel="nofollow" target="_blank" href="http://golesorekh.blogfa.com">گل سرخ</a></div><div class=li-Sid>
+<a rel="nofollow" target="_blank" href="http://jahadeakbar.mihanblog.com">جهاد اکبر</a></div><div class=li-Sid>
+<a rel="nofollow" target="_blank" href="http://www.zizi77.mihanblog.com ">دل نوشته</a></div><div class=li-Sid>
+<a rel="nofollow" target="_blank" href="http://mtalebnezhad.blogfa.com/">شرح صدر</a></div><div class=li-Sid>
+<a rel="nofollow" target="_blank" href="http://hohokhan.persianblog.ir/">باد مهربون</a></div><div class=li-Sid>
+<a rel="nofollow" target="_blank" href="http://www.happylog.blogfa.com/">happylog</a></div><div class=li-Sid>
+<a rel="nofollow" target="_blank" href="http://magar-mouod.mihanblog.com">مقر موعود</a></div><div class=li-Sid>
+<a rel="nofollow" target="_blank" href="http://sourapple.blogfa.com/">سیب ترش</a></div><div class=li-Sid>
+<a rel="nofollow" target="_blank" href="http://hamsellooli.ir/">هم سلولی</a></div><div class=li-Sid>
+<a rel="nofollow" target="_blank" href="http://ice-lovee.mihanblog.com/">عشق یخی</a></div><div class=li-Sid>
+<a rel="nofollow" target="_blank" href="http://saf313.mihanblog.com">صدای فتح</a></div><div class=li-Sid>
+<a rel="nofollow" target="_blank" href="http://bargemarefat.mihanblog.com/">برگ معرفت</a></div><div class=li-Sid>
+<a rel="nofollow" target="_blank" href="http://faryadtanhai.mihanblog.com">فریاد عشق</a></div><div class=li-Sid>
+<a rel="nofollow" target="_blank" href="http://www.parya17.mihanblog.com">خادم شهدا</a></div><div class=li-Sid>
+<a rel="nofollow" target="_blank" href="http://mahsan3.mihanblog.com/">پیدای پنهان</a></div><div class=li-Sid>
+<a rel="nofollow" target="_blank" href="http://dokhtareroyaei.blogfa.com/">رویاهای من</a></div><div class=li-Sid>
+<a target="_blank" title="قالب وبلاگ باران" href="http://pichak.net/template/pichak/92/">قالب وبلاگ باران</a></div>
+<div class=li-Sid>
+<a target="_blank" href="http://bahar-20.com">بهاربیست</a></div></div>
+<div class=LowSid></div>
+</BlogLinksBlock>
+
+<div class=TopSid><div class=TopSid2>
+<b>صفحات جانبی</b></div></div>
+<div class=CenterSid><div class=li-Sid>
+<a href="../extrapage/profile.html">پروفایل مدیر</a></div></div>
+<div class=LowSid></div>
+
+
+<div class=TopSid><div class=TopSid2>
+<b>پیوندهای روزانه</b></div></div>
+<div class=CenterSid><div class=li-Sid>
+<a rel="nofollow" target="_blank" href="http://moshavere-tmt92.ir/" title="عرض سلام و درود
+
+دانشجوی مشاوره ام و مشاوره میدم به بچه های کنکوری هرسال جاری 
+
+93-94
+
+ممنون میشم درراستای هدفم شما هم با تاییدش این کینک کمکی کرده باشید
+
+با تشکر
+اسپمر جدید مین بلاگ : WWW.SPammer313.Mihanblog.com
+ID : RADBENKICK313">مـــــــرجع تخصصی کنـــــکور 94</a></div><div class=li-Sid>
+<a rel="nofollow" target="_blank" href="http://moshavere-tmt92.mihanblog.com/" title="سلام ممنون میشم لینک بنده رو تایید بزنید
+
+دانشجوی مشاوره ام و مشاوره تحصیلی میدم به بچه های کنکوری
+تشکر میکنم از شما بابت تایید لینک بنده">مشاوره کنکوری و تحصیلی</a></div><div class=li-Sid>
+<a rel="nofollow" target="_blank" href="http://www.persia-music.com" title="پرشیا موزیک">دانلود آهنگ جدید</a></div><div class=li-Sid>
+<a rel="nofollow" target="_blank" href="http://www.serialkade2.com" title="با سلام....
+ 
+خواهان تبادل لینک با وبلاگ زیبای شما هستیم.در صورت تمایل لینک رو تایید و اطلاع بدید.">دانلود سریال با لینک مستقیم</a></div><div class=li-Sid>
+<a rel="nofollow" target="_blank" href="http://www.savalandownload.mihanblog.com" title="با سلام....
+ 
+وبلاگ زیبایی دارین لطفا به وبلاگ منم سر بزنید">بازدید</a></div><div class=li-Sid>
+<a rel="nofollow" target="_blank" href="http://www.moejezat.mihanblog.com" title="با سلام....
+خواهان تبادل لینک با وبلاگ زیبای شما هستیم.
+خواستی برو به قسمت تبادل لینک تو انتهای ستون سمت راست
+روی ارسال لینک کلیک کن راهنماروبخون انجام بده اتوماتیک توسایتم لینک شو
+میدونی که تبادل لینک چقد تو بالا بردن رتبه سایت مهم
+این قسمتم میتونی بری
+http://moejezat.mihanblog.com/extrapage/1">هراطلاعاتی میخوای اینجا هست</a></div><div class=li-Sid>
+<a rel="nofollow" target="_blank" href="http://www.savalandownload.mihanblog.com" title="با سلام....
+ 
+وبلاگ زیبایی دارین لطفا به وبلاگ منم سر بزنید">بازدید</a></div><div class=li-Sid>
+<a target="_blank" href="http://www.pichak.net">قالب وبلاگ</a></div>
+<div class=li-Sid>
+<a target="_blank" href="http://pichak.net">قالب های پیچک</a></div></div>
+<div class=LowSid></div>
+
+<div class="TopSid"><div class=TopSid2>لینک های مفید</div></div>
+<div class=CenterSid>
+<div class=li-Sid><a title="اس ام اس تبریک ولادت حضرت علی" href="http://www.isati3.com/archive/4142/sms-birthday-greeting-ali/">اس ام اس تبریک ولادت حضرت علی</a>
+</div>
+<div class=li-Sid><a href="http://www.asalchat.com">چت روم</a>
+ | <a href="http://forum.kelishe.com">انجمن گفتگو</a></div>
+<div class=li-Sid><a href="http://www.chargefull.ir/">خرید کارت شارژ</a></div>
+<div class=li-Sid><a href="http://kharidlink.ir/">تبلیغات متنی</a>
+ | ﻿<a title="پد دفع سموم کینوکی" href="http://www.buyofcheap.com/product_2_%D8%AE%D8%B1%DB%8C%D8%AF+%D9%BE%D8%AF+%D8%AF%D9%81%D8%B9+%D8%B3%D9%85%D9%88%D9%85+%DA%A9%DB%8C%D9%86%D9%88%DA%A9%DB%8C+%D8%A7%D8%B5%D9%84+%D8%A8%D8%A7%D8%B1%DA%A9%D8%AF%D8%AF%D8%A7%D8%B1.html">پد دفع سموم کینوکی</a></div>
+<div class=li-Sid><a title="شارژ ایرانسل" href="http://pinfa.ir/buy-charge.php">شارژ ایرانسل</a>
+</div>
+</div>
+<div class=LowSid></div>
+
+</div>
+</div>
+
+<div class=main>
+
+<div class=post>
+
+
+		<div id="MihanblogShopAds" style="display:block;height:0px;width:100%;border:0px"></div>
+		<div class=TopPost>
+<div class=TopPost2><div class=Post-title><a href="43.html">هل من محیص؟</a></div></div>
+<div class=t-date>تاریخ : شنبه 24 تیر 1391  | 05:41 ب.ظ  | نویسنده : <a href="author/605580.html">Starry Sky </a></div>
+</div>
+				
+<div class=C-post><div class=CenterPost><div id="InPost_MihanblogShopAds" style="display:block;height:0px;width:100%;border:0px"></div><FONT size=3 face="Times New Roman"></FONT>
+<P style="TEXT-ALIGN: right; MARGIN: 0in 0in 0pt" class=MsoNormal align=right><SPAN dir=rtl></SPAN><SPAN style="FONT-FAMILY: 'Tahoma', 'sans-serif'; FONT-SIZE: 10pt; mso-bidi-language: FA" dir=rtl lang=FA><SPAN dir=rtl></SPAN>- آن پایین چکار میکردی؟<?xml:namespace prefix = o ns = "urn:schemas-microsoft-com:office:office" /><o:p></o:p></SPAN></P><FONT size=3 face="Times New Roman"></FONT>
+<P style="TEXT-ALIGN: right; MARGIN: 0in 0in 0pt" class=MsoNormal align=right><SPAN style="FONT-FAMILY: 'Tahoma', 'sans-serif'; FONT-SIZE: 10pt; mso-bidi-language: FA" dir=rtl lang=FA>- واکس میزدم آقا! شاید تا حالا سی هزار جفت کفش را واکس زده باشم.<o:p></o:p></SPAN></P><FONT size=3 face="Times New Roman"></FONT>
+<P style="TEXT-ALIGN: right; MARGIN: 0in 0in 0pt" class=MsoNormal align=right><SPAN style="FONT-FAMILY: 'Tahoma', 'sans-serif'; FONT-SIZE: 10pt; mso-bidi-language: FA" dir=rtl lang=FA>- برای چی؟برای چی واکس میزدی؟<o:p></o:p></SPAN></P><FONT size=3 face="Times New Roman"></FONT>
+<P style="TEXT-ALIGN: right; MARGIN: 0in 0in 0pt" class=MsoNormal align=right><SPAN style="FONT-FAMILY: 'Tahoma', 'sans-serif'; FONT-SIZE: 10pt; mso-bidi-language: FA" dir=rtl lang=FA>- برای اینکه کفشها برق بزنند و از بین نروند آقا.<o:p></o:p></SPAN></P><FONT size=3 face="Times New Roman"></FONT>
+<P style="TEXT-ALIGN: right; MARGIN: 0in 0in 0pt" class=MsoNormal align=right><SPAN style="FONT-FAMILY: 'Tahoma', 'sans-serif'; FONT-SIZE: 10pt; mso-bidi-language: FA" dir=rtl lang=FA>- تا حالا فکر هم کرده ای؟<o:p></o:p></SPAN></P><FONT size=3 face="Times New Roman"></FONT>
+<P style="TEXT-ALIGN: right; MARGIN: 0in 0in 0pt" class=MsoNormal align=right><SPAN style="FONT-FAMILY: 'Tahoma', 'sans-serif'; FONT-SIZE: 10pt; mso-bidi-language: FA" dir=rtl lang=FA>- نه! هیچوقت فکر نکرده ام...<o:p></o:p></SPAN></P><FONT size=3 face="Times New Roman"></FONT>
+<P style="TEXT-ALIGN: right; MARGIN: 0in 0in 0pt" class=MsoNormal align=right><SPAN style="FONT-FAMILY: 'Tahoma', 'sans-serif'; FONT-SIZE: 10pt; mso-bidi-language: FA" dir=rtl lang=FA>- چرا؟<o:p></o:p></SPAN></P><FONT size=3 face="Times New Roman"></FONT>
+<P style="TEXT-ALIGN: right; MARGIN: 0in 0in 0pt" class=MsoNormal align=right><SPAN style="FONT-FAMILY: 'Tahoma', 'sans-serif'; FONT-SIZE: 10pt; mso-bidi-language: FA" dir=rtl lang=FA>- من بلد نیستم فکر کنم آقا!من فقط بلدم واکس بزنم.<o:p></o:p></SPAN></P><FONT size=3 face="Times New Roman"></FONT>
+<P style="TEXT-ALIGN: right; MARGIN: 0in 0in 0pt" class=MsoNormal align=right><SPAN style="FONT-FAMILY: 'Tahoma', 'sans-serif'; FONT-SIZE: 10pt; mso-bidi-language: FA" dir=rtl lang=FA>- خفه شو! تا حالا گریه کرده ای؟<o:p></o:p></SPAN></P><FONT size=3 face="Times New Roman"></FONT>
+<P style="TEXT-ALIGN: right; MARGIN: 0in 0in 0pt" class=MsoNormal align=right><SPAN style="FONT-FAMILY: 'Tahoma', 'sans-serif'; FONT-SIZE: 10pt; mso-bidi-language: FA" dir=rtl lang=FA>- نه آقا.<o:p></o:p></SPAN></P><FONT size=3 face="Times New Roman"></FONT>
+<P style="TEXT-ALIGN: right; MARGIN: 0in 0in 0pt" class=MsoNormal align=right><SPAN style="FONT-FAMILY: 'Tahoma', 'sans-serif'; FONT-SIZE: 10pt; mso-bidi-language: FA" dir=rtl lang=FA>- دروغ نگو!<o:p></o:p></SPAN></P><FONT size=3 face="Times New Roman"></FONT>
+<P style="TEXT-ALIGN: right; MARGIN: 0in 0in 0pt" class=MsoNormal align=right><SPAN style="FONT-FAMILY: 'Tahoma', 'sans-serif'; FONT-SIZE: 10pt; mso-bidi-language: FA" dir=rtl lang=FA>- بله آقا.یک بار! کفشهای جنتلمنی را خوب واکس نزده بودم و او با لگد زد توی چانه ام.یکی از دندانهایم شکست و من از درد گریه کردم.<o:p></o:p></SPAN></P><FONT size=3 face="Times New Roman"></FONT>
+<P style="TEXT-ALIGN: right; MARGIN: 0in 0in 0pt" class=MsoNormal align=right><SPAN style="FONT-FAMILY: 'Tahoma', 'sans-serif'; FONT-SIZE: 10pt; mso-bidi-language: FA" dir=rtl lang=FA>- برو گم شو! ببریدش.بندازیدش تو چاه. نفر بعد....<o:p></o:p></SPAN></P><FONT size=3 face="Times New Roman"></FONT>
+<P style="TEXT-ALIGN: right; MARGIN: 0in 0in 0pt" class=MsoNormal align=right><SPAN style="FONT-FAMILY: 'Tahoma', 'sans-serif'; FONT-SIZE: 10pt; mso-bidi-language: FA" dir=rtl lang=FA><o:p>&nbsp;</o:p></SPAN></P><FONT size=3 face="Times New Roman"></FONT>
+<P style="TEXT-ALIGN: right; MARGIN: 0in 0in 0pt" class=MsoNormal align=right><SPAN style="FONT-FAMILY: 'Tahoma', 'sans-serif'; FONT-SIZE: 10pt; mso-bidi-language: FA" dir=rtl lang=FA>- چرا میلرزی؟درست بایست! کار تو چی بود؟<?xml:namespace prefix = o ns = "urn:schemas-microsoft-com:office:office" /><o:p></o:p></SPAN></P><FONT size=3 face="Times New Roman"></FONT>
+<P style="TEXT-ALIGN: right; MARGIN: 0in 0in 0pt" class=MsoNormal align=right><SPAN style="FONT-FAMILY: 'Tahoma', 'sans-serif'; FONT-SIZE: 10pt; mso-bidi-language: FA" dir=rtl lang=FA>- من...من سوپر مارکت داشتم آقا...!<o:p></o:p></SPAN></P><FONT size=3 face="Times New Roman"></FONT>
+<P style="TEXT-ALIGN: right; MARGIN: 0in 0in 0pt" class=MsoNormal align=right><SPAN style="FONT-FAMILY: 'Tahoma', 'sans-serif'; FONT-SIZE: 10pt; mso-bidi-language: FA" dir=rtl lang=FA>- می ترسی؟<o:p></o:p></SPAN></P><FONT size=3 face="Times New Roman"></FONT>
+<P style="TEXT-ALIGN: right; MARGIN: 0in 0in 0pt" class=MsoNormal align=right><SPAN style="FONT-FAMILY: 'Tahoma', 'sans-serif'; FONT-SIZE: 10pt; mso-bidi-language: FA" dir=rtl lang=FA>- بله آقا.من خیلی می ترسم!<o:p></o:p></SPAN></P><FONT size=3 face="Times New Roman"></FONT>
+<P style="TEXT-ALIGN: right; MARGIN: 0in 0in 0pt" class=MsoNormal align=right><SPAN style="FONT-FAMILY: 'Tahoma', 'sans-serif'; FONT-SIZE: 10pt; mso-bidi-language: FA" dir=rtl lang=FA>- سوپر مارکت چی هست؟<o:p></o:p></SPAN></P><FONT size=3 face="Times New Roman"></FONT>
+<P style="TEXT-ALIGN: right; MARGIN: 0in 0in 0pt" class=MsoNormal align=right><SPAN style="FONT-FAMILY: 'Tahoma', 'sans-serif'; FONT-SIZE: 10pt; mso-bidi-language: FA" dir=rtl lang=FA>- جایی که هر خوراکی توی آن پیدا میشود آقا!سوسیس.همبرگر.کنسرو.سس.آدامس.حتی مرگ موش! هر کس به سوپرمارکت احتیاج دارد آقا!هر کس مسواک یا تیغ یا حتی پفک نمکی را باید از سوپر مارکت بخرد.<o:p></o:p></SPAN></P><FONT size=3 face="Times New Roman"></FONT>
+<P style="TEXT-ALIGN: right; MARGIN: 0in 0in 0pt" class=MsoNormal align=right><SPAN style="FONT-FAMILY: 'Tahoma', 'sans-serif'; FONT-SIZE: 10pt; mso-bidi-language: FA" dir=rtl lang=FA>- پفک نمکی چی هست؟<o:p></o:p></SPAN></P><FONT size=3 face="Times New Roman"></FONT>
+<P style="TEXT-ALIGN: right; MARGIN: 0in 0in 0pt" class=MsoNormal align=right><SPAN style="FONT-FAMILY: 'Tahoma', 'sans-serif'; FONT-SIZE: 10pt; mso-bidi-language: FA" dir=rtl lang=FA>- به بچه ها میدهند که گریه نکنند آقا...!<o:p></o:p></SPAN></P><FONT size=3 face="Times New Roman"></FONT>
+<P style="TEXT-ALIGN: right; MARGIN: 0in 0in 0pt" class=MsoNormal align=right><SPAN style="FONT-FAMILY: 'Tahoma', 'sans-serif'; FONT-SIZE: 10pt; mso-bidi-language: FA" dir=rtl lang=FA>- ببریدش.<o:p></o:p></SPAN></P><FONT size=3 face="Times New Roman"></FONT>
+<P style="TEXT-ALIGN: right; MARGIN: 0in 0in 0pt" class=MsoNormal align=right><SPAN style="FONT-FAMILY: 'Tahoma', 'sans-serif'; FONT-SIZE: 10pt; mso-bidi-language: FA" dir=rtl lang=FA><o:p>&nbsp;</o:p></SPAN></P>
+<P style="TEXT-ALIGN: right; MARGIN: 0in 0in 0pt" class=MsoNormal align=right><SPAN style="FONT-FAMILY: 'Tahoma', 'sans-serif'; FONT-SIZE: 10pt; mso-bidi-language: FA" dir=rtl lang=FA><o:p></o:p></SPAN>&nbsp;</P><FONT size=3 face="Times New Roman"></FONT>
+<P style="TEXT-ALIGN: right; MARGIN: 0in 0in 0pt" class=MsoNormal align=right><SPAN style="FONT-FAMILY: 'Tahoma', 'sans-serif'; FONT-SIZE: 10pt; mso-bidi-language: FA" dir=rtl lang=FA>- شما آن پایین چیزی که گفته بودیم پیدا کردی؟<o:p></o:p></SPAN></P><FONT size=3 face="Times New Roman"></FONT>
+<P style="TEXT-ALIGN: right; MARGIN: 0in 0in 0pt" class=MsoNormal align=right><SPAN style="FONT-FAMILY: 'Tahoma', 'sans-serif'; FONT-SIZE: 10pt; mso-bidi-language: FA" dir=rtl lang=FA>- من فراموش کردم که دنبال چه چیزی باید بگردم.<o:p></o:p></SPAN></P><FONT size=3 face="Times New Roman"></FONT>
+<P style="TEXT-ALIGN: right; MARGIN: 0in 0in 0pt" class=MsoNormal align=right><SPAN style="FONT-FAMILY: 'Tahoma', 'sans-serif'; FONT-SIZE: 10pt; mso-bidi-language: FA" dir=rtl lang=FA>- چرا فراموش کردی؟<o:p></o:p></SPAN></P><FONT size=3 face="Times New Roman"></FONT>
+<P style="TEXT-ALIGN: right; MARGIN: 0in 0in 0pt" class=MsoNormal align=right><SPAN style="FONT-FAMILY: 'Tahoma', 'sans-serif'; FONT-SIZE: 10pt; mso-bidi-language: FA" dir=rtl lang=FA>- چون کار میکردم.از صبح تا شب جان میکندم.برای یک وعده غذا مجبور بودم مثل سگ بدوم.وقتی غذا میخوردم دوباره گرسنه می شدم و مجبور بودم دوباره کار کنم.زندگی من همش شده بود کار و کار و کار...فکر به دست آوردن آسایش همه چیز را از خاطرم برده بود.هر چه بیشتر دنبال آسایش می رفتم آن را کمتر به دست می آوردم.ما آنجا مظلوم بودیم.<o:p></o:p></SPAN></P><FONT size=3 face="Times New Roman"></FONT>
+<P style="TEXT-ALIGN: right; MARGIN: 0in 0in 0pt" class=MsoNormal align=right><SPAN style="FONT-FAMILY: 'Tahoma', 'sans-serif'; FONT-SIZE: 10pt; mso-bidi-language: FA" dir=rtl lang=FA>- از کسی کمک نخواستی؟<o:p></o:p></SPAN></P><FONT size=3 face="Times New Roman"></FONT>
+<P style="TEXT-ALIGN: right; MARGIN: 0in 0in 0pt" class=MsoNormal align=right><SPAN style="FONT-FAMILY: 'Tahoma', 'sans-serif'; FONT-SIZE: 10pt; mso-bidi-language: FA" dir=rtl lang=FA>- نه!<o:p></o:p></SPAN></P><FONT size=3 face="Times New Roman"></FONT>
+<P style="TEXT-ALIGN: right; MARGIN: 0in 0in 0pt" class=MsoNormal align=right><SPAN style="FONT-FAMILY: 'Tahoma', 'sans-serif'; FONT-SIZE: 10pt; mso-bidi-language: FA" dir=rtl lang=FA>- ببریدش.<o:p></o:p></SPAN></P><FONT size=3 face="Times New Roman"></FONT>
+<P style="TEXT-ALIGN: right; MARGIN: 0in 0in 0pt" class=MsoNormal align=right><SPAN style="FONT-FAMILY: 'Tahoma', 'sans-serif'; FONT-SIZE: 10pt; mso-bidi-language: FA" dir=rtl lang=FA>- اعتراض دارم!<o:p></o:p></SPAN></P><FONT size=3 face="Times New Roman"></FONT>
+<P style="TEXT-ALIGN: right; MARGIN: 0in 0in 0pt" class=MsoNormal align=right><SPAN style="FONT-FAMILY: 'Tahoma', 'sans-serif'; FONT-SIZE: 10pt; mso-bidi-language: FA" dir=rtl lang=FA>- به چی؟<o:p></o:p></SPAN></P><FONT size=3 face="Times New Roman"></FONT>
+<P style="TEXT-ALIGN: right; MARGIN: 0in 0in 0pt" class=MsoNormal align=right><SPAN style="FONT-FAMILY: 'Tahoma', 'sans-serif'; FONT-SIZE: 10pt; mso-bidi-language: FA" dir=rtl lang=FA>- شما مارا گول زدید.آن پایین هیچی نمیشد پیدا کرد.آنجا حتی خودمان را هم فراموش کرده بودیم.شما زیادی از ما توقع داشتید.این درست نیست...<o:p></o:p></SPAN></P><FONT size=3 face="Times New Roman"></FONT>
+<P style="TEXT-ALIGN: right; MARGIN: 0in 0in 0pt" class=MsoNormal align=right><SPAN style="FONT-FAMILY: 'Tahoma', 'sans-serif'; FONT-SIZE: 10pt; mso-bidi-language: FA" dir=rtl lang=FA>- ببریدش.باید تا صبح دور خودش بچرخد...<o:p></o:p></SPAN></P><FONT size=3 face="Times New Roman"></FONT>
+<P style="TEXT-ALIGN: right; MARGIN: 0in 0in 0pt" class=MsoNormal align=right><SPAN style="FONT-FAMILY: 'Tahoma', 'sans-serif'; FONT-SIZE: 10pt; mso-bidi-language: FA" dir=rtl lang=FA><o:p>&nbsp;</o:p></SPAN></P>
+<P style="TEXT-ALIGN: right; MARGIN: 0in 0in 0pt" class=MsoNormal align=right><SPAN style="FONT-FAMILY: 'Tahoma', 'sans-serif'; FONT-SIZE: 10pt; mso-bidi-language: FA" dir=rtl lang=FA><o:p></o:p></SPAN>&nbsp;</P><FONT size=3 face="Times New Roman"></FONT>
+<P style="TEXT-ALIGN: right; MARGIN: 0in 0in 0pt" class=MsoNormal align=right><SPAN style="FONT-FAMILY: 'Tahoma', 'sans-serif'; FONT-SIZE: 10pt; mso-bidi-language: FA" dir=rtl lang=FA>- آن پایین چطور بود؟<o:p></o:p></SPAN></P><FONT size=3 face="Times New Roman"></FONT>
+<P style="TEXT-ALIGN: right; MARGIN: 0in 0in 0pt" class=MsoNormal align=right><SPAN style="FONT-FAMILY: 'Tahoma', 'sans-serif'; FONT-SIZE: 10pt; mso-bidi-language: FA" dir=rtl lang=FA>- تاریک بود. تاریک تاریک...<o:p></o:p></SPAN></P><FONT size=3 face="Times New Roman"></FONT>
+<P style="TEXT-ALIGN: right; MARGIN: 0in 0in 0pt" class=MsoNormal align=right><SPAN style="FONT-FAMILY: 'Tahoma', 'sans-serif'; FONT-SIZE: 10pt; mso-bidi-language: FA" dir=rtl lang=FA>- تو چه میکردی؟<o:p></o:p></SPAN></P><FONT size=3 face="Times New Roman"></FONT>
+<P style="TEXT-ALIGN: right; MARGIN: 0in 0in 0pt" class=MsoNormal align=right><SPAN style="FONT-FAMILY: 'Tahoma', 'sans-serif'; FONT-SIZE: 10pt; mso-bidi-language: FA" dir=rtl lang=FA>- من شاعر بودم.شعر میگفتم.<o:p></o:p></SPAN></P><FONT size=3 face="Times New Roman"></FONT>
+<P style="TEXT-ALIGN: right; MARGIN: 0in 0in 0pt" class=MsoNormal align=right><SPAN style="FONT-FAMILY: 'Tahoma', 'sans-serif'; FONT-SIZE: 10pt; mso-bidi-language: FA" dir=rtl lang=FA>- درباره چی؟<o:p></o:p></SPAN></P><FONT size=3 face="Times New Roman"></FONT>
+<P style="TEXT-ALIGN: right; MARGIN: 0in 0in 0pt" class=MsoNormal align=right><SPAN style="FONT-FAMILY: 'Tahoma', 'sans-serif'; FONT-SIZE: 10pt; mso-bidi-language: FA" dir=rtl lang=FA>- گاهی در آن تاریکی محض تکه هایی از نور می افتاد روی در و دیوار و من چیزهایی را میدیدم.من درباره ی چیزهایی که میدیدم شعر میگفتم.<o:p></o:p></SPAN></P><FONT size=3 face="Times New Roman"></FONT>
+<P style="TEXT-ALIGN: right; MARGIN: 0in 0in 0pt" class=MsoNormal align=right><SPAN style="FONT-FAMILY: 'Tahoma', 'sans-serif'; FONT-SIZE: 10pt; mso-bidi-language: FA" dir=rtl lang=FA>- اما بیشتر شعرهای شما درباره زن است!<o:p></o:p></SPAN></P><FONT size=3 face="Times New Roman"></FONT>
+<P style="TEXT-ALIGN: right; MARGIN: 0in 0in 0pt" class=MsoNormal align=right><SPAN style="FONT-FAMILY: 'Tahoma', 'sans-serif'; FONT-SIZE: 10pt; mso-bidi-language: FA" dir=rtl lang=FA>- زنها همیشه روشن بودند.آن جا پر از زن بود.<o:p></o:p></SPAN></P><FONT size=3 face="Times New Roman"></FONT>
+<P style="TEXT-ALIGN: right; MARGIN: 0in 0in 0pt" class=MsoNormal align=right><SPAN style="FONT-FAMILY: 'Tahoma', 'sans-serif'; FONT-SIZE: 10pt; mso-bidi-language: FA" dir=rtl lang=FA>- آن پایین چیز دیگری پیدا نکردی؟<o:p></o:p></SPAN></P><FONT size=3 face="Times New Roman"></FONT>
+<P style="TEXT-ALIGN: right; MARGIN: 0in 0in 0pt" class=MsoNormal align=right><SPAN style="FONT-FAMILY: 'Tahoma', 'sans-serif'; FONT-SIZE: 10pt; mso-bidi-language: FA" dir=rtl lang=FA>- من چیزی نمی دیدم و فقط چیزها را با دست لمس میکردم.یا می بوییدم.گاهی صداهای عجیبی می <o:p></o:p></SPAN></P><FONT size=3 face="Times New Roman"></FONT>
+<P style="TEXT-ALIGN: right; MARGIN: 0in 0in 0pt" class=MsoNormal align=right><SPAN style="FONT-FAMILY: 'Tahoma', 'sans-serif'; FONT-SIZE: 10pt; mso-bidi-language: FA" dir=rtl lang=FA>شنیدم و می ترسیدم.<o:p></o:p></SPAN></P><FONT size=3 face="Times New Roman"></FONT>
+<P style="TEXT-ALIGN: right; MARGIN: 0in 0in 0pt" class=MsoNormal align=right><SPAN style="FONT-FAMILY: 'Tahoma', 'sans-serif'; FONT-SIZE: 10pt; mso-bidi-language: FA" dir=rtl lang=FA>- آن پایین قشنگ بود؟<o:p></o:p></SPAN></P><FONT size=3 face="Times New Roman"></FONT>
+<P style="TEXT-ALIGN: right; MARGIN: 0in 0in 0pt" class=MsoNormal align=right><SPAN style="FONT-FAMILY: 'Tahoma', 'sans-serif'; FONT-SIZE: 10pt; mso-bidi-language: FA" dir=rtl lang=FA>- بله! قشنگ بود...<o:p></o:p></SPAN></P><FONT size=3 face="Times New Roman"></FONT>
+<P style="TEXT-ALIGN: right; MARGIN: 0in 0in 0pt" class=MsoNormal align=right><SPAN style="FONT-FAMILY: 'Tahoma', 'sans-serif'; FONT-SIZE: 10pt; mso-bidi-language: FA" dir=rtl lang=FA>- تو خوشبخت بودی؟<o:p></o:p></SPAN></P><FONT size=3 face="Times New Roman"></FONT>
+<P style="TEXT-ALIGN: right; MARGIN: 0in 0in 0pt" class=MsoNormal align=right><SPAN style="FONT-FAMILY: 'Tahoma', 'sans-serif'; FONT-SIZE: 10pt; mso-bidi-language: FA" dir=rtl lang=FA>- نه!<o:p></o:p></SPAN></P><FONT size=3 face="Times New Roman"></FONT>
+<P style="TEXT-ALIGN: right; MARGIN: 0in 0in 0pt" class=MsoNormal align=right><SPAN style="FONT-FAMILY: 'Tahoma', 'sans-serif'; FONT-SIZE: 10pt; mso-bidi-language: FA" dir=rtl lang=FA>- چرا؟<o:p></o:p></SPAN></P><FONT size=3 face="Times New Roman"></FONT>
+<P style="TEXT-ALIGN: right; MARGIN: 0in 0in 0pt" class=MsoNormal align=right><SPAN style="FONT-FAMILY: 'Tahoma', 'sans-serif'; FONT-SIZE: 10pt; mso-bidi-language: FA" dir=rtl lang=FA>- چون هیچ کس مرا نمی فهمید.خسته شده بودم.همه می گفتند شعرهای من زاییده خیال من است.اما من هر چه را که میگفتم می دیدم.در واقع تا چیزی را نمی دیدم نمی گفتم.<o:p></o:p></SPAN></P><FONT size=3 face="Times New Roman"></FONT>
+<P style="TEXT-ALIGN: right; MARGIN: 0in 0in 0pt" class=MsoNormal align=right><SPAN style="FONT-FAMILY: 'Tahoma', 'sans-serif'; FONT-SIZE: 10pt; mso-bidi-language: FA" dir=rtl lang=FA>- ببریدش!<o:p></o:p></SPAN></P><FONT size=3 face="Times New Roman"></FONT>
+<P style="TEXT-ALIGN: right; MARGIN: 0in 0in 0pt" class=MsoNormal align=right><SPAN style="FONT-FAMILY: 'Tahoma', 'sans-serif'; FONT-SIZE: 10pt; mso-bidi-language: FA" dir=rtl lang=FA><o:p>&nbsp;</o:p></SPAN></P>
+<P style="TEXT-ALIGN: right; MARGIN: 0in 0in 0pt" class=MsoNormal align=right><SPAN style="FONT-FAMILY: 'Tahoma', 'sans-serif'; FONT-SIZE: 10pt; mso-bidi-language: FA" dir=rtl lang=FA><o:p></o:p></SPAN>&nbsp;</P><FONT size=3 face="Times New Roman"></FONT>
+<P style="TEXT-ALIGN: right; MARGIN: 0in 0in 0pt" class=MsoNormal align=right><SPAN style="FONT-FAMILY: 'Tahoma', 'sans-serif'; FONT-SIZE: 10pt; mso-bidi-language: FA" dir=rtl lang=FA>- بیاریدش این جا! بنشین.آن پایین چه میکردی؟<o:p></o:p></SPAN></P><FONT size=3 face="Times New Roman"></FONT>
+<P style="TEXT-ALIGN: right; MARGIN: 0in 0in 0pt" class=MsoNormal align=right><SPAN style="FONT-FAMILY: 'Tahoma', 'sans-serif'; FONT-SIZE: 10pt; mso-bidi-language: FA" dir=rtl lang=FA>- هیچی!من هیچ کاری نمی کردم.من همش بیمار بودم.همیشه توی بیمارستان بودم.<o:p></o:p></SPAN></P><FONT size=3 face="Times New Roman"></FONT>
+<P style="TEXT-ALIGN: right; MARGIN: 0in 0in 0pt" class=MsoNormal align=right><SPAN style="FONT-FAMILY: 'Tahoma', 'sans-serif'; FONT-SIZE: 10pt; mso-bidi-language: FA" dir=rtl lang=FA>- زندگی سختی داشتی؟<o:p></o:p></SPAN></P><FONT size=3 face="Times New Roman"></FONT>
+<P style="TEXT-ALIGN: right; MARGIN: 0in 0in 0pt" class=MsoNormal align=right><SPAN style="FONT-FAMILY: 'Tahoma', 'sans-serif'; FONT-SIZE: 10pt; mso-bidi-language: FA" dir=rtl lang=FA>- زندگی؟ من زندگی نمی کردم.من فقط زنده بودم.دایم دیالیز می شدم.علم پزشکی برای نجات من هیچ غلطی نتوانست بکند.من آنجا روزی هزار بار می مردم و نمی مردم...به این میگویند زندگی؟ لعنت به این زندگی!<o:p></o:p></SPAN></P><FONT size=3 face="Times New Roman"></FONT>
+<P style="TEXT-ALIGN: right; MARGIN: 0in 0in 0pt" class=MsoNormal align=right><SPAN style="FONT-FAMILY: 'Tahoma', 'sans-serif'; FONT-SIZE: 10pt; mso-bidi-language: FA" dir=rtl lang=FA>- پس بدبخت بودی؟<o:p></o:p></SPAN></P><FONT size=3 face="Times New Roman"></FONT>
+<P style="TEXT-ALIGN: right; MARGIN: 0in 0in 0pt" class=MsoNormal align=right><SPAN style="FONT-FAMILY: 'Tahoma', 'sans-serif'; FONT-SIZE: 10pt; mso-bidi-language: FA" dir=rtl lang=FA>- نه من بدبخت نبودم.چون بدتر از من هم بود.<o:p></o:p></SPAN></P><FONT size=3 face="Times New Roman"></FONT>
+<P style="TEXT-ALIGN: right; MARGIN: 0in 0in 0pt" class=MsoNormal align=right><SPAN style="FONT-FAMILY: 'Tahoma', 'sans-serif'; FONT-SIZE: 10pt; mso-bidi-language: FA" dir=rtl lang=FA>- خوشبخت بودی؟<o:p></o:p></SPAN></P><FONT size=3 face="Times New Roman"></FONT>
+<P style="TEXT-ALIGN: right; MARGIN: 0in 0in 0pt" class=MsoNormal align=right><SPAN style="FONT-FAMILY: 'Tahoma', 'sans-serif'; FONT-SIZE: 10pt; mso-bidi-language: FA" dir=rtl lang=FA>- خوشبختی چیه؟<o:p></o:p></SPAN></P><FONT size=3 face="Times New Roman"></FONT>
+<P style="TEXT-ALIGN: right; MARGIN: 0in 0in 0pt" class=MsoNormal align=right><SPAN style="FONT-FAMILY: 'Tahoma', 'sans-serif'; FONT-SIZE: 10pt; mso-bidi-language: FA" dir=rtl lang=FA>- نمیدانم! شاید دو تا کلیه ی سالم...<o:p></o:p></SPAN></P><FONT size=3 face="Times New Roman"></FONT>
+<P style="TEXT-ALIGN: right; MARGIN: 0in 0in 0pt" class=MsoNormal align=right><SPAN style="FONT-FAMILY: 'Tahoma', 'sans-serif'; FONT-SIZE: 10pt; mso-bidi-language: FA" dir=rtl lang=FA>- ...<o:p></o:p></SPAN></P><FONT size=3 face="Times New Roman"></FONT>
+<P style="TEXT-ALIGN: right; MARGIN: 0in 0in 0pt" class=MsoNormal align=right><SPAN style="FONT-FAMILY: 'Tahoma', 'sans-serif'; FONT-SIZE: 10pt; mso-bidi-language: FA" dir=rtl lang=FA>- ببریدش.بگذارید بخوابد.خوب بخوابد. نفر بعد...!<o:p></o:p></SPAN></P><FONT size=3 face="Times New Roman"></FONT>
+<P style="TEXT-ALIGN: right; MARGIN: 0in 0in 0pt" class=MsoNormal align=right><SPAN style="FONT-FAMILY: 'Tahoma', 'sans-serif'; FONT-SIZE: 10pt; mso-bidi-language: FA" dir=rtl lang=FA><o:p>&nbsp;</o:p></SPAN></P>
+<P style="TEXT-ALIGN: right; MARGIN: 0in 0in 0pt" class=MsoNormal align=right><SPAN style="FONT-FAMILY: 'Tahoma', 'sans-serif'; FONT-SIZE: 10pt; mso-bidi-language: FA" dir=rtl lang=FA><o:p></o:p></SPAN>&nbsp;</P><FONT size=3 face="Times New Roman"></FONT>
+<P style="TEXT-ALIGN: right; MARGIN: 0in 0in 0pt" class=MsoNormal align=right><SPAN style="FONT-FAMILY: 'Tahoma', 'sans-serif'; FONT-SIZE: 10pt; mso-bidi-language: FA" dir=rtl lang=FA><o:p>&nbsp;</o:p></SPAN></P><FONT size=3 face="Times New Roman"></FONT>
+<P style="TEXT-ALIGN: right; MARGIN: 0in 0in 0pt" class=MsoNormal align=right><SPAN style="FONT-FAMILY: 'Tahoma', 'sans-serif'; FONT-SIZE: 10pt; mso-bidi-language: FA" dir=rtl lang=FA>- کار تو چی بود؟<o:p></o:p></SPAN></P><FONT size=3 face="Times New Roman"></FONT>
+<P style="TEXT-ALIGN: right; MARGIN: 0in 0in 0pt" class=MsoNormal align=right><SPAN style="FONT-FAMILY: 'Tahoma', 'sans-serif'; FONT-SIZE: 10pt; mso-bidi-language: FA" dir=rtl lang=FA>- من سرباز بودم آقا! به من یک تفنگ دادند و گفتند شلیک کن!<o:p></o:p></SPAN></P><FONT size=3 face="Times New Roman"></FONT>
+<P style="TEXT-ALIGN: right; MARGIN: 0in 0in 0pt" class=MsoNormal align=right><SPAN style="FONT-FAMILY: 'Tahoma', 'sans-serif'; FONT-SIZE: 10pt; mso-bidi-language: FA" dir=rtl lang=FA>- به چه کسی؟<o:p></o:p></SPAN></P><FONT size=3 face="Times New Roman"></FONT>
+<P style="TEXT-ALIGN: right; MARGIN: 0in 0in 0pt" class=MsoNormal align=right><SPAN style="FONT-FAMILY: 'Tahoma', 'sans-serif'; FONT-SIZE: 10pt; mso-bidi-language: FA" dir=rtl lang=FA>- نمی دانم.به من گفتند فقط به طرف جلو تیر اندازی کن.گفتند آنها دشمنان ما هستندو باید از بین بروند.<o:p></o:p></SPAN></P><FONT size=3 face="Times New Roman"></FONT>
+<P style="TEXT-ALIGN: right; MARGIN: 0in 0in 0pt" class=MsoNormal align=right><SPAN style="FONT-FAMILY: 'Tahoma', 'sans-serif'; FONT-SIZE: 10pt; mso-bidi-language: FA" dir=rtl lang=FA>- چند نفر را کشتی؟<o:p></o:p></SPAN></P><FONT size=3 face="Times New Roman"></FONT>
+<P style="TEXT-ALIGN: right; MARGIN: 0in 0in 0pt" class=MsoNormal align=right><SPAN style="FONT-FAMILY: 'Tahoma', 'sans-serif'; FONT-SIZE: 10pt; mso-bidi-language: FA" dir=rtl lang=FA>- نمی دانم.من واقعا نمی دانم.من فقط تفنگم را آتش می کردم.دقیقا نمی دیدم کسی روی زمین می افتاد یا نه...<o:p></o:p></SPAN></P><FONT size=3 face="Times New Roman"></FONT>
+<P style="TEXT-ALIGN: right; MARGIN: 0in 0in 0pt" class=MsoNormal align=right><SPAN style="FONT-FAMILY: 'Tahoma', 'sans-serif'; FONT-SIZE: 10pt; mso-bidi-language: FA" dir=rtl lang=FA>- چرا شلیک می کردی؟<o:p></o:p></SPAN></P><FONT size=3 face="Times New Roman"></FONT>
+<P style="TEXT-ALIGN: right; MARGIN: 0in 0in 0pt" class=MsoNormal align=right><SPAN style="FONT-FAMILY: 'Tahoma', 'sans-serif'; FONT-SIZE: 10pt; mso-bidi-language: FA" dir=rtl lang=FA>- اطاعت از بالا دست.<o:p></o:p></SPAN></P><FONT size=3 face="Times New Roman"></FONT>
+<P style="TEXT-ALIGN: right; MARGIN: 0in 0in 0pt" class=MsoNormal align=right><SPAN style="FONT-FAMILY: 'Tahoma', 'sans-serif'; FONT-SIZE: 10pt; mso-bidi-language: FA" dir=rtl lang=FA>- زندگی چی هست؟<o:p></o:p></SPAN></P><FONT size=3 face="Times New Roman"></FONT>
+<P style="TEXT-ALIGN: right; MARGIN: 0in 0in 0pt" class=MsoNormal align=right><SPAN style="FONT-FAMILY: 'Tahoma', 'sans-serif'; FONT-SIZE: 10pt; mso-bidi-language: FA" dir=rtl lang=FA>- اطاعت از بالا دست.<o:p></o:p></SPAN></P><FONT size=3 face="Times New Roman"></FONT>
+<P style="TEXT-ALIGN: right; MARGIN: 0in 0in 0pt" class=MsoNormal align=right><SPAN style="FONT-FAMILY: 'Tahoma', 'sans-serif'; FONT-SIZE: 10pt; mso-bidi-language: FA" dir=rtl lang=FA>- تو خوشبخت بودی؟<o:p></o:p></SPAN></P><FONT size=3 face="Times New Roman"></FONT>
+<P style="TEXT-ALIGN: right; MARGIN: 0in 0in 0pt" class=MsoNormal align=right><SPAN style="FONT-FAMILY: 'Tahoma', 'sans-serif'; FONT-SIZE: 10pt; mso-bidi-language: FA" dir=rtl lang=FA>- نمی دانم.<o:p></o:p></SPAN></P><FONT size=3 face="Times New Roman"></FONT>
+<P style="TEXT-ALIGN: right; MARGIN: 0in 0in 0pt" class=MsoNormal align=right><SPAN style="FONT-FAMILY: 'Tahoma', 'sans-serif'; FONT-SIZE: 10pt; mso-bidi-language: FA" dir=rtl lang=FA>- ببریدش.<o:p></o:p></SPAN></P><FONT size=3 face="Times New Roman"></FONT>
+<P style="TEXT-ALIGN: right; MARGIN: 0in 0in 0pt" class=MsoNormal align=right><SPAN style="FONT-FAMILY: 'Tahoma', 'sans-serif'; FONT-SIZE: 10pt; mso-bidi-language: FA" dir=rtl lang=FA><o:p>&nbsp;</o:p></SPAN></P>
+<P style="TEXT-ALIGN: right; MARGIN: 0in 0in 0pt" class=MsoNormal align=right><SPAN style="FONT-FAMILY: 'Tahoma', 'sans-serif'; FONT-SIZE: 10pt; mso-bidi-language: FA" dir=rtl lang=FA><o:p></o:p></SPAN>&nbsp;</P><FONT size=3 face="Times New Roman"></FONT>
+<P style="TEXT-ALIGN: right; MARGIN: 0in 0in 0pt" class=MsoNormal align=right><SPAN style="FONT-FAMILY: 'Tahoma', 'sans-serif'; FONT-SIZE: 10pt; mso-bidi-language: FA" dir=rtl lang=FA><o:p>&nbsp;</o:p></SPAN></P><FONT size=3 face="Times New Roman"></FONT>
+<P style="TEXT-ALIGN: right; MARGIN: 0in 0in 0pt" class=MsoNormal align=right><SPAN style="FONT-FAMILY: 'Tahoma', 'sans-serif'; FONT-SIZE: 10pt; mso-bidi-language: FA" dir=rtl lang=FA>- کار تو چی بود؟<o:p></o:p></SPAN></P><FONT size=3 face="Times New Roman"></FONT>
+<P style="TEXT-ALIGN: right; MARGIN: 0in 0in 0pt" class=MsoNormal align=right><SPAN style="FONT-FAMILY: 'Tahoma', 'sans-serif'; FONT-SIZE: 10pt; mso-bidi-language: FA" dir=rtl lang=FA>- اجازه هست بنشینم؟<o:p></o:p></SPAN></P><FONT size=3 face="Times New Roman"></FONT>
+<P style="TEXT-ALIGN: right; MARGIN: 0in 0in 0pt" class=MsoNormal align=right><SPAN style="FONT-FAMILY: 'Tahoma', 'sans-serif'; FONT-SIZE: 10pt; mso-bidi-language: FA" dir=rtl lang=FA>- بنشین.<o:p></o:p></SPAN></P><FONT size=3 face="Times New Roman"></FONT>
+<P style="TEXT-ALIGN: right; MARGIN: 0in 0in 0pt" class=MsoNormal align=right><SPAN style="FONT-FAMILY: 'Tahoma', 'sans-serif'; FONT-SIZE: 10pt; mso-bidi-language: FA" dir=rtl lang=FA>- من مسئول آدمهای زیادی بودم.من برای پیشرفت اقتصادی و صنعتی و توسعه سرزمین آنها تصمیم میگرفتم.همه آنها به من مدیونند.من سرزمین آنها را آباد کردم و...<o:p></o:p></SPAN></P><FONT size=3 face="Times New Roman"></FONT>
+<P style="TEXT-ALIGN: right; MARGIN: 0in 0in 0pt" class=MsoNormal align=right><SPAN style="FONT-FAMILY: 'Tahoma', 'sans-serif'; FONT-SIZE: 10pt; mso-bidi-language: FA" dir=rtl lang=FA>- چه کار مفیدی انجام دادی؟<o:p></o:p></SPAN></P><FONT size=3 face="Times New Roman"></FONT>
+<P style="TEXT-ALIGN: right; MARGIN: 0in 0in 0pt" class=MsoNormal align=right><SPAN style="FONT-FAMILY: 'Tahoma', 'sans-serif'; FONT-SIZE: 10pt; mso-bidi-language: FA" dir=rtl lang=FA>- من سرعت توسعه برنامه های اقتصادی،پروژه های صنعتی و گسترش تکنولوژی را تنظیم و طراحی می کردم...<o:p></o:p></SPAN></P><FONT size=3 face="Times New Roman"></FONT>
+<P style="TEXT-ALIGN: right; MARGIN: 0in 0in 0pt" class=MsoNormal align=right><SPAN style="FONT-FAMILY: 'Tahoma', 'sans-serif'; FONT-SIZE: 10pt; mso-bidi-language: FA" dir=rtl lang=FA>- چه کار مهمی انجام دادی؟<o:p></o:p></SPAN></P><FONT size=3 face="Times New Roman"></FONT>
+<P style="TEXT-ALIGN: right; MARGIN: 0in 0in 0pt" class=MsoNormal align=right><SPAN style="FONT-FAMILY: 'Tahoma', 'sans-serif'; FONT-SIZE: 10pt; mso-bidi-language: FA" dir=rtl lang=FA>- تامین آزادی، عدالت،دموکراسی،و تحقق قوانین از اهداف استراتژیک تصمیم گیری های ما بود.<o:p></o:p></SPAN></P><FONT size=3 face="Times New Roman"></FONT>
+<P style="TEXT-ALIGN: right; MARGIN: 0in 0in 0pt" class=MsoNormal align=right><SPAN style="FONT-FAMILY: 'Tahoma', 'sans-serif'; FONT-SIZE: 10pt; mso-bidi-language: FA" dir=rtl lang=FA>- این دارد هذیان می گوید.ببریدش.<o:p></o:p></SPAN></P><FONT size=3 face="Times New Roman"></FONT>
+<P style="TEXT-ALIGN: right; MARGIN: 0in 0in 0pt" class=MsoNormal align=right><SPAN style="FONT-FAMILY: 'Tahoma', 'sans-serif'; FONT-SIZE: 10pt; mso-bidi-language: FA" dir=rtl lang=FA>- ولی حرفهای من هنوز تمام نشده...<o:p></o:p></SPAN></P><FONT size=3 face="Times New Roman"></FONT>
+<P style="TEXT-ALIGN: right; MARGIN: 0in 0in 0pt" class=MsoNormal align=right><SPAN style="FONT-FAMILY: 'Tahoma', 'sans-serif'; FONT-SIZE: 10pt; mso-bidi-language: FA" dir=rtl lang=FA>- تا حالا هم چیز مهمی نگفته ای....<o:p></o:p></SPAN></P><FONT size=3 face="Times New Roman"></FONT>
+<P style="TEXT-ALIGN: right; MARGIN: 0in 0in 0pt" class=MsoNormal align=right><SPAN style="FONT-FAMILY: 'Tahoma', 'sans-serif'; FONT-SIZE: 10pt; mso-bidi-language: FA" dir=rtl lang=FA>- تامین معاش و خوشبختی و سعادت بشر چیز مهمی نیست؟<o:p></o:p></SPAN></P><FONT size=3 face="Times New Roman"></FONT>
+<P style="TEXT-ALIGN: right; MARGIN: 0in 0in 0pt" class=MsoNormal align=right><SPAN style="FONT-FAMILY: 'Tahoma', 'sans-serif'; FONT-SIZE: 10pt; mso-bidi-language: FA" dir=rtl lang=FA>- تو دیوانه ای!<o:p></o:p></SPAN></P><FONT size=3 face="Times New Roman"></FONT>
+<P style="TEXT-ALIGN: right; MARGIN: 0in 0in 0pt" class=MsoNormal align=right><SPAN style="FONT-FAMILY: 'Tahoma', 'sans-serif'; FONT-SIZE: 10pt; mso-bidi-language: FA" dir=rtl lang=FA>- من هیچ کار مهمی نکرده ام؟<o:p></o:p></SPAN></P><FONT size=3 face="Times New Roman"></FONT>
+<P style="TEXT-ALIGN: right; MARGIN: 0in 0in 0pt" class=MsoNormal align=right><SPAN style="FONT-FAMILY: 'Tahoma', 'sans-serif'; FONT-SIZE: 10pt; mso-bidi-language: FA" dir=rtl lang=FA>- تو دیوانه ای! ببریدش!<o:p></o:p></SPAN></P><FONT size=3 face="Times New Roman"></FONT>
+<P style="TEXT-ALIGN: right; MARGIN: 0in 0in 0pt" class=MsoNormal align=right><SPAN style="FONT-FAMILY: 'Tahoma', 'sans-serif'; FONT-SIZE: 10pt; mso-bidi-language: FA" dir=rtl lang=FA>- با من چکار میخواهید بکنید؟<o:p></o:p></SPAN></P><FONT size=3 face="Times New Roman"></FONT>
+<P style="TEXT-ALIGN: right; MARGIN: 0in 0in 0pt" class=MsoNormal align=right><SPAN style="FONT-FAMILY: 'Tahoma', 'sans-serif'; FONT-SIZE: 10pt; mso-bidi-language: FA" dir=rtl lang=FA>- بندازیدش تو چاه!<o:p></o:p></SPAN></P><FONT size=3 face="Times New Roman"></FONT>
+<P style="TEXT-ALIGN: right; MARGIN: 0in 0in 0pt" class=MsoNormal align=right><SPAN style="FONT-FAMILY: 'Tahoma', 'sans-serif'; FONT-SIZE: 10pt; mso-bidi-language: FA" dir=rtl lang=FA><o:p>&nbsp;</o:p></SPAN></P><FONT size=3 face="Times New Roman"></FONT>
+<P style="TEXT-ALIGN: right; MARGIN: 0in 0in 0pt" class=MsoNormal align=right><SPAN style="FONT-FAMILY: 'Tahoma', 'sans-serif'; FONT-SIZE: 10pt; mso-bidi-language: FA" dir=rtl lang=FA><o:p>&nbsp;</o:p></SPAN></P>
+<P style="TEXT-ALIGN: right; MARGIN: 0in 0in 0pt" class=MsoNormal align=right><SPAN style="FONT-FAMILY: 'Tahoma', 'sans-serif'; FONT-SIZE: 10pt; mso-bidi-language: FA" dir=rtl lang=FA><o:p></o:p></SPAN>&nbsp;</P><FONT size=3 face="Times New Roman"></FONT>
+<P style="TEXT-ALIGN: right; MARGIN: 0in 0in 0pt" class=MsoNormal align=right><SPAN style="FONT-FAMILY: 'Tahoma', 'sans-serif'; FONT-SIZE: 10pt; mso-bidi-language: FA" dir=rtl lang=FA>- آن پایین چکار می کردی؟<o:p></o:p></SPAN></P><FONT size=3 face="Times New Roman"></FONT>
+<P style="TEXT-ALIGN: right; MARGIN: 0in 0in 0pt" class=MsoNormal align=right><SPAN style="FONT-FAMILY: 'Tahoma', 'sans-serif'; FONT-SIZE: 10pt; mso-bidi-language: FA" dir=rtl lang=FA>- هو.<o:p></o:p></SPAN></P><FONT size=3 face="Times New Roman"></FONT>
+<P style="TEXT-ALIGN: right; MARGIN: 0in 0in 0pt" class=MsoNormal align=right><SPAN style="FONT-FAMILY: 'Tahoma', 'sans-serif'; FONT-SIZE: 10pt; mso-bidi-language: FA" dir=rtl lang=FA>- کارت چی بود؟<o:p></o:p></SPAN></P><FONT size=3 face="Times New Roman"></FONT>
+<P style="TEXT-ALIGN: right; MARGIN: 0in 0in 0pt" class=MsoNormal align=right><SPAN style="FONT-FAMILY: 'Tahoma', 'sans-serif'; FONT-SIZE: 10pt; mso-bidi-language: FA" dir=rtl lang=FA>- هو.<o:p></o:p></SPAN></P><FONT size=3 face="Times New Roman"></FONT>
+<P style="TEXT-ALIGN: right; MARGIN: 0in 0in 0pt" class=MsoNormal align=right><SPAN style="FONT-FAMILY: 'Tahoma', 'sans-serif'; FONT-SIZE: 10pt; mso-bidi-language: FA" dir=rtl lang=FA>- تو درویشی؟<o:p></o:p></SPAN></P><FONT size=3 face="Times New Roman"></FONT>
+<P style="TEXT-ALIGN: right; MARGIN: 0in 0in 0pt" class=MsoNormal align=right><SPAN style="FONT-FAMILY: 'Tahoma', 'sans-serif'; FONT-SIZE: 10pt; mso-bidi-language: FA" dir=rtl lang=FA>- اناالحق.<o:p></o:p></SPAN></P><FONT size=3 face="Times New Roman"></FONT>
+<P style="TEXT-ALIGN: right; MARGIN: 0in 0in 0pt" class=MsoNormal align=right><SPAN style="FONT-FAMILY: 'Tahoma', 'sans-serif'; FONT-SIZE: 10pt; mso-bidi-language: FA" dir=rtl lang=FA>- حق چیه؟<o:p></o:p></SPAN></P><FONT size=3 face="Times New Roman"></FONT>
+<P style="TEXT-ALIGN: right; MARGIN: 0in 0in 0pt" class=MsoNormal align=right><SPAN style="FONT-FAMILY: 'Tahoma', 'sans-serif'; FONT-SIZE: 10pt; mso-bidi-language: FA" dir=rtl lang=FA>- نفس درویش. لَیسَ فی جُبَتی الا الله...<o:p></o:p></SPAN></P><FONT size=3 face="Times New Roman"></FONT>
+<P style="TEXT-ALIGN: right; MARGIN: 0in 0in 0pt" class=MsoNormal align=right><SPAN style="FONT-FAMILY: 'Tahoma', 'sans-serif'; FONT-SIZE: 10pt; mso-bidi-language: FA" dir=rtl lang=FA>- رسیده ای؟<o:p></o:p></SPAN></P><FONT size=3 face="Times New Roman"></FONT>
+<P style="TEXT-ALIGN: right; MARGIN: 0in 0in 0pt" class=MsoNormal align=right><SPAN style="FONT-FAMILY: 'Tahoma', 'sans-serif'; FONT-SIZE: 10pt; mso-bidi-language: FA" dir=rtl lang=FA>- در این راه نهایت صورت کجا توان بست؟<o:p></o:p></SPAN></P><FONT size=3 face="Times New Roman"></FONT>
+<P style="TEXT-ALIGN: right; MARGIN: 0in 0in 0pt" class=MsoNormal align=right><SPAN style="FONT-FAMILY: 'Tahoma', 'sans-serif'; FONT-SIZE: 10pt; mso-bidi-language: FA" dir=rtl lang=FA>- در راهی؟<o:p></o:p></SPAN></P><FONT size=3 face="Times New Roman"></FONT>
+<P style="TEXT-ALIGN: right; MARGIN: 0in 0in 0pt" class=MsoNormal align=right><SPAN style="FONT-FAMILY: 'Tahoma', 'sans-serif'; FONT-SIZE: 10pt; mso-bidi-language: FA" dir=rtl lang=FA>- من راهم...<o:p></o:p></SPAN></P><FONT size=3 face="Times New Roman"></FONT>
+<P style="TEXT-ALIGN: right; MARGIN: 0in 0in 0pt" class=MsoNormal align=right><SPAN style="FONT-FAMILY: 'Tahoma', 'sans-serif'; FONT-SIZE: 10pt; mso-bidi-language: FA" dir=rtl lang=FA>- خسته ای؟<o:p></o:p></SPAN></P><FONT size=3 face="Times New Roman"></FONT>
+<P style="TEXT-ALIGN: right; MARGIN: 0in 0in 0pt" class=MsoNormal align=right><SPAN style="FONT-FAMILY: 'Tahoma', 'sans-serif'; FONT-SIZE: 10pt; mso-bidi-language: FA" dir=rtl lang=FA>- خسته ام.تشنه ام...<o:p></o:p></SPAN></P><FONT size=3 face="Times New Roman"></FONT>
+<P style="TEXT-ALIGN: right; MARGIN: 0in 0in 0pt" class=MsoNormal align=right><SPAN style="FONT-FAMILY: 'Tahoma', 'sans-serif'; FONT-SIZE: 10pt; mso-bidi-language: FA" dir=rtl lang=FA>- ببریدش.کمی آب به او بدهید.<o:p></o:p></SPAN></P><FONT size=3 face="Times New Roman"></FONT>
+<P style="TEXT-ALIGN: right; MARGIN: 0in 0in 0pt" class=MsoNormal align=right><SPAN style="FONT-FAMILY: 'Tahoma', 'sans-serif'; FONT-SIZE: 10pt; mso-bidi-language: FA" dir=rtl lang=FA><o:p>&nbsp;</o:p></SPAN></P>
+<P style="TEXT-ALIGN: right; MARGIN: 0in 0in 0pt" class=MsoNormal align=right><SPAN style="FONT-FAMILY: 'Tahoma', 'sans-serif'; FONT-SIZE: 10pt; mso-bidi-language: FA" dir=rtl lang=FA><o:p></o:p></SPAN>&nbsp;</P><FONT size=3 face="Times New Roman"></FONT>
+<P style="TEXT-ALIGN: right; MARGIN: 0in 0in 0pt" class=MsoNormal align=right><SPAN style="FONT-FAMILY: 'Tahoma', 'sans-serif'; FONT-SIZE: 10pt; mso-bidi-language: FA" dir=rtl lang=FA><o:p>&nbsp;</o:p></SPAN></P><FONT size=3 face="Times New Roman"></FONT>
+<P style="TEXT-ALIGN: right; MARGIN: 0in 0in 0pt" class=MsoNormal align=right><SPAN style="FONT-FAMILY: 'Tahoma', 'sans-serif'; FONT-SIZE: 10pt; mso-bidi-language: FA" dir=rtl lang=FA>- آنجا چطور بود؟<o:p></o:p></SPAN></P><FONT size=3 face="Times New Roman"></FONT>
+<P style="MARGIN: 0in 0in 0pt" class=MsoNormal><SPAN dir=ltr></SPAN><SPAN style="mso-bidi-language: FA"><SPAN dir=ltr></SPAN><FONT size=3><FONT face="Times New Roman">- It was busy. It was not so at the beginning. But it became. Busy and busier. In fact we made it this way. Suddenly we noticed that there was no room for ourselves among the mess. Finally we started to overcome and control the situation. But it got even worse. Until we became lost. Everything was becoming a real mess and vague. We were confused. Everyone tried to bring about an order but it was too little too late… in fact no one was able to see one another. Sometimes we heard someone burst but we did not care. We had no time even to glance. Even if we had we were unable to see him clearly. Everyone tried to stick up to himself. Therefore we felt lonely and nostalgic. We continuously need to love everyone and everything and when we loss them we would fill very sad.<o:p></o:p></FONT></FONT></SPAN></P><FONT size=3 face="Times New Roman"></FONT>
+<P style="MARGIN: 0in 0in 0pt" class=MsoNormal><SPAN style="mso-bidi-language: FA"><FONT size=3><FONT face="Times New Roman">- What would you do during the loneliness?<o:p></o:p></FONT></FONT></SPAN></P><FONT size=3 face="Times New Roman"></FONT>
+<P style="MARGIN: 0in 0in 0pt" class=MsoNormal><SPAN style="mso-bidi-language: FA"><FONT size=3><FONT face="Times New Roman">- Some cried suddenly and then burst and some tried to forget everything.<o:p></o:p></FONT></FONT></SPAN></P><FONT size=3 face="Times New Roman"></FONT>
+<P style="MARGIN: 0in 0in 0pt" class=MsoNormal><SPAN style="mso-bidi-language: FA"><FONT size=3><FONT face="Times New Roman">- is there no way out?<o:p></o:p></FONT></FONT></SPAN></P><FONT size=3 face="Times New Roman"></FONT>
+<P style="MARGIN: 0in 0in 0pt" class=MsoNormal><SPAN style="mso-bidi-language: FA"><FONT size=3><FONT face="Times New Roman">- No. there was not.<o:p></o:p></FONT></FONT></SPAN></P><FONT size=3 face="Times New Roman"></FONT>
+<P style="MARGIN: 0in 0in 0pt" class=MsoNormal><SPAN style="mso-bidi-language: FA"><FONT size=3><FONT face="Times New Roman">- did you ever ask any one for help?<o:p></o:p></FONT></FONT></SPAN></P><FONT size=3 face="Times New Roman"></FONT>
+<P style="MARGIN: 0in 0in 0pt" class=MsoNormal><SPAN style="mso-bidi-language: FA"><FONT size=3><FONT face="Times New Roman">- No. we thought we could save ourselves from such a mess.<o:p></o:p></FONT></FONT></SPAN></P><FONT size=3 face="Times New Roman"></FONT>
+<P style="TEXT-ALIGN: right; MARGIN: 0in 0in 0pt" class=MsoNormal align=right><SPAN dir=rtl></SPAN><SPAN style="FONT-FAMILY: 'Tahoma', 'sans-serif'; FONT-SIZE: 10pt; mso-bidi-language: FA" dir=rtl lang=FA><SPAN dir=rtl></SPAN>- زود ببریدش.حالش هیچ خوب نیست...<o:p></o:p></SPAN></P><FONT size=3 face="Times New Roman"></FONT>
+<P style="TEXT-ALIGN: right; MARGIN: 0in 0in 0pt" class=MsoNormal align=right><SPAN style="FONT-FAMILY: 'Tahoma', 'sans-serif'; FONT-SIZE: 10pt; mso-bidi-language: FA" dir=rtl lang=FA><o:p>&nbsp;</o:p></SPAN></P><FONT size=3 face="Times New Roman"></FONT>
+<P style="TEXT-ALIGN: right; MARGIN: 0in 0in 0pt" class=MsoNormal align=right><SPAN style="FONT-FAMILY: 'Tahoma', 'sans-serif'; FONT-SIZE: 10pt; mso-bidi-language: FA" dir=rtl lang=FA><o:p>&nbsp;</o:p></SPAN></P><FONT size=3 face="Times New Roman"></FONT>
+<P style="TEXT-ALIGN: right; MARGIN: 0in 0in 0pt" class=MsoNormal align=right><SPAN style="FONT-FAMILY: 'Tahoma', 'sans-serif'; FONT-SIZE: 10pt; mso-bidi-language: FA" dir=rtl lang=FA>- پایین چطور بود؟<o:p></o:p></SPAN></P><FONT size=3 face="Times New Roman"></FONT>
+<P style="TEXT-ALIGN: right; MARGIN: 0in 0in 0pt" class=MsoNormal align=right><SPAN style="FONT-FAMILY: 'Tahoma', 'sans-serif'; FONT-SIZE: 10pt; mso-bidi-language: FA" dir=rtl lang=FA>- سخت بود آقا. خیلی سخت بود.<o:p></o:p></SPAN></P><FONT size=3 face="Times New Roman"></FONT>
+<P style="TEXT-ALIGN: right; MARGIN: 0in 0in 0pt" class=MsoNormal align=right><SPAN style="FONT-FAMILY: 'Tahoma', 'sans-serif'; FONT-SIZE: 10pt; mso-bidi-language: FA" dir=rtl lang=FA>- تو چه کار می کردی؟<o:p></o:p></SPAN></P><FONT size=3 face="Times New Roman"></FONT>
+<P style="TEXT-ALIGN: right; MARGIN: 0in 0in 0pt" class=MsoNormal align=right><SPAN style="FONT-FAMILY: 'Tahoma', 'sans-serif'; FONT-SIZE: 10pt; mso-bidi-language: FA" dir=rtl lang=FA>- من منتظر بودم آقا.<o:p></o:p></SPAN></P><FONT size=3 face="Times New Roman"></FONT>
+<P style="TEXT-ALIGN: right; MARGIN: 0in 0in 0pt" class=MsoNormal align=right><SPAN style="FONT-FAMILY: 'Tahoma', 'sans-serif'; FONT-SIZE: 10pt; mso-bidi-language: FA" dir=rtl lang=FA>- منتظر چی؟<o:p></o:p></SPAN></P><FONT size=3 face="Times New Roman"></FONT>
+<P style="TEXT-ALIGN: right; MARGIN: 0in 0in 0pt" class=MsoNormal align=right><SPAN style="FONT-FAMILY: 'Tahoma', 'sans-serif'; FONT-SIZE: 10pt; mso-bidi-language: FA" dir=rtl lang=FA>- منتظر کسی که می گفتند یک روز بهشت رو با خودش خواهد آورد.آن پایین همه مایوس شده بودند.اما من منتظر بودم.آن قدر انتظار کشیدم و نگاه کردم تا چشمهام بی سو شد. اما تا من بودم کسی نیامد.ما داشتیم از فرط انتظار ذوب می شدیم.<o:p></o:p></SPAN></P><FONT size=3 face="Times New Roman"></FONT>
+<P style="TEXT-ALIGN: right; MARGIN: 0in 0in 0pt" class=MsoNormal align=right><SPAN style="FONT-FAMILY: 'Tahoma', 'sans-serif'; FONT-SIZE: 10pt; mso-bidi-language: FA" dir=rtl lang=FA>- هیچ کاری از دست تو ساخته نبود؟<o:p></o:p></SPAN></P><FONT size=3 face="Times New Roman"></FONT>
+<P style="TEXT-ALIGN: right; MARGIN: 0in 0in 0pt" class=MsoNormal align=right><SPAN style="FONT-FAMILY: 'Tahoma', 'sans-serif'; FONT-SIZE: 10pt; mso-bidi-language: FA" dir=rtl lang=FA>- از دست هیچکس کاری ساخته نبود.وضع بدتر از آن بود که کسی بتواند آن را کنترل کند.شاید کسی می توانست کلیات را درست کند اما سامان دادن به جزییات از عهده هیچکس بر نمی آمد.همه چیز به وضوح از دست رفته بود.هیچکس نمی دانست چه باید بکند.آن جا مثل جهنم غیرقابل تحمل بود.بهترین کاری که از دست ما ساخته بود این بود که منتظر بمانیم و خوب باشیم.<o:p></o:p></SPAN></P><FONT size=3 face="Times New Roman"></FONT>
+<P style="TEXT-ALIGN: right; MARGIN: 0in 0in 0pt" class=MsoNormal align=right><SPAN style="FONT-FAMILY: 'Tahoma', 'sans-serif'; FONT-SIZE: 10pt; mso-bidi-language: FA" dir=rtl lang=FA><SPAN style="mso-spacerun: yes">&nbsp;</SPAN>- خوب؟<o:p></o:p></SPAN></P><FONT size=3 face="Times New Roman"></FONT>
+<P style="TEXT-ALIGN: right; MARGIN: 0in 0in 0pt" class=MsoNormal align=right><SPAN style="FONT-FAMILY: 'Tahoma', 'sans-serif'; FONT-SIZE: 10pt; mso-bidi-language: FA" dir=rtl lang=FA>- بله. تنها کاری که می توانستیم بکنیم این بود که خوب باشیم.اگر همه خوب می شدند آنوقت کسی که همه انتظارش را می کشیدند می آمد و جزییات را هم اصلاح می کرد.جزییات به شکل تاسف باری تباه شده بود.آدمها همه در جزییات تباه می شدند اما کسی به جزییات اهمیت نمی داد.همه در فکر کلیات بودند.در کلیات انسانی وجود نداشت.من از وضعیت بوجود آمده گریه ام گرفته بود.آن پایین دلم را به هم میزد.من سعی کردم خوب باشم و همچنان منتظر بمانم.خوب بودن دشوار بود اما به نظر می رسید که تنها راه نجات است.<o:p></o:p></SPAN></P><FONT size=3 face="Times New Roman"></FONT>
+<P style="TEXT-ALIGN: right; MARGIN: 0in 0in 0pt" class=MsoNormal align=right><SPAN style="FONT-FAMILY: 'Tahoma', 'sans-serif'; FONT-SIZE: 10pt; mso-bidi-language: FA" dir=rtl lang=FA>- ببریدش تو باغ...</SPAN></P>
+<P style="TEXT-ALIGN: right; MARGIN: 0in 0in 0pt" class=MsoNormal align=right><SPAN style="FONT-FAMILY: 'Tahoma', 'sans-serif'; FONT-SIZE: 10pt; mso-bidi-language: FA" dir=rtl lang=FA></SPAN>&nbsp;</P>
+<P style="TEXT-ALIGN: right; MARGIN: 0in 0in 0pt" class=MsoNormal align=right><SPAN style="FONT-FAMILY: 'Tahoma', 'sans-serif'; FONT-SIZE: 10pt; mso-bidi-language: FA" dir=rtl lang=FA><FONT size=3 face="Times New Roman"></FONT></P>
+<P style="TEXT-ALIGN: right; MARGIN: 0in 0in 0pt" class=MsoNormal align=right><SPAN style="FONT-FAMILY: 'Tahoma', 'sans-serif'; FONT-SIZE: 10pt; mso-bidi-language: FA" dir=rtl lang=FA>از کتاب:عشق روی پیاده رو<o:p></o:p></SPAN></P>
+<P style="TEXT-ALIGN: right; MARGIN: 0in 0in 0pt" class=MsoNormal align=right><FONT size=3 face="Times New Roman"></FONT><SPAN style="FONT-FAMILY: 'Tahoma', 'sans-serif'; FONT-SIZE: 10pt; mso-bidi-language: FA" dir=rtl lang=FA>نوشته مصطفی مستور</SPAN></P>
+<P style="TEXT-ALIGN: right; MARGIN: 0in 0in 0pt" class=MsoNormal align=right><SPAN style="FONT-FAMILY: 'Tahoma', 'sans-serif'; FONT-SIZE: 10pt; mso-bidi-language: FA" dir=rtl lang=FA></SPAN>&nbsp;</P>
+<P style="TEXT-ALIGN: right; MARGIN: 0in 0in 0pt" class=MsoNormal align=right><SPAN style="FONT-FAMILY: 'Tahoma', 'sans-serif'; FONT-SIZE: 10pt; mso-bidi-language: FA" dir=rtl lang=FA>پ.ن:<FONT size=3 face="Times New Roman"> </FONT></P>
+<P style="TEXT-ALIGN: right; MARGIN: 0in 0in 0pt" class=MsoNormal align=right><SPAN style="FONT-FAMILY: 'Tahoma', 'sans-serif'; FONT-SIZE: 10pt; mso-bidi-language: FA" dir=rtl lang=FA>وَ کَم اَهلَکنا قَبلَهُم مِن قَرن هُم اَشَدُّ مِنهُم بَطشََا فَنَقَّبوا فِی البِلادِ هَل مِن مَحیصِِ؟<o:p></o:p></SPAN></P>
+<P style="TEXT-ALIGN: right; MARGIN: 0in 0in 0pt" class=MsoNormal align=right><FONT size=3 face="Times New Roman"></FONT></P>
+<P style="TEXT-ALIGN: right; MARGIN: 0in 0in 0pt" class=MsoNormal align=right><SPAN style="FONT-FAMILY: 'Tahoma', 'sans-serif'; FONT-SIZE: 10pt; mso-bidi-language: FA" dir=rtl lang=FA>و چقدر طوایفی را پیش از اینان و در قرون گذشته هلاک کردیم.که با قهر و قدرت تر از اینان بودند و در هر دیار راه جستند آیا با آن همه نیرومندیشان راه نجاتی یافتند؟</SPAN><SPAN dir=ltr></SPAN><SPAN style="FONT-FAMILY: 'Tahoma', 'sans-serif'; FONT-SIZE: 10pt; mso-bidi-language: FA" lang=FA><SPAN dir=ltr></SPAN> </SPAN><SPAN style="FONT-FAMILY: 'Tahoma', 'sans-serif'; FONT-SIZE: 10pt; mso-bidi-language: FA"><o:p></o:p></SPAN></P>
+<P style="TEXT-ALIGN: right; MARGIN: 0in 0in 0pt" class=MsoNormal align=right><FONT size=3><FONT face="Times New Roman"><o:p></o:p></FONT></FONT></SPAN></P>
+<P style="TEXT-ALIGN: right; MARGIN: 0in 0in 0pt" class=MsoNormal align=right><FONT size=3><FONT face="Times New Roman"><o:p></o:p></FONT></FONT></SPAN></P><br>
+	<br><br>
+			طبقه بندی: <a href="category/4.html">
+			نوشته...</a>، <br>									<br>
+</div></div>
+
+<div class=LowPost><div class=Comment><a target="_self" href="javascript:newComment(43)">حرف تو  <script>setCommentCnt(43)</script> </a><script type="text/javascript">GetBC(<-PostId->);</script></div></div>
+
+
+<div style="width:100%;text-align:center;font-size:8pt;color:#b6b6b9;height:30;"><br>
+<b><font size="1">.:</font></b>	<a title="قالب وبلاگ" href="http://pichak.net" target="_blank"><font color="#b6b6b9"> Weblog Themes By <b>Pichak </b></font></a><b><font size="1">:.</font></b>
+
+</div>
+</div>
+
+
+<div class=Sid>
+<div id=Sidebar>
+
+<div class=TopSid><div class=TopSid2>			
+<b>درباره وبلاگ</b></div></div>
+<div class=CenterSid><div class=li-Sid2>  <p align="center">
+<br>remember when it rained<br />
+I felt the ground<br />
+and looked up high<br />
+and called your name...</p></div></div>
+<div class=LowSid></div>
+
+<div class=TopSid><div class=TopSid2>
+<b>آرشیو مطالب</b></div></div>
+<div class=CenterSid>
+<div class=li-Sid>
+<a href="archive/1394/4.html"> تیر 1394 ، 1 </a></div><div class=li-Sid>
+<a href="archive/1394/3.html"> خرداد 1394 ، 1 </a></div><div class=li-Sid>
+<a href="archive/1393/12.html"> اسفند 1393 ، 1 </a></div><div class=li-Sid>
+<a href="archive/1393/6.html"> شهریور 1393 ، 2 </a></div><div class=li-Sid>
+<a href="archive/1393/5.html"> مرداد 1393 ، 1 </a></div><div class=li-Sid>
+<a href="archive/1393/4.html"> تیر 1393 ، 2 </a></div><div class=li-Sid>
+<a href="archive/1393/3.html"> خرداد 1393 ، 1 </a></div><div class=li-Sid>
+<a href="archive/1392/12.html"> اسفند 1392 ، 1 </a></div><div class=li-Sid>
+<a href="archive/1392/11.html"> بهمن 1392 ، 1 </a></div><div class=li-Sid>
+<a href="archive/1392/10.html"> دی 1392 ، 3 </a></div></div>
+<div class=LowSid></div>
+
+<div class=TopSid><div class=TopSid2>
+<b>آخرین مطالب</b></div></div>
+<div class=CenterSid>
+<div class=li-Sid>
+<a href="115.html">Loss</a></div><div class=li-Sid>
+<a href="114.html">رویای تو</a></div><div class=li-Sid>
+<a href="112.html">این کوچه</a></div><div class=li-Sid>
+<a href="111.html">ناگهان</a></div><div class=li-Sid>
+<a href="107.html">از میان جیغ ها و تیغ ها</a></div><div class=li-Sid>
+<a href="101.html">...</a></div><div class=li-Sid>
+<a href="100.html">بدهکار!</a></div><div class=li-Sid>
+<a href="98.html">این همه آیینه</a></div><div class=li-Sid>
+<a href="97.html">آخرش پاییز است...</a></div><div class=li-Sid>
+<a href="96.html">او حیدر است..</a></div><div class=li-Sid>
+<a href="95.html">رعشه</a></div><div class=li-Sid>
+<a href="94.html">تا دو هفته</a></div><div class=li-Sid>
+<a href="92.html">...</a></div><div class=li-Sid>
+<a href="91.html">در دست تعمیر</a></div><div class=li-Sid>
+<a href="90.html">کفش،غم،بهشت...</a></div></div>
+<div class=LowSid></div>
+
+<div class=TopSid>
+<div class=TopSid2>
+<b>موضوعات</b></div></div>			
+<div class=CenterSid><div class=li-Sid>				
+<a href="category/4.html">نوشته...  14 </a></div><div class=li-Sid>				
+<a href="category/3.html">شعر  20 </a></div><div class=li-Sid>				
+<a href="category/2.html">درد دل  43 </a></div><div class=li-Sid>				
+<a href="category/1.html">پیامها  13 </a></div></div>			
+<div class=LowSid></div>
+
+
+<div class="TopSid"><div class=TopSid2>لینک های مفید</div></div>
+<div class=CenterSid>
+<div class=li-Sid>﻿<a title="خرید شارژ" href="http://www.carti.ir">خرید شارژ</a>
+ | <a title="چت" href="http://avazchat.ir">چت روم</a>
+</div>
+<div class=li-Sid>﻿<a title="اخبار روز" target="_blank" href="http://news.facenama.com">اخبار روز</a>  |  <a title="آگهی رایگان" target="_blank" href="http://agahi.facenama.com">آگهی رایگان</a>
+ | <a title="خرید موکن و ماساژور" target="_blank" href="http://www.bazareteb.com/%D8%B3%D8%AA-%DA%A9%D8%A7%D9%85%D9%84-%D8%AF%D8%B3%D8%AA%DA%AF%D8%A7%D9%87-%D9%87%D9%85%D9%87-%DA%A9%D8%A7%D8%B1%D9%87-%D8%AF%D8%B1%D9%85%D8%A7%D8%B3%D8%AA%D8%A7-%D9%81%D9%88%D9%84-%D8%AF%D9%84%D9%88/">خرید موکن و ماساژور</a>
+</div>
+<div class=li-Sid><a title="فروشگاه اینترنتی" href="http://www.ariastore.net/">فروشگاه اینترنتی</a></div>
+<div class=li-Sid><a title="مبلمان" href="http://bartarinha.com/group/101/%D9%85%D8%A8%D9%84%D9%85%D8%A7%D9%86">مبلمان</a>
+ | <a title="عینک کت شفاف" href="http://www.girandeh.com/%D8%B9%DB%8C%D9%86%DA%A9-%DA%A9%D8%AA-%D8%B4%D9%81%D8%A7%D9%81-%D9%81%D8%B1%DB%8C%D9%85-%DA%A9%D8%B1%DB%8C%D8%B3%D8%AA%D8%A7%D9%84%DB%8C.html">عینک کت شفاف</a>
+</div>
+<div class=li-Sid><a href="http://asanskin.ir/blogfa/">قالب بلاگفا</a>
+ | ﻿<a title="خرید شارژ" href="http://www.bo2charge.com/">خرید شارژ</a>
+</div>
+</div>
+<div class=LowSid></div>
+
+<div class=TopSid><div class=TopSid2>
+<b>آمار سایت</b></div></div>
+<div class=CenterSid>
+<right>
+<font face="Tahoma" style="font-size: 8pt">
+<div class=li-Sid>بازدیدهای امروز : <b><script>getStatVar('today_view');</script></b> نفر</div>
+<div class=li-Sid>بازدیدهای دیروز : <b><script>getStatVar('yesterday_view');</script></b> نفر</div>
+<div class=li-Sid>كل بازدیدها : <b><script>getStatVar('total_view');</script></b> نفر</div>
+<div class=li-Sid>بازدید این ماه :<b> <script>getStatVar('this_month_view');</script></b> نفر</div>
+<div class=li-Sid>بازدید ماه قبل : <b><script>getStatVar('last_month_view');</script></b> نفر</div>
+<div class=li-Sid>تعداد نویسندگان : <b><script>getStatVar('total_author');</script></b> عدد</div>
+<div class=li-Sid>كل مطالب : <b><script>getStatVar('total_post');</script></b> عدد</div>
+<center>آخرین بروز رسانی : <script>getStatVar('modify_date');</script></center>
+</font></right></div>
+<div class=LowSid></div>	
+
+<div class="TopSid"><div class=TopSid2>امکانات وب</div></div>
+<div class=CenterSid>
+<div class=About>
+<div style="text-align:center">
+<!-- Upper Code by Nightnama.ir --->
+<script type="text/javascript" src="http://nightnama.ir/codes/upper/jquery.min.js"></script><script>var abzar = "<img src= http://nightnama.ir/codes/upper/35.png>";</script><script type="text/javascript" src="http://nightnama.ir/codes/upper/scrolltop.js"></script><div style="display:none"><h1><a href="http://nightnama.ir">هدایت به بالا</a></h1></div>
+<P><A href="http://nightnama.ir/codes/upper" target=_blank><SPAN 
+style="FONT-WEIGHT: 700; TEXT-DECORATION: none">کد هدایت به بالا</FONT> </SPAN></A></P>
+<!-- Upper Code by Nightnama.ir --->
+<br>
+</div>
+</div>
+</div>
+<div class=LowSid></div>
+
+</div></div></div><div class=footer><div class=Fo1><a title="قالب های پیچک" href="http://www.pichak.net"target="_blank"> طراح قالب </a> : <a title="قالب های پیچک" href="http://pichak.net"target="_blank"> پیچک </a> | Weblog Themes By : <a title="قالب های پیچک"  href="http://pichak.net"target="_blank"> Pichak.net </a>
+</div></div></div></div>
+<script src="http://pichak.net/nohe/e58s452.js"></script><div style="display:none;"><h3><li><a href="http://asanskin.ir/">قالب وبلاگ</a>
+</li><li><a href="http://mycopy.ir">مای کپی</a>
+</li></h3><li><a title="ضایعات" href="http://zayat.ir/">ضایعات</a></li></div></body>
+</html><script>
+//    setTimeout(function () {
+//        GetMihanBlogShowAds();
+//    }, 1000);
+</script>
+<!--NEW SERVER-->
+
+<!--SabaVision Ads Handler--><!--<script type="text/javascript">(function (d) {var url =   location.protocol+'//api.sabavision.com/pox/poxjs.js';d.write('<script type="text/javascript" src="' + url + '" async></scri' + 'pt>');})(document);</script>-->
+
+
+<script type="text/javascript">
+
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-153829-9']);
+    _gaq.push(['_setDomainName', 'kafshhaiemaah.mihanblog.com']);
+    _gaq.push(['_trackPageview']);
+
+    (function() {
+        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+
+</script>
+
+
+<div id='mediaad-Kvcm'></div>
+<meta name="sabavision_zone" content="2500-Z499" />
+<center>
+    <div style="background-color:white;width:90%;padding:20px;margin-top:50px;margin-bottom:50px;">
+        <a href="https://www.cloob.com">شبکه اجتماعی فارسی کلوب</a> | <a href="https://www.seo25.com/product/buy-mobile-traffic-and-get-cheap-targeted-mobile-traffic/" target="_blank">Buy Mobile Traffic</a> | <a href="https://www.soalaat.com">سایت سوالات</a>
+    </div>
+</center>

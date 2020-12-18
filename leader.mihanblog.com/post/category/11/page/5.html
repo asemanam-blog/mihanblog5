@@ -1,0 +1,1328 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" /><link rel="EditURI" type="application/rsd+xml" title="RSD" href="../../../../xmlrpc%3Frsd" />
+<script type="text/javascript" src="http://static.mihanblog.com//public/scripts/run/g.other.v3.js"></script>
+<script>
+
+	function c_$(id){
+        return document.getElementById(id);
+    }
+    
+			//if (parent.frames.length) top.location.href= document.location;
+		
+	setTodayDate = function(){
+		document.write('پنجشنبه 27 آذر 1399');
+		/*827628*/	}
+
+</script>
+
+
+
+        <script type="text/javascript">
+            (function(){
+            var now = new Date();
+            var head = document.getElementsByTagName('head')[0];
+            var script = document.createElement('script');
+            script.async = true;
+            var script_address = 'https://cdn.yektanet.com/js/mihanblog.com/native-mihanblog.com-6531.js';
+            script.src = script_address + '?v=' + now.getFullYear().toString() + '0' + now.getMonth() + '0' + now.getDate() + '0' + now.getHours();
+            head.appendChild(script);
+            })();
+        </script>
+
+        <!--<script type="text/javascript">
+            var head = document.getElementsByTagName("head")[0];
+            var script = document.createElement("script");
+            script.type = "text/javascript";
+            script.async=1;
+            script.src = "https://s1.mediaad.org/serve/mihanblog.com/loader.js" ;
+            head.appendChild(script);
+        </script>-->
+        
+        <script>
+            var sabaVisionWebsiteID = "9bab9dac-041d-4bdb-b39a-1ed789f65eed"; var sabaVisionWebsitePage = "ALL"
+        </script>
+        <link rel="stylesheet" href="https://plus.sabavision.com/dox/dox.min.css">
+        <script src="https://plus.sabavision.com/dox/dox.min.js"></script>
+        
+        <script>
+	try{
+		var commentCnt = new Array();
+		commentCnt[315]='15';commentCnt[316]='12';commentCnt[319]='114';commentCnt[320]='12';commentCnt[328]='90';commentCnt[329]='19';commentCnt[331]='86';	} catch(e){}
+	
+	newComment = function(post_id){
+		try{
+			window.open('/post/comment/'+post_id,'comment','status=yes,scrollbars=yes,toolbar=no,menubar=no,location=no ,width=480px,height=540px');
+		} catch(e){}
+	}
+	setCommentCnt = function(post_id){
+		try{
+			if(commentCnt[post_id]){
+				document.write(commentCnt[post_id]);
+			} else {
+				document.write(0);
+			}
+		} catch(e){}
+	}
+</script><script>
+
+
+	mihanblogUpdateLike = function(postid,type){
+		var url = '/post/like/'+postid+'/'+type;
+		mihanblogGetAjax(url,function(){});
+	};
+	try{
+        mihanblogGetAjax = function (url,callback) {
+    		var req;
+			if (window.XMLHttpRequest)
+            {
+                // code for IE7+, Firefox, Chrome, Opera, Safari
+			  	req = new XMLHttpRequest();
+			}else{	// code for IE6, IE5
+			  	req = new ActiveXObject("Microsoft.XMLHTTP");
+		  	}
+		    req.open("GET", url, 1);
+		    req.onreadystatechange = function () {
+		        if (req.readyState == 4) {
+		            if (req.status == 200) {
+		            	var response = eval(req.responseText);
+		            	callback();
+		            }else{
+	            		return ;
+		            }
+		        }else{
+					return ;
+		        }
+		    }
+		    req.send(null);
+		}
+	}catch(e){}
+
+	try{
+		var mihanblogLikeArrCnt = new Array();
+		var mihanblogDisLikeArrCnt = new Array();
+
+		mihanblogLikeArrCnt[315]='0';
+mihanblogDisLikeArrCnt[315]='0';
+mihanblogLikeArrCnt[316]='0';
+mihanblogDisLikeArrCnt[316]='0';
+mihanblogLikeArrCnt[319]='1';
+mihanblogDisLikeArrCnt[319]='0';
+mihanblogLikeArrCnt[320]='0';
+mihanblogDisLikeArrCnt[320]='0';
+mihanblogLikeArrCnt[328]='1';
+mihanblogDisLikeArrCnt[328]='0';
+mihanblogLikeArrCnt[329]='0';
+mihanblogDisLikeArrCnt[329]='0';
+mihanblogLikeArrCnt[331]='0';
+mihanblogDisLikeArrCnt[331]='0';
+	} catch(e){}
+
+
+
+    mihanblogPostLike = function(post_id){
+
+        mihanblogLikeCnt = (mihanblogLikeArrCnt[post_id]? mihanblogLikeArrCnt[post_id] : 0);
+        mihanblogDisLikeCnt = (mihanblogDisLikeArrCnt[post_id]? mihanblogDisLikeArrCnt[post_id] : 0);
+        mihanblogLikeCnt = parseInt(mihanblogLikeCnt);
+        mihanblogDisLikeCnt = parseInt(mihanblogDisLikeCnt);
+
+        document.write(
+                '<div class="mihanblog_like_wrapper ">'+
+                       '<div id="dislikeBar_'+post_id+'" onclick="mihanblogUpdateLike('+post_id+',\'dislike\')"   class="mihanblog_like_bar mihanblog_like_dislikeBar mihanblog_like_show_help ">-<div class="mihanblog_like_Cnt" id="disLikeCnt_'+post_id+'">'+mihanblogDisLikeCnt+'</div>'+
+                            '<span  class="mihanblog_like_v2_help mihanblog_like_v2_help_dislike clearfix"> '+
+                                '<span class="mihanblog_like_help_arrow mihanblog_like_help_arrow_dislike clearfix"></span>'+
+                                '<span class="mihanblog_like_help_text">نمی پسندم</span>'+
+                            '</span>'+
+                        '</div>'+
+                       '<div id="Like_'+post_id+'" class="mihanblog_like_border"></div>'+
+                       '<div id="likeBar_'+post_id+'" onclick="mihanblogUpdateLike('+post_id+',\'like\')"  class="mihanblog_like_bar mihanblog_like_likeBar mihanblog_like_show_help" >+<div class="mihanblog_like_Cnt" id="likeCnt_'+post_id+'">'+mihanblogLikeCnt+'</div>'+
+                            '<span  class="mihanblog_like_v2_help mihanblog_like_v2_help_like clearfix"> '+
+                                '<span class="mihanblog_like_help_arrow mihanblog_like_help_arrow_like clearfix"></span>'+
+                                '<span class="mihanblog_like_help_text">می پسندم</span>'+
+                            '</span>'+
+                        '</div>'+
+
+                '</div>'
+        );
+
+
+
+        mihanblogDisplayeLike(post_id);
+    }
+
+
+    mihanblogDisplayeLike = function(post_id){
+
+        mihanblogLikeCnt = (mihanblogLikeArrCnt[post_id]? mihanblogLikeArrCnt[post_id] : 0);
+        mihanblogDisLikeCnt = (mihanblogDisLikeArrCnt[post_id]? mihanblogDisLikeArrCnt[post_id] : 0);
+        mihanblogLikeCnt = parseInt(mihanblogLikeCnt);
+        mihanblogDisLikeCnt = parseInt(mihanblogDisLikeCnt);
+
+
+
+        sum = mihanblogLikeCnt - mihanblogDisLikeCnt;
+        backgroundBorder =  document.getElementById('Like_'+post_id);
+        var likeObj = document.getElementById('likeCnt_'+post_id);
+        var disLikeObj = document.getElementById('disLikeCnt_'+post_id);
+
+
+
+
+
+        likeObj.innerHTML =  mihanblogLikeCnt ;
+        disLikeObj.innerHTML =  mihanblogDisLikeCnt;
+
+        if(sum == 0){
+            backgroundBorder.style.backgroundImage = "url('/public/public/images/icons/like_likedislike.png')";
+            document.getElementById('dislikeBar_'+post_id).style.width = '19px';
+            document.getElementById('likeBar_'+post_id).style.width = '19px';
+        }else{
+             if(sum > 0){
+                 backgroundBorder.style.backgroundImage = "url('/public/public/images/icons/like_like.png')";
+                 document.getElementById('likeBar_'+post_id).style.width = '23px';
+                 document.getElementById('dislikeBar_'+post_id).style.width = '15px';
+             }else{
+                 backgroundBorder.style.backgroundImage = "url('/public/public/images/icons/like_dislike.png')";
+                 document.getElementById('likeBar_'+post_id).style.width = '15px';
+                 document.getElementById('dislikeBar_'+post_id).style.width = '23px';
+             }
+        }
+
+    }
+
+
+
+
+</script>
+
+<style type="text/css">
+
+
+    .clearfix {display: inline-block;}
+    .clearfix:after {
+        content: ".";
+        display: block;
+        height: 0;
+        clear: both;
+        visibility: hidden;
+    }
+
+    .mihanblog_like_wrapper {
+        color: #ffffff;
+        direction: ltr;
+        position: relative;
+    }
+    .mihanblog_like_wrapper span{
+        display: none;
+    }
+    .mihanblog_like_bar {
+        color: #FFFFFF;
+        cursor: pointer;
+        float: left;
+        font-size: 10px;
+        height: 20px;
+        line-height: 19px;
+        margin: 5px 0;
+    }
+    .mihanblog_like_likeBar {
+        background-color: #88B131;
+        padding-right: 5px;
+        border-top-right-radius: 2px;
+        border-bottom-right-radius: 2px;
+        text-align: right;
+    }
+    .mihanblog_like_likeBar:hover{
+        background-color: #699017;
+    }
+    .mihanblog_like_border {
+        background-color: #666666;
+        border: 1px solid #666666;
+        float: left;
+        font-size: 12px;
+        height: 20px;
+        margin-top: 2px;
+        width: 25px;
+        padding: 3px 5px 2px 0;
+        text-align: center;
+        border-radius: 2px;
+        color: #ffffff;
+        direction: ltr;
+        background-repeat: no-repeat ;
+        background-position: 4px center;
+    }
+    .mihanblog_like_border img {
+        margin-left: 2px;
+        margin-top: 2px;
+        width: 22px;
+    }
+    .mihanblog_like_dislikeBar {
+        background-color: #FF6F31;
+        padding-left: 5px;
+        border-top-left-radius: 2px;
+        border-bottom-left-radius: 2px;
+        text-align:left ;
+    }
+    .mihanblog_like_dislikeBar:hover{
+        background-color: #D54B10;
+    }
+
+
+
+    .mihanblog_like_show_help {
+        position: relative;
+    }
+    .mihanblog_like_show_help:hover span {
+        display: block;
+    }
+    .mihanblog_like_help_text {
+        background-color: white;
+        border: 1px solid #555555;
+        border-radius: 3px 3px 3px 3px;
+        color: #303030;
+        float: left;
+        font-size: 11px;
+        font-weight: normal;
+        padding: 5px 10px;
+    }
+
+    .mihanblog_like_help_arrow_dislike {
+        background: url("http://leader.mihanblog.com/public/public/images/icons/like_hover_top.png") no-repeat scroll 16px 0 transparent;
+        left: 0;
+        top: -4px;
+    }
+
+    .mihanblog_like_help_arrow_like {
+        background: url("http://leader.mihanblog.com/public/public/images/icons/like_hover_top _2.png") no-repeat scroll 16px 0 transparent;
+        left: -10px;
+        top: 29px;
+    }
+
+    .mihanblog_like_help_arrow{
+        height: 6px;
+        position: absolute;
+        width: 100px;
+
+    }
+
+    .mihanblog_like_v2_help_dislike {
+        left: -15px;
+        top: 24px;
+    }
+    .mihanblog_like_v2_help_like {
+        left: 0;
+        top: -35px;
+
+    }
+    .mihanblog_like_v2_help{
+        display: none;
+        position: absolute;
+        white-space: nowrap;
+        z-index: 1;
+    }
+
+    .mihanblog_like_Cnt{
+        display: inline;
+        color: #ffffff;
+    }
+
+</style><script>
+
+	statInfo = new Array();
+	setStatVar = function(index,value){
+		statInfo[index] = value;
+	}
+	getStatVar = function(index){
+		if(statInfo[index]) document.write(statInfo[index]);
+	}
+	
+	setStatVar('total_post','822');
+	setStatVar('total_author','9');
+	setStatVar('modify_date','دوشنبه 14 فروردین 1396');
+	
+	setStatVar('today_view','676');
+	setStatVar('yesterday_view','569');
+	
+	setStatVar('this_month_view','5786');
+	setStatVar('last_month_view','8062');
+
+	setStatVar('total_view','1534258');
+	setStatVar('last_view_date','پنجشنبه 27 آذر 1399 (12:08)');
+
+
+
+    
+    function setStatFromClient()
+    {
+        var url = 'http://leader.mihanblog.com/statupdate/?data[refereruri]=http://leader.mihanblog.com/post/category/11&data[postid]=&data[requesturi]=/post/category/11/page/5&data[sdate]=1608194308&data[hash]=04d87a9e9319437bea36bf5875364fe0&data[resolution]='+screen.width+' X '+screen.height;
+
+//        alert(url);
+//        var newjs = document.createElement("SCRIPT");
+//        newjs.type = 'text/javascript';
+//        newjs.src = url;
+//
+//        var newdiv = document.createElement("DIV");
+//        newdiv.setAttribute("style","display:none");
+
+        document.write(unescape('%3Cscript src="'+url+'" type="text/javascript"%3E%3C/script%3E'));
+//        newdiv.appendChild (newjs);
+//        document.write(newjs);
+//        document.write(appendChild (newdiv);
+
+    };
+    setStatFromClient();
+        
+</script><script>
+	messageForm = function(post_id){
+		try{
+			window.open('/message','message','status=yes,scrollbars=yes,toolbar=no,menubar=no,location=no ,width=480px,height=550px');
+		} catch(e){}
+	}
+</script><script>
+	linkdailyForm = function(){
+		try{
+			window.open('/linkdaily/new','linkdaily','status=yes,scrollbars=yes,toolbar=no,menubar=no,location=no ,width=500px,height=460px');
+		} catch(e){}
+	}
+</script><script>
+
+var MihanblogShopAdsArray = new Array();
+
+function GetMihanBlogShowAds(){
+	if(MihanblogShopAdsArray.length){
+		var adsTarget = 'MihanblogShopAds';
+		var containerWidth = document.getElementById(adsTarget).offsetWidth;
+		if(containerWidth>=200){
+			var adsCnt = parseInt(containerWidth / 200) ;
+			if(adsCnt>MihanblogShopAdsArray.length){
+				adsCnt = MihanblogShopAdsArray.length ; 
+			}
+//			var OneAdsWidth = parseInt(containerWidth / adsCnt) ;
+			var OneAdsWidth = containerWidth / adsCnt ;
+			if(OneAdsWidth>400){
+				OneAdsWidth = 400 ;
+			}
+			var OutHtml = '';
+			var img = '';
+			var link = '';
+			var title = '';
+			var description = '';
+			var imgWidth = 70;
+			if(OneAdsWidth>230){
+				imgWidth = 80;
+			}
+			if(OneAdsWidth>300){
+				imgWidth = 90;
+			}
+			for(adsOne=0;adsOne<adsCnt;adsOne++){
+				
+				img = MihanblogShopAdsArray[adsOne]['img'];
+				link = MihanblogShopAdsArray[adsOne]['link'];
+				title = MihanblogShopAdsArray[adsOne]['title'];
+				description = MihanblogShopAdsArray[adsOne]['description'];
+				
+				OutHtml += '<td style="background-color:#FFF;width: '+OneAdsWidth+'px;border:1px solid #f00;margin:0px 0px;font-size:11px;font-family:tahoma;padding:2px;margin:0px 0px;font-size:11px;border: 1px solid BurlyWood; padding: 1px; height: '+(imgWidth+25)+'px;">';
+
+				OutHtml += '	<a href="'+link+'.html" target="_blank" style="text-decoration:none">';
+
+				OutHtml += '			<div style="width: '+(OneAdsWidth-16)+'px;cursor:pointer;font-size:12px;padding: 4px 1px 4px 7px; white-space: nowrap; text-align: center; font-weight: bold; color: blue;white-space:nowrap;overflow:hidden">';
+				OutHtml += 					title;
+				OutHtml += '			</div>';
+				OutHtml += '			<div style="cursor:pointer;padding: 1px; display: block; float: right; width: '+imgWidth+'px;">';
+				OutHtml += '				<img src="'+img+'.html" style="border:0px;padding:0px;margin:0px;width:'+imgWidth+'px;height:'+imgWidth+'px;">';
+				OutHtml += '			</div>';
+				OutHtml += '			<div style="padding: 1px; display: block; float: right; width: '+(OneAdsWidth-13-imgWidth)+'px; text-align: right;overflow:hidden">';
+				OutHtml += '				<div style="overflow:hidden;cursor:pointer;padding: 2px 3px; line-height: 17px; height: '+(imgWidth-3)+'px; text-align: justify;color:#000;direction:rtl">';
+				OutHtml += 						description;
+				OutHtml += '				</div>';
+				OutHtml += '			</div>';
+
+				OutHtml += '	</a>';
+
+				OutHtml += '</td>';
+			}
+			
+			var Out = '<table align="center" cellpadding="0" cellspacing="2" style="width:'+(OneAdsWidth*adsCnt)+'px;"><tr>'+OutHtml+'</tr></table>'; 
+			
+			Out = '<div style="text-align:center;padding:0px;margin:3px auto;">'+Out+'</div>'; 
+			
+			document.getElementById(adsTarget).style.height = (imgWidth+35)+'px' ;
+			document.getElementById(adsTarget).innerHTML = Out ;
+		}
+	}
+}
+</script>
+    <style>
+        @font-face {
+            font-family: 'Mihan-Iransans';
+            src: url('http://leader.mihanblog.com/public/public/fonts/Iransans.eot');
+            src: url('http://leader.mihanblog.com/public/public/fonts/Iransans.eot?') format('embedded-opentype'),
+            url('http://leader.mihanblog.com/public/public/fonts/Iransans.woff2') format('woff2'),
+            url('http://leader.mihanblog.com/public/public/fonts/Iransans.woff') format('woff'),
+            url('http://leader.mihanblog.com/public/public/fonts/Iransans.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+        @font-face {
+            font-family: 'Mihan-IransansBold';
+            src: url('http://leader.mihanblog.com/public/public/fonts/Iransans-Black.eot');
+            src: url('http://leader.mihanblog.com/public/public/fonts/Iransans-Black.eot?') format('embedded-opentype'),
+            url('http://leader.mihanblog.com/public/public/fonts/Iransans-Black.woff2') format('woff2'),
+            url('http://leader.mihanblog.com/public/public/fonts/Iransans-Black.woff') format('woff'),
+            url('http://leader.mihanblog.com/public/public/fonts/Iransans-Black.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+        @font-face {
+            font-family: 'Mihan-IransansLight';
+            src: url('http://leader.mihanblog.com/public/public/fonts/Iransans-UltraLight.eot');
+            src: url('http://leader.mihanblog.com/public/public/fonts/Iransans-UltraLight.eot?') format('embedded-opentype'),
+            url('http://leader.mihanblog.com/public/public/fonts/Iransans-UltraLight.woff2') format('woff2'),
+            url('http://leader.mihanblog.com/public/public/fonts/Iransans-UltraLight.woff') format('woff'),
+            url('http://leader.mihanblog.com/public/public/fonts/Iransans-UltraLight.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+        @font-face {
+            font-family: 'Mihan-Nassim';
+            src: url('http://leader.mihanblog.com/public/public/fonts/Nassim.eot');
+            src: url('http://leader.mihanblog.com/public/public/fonts/Nassim.eot?') format('embedded-opentype'),
+            url('http://leader.mihanblog.com/public/public/fonts/Nassim.woff2') format('woff2'),
+            url('http://leader.mihanblog.com/public/public/fonts/Nassim.woff') format('woff'),
+            url('http://leader.mihanblog.com/public/public/fonts/Nassim.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+        @font-face {
+            font-family: 'Mihan-Koodak';
+            src: url('http://leader.mihanblog.com/public/public/fonts/Koodak.eot');
+            src: url('http://leader.mihanblog.com/public/public/fonts/Koodak.eot?') format('embedded-opentype'),
+            url('http://leader.mihanblog.com/public/public/fonts/Koodak.woff2') format('woff2'),
+            url('http://leader.mihanblog.com/public/public/fonts/Koodak.woff') format('woff'),
+            url('http://leader.mihanblog.com/public/public/fonts/Koodak.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+        @font-face {
+            font-family: 'Mihan-Yekan';
+            src: url('http://leader.mihanblog.com/public/public/fonts/Yekan.eot');
+            src: url('http://leader.mihanblog.com/public/public/fonts/Yekan.eot?') format('embedded-opentype'),
+            url('http://leader.mihanblog.com/public/public/fonts/Yekan.woff2') format('woff2'),
+            url('http://leader.mihanblog.com/public/public/fonts/Yekan.woff') format('woff'),
+            url('http://leader.mihanblog.com/public/public/fonts/Yekan.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+        @font-face {
+            font-family: 'FontAwesome';
+            src: url('http://leader.mihanblog.com/public/public/fonts/fontawesome_webfont.eot');
+            src: url('http://leader.mihanblog.com/public/public/fonts/fontawesome_webfont.eot?') format('embedded-opentype'),
+            url('http://leader.mihanblog.com/public/public/fonts/fontawesome_webfont.woff2') format('woff2'),
+            url('http://leader.mihanblog.com/public/public/fonts/fontawesome_webfont.woff') format('woff'),
+            url('http://leader.mihanblog.com/public/public/fonts/fontawesome_webfont.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+
+
+        
+
+        /* Smartphones (portrait and landscape) ----------- */
+
+        /*
+        @media only screen and (max-width : 480px) and (min-width : 320px) {
+            .sabaClick_advert__wrapper{
+                display:block;
+            }
+            .sabaClick_advert__inner{
+                max-width: 90%;
+                margin: 0 5%;
+            }
+        }
+        */
+
+    </style>
+
+
+
+
+
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+<meta name="designer" content="inventor_robot@yahoo.com"/>
+<meta name="author" content=". ."/>
+<meta name="language" content="Farsi"/>
+<meta name="description" content=""/>
+<meta name="keywords" content="ولایت، ولایت مطلقه، ولایت فقیه، ولایت مطلقه فقیه، دموکراسی، لیبرال دموکراسی، حکومت ، حکومت اسلامی ، جمهوری ، جمهوری اسلامی"/> 
+
+<link rel="alternate" type="application/rss+xml" title="ولایت فقیه و حکومت اسلامی" href="../../../rss/index.html" />
+<link rel="alternate" type="application/atom+xml" title="ولایت فقیه و حکومت اسلامی" href="../../../atom/index.html" />
+
+<title>ولایت فقیه و حکومت اسلامی - مطالب مناسبتها</title>
+
+<link rel="stylesheet" type="text/css" href="http://static.mihanblog.com//public/user_data/user_files/153/458214/BlackMihanblog/Style.css" media="screen"/> 
+<!--[if IE]>
+<link href="http://static.mihanblog.com//public/user_data/user_files/153/458214/BlackMihanblog/IEStyle.css" rel="stylesheet" type="text/css"/>
+<![endif]-->
+
+
+</head>
+
+<body>
+<!-- Start BG -->
+<div id="bg">
+<!-- Start Header -->
+<div class="header" style="background: url('http://static.mihanblog.com//public/user_data/user_files/153/458214/Baner/leaderB.jpg') no-repeat top;">   
+</div>
+<!-- End Header -->
+<!-- Start Menu -->
+<div class="nav">
+            <div class="nav2">
+		    <ul>
+		    <li><a href="javascript:messageForm()">تماس با مدیر وبلاگ</a></li>
+		    <li><a target="_blank" href="../../../list.html">آرشیو مطالب</a></li>
+			<li><a target="_blank" href="http://leader.mihanblog.com/m/">مشاهده در موبایل</a></li>
+			<li><a target="_blank" href="mailto:rfms_aaa@yahoo.com">پست الكترونیك</a></li>
+			</ul>
+		    </div>
+		    <div class="nav3">
+			<form method="get" action="http://google.com/search" class="sch"><input name="sitesearch" value="http://leader.mihanblog.com" type="hidden"/>
+			<input type="text" name="q" class="txt" value="جستجو در وبلاگ" onblur="if(this.value=='')this.value='جستجو در وبلاگ'" onfocus="if(this.value=='جستجو در وبلاگ') this.value='';" id="searchBox"/> <input type="submit" value=" " class="btn"/>
+			</form>
+		    </div>
+		    <div class="rss">
+            <a title="خروجی RSS وبلاگ" href="../../../rss/index.html" target="_blank">
+            <img src="http://static.mihanblog.com//public/user_data/user_files/153/458214/BlueBlogfa/RSS.png" title="RSS" height="24" width="24"/></a> 
+		    </div>
+		    <div class="home">
+            <a title="صفحه ی اصلی" href="../../../../index.html" >
+            <img src="http://static.mihanblog.com//public/user_data/user_files/153/458214/BlueBlogfa/home.png" title="صفحه ی اصلی" height="32" width="32"/></a> 
+		    </div>
+</div>
+<!-- End Menu -->
+<!-- Start Con-->
+<div id="con">
+<!-- Start scsl -->
+<div id="scs1">
+<div id="sc-all"><div id="sc">
+        <font face= Tahoma size=2px color=blue >
+				<MARQUEE onmouseover=this.stop() onmouseout=this.start() scrollAmount=2 
+		      	scrollDelay=2 direction=right   width=520 style="height: 20px">"...بصیرت یعنی اینکه خط درگیری با دشمن را تشخیص بدهی...امام خامنه ای    "
+		        </MARQUEE>	
+        </font>
+<!--Start Post-->
+		<div id="MihanblogShopAds" style="display:block;height:0px;width:100%;border:0px"></div>
+		            <div class="post clearfix">
+            <div class="p-head">
+            <div class="p-head1">
+            <div class="p-head2">		
+			<b><a href="../../../331.html">کجا کنار بکشیم؛ کجا کنار نکشیم</a></b>
+			</div>
+            </div>
+            </div>
+	        <div class="p-con clearfix">
+	        <div class="p-con1">
+	        <div class="p-con2">
+	        <div class="p-photo">
+	        </div>
+	        <div class="p-height">
+			<div id="InPost_MihanblogShopAds" style="display:block;height:0px;width:100%;border:0px"></div>
+
+
+
+
+
+
+
+
+<div align="justify"><font color="#000099" face="tahoma,arial,helvetica,sans-serif" size="2"><font size="2"><font size="2">از<font size="2"> </font>عبارتی مثل «کنار کشیدن<font size="2">»</font> و <font size="2">«</font>صحنه را خالی کردن» چه مفهومی <font size="2">در ذهن شما مجسم می شود<font size="2">؟</font> <font size="2">شاید ب<font size="2">عضی ها <font size="2">در «مفهوم منفی» این عبارات، تردیدی نداشته باشند ... اما اگر درست نگاه کنید <font size="2">م<font size="2">ی بینید <font size="2">که گاهی اوقات، «کنار کشیدن» خیلی هم خوب است!</font></font></font></font></font></font></font></font></font></font><font color="#000099"> <br></font></div><div align="justify"><font color="#000099" face="tahoma,arial,helvetica,sans-serif" size="2"><font size="2"><font size="2">مثلاً فرمانده ی شهید<font size="2">ِ</font> لشکر 27 محمد رسول الله<font size="1">(صلی الله علیه و آله</font><font size="1">)</font></font></font> ی<font size="2">ک شب، وقتی فهمید<font size="2"> غذای<font size="2"> اتاق فرماندهی<font size="2"> <font size="2">بهتر و چرب تر از </font></font></font></font></font></font><font color="#000099"><img src="http://tasnim57.persiangig.com/duelfa_18013009.jpg" alt="همت" align="left" border="0" hspace="0" vspace="10"><font face="tahoma,arial,helvetica,sans-serif" size="2"><font size="2"><font size="2"><font size="2"><font size="2"><font size="2">غذای رزمند ها<font size="2">ست؛ از کنار سفره کنار رفت و <font size="2">غذا</font> نخورد. هر چی بهش گفتند:<font size="2"> به خدا فرد<font size="2">ا ظهر همین غذا رو به بچه ها هم میدیم،<font size="2"> جواب داد: به خدا منم ف<font size="2">ردا ظهر میخورم!</font></font></font></font></font></font></font></font></font></font></font></font> <font size="1"><sup>1</sup></font><br></div><div align="justify"><font color="#000099" face="tahoma,arial,helvetica,sans-serif" size="2"><font size="2"><font size="2"><font size="2"><font size="2"><font size="2"><font size="2"><font size="2"><font size="2"><font size="2"><font size="2"><font size="2"><font size="2">یا وقتی </font>بهش پیشنهاد شد برای او<font size="2">لین دوره ی انتخابات مجلس، <font size="2">نامزد بشه؛ بعد<font size="2"> </font>ا<font size="2">ز</font> </font><font size="2">یک تفکر طولان<font size="2">ی<font size="2"> </font>گفت:</font></font></font></font></font></font></font></font></font></font></font></font></font></font></font><font color="#000099" face="tahoma,arial,helvetica,sans-serif" size="2"><font size="2"><font size="2"><font size="2"><font size="2"><font size="2"><font size="2"><font size="2"><font size="2"><font size="2"><font size="2"><font size="2"><font size="2"><font size="2"><font size="2">«نم<font size="2">ی</font>تونم.نمیام.» </font></font></font></font></font></font></font></font></font></font></font></font></font></font></font><font color="#000099" face="tahoma,arial,helvetica,sans-serif" size="2"><font size="2"><font size="2"><font size="2"><font size="2"><font size="2"><font size="2"><font size="2"><font size="2"><font size="2"><font size="2"><font size="2"><font size="2"><font size="2"><font size="2"><font size="2">پرسیدند</font>:«چرا؟»<font size="2"> </font>گفت:«خداحافظی این بچه ها را در شب عملیات با هیچ چی<font size="2">ز </font>عوض نمیکنم.»<font size="1"><sup>2</sup> </font>... «حاج همت» اینجا هم کنار کشید<font size="2"> چون می دانست جبهه، نیاز به ا<font size="2">فراد </font>مومن و کارآمد دار<font size="2"><font size="2">ه</font> و حضورش در آنجا پرفایده تر است... حالا به نظر<font size="2"> شما چرا بعضی ها برای شرکت در انتخابا<font size="2">ت و رسیدن به قدرت، همینطور تند و تند، احساس تکلیف می کنند؟! ... بگذریم.</font></font></font></font></font></font></font></font></font></font></font></font></font></font></font></font></font></font></font><font color="#000099"><br></font></div><div align="justify"><font color="#000099" face="tahoma,arial,helvetica,sans-serif" size="2"><font size="2"><font size="2"><font size="2"><font size="2"><font size="2"><font size="2"><font size="2"><font size="2"><font size="2"><font size="2"><font size="2"><font size="2"><font size="2"><font size="2"><font size="2"><font size="2"><font size="2"><font size="2"><font size="2">فرمانده 28 ساله ی لشکر اسلام، ملاکش انجام تکلیف بود<font size="2"><font size="2"> و گاهی تکلیف را در کنارکشیدن، تشخیص می داد</font> </font>اما «<font size="2">محمد ابراهیم</font></font>» هیچ وقت از زیز بار مسئولیت و <font size="2">وظیفه</font>، شانه خالی ن<font size="2">کرد بلکه فراتر از توانش هم عمل کرد<font size="2"><font size="2">.</font> </font>یک بار </font></font></font></font></font></font></font></font></font></font></font></font></font></font></font></font></font></font></font></font><font color="#000099" face="tahoma,arial,helvetica,sans-serif" size="2"><font size="2"><font size="2"><font size="2"><font size="2"><font size="2"><font size="2"><font size="2"><font size="2"><font size="2"><font size="2"><font size="2"><font size="2"><font size="2"><font size="2"><font size="2"><font size="2"><font size="2"><font size="2"><font size="2"><font face="Tahoma" size="2">به شدت،ضعف كرده بود و نمی‌توانست روی 
+		پا بایستد. <font size="2">سُ</font>ر<font size="2">ُ</font>م به دستش بود و <font size="2">به اجبار</font>، گوشه‌ی سنگر نشسته بود. با دست دیگر 
+		بی‌سیم را گرفته بود و با بچه‌ها صحبت می‌كرد؛‌ خبر می‌گرفت و راهنمائی 
+		می‌كرد.<font size="1"><sup>3</sup> </font>ا<font size="2">و این جور جاها درد می کشید اما<font size="2"> کنار نمی کشید.</font></font></font></font></font></font></font></font></font></font></font></font></font></font></font></font></font></font></font></font></font></font></font><font color="#000099"><br></font></div><div align="justify"><font color="#000099" face="tahoma,arial,helvetica,sans-serif" size="2"><font size="2"><font size="2"><font size="2"><font size="2"><font size="2"><font size="2"><font size="2"><font size="2"><font size="2"><font size="2"><font size="2"><font size="2"><font size="2"><font size="2"><font size="2"><font size="2"><font size="2"><font size="2"><font size="2"><font face="Tahoma" size="2"><font size="2"><font size="2"><font size="2"><font size="2">19 اسفند<font size="2"> که مصادف است با سالروز شهادت این سردار خیبرشکن، <font size="2">فرصت خوبی است تا بدانیم </font></font>امثال شهیدهمت، <font size="2">دست پرورده ی ام<font size="2">ام راحل<font size="1">(رحمه الله)</font> بودند و از او الگو گرفتند چرا که <font color="#006600" size="2">«</font></font></font></font></font></font></font></font></font></font></font></font></font></font></font></font></font></font></font></font></font></font></font></font></font></font></font></font><font face="tahoma,arial,helvetica,sans-serif" size="2"><font size="2"><font size="2"><font size="2"><font size="2"><font size="2"><font size="2"><font size="2"><font size="2"><font size="2"><font size="2"><font size="2"><font size="2"><font size="2"><font size="2"><font size="2"><font size="2"><font size="2"><font size="2"><font size="2"><font face="Tahoma" size="2"><font size="2"><font size="2"><font size="2"><font size="2"><font size="2"><font size="2"><font color="#006600">امام كار را <span class="highlight"><span class="highlight"><span class="highlight">بر</span></span></span>اى
+ خدا انجام داد. از اول، هرچه كه احساس می كرد تكلیف الهى اوست، آن را انجام
+ میداد ... به مردم و مسئولین هم این 
+درس را بارها گفت و تكرار كرد كه آنچه مهم است، تكلیف است. ما <font size="2">تكلیف </font>را 
+انجام می دهیم</font><font size="2"><font color="#006600">.»</font><font color="#000099" size="1"><sup>4</sup></font><font color="#000099"><br></font><br><font color="#990000" size="1">---------------------------------------------------------------------------------------------------------------</font><font color="#990000"><br><font size="2"><font size="1">1- http://www.ashoora.ir/defae-moghadas/farmandehan/khatere-az-shahid-hemat/menu-id-33<br></font><font size="1">2- </font></font></font></font></font></font></font></font></font></font></font></font></font></font></font></font></font></font></font></font></font></font></font></font></font></font></font></font></font></font></font><font color="#990000" size="1"><span id="C3031_LblContent" class="Text2"><span lang="AR-SA">مجموعه خاطرات سرداران شهید دفاع مقدس/ج4/ ص12<br>3-یادگاران - خاطرات شهید همت/ ص37<br></span></span></font></div><font face="tahoma,arial,helvetica,sans-serif" size="2"><font size="2"><font size="2"><font size="2"><font size="2"><font size="2"><font size="2"><font size="2"><font size="2"><font size="2"><font size="2"><font size="2"><font size="2"><font size="2"><font size="2"><font size="2"><font size="2"><font size="2"><font size="2"><font color="#990000" size="1">4- بیانات مقام معظم رهبری/ 14 خرداد 1390</font><br></font></font></font></font></font></font></font></font></font></font></font></font></font></font></font></font></font></font></font><br>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</div><br><b></b>
+			<br><br><font style="font-size:8pt;">
+<br>
+			طبقه بندی: 			<a href="../../6.html">
+			دیدگاه های ولی فقیه</a>،&nbsp;			<a href="../../11.html">
+			مناسبتها</a>،&nbsp;<br>
+			برچسب ها:
+						<a href="../../../tag/ولی&#32;فقیه.html" >ولی فقیه</a>، 
+						<a href="../../../tag/لیدر.html" >لیدر</a>، 
+						<a href="../../../tag/رهبری.html" >رهبری</a>، 
+						<a href="../../../tag/امام.html" >امام</a>، 
+						<a href="../../../tag/شهید.html" >شهید</a>، 
+						<a href="../../../tag/همت.html" >همت</a>، 
+						<a href="../../../tag/وظیفه.html" >وظیفه</a>، 
+						<a href="../../../tag/رضا&#32;رستمی.html" >رضا رستمی</a>، 
+						<a href="../../../tag/کنارکشیدن.html" >کنارکشیدن</a>، 
+			<br>
+			مطالب مرتبط:
+						<a href="http://www.aviny.com/Album/defa-moghadas/Shakhes/Hemmat/Gal1/Page01.aspx"  target="_blank">
+			آلبوم تصاویرشهید همت</a>،			
+						<a href="http://www.rajanews.com/detail.asp?id=87100"  target="_blank">
+			تصاویر كمتر دیده شده از شهید همت</a>،			
+			<br>
+			داغ کن:
+			<a   target="_blank"  
+			href="http://www.cloob.com/share/link/add?url=http://leader.mihanblog.com//post/331&title=کجا کنار بکشیم؛ کجا کنار نکشیم"> 
+			<img alt="داغ کن - کلوب دات کام" src="http://static.mihanblog.com//public/user_data/user_files/153/458214/orangeZitova/100c.gif" style='border: none; padding: 0px'/> 
+			</a>
+			
+			</font>
+	        </div>
+	        </div>
+	        <div class="p-con3"><div class="p-con4">
+	        نوشته شده در تاریخ : <span style="color:#0292c6">شنبه 19 اسفند 1391 </span> | توسط : <span style="color:#0292c6"><a href="../../../author/691669.html">رضا رستمی</a></span> | 
+	        <a target="_self" href="javascript:newComment(331)" >نظرات(<script>setCommentCnt(331)</script>)</a><script>mihanblogPostLike('331','like')</script>	        </div></div>
+	        </div>
+            </div>
+            <div class="post clearfix">
+            <div class="p-head">
+            <div class="p-head1">
+            <div class="p-head2">		
+			<b><a href="../../../329.html">او به آمریكاییها اعتماد كرده بود</a></b>
+			</div>
+            </div>
+            </div>
+	        <div class="p-con clearfix">
+	        <div class="p-con1">
+	        <div class="p-con2">
+	        <div class="p-photo">
+	        </div>
+	        <div class="p-height">
+			<div style="text-align: justify; color: rgb(0, 0, 153); "><font size="2">این روزها که داریم به یازدهمین انتخابات ریاست جمهوری نزدیک و نزدیکتر میشیم، یواش یواش درگیری های گفتمانی خودشون رو بیشتر و بیشتر نشون میدن. تکنوکرات بودن یا نبودن، توسعه (با معیارهای غربی) یا پیشرفت اسلامی، ارزشمندتر بودن اقتصاد یا فرهنگ و... . یکی از این دعواها که داغ هم هست، بر سر اینه که سیاست خارجی باید تنش زا باشه یا تنش زدا. گرچه هواداران سیاست تنش زدایی لزوما موافق مذاکره یا برقراری رابطه با آمریکا نیستن، ولی وقتی که صحبت به تنش زدایی رسید، صحبت آمریکا هم پیش میاد و کم نیستن کسانی که وقتی از تنش زدایی میگن، در اندیشه نرمش در برابر آمریکا هم هستن.<br></font><img src="http://delkhorha.persiangig.com/image/Policy/Mosaddegh5-ws.jpg" alt="" border="0" hspace="10" align="left" vspace="10"><font size="2">فردا 14 اسفند، سالروز پایان زندگی محمد مصدق، نخست وزیر سالهای نچندان دور ماست. همین رو بهانه ای میکنم برای یک یادآوری به دوستانی که شاید گمون میکنن اگر رفتارمون با آمریکا و دیگرانی که فرقشون با آمریکا در آب ندیدنه، جور دیگه ای باشه، روزگار بهتری خواهیم داشت.<br>درگیری ما و آمریکا از کودتای 28 مرداد آغاز شد. کودتایی که با هدف برکناری نخست وزیر نچندان ضد استکباری ایران انجام شد. «<span style="color: rgb(0, 102, 0); ">مأموران آمریكایى رسماً آمدند ایران، با چمدانهاى پر از دلار، الواط و اوباش و اراذل و بعضى از سیاستمداران خودفروخته را تطمیع كردند و كودتاى 28 مرداد سال 32 را در اینجا راه انداختند و حكومت مصدق را سرنگون كردند. جالب این است كه بدانید حكومت مصدق هیچگونه خصومتى با آمریكاییها نداشت. او در مقابله با انگلیسها ایستاده بود و به آمریكاییها اعتماد كرده بود؛ امیدوار بود كه آمریكاییها به او كمك كنند؛ با آنها روابط دوستانه اى داشت، به آنها اظهار علاقه میكرد، شاید اظهار كوچكى میكرد. با این دولت، آمریكاییها این كار را كردند... منافع استكبارى اقتضا كرد، آمریكاییها با انگلیسها همدست شدند، پولها را برداشتند آوردند اینجا و كار خود را كردند. عنصر اصلى كودتا در تهران، یك فرد آمریكایى بود</span><sup style="color: rgb(255, 0, 0); ">1</sup><span style="color: rgb(0, 0, 153); ">».</span><br></font></div><br><hr style="width: 100%; height: 2px; "><span style="color: rgb(255, 0, 0); ">1</span>.  (<a href="http://farsi.khamenei.ir/speech-content?id=21394" rel="nofollow">سخنان رهبر انقلاب در دیدار دانش آموزان و دانشجویان</a> 1391/8/10).
+
+
+</div><br><b></b>
+			<br><br><font style="font-size:8pt;">
+<br>
+			طبقه بندی: 			<a href="../../6.html">
+			دیدگاه های ولی فقیه</a>،&nbsp;			<a href="../../10.html">
+			مسائل مهم روز</a>،&nbsp;			<a href="../../11.html">
+			مناسبتها</a>،&nbsp;<br>
+			برچسب ها:
+						<a href="../../../tag/ولایت&#32;فقیه.html" >ولایت فقیه</a>، 
+						<a href="../../../tag/آمریکا.html" >آمریکا</a>، 
+						<a href="../../../tag/رابطه&#32;با&#32;آمریکا.html" >رابطه با آمریکا</a>، 
+						<a href="../../../tag/مصدق.html" >مصدق</a>، 
+						<a href="../../../tag/کودتای&#32;28&#32;مرداد.html" >کودتای 28 مرداد</a>، 
+						<a href="../../../tag/تنش&#32;زدایی.html" >تنش زدایی</a>، 
+			<br>
+			مطالب مرتبط:
+						<a href="http://www.irdc.ir/fa/content/27595/default.aspx"  target="_blank">
+			تصاویری از محمد مصدق</a>،			
+			<br>
+			داغ کن:
+			<a   target="_blank"  
+			href="http://www.cloob.com/share/link/add?url=http://leader.mihanblog.com//post/329&title=او به آمریكاییها اعتماد كرده بود"> 
+			<img alt="داغ کن - کلوب دات کام" src="http://static.mihanblog.com//public/user_data/user_files/153/458214/orangeZitova/100c.gif" style='border: none; padding: 0px'/> 
+			</a>
+			
+			</font>
+	        </div>
+	        </div>
+	        <div class="p-con3"><div class="p-con4">
+	        نوشته شده در تاریخ : <span style="color:#0292c6">یکشنبه 13 اسفند 1391 </span> | توسط : <span style="color:#0292c6"><a href="../../../author/785295.html">علی تجرد</a></span> | 
+	        <a target="_self" href="javascript:newComment(329)" >دیدگاه دوستان(<script>setCommentCnt(329)</script>)</a><script>mihanblogPostLike('329','like')</script>	        </div></div>
+	        </div>
+            </div>
+            <div class="post clearfix">
+            <div class="p-head">
+            <div class="p-head1">
+            <div class="p-head2">		
+			<b><a href="../../../328.html">در رثای یک بانو</a></b>
+			</div>
+            </div>
+            </div>
+	        <div class="p-con clearfix">
+	        <div class="p-con1">
+	        <div class="p-con2">
+	        <div class="p-photo">
+	        </div>
+	        <div class="p-height">
+			
+<font face="tahoma,arial,helvetica,sans-serif" size="2"><font face="tahoma,arial,helvetica,sans-serif" size="2"><font face="tahoma,arial,helvetica,sans-serif" size="2"><font face="tahoma,arial,helvetica,sans-serif" size="2"><font face="tahoma,arial,helvetica,sans-serif" size="2"><font face="tahoma,arial,helvetica,sans-serif" size="2"><font face="tahoma,arial,helvetica,sans-serif" size="2"><font face="tahoma,arial,helvetica,sans-serif" size="2"><font face="tahoma,arial,helvetica,sans-serif" size="2"><font face="tahoma,arial,helvetica,sans-serif" size="2"><font face="tahoma,arial,helvetica,sans-serif" size="2"><font face="tahoma,arial,helvetica,sans-serif" size="2"><font face="tahoma,arial,helvetica,sans-serif" size="2"><font face="tahoma,arial,helvetica,sans-serif" size="2"><font face="tahoma,arial,helvetica,sans-serif" size="2"><font face="tahoma,arial,helvetica,sans-serif" size="2"><font face="tahoma,arial,helvetica,sans-serif" size="2"><font face="tahoma,arial,helvetica,sans-serif" size="2"><font face="tahoma,arial,helvetica,sans-serif" size="2"><font face="tahoma,arial,helvetica,sans-serif" size="2"><font face="tahoma,arial,helvetica,sans-serif" size="2"><font face="tahoma,arial,helvetica,sans-serif" size="2"><font face="tahoma,arial,helvetica,sans-serif" size="2"><font face="tahoma,arial,helvetica,sans-serif" size="2"><font face="tahoma,arial,helvetica,sans-serif" size="2"><font face="tahoma,arial,helvetica,sans-serif" size="2"><font face="tahoma,arial,helvetica,sans-serif" size="2"><font face="tahoma,arial,helvetica,sans-serif" size="2"><font face="tahoma,arial,helvetica,sans-serif" size="2"><font face="tahoma,arial,helvetica,sans-serif" size="2"><font face="tahoma,arial,helvetica,sans-serif" size="2"><font face="tahoma,arial,helvetica,sans-serif" size="2"><font face="tahoma,arial,helvetica,sans-serif" size="2"><font face="tahoma,arial,helvetica,sans-serif" size="2"><font face="tahoma,arial,helvetica,sans-serif" size="2"><font face="tahoma,arial,helvetica,sans-serif" size="2"><font face="tahoma,arial,helvetica,sans-serif" size="2"><font face="tahoma,arial,helvetica,sans-serif" size="2"><font face="tahoma,arial,helvetica,sans-serif" size="2"><font face="tahoma,arial,helvetica,sans-serif" size="2"><font face="tahoma,arial,helvetica,sans-serif" size="2"><font face="tahoma,arial,helvetica,sans-serif" size="2"><font face="tahoma,arial,helvetica,sans-serif" size="2"><font face="tahoma,arial,helvetica,sans-serif" size="2"><font face="tahoma,arial,helvetica,sans-serif" size="2"><font face="tahoma,arial,helvetica,sans-serif" size="2"><font face="tahoma,arial,helvetica,sans-serif" size="2"><font face="tahoma,arial,helvetica,sans-serif" size="2"><font face="tahoma,arial,helvetica,sans-serif" size="2"><font face="tahoma,arial,helvetica,sans-serif" size="2"><font face="tahoma,arial,helvetica,sans-serif" size="2"><font face="tahoma,arial,helvetica,sans-serif" size="2"><font face="tahoma,arial,helvetica,sans-serif" size="2"><font face="tahoma,arial,helvetica,sans-serif" size="2"><font face="tahoma,arial,helvetica,sans-serif" size="2"><font face="tahoma,arial,helvetica,sans-serif" size="2"><font face="tahoma,arial,helvetica,sans-serif" size="2"><font face="tahoma,arial,helvetica,sans-serif" size="2"><font face="tahoma,arial,helvetica,sans-serif" size="2"><font face="tahoma,arial,helvetica,sans-serif" size="2"><font face="tahoma,arial,helvetica,sans-serif" size="2"><font face="tahoma,arial,helvetica,sans-serif" size="2"><font face="tahoma,arial,helvetica,sans-serif" size="2"><font face="tahoma,arial,helvetica,sans-serif" size="2"><font face="tahoma,arial,helvetica,sans-serif" size="2"><font face="tahoma,arial,helvetica,sans-serif" size="2"><font face="tahoma,arial,helvetica,sans-serif" size="2"><font face="tahoma,arial,helvetica,sans-serif" size="2"><font face="tahoma,arial,helvetica,sans-serif" size="2"><font face="tahoma,arial,helvetica,sans-serif" size="2"><font face="tahoma,arial,helvetica,sans-serif" size="2"><font face="tahoma,arial,helvetica,sans-serif" size="2"><font face="tahoma,arial,helvetica,sans-serif" size="2"><font face="tahoma,arial,helvetica,sans-serif" size="2"><font face="tahoma,arial,helvetica,sans-serif" size="2"><font face="tahoma,arial,helvetica,sans-serif" size="2"><font face="tahoma,arial,helvetica,sans-serif" size="2"><font face="tahoma,arial,helvetica,sans-serif" size="2"><font face="tahoma,arial,helvetica,sans-serif" size="2"><font face="tahoma,arial,helvetica,sans-serif" size="2"><font face="tahoma,arial,helvetica,sans-serif" size="2"><font face="tahoma,arial,helvetica,sans-serif" size="2"><font face="tahoma,arial,helvetica,sans-serif" size="2"><font face="tahoma,arial,helvetica,sans-serif" size="2"><font face="tahoma,arial,helvetica,sans-serif" size="2"><font face="tahoma,arial,helvetica,sans-serif" size="2"><font face="tahoma,arial,helvetica,sans-serif" size="2"><font face="tahoma,arial,helvetica,sans-serif" size="2"><font face="tahoma,arial,helvetica,sans-serif" size="2"><font face="tahoma,arial,helvetica,sans-serif" size="2"><font face="tahoma,arial,helvetica,sans-serif" size="2"><font face="tahoma,arial,helvetica,sans-serif" size="2"><font face="tahoma,arial,helvetica,sans-serif" size="2"><font face="tahoma,arial,helvetica,sans-serif" size="2"><font face="tahoma,arial,helvetica,sans-serif" size="2"><font face="tahoma,arial,helvetica,sans-serif" size="2"><font face="tahoma,arial,helvetica,sans-serif" size="2"><font face="tahoma,arial,helvetica,sans-serif" size="2"><font face="tahoma,arial,helvetica,sans-serif" size="2"><font face="tahoma,arial,helvetica,sans-serif" size="2"><font face="tahoma,arial,helvetica,sans-serif" size="2"><font face="tahoma,arial,helvetica,sans-serif" size="2"><font face="tahoma,arial,helvetica,sans-serif" size="2"><font face="tahoma,arial,helvetica,sans-serif" size="2"><font face="tahoma,arial,helvetica,sans-serif" size="2"><font face="tahoma,arial,helvetica,sans-serif" size="2"><font face="tahoma,arial,helvetica,sans-serif" size="2"><font face="tahoma,arial,helvetica,sans-serif" size="2"><font face="tahoma,arial,helvetica,sans-serif" size="2"><font face="tahoma,arial,helvetica,sans-serif" size="2"><font face="tahoma,arial,helvetica,sans-serif" size="2"><font face="tahoma,arial,helvetica,sans-serif" size="2"><font face="tahoma,arial,helvetica,sans-serif" size="2"><font face="tahoma,arial,helvetica,sans-serif" size="2"><font face="tahoma,arial,helvetica,sans-serif" size="2"><font face="tahoma,arial,helvetica,sans-serif" size="2"><font face="tahoma,arial,helvetica,sans-serif" size="2"><font face="tahoma,arial,helvetica,sans-serif" size="2"><font face="tahoma,arial,helvetica,sans-serif" size="2"><font face="tahoma,arial,helvetica,sans-serif" size="2"><font face="tahoma,arial,helvetica,sans-serif" size="2"><font face="tahoma,arial,helvetica,sans-serif" size="2"><font face="tahoma,arial,helvetica,sans-serif" size="2"><font face="tahoma,arial,helvetica,sans-serif" size="2"><font face="tahoma,arial,helvetica,sans-serif" size="2"><font face="tahoma,arial,helvetica,sans-serif" size="2"><font face="tahoma,arial,helvetica,sans-serif" size="2">
+<p align="justify"><font color="#6600cc" face="tahoma,arial,helvetica,sans-serif" size="2">نمی تونستم خودم رو&nbsp;قانع کنم که در رثای شما&nbsp;چیزی ننویسم. درسته که این روزها میشه سوژه های جور واجوری برای نوشتن&nbsp;پیدا کرد&nbsp;اما نمک نشناسی&nbsp;است اگر در غم فراقت، حتی از&nbsp;چند سطر هم دریغ کنیم.</font></p>
+<p align="justify"><font color="#6600cc" face="tahoma,arial,helvetica,sans-serif" size="2">بانوی مجاهد! «علی اکبر» تو به جبهه رفت، جهاد&nbsp;کرد و&nbsp;در سال 1360 به&nbsp;شهادت رسید. مجاهدت او تمام شد؛ اما مجاهدت تو همچنان ادامه داشت تا اینکه در شامگاه&nbsp;چهارم اسفند، به فرزند شهیدت پیوستی.<sup><font size="1">1</font></sup>&nbsp;</font></p>
+<p align="justify"><font face="tahoma,arial,helvetica,sans-serif" size="2"><font color="#6600cc">بانو</font> <font color="#ff6666">«شهربانو شیرودی</font><font color="#ff6666">»</font><font color="#6600cc">! شما براى خدا فرزندت را به جبهه فرستادی و براى خدا در مقابل مصیبت فقدانش صبر كردی. </font></font><font face="tahoma,arial,helvetica,sans-serif" size="2"><font color="#6600cc">تو به معنای واقعی، "زنده یاد" هستی چون </font><font color="#006600">«یاد پدران و مادران <span class="highlight"><span class="highlight"><span class="highlight">شهدا</span></span></span> مثل یاد خود <span class="highlight"><span class="highlight"><span class="highlight">شهدا</span></span></span> همیشه زنده است.»</font><sup><font size="1">2</font></sup></font></p>
+<p align="justify"><font face="tahoma,arial,helvetica,sans-serif" size="2"><font color="#6600cc">تو&nbsp;چنان فرزند&nbsp;پاک و صالحی تربیت کردی&nbsp;که رهبرمان در سال های دفاع مقدس و در&nbsp;پایگاه هوایی کرمانشاه، به او اقتدا می کند و نماز می خواند.<sup><font size="1">3</font></sup></font></font></p>
+<p align="justify"><font color="#6600cc">حتما خیلی آرام شدی وقتی شنیدی امام راحل <font size="1">(رحمه الله)</font> بعد از شنیدن خبر شهادت علی اکبر، با حالی منقلب و چشمی اشکبار فرمود: «شیرودی آمرزیده است.»<sup><font size="1">4</font></sup></font></p>
+<p align="justify"><font color="#6600cc">دغدغه ی فرزندت و توصیه ی خودت، پیروی از «ولایت فقیه» بود و تا آخر هم پای حرفتان ایستادید. ای کاش ذره ای از معرفت تو و پسرت، نصیبمان گردد.</font></p>
+<p align="center"><img alt="بانوی فداکار" src="http://tasnim57.persiangig.com/madar-shorodi.jpg" hspace="0" align="bottom" border="0"></p>
+<p align="justify"><font color="#993399" size="1">-----------------------------------------------------------------------------------------------------------</font></p>
+<p align="justify"><font color="#993399" size="1">1- مقام معظم رهبری: «این جوانى كه جبهه رفت و شهید شد، فقط خودش نبود كه مجاهدت كرد...شما هم كه مادر او هستید، مجاهدت كردید كه او رفت...هر كسى هم كه به او علاقه دارد، مجاهدت مى‌كند. و شگفتا كه این مجاهدتها تمام هم نمى‌شود! خود او به جبهه مى‌رود، مدّتى ایستادگى مى‌كند، صبر مى‌كند، جهاد مى‌كند و به شهادت مى‌رسد. مجاهدت او تمام شد؛ اما مجاهدت این مادر، ادامه دارد. مجاهدت این پدر، ادامه دارد. صبر اینها مجاهدت اینهاست.» (در جمع خانواده شهدا / 5مهر1377)</font></p>
+<p align="justify"><font color="#993399" size="1">2- مقام معظم رهبری / سوم خرداد 1388</font></p>
+<p align="justify"><font color="#993399" face="tahoma,arial,helvetica,sans-serif" size="1">3- به نقل از «محمد علی میرزایی» یکی ازخلبانان هوانیروز و همرزم شهید شیرودی / نشریه قدر،شماره 18</font></p>
+<p align="justify"><font color="#993399" size="1">4- خبر شهادت شهید شیرودی را «شهید فلاحی» به امام می دهند و این حالت و عبارت امام را هم شهید فلاحی نقل کرده است.</font></p></font></font></font></font></font></font></font></font></font></font></font></font></font></font></font></font></font></font></font></font></font></font></font></font></font></font></font></font></font></font></font></font></font></font></font></font></font></font></font></font></font></font></font></font></font></font></font></font></font></font></font></font></font></font></font></font></font></font></font></font></font></font></font></font></font></font></font></font></font></font></font></font></font></font></font></font></font></font></font></font></font></font></font></font></font></font></font></font></font></font></font></font></font></font></font></font></font></font></font></font></font></font></font></font></font></font></font></font></font></font></font></font></font></font></font></font></font></font></font></font></font></font></font></font></font></font></font>
+
+</div><br><b></b>
+			<br><br><font style="font-size:8pt;">
+<br>
+			طبقه بندی: 			<a href="../../6.html">
+			دیدگاه های ولی فقیه</a>،&nbsp;			<a href="../../11.html">
+			مناسبتها</a>،&nbsp;<br>
+			برچسب ها:
+						<a href="../../../tag/ولی&#32;فقیه.html" >ولی فقیه</a>، 
+						<a href="../../../tag/ولایت&#32;فقیه.html" >ولایت فقیه</a>، 
+						<a href="../../../tag/امام&#32;راحل.html" >امام راحل</a>، 
+						<a href="../../../tag/مقام&#32;معظم&#32;رهبری.html" >مقام معظم رهبری</a>، 
+						<a href="../../../tag/شهید&#32;شیرودی.html" >شهید شیرودی</a>، 
+						<a href="../../../tag/مادر&#32;شهید.html" >مادر شهید</a>، 
+						<a href="../../../tag/رثا.html" >رثا</a>، 
+						<a href="../../../tag/بانو.html" >بانو</a>، 
+						<a href="../../../tag/آمرزیده.html" >آمرزیده</a>، 
+						<a href="../../../tag/اقتدا.html" >اقتدا</a>، 
+						<a href="../../../tag/کرمانشاه.html" >کرمانشاه</a>، 
+						<a href="../../../tag/زنده&#32;یاد.html" >زنده یاد</a>، 
+			<br>
+			مطالب مرتبط:
+						<a href="http://www.aviny.com/Rahiyan_Noor/revaiat-eshgh/khatere/29.aspx"  target="_blank">
+			ده خاطره از شهید شیرودی</a>،			
+						<a href="http://www.rasekhoon.net/article/show/156508/%D8%A7%D9%85%D9%8A%D8%B1-%D8%B3%D8%B1%D8%AA%D9%8A%D9%BE-%D8%B4%D9%87%D9%8A%D8%AF-%D8%B9%D9%84%D9%8A-%D8%A7%D9%83%D8%A8%D8%B1-%D8%B4%D9%8A%D8%B1%D9%88%D8%AF%D9%8A/"  target="_blank">
+			امیر سرتیپ شهید علی اكبر شیرودی</a>،			
+						<a href="http://www.aviny.com/Album/defa-moghadas/Shakhes/shiroodi/page01.aspx"  target="_blank">
+			آلبوم تصاویر شهید شیرودی</a>،			
+						<a href="http://www.bultannews.com/fa/news/127221/%DA%AF%D9%81%D8%AA%DA%AF%D9%88%D9%8A-%D8%A8%D8%A7-%D9%87%D9%85%D8%B3%D8%B1-%D8%B4%D9%87%D9%8A%D8%AF-%D8%B4%D9%8A%D8%B1%D9%88%D8%AF%D9%8A"  target="_blank">
+			گفتگوی با همسر شهید شیرودی</a>،			
+						<a href="http://rajanews.com/detail.asp?id=151297"  target="_blank">
+			تصاویر تشییع پیکر مادر شهید شیرودی</a>،			
+			<br>
+			داغ کن:
+			<a   target="_blank"  
+			href="http://www.cloob.com/share/link/add?url=http://leader.mihanblog.com//post/328&title=در رثای یک بانو"> 
+			<img alt="داغ کن - کلوب دات کام" src="http://static.mihanblog.com//public/user_data/user_files/153/458214/orangeZitova/100c.gif" style='border: none; padding: 0px'/> 
+			</a>
+			
+			</font>
+	        </div>
+	        </div>
+	        <div class="p-con3"><div class="p-con4">
+	        نوشته شده در تاریخ : <span style="color:#0292c6">شنبه 12 اسفند 1391 </span> | توسط : <span style="color:#0292c6"><a href="../../../author/691669.html">رضا رستمی</a></span> | 
+	        <a target="_self" href="javascript:newComment(328)" >نظرات(<script>setCommentCnt(328)</script>)</a><script>mihanblogPostLike('328','like')</script>	        </div></div>
+	        </div>
+            </div>
+            <div class="post clearfix">
+            <div class="p-head">
+            <div class="p-head1">
+            <div class="p-head2">		
+			<b><a href="../../../320.html">بنیانگذاران حزب جمهوری اسلامی با تحزب مخالفند؟!</a></b>
+			</div>
+            </div>
+            </div>
+	        <div class="p-con clearfix">
+	        <div class="p-con1">
+	        <div class="p-con2">
+	        <div class="p-photo">
+	        </div>
+	        <div class="p-height">
+			
+
+<p style="color: rgb(0, 0, 153); text-align: justify;" dir="RTL"><font size="2">29<img src="http://delkhorha.persiangig.com/image/Policy/Hezbe%20Jomhouri%20Eslami.JPG" alt="" vspace="0" align="left" border="0" hspace="0">
+بهمن سالروز بنیانگذاری حزب جمهوری اسلامی است. به همین بهانه میخوام پاسخ کوتاهی
+بدم به این پرسش که: «دیدگاه جمهوری اسلامی درباره تحزب چیست؟» و آیا «بنیانگذاران حزب جمهوری اسلامی با تحزب مخالفند؟!».<br></font></p><div style="text-align: justify;"><font style="color: rgb(0, 0, 153);" size="2">حزب
+جمهوری اسلامی دو ویژگی ارزشمند داره: 1. اعضای برجسته بنیانگذار حزب جمهوری
+اسلامی، از اعضای برجسته انقلاب اسلامی هستند؛ افرادی مانند: شهید بهشتی، شهید
+باهنر، رهبر معظم انقلاب، آیت الله موسوی اردبیلی و حجة الاسلام هاشمی رفسنجانی.
+افزون بر این بنیانگذاری حزب، یک هفته پس از پیروزی انقلاب اسلامی نشون دهنده احساس
+نیازیه که بزرگان انقلاب به فعالیت حزبی احساس می کردند.
+
+</font></div><p style="color: rgb(0, 0, 153); text-align: justify;" dir="RTL"><font size="2">2. از
+ایراداتی که به بسیاری از احزاب کنونی وارد میشه، بی توجهی به فعالیتهای نظام مند
+و پویا نبودنشون در مسائل گوناگون کشوره و حزب جمهوری اسلامی از این دید هم نمونه
+برجسته ایه. گفته میشه که در روز نخست پخش برگه درخواست عضویت حزب، هشتادهزار نفر درخواست
+عضویت کردند.</font></p>
+
+<p style="color: rgb(0, 0, 153); text-align: justify;" dir="RTL"><font size="2">پس
+باید گفت در گفتمان جمهوری اسلامی مخالفت با حزب، به خودی خود، جایگاهی نداره.
+دنباله پاسخ از زبان رهبر انقلاب اسلامی:</font></p></div><br><b><a href='../../../320.html'>ادامه مطلب</a></b>
+			<br><br><font style="font-size:8pt;">
+<br>
+			طبقه بندی: 			<a href="../../9.html">
+			مباحث حکومت اسلامی</a>،&nbsp;			<a href="../../6.html">
+			دیدگاه های ولی فقیه</a>،&nbsp;			<a href="../../11.html">
+			مناسبتها</a>،&nbsp;<br>
+			برچسب ها:
+						<a href="../../../tag/ولایت&#32;فقیه.html" >ولایت فقیه</a>، 
+						<a href="../../../tag/حزب.html" >حزب</a>، 
+						<a href="../../../tag/جمهوری&#32;اسلامی.html" >جمهوری اسلامی</a>، 
+						<a href="../../../tag/29&#32;بهمن.html" >29 بهمن</a>، 
+			<br>
+			داغ کن:
+			<a   target="_blank"  
+			href="http://www.cloob.com/share/link/add?url=http://leader.mihanblog.com//post/320&title=بنیانگذاران حزب جمهوری اسلامی با تحزب مخالفند؟!"> 
+			<img alt="داغ کن - کلوب دات کام" src="http://static.mihanblog.com//public/user_data/user_files/153/458214/orangeZitova/100c.gif" style='border: none; padding: 0px'/> 
+			</a>
+			
+			</font>
+	        </div>
+	        </div>
+	        <div class="p-con3"><div class="p-con4">
+	        نوشته شده در تاریخ : <span style="color:#0292c6">یکشنبه 29 بهمن 1391 </span> | توسط : <span style="color:#0292c6"><a href="../../../author/785295.html">علی تجرد</a></span> | 
+	        <a target="_self" href="javascript:newComment(320)" >دیدگاه دوستان(<script>setCommentCnt(320)</script>)</a><script>mihanblogPostLike('320','like')</script>	        </div></div>
+	        </div>
+            </div>
+            <div class="post clearfix">
+            <div class="p-head">
+            <div class="p-head1">
+            <div class="p-head2">		
+			<b><a href="../../../319.html">صاحبان انقلاب، باز هم گل کاشتند</a></b>
+			</div>
+            </div>
+            </div>
+	        <div class="p-con clearfix">
+	        <div class="p-con1">
+	        <div class="p-con2">
+	        <div class="p-photo">
+	        </div>
+	        <div class="p-height">
+			<SPAN><SPAN><FONT color=#000099 size=2><SPAN><SPAN><FONT color=#000099 size=2><SPAN><SPAN><FONT color=#000099 size=2><SPAN>
+<P align=justify><SPAN><FONT color=#000099 size=2>زبان و قلم از ترسیم و توصیف عظمت شور و شعور انقلابی مردم در <FONT color=#ff0000>22 بهمن 1391</FONT> عاجز و قاصر است. در حالی که دشمنان منتظر بودند تا تحریم های سنگین و ناجوانمردانه شان بر حضور مردم، اثر بگذارد&nbsp;اما حضور پررنگ مردم، بازهم معادلات استکبار را بهم زد. حتی گروه&nbsp;1+5، مذاکرات هسته ای که قرار بود در روز 18 بهمن، انجام شود را&nbsp;به تعویق انداخت؛ چون خیال می کرد با حضور کمرنگ مردم در راهپیمایی 22بهمن، می تواند اهرم فشاری برای متقاعد کردن ایران پیدا کند!&nbsp;&nbsp;</FONT></SPAN></P>
+<P align=justify><FONT color=#000099><SPAN><FONT size=2>اما دشمنان ما مثل همیشه از درک واقعیت، عاجزند. اینجا <FONT color=#006600>«مردم، خود را صاحبان انقلاب می دانند كه هستند؛ صاحبان كشور می دانند كه هستند»</FONT><FONT color=#990000><SUP><FONT size=1>1</FONT></SUP> </FONT></FONT></SPAN><SPAN><FONT size=2>و&nbsp;زمانی که شما&nbsp;خود را صاحب چیزی دانستی با چنگ و دندان، برای محافظت از آن به این راحتی، تسلیم نخواهی شد.</FONT></SPAN></FONT></P>
+<P align=justify><FONT size=2><FONT color=#000099><SPAN><FONT color=#006600>«حقیقتاً پدیده‌ى عجیبى است»</FONT><SUP><FONT color=#990000><FONT size=1>2</FONT> </FONT></SUP></SPAN><SPAN>در شرایطی که فشار تحریم های دشمن از هر زمانی شدیدتر است و استکبار جهانی با تمام قوا برای به زانو درآوردن ملت ایران، به صحنه آمده است </SPAN><SPAN><FONT color=#006600>«این جور مردم در صحنه حاضرند، این جور مى‌آیند؛ مرد، زن، پیر، جوان، جاهاى مختلف، قشرهاى مختلف، همه جور، همه جا، همه كس، حضور پیدا می كنند»</FONT><SUP><FONT color=#990000>3</FONT></SUP></SPAN></FONT></FONT></P>
+<P align=justify><FONT size=2><FONT color=#000099><SPAN>و به واقع، حضرت روح الله <SPAN><FONT size=1>(رحمه الله)</FONT></SPAN> بهتر و زودتر از همه، این ملت را شناخت که در وصفش اینگونه گفت:</SPAN> </FONT><FONT color=#006600><SPAN>«من با جرأت مدعی هستم که ملت ایران و توده میلیونی آن در عصر حاضر بهتر از ملت حجاز در عهد رسول الله <SPAN><FONT size=1>-صلی الله علیه و آله -</FONT></SPAN> و کوفه و عراق درعهد امیرالمومنین و حسین بن علی <SPAN><FONT size=1>-صلوات الله و سلامه علیهما-</FONT></SPAN> می باشند.»<SUP><FONT color=#990000>4</FONT></SUP></SPAN></FONT></FONT></P>
+<P align=center><FONT size=2><FONT color=#006600><SPAN><IMG border=0 hspace=0 alt="صاحبان انقلاب" align=baseline src="http://tasnim57.persiangig.com/13911122151542715_PhotoL.jpg"></SPAN></FONT></FONT></P>
+<P align=justify><FONT color=#993399 size=1><SPAN>---------------------------------------------------------------------------------------</SPAN></FONT></P>
+<P align=justify><SPAN><FONT color=#993399 size=1>1و 2 و 3-<SUP> </SUP>بیانات رهبر انقلاب در جلسه درس خارج فقه بعد از ۲۲بهمن</FONT></SPAN></P>
+<P align=justify><SPAN><FONT color=#993399 size=1>4- <SPAN><SPAN>3- وصیت نامه ی حضرت امام خمینی (رحمه الله)</SPAN></SPAN></FONT></SPAN></P></SPAN></FONT></SPAN></SPAN></FONT></SPAN></SPAN></FONT></SPAN></SPAN></div><br><b></b>
+			<br><br><font style="font-size:8pt;">
+<br>
+			طبقه بندی: 			<a href="../../5.html">
+			شناسنامه های تاریخی ملت شریف ایران</a>،&nbsp;			<a href="../../6.html">
+			دیدگاه های ولی فقیه</a>،&nbsp;			<a href="../../10.html">
+			مسائل مهم روز</a>،&nbsp;			<a href="../../11.html">
+			مناسبتها</a>،&nbsp;<br>
+			برچسب ها:
+						<a href="../../../tag/صاحب&#32;کشور.html" >صاحب کشور</a>، 
+						<a href="../../../tag/صاحب&#32;انقلاب.html" >صاحب انقلاب</a>، 
+						<a href="../../../tag/ولی&#32;فقیه.html" >ولی فقیه</a>، 
+						<a href="../../../tag/تحریم.html" >تحریم</a>، 
+						<a href="../../../tag/22بهمن.html" >22بهمن</a>، 
+						<a href="../../../tag/عجیب.html" >عجیب</a>، 
+						<a href="../../../tag/ملت&#32;ایران.html" >ملت ایران</a>، 
+			<br>
+			داغ کن:
+			<a   target="_blank"  
+			href="http://www.cloob.com/share/link/add?url=http://leader.mihanblog.com//post/319&title=صاحبان انقلاب، باز هم گل کاشتند"> 
+			<img alt="داغ کن - کلوب دات کام" src="http://static.mihanblog.com//public/user_data/user_files/153/458214/orangeZitova/100c.gif" style='border: none; padding: 0px'/> 
+			</a>
+			
+			</font>
+	        </div>
+	        </div>
+	        <div class="p-con3"><div class="p-con4">
+	        نوشته شده در تاریخ : <span style="color:#0292c6">شنبه 28 بهمن 1391 </span> | توسط : <span style="color:#0292c6"><a href="../../../author/691669.html">رضا رستمی</a></span> | 
+	        <a target="_self" href="javascript:newComment(319)" >صاحبان کشور(<script>setCommentCnt(319)</script>)</a><script>mihanblogPostLike('319','like')</script>	        </div></div>
+	        </div>
+            </div>
+            <div class="post clearfix">
+            <div class="p-head">
+            <div class="p-head1">
+            <div class="p-head2">		
+			<b><a href="../../../316.html">اگه ما این جمهوری اسلامی رو نخوایم باید چه کار کنیم؟</a></b>
+			</div>
+            </div>
+            </div>
+	        <div class="p-con clearfix">
+	        <div class="p-con1">
+	        <div class="p-con2">
+	        <div class="p-photo">
+	        </div>
+	        <div class="p-height">
+			<div style="text-align: justify;">
+
+<font style="color: rgb(0, 0, 153);" size="2">
+
+</font><font style="color: rgb(0, 0, 153);" size="2">در سخنرانی 12 بهمن حضرت امام (قدّس سرّه الشریف) در بهشت زهرا، یک منطق خیلی ساده برای مخالفت با رژیم پهلوی بود.</font><br><font style="color: rgb(0, 0, 153);" size="2">« <span style="color: rgb(0, 102, 0);">سرنوشت هر ملت دست خودش است. ملت در صد سال پیش از این، صدوپنجاه سال پیش از این، یك ملتی بوده، یك سرنوشتی داشته است و اختیاری داشته ولی او اختیار ماها را نداشته است. ... مگر آن اشخاصی كه درصد سال پیش از این، هشتاد سال پیش از این بودند، می توانند سرنوشت یك ملتی را كه بعدها وجود پیدا كنند، آنها تعیین بكنند؟ ... علاوه بر این، این سلطنتی كه در آنوقت درست كرده بودند و مجلس موسسان هم ما فرض كنیم كه صحیح بوده است، این ملتی كه سرنوشت خودش با خودش باید باشد، در این زمان می گوید كه ما نمی خواهیم این سلطان را</span> ».</font><br><img style="width: 480px; height: 302px;" src="http://delkhorha.persiangig.com/image/Policy/Iran%26people-45230.jpg" alt="" border="0" hspace="10" vspace="10" align="bottom"><br><font style="color: rgb(0, 0, 153);" size="2">خیلی روشن است. مشروعیت یک حکومت، وابسته به خواست و رای مردم است. حکومت باید هم در آغاز کار و هم در دنباله کار همراهی مردم را با خودش داشته باشد و هرجایی که مردم دست از پشتیبانی حکومت بردارند، حق حاکمیت هم برداشته میشود.</font><br><font style="color: rgb(0, 0, 153);" size="2">بعضی ها با همین منطق ساده و روشن میپرسند: «<span style="color: rgb(255, 0, 0);">اگه ما این جمهوری اسلامی رو نخوایم باید چه کار کنیم؟</span>»</font><br><font style="color: rgb(0, 0, 153);" size="2">باید واقع بین بود! جمهوری اسلامی یک بار برای تعیین نوع نظام، یک بار برای انتخاب اعضای مجلس خبرگان قانون اساسی و یک بار برای خود قانون اساسی از مردم رای گرفت و این گونه پایه های مردمی خود را ساخت. این پایه مردمی در کشورهای جهان بی مانند است.</font><br><font style="color: rgb(0, 0, 153);" size="2">باید پذیرفت که هیچ نظامی در جهان هر سال برای اثبات مردمی بودنش همه پرسی برگزار نمی کند و مردم سالارترین نظام های دنیا بیشتر از انتخابات مجلس یا ریاست جمهوری فرصتی برای حضور مردم فراهم نمی کنند که میتوان گفت جمهوری اسلامی در این زمینه یکه تاز است. حضور بالاتر از پنجاه درصد مردم در انتخابات نشان دهنده پشتیبانی مردم از نظام حاکم است و هر حکومتی برای دفاع از مشروعیتش میتواند به همین آمار بالای پنجاه درصد بسنده کند. اما مردم ایران افزون بر این، به شکلی بی مانند پشتیبانی خود را از جمهوری اسلامی به رخ جهانیان میکشند. راهپیمایی هرساله مردم ایران در سالگرد پیروزی انقلاب اسلامی نشان روشن همبستگی مردم ایران با جمهوری اسلامی است و برای دشمنانش راهی جز توهین به فهم و شعور مردمش نمیگذارد.</font><br><font style="color: rgb(0, 0, 153);" size="2">هیچ شکی نیست که من نوعی دوستدار جمهوری اسلامی اگر روزی خود را در دسته اقلیت ببینم، به حکم انسانیت و آزادگی و به پیروی از رهبران دینی باید حکومت اکثریت مخالف را ـ هرچند با خون دل ـ بپذیرم و واقع بین باشم. مخالفان جمهوری اسلامی هم، باید واقع بین باشند و به جای افسانه بافی و فریب دادن خودشان، برای همراه کردن بیشتر مردم تلاش کنند.</font></div>
+
+
+
+</div><br><b></b>
+			<br><br><font style="font-size:8pt;">
+<br>
+			طبقه بندی: 			<a href="../../9.html">
+			مباحث حکومت اسلامی</a>،&nbsp;			<a href="../../11.html">
+			مناسبتها</a>،&nbsp;<br>
+			برچسب ها:
+						<a href="../../../tag/امام.html" >امام</a>، 
+						<a href="../../../tag/بهمن.html" >بهمن</a>، 
+						<a href="../../../tag/جمهوری&#32;اسلامی.html" >جمهوری اسلامی</a>، 
+						<a href="../../../tag/مشروعیت.html" >مشروعیت</a>، 
+						<a href="../../../tag/مردم.html" >مردم</a>، 
+			<br>
+			داغ کن:
+			<a   target="_blank"  
+			href="http://www.cloob.com/share/link/add?url=http://leader.mihanblog.com//post/316&title=اگه ما این جمهوری اسلامی رو نخوایم باید چه کار کنیم؟"> 
+			<img alt="داغ کن - کلوب دات کام" src="http://static.mihanblog.com//public/user_data/user_files/153/458214/orangeZitova/100c.gif" style='border: none; padding: 0px'/> 
+			</a>
+			
+			</font>
+	        </div>
+	        </div>
+	        <div class="p-con3"><div class="p-con4">
+	        نوشته شده در تاریخ : <span style="color:#0292c6">یکشنبه 22 بهمن 1391 </span> | توسط : <span style="color:#0292c6"><a href="../../../author/785295.html">علی تجرد</a></span> | 
+	        <a target="_self" href="javascript:newComment(316)" >دیدگاه دوستان(<script>setCommentCnt(316)</script>)</a><script>mihanblogPostLike('316','like')</script>	        </div></div>
+	        </div>
+            </div>
+            <div class="post clearfix">
+            <div class="p-head">
+            <div class="p-head1">
+            <div class="p-head2">		
+			<b><a href="../../../315.html">راه همین است؛ بیراهه نروید</a></b>
+			</div>
+            </div>
+            </div>
+	        <div class="p-con clearfix">
+	        <div class="p-con1">
+	        <div class="p-con2">
+	        <div class="p-photo">
+	        <a href="../../../author/691669.html"><img src="http://static.mihanblog.com//public/user_data/user_photo/231/691669.jpg"  /></a></div>
+	        <div class="p-height">
+			<SPAN style="LINE-HEIGHT: 115%; FONT-FAMILY: 'Tahoma', 'sans-serif'; FONT-SIZE: 9pt" lang=AR-SA sab="531"><SPAN style="LINE-HEIGHT: 115%; FONT-FAMILY: 'Tahoma', 'sans-serif'; FONT-SIZE: 9pt" lang=AR-SA sab="535"><SPAN style="LINE-HEIGHT: 115%; FONT-FAMILY: 'Tahoma', 'sans-serif'; FONT-SIZE: 9pt" lang=AR-SA sab="539"><SPAN style="LINE-HEIGHT: 115%; FONT-FAMILY: 'Tahoma', 'sans-serif'; FONT-SIZE: 9pt" lang=AR-SA sab="543"><SPAN style="LINE-HEIGHT: 115%; FONT-FAMILY: 'Tahoma', 'sans-serif'; FONT-SIZE: 9pt" lang=AR-SA sab="547"><SPAN style="LINE-HEIGHT: 115%; FONT-FAMILY: 'Tahoma', 'sans-serif'; FONT-SIZE: 9pt" lang=AR-SA sab="551"><SPAN style="LINE-HEIGHT: 115%; FONT-FAMILY: 'Tahoma', 'sans-serif'; FONT-SIZE: 9pt" lang=AR-SA sab="555"><SPAN style="LINE-HEIGHT: 115%; FONT-FAMILY: 'Tahoma', 'sans-serif'; FONT-SIZE: 9pt" lang=AR-SA sab="559"><SPAN style="LINE-HEIGHT: 115%; FONT-FAMILY: 'Tahoma', 'sans-serif'; FONT-SIZE: 9pt" lang=AR-SA sab="563"><SPAN style="LINE-HEIGHT: 115%; FONT-FAMILY: 'Tahoma', 'sans-serif'; FONT-SIZE: 9pt" lang=AR-SA sab="567"><SPAN style="LINE-HEIGHT: 115%; FONT-FAMILY: 'Tahoma', 'sans-serif'; FONT-SIZE: 9pt" lang=AR-SA sab="571"><SPAN style="LINE-HEIGHT: 115%; FONT-FAMILY: 'Tahoma', 'sans-serif'; FONT-SIZE: 9pt" lang=AR-SA sab="575"><SPAN style="LINE-HEIGHT: 115%; FONT-FAMILY: 'Tahoma', 'sans-serif'; FONT-SIZE: 9pt" lang=AR-SA sab="579"><SPAN style="LINE-HEIGHT: 115%; FONT-FAMILY: 'Tahoma', 'sans-serif'; FONT-SIZE: 9pt" lang=AR-SA sab="583"><SPAN style="LINE-HEIGHT: 115%; FONT-FAMILY: 'Tahoma', 'sans-serif'; FONT-SIZE: 9pt" lang=AR-SA sab="587"><SPAN style="LINE-HEIGHT: 115%; FONT-FAMILY: 'Tahoma', 'sans-serif'; FONT-SIZE: 9pt" lang=AR-SA sab="591"><SPAN style="LINE-HEIGHT: 115%; FONT-FAMILY: 'Tahoma', 'sans-serif'; FONT-SIZE: 9pt" lang=AR-SA sab="595"><SPAN style="LINE-HEIGHT: 115%; FONT-FAMILY: 'Tahoma', 'sans-serif'; FONT-SIZE: 9pt" lang=AR-SA sab="599"><SPAN style="LINE-HEIGHT: 115%; FONT-FAMILY: 'Tahoma', 'sans-serif'; FONT-SIZE: 9pt" lang=AR-SA sab="603"><SPAN style="LINE-HEIGHT: 115%; FONT-FAMILY: 'Tahoma', 'sans-serif'; FONT-SIZE: 9pt" lang=AR-SA sab="607"><SPAN style="LINE-HEIGHT: 115%; FONT-FAMILY: 'Tahoma', 'sans-serif'; FONT-SIZE: 9pt" lang=AR-SA sab="611"><SPAN style="LINE-HEIGHT: 115%; FONT-FAMILY: 'Tahoma', 'sans-serif'; FONT-SIZE: 9pt" lang=AR-SA sab="615"><SPAN style="LINE-HEIGHT: 115%; FONT-FAMILY: 'Tahoma', 'sans-serif'; FONT-SIZE: 9pt" lang=AR-SA sab="619"><SPAN style="LINE-HEIGHT: 115%; FONT-FAMILY: 'Tahoma', 'sans-serif'; FONT-SIZE: 9pt" lang=AR-SA sab="623"><SPAN style="LINE-HEIGHT: 115%; FONT-FAMILY: 'Tahoma', 'sans-serif'; FONT-SIZE: 9pt" lang=AR-SA sab="627"><SPAN style="LINE-HEIGHT: 115%; FONT-FAMILY: 'Tahoma', 'sans-serif'; FONT-SIZE: 9pt" lang=AR-SA sab="631"><SPAN style="LINE-HEIGHT: 115%; FONT-FAMILY: 'Tahoma', 'sans-serif'; FONT-SIZE: 9pt" lang=AR-SA sab="635"><SPAN style="LINE-HEIGHT: 115%; FONT-FAMILY: 'Tahoma', 'sans-serif'; FONT-SIZE: 9pt" lang=AR-SA sab="639"><SPAN style="LINE-HEIGHT: 115%; FONT-FAMILY: 'Tahoma', 'sans-serif'; FONT-SIZE: 9pt" lang=AR-SA sab="643"><SPAN style="LINE-HEIGHT: 115%; FONT-FAMILY: 'Tahoma', 'sans-serif'; FONT-SIZE: 9pt" lang=AR-SA sab="647"><SPAN style="LINE-HEIGHT: 115%; FONT-FAMILY: 'Tahoma', 'sans-serif'; FONT-SIZE: 9pt" lang=AR-SA sab="651"><SPAN style="LINE-HEIGHT: 115%; FONT-FAMILY: 'Tahoma', 'sans-serif'; FONT-SIZE: 9pt" lang=AR-SA sab="698"><SPAN style="LINE-HEIGHT: 115%; FONT-FAMILY: 'Tahoma','sans-serif'; COLOR: #000099; FONT-SIZE: 9pt" lang=AR-SA><SPAN style="LINE-HEIGHT: 115%; FONT-FAMILY: 'Tahoma', 'sans-serif'; FONT-SIZE: 9pt" lang=AR-SA sab="531"><SPAN style="LINE-HEIGHT: 115%; FONT-FAMILY: 'Tahoma', 'sans-serif'; FONT-SIZE: 9pt" lang=AR-SA sab="535"><SPAN style="LINE-HEIGHT: 115%; FONT-FAMILY: 'Tahoma', 'sans-serif'; FONT-SIZE: 9pt" lang=AR-SA sab="539"><SPAN style="LINE-HEIGHT: 115%; FONT-FAMILY: 'Tahoma', 'sans-serif'; FONT-SIZE: 9pt" lang=AR-SA sab="543"><SPAN style="LINE-HEIGHT: 115%; FONT-FAMILY: 'Tahoma', 'sans-serif'; FONT-SIZE: 9pt" lang=AR-SA sab="547"><SPAN style="LINE-HEIGHT: 115%; FONT-FAMILY: 'Tahoma', 'sans-serif'; FONT-SIZE: 9pt" lang=AR-SA sab="551"><SPAN style="LINE-HEIGHT: 115%; FONT-FAMILY: 'Tahoma', 'sans-serif'; FONT-SIZE: 9pt" lang=AR-SA sab="555"><SPAN style="LINE-HEIGHT: 115%; FONT-FAMILY: 'Tahoma', 'sans-serif'; FONT-SIZE: 9pt" lang=AR-SA sab="559"><SPAN style="LINE-HEIGHT: 115%; FONT-FAMILY: 'Tahoma', 'sans-serif'; FONT-SIZE: 9pt" lang=AR-SA sab="563"><SPAN style="LINE-HEIGHT: 115%; FONT-FAMILY: 'Tahoma', 'sans-serif'; FONT-SIZE: 9pt" lang=AR-SA sab="567"><SPAN style="LINE-HEIGHT: 115%; FONT-FAMILY: 'Tahoma', 'sans-serif'; FONT-SIZE: 9pt" lang=AR-SA sab="571"><SPAN style="LINE-HEIGHT: 115%; FONT-FAMILY: 'Tahoma', 'sans-serif'; FONT-SIZE: 9pt" lang=AR-SA sab="575"><SPAN style="LINE-HEIGHT: 115%; FONT-FAMILY: 'Tahoma', 'sans-serif'; FONT-SIZE: 9pt" lang=AR-SA sab="579"><SPAN style="LINE-HEIGHT: 115%; FONT-FAMILY: 'Tahoma', 'sans-serif'; FONT-SIZE: 9pt" lang=AR-SA sab="583"><SPAN style="LINE-HEIGHT: 115%; FONT-FAMILY: 'Tahoma', 'sans-serif'; FONT-SIZE: 9pt" lang=AR-SA sab="587"><SPAN style="LINE-HEIGHT: 115%; FONT-FAMILY: 'Tahoma', 'sans-serif'; FONT-SIZE: 9pt" lang=AR-SA sab="591"><SPAN style="LINE-HEIGHT: 115%; FONT-FAMILY: 'Tahoma', 'sans-serif'; FONT-SIZE: 9pt" lang=AR-SA sab="595"><SPAN style="LINE-HEIGHT: 115%; FONT-FAMILY: 'Tahoma', 'sans-serif'; FONT-SIZE: 9pt" lang=AR-SA sab="599"><SPAN style="LINE-HEIGHT: 115%; FONT-FAMILY: 'Tahoma', 'sans-serif'; FONT-SIZE: 9pt" lang=AR-SA sab="603"><SPAN style="LINE-HEIGHT: 115%; FONT-FAMILY: 'Tahoma', 'sans-serif'; FONT-SIZE: 9pt" lang=AR-SA sab="607"><SPAN style="LINE-HEIGHT: 115%; FONT-FAMILY: 'Tahoma', 'sans-serif'; FONT-SIZE: 9pt" lang=AR-SA sab="611"><SPAN style="LINE-HEIGHT: 115%; FONT-FAMILY: 'Tahoma', 'sans-serif'; FONT-SIZE: 9pt" lang=AR-SA sab="615"><SPAN style="LINE-HEIGHT: 115%; FONT-FAMILY: 'Tahoma', 'sans-serif'; FONT-SIZE: 9pt" lang=AR-SA sab="619"><SPAN style="LINE-HEIGHT: 115%; FONT-FAMILY: 'Tahoma', 'sans-serif'; FONT-SIZE: 9pt" lang=AR-SA sab="623"><SPAN style="LINE-HEIGHT: 115%; FONT-FAMILY: 'Tahoma', 'sans-serif'; FONT-SIZE: 9pt" lang=AR-SA sab="627"><SPAN style="LINE-HEIGHT: 115%; FONT-FAMILY: 'Tahoma', 'sans-serif'; FONT-SIZE: 9pt" lang=AR-SA sab="631"><SPAN style="LINE-HEIGHT: 115%; FONT-FAMILY: 'Tahoma', 'sans-serif'; FONT-SIZE: 9pt" lang=AR-SA sab="635"><SPAN style="LINE-HEIGHT: 115%; FONT-FAMILY: 'Tahoma', 'sans-serif'; FONT-SIZE: 9pt" lang=AR-SA sab="639"><SPAN style="LINE-HEIGHT: 115%; FONT-FAMILY: 'Tahoma', 'sans-serif'; FONT-SIZE: 9pt" lang=AR-SA sab="643"><SPAN style="LINE-HEIGHT: 115%; FONT-FAMILY: 'Tahoma', 'sans-serif'; FONT-SIZE: 9pt" lang=AR-SA sab="647"><SPAN style="LINE-HEIGHT: 115%; FONT-FAMILY: 'Tahoma', 'sans-serif'; FONT-SIZE: 9pt" lang=AR-SA sab="651"><SPAN style="LINE-HEIGHT: 115%; FONT-FAMILY: 'Tahoma', 'sans-serif'; FONT-SIZE: 9pt" lang=AR-SA sab="698"><SPAN style="LINE-HEIGHT: 115%; FONT-FAMILY: 'Tahoma','sans-serif'; COLOR: #000099; FONT-SIZE: 9pt" lang=AR-SA><SPAN style="LINE-HEIGHT: 115%; FONT-FAMILY: 'Tahoma', 'sans-serif'; FONT-SIZE: 9pt" lang=AR-SA sab="531"><SPAN style="LINE-HEIGHT: 115%; FONT-FAMILY: 'Tahoma', 'sans-serif'; FONT-SIZE: 9pt" lang=AR-SA sab="535"><SPAN style="LINE-HEIGHT: 115%; FONT-FAMILY: 'Tahoma', 'sans-serif'; FONT-SIZE: 9pt" lang=AR-SA sab="539"><SPAN style="LINE-HEIGHT: 115%; FONT-FAMILY: 'Tahoma', 'sans-serif'; FONT-SIZE: 9pt" lang=AR-SA sab="543"><SPAN style="LINE-HEIGHT: 115%; FONT-FAMILY: 'Tahoma', 'sans-serif'; FONT-SIZE: 9pt" lang=AR-SA sab="547"><SPAN style="LINE-HEIGHT: 115%; FONT-FAMILY: 'Tahoma', 'sans-serif'; FONT-SIZE: 9pt" lang=AR-SA sab="551"><SPAN style="LINE-HEIGHT: 115%; FONT-FAMILY: 'Tahoma', 'sans-serif'; FONT-SIZE: 9pt" lang=AR-SA sab="555"><SPAN style="LINE-HEIGHT: 115%; FONT-FAMILY: 'Tahoma', 'sans-serif'; FONT-SIZE: 9pt" lang=AR-SA sab="559"><SPAN style="LINE-HEIGHT: 115%; FONT-FAMILY: 'Tahoma', 'sans-serif'; FONT-SIZE: 9pt" lang=AR-SA sab="563"><SPAN style="LINE-HEIGHT: 115%; FONT-FAMILY: 'Tahoma', 'sans-serif'; FONT-SIZE: 9pt" lang=AR-SA sab="567"><SPAN style="LINE-HEIGHT: 115%; FONT-FAMILY: 'Tahoma', 'sans-serif'; FONT-SIZE: 9pt" lang=AR-SA sab="571"><SPAN style="LINE-HEIGHT: 115%; FONT-FAMILY: 'Tahoma', 'sans-serif'; FONT-SIZE: 9pt" lang=AR-SA sab="575"><SPAN style="LINE-HEIGHT: 115%; FONT-FAMILY: 'Tahoma', 'sans-serif'; FONT-SIZE: 9pt" lang=AR-SA sab="579"><SPAN style="LINE-HEIGHT: 115%; FONT-FAMILY: 'Tahoma', 'sans-serif'; FONT-SIZE: 9pt" lang=AR-SA sab="583"><SPAN style="LINE-HEIGHT: 115%; FONT-FAMILY: 'Tahoma', 'sans-serif'; FONT-SIZE: 9pt" lang=AR-SA sab="587"><SPAN style="LINE-HEIGHT: 115%; FONT-FAMILY: 'Tahoma', 'sans-serif'; FONT-SIZE: 9pt" lang=AR-SA sab="591"><SPAN style="LINE-HEIGHT: 115%; FONT-FAMILY: 'Tahoma', 'sans-serif'; FONT-SIZE: 9pt" lang=AR-SA sab="595"><SPAN style="LINE-HEIGHT: 115%; FONT-FAMILY: 'Tahoma', 'sans-serif'; FONT-SIZE: 9pt" lang=AR-SA sab="599"><SPAN style="LINE-HEIGHT: 115%; FONT-FAMILY: 'Tahoma', 'sans-serif'; FONT-SIZE: 9pt" lang=AR-SA sab="603"><SPAN style="LINE-HEIGHT: 115%; FONT-FAMILY: 'Tahoma', 'sans-serif'; FONT-SIZE: 9pt" lang=AR-SA sab="607"><SPAN style="LINE-HEIGHT: 115%; FONT-FAMILY: 'Tahoma', 'sans-serif'; FONT-SIZE: 9pt" lang=AR-SA sab="611"><SPAN style="LINE-HEIGHT: 115%; FONT-FAMILY: 'Tahoma', 'sans-serif'; FONT-SIZE: 9pt" lang=AR-SA sab="615"><SPAN style="LINE-HEIGHT: 115%; FONT-FAMILY: 'Tahoma', 'sans-serif'; FONT-SIZE: 9pt" lang=AR-SA sab="619"><SPAN style="LINE-HEIGHT: 115%; FONT-FAMILY: 'Tahoma', 'sans-serif'; FONT-SIZE: 9pt" lang=AR-SA sab="623"><SPAN style="LINE-HEIGHT: 115%; FONT-FAMILY: 'Tahoma', 'sans-serif'; FONT-SIZE: 9pt" lang=AR-SA sab="627"><SPAN style="LINE-HEIGHT: 115%; FONT-FAMILY: 'Tahoma', 'sans-serif'; FONT-SIZE: 9pt" lang=AR-SA sab="631"><SPAN style="LINE-HEIGHT: 115%; FONT-FAMILY: 'Tahoma', 'sans-serif'; FONT-SIZE: 9pt" lang=AR-SA sab="635"><SPAN style="LINE-HEIGHT: 115%; FONT-FAMILY: 'Tahoma', 'sans-serif'; FONT-SIZE: 9pt" lang=AR-SA sab="639"><SPAN style="LINE-HEIGHT: 115%; FONT-FAMILY: 'Tahoma', 'sans-serif'; FONT-SIZE: 9pt" lang=AR-SA sab="643"><SPAN style="LINE-HEIGHT: 115%; FONT-FAMILY: 'Tahoma', 'sans-serif'; FONT-SIZE: 9pt" lang=AR-SA sab="647"><SPAN style="LINE-HEIGHT: 115%; FONT-FAMILY: 'Tahoma', 'sans-serif'; FONT-SIZE: 9pt" lang=AR-SA sab="651"><SPAN style="LINE-HEIGHT: 115%; FONT-FAMILY: 'Tahoma', 'sans-serif'; FONT-SIZE: 9pt" lang=AR-SA sab="698"><SPAN style="LINE-HEIGHT: 115%; FONT-FAMILY: 'Tahoma','sans-serif'; COLOR: #000099; FONT-SIZE: 9pt" lang=AR-SA><SPAN style="LINE-HEIGHT: 115%; FONT-FAMILY: 'Tahoma', 'sans-serif'; FONT-SIZE: 9pt" lang=AR-SA sab="531"><SPAN style="LINE-HEIGHT: 115%; FONT-FAMILY: 'Tahoma', 'sans-serif'; FONT-SIZE: 9pt" lang=AR-SA sab="535"><SPAN style="LINE-HEIGHT: 115%; FONT-FAMILY: 'Tahoma', 'sans-serif'; FONT-SIZE: 9pt" lang=AR-SA sab="539"><SPAN style="LINE-HEIGHT: 115%; FONT-FAMILY: 'Tahoma', 'sans-serif'; FONT-SIZE: 9pt" lang=AR-SA sab="543"><SPAN style="LINE-HEIGHT: 115%; FONT-FAMILY: 'Tahoma', 'sans-serif'; FONT-SIZE: 9pt" lang=AR-SA sab="547"><SPAN style="LINE-HEIGHT: 115%; FONT-FAMILY: 'Tahoma', 'sans-serif'; FONT-SIZE: 9pt" lang=AR-SA sab="551"><SPAN style="LINE-HEIGHT: 115%; FONT-FAMILY: 'Tahoma', 'sans-serif'; FONT-SIZE: 9pt" lang=AR-SA sab="555"><SPAN style="LINE-HEIGHT: 115%; FONT-FAMILY: 'Tahoma', 'sans-serif'; FONT-SIZE: 9pt" lang=AR-SA sab="559"><SPAN style="LINE-HEIGHT: 115%; FONT-FAMILY: 'Tahoma', 'sans-serif'; FONT-SIZE: 9pt" lang=AR-SA sab="563"><SPAN style="LINE-HEIGHT: 115%; FONT-FAMILY: 'Tahoma', 'sans-serif'; FONT-SIZE: 9pt" lang=AR-SA sab="567"><SPAN style="LINE-HEIGHT: 115%; FONT-FAMILY: 'Tahoma', 'sans-serif'; FONT-SIZE: 9pt" lang=AR-SA sab="571"><SPAN style="LINE-HEIGHT: 115%; FONT-FAMILY: 'Tahoma', 'sans-serif'; FONT-SIZE: 9pt" lang=AR-SA sab="575"><SPAN style="LINE-HEIGHT: 115%; FONT-FAMILY: 'Tahoma', 'sans-serif'; FONT-SIZE: 9pt" lang=AR-SA sab="579"><SPAN style="LINE-HEIGHT: 115%; FONT-FAMILY: 'Tahoma', 'sans-serif'; FONT-SIZE: 9pt" lang=AR-SA sab="583"><SPAN style="LINE-HEIGHT: 115%; FONT-FAMILY: 'Tahoma', 'sans-serif'; FONT-SIZE: 9pt" lang=AR-SA sab="587"><SPAN style="LINE-HEIGHT: 115%; FONT-FAMILY: 'Tahoma', 'sans-serif'; FONT-SIZE: 9pt" lang=AR-SA sab="591"><SPAN style="LINE-HEIGHT: 115%; FONT-FAMILY: 'Tahoma', 'sans-serif'; FONT-SIZE: 9pt" lang=AR-SA sab="595"><SPAN style="LINE-HEIGHT: 115%; FONT-FAMILY: 'Tahoma', 'sans-serif'; FONT-SIZE: 9pt" lang=AR-SA sab="599"><SPAN style="LINE-HEIGHT: 115%; FONT-FAMILY: 'Tahoma', 'sans-serif'; FONT-SIZE: 9pt" lang=AR-SA sab="603"><SPAN style="LINE-HEIGHT: 115%; FONT-FAMILY: 'Tahoma', 'sans-serif'; FONT-SIZE: 9pt" lang=AR-SA sab="607"><SPAN style="LINE-HEIGHT: 115%; FONT-FAMILY: 'Tahoma', 'sans-serif'; FONT-SIZE: 9pt" lang=AR-SA sab="611"><SPAN style="LINE-HEIGHT: 115%; FONT-FAMILY: 'Tahoma', 'sans-serif'; FONT-SIZE: 9pt" lang=AR-SA sab="615"><SPAN style="LINE-HEIGHT: 115%; FONT-FAMILY: 'Tahoma', 'sans-serif'; FONT-SIZE: 9pt" lang=AR-SA sab="619"><SPAN style="LINE-HEIGHT: 115%; FONT-FAMILY: 'Tahoma', 'sans-serif'; FONT-SIZE: 9pt" lang=AR-SA sab="623"><SPAN style="LINE-HEIGHT: 115%; FONT-FAMILY: 'Tahoma', 'sans-serif'; FONT-SIZE: 9pt" lang=AR-SA sab="627"><SPAN style="LINE-HEIGHT: 115%; FONT-FAMILY: 'Tahoma', 'sans-serif'; FONT-SIZE: 9pt" lang=AR-SA sab="631"><SPAN style="LINE-HEIGHT: 115%; FONT-FAMILY: 'Tahoma', 'sans-serif'; FONT-SIZE: 9pt" lang=AR-SA sab="635"><SPAN style="LINE-HEIGHT: 115%; FONT-FAMILY: 'Tahoma', 'sans-serif'; FONT-SIZE: 9pt" lang=AR-SA sab="639"><SPAN style="LINE-HEIGHT: 115%; FONT-FAMILY: 'Tahoma', 'sans-serif'; FONT-SIZE: 9pt" lang=AR-SA sab="643"><SPAN style="LINE-HEIGHT: 115%; FONT-FAMILY: 'Tahoma', 'sans-serif'; FONT-SIZE: 9pt" lang=AR-SA sab="647"><SPAN style="LINE-HEIGHT: 115%; FONT-FAMILY: 'Tahoma', 'sans-serif'; FONT-SIZE: 9pt" lang=AR-SA sab="651"><SPAN style="LINE-HEIGHT: 115%; FONT-FAMILY: 'Tahoma', 'sans-serif'; FONT-SIZE: 9pt" lang=AR-SA sab="698"><SPAN style="LINE-HEIGHT: 115%; FONT-FAMILY: 'Tahoma','sans-serif'; COLOR: #000099; FONT-SIZE: 9pt" lang=AR-SA><FONT size=2><SPAN style="LINE-HEIGHT: 115%; FONT-FAMILY: 'Tahoma', 'sans-serif'; FONT-SIZE: 9pt" lang=AR-SA sab="531"><SPAN style="LINE-HEIGHT: 115%; FONT-FAMILY: 'Tahoma', 'sans-serif'; FONT-SIZE: 9pt" lang=AR-SA sab="535"><SPAN style="LINE-HEIGHT: 115%; FONT-FAMILY: 'Tahoma', 'sans-serif'; FONT-SIZE: 9pt" lang=AR-SA sab="539"><SPAN style="LINE-HEIGHT: 115%; FONT-FAMILY: 'Tahoma', 'sans-serif'; FONT-SIZE: 9pt" lang=AR-SA sab="543"><SPAN style="LINE-HEIGHT: 115%; FONT-FAMILY: 'Tahoma', 'sans-serif'; FONT-SIZE: 9pt" lang=AR-SA sab="547"><SPAN style="LINE-HEIGHT: 115%; FONT-FAMILY: 'Tahoma', 'sans-serif'; FONT-SIZE: 9pt" lang=AR-SA sab="551"><SPAN style="LINE-HEIGHT: 115%; FONT-FAMILY: 'Tahoma', 'sans-serif'; FONT-SIZE: 9pt" lang=AR-SA sab="555"><SPAN style="LINE-HEIGHT: 115%; FONT-FAMILY: 'Tahoma', 'sans-serif'; FONT-SIZE: 9pt" lang=AR-SA sab="559"><SPAN style="LINE-HEIGHT: 115%; FONT-FAMILY: 'Tahoma', 'sans-serif'; FONT-SIZE: 9pt" lang=AR-SA sab="563"><SPAN style="LINE-HEIGHT: 115%; FONT-FAMILY: 'Tahoma', 'sans-serif'; FONT-SIZE: 9pt" lang=AR-SA sab="567"><SPAN style="LINE-HEIGHT: 115%; FONT-FAMILY: 'Tahoma', 'sans-serif'; FONT-SIZE: 9pt" lang=AR-SA sab="571"><SPAN style="LINE-HEIGHT: 115%; FONT-FAMILY: 'Tahoma', 'sans-serif'; FONT-SIZE: 9pt" lang=AR-SA sab="575"><SPAN style="LINE-HEIGHT: 115%; FONT-FAMILY: 'Tahoma', 'sans-serif'; FONT-SIZE: 9pt" lang=AR-SA sab="579"><SPAN style="LINE-HEIGHT: 115%; FONT-FAMILY: 'Tahoma', 'sans-serif'; FONT-SIZE: 9pt" lang=AR-SA sab="583"><SPAN style="LINE-HEIGHT: 115%; FONT-FAMILY: 'Tahoma', 'sans-serif'; FONT-SIZE: 9pt" lang=AR-SA sab="587"><SPAN style="LINE-HEIGHT: 115%; FONT-FAMILY: 'Tahoma', 'sans-serif'; FONT-SIZE: 9pt" lang=AR-SA sab="591"><SPAN style="LINE-HEIGHT: 115%; FONT-FAMILY: 'Tahoma', 'sans-serif'; FONT-SIZE: 9pt" lang=AR-SA sab="595"><SPAN style="LINE-HEIGHT: 115%; FONT-FAMILY: 'Tahoma', 'sans-serif'; FONT-SIZE: 9pt" lang=AR-SA sab="599"><SPAN style="LINE-HEIGHT: 115%; FONT-FAMILY: 'Tahoma', 'sans-serif'; FONT-SIZE: 9pt" lang=AR-SA sab="603"><SPAN style="LINE-HEIGHT: 115%; FONT-FAMILY: 'Tahoma', 'sans-serif'; FONT-SIZE: 9pt" lang=AR-SA sab="607"><SPAN style="LINE-HEIGHT: 115%; FONT-FAMILY: 'Tahoma', 'sans-serif'; FONT-SIZE: 9pt" lang=AR-SA sab="611"><SPAN style="LINE-HEIGHT: 115%; FONT-FAMILY: 'Tahoma', 'sans-serif'; FONT-SIZE: 9pt" lang=AR-SA sab="615"><SPAN style="LINE-HEIGHT: 115%; FONT-FAMILY: 'Tahoma', 'sans-serif'; FONT-SIZE: 9pt" lang=AR-SA sab="619"><SPAN style="LINE-HEIGHT: 115%; FONT-FAMILY: 'Tahoma', 'sans-serif'; FONT-SIZE: 9pt" lang=AR-SA sab="623"><SPAN style="LINE-HEIGHT: 115%; FONT-FAMILY: 'Tahoma', 'sans-serif'; FONT-SIZE: 9pt" lang=AR-SA sab="627"><SPAN style="LINE-HEIGHT: 115%; FONT-FAMILY: 'Tahoma', 'sans-serif'; FONT-SIZE: 9pt" lang=AR-SA sab="631"><SPAN style="LINE-HEIGHT: 115%; FONT-FAMILY: 'Tahoma', 'sans-serif'; FONT-SIZE: 9pt" lang=AR-SA sab="635"><SPAN style="LINE-HEIGHT: 115%; FONT-FAMILY: 'Tahoma', 'sans-serif'; FONT-SIZE: 9pt" lang=AR-SA sab="639"><SPAN style="LINE-HEIGHT: 115%; FONT-FAMILY: 'Tahoma', 'sans-serif'; FONT-SIZE: 9pt" lang=AR-SA sab="643"><SPAN style="LINE-HEIGHT: 115%; FONT-FAMILY: 'Tahoma', 'sans-serif'; FONT-SIZE: 9pt" lang=AR-SA sab="647"><SPAN style="LINE-HEIGHT: 115%; FONT-FAMILY: 'Tahoma', 'sans-serif'; FONT-SIZE: 9pt" lang=AR-SA sab="651"><SPAN style="LINE-HEIGHT: 115%; FONT-FAMILY: 'Tahoma', 'sans-serif'; FONT-SIZE: 9pt" lang=AR-SA sab="698"><SPAN style="LINE-HEIGHT: 115%; FONT-FAMILY: 'Tahoma','sans-serif'; COLOR: #000099; FONT-SIZE: 9pt" lang=AR-SA><SPAN style="LINE-HEIGHT: 115%; FONT-FAMILY: 'Tahoma', 'sans-serif'; FONT-SIZE: 9pt" lang=AR-SA sab="531"><SPAN style="LINE-HEIGHT: 115%; FONT-FAMILY: 'Tahoma', 'sans-serif'; FONT-SIZE: 9pt" lang=AR-SA sab="535"><SPAN style="LINE-HEIGHT: 115%; FONT-FAMILY: 'Tahoma', 'sans-serif'; FONT-SIZE: 9pt" lang=AR-SA sab="539"><SPAN style="LINE-HEIGHT: 115%; FONT-FAMILY: 'Tahoma', 'sans-serif'; FONT-SIZE: 9pt" lang=AR-SA sab="543"><SPAN style="LINE-HEIGHT: 115%; FONT-FAMILY: 'Tahoma', 'sans-serif'; FONT-SIZE: 9pt" lang=AR-SA sab="547"><SPAN style="LINE-HEIGHT: 115%; FONT-FAMILY: 'Tahoma', 'sans-serif'; FONT-SIZE: 9pt" lang=AR-SA sab="551"><SPAN style="LINE-HEIGHT: 115%; FONT-FAMILY: 'Tahoma', 'sans-serif'; FONT-SIZE: 9pt" lang=AR-SA sab="555"><SPAN style="LINE-HEIGHT: 115%; FONT-FAMILY: 'Tahoma', 'sans-serif'; FONT-SIZE: 9pt" lang=AR-SA sab="559"><SPAN style="LINE-HEIGHT: 115%; FONT-FAMILY: 'Tahoma', 'sans-serif'; FONT-SIZE: 9pt" lang=AR-SA sab="563"><SPAN style="LINE-HEIGHT: 115%; FONT-FAMILY: 'Tahoma', 'sans-serif'; FONT-SIZE: 9pt" lang=AR-SA sab="567"><SPAN style="LINE-HEIGHT: 115%; FONT-FAMILY: 'Tahoma', 'sans-serif'; FONT-SIZE: 9pt" lang=AR-SA sab="571"><SPAN style="LINE-HEIGHT: 115%; FONT-FAMILY: 'Tahoma', 'sans-serif'; FONT-SIZE: 9pt" lang=AR-SA sab="575"><SPAN style="LINE-HEIGHT: 115%; FONT-FAMILY: 'Tahoma', 'sans-serif'; FONT-SIZE: 9pt" lang=AR-SA sab="579"><SPAN style="LINE-HEIGHT: 115%; FONT-FAMILY: 'Tahoma', 'sans-serif'; FONT-SIZE: 9pt" lang=AR-SA sab="583"><SPAN style="LINE-HEIGHT: 115%; FONT-FAMILY: 'Tahoma', 'sans-serif'; FONT-SIZE: 9pt" lang=AR-SA sab="587"><SPAN style="LINE-HEIGHT: 115%; FONT-FAMILY: 'Tahoma', 'sans-serif'; FONT-SIZE: 9pt" lang=AR-SA sab="591"><SPAN style="LINE-HEIGHT: 115%; FONT-FAMILY: 'Tahoma', 'sans-serif'; FONT-SIZE: 9pt" lang=AR-SA sab="595"><SPAN style="LINE-HEIGHT: 115%; FONT-FAMILY: 'Tahoma', 'sans-serif'; FONT-SIZE: 9pt" lang=AR-SA sab="599"><SPAN style="LINE-HEIGHT: 115%; FONT-FAMILY: 'Tahoma', 'sans-serif'; FONT-SIZE: 9pt" lang=AR-SA sab="603"><SPAN style="LINE-HEIGHT: 115%; FONT-FAMILY: 'Tahoma', 'sans-serif'; FONT-SIZE: 9pt" lang=AR-SA sab="607"><SPAN style="LINE-HEIGHT: 115%; FONT-FAMILY: 'Tahoma', 'sans-serif'; FONT-SIZE: 9pt" lang=AR-SA sab="611"><SPAN style="LINE-HEIGHT: 115%; FONT-FAMILY: 'Tahoma', 'sans-serif'; FONT-SIZE: 9pt" lang=AR-SA sab="615"><SPAN style="LINE-HEIGHT: 115%; FONT-FAMILY: 'Tahoma', 'sans-serif'; FONT-SIZE: 9pt" lang=AR-SA sab="619"><SPAN style="LINE-HEIGHT: 115%; FONT-FAMILY: 'Tahoma', 'sans-serif'; FONT-SIZE: 9pt" lang=AR-SA sab="623"><SPAN style="LINE-HEIGHT: 115%; FONT-FAMILY: 'Tahoma', 'sans-serif'; FONT-SIZE: 9pt" lang=AR-SA sab="627"><SPAN style="LINE-HEIGHT: 115%; FONT-FAMILY: 'Tahoma', 'sans-serif'; FONT-SIZE: 9pt" lang=AR-SA sab="631"><SPAN style="LINE-HEIGHT: 115%; FONT-FAMILY: 'Tahoma', 'sans-serif'; FONT-SIZE: 9pt" lang=AR-SA sab="635"><SPAN style="LINE-HEIGHT: 115%; FONT-FAMILY: 'Tahoma', 'sans-serif'; FONT-SIZE: 9pt" lang=AR-SA sab="639"><SPAN style="LINE-HEIGHT: 115%; FONT-FAMILY: 'Tahoma', 'sans-serif'; FONT-SIZE: 9pt" lang=AR-SA sab="643"><SPAN style="LINE-HEIGHT: 115%; FONT-FAMILY: 'Tahoma', 'sans-serif'; FONT-SIZE: 9pt" lang=AR-SA sab="647"><SPAN style="LINE-HEIGHT: 115%; FONT-FAMILY: 'Tahoma', 'sans-serif'; FONT-SIZE: 9pt" lang=AR-SA sab="651"><SPAN style="LINE-HEIGHT: 115%; FONT-FAMILY: 'Tahoma', 'sans-serif'; FONT-SIZE: 9pt" lang=AR-SA sab="698"><SPAN style="LINE-HEIGHT: 115%; FONT-FAMILY: 'Tahoma','sans-serif'; COLOR: #000099; FONT-SIZE: 9pt" lang=AR-SA><SPAN style="LINE-HEIGHT: 115%; FONT-FAMILY: 'Tahoma', 'sans-serif'; FONT-SIZE: 9pt" lang=AR-SA sab="531"><SPAN style="LINE-HEIGHT: 115%; FONT-FAMILY: 'Tahoma', 'sans-serif'; FONT-SIZE: 9pt" lang=AR-SA sab="535"><SPAN style="LINE-HEIGHT: 115%; FONT-FAMILY: 'Tahoma', 'sans-serif'; FONT-SIZE: 9pt" lang=AR-SA sab="539"><SPAN style="LINE-HEIGHT: 115%; FONT-FAMILY: 'Tahoma', 'sans-serif'; FONT-SIZE: 9pt" lang=AR-SA sab="543"><SPAN style="LINE-HEIGHT: 115%; FONT-FAMILY: 'Tahoma', 'sans-serif'; FONT-SIZE: 9pt" lang=AR-SA sab="547"><SPAN style="LINE-HEIGHT: 115%; FONT-FAMILY: 'Tahoma', 'sans-serif'; FONT-SIZE: 9pt" lang=AR-SA sab="551"><SPAN style="LINE-HEIGHT: 115%; FONT-FAMILY: 'Tahoma', 'sans-serif'; FONT-SIZE: 9pt" lang=AR-SA sab="555"><SPAN style="LINE-HEIGHT: 115%; FONT-FAMILY: 'Tahoma', 'sans-serif'; FONT-SIZE: 9pt" lang=AR-SA sab="559"><SPAN style="LINE-HEIGHT: 115%; FONT-FAMILY: 'Tahoma', 'sans-serif'; FONT-SIZE: 9pt" lang=AR-SA sab="563"><SPAN style="LINE-HEIGHT: 115%; FONT-FAMILY: 'Tahoma', 'sans-serif'; FONT-SIZE: 9pt" lang=AR-SA sab="567"><SPAN style="LINE-HEIGHT: 115%; FONT-FAMILY: 'Tahoma', 'sans-serif'; FONT-SIZE: 9pt" lang=AR-SA sab="571"><SPAN style="LINE-HEIGHT: 115%; FONT-FAMILY: 'Tahoma', 'sans-serif'; FONT-SIZE: 9pt" lang=AR-SA sab="575"><SPAN style="LINE-HEIGHT: 115%; FONT-FAMILY: 'Tahoma', 'sans-serif'; FONT-SIZE: 9pt" lang=AR-SA sab="579"><SPAN style="LINE-HEIGHT: 115%; FONT-FAMILY: 'Tahoma', 'sans-serif'; FONT-SIZE: 9pt" lang=AR-SA sab="583"><SPAN style="LINE-HEIGHT: 115%; FONT-FAMILY: 'Tahoma', 'sans-serif'; FONT-SIZE: 9pt" lang=AR-SA sab="587"><SPAN style="LINE-HEIGHT: 115%; FONT-FAMILY: 'Tahoma', 'sans-serif'; FONT-SIZE: 9pt" lang=AR-SA sab="591"><SPAN style="LINE-HEIGHT: 115%; FONT-FAMILY: 'Tahoma', 'sans-serif'; FONT-SIZE: 9pt" lang=AR-SA sab="595"><SPAN style="LINE-HEIGHT: 115%; FONT-FAMILY: 'Tahoma', 'sans-serif'; FONT-SIZE: 9pt" lang=AR-SA sab="599"><SPAN style="LINE-HEIGHT: 115%; FONT-FAMILY: 'Tahoma', 'sans-serif'; FONT-SIZE: 9pt" lang=AR-SA sab="603"><SPAN style="LINE-HEIGHT: 115%; FONT-FAMILY: 'Tahoma', 'sans-serif'; FONT-SIZE: 9pt" lang=AR-SA sab="607"><SPAN style="LINE-HEIGHT: 115%; FONT-FAMILY: 'Tahoma', 'sans-serif'; FONT-SIZE: 9pt" lang=AR-SA sab="611"><SPAN style="LINE-HEIGHT: 115%; FONT-FAMILY: 'Tahoma', 'sans-serif'; FONT-SIZE: 9pt" lang=AR-SA sab="615"><SPAN style="LINE-HEIGHT: 115%; FONT-FAMILY: 'Tahoma', 'sans-serif'; FONT-SIZE: 9pt" lang=AR-SA sab="619"><SPAN style="LINE-HEIGHT: 115%; FONT-FAMILY: 'Tahoma', 'sans-serif'; FONT-SIZE: 9pt" lang=AR-SA sab="623"><SPAN style="LINE-HEIGHT: 115%; FONT-FAMILY: 'Tahoma', 'sans-serif'; FONT-SIZE: 9pt" lang=AR-SA sab="627"><SPAN style="LINE-HEIGHT: 115%; FONT-FAMILY: 'Tahoma', 'sans-serif'; FONT-SIZE: 9pt" lang=AR-SA sab="631"><SPAN style="LINE-HEIGHT: 115%; FONT-FAMILY: 'Tahoma', 'sans-serif'; FONT-SIZE: 9pt" lang=AR-SA sab="635"><SPAN style="LINE-HEIGHT: 115%; FONT-FAMILY: 'Tahoma', 'sans-serif'; FONT-SIZE: 9pt" lang=AR-SA sab="639"><SPAN style="LINE-HEIGHT: 115%; FONT-FAMILY: 'Tahoma', 'sans-serif'; FONT-SIZE: 9pt" lang=AR-SA sab="643"><SPAN style="LINE-HEIGHT: 115%; FONT-FAMILY: 'Tahoma', 'sans-serif'; FONT-SIZE: 9pt" lang=AR-SA sab="647"><SPAN style="LINE-HEIGHT: 115%; FONT-FAMILY: 'Tahoma', 'sans-serif'; FONT-SIZE: 9pt" lang=AR-SA sab="651"><SPAN style="LINE-HEIGHT: 115%; FONT-FAMILY: 'Tahoma', 'sans-serif'; FONT-SIZE: 9pt" lang=AR-SA sab="698"><SPAN style="LINE-HEIGHT: 115%; FONT-FAMILY: 'Tahoma','sans-serif'; COLOR: #000099; FONT-SIZE: 9pt" lang=AR-SA><SPAN style="LINE-HEIGHT: 115%; FONT-FAMILY: 'Tahoma', 'sans-serif'; FONT-SIZE: 9pt" lang=AR-SA sab="531"><SPAN style="LINE-HEIGHT: 115%; FONT-FAMILY: 'Tahoma', 'sans-serif'; FONT-SIZE: 9pt" lang=AR-SA sab="535"><SPAN style="LINE-HEIGHT: 115%; FONT-FAMILY: 'Tahoma', 'sans-serif'; FONT-SIZE: 9pt" lang=AR-SA sab="539"><SPAN style="LINE-HEIGHT: 115%; FONT-FAMILY: 'Tahoma', 'sans-serif'; FONT-SIZE: 9pt" lang=AR-SA sab="543"><SPAN style="LINE-HEIGHT: 115%; FONT-FAMILY: 'Tahoma', 'sans-serif'; FONT-SIZE: 9pt" lang=AR-SA sab="547"><SPAN style="LINE-HEIGHT: 115%; FONT-FAMILY: 'Tahoma', 'sans-serif'; FONT-SIZE: 9pt" lang=AR-SA sab="551"><SPAN style="LINE-HEIGHT: 115%; FONT-FAMILY: 'Tahoma', 'sans-serif'; FONT-SIZE: 9pt" lang=AR-SA sab="555"><SPAN style="LINE-HEIGHT: 115%; FONT-FAMILY: 'Tahoma', 'sans-serif'; FONT-SIZE: 9pt" lang=AR-SA sab="559"><SPAN style="LINE-HEIGHT: 115%; FONT-FAMILY: 'Tahoma', 'sans-serif'; FONT-SIZE: 9pt" lang=AR-SA sab="563"><SPAN style="LINE-HEIGHT: 115%; FONT-FAMILY: 'Tahoma', 'sans-serif'; FONT-SIZE: 9pt" lang=AR-SA sab="567"><SPAN style="LINE-HEIGHT: 115%; FONT-FAMILY: 'Tahoma', 'sans-serif'; FONT-SIZE: 9pt" lang=AR-SA sab="571"><SPAN style="LINE-HEIGHT: 115%; FONT-FAMILY: 'Tahoma', 'sans-serif'; FONT-SIZE: 9pt" lang=AR-SA sab="575"><SPAN style="LINE-HEIGHT: 115%; FONT-FAMILY: 'Tahoma', 'sans-serif'; FONT-SIZE: 9pt" lang=AR-SA sab="579"><SPAN style="LINE-HEIGHT: 115%; FONT-FAMILY: 'Tahoma', 'sans-serif'; FONT-SIZE: 9pt" lang=AR-SA sab="583"><SPAN style="LINE-HEIGHT: 115%; FONT-FAMILY: 'Tahoma', 'sans-serif'; FONT-SIZE: 9pt" lang=AR-SA sab="587"><SPAN style="LINE-HEIGHT: 115%; FONT-FAMILY: 'Tahoma', 'sans-serif'; FONT-SIZE: 9pt" lang=AR-SA sab="591"><SPAN style="LINE-HEIGHT: 115%; FONT-FAMILY: 'Tahoma', 'sans-serif'; FONT-SIZE: 9pt" lang=AR-SA sab="595"><SPAN style="LINE-HEIGHT: 115%; FONT-FAMILY: 'Tahoma', 'sans-serif'; FONT-SIZE: 9pt" lang=AR-SA sab="599"><SPAN style="LINE-HEIGHT: 115%; FONT-FAMILY: 'Tahoma', 'sans-serif'; FONT-SIZE: 9pt" lang=AR-SA sab="603"><SPAN style="LINE-HEIGHT: 115%; FONT-FAMILY: 'Tahoma', 'sans-serif'; FONT-SIZE: 9pt" lang=AR-SA sab="607"><SPAN style="LINE-HEIGHT: 115%; FONT-FAMILY: 'Tahoma', 'sans-serif'; FONT-SIZE: 9pt" lang=AR-SA sab="611"><SPAN style="LINE-HEIGHT: 115%; FONT-FAMILY: 'Tahoma', 'sans-serif'; FONT-SIZE: 9pt" lang=AR-SA sab="615"><SPAN style="LINE-HEIGHT: 115%; FONT-FAMILY: 'Tahoma', 'sans-serif'; FONT-SIZE: 9pt" lang=AR-SA sab="619"><SPAN style="LINE-HEIGHT: 115%; FONT-FAMILY: 'Tahoma', 'sans-serif'; FONT-SIZE: 9pt" lang=AR-SA sab="623"><SPAN style="LINE-HEIGHT: 115%; FONT-FAMILY: 'Tahoma', 'sans-serif'; FONT-SIZE: 9pt" lang=AR-SA sab="627"><SPAN style="LINE-HEIGHT: 115%; FONT-FAMILY: 'Tahoma', 'sans-serif'; FONT-SIZE: 9pt" lang=AR-SA sab="631"><SPAN style="LINE-HEIGHT: 115%; FONT-FAMILY: 'Tahoma', 'sans-serif'; FONT-SIZE: 9pt" lang=AR-SA sab="635"><SPAN style="LINE-HEIGHT: 115%; FONT-FAMILY: 'Tahoma', 'sans-serif'; FONT-SIZE: 9pt" lang=AR-SA sab="639"><SPAN style="LINE-HEIGHT: 115%; FONT-FAMILY: 'Tahoma', 'sans-serif'; FONT-SIZE: 9pt" lang=AR-SA sab="643"><SPAN style="LINE-HEIGHT: 115%; FONT-FAMILY: 'Tahoma', 'sans-serif'; FONT-SIZE: 9pt" lang=AR-SA sab="647"><SPAN style="LINE-HEIGHT: 115%; FONT-FAMILY: 'Tahoma', 'sans-serif'; FONT-SIZE: 9pt" lang=AR-SA sab="651"><SPAN style="LINE-HEIGHT: 115%; FONT-FAMILY: 'Tahoma', 'sans-serif'; FONT-SIZE: 9pt" lang=AR-SA sab="698">
+<P style="TEXT-ALIGN: right; LINE-HEIGHT: 115%; unicode-bidi: embed; DIRECTION: rtl" dir=rtl align=justify><SPAN style="LINE-HEIGHT: 115%; FONT-FAMILY: 'Tahoma','sans-serif'; COLOR: #000099; FONT-SIZE: 9pt" lang=AR-SA><FONT size=2>ساعت </FONT></SPAN></SPAN><FONT size=2><SPAN style="LINE-HEIGHT: 115%; FONT-FAMILY: 'Tahoma','sans-serif'; COLOR: #000099; FONT-SIZE: 9pt" lang=FA><SPAN sab="657">۴</SPAN><SPAN sab="658"> </SPAN><SPAN sab="659">بعدازظهر روز 21 بهمن 1357 بود كه رژیم شاه اعلام حکومت نظامی کرد و به مردم دستور داد که از ساعت چهار </SPAN><SPAN sab="660">بعدازظهر به </SPAN></SPAN><SPAN style="LINE-HEIGHT: 115%; FONT-FAMILY: 'Tahoma','sans-serif'; COLOR: #000099; FONT-SIZE: 9pt" lang=FA><SPAN sab="660">بعد، از خانه‌های خود خارج نشوند. امام <FONT size=1>(رحمه الله)</FONT> بلافاصله این حکم را لغو کردند و از همه مردم خواستند به خیابان‌ها بریزند.</SPAN></SPAN></FONT></P>
+<P style="TEXT-ALIGN: right; LINE-HEIGHT: 115%; unicode-bidi: embed; DIRECTION: rtl" dir=rtl align=justify sab="662">&nbsp;</P>
+<P style="TEXT-ALIGN: right; LINE-HEIGHT: 115%; unicode-bidi: embed; DIRECTION: rtl" dir=rtl align=justify sab="662"><FONT size=3><SPAN style="LINE-HEIGHT: 115%; FONT-FAMILY: 'Tahoma','sans-serif'; COLOR: #000099; FONT-SIZE: 10pt" lang=AR-SA><SPAN sab="666">عده‌ای نزد مرحوم طالقانی آمدند و از ایشان خواستند از امام تقاضا كنند تا اعلامیه ی لغو حكومت نظامی را پس بگیرند. البته نیت </SPAN></SPAN><SPAN style="LINE-HEIGHT: 115%; FONT-FAMILY: 'Tahoma','sans-serif'; COLOR: #000099; FONT-SIZE: 10pt" lang=AR-SA><SPAN sab="666">این عده، خیر بود اما اگر قرار باشد یك كشتی به ساحل نجات برسد همه باید در هر شرایطی، تابع ناخدا باشند.</SPAN></SPAN></FONT></P>
+<P style="TEXT-ALIGN: right; LINE-HEIGHT: 115%; unicode-bidi: embed; DIRECTION: rtl" dir=rtl align=justify sab="668">&nbsp;</P>
+<P style="TEXT-ALIGN: right; LINE-HEIGHT: 115%; unicode-bidi: embed; DIRECTION: rtl" dir=rtl align=justify sab="668"><FONT size=3><SPAN style="LINE-HEIGHT: 115%; FONT-FAMILY: 'Tahoma','sans-serif'; COLOR: #000099; FONT-SIZE: 10pt" lang=AR-SA><SPAN sab="672">آیت الله طالقانی در تماس تلفنی با حضرت امام به طرح استدلال های مختلف می پردازند تا ایشان را برای پس گرفتن اعلامیه، قانع </SPAN></SPAN><SPAN style="LINE-HEIGHT: 115%; FONT-FAMILY: 'Tahoma','sans-serif'; COLOR: #000099; FONT-SIZE: 10pt" lang=AR-SA><SPAN sab="672">كنند. اما در پایان این مكالمه، این مرحوم طالقانی بود كه قانع شد و اشك ریزان، بر تصمیم حضرت امام(<FONT size=1>رحمه الله)</FONT> مهر تایید زد.<SUP>1</SUP></SPAN></SPAN></FONT></P><SPAN sab="672"><SPAN style="LINE-HEIGHT: 115%; FONT-FAMILY: 'Tahoma','sans-serif'; COLOR: #000099; FONT-SIZE: 10pt" lang=AR-SA>
+<P style="TEXT-ALIGN: right; LINE-HEIGHT: 115%; unicode-bidi: embed; DIRECTION: rtl" dir=rtl align=justify sab="671">&nbsp;</P>
+<P style="TEXT-ALIGN: right; LINE-HEIGHT: 115%; unicode-bidi: embed; DIRECTION: rtl" dir=rtl align=justify sab="671"><FONT size=3><SPAN sab="672"><SPAN style="LINE-HEIGHT: 115%; FONT-FAMILY: 'Tahoma','sans-serif'; COLOR: #000099; FONT-SIZE: 10pt" lang=AR-SA>انقلابیون آن روز، تصمیم و نظر نایب امام زمان <FONT size=1>(عجل الله فرجه)</FONT> را پذیرفتند و نتیجه این شد كه یك روز بعد یعنی روز 22 بهمن، پیروزی </SPAN></SPAN><SPAN sab="672"><SPAN style="LINE-HEIGHT: 115%; FONT-FAMILY: 'Tahoma','sans-serif'; COLOR: #000099; FONT-SIZE: 10pt" lang=AR-SA>نهایی حاصل شد و كشتی انقلاب به ساحل موفقیت رسید.</SPAN></SPAN></FONT></P><FONT face=tahoma,arial,helvetica,sans-serif><FONT color=#000099 sab="650"><FONT face="" sab="649"><FONT size=2 face=tahoma,arial,helvetica,sans-serif sab="648"><FONT color=#000099 sab="646"><FONT face="" sab="645"><FONT size=2 face=tahoma,arial,helvetica,sans-serif sab="644"><FONT color=#000099 sab="642"><FONT face="" sab="641"><FONT size=2 face=tahoma,arial,helvetica,sans-serif sab="640"><FONT color=#000099 sab="638"><FONT face="" sab="637"><FONT size=2 face=tahoma,arial,helvetica,sans-serif sab="636"><FONT color=#000099 sab="634"><FONT face="" sab="633"><FONT size=2 face=tahoma,arial,helvetica,sans-serif sab="632"><FONT color=#000099 sab="630"><FONT face="" sab="629"><FONT size=2 face=tahoma,arial,helvetica,sans-serif sab="628"><FONT color=#000099 sab="626"><FONT face="" sab="625"><FONT size=2 face=tahoma,arial,helvetica,sans-serif sab="624"><FONT color=#000099 sab="622"><FONT face="" sab="621"><FONT size=2 face=tahoma,arial,helvetica,sans-serif sab="620"><FONT color=#000099 sab="618"><FONT face="" sab="617"><FONT size=2 face=tahoma,arial,helvetica,sans-serif sab="616"><FONT color=#000099 sab="614"><FONT face="" sab="613"><FONT size=2 face=tahoma,arial,helvetica,sans-serif sab="612"><FONT color=#000099 sab="610"><FONT face="" sab="609"><FONT size=2 face=tahoma,arial,helvetica,sans-serif sab="608"><FONT color=#000099 sab="606"><FONT face="" sab="605"><FONT size=2 face=tahoma,arial,helvetica,sans-serif sab="604"><FONT color=#000099 sab="602"><FONT face="" sab="601"><FONT size=2 face=tahoma,arial,helvetica,sans-serif sab="600"><FONT color=#000099 sab="598"><FONT face="" sab="597"><FONT size=2 face=tahoma,arial,helvetica,sans-serif sab="596"><FONT color=#000099 sab="594"><FONT face="" sab="593"><FONT size=2 face=tahoma,arial,helvetica,sans-serif sab="592"><FONT color=#000099 sab="590"><FONT face="" sab="589"><FONT size=2 face=tahoma,arial,helvetica,sans-serif sab="588"><FONT color=#000099 sab="586"><FONT face="" sab="585"><FONT size=2 face=tahoma,arial,helvetica,sans-serif sab="584"><FONT color=#000099 sab="582"><FONT face="" sab="581"><FONT size=2 face=tahoma,arial,helvetica,sans-serif sab="580"><FONT color=#000099 sab="578"><FONT face="" sab="577"><FONT size=2 face=tahoma,arial,helvetica,sans-serif sab="576"><FONT color=#000099 sab="574"><FONT face="" sab="573"><FONT size=2 face=tahoma,arial,helvetica,sans-serif sab="572"><FONT color=#000099 sab="570"><FONT face="" sab="569"><FONT size=2 face=tahoma,arial,helvetica,sans-serif sab="568"><FONT color=#000099 sab="566"><FONT face="" sab="565"><FONT size=2 face=tahoma,arial,helvetica,sans-serif sab="564"><FONT color=#000099 sab="562"><FONT face="" sab="561"><FONT size=2 face=tahoma,arial,helvetica,sans-serif sab="560"><FONT color=#000099 sab="558"><FONT face="" sab="557"><FONT size=2 face=tahoma,arial,helvetica,sans-serif sab="556"><FONT color=#000099 sab="554"><FONT face="" sab="553"><FONT size=2 face=tahoma,arial,helvetica,sans-serif sab="552"><FONT color=#000099 sab="550"><FONT face="" sab="549"><FONT size=2 face=tahoma,arial,helvetica,sans-serif sab="548"><FONT color=#000099 sab="546"><FONT face="" sab="545"><FONT size=2 face=tahoma,arial,helvetica,sans-serif sab="544"><FONT color=#000099 sab="542"><FONT face="" sab="541"><FONT size=2 face=tahoma,arial,helvetica,sans-serif sab="540"><FONT color=#000099 sab="538"><FONT face="" sab="537"><FONT size=2 face=tahoma,arial,helvetica,sans-serif sab="536"><FONT color=#000099 sab="534"><FONT face="" sab="533"><FONT size=2 face=tahoma,arial,helvetica,sans-serif sab="532"><FONT color=#000099 sab="530"><FONT face="" sab="529"><FONT size=2 face=tahoma,arial,helvetica,sans-serif sab="528"><FONT face=tahoma,arial,helvetica,sans-serif><FONT face=tahoma,arial,helvetica,sans-serif><FONT size=2><FONT size=2 face=tahoma,arial,helvetica,sans-serif sab="652"><FONT color=#000099 sab="650"><FONT face="" sab="649"><FONT size=2 face=tahoma,arial,helvetica,sans-serif sab="648"><FONT color=#000099 sab="646"><FONT face="" sab="645"><FONT size=2 face=tahoma,arial,helvetica,sans-serif sab="644"><FONT color=#000099 sab="642"><FONT face="" sab="641"><FONT size=2 face=tahoma,arial,helvetica,sans-serif sab="640"><FONT color=#000099 sab="638"><FONT face="" sab="637"><FONT size=2 face=tahoma,arial,helvetica,sans-serif sab="636"><FONT color=#000099 sab="634"><FONT face="" sab="633"><FONT size=2 face=tahoma,arial,helvetica,sans-serif sab="632"><FONT color=#000099 sab="630"><FONT face="" sab="629"><FONT size=2 face=tahoma,arial,helvetica,sans-serif sab="628"><FONT color=#000099 sab="626"><FONT face="" sab="625"><FONT size=2 face=tahoma,arial,helvetica,sans-serif sab="624"><FONT color=#000099 sab="622"><FONT face="" sab="621"><FONT size=2 face=tahoma,arial,helvetica,sans-serif sab="620"><FONT color=#000099 sab="618"><FONT face="" sab="617"><FONT size=2 face=tahoma,arial,helvetica,sans-serif sab="616"><FONT color=#000099 sab="614"><FONT face="" sab="613"><FONT size=2 face=tahoma,arial,helvetica,sans-serif sab="612"><FONT color=#000099 sab="610"><FONT face="" sab="609"><FONT size=2 face=tahoma,arial,helvetica,sans-serif sab="608"><FONT color=#000099 sab="606"><FONT face="" sab="605"><FONT size=2 face=tahoma,arial,helvetica,sans-serif sab="604"><FONT color=#000099 sab="602"><FONT face="" sab="601"><FONT size=2 face=tahoma,arial,helvetica,sans-serif sab="600"><FONT color=#000099 sab="598"><FONT face="" sab="597"><FONT size=2 face=tahoma,arial,helvetica,sans-serif sab="596"><FONT color=#000099 sab="594"><FONT face="" sab="593"><FONT size=2 face=tahoma,arial,helvetica,sans-serif sab="592"><FONT color=#000099 sab="590"><FONT face="" sab="589"><FONT size=2 face=tahoma,arial,helvetica,sans-serif sab="588"><FONT color=#000099 sab="586"><FONT face="" sab="585"><FONT size=2 face=tahoma,arial,helvetica,sans-serif sab="584"><FONT color=#000099 sab="582"><FONT face="" sab="581"><FONT size=2 face=tahoma,arial,helvetica,sans-serif sab="580"><FONT color=#000099 sab="578"><FONT face="" sab="577"><FONT size=2 face=tahoma,arial,helvetica,sans-serif sab="576"><FONT color=#000099 sab="574"><FONT face="" sab="573"><FONT size=2 face=tahoma,arial,helvetica,sans-serif sab="572"><FONT color=#000099 sab="570"><FONT face="" sab="569"><FONT size=2 face=tahoma,arial,helvetica,sans-serif sab="568"><FONT color=#000099 sab="566"><FONT face="" sab="565"><FONT size=2 face=tahoma,arial,helvetica,sans-serif sab="564"><FONT color=#000099 sab="562"><FONT face="" sab="561"><FONT size=2 face=tahoma,arial,helvetica,sans-serif sab="560"><FONT color=#000099 sab="558"><FONT face="" sab="557"><FONT size=2 face=tahoma,arial,helvetica,sans-serif sab="556"><FONT color=#000099 sab="554"><FONT face="" sab="553"><FONT size=2 face=tahoma,arial,helvetica,sans-serif sab="552"><FONT color=#000099 sab="550"><FONT face="" sab="549"><FONT size=2 face=tahoma,arial,helvetica,sans-serif sab="548"><FONT color=#000099 sab="546"><FONT face="" sab="545"><FONT size=2 face=tahoma,arial,helvetica,sans-serif sab="544"><FONT color=#000099 sab="542"><FONT face="" sab="541"><FONT size=2 face=tahoma,arial,helvetica,sans-serif sab="540"><FONT color=#000099 sab="538"><FONT face="" sab="537"><FONT size=2 face=tahoma,arial,helvetica,sans-serif sab="536"><FONT color=#000099 sab="534"><FONT face="" sab="533"><FONT size=2 face=tahoma,arial,helvetica,sans-serif sab="532"><FONT color=#000099 sab="530"><FONT face="" sab="529"><FONT size=2 face=tahoma,arial,helvetica,sans-serif sab="528"><FONT size=2 face=tahoma,arial,helvetica,sans-serif sab="528">
+<P style="TEXT-ALIGN: right; LINE-HEIGHT: 115%; unicode-bidi: embed; DIRECTION: rtl" dir=rtl align=justify sab="671"></FONT></SPAN></SPAN></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT>&nbsp;</P>
+<P style="TEXT-ALIGN: right; LINE-HEIGHT: 115%; unicode-bidi: embed; DIRECTION: rtl" dir=rtl align=justify sab="671"><FONT size=3><SPAN style="LINE-HEIGHT: 115%; FONT-FAMILY: 'Tahoma','sans-serif'; COLOR: #000099; FONT-SIZE: 10pt" lang=AR-SA><SPAN sab="683">مسئولین و انقلابیون امروز هم اگر دغدغه ی حفظ و اعتلای سربلندی كشور را دارند باید بدانند</SPAN><SPAN style="LINE-HEIGHT: 115%; FONT-FAMILY: 'Tahoma','sans-serif'; COLOR: #003300; FONT-SIZE: 10pt" lang=AR-SA> «راهش این است كه اتحاد خودمان را </SPAN></SPAN><SPAN style="LINE-HEIGHT: 115%; FONT-FAMILY: 'Tahoma','sans-serif'; COLOR: #000099; FONT-SIZE: 10pt" lang=AR-SA><SPAN style="LINE-HEIGHT: 115%; FONT-FAMILY: 'Tahoma','sans-serif'; COLOR: #003300; FONT-SIZE: 10pt" lang=AR-SA>حفظ كنیم؛ راهش این است كه مسئولین كشور مصالح كشور را حفظ كنند. این بداخلاقى‌هایى كه دیده مى‌شود در برخى از </SPAN></SPAN><SPAN style="LINE-HEIGHT: 115%; FONT-FAMILY: 'Tahoma','sans-serif'; COLOR: #000099; FONT-SIZE: 10pt" lang=AR-SA><SPAN style="LINE-HEIGHT: 115%; FONT-FAMILY: 'Tahoma','sans-serif'; COLOR: #003300; FONT-SIZE: 10pt" lang=AR-SA>عرصه‌ها و صحنه‌ها از بعضى از مسئولین كشور، این بداخلاقى‌ها را بگذارند كنار.»<SUP>2</SUP></SPAN></SPAN></FONT></P><FONT face=tahoma,arial,helvetica,sans-serif><FONT color=#000099 sab="650"><FONT face="" sab="649"><FONT size=2 face=tahoma,arial,helvetica,sans-serif sab="648"><FONT color=#000099 sab="646"><FONT face="" sab="645"><FONT size=2 face=tahoma,arial,helvetica,sans-serif sab="644"><FONT color=#000099 sab="642"><FONT face="" sab="641"><FONT size=2 face=tahoma,arial,helvetica,sans-serif sab="640"><FONT color=#000099 sab="638"><FONT face="" sab="637"><FONT size=2 face=tahoma,arial,helvetica,sans-serif sab="636"><FONT color=#000099 sab="634"><FONT face="" sab="633"><FONT size=2 face=tahoma,arial,helvetica,sans-serif sab="632"><FONT color=#000099 sab="630"><FONT face="" sab="629"><FONT size=2 face=tahoma,arial,helvetica,sans-serif sab="628"><FONT color=#000099 sab="626"><FONT face="" sab="625"><FONT size=2 face=tahoma,arial,helvetica,sans-serif sab="624"><FONT color=#000099 sab="622"><FONT face="" sab="621"><FONT size=2 face=tahoma,arial,helvetica,sans-serif sab="620"><FONT color=#000099 sab="618"><FONT face="" sab="617"><FONT size=2 face=tahoma,arial,helvetica,sans-serif sab="616"><FONT color=#000099 sab="614"><FONT face="" sab="613"><FONT size=2 face=tahoma,arial,helvetica,sans-serif sab="612"><FONT color=#000099 sab="610"><FONT face="" sab="609"><FONT size=2 face=tahoma,arial,helvetica,sans-serif sab="608"><FONT color=#000099 sab="606"><FONT face="" sab="605"><FONT size=2 face=tahoma,arial,helvetica,sans-serif sab="604"><FONT color=#000099 sab="602"><FONT face="" sab="601"><FONT size=2 face=tahoma,arial,helvetica,sans-serif sab="600"><FONT color=#000099 sab="598"><FONT face="" sab="597"><FONT size=2 face=tahoma,arial,helvetica,sans-serif sab="596"><FONT color=#000099 sab="594"><FONT face="" sab="593"><FONT size=2 face=tahoma,arial,helvetica,sans-serif sab="592"><FONT color=#000099 sab="590"><FONT face="" sab="589"><FONT size=2 face=tahoma,arial,helvetica,sans-serif sab="588"><FONT color=#000099 sab="586"><FONT face="" sab="585"><FONT size=2 face=tahoma,arial,helvetica,sans-serif sab="584"><FONT color=#000099 sab="582"><FONT face="" sab="581"><FONT size=2 face=tahoma,arial,helvetica,sans-serif sab="580"><FONT color=#000099 sab="578"><FONT face="" sab="577"><FONT size=2 face=tahoma,arial,helvetica,sans-serif sab="576"><FONT color=#000099 sab="574"><FONT face="" sab="573"><FONT size=2 face=tahoma,arial,helvetica,sans-serif sab="572"><FONT color=#000099 sab="570"><FONT face="" sab="569"><FONT size=2 face=tahoma,arial,helvetica,sans-serif sab="568"><FONT color=#000099 sab="566"><FONT face="" sab="565"><FONT size=2 face=tahoma,arial,helvetica,sans-serif sab="564"><FONT color=#000099 sab="562"><FONT face="" sab="561"><FONT size=2 face=tahoma,arial,helvetica,sans-serif sab="560"><FONT color=#000099 sab="558"><FONT face="" sab="557"><FONT size=2 face=tahoma,arial,helvetica,sans-serif sab="556"><FONT color=#000099 sab="554"><FONT face="" sab="553"><FONT size=2 face=tahoma,arial,helvetica,sans-serif sab="552"><FONT color=#000099 sab="550"><FONT face="" sab="549"><FONT size=2 face=tahoma,arial,helvetica,sans-serif sab="548"><FONT color=#000099 sab="546"><FONT face="" sab="545"><FONT size=2 face=tahoma,arial,helvetica,sans-serif sab="544"><FONT color=#000099 sab="542"><FONT face="" sab="541"><FONT size=2 face=tahoma,arial,helvetica,sans-serif sab="540"><FONT color=#000099 sab="538"><FONT face="" sab="537"><FONT size=2 face=tahoma,arial,helvetica,sans-serif sab="536"><FONT color=#000099 sab="534"><FONT face="" sab="533"><FONT size=2 face=tahoma,arial,helvetica,sans-serif sab="532"><FONT color=#000099 sab="530"><FONT face="" sab="529"><FONT size=2 face=tahoma,arial,helvetica,sans-serif sab="528"><FONT face=tahoma,arial,helvetica,sans-serif><FONT face=tahoma,arial,helvetica,sans-serif><FONT size=2><FONT size=2 face=tahoma,arial,helvetica,sans-serif sab="652"><FONT color=#000099 sab="650"><FONT face="" sab="649"><FONT size=2 face=tahoma,arial,helvetica,sans-serif sab="648"><FONT color=#000099 sab="646"><FONT face="" sab="645"><FONT size=2 face=tahoma,arial,helvetica,sans-serif sab="644"><FONT color=#000099 sab="642"><FONT face="" sab="641"><FONT size=2 face=tahoma,arial,helvetica,sans-serif sab="640"><FONT color=#000099 sab="638"><FONT face="" sab="637"><FONT size=2 face=tahoma,arial,helvetica,sans-serif sab="636"><FONT color=#000099 sab="634"><FONT face="" sab="633"><FONT size=2 face=tahoma,arial,helvetica,sans-serif sab="632"><FONT color=#000099 sab="630"><FONT face="" sab="629"><FONT size=2 face=tahoma,arial,helvetica,sans-serif sab="628"><FONT color=#000099 sab="626"><FONT face="" sab="625"><FONT size=2 face=tahoma,arial,helvetica,sans-serif sab="624"><FONT color=#000099 sab="622"><FONT face="" sab="621"><FONT size=2 face=tahoma,arial,helvetica,sans-serif sab="620"><FONT color=#000099 sab="618"><FONT face="" sab="617"><FONT size=2 face=tahoma,arial,helvetica,sans-serif sab="616"><FONT color=#000099 sab="614"><FONT face="" sab="613"><FONT size=2 face=tahoma,arial,helvetica,sans-serif sab="612"><FONT color=#000099 sab="610"><FONT face="" sab="609"><FONT size=2 face=tahoma,arial,helvetica,sans-serif sab="608"><FONT color=#000099 sab="606"><FONT face="" sab="605"><FONT size=2 face=tahoma,arial,helvetica,sans-serif sab="604"><FONT color=#000099 sab="602"><FONT face="" sab="601"><FONT size=2 face=tahoma,arial,helvetica,sans-serif sab="600"><FONT color=#000099 sab="598"><FONT face="" sab="597"><FONT size=2 face=tahoma,arial,helvetica,sans-serif sab="596"><FONT color=#000099 sab="594"><FONT face="" sab="593"><FONT size=2 face=tahoma,arial,helvetica,sans-serif sab="592"><FONT color=#000099 sab="590"><FONT face="" sab="589"><FONT size=2 face=tahoma,arial,helvetica,sans-serif sab="588"><FONT color=#000099 sab="586"><FONT face="" sab="585"><FONT size=2 face=tahoma,arial,helvetica,sans-serif sab="584"><FONT color=#000099 sab="582"><FONT face="" sab="581"><FONT size=2 face=tahoma,arial,helvetica,sans-serif sab="580"><FONT color=#000099 sab="578"><FONT face="" sab="577"><FONT size=2 face=tahoma,arial,helvetica,sans-serif sab="576"><FONT color=#000099 sab="574"><FONT face="" sab="573"><FONT size=2 face=tahoma,arial,helvetica,sans-serif sab="572"><FONT color=#000099 sab="570"><FONT face="" sab="569"><FONT size=2 face=tahoma,arial,helvetica,sans-serif sab="568"><FONT color=#000099 sab="566"><FONT face="" sab="565"><FONT size=2 face=tahoma,arial,helvetica,sans-serif sab="564"><FONT color=#000099 sab="562"><FONT face="" sab="561"><FONT size=2 face=tahoma,arial,helvetica,sans-serif sab="560"><FONT color=#000099 sab="558"><FONT face="" sab="557"><FONT size=2 face=tahoma,arial,helvetica,sans-serif sab="556"><FONT color=#000099 sab="554"><FONT face="" sab="553"><FONT size=2 face=tahoma,arial,helvetica,sans-serif sab="552"><FONT color=#000099 sab="550"><FONT face="" sab="549"><FONT size=2 face=tahoma,arial,helvetica,sans-serif sab="548"><FONT color=#000099 sab="546"><FONT face="" sab="545"><FONT size=2 face=tahoma,arial,helvetica,sans-serif sab="544"><FONT color=#000099 sab="542"><FONT face="" sab="541"><FONT size=2 face=tahoma,arial,helvetica,sans-serif sab="540"><FONT color=#000099 sab="538"><FONT face="" sab="537"><FONT size=2 face=tahoma,arial,helvetica,sans-serif sab="536"><FONT color=#000099 sab="534"><FONT face="" sab="533"><FONT size=2 face=tahoma,arial,helvetica,sans-serif sab="532"><FONT color=#000099 sab="530"><FONT face="" sab="529"><FONT size=2 face=tahoma,arial,helvetica,sans-serif sab="528">
+<P align=justify sab="697">&nbsp;</P>
+<P align=justify sab="697"><SPAN sab="689"><SPAN sab="692"><FONT color=#000000 size=3><FONT face=tahoma,arial,helvetica,sans-serif><FONT size=2>آری</FONT> <FONT size=2>عزیزان!</FONT> <FONT size=2>راه</FONT> <FONT size=2>همین</FONT> <FONT size=2>است؛</FONT> <FONT size=2>بیراهه</FONT> <FONT size=2>نروید</FONT>.</FONT></FONT></SPAN></SPAN></P>
+<P align=justify sab="697"></SPAN>&nbsp;</P>
+<P align=center sab="697"><SPAN style="LINE-HEIGHT: 115%; FONT-FAMILY: 'Tahoma', 'sans-serif'; FONT-SIZE: 9pt" lang=AR-SA sab="698"><FONT face=verdana,arial,helvetica,sans-serif><IMG border=0 hspace=0 alt="راه راست" align=bottom src="http://tasnim57.persiangig.com/236710_106.jpg" sab="699"></FONT></SPAN></P>
+<P align=justify sab="700"><SPAN style="LINE-HEIGHT: 115%; FONT-FAMILY: 'Tahoma', 'sans-serif'; FONT-SIZE: 9pt" lang=AR-SA sab="701"><FONT color=#663366 size=1 face=verdana,arial,helvetica,sans-serif sab="702">----------------------------------------------------------------------------------------------</FONT></SPAN></P>
+<P align=justify sab="703"><SPAN style="LINE-HEIGHT: 115%; FONT-FAMILY: 'Tahoma', 'sans-serif'; FONT-SIZE: 9pt" lang=AR-SA sab="704"><FONT color=#000066 size=1 sab="705"><FONT face=verdana,arial,helvetica,sans-serif><FONT color=#663366 sab="706">1- </FONT><FONT color=#000000 size=2 sab="707"><FONT color=#663366 size=1 sab="708">عده‌ای نزد مرحوم طالقانی آمدند و از ایشان خواستند از امام (ره) استدعا کنند که اعلامیه لغو حکومت نظامی را پس بگیرند. اینها معتقد بودند رژیم شاه، خونخوار و پلید است و قتل عام به راه خواهد انداخت. آقای طالقانی با مدرسه علوی تماس گرفتند و تقاضا کردند با امام (ره) حرف بزنند. صحبت آن دو بسیار طولانی شد. صحبت‌هایشان که تمام شد، مرحوم طالقانی گوشی را گذاشتند و به گوشه‌ای رفتند و شروع کردند به گریه کردن. </FONT></FONT></FONT></FONT></SPAN></P><FONT color=#000066 size=1 sab="705"><FONT color=#000000 size=2 face="" sab="707">
+<P style="TEXT-ALIGN: justify; unicode-bidi: embed; DIRECTION: rtl" dir=rtl align=justify sab="709"><SPAN style="LINE-HEIGHT: 115%; FONT-FAMILY: 'Tahoma', 'sans-serif'; FONT-SIZE: 9pt" lang=AR-SA sab="710"><FONT size=1 sab="711"><FONT color=#663366 face=verdana,arial,helvetica,sans-serif sab="712">ما که شاهد این صحنه بودیم تصور کردیم خدای ناخواسته بین ایشان و امام‌(ره) اختلافی پیش آمده و امام‌(ره) حرفی زده‌اند که آقای طالقانی ناراحت شده‌اند. بعد که آرام شدند، بعضی از دوستان علت گریه ایشان را پرسیدند. مرحوم طالقانی گفتند: «هر چه استدلال آوردم، امام نپذیرفتند. وقتی دیدند قانع نمی‌شوم، فرمودند: «اگر دستور و نظر حضرت ولی‌عصر(عج) باشد، باز هم نمی‌پذیرید؟» وقتی این طور فرمودند، عرض کردم هر جور صلاح می‌دانید عمل بفرمایید و ما هم تابع شما هستیم». (به نقل از «محمود مرتضایی فر» ملقب به وزیر شعار) </FONT><A href="http://rajanews.com/detail.asp?id=149936" sab="713"><FONT color=#663366 face=verdana,arial,helvetica,sans-serif sab="714">http://rajanews.com/detail.asp?id=149936</FONT></A></FONT></SPAN></P>
+<P style="TEXT-ALIGN: justify; unicode-bidi: embed; DIRECTION: rtl" dir=rtl align=justify sab="715"><SPAN style="LINE-HEIGHT: 115%; FONT-FAMILY: 'Tahoma', 'sans-serif'; FONT-SIZE: 9pt" lang=AR-SA sab="716"><FONT color=#663366 size=1 face=verdana,arial,helvetica,sans-serif sab="717">2- بیانات رهبر معظم انقلاب در سالروز بیعت نیروی هوایی/ 19 بهمن 1391</FONT></SPAN></FONT></FONT></FONT></SPAN></FONT></FONT></FONT></SPAN></FONT></FONT></FONT></SPAN></FONT></FONT></FONT></SPAN></FONT></FONT></FONT></SPAN></FONT></FONT></FONT></SPAN></FONT></FONT></FONT></SPAN></FONT></FONT></FONT></SPAN></FONT></FONT></FONT></SPAN></FONT></FONT></FONT></SPAN></FONT></FONT></FONT></SPAN></FONT></FONT></FONT></SPAN></FONT></FONT></FONT></SPAN></FONT></FONT></FONT></SPAN></FONT></FONT></FONT></SPAN></FONT></FONT></FONT></SPAN></FONT></FONT></FONT></SPAN></FONT></FONT></FONT></SPAN></FONT></FONT></FONT></SPAN></FONT></FONT></FONT></SPAN></FONT></FONT></FONT></SPAN></FONT></FONT></FONT></SPAN></FONT></FONT></FONT></SPAN></FONT></FONT></FONT></SPAN></FONT></FONT></FONT></SPAN></FONT></FONT></FONT></SPAN></FONT></FONT></FONT></SPAN></FONT></FONT></FONT></SPAN></FONT></FONT></FONT></SPAN></FONT></FONT></FONT></SPAN></FONT></FONT></FONT></SPAN></FONT></FONT></FONT></FONT></SPAN></FONT></FONT></SPAN></FONT></SPAN></FONT></FONT></FONT></SPAN></FONT></FONT></FONT></SPAN></FONT></FONT></FONT></SPAN></FONT></FONT></FONT></SPAN></FONT></FONT></FONT></SPAN></FONT></FONT></FONT></SPAN></FONT></FONT></FONT></SPAN></FONT></FONT></FONT></SPAN></FONT></FONT></FONT></SPAN></FONT></FONT></FONT></SPAN></FONT></FONT></FONT></SPAN></FONT></FONT></FONT></SPAN></FONT></FONT></FONT></SPAN></FONT></FONT></FONT></SPAN></FONT></FONT></FONT></SPAN></FONT></FONT></FONT></SPAN></FONT></FONT></FONT></SPAN></FONT></FONT></FONT></SPAN></FONT></FONT></FONT></SPAN></FONT></FONT></FONT></SPAN></FONT></FONT></FONT></SPAN></FONT></FONT></FONT></SPAN></FONT></FONT></FONT></SPAN></FONT></FONT></FONT></SPAN></FONT></FONT></FONT></SPAN></FONT></FONT></FONT></SPAN></FONT></FONT></FONT></SPAN></FONT></FONT></FONT></SPAN></FONT></FONT></FONT></SPAN></FONT></FONT></FONT></SPAN></FONT></FONT></FONT></SPAN></SPAN></FONT></SPAN></SPAN></SPAN></SPAN></SPAN></SPAN></SPAN></SPAN></SPAN></SPAN></SPAN></SPAN></SPAN></SPAN></SPAN></SPAN></SPAN></SPAN></SPAN></SPAN></SPAN></SPAN></SPAN></SPAN></SPAN></SPAN></SPAN></SPAN></SPAN></SPAN></SPAN></SPAN></SPAN></SPAN></SPAN></SPAN></SPAN></SPAN></SPAN></SPAN></SPAN></SPAN></SPAN></SPAN></SPAN></SPAN></SPAN></SPAN></SPAN></SPAN></SPAN></SPAN></SPAN></SPAN></SPAN></SPAN></SPAN></SPAN></SPAN></SPAN></SPAN></SPAN></SPAN></SPAN></SPAN></SPAN></P></SPAN></SPAN></SPAN></SPAN></SPAN></SPAN></SPAN></SPAN></SPAN></SPAN></SPAN></SPAN></SPAN></SPAN></SPAN></SPAN></SPAN></SPAN></SPAN></SPAN></SPAN></SPAN></SPAN></SPAN></SPAN></SPAN></SPAN></SPAN></SPAN></SPAN></SPAN></SPAN></SPAN></SPAN></SPAN></SPAN></SPAN></SPAN></SPAN></SPAN></SPAN></SPAN></SPAN></SPAN></SPAN></SPAN></SPAN></SPAN></SPAN></SPAN></SPAN></SPAN></SPAN></SPAN></SPAN></SPAN></SPAN></SPAN></SPAN></SPAN></SPAN></SPAN></SPAN></SPAN></SPAN></SPAN></SPAN></SPAN></SPAN></SPAN></SPAN></SPAN></SPAN></SPAN></SPAN></SPAN></SPAN></SPAN></SPAN></SPAN></SPAN></SPAN></SPAN></SPAN></SPAN></SPAN></SPAN></SPAN></SPAN></SPAN></SPAN></SPAN></SPAN></SPAN></SPAN></SPAN></SPAN></SPAN></SPAN></SPAN></SPAN></SPAN></SPAN></SPAN></SPAN></SPAN></SPAN></SPAN></SPAN></SPAN></SPAN></SPAN></SPAN></SPAN></SPAN></SPAN></SPAN></SPAN></SPAN></SPAN></SPAN></SPAN></SPAN></SPAN></SPAN></SPAN></SPAN></SPAN></SPAN></SPAN></div><br><b></b>
+			<br><br><font style="font-size:8pt;">
+<br>
+			طبقه بندی: 			<a href="../../6.html">
+			دیدگاه های ولی فقیه</a>،&nbsp;			<a href="../../10.html">
+			مسائل مهم روز</a>،&nbsp;			<a href="../../11.html">
+			مناسبتها</a>،&nbsp;<br>
+			داغ کن:
+			<a   target="_blank"  
+			href="http://www.cloob.com/share/link/add?url=http://leader.mihanblog.com//post/315&title=راه همین است؛ بیراهه نروید"> 
+			<img alt="داغ کن - کلوب دات کام" src="http://static.mihanblog.com//public/user_data/user_files/153/458214/orangeZitova/100c.gif" style='border: none; padding: 0px'/> 
+			</a>
+			
+			</font>
+	        </div>
+	        </div>
+	        <div class="p-con3"><div class="p-con4">
+	        نوشته شده در تاریخ : <span style="color:#0292c6">شنبه 21 بهمن 1391 </span> | توسط : <span style="color:#0292c6"><a href="../../../author/691669.html">رضا رستمی</a></span> | 
+	        <a target="_self" href="javascript:newComment(315)" >نظرات(<script>setCommentCnt(315)</script>)</a><script>mihanblogPostLike('315','like')</script>	        </div></div>
+	        </div>
+            </div>
+<!--End Post-->
+<!--Start List&Pages-->
+			<div class="cb_page_box clearfix"><ul>
+			<li>تعداد کل صفحات :&nbsp;<font color="red"><b>17</b></font>&nbsp; صفحات :</li> 
+			<li><a href="1.html"><i>...</i></a>&nbsp;&nbsp;</li><li><a href="2.html"><span>2</span></a>&nbsp;&nbsp;</li><li><a href="3.html"><span>3</span></a>&nbsp;&nbsp;</li><li><a href="4.html"><span>4</span></a>&nbsp;&nbsp;</li><li><a href="5.html"><b>5</b></a>&nbsp;&nbsp;</li><li><a href="6.html"><span>6</span></a>&nbsp;&nbsp;</li><li><a href="7.html"><span>7</span></a>&nbsp;&nbsp;</li><li><a href="8.html"><span>8</span></a>&nbsp;&nbsp;</li><li><a href="9.html"><i>...</i></a>&nbsp;&nbsp;</li>			</ul>
+			</div>
+<!--End List&Pages-->
+</div></div>
+<!--End sc-all&sc-->
+<!-- Start sl -->
+<div class="sl">
+            <div class="menul">
+            <div class="tmenu">
+	        <div class="tmenu2">
+	        <b>انتخاب زبان</b></div></div>
+	        <div class="xmenu"><div class="menu-txt">
+			<center>
+			<a href="http://translate.google.com/translate?u=http://leader.mihanblog.com&sl=fa&tl=ar&hl=en&ie=UTF-8">
+			العربیة</a>&nbsp;&nbsp;   
+			<a href="http://translate.google.com/translate?u=http://leader.mihanblog.com&sl=fa&tl=en&hl=en&ie=UTF-8">
+			English</a>&nbsp;&nbsp;  
+			<a href="http://translate.google.com/translate?u=http://leader.mihanblog.com&sl=fa&tl=fr&hl=en&ie=UTF-8">
+			French</a> <br>
+			<br>
+			امروز : <script>setTodayDate()</script>			</center></div></div>
+			<div class="s"></div></div>
+			<div class="menul">
+			<div class=tmenu>
+			<div class=tmenu2>
+			<b>وبلاگ دوستان</b></div></div>
+			<div class=xmenu><marquee scrollamount=1 scrolldelay=1 onmouseover='this.stop()' onmouseout='this.start()' direction=up style="height: 200px;width:195px">			<div class=menu-txt>
+			<a target="_blank" href="http://KHAMENEI.IR">سایت مقام معظم رهبری</a></div>			<div class=menu-txt>
+			<a target="_blank" href="http://www.leader.ir">پایگاه اطلاع رسانی مقام معظم رهبری</a></div>			<div class=menu-txt>
+			<a target="_blank" href="http://tamadonsazan.blog.ir/">اندیشه‌های تمدن ساز</a></div>			<div class=menu-txt>
+			<a target="_blank" href="http://shahadat-ir.blogfa.com/">یاد و خاطره شهدا</a></div>			<div class=menu-txt>
+			<a target="_blank" href="http://www.netdarnet.ir">مجله اینترنتی نت در نت</a></div>			<div class=menu-txt>
+			<a target="_blank" href="http://valishenasi.blog.ir/">امام شناسی</a></div>			<div class=menu-txt>
+			<a target="_blank" href="http://www.rahroclip.ir/">رهرو کلیپ</a></div>			<div class=menu-txt>
+			<a target="_blank" href="http://www.montazeram.ir/">من هنوز منتظرم</a></div>			<div class=menu-txt>
+			<a target="_blank" href="http://www.sabrbasirat.rozblog.com/">قافله ی صبر و بصیرت</a></div>			<div class=menu-txt>
+			<a target="_blank" href="http://akharinmouod.mihanblog.com/">وبلاگ حضرت حجت بن الحسن (ع)</a></div>			<div class=menu-txt>
+			<a target="_blank" href="http://modafeanvelayat.blogfa.com/">جنبش مدافعان ولایت</a></div>			<div class=menu-txt>
+			<a target="_blank" href="http://www.jnarm.blogfa.com/">جنگ نرم</a></div>			<div class=menu-txt>
+			<a target="_blank" href="http://www.jonbeshnet.ir">رهروان ولایت</a></div>			<div class=menu-txt>
+			<a target="_blank" href="http://mymeraj.ir/">معراج</a></div>			<div class=menu-txt>
+			<a target="_blank" href="http://kolbe-asheghi.mihanblog.com/">با من حرف بزن</a></div>			<div class=menu-txt>
+			<a target="_blank" href="http://sangarhaye-asemani.blogfa.com/">سنگرهای آسمانی</a></div>			<div class=menu-txt>
+			<a target="_blank" href="http://negin114.blogfa.com/">عماریون رهبریم</a></div>			<div class=menu-txt>
+			<a target="_blank" href="http://www.yekneveshte.blogfa.com/">کاغذ دیواری</a></div>			<div class=menu-txt>
+			<a target="_blank" href="http://mahdaviat-alzahra.mihanblog.com/">کانون مهدویت دانشگاه الزهرا(س)</a></div>			<div class=menu-txt>
+			<a target="_blank" href="http://raheshia.blog.ir/">راه شیعه</a></div></marquee><br><br><a href="../../../../link/index.html"><b style="padding: 10px"><font color="red">»</font>&nbsp;همه لینک ها </b></a><br></div>
+			<div class=s></div></div>
+          
+			<div class=menul>
+			<div class=tmenu>
+			<div class=tmenu2>
+			<b>پیوندهای مفید </b></div></div>
+			<div class=xmenu> <div class=menu-txt>
+			<a target="_blank" href="http://www.nabae.blog.ir" title="با سلام....
+ 
+این یک وبلاگ علمی فرهنگی و تفریحی است از شما تقاضا میشود در صورت تمایل لینک تبادل را قرار دهید.
+این هم آدرس کانل تلگرامی وبلاگ:https://telegram.me/nabaeblog">
+			نبآ</a></div> <div class=menu-txt>
+			<a target="_blank" href="http://zavvar-hosein.blogfa.com" title="سلام علیکم.هیئت زوارالحسین (ع)درمحله سبلان شمالی تهران با دارای مجوز فعالیت از سازمان تبلیغات اسلامی شماشرق تهران به شماره 207032668 توسط چندتن از بر وبچه های ولایی برای برگزاری جلسات هفتگی(یک شنبه شبها) فعالیت میکند انشاءالله.ممنون">
+			هیئت زوّارالحسین(ع)</a></div> <div class=menu-txt>
+			<a target="_blank" href="http://sollam.ir/" title="تمایل به همکاری">
+			شخصی</a></div> <div class=menu-txt>
+			<a target="_blank" href="http://www.netdarnet.ir" title="مجله اینترنتی نت در نت">
+			مجله اینترنتی نت در نت</a></div> <div class=menu-txt>
+			<a target="_blank" href="http://www.rajanews.com/detail.asp?id=163672" title="">
+			چرا دختران در دیدار با رهبری چادری هستند؟!</a></div><br><a href="../../../../linkdaily/index.html"><b style="padding: 10px"><font color="red">»</font>&nbsp;آرشیو پیوندهای روزانه</b></a><br>
+            <br><a href="javascript:linkdailyForm()"><b style="padding: 10px"><font color="red">»</font>&nbsp;ارسال لینک به ما</b></a><br> </div>
+			<div class=s></div></div>
+ 
+            <div class=menul>
+			<div class=tmenu>
+			<div class=tmenu2>
+			<b>آماروبلاگ </b></div></div>
+			<div class=xmenu><div class="menu-txta">
+							کل بازدید:<span style="color:#0292c6"><script>getStatVar('total_view');</script></span><br/>
+				بازدید امروز :<span style="color:#0292c6"><script>getStatVar('today_view');</script></span><br/>
+				بازدید دیروز :<span style="color:#0292c6"><script>getStatVar('yesterday_view');</script></span><br/>
+				بازدید این ماه :<span style="color:#0292c6"><script>getStatVar('this_month_view');</script></span><br/>
+				بازدید ماه قبل :<span style="color:#0292c6"><script>getStatVar('last_month_view');</script></span><br/>
+				تعداد کل مطالب :<span style="color:#0292c6"><script>getStatVar('total_post');</script></span><br/>
+				آخرین بازدید :<span style="color:#0292c6"><script>getStatVar('last_view_date');</script></span><br/>
+				آخرین بروز رسانی :<span style="color:#0292c6"><script>getStatVar('modify_date');</script></span><br/>
+            <center><SCRIPT language=JavaScript type=text/javascript src="http://www.welayatnet.com/sites/default/files/webtools/telgram.js"></SCRIPT></center></div></div>
+			<div class=s></div></div>     
+</div>
+<!--End SL -->
+</div>
+<!-- End scsl -->
+<!-- Start SR -->
+<div class="sr">
+            <div class=menur>
+			<div class=tmenu>
+			<div class=tmenu2>
+			<b>درباره وبلاگ</b></div></div>
+			<div class=xmenu><div class=menu-txt2>  
+            <div style="text-align:center;"><img src="http://static.mihanblog.com//public/user_data/web_photo/276/827628.jpg?3295"  /></div>
+            <br><div class="descri">این وبلاگ گروهی به همت جمعی از طلاب حوزه علمیه قم برای دفاع علمی ، منطقی و مستدل از ولایت فقیه و حکومت اسلامی بر اساس اصول و معارف اسلامی راه اندازی شده است.<br />
+قصد ما کمک به شناخت بهتر این الگوی اسلامی می باشد، تا اگر اشکالی در این الگو وجود دارد با نقد منصفانه دوستان اصلاح و اگر اشکالی بر آن وارد نیست به عنوان یک الگوی موفق سرمشق دیگر آزادگان جهان قرار بگیرد.<br />
+منتظر نظرات سازنده شما هستیم.<br />
+</div></div></div>
+			<div class=s></div></div>
+<div class=menur>
+			<div class=tmenu>
+			<div class=tmenu2>
+			<b>پاسخگوی آنلاین ولایت فقیه</b></div></div>
+			<div class=xmenu><div class=menu-txt2>  
+            <div style="margin:0px auto;width:172px;min-height:70px;padding-top:8px"><div style="width:86px;text-align:center;margin:0px auto;"><!-- 
+
+Begin http://zitova.ir ‍Yahoo Status --><a  target="_self" title="http://zitova.ir" href = "ymsgr:sendim?
+
+zitova9"><img src="http://www.zitova.com/YState/ystat.php?id=zitova9&mod=5" border="0"></a><br/><!-- 
+
+End  http://zitova.ir Yahoo Status -->
+            <div style="padding-top:20px"><a href='ymsgr:addfriend?zitova9'>اضافه کردن</a></div></div>
+				</div>
+
+           </div></div>
+<div class=s></div></div>
+
+
+<div class=menur>
+<div class=tmenu>
+<div class=tmenu2>
+<b>نویسندگان وبلاگ</b></div></div>
+<div class=xmenu>
+
+<!-- نام نویسنده اول -->
+<div class=menu-txt>
+<a href="../../../author/691669.html">رضا رستمی - شنبه ها</a></div>
+
+<!-- نام نویسنده دوم -->
+<div class=menu-txt>
+<a href="../../../author/785295.html">علی تجرد </a></div>
+
+<!-- نام نویسنده سوم -->
+<div class=menu-txt>
+<a href="../../../author/767000.html">احمد منزه </a></div>
+
+<!-- نام نویسنده چهارم -->
+<div class=menu-txt>
+<a href="../../../author/211181.html">مجید </a></div>
+
+<!-- نام نویسنده پنجم -->
+<div class=menu-txt>
+<a href="../../../author/903125.html">سید هاشمی - چهارشنبه ها</a></div>
+
+</div>
+<div class=s></div></div>
+			<div class=menur>
+			<div class=tmenu>
+			<div class=tmenu2>
+			<b>موضوعات وبلاگ</b></div></div>
+			<div class=xmenu><div class=menu-txt>
+			<a href="../../5.html">شناسنامه های تاریخی ملت شریف ایران(27)</a></div><div class=menu-txt>
+			<a href="../../7.html">شخصیت شناسی ولی فقیه(15)</a></div><div class=menu-txt>
+			<a href="../../8.html">دموکراسی و تضادهای درونی آن(3)</a></div><div class=menu-txt>
+			<a href="../../4.html">مقالات درباره ولایت فقیه(25)</a></div><div class=menu-txt>
+			<a href="../../2.html">مبانی کلامی ولایت فقیه(14)</a></div><div class=menu-txt>
+			<a href="../../1.html">مبانی فقهی ولایت فقیه(16)</a></div><div class=menu-txt>
+			<a href="../../9.html">مباحث حکومت اسلامی(93)</a></div><div class=menu-txt>
+			<a href="../../6.html">دیدگاه های ولی فقیه(160)</a></div><div class=menu-txt>
+			<a href="../../10.html">مسائل مهم روز(198)</a></div><div class=menu-txt>
+			<a href="../../11.html">مناسبتها(116)</a></div></div>
+			<div class=s></div></div>
+            <div class=menur>
+			<div class=tmenu>
+			<div class=tmenu2>
+			<b>عضویت ! </b></div></div>
+			<div class=xmenu><div class=menu-txt2>  
+            <div style="text-align:center;"><form style="border:0px solid #ccc;padding:3px;text-align:justify;" action="http://feedburner.google.com/fb/a/mailverify" method="post" target="popupwindow" onsubmit="window.open('http://feedburner.google.com/fb/a/mailverify?uri=mihanblog/Yjrt', 'popupwindow', 'scrollbars=yes,width=550,height=520');return true"><p>آدرس ایمیل خودتان را وارد كنید تا آخرین نوشته ها برایتان ارسال شود :</p><p align="center" style="direction:ltr"><input style="margin:5px" type="text"  style="width:167px" style="text-align:left" name="email" /></p><input type="hidden" value="mihanblog/Yjrt" name="uri"/><input type="hidden" name="loc" value="en_US"/><center><input style="margin:5px;padding:3px;cursor:pointer;outline:none;font-family:Tahoma" type="submit" value="اشتراک" /></center></form></div>
+            </div></div>
+			<div class=s></div></div>
+
+		            <div class=menur>
+			<div class=tmenu>
+			<div class=tmenu2>
+			<b>آخرین مطالب</b></div></div>
+			<div class=xmenu>
+			<div class=menu-txt>
+			<a href="../../../905.html"> سه نکته پیرامون شهید و شهادت</a></div><div class=menu-txt>
+			<a href="../../../904.html"> مردم ایران، امام خود را عاشقانه دوست داشتند! </a></div><div class=menu-txt>
+			<a href="../../../903.html"> کار؛ فرمانده عبور از رکود </a></div><div class=menu-txt>
+			<a href="../../../902.html"> مبانی اقتصادی استکبار </a></div><div class=menu-txt>
+			<a href="../../../901.html"> نقش ایمان در تخریب دیوار تحریم </a></div><div class=menu-txt>
+			<a href="../../../900.html"> موانع اقدام؛ از نگاه قرآن و احادیث </a></div><div class=menu-txt>
+			<a href="../../../899.html"> جوان و جوانی؛ منشأ یک اختلاف و جنگ نرم فراگیر </a></div><div class=menu-txt>
+			<a href="../../../898.html"> منطقی که نتیجه‌اش شکست‌ناپذیری است </a></div><div class=menu-txt>
+			<a href="../../../897.html"> فرهنگ یا اقتصاد، مسأله این است</a></div><div class=menu-txt>
+			<a href="../../../896.html"> تلاش دشمن برای پاک‌سازی برخی چهره‌های انقلاب </a></div><div class=menu-txt>
+			<a href="../../../895.html"> بلای بزرگی که جان امت اسلامی را فرا گرفته است </a></div><div class=menu-txt>
+			<a href="../../../894.html"> خفت و خیانت؛ عصاره‌ی زندگی ملکه‌ی ترور </a></div><div class=menu-txt>
+			<a href="../../../893.html"> فقط یک ضلع مثلث ظهور، مفقود است </a></div><div class=menu-txt>
+			<a href="../../../892.html"> محکی جدی برای مدعیان انتظار </a></div><div class=menu-txt>
+			<a href="../../../891.html">آموزش الفبای مواجهه با دشمن </a></div></div>
+			<div class=s></div></div>
+            <div class=menur>
+			<div class=tmenu>
+			<div class=tmenu2>
+			<b>آرشیو مطالب</b></div></div>
+			<div class=xmenu>
+			<div class=menu-txt>
+			<a href="../../../archive/1396/1.html"> فروردین 1396(2)</a></div><div class=menu-txt>
+			<a href="../../../archive/1395/12.html"> اسفند 1395(23)</a></div><div class=menu-txt>
+			<a href="../../../archive/1395/11.html"> بهمن 1395(59)</a></div><div class=menu-txt>
+			<a href="../../../archive/1395/10.html"> دی 1395(16)</a></div><div class=menu-txt>
+			<a href="../../../archive/1395/9.html"> آذر 1395(9)</a></div><div class=menu-txt>
+			<a href="../../../archive/1395/8.html"> آبان 1395(10)</a></div><div class=menu-txt>
+			<a href="../../../archive/1395/7.html"> مهر 1395(11)</a></div><div class=menu-txt>
+			<a href="../../../archive/1395/6.html"> شهریور 1395(6)</a></div><div class=menu-txt>
+			<a href="../../../archive/1395/5.html"> مرداد 1395(7)</a></div><div class=menu-txt>
+			<a href="../../../archive/1395/4.html"> تیر 1395(12)</a></div><div class=menu-txt>
+			<a href="../../../archive/1395/3.html"> خرداد 1395(10)</a></div><div class=menu-txt>
+			<a href="../../../archive/1395/2.html"> اردیبهشت 1395(4)</a></div></div>
+			<div class=s></div></div>
+			
+</div>
+<!--End SR -->
+</div>
+<!-- End Con-->
+<!-- Start Footer-->
+<div class="footer">
+          <p><strong>تمام حقوق این وبلاگ و مطالب آن متعلق به 
+           <a href="../../../../index.html">ولایت فقیه و حکومت اسلامی</a> می باشد.</strong></p>
+</div>
+<!-- End Footer-->
+</div>
+<!-- End BG -->
+<!--AmarGir-->
+<script type="text/javascript" src="http://radarurl.com/js/radarurl_widget.js"></script><script type="text/javascript">radarurl_call_radar_widgetv2({edition:"Dynamic",location:"leftcenter"})</script><noscript><a href="http://radarurl.com/" _fcksavedurl="http://radarurl.com/">radarurl - Monitor Visitors</a></noscript>
+<!--EndAmarGir-->
+<!-- Piwik -->
+<script type="text/javascript">
+  var _paq = _paq || [];
+  _paq.push(['trackPageView']);
+  _paq.push(['enableLinkTracking']);
+  (function() {
+    var u="//analytics.welayatnet.com/";
+    _paq.push(['setTrackerUrl', u+'piwik.php']);
+    _paq.push(['setSiteId', 5]);
+    var d=document, g=d.createElement('script'), s=d.getElementsByTagName('script')[0];
+    g.type='text/javascript'; g.async=true; g.defer=true; g.src=u+'piwik.js'; s.parentNode.insertBefore(g,s);
+  })();
+</script>
+<noscript><p><img src="http://analytics.welayatnet.com/piwik.php?idsite=5" style="border:0;" alt="" /></p></noscript>
+<!-- End Piwik Code -->
+</body>
+</html><script>
+//    setTimeout(function () {
+//        GetMihanBlogShowAds();
+//    }, 1000);
+</script>
+<!--NEW SERVER--><!--;)-->
+
+<!--SabaVision Ads Handler--><!--<script type="text/javascript">(function (d) {var url =   location.protocol+'//api.sabavision.com/pox/poxjs.js';d.write('<script type="text/javascript" src="' + url + '" async></scri' + 'pt>');})(document);</script>-->
+
+
+<script type="text/javascript">
+
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-153829-9']);
+    _gaq.push(['_setDomainName', 'leader.mihanblog.com']);
+    _gaq.push(['_trackPageview']);
+
+    (function() {
+        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+
+</script>
+
+
+<div id='mediaad-Kvcm'></div>
+<meta name="sabavision_zone" content="2500-Z499" />
+<center>
+    <div style="background-color:white;width:90%;padding:20px;margin-top:50px;margin-bottom:50px;">
+        <a href="https://www.cloob.com">شبکه اجتماعی فارسی کلوب</a> | <a href="https://www.seo25.com/product/buy-mobile-traffic-and-get-cheap-targeted-mobile-traffic/" target="_blank">Buy Mobile Traffic</a> | <a href="https://www.soalaat.com">سایت سوالات</a>
+    </div>
+</center>

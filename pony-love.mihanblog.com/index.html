@@ -1,0 +1,913 @@
+<!DOCTYPE html PUBLIC  "-//W3C//DTD XHTML 1.0 Transitional//EN"  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" /><link rel="EditURI" type="application/rsd+xml" title="RSD" href="http://pony-love.mihanblog.com/xmlrpc?rsd" />
+<script type="text/javascript" src="../static.mihanblog.com/public/scripts/run/g.other.v3.js"></script>
+<script>
+
+	function c_$(id){
+        return document.getElementById(id);
+    }
+    
+			//if (parent.frames.length) top.location.href= document.location;
+		
+	setTodayDate = function(){
+		document.write('یکشنبه 23 آذر 1399');
+		/*1612590*/	}
+
+</script>
+
+
+
+        <script type="text/javascript">
+            (function(){
+            var now = new Date();
+            var head = document.getElementsByTagName('head')[0];
+            var script = document.createElement('script');
+            script.async = true;
+            var script_address = 'https://cdn.yektanet.com/js/mihanblog.com/native-mihanblog.com-6531.js';
+            script.src = script_address + '?v=' + now.getFullYear().toString() + '0' + now.getMonth() + '0' + now.getDate() + '0' + now.getHours();
+            head.appendChild(script);
+            })();
+        </script>
+
+        <!--<script type="text/javascript">
+            var head = document.getElementsByTagName("head")[0];
+            var script = document.createElement("script");
+            script.type = "text/javascript";
+            script.async=1;
+            script.src = "https://s1.mediaad.org/serve/mihanblog.com/loader.js" ;
+            head.appendChild(script);
+        </script>-->
+        
+        <script>
+            var sabaVisionWebsiteID = "9bab9dac-041d-4bdb-b39a-1ed789f65eed"; var sabaVisionWebsitePage = "ALL"
+        </script>
+        <link rel="stylesheet" href="https://plus.sabavision.com/dox/dox.min.css">
+        <script src="https://plus.sabavision.com/dox/dox.min.js"></script>
+        
+        <script>
+	try{
+		var commentCnt = new Array();
+		commentCnt[34]='2636';commentCnt[257]='0';commentCnt[271]='9';commentCnt[273]='0';commentCnt[274]='0';commentCnt[275]='0';commentCnt[276]='0';commentCnt[277]='0';commentCnt[278]='0';commentCnt[279]='0';commentCnt[280]='0';commentCnt[281]='0';commentCnt[282]='0';commentCnt[283]='1';commentCnt[284]='1';commentCnt[286]='40';	} catch(e){}
+	
+	newComment = function(post_id){
+		try{
+			window.open('/post/comment/'+post_id,'comment','status=yes,scrollbars=yes,toolbar=no,menubar=no,location=no ,width=480px,height=540px');
+		} catch(e){}
+	}
+	setCommentCnt = function(post_id){
+		try{
+			if(commentCnt[post_id]){
+				document.write(commentCnt[post_id]);
+			} else {
+				document.write(0);
+			}
+		} catch(e){}
+	}
+</script><script>
+
+
+	mihanblogUpdateLike = function(postid,type){
+		var url = '/post/like/'+postid+'/'+type;
+		mihanblogGetAjax(url,function(){});
+	};
+	try{
+        mihanblogGetAjax = function (url,callback) {
+    		var req;
+			if (window.XMLHttpRequest)
+            {
+                // code for IE7+, Firefox, Chrome, Opera, Safari
+			  	req = new XMLHttpRequest();
+			}else{	// code for IE6, IE5
+			  	req = new ActiveXObject("Microsoft.XMLHTTP");
+		  	}
+		    req.open("GET", url, 1);
+		    req.onreadystatechange = function () {
+		        if (req.readyState == 4) {
+		            if (req.status == 200) {
+		            	var response = eval(req.responseText);
+		            	callback();
+		            }else{
+	            		return ;
+		            }
+		        }else{
+					return ;
+		        }
+		    }
+		    req.send(null);
+		}
+	}catch(e){}
+
+	try{
+		var mihanblogLikeArrCnt = new Array();
+		var mihanblogDisLikeArrCnt = new Array();
+
+		mihanblogLikeArrCnt[34]='0';
+mihanblogDisLikeArrCnt[34]='0';
+mihanblogLikeArrCnt[257]='0';
+mihanblogDisLikeArrCnt[257]='0';
+mihanblogLikeArrCnt[271]='0';
+mihanblogDisLikeArrCnt[271]='0';
+mihanblogLikeArrCnt[273]='0';
+mihanblogDisLikeArrCnt[273]='0';
+mihanblogLikeArrCnt[274]='0';
+mihanblogDisLikeArrCnt[274]='0';
+mihanblogLikeArrCnt[277]='0';
+mihanblogDisLikeArrCnt[277]='0';
+mihanblogLikeArrCnt[281]='0';
+mihanblogDisLikeArrCnt[281]='0';
+mihanblogLikeArrCnt[282]='0';
+mihanblogDisLikeArrCnt[282]='0';
+mihanblogLikeArrCnt[283]='0';
+mihanblogDisLikeArrCnt[283]='0';
+mihanblogLikeArrCnt[284]='0';
+mihanblogDisLikeArrCnt[284]='0';
+mihanblogLikeArrCnt[286]='0';
+mihanblogDisLikeArrCnt[286]='0';
+	} catch(e){}
+
+
+
+    mihanblogPostLike = function(post_id){
+
+        mihanblogLikeCnt = (mihanblogLikeArrCnt[post_id]? mihanblogLikeArrCnt[post_id] : 0);
+        mihanblogDisLikeCnt = (mihanblogDisLikeArrCnt[post_id]? mihanblogDisLikeArrCnt[post_id] : 0);
+        mihanblogLikeCnt = parseInt(mihanblogLikeCnt);
+        mihanblogDisLikeCnt = parseInt(mihanblogDisLikeCnt);
+
+        document.write(
+                '<div class="mihanblog_like_wrapper ">'+
+                       '<div id="dislikeBar_'+post_id+'" onclick="mihanblogUpdateLike('+post_id+',\'dislike\')"   class="mihanblog_like_bar mihanblog_like_dislikeBar mihanblog_like_show_help ">-<div class="mihanblog_like_Cnt" id="disLikeCnt_'+post_id+'">'+mihanblogDisLikeCnt+'</div>'+
+                            '<span  class="mihanblog_like_v2_help mihanblog_like_v2_help_dislike clearfix"> '+
+                                '<span class="mihanblog_like_help_arrow mihanblog_like_help_arrow_dislike clearfix"></span>'+
+                                '<span class="mihanblog_like_help_text">نمی پسندم</span>'+
+                            '</span>'+
+                        '</div>'+
+                       '<div id="Like_'+post_id+'" class="mihanblog_like_border"></div>'+
+                       '<div id="likeBar_'+post_id+'" onclick="mihanblogUpdateLike('+post_id+',\'like\')"  class="mihanblog_like_bar mihanblog_like_likeBar mihanblog_like_show_help" >+<div class="mihanblog_like_Cnt" id="likeCnt_'+post_id+'">'+mihanblogLikeCnt+'</div>'+
+                            '<span  class="mihanblog_like_v2_help mihanblog_like_v2_help_like clearfix"> '+
+                                '<span class="mihanblog_like_help_arrow mihanblog_like_help_arrow_like clearfix"></span>'+
+                                '<span class="mihanblog_like_help_text">می پسندم</span>'+
+                            '</span>'+
+                        '</div>'+
+
+                '</div>'
+        );
+
+
+
+        mihanblogDisplayeLike(post_id);
+    }
+
+
+    mihanblogDisplayeLike = function(post_id){
+
+        mihanblogLikeCnt = (mihanblogLikeArrCnt[post_id]? mihanblogLikeArrCnt[post_id] : 0);
+        mihanblogDisLikeCnt = (mihanblogDisLikeArrCnt[post_id]? mihanblogDisLikeArrCnt[post_id] : 0);
+        mihanblogLikeCnt = parseInt(mihanblogLikeCnt);
+        mihanblogDisLikeCnt = parseInt(mihanblogDisLikeCnt);
+
+
+
+        sum = mihanblogLikeCnt - mihanblogDisLikeCnt;
+        backgroundBorder =  document.getElementById('Like_'+post_id);
+        var likeObj = document.getElementById('likeCnt_'+post_id);
+        var disLikeObj = document.getElementById('disLikeCnt_'+post_id);
+
+
+
+
+
+        likeObj.innerHTML =  mihanblogLikeCnt ;
+        disLikeObj.innerHTML =  mihanblogDisLikeCnt;
+
+        if(sum == 0){
+            backgroundBorder.style.backgroundImage = "url('/public/public/images/icons/like_likedislike.png')";
+            document.getElementById('dislikeBar_'+post_id).style.width = '19px';
+            document.getElementById('likeBar_'+post_id).style.width = '19px';
+        }else{
+             if(sum > 0){
+                 backgroundBorder.style.backgroundImage = "url('/public/public/images/icons/like_like.png')";
+                 document.getElementById('likeBar_'+post_id).style.width = '23px';
+                 document.getElementById('dislikeBar_'+post_id).style.width = '15px';
+             }else{
+                 backgroundBorder.style.backgroundImage = "url('/public/public/images/icons/like_dislike.png')";
+                 document.getElementById('likeBar_'+post_id).style.width = '15px';
+                 document.getElementById('dislikeBar_'+post_id).style.width = '23px';
+             }
+        }
+
+    }
+
+
+
+
+</script>
+
+<style type="text/css">
+
+
+    .clearfix {display: inline-block;}
+    .clearfix:after {
+        content: ".";
+        display: block;
+        height: 0;
+        clear: both;
+        visibility: hidden;
+    }
+
+    .mihanblog_like_wrapper {
+        color: #ffffff;
+        direction: ltr;
+        position: relative;
+    }
+    .mihanblog_like_wrapper span{
+        display: none;
+    }
+    .mihanblog_like_bar {
+        color: #FFFFFF;
+        cursor: pointer;
+        float: left;
+        font-size: 10px;
+        height: 20px;
+        line-height: 19px;
+        margin: 5px 0;
+    }
+    .mihanblog_like_likeBar {
+        background-color: #88B131;
+        padding-right: 5px;
+        border-top-right-radius: 2px;
+        border-bottom-right-radius: 2px;
+        text-align: right;
+    }
+    .mihanblog_like_likeBar:hover{
+        background-color: #699017;
+    }
+    .mihanblog_like_border {
+        background-color: #666666;
+        border: 1px solid #666666;
+        float: left;
+        font-size: 12px;
+        height: 20px;
+        margin-top: 2px;
+        width: 25px;
+        padding: 3px 5px 2px 0;
+        text-align: center;
+        border-radius: 2px;
+        color: #ffffff;
+        direction: ltr;
+        background-repeat: no-repeat ;
+        background-position: 4px center;
+    }
+    .mihanblog_like_border img {
+        margin-left: 2px;
+        margin-top: 2px;
+        width: 22px;
+    }
+    .mihanblog_like_dislikeBar {
+        background-color: #FF6F31;
+        padding-left: 5px;
+        border-top-left-radius: 2px;
+        border-bottom-left-radius: 2px;
+        text-align:left ;
+    }
+    .mihanblog_like_dislikeBar:hover{
+        background-color: #D54B10;
+    }
+
+
+
+    .mihanblog_like_show_help {
+        position: relative;
+    }
+    .mihanblog_like_show_help:hover span {
+        display: block;
+    }
+    .mihanblog_like_help_text {
+        background-color: white;
+        border: 1px solid #555555;
+        border-radius: 3px 3px 3px 3px;
+        color: #303030;
+        float: left;
+        font-size: 11px;
+        font-weight: normal;
+        padding: 5px 10px;
+    }
+
+    .mihanblog_like_help_arrow_dislike {
+        background: url("http://pony-love.mihanblog.com/public/public/images/icons/like_hover_top.png") no-repeat scroll 16px 0 transparent;
+        left: 0;
+        top: -4px;
+    }
+
+    .mihanblog_like_help_arrow_like {
+        background: url("http://pony-love.mihanblog.com/public/public/images/icons/like_hover_top _2.png") no-repeat scroll 16px 0 transparent;
+        left: -10px;
+        top: 29px;
+    }
+
+    .mihanblog_like_help_arrow{
+        height: 6px;
+        position: absolute;
+        width: 100px;
+
+    }
+
+    .mihanblog_like_v2_help_dislike {
+        left: -15px;
+        top: 24px;
+    }
+    .mihanblog_like_v2_help_like {
+        left: 0;
+        top: -35px;
+
+    }
+    .mihanblog_like_v2_help{
+        display: none;
+        position: absolute;
+        white-space: nowrap;
+        z-index: 1;
+    }
+
+    .mihanblog_like_Cnt{
+        display: inline;
+        color: #ffffff;
+    }
+
+</style><script>
+
+	statInfo = new Array();
+	setStatVar = function(index,value){
+		statInfo[index] = value;
+	}
+	getStatVar = function(index){
+		if(statInfo[index]) document.write(statInfo[index]);
+	}
+	
+	setStatVar('total_post','186');
+	setStatVar('total_author','1');
+	setStatVar('modify_date','شنبه 26 بهمن 1398');
+	
+	setStatVar('today_view','14');
+	setStatVar('yesterday_view','50');
+	
+	setStatVar('this_month_view','1050');
+	setStatVar('last_month_view','1420');
+
+	setStatVar('total_view','103745');
+	setStatVar('last_view_date','یکشنبه 23 آذر 1399 (05:16)');
+
+
+
+    
+    function setStatFromClient()
+    {
+        var url = 'http://pony-love.mihanblog.com/statupdate/?data[refereruri]=http://mahdisclub.mihanblog.com/&data[postid]=&data[requesturi]=/&data[sdate]=1607825819&data[hash]=940e6d16cd5f8c94d5c629f4c9a6f6f1&data[resolution]='+screen.width+' X '+screen.height;
+
+//        alert(url);
+//        var newjs = document.createElement("SCRIPT");
+//        newjs.type = 'text/javascript';
+//        newjs.src = url;
+//
+//        var newdiv = document.createElement("DIV");
+//        newdiv.setAttribute("style","display:none");
+
+        document.write(unescape('%3Cscript src="'+url+'" type="text/javascript"%3E%3C/script%3E'));
+//        newdiv.appendChild (newjs);
+//        document.write(newjs);
+//        document.write(appendChild (newdiv);
+
+    };
+    setStatFromClient();
+        
+</script><script>
+	messageForm = function(post_id){
+		try{
+			window.open('/message','message','status=yes,scrollbars=yes,toolbar=no,menubar=no,location=no ,width=480px,height=550px');
+		} catch(e){}
+	}
+</script><script>
+	linkdailyForm = function(){
+		try{
+			window.open('/linkdaily/new','linkdaily','status=yes,scrollbars=yes,toolbar=no,menubar=no,location=no ,width=500px,height=460px');
+		} catch(e){}
+	}
+</script><script>
+
+var MihanblogShopAdsArray = new Array();
+
+function GetMihanBlogShowAds(){
+	if(MihanblogShopAdsArray.length){
+		var adsTarget = 'MihanblogShopAds';
+		var containerWidth = document.getElementById(adsTarget).offsetWidth;
+		if(containerWidth>=200){
+			var adsCnt = parseInt(containerWidth / 200) ;
+			if(adsCnt>MihanblogShopAdsArray.length){
+				adsCnt = MihanblogShopAdsArray.length ; 
+			}
+//			var OneAdsWidth = parseInt(containerWidth / adsCnt) ;
+			var OneAdsWidth = containerWidth / adsCnt ;
+			if(OneAdsWidth>400){
+				OneAdsWidth = 400 ;
+			}
+			var OutHtml = '';
+			var img = '';
+			var link = '';
+			var title = '';
+			var description = '';
+			var imgWidth = 70;
+			if(OneAdsWidth>230){
+				imgWidth = 80;
+			}
+			if(OneAdsWidth>300){
+				imgWidth = 90;
+			}
+			for(adsOne=0;adsOne<adsCnt;adsOne++){
+				
+				img = MihanblogShopAdsArray[adsOne]['img'];
+				link = MihanblogShopAdsArray[adsOne]['link'];
+				title = MihanblogShopAdsArray[adsOne]['title'];
+				description = MihanblogShopAdsArray[adsOne]['description'];
+				
+				OutHtml += '<td style="background-color:#FFF;width: '+OneAdsWidth+'px;border:1px solid #f00;margin:0px 0px;font-size:11px;font-family:tahoma;padding:2px;margin:0px 0px;font-size:11px;border: 1px solid BurlyWood; padding: 1px; height: '+(imgWidth+25)+'px;">';
+
+				OutHtml += '	<a href="http://pony-love.mihanblog.com/'+link+'" target="_blank" style="text-decoration:none">';
+
+				OutHtml += '			<div style="width: '+(OneAdsWidth-16)+'px;cursor:pointer;font-size:12px;padding: 4px 1px 4px 7px; white-space: nowrap; text-align: center; font-weight: bold; color: blue;white-space:nowrap;overflow:hidden">';
+				OutHtml += 					title;
+				OutHtml += '			</div>';
+				OutHtml += '			<div style="cursor:pointer;padding: 1px; display: block; float: right; width: '+imgWidth+'px;">';
+				OutHtml += '				<img src="'+img+'.html" style="border:0px;padding:0px;margin:0px;width:'+imgWidth+'px;height:'+imgWidth+'px;">';
+				OutHtml += '			</div>';
+				OutHtml += '			<div style="padding: 1px; display: block; float: right; width: '+(OneAdsWidth-13-imgWidth)+'px; text-align: right;overflow:hidden">';
+				OutHtml += '				<div style="overflow:hidden;cursor:pointer;padding: 2px 3px; line-height: 17px; height: '+(imgWidth-3)+'px; text-align: justify;color:#000;direction:rtl">';
+				OutHtml += 						description;
+				OutHtml += '				</div>';
+				OutHtml += '			</div>';
+
+				OutHtml += '	</a>';
+
+				OutHtml += '</td>';
+			}
+			
+			var Out = '<table align="center" cellpadding="0" cellspacing="2" style="width:'+(OneAdsWidth*adsCnt)+'px;"><tr>'+OutHtml+'</tr></table>'; 
+			
+			Out = '<div style="text-align:center;padding:0px;margin:3px auto;">'+Out+'</div>'; 
+			
+			document.getElementById(adsTarget).style.height = (imgWidth+35)+'px' ;
+			document.getElementById(adsTarget).innerHTML = Out ;
+		}
+	}
+}
+</script>
+    <style>
+        @font-face {
+            font-family: 'Mihan-Iransans';
+            src: url('http://pony-love.mihanblog.com/public/public/fonts/Iransans.eot');
+            src: url('http://pony-love.mihanblog.com/public/public/fonts/Iransans.eot?') format('embedded-opentype'),
+            url('http://pony-love.mihanblog.com/public/public/fonts/Iransans.woff2') format('woff2'),
+            url('http://pony-love.mihanblog.com/public/public/fonts/Iransans.woff') format('woff'),
+            url('http://pony-love.mihanblog.com/public/public/fonts/Iransans.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+        @font-face {
+            font-family: 'Mihan-IransansBold';
+            src: url('http://pony-love.mihanblog.com/public/public/fonts/Iransans-Black.eot');
+            src: url('http://pony-love.mihanblog.com/public/public/fonts/Iransans-Black.eot?') format('embedded-opentype'),
+            url('http://pony-love.mihanblog.com/public/public/fonts/Iransans-Black.woff2') format('woff2'),
+            url('http://pony-love.mihanblog.com/public/public/fonts/Iransans-Black.woff') format('woff'),
+            url('http://pony-love.mihanblog.com/public/public/fonts/Iransans-Black.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+        @font-face {
+            font-family: 'Mihan-IransansLight';
+            src: url('http://pony-love.mihanblog.com/public/public/fonts/Iransans-UltraLight.eot');
+            src: url('http://pony-love.mihanblog.com/public/public/fonts/Iransans-UltraLight.eot?') format('embedded-opentype'),
+            url('http://pony-love.mihanblog.com/public/public/fonts/Iransans-UltraLight.woff2') format('woff2'),
+            url('http://pony-love.mihanblog.com/public/public/fonts/Iransans-UltraLight.woff') format('woff'),
+            url('http://pony-love.mihanblog.com/public/public/fonts/Iransans-UltraLight.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+        @font-face {
+            font-family: 'Mihan-Nassim';
+            src: url('http://pony-love.mihanblog.com/public/public/fonts/Nassim.eot');
+            src: url('http://pony-love.mihanblog.com/public/public/fonts/Nassim.eot?') format('embedded-opentype'),
+            url('http://pony-love.mihanblog.com/public/public/fonts/Nassim.woff2') format('woff2'),
+            url('http://pony-love.mihanblog.com/public/public/fonts/Nassim.woff') format('woff'),
+            url('http://pony-love.mihanblog.com/public/public/fonts/Nassim.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+        @font-face {
+            font-family: 'Mihan-Koodak';
+            src: url('http://pony-love.mihanblog.com/public/public/fonts/Koodak.eot');
+            src: url('http://pony-love.mihanblog.com/public/public/fonts/Koodak.eot?') format('embedded-opentype'),
+            url('http://pony-love.mihanblog.com/public/public/fonts/Koodak.woff2') format('woff2'),
+            url('http://pony-love.mihanblog.com/public/public/fonts/Koodak.woff') format('woff'),
+            url('http://pony-love.mihanblog.com/public/public/fonts/Koodak.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+        @font-face {
+            font-family: 'Mihan-Yekan';
+            src: url('http://pony-love.mihanblog.com/public/public/fonts/Yekan.eot');
+            src: url('http://pony-love.mihanblog.com/public/public/fonts/Yekan.eot?') format('embedded-opentype'),
+            url('http://pony-love.mihanblog.com/public/public/fonts/Yekan.woff2') format('woff2'),
+            url('http://pony-love.mihanblog.com/public/public/fonts/Yekan.woff') format('woff'),
+            url('http://pony-love.mihanblog.com/public/public/fonts/Yekan.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+        @font-face {
+            font-family: 'FontAwesome';
+            src: url('http://pony-love.mihanblog.com/public/public/fonts/fontawesome_webfont.eot');
+            src: url('http://pony-love.mihanblog.com/public/public/fonts/fontawesome_webfont.eot?') format('embedded-opentype'),
+            url('http://pony-love.mihanblog.com/public/public/fonts/fontawesome_webfont.woff2') format('woff2'),
+            url('http://pony-love.mihanblog.com/public/public/fonts/fontawesome_webfont.woff') format('woff'),
+            url('http://pony-love.mihanblog.com/public/public/fonts/fontawesome_webfont.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+
+
+        
+
+        /* Smartphones (portrait and landscape) ----------- */
+
+        /*
+        @media only screen and (max-width : 480px) and (min-width : 320px) {
+            .sabaClick_advert__wrapper{
+                display:block;
+            }
+            .sabaClick_advert__inner{
+                max-width: 90%;
+                margin: 0 5%;
+            }
+        }
+        */
+
+    </style>
+
+
+
+
+
+
+
+
+<div id="first_p" style="text-align: center; margin-top: 5px;"><a onclick="document.getElementById('main_p').style.display = 'block';document.getElementById('first_p').style.display = 'none';" href="index.html#"><img src="http://s9.picofile.com/file/8300659126/546.png" border="0"></a></div><div id="main_p" style="display: none;">
+  <html>     <head><link href="http://pony-love.mihanblog.com/%D9%81%D8%A7%D9%88%20%D8%A2%DB%8C%DA%A9%D9%86" rel="shortcut  icon">        <title>اکتویا بهترین ویالون زن کنترهات</title>         <meta http-equiv="Content-Type" content="text/html;  charset=utf-8">        <meta http-equiv="Content-Language"  content="fa">        <meta name="description"  content="" />        <meta  name="keywords" content="" />                 <link rel="alternate" type="application/rss+xml"  title="اکتویا بهترین ویالون زن کنترهات"           href="http://pony-love.mihanblog.com/post/rss/" />         <link rel="alternate" type="application/atom+xml"  title="اکتویا بهترین ویالون زن کنترهات"           href="http://pony-love.mihanblog.com/post/atom/" />         </head>    <style>         *{font-family:tahoma;direction:rtl;color:#8B008B}         #sidebar{float:left;width:200px;margin-right:5px}         #content{float:right;width:500px;padding:20px}             #body{display:block;font-size:12px}                 a,a:hover,a.visited{text-decoration:none}        .inbox{list-style:none;  padding:0 4px}        ul{padding:3px;margin:5px;}        h2{color:red}         h2 a{color:#8B008B; font-size:25px; font-family:A Dast Nevis}         h3{color:#8B008B; margin-top:0; font-size:25px; font-family:A Dast  Nevis; text-align:center}        #header h1 a{font-size:35px;  font-family:A Dast Nevis; float:center; color:}                #header  h1{margin:0; height:50px; overflow:hidden}                .author_box  img{float:right;border:none;}         .mihan_logo{text-align:center;height:200px;margin-top:10px;     background: url() no-repeat top center;}        .slogan{             color:#8B008B; text-align:center; padding:160px 0;             background: url(http://uupload.ir/files/er7l_gr.png) repeat;            background:  expression(#8B008B);        }                 #footer{font-size:9px;display:block;margin-top:50px; float:left}         #footer a,#footer a:hover,#footer a:visited{color:#;}                 .hr{border-top:1px solid #8B008B;height:1px;margin:3px;}                     body{margin:0; background: #00FFFF url(http://uupload.ir/files/0g61_pinkstars.gif~c200.gif) repeat fixed  center}                .sidebar_box{background-color:#; padding:10px  5px; line-height:5px; line-height:20px}         .sidebar_box_border{background-color:#; height:1px; display:block;  overflow:hidden}        .sidebar_box_border_div{width:185px;}         .seprator{margin-bottom:10px}        .main_menu{text-align:center}         .blog_title{color:#}                #header{height:0px;  overflow:hidden; background: #8B008B url() center repeat}        #body{             background: url(http://uupload.ir/files/esej_بدنه.png) repeat;            background:  expression(#8B008B);        }        #blog_body{width:770px;  margin:200px auto; }        #footer_background{background: url(http://uupload.ir/files/suni_فوتر.png) repeat-x; padding-bottom:320px}            .clearfix {             display:inline-block;        }        .clearfix:after {             clear:both;            content:'.';            display:block;             height:0;            visibility:hidden;        }        * html  .clearfix {            height:20%;        }        .clearfix {             display:block;        }    </style>    <body>         <div id="blog_body">                <div id="header">                 <h1><p style="text-align:center; margin:0"><a  class="blog_title" href="http://pony-love.mihanblog.com/pony-love"  style="margin:10px">اکتویا بهترین ویالون زن کنترهات</a></p></h1>             </div>                    <div  class="slogan">بخند تا دنیا به بهت بخنده</div>                         <div class="clearfix">                            <div  id="body" class="clearfix">                                         <div id="content">                                                     
+		<div id="MihanblogShopAds" style="display:block;height:0px;width:100%;border:0px"></div>
+		                                 <div>                                    <h2>                                         <a  href="http://pony-love.mihanblog.com/post/34">پونی های گرامی </a>                                     </h2>                                    <p  class="date">                                         یکشنبه 31 خرداد 1394 11:04 ب.ظ                                     </p>                                </div>                                             <b>نویسنده :</b>                                 <a href="http://pony-love.mihanblog.com/post/author/1341924">                                     اکتویا                                   </a>                                                         <br/>                                                                                  <b>ارسالشدهدر:</b>                                                                              <a href="http://pony-love.mihanblog.com/post/category/8">                                             اخبار                                         </a>،                                                                                                  <br>                                                                                              <a href="http://pony-love.mihanblog.com/post/author/1341924"><img src="../static.mihanblog.com/public/user_data/user_photo/448/1341924.jpg"  /></a>                                 <div id="InPost_MihanblogShopAds" style="display:block;height:0px;width:100%;border:0px"></div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div><font color="#336666"><br></font></div><div align="center"><div style="" dir="ltr" class="_fUc irc_mimg"><img hspace="0" border="0" align="baseline" vspace="0" src="http://uupload.ir/files/2aza_%D9%88%D9%84%DA%A9%D8%A7%D9%85.png" alt="" style="font-size: 11px;"></div></div>
+
+
+
+<font color="#336666" size="3"><div><font color="#336666"><br></font></div></font><div align="center"><font color="#336666" size="3">سلام بر پونی های گرامی&nbsp;</font></div><div><div align="center"><font color="#336666" size="3">حالتون خوبه&nbsp;</font></div><div align="center"><font color="#336666" size="3">خدا رو شکر&nbsp;</font></div><div align="center"><font color="#336666" size="3">من اکتویا مدیر این وبم&nbsp;</font></div><div align="center"><font color="#336666" size="3">از رزالین هم ممنونم که تو تاسیس وب کمکم کرد&nbsp;</font></div><div align="center"><font color="#336666" size="3">خوب این اولین وبلاگ منه&nbsp;</font></div><div align="center"><font color="#336666" size="3">و&nbsp;</font></div><div align="center"><font color="#336666" size="3">دوست دارم شما راضی باشین&nbsp;</font></div><div align="center"><font color="#336666" size="3">اینجا مثل تمام وبلاگا&nbsp;</font></div><div align="center"><font color="#336666" size="3">قوانینی داره :</font></div><div align="center"><font color="#660000" size="3">1-کپی از مطالبی که من می نویسم آزاده ولی مطالبی که نویسنده ها می نویسند رو باید خودشون بگن آزاده یا نه&nbsp;</font></div><div align="center"><font color="#660000" size="3">2-لینک کنی لینک می کنم&nbsp;</font></div><div align="center"><font color="#660000" size="3">3-لگو بزاری لگو می زارم&nbsp;</font></div><div align="center"><font color="#660000" size="3">4-نظر بدید&nbsp;</font></div><div align="center"><font color="#660000" size="3">5-نویسنده می پذیرم&nbsp;</font></div><div align="center"><font color="#660000" size="3">6-پایه دوستیم&nbsp;</font></div><div align="center"><br></div><div align="center"><font color="#ff6666" size="3">خوب حالا بریم سراغ امکانات جانبی&nbsp;</font></div><div align="center"><font size="3"><span style="font-size: 11px;"><br></span></font></div><div align="center"><font size="3"><span style="font-size: 11px;">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;</span></font><img hspace="NaN" border="NaN" align="baseline" vspace="0" src="http://s9.picofile.com/file/8300658934/Unti%DA%A9%DA%AFtyjyjyed.png" alt=""><span style="font-size: medium;">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</span></div><div align="center"><font size="3"><br></font></div><div align="center"><font color="#33cc00" size="3">لگو :</font></div><div align="center"><font size="3">&nbsp;</font></div><div align="center"><font size="3"><img src="http://s6.picofile.com/file/8206854442/Copy_of_violet_tinted_world_by_coin_trip39_d5qqio0.jpg"></font></div><div align="center"><font size="1"><br></font></div><div align="center"><div><font size="1">&lt;p</font></div><div><font size="1">&nbsp;align="center"&gt;&lt;a href="http://pony-love.mihanblog.com"&nbsp;</font></div><div><font size="1">target="_blank"&gt;&lt;img border="0"&nbsp;</font></div><div><font size="1">src="http://s6.picofile.com/file/8206854442/Copy_of_violet_tinted_world_by_coin_trip39_d5qqio0.jpg"</font></div><div><font size="1">&nbsp; alt="" &gt;&lt;/a&gt;&lt;br&gt;&lt;input onclick="this.select()"&nbsp;</font></div><div><font size="1">type="text" width="356" name="T1" size="15" value='&lt;!-- start logo&nbsp;</font></div><div><font size="1">cod off http://pony-love.mihanblog.com --&gt;&lt;p&nbsp;</font></div><div><font size="1">align="center"&gt;&lt;p align="center"&gt;&lt;a&nbsp;</font></div><div><font size="1">href="http://pony-love.mihanblog.com" target="_blank"&gt;&lt;img&nbsp;</font></div><div><font size="1">border="0"&nbsp;</font></div><div><font size="1">src="http://s6.picofile.com/file/8206854442/Copy_of_violet_tinted_world_by_coin_trip39_d5qqio0.jpg"</font></div><div><font size="1">&nbsp; alt=""&gt;&lt;/a&gt;&lt;/p&gt;&lt;!--finish logo cod off&nbsp;</font></div><div><font size="1">http://pony-love.mihanblog.com --&gt;' dir="ltr" &gt;&lt;/p&gt;&lt;div&nbsp;</font></div><div><font size="1">style="display:none"&gt;&lt;a&nbsp;</font></div><div><font size="1">href="http://blogers.ir"&gt;وبلاگ&lt;/a&gt;-&lt;a&nbsp;</font></div><div><font size="1">href="http://blogers.ir/cod/make-logo-banner-cod/"&gt;کد لوگو و&nbsp;</font></div><div><font size="1">بنر&lt;/a&gt;&lt;/div&gt;</font></div></div><div align="center"><font size="3"><br></font></div><div align="center"><font size="3"><span style="font-size: 11px;">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</span></font><img hspace="NaN" border="NaN" align="baseline" vspace="0" src="http://s9.picofile.com/file/8300658934/Unti%DA%A9%DA%AFtyjyjyed.png" alt=""><font size="3">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<span class="Apple-tab-span" style="white-space: pre;">	</span>&nbsp;</font></div><div align="center"><font size="3">&nbsp; &nbsp; &nbsp;&nbsp;<span class="Apple-tab-span" style="white-space: pre;">		</span></font></div><div align="center"><font color="#999999" size="3">دکمه ها :</font></div><div align="center"><font color="#999999" size="3"><br></font></div><div align="center"><a href="http://pony-love.mihanblog.com/extrapage/0000" target="" title=""><img hspace="0" border="0" align="baseline" vspace="0" src="http://s9.picofile.com/file/8300658800/thg.png" alt=""></a></div><div align="center"><br></div><div align="center"><a href="http://pony-love.mihanblog.com/extrapage/gijcd" target="" title=""><img hspace="0" border="0" align="baseline" vspace="0" src="http://s9.picofile.com/file/8300605834/Untiuliuitled.png" alt=""></a><br><a href="http://pony-love.mihanblog.com/extrapage/ctibfdjbd" target="" title=""><br><img hspace="0" border="0" align="baseline" vspace="0" src="http://s8.picofile.com/file/8300605900/uhk.png" alt=""></a><br><a href="http://pony-love.mihanblog.com/extrapage/ponylove" target="" title=""><br><img hspace="0" border="0" align="baseline" vspace="0" src="http://s9.picofile.com/file/8300658700/ytj.png" alt=""></a><br><a href="http://pony-love.mihanblog.com/extrapage/48954" target="" title=""><br><img hspace="0" border="0" align="baseline" vspace="0" src="http://s9.picofile.com/file/8300658726/ghjh.png" alt=""></a><br><a href="http://pony-love.mihanblog.com/extrapage/gjnvf" target="" title=""><br><img hspace="0" border="0" align="baseline" vspace="0" src="http://s8.picofile.com/file/8300658742/gjgh.png" alt=""></a><br><br></div><div align="center"><font size="3"><br></font></div><div align="center"><img hspace="0" border="0" align="baseline" vspace="0" src="http://s9.picofile.com/file/8300658934/Unti%DA%A9%DA%AFtyjyjyed.png" alt=""></div><div align="center"><font size="3">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;</font></div><div align="center"><br></div><div align="center"><div style="direction: rtl; color: rgb(153, 0, 204); font-size: 12px; text-align: -webkit-center; background-color: rgb(153, 0, 204);"><div style="direction: rtl;"><div style="font-family: Tahoma; direction: rtl; color: rgb(237, 69, 192); line-height: 16px;"><div style="font-family: Arial; direction: rtl; color: rgb(0, 0, 0); border: 1px solid rgb(0, 0, 0); width: 300px; height: 180px; overflow: auto; background-image: url(http://s6.picofile.com/file/8206856976/Copy_of_fluttershy_by_mistix_d45iajs_png.jpeg);"><font style="font-family: tahoma; direction: rtl; color: rgb(153, 0, 204);" size="3"><p style="direction: rtl; margin-top: 10px; margin-bottom: 0px;" align="center"><b>اخبار&nbsp;</b></p><p style="direction: rtl; margin-top: 10px; margin-bottom: 0px;" align="center"><b><br></b></p><p style="direction: rtl; margin-top: 10px; margin-bottom: 0px;" align="center">آگه عکس از شخصیتی خواستید بگید بزارم</p><p style="direction: rtl; margin-top: 10px; margin-bottom: 0px;" align="center"><br></p><p style="direction: rtl; margin-top: 10px; margin-bottom: 0px;" align="center">سفارش کد مجانی می گیرم پس سفارش بدید&nbsp;</p><p style="direction: rtl; margin-top: 10px; margin-bottom: 0px;" align="center">البته قالب سفارش ندید لطفا چون بلد نیستم&nbsp;</p><p style="direction: rtl; margin-top: 10px; margin-bottom: 0px;" align="center">هر دوشنبه به فروشگاه سر بزنید چون چیز جدید هر دوشنبه می زارم البته یه هفته در میون سر بزنید&nbsp;</p><p style="direction: rtl; margin-top: 10px; margin-bottom: 0px;" align="center"><br></p><p style="direction: rtl; margin-top: 10px; margin-bottom: 0px;" align="center">به وبلاگهام هم سر بزنید لطفا توی صفحات جانبی همشان هست&nbsp;</p></font></div></div></div></div></div><div align="center"><br></div><div align="center"><br></div><div align="center"><img hspace="0" border="NaN" align="baseline" vspace="0" src="http://s9.picofile.com/file/8300658934/Unti%DA%A9%DA%AFtyjyjyed.png" alt=""></div><div align="center"><font size="3"><span style="color: rgb(153, 51, 0); font-size: 11px;"><br></span></font></div><div align="center"><br></div><div align="center"><font color="#660000" size="3">خوش باشید&nbsp;</font></div>
+
+
+
+
+
+
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                                
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                                                     <br>                                                                                                                                   <br>                                <br>                                                     <a target="_self" href="javascript:newComment(34)">                                     <b>دیدگاهها : </b>                                     <script>setCommentCnt(34)</script> علاقه مندان پونی                                  </a>                                                                 <br/>                                                                                  <b>برچسبها:</b>                                                                         <a  href="http://pony-love.mihanblog.com/post/tag/%D8%B3%D8%A7%D8%A8%D8%AA" >                                         سابت                                    </a>،                                                                         <a  href="http://pony-love.mihanblog.com/post/tag/%D9%85%D8%AF%DB%8C%D8%B1" >                                         مدیر                                    </a>،                                                                                                          <br/>                                                                                                                                                               <b>آخرینویرایش:</b>                                 پنجشنبه 29 تیر 1396  03:36 ق.ظ                                                                  <br><center><img src='http://uupload.ir/files/e4ap_octavia_fan_button_by_requestbuttons-d5hdk2t.png'</a></center>        <br>                                                                                          <div>                                    <h2>                                         <a  href="http://pony-love.mihanblog.com/post/286">گذشت...</a>                                     </h2>                                    <p  class="date">                                         شنبه 26 بهمن 1398 01:14 ق.ظ                                     </p>                                </div>                                             <b>نویسنده :</b>                                 <a href="http://pony-love.mihanblog.com/post/author/1341924">                                     اکتویا                                   </a>                                                         <br/>                                                                                  <b>ارسالشدهدر:</b>                                                                              <a href="http://pony-love.mihanblog.com/post/category/16">                                             حرف های مدیر                                         </a>،                                                                                                  <br>                                                                                              <a href="http://pony-love.mihanblog.com/post/author/1341924"><img src="../static.mihanblog.com/public/user_data/user_photo/448/1341924.jpg"  /></a>                                 
+
+
+<div style="text-align: center;">سلام&nbsp;</div><div style="text-align: center;">باز اومدم</div><div style="text-align: center;">هر چند که آروم اومدم</div><div style="text-align: center;">کی صدای پامو شنید؟</div><div style="text-align: center;">اون دلم بود که شنید</div><div style="text-align: center;">هر چند که بی معنیه</div><div style="text-align: center;">ولی شاعر دیدنیه</div><div style="text-align: center;"><br></div><div style="text-align: center;"><br></div><div style="text-align: center;">میدونم میدونم خواستم با قدرت اومده باشم یه ذرت و پرتی کردم</div><div style="text-align: center;"><br></div><div style="text-align: center;">شما خودتو اذیت نکن</div><div style="text-align: center;">اهم اهم بعد مدتها اومدم رو منبر</div><div style="text-align: center;">مگه می تونم اینجا رو فراموش کنم؟</div><div style="text-align: center;">تمام دوران سختمو اینجا گذروندم&nbsp;</div><div style="text-align: center;"><br></div><div style="text-align: center;">هر چند که دیگه خیلی طرفدار پونی نیستم&nbsp;</div><div style="text-align: center;">ولی دردناکه که قسمتی از شادیه گذشتمو ول کنم برم</div><div style="text-align: center;"><br></div><div style="text-align: center;">یادمه پنج سال پیش چه ذوقی داشتم برای دیدن چند قسمت از پونی اونم با زبان اصلی&nbsp;</div><div style="text-align: center;">که مامانم بعد هر آزمون برام می گرفت و من میرفتم با کامپیوتر داییم که اونموقع هنوز دانشجو بود نگاه میکردم&nbsp;</div><div style="text-align: center;">چه ذوقی داشتم که بشینم و دیالوگا و آهنگهای انگلیسی شون رو حفظ کنم</div><div style="text-align: center;">چقدر زود بزرگ شدم و همه اونچه که دوست داشتم رو پشت سر گذاشتم</div><div style="text-align: center;"><br></div><div style="text-align: center;">کلاس ششم بودم،پنج سال پیش&nbsp;</div><div style="text-align: center;"><br></div><div style="text-align: center;">من در شهری زندگی می کردم که مردمش حتی نمی دونستن طرفدار بودن یعنی چی</div><div style="text-align: center;">همه منو مسخره می کردن ولی من باز هم شور و اشتیاق زیادی برای دیدن داشتم</div><div style="text-align: center;">من محسور شده بودم&nbsp;</div><div style="text-align: center;">هر چند در اون زمان تنها کسی که به من نخندید مامانم بود و یکی از شانسایی که آوردم این بود که تک بچه ام</div><div style="text-align: center;"><br></div><div style="text-align: center;">و الان من اینجام یه آدم بالغ که اون اشتیاق درش ناپدید شده ولی باز هم دوست داره اون آدمی که قبلا بوده رو در عاقوش بگیره</div><div style="text-align: center;">بعضی وقتها به خودم می گم من دوست دارم همون آدمی باشم که همیشه بودم</div><div style="text-align: center;">همون بچه ای که دردورنجش رو می ریخت تو رویاهاش چقدر پاک و معصوم</div><div style="text-align: center;">و الان من</div><div style="text-align: center;"><br></div><div style="text-align: center;">کلاس یازدهمم و داوطلب پزشکی</div><div style="text-align: center;">نمیدونم می تونم یا نه اما</div><div style="text-align: center;">همه ی اونا منو همایت می کنن کسی که قبلا بودم کسی که الان هستم و کسی که خواهم بودم</div><div style="text-align: center;"><br></div><div style="text-align: center;">لپ کلوم</div><div style="text-align: center;">من هیج وقت خود گذشتمو ول نمی کنم پس همیشه اینجا هستم :)</div><div style="text-align: center;"><br></div><div style="text-align: center;">به ترتیب مبارک:</div><div style="text-align: center;">روز ولنتاین 1398/11/25</div><div style="text-align: center;">روز مادر1398/11/26</div><div style="text-align: center;">تولدم :] 1398/11/27</div><div style="text-align: center;"><br></div><div style="text-align: center;">لپ تر کلوم</div><div style="text-align: center;">فردا تولدمه گفتم یه اعلام حضور بکنم خخخخخ</div><div style="text-align: center;"><br></div><div style="text-align: center;">خوش باشید</div><div style="text-align: center;">زمستونتون کنار خانوادتون خوش باشه</div><div style="text-align: center;"><br></div><div style="text-align: center;"><br></div>
+
+
+
+
+
+
+
+
+                                                                                     <br>                                                                                                                                   <br>                                <br>                                                     <a target="_self" href="javascript:newComment(286)">                                     <b>دیدگاهها : </b>                                     <script>setCommentCnt(286)</script> نظرات                                 </a>                                                                 <br/>                                                                                                                                                                           <b>آخرینویرایش:</b>                                 شنبه 26 بهمن 1398  01:19 ق.ظ                                                                  <br><center><img src='http://uupload.ir/files/e4ap_octavia_fan_button_by_requestbuttons-d5hdk2t.png'</a></center>        <br>                                                                                          <div>                                    <h2>                                         <a  href="http://pony-love.mihanblog.com/post/284">اکتویا</a>                                     </h2>                                    <p  class="date">                                         سه شنبه 4 تیر 1398 07:20 ب.ظ                                     </p>                                </div>                                             <b>نویسنده :</b>                                 <a href="http://pony-love.mihanblog.com/post/author/1341924">                                     اکتویا                                   </a>                                                         <br/>                                                                                  <b>ارسالشدهدر:</b>                                                                              <a href="http://pony-love.mihanblog.com/post/category/14">                                             متفرقه                                         </a>،                                                                              <a href="http://pony-love.mihanblog.com/post/category/26">                                             دی جی پونی و اکتویا                                         </a>،                                                                                                  <br>                                                                                              <a href="http://pony-love.mihanblog.com/post/author/1341924"><img src="../static.mihanblog.com/public/user_data/user_photo/448/1341924.jpg"  /></a>                                 
+<div style="text-align: center;"><br></div><div style="text-align: center;">اکتویا اینجا</div><div style="text-align: center;">&nbsp;اکتویا اونجا</div><div style="text-align: center;">اکتویا همه جا</div><div style="text-align: center;"><br></div><div style="text-align: center;"><img hspace="0" border="0" align="baseline" vspace="0" src="http://s8.picofile.com/file/8364740626/Screenshot_%DB%B2%DB%B0%DB%B1%DB%B7_%DB%B0%DB%B6_%DB%B1%DB%B0_%DB%B1%DB%B0_%DB%B2%DB%B4_%DB%B5%DB%B1.png" alt=""></div><div style="text-align: center;"><br></div><div style="text-align: center;"><br></div><div style="text-align: center;"><img hspace="0" border="0" align="baseline" vspace="0" src="http://s8.picofile.com/file/8364740718/Screenshot_%DB%B2%DB%B0%DB%B1%DB%B7_%DB%B0%DB%B6_%DB%B1%DB%B0_%DB%B1%DB%B0_%DB%B2%DB%B5_%DB%B2%DB%B7.png" alt=""></div><div style="text-align: center;"><br></div><div style="text-align: center;"><img hspace="0" border="0" align="baseline" vspace="0" src="http://s8.picofile.com/file/8364740792/Screenshot_%DB%B2%DB%B0%DB%B1%DB%B7_%DB%B0%DB%B6_%DB%B1%DB%B0_%DB%B1%DB%B0_%DB%B2%DB%B6_%DB%B1%DB%B7.png" alt=""></div><div style="text-align: center;"><br></div>
+
+                                                                                     <br>                                                                                                                                   <br>                                <br>                                                     <a target="_self" href="javascript:newComment(284)">                                     <b>دیدگاهها : </b>                                     <script>setCommentCnt(284)</script> نظرات                                 </a>                                                                 <br/>                                                                                                                                                                           <b>آخرینویرایش:</b>                                 سه شنبه 4 تیر 1398  07:29 ب.ظ                                                                  <br><center><img src='http://uupload.ir/files/e4ap_octavia_fan_button_by_requestbuttons-d5hdk2t.png'</a></center>        <br>                                                                                          <div>                                    <h2>                                         <a  href="http://pony-love.mihanblog.com/post/283">لحظه خداحافظی</a>                                     </h2>                                    <p  class="date">                                         دوشنبه 29 بهمن 1397 05:54 ب.ظ                                     </p>                                </div>                                             <b>نویسنده :</b>                                 <a href="http://pony-love.mihanblog.com/post/author/1341924">                                     اکتویا                                   </a>                                                         <br/>                                                                                                                                           
+<div style="text-align: center;">لحظه خداحافظی شده</div><div style="text-align: center;"><br></div><div style="text-align: center;"><br></div><div style="text-align: center;">خورشید در حال غروب کردنه و توایلایت می خواد به اکاستریا بر گرده</div><div style="text-align: center;"><br></div><div style="text-align: center;"><br></div><div style="text-align: center;"><br></div><div style="text-align: center;">همه دارن گریه می کنن و توایلایت وارد مجسمه میشه</div><div style="text-align: center;"><br></div><div style="text-align: center;"><br></div><div style="text-align: center;">اما وایسا</div><div style="text-align: center;"><br></div><div style="text-align: center;"><br></div><div style="text-align: center;">یه چیزی جلوشو گرفته</div><div style="text-align: center;"><br></div><div style="text-align: center;"><br></div><div style="text-align: center;"><img hspace="0" border="0" align="baseline" vspace="0" src="http://s8.picofile.com/file/8352139800/Equestria_Girls_Photo_Funny_equestria_girls_photos.jpg" alt=""></div><div style="text-align: center;"><br></div>
+
+
+
+
+                                                                                     <br>                                                                                                                                   <br>                                <br>                                                     <a target="_self" href="javascript:newComment(283)">                                     <b>دیدگاهها : </b>                                     <script>setCommentCnt(283)</script> نظرات                                 </a>                                                                 <br/>                                                                                                                                                                           <b>آخرینویرایش:</b>                                 چهارشنبه 24 بهمن 1397  05:59 ب.ظ                                                                  <br><center><img src='http://uupload.ir/files/e4ap_octavia_fan_button_by_requestbuttons-d5hdk2t.png'</a></center>        <br>                                                                                          <div>                                    <h2>                                         <a  href="http://pony-love.mihanblog.com/post/282">پرنسس توایلایت + تولد</a>                                     </h2>                                    <p  class="date">                                         شنبه 27 بهمن 1397 05:52 ب.ظ                                     </p>                                </div>                                             <b>نویسنده :</b>                                 <a href="http://pony-love.mihanblog.com/post/author/1341924">                                     اکتویا                                   </a>                                                         <br/>                                                                                  <b>ارسالشدهدر:</b>                                                                              <a href="http://pony-love.mihanblog.com/post/category/3">                                             توایلایت                                         </a>،                                                                                                  <br>                                                                                              <a href="http://pony-love.mihanblog.com/post/author/1341924"><img src="../static.mihanblog.com/public/user_data/user_photo/448/1341924.jpg"  /></a>                                 
+
+
+
+
+<div style="text-align: center;"><br></div><div style="text-align: center;">بررسی رشد و تغییرات توایلایت از وقتی پرنسس شد</div><div style="text-align: center;"><br></div><div style="text-align: center;">الیکورن توایلایت بلند قد تره</div><div style="text-align: center;"><br></div><div style="text-align: center;"><img hspace="0" border="0" align="baseline" vspace="0" src="http://s8.picofile.com/file/8352139400/Alicorn_Twilight_is_Taller.jpg" alt=""></div><div style="text-align: center;"><br></div><div style="text-align: center;"><br></div><div style="text-align: center;">تولد تولد تولدم مبارک بیام شعمارو فوت کنم تا صد ال زنده باشم</div><div style="text-align: center;"><br></div><div style="text-align: center;"><br></div><div style="text-align: center;">بیام شعمااارو فوت کنم تا صد سال زنده باشم</div><div style="text-align: center;"><br></div>
+
+
+
+
+
+
+
+
+
+
+
+
+                                                                                     <br>                                                                                                                                   <br>                                <br>                                                     <a target="_self" href="javascript:newComment(282)">                                     <b>دیدگاهها : </b>                                     <script>setCommentCnt(282)</script> نظرات                                 </a>                                                                 <br/>                                                                                                                                                                           <b>آخرینویرایش:</b>                                 دوشنبه 29 بهمن 1397  04:25 ب.ظ                                                                  <br><center><img src='http://uupload.ir/files/e4ap_octavia_fan_button_by_requestbuttons-d5hdk2t.png'</a></center>        <br>                                                                                          <div>                                    <h2>                                         <a  href="http://pony-love.mihanblog.com/post/281">شت</a>                                     </h2>                                    <p  class="date">                                         جمعه 26 بهمن 1397 05:49 ب.ظ                                     </p>                                </div>                                             <b>نویسنده :</b>                                 <a href="http://pony-love.mihanblog.com/post/author/1341924">                                     اکتویا                                   </a>                                                         <br/>                                                                                  <b>ارسالشدهدر:</b>                                                                              <a href="http://pony-love.mihanblog.com/post/category/28">                                             مبارزان نشان لیاقت                                         </a>،                                                                                                  <br>                                                                                              <a href="http://pony-love.mihanblog.com/post/author/1341924"><img src="../static.mihanblog.com/public/user_data/user_photo/448/1341924.jpg"  /></a>                                 
+<div style="text-align: center;"><br></div><div style="text-align: center;">اوه شت</div><div style="text-align: center;"><br></div><div style="text-align: center;"><br></div><div style="text-align: center;">این عکس میگه سکوتولو خواهر رینبودش نیست</div><div style="text-align: center;"><br></div><div style="text-align: center;"><br></div><div style="text-align: center;"><br></div><div style="text-align: center;">برادر زاده اپله<img src="http://mihanblog.com/public/public/rte/images_new/smiles/4.gif"></div><div style="text-align: center;"><br></div><div style="text-align: center;"><br></div><div style="text-align: center;"><br></div><div style="text-align: center;"><img hspace="0" border="0" align="baseline" vspace="0" src="http://s9.picofile.com/file/8352139142/Discover_ideas_about_Mlp_My_Little_Pony.jpg" alt=""></div>
+
+
+
+
+                                                                                     <br>                                                                                                                                   <br>                                <br>                                                     <a target="_self" href="javascript:newComment(281)">                                     <b>دیدگاهها : </b>                                     <script>setCommentCnt(281)</script> نظرات                                 </a>                                                                 <br/>                                                                                                                                                                           <b>آخرینویرایش:</b>                                 دوشنبه 29 بهمن 1397  04:26 ب.ظ                                                                  <br><center><img src='http://uupload.ir/files/e4ap_octavia_fan_button_by_requestbuttons-d5hdk2t.png'</a></center>        <br>                                                                                          <div>                                    <h2>                                         <a  href="http://pony-love.mihanblog.com/post/280">رو نمایی</a>                                     </h2>                                    <p  class="date">                                         پنجشنبه 25 بهمن 1397 05:45 ب.ظ                                     </p>                                </div>                                             <b>نویسنده :</b>                                 <a href="http://pony-love.mihanblog.com/post/author/1341924">                                     اکتویا                                   </a>                                                         <br/>                                                                                  <b>ارسالشدهدر:</b>                                                                              <a href="http://pony-love.mihanblog.com/post/category/31">                                             دیسکورد                                         </a>،                                                                              <a href="http://pony-love.mihanblog.com/post/category/9">                                             همگی                                         </a>،                                                                                                  <br>                                                                                              <a href="http://pony-love.mihanblog.com/post/author/1341924"><img src="../static.mihanblog.com/public/user_data/user_photo/448/1341924.jpg"  /></a>                                 
+<div style="text-align: center;">بععععله</div><div style="text-align: center;"><br></div><div style="text-align: center;">معلوم شد نامه بیگ مکنتاج و دیسکورد به کی رسید</div><div style="text-align: center;"><br></div><div style="text-align: center;"><br></div><div style="text-align: center;"><img hspace="0" border="0" align="baseline" vspace="0" src="http://s9.picofile.com/file/8352138476/Fluttercord_Valentines_Day_2016.jpg" alt=""></div><div style="text-align: center;"><br></div><div style="text-align: center;"><img hspace="0" border="0" align="baseline" vspace="0" src="http://s9.picofile.com/file/8352138650/Fluttermac_For_You_.jpg" alt=""></div><div style="text-align: center;"><br></div><div style="text-align: center;">البته گفته شده بیگ مکنتاج بزرگوار انقدر هم راحت کادو ولنتاین رو&nbsp; نرسونده</div><div style="text-align: center;"><br></div><div style="text-align: center;"><img hspace="0" border="0" align="baseline" vspace="0" src="http://s8.picofile.com/file/8352138676/Discover_ideas_about_Big_Macintosh.jpg" alt=""></div><div style="text-align: center;"><br></div><div style="text-align: center;"><br></div><div style="text-align: center;">ولنتاین همه شما و پونیا مبارک</div>
+
+
+
+
+                                                                                     <br>                                                                                                                                   <br>                                <br>                                                     <a target="_self" href="javascript:newComment(280)">                                     <b>دیدگاهها : </b>                                     <script>setCommentCnt(280)</script> نظرات                                 </a>                                                                 <br/>                                                                                                                                                                           <b>آخرینویرایش:</b>                                 چهارشنبه 24 بهمن 1397  05:49 ب.ظ                                                                  <br><center><img src='http://uupload.ir/files/e4ap_octavia_fan_button_by_requestbuttons-d5hdk2t.png'</a></center>        <br>                                                                                          <div>                                    <h2>                                         <a  href="http://pony-love.mihanblog.com/post/279">ولنتاین</a>                                     </h2>                                    <p  class="date">                                         چهارشنبه 24 بهمن 1397 05:41 ب.ظ                                     </p>                                </div>                                             <b>نویسنده :</b>                                 <a href="http://pony-love.mihanblog.com/post/author/1341924">                                     اکتویا                                   </a>                                                         <br/>                                                                                  <b>ارسالشدهدر:</b>                                                                              <a href="http://pony-love.mihanblog.com/post/category/9">                                             همگی                                         </a>،                                                                              <a href="http://pony-love.mihanblog.com/post/category/14">                                             متفرقه                                         </a>،                                                                                                  <br>                                                                                              <a href="http://pony-love.mihanblog.com/post/author/1341924"><img src="../static.mihanblog.com/public/user_data/user_photo/448/1341924.jpg"  /></a>                                 <div style="text-align: center;">سلااااام</div><div style="text-align: center;"><br></div><div style="text-align: center;"><br></div><div style="text-align: center;">بعد مدتها یه سری زدم</div><div style="text-align: center;"><br></div><div style="text-align: center;">چیکا کنم خو درسام خیلی سنگینن</div><div style="text-align: center;"><br></div><div style="text-align: center;">راستی ولنتاین پیشاپیش مبارک</div><div style="text-align: center;"><br></div><div style="text-align: center;">امیدوارم همه روز ولنتاین خوبی رو با کراشتون بگذرونین</div><div style="text-align: center;"><br></div><div style="text-align: center;">پونی ها هم ولنتاینشونه</div><div style="text-align: center;"><br></div><div style="text-align: center;">به نظرتون این نامه ها قراره به کی برسه؟</div><div style="text-align: center;"><br></div><div style="text-align: center;"><br></div><div style="text-align: center;"><img hspace="0" border="0" align="baseline" vspace="0" src="http://s8.picofile.com/file/8352138084/MLP_Valentines.jpg" alt=""></div>                                                                                     <br>                                                                                                                                   <br>                                <br>                                                     <a target="_self" href="javascript:newComment(279)">                                     <b>دیدگاهها : </b>                                     <script>setCommentCnt(279)</script> نظرات                                 </a>                                                                 <br/>                                                                                                                                                                           <b>آخرینویرایش:</b>                                 چهارشنبه 24 بهمن 1397  05:45 ب.ظ                                                                  <br><center><img src='http://uupload.ir/files/e4ap_octavia_fan_button_by_requestbuttons-d5hdk2t.png'</a></center>        <br>                                                                                          <div>                                    <h2>                                         <a  href="http://pony-love.mihanblog.com/post/257">مدلکی</a>                                     </h2>                                    <p  class="date">                                         پنجشنبه 13 دی 1397 03:36 ب.ظ                                     </p>                                </div>                                             <b>نویسنده :</b>                                 <a href="http://pony-love.mihanblog.com/post/author/1341924">                                     اکتویا                                   </a>                                                         <br/>                                                                                  <b>ارسالشدهدر:</b>                                                                              <a href="http://pony-love.mihanblog.com/post/category/4">                                             پینکی پای                                         </a>،                                                                                                  <br>                                                                                              <a href="http://pony-love.mihanblog.com/post/author/1341924"><img src="../static.mihanblog.com/public/user_data/user_photo/448/1341924.jpg"  /></a>                                 
+<div style="text-align: center;">از این عکسای مدلکی</div><div style="text-align: center;"><br></div><div style="text-align: center;"><img hspace="0" border="0" align="baseline" vspace="0" src="https://pre00.deviantart.net/025b/th/pre/i/2013/238/a/6/pinkception_by_howlsinthedistance-d6juw06.png" alt=""></div><div style="text-align: center;"><br></div>
+
+
+
+
+                                                                                     <br>                                                                                                                                   <br>                                <br>                                                     <a target="_self" href="javascript:newComment(257)">                                     <b>دیدگاهها : </b>                                     <script>setCommentCnt(257)</script> نظرات                                 </a>                                                                 <br/>                                                                                                                                                                           <b>آخرینویرایش:</b>                                 شنبه 8 دی 1397  03:28 ب.ظ                                                                  <br><center><img src='http://uupload.ir/files/e4ap_octavia_fan_button_by_requestbuttons-d5hdk2t.png'</a></center>        <br>                                                                                          <div>                                    <h2>                                         <a  href="http://pony-love.mihanblog.com/post/278">اشتباه</a>                                     </h2>                                    <p  class="date">                                         چهارشنبه 12 دی 1397 03:20 ب.ظ                                     </p>                                </div>                                             <b>نویسنده :</b>                                 <a href="http://pony-love.mihanblog.com/post/author/1341924">                                     اکتویا                                   </a>                                                         <br/>                                                                                  <b>ارسالشدهدر:</b>                                                                              <a href="http://pony-love.mihanblog.com/post/category/28">                                             مبارزان نشان لیاقت                                         </a>،                                                                                                  <br>                                                                                              <a href="http://pony-love.mihanblog.com/post/author/1341924"><img src="../static.mihanblog.com/public/user_data/user_photo/448/1341924.jpg"  /></a>                                 
+<div style="text-align: center;">این عکس چندتا چیزو داره اشتب میزنه</div><div style="text-align: center;"><br></div><div style="text-align: center;"><br></div><div style="text-align: center;"><br></div><div style="text-align: center;">ببینم چی رو می فهمین</div><div style="text-align: center;"><br></div><div style="text-align: center;"><br></div><div style="text-align: center;"><img hspace="0" border="0" align="baseline" vspace="0" src="https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/intermediary/f/ad21e55e-9920-4f65-8ee7-913bfe9ccc86/d7bmo31-1dbf0ca7-5ebc-47c5-91fc-963deafe8b74.png/v1/fill/w_1018,h_785,strp/_art_from_song__i_ll_fly_higher_by_vavacung_d7bmo31-pre.png" alt=""></div><div style="text-align: center;"><br></div><div style="text-align: center;"><br></div>
+
+
+
+
+                                                                                     <br>                                                                                                                                   <br>                                <br>                                                     <a target="_self" href="javascript:newComment(278)">                                     <b>دیدگاهها : </b>                                     <script>setCommentCnt(278)</script> نظرات                                 </a>                                                                 <br/>                                                                                                                                                                           <b>آخرینویرایش:</b>                                 شنبه 8 دی 1397  03:16 ب.ظ                                                                  <br><center><img src='http://uupload.ir/files/e4ap_octavia_fan_button_by_requestbuttons-d5hdk2t.png'</a></center>        <br>                                                                                          <div>                                    <h2>                                         <a  href="http://pony-love.mihanblog.com/post/277">مورچه</a>                                     </h2>                                    <p  class="date">                                         سه شنبه 11 دی 1397 03:18 ب.ظ                                     </p>                                </div>                                             <b>نویسنده :</b>                                 <a href="http://pony-love.mihanblog.com/post/author/1341924">                                     اکتویا                                   </a>                                                         <br/>                                                                                  <b>ارسالشدهدر:</b>                                                                              <a href="http://pony-love.mihanblog.com/post/category/6">                                             فلاترشای                                         </a>،                                                                                                  <br>                                                                                              <a href="http://pony-love.mihanblog.com/post/author/1341924"><img src="../static.mihanblog.com/public/user_data/user_photo/448/1341924.jpg"  /></a>                                 <div style="text-align: center;"><br></div><div style="text-align: center;"><br></div><div style="text-align: center;">وااااااااااااای چه باحال میشه اگه مورچه هاشون اینطوری بود</div><div style="text-align: center;"><br></div><div style="text-align: center;"><br></div><div style="text-align: center;">خیلی باحاله</div><div style="text-align: center;"><br></div><div style="text-align: center;">فکر کنم برگرده به همون تاریکی</div><div style="text-align: center;"><br></div><div style="text-align: center;"><img hspace="0" border="0" align="baseline" vspace="0" src="https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/intermediary/f/ef749707-926a-4432-be48-b67aaed459f7/d8sb4xp-02e33ead-bcb3-497e-8405-2f8e121817cb.jpg/v1/fill/w_575,h_1390,q_70,strp/cute_little_vanilla__by_made_in_donuts_d8sb4xp-pre.jpg" alt=""></div><div style="text-align: center;"><br></div><div style="text-align: center;"><br></div>
+
+
+                                                                                     <br>                                                                                                                                   <br>                                <br>                                                     <a target="_self" href="javascript:newComment(277)">                                     <b>دیدگاهها : </b>                                     <script>setCommentCnt(277)</script> نظرات                                 </a>                                                                 <br/>                                                                                                                                                                           <b>آخرینویرایش:</b>                                 شنبه 8 دی 1397  03:15 ب.ظ                                                                  <br><center><img src='http://uupload.ir/files/e4ap_octavia_fan_button_by_requestbuttons-d5hdk2t.png'</a></center>        <br>                                                                                          <div>                                    <h2>                                         <a  href="http://pony-love.mihanblog.com/post/276">الفرار</a>                                     </h2>                                    <p  class="date">                                         دوشنبه 10 دی 1397 03:14 ب.ظ                                     </p>                                </div>                                             <b>نویسنده :</b>                                 <a href="http://pony-love.mihanblog.com/post/author/1341924">                                     اکتویا                                   </a>                                                         <br/>                                                                                  <b>ارسالشدهدر:</b>                                                                              <a href="http://pony-love.mihanblog.com/post/category/32">                                             طنز پونی                                         </a>،                                                                              <a href="http://pony-love.mihanblog.com/post/category/28">                                             مبارزان نشان لیاقت                                         </a>،                                                                                                  <br>                                                                                              <a href="http://pony-love.mihanblog.com/post/author/1341924"><img src="../static.mihanblog.com/public/user_data/user_photo/448/1341924.jpg"  /></a>                                 <div style="text-align: center;"><br></div><div style="text-align: center;"><br></div><div style="text-align: center;">ماجراهای این دو تمومی ندارد&nbsp;</div><div style="text-align: center;"><br></div><div style="text-align: center;"><br></div><div style="text-align: center;">خخخ فکر کنم سیوتی باید اول اونو که از ترس خشکش زده می برد جلو</div><div style="text-align: center;"><br></div><div style="text-align: center;">ولی خودش الفرار کرده</div><div style="text-align: center;"><br></div><div style="text-align: center;"><br></div><div style="text-align: center;"><img hspace="0" border="0" align="baseline" vspace="0" src="https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/intermediary/f/917feffa-9bfd-4b08-94e5-0248597d915e/d7sbp7d-99622b21-8594-42bf-869a-5f8bb158a7c2.png/v1/fill/w_752,h_1063,q_70,strp/done_mine_at_night_by_geckogeek_d7sbp7d-pre.jpg" alt=""></div><div style="text-align: center;"><br></div><div style="text-align: center;"><br></div>
+
+
+                                                                                     <br>                                                                                                                                   <br>                                <br>                                                     <a target="_self" href="javascript:newComment(276)">                                     <b>دیدگاهها : </b>                                     <script>setCommentCnt(276)</script> نظرات                                 </a>                                                                 <br/>                                                                                                                                                                           <b>آخرینویرایش:</b>                                 شنبه 8 دی 1397  03:13 ب.ظ                                                                  <br><center><img src='http://uupload.ir/files/e4ap_octavia_fan_button_by_requestbuttons-d5hdk2t.png'</a></center>        <br>                                                                                          <div>                                    <h2>                                         <a  href="http://pony-love.mihanblog.com/post/275">سوال</a>                                     </h2>                                    <p  class="date">                                         یکشنبه 9 دی 1397 03:13 ب.ظ                                     </p>                                </div>                                             <b>نویسنده :</b>                                 <a href="http://pony-love.mihanblog.com/post/author/1341924">                                     اکتویا                                   </a>                                                         <br/>                                                                                  <b>ارسالشدهدر:</b>                                                                              <a href="http://pony-love.mihanblog.com/post/category/5">                                             رریتی                                         </a>،                                                                                                  <br>                                                                                              <a href="http://pony-love.mihanblog.com/post/author/1341924"><img src="../static.mihanblog.com/public/user_data/user_photo/448/1341924.jpg"  /></a>                                 <div style="text-align: center;">&nbsp;</div><div style="text-align: center;"><br></div><div style="text-align: center;">سوال اول برداشت خود را از این تصویر بنویسید :/</div><div style="text-align: center;"><br></div><div style="text-align: center;"><br></div><div style="text-align: center;">*برداشت آزاد*</div><div style="text-align: center;"><br></div><div style="text-align: center;"><img hspace="0" border="0" align="baseline" vspace="0" src="https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/intermediary/f/ccf0e39b-bf27-4a5d-abcb-29c28006b3cf/d6ta9b5-2eefae5d-54d5-4e7c-917e-fed6461c56ae.png" alt=""></div><div style="text-align: center;"><br></div><div style="text-align: center;"><br></div><div style="text-align: center;"><br></div>
+
+
+                                                                                     <br>                                                                                                                                   <br>                                <br>                                                     <a target="_self" href="javascript:newComment(275)">                                     <b>دیدگاهها : </b>                                     <script>setCommentCnt(275)</script> نظرات                                 </a>                                                                 <br/>                                                                                                                                                                           <b>آخرینویرایش:</b>                                 شنبه 8 دی 1397  03:09 ب.ظ                                                                  <br><center><img src='http://uupload.ir/files/e4ap_octavia_fan_button_by_requestbuttons-d5hdk2t.png'</a></center>        <br>                                                                                          <div>                                    <h2>                                         <a  href="http://pony-love.mihanblog.com/post/274">امتحان</a>                                     </h2>                                    <p  class="date">                                         شنبه 8 دی 1397 03:04 ب.ظ                                     </p>                                </div>                                             <b>نویسنده :</b>                                 <a href="http://pony-love.mihanblog.com/post/author/1341924">                                     اکتویا                                   </a>                                                         <br/>                                                                                  <b>ارسالشدهدر:</b>                                                                              <a href="http://pony-love.mihanblog.com/post/category/14">                                             متفرقه                                         </a>،                                                                                                  <br>                                                                                              <a href="http://pony-love.mihanblog.com/post/author/1341924"><img src="../static.mihanblog.com/public/user_data/user_photo/448/1341924.jpg"  /></a>                                 <div style="text-align: center;">سلام دوستان چه خبر&nbsp;</div><div style="text-align: center;"><br></div><div style="text-align: center;">با امتحانا چه می کنید؟</div><div style="text-align: center;"><br></div><div style="text-align: center;">وای خدایی درسای ما از امسال سخت شده</div><div style="text-align: center;"><br></div><div style="text-align: center;">مخصوصا اینکه تازه رفتم دهم و رشته تجربیم هنوز با جو کنار نیومدم</div><div style="text-align: center;"><br></div><div style="text-align: center;">خدایی احساس می کنم به ترک تحصیل نیازمندم</div><div style="text-align: center;"><br></div><div style="text-align: center;">تلاش های من برای شب زنده داری و درس خوندن</div><div style="text-align: center;"><br></div><div style="text-align: center;"><br></div><div style="text-align: center;"><img hspace="0" border="0" align="baseline" vspace="0" src="https://orig00.deviantart.net/68e7/f/2013/249/3/6/coffee_chugging_champion_by_klystron2010-d6larsc.gif" alt=""></div><div style="text-align: center;"><br></div><div style="text-align: center;"><br></div><div style="text-align: center;">حال و روز من سر امتحان وقتی یه مبحثو یادم رفته و سعی می کنم به خاطر بیارم</div><div style="text-align: center;"><br></div><div style="text-align: center;"><br></div><div style="text-align: center;"><img hspace="0" border="0" align="baseline" vspace="0" src="https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/intermediary/f/a3094bee-cb69-4d5c-b59d-eab6e126601f/d6knvsx-8c7e42c2-f1a6-4a17-aff2-372699c659e4.png/v1/fill/w_1024,h_576,strp/the_inside_story_by_klystron2010_d6knvsx-fullview.png" alt=""></div><div style="text-align: center;"><br></div><div style="text-align: center;">حالا حال و روز من بعد امتحان ریاضی که تنها اشتباهم این بود که شیش تقسیم بر دو نوشتم مساوی دو<img src="http://mihanblog.com/public/public/rte/images_new/smiles/21.gif"></div><div style="text-align: center;"><br></div><div style="text-align: center;"><br></div><div style="text-align: center;"><img hspace="0" border="0" align="baseline" vspace="0" src="https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/intermediary/f/5bd642e7-6a59-4b97-82e3-29b2c98a5203/d5zrxrg-14ba2fb3-9bc1-4b1d-89a1-a5e2150a62c8.png/v1/fill/w_1000,h_800,q_70,strp/i_have_a_cavity_by_acharmingpony_d5zrxrg-pre.jpg" alt=""></div><div style="text-align: center;"><br></div><div style="text-align: center;"><br></div><div style="text-align: center;">و به طور حتم وضعیت من بعد گرفتن کارنامه ها از همین حالا برای من تو خونتون جا نگه دارین بیام اونجا</div><div style="text-align: center;"><br></div><div style="text-align: center;"><br></div><div style="text-align: center;"><img hspace="0" border="0" align="baseline" vspace="0" src="https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/intermediary/f/d9e96082-a50a-42b8-a425-bc243de14ec6/d6xq0nt-e5ea7ae8-e847-49ac-b794-c0fda2ee6081.png/v1/fill/w_942,h_848,q_70,strp/don_t_leave_me_by_isa_isa_chan_d6xq0nt-pre.jpg" alt=""></div><div style="text-align: center;"><br></div>
+
+
+                                                                                     <br>                                                                                                                                   <br>                                <br>                                                     <a target="_self" href="javascript:newComment(274)">                                     <b>دیدگاهها : </b>                                     <script>setCommentCnt(274)</script> نظرات                                 </a>                                                                 <br/>                                                                                                                                                                           <b>آخرینویرایش:</b>                                 شنبه 8 دی 1397  03:07 ب.ظ                                                                  <br><center><img src='http://uupload.ir/files/e4ap_octavia_fan_button_by_requestbuttons-d5hdk2t.png'</a></center>        <br>                                                                                          <div>                                    <h2>                                         <a  href="http://pony-love.mihanblog.com/post/273">وقتی من دوباره عاشق شدم</a>                                     </h2>                                    <p  class="date">                                         جمعه 2 آذر 1397 02:16 ب.ظ                                     </p>                                </div>                                             <b>نویسنده :</b>                                 <a href="http://pony-love.mihanblog.com/post/author/1341924">                                     اکتویا                                   </a>                                                         <br/>                                                                                  <b>ارسالشدهدر:</b>                                                                              <a href="http://pony-love.mihanblog.com/post/category/26">                                             دی جی پونی و اکتویا                                         </a>،                                                                              <a href="http://pony-love.mihanblog.com/post/category/11">                                             پونی های ناشناس                                         </a>،                                                                                                  <br>                                                                                              <a href="http://pony-love.mihanblog.com/post/author/1341924"><img src="../static.mihanblog.com/public/user_data/user_photo/448/1341924.jpg"  /></a>                                 
+<div style="text-align: center;">جیغ جیغ جییییغ</div><div style="text-align: center;"><br></div><div style="text-align: center;">اینو دیدم یه لحظه فکر کردم اوکتاویاست&nbsp;</div><div style="text-align: center;"><br></div><div style="text-align: center;">ولی خداییی خیلییییییی نانازه عاشقش شدم</div><div style="text-align: center;"><br></div><div style="text-align: center;">ولی حتی نمی دونم اسمش چیهههه</div><div style="text-align: center;"><br></div><div style="text-align: center;">حالا الان وضعیت انیمه اسم تو رو درک می کنم<img src="http://mihanblog.com/public/public/rte/images_new/smiles/20.gif"></div><div style="text-align: center;"><br></div><div style="text-align: center;"><br></div><div style="text-align: center;"><img hspace="0" border="0" align="baseline" vspace="0" src="https://img00.deviantart.net/a6a5/i/2013/029/3/7/commission___roan_of_arc_by_valkyrie_girl-d5t7rfi.png" alt=""></div><div style="text-align: center;"><br></div><div style="text-align: center;"><br></div>
+
+                                                                                     <br>                                                                                                                                   <br>                                <br>                                                     <a target="_self" href="javascript:newComment(273)">                                     <b>دیدگاهها : </b>                                     <script>setCommentCnt(273)</script> نظرات                                 </a>                                                                 <br/>                                                                                                                                                                           <b>آخرینویرایش:</b>                                 جمعه 2 آذر 1397  02:12 ب.ظ                                                                  <br><center><img src='http://uupload.ir/files/e4ap_octavia_fan_button_by_requestbuttons-d5hdk2t.png'</a></center>        <br>                                                                                          <div>                                    <h2>                                         <a  href="http://pony-love.mihanblog.com/post/271">ببخشید ولی برمیگردم...</a>                                     </h2>                                    <p  class="date">                                         سه شنبه 20 شهریور 1397 10:46 ب.ظ                                     </p>                                </div>                                             <b>نویسنده :</b>                                 <a href="http://pony-love.mihanblog.com/post/author/1761594">                                     ❀kizuna❀                                  </a>                                                         <br/>                                                                                                                                           کسی اینجا نظر نمی ده اکتویا هم اپ نمی کنه معذرت می خوام ولی من میرم                                                                                     <br>                                                                                                                                   <br>                                <br>                                                     <a target="_self" href="javascript:newComment(271)">                                     <b>دیدگاهها : </b>                                     <script>setCommentCnt(271)</script> نظرات                                 </a>                                                                 <br/>                                                                                                                                                                           <b>آخرینویرایش:</b>                                 سه شنبه 20 شهریور 1397  10:44 ب.ظ                                                                  <br><center><img src='http://uupload.ir/files/e4ap_octavia_fan_button_by_requestbuttons-d5hdk2t.png'</a></center>        <br>                                                                                                                              <br><br>                                                                                                                                  تعدادکلصفحات  : 13                                                           <a href="http://pony-love.mihanblog.com/page/1">  <b>1</b></a>                                                          <a href="http://pony-love.mihanblog.com/page/2">  <span>2</span></a>                                                          <a href="http://pony-love.mihanblog.com/page/3">  <span>3</span></a>                                                          <a href="http://pony-love.mihanblog.com/page/4">  <span>4</span></a>                                                          <a href="http://pony-love.mihanblog.com/page/5">  <span>5</span></a>                                                          <a href="http://pony-love.mihanblog.com/page/6">  <span>6</span></a>                                                          <a href="http://pony-love.mihanblog.com/page/7">  <span>7</span></a>                                                          <a href="http://pony-love.mihanblog.com/page/8">  <i>...</i></a>                                                                                                              <div id="footer"  class="clearfix">                            <strong>                                 POWERED BY <a  href="../www.twilight-sparkle.mihanblog.com/index.html">                                 <font color="#FF0000" size="2px">M</font>IHAN                                 <font color="#FF0000"  size="2px">B</font>LOG.COM</a>                             </strong>                        </div>                     </div>                                            <div  id="sidebar">                            <form id="frm-16077755525fd4b540422e7" method="get" action="http://pony-love.mihanblog.com/post/search/fid/16077755525fd4b540422e7"  onsubmit="window.open('', 'search', 'toolbar=0,location=0,status=0,menubar=0,scrollbars=1,resizable=0,width=400,height=310')" target="search">                                  <div class="sidebar_box_border_div">                                     <b class="sidebar_box_border"  style="margin:0 3px"><img  src="../static.mihanblog.com/public/images/empty.gif"/></b>                                     <b class="sidebar_box_border"  style="margin:0 2px"><img  src="../static.mihanblog.com/public/images/empty.gif"/></b>                                     <b class="sidebar_box_border"  style="margin:0 1px"><img  src="../static.mihanblog.com/public/images/empty.gif"/></b>                                     <div class="sidebar_box">                                         <input type="text"  name="search_text" style="width:90px"/>                                         <input type="submit" value="آهااااااااان"/>                                     </div>                                     <b class="sidebar_box_border" style="margin:0  1px"><img  src="../static.mihanblog.com/public/images/empty.gif"/></b>                                     <b class="sidebar_box_border"  style="margin:0 2px"><img  src="../static.mihanblog.com/public/images/empty.gif"/></b>                                     <b class="sidebar_box_border"  style="margin:0 3px"><img  src="../static.mihanblog.com/public/images/empty.gif"/></b>                                 </div>                             <input type="hidden" name="frm-id" value="16077755525fd4b540422e7" id="frm-id" /></form>                                                     <div class="seprator"><img  src="../static.mihanblog.com/public/images/empty.gif"/></div>                                                 <div  class="sidebar_box_border_div">                                <b  class="sidebar_box_border" style="margin:0 3px"><img  src="../static.mihanblog.com/public/images/empty.gif"/></b>                                 <b class="sidebar_box_border"  style="margin:0 2px"><img  src="../static.mihanblog.com/public/images/empty.gif"/></b>                                 <b class="sidebar_box_border"  style="margin:0 1px"><img  src="../static.mihanblog.com/public/images/empty.gif"/></b>                                 <div class="sidebar_box">                                     <div style="text-align:center">                                         <div align="center"  style="border:none; width:160px;  overflow:hidden"><img src="../static.mihanblog.com/public/user_data/web_photo/538/1612590.jpg@2599"  /></div>                                         <a  href="index.html">پستالکترونیک</a><br/>                                         <a  href="javascript:messageForm()">تماسباما</a><br/><!--  start logo cod offhttphttp://selectiacastel.mihanblog.com/ --><p  align="center"><p align="center"><a  href="http://selectiacastel.mihanblog.com/" target="_blank"><img  border="0" src="http://uupload.ir/files/8d77_picture6.png"  width="165" height="200"  alt="click"></a></p><!--finish logo cod off  http://selectiacastel.mihanblog.com/-->                                         <div  style="text-align:center">خوشـــــــــــــــــــــ اومــــــــــــــــدی<br />
+من اکتویام نمی گم که وبم عالیه<br />
+ولی بدم نیست<br />
+لطفاًنظر بدید<br />
+خوش باشید</div>                                         <div class="clearfix"  style="margin-right:70px">                                             <a href="http://pony-love.mihanblog.com/post/rss/"><img style="border:none;  float:right"  src="../static.mihanblog.com/public/images/icon/rss.gif"/></a>                                             <a  href="http://pony-love.mihanblog.com/post/atom/"><img style="border:none; float:right"  src="../static.mihanblog.com/public/images/icon/atom.gif"/></a>                                         </div>                                     </div>                                </div>                                 <b class="sidebar_box_border"  style="margin:0 1px"><img  src="../static.mihanblog.com/public/images/empty.gif"/></b>                                 <b class="sidebar_box_border"  style="margin:0 2px"><img  src="../static.mihanblog.com/public/images/empty.gif"/></b>                                 <b class="sidebar_box_border"  style="margin:0 3px"><img  src="../static.mihanblog.com/public/images/empty.gif"/></b>                             </div>                             <div class="seprator"><img  src="../static.mihanblog.com/public/images/empty.gif"/></div>                                                          
+		<form id="frm-16077755525fd4b5404241f" method="post" action="http://pony-love.mihanblog.com/poll/new/fid/16077755525fd4b5404241f/atrty/1607775552/avrvy/0/key/ae6b10accf1cf26482be8201544f518e/"  onsubmit="window.open('', 'poll', 'toolbar=0,location=0,status=0,menubar=0,scrollbars=1,resizable=0,width=505,height=315')" target="poll"><input type="hidden" name="data[pollid]" value="366430" id="data[pollid]" />		                                <div  class="sidebar_box_border_div">                                     <b class="sidebar_box_border" style="margin:0 3px"><img  src="../static.mihanblog.com/public/images/empty.gif"/></b>                                     <b class="sidebar_box_border"  style="margin:0 2px"><img  src="../static.mihanblog.com/public/images/empty.gif"/></b>                                     <b class="sidebar_box_border"  style="margin:0 1px"><img  src="../static.mihanblog.com/public/images/empty.gif"/></b>                                     <div class="sidebar_box">                                         <h3>نظرسنجی</h3>                                         چه احساسی داری؟ <br>                                                                                      <label><input type="radio" name="data[answer]" value="v1">ناراحتی </label>                                             <br>                                                                                      <label><input type="radio" name="data[answer]" value="v2">افسردگی </label>                                             <br>                                                                                      <label><input type="radio" name="data[answer]" value="v3">شادی </label>                                             <br>                                                                                      <label><input type="radio" name="data[answer]" value="v4">ترس </label>                                             <br>                                                                                      <label><input type="radio" name="data[answer]" value="v5">نا امیدی </label>                                             <br>                                                                                      <label><input type="radio" name="data[answer]" value="v6">خوشبخت </label>                                             <br>                                                                                      <input type="submit" value="انگشت خوشگلتو بزار روم "/>                                     </div>                                     <b class="sidebar_box_border" style="margin:0 1px"><img  src="../static.mihanblog.com/public/images/empty.gif"/></b>                                     <b class="sidebar_box_border"  style="margin:0 2px"><img  src="../static.mihanblog.com/public/images/empty.gif"/></b>                                     <b class="sidebar_box_border"  style="margin:0 3px"><img  src="../static.mihanblog.com/public/images/empty.gif"/></b>                                 </div>                             
+		<input type="hidden" name="frm-id" value="16077755525fd4b5404241f" id="frm-id" /></form>                                                                                     <div class="seprator"><img  src="../static.mihanblog.com/public/images/empty.gif"/></div>                                                                                                               <div class="sidebar_box_border_div">                                     <b class="sidebar_box_border" style="margin:0 3px"><img  src="../static.mihanblog.com/public/images/empty.gif"/></b>                                     <b class="sidebar_box_border"  style="margin:0 2px"><img  src="../static.mihanblog.com/public/images/empty.gif"/></b>                                     <b class="sidebar_box_border"  style="margin:0 1px"><img  src="../static.mihanblog.com/public/images/empty.gif"/></b>                                     <div class="sidebar_box">                                         <h3>اَبربرچسبها</h3>                                                                                                      <a  href="http://pony-love.mihanblog.com/post/tag/%D8%B3%D8%A7%D8%A8%D8%AA"  style="font-size:1em">                                                 سابت                                              </a>                                                                                                      <a  href="http://pony-love.mihanblog.com/post/tag/%D9%85%D8%AF%DB%8C%D8%B1"  style="font-size:1em">                                                 مدیر                                              </a>                                                                                                      <a  href="http://pony-love.mihanblog.com/post/tag/%D8%AA%D9%88%D8%A7%DB%8C%D9%84%D8%A7%DB%8C%D8%AA+-%D9%BE%D9%88%D9%86%DB%8C-%D8%B1%D9%88%D8%B2+%D9%BE%D9%88%D9%86%DB%8C+%D9%87%D8%A7"  style="font-size:1em">                                                 توایلایت -پونی-روز پونی ها                                              </a>                                                                                  </div>                                        <b  class="sidebar_box_border" style="margin:0 1px"><img  src="../static.mihanblog.com/public/images/empty.gif"/></b>                                     <b class="sidebar_box_border"  style="margin:0 2px"><img  src="../static.mihanblog.com/public/images/empty.gif"/></b>                                     <b class="sidebar_box_border"  style="margin:0 3px"><img  src="../static.mihanblog.com/public/images/empty.gif"/></b>                                 </div>                                                         <div  class="seprator"><img  src="../static.mihanblog.com/public/images/empty.gif"/></div>                                                                                                               <div class="sidebar_box_border_div">                                     <b class="sidebar_box_border" style="margin:0 3px"><img  src="../static.mihanblog.com/public/images/empty.gif"/></b>                                     <b class="sidebar_box_border"  style="margin:0 2px"><img  src="../static.mihanblog.com/public/images/empty.gif"/></b>                                     <b class="sidebar_box_border"  style="margin:0 1px"><img  src="../static.mihanblog.com/public/images/empty.gif"/></b>                                     <div class="sidebar_box">                                         <h3>آرشیوموضوعی</h3>                                                                                      <a  href="http://pony-love.mihanblog.com/post/category/33">                                                 اسنودراپ(1)                                             </a>                                             <br/>                                                                              <a  href="http://pony-love.mihanblog.com/post/category/32">                                                 طنز پونی(3)                                             </a>                                             <br/>                                                                              <a  href="http://pony-love.mihanblog.com/post/category/31">                                                 دیسکورد(2)                                             </a>                                             <br/>                                                                              <a  href="http://pony-love.mihanblog.com/post/category/30">                                                 دایموندتیارا و سیلوراسپون(1)                                             </a>                                             <br/>                                                                              <a  href="http://pony-love.mihanblog.com/post/category/29">                                                 درپی(2)                                             </a>                                             <br/>                                                                              <a  href="http://pony-love.mihanblog.com/post/category/28">                                                 مبارزان نشان لیاقت(6)                                             </a>                                             <br/>                                                                              <a  href="http://pony-love.mihanblog.com/post/category/27">                                                 چریسلس(1)                                             </a>                                             <br/>                                                                              <a  href="http://pony-love.mihanblog.com/post/category/26">                                                 دی جی پونی و اکتویا(11)                                             </a>                                             <br/>                                                                              <a  href="http://pony-love.mihanblog.com/post/category/25">                                                 لایرا(2)                                             </a>                                             <br/>                                                                              <a  href="http://pony-love.mihanblog.com/post/category/24">                                                 بن بن(1)                                             </a>                                             <br/>                                                                              <a  href="http://pony-love.mihanblog.com/post/category/23">                                                 درینگ دو(1)                                             </a>                                             <br/>                                                                              <a  href="http://pony-love.mihanblog.com/post/category/22">                                                 پرنسس سلستیا(4)                                             </a>                                             <br/>                                                                              <a  href="http://pony-love.mihanblog.com/post/category/21">                                                 پرنسس لونا(3)                                             </a>                                             <br/>                                                                              <a  href="http://pony-love.mihanblog.com/post/category/20">                                                 کدها(1)                                             </a>                                             <br/>                                                                              <a  href="http://pony-love.mihanblog.com/post/category/19">                                                 آموزشات(1)                                             </a>                                             <br/>                                                                              <a  href="http://pony-love.mihanblog.com/post/category/18">                                                 سفارشات(1)                                             </a>                                             <br/>                                                                              <a  href="http://pony-love.mihanblog.com/post/category/17">                                                 حرف های نویسنده ها(8)                                             </a>                                             <br/>                                                                              <a  href="http://pony-love.mihanblog.com/post/category/16">                                                 حرف های مدیر(15)                                             </a>                                             <br/>                                                                              <a  href="http://pony-love.mihanblog.com/post/category/15">                                                 داستان(7)                                             </a>                                             <br/>                                                                              <a  href="http://pony-love.mihanblog.com/post/category/14">                                                 متفرقه(8)                                             </a>                                             <br/>                                                                              <a  href="http://pony-love.mihanblog.com/post/category/13">                                                 سانست شیمر(4)                                             </a>                                             <br/>                                                                              <a  href="http://pony-love.mihanblog.com/post/category/12">                                                 بیوگرافی(1)                                             </a>                                             <br/>                                                                              <a  href="http://pony-love.mihanblog.com/post/category/11">                                                 پونی های ناشناس(3)                                             </a>                                             <br/>                                                                              <a  href="http://pony-love.mihanblog.com/post/category/9">                                                 همگی(45)                                             </a>                                             <br/>                                                                              <a  href="http://pony-love.mihanblog.com/post/category/8">                                                 اخبار(15)                                             </a>                                             <br/>                                                                              <a  href="http://pony-love.mihanblog.com/post/category/6">                                                 فلاترشای(6)                                             </a>                                             <br/>                                                                              <a  href="http://pony-love.mihanblog.com/post/category/5">                                                 رریتی(10)                                             </a>                                             <br/>                                                                              <a  href="http://pony-love.mihanblog.com/post/category/4">                                                 پینکی پای(6)                                             </a>                                             <br/>                                                                              <a  href="http://pony-love.mihanblog.com/post/category/3">                                                 توایلایت(15)                                             </a>                                             <br/>                                                                              <a  href="http://pony-love.mihanblog.com/post/category/2">                                                 رینبو دش(6)                                             </a>                                             <br/>                                                                              <a  href="http://pony-love.mihanblog.com/post/category/1">                                                 اپل جک(2)                                             </a>                                             <br/>                                                                      </div>                                    <b  class="sidebar_box_border" style="margin:0 1px"><img  src="../static.mihanblog.com/public/images/empty.gif"/></b>                                     <b class="sidebar_box_border"  style="margin:0 2px"><img  src="../static.mihanblog.com/public/images/empty.gif"/></b>                                     <b class="sidebar_box_border"  style="margin:0 3px"><img  src="../static.mihanblog.com/public/images/empty.gif"/></b>                                 </div>                                                                                      <div class="seprator"><img  src="../static.mihanblog.com/public/images/empty.gif"/></div>                                                                                                                       <div class="sidebar_box_border_div">                                                             <b class="sidebar_box_border"  style="margin:0 3px"><img  src="../static.mihanblog.com/public/images/empty.gif"/></b>                                     <b class="sidebar_box_border"  style="margin:0 2px"><img  src="../static.mihanblog.com/public/images/empty.gif"/></b>                                     <b class="sidebar_box_border"  style="margin:0 1px"><img  src="../static.mihanblog.com/public/images/empty.gif"/></b>                                     <div class="sidebar_box">                                         <div>                                             <h3>نویسندگان</h3>                                                                                                  <a href="http://pony-love.mihanblog.com/post/author/1341924"><img src="../static.mihanblog.com/public/user_data/user_photo/448/1341924.jpg" style="width:16px;" /></a>                                                 <a href="http://pony-love.mihanblog.com/post/author/1341924">                                                      اکتویا  (125)                                                 </a>                                             <br/>                                                                                      </div>                                    </div>                                     <b class="sidebar_box_border" style="margin:0  1px"><img  src="../static.mihanblog.com/public/images/empty.gif"/></b>                                     <b class="sidebar_box_border"  style="margin:0 2px"><img  src="../static.mihanblog.com/public/images/empty.gif"/></b>                                     <b class="sidebar_box_border"  style="margin:0 3px"><img  src="../static.mihanblog.com/public/images/empty.gif"/></b>                                 </div>                                                                                      <div class="seprator"><img  src="../static.mihanblog.com/public/images/empty.gif"/></div>                                                                                                              <div  class="sidebar_box_border_div">                                     <b class="sidebar_box_border" style="margin:0 3px"><img  src="../static.mihanblog.com/public/images/empty.gif"/></b>                                     <b class="sidebar_box_border"  style="margin:0 2px"><img  src="../static.mihanblog.com/public/images/empty.gif"/></b>                                     <b class="sidebar_box_border"  style="margin:0 1px"><img  src="../static.mihanblog.com/public/images/empty.gif"/></b>                                     <div class="sidebar_box">                                         <h3>صفحات جانبی</h3>                                                                                          <a href="http://pony-love.mihanblog.com/extrapage/gijcd">                                                 دکمه های متفرقه                                             </a>                                             <br/>                                                                                          <a href="http://pony-love.mihanblog.com/extrapage/ctibfdjbd">                                                 اتاق مدیر                                             </a>                                             <br/>                                                                                          <a href="http://pony-love.mihanblog.com/extrapage/gjnvf">                                                 لگو دوستان                                             </a>                                             <br/>                                                                                          <a href="http://pony-love.mihanblog.com/extrapage/48954">                                                 فروشگاه                                             </a>                                             <br/>                                                                                          <a href="http://pony-love.mihanblog.com/extrapage/0000">                                                 نشریات                                             </a>                                             <br/>                                                                                          <a href="http://pony-love.mihanblog.com/extrapage/zaza">                                                 وبلاگ هام                                             </a>                                             <br/>                                                                                          <a href="http://pony-love.mihanblog.com/extrapage/ponylove">                                                 نتایج نظرسنجی                                             </a>                                             <br/>                                                                                  </div>                                        <b  class="sidebar_box_border" style="margin:0 1px"><img  src="../static.mihanblog.com/public/images/empty.gif"/></b>                                     <b class="sidebar_box_border"  style="margin:0 2px"><img  src="../static.mihanblog.com/public/images/empty.gif"/></b>                                     <b class="sidebar_box_border"  style="margin:0 3px"><img  src="../static.mihanblog.com/public/images/empty.gif"/></b>                                 </div>                                                                                      <div class="seprator"><img  src="../static.mihanblog.com/public/images/empty.gif"/></div>                                                                                                                                               <div class="sidebar_box_border_div">                                     <b class="sidebar_box_border"  style="margin:0 3px"><img  src="../static.mihanblog.com/public/images/empty.gif"/></b>                                     <b class="sidebar_box_border"  style="margin:0 2px"><img  src="../static.mihanblog.com/public/images/empty.gif"/></b>                                     <b class="sidebar_box_border"  style="margin:0 1px"><img  src="../static.mihanblog.com/public/images/empty.gif"/></b>                                     <div class="sidebar_box">                                         <h3>آرشیو</h3>                                                                                      <a  href="http://pony-love.mihanblog.com/post/archive/1398/11/4"> هفته چهارم بهمن 1398</a>                                             <br/>                                                                                      <a  href="http://pony-love.mihanblog.com/post/archive/1398/4/1"> هفته اول تیر 1398</a>                                             <br/>                                                                                      <a  href="http://pony-love.mihanblog.com/post/archive/1397/11/4"> هفته چهارم بهمن 1397</a>                                             <br/>                                                                                      <a  href="http://pony-love.mihanblog.com/post/archive/1397/10/2"> هفته دوم دی 1397</a>                                             <br/>                                                                                      <a  href="http://pony-love.mihanblog.com/post/archive/1397/6/3"> هفته سوم شهریور 1397</a>                                             <br/>                                                                                      <a  href="http://pony-love.mihanblog.com/post/archive/1397/6/1"> هفته اول شهریور 1397</a>                                             <br/>                                                                                      <a  href="http://pony-love.mihanblog.com/post/archive/1397/5/4"> هفته چهارم مرداد 1397</a>                                             <br/>                                                                                      <a  href="http://pony-love.mihanblog.com/post/archive/1397/5/3"> هفته سوم مرداد 1397</a>                                             <br/>                                                                                      <a  href="http://pony-love.mihanblog.com/post/archive/1397/5/1"> هفته اول مرداد 1397</a>                                             <br/>                                                                                      <a  href="http://pony-love.mihanblog.com/post/archive/1397/4/4"> هفته چهارم تیر 1397</a>                                             <br/>                                                                                  <a  href="http://pony-love.mihanblog.com/post/archive"><b>همه   آرشیوها</b></a>                                     </div>                                    <b  class="sidebar_box_border" style="margin:0 1px"><img  src="../static.mihanblog.com/public/images/empty.gif"/></b>                                     <b class="sidebar_box_border"  style="margin:0 2px"><img  src="../static.mihanblog.com/public/images/empty.gif"/></b>                                     <b class="sidebar_box_border"  style="margin:0 3px"><img  src="../static.mihanblog.com/public/images/empty.gif"/></b>                                 </div>                                                                                                                                                           <div class="seprator"><img  src="../static.mihanblog.com/public/images/empty.gif"/></div>                                                                                                                                       <div class="seprator"><img  src="../static.mihanblog.com/public/images/empty.gif"/></div>                                                                                                              <div  class="sidebar_box_border_div">                                     <b class="sidebar_box_border" style="margin:0 3px"><img  src="../static.mihanblog.com/public/images/empty.gif"/></b>                                     <b class="sidebar_box_border"  style="margin:0 2px"><img  src="../static.mihanblog.com/public/images/empty.gif"/></b>                                     <b class="sidebar_box_border"  style="margin:0 1px"><img  src="../static.mihanblog.com/public/images/empty.gif"/></b>                                     <div class="sidebar_box">                                         <h3>لینکدونی</h3>                                                                                          <a href="http://www.bazarganisepahan.ir"  title="بسیار وبلاگ خوبی بود استفاده کردیم امیدوارم سلامت باشید ممنون میشم سری به وبلگ ما بزنید کار ما در زمینه اتصالات گالوانیزه برزیلی و اتصالات گالوانیزه جورج فیشر و اتصالات گالوانیزه چینی می باشد . 
+http://www.bazarganisepahan.ir" target="_blank">                                                 اتصالات گالوانیزه برزیلی                                             </a>                                             <br/>                                                                                          <a href="../pojigdr.mihanblog.com/index.html"  title="" target="_blank">                                                 سرزمین روشن کارتون و انیمه                                             </a>                                             <br/>                                                                                          <a href="../twilight-sparkle-dash.mihanblog.com/index.html"  title="" target="_blank">                                                 Kawaii web                                             </a>                                             <br/>                                                                                          <a href="../roomina-sarina.mihanblog.com/index.html"  title="" target="_blank">                                                 همه چیز از همه جا                                              </a>                                             <br/>                                                                                          <a href="http://sonic25.blogfa.com"  title="" target="_blank">                                                 Dream world of sonic                                             </a>                                             <br/>                                                                                          <a href="../mjorvajorm.mihanblog.com/index.html"  title="" target="_blank">                                                 جورواجور                                              </a>                                             <br/>                                                                                          <a href="../rainbowshycod.mihanblog.com/index.html"  title="" target="_blank">                                                 دنیای انیمه من                                             </a>                                             <br/>                                                                                          <a href="../story-writers.mihanblog.com/index.html"  title="" target="_blank">                                                 وب رمان نویسان                                             </a>                                             <br/>                                                                                          <a href="../barbikalab.mihanblog.com/index.html"  title="" target="_blank">                                                 افسانه گوی شب                                             </a>                                             <br/>                                                                                          <a href="../excellent-codes.mihanblog.com/index.html"  title="" target="_blank">                                                 The best codes for blog                                             </a>                                             <br/>                                                                                          <a href="http://taravat2015.mihanblog.com"  title="" target="_blank">                                                 گالری کد نویسی طراوت                                              </a>                                             <br/>                                                                                          <a href="http://pony-s.mihanblog.com"  title="" target="_blank">                                                 بهترین های پونی کوچولو                                             </a>                                             <br/>                                                                                 <a  href="http://pony-love.mihanblog.com/linkdaily/"><b>همه  لینکها</b></a>                                        <a  href="javascript:linkdailyForm()"><b>ارسال  لینک</b></a>                                    </div>                                     <b class="sidebar_box_border"  style="margin:0 1px"><img  src="../static.mihanblog.com/public/images/empty.gif"/></b>                                     <b class="sidebar_box_border"  style="margin:0 2px"><img  src="../static.mihanblog.com/public/images/empty.gif"/></b>                                     <b class="sidebar_box_border"  style="margin:0 3px"><img  src="../static.mihanblog.com/public/images/empty.gif"/></b>                                 </div>                                                                                                                                                   <div class="seprator"><img  src="../static.mihanblog.com/public/images/empty.gif"/></div>                                                                                                               <div class="sidebar_box_border_div">                                     <b class="sidebar_box_border" style="margin:0 3px"><img  src="../static.mihanblog.com/public/images/empty.gif"/></b>                                     <b class="sidebar_box_border"  style="margin:0 2px"><img  src="../static.mihanblog.com/public/images/empty.gif"/></b>                                     <b class="sidebar_box_border"  style="margin:0 1px"><img  src="../static.mihanblog.com/public/images/empty.gif"/></b>                                         <div class="sidebar_box">                                         <div>                                             <h3>مطالب اخیر</h3>                                                                                                  <a  href="http://pony-love.mihanblog.com/post/286">                                                     گذشت...                                                 </a>                                                 <br/>                                                                                                  <a  href="http://pony-love.mihanblog.com/post/284">                                                     اکتویا                                                 </a>                                                 <br/>                                                                                                  <a  href="http://pony-love.mihanblog.com/post/283">                                                     لحظه خداحافظی                                                 </a>                                                 <br/>                                                                                                  <a  href="http://pony-love.mihanblog.com/post/282">                                                     پرنسس توایلایت + تولد                                                 </a>                                                 <br/>                                                                                                  <a  href="http://pony-love.mihanblog.com/post/281">                                                     شت                                                 </a>                                                 <br/>                                                                                                  <a  href="http://pony-love.mihanblog.com/post/280">                                                     رو نمایی                                                 </a>                                                 <br/>                                                                                                  <a  href="http://pony-love.mihanblog.com/post/279">                                                     ولنتاین                                                 </a>                                                 <br/>                                                                                                  <a  href="http://pony-love.mihanblog.com/post/257">                                                     مدلکی                                                 </a>                                                 <br/>                                                                                                  <a  href="http://pony-love.mihanblog.com/post/278">                                                     اشتباه                                                 </a>                                                 <br/>                                                                                                  <a  href="http://pony-love.mihanblog.com/post/277">                                                     مورچه                                                 </a>                                                 <br/>                                                                                                  <a  href="http://pony-love.mihanblog.com/post/276">                                                     الفرار                                                 </a>                                                 <br/>                                                                                                  <a  href="http://pony-love.mihanblog.com/post/275">                                                     سوال                                                 </a>                                                 <br/>                                                                                                  <a  href="http://pony-love.mihanblog.com/post/274">                                                     امتحان                                                 </a>                                                 <br/>                                                                                                  <a  href="http://pony-love.mihanblog.com/post/273">                                                     وقتی من دوباره عاشق شدم                                                 </a>                                                 <br/>                                                                                                  <a  href="http://pony-love.mihanblog.com/post/271">                                                     ببخشید ولی برمیگردم...                                                 </a>                                                 <br/>                                                                                      </div>                                    </div>                                     <b class="sidebar_box_border"  style="margin:0 1px"><img  src="../static.mihanblog.com/public/images/empty.gif"/></b>                                     <b class="sidebar_box_border"  style="margin:0 2px"><img  src="../static.mihanblog.com/public/images/empty.gif"/></b>                                     <b class="sidebar_box_border"  style="margin:0 3px"><img  src="../static.mihanblog.com/public/images/empty.gif"/></b>                                 </div>                                                                                      <div class="seprator"><img  src="../static.mihanblog.com/public/images/empty.gif"/></div>                                                                                                                                                   <div class="sidebar_box_border_div">                                     <b class="sidebar_box_border"  style="margin:0 3px"><img  src="../static.mihanblog.com/public/images/empty.gif"/></b>                                     <b class="sidebar_box_border"  style="margin:0 2px"><img  src="../static.mihanblog.com/public/images/empty.gif"/></b>                                     <b class="sidebar_box_border"  style="margin:0 1px"><img  src="../static.mihanblog.com/public/images/empty.gif"/></b>                                 <div class="sidebar_box">                                         <h3>آماروبلاگ</h3>                                         کل بازدید:<script>getStatVar('total_view');</script><br/>                                         بازدیدامروز  :<script>getStatVar('today_view');</script><br/>                                         بازدیددیروز : <script>getStatVar('yesterday_view');</script><br/>                                         بازدیداین ماه : <script>getStatVar('this_month_view');</script><br/>                                         بازدیدماه قبل :  <script>getStatVar('last_month_view');</script><br/>                                         تعدادنویسندگان : <script>getStatVar('total_author');</script><br/>                                         تعدادکل مطالب : <script>getStatVar('total_post');</script><br/>                                         آخرین بازدید :  <script>getStatVar('last_view_date');</script><br/>                                         آخرین بروزرسانی : <script>getStatVar('modify_date');</script><br/>                                     </div>                                         <b class="sidebar_box_border" style="margin:0 1px"><img  src="../static.mihanblog.com/public/images/empty.gif"/></b>                                     <b class="sidebar_box_border"  style="margin:0 2px"><img  src="../static.mihanblog.com/public/images/empty.gif"/></b>                                     <b class="sidebar_box_border"  style="margin:0 3px"><img  src="../static.mihanblog.com/public/images/empty.gif"/></b>                                 </div>                                                                                                                                          <div  class="seprator"><img  src="../static.mihanblog.com/public/images/empty.gif"/></div>                                                 <div  class="sidebar_box_border_div">                                 موس
+<!-- Start Code By Love-skin.ir -->
+<style>body, a{cursor:url(http://s6.picofile.com/file/8241377192/%D8%A7%DA%A9%D8%AA%D9%88%DB%8C%D8%A7_%D9%85%D8%AA%D8%AD%D8%B1%DA%A9.gif), url(http://s6.picofile.com/file/8241377192/%D8%A7%DA%A9%D8%AA%D9%88%DB%8C%D8%A7_%D9%85%D8%AA%D8%AD%D8%B1%DA%A9.gif), progress !important;}
+a:hover{cursor:url(http://s6.picofile.com/file/8241377192/%D8%A7%DA%A9%D8%AA%D9%88%DB%8C%D8%A7_%D9%85%D8%AA%D8%AD%D8%B1%DA%A9.gif), url(http://s6.picofile.com/file/8241377192/%D8%A7%DA%A9%D8%AA%D9%88%DB%8C%D8%A7_%D9%85%D8%AA%D8%AD%D8%B1%DA%A9.gif), progress !important;}</style>
+<!-- End Code By Love-skin.ir -->
+
+
+
+
+</p><p style="text-align:center;margin:2px 0px 0px 0px;font-size:10px;padding:0;"><a href="http://www.theme-skin.blogfa.com/" style="text-decoration:none;margin:0;padding:0;" title="دریافت کد نقطه چین شدن دور عکس"  target="_blank" >دریافت کد نقطه چین شدن دور عکس</a></p>
+<p></center><script language="javascript" type="text/javascript"src="http://theme-skin.persiangig.com/zibasazi-negar.js"></script>
+<center><style>
+img {
+max-width:400px;
+max-height:400px;
+border: dashed 2px #FFFFFF;
+}
+img:hover {
+     border-top-left-radius:30px;
+        border-bottom-left-radius:30px;
+     border-top-right-radius:30px;
+        border-bottom-right-radius:30px;
+     border-top-right-radius:30px;
+        border-bottom-left-radius:30px;
+  border-top-left-radius:30px;
+        border-bottom-right-radius:30px;
+box-shadow: 0 0 0.10px #FFFFFF;
+-webkit-transition: all 1s ease-in;
+-moz-transition: all 1s ease-in;
+-o-transition: all 1s ease-in;
+transition: all 1s ease-in;
+-webkit-transform: rotate(0.15deg);
+-moz-transform: rotate(0.15deg);
+-o-transform: rotate(0.15deg);
+}</style>
+<!-- Start Code By Love-skin.ir -->
+<script type="text/javascript" src="http://up.love-skin.ir/up/l-skin/tools/maker/top/top.jquery-min.js"></script>
+<script>var abzar = "<img src=http://s7.picofile.com/file/8236989626/Picture4.png />";</script>
+<script type="text/javascript" src="http://up.love-skin.ir/up/l-skin/tools/maker/top/scroll-topcontrol.js"></script>
+
+بالابر 
+
+
+<!-- Goto Top by www.1abzar.com --->
+<script type="text/javascript" src="http://1abzaar.ir/abzar/tools/top-page/jquery.min.js"></script><script>var abzar = "<img src=http://s9.picofile.com/file/8300659168/octavia_equestria_girls_style_by_zacatron94_d7anjgd.png />";</script><script type="text/javascript" src="http://1abzaar.ir/abzar/tools/top-page/scrolltopcontrol.js"></script><div style="display:none"><h1><a href="http://www.1abzar.com">ابزار هدایت به بالای صفحه</a></h1></div>
+<!-- Goto Top by www.1abzar.com --->
+
+
+<a href="http:/pony-love.mihanblog.com"><img src="http://s8.picofile.com/file/8301543484/Unti%D9%87%D8%B9%D9%85%D8%B9%D9%87%D9%85%D9%8642tle24d_1.png" border="0" alt="هر چی دوس داری اینجا بنویس " /></a>
+
+
+<a href="http://en.bloggif.com/" title="Photo Editing"><img src="http://data.bloggif.com/distant/user/store/4/3/b/7/9743882516c6c3a5d175df5258e57b34.gif" alt="Mounting created Bloggif" width="50" height="50" /></a>
+
+<p align='center'><script type='text/javascript' src='http://cafe-webniaz.ir/bmp/baziadad.js'></script></p>
+
+
+
+<!-- start logo cod off http://www.kpopnews1.loxblog.com/ --><p align="center"><p align="center"><a href="http://www.kpopnews1.loxblog.com/" target="_blank"><img border="0" src="http://s8.picofile.com/file/8302175518/golsaorder.gif" width="230" height="129" alt="kpop news"></a></p><!--finish logo cod off http://www.kpopnews1.loxblog.com/ -->
+
+
+<a href="http://shool0031.mihanblog.com "><img src="http://s8.picofile.com/file/8302686384/%D8%AE%D9%87%D8%AE%DA%A9%D9%85d_1.png" border="0" alt="مدرسه دختران یکدل " /></a>
+
+<div style="text-align: center;line-height: 150%;font-size: .75rem;"><audio controls preload="none" style="width:94%;margin:0% 3%;"><source type="audio/mpeg" id="player" src="http://musicfeed.ir/files/2019/04/Alan-Walker-Faded-128.mp3">Not supported</audio><br /><a href="http://musicfeed.ir/faded-walker/" target="_blank">دانلود آهنگ Alan Walker - Faded</a></div>                            </div>                             <div class="sidebar_box_border_div">                                 <div class="mihan_logo"></div>                             </div>                    </div>                 </div>            </div>                        <div  id="footer_background"><img  src="../static.mihanblog.com/public/images/empty.gif"/></div>                                         </div>                             </body></html><script>
+//    setTimeout(function () {
+//        GetMihanBlogShowAds();
+//    }, 1000);
+</script>
+<!--NEW SERVER--><!--;)-->
+
+<!--SabaVision Ads Handler--><!--<script type="text/javascript">(function (d) {var url =   location.protocol+'//api.sabavision.com/pox/poxjs.js';d.write('<script type="text/javascript" src="' + url + '" async></scri' + 'pt>');})(document);</script>-->
+
+
+<script type="text/javascript">
+
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-153829-9']);
+    _gaq.push(['_setDomainName', 'pony-love.mihanblog.com']);
+    _gaq.push(['_trackPageview']);
+
+    (function() {
+        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+
+</script>
+
+
+<div id='mediaad-Kvcm'></div>
+<meta name="sabavision_zone" content="2500-Z499" />
+<center>
+    <div style="background-color:white;width:90%;padding:20px;margin-top:50px;margin-bottom:50px;">
+        <a href="https://www.cloob.com">شبکه اجتماعی فارسی کلوب</a> | <a href="https://www.seo25.com/product/buy-mobile-traffic-and-get-cheap-targeted-mobile-traffic/" target="_blank">Buy Mobile Traffic</a> | <a href="https://www.soalaat.com">سایت سوالات</a>
+    </div>
+</center>

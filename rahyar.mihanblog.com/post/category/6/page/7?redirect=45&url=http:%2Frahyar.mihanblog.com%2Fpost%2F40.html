@@ -1,0 +1,1662 @@
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" /><link rel="EditURI" type="application/rsd+xml" title="RSD" href="../../../../xmlrpc%3Frsd" />
+<script type="text/javascript" src="http://static.mihanblog.com//public/scripts/run/g.other.v3.js"></script>
+<script>
+
+	function c_$(id){
+        return document.getElementById(id);
+    }
+    
+			//if (parent.frames.length) top.location.href= document.location;
+		
+	setTodayDate = function(){
+		document.write('پنجشنبه 27 آذر 1399');
+		/*88675*/	}
+
+</script>
+
+
+
+        <script type="text/javascript">
+            (function(){
+            var now = new Date();
+            var head = document.getElementsByTagName('head')[0];
+            var script = document.createElement('script');
+            script.async = true;
+            var script_address = 'https://cdn.yektanet.com/js/mihanblog.com/native-mihanblog.com-6531.js';
+            script.src = script_address + '?v=' + now.getFullYear().toString() + '0' + now.getMonth() + '0' + now.getDate() + '0' + now.getHours();
+            head.appendChild(script);
+            })();
+        </script>
+
+        <!--<script type="text/javascript">
+            var head = document.getElementsByTagName("head")[0];
+            var script = document.createElement("script");
+            script.type = "text/javascript";
+            script.async=1;
+            script.src = "https://s1.mediaad.org/serve/mihanblog.com/loader.js" ;
+            head.appendChild(script);
+        </script>-->
+        
+        <script>
+            var sabaVisionWebsiteID = "9bab9dac-041d-4bdb-b39a-1ed789f65eed"; var sabaVisionWebsitePage = "ALL"
+        </script>
+        <link rel="stylesheet" href="https://plus.sabavision.com/dox/dox.min.css">
+        <script src="https://plus.sabavision.com/dox/dox.min.js"></script>
+        
+        <script>
+	try{
+		var commentCnt = new Array();
+		commentCnt[537]='9';commentCnt[539]='12';commentCnt[541]='6';commentCnt[543]='15';commentCnt[549]='7';commentCnt[551]='10';commentCnt[559]='13';commentCnt[560]='8';	} catch(e){}
+	
+	newComment = function(post_id){
+		try{
+			window.open('/post/comment/'+post_id,'comment','status=yes,scrollbars=yes,toolbar=no,menubar=no,location=no ,width=480px,height=540px');
+		} catch(e){}
+	}
+	setCommentCnt = function(post_id){
+		try{
+			if(commentCnt[post_id]){
+				document.write(commentCnt[post_id]);
+			} else {
+				document.write(0);
+			}
+		} catch(e){}
+	}
+</script><script>
+
+
+	mihanblogUpdateLike = function(postid,type){
+		var url = '/post/like/'+postid+'/'+type;
+		mihanblogGetAjax(url,function(){});
+	};
+	try{
+        mihanblogGetAjax = function (url,callback) {
+    		var req;
+			if (window.XMLHttpRequest)
+            {
+                // code for IE7+, Firefox, Chrome, Opera, Safari
+			  	req = new XMLHttpRequest();
+			}else{	// code for IE6, IE5
+			  	req = new ActiveXObject("Microsoft.XMLHTTP");
+		  	}
+		    req.open("GET", url, 1);
+		    req.onreadystatechange = function () {
+		        if (req.readyState == 4) {
+		            if (req.status == 200) {
+		            	var response = eval(req.responseText);
+		            	callback();
+		            }else{
+	            		return ;
+		            }
+		        }else{
+					return ;
+		        }
+		    }
+		    req.send(null);
+		}
+	}catch(e){}
+
+	try{
+		var mihanblogLikeArrCnt = new Array();
+		var mihanblogDisLikeArrCnt = new Array();
+
+		mihanblogLikeArrCnt[537]='0';
+mihanblogDisLikeArrCnt[537]='0';
+mihanblogLikeArrCnt[539]='0';
+mihanblogDisLikeArrCnt[539]='0';
+mihanblogLikeArrCnt[541]='1';
+mihanblogDisLikeArrCnt[541]='1';
+mihanblogLikeArrCnt[543]='0';
+mihanblogDisLikeArrCnt[543]='1';
+mihanblogLikeArrCnt[549]='0';
+mihanblogDisLikeArrCnt[549]='0';
+mihanblogLikeArrCnt[551]='1';
+mihanblogDisLikeArrCnt[551]='0';
+mihanblogLikeArrCnt[559]='0';
+mihanblogDisLikeArrCnt[559]='0';
+mihanblogLikeArrCnt[560]='0';
+mihanblogDisLikeArrCnt[560]='0';
+	} catch(e){}
+
+
+
+    mihanblogPostLike = function(post_id){
+
+        mihanblogLikeCnt = (mihanblogLikeArrCnt[post_id]? mihanblogLikeArrCnt[post_id] : 0);
+        mihanblogDisLikeCnt = (mihanblogDisLikeArrCnt[post_id]? mihanblogDisLikeArrCnt[post_id] : 0);
+        mihanblogLikeCnt = parseInt(mihanblogLikeCnt);
+        mihanblogDisLikeCnt = parseInt(mihanblogDisLikeCnt);
+
+        document.write(
+                '<div class="mihanblog_like_wrapper ">'+
+                       '<div id="dislikeBar_'+post_id+'" onclick="mihanblogUpdateLike('+post_id+',\'dislike\')"   class="mihanblog_like_bar mihanblog_like_dislikeBar mihanblog_like_show_help ">-<div class="mihanblog_like_Cnt" id="disLikeCnt_'+post_id+'">'+mihanblogDisLikeCnt+'</div>'+
+                            '<span  class="mihanblog_like_v2_help mihanblog_like_v2_help_dislike clearfix"> '+
+                                '<span class="mihanblog_like_help_arrow mihanblog_like_help_arrow_dislike clearfix"></span>'+
+                                '<span class="mihanblog_like_help_text">نمی پسندم</span>'+
+                            '</span>'+
+                        '</div>'+
+                       '<div id="Like_'+post_id+'" class="mihanblog_like_border"></div>'+
+                       '<div id="likeBar_'+post_id+'" onclick="mihanblogUpdateLike('+post_id+',\'like\')"  class="mihanblog_like_bar mihanblog_like_likeBar mihanblog_like_show_help" >+<div class="mihanblog_like_Cnt" id="likeCnt_'+post_id+'">'+mihanblogLikeCnt+'</div>'+
+                            '<span  class="mihanblog_like_v2_help mihanblog_like_v2_help_like clearfix"> '+
+                                '<span class="mihanblog_like_help_arrow mihanblog_like_help_arrow_like clearfix"></span>'+
+                                '<span class="mihanblog_like_help_text">می پسندم</span>'+
+                            '</span>'+
+                        '</div>'+
+
+                '</div>'
+        );
+
+
+
+        mihanblogDisplayeLike(post_id);
+    }
+
+
+    mihanblogDisplayeLike = function(post_id){
+
+        mihanblogLikeCnt = (mihanblogLikeArrCnt[post_id]? mihanblogLikeArrCnt[post_id] : 0);
+        mihanblogDisLikeCnt = (mihanblogDisLikeArrCnt[post_id]? mihanblogDisLikeArrCnt[post_id] : 0);
+        mihanblogLikeCnt = parseInt(mihanblogLikeCnt);
+        mihanblogDisLikeCnt = parseInt(mihanblogDisLikeCnt);
+
+
+
+        sum = mihanblogLikeCnt - mihanblogDisLikeCnt;
+        backgroundBorder =  document.getElementById('Like_'+post_id);
+        var likeObj = document.getElementById('likeCnt_'+post_id);
+        var disLikeObj = document.getElementById('disLikeCnt_'+post_id);
+
+
+
+
+
+        likeObj.innerHTML =  mihanblogLikeCnt ;
+        disLikeObj.innerHTML =  mihanblogDisLikeCnt;
+
+        if(sum == 0){
+            backgroundBorder.style.backgroundImage = "url('/public/public/images/icons/like_likedislike.png')";
+            document.getElementById('dislikeBar_'+post_id).style.width = '19px';
+            document.getElementById('likeBar_'+post_id).style.width = '19px';
+        }else{
+             if(sum > 0){
+                 backgroundBorder.style.backgroundImage = "url('/public/public/images/icons/like_like.png')";
+                 document.getElementById('likeBar_'+post_id).style.width = '23px';
+                 document.getElementById('dislikeBar_'+post_id).style.width = '15px';
+             }else{
+                 backgroundBorder.style.backgroundImage = "url('/public/public/images/icons/like_dislike.png')";
+                 document.getElementById('likeBar_'+post_id).style.width = '15px';
+                 document.getElementById('dislikeBar_'+post_id).style.width = '23px';
+             }
+        }
+
+    }
+
+
+
+
+</script>
+
+<style type="text/css">
+
+
+    .clearfix {display: inline-block;}
+    .clearfix:after {
+        content: ".";
+        display: block;
+        height: 0;
+        clear: both;
+        visibility: hidden;
+    }
+
+    .mihanblog_like_wrapper {
+        color: #ffffff;
+        direction: ltr;
+        position: relative;
+    }
+    .mihanblog_like_wrapper span{
+        display: none;
+    }
+    .mihanblog_like_bar {
+        color: #FFFFFF;
+        cursor: pointer;
+        float: left;
+        font-size: 10px;
+        height: 20px;
+        line-height: 19px;
+        margin: 5px 0;
+    }
+    .mihanblog_like_likeBar {
+        background-color: #88B131;
+        padding-right: 5px;
+        border-top-right-radius: 2px;
+        border-bottom-right-radius: 2px;
+        text-align: right;
+    }
+    .mihanblog_like_likeBar:hover{
+        background-color: #699017;
+    }
+    .mihanblog_like_border {
+        background-color: #666666;
+        border: 1px solid #666666;
+        float: left;
+        font-size: 12px;
+        height: 20px;
+        margin-top: 2px;
+        width: 25px;
+        padding: 3px 5px 2px 0;
+        text-align: center;
+        border-radius: 2px;
+        color: #ffffff;
+        direction: ltr;
+        background-repeat: no-repeat ;
+        background-position: 4px center;
+    }
+    .mihanblog_like_border img {
+        margin-left: 2px;
+        margin-top: 2px;
+        width: 22px;
+    }
+    .mihanblog_like_dislikeBar {
+        background-color: #FF6F31;
+        padding-left: 5px;
+        border-top-left-radius: 2px;
+        border-bottom-left-radius: 2px;
+        text-align:left ;
+    }
+    .mihanblog_like_dislikeBar:hover{
+        background-color: #D54B10;
+    }
+
+
+
+    .mihanblog_like_show_help {
+        position: relative;
+    }
+    .mihanblog_like_show_help:hover span {
+        display: block;
+    }
+    .mihanblog_like_help_text {
+        background-color: white;
+        border: 1px solid #555555;
+        border-radius: 3px 3px 3px 3px;
+        color: #303030;
+        float: left;
+        font-size: 11px;
+        font-weight: normal;
+        padding: 5px 10px;
+    }
+
+    .mihanblog_like_help_arrow_dislike {
+        background: url("http://rahyar.mihanblog.com/public/public/images/icons/like_hover_top.png") no-repeat scroll 16px 0 transparent;
+        left: 0;
+        top: -4px;
+    }
+
+    .mihanblog_like_help_arrow_like {
+        background: url("http://rahyar.mihanblog.com/public/public/images/icons/like_hover_top _2.png") no-repeat scroll 16px 0 transparent;
+        left: -10px;
+        top: 29px;
+    }
+
+    .mihanblog_like_help_arrow{
+        height: 6px;
+        position: absolute;
+        width: 100px;
+
+    }
+
+    .mihanblog_like_v2_help_dislike {
+        left: -15px;
+        top: 24px;
+    }
+    .mihanblog_like_v2_help_like {
+        left: 0;
+        top: -35px;
+
+    }
+    .mihanblog_like_v2_help{
+        display: none;
+        position: absolute;
+        white-space: nowrap;
+        z-index: 1;
+    }
+
+    .mihanblog_like_Cnt{
+        display: inline;
+        color: #ffffff;
+    }
+
+</style><script>
+
+	statInfo = new Array();
+	setStatVar = function(index,value){
+		statInfo[index] = value;
+	}
+	getStatVar = function(index){
+		if(statInfo[index]) document.write(statInfo[index]);
+	}
+	
+	setStatVar('total_post','673');
+	setStatVar('total_author','1');
+	setStatVar('modify_date','جمعه 28 شهریور 1399');
+	
+	setStatVar('today_view','1893');
+	setStatVar('yesterday_view','170');
+	
+	setStatVar('this_month_view','9047');
+	setStatVar('last_month_view','7835');
+
+	setStatVar('total_view','5114916');
+	setStatVar('last_view_date','پنجشنبه 27 آذر 1399 (09:44)');
+
+
+
+    
+    function setStatFromClient()
+    {
+        var url = 'http://rahyar.mihanblog.com/statupdate/?data[refereruri]=http://rahyar.mihanblog.com/post/category/6/page/11&data[postid]=&data[requesturi]=/post/category/6/page/7?redirect=45&url=http%3A%2Frahyar.mihanblog.com%2Fpost%2F40&data[sdate]=1608185689&data[hash]=57c3f8d1a51b770fe59ebb9a6e1f7faf&data[resolution]='+screen.width+' X '+screen.height;
+
+//        alert(url);
+//        var newjs = document.createElement("SCRIPT");
+//        newjs.type = 'text/javascript';
+//        newjs.src = url;
+//
+//        var newdiv = document.createElement("DIV");
+//        newdiv.setAttribute("style","display:none");
+
+        document.write(unescape('%3Cscript src="'+url+'" type="text/javascript"%3E%3C/script%3E'));
+//        newdiv.appendChild (newjs);
+//        document.write(newjs);
+//        document.write(appendChild (newdiv);
+
+    };
+    setStatFromClient();
+        
+</script><script>
+	messageForm = function(post_id){
+		try{
+			window.open('/message','message','status=yes,scrollbars=yes,toolbar=no,menubar=no,location=no ,width=480px,height=550px');
+		} catch(e){}
+	}
+</script><script>
+	linkdailyForm = function(){
+		try{
+			window.open('/linkdaily/new','linkdaily','status=yes,scrollbars=yes,toolbar=no,menubar=no,location=no ,width=500px,height=460px');
+		} catch(e){}
+	}
+</script><script>
+
+var MihanblogShopAdsArray = new Array();
+
+function GetMihanBlogShowAds(){
+	if(MihanblogShopAdsArray.length){
+		var adsTarget = 'MihanblogShopAds';
+		var containerWidth = document.getElementById(adsTarget).offsetWidth;
+		if(containerWidth>=200){
+			var adsCnt = parseInt(containerWidth / 200) ;
+			if(adsCnt>MihanblogShopAdsArray.length){
+				adsCnt = MihanblogShopAdsArray.length ; 
+			}
+//			var OneAdsWidth = parseInt(containerWidth / adsCnt) ;
+			var OneAdsWidth = containerWidth / adsCnt ;
+			if(OneAdsWidth>400){
+				OneAdsWidth = 400 ;
+			}
+			var OutHtml = '';
+			var img = '';
+			var link = '';
+			var title = '';
+			var description = '';
+			var imgWidth = 70;
+			if(OneAdsWidth>230){
+				imgWidth = 80;
+			}
+			if(OneAdsWidth>300){
+				imgWidth = 90;
+			}
+			for(adsOne=0;adsOne<adsCnt;adsOne++){
+				
+				img = MihanblogShopAdsArray[adsOne]['img'];
+				link = MihanblogShopAdsArray[adsOne]['link'];
+				title = MihanblogShopAdsArray[adsOne]['title'];
+				description = MihanblogShopAdsArray[adsOne]['description'];
+				
+				OutHtml += '<td style="background-color:#FFF;width: '+OneAdsWidth+'px;border:1px solid #f00;margin:0px 0px;font-size:11px;font-family:tahoma;padding:2px;margin:0px 0px;font-size:11px;border: 1px solid BurlyWood; padding: 1px; height: '+(imgWidth+25)+'px;">';
+
+				OutHtml += '	<a href="'+link+'.html" target="_blank" style="text-decoration:none">';
+
+				OutHtml += '			<div style="width: '+(OneAdsWidth-16)+'px;cursor:pointer;font-size:12px;padding: 4px 1px 4px 7px; white-space: nowrap; text-align: center; font-weight: bold; color: blue;white-space:nowrap;overflow:hidden">';
+				OutHtml += 					title;
+				OutHtml += '			</div>';
+				OutHtml += '			<div style="cursor:pointer;padding: 1px; display: block; float: right; width: '+imgWidth+'px;">';
+				OutHtml += '				<img src="'+img+'.html" style="border:0px;padding:0px;margin:0px;width:'+imgWidth+'px;height:'+imgWidth+'px;">';
+				OutHtml += '			</div>';
+				OutHtml += '			<div style="padding: 1px; display: block; float: right; width: '+(OneAdsWidth-13-imgWidth)+'px; text-align: right;overflow:hidden">';
+				OutHtml += '				<div style="overflow:hidden;cursor:pointer;padding: 2px 3px; line-height: 17px; height: '+(imgWidth-3)+'px; text-align: justify;color:#000;direction:rtl">';
+				OutHtml += 						description;
+				OutHtml += '				</div>';
+				OutHtml += '			</div>';
+
+				OutHtml += '	</a>';
+
+				OutHtml += '</td>';
+			}
+			
+			var Out = '<table align="center" cellpadding="0" cellspacing="2" style="width:'+(OneAdsWidth*adsCnt)+'px;"><tr>'+OutHtml+'</tr></table>'; 
+			
+			Out = '<div style="text-align:center;padding:0px;margin:3px auto;">'+Out+'</div>'; 
+			
+			document.getElementById(adsTarget).style.height = (imgWidth+35)+'px' ;
+			document.getElementById(adsTarget).innerHTML = Out ;
+		}
+	}
+}
+</script>
+    <style>
+        @font-face {
+            font-family: 'Mihan-Iransans';
+            src: url('http://rahyar.mihanblog.com/public/public/fonts/Iransans.eot');
+            src: url('http://rahyar.mihanblog.com/public/public/fonts/Iransans.eot?') format('embedded-opentype'),
+            url('http://rahyar.mihanblog.com/public/public/fonts/Iransans.woff2') format('woff2'),
+            url('http://rahyar.mihanblog.com/public/public/fonts/Iransans.woff') format('woff'),
+            url('http://rahyar.mihanblog.com/public/public/fonts/Iransans.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+        @font-face {
+            font-family: 'Mihan-IransansBold';
+            src: url('http://rahyar.mihanblog.com/public/public/fonts/Iransans-Black.eot');
+            src: url('http://rahyar.mihanblog.com/public/public/fonts/Iransans-Black.eot?') format('embedded-opentype'),
+            url('http://rahyar.mihanblog.com/public/public/fonts/Iransans-Black.woff2') format('woff2'),
+            url('http://rahyar.mihanblog.com/public/public/fonts/Iransans-Black.woff') format('woff'),
+            url('http://rahyar.mihanblog.com/public/public/fonts/Iransans-Black.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+        @font-face {
+            font-family: 'Mihan-IransansLight';
+            src: url('http://rahyar.mihanblog.com/public/public/fonts/Iransans-UltraLight.eot');
+            src: url('http://rahyar.mihanblog.com/public/public/fonts/Iransans-UltraLight.eot?') format('embedded-opentype'),
+            url('http://rahyar.mihanblog.com/public/public/fonts/Iransans-UltraLight.woff2') format('woff2'),
+            url('http://rahyar.mihanblog.com/public/public/fonts/Iransans-UltraLight.woff') format('woff'),
+            url('http://rahyar.mihanblog.com/public/public/fonts/Iransans-UltraLight.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+        @font-face {
+            font-family: 'Mihan-Nassim';
+            src: url('http://rahyar.mihanblog.com/public/public/fonts/Nassim.eot');
+            src: url('http://rahyar.mihanblog.com/public/public/fonts/Nassim.eot?') format('embedded-opentype'),
+            url('http://rahyar.mihanblog.com/public/public/fonts/Nassim.woff2') format('woff2'),
+            url('http://rahyar.mihanblog.com/public/public/fonts/Nassim.woff') format('woff'),
+            url('http://rahyar.mihanblog.com/public/public/fonts/Nassim.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+        @font-face {
+            font-family: 'Mihan-Koodak';
+            src: url('http://rahyar.mihanblog.com/public/public/fonts/Koodak.eot');
+            src: url('http://rahyar.mihanblog.com/public/public/fonts/Koodak.eot?') format('embedded-opentype'),
+            url('http://rahyar.mihanblog.com/public/public/fonts/Koodak.woff2') format('woff2'),
+            url('http://rahyar.mihanblog.com/public/public/fonts/Koodak.woff') format('woff'),
+            url('http://rahyar.mihanblog.com/public/public/fonts/Koodak.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+        @font-face {
+            font-family: 'Mihan-Yekan';
+            src: url('http://rahyar.mihanblog.com/public/public/fonts/Yekan.eot');
+            src: url('http://rahyar.mihanblog.com/public/public/fonts/Yekan.eot?') format('embedded-opentype'),
+            url('http://rahyar.mihanblog.com/public/public/fonts/Yekan.woff2') format('woff2'),
+            url('http://rahyar.mihanblog.com/public/public/fonts/Yekan.woff') format('woff'),
+            url('http://rahyar.mihanblog.com/public/public/fonts/Yekan.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+        @font-face {
+            font-family: 'FontAwesome';
+            src: url('http://rahyar.mihanblog.com/public/public/fonts/fontawesome_webfont.eot');
+            src: url('http://rahyar.mihanblog.com/public/public/fonts/fontawesome_webfont.eot?') format('embedded-opentype'),
+            url('http://rahyar.mihanblog.com/public/public/fonts/fontawesome_webfont.woff2') format('woff2'),
+            url('http://rahyar.mihanblog.com/public/public/fonts/fontawesome_webfont.woff') format('woff'),
+            url('http://rahyar.mihanblog.com/public/public/fonts/fontawesome_webfont.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+
+
+        
+
+        /* Smartphones (portrait and landscape) ----------- */
+
+        /*
+        @media only screen and (max-width : 480px) and (min-width : 320px) {
+            .sabaClick_advert__wrapper{
+                display:block;
+            }
+            .sabaClick_advert__inner{
+                max-width: 90%;
+                margin: 0 5%;
+            }
+        }
+        */
+
+    </style>
+
+
+
+
+
+
+<html>
+<head>
+<title>ریاضی-معما و سرگرمی - مطالب معما و سرگرمی</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="weblog-verification" content="weblog" />
+<SCRIPT language=JavaScript1.2>function disableselect
+
+(e){return false}function reEnable(){return true}document.onselectstart=new Function ("return false");if (window.sidebar)
+
+{document.onmousedown=disableselectdocument.onclick=reEnable}</SCRIPT>
+
+
+<meta name="author" content="محسن" />
+<meta name="language" content="Farsi" />
+<meta name="description" content="ریاضی-معما و سرگرمی - سلام دوست من<br />
+به رهیار خوش اومدید<br />
+سعی کردم با نوشتن سئوالات ریاضی(دوره متوسطه اول) و آموزش مفاهیم هندسه به روش پویا  و بیان معماهای سرگرم کننده ریاضی  اینجا پاتوقی باشه  سرگرم کننده و شاد و  در عین حال مفید, واسه همه اونهایی که به  حل مسائل ریاضی و  کشف جواب معماها و سرگرمی های ریاضی علاقه مند هستند, اعم از دانش آموزان , معلمان و ریاضیدوستان .<br />
+هر موقع فرصتی پبش بیاد سعی میکنم نرم افزارهایی کوچک برای آموزش یک مفهوم ریاضی دوره  ابتدایی , راهنمایی یا دبیرستان بسازم. امیدوارم اگر شما هم از اونها استفاده کردید نظرتون رو درباره اونها برام بنویسید تا  اشکالات احتمالی اونها رو  با یاری هم برطرف کنیم.<br />
+انگیزه ای که  یک نویسنده وب رو به ادامه کارش ترغیب میکنه,بازخوردی است که از کاربران دریافت میکنه,پس  این لطف رو  بکنید و با نظرات مثبت و سازنده تون  چراغ راه  آینده رهیار باشید.<br />
+سپاسگزارم :-)<br />
+ - ریاضی-معما و سرگرمی" />
+<meta name="keywords" content="ریاضی-معما و سرگرمی,Rahyar,پاتوق عاشقان ریاضی (متوسطه1و2),بازیهای ریاضی,داستانهای جذاب ,معماهای سرگرم کننده,فلش های آموزشی , ریاضی راهنمایی , ریاضی دبیرستان ,آموزش هندسه, Blog, سرگرمی ریاضی, فلش ریاضی,Iran,
+ بازی ریاضی, هندسه, rahyar,رهیار,ریاضیات راهنمایی,معما,سرگرمی ریاضی,نرم افزارهای ریاضی دوره راهنمایی," />
+<link rel="alternate" type="application/rss+xml" title="ریاضی-معما و سرگرمی" href="../../../rss/index.html" />
+<link rel="alternate" type="application/atom+xml" title="ریاضی-معما و سرگرمی" href="../../../atom/index.html" />
+<link href="http://rahyar.persiangig.com/image/favicon.ico" rel="SHORTCUT ICON"/>
+<style>
+.text100 , .text100 a{color:#FFF; font-size:8pt;-moz-text-shadow: #444 1px 1px 0px;-webkit-text-shadow: #444 1px 1px 0px;text-shadow: #444 1px 1px 0px;}
+.text101 , .text101 a{color:#444444; font-size:8pt;-moz-text-shadow: #fff 1px 1px 0px;-webkit-text-shadow: #fff 1px 1px 0px;text-shadow: #fff 1px 1px 0px;}
+.text102 , .text102 a{color:#000; font-size:8pt;-moz-text-shadow: #fff 1px 1px 0px;-webkit-text-shadow: #fff 1px 1px 0px;text-shadow: #fff 1px 1px 0px;}
+
+.com{ width:535px; float:left; background:#EC7413; -webkit-border-radius: 5px;-moz-border-radius: 5px;border-radius: 5px; margin: 0px 7px 0px 15px; padding:0 0 10px 0;}
+.com1{ width:517px; float:left; background:#B12E24; -webkit-border-radius: 5px;-moz-border-radius: 5px;border-radius: 5px; margin: 10px 20px 0 10px; padding:0 0 3px 0;}
+.com3{ width:290px; float:left; text-align:right; direction:rtl; line-height:27px;}
+.com2{ width:190px; float:left; height:30px; text-align:left; direction:rtl; line-height:27px; padding-left:10px; opacity:0.6;}
+.com4{ width:497px; float:left; background:#FFF; -webkit-border-radius: 5px;-moz-border-radius: 5px;border-radius: 5px; margin: 3px 3px 0 3px; padding: 7px; direction:rtl; text-align:right; -moz-box-shadow: inset #444 0px 0px 5px;-webkit-box-shadow:inset  #444 0px 0px 5px;box-shadow: inset #444 0px 0px 5px;}
+.com5{ width:497px; float:left; background:#cfcfcf; -webkit-border-radius: 5px;-moz-border-radius: 5px;border-radius: 5px; margin:  3px 3px 0 3px; padding: 7px; direction:rtl; text-align:right; -moz-box-shadow:inset  #444 0px 0px 5px;-webkit-box-shadow: inset #444 0px 0px 5px;box-shadow: inset #444 0px 0px 5px;}
+.com6{ width:507px; float:left; background:#fff; -webkit-border-radius: 5px;-moz-border-radius: 5px;border-radius: 5px; margin: 5px 20px 0 10px; padding: 5px 5px 5px 5px; direction:rtl; }
+.com7{width:25px; padding:5px 0 0 0; float:right; text-align:center;}
+body{margin:0;font-family: Tahoma;background:#ededed}
+img{border:none;
+ transform: scale(1);
+
+-ms-transform: scale(1,1); /* IE 9 */
+-webkit-transform: scale(1,1); /* Safari and Chrome */
+    transition-duration: 0.5s;
+    margin: 0px 5px 5px 0px;}
+img:hover {
+    transform: scale(1.3);
+-ms-transform: scale(1.3,1.3); /* IE 9 */
+-webkit-transform: scale(1.3,1.3); /* Safari and Chrome */
+    box-shadow: 0px 0px 30px black;
+    opacity: 1;
+transform:rotate(7deg);
+-ms-transform:rotate(7deg); /* IE 9 */
+-webkit-transform:rotate(7deg); /* Safari and Chrome */
+}
+
+A {TEXT-DECORATION: none; }
+
+.top{width:1003;background:url('http://s3.picofile.com/file/7465259886/top.jpg') no-repeat top;height:210;vertical-align:top;direction:rtl;}
+.titr{color:#fea900;text-align:center;font-size:27pt;font-weight: bold;padding:0 60 3 500;font-family:Times New Roman;}
+.des{padding:0 70 0 500;direction:rtl;font-size:10pt;color:#dddddd;text-align:center;}
+
+.menur{width:209;float:left;}
+.menul{width:209;float:right;}
+.tmenu{width:209;background:url('http://s3.picofile.com/file/7465242903/m1.jpg') no-repeat top right;height:58;direction:rtl;color:#e47300;font-size:9pt;}
+.tmenu2{padding:20 65 0 0;text-align:right}
+.xmenu{width:209;float:left;direction:rtl;color:#444444;font-size:9pt;background:url('http://s3.picofile.com/file/7465243759/m2.jpg') repeat-y right;}
+.xmenu a{color:#444444;}
+
+.xmenu a:hover{color:#999999}
+.menu-txt{padding:3 15 6 0;background:url('http://s3.picofile.com/file/7465244301/dot.gif') 180px 6px  no-repeat;border-bottom:1px solid #dcdcdc;margin:0 10;}
+.menu-txt a:hover{border-right:3px solid #bb3627; border-left:3px solid #bb3627; color:#000000; text-decoration:none;  text-shadow:0 -1px 0 #fff; border-radius:3px; -moz-border-radius:3px; -o-border-radius:3px; -webkit-border-radius:3px; border-bottom:1px solid #888; background-color:#FFDC42;}
+}
+.s{width:209;background:url('http://s1.picofile.com/file/7465245050/m3.jpg') no-repeat top right;height:30;float:right}
+.menu-txt2 span{color:#c64226;font-size:8pt;font-weight:bold}
+.menu-txt2{padding:0 10 5 10;}
+
+.tpost{width:543;height:50;background:url('http://s3.picofile.com/file/7465245585/p1.jpg') no-repeat top right;direction:rtl;text-align:right;color:#fff;
+font-size:14pt;font-family: Times New Roman}
+.tpost a{color:#fff}
+.tpost2{padding:10 70 0 20;}
+.post{width:543;background:url('http://s1.picofile.com/file/7465245806/p2.gif') repeat-y right;direction:rtl;text-align:right;color:#333333;font-size:9pt;}
+.post2{padding:8 15 10 15}
+.post3{width:543;background:url('http://s1.picofile.com/file/7465246234/p3.jpg') no-repeat top right;height:55;text-align:right}
+.post33{padding:15 50 0 5}
+.post a{color:#c71607}
+.date{width:350px;float:right;direction:rtl;font-size:8pt;color:#777777}
+.nazar{width:130px;float:left;direction:rtl;font-size:9pt;color:#fff;text-align:center;}
+.nazar a{color:#fff}
+.barchasb {
+	padding:5px;
+	 border-right: 3px solid rgb(56,61,67);
+    border-left: 3px solid rgb(56,61,67);
+     border-radius: 3px 3px 3px 3px;
+	 background-color: rgb(237,237,237);
+
+    
+}
+
+.barchasb a{
+	padding:2px;
+	margin:2px 2px 2px;
+    border-right: 3px solid rgb(187, 54, 39);
+    border-left: 3px solid rgb(187, 54, 39);
+    color: rgb(20, 20, 20);
+      text-shadow: 0px -1px 0px rgb(255, 255, 255);
+    border-radius: 3px 3px 3px 3px;
+    border-bottom: 1px solid rgb(136, 136, 136);
+    background-color: rgb(255, 220, 66);
+}
+.barchasb a:hover  {
+    border-top:2px solid rgb(62,35,15);
+	border-right:none;
+    border-bottom:2px solid rgb(62,35,15);
+	border-left:none;
+	 color: rgb(255, 220, 66);
+      text-shadow: 0px -1px 0px rgb(62,35,15);
+   
+       background: none repeat scroll 0% 0% rgb(187,54,39);
+}
+
+.page{width:100%;float:right;text-align:center;font-size:10pt;color:#999999;direction:rtl;}
+.page a{ color: rgb(51, 51, 51);
+    float: right;
+padding:7px;
+	margin:3px ;
+    border-radius: 2px 2px 2px 2px;
+    background: -moz-linear-gradient(center top , rgb(255, 255, 255) 1px, rgb(243, 243, 243) 1px, rgb(230, 230, 230)) repeat scroll 0% 0% transparent;
+    border: 1px solid rgb(182, 182, 182);
+    box-shadow: 0px 0px 3px 0px rgb(239, 239, 239);
+    text-shadow: 0px 1px 1px rgb(246, 246, 246);}
+.page a:hover{
+font-weight:bold;color:#fff;float:right;border-radius:2px;background:rgb(34,133,226);background:-moz-linear-gradient(top,  rgba(34,133,226,1) 0%, rgba(64,127,225,1) 1%, rgba(8,66,116,1) 100%);background:-webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(34,133,226,1)), color-stop(1%,rgba(64,127,225,1)), color-stop(100%,rgba(8,66,116,1)));background:-webkit-linear-gradient(top,  rgba(34,133,226,1) 0%,rgba(64,127,225,1) 1%,rgba(8,66,116,1) 100%);background:-o-linear-gradient(top,  rgba(34,133,226,1) 0%,rgba(64,127,225,1) 1%,rgba(8,66,116,1) 100%);background:-ms-linear-gradient(top,  rgba(34,133,226,1) 0%,rgba(64,127,225,1) 1%,rgba(8,66,116,1) 100%);background:linear-gradient(to bottom,  rgba(34,133,226,1) 0%,rgba(64,127,225,1) 1%,rgba(8,66,116,1) 100%);border:1px
+solid #214682;box-shadow:0px 0px 3px 0px #d4d4d4;text-shadow:1px 1px 1px #2c3c80}
+
+
+.ft{text-align:center;background:url('http://s1.picofile.com/file/7465246555/ft.jpg') repeat-x top;font-size:9pt;color:#c1c1c1;direction:rtl;height:45;}
+.ft a{color:#fff}
+
+.top-pichak{color:#000;font-size:10pt;padding:10 0 0 0;text-align:right; }
+.top a{color:#FC5F2A;margin:0 12;}
+.top a:hover{color:#fff}
+.sch{margin:0;padding:0;height:30}
+.but{cursor:pointer;width:30;border:none;background:none}
+.txt{border:0;background:none;color:#fff;height:20}
+.bala{float:left;width:50;text-align:right;height:20;}
+.btn{
+	-x-system-font:none;
+	border:none;
+	color:#000000;
+	cursor:pointer;
+	float:none;
+	font-family:Tahoma;
+	font-size:12px;
+	font-size-adjust:none;
+	font-stretch:normal;
+	font-style:normal;
+	font-variant:normal;
+	font-weight:normal;
+	height:28px;
+	line-height:normal;
+	text-align:center;
+	width:110px;
+	margin-top:2px;
+	background-attachment: scroll;
+	background-color: transparent;
+	background-image: url('http://s3.picofile.com/file/7465246983/button_go.gif');
+	background-repeat: no-repeat;
+	background-position: 0 0;
+	.commenet_post{
+padding:4px;
+line-height:25px;
+-moz-border-radius:7px;
+-webkit-border-radius:7px;
+-khtml-border-radius:7px;
+border-radius:7px;
+text-align: right;
+direction: rtl;
+}
+
+
+</style>
+
+
+
+</head>
+
+<body>
+<div align="center">
+	<table border="0" width="1003" cellspacing="0" cellpadding="0">
+		<tr>
+			<td colspan="3" class=top>
+			<div class=top-pichak>
+<div style="float:right;width:770;direction:rtl">
+<div style="width:40;height:20;float:right"></div>
+<a href="http://rahyarmath.ir/">صفحه اول</a>
+<a href="http://rahyarmath.ir/post/category/2">ریاضیات</a>
+<a href="http://rahyarmath.ir/post/category/6">معما و سرگرمی</a>
+<a href="http://rahyarmath.ir/post/category/10">آموزش هندسه</a>
+<a href="http://rahyarmath.ir/post/category/7">نرم افزارهای ریاضی</a>
+
+<a href="http://rahyarmath.ir/post/category/5">بزرگان ریاضی </a>
+
+<a href="javascript:messageForm()" title="تماس با مدیر رهیار ">
+		  تماس با ما</a>
+</div>
+
+<form method="Get" action="http://google.com/search" class=sch><input name="sitesearch"
+
+value="Rahyar.mihanblog.com" type="hidden" />
+<input type="text" name="q" size="22" class=txt /> <input type="submit" value=" " class=but />
+</form>
+
+</div>
+
+
+			</td>
+		</tr>
+		<tr>
+			<td width="220" valign="top">
+		<form id="frm-16080948015fd99451747e0" method="post" action="http://rahyar.mihanblog.com/poll/new/fid/16080948015fd99451747e0/atrty/1608094801/avrvy/0/key/0bba4f65f2b531ea228bf17d7651eb40/"  onsubmit="window.open('', 'poll', 'toolbar=0,location=0,status=0,menubar=0,scrollbars=1,resizable=0,width=505,height=315')" target="poll"><input type="hidden" name="data[pollid]" value="11564" id="data[pollid]" />		<div class=menul>
+			<div class=tmenu>
+			<div class=tmenu2>
+			<b>نظر سنجی</b></div></div>
+			<div class=xmenu><div class=menu-txt>
+				به نظر شما مطلب بعدی ما كدوم یكی از موارد زیر باشه بهتره؟اگر خواهان بهبود كار رهیار هستیدپس خواهشاً بی تفاوت نباشید!ممنون از شما دوست عزیز <br /><label><input type="radio" name="data[answer]" value="v1">مسئله های ریاضی</label><br /><label><input type="radio" name="data[answer]" value="v2">داستان و رمان و حكایت</label><br /><label><input type="radio" name="data[answer]" value="v3">نرم افزار های ریاضی </label><br /><label><input type="radio" name="data[answer]" value="v4">ترفندهای كامپیوتری</label><br /><label><input type="radio" name="data[answer]" value="v5">معما و سرگرمی ریاضی</label><br /><br /><input
+
+type="submit" value="نتیجه رو اینجا ببینید" class="btn" /></div></div>
+			</div><div class=s></div>
+		<input type="hidden" name="frm-id" value="16080948015fd99451747e0" id="frm-id" /></form>
+						<div class=menul>
+			<div class=tmenu>
+			<div class=tmenu2>
+			<b>دوستان رهیار</b></div></div>
+			<div class=xmenu><div class=menu-txt>
+				<a target="_blank" href="http://topy.blogfa.com/" title="">Topy
+</a></div><div class=menu-txt>
+				<a target="_blank" href="http://2funsara.ir/" title="احمد عظیمی">طوفان سرا
+</a></div><div class=menu-txt>
+				<a target="_blank" href="http://baranedanesh313.blogfa.com/" title="">معلم عصر21
+</a></div><div class=menu-txt>
+				<a target="_blank" href="http://www.hsma.ir" title="وبلاگ ارزشمند آقای محقق">ریاضی دبیرستان
+</a></div><div class=menu-txt>
+				<a target="_blank" href="http://mathgroup.blogfa.com/" title="">آموزش ریاضی چناران
+</a></div><div class=menu-txt>
+				<a target="_blank" href="http://languagedownload.ir/" title="">آموزش زبان انگلیسی
+</a></div><div class=menu-txt>
+				<a target="_blank" href="http://mydifferentmathclass.blogfa.com/" title="">کلاس ریاضی متفاوت من
+</a></div><div class=menu-txt>
+				<a target="_blank" href="http://mathematichouse.ir/" title="پرنیان قزلباش">ریاضیات دروازه و کلید علوم
+</a></div><div class=menu-txt>
+				<a target="_blank" href="http://www.math-86.blogfa.com/" title="گروه ریاضی شهرستان نجف‌آباد">گروه ریاضی شهرستان نجف‌آباد
+</a></div><div class=menu-txt>
+				<a target="_blank" href="http://esfandune.ir" title="اسفندونه">مرجع آموزش برنامه نویسی موبایل
+</a></div><div class=menu-txt>
+				<a target="_blank" href="http://math-teachers.blogfa.com/" title="وبلاگ معلمان ریاضی راهنمایی کشور">معلمان ریاضی راهنمایی کشور
+</a></div><div class=menu-txt>
+				<a target="_blank" href="http://math.gilansch.ir" title="">گروه آموزش ریاضی استان گیلان
+</a></div><div class=menu-txt>
+				<a target="_blank" href="http://chap.sch.ir/" title="در این سایت میتوانید تمام کتاب های درسی مقاطع مختلف تحصیلی را دانلود کنید">نسخه الکترونیکی کتب درسی
+</a></div><div class=menu-txt>
+				<a target="_blank" href="http://www.khaneieriazi.blogfa.com/" title="">گروه ریاضی شهرستان زرندیه
+</a></div><div class=menu-txt>
+				<a target="_blank" href="http://www.77math.ir/" title="">ریاضیات الفبای کتاب آفرینش
+</a></div><div class=menu-txt>
+				<a target="_blank" href="http://mathematic2014.blogfa.com/" title="دانلود رایگان کتب و جزوات ریاضی و هندسه 
+محسن صفری">دانلود کتب ریاضی و هندسه
+</a></div><div class=menu-txt>
+				<a target="_blank" href="http://www.rezaonline.net/blog/" title="همه چیز درباره طراحی وب و سایت با سیستم مدیریت محتوای وردپرس در وبلاگ رضاشیخله">آموزش ترفندهای وردپرس
+</a></div><div class=menu-txt>
+				<a target="_blank" href="http://riyazi321.blogfa.com/" title="علیرضا حافظی نسب">مباحث متنوع ریاضی
+</a></div><div class=menu-txt>
+				<a target="_blank" href="http://kooche-baqe.blogfa.com/" title="">کوچه باغ
+</a></div><div class=menu-txt>
+				<a target="_blank" href="http://mahnazkhoubi.blogfa.com/" title="مهناز خوبی">زاویه
+</a></div><div class=menu-txt>
+				<a target="_blank" href="http://afshin1352.blogfa.com/" title="جامعه شناسی و روانشناسی">افق ترشیز
+</a></div><div class=menu-txt>
+				<a target="_blank" href="http://babaabdad.blogfa.com/" title="">بابا آب داد
+</a></div><div class=menu-txt>
+				<a target="_blank" href="http://charbagheman.blogfa.com/" title="">چهــار بـاغ
+</a></div><div class=menu-txt>
+				<a target="_blank" href="http://honaremoalemi.blogfa.com/" title="هنر معلمی">هنر معلمی
+</a></div><div class=menu-txt>
+				<a target="_blank" href="http://hosseinbeigi.blogfa.com/" title="سرکار خانم حسین بیگی">مکمل کلاس ریاضی
+</a></div><div class=menu-txt>
+				<a target="_blank" href="http://atcce.com/" title="مجتمع فرهنگی آموزشی علامه طباطبایی">مجتمع علامه طباطبایی
+</a></div>			  <div class=menu-txt>
+			  <a href="../../../../link/index.html"><b>همه پیوندها</b></a></div>
+				</div>
+			</div><div class=s></div>
+
+						<div class=menul>
+			<div class=tmenu>
+			<div class=tmenu2>
+			<b>چند بازی جالب</b></div></div>
+			<div class=xmenu><div class=menu-txt>
+				<a href="../../../../extrapage/jabr.html">بازی عبارت جبری ویژه دوره راهنمایی-اول دبیرستان</a></div><div class=menu-txt>
+				<a href="../../../../extrapage/savingmultiple.html">بازی جالب &quot;نجات مضرب ها  &quot;مخصوص دوره ابتدایی و راهنمایی</a></div><div class=menu-txt>
+				<a href="../../../../extrapage/multiply2zahlen.html">بازی جذاب ضرب و تقسیم اعدادصحیح</a></div><div class=menu-txt>
+				<a href="../../../../extrapage/sum2zahlen.html">بازی ریاضی:جمع اعدادصحیح به روش ذهنی</a></div><div class=menu-txt>
+				<a href="../../../../extrapage/multiplytable.html">بازی:خوب بگرد و نگاه کن،حاصلضرب رو پیدا کن(مقطع ابتدایی )</a></div><div class=menu-txt>
+				<a href="../../../../extrapage/lostcharacter.html">افزایش هوش و دقت:حرف گمشده</a></div><div class=menu-txt>
+				<a href="../../../../extrapage/bigernumbers.html">سریع بگو:کدوم عدد بزرگتره</a></div><div class=menu-txt>
+				<a href="../../../../extrapage/sumborder.html">بازی جمع و تفریق بردار صحیح</a></div><div class=menu-txt>
+				<a href="../../../../extrapage/zahlenborder.html">بازی آموزشی بردار صحیح</a></div><div class=menu-txt>
+				<a href="../../../../extrapage/confusedtable.html">بازی ریاضی جدول درهم برهم</a></div><div class=menu-txt>
+				<a href="../../../../extrapage/kakuro.html">بازی فکری و ریاضی جدول کاکرو</a></div><div class=menu-txt>
+				<a href="../../../../extrapage/coordinate.html">بازی مختصات نقطه و بردار</a></div><div class=menu-txt>
+				<a href="../../../../extrapage/addingfractions.html">تمرین جمع کسرها</a></div><div class=menu-txt>
+				<a href="../../../../extrapage/lineandpoint.html">بازی  فکری4خط و 5 نقطه</a></div><div class=menu-txt>
+				<a href="../../../../extrapage/zahlennumbers.html">بازی ضرب اعداد صحیح</a></div><div class=menu-txt>
+				<a href="../../../../extrapage/bakhshpaziri.html">بازی بخش پذیری اعداد</a></div><div class=menu-txt>
+				<a href="../../../../extrapage/angrybirdsmath.html">بازی ریاضی پرنده عصبانی</a></div><div class=menu-txt>
+				<a href="../../../../extrapage/mathgame.html">بازی سرعت,دقت,ریاضی</a></div><div class=menu-txt>
+				<a href="../../../../Page/4.aspx.html">بازی انهدام سوسک ها</a></div><div class=menu-txt>
+				<a href="../../../../extrapage/3.html">بازی ریاضی سودوکو</a></div><div class=menu-txt>
+				<a href="../../../../extrapage/1.html">بازی جابجایی قورباغه ها</a></div>				</div>
+			</div><div class=s></div>
+
+						<div class=menul>
+			<div class=tmenu>
+			<div class=tmenu2>
+			<b>ابر برچسب ها</b></div></div>
+			<div class=xmenu>
+            <div class=menu-txt2>				<a href="../../../tag/معمای+ریاضی.html" style="font-size:1.77em">
+		معمای ریاضی</a> 				<a href="../../../tag/اعدادطبیعی.html" style="font-size:1.06em">
+		اعدادطبیعی</a> 				<a href="../../../tag/سرگرمی+فلش.html" style="font-size:1.06em">
+		سرگرمی فلش</a> 				<a href="../../../tag/سرگرمی+ریاضی.html" style="font-size:2em">
+		سرگرمی ریاضی</a> 				<a href="../../../tag/مثلث.html" style="font-size:1.12em">
+		مثلث</a> 				<a href="../../../tag/سرگرمی.html" style="font-size:1.3em">
+		سرگرمی</a> 				<a href="../../../tag/ریاضی.html" style="font-size:1.06em">
+		ریاضی</a> 				<a href="../../../tag/معمای+فلش.html" style="font-size:1.36em">
+		معمای فلش</a> 				<a href="../../../tag/بازی+ریاضی.html" style="font-size:1.48em">
+		بازی ریاضی</a> 				<a href="../../../tag/معما.html" style="font-size:2em">
+		معما</a> 				<a href="../../../tag/فلش+ریاضی.html" style="font-size:1.77em">
+		فلش ریاضی</a> 				<a href="../../../tag/مسئله+ریاضی.html" style="font-size:1.12em">
+		مسئله ریاضی</a> 				<a href="../../../tag/هندسه.html" style="font-size:1.53em">
+		هندسه</a> 				<a href="../../../tag/مربع.html" style="font-size:1em">
+		مربع</a> 				<a href="../../../tag/بازی+فلش.html" style="font-size:1.36em">
+		بازی فلش</a> </div>
+				</div>
+			</div><div class=s></div>
+						<div class=menul>
+			<div class=tmenu>
+			<div class=tmenu2>
+			<b>گلچینی از گذشته</b></div></div>
+			<div class=xmenu> <div class=menu-txt>
+				<a target="_blank" href="http://rahyarmath.ir/post/747" title="دوره ضمن خدمت ریاضی نهم">
+
+محتواهای مورد نیاز تدریس کتاب ریاضی نهم</a></div> <div class=menu-txt>
+				<a target="_blank" href="http://rahyarmath.ir/post/730" title="">
+
+یک بازی برای کلاس هشتمی ها&quot;مربع جادویی صحیح&quot;</a></div> <div class=menu-txt>
+				<a target="_blank" href="http://moshavere-tmt92.mihanblog.com/" title="سلام ممنون میشم لینک بنده رو تایید بزنید
+
+دانشجوی مشاوره ام و مشاوره تحصیلی میدم به بچه های کنکوری
+تشکر میکنم از شما بابت تایید لینک بنده">
+
+مشاوره کنکوری و تحصیلی</a></div> <div class=menu-txt>
+				<a target="_blank" href="../../../529.html" title="تمرین چهار عمل اصلی در ترکیبی با سودوکو">
+
+سودوکوی رهیار(مینیکو)</a></div> <div class=menu-txt>
+				<a target="_blank" href="../../../561.html" title="یک بازی یگر در رابطه با جمع و تفریق اعداد صحیح">
+
+جدول متوازن</a></div> <div class=menu-txt>
+				<a target="_blank" href="../../../610.html" title="">
+
+بازی جمع و تفریق اعداد صحیح(به روش مختصرنویسی)</a></div> <div class=menu-txt>
+				<a target="_blank" href="../../../607.html" title="روش جذرگیری از اعداد که در سال سوم راهنمایی معرفی شده است">
+
+درس افزار&quot;الگوریتم جذر تقریبی&quot; </a></div> <div class=menu-txt>
+				<a target="_blank" href="http://rahyarmath.ir/post/620" title="بهبود مهارت جمع و تفریق ذهنی اعداد صحیح">
+
+بازی ریاضی هرم اعدادصحیح</a></div> <div class=menu-txt>
+				<a target="_blank" href="http://rahyarmath.ir/post/506" title="">
+
+راهنمای ساخت بازی های آموزشی فلش</a></div> <div class=menu-txt>
+				<a target="_blank" href="http://rahyarmath.ir/post/444" title="">
+
+انیمیشن رابطه بین تعداد اضلاع و زاویه های چندضلعی منتظم</a></div> <div class=menu-txt>
+				<a target="_blank" href="http://rahyarmath.ir/post/443" title="">
+
+بازی فکری چیدن اشیا مختلف با رنگهای مختلف</a></div> <div class=menu-txt>
+				<a target="_blank" href="http://rahyarmath.ir/post/387" title="دانلود کنید:یک بازی ریاضی جذاب  و تفکربرانگیز به نام ** فکر و بکر**">
+
+دانلود کنید:یک بازی ریاضی جذاب (فکر و بکر) </a></div> <div class=menu-txt>
+				<a target="_blank" href="http://rahyarmath.ir/post/350" title="">
+
+رسم مماس بر دایره بدون خط کش</a></div> <div class=menu-txt>
+				<a target="_blank" href="http://rahyarmath.ir/post/372" title="">
+
+آموزش تعاملی جمع بردارها در صفحه</a></div> <div class=menu-txt>
+				<a target="_blank" href="http://rahyarmath.ir/post/352" title="">
+
+تقسیم پاره خط به چند قسمت مساوی بدون خط کش</a></div> <div class=menu-txt>
+				<a target="_blank" href="http://rahyarmath.ir/post/375" title="">
+
+آموزش رسم عمودمنصف بصورت عملی</a></div> <div class=menu-txt>
+				<a target="_blank" href="http://rahyarmath.ir/post/378" title="">
+
+نرم افزار مختصات دکارتی(ساخته رهیار)</a></div> <div class=menu-txt>
+				<a target="_blank" href="../../../270.html" title="">
+
+افزودن پسورد دوم در ایکس پی</a></div> <div class=menu-txt>
+				<a target="_blank" href="../../../262.html" title="">
+
+نرم افزار همراه بانک ملی</a></div> <div class=menu-txt>
+				<a target="_blank" href="../../../271.html" title="">
+
+نرم افزار کارگاه حساب نسخه دو</a></div>			  <div class=menu-txt>
+			  <a href="../../../../linkdaily/index.html"><b>لیست کامل گلچین ها</b></a></div>
+			</div>
+			</div>
+<div class=s></div>
+
+
+<div id="c" style="text-align:center;width:210;float:right;"><font face="Tahoma"><span style="font-size: 8pt">
+<!-- Begin WebGozar.com Counter code -->
+<script language="javascript" src="http://www.webgozar.ir/c.aspx?Code=809089&amp;t=counter"></script>
+<noscript><a href="http://www.webgozar.com/counter/stats.aspx?code=809089" 
+
+target="_blank">&#1570;&#1605;&#1575;&#1585;</a></noscript>
+<!-- End WebGozar.com Counter code -->
+</span></font></div>
+</td>
+			<td width="563" valign="top">
+
+			<div align="center">
+					<div id="MihanblogShopAds" style="display:block;height:0px;width:100%;border:0px"></div>
+					<div class=tpost>
+			<div class=tpost2>
+			<b><a href="../../../560.html">باقیمانده تقسیم رو پیدا کنید</a></b></div>
+            </div>
+			<div class=post>
+			<div class=post2>
+			<div style="float:right"></div> <div id="InPost_MihanblogShopAds" style="display:block;height:0px;width:100%;border:0px"></div>
+
+
+
+<a href="http://rahyarmath.ir/post/category/6" target="_blank" title=""><img src="http://s3.picofile.com/file/7468862903/moamaTitr_1_.gif"></a>
+
+&nbsp; &nbsp;&nbsp;&nbsp; <br><div align="right">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<font color="#FF0000"><b><font size="2"> پیدا کردن باقیمانده یک تقسیم فقط با ماشین حساب</font></b></font><br></div><br><br><a href="http://rahyarmath.ir/post/category/6" target="_blank" title=""><img src="http://s4.picofile.com/file/7814501612/calculator.jpg" alt="ماشین حساب" align="right" border="0" hspace="4" vspace="4"></a><font size="2">سلامی گرم در اولین روزهای تابستون<br><font size="2"><font size="2"><font size="2"><font size="2"></font></font></font></font><br>همونطور که میدونید وقتی دو عدد رو با ماشین </font><a href="http://rahyarmath.ir/post/category/2" target="_blank" title="">حساب</a><font size="2"> بر هم تقسیم میکنید جواب رو تا چندین رقم اعشار براتون محاسبه میکنه(بستگی به تعداد ارقامی که در نمایشگر ماشین حساب دیده بشه).<br><font color="#3333FF">ولی اگر بخواهیم خارج قسمت صحیح یک تقسیم رو به همراه مقدار باقیمانده بدست بیاریم چه باید بکنیم؟</font><br>مثلاً5823 رو بر 17 تقسیم کنید جواب رو 342.52941 نشون میده ، خارج قسمت صحیح این تقسیم رو میشه دید(عدد342) ولی چطور باقیمانده رو بدست بیاوریم؟؟<br><br></font><img src="http://mihanblog.com/public/public/rte/images_new/smiles/58.gif"><font size="2"> دقت کنید قرار نیست از <b>قلم و کاغذ</b> استفاده کنیم فقط با فشردن دکمه های ماشین حساب، باقی مانده تقسیم 5823 بر17 رو روی نمایشگر نشان بدهید.<br>من از یک ماشین حساب کاسیو معمولی 8 رقمی استفاده کرده ام شما هم بنویسید از چه ماشین حسابی استفاده کردید(تعداد ارقام ماشین حساب) و مراحل انجام کار رو مرحله به مرحله برای ما بیان کنید.</font><br><font size="2">منتظر دیدن و شنیدن راه حل های شما هستم</font><img src="http://mihanblog.com/public/public/rte/images_new/smiles/8.gif">
+
+
+
+
+
+
+
+
+
+
+<br />
+				<br /><b></b>
+				<br /><br />
+                <script>mihanblogPostLike('560','like')</script><br />
+           <div class=barchasb>
+                			طبقه بندی: <a  href="../../../../Cat/6.aspx.html">
+			معما و سرگرمی</a>، <br />										برچسب ها:
+													<a href="../../../tag/ماشین&#32;حساب.html" >ماشین حساب</a>،
+													<a href="../../../tag/تقسیم.html" >تقسیم</a>،
+													<a href="../../../tag/باقی&#32;مانده.html" >باقی مانده</a>،
+													<a href="../../../tag/باقیمانده&#32;تقسیم.html" >باقیمانده تقسیم</a>،
+													<a href="../../../tag/تقسیم&#32;با&#32;ماشین&#32;حساب.html" >تقسیم با ماشین حساب</a>،
+						
+					<br />					<br />
+			</div>
+            </div>
+            
+
+				</div>
+
+			<div class=post3><div class=post33>
+				<div class=date>نوشته شده در تاریخ شنبه 1 تیر 1392 توسط
+
+محسن</div>
+				<div class=nazar>
+	      <a target="_self" href="../../../560.html#commentlist" >نظرات (<script>setCommentCnt(560)</script>)</a>
+        </div></div></div>
+  </br>
+
+			<div class=div54 style="background:#badb44;">
+
+</div>
+						<div class=tpost>
+			<div class=tpost2>
+			<b><a href="../../../559.html"> 6 تا عدد و حاصل جمعهای نابرابر</a></b></div>
+            </div>
+			<div class=post>
+			<div class=post2>
+			<div style="float:right"></div> 
+
+
+<img src="http://s3.picofile.com/file/7468862903/moamaTitr_1_.gif"><font size="2"> <b><font color="#FF0000">6 تا عدد و حاصل جمعهای نابرابر</font></b><br>با سلامی دوباره<br>برای امروز یک فلش تهیه کردم که در اون 6 تا دایره داریم که به وسیله چند تا خط بهم متصل شده اند<br></font><img src="http://s4.picofile.com/file/7808402468/notequalsum.jpg" alt="معمای 6 عدد و حاصل جمع نابرابر" align="right" border="0" hspace="7" vspace="7"><font size="2">شما باید اعداد 1تا6 رو کشیده و توی این دایره ها رها کنید(همون دراگ&nbsp; اند دراپ خودمون<img src="http://mihanblog.com/public/public/rte/images_new/smiles/3.gif">).<br>تا اینجای کار خیلی راحته ولی مسئله اینه که وقتی اعداد رو توی دایره های دو سر هر خط قرار میدین حاصل جمع اون هم بصورت هوشمند در وسط اون خط نوشته میشه،حالا اعداد&nbsp; رو طوری باید جابجا کنید که هیچکدام از این حاصل جمع ها با هم برابر نشوند.وقتی اینکار رو انجام بدین </font><a href="http://rahyarmath.ir/post/category/6" target="_blank" title="">معما</a><font size="2"> حل میشه.<br>در ادامه مطلب میتونید </font><a href="http://rahyarmath.ir/post/category/6" target="_blank" title="">معمای</a><font size="2"> </font><a href="http://rahyarmath.ir/post/category/2" target="_blank" title="">ریاضی</a><font size="2"> امروز رو ببینید و انجام بدین.برای دوستانی که میخوان فلش رو دانلود کنند هم لینک دانلود رو قرار دادم.<br>این </font><a href="http://rahyarmath.ir/post/category/2" target="_blank" title="">مسئله</a><font size="2"> ممکنه به چندین صورت قابل اجرا باشه.خودتون میتونید حالتهای مختلف رو بررسی کنید و برای من و بقیه دوستان بیان کنید.</font><br><br>
+
+
+
+
+
+
+<br />
+				<br /><b><a href='../../../559.html'>ادامه مطلب</a></b>
+				<br /><br />
+                <script>mihanblogPostLike('559','like')</script><br />
+           <div class=barchasb>
+                			طبقه بندی: <a  href="../../../../Cat/6.aspx.html">
+			معما و سرگرمی</a>، <br />									<br />
+			</div>
+            </div>
+            
+
+				</div>
+
+			<div class=post3><div class=post33>
+				<div class=date>نوشته شده در تاریخ چهارشنبه 29 خرداد 1392 توسط
+
+محسن</div>
+				<div class=nazar>
+	      <a target="_self" href="../../../559.html#commentlist" >نظرات (<script>setCommentCnt(559)</script>)</a>
+        </div></div></div>
+  </br>
+
+			<div class=div54 style="background:#badb44;">
+
+</div>
+						<div class=tpost>
+			<div class=tpost2>
+			<b><a href="../../../551.html">یک ترازو و یک مسئله ریاضی</a></b></div>
+            </div>
+			<div class=post>
+			<div class=post2>
+			<div style="float:right"></div> 
+
+<br>
+<a href="http://rahyarmath.ir/post/category/2" target="_blank" title=""><img src="http://s1.picofile.com/file/7468865799/MathTitr_1_.gif"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<font color="#FF0000"><b>&nbsp;
+</b></font><font size="2"><font color="#FF0000"><b>
+یک تــــــــــــرازو و یـــــــــک معمای ریاضی</b></font><br></font><br><a href="http://rahyarmath.ir/post/category/2" target="_blank" title="معمای ترازو"><img src="http://s1.picofile.com/file/7782574836/foto_modelo1_1.jpg" alt="ترازو" align="right" border="0" hspace="7" vspace="7"></a><font size="2"><br><br>سلامی دوباره<br>تابحال با ترازو کار کردین؟ ترازوهای دیجیتال جدید رو نمیگم ها!! اون قدیمی تر ها که دو تا کفه دارند؟<br>یکی از کاربردهای اون ترازوها علاوه بر اینکه وزن رو مشخص میکنند اینه که میشه تعیین کرد آیا دو جسم وزنشون با هم برابره یا اینکه یکی از دیگری سنگین تره؟<br>کافیه دو جسم رو در دو کفه قرار بدهیم و چنانچه هر دو کفه در یک راستا قرار گرفتند میشه نتیجه گرفت وزن هر دو جسم با هم برابره.<br>حالا معمای امروز </font><a href="http://rahyarmath.ir/" target="_blank" title="">رهیار</a><font size="2"> بر همین اساس طراحی شده. یعنی یک ترازو داریم و چند تا جسم که اونها رو با هم مقایسه کرده ایم. شما باید با بررسی وضعیت های مختلف ترازو حساب کنید در کفه ترازوی آخری چند تا 6ضلعی باید قرار دهیم که هر دو طرف هم وزن باشند؟<br><br>برای دیدن مسئله </font><a href="http://rahyarmath.ir/post/category/2" target="_blank" title="">ریاضی</a><font size="2"> که در قالب یک فلش براتون طراحی کردم به ادامه مطلب تشریف ببرید</font><br>
+
+
+
+
+
+
+<br />
+				<br /><b><a href='../../../551.html'>ادامه مطلب</a></b>
+				<br /><br />
+                <script>mihanblogPostLike('551','like')</script><br />
+           <div class=barchasb>
+                			طبقه بندی: <a  href="../../../../Cat/2.aspx.html">
+			ریاضیات</a>، <a  href="../../../../Cat/6.aspx.html">
+			معما و سرگرمی</a>، <br />										برچسب ها:
+													<a href="../../../tag/ترازو.html" >ترازو</a>،
+													<a href="../../../tag/مقایسه.html" >مقایسه</a>،
+													<a href="../../../tag/وزن.html" >وزن</a>،
+													<a href="../../../tag/معادله.html" >معادله</a>،
+													<a href="../../../tag/معمای&#32;ترازو.html" >معمای ترازو</a>،
+													<a href="../../../tag/وزن&#32;کردن.html" >وزن کردن</a>،
+													<a href="../../../tag/معادلات.html" >معادلات</a>،
+						
+					<br />					<br />
+			</div>
+            </div>
+            
+
+				</div>
+
+			<div class=post3><div class=post33>
+				<div class=date>نوشته شده در تاریخ چهارشنبه 8 خرداد 1392 توسط
+
+محسن</div>
+				<div class=nazar>
+	      <a target="_self" href="../../../551.html#commentlist" >نظرات (<script>setCommentCnt(551)</script>)</a>
+        </div></div></div>
+  </br>
+
+			<div class=div54 style="background:#badb44;">
+
+</div>
+						<div class=tpost>
+			<div class=tpost2>
+			<b><a href="../../../549.html">چند تساوی تصویری و یک معما</a></b></div>
+            </div>
+			<div class=post>
+			<div class=post2>
+			<div style="float:right"></div> 
+
+
+<a href="http://rahyarmath.ir/post/category/6" target="_blank" title="معماهای ریاضی رهیار"><img src="http://s3.picofile.com/file/7468862903/moamaTitr_1_.gif"></a> <font size="2"><font color="#FF0000"><b>چند شکل هندسی و چند تساوی</b></font><br>سلام دوستان<br>آخر هفته خوبی رو براتون آرزو میکنم.</font><br><img src="http://mihanblog.com/public/public/rte/images_new/smiles/8.gif"><a href="http://rahyarmath.ir/post/category/2" target="_blank" title="تساوی عددی"><img src="http://s4.picofile.com/file/7774589779/tasavi.gif" alt="تساوی های شکلی" align="right" border="0" hspace="6" vspace="6"></a><font size="2">اگر به </font><a href="http://rahyarmath.ir/" target="" title="">رهیار</a><font size="2"> سر زدید پس حتماً وقت دارید چند دقیقه ای رو با حل سئوالات </font><a href="http://rahyarmath.ir/post/category/2" target="_blank" title="">ریاضی</a><font size="2"> و </font><a href="http://rahyarmath.ir/post/category/6" target="_blank" title="">معما</a><font size="2">های </font><a href="http://rahyarmath.ir" target="_blank" title="">رهیار</a><font size="2"> بگذرونید.<br>سئوال امروز همونطور که از شکل هم معلومه درباره مقدار عددی متناظر&nbsp; چند شکل هندسی هست که باید اونها رو از تساوی هایی که در اختیارتون قرار گرفته محاسبه کرده و استخراج کنید و در جاخالی های مربوطه وارد کنید.<br>در ادامه مطلب میتونید فایل فلش معمای </font><a href="http://rahyarmath.ir/post/category/2" target="_blank" title="">ریاضی</a><font size="2"> امروز رو ببینید و شانس خودتون رو برای پیدا کردن جواب آزماش کنید.مثل همیشه میتونید راهبردی رو که برای بدست آوردن جواب استفاده کردید با من و بقیه دوستان در میان بذارید<br>لذت ببرید</font><img src="http://mihanblog.com/public/public/rte/images_new/smiles/8.gif">
+
+
+
+
+
+
+<br />
+				<br /><b><a href='../../../549.html'>ادامه مطلب</a></b>
+				<br /><br />
+                <script>mihanblogPostLike('549','like')</script><br />
+           <div class=barchasb>
+                			طبقه بندی: <a  href="../../../../Cat/2.aspx.html">
+			ریاضیات</a>، <a  href="../../../../Cat/6.aspx.html">
+			معما و سرگرمی</a>، <br />										برچسب ها:
+													<a href="../../../tag/شکل&#32;هندسی.html" >شکل هندسی</a>،
+													<a href="../../../tag/تساوی.html" >تساوی</a>،
+													<a href="../../../tag/معادله.html" >معادله</a>،
+													<a href="../../../tag/مقدارعددی.html" >مقدارعددی</a>،
+													<a href="../../../tag/مجهول.html" >مجهول</a>،
+													<a href="../../../tag/تساوی&#32;عددی.html" >تساوی عددی</a>،
+													<a href="../../../tag/مقدارمتناظر.html" >مقدارمتناظر</a>،
+						
+					<br />											دنبالک ها:
+													<a href="http://rahyarmath.ir/post/category/2"  target="_blank">
+						بقیه سئوالات ریاضی رهیار</a>،
+						
+					<br /><br />
+			</div>
+            </div>
+            
+
+				</div>
+
+			<div class=post3><div class=post33>
+				<div class=date>نوشته شده در تاریخ پنجشنبه 2 خرداد 1392 توسط
+
+محسن</div>
+				<div class=nazar>
+	      <a target="_self" href="../../../549.html#commentlist" >نظرات (<script>setCommentCnt(549)</script>)</a>
+        </div></div></div>
+  </br>
+
+			<div class=div54 style="background:#badb44;">
+
+</div>
+						<div class=tpost>
+			<div class=tpost2>
+			<b><a href="../../../543.html">دزد اسب رو پیدا کنید</a></b></div>
+            </div>
+			<div class=post>
+			<div class=post2>
+			<div style="float:right"></div> 
+<br>
+<a href="http://rahyarmath.ir/post/category/6" target="_blank" title=""><img src="http://s3.picofile.com/file/7468862903/moamaTitr_1_.gif"></a>&nbsp;
+
+<font color="#FF0000"><b>بر</b></font><font size="2"><font color="#FF0000"><b>ادران دالتون و دزدی از لوک&nbsp; خوش شانس</b></font><br></font><a href="http://rahyarmath.ir/post/category/6" target="_blank" title=""><img src="http://s4.picofile.com/file/7759588381/Daltons.jpg" alt="معمای اسب لوک خوش شانس" align="right" border="0" hspace="5" vspace="5"></a><font size="2">سلامی دوباره به همه دوستان رهیار<br><br>حتماً شما هم کارتون لوک خوش شانس رو دیدین درسته؟!<br>پس حتماً دیده اید که چطور لوک برادران دالتون رو موقع سرقت و دزدی فیتیله پیچ میکنه.<br>این دفعه برادران دالتون اسب تیز رو و سرخوش لوک رو دزدیده اند و لوک هم اونها رو جلوی بانک گیر آورده و داره اونها رو بازرسی میکنه تا ببینه کدوم یک از اونها اسبش رو دزدیده اند.<br><br>شما باید به لوک کمک کنید و دزد اسبش رو پیدا کنید.<br>فقط یادتون باشه همه برادران دالتون به غیر از یکی از اونها دروغگو هستند و نباید به حرفهاشون توجه کنید.<br><br>در ادامه مطلب میتونید </font><a href="http://rahyarmath.ir/post/category/6" target="_blank" title="">معمای</a><font size="2"> امروز </font><a href="http://rahyarmath.ir/post/category/6" target="_blank" title="">رهیار</a><font size="2"> رو اجرا کنید.<br><br><br>منتظر پاسخ های شما هستم.<br></font><br>
+
+
+
+
+<br />
+				<br /><b><a href='../../../543.html'>ادامه مطلب</a></b>
+				<br /><br />
+                <script>mihanblogPostLike('543','like')</script><br />
+           <div class=barchasb>
+                			طبقه بندی: <a  href="../../../../Cat/6.aspx.html">
+			معما و سرگرمی</a>، <br />										برچسب ها:
+													<a href="../../../tag/معماهای&#32;ریاضی.html" >معماهای ریاضی</a>،
+													<a href="../../../tag/معمای&#32;منطقی.html" >معمای منطقی</a>،
+													<a href="../../../tag/پازل&#32;منطقی.html" >پازل منطقی</a>،
+													<a href="../../../tag/منطق&#32;گزاره&#32;ها.html" >منطق گزاره ها</a>،
+													<a href="../../../tag/جدول&#32;نظام&#32;دار.html" >جدول نظام دار</a>،
+													<a href="../../../tag/معمای&#32;لوک&#32;خوش&#32;شانس.html" >معمای لوک خوش شانس</a>،
+													<a href="../../../tag/برادران&#32;دالتون.html" >برادران دالتون</a>،
+						
+					<br />					<br />
+			</div>
+            </div>
+            
+
+				</div>
+
+			<div class=post3><div class=post33>
+				<div class=date>نوشته شده در تاریخ شنبه 21 اردیبهشت 1392 توسط
+
+محسن</div>
+				<div class=nazar>
+	      <a target="_self" href="../../../543.html#commentlist" >نظرات (<script>setCommentCnt(543)</script>)</a>
+        </div></div></div>
+  </br>
+
+			<div class=div54 style="background:#badb44;">
+
+</div>
+						<div class=tpost>
+			<div class=tpost2>
+			<b><a href="../../../541.html">ما چهار نفر</a></b></div>
+            </div>
+			<div class=post>
+			<div class=post2>
+			<div style="float:right"></div> 
+<a href="http://rahyarmath.ir/post/category/6" target="_blank" title=""><img src="http://s3.picofile.com/file/7468862903/moamaTitr_1_.gif"></a> <font size="2"><b><font color="#FF0000">من کجا هستم ؟ میتونید من رو ببینید؟</font></b><br>سلامی دوباره بعد از چند روز غیبت<br>کم کم به آخر سال تحصیلی و شروع امتحانات دانش آموزان نزدیک میشیم.به همین خاطر حجم کاری همه زیادتر شده و شاید دلیل کمتر سر زدن به وبلاگ و دوستان وبلاگیم هم میتونه این باشه.<br>و اما معمای امروز</font><a href="http://rahyarmath.ir/post/category/6" target="_blank" title=""> رهیار</a><font size="2">.<br>من و سینا و آرش و رضا رفته بودیم نمایشگاه کتاب . در وسط سالن نمایشگاه یک کیوسک اطلاعات نسبتاً بزرگ به شکل مکعب قرار داشت و ما هم مشغول خوندن بروشور و پوسترهای نصب شده روی دیوارهای کیوسک اطلاعات بودیم.<br>یک عکس شماتیک از محل قرار گیری ما در اطراف کیوسک اطلاعات براتون کشیدم و شما باید با خوندن توضیحات درج شده در متن سئوال تشخیص بدهید کدوم یکی از آدمکها........<br>بهتره پازل فلش رو حل کنید و به سئوال جواب بدین.</font><br><br><font size="2"><span style="font-weight: bold;">تا لود شدن فلش کمی صبر کنید</span></font><div align="center"><embed style="WIDTH: 450px; HEIGHT: 500px" name="obj1" pluginspage="http://www.macromedia.com/go/getflashplayer" src="http://rahyarmath3.persiangig.com/puzzles/fourFriends/fourFreinds.swf" type="application/x-shockwave-flash" height="500" width="450"></div><div><font color="#ff0000"><br>اگر قادر به دیدن فایل فلش نیستید.یا فایل بدرستی نمایش داده نمی شود باید فلش پلیر را از لینک زیر دریافت کرده و نصب کنید.</font></div><a href="http://www.flashplayer.ir/#flashplayer" target="_blank"><img alt="Download Adobe Flash Player" src="http://www.flashplayer.ir/images/dev/badges/fp_small.gif" border="0"></a> <br />
+				<br /><b></b>
+				<br /><br />
+                <script>mihanblogPostLike('541','like')</script><br />
+           <div class=barchasb>
+                			طبقه بندی: <a  href="../../../../Cat/6.aspx.html">
+			معما و سرگرمی</a>، <br />										برچسب ها:
+													<a href="../../../tag/نمایشگاه&#32;کتاب.html" >نمایشگاه کتاب</a>،
+													<a href="../../../tag/پازل.html" >پازل</a>،
+													<a href="../../../tag/معما.html" >معما</a>،
+													<a href="../../../tag/سرگرمی&#32;ریاضی.html" >سرگرمی ریاضی</a>،
+													<a href="../../../tag/معمای&#32;هوش.html" >معمای هوش</a>،
+						
+					<br />											دنبالک ها:
+													<a href="http://rahyarmath.ir/post/category/6"  target="_blank">
+						معما های هوش و ریاضی</a>،
+						
+					<br /><br />
+			</div>
+            </div>
+            
+
+				</div>
+
+			<div class=post3><div class=post33>
+				<div class=date>نوشته شده در تاریخ دوشنبه 16 اردیبهشت 1392 توسط
+
+محسن</div>
+				<div class=nazar>
+	      <a target="_self" href="../../../541.html#commentlist" >نظرات (<script>setCommentCnt(541)</script>)</a>
+        </div></div></div>
+  </br>
+
+			<div class=div54 style="background:#badb44;">
+
+</div>
+						<div class=tpost>
+			<div class=tpost2>
+			<b><a href="../../../539.html">دزد باغ وحش رو پیدا کنید</a></b></div>
+            </div>
+			<div class=post>
+			<div class=post2>
+			<div style="float:right"></div> 
+
+
+<a href="http://rahyarmath.ir/post/category/6" target="_blank" title=""><img src="http://s3.picofile.com/file/7468862903/moamaTitr_1_.gif"></a> <b><font color="#FF0000" size="2">مظنون مورد نظر کدام است؟</font></b><br><a href="http://rahyarmath.ir/post/category/6" target="_blank" title=""><img src="http://s4.picofile.com/file/7742670000/tasaod.jpg" alt="رشته اعداد" align="right" border="0" hspace="6" vspace="6"></a><br><br><br><font size="2"><br>توی یک باغ وحش چند وقته که شبها دزدی های مشکوکی انجام میشه .پس از بررسی های مسئول حراست باغ وحش معلوم شد که این عمل کار حیوانات باغ وحشه.به همین خاطر یک دوربین در محل ورودی انبار غذاها نصب شد که با ورود هر جانداری بصورت خودکار یک عکس&nbsp; میگرفت. و با این ترفند توانستند حیوانات خلافکار رو شناسایی کنند.<br>ما به تعداد محدودی از اون عکسها دسترسی داریم و شما باید از روی الگوی ورود حیوانات به انبار غذا تشخیص دهید که صدمین و صد و یکمین حیوانی که وارد انبار شده اند و به عنوان مقصر دستگیر شده اند کدوم حیوانها هستند؟<br><font size="2">در ادامه مطلب میتونید معمای امروز </font></font><a href="http://rahyarmath.ir/" target="_blank" title="">رهیار</a><font size="2"><font size="2"> رو در قالب یک فایل فلش مشاهده کنید.</font> </font><br>
+
+
+
+
+
+
+<br />
+				<br /><b><a href='../../../539.html'>ادامه مطلب</a></b>
+				<br /><br />
+                <script>mihanblogPostLike('539','like')</script><br />
+           <div class=barchasb>
+                			طبقه بندی: <a  href="../../../../Cat/6.aspx.html">
+			معما و سرگرمی</a>، <br />										برچسب ها:
+													<a href="../../../tag/باغ&#32;وحش.html" >باغ وحش</a>،
+													<a href="../../../tag/حیوانات.html" >حیوانات</a>،
+													<a href="../../../tag/رشته&#32;اعداد.html" >رشته اعداد</a>،
+													<a href="../../../tag/آنالیز&#32;عددی.html" >آنالیز عددی</a>،
+													<a href="../../../tag/تصاعد.html" >تصاعد</a>،
+													<a href="../../../tag/حساب&#32;اعداد.html" >حساب اعداد</a>،
+													<a href="../../../tag/بخش&#32;پذیری.html" >بخش پذیری</a>،
+						
+					<br />											دنبالک ها:
+													<a href="http://rahyarmath.ir/post/category/6"  target="_blank">
+						سرگرمی های ریاضی رهیار</a>،
+						
+					<br /><br />
+			</div>
+            </div>
+            
+
+				</div>
+
+			<div class=post3><div class=post33>
+				<div class=date>نوشته شده در تاریخ یکشنبه 8 اردیبهشت 1392 توسط
+
+محسن</div>
+				<div class=nazar>
+	      <a target="_self" href="../../../539.html#commentlist" >نظرات (<script>setCommentCnt(539)</script>)</a>
+        </div></div></div>
+  </br>
+
+			<div class=div54 style="background:#badb44;">
+
+</div>
+						<div class=tpost>
+			<div class=tpost2>
+			<b><a href="../../../537.html">سئوالی از انجمن ریاضی انگلستان</a></b></div>
+            </div>
+			<div class=post>
+			<div class=post2>
+			<div style="float:right"></div> 
+
+
+<a href="http://rahyarmath.ir/post/category/2" target="_blank" title=""><img src="http://s1.picofile.com/file/7468865799/MathTitr_1_.gif"></a> <font size="2"><b><font color="#FF0000">یک سئوال ریاضی از انجمن ریاضی انگلستان</font></b><br>پارسال سئوالی توی <a href="http://www.mathcomp.leeds.ac.uk/publications/" target="_blank" title="">انجمن ریاضی انگلستان</a> مطرح شده بود که ترکیبی از حساب و جبر بود. <br><br>بدین صورت که یک جدول ضرب 6در6 داده <a href="http://rahyarmath.ir/post/category/2" target="_blank" title="سئوال انجمن ریاضی انگلستان"><img src="http://s4.picofile.com/file/7736997090/mt.jpg" alt="سئوال ریاضی انجمن ریاضی انگلستان" align="right" border="0" hspace="6" vspace="6"></a>شده بود که بعضی از خانه های اون عدد داشتند و بقیه خالی بود <br>و مخصوصاً ستون و سطر اول که خود مولفه های ضرب رو تشکیل میدهند خالی بود و دانش آموز می بایست با راهبرد <a href="http://rahyarmath.ir/post/category/2" target="_blank" title=""><b><font color="#3333FF">تشکیل معادله</font></b></a><b><font color="#3333FF"></font></b> یا <a href="http://rahyarmath.ir/post/category/2" target="_blank" title="">حدس و آزمایش</a> و <a href="http://rahyarmath.ir/post/category/2" target="_blank" title="">حذف حالتهای نامطلوب</a> کم کم خانه های جدول را با اعداد مناسب پر کند و....<br><br>فرصتی پیدا کردم تا اون سئوال رو با کمی ویرایش ویژه <a href="http://rahyarmath.ir/post/category/2" target="_blank" title="">رهیار</a> به صورت یک <b><font color="#3333FF">معمای فلش</font></b> برای علاقه مندان به <a href="http://rahyarmath.ir/post/category/2" target="_blank" title="">ریاضی</a> و <a href="http://rahyarmath.ir/post/category/6" target="_blank" title="">سرگرمی</a> در بیارم که در ادامه مطلب میتونید اون رو ببینید و حل کنید.<br><br>توضیحات بیشتر درباره نحوه حل جدول رو در ادامه نوشته ام.</font><br>
+
+
+
+
+
+
+
+
+
+
+
+
+<br />
+				<br /><b><a href='../../../537.html'>ادامه مطلب</a></b>
+				<br /><br />
+                <script>mihanblogPostLike('537','like')</script><br />
+           <div class=barchasb>
+                			طبقه بندی: <a  href="../../../../Cat/2.aspx.html">
+			ریاضیات</a>، <a  href="../../../../Cat/6.aspx.html">
+			معما و سرگرمی</a>، <br />										برچسب ها:
+													<a href="../../../tag/سئوال&#32;ریاضی.html" >سئوال ریاضی</a>،
+													<a href="../../../tag/المپیاد&#32;ریاضی.html" >المپیاد ریاضی</a>،
+													<a href="../../../tag/انجمن&#32;ریاضی&#32;انگلستان.html" >انجمن ریاضی انگلستان</a>،
+													<a href="../../../tag/جبر.html" >جبر</a>،
+													<a href="../../../tag/تشکیل&#32;معادله.html" >تشکیل معادله</a>،
+													<a href="../../../tag/حدس&#32;و&#32;آزمایش.html" >حدس و آزمایش</a>،
+													<a href="../../../tag/حذف&#32;حالتهای&#32;نامطلوب.html" >حذف حالتهای نامطلوب</a>،
+						
+					<br />											دنبالک ها:
+													<a href="http://rahyarmath.ir/post/category/2"  target="_blank">
+						بقیه سئوالات ریاضی رهیار</a>،
+						
+					<br /><br />
+			</div>
+            </div>
+            
+
+				</div>
+
+			<div class=post3><div class=post33>
+				<div class=date>نوشته شده در تاریخ یکشنبه 1 اردیبهشت 1392 توسط
+
+محسن</div>
+				<div class=nazar>
+	      <a target="_self" href="../../../537.html#commentlist" >نظرات (<script>setCommentCnt(537)</script>)</a>
+        </div></div></div>
+  </br>
+
+			<div class=div54 style="background:#badb44;">
+
+</div>
+			
+			
+			<div class=page>
+			(تعداد کل صفحات:28)     			<a href="3.html">
+			<i>...</i></a>  			<a href="4.html">
+			<span>4</span></a>  			<a href="5.html">
+			<span>5</span></a>  			<a href="6.html">
+			<span>6</span></a>  			<a href="7.html">
+			<b>7</b></a>  			<a href="8.html">
+			<span>8</span></a>  			<a href="9.html">
+			<span>9</span></a>  			<a href="10.html">
+			<span>10</span></a>  			<a href="11.html">
+			<i>...</i></a>  </div>			</div>
+
+
+						</td>
+			<td width="220" valign="top">
+			<div class=menur>
+			<div class=tmenu>
+			<div class=tmenu2>
+			<b>درباره رهیار</b></div></div>
+			<div class=xmenu>  <div class=menu-txt2>
+<div style="text-align:center;"><img src="http://static.mihanblog.com//public/user_data/web_photo/30/88675.jpg?1490"  /></div>
+<br />
+سلام دوست من<br />
+به رهیار خوش اومدید<br />
+سعی کردم با نوشتن سئوالات ریاضی(دوره متوسطه اول) و آموزش مفاهیم هندسه به روش پویا  و بیان معماهای سرگرم کننده ریاضی  اینجا پاتوقی باشه  سرگرم کننده و شاد و  در عین حال مفید, واسه همه اونهایی که به  حل مسائل ریاضی و  کشف جواب معماها و سرگرمی های ریاضی علاقه مند هستند, اعم از دانش آموزان , معلمان و ریاضیدوستان .<br />
+هر موقع فرصتی پبش بیاد سعی میکنم نرم افزارهایی کوچک برای آموزش یک مفهوم ریاضی دوره  ابتدایی , راهنمایی یا دبیرستان بسازم. امیدوارم اگر شما هم از اونها استفاده کردید نظرتون رو درباره اونها برام بنویسید تا  اشکالات احتمالی اونها رو  با یاری هم برطرف کنیم.<br />
+انگیزه ای که  یک نویسنده وب رو به ادامه کارش ترغیب میکنه,بازخوردی است که از کاربران دریافت میکنه,پس  این لطف رو  بکنید و با نظرات مثبت و سازنده تون  چراغ راه  آینده رهیار باشید.<br />
+سپاسگزارم :-)<br />
+</div></div>
+			<div class=s></div></div>
+
+
+			<div class=menur>
+			<div class=tmenu>
+			<div class=tmenu2>
+			<b>موضوعات</b></div></div>
+			<div class=xmenu><div class=menu-txt>
+				<a href="../../13.html">پازل های منطقی
+(8)</a></div><div class=menu-txt>
+				<a href="../../../../Cat/2.aspx.html">ریاضیات
+(237)</a></div><div class=menu-txt>
+				<a href="../../../../Cat/6.aspx.html">معما و سرگرمی
+(219)</a></div><div class=menu-txt>
+				<a href="../../10.html">آموزش هندسه
+(47)</a></div><div class=menu-txt>
+				<a href="../../14.html">جئوجبرا
+(4)</a></div><div class=menu-txt>
+				<a href="../../../../Cat/7.aspx.html">نرم افزار های ریاضی رهیار
+(26)</a></div><div class=menu-txt>
+				<a href="../../11.html">بازیهای ریاضی
+(44)</a></div><div class=menu-txt>
+				<a href="../../../../Cat/3.aspx.html">ترفندهای کامپیوتر
+(51)</a></div><div class=menu-txt>
+				<a href="../../9.html">مقالات و تحقیقات ریاضی
+(12)</a></div><div class=menu-txt>
+				<a href="../../../../Cat/4.aspx.html">داستان
+(28)</a></div><div class=menu-txt>
+				<a href="../../../../Cat/5.aspx.html">زندگینامه بزرگان
+(19)</a></div><div class=menu-txt>
+				<a href="../../../../Cat/1.aspx.html">عمومی
+(61)</a></div><div class=menu-txt>
+				<a href="../../12.html">تصویر از من،پیام از شما
+(4)</a></div></div>
+			<div class=s></div></div>
+						<div class=menur>
+			<div class=tmenu>
+			<div class=tmenu2>
+			<b>آرشیو مطالب</b></div></div>
+			<div class=xmenu>
+			<div class=menu-txt>
+				<a href="../../../archive/1399/6.html"> شهریور 1399
+</a></div><div class=menu-txt>
+				<a href="../../../archive/1396/10.html"> دی 1396
+</a></div><div class=menu-txt>
+				<a href="../../../archive/1395/10.html"> دی 1395
+</a></div><div class=menu-txt>
+				<a href="../../../archive/1395/9.html"> آذر 1395
+</a></div><div class=menu-txt>
+				<a href="../../../archive/1395/8.html"> آبان 1395
+</a></div><div class=menu-txt>
+				<a href="../../../archive/1395/3.html"> خرداد 1395
+</a></div><div class=menu-txt>
+				<a href="../../../archive/1395/2.html"> اردیبهشت 1395
+</a></div><div class=menu-txt>
+				<a href="../../../archive/1394/12.html"> اسفند 1394
+</a></div><div class=menu-txt>
+				<a href="../../../archive/1394/9.html"> آذر 1394
+</a></div><div class=menu-txt>
+				<a href="../../../archive/1394/8.html"> آبان 1394
+</a></div><div class=menu-txt>
+				<a href="../../../archive/1394/3.html"> خرداد 1394
+</a></div><div class=menu-txt>
+				<a href="../../../archive/1394/2.html"> اردیبهشت 1394
+</a></div><div class=menu-txt>
+				<a href="../../../archive/1393/11.html"> بهمن 1393
+</a></div><div class=menu-txt>
+				<a href="../../../archive/1393/10.html"> دی 1393
+</a></div><div class=menu-txt>
+				<a href="../../../archive/1393/8.html"> آبان 1393
+</a></div><div class=menu-txt>
+				<a href="../../../archive/1393/7.html"> مهر 1393
+</a></div><div class=menu-txt>
+				<a href="../../../archive/1393/5.html"> مرداد 1393
+</a></div><div class=menu-txt>
+				<a href="../../../archive/1393/4.html"> تیر 1393
+</a></div><div class=menu-txt>
+				<a href="../../../archive/1393/3.html"> خرداد 1393
+</a></div><div class=menu-txt>
+				<a href="../../../archive/1393/2.html"> اردیبهشت 1393
+</a></div><div class=menu-txt>
+				<a href="../../../archive/1393/1.html"> فروردین 1393
+</a></div><div class=menu-txt>
+				<a href="../../../archive/1392/12.html"> اسفند 1392
+</a></div><div class=menu-txt>
+				<a href="../../../archive/1392/11.html"> بهمن 1392
+</a></div><div class=menu-txt>
+				<a href="../../../archive/1392/10.html"> دی 1392
+</a></div><div class=menu-txt>
+				<a href="../../../archive/1392/9.html"> آذر 1392
+</a></div><div class=menu-txt>
+				<a href="../../../archive/1392/8.html"> آبان 1392
+</a></div><div class=menu-txt>
+				<a href="../../../archive/1392/7.html"> مهر 1392
+</a></div><div class=menu-txt>
+				<a href="../../../archive/1392/6.html"> شهریور 1392
+</a></div><div class=menu-txt>
+				<a href="../../../archive/1392/5.html"> مرداد 1392
+</a></div><div class=menu-txt>
+				<a href="../../../archive/1392/4.html"> تیر 1392
+</a></div><div class=menu-txt>
+				<a href="../../../archive/1392/3.html"> خرداد 1392
+</a></div><div class=menu-txt>
+				<a href="../../../archive/1392/2.html"> اردیبهشت 1392
+</a></div><div class=menu-txt>
+				<a href="../../../archive/1392/1.html"> فروردین 1392
+</a></div><div class=menu-txt>
+				<a href="../../../archive/1391/12.html"> اسفند 1391
+</a></div><div class=menu-txt>
+				<a href="../../../archive/1391/11.html"> بهمن 1391
+</a></div><div class=menu-txt>
+				<a href="../../../archive/1391/10.html"> دی 1391
+</a></div><div class=menu-txt>
+				<a href="../../../archive/1391/9.html"> آذر 1391
+</a></div><div class=menu-txt>
+				<a href="../../../archive/1391/8.html"> آبان 1391
+</a></div><div class=menu-txt>
+				<a href="../../../archive/1391/7.html"> مهر 1391
+</a></div><div class=menu-txt>
+				<a href="../../../archive/1391/6.html"> شهریور 1391
+</a></div><div class=menu-txt>
+				<a href="../../../archive/1391/5.html"> مرداد 1391
+</a></div><div class=menu-txt>
+				<a href="../../../archive/1391/4.html"> تیر 1391
+</a></div><div class=menu-txt>
+				<a href="../../../archive/1391/3.html"> خرداد 1391
+</a></div><div class=menu-txt>
+				<a href="../../../archive/1391/2.html"> اردیبهشت 1391
+</a></div></div>
+			<div class=s></div></div>
+
+
+
+
+
+
+			<div class=menur>
+			<div class=tmenu>
+			<div class=tmenu2>
+			<b>آخرین نوشته های رهیار</b></div></div>
+			<div class=xmenu>
+			<div class=menu-txt>
+				<a href="../../../766.html">سال تحصیلی جدید
+</a></div><div class=menu-txt>
+				<a href="../../../751.html">اپلیکیشن اندرویدی &quot;کی بزرگتره؟&quot; ویژه کلاس نهم
+</a></div><div class=menu-txt>
+				<a href="../../../764.html">آموزش جئوجبرا: کار با نمای 3بعدی در جئوجبرا
+</a></div><div class=menu-txt>
+				<a href="../../../762.html">یک عدد شگفت انگیز
+</a></div><div class=menu-txt>
+				<a href="../../../761.html">اثبات یک رابطه هندسه به صورت شهودی
+</a></div><div class=menu-txt>
+				<a href="../../../760.html">آموزش جئوجبرا:شبیه سازی جمع دوعددصحیح و محاسبه پاسخ آن
+</a></div><div class=menu-txt>
+				<a href="../../../759.html">آموزش جئوجبرا ۱
+</a></div><div class=menu-txt>
+				<a href="../../../758.html"> انتقال شکلهای هندسی کشیده شده در جئوجبرا به محیط ورد
+</a></div><div class=menu-txt>
+				<a href="../../../756.html">چند نمونه سوال ریاضی پایه نهم  امسالی داغ داغ !!!
+</a></div><div class=menu-txt>
+				<a href="../../../755.html">جدیدترین اپلیکیشن ساخت رهیار رو دیدین؟
+</a></div><div class=menu-txt>
+				<a href="../../../754.html">نمونه سوالات ریاضی خردادماه  پایه نهم 
+</a></div><div class=menu-txt>
+				<a href="../../../753.html">اپلیکیشن اندرویدی«شمارش مکعبها»
+</a></div>				<div class=menu-txt>
+				<a href="../../../list.html"><b>لیست آخرین
+			مطالب</b></a></div>
+				</div>
+			<div class=s></div></div>
+
+
+			<div class=menur>
+			<div class=tmenu>
+			<div class=tmenu2>
+			<b>آمار بازدید از رهیار</b></div></div>
+			<div class=xmenu><div class=menu-txt2>
+			بازدیدهای امروز : <span><script>getStatVar('today_view');</script></span> نفر<br />
+بازدیدهای دیروز : <span><script>getStatVar('yesterday_view');</script></span> نفر<br />
+كل بازدیدها : <span><script>getStatVar('total_view');</script></span> نفر<br />
+بازدید این ماه :<span> <script>getStatVar('this_month_view');</script></span> نفر<br />
+بازدید ماه قبل : <span><script>getStatVar('last_month_view');</script></span> نفر<br />
+تعداد نویسندگان : <span><script>getStatVar('total_author');</script></span> عدد<br />
+كل مطالب : <span><script>getStatVar('total_post');</script></span> عدد<br />
+آخرین بازدید : <span><script>getStatVar('last_view_date');</script></span><br />
+آخرین بروز رسانی : <span><script>getStatVar('modify_date');</script></span>
+				</div></div>			<div class=s></div></div>
+
+
+			</td>
+		</tr>
+		<tr>
+			<td width="1003" colspan="3" class="ft">
+			<div class="bala"></div>
+			تمامی حقوق این سایت محفوظ است.کپی برداری از مطالب بدون اجازه مدیر سایت شرعاً و عرفاً مجاز نمی
+
+باشد. </td>
+		</tr>
+	</table>
+</div>
+<script type=text/javascript>document.getElementById('s'+'e'+'o').style.display='none';</script>
+
+
+</body>
+</html><script>
+//    setTimeout(function () {
+//        GetMihanBlogShowAds();
+//    }, 1000);
+</script>
+<!--NEW SERVER--><!--;)-->
+
+<!--SabaVision Ads Handler--><!--<script type="text/javascript">(function (d) {var url =   location.protocol+'//api.sabavision.com/pox/poxjs.js';d.write('<script type="text/javascript" src="' + url + '" async></scri' + 'pt>');})(document);</script>-->
+
+
+<script type="text/javascript">
+
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-153829-9']);
+    _gaq.push(['_setDomainName', 'rahyar.mihanblog.com']);
+    _gaq.push(['_trackPageview']);
+
+    (function() {
+        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+
+</script>
+
+
+<div id='mediaad-Kvcm'></div>
+<meta name="sabavision_zone" content="2500-Z499" />
+<center>
+    <div style="background-color:white;width:90%;padding:20px;margin-top:50px;margin-bottom:50px;">
+        <a href="https://www.cloob.com">شبکه اجتماعی فارسی کلوب</a> | <a href="https://www.seo25.com/product/buy-mobile-traffic-and-get-cheap-targeted-mobile-traffic/" target="_blank">Buy Mobile Traffic</a> | <a href="https://www.soalaat.com">سایت سوالات</a>
+    </div>
+</center>

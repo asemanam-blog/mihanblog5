@@ -1,0 +1,1043 @@
+<!doctype html>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" /><link rel="EditURI" type="application/rsd+xml" title="RSD" href="../../xmlrpc@rsd.html" />
+<script type="text/javascript" src="../../../static.mihanblog.com/public/scripts/run/g.other.v3.js"></script>
+<script>
+
+	function c_$(id){
+        return document.getElementById(id);
+    }
+    
+			//if (parent.frames.length) top.location.href= document.location;
+		
+	setTodayDate = function(){
+		document.write('شنبه 22 آذر 1399');
+		/*1694810*/	}
+
+</script>
+
+
+
+        <script type="text/javascript">
+            (function(){
+            var now = new Date();
+            var head = document.getElementsByTagName('head')[0];
+            var script = document.createElement('script');
+            script.async = true;
+            var script_address = 'https://cdn.yektanet.com/js/mihanblog.com/native-mihanblog.com-6531.js';
+            script.src = script_address + '?v=' + now.getFullYear().toString() + '0' + now.getMonth() + '0' + now.getDate() + '0' + now.getHours();
+            head.appendChild(script);
+            })();
+        </script>
+
+        <!--<script type="text/javascript">
+            var head = document.getElementsByTagName("head")[0];
+            var script = document.createElement("script");
+            script.type = "text/javascript";
+            script.async=1;
+            script.src = "https://s1.mediaad.org/serve/mihanblog.com/loader.js" ;
+            head.appendChild(script);
+        </script>-->
+        
+        <script>
+            var sabaVisionWebsiteID = "9bab9dac-041d-4bdb-b39a-1ed789f65eed"; var sabaVisionWebsitePage = "ALL"
+        </script>
+        <link rel="stylesheet" href="https://plus.sabavision.com/dox/dox.min.css">
+        <script src="https://plus.sabavision.com/dox/dox.min.js"></script>
+        
+        <script>
+	try{
+		var commentCnt = new Array();
+		commentCnt[266]='0';commentCnt[267]='2';commentCnt[319]='0';commentCnt[320]='0';commentCnt[338]='0';commentCnt[339]='0';commentCnt[340]='0';commentCnt[341]='0';commentCnt[342]='0';commentCnt[344]='0';	} catch(e){}
+	
+	newComment = function(post_id){
+		try{
+			window.open('/post/comment/'+post_id,'comment','status=yes,scrollbars=yes,toolbar=no,menubar=no,location=no ,width=480px,height=540px');
+		} catch(e){}
+	}
+	setCommentCnt = function(post_id){
+		try{
+			if(commentCnt[post_id]){
+				document.write(commentCnt[post_id]);
+			} else {
+				document.write(0);
+			}
+		} catch(e){}
+	}
+</script><script>
+
+
+	mihanblogUpdateLike = function(postid,type){
+		var url = '/post/like/'+postid+'/'+type;
+		mihanblogGetAjax(url,function(){});
+	};
+	try{
+        mihanblogGetAjax = function (url,callback) {
+    		var req;
+			if (window.XMLHttpRequest)
+            {
+                // code for IE7+, Firefox, Chrome, Opera, Safari
+			  	req = new XMLHttpRequest();
+			}else{	// code for IE6, IE5
+			  	req = new ActiveXObject("Microsoft.XMLHTTP");
+		  	}
+		    req.open("GET", url, 1);
+		    req.onreadystatechange = function () {
+		        if (req.readyState == 4) {
+		            if (req.status == 200) {
+		            	var response = eval(req.responseText);
+		            	callback();
+		            }else{
+	            		return ;
+		            }
+		        }else{
+					return ;
+		        }
+		    }
+		    req.send(null);
+		}
+	}catch(e){}
+
+	try{
+		var mihanblogLikeArrCnt = new Array();
+		var mihanblogDisLikeArrCnt = new Array();
+
+		mihanblogLikeArrCnt[266]='1';
+mihanblogDisLikeArrCnt[266]='0';
+mihanblogLikeArrCnt[267]='1';
+mihanblogDisLikeArrCnt[267]='0';
+mihanblogLikeArrCnt[319]='0';
+mihanblogDisLikeArrCnt[319]='0';
+mihanblogLikeArrCnt[320]='0';
+mihanblogDisLikeArrCnt[320]='0';
+	} catch(e){}
+
+
+
+    mihanblogPostLike = function(post_id){
+
+        mihanblogLikeCnt = (mihanblogLikeArrCnt[post_id]? mihanblogLikeArrCnt[post_id] : 0);
+        mihanblogDisLikeCnt = (mihanblogDisLikeArrCnt[post_id]? mihanblogDisLikeArrCnt[post_id] : 0);
+        mihanblogLikeCnt = parseInt(mihanblogLikeCnt);
+        mihanblogDisLikeCnt = parseInt(mihanblogDisLikeCnt);
+
+        document.write(
+                '<div class="mihanblog_like_wrapper ">'+
+                       '<div id="dislikeBar_'+post_id+'" onclick="mihanblogUpdateLike('+post_id+',\'dislike\')"   class="mihanblog_like_bar mihanblog_like_dislikeBar mihanblog_like_show_help ">-<div class="mihanblog_like_Cnt" id="disLikeCnt_'+post_id+'">'+mihanblogDisLikeCnt+'</div>'+
+                            '<span  class="mihanblog_like_v2_help mihanblog_like_v2_help_dislike clearfix"> '+
+                                '<span class="mihanblog_like_help_arrow mihanblog_like_help_arrow_dislike clearfix"></span>'+
+                                '<span class="mihanblog_like_help_text">نمی پسندم</span>'+
+                            '</span>'+
+                        '</div>'+
+                       '<div id="Like_'+post_id+'" class="mihanblog_like_border"></div>'+
+                       '<div id="likeBar_'+post_id+'" onclick="mihanblogUpdateLike('+post_id+',\'like\')"  class="mihanblog_like_bar mihanblog_like_likeBar mihanblog_like_show_help" >+<div class="mihanblog_like_Cnt" id="likeCnt_'+post_id+'">'+mihanblogLikeCnt+'</div>'+
+                            '<span  class="mihanblog_like_v2_help mihanblog_like_v2_help_like clearfix"> '+
+                                '<span class="mihanblog_like_help_arrow mihanblog_like_help_arrow_like clearfix"></span>'+
+                                '<span class="mihanblog_like_help_text">می پسندم</span>'+
+                            '</span>'+
+                        '</div>'+
+
+                '</div>'
+        );
+
+
+
+        mihanblogDisplayeLike(post_id);
+    }
+
+
+    mihanblogDisplayeLike = function(post_id){
+
+        mihanblogLikeCnt = (mihanblogLikeArrCnt[post_id]? mihanblogLikeArrCnt[post_id] : 0);
+        mihanblogDisLikeCnt = (mihanblogDisLikeArrCnt[post_id]? mihanblogDisLikeArrCnt[post_id] : 0);
+        mihanblogLikeCnt = parseInt(mihanblogLikeCnt);
+        mihanblogDisLikeCnt = parseInt(mihanblogDisLikeCnt);
+
+
+
+        sum = mihanblogLikeCnt - mihanblogDisLikeCnt;
+        backgroundBorder =  document.getElementById('Like_'+post_id);
+        var likeObj = document.getElementById('likeCnt_'+post_id);
+        var disLikeObj = document.getElementById('disLikeCnt_'+post_id);
+
+
+
+
+
+        likeObj.innerHTML =  mihanblogLikeCnt ;
+        disLikeObj.innerHTML =  mihanblogDisLikeCnt;
+
+        if(sum == 0){
+            backgroundBorder.style.backgroundImage = "url('/public/public/images/icons/like_likedislike.png')";
+            document.getElementById('dislikeBar_'+post_id).style.width = '19px';
+            document.getElementById('likeBar_'+post_id).style.width = '19px';
+        }else{
+             if(sum > 0){
+                 backgroundBorder.style.backgroundImage = "url('/public/public/images/icons/like_like.png')";
+                 document.getElementById('likeBar_'+post_id).style.width = '23px';
+                 document.getElementById('dislikeBar_'+post_id).style.width = '15px';
+             }else{
+                 backgroundBorder.style.backgroundImage = "url('/public/public/images/icons/like_dislike.png')";
+                 document.getElementById('likeBar_'+post_id).style.width = '15px';
+                 document.getElementById('dislikeBar_'+post_id).style.width = '23px';
+             }
+        }
+
+    }
+
+
+
+
+</script>
+
+<style type="text/css">
+
+
+    .clearfix {display: inline-block;}
+    .clearfix:after {
+        content: ".";
+        display: block;
+        height: 0;
+        clear: both;
+        visibility: hidden;
+    }
+
+    .mihanblog_like_wrapper {
+        color: #ffffff;
+        direction: ltr;
+        position: relative;
+    }
+    .mihanblog_like_wrapper span{
+        display: none;
+    }
+    .mihanblog_like_bar {
+        color: #FFFFFF;
+        cursor: pointer;
+        float: left;
+        font-size: 10px;
+        height: 20px;
+        line-height: 19px;
+        margin: 5px 0;
+    }
+    .mihanblog_like_likeBar {
+        background-color: #88B131;
+        padding-right: 5px;
+        border-top-right-radius: 2px;
+        border-bottom-right-radius: 2px;
+        text-align: right;
+    }
+    .mihanblog_like_likeBar:hover{
+        background-color: #699017;
+    }
+    .mihanblog_like_border {
+        background-color: #666666;
+        border: 1px solid #666666;
+        float: left;
+        font-size: 12px;
+        height: 20px;
+        margin-top: 2px;
+        width: 25px;
+        padding: 3px 5px 2px 0;
+        text-align: center;
+        border-radius: 2px;
+        color: #ffffff;
+        direction: ltr;
+        background-repeat: no-repeat ;
+        background-position: 4px center;
+    }
+    .mihanblog_like_border img {
+        margin-left: 2px;
+        margin-top: 2px;
+        width: 22px;
+    }
+    .mihanblog_like_dislikeBar {
+        background-color: #FF6F31;
+        padding-left: 5px;
+        border-top-left-radius: 2px;
+        border-bottom-left-radius: 2px;
+        text-align:left ;
+    }
+    .mihanblog_like_dislikeBar:hover{
+        background-color: #D54B10;
+    }
+
+
+
+    .mihanblog_like_show_help {
+        position: relative;
+    }
+    .mihanblog_like_show_help:hover span {
+        display: block;
+    }
+    .mihanblog_like_help_text {
+        background-color: white;
+        border: 1px solid #555555;
+        border-radius: 3px 3px 3px 3px;
+        color: #303030;
+        float: left;
+        font-size: 11px;
+        font-weight: normal;
+        padding: 5px 10px;
+    }
+
+    .mihanblog_like_help_arrow_dislike {
+        background: url("http://kanoonrezvan92.mihanblog.com/public/public/images/icons/like_hover_top.png") no-repeat scroll 16px 0 transparent;
+        left: 0;
+        top: -4px;
+    }
+
+    .mihanblog_like_help_arrow_like {
+        background: url("http://kanoonrezvan92.mihanblog.com/public/public/images/icons/like_hover_top _2.png") no-repeat scroll 16px 0 transparent;
+        left: -10px;
+        top: 29px;
+    }
+
+    .mihanblog_like_help_arrow{
+        height: 6px;
+        position: absolute;
+        width: 100px;
+
+    }
+
+    .mihanblog_like_v2_help_dislike {
+        left: -15px;
+        top: 24px;
+    }
+    .mihanblog_like_v2_help_like {
+        left: 0;
+        top: -35px;
+
+    }
+    .mihanblog_like_v2_help{
+        display: none;
+        position: absolute;
+        white-space: nowrap;
+        z-index: 1;
+    }
+
+    .mihanblog_like_Cnt{
+        display: inline;
+        color: #ffffff;
+    }
+
+</style><script>
+
+	statInfo = new Array();
+	setStatVar = function(index,value){
+		statInfo[index] = value;
+	}
+	getStatVar = function(index){
+		if(statInfo[index]) document.write(statInfo[index]);
+	}
+	
+	setStatVar('total_post','215');
+	setStatVar('total_author','2');
+	setStatVar('modify_date','یکشنبه 13 بهمن 1398');
+	
+	setStatVar('today_view','52');
+	setStatVar('yesterday_view','62');
+	
+	setStatVar('this_month_view','1681');
+	setStatVar('last_month_view','2547');
+
+	setStatVar('total_view','151824');
+	setStatVar('last_view_date','شنبه 22 آذر 1399 (14:43)');
+
+
+
+    
+    function setStatFromClient()
+    {
+        var url = 'http://kanoonrezvan92.mihanblog.com/statupdate/?data[refereruri]=http://kanoonrezvan92.mihanblog.com/post/81&data[postid]=&data[requesturi]=/post/category/8&data[sdate]=1607772492&data[hash]=47d96eaaeaa9cb9ea2422e8f9ac2345a&data[resolution]='+screen.width+' X '+screen.height;
+
+//        alert(url);
+//        var newjs = document.createElement("SCRIPT");
+//        newjs.type = 'text/javascript';
+//        newjs.src = url;
+//
+//        var newdiv = document.createElement("DIV");
+//        newdiv.setAttribute("style","display:none");
+
+        document.write(unescape('%3Cscript src="'+url+'" type="text/javascript"%3E%3C/script%3E'));
+//        newdiv.appendChild (newjs);
+//        document.write(newjs);
+//        document.write(appendChild (newdiv);
+
+    };
+    setStatFromClient();
+        
+</script><script>
+	messageForm = function(post_id){
+		try{
+			window.open('/message','message','status=yes,scrollbars=yes,toolbar=no,menubar=no,location=no ,width=480px,height=550px');
+		} catch(e){}
+	}
+</script><script>
+	linkdailyForm = function(){
+		try{
+			window.open('/linkdaily/new','linkdaily','status=yes,scrollbars=yes,toolbar=no,menubar=no,location=no ,width=500px,height=460px');
+		} catch(e){}
+	}
+</script><script>
+
+var MihanblogShopAdsArray = new Array();
+
+function GetMihanBlogShowAds(){
+	if(MihanblogShopAdsArray.length){
+		var adsTarget = 'MihanblogShopAds';
+		var containerWidth = document.getElementById(adsTarget).offsetWidth;
+		if(containerWidth>=200){
+			var adsCnt = parseInt(containerWidth / 200) ;
+			if(adsCnt>MihanblogShopAdsArray.length){
+				adsCnt = MihanblogShopAdsArray.length ; 
+			}
+//			var OneAdsWidth = parseInt(containerWidth / adsCnt) ;
+			var OneAdsWidth = containerWidth / adsCnt ;
+			if(OneAdsWidth>400){
+				OneAdsWidth = 400 ;
+			}
+			var OutHtml = '';
+			var img = '';
+			var link = '';
+			var title = '';
+			var description = '';
+			var imgWidth = 70;
+			if(OneAdsWidth>230){
+				imgWidth = 80;
+			}
+			if(OneAdsWidth>300){
+				imgWidth = 90;
+			}
+			for(adsOne=0;adsOne<adsCnt;adsOne++){
+				
+				img = MihanblogShopAdsArray[adsOne]['img'];
+				link = MihanblogShopAdsArray[adsOne]['link'];
+				title = MihanblogShopAdsArray[adsOne]['title'];
+				description = MihanblogShopAdsArray[adsOne]['description'];
+				
+				OutHtml += '<td style="background-color:#FFF;width: '+OneAdsWidth+'px;border:1px solid #f00;margin:0px 0px;font-size:11px;font-family:tahoma;padding:2px;margin:0px 0px;font-size:11px;border: 1px solid BurlyWood; padding: 1px; height: '+(imgWidth+25)+'px;">';
+
+				OutHtml += '	<a href="http://kanoonrezvan92.mihanblog.com/post/category/'+link+'" target="_blank" style="text-decoration:none">';
+
+				OutHtml += '			<div style="width: '+(OneAdsWidth-16)+'px;cursor:pointer;font-size:12px;padding: 4px 1px 4px 7px; white-space: nowrap; text-align: center; font-weight: bold; color: blue;white-space:nowrap;overflow:hidden">';
+				OutHtml += 					title;
+				OutHtml += '			</div>';
+				OutHtml += '			<div style="cursor:pointer;padding: 1px; display: block; float: right; width: '+imgWidth+'px;">';
+				OutHtml += '				<img src="'+img+'.html" style="border:0px;padding:0px;margin:0px;width:'+imgWidth+'px;height:'+imgWidth+'px;">';
+				OutHtml += '			</div>';
+				OutHtml += '			<div style="padding: 1px; display: block; float: right; width: '+(OneAdsWidth-13-imgWidth)+'px; text-align: right;overflow:hidden">';
+				OutHtml += '				<div style="overflow:hidden;cursor:pointer;padding: 2px 3px; line-height: 17px; height: '+(imgWidth-3)+'px; text-align: justify;color:#000;direction:rtl">';
+				OutHtml += 						description;
+				OutHtml += '				</div>';
+				OutHtml += '			</div>';
+
+				OutHtml += '	</a>';
+
+				OutHtml += '</td>';
+			}
+			
+			var Out = '<table align="center" cellpadding="0" cellspacing="2" style="width:'+(OneAdsWidth*adsCnt)+'px;"><tr>'+OutHtml+'</tr></table>'; 
+			
+			Out = '<div style="text-align:center;padding:0px;margin:3px auto;">'+Out+'</div>'; 
+			
+			document.getElementById(adsTarget).style.height = (imgWidth+35)+'px' ;
+			document.getElementById(adsTarget).innerHTML = Out ;
+		}
+	}
+}
+</script>
+    <style>
+        @font-face {
+            font-family: 'Mihan-Iransans';
+            src: url('http://kanoonrezvan92.mihanblog.com/public/public/fonts/Iransans.eot');
+            src: url('http://kanoonrezvan92.mihanblog.com/public/public/fonts/Iransans.eot?') format('embedded-opentype'),
+            url('http://kanoonrezvan92.mihanblog.com/public/public/fonts/Iransans.woff2') format('woff2'),
+            url('http://kanoonrezvan92.mihanblog.com/public/public/fonts/Iransans.woff') format('woff'),
+            url('http://kanoonrezvan92.mihanblog.com/public/public/fonts/Iransans.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+        @font-face {
+            font-family: 'Mihan-IransansBold';
+            src: url('http://kanoonrezvan92.mihanblog.com/public/public/fonts/Iransans-Black.eot');
+            src: url('http://kanoonrezvan92.mihanblog.com/public/public/fonts/Iransans-Black.eot?') format('embedded-opentype'),
+            url('http://kanoonrezvan92.mihanblog.com/public/public/fonts/Iransans-Black.woff2') format('woff2'),
+            url('http://kanoonrezvan92.mihanblog.com/public/public/fonts/Iransans-Black.woff') format('woff'),
+            url('http://kanoonrezvan92.mihanblog.com/public/public/fonts/Iransans-Black.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+        @font-face {
+            font-family: 'Mihan-IransansLight';
+            src: url('http://kanoonrezvan92.mihanblog.com/public/public/fonts/Iransans-UltraLight.eot');
+            src: url('http://kanoonrezvan92.mihanblog.com/public/public/fonts/Iransans-UltraLight.eot?') format('embedded-opentype'),
+            url('http://kanoonrezvan92.mihanblog.com/public/public/fonts/Iransans-UltraLight.woff2') format('woff2'),
+            url('http://kanoonrezvan92.mihanblog.com/public/public/fonts/Iransans-UltraLight.woff') format('woff'),
+            url('http://kanoonrezvan92.mihanblog.com/public/public/fonts/Iransans-UltraLight.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+        @font-face {
+            font-family: 'Mihan-Nassim';
+            src: url('http://kanoonrezvan92.mihanblog.com/public/public/fonts/Nassim.eot');
+            src: url('http://kanoonrezvan92.mihanblog.com/public/public/fonts/Nassim.eot?') format('embedded-opentype'),
+            url('http://kanoonrezvan92.mihanblog.com/public/public/fonts/Nassim.woff2') format('woff2'),
+            url('http://kanoonrezvan92.mihanblog.com/public/public/fonts/Nassim.woff') format('woff'),
+            url('http://kanoonrezvan92.mihanblog.com/public/public/fonts/Nassim.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+        @font-face {
+            font-family: 'Mihan-Koodak';
+            src: url('http://kanoonrezvan92.mihanblog.com/public/public/fonts/Koodak.eot');
+            src: url('http://kanoonrezvan92.mihanblog.com/public/public/fonts/Koodak.eot?') format('embedded-opentype'),
+            url('http://kanoonrezvan92.mihanblog.com/public/public/fonts/Koodak.woff2') format('woff2'),
+            url('http://kanoonrezvan92.mihanblog.com/public/public/fonts/Koodak.woff') format('woff'),
+            url('http://kanoonrezvan92.mihanblog.com/public/public/fonts/Koodak.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+        @font-face {
+            font-family: 'Mihan-Yekan';
+            src: url('http://kanoonrezvan92.mihanblog.com/public/public/fonts/Yekan.eot');
+            src: url('http://kanoonrezvan92.mihanblog.com/public/public/fonts/Yekan.eot?') format('embedded-opentype'),
+            url('http://kanoonrezvan92.mihanblog.com/public/public/fonts/Yekan.woff2') format('woff2'),
+            url('http://kanoonrezvan92.mihanblog.com/public/public/fonts/Yekan.woff') format('woff'),
+            url('http://kanoonrezvan92.mihanblog.com/public/public/fonts/Yekan.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+        @font-face {
+            font-family: 'FontAwesome';
+            src: url('http://kanoonrezvan92.mihanblog.com/public/public/fonts/fontawesome_webfont.eot');
+            src: url('http://kanoonrezvan92.mihanblog.com/public/public/fonts/fontawesome_webfont.eot?') format('embedded-opentype'),
+            url('http://kanoonrezvan92.mihanblog.com/public/public/fonts/fontawesome_webfont.woff2') format('woff2'),
+            url('http://kanoonrezvan92.mihanblog.com/public/public/fonts/fontawesome_webfont.woff') format('woff'),
+            url('http://kanoonrezvan92.mihanblog.com/public/public/fonts/fontawesome_webfont.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+
+
+        
+
+        /* Smartphones (portrait and landscape) ----------- */
+
+        /*
+        @media only screen and (max-width : 480px) and (min-width : 320px) {
+            .sabaClick_advert__wrapper{
+                display:block;
+            }
+            .sabaClick_advert__inner{
+                max-width: 90%;
+                margin: 0 5%;
+            }
+        }
+        */
+
+    </style>
+
+
+
+
+
+
+<div id="first_p" style="text-align: center; margin-top: 5px;"><a onclick="document.getElementById('main_p').style.display = 'block';document.getElementById('first_p').style.display = 'none';" href="8.html#"><img src="../../../file.mihanblog.com/public/user_data/user_files/565/1694810/sssssss.jpg" border="0"></a><div style="padding:4px; position:fixed; bottom:2px; left:4px;"><a style="border:0px;" href="http://code.sarayedownload.ir/page-entry-blog/" target="_blank" title="دریافت کد صفحه ورودی"><img style="margin:0px; border:none;border-radius:0px;" src="http://c.sarayedownload.ir/blogcod/entry/img/get.png" /></a></div></div><div id="main_p" style="display: none;"><div style="display:none"><h1 style="font-size:12px"><a title="کد صفحه ورودی" rel="follow" href="http://code.sarayedownload.ir/page-entry-blog/" >کد صفحه ی ورودی وبلاگ</a></h1></div><br>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+
+<head>
+<meta http-equiv="content-type" content="text/html;charset=utf-8"/>
+<link rel="shortcut icon" href="http://up.ghalebgraph.ir/up/galebgraph/posts/theme/web/yargomnam2/img/fav.png"/>
+<meta name="robots" content="index,follow,all"/>
+<link rel="alternate" type="application/rss+xml" title="کانون فرهنگی تبلیغی رضوان" href="../rss/index.html"/>
+<meta name="keyword" content="کانون رضوان , رضوان , حسام اسکندری , محمد عسگری , فولادشهر , شهدای اسلام , روشنگری , kanoon rezvan , rezvan , kanoonrezvan">
+
+<meta name="description" content=" وبلاگ کانون فرهنگی تبلیغی رضوان با مدیریت حسام اسکندری و محمد عسگری در سال 1392 شروع به کار کرد.">
+<meta name="author" content=" حسام اسکندری , محمد عسگری ">
+<title>کانون فرهنگی تبلیغی رضوان - مطالب حکمت الهی</title>
+<link rel="stylesheet" href="http://up.ghalebgraph.ir/up/galebgraph/posts/theme/web/yargomnam2/style.css" type="text/css" media="screen"/>
+<style>
+body {
+    background-position: top center;
+    background-repeat: repeat-x;
+    background-image: url(http://up.ghalebgraph.ir/up/galebgraph/posts/theme/web/yargomnam2/img/bg.jpg);
+    background-color: #095056;
+}
+</style>
+</head>
+<body>
+<h1>کانون فرهنگی تبلیغی رضوان - مطالب حکمت الهی</h1>
+<div class="bg">
+<aside class="header"></aside>
+
+<div class="main">
+<div class="links">
+<ul>
+<li><a href="../../index.html">خانه</a></li>
+<li><a href="../author/1406363.html">تمام مطالب مدیر وبلاگ</a></li>
+<li><a href="http://kanoonrezvan92.mihanblog.com/m/">نسخه موبایل</a></li>
+<li><a href="../atom/index.html">اتوم</a></li>
+<li><a href="../rss/index.html">خوراک</a></li>
+<li><a href="javascript:messageForm()">ارتباط با ما</a></li>
+<div class="clear"></div>
+</ul>
+</div>
+<div class="search">
+<form class="search" target="_blank" method="get" action="http://www.google.com/search">
+<input name="q" type="text" placeholder="دنبال چیزی هستید ؟ ...">
+<input type="submit" name="btnG" value="برام بگرد ! ">
+<input type="hidden" value="http://kanoonrezvan92.mihanblog.com" type="radio" name="sitesearch" checked>
+<input type="hidden" name="ie" value="UTF-8">
+<input type="hidden" name="oe" value="UTF-8">
+</form>
+
+
+</div>
+<div class="clear"></div>
+</div>
+
+<aside class="text">
+دعای فرج :
+<marquee scrollamount="3" scrolldelay="3" direction="right" behavior="scroll">اِلهی عَُظمَ الْبَلاءُ وَ بَرِحَ الْخَفآءُ وَ انْکَشَفَ الْغِطآءُ وَ انْقَطَعَ الرَّجآءُ وَ ضاقَتِ الاَْرْضُ وَ مُنِعَتِ السَّمآءُ وَ اَنْتَ الْمُسْتَعانُ وَ اِلَیْکَ الْمُشْتَکی وَ عَلَیْکَ الْمُعَوَّلُ فِی الشِّدَّةِ وَ الرَّخآءِ اَللّهُمَّ صَلِّ عَلی مُحَمَّد وَ الِ مُحَمَّد اُولِی الاَْمْرِ الَّذینَ فَرَضْتَ عَلَیْنا طاعَتَهُمْ وَ عَرَّفْتَنا بِذلِکَ مَنْزِلَتَهُمْ فَفَرِّجْ عَنّا بِحَقِّهِمْ فَرَجاً عاجِلا قَریباً کَلَمْحِ الْبَصَرِ اَوْ هُوَ اَقْرَبُ یا مُحَمَّدُ یا عَلِیُّ یا عَلِیُّ یا مُحَمَّدُ اِکْفِیانی فَاِنَّکُما کافِیانِ وَ انْصُرانی فَاِنَّکُما ناصِرانِ یا مَوْلانا یا صاحِبَ الزَّمانِ الْغَوْثَ الْغَوْثَ الْغَوْثَ اَدْرِکْنی اَدْرِکْنی اَدْرِکْنی السّاعَةَ السّاعَةَ السّاعَةَ الْعَجَلَ الْعَجَلَ الْعَجَلَ یا اَرْحَمَ الرّاحِمینَ بِحَقِّ مُحَمَّد وَ الِهِ الطّاهِرینَ.</marquee>
+</aside>
+
+<div class="body">
+
+<a href="8.html#"><div style="text-align: center;"><img style="margin-top:-2px" alt="عنوان عکس" title="عنوان عکس" src="http://up.ghalebgraph.ir/up/galebgraph/posts/theme/web/yargomnam2/img/photo_2015-10-15_03-31-31.jpg" /></div></a>
+
+<div style="overflow:hidden;">
+<aside class="block-1">
+<div class="b1-head">آگهی های تصویری</div>
+<div class="b1-text">
+<div class="ads120">
+<a target="_blank" href="../../extrapage/tabligh.html#"><img alt="عنوان عکس" title="" src="http://up.ghalebgraph.ir/up/galebgraph/posts/theme/web/yargomnam2/img/ads1.jpg"/></a>
+<a target="_blank" href="../../extrapage/tabligh.html#"><img alt="" title="عنوان عکس" src="http://up.ghalebgraph.ir/up/galebgraph/posts/theme/web/yargomnam2/img/ads1.jpg"/></a>
+</div>
+</div>
+</aside>
+
+<div style="float:right;margin:-16px 5px 0px ;">
+<script type="text/javascript" src="http://up.ghalebgraph.ir/up/galebgraph/posts/theme/web/yargomnam2/jquery30.js"></script>
+<script language="JavaScript" src="http://up.ghalebgraph.ir/up/galebgraph/posts/theme/web/yargomnam2/slider2.js" type="text/javascript"></script>
+<script language="JavaScript" type="text/javascript">
+/*<![CDATA[*/
+var wwidth = 569;
+var hheight = 261;
+var ttime = 3000;
+var trantime = 800;
+/*]]>*/
+</script>
+<div id="slidercode" class="thethe_image_slider white-rounded"><div id="animate">
+<div id="imag1"><img src="http://up.ghalebgraph.ir/up/galebgraph/posts/theme/web/yargomnam2/img/17.jpg" alt=" عنوان عکس " title="عنوان عکس"><a href="8.html#" target="_blank"><span class="ws-title">یک روز صبح ...</span></a></div>
+<div id="imag2" ><img src="http://up.ghalebgraph.ir/up/galebgraph/posts/theme/web/yargomnam2/img/11.jpg" alt=" عنوان عکس " title="عنوان عکس"><a href="8.html#" target="_blank"><span class="ws-title">چشم به راهم</span></a></div>
+<div id="imag3" ><img src="http://up.ghalebgraph.ir/up/galebgraph/posts/theme/web/yargomnam2/img/12.jpg" alt=" عنوان عکس " title="عنوان عکس"><a href="8.html#" target="_blank"><span class="ws-title">مهدی آمد</span></a></div>
+</div>
+</div>  
+</div>
+
+<aside class="block-2">
+<a target="_blank" href="../../index.html#"><img alt="عنوان عکس" title="عنوان عکس" src="../../../file.mihanblog.com/public/user_data/user_files/565/1694810/rezvan.gif"/></a>
+</aside>
+
+</div>
+
+
+<div class="ads468">
+<a target="_blank" href="../../index.html#"><img href="8.html#"alt="عنوان" title="عنوان" src="../../../file.mihanblog.com/public/user_data/user_files/565/1694810/REZVAN2.gif">
+<a target="_blank" href="../../extrapage/tabligh.html#"><img alt="عنوان" title="عنوان" src="http://up.ghalebgraph.ir/up/galebgraph/posts/theme/web/yargomnam2/img/ads2.gif">
+</div>
+
+<div id="right">
+
+<form id="frm-16076358425fd2938215c83" method="get" action="http://kanoonrezvan92.mihanblog.com/post/search/fid/16076358425fd2938215c83"  onsubmit="window.open('', 'search', 'toolbar=0,location=0,status=0,menubar=0,scrollbars=1,resizable=0,width=400,height=310')" target="search"> 
+<aside class="block-1">
+<div class="b1-head">جستجو</div>
+<div class="b1-text">
+<div align="center"><input type="text" placeholder="جستجو در سایت ...." name="search_text"></div>
+<div align="center"><input type="submit" value="جستجو" style="font-family: Tahoma; font-size: 9pt"></div>
+</div>
+</aside>
+<input type="hidden" name="frm-id" value="16076358425fd2938215c83" id="frm-id" /></form>
+<aside class="block-1">
+<div class="b1-head">موضوعات</div>
+<div class="b1-text">
+<ul><li><h3><a href="9.html">مناسبت ها (17)</a></h3></li><li><h3><a href="8.html">حکمت الهی (14)</a></h3></li><li><h3><a href="7.html">روشنگری (17)</a></h3></li><li><h3><a href="1.html">شهدا ی اسلام (67)</a></h3></li><li><h3><a href="2.html">معرفی کتاب (8)</a></h3></li><li><h3><a href="6.html">احکام دینی (4)</a></h3></li><li><h3><a href="3.html">خنده و سرگرمی (16)</a></h3></li><li><h3><a href="4.html">متفرقه (75)</a></h3></li></ul>
+</div>
+</aside>
+
+<aside class="block-1">
+<div class="b1-head">آمار سایت</div>
+<div class="b1-text">
+کل بازدید : <script>getStatVar('total_view');</script><br/>
+بازدید امروز :<script>getStatVar('today_view');</script><br/>
+بازدید دیروز : <script>getStatVar('yesterday_view');</script><br/>
+بازدید این ماه : <script>getStatVar('this_month_view');</script><br/>
+بازدید ماه قبل : <script>getStatVar('last_month_view');</script><br/>
+تعداد نویسندگان : <script>getStatVar('total_author');</script><br/>
+تعداد کل پست ها : <script>getStatVar('total_post');</script><br/>
+آخرین بازدید : <script>getStatVar('last_view_date');</script><br/>
+امروز : <script>setTodayDate()</script><br/>
+آخرین بروز رسانی : <script>getStatVar('modify_date');</script><br/>
+</div>
+</aside>
+
+
+<aside class="block-1">
+<div class="b1-head">نویسندگان</div>
+<div class="b1-text">
+<div class="lastcomment">
+<div class="pic"><a href="../author/1406363.html"><img src="../../../static.mihanblog.com/public/user_data/user_photo/469/1406363.jpg" style="width:16px;" /></a></div>
+<div class="usercomment">
+<a rel="author" href="../author/1406363.html">حسام اسکندری (105 نوشته)</a><br/></div>
+<div class="clear"></div>
+<div class="pic"><a href="../author/1407473.html"><img src="../../../static.mihanblog.com/public/user_data/user_photo/470/1407473.jpg" style="width:16px;" /></a></div>
+<div class="usercomment">
+<a rel="author" href="../author/1407473.html">محمد عسگری (109 نوشته)</a><br/></div>
+<div class="clear"></div>
+</div>
+</div>
+</aside>
+
+
+<aside class="block-1">
+<div class="b1-head">لینک های سایت</div>
+<div class="b1-text">
+<ul><li><a rel="nofollow" target="_blank" title="" href="http://parvaz-club.avablog.ir">افسر جنگ نرم آقا</a></li><li><a rel="nofollow" target="_blank" title="" href="http://http://farsi.khamenei.ir/">سایت رهبر معظم انقلاب آیت الله خامنه ای</a></li><li><a rel="nofollow" target="_blank" title="" href="http://www.jamkaran.info/">وبسایت رسمی مسجد جمکران</a></li><li><a rel="nofollow" target="_blank" title="" href="http://www.aqr.ir/">سایت امام رضا (ع)</a></li><li><a rel="nofollow" target="_blank" title="" href="http://shiayan.ir">پایگاه اطلاع رسانی شیعیان</a></li><li><a rel="nofollow" target="_blank" title="" href="../../../khodadad-poem.mihanblog.com/index.html">اشعار آیینی</a></li><li><a rel="nofollow" target="_blank" title="" href="http://www.makarem.ir">آیت ا... العظمی مکارم شیرازی</a></li><li><a rel="nofollow" target="_blank" title="" href="http://www.Tohid.ir">آیت ا... العظمی سبحانی</a></li><li><a rel="nofollow" target="_blank" title="" href="http://www.sistani.org">آیت ا... العظمی سیستانی</a></li><li><a rel="nofollow" target="_blank" title="" href="http://www.saafi.net">آیت ا... العظمی صافی گلپایگانی</a></li></ul>
+</div>
+</aside>
+
+<aside class="block-1">
+<div class="b1-head">ابر برچسب های سایت</div>
+<div class="b1-text">
+<ul><li><h4><a rel="tag" title="تعداد 1 نوشته با این برچسب" href="../tag/30%252F9%252F97.html" style="font-size:1em">30/9/97 </a></h4></li><li><h4><a rel="tag" title="تعداد 1 نوشته با این برچسب" href="../tag/30+آذر.html" style="font-size:1em">30 آذر </a></h4></li><li><h4><a rel="tag" title="تعداد 1 نوشته با این برچسب" href="../tag/شب+چله.html" style="font-size:1em">شب چله </a></h4></li><li><h4><a rel="tag" title="تعداد 2 نوشته با این برچسب" href="../tag/Moharam95.html" style="font-size:2em">Moharam95 </a></h4></li><li><h4><a rel="tag" title="تعداد 1 نوشته با این برچسب" href="../tag/حکمت+ذبح+اسلامی.html" style="font-size:1em">حکمت ذبح اسلامی </a></h4></li><li><h4><a rel="tag" title="تعداد 1 نوشته با این برچسب" href="../tag/شب+یلدا.html" style="font-size:1em">شب یلدا </a></h4></li><li><h4><a rel="tag" title="تعداد 1 نوشته با این برچسب" href="../tag/moharam-95.html" style="font-size:1em">moharam-95 </a></h4></li><li><h4><a rel="tag" title="تعداد 1 نوشته با این برچسب" href="../tag/سی+اذر.html" style="font-size:1em">سی اذر </a></h4></li><li><h4><a rel="tag" title="تعداد 1 نوشته با این برچسب" href="../tag/حکمت+ذبح+شرعی.html" style="font-size:1em">حکمت ذبح شرعی </a></h4></li><li><h4><a rel="tag" title="تعداد 2 نوشته با این برچسب" href="../tag/احکام.html" style="font-size:2em">احکام </a></h4></li></ul>
+</div>
+</aside>
+
+<aside class="block-1">
+<div class="b1-head">جدید ترین مطالب</div>
+<div class="b1-text">
+<ul>
+<li><a title="تاریخ ارسال : یکشنبه 13 بهمن 1398" href="../346.html">پیام تسلیت رهبرانقلاب درپی شهادت حاج قاسم سلیمانی</a></li><li><a title="تاریخ ارسال : چهارشنبه 9 بهمن 1398" href="../347.html">شهادت حضرت فاطمه (سلام الله علیها)</a></li><li><a title="تاریخ ارسال : جمعه 13 دی 1398" href="../344.html">سردار شهید سپهبد حاج قاسم سلیمانی</a></li><li><a title="تاریخ ارسال : چهارشنبه 20 آذر 1398" href="../338.html">نهج البلاغه</a></li><li><a title="تاریخ ارسال : چهارشنبه 20 آذر 1398" href="../335.html">شهادت امام حسن عسکری علیه السلام</a></li><li><a title="تاریخ ارسال : پنجشنبه 14 آذر 1398" href="../337.html">ولادت امام حسن عسکری علیه السلام</a></li><li><a title="تاریخ ارسال : سه شنبه 12 آذر 1398" href="../342.html">نهج البلاغه ( امید )</a></li><li><a title="تاریخ ارسال : جمعه 1 آذر 1398" href="../339.html">کوچک شمردن گناه</a></li><li><a title="تاریخ ارسال : جمعه 24 آبان 1398" href="../336.html">میلاد رسول اکرم و امام جعفر صادق علیه السلام</a></li><li><a title="تاریخ ارسال : پنجشنبه 2 آبان 1398" href="../340.html">نهج البلاغه ( وطن )</a></li><li><a title="تاریخ ارسال : شنبه 27 مهر 1398" href="../334.html">رحلت رسول اکرم؛شهادت امام حسن مجتبی علیه السلام و امام رضا علیه السلام </a></li><li><a title="تاریخ ارسال : شنبه 27 مهر 1398" href="../333.html">اربعین حسینی</a></li><li><a title="تاریخ ارسال : سه شنبه 2 مهر 1398" href="../341.html">خویشتن داری،بردباری</a></li><li><a title="تاریخ ارسال : یکشنبه 31 شهریور 1398" href="../332.html">هفته دفاع مقدس</a></li><li><a title="تاریخ ارسال : چهارشنبه 20 شهریور 1398" href="../331.html">شهادت امام زین العابدین علیه السلام</a></li><li><a title="لیست آخرین پستها"  href="../list.html"><b>لیست آخرین پستها</b></a></li>
+</ul>
+</div>
+</aside>
+
+<aside class="block-1">
+<div class="b1-head">صفحات جانبی</div>
+<div class="b1-text">
+<ul><li><a title="طرح تبادل لینک" href="../../extrapage/tabadol.html" target="_blank">طرح تبادل لینک</a></li><li><a title="تبلیغات" href="../../extrapage/tabligh.html" target="_blank">تبلیغات</a></li></ul>
+</div>
+</aside>
+
+
+		<form id="frm-16076358425fd29382162be" method="post" action="http://kanoonrezvan92.mihanblog.com/poll/new/fid/16076358425fd29382162be/atrty/1607635842/avrvy/0/key/bcd1815dbd31e085d2c0dddd6cc9fbfd/"  onsubmit="window.open('', 'poll', 'toolbar=0,location=0,status=0,menubar=0,scrollbars=1,resizable=0,width=505,height=315')" target="poll"><input type="hidden" name="data[pollid]" value="367311" id="data[pollid]" />		
+<aside class="block-1">
+<div class="b1-head">نظرسنجی</div>
+<div class="b1-text">
+آیا از وبلاگ ما راضی هستید؟<br/>
+<label><input type="radio" name="data[answer]" value="v1">بله </label><br/><label><input type="radio" name="data[answer]" value="v2">خیر</label><br/><label><input type="radio" name="data[answer]" value="v3">تقریبا</label><br/><input type="submit" value="یا علی"/>
+</div>
+</aside>
+
+		<input type="hidden" name="frm-id" value="16076358425fd29382162be" id="frm-id" /></form>
+
+<aside class="block-1">
+<div class="b1-head">امکانات جانبی</div>
+<div class="b1-text">
+<!-- Code By Samentheme.ir [Doaye Faraj] --><script type="text/javascript" language="javascript" src="http://webtools.samentheme.ir/st/doayefaraj/5/st.php?mod5"></script><!-- Code By Samentheme.ir [Doaye Faraj] -->
+
+<!-- Start Code By Samentheme.ir & Mazloum.ir [Tasadofi-Leader] --><script type="text/javascript" language="javascript" src="http://www.samentheme.ir/tools/random/matn/leader/1/st.php?mod1"></script><!-- End Code By Samentheme.ir & Mazloum.ir [Tasadofi-Leader] -->
+
+
+<!-- this script got from www.Avazak.ir-Design By: Avazak.ir -->
+<body onLoad="window.alert('سلام به وبلاگ ما خوش آمدید.  جهت تعجیل در فرج امام زمان (عج) و شادی روح امام خمینی(ره) و سلامتی امام خامنه ای(حفظه الله) صلواتی ختم کنید');">
+<br>
+<span id="script1957"><script src="https://backority.ir/tabligh.js?id=1957&c=39236f5da155852f0331c316460fea27&t=8"></script></span></div>
+</aside>
+
+</div>
+<div id="left">
+
+
+		<div id="MihanblogShopAds" style="display:block;height:0px;width:100%;border:0px"></div>
+		<aside class="block-3">
+<div class="b2-head"><h2><a href="../344.html" title="سردار شهید سپهبد حاج قاسم سلیمانی">سردار شهید سپهبد حاج قاسم سلیمانی</a></h2>
+<span><a target="_self" href="../344.html#commentlist">نظرات (<script>setCommentCnt(344)</script>)</a></span>
+</div>
+<div class="b2-text">
+<div id="InPost_MihanblogShopAds" style="display:block;height:0px;width:100%;border:0px"></div>
+<div style="text-align: center;"><img hspace="0" border="0" align="baseline" vspace="0" src="../../../file.mihanblog.com/public/user_data/user_files/565/1694810/paysm1.jpg" alt=""></div><div style="text-align: center;"><font face="Mihan-Iransans" size="2">‏امام علی (ع) :</font></div><div style="text-align: center;"><font face="Mihan-Iransans" size="2">&nbsp;"آیا مانند مالک کسى هست، آیا زنان از نزد طفلى بر مى خیزند که مانند مالک شود.</font><span style="font-family: Mihan-Iransans; font-size: small;">"</span></div><div style="text-align: center;"><font face="Mihan-Iransans" size="2">&nbsp;شهادت مالک اشتر زمان، سردار رشید سپاه اسلام حاج قاسم سلیمانی به محضر مقدس امام زمان عج مقام معظم رهبری و همه ارادتمندان آن سردار بزرگ ، تبریک و تسلیت می گوییم
+
+
+</font></div>
+
+<div class="details">
+<div class="texts">
+نویسنده : <a rel="author" href="../author/1407473.html">محمد عسگری</a> | 
+تاریخ : جمعه 13 دی 1398 ساعت: 11:36 | 
+موضوع : <a href="1.html">شهدا ی اسلام</a>، <a href="9.html">مناسبت ها</a>، <a href="8.html">حکمت الهی</a>، <a href="7.html">روشنگری</a>،  | <BlogExtendedPost><a class="more" href="../344.html"> ادامه مطلب </a></BlogExtendedPost>
+</div>
+</div>
+</div>
+</aside>
+<aside class="block-3">
+<div class="b2-head"><h2><a href="../338.html" title="نهج البلاغه">نهج البلاغه</a></h2>
+<span><a target="_self" href="../338.html#commentlist">نظرات (<script>setCommentCnt(338)</script>)</a></span>
+</div>
+<div class="b2-text">
+<img hspace="0" border="0" align="baseline" vspace="0" src="../../../file.mihanblog.com/public/user_data/user_files/565/1694810/g1.jpg" alt=""><div class="details">
+<div class="texts">
+نویسنده : <a rel="author" href="../author/1407473.html">محمد عسگری</a> | 
+تاریخ : چهارشنبه 20 آذر 1398 ساعت: 21:09 | 
+موضوع : <a href="8.html">حکمت الهی</a>، <a href="6.html">احکام دینی</a>،  | <BlogExtendedPost><a class="more" href="../338.html"> ادامه مطلب </a></BlogExtendedPost>
+</div>
+</div>
+</div>
+</aside>
+<aside class="block-3">
+<div class="b2-head"><h2><a href="../342.html" title="نهج البلاغه ( امید )">نهج البلاغه ( امید )</a></h2>
+<span><a target="_self" href="../342.html#commentlist">نظرات (<script>setCommentCnt(342)</script>)</a></span>
+</div>
+<div class="b2-text">
+<div style="text-align: center;"><img hspace="0" border="0" align="baseline" vspace="0" src="../../../file.mihanblog.com/public/user_data/user_files/565/1694810/g14.jpg" alt=""></div><div class="details">
+<div class="texts">
+نویسنده : <a rel="author" href="../author/1407473.html">محمد عسگری</a> | 
+تاریخ : سه شنبه 12 آذر 1398 ساعت: 21:36 | 
+موضوع : <a href="8.html">حکمت الهی</a>،  | <BlogExtendedPost><a class="more" href="../342.html"> ادامه مطلب </a></BlogExtendedPost>
+</div>
+</div>
+</div>
+</aside>
+<aside class="block-3">
+<div class="b2-head"><h2><a href="../339.html" title="کوچک شمردن گناه">کوچک شمردن گناه</a></h2>
+<span><a target="_self" href="../339.html#commentlist">نظرات (<script>setCommentCnt(339)</script>)</a></span>
+</div>
+<div class="b2-text">
+<img hspace="0" border="0" align="baseline" vspace="0" src="../../../file.mihanblog.com/public/user_data/user_files/565/1694810/g1.jpg" alt="">
+
+
+<div class="details">
+<div class="texts">
+نویسنده : <a rel="author" href="../author/1407473.html">محمد عسگری</a> | 
+تاریخ : جمعه 1 آذر 1398 ساعت: 21:31 | 
+موضوع : <a href="8.html">حکمت الهی</a>، <a href="6.html">احکام دینی</a>،  | <BlogExtendedPost><a class="more" href="../339.html"> ادامه مطلب </a></BlogExtendedPost>
+</div>
+</div>
+</div>
+</aside>
+<aside class="block-3">
+<div class="b2-head"><h2><a href="../340.html" title="نهج البلاغه ( وطن )">نهج البلاغه ( وطن )</a></h2>
+<span><a target="_self" href="../340.html#commentlist">نظرات (<script>setCommentCnt(340)</script>)</a></span>
+</div>
+<div class="b2-text">
+<img hspace="0" border="0" align="baseline" vspace="0" src="../../../file.mihanblog.com/public/user_data/user_files/565/1694810/g12.jpg" alt="">
+
+
+<div class="details">
+<div class="texts">
+نویسنده : <a rel="author" href="../author/1407473.html">محمد عسگری</a> | 
+تاریخ : پنجشنبه 2 آبان 1398 ساعت: 21:32 | 
+موضوع : <a href="8.html">حکمت الهی</a>،  | <BlogExtendedPost><a class="more" href="../340.html"> ادامه مطلب </a></BlogExtendedPost>
+</div>
+</div>
+</div>
+</aside>
+<aside class="block-3">
+<div class="b2-head"><h2><a href="../341.html" title="خویشتن داری،بردباری">خویشتن داری،بردباری</a></h2>
+<span><a target="_self" href="../341.html#commentlist">نظرات (<script>setCommentCnt(341)</script>)</a></span>
+</div>
+<div class="b2-text">
+<img hspace="0" border="0" align="baseline" vspace="0" src="../../../file.mihanblog.com/public/user_data/user_files/565/1694810/g13.jpg" alt="">
+
+
+<div class="details">
+<div class="texts">
+نویسنده : <a rel="author" href="../author/1407473.html">محمد عسگری</a> | 
+تاریخ : سه شنبه 2 مهر 1398 ساعت: 21:33 | 
+موضوع : <a href="8.html">حکمت الهی</a>،  | <BlogExtendedPost><a class="more" href="../341.html"> ادامه مطلب </a></BlogExtendedPost>
+</div>
+</div>
+</div>
+</aside>
+<aside class="block-3">
+<div class="b2-head"><h2><a href="http://kanoonrezvan92.mihanblog.com/post/320" title="عید قربان">عید قربان</a></h2>
+<span><a target="_self" href="http://kanoonrezvan92.mihanblog.com/post/320#commentlist">نظرات (<script>setCommentCnt(320)</script>)</a></span>
+</div>
+<div class="b2-text">
+<div style="text-align: center;"><img hspace="0" border="0" align="baseline" vspace="0" src="../../../file.mihanblog.com/public/user_data/user_files/565/1694810/12121.jpg" alt=""></div><div style="text-align: center;"><font color="#383838" face="Mihan-Iransans" size="3">ز اسماعیل جان تا نگذری مانند ابراهیم</font></div><div style="text-align: center;"><font color="#383838" face="Mihan-Iransans" size="3">به کعبه رفتنت تنها نماید شاد شیطان را</font></div><div style="text-align: center;"><font color="#383838" face="Mihan-Iransans" size="3">کسی کو روز قربان ، غیر خود را می کند قربان</font></div><div style="text-align: center;"><font color="#383838" face="Mihan-Iransans" size="3">نفهمیده است هرگز معنی و مفهوم قربان را</font></div><div style="text-align: center;"><font color="#383838" face="Mihan-Iransans" size="3">عید سعید قربان مبارک</font></div><div class="details">
+<div class="texts">
+نویسنده : <a rel="author" href="../author/1407473.html">محمد عسگری</a> | 
+تاریخ : دوشنبه 21 مرداد 1398 ساعت: 10:05 | 
+موضوع : <a href="9.html">مناسبت ها</a>، <a href="1.html">شهدا ی اسلام</a>، <a href="8.html">حکمت الهی</a>،  | <BlogExtendedPost><a class="more" href="http://kanoonrezvan92.mihanblog.com/post/320"> ادامه مطلب </a></BlogExtendedPost>
+</div>
+</div>
+</div>
+</aside>
+<aside class="block-3">
+<div class="b2-head"><h2><a href="http://kanoonrezvan92.mihanblog.com/post/319" title="شهادت امام جواد (علیه السلام)">شهادت امام جواد (علیه السلام)</a></h2>
+<span><a target="_self" href="http://kanoonrezvan92.mihanblog.com/post/319#commentlist">نظرات (<script>setCommentCnt(319)</script>)</a></span>
+</div>
+<div class="b2-text">
+<div style="text-align: center;"><img hspace="0" border="0" align="baseline" vspace="0" src="../../../file.mihanblog.com/public/user_data/user_files/565/1694810/121.jpg" alt=""></div><div class="details">
+<div class="texts">
+نویسنده : <a rel="author" href="../author/1407473.html">محمد عسگری</a> | 
+تاریخ : جمعه 11 مرداد 1398 ساعت: 07:39 | 
+موضوع : <a href="9.html">مناسبت ها</a>، <a href="1.html">شهدا ی اسلام</a>، <a href="8.html">حکمت الهی</a>،  | <BlogExtendedPost><a class="more" href="http://kanoonrezvan92.mihanblog.com/post/319"> ادامه مطلب </a></BlogExtendedPost>
+</div>
+</div>
+</div>
+</aside>
+<aside class="block-3">
+<div class="b2-head"><h2><a href="http://kanoonrezvan92.mihanblog.com/post/267" title=" ترجمه حکمت 372 نهج البلاغه: عمل به علم و بخشش مال"> ترجمه حکمت 372 نهج البلاغه: عمل به علم و بخشش مال</a></h2>
+<span><a target="_self" href="http://kanoonrezvan92.mihanblog.com/post/267#commentlist">نظرات (<script>setCommentCnt(267)</script>)</a></span>
+</div>
+<div class="b2-text">
+<div align="center"><font size="3" face="Mihan-Iransans" color="#FF0000"><span class="arabic">وَ قَالَ (علیه السلام) لِجَابِرِ بْنِ عَبْدِ 
+اللَّهِ الْأَنْصَارِیِّ: یَا جَابِرُ قِوَامُ الدِّینِ وَ الدُّنْیَا 
+بِأَرْبَعَةٍ: عَالِمٍ مُسْتَعْمِلٍ عِلْمَهُ، وَ جَاهِلٍ لَا یَسْتَنْكِفُ
+ أَنْ یَتَعَلَّمَ، وَ جَوَادٍ لَا یَبْخَلُ بِمَعْرُوفِهِ، وَ فَقِیرٍ لَا
+ یَبِیعُ آخِرَتَهُ بِدُنْیَاهُ. فَإِذَا ضَیَّعَ الْعَالِمُ عِلْمَهُ 
+اسْتَنْكَفَ الْجَاهِلُ أَنْ یَتَعَلَّمَ، وَ إِذَا بَخِلَ الْغَنِیُّ 
+بِمَعْرُوفِهِ بَاعَ الْفَقِیرُ آخِرَتَهُ بِدُنْیَاهُ. یَا جَابِرُ مَنْ 
+كَثُرَتْ نِعَمُ اللَّهِ عَلَیْهِ، كَثُرَتْ حَوَائِجُ النَّاسِ إِلَیْهِ؛ 
+فَمَنْ قَامَ لِلَّهِ فِیهَا بِمَا یَجِبُ فِیهَا، عَرَّضَهَا لِلدَّوَامِ 
+وَ الْبَقَاءِ، وَ مَنْ لَمْ یَقُمْ فِیهَا بِمَا یَجِبُ، عَرَّضَهَا 
+لِلزَّوَالِ وَ الْفَنَاءِ.</span></font></div><div align="center"><br><font size="3" face="Mihan-Iransans"><span class="arabic">و درود خدا بر او، (به جابر بن عبد اللَّه انصارى فرمود) اى جابر استوارى 
+دین و دنیا به چهار چیز است: عالمى كه به علم خود عمل كند، و جاهلى كه از 
+آموختن سرباز نزند، و بخشنده اى كه در بخشش بخل نورزد، و فقیرى كه آخرت خود
+ را به دنیا نفروشد. پس هر گاه عالم علم خود را تباه كند، نادان به آموختن 
+روى نیاورد، هر گاه بى نیاز در بخشش بخل ورزد، تهیدست آخرت خویش را به دنیا
+ فروشد.<br>اى جابر كسى كه نعمت هاى فراوان خدا به او روى كرد، نیازهاى 
+فراوان مردم نیز به او روى آورد، پس اگر صاحب نعمتى حقوق واجب الهى را 
+بپردازد، خداوند نعمت ها را بر او جاودانه سازد، و آن كس كه حقوق واجب الهى
+ در نعمت ها را نپردازد، خداوند، آن را به زوال و نابودى كشاند</span></font></div>
+
+
+<div class="details">
+<div class="texts">
+نویسنده : <a rel="author" href="../author/1407473.html">محمد عسگری</a> | 
+تاریخ : شنبه 12 اسفند 1396 ساعت: 16:34 | 
+موضوع : <a href="8.html">حکمت الهی</a>،  | <BlogExtendedPost><a class="more" href="http://kanoonrezvan92.mihanblog.com/post/267"> ادامه مطلب </a></BlogExtendedPost>
+</div>
+</div>
+</div>
+</aside>
+<aside class="block-3">
+<div class="b2-head"><h2><a href="http://kanoonrezvan92.mihanblog.com/post/266" title="حكمت 8 شگفتی تن آدمی (علمی ، فیزیولوژی انسانی)">حكمت 8 شگفتی تن آدمی (علمی ، فیزیولوژی انسانی)</a></h2>
+<span><a target="_self" href="http://kanoonrezvan92.mihanblog.com/post/266#commentlist">نظرات (<script>setCommentCnt(266)</script>)</a></span>
+</div>
+<div class="b2-text">
+
+
+<div align="center"><img src="../../../file.mihanblog.com/public/user_data/user_files/565/1694810/11111.png" alt="کانون فرهنگی تبلیغی رضوان" width="482" vspace="0" hspace="0" height="340" border="0" align="bottom"></div>
+
+
+
+
+
+
+<div class="details">
+<div class="texts">
+نویسنده : <a rel="author" href="../author/1407473.html">محمد عسگری</a> | 
+تاریخ : شنبه 5 اسفند 1396 ساعت: 17:43 | 
+موضوع : <a href="8.html">حکمت الهی</a>،  | <BlogExtendedPost><a class="more" href="http://kanoonrezvan92.mihanblog.com/post/266"> ادامه مطلب </a></BlogExtendedPost>
+</div>
+</div>
+</div>
+</aside>
+
+<aside class="block-3">
+<div class="b2-head">صفحات سایت</div>
+<div class="b2-text">
+تعداد صفحات : <b>2</b><br/>
+<div class="pagination"><a href="http://kanoonrezvan92.mihanblog.com/post/category/8/page/1"><b>1</b></a><a href="http://kanoonrezvan92.mihanblog.com/post/category/8/page/2"><span>2</span></a></div>
+</div>
+</aside>
+
+
+
+</div>
+</div>
+<div class="clear"></div>
+<aside class="footer">
+
+<aside class="block-4">
+<div class="b3-head">دوستان و همسایگان ما ...</div>
+<div class="b3-text" style="height:247px;">
+<a href="8.html#"><img src="http://up.ghalebgraph.ir/up/galebgraph/posts/theme/web/yargomnam2/img/11.png" alt="تبادل بنر" title="محل تبلیغات شما ..." /></a>
+<a href="8.html#"><img src="http://up.ghalebgraph.ir/up/galebgraph/posts/theme/web/yargomnam2/img/11.png" alt="تبادل بنر" title="محل تبلیغات شما ..." /></a>
+<a href="8.html#"><img src="http://up.ghalebgraph.ir/up/galebgraph/posts/theme/web/yargomnam2/img/11.png" alt="تبادل بنر" title="محل تبلیغات شما ..." /></a>
+<a href="8.html#"><img src="http://up.ghalebgraph.ir/up/galebgraph/posts/theme/web/yargomnam2/img/11.png" alt="تبادل بنر" title="محل تبلیغات شما ..." /></a>
+<a href="8.html#"><img src="http://up.ghalebgraph.ir/up/galebgraph/posts/theme/web/yargomnam2/img/11.png" alt="تبادل بنر" title="محل تبلیغات شما ..." /></a>
+<a href="8.html#"><img src="http://up.ghalebgraph.ir/up/galebgraph/posts/theme/web/yargomnam2/img/11.png" alt="تبادل بنر" title="محل تبلیغات شما ..." /></a>
+<a href="8.html#"><img src="http://up.ghalebgraph.ir/up/galebgraph/posts/theme/web/yargomnam2/img/11.png" alt="تبادل بنر" title="محل تبلیغات شما ..." /></a>
+<a href="8.html#"><img src="http://up.ghalebgraph.ir/up/galebgraph/posts/theme/web/yargomnam2/img/11.png" alt="تبادل بنر" title="محل تبلیغات شما ..." /></a>
+<a href="8.html#"><img src="http://up.ghalebgraph.ir/up/galebgraph/posts/theme/web/yargomnam2/img/11.png" alt="تبادل بنر" title="محل تبلیغات شما ..." /></a>
+<a href="8.html#"><img src="http://up.ghalebgraph.ir/up/galebgraph/posts/theme/web/yargomnam2/img/11.png" alt="تبادل بنر" title="محل تبلیغات شما ..." /></a>
+<a href="8.html#"><img src="http://up.ghalebgraph.ir/up/galebgraph/posts/theme/web/yargomnam2/img/11.png" alt="تبادل بنر" title="محل تبلیغات شما ..." /></a>
+<a href="8.html#"><img src="http://up.ghalebgraph.ir/up/galebgraph/posts/theme/web/yargomnam2/img/11.png" alt="تبادل بنر" title="محل تبلیغات شما ..." /></a>
+<a href="8.html#"><img src="http://up.ghalebgraph.ir/up/galebgraph/posts/theme/web/yargomnam2/img/11.png" alt="تبادل بنر" title="محل تبلیغات شما ..." /></a>
+<a href="8.html#"><img src="http://up.ghalebgraph.ir/up/galebgraph/posts/theme/web/yargomnam2/img/11.png" alt="تبادل بنر" title="محل تبلیغات شما ..." /></a>
+<a href="8.html#"><img src="http://up.ghalebgraph.ir/up/galebgraph/posts/theme/web/yargomnam2/img/11.png" alt="تبادل بنر" title="محل تبلیغات شما ..." /></a>
+<a href="8.html#"><img src="http://up.ghalebgraph.ir/up/galebgraph/posts/theme/web/yargomnam2/img/11.png" alt="تبادل بنر" title="محل تبلیغات شما ..." /></a>
+<div class="style">
+<a href="8.html#">برای تبادل لوگو با ما کلیک کنید</a>
+</div>
+</div>
+</aside>
+
+<aside class="block-4">
+<div class="b3-head">درباره ما</div>
+<div class="b3-text">
+<center><img src="../../../static.mihanblog.com/public/user_data/web_photo/565/1694810.jpg@7802"  /></center><br/>کانون فرهنگی تبلیغی رضوان در سال 1392 در فولادشهر اصفهان تاسیس شد</div>
+</aside>
+
+<aside class="block-4">
+<div class="b3-head">آرشیو ...</div>
+<div class="b3-text">
+<div class="style">
+<a rel="archives" name="[cb:blog_category_id]" title=" هفته دوم بهمن 1398" href="../archive/1398/11/2.html"> هفته دوم بهمن 1398(2)</a><a rel="archives" name="[cb:blog_category_id]" title=" هفته دوم دی 1398" href="../archive/1398/10/2.html"> هفته دوم دی 1398(1)</a><a rel="archives" name="[cb:blog_category_id]" title=" هفته دوم آذر 1398" href="../archive/1398/9/2.html"> هفته دوم آذر 1398(2)</a><a rel="archives" name="[cb:blog_category_id]" title=" هفته اول آذر 1398" href="../archive/1398/9/1.html"> هفته اول آذر 1398(1)</a><a rel="archives" name="[cb:blog_category_id]" title=" هفته چهارم آبان 1398" href="../archive/1398/8/4.html"> هفته چهارم آبان 1398(1)</a><a rel="archives" name="[cb:blog_category_id]" title=" هفته اول آبان 1398" href="../archive/1398/8/1.html"> هفته اول آبان 1398(1)</a><a rel="archives" name="[cb:blog_category_id]" title=" هفته چهارم مهر 1398" href="../archive/1398/7/4.html"> هفته چهارم مهر 1398(2)</a><a rel="archives" name="[cb:blog_category_id]" title=" هفته اول مهر 1398" href="../archive/1398/7/1.html"> هفته اول مهر 1398(1)</a><a rel="archives" name="[cb:blog_category_id]" title=" هفته چهارم شهریور 1398" href="../archive/1398/6/4.html"> هفته چهارم شهریور 1398(1)</a><a rel="archives" name="[cb:blog_category_id]" title=" هفته سوم شهریور 1398" href="../archive/1398/6/3.html"> هفته سوم شهریور 1398(2)</a><a rel="archives" name="[cb:blog_category_id]" title=" هفته دوم شهریور 1398" href="../archive/1398/6/2.html"> هفته دوم شهریور 1398(1)</a><a rel="archives" name="[cb:blog_category_id]" title=" هفته چهارم مرداد 1398" href="../archive/1398/5/4.html"> هفته چهارم مرداد 1398(4)</a><a rel="archives" name="[cb:blog_category_id]" title=" هفته سوم مرداد 1398" href="../archive/1398/5/3.html"> هفته سوم مرداد 1398(1)</a><a rel="archives" name="[cb:blog_category_id]" title=" هفته دوم مرداد 1398" href="../archive/1398/5/2.html"> هفته دوم مرداد 1398(1)</a><a rel="archives" name="[cb:blog_category_id]" title=" هفته چهارم تیر 1398" href="../archive/1398/4/4.html"> هفته چهارم تیر 1398(1)</a><a rel="archives" name="[cb:blog_category_id]" title=" هفته دوم تیر 1398" href="../archive/1398/4/2.html"> هفته دوم تیر 1398(2)</a><a rel="archives" name="[cb:blog_category_id]" title=" هفته سوم خرداد 1398" href="../archive/1398/3/3.html"> هفته سوم خرداد 1398(1)</a><a rel="archives" name="[cb:blog_category_id]" title=" هفته اول اردیبهشت 1398" href="../archive/1398/2/1.html"> هفته اول اردیبهشت 1398(1)</a><b><a href="../archive.html">آرشیو كل مطالب</a></b>
+<div class="clear"></div>
+</div>
+</div>
+</aside>
+
+</aside>
+<div class="copyright">قالب طراحی شده توسط : <a href="http://www.yargomnam.ir/" target="_blank"> دانلود مداحی </a> ترجمه و انتشار از : <a href="http://ghalebgraph.ir/" target="_blank"> قالب رزبلاگ</a></div>
+<! استفاده از قالب در صورت حذف لینک طراح و مترجم قالب حرام می باشد و ما رضایتی نداریم ->
+</div>
+</body>
+</html><script>
+//    setTimeout(function () {
+//        GetMihanBlogShowAds();
+//    }, 1000);
+</script>
+<!--NEW SERVER--><!--;)-->
+
+<!--SabaVision Ads Handler--><!--<script type="text/javascript">(function (d) {var url =   location.protocol+'//api.sabavision.com/pox/poxjs.js';d.write('<script type="text/javascript" src="' + url + '" async></scri' + 'pt>');})(document);</script>-->
+
+
+<script type="text/javascript">
+
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-153829-9']);
+    _gaq.push(['_setDomainName', 'kanoonrezvan92.mihanblog.com']);
+    _gaq.push(['_trackPageview']);
+
+    (function() {
+        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+
+</script>
+
+
+<div id='mediaad-Kvcm'></div>
+<meta name="sabavision_zone" content="2500-Z499" />
+<center>
+    <div style="background-color:white;width:90%;padding:20px;margin-top:50px;margin-bottom:50px;">
+        <a href="https://www.cloob.com">شبکه اجتماعی فارسی کلوب</a> | <a href="https://www.seo25.com/product/buy-mobile-traffic-and-get-cheap-targeted-mobile-traffic/" target="_blank">Buy Mobile Traffic</a> | <a href="https://www.soalaat.com">سایت سوالات</a>
+    </div>
+</center>

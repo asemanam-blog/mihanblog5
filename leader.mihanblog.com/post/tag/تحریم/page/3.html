@@ -1,0 +1,1314 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" /><link rel="EditURI" type="application/rsd+xml" title="RSD" href="../../../../xmlrpc%3Frsd" />
+<script type="text/javascript" src="http://static.mihanblog.com//public/scripts/run/g.other.v3.js"></script>
+<script>
+
+	function c_$(id){
+        return document.getElementById(id);
+    }
+    
+			//if (parent.frames.length) top.location.href= document.location;
+		
+	setTodayDate = function(){
+		document.write('پنجشنبه 27 آذر 1399');
+		/*827628*/	}
+
+</script>
+
+
+
+        <script type="text/javascript">
+            (function(){
+            var now = new Date();
+            var head = document.getElementsByTagName('head')[0];
+            var script = document.createElement('script');
+            script.async = true;
+            var script_address = 'https://cdn.yektanet.com/js/mihanblog.com/native-mihanblog.com-6531.js';
+            script.src = script_address + '?v=' + now.getFullYear().toString() + '0' + now.getMonth() + '0' + now.getDate() + '0' + now.getHours();
+            head.appendChild(script);
+            })();
+        </script>
+
+        <!--<script type="text/javascript">
+            var head = document.getElementsByTagName("head")[0];
+            var script = document.createElement("script");
+            script.type = "text/javascript";
+            script.async=1;
+            script.src = "https://s1.mediaad.org/serve/mihanblog.com/loader.js" ;
+            head.appendChild(script);
+        </script>-->
+        
+        <script>
+            var sabaVisionWebsiteID = "9bab9dac-041d-4bdb-b39a-1ed789f65eed"; var sabaVisionWebsitePage = "ALL"
+        </script>
+        <link rel="stylesheet" href="https://plus.sabavision.com/dox/dox.min.css">
+        <script src="https://plus.sabavision.com/dox/dox.min.js"></script>
+        
+        <script>
+	linkdailyForm = function(){
+		try{
+			window.open('/linkdaily/new','linkdaily','status=yes,scrollbars=yes,toolbar=no,menubar=no,location=no ,width=500px,height=460px');
+		} catch(e){}
+	}
+</script><script>
+
+	statInfo = new Array();
+	setStatVar = function(index,value){
+		statInfo[index] = value;
+	}
+	getStatVar = function(index){
+		if(statInfo[index]) document.write(statInfo[index]);
+	}
+	
+	setStatVar('total_post','822');
+	setStatVar('total_author','9');
+	setStatVar('modify_date','دوشنبه 14 فروردین 1396');
+	
+	setStatVar('today_view','1399');
+	setStatVar('yesterday_view','569');
+	
+	setStatVar('this_month_view','6509');
+	setStatVar('last_month_view','8062');
+
+	setStatVar('total_view','1534981');
+	setStatVar('last_view_date','پنجشنبه 27 آذر 1399 (12:10)');
+
+
+
+    
+    function setStatFromClient()
+    {
+        var url = 'http://leader.mihanblog.com/statupdate/?data[refereruri]=http://leader.mihanblog.com/post/tag/%D8%AA%D8%AD%D8%B1%DB%8C%D9%85&data[postid]=&data[requesturi]=/post/tag/%D8%AA%D8%AD%D8%B1%DB%8C%D9%85/page/3&data[sdate]=1608194429&data[hash]=7d4b21ce78b9cda54b816fd568b8ecad&data[resolution]='+screen.width+' X '+screen.height;
+
+//        alert(url);
+//        var newjs = document.createElement("SCRIPT");
+//        newjs.type = 'text/javascript';
+//        newjs.src = url;
+//
+//        var newdiv = document.createElement("DIV");
+//        newdiv.setAttribute("style","display:none");
+
+        document.write(unescape('%3Cscript src="'+url+'" type="text/javascript"%3E%3C/script%3E'));
+//        newdiv.appendChild (newjs);
+//        document.write(newjs);
+//        document.write(appendChild (newdiv);
+
+    };
+    setStatFromClient();
+        
+</script><script>
+	messageForm = function(post_id){
+		try{
+			window.open('/message','message','status=yes,scrollbars=yes,toolbar=no,menubar=no,location=no ,width=480px,height=550px');
+		} catch(e){}
+	}
+</script><script>
+	try{
+		var commentCnt = new Array();
+		commentCnt[355]='5';commentCnt[377]='4';commentCnt[386]='2';commentCnt[456]='1';commentCnt[462]='1';commentCnt[465]='3';commentCnt[481]='8';	} catch(e){}
+	
+	newComment = function(post_id){
+		try{
+			window.open('/post/comment/'+post_id,'comment','status=yes,scrollbars=yes,toolbar=no,menubar=no,location=no ,width=480px,height=540px');
+		} catch(e){}
+	}
+	setCommentCnt = function(post_id){
+		try{
+			if(commentCnt[post_id]){
+				document.write(commentCnt[post_id]);
+			} else {
+				document.write(0);
+			}
+		} catch(e){}
+	}
+</script><script>
+
+
+	mihanblogUpdateLike = function(postid,type){
+		var url = '/post/like/'+postid+'/'+type;
+		mihanblogGetAjax(url,function(){});
+	};
+	try{
+        mihanblogGetAjax = function (url,callback) {
+    		var req;
+			if (window.XMLHttpRequest)
+            {
+                // code for IE7+, Firefox, Chrome, Opera, Safari
+			  	req = new XMLHttpRequest();
+			}else{	// code for IE6, IE5
+			  	req = new ActiveXObject("Microsoft.XMLHTTP");
+		  	}
+		    req.open("GET", url, 1);
+		    req.onreadystatechange = function () {
+		        if (req.readyState == 4) {
+		            if (req.status == 200) {
+		            	var response = eval(req.responseText);
+		            	callback();
+		            }else{
+	            		return ;
+		            }
+		        }else{
+					return ;
+		        }
+		    }
+		    req.send(null);
+		}
+	}catch(e){}
+
+	try{
+		var mihanblogLikeArrCnt = new Array();
+		var mihanblogDisLikeArrCnt = new Array();
+
+		mihanblogLikeArrCnt[377]='0';
+mihanblogDisLikeArrCnt[377]='0';
+mihanblogLikeArrCnt[456]='1';
+mihanblogDisLikeArrCnt[456]='0';
+mihanblogLikeArrCnt[462]='0';
+mihanblogDisLikeArrCnt[462]='0';
+mihanblogLikeArrCnt[465]='1';
+mihanblogDisLikeArrCnt[465]='0';
+mihanblogLikeArrCnt[481]='0';
+mihanblogDisLikeArrCnt[481]='0';
+	} catch(e){}
+
+
+
+    mihanblogPostLike = function(post_id){
+
+        mihanblogLikeCnt = (mihanblogLikeArrCnt[post_id]? mihanblogLikeArrCnt[post_id] : 0);
+        mihanblogDisLikeCnt = (mihanblogDisLikeArrCnt[post_id]? mihanblogDisLikeArrCnt[post_id] : 0);
+        mihanblogLikeCnt = parseInt(mihanblogLikeCnt);
+        mihanblogDisLikeCnt = parseInt(mihanblogDisLikeCnt);
+
+        document.write(
+                '<div class="mihanblog_like_wrapper ">'+
+                       '<div id="dislikeBar_'+post_id+'" onclick="mihanblogUpdateLike('+post_id+',\'dislike\')"   class="mihanblog_like_bar mihanblog_like_dislikeBar mihanblog_like_show_help ">-<div class="mihanblog_like_Cnt" id="disLikeCnt_'+post_id+'">'+mihanblogDisLikeCnt+'</div>'+
+                            '<span  class="mihanblog_like_v2_help mihanblog_like_v2_help_dislike clearfix"> '+
+                                '<span class="mihanblog_like_help_arrow mihanblog_like_help_arrow_dislike clearfix"></span>'+
+                                '<span class="mihanblog_like_help_text">نمی پسندم</span>'+
+                            '</span>'+
+                        '</div>'+
+                       '<div id="Like_'+post_id+'" class="mihanblog_like_border"></div>'+
+                       '<div id="likeBar_'+post_id+'" onclick="mihanblogUpdateLike('+post_id+',\'like\')"  class="mihanblog_like_bar mihanblog_like_likeBar mihanblog_like_show_help" >+<div class="mihanblog_like_Cnt" id="likeCnt_'+post_id+'">'+mihanblogLikeCnt+'</div>'+
+                            '<span  class="mihanblog_like_v2_help mihanblog_like_v2_help_like clearfix"> '+
+                                '<span class="mihanblog_like_help_arrow mihanblog_like_help_arrow_like clearfix"></span>'+
+                                '<span class="mihanblog_like_help_text">می پسندم</span>'+
+                            '</span>'+
+                        '</div>'+
+
+                '</div>'
+        );
+
+
+
+        mihanblogDisplayeLike(post_id);
+    }
+
+
+    mihanblogDisplayeLike = function(post_id){
+
+        mihanblogLikeCnt = (mihanblogLikeArrCnt[post_id]? mihanblogLikeArrCnt[post_id] : 0);
+        mihanblogDisLikeCnt = (mihanblogDisLikeArrCnt[post_id]? mihanblogDisLikeArrCnt[post_id] : 0);
+        mihanblogLikeCnt = parseInt(mihanblogLikeCnt);
+        mihanblogDisLikeCnt = parseInt(mihanblogDisLikeCnt);
+
+
+
+        sum = mihanblogLikeCnt - mihanblogDisLikeCnt;
+        backgroundBorder =  document.getElementById('Like_'+post_id);
+        var likeObj = document.getElementById('likeCnt_'+post_id);
+        var disLikeObj = document.getElementById('disLikeCnt_'+post_id);
+
+
+
+
+
+        likeObj.innerHTML =  mihanblogLikeCnt ;
+        disLikeObj.innerHTML =  mihanblogDisLikeCnt;
+
+        if(sum == 0){
+            backgroundBorder.style.backgroundImage = "url('/public/public/images/icons/like_likedislike.png')";
+            document.getElementById('dislikeBar_'+post_id).style.width = '19px';
+            document.getElementById('likeBar_'+post_id).style.width = '19px';
+        }else{
+             if(sum > 0){
+                 backgroundBorder.style.backgroundImage = "url('/public/public/images/icons/like_like.png')";
+                 document.getElementById('likeBar_'+post_id).style.width = '23px';
+                 document.getElementById('dislikeBar_'+post_id).style.width = '15px';
+             }else{
+                 backgroundBorder.style.backgroundImage = "url('/public/public/images/icons/like_dislike.png')";
+                 document.getElementById('likeBar_'+post_id).style.width = '15px';
+                 document.getElementById('dislikeBar_'+post_id).style.width = '23px';
+             }
+        }
+
+    }
+
+
+
+
+</script>
+
+<style type="text/css">
+
+
+    .clearfix {display: inline-block;}
+    .clearfix:after {
+        content: ".";
+        display: block;
+        height: 0;
+        clear: both;
+        visibility: hidden;
+    }
+
+    .mihanblog_like_wrapper {
+        color: #ffffff;
+        direction: ltr;
+        position: relative;
+    }
+    .mihanblog_like_wrapper span{
+        display: none;
+    }
+    .mihanblog_like_bar {
+        color: #FFFFFF;
+        cursor: pointer;
+        float: left;
+        font-size: 10px;
+        height: 20px;
+        line-height: 19px;
+        margin: 5px 0;
+    }
+    .mihanblog_like_likeBar {
+        background-color: #88B131;
+        padding-right: 5px;
+        border-top-right-radius: 2px;
+        border-bottom-right-radius: 2px;
+        text-align: right;
+    }
+    .mihanblog_like_likeBar:hover{
+        background-color: #699017;
+    }
+    .mihanblog_like_border {
+        background-color: #666666;
+        border: 1px solid #666666;
+        float: left;
+        font-size: 12px;
+        height: 20px;
+        margin-top: 2px;
+        width: 25px;
+        padding: 3px 5px 2px 0;
+        text-align: center;
+        border-radius: 2px;
+        color: #ffffff;
+        direction: ltr;
+        background-repeat: no-repeat ;
+        background-position: 4px center;
+    }
+    .mihanblog_like_border img {
+        margin-left: 2px;
+        margin-top: 2px;
+        width: 22px;
+    }
+    .mihanblog_like_dislikeBar {
+        background-color: #FF6F31;
+        padding-left: 5px;
+        border-top-left-radius: 2px;
+        border-bottom-left-radius: 2px;
+        text-align:left ;
+    }
+    .mihanblog_like_dislikeBar:hover{
+        background-color: #D54B10;
+    }
+
+
+
+    .mihanblog_like_show_help {
+        position: relative;
+    }
+    .mihanblog_like_show_help:hover span {
+        display: block;
+    }
+    .mihanblog_like_help_text {
+        background-color: white;
+        border: 1px solid #555555;
+        border-radius: 3px 3px 3px 3px;
+        color: #303030;
+        float: left;
+        font-size: 11px;
+        font-weight: normal;
+        padding: 5px 10px;
+    }
+
+    .mihanblog_like_help_arrow_dislike {
+        background: url("http://leader.mihanblog.com/public/public/images/icons/like_hover_top.png") no-repeat scroll 16px 0 transparent;
+        left: 0;
+        top: -4px;
+    }
+
+    .mihanblog_like_help_arrow_like {
+        background: url("http://leader.mihanblog.com/public/public/images/icons/like_hover_top _2.png") no-repeat scroll 16px 0 transparent;
+        left: -10px;
+        top: 29px;
+    }
+
+    .mihanblog_like_help_arrow{
+        height: 6px;
+        position: absolute;
+        width: 100px;
+
+    }
+
+    .mihanblog_like_v2_help_dislike {
+        left: -15px;
+        top: 24px;
+    }
+    .mihanblog_like_v2_help_like {
+        left: 0;
+        top: -35px;
+
+    }
+    .mihanblog_like_v2_help{
+        display: none;
+        position: absolute;
+        white-space: nowrap;
+        z-index: 1;
+    }
+
+    .mihanblog_like_Cnt{
+        display: inline;
+        color: #ffffff;
+    }
+
+</style>
+    <style>
+        @font-face {
+            font-family: 'Mihan-Iransans';
+            src: url('http://leader.mihanblog.com/public/public/fonts/Iransans.eot');
+            src: url('http://leader.mihanblog.com/public/public/fonts/Iransans.eot?') format('embedded-opentype'),
+            url('http://leader.mihanblog.com/public/public/fonts/Iransans.woff2') format('woff2'),
+            url('http://leader.mihanblog.com/public/public/fonts/Iransans.woff') format('woff'),
+            url('http://leader.mihanblog.com/public/public/fonts/Iransans.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+        @font-face {
+            font-family: 'Mihan-IransansBold';
+            src: url('http://leader.mihanblog.com/public/public/fonts/Iransans-Black.eot');
+            src: url('http://leader.mihanblog.com/public/public/fonts/Iransans-Black.eot?') format('embedded-opentype'),
+            url('http://leader.mihanblog.com/public/public/fonts/Iransans-Black.woff2') format('woff2'),
+            url('http://leader.mihanblog.com/public/public/fonts/Iransans-Black.woff') format('woff'),
+            url('http://leader.mihanblog.com/public/public/fonts/Iransans-Black.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+        @font-face {
+            font-family: 'Mihan-IransansLight';
+            src: url('http://leader.mihanblog.com/public/public/fonts/Iransans-UltraLight.eot');
+            src: url('http://leader.mihanblog.com/public/public/fonts/Iransans-UltraLight.eot?') format('embedded-opentype'),
+            url('http://leader.mihanblog.com/public/public/fonts/Iransans-UltraLight.woff2') format('woff2'),
+            url('http://leader.mihanblog.com/public/public/fonts/Iransans-UltraLight.woff') format('woff'),
+            url('http://leader.mihanblog.com/public/public/fonts/Iransans-UltraLight.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+        @font-face {
+            font-family: 'Mihan-Nassim';
+            src: url('http://leader.mihanblog.com/public/public/fonts/Nassim.eot');
+            src: url('http://leader.mihanblog.com/public/public/fonts/Nassim.eot?') format('embedded-opentype'),
+            url('http://leader.mihanblog.com/public/public/fonts/Nassim.woff2') format('woff2'),
+            url('http://leader.mihanblog.com/public/public/fonts/Nassim.woff') format('woff'),
+            url('http://leader.mihanblog.com/public/public/fonts/Nassim.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+        @font-face {
+            font-family: 'Mihan-Koodak';
+            src: url('http://leader.mihanblog.com/public/public/fonts/Koodak.eot');
+            src: url('http://leader.mihanblog.com/public/public/fonts/Koodak.eot?') format('embedded-opentype'),
+            url('http://leader.mihanblog.com/public/public/fonts/Koodak.woff2') format('woff2'),
+            url('http://leader.mihanblog.com/public/public/fonts/Koodak.woff') format('woff'),
+            url('http://leader.mihanblog.com/public/public/fonts/Koodak.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+        @font-face {
+            font-family: 'Mihan-Yekan';
+            src: url('http://leader.mihanblog.com/public/public/fonts/Yekan.eot');
+            src: url('http://leader.mihanblog.com/public/public/fonts/Yekan.eot?') format('embedded-opentype'),
+            url('http://leader.mihanblog.com/public/public/fonts/Yekan.woff2') format('woff2'),
+            url('http://leader.mihanblog.com/public/public/fonts/Yekan.woff') format('woff'),
+            url('http://leader.mihanblog.com/public/public/fonts/Yekan.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+        @font-face {
+            font-family: 'FontAwesome';
+            src: url('http://leader.mihanblog.com/public/public/fonts/fontawesome_webfont.eot');
+            src: url('http://leader.mihanblog.com/public/public/fonts/fontawesome_webfont.eot?') format('embedded-opentype'),
+            url('http://leader.mihanblog.com/public/public/fonts/fontawesome_webfont.woff2') format('woff2'),
+            url('http://leader.mihanblog.com/public/public/fonts/fontawesome_webfont.woff') format('woff'),
+            url('http://leader.mihanblog.com/public/public/fonts/fontawesome_webfont.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+
+
+        
+
+        /* Smartphones (portrait and landscape) ----------- */
+
+        /*
+        @media only screen and (max-width : 480px) and (min-width : 320px) {
+            .sabaClick_advert__wrapper{
+                display:block;
+            }
+            .sabaClick_advert__inner{
+                max-width: 90%;
+                margin: 0 5%;
+            }
+        }
+        */
+
+    </style>
+
+
+
+
+
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+<meta name="designer" content="inventor_robot@yahoo.com"/>
+<meta name="author" content=". ."/>
+<meta name="language" content="Farsi"/>
+<meta name="description" content=""/>
+<meta name="keywords" content="ولایت، ولایت مطلقه، ولایت فقیه، ولایت مطلقه فقیه، دموکراسی، لیبرال دموکراسی، حکومت ، حکومت اسلامی ، جمهوری ، جمهوری اسلامی"/> 
+
+<link rel="alternate" type="application/rss+xml" title="ولایت فقیه و حکومت اسلامی" href="../../../rss/index.html" />
+<link rel="alternate" type="application/atom+xml" title="ولایت فقیه و حکومت اسلامی" href="../../../atom/index.html" />
+
+<title>ولایت فقیه و حکومت اسلامی - مطالب ابر تحریم</title>
+
+<link rel="stylesheet" type="text/css" href="http://static.mihanblog.com//public/user_data/user_files/153/458214/BlackMihanblog/Style.css" media="screen"/> 
+<!--[if IE]>
+<link href="http://static.mihanblog.com//public/user_data/user_files/153/458214/BlackMihanblog/IEStyle.css" rel="stylesheet" type="text/css"/>
+<![endif]-->
+
+
+</head>
+
+<body>
+<!-- Start BG -->
+<div id="bg">
+<!-- Start Header -->
+<div class="header" style="background: url('http://static.mihanblog.com//public/user_data/user_files/153/458214/Baner/leaderB.jpg') no-repeat top;">   
+</div>
+<!-- End Header -->
+<!-- Start Menu -->
+<div class="nav">
+            <div class="nav2">
+		    <ul>
+		    <li><a href="javascript:messageForm()">تماس با مدیر وبلاگ</a></li>
+		    <li><a target="_blank" href="../../../list.html">آرشیو مطالب</a></li>
+			<li><a target="_blank" href="http://leader.mihanblog.com/m/">مشاهده در موبایل</a></li>
+			<li><a target="_blank" href="mailto:rfms_aaa@yahoo.com">پست الكترونیك</a></li>
+			</ul>
+		    </div>
+		    <div class="nav3">
+			<form method="get" action="http://google.com/search" class="sch"><input name="sitesearch" value="http://leader.mihanblog.com" type="hidden"/>
+			<input type="text" name="q" class="txt" value="جستجو در وبلاگ" onblur="if(this.value=='')this.value='جستجو در وبلاگ'" onfocus="if(this.value=='جستجو در وبلاگ') this.value='';" id="searchBox"/> <input type="submit" value=" " class="btn"/>
+			</form>
+		    </div>
+		    <div class="rss">
+            <a title="خروجی RSS وبلاگ" href="../../../rss/index.html" target="_blank">
+            <img src="http://static.mihanblog.com//public/user_data/user_files/153/458214/BlueBlogfa/RSS.png" title="RSS" height="24" width="24"/></a> 
+		    </div>
+		    <div class="home">
+            <a title="صفحه ی اصلی" href="../../../../index.html" >
+            <img src="http://static.mihanblog.com//public/user_data/user_files/153/458214/BlueBlogfa/home.png" title="صفحه ی اصلی" height="32" width="32"/></a> 
+		    </div>
+</div>
+<!-- End Menu -->
+<!-- Start Con-->
+<div id="con">
+<!-- Start scsl -->
+<div id="scs1">
+<div id="sc-all"><div id="sc">
+        <font face= Tahoma size=2px color=blue >
+				<MARQUEE onmouseover=this.stop() onmouseout=this.start() scrollAmount=2 
+		      	scrollDelay=2 direction=right   width=520 style="height: 20px">"...بصیرت یعنی اینکه خط درگیری با دشمن را تشخیص بدهی...امام خامنه ای    "
+		        </MARQUEE>	
+        </font>
+<!--Start Post-->
+		<div id="MihanblogShopAds" style="display:block;height:0px;width:100%;border:0px"></div>
+		            <div class="post clearfix">
+            <div class="p-head">
+            <div class="p-head1">
+            <div class="p-head2">		
+			<b><a href="../../../481.html">از «واقعیت» باید فرار کرد اگر برخلاف «آرمان» باشد</a></b>
+			</div>
+            </div>
+            </div>
+	        <div class="p-con clearfix">
+	        <div class="p-con1">
+	        <div class="p-con2">
+	        <div class="p-photo">
+	        </div>
+	        <div class="p-height">
+			<div id="InPost_MihanblogShopAds" style="display:block;height:0px;width:100%;border:0px"></div><div class="section field field-name-body field-type-text-with-summary field-label-hidden"><div class="field-items"><div class="field-item odd"><p align="justify"><font color="#333399" size="2">خاطرم
+ هست در مراسم عروسی یکی از نزدیکان، وقتی دیدم بساط رقص و گناه برپا شده، 
+دست پسر سه‌ساله‌ام را گرفتم و برای در امان ماندن از تبعات حضور در آن 
+جلسه‌ی گناه، به خیابان‌گردی پرداختم.</font></p><font color="#333399" size="2">
+</font><p align="justify"><font color="#333399" size="2">پس از بازگشت، یکی از اقوام که متوجه‌ی این حرکت شده بود با لحنی جدی و قیافه‌ای حق‌به‌جانب گفت: «چرا از واقعیت فرار می‌کنی؟»</font></p><font color="#333399" size="2">
+</font><p align="justify"><font color="#333399" size="2">البته حق با او بود؛ چون واقعیت آن جلسه، حضور حداکثریِ افرادی بود که 
+تمایل به گناه داشتند. اما این واقعیت، دلیل نمی‌شد تا از اعتقاد و آرمان 
+خود، دست بکشم و تسلیم اکثریت شوم.</font></p><font color="#333399" size="2">
+</font><p align="justify"><font size="2"><font color="#333399">این قضیه اگرچه مربوط به یک محفل بسیار کوچک در یک گوشه از این کره‌ی 
+خاکی بود اما موضوع این قضیه که همان تقابل «واقعیت و آرمان» بود، امری 
+رایج و شایع در تمام زمان‌ها و مکان‌هاست. با یک بررسی مختصر، می‌توان 
+دریافت که تقریباً در تمام دوران‌های زندگی بشر، «واقعیت» این بود که حق و 
+حق‌گرایان در اقلیت بودند و غلبه با باطل و باطل‌گرایان بوده است.</font></font></p><font color="#333399" size="2">
+</font><p align="justify"><font color="#333399" size="2">در حادثه‌ی بی‌نظیر عاشورا، «واقعیت» این بود که یک گروه ۷۲ نفره، توان 
+پیروزی بر یک لشکر سی‌هزار نفری را ندارد. اما این «واقعیت» سبب نشد تا 
+سیدالشهدا (علیه‌السلام) و یارانش، تن به ذلت دهند و از «آرمان» خود دست 
+بکشند.</font></p><font color="#333399" size="2">
+</font><p align="justify"><font color="#333399" size="2">در دفاع مقدسِ هشت‌ساله‌ی ملت ایران هم «واقعیت» این بود که صدام 
+جنایت‌پیشه، از پشتیبانی تمام قدرت‌های آن روز دنیا مثل آمریکا، شوروی، 
+فرانسه، انگلیس، آلمان برخوردار بود و درمقابل، کشور تازه‌انقلاب کرده‌ی ما
+ حتی از امکاناتی مثل سیم‌خاردار هم در داخل، محروم بود. اما این «واقعیت»،
+ نتوانست «آرمان» ملت ما را تحت‌الشعاع قرار دهد و به لطف خدا، همان 
+پافشاری بر آرمان‌ها توانست بر واقعیت‌های موجود، غلبه کند و صدام و 
+پشتیبان‌های او را ناکام نماید.</font></p><p align="center"><br><img class="decoded" alt="http://www.jonbeshnet.ir/sites/default/files/media/image/170_24380.jpg" src="http://www.jonbeshnet.ir/sites/default/files/media/image/170_24380.jpg" height="326" width="489"></p><font size="2">
+</font><p align="justify"><font color="#333399" size="2">این روزها هم اگرچه جنگ نظامی، دیگر جریان ندارد اما نبردهای تمام‌عیار 
+در زمینه‌های مختلف، علیه کشورمان در جریان است و راهکار مبارزه در تمام 
+این نبردها هم همان «آرمان‌گرایی» و تسلیم‌نشدن در برابر «واقعیت»های 
+ظالمانه است.</font></p><font color="#333399" size="2">
+</font><p align="justify"><font color="#333399" size="2">میدان و عرصه‌ی انرژی ‌هسته‌ای که در دهه‌ی اخیر به نماد پایداری ملت ما
+ تبدیل شده است یکی از عرصه‌های بکارگرفتن این شیوه است. درست است که 
+واقعیاتی مثل «تحریم‌های بی‌سابقه» به‌خاطر همین پافشاری بر حقوق مسلّم 
+خود، بر ما تحمیل شده است اما این مساله، نباید بهانه‌ای شود تا از 
+آرمان‌های خود دست بکشیم.</font></p><font color="#333399" size="2">
+</font><p align="justify"><font color="#333399" size="2">مقابله با استکبار و مقاومت در برابر نماد آن در دنیای امروز، یعنی 
+آمریکا، آرمان قطعی نظام اسلامی است و نباید با توجیهاتی مثل «کدخدا بودن 
+آمریکا» به سست‌کردن این آرمان پرداخت.</font></p><font color="#333399" size="2">
+</font><p align="justify"><font color="#333399" size="2">۳۴ سال پیش که ایران بسیار ضعیف‌ و آمریکا به‌مراتب قوی‌تر از امروز بود
+ امام راحل عظیم‌الشأن ما فرمودند: «آمریکا هیچ غلطی نمی‌تواند بکند» پس 
+چگونه است که امروز و با وجود بی‌آبرویی و تضعیف شیطان بزرگ، برخی‌ها از 
+موضع ضعف برخورد می‌کنند و در مقابل زیاده‌خواهی‌های کاخ سفید، زبان به 
+تمجید و مودب‌نامیدن اوباما می‌گشایند؟!</font></p><font color="#333399" size="2">
+</font><p align="justify"><font color="#333399" size="2">مطلب پایانی این نوشتار، کلام حکیمانه‌ی سیدالشهدای انقلاب اسلامی، شهید آیت‌الله دکتر بهشتی (رحمةالله‎علیه) است.</font></p><font color="#333399" size="2">
+</font><p align="justify"><font color="#333399" size="2">در سال ۵۸، سفیر انگلیس در ایران، ضمن درخواست برای تسریع در آزادکردن 
+گروگان‌های آمریکایی در لانه‌ی جاسوسی، به شهید بهشتی می‌گوید: «خیلی 
+غیرواقع‌بینانه با مسائل سیاسی برخورد می‌کنید.» پاسخ راهبردی و حکیمانه‌ی 
+آن شهید انقلابی و والامقام، بهترین پاسخ به&nbsp; توجیهات نادرست برخی افراد در
+ زمان ماست.</font></p><font color="#333399" size="2">
+</font><p align="justify"><font color="#333399" size="2">شهید بهشتی گفت: «ما قرار است آرمان‌طلبانه با مسائل، برخورد کنیم. 
+انقلاب ما انقلاب آرمان‌هاست نه انقلاب تسلیم به واقعیت‌ها. ما انقلاب 
+کردیم که واقعیت‌ها را عوض کنیم، نه اینکه واقعیت‌ها را هرچه هست 
+بپذیریم.»<font size="1"><sup>1</sup></font></font></p><font size="2">
+</font><p align="justify"><font color="#6600CC" size="1">-----------------------------------------</font></p><font color="#6600CC" size="1">
+
+</font><p align="justify"><font color="#6600CC" size="1">1- سخنرانی‌ها و مصاحبه‌های آیت الله شهید دکتر سید محمد حسینی بهشتی، چاپ مرکز اسناد انقلاب اسلامی، جلد ۱، ص۵۵۳</font></p>
+</div></div></div>
+
+
+</div><br><b></b>
+			<br><br><font style="font-size:8pt;">
+<br>
+			برچسب ها:
+						<a href="../../شهید&#32;بهشتی.html" >شهید بهشتی</a>، 
+						<a href="../../واقعیت.html" >واقعیت</a>، 
+						<a href="../../آرمان.html" >آرمان</a>، 
+						<a href="../../آمریکا.html" >آمریکا</a>، 
+						<a href="../../کدخدا.html" >کدخدا</a>، 
+						<a href="../../تحریم.html" >تحریم</a>، 
+			<br>
+			داغ کن:
+			<a   target="_blank"  
+			href="http://www.cloob.com/share/link/add?url=http://leader.mihanblog.com//post/481&title=از «واقعیت» باید فرار کرد اگر برخلاف «آرمان» باشد"> 
+			<img alt="داغ کن - کلوب دات کام" src="http://static.mihanblog.com//public/user_data/user_files/153/458214/orangeZitova/100c.gif" style='border: none; padding: 0px'/> 
+			</a>
+			
+			</font>
+	        </div>
+	        </div>
+	        <div class="p-con3"><div class="p-con4">
+	        نوشته شده در تاریخ : <span style="color:#0292c6">شنبه 19 بهمن 1392 </span> | توسط : <span style="color:#0292c6"><a href="../../../author/691669.html">رضا رستمی</a></span> | 
+	        <a target="_self" href="javascript:newComment(481)" >نظرات(<script>setCommentCnt(481)</script>)</a><script>mihanblogPostLike('481','like')</script>	        </div></div>
+	        </div>
+            </div>
+            <div class="post clearfix">
+            <div class="p-head">
+            <div class="p-head1">
+            <div class="p-head2">		
+			<b><a href="../../../465.html">آزادی آمریکایی خون سه دانشجو را ریخت</a></b>
+			</div>
+            </div>
+            </div>
+	        <div class="p-con clearfix">
+	        <div class="p-con1">
+	        <div class="p-con2">
+	        <div class="p-photo">
+	        </div>
+	        <div class="p-height">
+			
+
+<div class="section field field-name-body field-type-text-with-summary field-label-hidden" align="justify"><div class="field-items"><div class="field-item odd"><p><img src="http://www.jonbeshnet.ir/sites/default/files/media/image/169_20643.jpg" alt="" align="left" border="0" height="337" hspace="10" vspace="10" width="224"><font color="#000099" size="2">نام
+ "آمریکا" در تاریخ معاصر ایران حذف شدنی نیست و روحیه استکباری آمریکا 
+نگذاشته که دندان طمعش را بکشد و دست از سر کشور وسوسه انگیزی مثل ایران 
+بردارد.</font></p>
+<p><font color="#000099" size="2">در تقویم ایرانیان روزهای بسیاری هستند که با نام شیطانی آمریکا گره 
+خورده اند، اما در این میان آمیختگی روز دانشجو با "آمریکا" به گونه دیگری 
+است. ۱۶ آذر، روز اعتراض دانشجویان به کودتایی است که نقطه اوج دخالت 
+آمریکا در سرنوشت ایران و ایرانی بود؛ کودتای آمریکایی که دولت مصدق را 
+برکنار کرد؛ مصدقی که از روباه انگلیس به گرگ آمریکا پناه برده بود و به 
+نوکر دست نشانده آمریکا قدرت بیشتری داد؛ قدرتی که به نظامیان پهلوی اجازه 
+داد، خون دانشجویان معترض به ورود نیکسون به ایران را فرش قرمز زیر پای 
+معاون رییس جمهور آمریکا کند.</font></p>
+<p><font color="#000099" size="2">آیزنهاور، رییس جمهور وقت آمریکا کودتای ۲۸ مرداد را پیروزی سیاسی 
+امیدبخشی دانسته بود که در ایران نصیب قوای طرفدار تثبیت اوضاع و قوای 
+آزادی شده است<font color="#FF0000"><sup>۱</sup></font>. آزادی آمریکایی خون سه دانشجو را ریخت و دو روز بعد در 
+قتلگاه دانشجویان به نیکسون دکترای افتخاری حقوق داد.</font></p>
+<p><font color="#000099" size="2">به همین سادگی! و کسی هم نشنید که مقامات آمریکایی اعتراضی به نقض حقوق 
+بشر داشته باشند که بخواهند به بهانه آن تحریمهای تازه ای وضع کنند<font color="#FF0000"><sup>۲</sup></font>.</font></p>
+<p><font color="#000099" size="2">&nbsp;</font></p>
+<hr>
+<p><font color="#000099" size="2"><font color="#FF0000">۱</font>. برگرفته از سخنرانی آیزنهاور، پس از کودتای ۲۸ مرداد در کنگره آمریکا (سایت <a href="http://www.irdc.ir/fa/calendar/66/default.aspx" rel="nofollow">مرکز اسناد انقلاب اسلامی</a>).</font></p>
+<p><font color="#000099" size="2"><font color="#FF0000">۲</font>. سوزان رایس، مشاور امنیت ملی آمریکا: «تحریم‌های ایالات متحده علیه 
+ناقضان حقوق بشر در ایران ادامه خواهد یافت و آمریکا همچنان از حقوق اساسی 
+تمامی ایرانیان دفاع خواهد کرد». (<a href="http://www.rajanews.com/detail.asp?id=175536" rel="nofollow">رجانیوز</a>)</font></p>
+</div></div></div>
+
+
+
+
+
+
+</div><br><b></b>
+			<br><br><font style="font-size:8pt;">
+<br>
+			طبقه بندی: 			<a href="../../../category/11.html">
+			مناسبتها</a>،&nbsp;			<a href="../../../category/10.html">
+			مسائل مهم روز</a>،&nbsp;<br>
+			برچسب ها:
+						<a href="../../آمریکا.html" >آمریکا</a>، 
+						<a href="../../آزادی.html" >آزادی</a>، 
+						<a href="../../کودتا.html" >کودتا</a>، 
+						<a href="../../روز.html" >روز</a>، 
+						<a href="../../دانشجو.html" >دانشجو</a>، 
+						<a href="../../تحریم.html" >تحریم</a>، 
+						<a href="../../حقوق&#32;بشر.html" >حقوق بشر</a>، 
+			<br>
+			داغ کن:
+			<a   target="_blank"  
+			href="http://www.cloob.com/share/link/add?url=http://leader.mihanblog.com//post/465&title=آزادی آمریکایی خون سه دانشجو را ریخت"> 
+			<img alt="داغ کن - کلوب دات کام" src="http://static.mihanblog.com//public/user_data/user_files/153/458214/orangeZitova/100c.gif" style='border: none; padding: 0px'/> 
+			</a>
+			
+			</font>
+	        </div>
+	        </div>
+	        <div class="p-con3"><div class="p-con4">
+	        نوشته شده در تاریخ : <span style="color:#0292c6">یکشنبه 17 آذر 1392 </span> | توسط : <span style="color:#0292c6"><a href="../../../author/785295.html">علی تجرد</a></span> | 
+	        <a target="_self" href="javascript:newComment(465)" >دیدگاه دوستان(<script>setCommentCnt(465)</script>)</a><script>mihanblogPostLike('465','like')</script>	        </div></div>
+	        </div>
+            </div>
+            <div class="post clearfix">
+            <div class="p-head">
+            <div class="p-head1">
+            <div class="p-head2">		
+			<b><a href="../../../462.html">توافقنامه ژنو، نخستین توافقنامه لغو تحریم ها نیست</a></b>
+			</div>
+            </div>
+            </div>
+	        <div class="p-con clearfix">
+	        <div class="p-con1">
+	        <div class="p-con2">
+	        <div class="p-photo">
+	        </div>
+	        <div class="p-height">
+			
+
+
+<div align="justify"><font color="#000099" size="2">توافقنامه ژنو، نخستین توافقنامه لغو تحریم ها نیست. نزدیک به سی و سه 
+سال پیش و در پی فتح لانه جاسوسی آمریکا به دست دانشجویان انقلابی اختلاف 
+ایران و آمریکا بالا گرفت. همان روز ۱۳ آبان، دولت آمریکا رابطه سیاسی خود 
+با ایران را قطع کرد و رییس جمهور وقت آمریکا دستور توقیف همه دارایی‌های 
+دولت ایران در آمریکا و شعب خارجی بانکهای آمریکایی را داد. دولت آمریکا که
+ خواستار آزادی ۵۲ تبعه خود بود، وادار به امضای نخستین توافقنامه با 
+جمهوری اسلامی ایران شد. دولت وقت الجزایر میانجی این توافق شد و این پیمان
+ ـ که به «بیانیه الجزایر» شناخته شد ـ تنها در یکی از موارد، دولت آمریکا 
+را متعهد به&nbsp;لغو همه تحریمهای تجاری کرد که از ۱۳ آبان ۱۳۵۸ بر ایران اعمال
+ کرده بود. همچنین آمریکا پذیرفت که اموال شاه را به دولت ایران برگرداند و
+ در امور ایران مداخله نکند.<font color="#FF0000"><sup>۱</sup></font></font></div>
+<p align="justify"><img src="http://www.jonbeshnet.ir/sites/default/files/media/image/169_20334.jpg" alt="" align="bottom" border="0" hspace="10" vspace="10"></p><p align="justify"><font color="#000099" size="2">نیازی به حدس زدن نیست؛ نیازی به خواندن کتابهای تاریخی هم نیست. یک 
+نگاه گذرا به تاریخ سی و چندساله جمهوری اسلامی سرنوشت این پیمان را روشن 
+می‌کند. انگار که ناف آمریکا را با عهدشکنی بریده اند. این روزها هم آمریکا
+ پای امضای پیمانی با جمهوری اسلامی نشسته و متعهد شده که بخشی از 
+تحریمهایی را که نه تنها خلاف قوانین انسانی و اخلاقی و بین المللی، که 
+خلاف بیانیه الجزایر اعمال کرده، لغو کند. سرنوشت این پیمان چه خواهد شد؟</font></p><hr><p><font color="#000099" size="2"><font color="#FF0000">۱</font>. برگرفته از کتاب «دیوار بی اعتمادی»، نوشته رضا ایماشی.</font></p>
+
+
+
+
+
+
+
+
+</div><br><b></b>
+			<br><br><font style="font-size:8pt;">
+<br>
+			طبقه بندی: 			<a href="../../../category/10.html">
+			مسائل مهم روز</a>،&nbsp;<br>
+			برچسب ها:
+						<a href="../../ژنو.html" >ژنو</a>، 
+						<a href="../../آمریکا.html" >آمریکا</a>، 
+						<a href="../../بیانیه&#32;الجزایر.html" >بیانیه الجزایر</a>، 
+						<a href="../../تحریم.html" >تحریم</a>، 
+						<a href="../../ایران.html" >ایران</a>، 
+						<a href="../../ظریف.html" >ظریف</a>، 
+						<a href="../../کری.html" >کری</a>، 
+			<br>
+			داغ کن:
+			<a   target="_blank"  
+			href="http://www.cloob.com/share/link/add?url=http://leader.mihanblog.com//post/462&title=توافقنامه ژنو، نخستین توافقنامه لغو تحریم ها نیست"> 
+			<img alt="داغ کن - کلوب دات کام" src="http://static.mihanblog.com//public/user_data/user_files/153/458214/orangeZitova/100c.gif" style='border: none; padding: 0px'/> 
+			</a>
+			
+			</font>
+	        </div>
+	        </div>
+	        <div class="p-con3"><div class="p-con4">
+	        نوشته شده در تاریخ : <span style="color:#0292c6">یکشنبه 10 آذر 1392 </span> | توسط : <span style="color:#0292c6"><a href="../../../author/785295.html">علی تجرد</a></span> | 
+	        <a target="_self" href="javascript:newComment(462)" >دیدگاه دوستان(<script>setCommentCnt(462)</script>)</a><script>mihanblogPostLike('462','like')</script>	        </div></div>
+	        </div>
+            </div>
+            <div class="post clearfix">
+            <div class="p-head">
+            <div class="p-head1">
+            <div class="p-head2">		
+			<b><a href="../../../456.html">چرا خون آمریکایی ها کمرنگ تر است؟</a></b>
+			</div>
+            </div>
+            </div>
+	        <div class="p-con clearfix">
+	        <div class="p-con1">
+	        <div class="p-con2">
+	        <div class="p-photo">
+	        </div>
+	        <div class="p-height">
+			
+
+<font color="#000099"><p align="justify"><font color="#000099" size="2"></font>&nbsp;</p><p align="justify"><font color="#000099" size="2">میدانم خود این پرسشها برای خیلی ها آن اندازه شگفت انگیز است که شاید ندانند در پاسخ چه باید بگویند، ولی هستند کسانی که به هر دلیل پاسخی برای این پرسشها نمی یابند: «مگر ما از دیلپلماسی فعال دولت حمایت نمیکنیم؟ پس چرا آب ما با آمریکا توی یک جوی نمی رود؟ مگر خون آمریکا از دیگر کشورها کمرنگ تر است؟ فرق آمریکا با دیگر کشورهایی که با وجود ستمهایی که گهگاه بر ما روا داشته اند، با آنها رابطه عادی داریم چیست؟».</font></p><p align="justify"><font color="#000099" size="2"><img width="1" height="394" align="baseline" style="width: 481px; height: 306px;" alt="" src="http://www.jonbeshnet.ir/sites/default/files/media/image/169_19443.jpg" border="0" vspace="0" hspace="0"></font></p><p align="justify"><font color="#000099" size="2">دیپلماسی تلاش دولتها برای رسیدن به منافع هرچه بیشتر، در چارچوب روابط خارجی است. در فضای موجود جهان وقتی که پای منافع در میان باشد، اخلاق ذبح میشود. کشورها&nbsp; معمولا به این کاری ندارند که منافعی که در رابطه با کشور دیگر مطالبه میکنند، تا چه اندازه&nbsp;منصفانه&nbsp;است، ولی&nbsp;برای حفظ این رابطه همه چیز را برای خود نخواهند خواست، و سطحی از حقوق را برای طرف خود در نظر میگیرند؛ اما در این میان آمریکا تافته جدا بافته ای است و به معنای واقعی کلمه مستکبرانه رفتار میکند.</font></p><p align="justify"><font color="#000099" size="2">در چنین روزهایی<sup><font color="#ff0000">1</font></sup> بود که کارتر رییس جمهور وقت آمریکا دستور توقیف تمامی دارایی های منقول و غیر منقول ایران در ایالات متحده آمریکا وهمچین نقود ایرانی دربانک های این کشور را صادرکرد . این عمل در پاسخ به گروگان گیری 63 نفر از افراد حاضر در سفارت سابق آمریکا در تهران (لانه جاسوسی) اتفاق افتاد . هنوز پس از گذشت بیش از سه دهه از آن واقعه و همچنین صدور برخی بیانیه های کلی توافق الجزایر<sup><font color="#ff0000">2</font></sup>، دولت آمریکا ثروت ملی ایران را غاصبانه نگه داشته است.</font></p><p align="justify"><font color="#000099" size="2">این تنها یک نمونه از کارهایی است که آمریکا منحصرا علیه مردم ایران انجام داده است؛ یک جستجوی ساده ذهنی ما را به رخدادهای تلخ دیگری که بانی آن آمریکاست و&nbsp;نشان میدهد چرا خون آمریکا&nbsp;برای ما کمرنگ تر است، می رساند؛ نقش آمریکا در کودتای سال 32، پس ندادن شاه به ایران برای محاکمه، تبدیل سفارتخانه به لانه جاسوسی، سرنگون کردن هواپیمای مسافربری، نقش برجسته آمریکا در جنگ تحمیلی و...</font></p><p align="justify"><font color="#000099" size="2">آمریکا یک دولت مستکبر است.&nbsp;«در قرآن كلمه استكبار به كار رفته است؛ آدم مستكبر، دولت مستكبر، گروه مستكبر، یعنى آن كسانى و آن دولتى كه قصد دخالت در امور انسانها و ملّتهاى دیگر را دارد، در همه كارهاى آنها مداخله میكند براى حفظ منافع خود؛ خود را آزاد میداند، حقّ تحمیل بر ملّتها را براى خود قائل است، حقّ دخالت در امور كشورها را براى خود قائل است، پاسخگو هم به هیچ‌كس نیست».</font></p><p align="justify"><font color="#000099" size="2">و ما مردم ایران یک عیب بزرگ داریم؛ دوست نداریم زیر بار زور برویم.</font><font color="#000099" size="2">&nbsp;</font><font size="2"></font><hr><p></p><p><font color="#000099"><font size="1"><font color="#ff0000">1</font>. 13 نوامبر 1979 میلادی یا 23 آبان 1358 خورشیدی.</font></font></p><p align="justify"><font color="#000099"><font size="1"><font color="#ff0000">2</font>. محور توافق‌های الجزایر: آزادی گروگان‌ها، تعهد ایالات متحده به عدم مداخله (سیاسی - نظامی) در امور داخلی ایران، تعهد ایالات متحده به لغو مجازات‌های تجاری و اقتصادی علیه ایران و آزاد کردن دارایی‌های مسدود شده ایران نزد موسسات مالی و اعتباری آمریکا، تعهد طرفین به ارجاع دعاوی دولتی و غیردولتی اتباع یکدیگر به داوری مرضی الطرفین تا زمان انعقاد کامل بیانیه‌های قرارداد این بند به بنیانگذاری نهادی حقوقی به نام دیوان داوری دعاوی ایران و آمریکا منجر شد، تعهد واشنگتن به عدم رعایت مصونیت شاه نزد دادگاه‌های ایالتی در مورد نقل و انتقال دارایی حکومت پیشین، تعهد ایران به پرداخت قروض ایران و ایالات متحده.</font></font></p></font><p align="justify"><font size="2"></font></p>
+
+
+
+</div><br><b></b>
+			<br><br><font style="font-size:8pt;">
+<br>
+			طبقه بندی: 			<a href="../../../category/6.html">
+			دیدگاه های ولی فقیه</a>،&nbsp;			<a href="../../../category/10.html">
+			مسائل مهم روز</a>،&nbsp;<br>
+			برچسب ها:
+						<a href="../../ایران.html" >ایران</a>، 
+						<a href="../../آمریکا.html" >آمریکا</a>، 
+						<a href="../../رابطه.html" >رابطه</a>، 
+						<a href="../../تحریم.html" >تحریم</a>، 
+						<a href="../../دیپلماسی.html" >دیپلماسی</a>، 
+						<a href="../../بلوکه.html" >بلوکه</a>، 
+						<a href="../../دارایی.html" >دارایی</a>، 
+			<br>
+			مطالب مرتبط:
+						<a href="http://www.rajanews.com/detail.asp?lang_id=&amp;id=173877"  target="_blank">
+			توافق بزرگ آمریکایی ها چه قدر می ارزد؟</a>،			
+			<br>
+			داغ کن:
+			<a   target="_blank"  
+			href="http://www.cloob.com/share/link/add?url=http://leader.mihanblog.com//post/456&title=چرا خون آمریکایی ها کمرنگ تر است؟"> 
+			<img alt="داغ کن - کلوب دات کام" src="http://static.mihanblog.com//public/user_data/user_files/153/458214/orangeZitova/100c.gif" style='border: none; padding: 0px'/> 
+			</a>
+			
+			</font>
+	        </div>
+	        </div>
+	        <div class="p-con3"><div class="p-con4">
+	        نوشته شده در تاریخ : <span style="color:#0292c6">یکشنبه 26 آبان 1392 </span> | توسط : <span style="color:#0292c6"><a href="../../../author/785295.html">علی تجرد</a></span> | 
+	        <a target="_self" href="javascript:newComment(456)" >نظرات(<script>setCommentCnt(456)</script>)</a><script>mihanblogPostLike('456','like')</script>	        </div></div>
+	        </div>
+            </div>
+            <div class="post clearfix">
+            <div class="p-head">
+            <div class="p-head1">
+            <div class="p-head2">		
+			<b><a href="../../../386.html">آقایان بازنگری کنند!</a></b>
+			</div>
+            </div>
+            </div>
+	        <div class="p-con clearfix">
+	        <div class="p-con1">
+	        <div class="p-con2">
+	        <div class="p-photo">
+	        </div>
+	        <div class="p-height">
+			
+<p style="text-align:justify"><img src="http://www.jonbeshnet.ir/sites/default/files/media/image/169_14825.jpg" alt="" align="left" border="0" hspace="10" vspace="10"><font color="#000099" size="2">هرچند در نگاه گذرا چندان به چشم نیاید، ولی
+ از چشمان تیزبین پنهان نیست که در هر انتخابات، ملت ایران یک گام به پیش 
+میرود. این پیشرفت لزوما به این معنا نیست که کسی که برگزیده رای مردم 
+میشود شایسته تر از دیگر نامزدها و پیشرفته تر از برگزیده پیش از خود بوده 
+است. گاهی این پیشرفت، دستاورد آموزه هایی است که از خود انتخابات یا 
+رخدادهای برگرفته از آن گرفته میشود.<br>این انتخابات هم برای اهل دقت 
+آموزه هایی داشت و خواهد داشت. یکی از این آموزه ها این بود که دید بهتری 
+به مردم داد تا بتوانند مسئولان رده بالای کشور را بهتر ارزیابی کنند.<br></font><a href="../../../377.html" target="_blank" title="">پیشتر هم نوشته بودم</a><font color="#000099" size="2"> که مناظره ها نشان داد دیدگاه چندی از آقایان در زمینه های سیاسی و فرهنگی
+ با دیدگاه رهبر انقلاب همخوانی ندارد. یادآور می شوم که این بزرگواران، 
+دارای جایگاه های برجسته ای، چون عضویت در مجمع تشخیص مصلحت هستند. از 
+درسهای این انتخابات این بود که حتی سیاستمداران برجسته ای که با حکم رهبر 
+انقلاب مسئولیتهای برجسته ای دارند هم، گاهی در اثر تحلیل یا اطلاعات 
+نادرست، مرتکب اشتباهات نه چندان کوچک میشوند.<br>گرچه همان گونه که رهبر 
+انقلاب هم فرمودند<sup><font color="#FF0000">1</font></sup>، حتی توجه به سخنان آغاز سال ایشان در حرم مطهر رضوی 
+میتوانست آقایان را متوجه اشتباهشان بکند، ولی با سخنان اخیر ایشان که 
+مستقیما درباره مناظره ها بود، امیدواریم آقایان در گفته هایشان بازنگری 
+کنند و در این میان آقای رییس جمهور منتخب بیش از همه به این بازنگری نیاز 
+دارند.<br></font></p><hr><p style="text-align:justify"><font color="#000099" size="2"><font color="#FF0000">1</font>. بخشی از </font><a href="http://farsi.khamenei.ir/speech-content?id=23006" target="_blank" title="">سخنان رهبر انقلاب</a><font color="#000099" size="2"> در تاریخ پنجم تیر: «<font color="#006600">من در <a data-cke-saved-href="http://farsi.khamenei.ir/speech-content?id=22233#21" href="http://farsi.khamenei.ir/speech-content?id=22233#21">سخنرانى روز اول سال</a> گفتم جبهه‌ مخالف ما... نمیخواهند موضوع هسته‌اى ایران حل شود. اگر لجبازى آنها نبود، موضوع هسته‌اى به راحتى حل میشد. بارها تا لحظه حل پیش رفتیم، امضا كردند، آژانس هسته‌اى
+ امضا كرد؛ قبول كرد كه این اشكالاتى كه وجود داشته، برطرف شده - اینها 
+موجود است، اینها سند است؛ اینها كه قابل انكار نیست - خب باید قضیه تمام 
+میشد، پرونده‌ هسته‌اى كشور باید پایان پیدا میكرد. آمریكایى‌ها بلافاصله یك چیز جدید را مطرح كردند، آوردند وسط. نمیخواهند قضیه تمام شود. نمونه‌هاى متعددى را ما در این زمینه داریم. حل مسئله هسته‌اى
+ جمهورى اسلامى، به حسب طبیعت خود، از جمله كارهاى سهل و آسان و روان است؛ 
+اما وقتى طرف مقابل مایل نیست این قضیه حل شود، خب بله همین جور میشود كه 
+ملاحظه میكنید</font></font><font color="#000099" size="2">»</font><font color="#000099" size="2">.<br></font></p>
+
+
+
+
+</div><br><b></b>
+			<br><br><font style="font-size:8pt;">
+<br>
+			طبقه بندی: 			<a href="../../../category/6.html">
+			دیدگاه های ولی فقیه</a>،&nbsp;			<a href="../../../category/10.html">
+			مسائل مهم روز</a>،&nbsp;<br>
+			برچسب ها:
+						<a href="../../هسته&#32;ای.html" >هسته ای</a>، 
+						<a href="../../تحریم.html" >تحریم</a>، 
+						<a href="../../انصاف.html" >انصاف</a>، 
+						<a href="../../انتخابات.html" >انتخابات</a>، 
+						<a href="../../مناظره.html" >مناظره</a>، 
+						<a href="../../رییس&#32;جمهور.html" >رییس جمهور</a>، 
+						<a href="../../روحانی.html" >روحانی</a>، 
+			<br>
+			داغ کن:
+			<a   target="_blank"  
+			href="http://www.cloob.com/share/link/add?url=http://leader.mihanblog.com//post/386&title=آقایان بازنگری کنند!"> 
+			<img alt="داغ کن - کلوب دات کام" src="http://static.mihanblog.com//public/user_data/user_files/153/458214/orangeZitova/100c.gif" style='border: none; padding: 0px'/> 
+			</a>
+			
+			</font>
+	        </div>
+	        </div>
+	        <div class="p-con3"><div class="p-con4">
+	        نوشته شده در تاریخ : <span style="color:#0292c6">یکشنبه 9 تیر 1392 </span> | توسط : <span style="color:#0292c6"><a href="../../../author/785295.html">علی تجرد</a></span> | 
+	        <a target="_self" href="javascript:newComment(386)" >دیدگاه دوستان(<script>setCommentCnt(386)</script>)</a><script>mihanblogPostLike('386','like')</script>	        </div></div>
+	        </div>
+            </div>
+            <div class="post clearfix">
+            <div class="p-head">
+            <div class="p-head1">
+            <div class="p-head2">		
+			<b><a href="../../../377.html">اگر مناظرات را ندیده اید، این نوشته را نخوانید</a></b>
+			</div>
+            </div>
+            </div>
+	        <div class="p-con clearfix">
+	        <div class="p-con1">
+	        <div class="p-con2">
+	        <div class="p-photo">
+	        </div>
+	        <div class="p-height">
+			
+
+
+
+
+<div class="section field field-name-body field-type-text-with-summary field-label-hidden" align="justify"><div class="field-items"><div class="field-item odd"><p><font color="#000099" size="2">شاید
+
+ بهتر باشد اگر مناظرات نامزدهای ریاست جمهوری را ندیده اید، این نوشته را 
+نخوانید، ولی اگر دیده اید، کمی وقت بگذارید و با دقت 
+بخوانید!</font><br><font color="#000099" size="2">از دید 
+من هیچ اشکالی ندارد که کسی از نامزدهای ریاست جمهوری در برنامه های 
+تبلیغاتیش با مردم رو راست باشد و بگوید در فلان مسئله دیدگاه من با دیدگاه
+ رهبر انقلاب متفاوت است، که اگر چنین نبود، خود رهبر انقلاب در <a href="http://farsi.khamenei.ir/speech-content?id=7190" rel="nofollow">خطبه نماز جمعه 29 تیر 1388</a>
+ به اختلاف دیدگاهش با کسی که بسیاری او را مرد دوم نظام جمهوری اسلامی می 
+دانند، اشاره نمی کرد</font><font color="#000099" size="2"><sup><font color="#000099"><font color="#FF0000">1</font></font></sup>، ولی هیچیک از هشت نامزد ریاست جمهوری این کار را 
+نکردند و برعکس، خود را هماهنگ با رهبر انقلاب دانسته اند.<br>چندی از سخنان رهبر انقلاب را در فرهنگ و سیاست می آورم
+ و داوری درباره اینکه کدامیک از نامزدها دیدگاهی برخلاف دیدگاه رهبر 
+انقلاب را در مناظره ها داشت، بر دوش خودتان می گذارم.</font><br><img src="http://www.jonbeshnet.ir/sites/default/files/media/image/169_14231.jpg" alt="" align="" border="0" hspace="10" vspace="10"><font color="#000099" size="2"><br></font></p><br></div></div></div>
+
+
+
+
+
+
+
+
+
+
+
+
+</div><br><b><a href='../../../377.html'>ادامه مطلب</a></b>
+			<br><br><font style="font-size:8pt;">
+<br>
+			طبقه بندی: 			<a href="../../../category/6.html">
+			دیدگاه های ولی فقیه</a>،&nbsp;			<a href="../../../category/10.html">
+			مسائل مهم روز</a>،&nbsp;<br>
+			برچسب ها:
+						<a href="../../رهبر&#32;انقلاب.html" >رهبر انقلاب</a>، 
+						<a href="../../مناظره.html" >مناظره</a>، 
+						<a href="../../انتخابات.html" >انتخابات</a>، 
+						<a href="../../ریاست&#32;جمهوری.html" >ریاست جمهوری</a>، 
+						<a href="../../سیاست&#32;خارجی.html" >سیاست خارجی</a>، 
+						<a href="../../فرهنگ.html" >فرهنگ</a>، 
+						<a href="../../تحریم.html" >تحریم</a>، 
+						<a href="../../دولت.html" >دولت</a>، 
+			<br>
+			داغ کن:
+			<a   target="_blank"  
+			href="http://www.cloob.com/share/link/add?url=http://leader.mihanblog.com//post/377&title=اگر مناظرات را ندیده اید، این نوشته را نخوانید"> 
+			<img alt="داغ کن - کلوب دات کام" src="http://static.mihanblog.com//public/user_data/user_files/153/458214/orangeZitova/100c.gif" style='border: none; padding: 0px'/> 
+			</a>
+			
+			</font>
+	        </div>
+	        </div>
+	        <div class="p-con3"><div class="p-con4">
+	        نوشته شده در تاریخ : <span style="color:#0292c6">یکشنبه 19 خرداد 1392 </span> | توسط : <span style="color:#0292c6"><a href="../../../author/785295.html">علی تجرد</a></span> | 
+	        <a target="_self" href="javascript:newComment(377)" >دیدگاه دوستان(<script>setCommentCnt(377)</script>)</a><script>mihanblogPostLike('377','like')</script>	        </div></div>
+	        </div>
+            </div>
+            <div class="post clearfix">
+            <div class="p-head">
+            <div class="p-head1">
+            <div class="p-head2">		
+			<b><a href="../../../355.html">همه این فشارها خنثی خواهد شد</a></b>
+			</div>
+            </div>
+            </div>
+	        <div class="p-con clearfix">
+	        <div class="p-con1">
+	        <div class="p-con2">
+	        <div class="p-photo">
+	        </div>
+	        <div class="p-height">
+			
+
+<div style="text-align: justify;"><font style="color: rgb(0, 0, 153);" size="2">روی ملت، روی دولت و روی دیگر دستگاه های اجرایی فشار هست، همانجور که از روزهای آغازین انقلاب بوده، گرچه فشار این روزها شاید ویژه باشد. فشارها کم نیست و این چیزی نیست که کسی نخواهد آن را بپذیرد. خوب! باید چه کار کرد؟</font><br><font style="color: rgb(0, 0, 153);" size="2">بعضی ها نق می زنند، بعضی ها مقصر را پیدا کرده اند: آقای الف، میم، یا گاف. همین که آقای مقصر نباشد، همه چیز حل است. بعضی ها رفتارهای نادرست در سیاست خارجی را عامل افزایش فشارها می دانند. اما نگاه دیگری هم هست:<br></font><img src="http://delkhorha.persiangig.com/image/Policy/S.Ali/13920207_2722391-ws.jpg" alt="" border="0" hspace="10" vspace="10" align="left"><font style="color: rgb(0, 0, 153);" size="2">«<span style="color: rgb(0, 102, 0); ">البته فشارها خیلى زیاد است - از جوانب مختلف - اما اینكه ما تصور كنیم با فلان تصمیم، با فلان تدبیر و اقدام، موجب شدیم كه دشمنى به طرف ما جلب شود، این غلط است؛ این درست نیست</span>»<sup style="color: rgb(255, 0, 0);">1</sup>. </font><br><font style="color: rgb(0, 0, 153); " size="2">«<span style="color: rgb(0, 102, 0); ">آحاد مردم، چه در مصرفشان، چه در تولیدشان؛ بخشهاى مولّد یك جور، بخشهاى مصرف كننده یك جور، بخشهاى خدمات یك جور؛ بدانند كه براى پیشرفت كشور حركت جهش گونه لازم است، خلق حماسه لازم است؛ آن وقت كشور پیش خواهد رفت، استقرار پیدا خواهد شد</span></font><font style="color: rgb(0, 0, 153); " size="2">»<sup style="color: rgb(255, 0, 0);">2</sup>. «</font><font style="color: rgb(0, 0, 153);" size="2"><span style="color: rgb(0, 102, 0); ">حماسه اقتصادى فقط دست دولت نیست؛ البته برنامه ریزیهاى دولت مؤثر است. حماسه یعنى واقعه جهادگونه و پرشور؛ این را باید ملت ایران و مسئولان كشور مورد نظر قرار دهند؛ ضعفها را، خلأها را پُر كنند؛ اول بشناسند. در همه برنامه ریزیها باید زندگى و معیشت طبقات ضعیف مورد توجه قرار گیرد؛ بعد براى آنها برنامه ریزى كنند. این میشود حماسه</span>»<sup style="color: rgb(255, 0, 0);">3</sup>. </font><br><font style="color: rgb(0, 0, 153); " size="2">«<span style="color: rgb(0, 102, 0); ">اگر چنانچه این حركت عظیم اقتصادى، این جهش اقتصادى، این برنامه ریزى درست، چه در بخش قانونگذارى، چه در بخش اجرا، در سطوح مختلف، مورد توجه قرار بگیرد، همه این فشارها خنثى خواهد شد. ملت ایران و مسئولان كشور باید با عزم راسخ، دشمن را مأیوس كنند</span>»<sup style="color: rgb(255, 0, 0);">4</sup>.</font></div><hr style="width: 100%; height: 2px; margin-left: 0px; margin-right: 0px;"><div style="text-align: justify;"><span style="color: rgb(0, 0, 153);">1.&nbsp;</span><a href="http://farsi.khamenei.ir/speech-content?id=21044" data-cke-saved-href="http://farsi.khamenei.ir/speech-content?id=21044">در دیدار شرکت کنندگان در ششمین همایش ملی نخبگان جوان</a><span style="color: rgb(0, 0, 153);"> (1391/7/12).</span><br style="color: rgb(0, 0, 153);"></div><p style="text-align: justify;"><span style="color: rgb(0, 0, 153);">2، 3 ، 4.&nbsp;</span><a href="http://farsi.khamenei.ir/speech-content?id=22395" data-cke-saved-href="http://farsi.khamenei.ir/speech-content?id=22395">در دیدار کارگران و فعالان بخش تولید کشور</a><span style="color: rgb(0, 0, 153);"> (1392/2/7).</span><br></p><div style="text-align: justify;"><br><br></div>
+
+
+
+</div><br><b></b>
+			<br><br><font style="font-size:8pt;">
+<br>
+			برچسب ها:
+						<a href="../../ولایت&#32;فقیه.html" >ولایت فقیه</a>، 
+						<a href="../../حماسه&#32;اقتصادی.html" >حماسه اقتصادی</a>، 
+						<a href="../../فشار.html" >فشار</a>، 
+						<a href="../../تحریم.html" >تحریم</a>، 
+			<br>
+			داغ کن:
+			<a   target="_blank"  
+			href="http://www.cloob.com/share/link/add?url=http://leader.mihanblog.com//post/355&title=همه این فشارها خنثی خواهد شد"> 
+			<img alt="داغ کن - کلوب دات کام" src="http://static.mihanblog.com//public/user_data/user_files/153/458214/orangeZitova/100c.gif" style='border: none; padding: 0px'/> 
+			</a>
+			
+			</font>
+	        </div>
+	        </div>
+	        <div class="p-con3"><div class="p-con4">
+	        نوشته شده در تاریخ : <span style="color:#0292c6">یکشنبه 8 اردیبهشت 1392 </span> | توسط : <span style="color:#0292c6"><a href="../../../author/785295.html">علی تجرد</a></span> | 
+	        <a target="_self" href="javascript:newComment(355)" >دیدگاه دوستان(<script>setCommentCnt(355)</script>)</a><script>mihanblogPostLike('355','like')</script>	        </div></div>
+	        </div>
+            </div>
+<!--End Post-->
+<!--Start List&Pages-->
+			<div class="cb_page_box clearfix"><ul>
+			<li>تعداد کل صفحات :&nbsp;<font color="red"><b>4</b></font>&nbsp; صفحات :</li> 
+			<li><a href="1.html"><span>1</span></a>&nbsp;&nbsp;</li><li><a href="2.html"><span>2</span></a>&nbsp;&nbsp;</li><li><a href="3.html"><b>3</b></a>&nbsp;&nbsp;</li><li><a href="4.html"><span>4</span></a>&nbsp;&nbsp;</li>			</ul>
+			</div>
+<!--End List&Pages-->
+</div></div>
+<!--End sc-all&sc-->
+<!-- Start sl -->
+<div class="sl">
+            <div class="menul">
+            <div class="tmenu">
+	        <div class="tmenu2">
+	        <b>انتخاب زبان</b></div></div>
+	        <div class="xmenu"><div class="menu-txt">
+			<center>
+			<a href="http://translate.google.com/translate?u=http://leader.mihanblog.com&sl=fa&tl=ar&hl=en&ie=UTF-8">
+			العربیة</a>&nbsp;&nbsp;   
+			<a href="http://translate.google.com/translate?u=http://leader.mihanblog.com&sl=fa&tl=en&hl=en&ie=UTF-8">
+			English</a>&nbsp;&nbsp;  
+			<a href="http://translate.google.com/translate?u=http://leader.mihanblog.com&sl=fa&tl=fr&hl=en&ie=UTF-8">
+			French</a> <br>
+			<br>
+			امروز : <script>setTodayDate()</script>			</center></div></div>
+			<div class="s"></div></div>
+			<div class="menul">
+			<div class=tmenu>
+			<div class=tmenu2>
+			<b>وبلاگ دوستان</b></div></div>
+			<div class=xmenu><marquee scrollamount=1 scrolldelay=1 onmouseover='this.stop()' onmouseout='this.start()' direction=up style="height: 200px;width:195px">			<div class=menu-txt>
+			<a target="_blank" href="http://KHAMENEI.IR">سایت مقام معظم رهبری</a></div>			<div class=menu-txt>
+			<a target="_blank" href="http://www.leader.ir">پایگاه اطلاع رسانی مقام معظم رهبری</a></div>			<div class=menu-txt>
+			<a target="_blank" href="http://tamadonsazan.blog.ir/">اندیشه‌های تمدن ساز</a></div>			<div class=menu-txt>
+			<a target="_blank" href="http://shahadat-ir.blogfa.com/">یاد و خاطره شهدا</a></div>			<div class=menu-txt>
+			<a target="_blank" href="http://www.netdarnet.ir">مجله اینترنتی نت در نت</a></div>			<div class=menu-txt>
+			<a target="_blank" href="http://valishenasi.blog.ir/">امام شناسی</a></div>			<div class=menu-txt>
+			<a target="_blank" href="http://www.rahroclip.ir/">رهرو کلیپ</a></div>			<div class=menu-txt>
+			<a target="_blank" href="http://www.montazeram.ir/">من هنوز منتظرم</a></div>			<div class=menu-txt>
+			<a target="_blank" href="http://www.sabrbasirat.rozblog.com/">قافله ی صبر و بصیرت</a></div>			<div class=menu-txt>
+			<a target="_blank" href="http://akharinmouod.mihanblog.com/">وبلاگ حضرت حجت بن الحسن (ع)</a></div>			<div class=menu-txt>
+			<a target="_blank" href="http://modafeanvelayat.blogfa.com/">جنبش مدافعان ولایت</a></div>			<div class=menu-txt>
+			<a target="_blank" href="http://www.jnarm.blogfa.com/">جنگ نرم</a></div>			<div class=menu-txt>
+			<a target="_blank" href="http://www.jonbeshnet.ir">رهروان ولایت</a></div>			<div class=menu-txt>
+			<a target="_blank" href="http://mymeraj.ir/">معراج</a></div>			<div class=menu-txt>
+			<a target="_blank" href="http://kolbe-asheghi.mihanblog.com/">با من حرف بزن</a></div>			<div class=menu-txt>
+			<a target="_blank" href="http://sangarhaye-asemani.blogfa.com/">سنگرهای آسمانی</a></div>			<div class=menu-txt>
+			<a target="_blank" href="http://negin114.blogfa.com/">عماریون رهبریم</a></div>			<div class=menu-txt>
+			<a target="_blank" href="http://www.yekneveshte.blogfa.com/">کاغذ دیواری</a></div>			<div class=menu-txt>
+			<a target="_blank" href="http://mahdaviat-alzahra.mihanblog.com/">کانون مهدویت دانشگاه الزهرا(س)</a></div>			<div class=menu-txt>
+			<a target="_blank" href="http://raheshia.blog.ir/">راه شیعه</a></div></marquee><br><br><a href="../../../../link/index.html"><b style="padding: 10px"><font color="red">»</font>&nbsp;همه لینک ها </b></a><br></div>
+			<div class=s></div></div>
+          
+			<div class=menul>
+			<div class=tmenu>
+			<div class=tmenu2>
+			<b>پیوندهای مفید </b></div></div>
+			<div class=xmenu> <div class=menu-txt>
+			<a target="_blank" href="http://www.nabae.blog.ir" title="با سلام....
+ 
+این یک وبلاگ علمی فرهنگی و تفریحی است از شما تقاضا میشود در صورت تمایل لینک تبادل را قرار دهید.
+این هم آدرس کانل تلگرامی وبلاگ:https://telegram.me/nabaeblog">
+			نبآ</a></div> <div class=menu-txt>
+			<a target="_blank" href="http://zavvar-hosein.blogfa.com" title="سلام علیکم.هیئت زوارالحسین (ع)درمحله سبلان شمالی تهران با دارای مجوز فعالیت از سازمان تبلیغات اسلامی شماشرق تهران به شماره 207032668 توسط چندتن از بر وبچه های ولایی برای برگزاری جلسات هفتگی(یک شنبه شبها) فعالیت میکند انشاءالله.ممنون">
+			هیئت زوّارالحسین(ع)</a></div> <div class=menu-txt>
+			<a target="_blank" href="http://sollam.ir/" title="تمایل به همکاری">
+			شخصی</a></div> <div class=menu-txt>
+			<a target="_blank" href="http://www.netdarnet.ir" title="مجله اینترنتی نت در نت">
+			مجله اینترنتی نت در نت</a></div> <div class=menu-txt>
+			<a target="_blank" href="http://www.rajanews.com/detail.asp?id=163672" title="">
+			چرا دختران در دیدار با رهبری چادری هستند؟!</a></div><br><a href="../../../../linkdaily/index.html"><b style="padding: 10px"><font color="red">»</font>&nbsp;آرشیو پیوندهای روزانه</b></a><br>
+            <br><a href="javascript:linkdailyForm()"><b style="padding: 10px"><font color="red">»</font>&nbsp;ارسال لینک به ما</b></a><br> </div>
+			<div class=s></div></div>
+ 
+            <div class=menul>
+			<div class=tmenu>
+			<div class=tmenu2>
+			<b>آماروبلاگ </b></div></div>
+			<div class=xmenu><div class="menu-txta">
+							کل بازدید:<span style="color:#0292c6"><script>getStatVar('total_view');</script></span><br/>
+				بازدید امروز :<span style="color:#0292c6"><script>getStatVar('today_view');</script></span><br/>
+				بازدید دیروز :<span style="color:#0292c6"><script>getStatVar('yesterday_view');</script></span><br/>
+				بازدید این ماه :<span style="color:#0292c6"><script>getStatVar('this_month_view');</script></span><br/>
+				بازدید ماه قبل :<span style="color:#0292c6"><script>getStatVar('last_month_view');</script></span><br/>
+				تعداد کل مطالب :<span style="color:#0292c6"><script>getStatVar('total_post');</script></span><br/>
+				آخرین بازدید :<span style="color:#0292c6"><script>getStatVar('last_view_date');</script></span><br/>
+				آخرین بروز رسانی :<span style="color:#0292c6"><script>getStatVar('modify_date');</script></span><br/>
+            <center><SCRIPT language=JavaScript type=text/javascript src="http://www.welayatnet.com/sites/default/files/webtools/telgram.js"></SCRIPT></center></div></div>
+			<div class=s></div></div>     
+</div>
+<!--End SL -->
+</div>
+<!-- End scsl -->
+<!-- Start SR -->
+<div class="sr">
+            <div class=menur>
+			<div class=tmenu>
+			<div class=tmenu2>
+			<b>درباره وبلاگ</b></div></div>
+			<div class=xmenu><div class=menu-txt2>  
+            <div style="text-align:center;"><img src="http://static.mihanblog.com//public/user_data/web_photo/276/827628.jpg?1999"  /></div>
+            <br><div class="descri">این وبلاگ گروهی به همت جمعی از طلاب حوزه علمیه قم برای دفاع علمی ، منطقی و مستدل از ولایت فقیه و حکومت اسلامی بر اساس اصول و معارف اسلامی راه اندازی شده است.<br />
+قصد ما کمک به شناخت بهتر این الگوی اسلامی می باشد، تا اگر اشکالی در این الگو وجود دارد با نقد منصفانه دوستان اصلاح و اگر اشکالی بر آن وارد نیست به عنوان یک الگوی موفق سرمشق دیگر آزادگان جهان قرار بگیرد.<br />
+منتظر نظرات سازنده شما هستیم.<br />
+</div></div></div>
+			<div class=s></div></div>
+<div class=menur>
+			<div class=tmenu>
+			<div class=tmenu2>
+			<b>پاسخگوی آنلاین ولایت فقیه</b></div></div>
+			<div class=xmenu><div class=menu-txt2>  
+            <div style="margin:0px auto;width:172px;min-height:70px;padding-top:8px"><div style="width:86px;text-align:center;margin:0px auto;"><!-- 
+
+Begin http://zitova.ir ‍Yahoo Status --><a  target="_self" title="http://zitova.ir" href = "ymsgr:sendim?
+
+zitova9"><img src="http://www.zitova.com/YState/ystat.php?id=zitova9&mod=5" border="0"></a><br/><!-- 
+
+End  http://zitova.ir Yahoo Status -->
+            <div style="padding-top:20px"><a href='ymsgr:addfriend?zitova9'>اضافه کردن</a></div></div>
+				</div>
+
+           </div></div>
+<div class=s></div></div>
+
+
+<div class=menur>
+<div class=tmenu>
+<div class=tmenu2>
+<b>نویسندگان وبلاگ</b></div></div>
+<div class=xmenu>
+
+<!-- نام نویسنده اول -->
+<div class=menu-txt>
+<a href="../../../author/691669.html">رضا رستمی - شنبه ها</a></div>
+
+<!-- نام نویسنده دوم -->
+<div class=menu-txt>
+<a href="../../../author/785295.html">علی تجرد </a></div>
+
+<!-- نام نویسنده سوم -->
+<div class=menu-txt>
+<a href="../../../author/767000.html">احمد منزه </a></div>
+
+<!-- نام نویسنده چهارم -->
+<div class=menu-txt>
+<a href="../../../author/211181.html">مجید </a></div>
+
+<!-- نام نویسنده پنجم -->
+<div class=menu-txt>
+<a href="../../../author/903125.html">سید هاشمی - چهارشنبه ها</a></div>
+
+</div>
+<div class=s></div></div>
+			<div class=menur>
+			<div class=tmenu>
+			<div class=tmenu2>
+			<b>موضوعات وبلاگ</b></div></div>
+			<div class=xmenu><div class=menu-txt>
+			<a href="../../../category/5.html">شناسنامه های تاریخی ملت شریف ایران(27)</a></div><div class=menu-txt>
+			<a href="../../../category/7.html">شخصیت شناسی ولی فقیه(15)</a></div><div class=menu-txt>
+			<a href="../../../category/8.html">دموکراسی و تضادهای درونی آن(3)</a></div><div class=menu-txt>
+			<a href="../../../category/4.html">مقالات درباره ولایت فقیه(25)</a></div><div class=menu-txt>
+			<a href="../../../category/2.html">مبانی کلامی ولایت فقیه(14)</a></div><div class=menu-txt>
+			<a href="../../../category/1.html">مبانی فقهی ولایت فقیه(16)</a></div><div class=menu-txt>
+			<a href="../../../category/9.html">مباحث حکومت اسلامی(93)</a></div><div class=menu-txt>
+			<a href="../../../category/6.html">دیدگاه های ولی فقیه(160)</a></div><div class=menu-txt>
+			<a href="../../../category/10.html">مسائل مهم روز(198)</a></div><div class=menu-txt>
+			<a href="../../../category/11.html">مناسبتها(116)</a></div></div>
+			<div class=s></div></div>
+            <div class=menur>
+			<div class=tmenu>
+			<div class=tmenu2>
+			<b>عضویت ! </b></div></div>
+			<div class=xmenu><div class=menu-txt2>  
+            <div style="text-align:center;"><form style="border:0px solid #ccc;padding:3px;text-align:justify;" action="http://feedburner.google.com/fb/a/mailverify" method="post" target="popupwindow" onsubmit="window.open('http://feedburner.google.com/fb/a/mailverify?uri=mihanblog/Yjrt', 'popupwindow', 'scrollbars=yes,width=550,height=520');return true"><p>آدرس ایمیل خودتان را وارد كنید تا آخرین نوشته ها برایتان ارسال شود :</p><p align="center" style="direction:ltr"><input style="margin:5px" type="text"  style="width:167px" style="text-align:left" name="email" /></p><input type="hidden" value="mihanblog/Yjrt" name="uri"/><input type="hidden" name="loc" value="en_US"/><center><input style="margin:5px;padding:3px;cursor:pointer;outline:none;font-family:Tahoma" type="submit" value="اشتراک" /></center></form></div>
+            </div></div>
+			<div class=s></div></div>
+
+		            <div class=menur>
+			<div class=tmenu>
+			<div class=tmenu2>
+			<b>آخرین مطالب</b></div></div>
+			<div class=xmenu>
+			<div class=menu-txt>
+			<a href="../../../905.html"> سه نکته پیرامون شهید و شهادت</a></div><div class=menu-txt>
+			<a href="../../../904.html"> مردم ایران، امام خود را عاشقانه دوست داشتند! </a></div><div class=menu-txt>
+			<a href="../../../903.html"> کار؛ فرمانده عبور از رکود </a></div><div class=menu-txt>
+			<a href="../../../902.html"> مبانی اقتصادی استکبار </a></div><div class=menu-txt>
+			<a href="../../../901.html"> نقش ایمان در تخریب دیوار تحریم </a></div><div class=menu-txt>
+			<a href="../../../900.html"> موانع اقدام؛ از نگاه قرآن و احادیث </a></div><div class=menu-txt>
+			<a href="../../../899.html"> جوان و جوانی؛ منشأ یک اختلاف و جنگ نرم فراگیر </a></div><div class=menu-txt>
+			<a href="../../../898.html"> منطقی که نتیجه‌اش شکست‌ناپذیری است </a></div><div class=menu-txt>
+			<a href="../../../897.html"> فرهنگ یا اقتصاد، مسأله این است</a></div><div class=menu-txt>
+			<a href="../../../896.html"> تلاش دشمن برای پاک‌سازی برخی چهره‌های انقلاب </a></div><div class=menu-txt>
+			<a href="../../../895.html"> بلای بزرگی که جان امت اسلامی را فرا گرفته است </a></div><div class=menu-txt>
+			<a href="../../../894.html"> خفت و خیانت؛ عصاره‌ی زندگی ملکه‌ی ترور </a></div><div class=menu-txt>
+			<a href="../../../893.html"> فقط یک ضلع مثلث ظهور، مفقود است </a></div><div class=menu-txt>
+			<a href="../../../892.html"> محکی جدی برای مدعیان انتظار </a></div><div class=menu-txt>
+			<a href="../../../891.html">آموزش الفبای مواجهه با دشمن </a></div></div>
+			<div class=s></div></div>
+            <div class=menur>
+			<div class=tmenu>
+			<div class=tmenu2>
+			<b>آرشیو مطالب</b></div></div>
+			<div class=xmenu>
+			<div class=menu-txt>
+			<a href="../../../archive/1396/1.html"> فروردین 1396(2)</a></div><div class=menu-txt>
+			<a href="../../../archive/1395/12.html"> اسفند 1395(23)</a></div><div class=menu-txt>
+			<a href="../../../archive/1395/11.html"> بهمن 1395(59)</a></div><div class=menu-txt>
+			<a href="../../../archive/1395/10.html"> دی 1395(16)</a></div><div class=menu-txt>
+			<a href="../../../archive/1395/9.html"> آذر 1395(9)</a></div><div class=menu-txt>
+			<a href="../../../archive/1395/8.html"> آبان 1395(10)</a></div><div class=menu-txt>
+			<a href="../../../archive/1395/7.html"> مهر 1395(11)</a></div><div class=menu-txt>
+			<a href="../../../archive/1395/6.html"> شهریور 1395(6)</a></div><div class=menu-txt>
+			<a href="../../../archive/1395/5.html"> مرداد 1395(7)</a></div><div class=menu-txt>
+			<a href="../../../archive/1395/4.html"> تیر 1395(12)</a></div><div class=menu-txt>
+			<a href="../../../archive/1395/3.html"> خرداد 1395(10)</a></div><div class=menu-txt>
+			<a href="../../../archive/1395/2.html"> اردیبهشت 1395(4)</a></div></div>
+			<div class=s></div></div>
+			
+</div>
+<!--End SR -->
+</div>
+<!-- End Con-->
+<!-- Start Footer-->
+<div class="footer">
+          <p><strong>تمام حقوق این وبلاگ و مطالب آن متعلق به 
+           <a href="../../../../index.html">ولایت فقیه و حکومت اسلامی</a> می باشد.</strong></p>
+</div>
+<!-- End Footer-->
+</div>
+<!-- End BG -->
+<!--AmarGir-->
+<script type="text/javascript" src="http://radarurl.com/js/radarurl_widget.js"></script><script type="text/javascript">radarurl_call_radar_widgetv2({edition:"Dynamic",location:"leftcenter"})</script><noscript><a href="http://radarurl.com/" _fcksavedurl="http://radarurl.com/">radarurl - Monitor Visitors</a></noscript>
+<!--EndAmarGir-->
+<!-- Piwik -->
+<script type="text/javascript">
+  var _paq = _paq || [];
+  _paq.push(['trackPageView']);
+  _paq.push(['enableLinkTracking']);
+  (function() {
+    var u="//analytics.welayatnet.com/";
+    _paq.push(['setTrackerUrl', u+'piwik.php']);
+    _paq.push(['setSiteId', 5]);
+    var d=document, g=d.createElement('script'), s=d.getElementsByTagName('script')[0];
+    g.type='text/javascript'; g.async=true; g.defer=true; g.src=u+'piwik.js'; s.parentNode.insertBefore(g,s);
+  })();
+</script>
+<noscript><p><img src="http://analytics.welayatnet.com/piwik.php?idsite=5" style="border:0;" alt="" /></p></noscript>
+<!-- End Piwik Code -->
+</body>
+</html><script>
+//    setTimeout(function () {
+//        GetMihanBlogShowAds();
+//    }, 1000);
+</script>
+<!--NEW SERVER-->
+
+<!--SabaVision Ads Handler--><!--<script type="text/javascript">(function (d) {var url =   location.protocol+'//api.sabavision.com/pox/poxjs.js';d.write('<script type="text/javascript" src="' + url + '" async></scri' + 'pt>');})(document);</script>-->
+
+
+<script type="text/javascript">
+
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-153829-9']);
+    _gaq.push(['_setDomainName', 'leader.mihanblog.com']);
+    _gaq.push(['_trackPageview']);
+
+    (function() {
+        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+
+</script>
+
+
+<div id='mediaad-Kvcm'></div>
+<meta name="sabavision_zone" content="2500-Z499" />
+<center>
+    <div style="background-color:white;width:90%;padding:20px;margin-top:50px;margin-bottom:50px;">
+        <a href="https://www.cloob.com">شبکه اجتماعی فارسی کلوب</a> | <a href="https://www.seo25.com/product/buy-mobile-traffic-and-get-cheap-targeted-mobile-traffic/" target="_blank">Buy Mobile Traffic</a> | <a href="https://www.soalaat.com">سایت سوالات</a>
+    </div>
+</center>

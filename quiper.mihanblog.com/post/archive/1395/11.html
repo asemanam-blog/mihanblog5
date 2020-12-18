@@ -1,0 +1,838 @@
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" /><link rel="EditURI" type="application/rsd+xml" title="RSD" href="../../../xmlrpc@rsd" />
+<script type="text/javascript" src="../../../../static.mihanblog.com/public/scripts/run/g.other.v3.js"></script>
+<script>
+
+	function c_$(id){
+        return document.getElementById(id);
+    }
+    
+			//if (parent.frames.length) top.location.href= document.location;
+		
+	setTodayDate = function(){
+		document.write('شنبه 22 آذر 1399');
+		/*1138844*/	}
+
+</script>
+
+
+
+        <script type="text/javascript">
+            (function(){
+            var now = new Date();
+            var head = document.getElementsByTagName('head')[0];
+            var script = document.createElement('script');
+            script.async = true;
+            var script_address = 'https://cdn.yektanet.com/js/mihanblog.com/native-mihanblog.com-6531.js';
+            script.src = script_address + '?v=' + now.getFullYear().toString() + '0' + now.getMonth() + '0' + now.getDate() + '0' + now.getHours();
+            head.appendChild(script);
+            })();
+        </script>
+
+        <!--<script type="text/javascript">
+            var head = document.getElementsByTagName("head")[0];
+            var script = document.createElement("script");
+            script.type = "text/javascript";
+            script.async=1;
+            script.src = "https://s1.mediaad.org/serve/mihanblog.com/loader.js" ;
+            head.appendChild(script);
+        </script>-->
+        
+        <script>
+            var sabaVisionWebsiteID = "9bab9dac-041d-4bdb-b39a-1ed789f65eed"; var sabaVisionWebsitePage = "ALL"
+        </script>
+        <link rel="stylesheet" href="https://plus.sabavision.com/dox/dox.min.css">
+        <script src="https://plus.sabavision.com/dox/dox.min.js"></script>
+        
+        <script>
+	try{
+		var commentCnt = new Array();
+		commentCnt[281]='5';commentCnt[282]='6';commentCnt[284]='4';commentCnt[286]='15';commentCnt[287]='11';commentCnt[288]='4';	} catch(e){}
+	
+	newComment = function(post_id){
+		try{
+			window.open('/post/comment/'+post_id,'comment','status=yes,scrollbars=yes,toolbar=no,menubar=no,location=no ,width=480px,height=540px');
+		} catch(e){}
+	}
+	setCommentCnt = function(post_id){
+		try{
+			if(commentCnt[post_id]){
+				document.write(commentCnt[post_id]);
+			} else {
+				document.write(0);
+			}
+		} catch(e){}
+	}
+</script><script>
+
+
+	mihanblogUpdateLike = function(postid,type){
+		var url = '/post/like/'+postid+'/'+type;
+		mihanblogGetAjax(url,function(){});
+	};
+	try{
+        mihanblogGetAjax = function (url,callback) {
+    		var req;
+			if (window.XMLHttpRequest)
+            {
+                // code for IE7+, Firefox, Chrome, Opera, Safari
+			  	req = new XMLHttpRequest();
+			}else{	// code for IE6, IE5
+			  	req = new ActiveXObject("Microsoft.XMLHTTP");
+		  	}
+		    req.open("GET", url, 1);
+		    req.onreadystatechange = function () {
+		        if (req.readyState == 4) {
+		            if (req.status == 200) {
+		            	var response = eval(req.responseText);
+		            	callback();
+		            }else{
+	            		return ;
+		            }
+		        }else{
+					return ;
+		        }
+		    }
+		    req.send(null);
+		}
+	}catch(e){}
+
+	try{
+		var mihanblogLikeArrCnt = new Array();
+		var mihanblogDisLikeArrCnt = new Array();
+
+		mihanblogLikeArrCnt[281]='0';
+mihanblogDisLikeArrCnt[281]='0';
+mihanblogLikeArrCnt[282]='0';
+mihanblogDisLikeArrCnt[282]='0';
+mihanblogLikeArrCnt[284]='0';
+mihanblogDisLikeArrCnt[284]='0';
+mihanblogLikeArrCnt[286]='0';
+mihanblogDisLikeArrCnt[286]='0';
+mihanblogLikeArrCnt[287]='0';
+mihanblogDisLikeArrCnt[287]='0';
+mihanblogLikeArrCnt[288]='0';
+mihanblogDisLikeArrCnt[288]='0';
+	} catch(e){}
+
+
+
+    mihanblogPostLike = function(post_id){
+
+        mihanblogLikeCnt = (mihanblogLikeArrCnt[post_id]? mihanblogLikeArrCnt[post_id] : 0);
+        mihanblogDisLikeCnt = (mihanblogDisLikeArrCnt[post_id]? mihanblogDisLikeArrCnt[post_id] : 0);
+        mihanblogLikeCnt = parseInt(mihanblogLikeCnt);
+        mihanblogDisLikeCnt = parseInt(mihanblogDisLikeCnt);
+
+        document.write(
+                '<div class="mihanblog_like_wrapper ">'+
+                       '<div id="dislikeBar_'+post_id+'" onclick="mihanblogUpdateLike('+post_id+',\'dislike\')"   class="mihanblog_like_bar mihanblog_like_dislikeBar mihanblog_like_show_help ">-<div class="mihanblog_like_Cnt" id="disLikeCnt_'+post_id+'">'+mihanblogDisLikeCnt+'</div>'+
+                            '<span  class="mihanblog_like_v2_help mihanblog_like_v2_help_dislike clearfix"> '+
+                                '<span class="mihanblog_like_help_arrow mihanblog_like_help_arrow_dislike clearfix"></span>'+
+                                '<span class="mihanblog_like_help_text">نمی پسندم</span>'+
+                            '</span>'+
+                        '</div>'+
+                       '<div id="Like_'+post_id+'" class="mihanblog_like_border"></div>'+
+                       '<div id="likeBar_'+post_id+'" onclick="mihanblogUpdateLike('+post_id+',\'like\')"  class="mihanblog_like_bar mihanblog_like_likeBar mihanblog_like_show_help" >+<div class="mihanblog_like_Cnt" id="likeCnt_'+post_id+'">'+mihanblogLikeCnt+'</div>'+
+                            '<span  class="mihanblog_like_v2_help mihanblog_like_v2_help_like clearfix"> '+
+                                '<span class="mihanblog_like_help_arrow mihanblog_like_help_arrow_like clearfix"></span>'+
+                                '<span class="mihanblog_like_help_text">می پسندم</span>'+
+                            '</span>'+
+                        '</div>'+
+
+                '</div>'
+        );
+
+
+
+        mihanblogDisplayeLike(post_id);
+    }
+
+
+    mihanblogDisplayeLike = function(post_id){
+
+        mihanblogLikeCnt = (mihanblogLikeArrCnt[post_id]? mihanblogLikeArrCnt[post_id] : 0);
+        mihanblogDisLikeCnt = (mihanblogDisLikeArrCnt[post_id]? mihanblogDisLikeArrCnt[post_id] : 0);
+        mihanblogLikeCnt = parseInt(mihanblogLikeCnt);
+        mihanblogDisLikeCnt = parseInt(mihanblogDisLikeCnt);
+
+
+
+        sum = mihanblogLikeCnt - mihanblogDisLikeCnt;
+        backgroundBorder =  document.getElementById('Like_'+post_id);
+        var likeObj = document.getElementById('likeCnt_'+post_id);
+        var disLikeObj = document.getElementById('disLikeCnt_'+post_id);
+
+
+
+
+
+        likeObj.innerHTML =  mihanblogLikeCnt ;
+        disLikeObj.innerHTML =  mihanblogDisLikeCnt;
+
+        if(sum == 0){
+            backgroundBorder.style.backgroundImage = "url('/public/public/images/icons/like_likedislike.png')";
+            document.getElementById('dislikeBar_'+post_id).style.width = '19px';
+            document.getElementById('likeBar_'+post_id).style.width = '19px';
+        }else{
+             if(sum > 0){
+                 backgroundBorder.style.backgroundImage = "url('/public/public/images/icons/like_like.png')";
+                 document.getElementById('likeBar_'+post_id).style.width = '23px';
+                 document.getElementById('dislikeBar_'+post_id).style.width = '15px';
+             }else{
+                 backgroundBorder.style.backgroundImage = "url('/public/public/images/icons/like_dislike.png')";
+                 document.getElementById('likeBar_'+post_id).style.width = '15px';
+                 document.getElementById('dislikeBar_'+post_id).style.width = '23px';
+             }
+        }
+
+    }
+
+
+
+
+</script>
+
+<style type="text/css">
+
+
+    .clearfix {display: inline-block;}
+    .clearfix:after {
+        content: ".";
+        display: block;
+        height: 0;
+        clear: both;
+        visibility: hidden;
+    }
+
+    .mihanblog_like_wrapper {
+        color: #ffffff;
+        direction: ltr;
+        position: relative;
+    }
+    .mihanblog_like_wrapper span{
+        display: none;
+    }
+    .mihanblog_like_bar {
+        color: #FFFFFF;
+        cursor: pointer;
+        float: left;
+        font-size: 10px;
+        height: 20px;
+        line-height: 19px;
+        margin: 5px 0;
+    }
+    .mihanblog_like_likeBar {
+        background-color: #88B131;
+        padding-right: 5px;
+        border-top-right-radius: 2px;
+        border-bottom-right-radius: 2px;
+        text-align: right;
+    }
+    .mihanblog_like_likeBar:hover{
+        background-color: #699017;
+    }
+    .mihanblog_like_border {
+        background-color: #666666;
+        border: 1px solid #666666;
+        float: left;
+        font-size: 12px;
+        height: 20px;
+        margin-top: 2px;
+        width: 25px;
+        padding: 3px 5px 2px 0;
+        text-align: center;
+        border-radius: 2px;
+        color: #ffffff;
+        direction: ltr;
+        background-repeat: no-repeat ;
+        background-position: 4px center;
+    }
+    .mihanblog_like_border img {
+        margin-left: 2px;
+        margin-top: 2px;
+        width: 22px;
+    }
+    .mihanblog_like_dislikeBar {
+        background-color: #FF6F31;
+        padding-left: 5px;
+        border-top-left-radius: 2px;
+        border-bottom-left-radius: 2px;
+        text-align:left ;
+    }
+    .mihanblog_like_dislikeBar:hover{
+        background-color: #D54B10;
+    }
+
+
+
+    .mihanblog_like_show_help {
+        position: relative;
+    }
+    .mihanblog_like_show_help:hover span {
+        display: block;
+    }
+    .mihanblog_like_help_text {
+        background-color: white;
+        border: 1px solid #555555;
+        border-radius: 3px 3px 3px 3px;
+        color: #303030;
+        float: left;
+        font-size: 11px;
+        font-weight: normal;
+        padding: 5px 10px;
+    }
+
+    .mihanblog_like_help_arrow_dislike {
+        background: url("http://quiper.mihanblog.com/public/public/images/icons/like_hover_top.png") no-repeat scroll 16px 0 transparent;
+        left: 0;
+        top: -4px;
+    }
+
+    .mihanblog_like_help_arrow_like {
+        background: url("http://quiper.mihanblog.com/public/public/images/icons/like_hover_top _2.png") no-repeat scroll 16px 0 transparent;
+        left: -10px;
+        top: 29px;
+    }
+
+    .mihanblog_like_help_arrow{
+        height: 6px;
+        position: absolute;
+        width: 100px;
+
+    }
+
+    .mihanblog_like_v2_help_dislike {
+        left: -15px;
+        top: 24px;
+    }
+    .mihanblog_like_v2_help_like {
+        left: 0;
+        top: -35px;
+
+    }
+    .mihanblog_like_v2_help{
+        display: none;
+        position: absolute;
+        white-space: nowrap;
+        z-index: 1;
+    }
+
+    .mihanblog_like_Cnt{
+        display: inline;
+        color: #ffffff;
+    }
+
+</style><script>
+
+	statInfo = new Array();
+	setStatVar = function(index,value){
+		statInfo[index] = value;
+	}
+	getStatVar = function(index){
+		if(statInfo[index]) document.write(statInfo[index]);
+	}
+	
+	setStatVar('total_post','168');
+	setStatVar('total_author','0');
+	setStatVar('modify_date','یکشنبه 9 شهریور 1399');
+	
+	setStatVar('today_view','3');
+	setStatVar('yesterday_view','2');
+	
+	setStatVar('this_month_view','293');
+	setStatVar('last_month_view','335');
+
+	setStatVar('total_view','160061');
+	setStatVar('last_view_date','شنبه 22 آذر 1399 (13:31)');
+
+
+
+    
+    function setStatFromClient()
+    {
+        var url = 'http://quiper.mihanblog.com/statupdate/?data[refereruri]=http://quiper.mihanblog.com/&data[postid]=&data[requesturi]=/post/archive/1395/11&data[sdate]=1607768170&data[hash]=2bade82ba4cc507b6d4a21130014b365&data[resolution]='+screen.width+' X '+screen.height;
+
+//        alert(url);
+//        var newjs = document.createElement("SCRIPT");
+//        newjs.type = 'text/javascript';
+//        newjs.src = url;
+//
+//        var newdiv = document.createElement("DIV");
+//        newdiv.setAttribute("style","display:none");
+
+        document.write(unescape('%3Cscript src="'+url+'" type="text/javascript"%3E%3C/script%3E'));
+//        newdiv.appendChild (newjs);
+//        document.write(newjs);
+//        document.write(appendChild (newdiv);
+
+    };
+    setStatFromClient();
+        
+</script><script>
+	messageForm = function(post_id){
+		try{
+			window.open('/message','message','status=yes,scrollbars=yes,toolbar=no,menubar=no,location=no ,width=480px,height=550px');
+		} catch(e){}
+	}
+</script><script>
+	linkdailyForm = function(){
+		try{
+			window.open('/linkdaily/new','linkdaily','status=yes,scrollbars=yes,toolbar=no,menubar=no,location=no ,width=500px,height=460px');
+		} catch(e){}
+	}
+</script><script>
+
+var MihanblogShopAdsArray = new Array();
+
+function GetMihanBlogShowAds(){
+	if(MihanblogShopAdsArray.length){
+		var adsTarget = 'MihanblogShopAds';
+		var containerWidth = document.getElementById(adsTarget).offsetWidth;
+		if(containerWidth>=200){
+			var adsCnt = parseInt(containerWidth / 200) ;
+			if(adsCnt>MihanblogShopAdsArray.length){
+				adsCnt = MihanblogShopAdsArray.length ; 
+			}
+//			var OneAdsWidth = parseInt(containerWidth / adsCnt) ;
+			var OneAdsWidth = containerWidth / adsCnt ;
+			if(OneAdsWidth>400){
+				OneAdsWidth = 400 ;
+			}
+			var OutHtml = '';
+			var img = '';
+			var link = '';
+			var title = '';
+			var description = '';
+			var imgWidth = 70;
+			if(OneAdsWidth>230){
+				imgWidth = 80;
+			}
+			if(OneAdsWidth>300){
+				imgWidth = 90;
+			}
+			for(adsOne=0;adsOne<adsCnt;adsOne++){
+				
+				img = MihanblogShopAdsArray[adsOne]['img'];
+				link = MihanblogShopAdsArray[adsOne]['link'];
+				title = MihanblogShopAdsArray[adsOne]['title'];
+				description = MihanblogShopAdsArray[adsOne]['description'];
+				
+				OutHtml += '<td style="background-color:#FFF;width: '+OneAdsWidth+'px;border:1px solid #f00;margin:0px 0px;font-size:11px;font-family:tahoma;padding:2px;margin:0px 0px;font-size:11px;border: 1px solid BurlyWood; padding: 1px; height: '+(imgWidth+25)+'px;">';
+
+				OutHtml += '	<a href="'+link+'.html" target="_blank" style="text-decoration:none">';
+
+				OutHtml += '			<div style="width: '+(OneAdsWidth-16)+'px;cursor:pointer;font-size:12px;padding: 4px 1px 4px 7px; white-space: nowrap; text-align: center; font-weight: bold; color: blue;white-space:nowrap;overflow:hidden">';
+				OutHtml += 					title;
+				OutHtml += '			</div>';
+				OutHtml += '			<div style="cursor:pointer;padding: 1px; display: block; float: right; width: '+imgWidth+'px;">';
+				OutHtml += '				<img src="'+img+'.html" style="border:0px;padding:0px;margin:0px;width:'+imgWidth+'px;height:'+imgWidth+'px;">';
+				OutHtml += '			</div>';
+				OutHtml += '			<div style="padding: 1px; display: block; float: right; width: '+(OneAdsWidth-13-imgWidth)+'px; text-align: right;overflow:hidden">';
+				OutHtml += '				<div style="overflow:hidden;cursor:pointer;padding: 2px 3px; line-height: 17px; height: '+(imgWidth-3)+'px; text-align: justify;color:#000;direction:rtl">';
+				OutHtml += 						description;
+				OutHtml += '				</div>';
+				OutHtml += '			</div>';
+
+				OutHtml += '	</a>';
+
+				OutHtml += '</td>';
+			}
+			
+			var Out = '<table align="center" cellpadding="0" cellspacing="2" style="width:'+(OneAdsWidth*adsCnt)+'px;"><tr>'+OutHtml+'</tr></table>'; 
+			
+			Out = '<div style="text-align:center;padding:0px;margin:3px auto;">'+Out+'</div>'; 
+			
+			document.getElementById(adsTarget).style.height = (imgWidth+35)+'px' ;
+			document.getElementById(adsTarget).innerHTML = Out ;
+		}
+	}
+}
+</script>
+    <style>
+        @font-face {
+            font-family: 'Mihan-Iransans';
+            src: url('http://quiper.mihanblog.com/public/public/fonts/Iransans.eot');
+            src: url('http://quiper.mihanblog.com/public/public/fonts/Iransans.eot?') format('embedded-opentype'),
+            url('http://quiper.mihanblog.com/public/public/fonts/Iransans.woff2') format('woff2'),
+            url('http://quiper.mihanblog.com/public/public/fonts/Iransans.woff') format('woff'),
+            url('http://quiper.mihanblog.com/public/public/fonts/Iransans.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+        @font-face {
+            font-family: 'Mihan-IransansBold';
+            src: url('http://quiper.mihanblog.com/public/public/fonts/Iransans-Black.eot');
+            src: url('http://quiper.mihanblog.com/public/public/fonts/Iransans-Black.eot?') format('embedded-opentype'),
+            url('http://quiper.mihanblog.com/public/public/fonts/Iransans-Black.woff2') format('woff2'),
+            url('http://quiper.mihanblog.com/public/public/fonts/Iransans-Black.woff') format('woff'),
+            url('http://quiper.mihanblog.com/public/public/fonts/Iransans-Black.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+        @font-face {
+            font-family: 'Mihan-IransansLight';
+            src: url('http://quiper.mihanblog.com/public/public/fonts/Iransans-UltraLight.eot');
+            src: url('http://quiper.mihanblog.com/public/public/fonts/Iransans-UltraLight.eot?') format('embedded-opentype'),
+            url('http://quiper.mihanblog.com/public/public/fonts/Iransans-UltraLight.woff2') format('woff2'),
+            url('http://quiper.mihanblog.com/public/public/fonts/Iransans-UltraLight.woff') format('woff'),
+            url('http://quiper.mihanblog.com/public/public/fonts/Iransans-UltraLight.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+        @font-face {
+            font-family: 'Mihan-Nassim';
+            src: url('http://quiper.mihanblog.com/public/public/fonts/Nassim.eot');
+            src: url('http://quiper.mihanblog.com/public/public/fonts/Nassim.eot?') format('embedded-opentype'),
+            url('http://quiper.mihanblog.com/public/public/fonts/Nassim.woff2') format('woff2'),
+            url('http://quiper.mihanblog.com/public/public/fonts/Nassim.woff') format('woff'),
+            url('http://quiper.mihanblog.com/public/public/fonts/Nassim.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+        @font-face {
+            font-family: 'Mihan-Koodak';
+            src: url('http://quiper.mihanblog.com/public/public/fonts/Koodak.eot');
+            src: url('http://quiper.mihanblog.com/public/public/fonts/Koodak.eot?') format('embedded-opentype'),
+            url('http://quiper.mihanblog.com/public/public/fonts/Koodak.woff2') format('woff2'),
+            url('http://quiper.mihanblog.com/public/public/fonts/Koodak.woff') format('woff'),
+            url('http://quiper.mihanblog.com/public/public/fonts/Koodak.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+        @font-face {
+            font-family: 'Mihan-Yekan';
+            src: url('http://quiper.mihanblog.com/public/public/fonts/Yekan.eot');
+            src: url('http://quiper.mihanblog.com/public/public/fonts/Yekan.eot?') format('embedded-opentype'),
+            url('http://quiper.mihanblog.com/public/public/fonts/Yekan.woff2') format('woff2'),
+            url('http://quiper.mihanblog.com/public/public/fonts/Yekan.woff') format('woff'),
+            url('http://quiper.mihanblog.com/public/public/fonts/Yekan.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+        @font-face {
+            font-family: 'FontAwesome';
+            src: url('http://quiper.mihanblog.com/public/public/fonts/fontawesome_webfont.eot');
+            src: url('http://quiper.mihanblog.com/public/public/fonts/fontawesome_webfont.eot?') format('embedded-opentype'),
+            url('http://quiper.mihanblog.com/public/public/fonts/fontawesome_webfont.woff2') format('woff2'),
+            url('http://quiper.mihanblog.com/public/public/fonts/fontawesome_webfont.woff') format('woff'),
+            url('http://quiper.mihanblog.com/public/public/fonts/fontawesome_webfont.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+
+
+        
+
+        /* Smartphones (portrait and landscape) ----------- */
+
+        /*
+        @media only screen and (max-width : 480px) and (min-width : 320px) {
+            .sabaClick_advert__wrapper{
+                display:block;
+            }
+            .sabaClick_advert__inner{
+                max-width: 90%;
+                margin: 0 5%;
+            }
+        }
+        */
+
+    </style>
+
+
+
+
+
+
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<META NAME="description" CONTENT="">
+<META NAME="keywords" CONTENT="کوئیپر">
+<META NAME="DesignerUrl" CONTENT="http://Avazak.ir">
+<META NAME="Designer" CONTENT="AVAZAK">
+<link rel="alternate" type="application/rss+xml" title="کوئیپر" href="../../rss/index.html" />
+<title>کوئیپر - مطالب  بهمن 1395</title>
+<style>
+
+body {text-align:Center;color:#116d8d;font-family: Tahoma; font-size: 8pt;margin:0px 0px 20px}
+body {background: #FFFFFF url('http://axgig.com/images/89372301896876181710.jpg') no-repeat Top Center; }
+A, A:visited{color:#69aac0;text-decoration: none}A:hover{color:#116d8d;text-decoration: none;font-size: 9pt}
+.page{float:Center;margin:0px auto;padding:0px;width:535px}img{border:none}
+.Avazak {margin:0;padding:0;text-align:center;background-repeat:repeat-x; background-position-y:top}
+.space{padding:0px 0px}
+.header{padding:0;margin:0;position:relative;height:80px;width:535px}
+.header .title{position:relative;font-family: Arial;font-size:15pt;font-weight:bold;color:#727877;text-align:Right;margin:320px 0px 10px}
+.header .subtitle {font-family: Tahoma; font-size: 8pt;color:#999999;text-align:Right;margin:0px 0px 30px;line-height:1.5em}
+.sidebar{float: Center;width:515px;font-family: Tahoma; font-size: 8pt;text-align:Right;line-height:2.5em;padding:5px;Border:#e0e3ec 2px Solid;background:#f7f8fa;margin:0px}
+.sidebar  h1{margin:30px 0px 7px;font-family: Tahoma; font-size: 8pt;text-align:Right;color:#116d8d;line-height:2em;Border-Top:#e0e3ec 2px Dotted;}
+.About{width:515px;color:#69aac0;line-height:2.5em;}
+.About img{text-align:Right;Padding-Top:3px;}
+.bodyposts{float: Center;text-align: right;width:535px;margin:0px;overflow:hidden}
+.post{width:535px;margin:0px;text-align:right;background:url('http://Avazak.ir/Theme/pic/272-2.jpg') repeat-Y Top Center;}
+.post .Title{height:40px;font-size: 9pt;font-family: Tahoma;font-weight:bold;color:#000000;Padding:10px 10px 0px;background:url('http://Avazak.ir/Theme/pic/272-1.jpg') no-repeat Top Center;}
+.post .Content{font-family: Tahoma;color:#000000; font-size: 8pt;line-height:1.5em;padding:0px 5px 0px 5px;direction:rtl;}
+.post .date{font-family: Tahoma; color:#116d8d;Padding:20px 5px 50px;font-size: 8pt;background:url('http://Avazak.ir/Theme/pic/272-3.jpg') no-repeat Bottom Center;}
+.custom{color:#116d8d;margin:10px 0;text-align:center;direction:rtl}
+
+</style>
+</head>
+
+<body>
+<!--Design By : Avazak.ir-->
+<div class=Top>
+<div class=Avazak>
+<div align =center>
+<div class="page" dir="rtl" >
+<div  class ="header" >
+<p class="title">کوئیپر</p>
+<p class="subtitle"></p></div>
+	<!-- end header -->
+<!--Design By : Avazak.ir-->
+<div class="bodyposts">
+<div class="space"></div>
+		<div id="MihanblogShopAds" style="display:block;height:0px;width:100%;border:0px"></div>
+		<div class="post">
+<a name="288"></a>
+<h2 class="Title">ولنتاین </a></h2>
+<div class="Content"><div id="InPost_MihanblogShopAds" style="display:block;height:0px;width:100%;border:0px"></div>
+<p><font size="2">پیرمرد با آرامش و با دقت، ریش سفید بلندش را شانه زد و مرتب کرد. دست هایش میلرزید.
+</font></p>
+<p><font size="2">دورتر رفت. توی تکه آینه ی شکسته ی کوچک لب طاقچه به خودش نگاه کرد. یک پیراهن سفید کهنه، اما به شدت تمیز. یک جلیقه ی مشکی قدیمی. با یک ساعت جیبی زنجیر دار. یک شلوار سیاه مرتب.
+</font></p>
+<p><font size="2">دوباره دستی به موهایش کشید. شیشه ی عطر کوچکی را از کنار طاقچه برداشت. عطر را توی کف دستش ریخت و بعد دست هایش را چند بار به هم مالید. کف دستش را بو کشید. تندی عطر دماغش را زد. خوش بو نبود. بعد دو دستش را به دو طرف ریش و روی سینه لباسش مالید.
+</font></p>
+<p><font size="2">به ساعتش نگاه کرد. تیک تیک صدا میکرد.
+</font></p>
+<p><font size="2">ساعت را توی جیب پهلوی  جلیقه اش گذاشت. به طرف در رفت. عصای چوبی اش را از پشت در برداشت و از خانه خارج شد.
+</font></p>
+<p><font size="2"><br>
+</font></p>
+<p><font size="2"><br>
+</font></p>
+<p><font size="2"><br>
+</font></p>
+<p><font size="2">+ بعدا نوشت : البته مرتبط با این پست نیست ، اما اگه یه روز خیلی خواستید گریه کنید ( گریه ی خوب) فیلم Hachi (a dog's tale) - 2009 رو ببینید :) . یه فیلم خیلی خوب.
+</font></p>
+
+<br><br></p>
+</div>
+<div class ="date">[ دوشنبه 25 بهمن 1395 ]  [ 20:54 ]  [ کوئیپر  ]
+<span dir="rtl" > <a target="_self" href="javascript:newComment(288)">[ نظرات(<script>setCommentCnt(288)</script>) ]</a>
+</div></div>
+<br>
+<div class="post">
+<a name="287"></a>
+<h2 class="Title">آرزوها </a></h2>
+<div class="Content"><font size="2">
+
+خبر خوب اینکه یکی یکی دارم به آرزوهام میرسم. مدتیه یه شیرینی فروشی تو مسیر کارم پیدا کرده ام که شیرینی نارگیلی های محشری داره. ( بله، شیرینی نارگیلی بی پایان جزء آرزوهای من بود)</font><div><font size="2">خبر بد هم اینکه متاسفانه کماکان آرزوهای آدما شبیه نسخه به واقعیت پیوسته شون &nbsp;نیست. :/</font></div><div><font size="2">طنز دنیا اینطوریه که آدم تا بچه اس باید در آرزوی هله هوله های خوشمزه بی پایان بسوزه، وقتی هم بزرگ میشه، &nbsp;با مفهوم سلامتی و اضافه وزن و بدن و این مهملات آشنا میشه. یک برگه چیپس میذاری دهنت، به جای اینکه زیر دندونت "خرچ" صدا بده، صدا میده "هوووممم کالریییی! هوممم چربی p: هوممم به به قنننند! وااای چه مواد ناسالمی =)))"&nbsp;</font></div><div><font size="2">وقعی نمینهم خیلی من به اینها حالا. اما خب کوفت آدم میشه آرزوهای بچگی اش دیگه. والا خب. چرا مثلا شیرینی نارگیلی نباید زیر دندون من فریاد بزنه " به خدای شیرینی ها، رستگار شدم"؟ چرا نباید غصه خوران آروم زیر لب زمزمه کنه" فقط یه دونه شیرینی؟ :( چرا ارباب؟ از ما راضی نیستید؟ کیلویی بخورید تو رو خدا! جعبه مون هنوز خالی نشده که "&nbsp;</font></div><div><font size="2">طنز تلخیه خلاصه این دنیا! هعیی. یکی هم نیس به طرف بگه بلد نیستی بیا پایین این ممد ما جات بشینه. نیس دیگه. نیس.&nbsp;</font></div><div><font size="2"><br></font></div><div><font size="2">+ هنوز که هنوزه برای خودمم عجیبه، آدمی که تو نوجوونی آرزوش بود از لاغری دربیاد، حالا تو عرض چند سال باید غصه ی اضافه وزن بخوره! :/ چیه واقعا این دنیا؟ نه نظمی، نه ترتیبی، نه حد وسطی! آرزوهامون هم که اینطوری. :/ :دی</font></div><div><font size="2">+ خواننده ریزبین خواهد پرسید تو جمله اول گفتی یکی یکی دارم به آرزوهام میرسم. شیرینی نارگیلی که یکیشه فقط. در جواب باید گفت بله، آرزوی دیگه چیپس و پفک و سیب زمینی سرخ کرده بود. که متاسفانه به سرنوشت همین آرزوی ذکر شده گرفتارند اونها هم.&nbsp;</font></div><div><font size="2">+ خواننده قضاوت گر حالا خواهد پرسید واقعا؟! اینه درکت از زندگی؟ اینها آرزوهاتن؟! باید پاسخ گفت : خیر. چیه؟ بیا حالا مارو بخور! والا با این سوالاشون.&nbsp;</font></div>
+
+
+
+<br><br></p>
+</div>
+<div class ="date">[ دوشنبه 18 بهمن 1395 ]  [ 20:29 ]  [ کوئیپر  ]
+<span dir="rtl" > <a target="_self" href="javascript:newComment(287)">[ نظرات(<script>setCommentCnt(287)</script>) ]</a>
+</div></div>
+<br>
+<div class="post">
+<a name="286"></a>
+<h2 class="Title">لالالالالالالالا</a></h2>
+<div class="Content">
+بلاگ چیش خوبه؟ حرف زدن. خوندن. کلمه بازی کردن. که بالاخره یکی هست. میخونه یکی . یکی همیشه هست. حسادت کردن به متنهای خوب بقیه. نوشته های طولانی شون. که یعنی حرف زده. چیزی رو که دوست داره میگه. چه خوب. چه خوب. یکی میخونتش.&nbsp;<div>حرف زدن. حرف زدن. حرف زدن. کاش. کاش. کاش. چه میشه کرد اما.&nbsp;<div>من فیسبوک رو امتحان کردم. توییتر رو هم. حتی اینستا. من نمیتونم با اسم خودم بنویسم. نمیتونم وقتی آشناهام میخوننم بنویسم. حرف بزنم. از چیزهایی که مهمه. از چیزهایی که مهمه. توییتر زیادی سیاسی بود. و نه که سیاست چیز بدی باشه. اما من توی کشور اشتباهی زندگی میکنم . آخر توییتر، آخر آخرش، آخر از خودت نوشتن، &nbsp;استرس بود. و من این استرس رو نمیخواستم. &nbsp;</div><div>مونده همین بلاگ. بلاگ قدیمی. بلاگ عزیز. بلاگ همیشگی. بلاگ ( &nbsp; &nbsp; &nbsp;)&nbsp;</div><div>کاش. کاش. کاش. حرف حرف حرف.</div><div>و از همین جور چیزها.&nbsp;</div></div>
+
+
+
+
+<br><br></p>
+</div>
+<div class ="date">[ دوشنبه 11 بهمن 1395 ]  [ 20:36 ]  [ کوئیپر  ]
+<span dir="rtl" > <a target="_self" href="javascript:newComment(286)">[ نظرات(<script>setCommentCnt(286)</script>) ]</a>
+</div></div>
+<br>
+<div class="post">
+<a name="284"></a>
+<h2 class="Title">                                                         .    </a></h2>
+<div class="Content">
+
+
+
+
+
+<br><br></p>
+</div>
+<div class ="date">[ دوشنبه 11 بهمن 1395 ]  [ 11:13 ]  [ کوئیپر  ]
+<span dir="rtl" > <a target="_self" href="javascript:newComment(284)">[ نظرات(<script>setCommentCnt(284)</script>) ]</a>
+</div></div>
+<br>
+<div class="post">
+<a name="282"></a>
+<h2 class="Title">نامه ای به خود آینده! </a></h2>
+<div class="Content">
+
+
+
+
+<div><font size="2">سلام! حالت چطوره؟ خانواده محترم خوبن؟</font></div><div><font size="2">از حال ما هم اگه خواسته باشید، خوبیم! =)))</font></div><div><font size="2">بعله خب البته که حال من برای شما چندان هم اهمیتی نداره. دی: ولی خب برای خودمون که فعلا داره متاسفانه :/ =)))</font></div><div><font size="2">داشتم فکر میکردم 10 سال بعد که تو احتمالا داری این نامه رو میخونی، من و تو چقدر از هم جداییم؟ چقدر یکی نیستیم؟ چقدر فرق داریم؟ گمونم من ( کل موجودیت من تمام و کمال) تو دید تو فقط یه خاطره مبهمه. همونقد که احتمالا من الان رسول 15 ساله رو به خاطر میارم.</font></div><div><font size="2">عجیب نیس؟ دی: اینکه چقدر فرق میکنیم با خودمون تو طول زمان؟ جسمی و روحی. خلاصه آقا. &nbsp;بسه این مدل حرفا! دی:</font></div><div><font size="2">شما بگو چیکارا میکنی؟ کجاها هستی؟ دلخوشی هات چی ان؟ غصه ی چیا رو میخوری؟</font></div><div><font size="2">نخور آقا غصه! دنیا دو روزه به خدا! =))) ( شکلک ریش سفید دنیا دیده) نه خب والا! عمرا الان برا تو مهم باشه که من ( 10 سال پیش شما) چه غصه هایی برای خوردن تو زندگیم دارم. نیس دیگه. الان هم برا هرچی غصه بخوری، باز 10 سال بعدش همینه. از قدیم و ندیم گفتن (تازه اوستا قربان هم گفته دی:) آدم همیشه چیزی برای غصه خوردن پیدا میکنه! :))) دی: واقعا ها!</font></div><div><font size="2">نتیجه اینکه عجالتا خوش باش آقا. حیف این دو روز دنیا! =)))</font></div><div><font size="2">همسر محترم چطورن راستی؟ =))) بچه مچه ها خوبن؟ چی؟! یکی؟! از پس همین یکیش هم به زور بر میاین؟ بابا شماها دیگه کی هستین. پس فرمان 16 ماده ای چی میشه؟ زمونه ای شده به خدا! :/ دییی: =))))</font></div><div><font size="2">همسر محترم رو صدا کن بیاد. ببوسش حالا از طرف من. چیه؟! من خودتم. پررو هم خودتی. ببوسشا! بگو بوسه ای از گذشته اومده =)))) بچه رم بگو بیاد اینجا. اومد؟ یکی بزن پس کله اش. اگه شاکی شد یه ایراد الکی ازش بگیر. بعد یه نصیحت الکی هم بهش بکن. ااااره دیگه به هر حال بچه نیاز به تربیت داره دیگه. والا! =))) خب حالا کانون گرم خانواده دور هم جمع شد؟ ( الان تصور من اینطوریه که شماها عین آدمایی که دور آتیش جمع میشن و به صحبت های گرم و زیبای یک پیردنیا دیده، لبخند زنان گوش میدن نشستین جلوی نامه ی من) خب همین دیگه. همینطوری جمع باشین دیگه خلاصه. کانون گرم خانواده. زندگی. اینجور چیزا. اون گوشی عجیب و غریبو از دست اون بچه بگیرا! من اینجا گل لگد نمیکنم که. دارم صحبت میکنم. هنر کردین با این بچه تربیت کردن! والا زمان ما به بزرگترا احترام میذاشتن. ما جلو بزرگترامون پامونو دراز نمیکردیم. زمان ما لامپ برق نبود، شبا تو تاریکی خونه با یه چراغ موشی درس میخوندیم. مدرسه نبود، هر روز صبح هزار و پونصد کیلومتر پیاده میرفتیم تا میرسیدیم مدرسه. اونم چه مسیری! 100 کیلومترش جاده کوهستانی! 50 کیلومتر مسیر باتلاقی! حتی 20 کیلومتر تو مسیر دره بود اون قسمت مسیرو پرواز میکردیم... اهم اهم. خیله خب اوکی حالا ممکنه یه ذره این قسمت های اخیرو مبالغه کرده باشم. :/ خلاصه درست تربیت کنید بچه رو. اینا همه نکته اخلاقیه ها!</font></div><div><font size="2">خب من یه ذره از منبر بیام پایین در جمع شما جوون امروزی ها بشینم. بیار دوربینو یه عکس دسته جمعی همه با هم بگیریم. جالب میشه. اها بعد من رفتم بشینید با هم شما هم یه نامه بنویسین به 10 سال بعدتون. دی: یا 2 سال بعد. یا هرچی. جالب نیس؟ مثل یه رسم خانوادگی! دی: حالا من چه میدونم جالب هست یا نه! به من چه! اصلا اگه جالب نیس ننویسین. بیا و خوبی کن والا :/&nbsp;</font></div><div><font size="2">خب من دیگه صحبت خاصی ندارم. امیدوارم همه اش خوب و خوش و خوشحال باشید. خلاصه که بنده اونچه در توان دارم سعی میکنم زندگی شما بهتر باشه. میبینید تو رو خدا؟ من انقد برای شماها زحمت میکشم، اونوخت شما چی؟! دریغ از یه دستت درد نکنه!</font></div><div><font size="2">ها؟! خانومت چپ چپ نگاه میکنه ها! یه چیزی بش بگو! ضمنا غذای روی گازش هم سوخت. بهتر. بله حقتونه.&nbsp;</font></div><div><font size="2">اها نیمرو بود؟ همیشه نیمرو درست میکنه؟! همونم میسوزونه؟! اخی! طفلکی! میبینم لاغر شدی انقد :(</font></div><div><font size="2">خلاصه که اینطوری اقا. این مدلیه زندگی ما و نامه نگاری ما فی الحال. دی: برم من دیگه. از دیدارتون خوشحال شدم. به همه سلام برسونید. البته تا حدی که فکر نکنن دیوونه ای چیزی هستید. ( که هستید) دیی:</font></div><div><font size="2"><br></font></div><div><font size="2"><br></font></div><div><font size="2">ارادتمند و خودشیفته ( منظور دوست دار شما، خود عزیز ) ، رسول، قریه ی زیبای تنکابن ، 10 /11/ 1395 &nbsp;، ده سال پیش :)))</font></div><div><font size="2"><br></font></div><div><font size="2"><br></font></div><div><font size="2"><br></font></div><div><font size="2">+ این پست به پیشنهاد&nbsp;<a href="http://aramevahshi.blog.ir" target="_blank" title="">صخره</a>&nbsp; :))&nbsp;</font></div><div><font size="2">+ یه نسخه از این پست هم ارسال به آینده شد برای 10 بهمن 1405</font></div><div><font size="2">+ دیگه پیشنهاد میدم این بازی وبلاگی رو به فاطمه، محدثه، زهرا و همه ی دوستای بلاگی که احتمالا اینجا رو میخونند یا حتی عبوری رد میشند :)</font></div>
+
+
+
+
+
+
+
+
+
+
+
+
+<br><br></p>
+</div>
+<div class ="date">[ یکشنبه 10 بهمن 1395 ]  [ 12:01 ]  [ کوئیپر  ]
+<span dir="rtl" > <a target="_self" href="javascript:newComment(282)">[ نظرات(<script>setCommentCnt(282)</script>) ]</a>
+</div></div>
+<br>
+<div class="post">
+<a name="281"></a>
+<h2 class="Title">F.R.I.E.N.D.S</a></h2>
+<div class="Content">
+<div>فرندز. داستان فوق العاده ی دوستی، عشق و زندگی. احتمالا هزاران نفر در سراسر جهان تا حالا راجع به فرندز نوشته ان. بعدا هم خواهند نوشت. راس، چندلر، جویی، مانیکا، فیبی و ریچل. 6 دوستی که دیدن داستان زندگی شون، زندگی آدم رو خوشحال تر میکنه. با فرندز میخندید و اشک میریزید و زندگی میکنید . دوست شما میشند و لذت میبرید از اینکه وقت بگذرونید باهاشون.</div><div>اولین بار که با فرندز آشنا شدم، توی خوابگاه دانشگاه بود. دوستی داشتم که فرندز میدید. دراز میکشید کف اتاق و روی لپتاپ با سریالی قه قهه میزد که از دور فقط یک شوی قدیمی معمولی بود. بعدها اما گرفتم سریال رو ازش. و گفتم بعد دانشگاه میبینم.</div><div>سریالی که بعد دانشگاه، توی همه ی اون ماه های پراسترس و اذیت کننده ی قبل سربازی، کمکم کرد بخندم. بهم کمک میکرد روی خوب زندگی یادم نره. فرندزی که فصل های آخرش رو روی گوشی ریختم و با خودم به سربازی بردم. که شب های خدمت، توی خوابگاه، گوشه ی اتاق، هندزفری به گوش قه قهه بزنم و از ته دل بخندم. و حالا... که برای بار دوم، یک دور کامل تمومش رو دوباره دیدم. امروز، بعد دیدن آخرین قسمت، احساس کردم فرندز چیزی بیشتر از فقط یک سریاله برای من. مثل یک دوست خوب. که همیشه حس خوب میده بهت. وقتی خوشحالی، و وقتی ناراحت. که خوشحالی از وجود داشتنش. که هنوز تموم نشده، دلتنگ میشی و برنامه میریزی که کی دوباره ببینمش؟&nbsp;</div><div>و چه حس مشترکی باید باشه همه ی اینها. با همه ی کسانی که تو همه جای دنیا، توی کشورهای مختلف، با فرندز خندیدند و زندگی کردند و گذاشتند فرندز یک قسمت خوب و یک تجربه و خاطره ی شاد از زندگیشون باشه.&nbsp;</div><div>هوم! :)</div><div><br></div><div><br></div><div>+&nbsp;Friends (دوستان) . مجموعه تلویزیونی محصول آمریکا 1994 تا 2004</div>
+
+
+
+
+<br><br></p>
+</div>
+<div class ="date">[ سه شنبه 5 بهمن 1395 ]  [ 14:20 ]  [ کوئیپر  ]
+<span dir="rtl" > <a target="_self" href="javascript:newComment(281)">[ نظرات(<script>setCommentCnt(281)</script>) ]</a>
+</div></div>
+<br>
+	<!-- end post -->
+<!--Design By : Avazak.ir-->
+</div><div class="sidebar">
+<!--Design By : Avazak.ir-->
+<h1>من</h1>
+<div class="About">
+<div align=Right >   </div>
+آشتی خواهم داد / آشنا خواهم کرد / راه خواهم رفت / نور خواهم خورد / دوست خواهم داشت...<br />
+« سهراب »</div>  
+<!--Design By : Avazak.ir-->
+<h1>کوئیپر</h1>
+<a href="../../../index.html">صفحه اصلی وبلاگ</a> |
+<a href="mailto:">ایمیل نویسنده</a> |
+<a href="javascript:messageForm()">تماس با مدیر</a> |
+<a href="http://www.Avazak.ir/">طراح قالب</a> |
+<!--Design By : Avazak.ir-->
+<h1>توسط</h1>
+<a href="../../author/435127.html">کوئیپر </a> |
+<br>
+<!--Design By : Avazak.ir-->
+<!--Design By : Avazak.ir-->
+<h1>صفحات جانبی</h1>
+<span dir="ltr">
+<a href="../../../extrapage/111.html">.</a> |
+<!--Design By : Avazak.ir-->
+<h1>آرشیو مطالب</h1>
+<span dir="ltr">
+<a href="../1399/6.html"> شهریور 1399</a> |
+<a href="../1399/5.html"> مرداد 1399</a> |
+<a href="../1398/12.html"> اسفند 1398</a> |
+<a href="../1398/8.html"> آبان 1398</a> |
+<a href="../1397/8.html"> آبان 1397</a> |
+<a href="../1397/2.html"> اردیبهشت 1397</a> |
+<a href="../1396/11.html"> بهمن 1396</a> |
+<a href="../1396/9.html"> آذر 1396</a> |
+<a href="../1396/8.html"> آبان 1396</a> |
+<a href="../1396/6.html"> شهریور 1396</a> |
+<a href="../1396/5.html"> مرداد 1396</a> |
+<a href="../1396/4.html"> تیر 1396</a> |
+<a href="../1396/3.html"> خرداد 1396</a> |
+<a href="../1396/2.html"> اردیبهشت 1396</a> |
+<a href="../1396/1.html"> فروردین 1396</a> |
+<a href="12.html"> اسفند 1395</a> |
+<a href="11.html"> بهمن 1395</a> |
+<a href="10.html"> دی 1395</a> |
+<a href="7.html"> مهر 1395</a> |
+<a href="6.html"> شهریور 1395</a> |
+<a href="5.html"> مرداد 1395</a> |
+<a href="4.html"> تیر 1395</a> |
+<a href="3.html"> خرداد 1395</a> |
+<a href="2.html"> اردیبهشت 1395</a> |
+<a href="1.html"> فروردین 1395</a> |
+<a href="../1394/12.html"> اسفند 1394</a> |
+<a href="../1394/11.html"> بهمن 1394</a> |
+<a href="../1394/10.html"> دی 1394</a> |
+<a href="../1394/9.html"> آذر 1394</a> |
+<a href="../1394/8.html"> آبان 1394</a> |
+<a href="../1394/5.html"> مرداد 1394</a> |
+<a href="../1394/3.html"> خرداد 1394</a> |
+<a href="../1394/1.html"> فروردین 1394</a> |
+<a href="../1393/12.html"> اسفند 1393</a> |
+<a href="../1393/11.html"> بهمن 1393</a> |
+<a href="../1393/10.html"> دی 1393</a> |
+<a href="../1393/9.html"> آذر 1393</a> |
+<a href="../1393/8.html"> آبان 1393</a> |
+<a href="../1393/7.html"> مهر 1393</a> |
+<a href="../1393/6.html"> شهریور 1393</a> |
+<a href="../1393/5.html"> مرداد 1393</a> |
+<a href="../1393/4.html"> تیر 1393</a> |
+<a href="../1393/3.html"> خرداد 1393</a> |
+<a href="../1393/2.html"> اردیبهشت 1393</a> |
+<a href="../1393/1.html"> فروردین 1393</a> |
+<a href="../1392/12.html"> اسفند 1392</a> |
+<a href="../1392/11.html"> بهمن 1392</a> |
+<a href="../1392/10.html"> دی 1392</a> |
+<a href="../1392/9.html"> آذر 1392</a> |
+<a href="../../archive.html">لیست آرشیوها</a> |
+<!--Design By : Avazak.ir-->
+	
+<!--Design By : Avazak.ir-->
+<!--Design By : Avazak.ir-->
+
+		<!--Design By : Avazak.ir-->
+<div class="custom">
+<h1>دیگر امکانات</h1>
+<div align="center"><!-- Begin WebGozar.com Counter code -->
+<script type="text/javascript" language="javascript" src="http://www.webgozar.ir/c.aspx?Code=2821131&amp;t=counter" ></script>
+<noscript><a href="http://www.webgozar.com/counter/stats.aspx?code=2821131" target="_blank">&#1570;&#1605;&#1575;&#1585;</a></noscript>
+<!-- End WebGozar.com Counter code --></div>
+<!--Design By : Avazak.ir-->
+	<!-- end sidebar -->
+<!--Design By : Avazak.ir-->
+</div></body>
+
+</html><script>
+//    setTimeout(function () {
+//        GetMihanBlogShowAds();
+//    }, 1000);
+</script>
+<!--NEW SERVER--><!--;)-->
+
+<!--SabaVision Ads Handler--><!--<script type="text/javascript">(function (d) {var url =   location.protocol+'//api.sabavision.com/pox/poxjs.js';d.write('<script type="text/javascript" src="' + url + '" async></scri' + 'pt>');})(document);</script>-->
+
+
+<script type="text/javascript">
+
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-153829-9']);
+    _gaq.push(['_setDomainName', 'quiper.mihanblog.com']);
+    _gaq.push(['_trackPageview']);
+
+    (function() {
+        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+
+</script>
+
+
+<div id='mediaad-Kvcm'></div>
+<meta name="sabavision_zone" content="2500-Z499" />
+<center>
+    <div style="background-color:white;width:90%;padding:20px;margin-top:50px;margin-bottom:50px;">
+        <a href="https://www.cloob.com">شبکه اجتماعی فارسی کلوب</a> | <a href="https://www.seo25.com/product/buy-mobile-traffic-and-get-cheap-targeted-mobile-traffic/" target="_blank">Buy Mobile Traffic</a> | <a href="https://www.soalaat.com">سایت سوالات</a>
+    </div>
+</center>

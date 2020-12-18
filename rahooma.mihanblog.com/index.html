@@ -1,0 +1,1794 @@
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" /><link rel="EditURI" type="application/rsd+xml" title="RSD" href="http://rahooma.mihanblog.com/xmlrpc?rsd" />
+<script type="text/javascript" src="../static.mihanblog.com/public/scripts/run/g.other.v3.js"></script>
+<script>
+
+	function c_$(id){
+        return document.getElementById(id);
+    }
+    
+			//if (parent.frames.length) top.location.href= document.location;
+		
+	setTodayDate = function(){
+		document.write('شنبه 22 آذر 1399');
+		/*913698*/	}
+
+</script>
+
+
+
+        <script type="text/javascript">
+            (function(){
+            var now = new Date();
+            var head = document.getElementsByTagName('head')[0];
+            var script = document.createElement('script');
+            script.async = true;
+            var script_address = 'https://cdn.yektanet.com/js/mihanblog.com/native-mihanblog.com-6531.js';
+            script.src = script_address + '?v=' + now.getFullYear().toString() + '0' + now.getMonth() + '0' + now.getDate() + '0' + now.getHours();
+            head.appendChild(script);
+            })();
+        </script>
+
+        <!--<script type="text/javascript">
+            var head = document.getElementsByTagName("head")[0];
+            var script = document.createElement("script");
+            script.type = "text/javascript";
+            script.async=1;
+            script.src = "https://s1.mediaad.org/serve/mihanblog.com/loader.js" ;
+            head.appendChild(script);
+        </script>-->
+        
+        <script>
+            var sabaVisionWebsiteID = "9bab9dac-041d-4bdb-b39a-1ed789f65eed"; var sabaVisionWebsitePage = "ALL"
+        </script>
+        <link rel="stylesheet" href="https://plus.sabavision.com/dox/dox.min.css">
+        <script src="https://plus.sabavision.com/dox/dox.min.js"></script>
+        
+        <script>
+	try{
+		var commentCnt = new Array();
+		commentCnt[45]='-';commentCnt[56]='74';commentCnt[57]='59';commentCnt[58]='46';commentCnt[59]='62';commentCnt[60]='68';commentCnt[61]='65';commentCnt[62]='63';commentCnt[63]='49';commentCnt[64]='79';commentCnt[65]='47';commentCnt[66]='77';commentCnt[67]='41';	} catch(e){}
+	
+	newComment = function(post_id){
+		try{
+			window.open('/post/comment/'+post_id,'comment','status=yes,scrollbars=yes,toolbar=no,menubar=no,location=no ,width=480px,height=540px');
+		} catch(e){}
+	}
+	setCommentCnt = function(post_id){
+		try{
+			if(commentCnt[post_id]){
+				document.write(commentCnt[post_id]);
+			} else {
+				document.write(0);
+			}
+		} catch(e){}
+	}
+</script><script>
+
+
+	mihanblogUpdateLike = function(postid,type){
+		var url = '/post/like/'+postid+'/'+type;
+		mihanblogGetAjax(url,function(){});
+	};
+	try{
+        mihanblogGetAjax = function (url,callback) {
+    		var req;
+			if (window.XMLHttpRequest)
+            {
+                // code for IE7+, Firefox, Chrome, Opera, Safari
+			  	req = new XMLHttpRequest();
+			}else{	// code for IE6, IE5
+			  	req = new ActiveXObject("Microsoft.XMLHTTP");
+		  	}
+		    req.open("GET", url, 1);
+		    req.onreadystatechange = function () {
+		        if (req.readyState == 4) {
+		            if (req.status == 200) {
+		            	var response = eval(req.responseText);
+		            	callback();
+		            }else{
+	            		return ;
+		            }
+		        }else{
+					return ;
+		        }
+		    }
+		    req.send(null);
+		}
+	}catch(e){}
+
+	try{
+		var mihanblogLikeArrCnt = new Array();
+		var mihanblogDisLikeArrCnt = new Array();
+
+		mihanblogLikeArrCnt[45]='0';
+mihanblogDisLikeArrCnt[45]='0';
+mihanblogLikeArrCnt[56]='0';
+mihanblogDisLikeArrCnt[56]='0';
+mihanblogLikeArrCnt[57]='0';
+mihanblogDisLikeArrCnt[57]='0';
+mihanblogLikeArrCnt[58]='0';
+mihanblogDisLikeArrCnt[58]='0';
+mihanblogLikeArrCnt[59]='0';
+mihanblogDisLikeArrCnt[59]='0';
+mihanblogLikeArrCnt[60]='0';
+mihanblogDisLikeArrCnt[60]='0';
+mihanblogLikeArrCnt[61]='0';
+mihanblogDisLikeArrCnt[61]='0';
+mihanblogLikeArrCnt[62]='0';
+mihanblogDisLikeArrCnt[62]='0';
+mihanblogLikeArrCnt[63]='0';
+mihanblogDisLikeArrCnt[63]='0';
+mihanblogLikeArrCnt[64]='0';
+mihanblogDisLikeArrCnt[64]='0';
+mihanblogLikeArrCnt[65]='0';
+mihanblogDisLikeArrCnt[65]='0';
+mihanblogLikeArrCnt[66]='0';
+mihanblogDisLikeArrCnt[66]='0';
+mihanblogLikeArrCnt[67]='0';
+mihanblogDisLikeArrCnt[67]='0';
+	} catch(e){}
+
+
+
+    mihanblogPostLike = function(post_id){
+
+        mihanblogLikeCnt = (mihanblogLikeArrCnt[post_id]? mihanblogLikeArrCnt[post_id] : 0);
+        mihanblogDisLikeCnt = (mihanblogDisLikeArrCnt[post_id]? mihanblogDisLikeArrCnt[post_id] : 0);
+        mihanblogLikeCnt = parseInt(mihanblogLikeCnt);
+        mihanblogDisLikeCnt = parseInt(mihanblogDisLikeCnt);
+
+        document.write(
+                '<div class="mihanblog_like_wrapper ">'+
+                       '<div id="dislikeBar_'+post_id+'" onclick="mihanblogUpdateLike('+post_id+',\'dislike\')"   class="mihanblog_like_bar mihanblog_like_dislikeBar mihanblog_like_show_help ">-<div class="mihanblog_like_Cnt" id="disLikeCnt_'+post_id+'">'+mihanblogDisLikeCnt+'</div>'+
+                            '<span  class="mihanblog_like_v2_help mihanblog_like_v2_help_dislike clearfix"> '+
+                                '<span class="mihanblog_like_help_arrow mihanblog_like_help_arrow_dislike clearfix"></span>'+
+                                '<span class="mihanblog_like_help_text">نمی پسندم</span>'+
+                            '</span>'+
+                        '</div>'+
+                       '<div id="Like_'+post_id+'" class="mihanblog_like_border"></div>'+
+                       '<div id="likeBar_'+post_id+'" onclick="mihanblogUpdateLike('+post_id+',\'like\')"  class="mihanblog_like_bar mihanblog_like_likeBar mihanblog_like_show_help" >+<div class="mihanblog_like_Cnt" id="likeCnt_'+post_id+'">'+mihanblogLikeCnt+'</div>'+
+                            '<span  class="mihanblog_like_v2_help mihanblog_like_v2_help_like clearfix"> '+
+                                '<span class="mihanblog_like_help_arrow mihanblog_like_help_arrow_like clearfix"></span>'+
+                                '<span class="mihanblog_like_help_text">می پسندم</span>'+
+                            '</span>'+
+                        '</div>'+
+
+                '</div>'
+        );
+
+
+
+        mihanblogDisplayeLike(post_id);
+    }
+
+
+    mihanblogDisplayeLike = function(post_id){
+
+        mihanblogLikeCnt = (mihanblogLikeArrCnt[post_id]? mihanblogLikeArrCnt[post_id] : 0);
+        mihanblogDisLikeCnt = (mihanblogDisLikeArrCnt[post_id]? mihanblogDisLikeArrCnt[post_id] : 0);
+        mihanblogLikeCnt = parseInt(mihanblogLikeCnt);
+        mihanblogDisLikeCnt = parseInt(mihanblogDisLikeCnt);
+
+
+
+        sum = mihanblogLikeCnt - mihanblogDisLikeCnt;
+        backgroundBorder =  document.getElementById('Like_'+post_id);
+        var likeObj = document.getElementById('likeCnt_'+post_id);
+        var disLikeObj = document.getElementById('disLikeCnt_'+post_id);
+
+
+
+
+
+        likeObj.innerHTML =  mihanblogLikeCnt ;
+        disLikeObj.innerHTML =  mihanblogDisLikeCnt;
+
+        if(sum == 0){
+            backgroundBorder.style.backgroundImage = "url('/public/public/images/icons/like_likedislike.png')";
+            document.getElementById('dislikeBar_'+post_id).style.width = '19px';
+            document.getElementById('likeBar_'+post_id).style.width = '19px';
+        }else{
+             if(sum > 0){
+                 backgroundBorder.style.backgroundImage = "url('/public/public/images/icons/like_like.png')";
+                 document.getElementById('likeBar_'+post_id).style.width = '23px';
+                 document.getElementById('dislikeBar_'+post_id).style.width = '15px';
+             }else{
+                 backgroundBorder.style.backgroundImage = "url('/public/public/images/icons/like_dislike.png')";
+                 document.getElementById('likeBar_'+post_id).style.width = '15px';
+                 document.getElementById('dislikeBar_'+post_id).style.width = '23px';
+             }
+        }
+
+    }
+
+
+
+
+</script>
+
+<style type="text/css">
+
+
+    .clearfix {display: inline-block;}
+    .clearfix:after {
+        content: ".";
+        display: block;
+        height: 0;
+        clear: both;
+        visibility: hidden;
+    }
+
+    .mihanblog_like_wrapper {
+        color: #ffffff;
+        direction: ltr;
+        position: relative;
+    }
+    .mihanblog_like_wrapper span{
+        display: none;
+    }
+    .mihanblog_like_bar {
+        color: #FFFFFF;
+        cursor: pointer;
+        float: left;
+        font-size: 10px;
+        height: 20px;
+        line-height: 19px;
+        margin: 5px 0;
+    }
+    .mihanblog_like_likeBar {
+        background-color: #88B131;
+        padding-right: 5px;
+        border-top-right-radius: 2px;
+        border-bottom-right-radius: 2px;
+        text-align: right;
+    }
+    .mihanblog_like_likeBar:hover{
+        background-color: #699017;
+    }
+    .mihanblog_like_border {
+        background-color: #666666;
+        border: 1px solid #666666;
+        float: left;
+        font-size: 12px;
+        height: 20px;
+        margin-top: 2px;
+        width: 25px;
+        padding: 3px 5px 2px 0;
+        text-align: center;
+        border-radius: 2px;
+        color: #ffffff;
+        direction: ltr;
+        background-repeat: no-repeat ;
+        background-position: 4px center;
+    }
+    .mihanblog_like_border img {
+        margin-left: 2px;
+        margin-top: 2px;
+        width: 22px;
+    }
+    .mihanblog_like_dislikeBar {
+        background-color: #FF6F31;
+        padding-left: 5px;
+        border-top-left-radius: 2px;
+        border-bottom-left-radius: 2px;
+        text-align:left ;
+    }
+    .mihanblog_like_dislikeBar:hover{
+        background-color: #D54B10;
+    }
+
+
+
+    .mihanblog_like_show_help {
+        position: relative;
+    }
+    .mihanblog_like_show_help:hover span {
+        display: block;
+    }
+    .mihanblog_like_help_text {
+        background-color: white;
+        border: 1px solid #555555;
+        border-radius: 3px 3px 3px 3px;
+        color: #303030;
+        float: left;
+        font-size: 11px;
+        font-weight: normal;
+        padding: 5px 10px;
+    }
+
+    .mihanblog_like_help_arrow_dislike {
+        background: url("http://rahooma.mihanblog.com/public/public/images/icons/like_hover_top.png") no-repeat scroll 16px 0 transparent;
+        left: 0;
+        top: -4px;
+    }
+
+    .mihanblog_like_help_arrow_like {
+        background: url("http://rahooma.mihanblog.com/public/public/images/icons/like_hover_top _2.png") no-repeat scroll 16px 0 transparent;
+        left: -10px;
+        top: 29px;
+    }
+
+    .mihanblog_like_help_arrow{
+        height: 6px;
+        position: absolute;
+        width: 100px;
+
+    }
+
+    .mihanblog_like_v2_help_dislike {
+        left: -15px;
+        top: 24px;
+    }
+    .mihanblog_like_v2_help_like {
+        left: 0;
+        top: -35px;
+
+    }
+    .mihanblog_like_v2_help{
+        display: none;
+        position: absolute;
+        white-space: nowrap;
+        z-index: 1;
+    }
+
+    .mihanblog_like_Cnt{
+        display: inline;
+        color: #ffffff;
+    }
+
+</style><script>
+
+	statInfo = new Array();
+	setStatVar = function(index,value){
+		statInfo[index] = value;
+	}
+	getStatVar = function(index){
+		if(statInfo[index]) document.write(statInfo[index]);
+	}
+	
+	setStatVar('total_post','55');
+	setStatVar('total_author','0');
+	setStatVar('modify_date','پنجشنبه 29 خرداد 1393');
+	
+	setStatVar('today_view','101');
+	setStatVar('yesterday_view','19');
+	
+	setStatVar('this_month_view','478');
+	setStatVar('last_month_view','573');
+
+	setStatVar('total_view','599286');
+	setStatVar('last_view_date','شنبه 22 آذر 1399 (12:43)');
+
+
+
+    
+    function setStatFromClient()
+    {
+        var url = 'http://rahooma.mihanblog.com/statupdate/?data[refereruri]=http://setareyelara23.mihanblog.com/&data[postid]=&data[requesturi]=/&data[sdate]=1607773898&data[hash]=8292a211025b59fdf34cfd9a16f6e013&data[resolution]='+screen.width+' X '+screen.height;
+
+//        alert(url);
+//        var newjs = document.createElement("SCRIPT");
+//        newjs.type = 'text/javascript';
+//        newjs.src = url;
+//
+//        var newdiv = document.createElement("DIV");
+//        newdiv.setAttribute("style","display:none");
+
+        document.write(unescape('%3Cscript src="'+url+'" type="text/javascript"%3E%3C/script%3E'));
+//        newdiv.appendChild (newjs);
+//        document.write(newjs);
+//        document.write(appendChild (newdiv);
+
+    };
+    setStatFromClient();
+        
+</script><script>
+	messageForm = function(post_id){
+		try{
+			window.open('/message','message','status=yes,scrollbars=yes,toolbar=no,menubar=no,location=no ,width=480px,height=550px');
+		} catch(e){}
+	}
+</script><script>
+	linkdailyForm = function(){
+		try{
+			window.open('/linkdaily/new','linkdaily','status=yes,scrollbars=yes,toolbar=no,menubar=no,location=no ,width=500px,height=460px');
+		} catch(e){}
+	}
+</script><script>
+
+var MihanblogShopAdsArray = new Array();
+
+function GetMihanBlogShowAds(){
+	if(MihanblogShopAdsArray.length){
+		var adsTarget = 'MihanblogShopAds';
+		var containerWidth = document.getElementById(adsTarget).offsetWidth;
+		if(containerWidth>=200){
+			var adsCnt = parseInt(containerWidth / 200) ;
+			if(adsCnt>MihanblogShopAdsArray.length){
+				adsCnt = MihanblogShopAdsArray.length ; 
+			}
+//			var OneAdsWidth = parseInt(containerWidth / adsCnt) ;
+			var OneAdsWidth = containerWidth / adsCnt ;
+			if(OneAdsWidth>400){
+				OneAdsWidth = 400 ;
+			}
+			var OutHtml = '';
+			var img = '';
+			var link = '';
+			var title = '';
+			var description = '';
+			var imgWidth = 70;
+			if(OneAdsWidth>230){
+				imgWidth = 80;
+			}
+			if(OneAdsWidth>300){
+				imgWidth = 90;
+			}
+			for(adsOne=0;adsOne<adsCnt;adsOne++){
+				
+				img = MihanblogShopAdsArray[adsOne]['img'];
+				link = MihanblogShopAdsArray[adsOne]['link'];
+				title = MihanblogShopAdsArray[adsOne]['title'];
+				description = MihanblogShopAdsArray[adsOne]['description'];
+				
+				OutHtml += '<td style="background-color:#FFF;width: '+OneAdsWidth+'px;border:1px solid #f00;margin:0px 0px;font-size:11px;font-family:tahoma;padding:2px;margin:0px 0px;font-size:11px;border: 1px solid BurlyWood; padding: 1px; height: '+(imgWidth+25)+'px;">';
+
+				OutHtml += '	<a href="http://rahooma.mihanblog.com/'+link+'" target="_blank" style="text-decoration:none">';
+
+				OutHtml += '			<div style="width: '+(OneAdsWidth-16)+'px;cursor:pointer;font-size:12px;padding: 4px 1px 4px 7px; white-space: nowrap; text-align: center; font-weight: bold; color: blue;white-space:nowrap;overflow:hidden">';
+				OutHtml += 					title;
+				OutHtml += '			</div>';
+				OutHtml += '			<div style="cursor:pointer;padding: 1px; display: block; float: right; width: '+imgWidth+'px;">';
+				OutHtml += '				<img src="'+img+'.html" style="border:0px;padding:0px;margin:0px;width:'+imgWidth+'px;height:'+imgWidth+'px;">';
+				OutHtml += '			</div>';
+				OutHtml += '			<div style="padding: 1px; display: block; float: right; width: '+(OneAdsWidth-13-imgWidth)+'px; text-align: right;overflow:hidden">';
+				OutHtml += '				<div style="overflow:hidden;cursor:pointer;padding: 2px 3px; line-height: 17px; height: '+(imgWidth-3)+'px; text-align: justify;color:#000;direction:rtl">';
+				OutHtml += 						description;
+				OutHtml += '				</div>';
+				OutHtml += '			</div>';
+
+				OutHtml += '	</a>';
+
+				OutHtml += '</td>';
+			}
+			
+			var Out = '<table align="center" cellpadding="0" cellspacing="2" style="width:'+(OneAdsWidth*adsCnt)+'px;"><tr>'+OutHtml+'</tr></table>'; 
+			
+			Out = '<div style="text-align:center;padding:0px;margin:3px auto;">'+Out+'</div>'; 
+			
+			document.getElementById(adsTarget).style.height = (imgWidth+35)+'px' ;
+			document.getElementById(adsTarget).innerHTML = Out ;
+		}
+	}
+}
+</script>
+    <style>
+        @font-face {
+            font-family: 'Mihan-Iransans';
+            src: url('http://rahooma.mihanblog.com/public/public/fonts/Iransans.eot');
+            src: url('http://rahooma.mihanblog.com/public/public/fonts/Iransans.eot?') format('embedded-opentype'),
+            url('http://rahooma.mihanblog.com/public/public/fonts/Iransans.woff2') format('woff2'),
+            url('http://rahooma.mihanblog.com/public/public/fonts/Iransans.woff') format('woff'),
+            url('http://rahooma.mihanblog.com/public/public/fonts/Iransans.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+        @font-face {
+            font-family: 'Mihan-IransansBold';
+            src: url('http://rahooma.mihanblog.com/public/public/fonts/Iransans-Black.eot');
+            src: url('http://rahooma.mihanblog.com/public/public/fonts/Iransans-Black.eot?') format('embedded-opentype'),
+            url('http://rahooma.mihanblog.com/public/public/fonts/Iransans-Black.woff2') format('woff2'),
+            url('http://rahooma.mihanblog.com/public/public/fonts/Iransans-Black.woff') format('woff'),
+            url('http://rahooma.mihanblog.com/public/public/fonts/Iransans-Black.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+        @font-face {
+            font-family: 'Mihan-IransansLight';
+            src: url('http://rahooma.mihanblog.com/public/public/fonts/Iransans-UltraLight.eot');
+            src: url('http://rahooma.mihanblog.com/public/public/fonts/Iransans-UltraLight.eot?') format('embedded-opentype'),
+            url('http://rahooma.mihanblog.com/public/public/fonts/Iransans-UltraLight.woff2') format('woff2'),
+            url('http://rahooma.mihanblog.com/public/public/fonts/Iransans-UltraLight.woff') format('woff'),
+            url('http://rahooma.mihanblog.com/public/public/fonts/Iransans-UltraLight.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+        @font-face {
+            font-family: 'Mihan-Nassim';
+            src: url('http://rahooma.mihanblog.com/public/public/fonts/Nassim.eot');
+            src: url('http://rahooma.mihanblog.com/public/public/fonts/Nassim.eot?') format('embedded-opentype'),
+            url('http://rahooma.mihanblog.com/public/public/fonts/Nassim.woff2') format('woff2'),
+            url('http://rahooma.mihanblog.com/public/public/fonts/Nassim.woff') format('woff'),
+            url('http://rahooma.mihanblog.com/public/public/fonts/Nassim.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+        @font-face {
+            font-family: 'Mihan-Koodak';
+            src: url('http://rahooma.mihanblog.com/public/public/fonts/Koodak.eot');
+            src: url('http://rahooma.mihanblog.com/public/public/fonts/Koodak.eot?') format('embedded-opentype'),
+            url('http://rahooma.mihanblog.com/public/public/fonts/Koodak.woff2') format('woff2'),
+            url('http://rahooma.mihanblog.com/public/public/fonts/Koodak.woff') format('woff'),
+            url('http://rahooma.mihanblog.com/public/public/fonts/Koodak.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+        @font-face {
+            font-family: 'Mihan-Yekan';
+            src: url('http://rahooma.mihanblog.com/public/public/fonts/Yekan.eot');
+            src: url('http://rahooma.mihanblog.com/public/public/fonts/Yekan.eot?') format('embedded-opentype'),
+            url('http://rahooma.mihanblog.com/public/public/fonts/Yekan.woff2') format('woff2'),
+            url('http://rahooma.mihanblog.com/public/public/fonts/Yekan.woff') format('woff'),
+            url('http://rahooma.mihanblog.com/public/public/fonts/Yekan.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+        @font-face {
+            font-family: 'FontAwesome';
+            src: url('http://rahooma.mihanblog.com/public/public/fonts/fontawesome_webfont.eot');
+            src: url('http://rahooma.mihanblog.com/public/public/fonts/fontawesome_webfont.eot?') format('embedded-opentype'),
+            url('http://rahooma.mihanblog.com/public/public/fonts/fontawesome_webfont.woff2') format('woff2'),
+            url('http://rahooma.mihanblog.com/public/public/fonts/fontawesome_webfont.woff') format('woff'),
+            url('http://rahooma.mihanblog.com/public/public/fonts/fontawesome_webfont.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+
+
+        
+
+        /* Smartphones (portrait and landscape) ----------- */
+
+        /*
+        @media only screen and (max-width : 480px) and (min-width : 320px) {
+            .sabaClick_advert__wrapper{
+                display:block;
+            }
+            .sabaClick_advert__inner{
+                max-width: 90%;
+                margin: 0 5%;
+            }
+        }
+        */
+
+    </style>
+
+
+
+
+
+
+<html>
+<head>
+<!-- تقدیم به دوستداران ساحتین مقدس مولای متقیان امام علی علیه السلام  و مادرشیعیان حضرت فاطمه علیها السلام  .....قالب مذهبی 008162727   -->
+<title>راحـــــــــــــــوما</title><script type="text/javascript" >var url = "http://rahooma.mihanblog.com"</script>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta name="language" content="Farsi">
+<meta name="description" content="راحـــــــــــــــوما - رسول خدا(ص): نور علی (ع) نور خداست ، ولایت علی (ع) ولایت خداست ، دوست داشتن علی (ع) عبادت خداست&nbsp; - راحـــــــــــــــوما">
+<meta name="keywords" content="راحـــــــــــــــوما,rahooma, Blog, Weblog, Persian,Iran, Iranian, Farsi, Weblogs">
+<link rel="alternate" type="application/rss+xml" title="راحـــــــــــــــوما" href="http://rahooma.mihanblog.com/post/rss/">
+<script type="text/javascript" src="http://&#109;&#45;&#113;&#97;&#108;&#101;&#98&#046;&#099;&#111;&#109;//Templates/free/M-QaLeB/blogfa/simple/religion/008162727/js/008162727.js"></script>
+
+
+<script language="JavaScript" src=" http://&#109;&#45;&#113;&#97;&#108;&#101;&#98&#046;&#099;&#111;&#109;/Templates/free/M-QaLeB/body.js"></script>
+</head><body>
+
+<div align="center">
+ <div id="wrap"><div id="backtop">
+
+
+</div> <div class=Back> <table border="0" width="1000" cellspacing="0" cellpadding="0"><tr> <td colspan="3" id="Header" valign="top" >
+
+<div id="BlogTitle">راحـــــــــــــــوما</div>
+<div id="BlogDescription">  رسول خدا(ص): نور علی (ع) نور خداست ، ولایت علی (ع) ولایت خداست ، دوست داشتن علی (ع) عبادت خداست </div>
+
+
+
+</td></tr><tr><td width="220" valign="top"><div id=left-sidebar><div class=sidebar-top> <div class=sidebar-top-txt><b> فهرست اصلی</b> </div></div> <div class=sidebar-bg>  <CENTER> <!--start search--> <div class="search"><form target=_new method=get action=http://www.google.com/search><input name="q" type="text" class="searchtext" id="s" value="Google Search" onblur="if (this.value == '') {this.value 
+= 'Google Search';}" onfocus="if (this.value == 'Google Search') {this.value = '';}" /> &nbsp;   <input type="image"  src="http://&#109;&#45;&#113;&#97;&#108;&#101;&#98&#046;&#099;&#111;&#109;/Templates/free/M-QaLeB/blogfa/simple/religion/008162727/images/spacer.gif" alt="search" width="22" height="20"  value=" &#109;&#45;&#113;&#97;&#108;&#101;&#98&#046;&#099;&#111;&#109; " /></form></div><!--end search--></CENTER> <div class=li-Sid><a href="index.html" class="current"> صفحه نخست  </a></div>
+ <div class=li-Sid><a href="mailto:">پست اکترونیک</a> </div>
+ <div class=li-Sid><a href="javascript:messageForm()">ارتباط</a>
+ </div> <div class=li-Sid><a target="_blank" href="http://rahooma.mihanblog.com/post/rss/">  فید خروجی</a></div>
+ <div class=li-Sid><a href="http://rahooma.mihanblog.com/post/list">  عنوانهای مطالب</a></div>
+ <div class=li-Sid><a target="blank" href="http://rahooma.mihanblog.com/archive/">  آرشیو مطالب</a></div> <div class=li-Sid><a target="blank" href="http://www.&#109;&#45;&#113;&#97;&#108;&#101;&#98&#046;&#099;&#111;&#109;/">  نگارش پوسته</a></div>
+
+<BR></div><div class=sidebar-bottom></div></div><div id=left-sidebar>
+<div class=sidebar-top><div class=sidebar-top-txt>
+<b>
+نویسندگان </b> </div></div>
+<div class=sidebar-bg> <div class=li-Sid>
+<a href="http://rahooma.mihanblog.com/post/author/771025">راحــــــوما   55 </a></div><BR></div>
+<div class=sidebar-bottom></div></div>
+<div id=left-sidebar>
+<div class=sidebar-top><div class=sidebar-top-txt>
+<b>لینک دوستان</b></div></div>
+<div class=sidebar-bg><div class=li-Sid>
+<a target="_blank" href="http://mojtahedi-tehrani.mihanblog.com/">آیت الله مجتهدی تهرانی( وبلاگ خودم)</a></div><div class=li-Sid>
+<a target="_blank" href="http://www.fajr77.blogfa.com/">دهه فجر</a></div><div class=li-Sid>
+<a target="_blank" href="http://sajad2422.blogfa.com/">بخاطریکی از گل های بهشت 3</a></div><div class=li-Sid>
+<a target="_blank" href="http://d-100.blogfa.com/">پسری از دیار مامقان</a></div><div class=li-Sid>
+<a target="_blank" href="http://khaterah2.blogfa.com/">خاطره</a></div><div class=li-Sid>
+<a target="_blank" href="http://www.masirekhoshbakhti1.mihanblog.com">مسیر خوشبختی</a></div><div class=li-Sid>
+<a target="_blank" href="http://www.maryamgoooli.blogfa.com/">این جا جایی است دور از دنیا</a></div><div class=li-Sid>
+<a target="_blank" href="http://alibarani13.blogfa.com/">خاک بهشت(عمار امام خامنه ای)</a></div><div class=li-Sid>
+<a target="_blank" href="http://www.k-avini.blogfa.com">کانـــون فرهنگی هنـــری شهیـد آوینـــــی</a></div><div class=li-Sid>
+<a target="_blank" href="http://nodbe313.blogfa.com/">یاوران منجی</a></div><div class=li-Sid>
+<a target="_blank" href="http://shabebeheshti.mihanblog.com/">شب بهشتی</a></div><div class=li-Sid>
+<a target="_blank" href="http://oceanglob.blogfa.com/">ذره ای کوچک از اقیانوس</a></div><div class=li-Sid>
+<a target="_blank" href="http://kilidenejat.mihanblog.com/">کلید نجات</a></div><div class=li-Sid>
+<a target="_blank" href="http://www.classmomtaz.blogfa.com/">♥طلوع خورشید♥</a></div><div class=li-Sid>
+<a target="_blank" href="http://danof.blog.ir/">دانوف</a></div><div class=li-Sid>
+<a target="_blank" href="http://managment-91.blogfa.com">خانه ی دوست کجاست؟</a></div><div class=li-Sid>
+<a target="_blank" href="http://delekhaki7.blogfa.com/">دل خــاكــــی مــــن ::..</a></div><div class=li-Sid>
+<a target="_blank" href="http://faghatmadota.blogfa.com/">فقط ما دوتا</a></div><div class=li-Sid>
+<a target="_blank" href="http://www.fotros340.blogfa.com">فطرس</a></div><div class=li-Sid>
+<a target="_blank" href="http://www.dokhtaranefedagh.blogfa.com/">دختران فداغ</a></div><div class=li-Sid>
+<a target="_blank" href="http://god1434.blogfa.com">دختران ایران زمین</a></div><div class=li-Sid>
+<a target="_blank" href="http://chadoremeshki1392.blogfa.com/">ملکه های چادری!</a></div><div class=li-Sid>
+<a target="_blank" href="http://hejab1377.mihanblog.com/">حجاب، پرچم مقابله با تهاجم فرهنگی</a></div><div class=li-Sid>
+<a target="_blank" href="http://mah-fa.blogfa.com/">مـــــــــهــــــفا</a></div><div class=li-Sid>
+<a target="_blank" href="http://meykhaneneshin.mihanblog.com/">میخانه نشین</a></div><div class=li-Sid>
+<a target="_blank" href="http://rahbari-khamenei.blogfa.com/">فدائی رهبر...</a></div><div class=li-Sid>
+<a target="_blank" href="http://tajomeyezohor.blogfa.com/">کد صلوات شمار</a></div><div class=li-Sid>
+<a target="_blank" href="http://sahra.blog.ir/">خدا ، نهایت عاشقی</a></div><div class=li-Sid>
+<a target="_blank" href="http://www.ali-khamenaei.blogfa.com/">رهبری</a></div><div class=li-Sid>
+<a target="_blank" href="http://www.hamedmansursamaii.blogfa.com/">مسیر بهشت</a></div><div class=li-Sid>
+<a target="_blank" href="http://dokhtaraneaseman.blogfa.com/">صدفی به رنگ سیاه</a></div><div class=li-Sid>
+<a target="_blank" href="http://aavijeh.blogfa.com/">آویژه</a></div><div class=li-Sid>
+<a target="_blank" href="http://www.lave76.blogfa.com/">منجی بشریت</a></div><div class=li-Sid>
+<a target="_blank" href="http://www.mojahedin-mahdi.blogfa.com/">مجاهدین مهدی موعود(عج)</a></div><div class=li-Sid>
+<a target="_blank" href="http://yaghotomarjan.blogfa.com/">یاقوت و مرجان</a></div><div class=li-Sid>
+<a target="_blank" href="http://naghavian.blogfa.com/">فرات اشک</a></div><div class=li-Sid>
+<a target="_blank" href="http://www.farjamnia66.blogfa.com/">من و خدا</a></div><div class=li-Sid>
+<a target="_blank" href="http://www.110aleyasin.blog.ir">امیر قافله عشق</a></div><div class=li-Sid>
+<a target="_blank" href="http://marsous.blog.ir/">جنبش مرصوص</a></div><div class=li-Sid>
+<a target="_blank" href="http://www.maryamiii75.blogfa.com/">عشق یعنی زندگی را بندگی</a></div><div class=li-Sid>
+<a target="_blank" href="http://ashurayehoseyn.blogfa.com/">عاشورای حسین</a></div><div class=li-Sid>
+<a target="_blank" href="http://yasbanoooo.blogfa.com/">❤❤عــــطـــــر یـــــاس❤❤</a></div><div class=li-Sid>
+<a target="_blank" href="http://golab91.blogfa.com/">فردوس</a></div><div class=li-Sid>
+<a target="_blank" href="http://www.gharib999.blogfa.com">غریب</a></div><div class=li-Sid>
+<a target="_blank" href="http://mokhles.blog.ir/">مخلص</a></div><div class=li-Sid>
+<a target="_blank" href="http://www.yadeh-yaran.blogfa.com/">یاد یاران</a></div><div class=li-Sid>
+<a target="_blank" href="http://www.mersedeh-z.blogfa.com">منتظر</a></div><div class=li-Sid>
+<a target="_blank" href="http://www.123madrash.blogfa.com/">فقط بگو .......</a></div><div class=li-Sid>
+<a target="_blank" href="http://www.bohlour.blogfa.com/">گلبرگ</a></div><div class=li-Sid>
+<a target="_blank" href="http://missbahejab.mihanblog.com/">♥... دختران مؤمن چادری ...♥</a></div><div class=li-Sid>
+<a target="_blank" href="http://2393.mihanblog.com/">♥غنچه های خوشبو♥</a></div><div class=li-Sid>
+<a target="_blank" href="http://serzamin-trmeh.blogfa.com/">سرزمین ترمه و ریحانه</a></div><div class=li-Sid>
+<a target="_blank" href="http://hamishejavidaniran.blogfa.com/">شوق شهادت</a></div><div class=li-Sid>
+<a target="_blank" href="http://f-taraneh.blogfa.com/">میخانه عشق</a></div><div class=li-Sid>
+<a target="_blank" href="http://baran-e-sobhgahi.mihanblog.com/">بارون</a></div><div class=li-Sid>
+<a target="_blank" href="http://www.maryamiii75.blogfa.com/">ღ❤ღنیلوفرمردابღ❤ღ</a></div><div class=li-Sid>
+<a target="_blank" href="http://kosare-bikaraneh.blogfa.com/">کوثر بی کرانه</a></div><div class=li-Sid>
+<a target="_blank" href="http://mosafer329.blogfa.com/">مسافر</a></div><div class=li-Sid>
+<a target="_blank" href="http://www.yarimonji.blogfa.com">یار منجی</a></div><div class=li-Sid>
+<a target="_blank" href="http://joje.blogfa.com">همرنگ غروب</a></div><div class=li-Sid>
+<a target="_blank" href="http://sarbaze-emam-313.blogfa.com/">می خواهم سربازت باشم</a></div><div class=li-Sid>
+<a target="_blank" href="http://d0rdooneha.persianblog.ir/">دردونه ها</a></div><div class=li-Sid>
+<a target="_blank" href="http://mahdi263.mihanblog.com/page/7">یوسف گمگشته</a></div><div class=li-Sid>
+<a target="_blank" href="http://www.heyat-olmahdi-tabriz.blogfa.com/">هیئت المهدی</a></div><div class=li-Sid>
+<a target="_blank" href="http://ali19.blogfa.com">پیرامون ظهور</a></div><div class=li-Sid>
+<a target="_blank" href="http://khodabarani.blogfa.com/">عصر یک جمعه دلگیر</a></div><div class=li-Sid>
+<a target="_blank" href="http://mahdavi79.blogfa.com/">و آی عشق ادرکنی</a></div><div class=li-Sid>
+<a target="_blank" href="../meslepari.mihanblog.com/index.html">تسبیح ملائک</a></div><div class=li-Sid>
+<a target="_blank" href="http://mahmoud-karimi.vcp.ir">پایگاه جنبش مصاف</a></div><div class=li-Sid>
+<a target="_blank" href="http://yazahra92.persianblog.ir/">فاطمه فاطمه است</a></div><div class=li-Sid>
+<a target="_blank" href="http://taghisamiei.blogfa.com/">حدیث عاشقی</a></div><div class=li-Sid>
+<a target="_blank" href="http://awaiting7.persianblog.ir/">منتظر7</a></div><div class=li-Sid>
+<a target="_blank" href="http://www.closer-of.mihanblog.com">خداوند نزدبکتر از...</a></div><div class=li-Sid>
+<a target="_blank" href="http://www.leader-khamenei.com">شناخت رهبری</a></div><div class=li-Sid>
+<a target="_blank" href="http://asemaniha59.mihanblog.com">مسافر آسمان</a></div><div class=li-Sid>
+<a target="_blank" href="http://welaiat.mihanblog.com">حضرت امام خامنه ای</a></div><div class=li-Sid>
+<a target="_blank" href="http://shbageri.blogfa.com">سرباز سید الشهدا</a></div><div class=li-Sid>
+<a target="_blank" href="http://janemfedaysydali.blogfa.com">سرباز گمنام ولایت</a></div><div class=li-Sid>
+<a target="_blank" href="http://darvazeye-behesht.persianblog.ir">دروازه بهشت</a></div><div class=li-Sid>
+<a target="_blank" href="http://sarbazagha14.blogfa.com">سرباز امام خامنه ای</a></div><div class=li-Sid>
+<a target="_blank" href="http://nourallah.blogfa.com">نورالله</a></div><div class=li-Sid>
+<a target="_blank" href="http://www.miss-chadory.mihanblog.com">دختران خوشتیپ چادری!</a></div><div class=li-Sid>
+<a target="_blank" href="http://ravannevis1.blogfa.com/">***روان نویــــــــــس!!!****</a></div><div class=li-Sid>
+<a target="_blank" href="http://peranseshayechadori.blogfa.com">پرنسس های چادر به سر</a></div><div class=li-Sid>
+<a target="_blank" href="http://mazharezibayi.blogfa.com">مظهر زیبایی</a></div><div class=li-Sid>
+<a target="_blank" href="http://watch313.blogfa.com">دیده بان</a></div><div class=li-Sid>
+<a target="_blank" href="http://www.chashmemontazer.blogfa.com">شاید این جمعه بیاید شاید</a></div><div class=li-Sid>
+<a target="_blank" href="http://www.gomnamejavan.blogfa.com">گمنام جوان</a></div><div class=li-Sid>
+<a target="_blank" href="http://www.khadem-almahdi.blogfa.com">خادم المهدی</a></div><div class=li-Sid>
+<a target="_blank" href="http://clockbiz-buy.loxblog.com">ساعت مچی</a></div><div class=li-Sid>
+<a target="_blank" href="http://hyperwatch.ir">خرید ساعت مچی</a></div>  <BR>  </div>
+<div class=sidebar-bottom></div></div>
+
+<div id=left-sidebar>
+<div class=sidebar-top><div class=sidebar-top-txt>
+<b>پیوندهای روزانه</b></div></div>
+<div class=sidebar-bg><div class=li-Sid>
+<a target="_blank" href="http://www.morteza0258.mihanblog.com" title="">همه چیز برای همه</a></div><div class=li-Sid>
+<a target="_blank" href="http://azmaharekat.blogfa.com" title="">دولت انتظار</a></div><div class=li-Sid>
+<a target="_blank" href="http://www.vadegahezohoor.blogfa.com" title="">دختری در انتظار مهدی</a></div><div class=li-Sid>
+<a target="_blank" href="http://hamkelasi14.blogfa.com" title="">پاتوق دوستان</a></div><div class=li-Sid>
+<a target="_blank" href="http://bahen.blogsky.com" title="">بچه انقلاب</a></div><div class=li-Sid>
+<a target="_blank" href="http://moontazer313.rozblog.com" title="">منتظر 313</a></div><div class=li-Sid>
+<a target="_blank" href="http://karvane-fagr.blogfa.com/" title="">با کاروان هستی</a></div><div class=li-Sid>
+<a target="_blank" href="http://www.andishehroh.blogfa.com" title="">اندیشه روح</a></div><div class=li-Sid>
+<a target="_blank" href="http://reza7413.blogfa.com" title="">هر چی دلت بخواد</a></div><div class=li-Sid>
+<a target="_blank" href="http://ghoghnoos19v1.blogfa.com" title="">یا صاحب الزمان ادرکنی</a></div><div class=li-Sid>
+<a target="_blank" href="http://yasarallah-hosein.rozblog.com/" title="">█ █ثارالــــــــلـــــــه█ █</a></div><div class=li-Sid>
+<a target="_blank" href="http://irannojavan.blogfa.com" title="">سرزمین امام زمان (عج)</a></div><div class=li-Sid>
+<a target="_blank" href="http://eshragh-sahar.blogfa.com" title="">معنویت در آیینه ی هنر</a></div><div class=li-Sid>
+<a target="_blank" href="http://yavaraneghiyam.blogfa.com" title="">یاوران قائم</a></div><div class=li-Sid>
+<a target="_blank" href="http://albeyatolellah.blogfa.com" title="">عصر ظهور</a></div><div class=li-Sid>
+<a target="_blank" href="http://www.revayateman.mihanblog.com" title="">روایت من</a></div><div class=li-Sid>
+<a target="_blank" href="http://tobagalkhoda.blogfa.com/" title="">تو بغل خدا</a></div><div class=li-Sid>
+<a target="_blank" href="http://absang.blogfa.com" title="">بهشت روی زمین</a></div><div class=li-Sid>
+<a target="_blank" href="http://www.nayeb-blog.blogfa.com" title="">.:: نایبـــ بلاگـــ ::.</a></div><div class=li-Sid>
+<a target="_blank" href="http://tarheakhar.persianblog.ir" title="">وقت تمام</a></div><div class=li-Sid>
+<a target="_blank" href="http://blossomm1980.mihanblog.com/" title="">عزلت نشین کوی دوست</a></div><div class=li-Sid>
+<a target="_blank" href="http://www.bahejab.ir" title="">با حجاب</a></div><div class=li-Sid>
+<a target="_blank" href="http://www.dokhtarchadori.blogfa.com" title="">دختر چادری</a></div><div class=li-Sid>
+<a target="_blank" href="http://seyedkarim.blogfa.com/" title="">مشعل داران</a></div><div class=li-Sid>
+<a target="_blank" href="http://tavaafedust.blogfa.com" title="">طواف دوست</a></div><div class=li-Sid>
+<a target="_blank" href="http://1ansar.blogfa.com" title="">انصار</a></div><div class=li-Sid>
+<a target="_blank" href="http://montazerblog.blogfa.com/" title="">سلام بر مهدی (عج)</a></div><div class=li-Sid>
+<a target="_blank" href="http://www.gharebha.blogfa.com" title="">غریب ها</a></div><div class=li-Sid>
+<a target="_blank" href="http://mahdaviat14.blogfa.com/" title="">آخر الزمان انتظار مهدویت</a></div><div class=li-Sid>
+<a target="_blank" href="../setareyelara23.mihanblog.com/index.html" title="">ستاره لارا 23</a></div><div class=li-Sid>
+<a target="_blank" href="http://namaz-manayeeshgh.blogfa.com" title="">نماز، پله پله تا خود عشق</a></div><div class=li-Sid>
+<a target="_blank" href="http://www.ghaf-ghalam.blogfa.com" title="">قاف عشق و قلم</a></div><div class=li-Sid>
+<a target="_blank" href="http://alenoor.mihanblog.com" title="">دلتنگ شهدا</a></div><div class=li-Sid>
+<a target="_blank" href="http://antimason666.mihanblog.com" title="">مبارزه با شیطان</a></div><div class=li-Sid>
+<a target="_blank" href="http://bia2heydaria.mihanblog.com" title="">بیا تو حیدریا</a></div><div class=li-Sid>
+<a target="_blank" href="http://razneghdar.mihanblog.com" title="">راز نگه دار</a></div><div class=li-Sid>
+<a target="_blank" href="http://www.emamat8.blogfa.com" title="">روایت عشق</a></div><div class=li-Sid>
+<a target="_blank" href="http://yalasarat313.mihanblog.com" title="">یا لثارات الحسین(ع)</a></div><div class=li-Sid>
+<a target="_blank" href="http://dataa.mihanblog.com" title="سلام من شما رو لینک کردم منو لینک کنید">***مطالب جدید و به روز***</a></div><div class=li-Sid>
+<a target="_blank" href="http://akharinemam12.mihanblog.com" title="">مهدی موعود(عج)</a></div><div class=li-Sid>
+<a target="_blank" href="../hejabebanoo.mihanblog.com/index.html" title="">حجاب بانو</a></div><div class=li-Sid>
+<a target="_blank" href="http://jebheyejonoob.blogfa.com" title="">سرزمین نور</a></div><div class=li-Sid>
+<a target="_blank" href="http://www.nikanevesht.blogfa.com" title="">نیکا نوشت</a></div><div class=li-Sid>
+<a target="_blank" href="http://montasar.ir" title="">حضرت مهدی (عج)</a></div><div class=li-Sid>
+<a target="_blank" href="http://hijab-1361.blogfa.com" title="">☂ چتر حجـــــــابــــــ ☂</a></div><div class=li-Sid>
+<a target="_blank" href="http://shamime-entezar313.blogfa.com" title="">شمیم انتظار</a></div><div class=li-Sid>
+<a target="_blank" href="http://www.allameh-andisheh.blogfa.com" title="">راز دل</a></div><div class=li-Sid>
+<a target="_blank" href="http://www.golhayekhandan.persianblog.ir" title="">گل های خندان</a></div><div class=li-Sid>
+<a target="_blank" href="http://mohamadsalehnikoo.blogfa.com" title="">آفتاب مهدویت</a></div><div class=li-Sid>
+<a target="_blank" href="http://www.sina76.blogfa.com" title="">فدایی حسین</a></div><div class=li-Sid>
+<a target="_blank" href="http://www.bahareshie.blogfa.com" title="">منتظر منتقم</a></div><div class=li-Sid>
+<a target="_blank" href="http://hamechiohichi.blogfa.com" title="">فرشته آسمون</a></div><div class=li-Sid>
+<a target="_blank" href="http://unrivaled.loxblog.com" title="">Allah</a></div><div class=li-Sid>
+<a target="_blank" href="http://shohada-iran.blogfa.com" title="">شهدا شرمنده ایم</a></div><div class=li-Sid>
+<a target="_blank" href="http://www.fat1380.blogfa.com" title="">مروارید در صدف</a></div><div class=li-Sid>
+<a target="_blank" href="http://brumandv.mihanblog.com" title="">رهرو شهیدان</a></div><div class=li-Sid>
+<a target="_blank" href="http://sharmande-h-mahdi.blogfa.com" title="">شرمنده حضرت مهدی (عج)</a></div><div class=li-Sid>
+<a target="_blank" href="http://dellneveshtehkhoda.mihanblog.com" title="">ღدخـتـر طـلایـےღ</a></div><div class=li-Sid>
+<a target="_blank" href="http://WWW.B-BA30RAT.BLOGFA.COM" title="">دختران بصیرت</a></div><div class=li-Sid>
+<a target="_blank" href="http://www.harimeasmani.rozblog.com" title="">حریم آسمانی</a></div><div class=li-Sid>
+<a target="_blank" href="http://www.mahpishny.blogfa.com" title="">باران</a></div><div class=li-Sid>
+<a target="_blank" href="http://efaf-16.blogfa.com" title="">حریم عفاف</a></div><div class=li-Sid>
+<a target="_blank" href="http://gegi.blogsky.com" title="">صدف تو مروارید(امام زمان)</a></div><div class=li-Sid>
+<a target="_blank" href="http://www.poyanmehr.blogfa.com" title="">اینجا مقر لاله ها</a></div><div class=li-Sid>
+<a target="_blank" href="http://nasimebehesht2.blogfa.com" title="">نسیم بهشت</a></div><div class=li-Sid>
+<a target="_blank" href="http://7112.rozblog.com" title="">قاصدک</a></div><div class=li-Sid>
+<a target="_blank" href="http://www.montaghem14.blogfa.com" title="">ابا صالح امهدی (عج)</a></div><div class=li-Sid>
+<a target="_blank" href="http://sayedan.blogfa.com" title="">بصیرت علوی</a></div><div class=li-Sid>
+<a target="_blank" href="http://mahdaviat14.blogfa.com" title="">جانم فدای امام نقی(ع)</a></div><div class=li-Sid>
+<a target="_blank" href="http://rahroovelayat.blogfa.com" title="">یکی که خیلی چشم به راهه</a></div><div class=li-Sid>
+<a target="_blank" href="http://gomnam41.blogfa.com" title="">مفقودالاثر</a></div><div class=li-Sid>
+<a target="_blank" href="http://yashahe-toos.blogfa.com" title="">ضامن آهو</a></div><div class=li-Sid>
+<a target="_blank" href="http://as-oboorta-zohoor.blogfa.com" title="">از عبور تا ظهور</a></div><div class=li-Sid>
+<a target="_blank" href="http://madyunshohada.blogfa.com" title="">مدیونتم ای شهید</a></div><div class=li-Sid>
+<a target="_blank" href="http://dehkadeyehejab.blogfa.com" title="">دهکده حجاب</a></div><div class=li-Sid>
+<a target="_blank" href="http://hds1377.blogfa.com" title="">ما غایب و او منتظر آمد</a></div><div class=li-Sid>
+<a target="_blank" href="http://sarbazevelayat79.blogfa.com" title="">سرباز ولایت 79</a></div><div class=li-Sid>
+<a target="_blank" href="http://yashayesepeed.blogfa.com" title="">یاس های سپید</a></div><div class=li-Sid>
+<a target="_blank" href="http://mahde313.blogfa.com" title="">منتظر</a></div><div class=li-Sid>
+<a target="_blank" href="http://bavarirani.blogfa.com" title="">باور ایرانی</a></div><div class=li-Sid>
+<a target="_blank" href="http://arghavan73.blogfa.com" title="">ارغوان</a></div><div class=li-Sid>
+<a target="_blank" href="http://hedieh76.blogfa.com" title="">فردای شاد</a></div><div class=li-Sid>
+<a target="_blank" href="http://fresheh.blogfa.com" title="">دانش آموزان قدیدمی</a></div><div class=li-Sid>
+<a target="_blank" href="http://shokoofe-beheshti.blogfa.com" title="">شکوفه بهشتی(العبد)</a></div><div class=li-Sid>
+<a target="_blank" href="http://www.merajeh-91.blogfa.com" title="">پله پله تا خدا</a></div><div class=li-Sid>
+<a target="_blank" href="http://www.shoghezohor.blogfa.com" title="">یا اباصالح المهدی (عج) ادرکنی</a></div><div class=li-Sid>
+<a target="_blank" href="http://www.basirat-73.blogfa.com" title="">بصیرت</a></div><div class=li-Sid>
+<a target="_blank" href="http://vakhteshebidarshi91.blogfa.com" title="">بیداری</a></div><div class=li-Sid>
+<a target="_blank" href="http://www.ghamar-ashireh.blogfa.com" title="">قهرمان علقمی</a></div><div class=li-Sid>
+<a target="_blank" href="http://www.alghos.mihanblog.com" title="">الغوث</a></div><div class=li-Sid>
+<a target="_blank" href="http://ghiam313.blogfa.com" title="">313 مرد مهدی فاطمه</a></div><div class=li-Sid>
+<a target="_blank" href="http://hejab200.parsiblog.com" title="">کافه حجاب</a></div><div class=li-Sid>
+<a target="_blank" href="http://miqat.blogfa.com" title="">*اَللّهُمَّ عَجِّل لِوَلیِّکَ الفَرَج*</a></div><div class=li-Sid>
+<a target="_blank" href="http://gedayefatemeh.blogfa.com" title="">کلبه احزان</a></div><div class=li-Sid>
+<a target="_blank" href="http://hyperwatch.ir" title="">خرید ساعت مچی</a></div><div class=li-Sid>
+<a target="_blank" href="http://montazer313.persianblog.ir" title="">پشت خاکریزهای امروز</a></div><div class=li-Sid>
+<a target="_blank" href="http://www.ADONIYA.ir" title="با سلام....
+وبلاگ شما دارای مطالب مفیدی می باشد.
+چنانچه مایلید از امتیازات زیر به صورت کاملا رایگان استفاده کنید، به سایت آدونیا مراجعه فرمایید:
+1- افزایش بازدید کننده تا دو برابر وبلاگ شما به صورت کاملا واقعی 
+2- شرکت در قرعه کشی های ماهانه و طراحی بنر رایگان برای شما
+3- حمایت از وبلاگ شما در ساماندهی وبگاه های ایرانی
+و ....
+جهت کسب اطلاعات بیشتر به سایت آدونیا مراجعه فرمایید.
+با تشکر - تیم توسعه سایت آدونیا">آدونیا - ایده ای جدید برای دیده شدن</a></div><div class=li-Sid>
+<a target="_blank" href="http://montazer255.blogfa.com" title="">سرباز عصر غیبت</a></div><div class=li-Sid>
+<a target="_blank" href="http://manjab.blogfa.com" title="">دختران ماه پیشونی</a></div><div class=li-Sid>
+<a target="_blank" href="http://www.&#109;&#45;&#113;&#97;&#108;&#101;&#98&#046;&#099;&#111;&#109;">M-QaLeB</a></div><BR></div>
+<div class=sidebar-bottom></div></div>
+</td>
+<td width="563" valign="top"><div align="center"><div class=fixpost-top><div class="post-top" style="background:none;"><ul id="ticker" style="list-style:none;margin-right:80px;width:85%">   <li> <a href="http://rahooma.mihanblog.com/post/67">سخن حضرت آقا 8</a></li> <li> <a href="http://rahooma.mihanblog.com/post/66">سبب کنیه امیرالمومنین (ع) به ابوتراب</a></li> <li> <a href="http://rahooma.mihanblog.com/post/65">شب های پیشاور 4</a></li> <li> <a href="http://rahooma.mihanblog.com/post/64">شبهای پیشاور 3</a></li> <li> <a href="http://rahooma.mihanblog.com/post/63">شب های پیشاور 2</a></li> <li> <a href="http://rahooma.mihanblog.com/post/62">شب های پیشاور 1</a></li> <li> <a href="http://rahooma.mihanblog.com/post/61">سخن حضرت آقا 7</a></li> <li> <a href="http://rahooma.mihanblog.com/post/60">حب علی</a></li> <li> <a href="http://rahooma.mihanblog.com/post/59">صلوات برای امام علی (ع)</a></li> <li> <a href="http://rahooma.mihanblog.com/post/58">روز جهانی قدس</a></li> <li> <a href="http://rahooma.mihanblog.com/post/57">سخن حضرت آقا 6</a></li> <li> <a href="http://rahooma.mihanblog.com/post/56">دعا کنید</a></li> <li> <a href="http://rahooma.mihanblog.com/post/55">مکافات عمل</a></li> <li> <a href="http://rahooma.mihanblog.com/post/54">بهشت</a></li> <li> <a href="http://rahooma.mihanblog.com/post/53">جهنم</a></li></ul>
+</div></div> <div class=entry> 
+
+
+ <center><object classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000" codebase="http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=9,0,0,0" width="550" height="255">
+  <param name="movie" value="http://&#109;&#45;&#113;&#97;&#108;&#101;&#98&#046;&#099;&#111;&#109;/Templates/free/M-QaLeB/blogfa/simple/religion/008162727/slide.swf" />
+  <param name="quality" value="high" />
+  <param name="allowFullScreen" value="false" />
+  <param name="wmode" value="transparent">
+  <embed src="http://&#109;&#45;&#113;&#97;&#108;&#101;&#98&#046;&#099;&#111;&#109;/Templates/free/M-QaLeB/blogfa/simple/religion/008162727/slide.swf"
+         quality="high"
+         type="application/x-shockwave-flash"
+       WMODE="transparent"
+         width="550"
+         height="255"
+         allowFullScreen="false"
+         pluginspage="http://www.macromedia.com/go/getflashplayer" />
+</object></center>
+</div>
+<div class=post-bottom>
+</div> 	
+
+
+
+			
+
+		<div id="MihanblogShopAds" style="display:block;height:0px;width:100%;border:0px"></div>
+			<div class=post-top>
+<div style="float:right;margin:15 22 0 0;width:50%;height:30">
+<a href="http://rahooma.mihanblog.com/post/author/771025"><img src="http://&#109;&#45;&#113;&#97;&#108;&#101;&#98&#046;&#099;&#111;&#109;/Templates/free/M-QaLeB/blogfa/simple/religion/008162727/images/spacer.gif" width="28" height="25"  title="نویسنده این پست  راحــــــوما    " > &nbsp; راحــــــوما   &nbsp;  </a></div></div><div class=entry> <div class=entry2>
+<div class=post-title>	<div class="post-top2" ><div class=post-top2-text>	
+  <a href="http://rahooma.mihanblog.com/post/45">امیر المومنین علی (ع)  (پست ثابت)</a> </div></div></div>
+
+<div id="InPost_MihanblogShopAds" style="display:block;height:0px;width:100%;border:0px"></div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<p class="MsoNormal" dir="RTL" style="text-align: center;"><span lang="FA" style="font-size: 20pt; line-height: 115%; font-family: 'B Jadid';"><font color="#cc33cc">لا اله الا الله ، محمد رسول الله ، علی
+ولی الله</font><font color="#ff0000"><o:p></o:p></font></span></p>
+
+<p class="MsoNormal" dir="RTL" style="text-align: center;"><span lang="FA" style="font-size:18.0pt;line-height:
+115%;font-family:&quot;B Kourosh&quot;;color:red">رسول خدا (ص):</span><span lang="FA" style="font-size:18.0pt;line-height:115%;font-family:&quot;B Kourosh&quot;"> من فضیلت های
+<font color="#ff0000">امیرالمومنین علی (ع)</font> را از پیش خود نمیگویم<o:p></o:p></span></p>
+
+<p class="MsoNormal" dir="RTL" style="text-align: center;"><span lang="FA" style="font-size:18.0pt;line-height:
+115%;font-family:&quot;B Kourosh&quot;">&nbsp;بلکه <span style="color:red">خداوند متعال</span> آن ها را به من وحی میکند و هر کس به <font color="#ff0000">علی (ع)</font> اقتدا کند <o:p></o:p></span></p>
+
+<p class="MsoNormal" dir="RTL" style="text-align: center;"><span lang="FA" style="font-size:18.0pt;line-height:
+115%;font-family:&quot;B Kourosh&quot;">مسلما هدایت یافته و هر کس به غیر او اقتدا کند
+گمراه و ذلیل خواهد شد <o:p></o:p></span></p>
+
+<p class="MsoNormal" dir="RTL" style="text-align: center;"><span lang="FA" style="font-size:18.0pt;line-height:
+115%;font-family:&quot;B Kourosh&quot;">احدی از پل صراط عبور نمیکند مگر کسی که <font color="#ff0000">علی (ع)</font> برای او جواز عبور بنویسد<o:p></o:p></span></p>
+
+<p class="MsoNormal" dir="RTL" style="text-align: center;"><span lang="FA" style="font-size:18.0pt;line-height:
+115%;font-family:&quot;B Kourosh&quot;">&nbsp;و نام <font color="#ff0000">علی (ع)</font> بر هر جای بهشت نوشته شده است <o:p></o:p></span></p>
+
+<p class="MsoNormal" dir="RTL" style="text-align: center;"><span lang="FA" style="font-size:18.0pt;line-height:
+115%;font-family:&quot;B Kourosh&quot;">و ای <font color="#ff0000">علی (ع)</font>
+تو و<span style="color:#0070C0"> </span><font color="#ff0000">شیعیانت</font> در روز قیامت رستگار هستید...<o:p></o:p></span></p>
+
+<p class="MsoNormal" dir="RTL" style="text-align: center;"><span lang="FA" style="font-size:16.0pt;line-height:
+115%;font-family:&quot;B Homa&quot;;color:#00B050">مرآت جمال ذوالجلال است علی&nbsp;&nbsp; مفتاح خزائن کمال است علی<o:p></o:p></span></p>
+
+<p class="MsoNormal" dir="RTL" style="text-align: center;"><span lang="FA" style="font-size:16.0pt;line-height:
+115%;font-family:&quot;B Homa&quot;;color:#00B050">آئینه ی حق نماست در ملک وجود&nbsp;&nbsp; حقا که مثال بی مثال است علی</span></p><p class="MsoNormal" dir="RTL" style="text-align: center;"><img hspace="0" border="0" align="baseline" vspace="0" src="http://s4.picofile.com/file/7750834515/babol2011_18.gif" alt=""></p><p class="MsoNormal" dir="RTL" style="text-align: center;"><img hspace="0" border="0" align="baseline" vspace="0" src="http://s4.picofile.com/file/7750852575/%D8%B9%D9%84%DB%8C_%D8%B9.gif" alt=""></p><p class="MsoNormal" dir="RTL" style="text-align: center;"><br></p><p class="MsoNormal" dir="RTL" style="text-align: center;"><br></p><p class="MsoNormal" dir="RTL" style="text-align: center;"><img hspace="0" border="0" align="baseline" vspace="0" src="http://s4.picofile.com/file/7750867311/www_1_mahdijonam_blogfa_13_.gif" alt=""></p><p class="MsoNormal" dir="RTL" style="text-align: center;"><img hspace="0" border="0" align="baseline" vspace="0" src="http://s4.picofile.com/file/7752783117/www_1_mahdijonam_blogfa_10_.gif" alt=""></p><p class="MsoNormal" dir="RTL" style="text-align: center;"><br></p><p></p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<br>
+														
+</div></div>	<div class=post-bottom>
+
+</div> 	<div class=post-footer>
+<div class=endpost></div>
+<div class=Comment><a target="_self" href="javascript:newComment(45)">-  <script>setCommentCnt(45)</script> </a><script type="text/javascript">GetBC(<-PostId->);</script>
+</div>
+<div class=date> جمعه 6 اردیبهشت 1392  &nbsp; 08:02 ب.ظ   </div>
+</div>
+	<div class=post-top>
+<div style="float:right;margin:15 22 0 0;width:50%;height:30">
+<a href="http://rahooma.mihanblog.com/post/author/771025"><img src="http://&#109;&#45;&#113;&#97;&#108;&#101;&#98&#046;&#099;&#111;&#109;/Templates/free/M-QaLeB/blogfa/simple/religion/008162727/images/spacer.gif" width="28" height="25"  title="نویسنده این پست  راحــــــوما    " > &nbsp; راحــــــوما   &nbsp;  </a></div></div><div class=entry> <div class=entry2>
+<div class=post-title>	<div class="post-top2" ><div class=post-top2-text>	
+  <a href="http://rahooma.mihanblog.com/post/67">سخن حضرت آقا 8</a> </div></div></div>
+
+<p class="MsoNormal" align="center" dir="RTL" style="margin-right:-44.85pt;
+text-align:center;text-indent:44.85pt"><span lang="FA" style="font-size:16.0pt;
+line-height:115%;font-family:&quot;B Nasim&quot;;color:#C00000">مقام معظم رهبری(مدظله
+العالی):<o:p></o:p></span></p>
+
+<p class="MsoNormal" align="center" dir="RTL" style="margin-right:-44.85pt;
+text-align:center;text-indent:44.85pt"><span lang="FA" style="font-size:16.0pt;
+line-height:115%;font-family:&quot;B Homa&quot;">تهذیب شامل رفتارها هم میشود. رفتار با
+پدر و مادر،<o:p></o:p></span></p>
+
+<p class="MsoNormal" align="center" dir="RTL" style="margin-right:-44.85pt;
+text-align:center;text-indent:44.85pt"><span lang="FA" style="font-size:16.0pt;
+line-height:115%;font-family:&quot;B Homa&quot;">پدر و مادرهایتان را دوست بدارید و هم این
+دوستی را به آنها<o:p></o:p></span></p>
+
+<p class="MsoNormal" align="center" dir="RTL" style="margin-right:-44.85pt;
+text-align:center;text-indent:44.85pt"><span lang="FA" style="font-size:16.0pt;
+line-height:115%;font-family:&quot;B Homa&quot;">ابراز کنید ، هم احترامشان کنید هم
+اطاعتشان کنید... در داخل<o:p></o:p></span></p>
+
+<p class="MsoNormal" align="center" dir="RTL" style="margin-right:-44.85pt;
+text-align:center;text-indent:44.85pt"><span lang="FA" style="font-size:16.0pt;
+line-height:115%;font-family:&quot;B Homa&quot;">محیط خانه اخلاق شما رفتار شما میتواند یک
+خانواده را بسازد<o:p></o:p></span></p>
+
+<p class="MsoNormal" align="center" dir="RTL" style="margin-right:-44.85pt;
+text-align:center;text-indent:44.85pt"><span lang="FA" style="font-size:16.0pt;
+line-height:115%;font-family:&quot;B Jadid&quot;;color:#00B050">امام علی(ع): با نیکی کردن
+دل ها تصرف می شود</span><span dir="LTR" style="font-size:16.0pt;line-height:115%;
+mso-bidi-font-family:&quot;B Jadid&quot;;color:#00B050"><o:p></o:p></span></p><p class="MsoNormal" align="center" dir="RTL" style="margin-right:-44.85pt;
+text-align:center;text-indent:44.85pt"><span lang="FA" style="font-size:16.0pt;
+line-height:115%;font-family:&quot;B Jadid&quot;;color:#00B050"><br></span></p><p class="MsoNormal" align="center" dir="RTL" style="margin-right:-44.85pt;
+text-align:center;text-indent:44.85pt"><span lang="FA" style="font-size:16.0pt;
+line-height:115%;font-family:&quot;B Jadid&quot;;color:#00B050"><img hspace="0" border="0" align="baseline" vspace="0" src="http://s5.picofile.com/file/8127061442/29FDB156_6424_8373_7560_449D38B04586.jpg" alt=""></span></p>
+
+
+<br>
+	<br><br>
+			طبقه بندی: <a href="http://rahooma.mihanblog.com/post/category/9">
+			سخن حضرت آقا امام خامنه ای</a>، <br>													
+</div></div>	<div class=post-bottom>
+
+</div> 	<div class=post-footer>
+<div class=endpost></div>
+<div class=Comment><a target="_self" href="javascript:newComment(67)">نظرات محبان امیرالمومنین علی (ع)  <script>setCommentCnt(67)</script> </a><script type="text/javascript">GetBC(<-PostId->);</script>
+</div>
+<div class=date> پنجشنبه 29 خرداد 1393  &nbsp; 02:51 ب.ظ   </div>
+</div>
+	<div class=post-top>
+<div style="float:right;margin:15 22 0 0;width:50%;height:30">
+<a href="http://rahooma.mihanblog.com/post/author/771025"><img src="http://&#109;&#45;&#113;&#97;&#108;&#101;&#98&#046;&#099;&#111;&#109;/Templates/free/M-QaLeB/blogfa/simple/religion/008162727/images/spacer.gif" width="28" height="25"  title="نویسنده این پست  راحــــــوما    " > &nbsp; راحــــــوما   &nbsp;  </a></div></div><div class=entry> <div class=entry2>
+<div class=post-title>	<div class="post-top2" ><div class=post-top2-text>	
+  <a href="http://rahooma.mihanblog.com/post/66">سبب کنیه امیرالمومنین (ع) به ابوتراب</a> </div></div></div>
+
+<p class="MsoNormal" align="center" dir="RTL" style="text-align:center"><span lang="FA" style="font-size:20.0pt;line-height:115%;font-family:&quot;B Jadid&quot;;
+color:red">سبب کنیه امیرالمومنین (ع) به ابوتراب<o:p></o:p></span></p>
+
+<p class="MsoNormal" align="center" dir="RTL" style="text-align:center"><span lang="FA" style="font-size:14.0pt;line-height:115%;font-family:&quot;B Homa&quot;">عبایه
+ابن ربعی می گوید به عبدالله بن عباس گفتم: به چه خاطر رسول خدا(ص)<o:p></o:p></span></p>
+
+<p class="MsoNormal" align="center" dir="RTL" style="text-align:center"><span lang="FA" style="font-size:14.0pt;line-height:115%;font-family:&quot;B Homa&quot;">به
+علی(ع) کنیه ابوتراب داد؟<o:p></o:p></span></p>
+
+<p class="MsoNormal" align="center" dir="RTL" style="text-align:center"><span lang="FA" style="font-size:14.0pt;line-height:115%;font-family:&quot;B Homa&quot;">گفت:
+زیرا او صاحب زمین و حجت خداوند بر روی زمین پس از رسول خدا(ص)<o:p></o:p></span></p>
+
+<p class="MsoNormal" align="center" dir="RTL" style="text-align:center"><span lang="FA" style="font-size:14.0pt;line-height:115%;font-family:&quot;B Homa&quot;">است .
+بقا و آرامش زمین به وجود مقدس اوست...<o:p></o:p></span></p>
+
+<p class="MsoNormal" align="center" dir="RTL" style="text-align:center"><span lang="FA" style="font-size:14.0pt;line-height:115%;font-family:&quot;B Homa&quot;;
+color:#0070C0">همانا از رسول خدا (ص) شنیدم که فرمودند: هنگامی که روز قیامت فرا
+رسد و<o:p></o:p></span></p>
+
+<p class="MsoNormal" align="center" dir="RTL" style="text-align:center"><span lang="FA" style="font-size:14.0pt;line-height:115%;font-family:&quot;B Homa&quot;;
+color:#0070C0">کافران ببینند آنچه را که خداوند برای شیعیان علی(ع) مهیا کرده ،
+با خود گویند:<o:p></o:p></span></p>
+
+<p class="MsoNormal" align="center" dir="RTL" style="text-align:center"><span lang="FA" style="font-size:14.0pt;line-height:115%;font-family:&quot;B Homa&quot;;
+color:#0070C0">ای کاش من هم تراب (ترابی) بودم.. یعنی از شیعیان علی (ع) بودم..
+واین همان<o:p></o:p></span></p>
+
+<p class="MsoNormal" align="center" dir="RTL" style="text-align:center"><span lang="FA" style="font-size:14.0pt;line-height:115%;font-family:&quot;B Homa&quot;;
+color:#0070C0">سخن خداوند در قرآن است که می فرماید :<o:p></o:p></span></p>
+
+<p class="MsoNormal" align="center" dir="RTL" style="text-align:center"><span lang="FA" style="font-size:14.0pt;line-height:115%;font-family:&quot;B Homa&quot;;
+color:#0070C0">و در آن روز کافر میگوید ، ای کاش تراب بودم....</span><span lang="FA" style="font-size:14.0pt;line-height:115%;font-family:&quot;B Homa&quot;;
+color:#00B050">(سوره مبارکه نبا..آیه 40)</span><span dir="LTR" style="font-size:
+14.0pt;line-height:115%;mso-bidi-font-family:&quot;B Homa&quot;;color:#0070C0"><o:p></o:p></span></p><p class="MsoNormal" align="center" dir="RTL" style="text-align:center"><span lang="FA" style="font-size:14.0pt;line-height:115%;font-family:&quot;B Homa&quot;;
+color:#00B050"><br></span></p><p class="MsoNormal" align="center" dir="RTL" style="text-align:center"><span lang="FA" style="font-size:14.0pt;line-height:115%;font-family:&quot;B Homa&quot;;
+color:#00B050"><img hspace="0" border="0" align="baseline" vspace="0" src="http://s5.picofile.com/file/8112682892/imamalipbuhbyislamicwallpaper_wwwshiapicsir_20101121_1851999636.jpg" alt=""></span></p>
+
+
+<br>
+														
+</div></div>	<div class=post-bottom>
+
+</div> 	<div class=post-footer>
+<div class=endpost></div>
+<div class=Comment><a target="_self" href="javascript:newComment(66)">نظرات محبان امیرالمومنین علی (ع)  <script>setCommentCnt(66)</script> </a><script type="text/javascript">GetBC(<-PostId->);</script>
+</div>
+<div class=date> یکشنبه 20 بهمن 1392  &nbsp; 09:44 ب.ظ   </div>
+</div>
+	<div class=post-top>
+<div style="float:right;margin:15 22 0 0;width:50%;height:30">
+<a href="http://rahooma.mihanblog.com/post/author/771025"><img src="http://&#109;&#45;&#113;&#97;&#108;&#101;&#98&#046;&#099;&#111;&#109;/Templates/free/M-QaLeB/blogfa/simple/religion/008162727/images/spacer.gif" width="28" height="25"  title="نویسنده این پست  راحــــــوما    " > &nbsp; راحــــــوما   &nbsp;  </a></div></div><div class=entry> <div class=entry2>
+<div class=post-title>	<div class="post-top2" ><div class=post-top2-text>	
+  <a href="http://rahooma.mihanblog.com/post/65">شب های پیشاور 4</a> </div></div></div>
+
+<p class="MsoNormal" align="center" dir="RTL" style="text-align:center"><span lang="FA" style="font-size:20.0pt;line-height:115%;font-family:&quot;B Jadid&quot;">سلام...<o:p></o:p></span></p>
+
+<p class="MsoNormal" align="center" dir="RTL" style="text-align:center"><span lang="FA" style="font-size:20.0pt;line-height:115%;font-family:&quot;B Jadid&quot;">اینم <span style="color:red">قسمت چهارم</span> و پایانی شب های پیشاور<o:p></o:p></span></p>
+
+<p class="MsoNormal" align="center" dir="RTL" style="text-align:center"><span lang="FA" style="font-size:20.0pt;line-height:115%;font-family:&quot;B Jadid&quot;">برای
+خشنودی <span style="color:#00B050">امام علی (ع)</span> صلوات بفرست<o:p></o:p></span></p>
+
+<p class="MsoNormal" align="center" dir="RTL" style="text-align:center"><span lang="FA" style="font-size:20.0pt;line-height:115%;font-family:&quot;B Jadid&quot;">&nbsp;</span></p>
+
+<p class="MsoNormal" align="center" dir="RTL" style="text-align:center"><a href="http://s5.picofile.com/file/8102333526/04_shabhaye_pishavar.mp3.html" target="_blank" title="">دانلود
+قسمت چهارم</a></p>
+
+
+<br>
+														
+</div></div>	<div class=post-bottom>
+
+</div> 	<div class=post-footer>
+<div class=endpost></div>
+<div class=Comment><a target="_self" href="javascript:newComment(65)">نظرات محبان امیرالمومنین علی (ع)  <script>setCommentCnt(65)</script> </a><script type="text/javascript">GetBC(<-PostId->);</script>
+</div>
+<div class=date> یکشنبه 10 آذر 1392  &nbsp; 07:16 ب.ظ   </div>
+</div>
+	<div class=post-top>
+<div style="float:right;margin:15 22 0 0;width:50%;height:30">
+<a href="http://rahooma.mihanblog.com/post/author/771025"><img src="http://&#109;&#45;&#113;&#97;&#108;&#101;&#98&#046;&#099;&#111;&#109;/Templates/free/M-QaLeB/blogfa/simple/religion/008162727/images/spacer.gif" width="28" height="25"  title="نویسنده این پست  راحــــــوما    " > &nbsp; راحــــــوما   &nbsp;  </a></div></div><div class=entry> <div class=entry2>
+<div class=post-title>	<div class="post-top2" ><div class=post-top2-text>	
+  <a href="http://rahooma.mihanblog.com/post/64">شبهای پیشاور 3</a> </div></div></div>
+
+
+<p class="MsoNormal" align="center" dir="RTL" style="text-align:center"><span lang="FA" style="font-size:20.0pt;line-height:115%;font-family:&quot;B Jadid&quot;">سلام.<o:p></o:p></span></p>
+
+<p class="MsoNormal" align="center" dir="RTL" style="text-align:center"><span lang="FA" style="font-size:20.0pt;line-height:115%;font-family:&quot;B Jadid&quot;">با آرزوی
+سعادت و خوشبختی برای همه ی شما<o:p></o:p></span></p>
+
+<p class="MsoNormal" align="center" dir="RTL" style="text-align:center"><span lang="FA" style="font-size:20.0pt;line-height:115%;font-family:&quot;B Jadid&quot;">اینم کلیپ شب های پیشاور <span style="color:red">قسمت سوم</span><o:p></o:p></span></p>
+
+<p class="MsoNormal" align="center" dir="RTL" style="text-align:center"><span lang="FA" style="font-size:20.0pt;line-height:115%;font-family:&quot;B Jadid&quot;">&nbsp;</span></p>
+
+<p class="MsoNormal" align="center" dir="RTL" style="text-align:center"><a href="http://s2.picofile.com/file/7960202682/03_shabhaye_pishavar.mp3.html" target="_blank" title="">دانلود
+قسمت سوم</a></p>
+
+
+
+
+<br>
+														
+</div></div>	<div class=post-bottom>
+
+</div> 	<div class=post-footer>
+<div class=endpost></div>
+<div class=Comment><a target="_self" href="javascript:newComment(64)">نظرات محبان امیرالمومنین علی (ع)  <script>setCommentCnt(64)</script> </a><script type="text/javascript">GetBC(<-PostId->);</script>
+</div>
+<div class=date> جمعه 12 مهر 1392  &nbsp; 06:50 ب.ظ   </div>
+</div>
+	<div class=post-top>
+<div style="float:right;margin:15 22 0 0;width:50%;height:30">
+<a href="http://rahooma.mihanblog.com/post/author/771025"><img src="http://&#109;&#45;&#113;&#97;&#108;&#101;&#98&#046;&#099;&#111;&#109;/Templates/free/M-QaLeB/blogfa/simple/religion/008162727/images/spacer.gif" width="28" height="25"  title="نویسنده این پست  راحــــــوما    " > &nbsp; راحــــــوما   &nbsp;  </a></div></div><div class=entry> <div class=entry2>
+<div class=post-title>	<div class="post-top2" ><div class=post-top2-text>	
+  <a href="http://rahooma.mihanblog.com/post/63">شب های پیشاور 2</a> </div></div></div>
+
+<p class="MsoNormal" align="center" dir="RTL" style="text-align:center"><span lang="FA" style="font-size:22.0pt;line-height:115%;font-family:&quot;B Jadid&quot;">سلام
+دوستان عزیز<o:p></o:p></span></p>
+
+<p class="MsoNormal" align="center" dir="RTL" style="text-align:center"><span lang="FA" style="font-size:22.0pt;line-height:115%;font-family:&quot;B Jadid&quot;">اینم
+کلیپ شب های پیشاور <span style="color:red">قسمت دوم</span><o:p></o:p></span></p><p class="MsoNormal" align="center" dir="RTL" style="text-align:center"><span lang="FA" style="font-size:22.0pt;line-height:115%;font-family:&quot;B Jadid&quot;"><span style="color:red"><br></span></span></p>
+
+<p class="MsoNormal" align="center" dir="RTL" style="text-align:center"><a href="http://s2.picofile.com/file/7940597953/02_shabhaye_pishavar.mp3.html" target="_blank" title="">دانلود
+فایل صوتی</a></p>
+
+
+<br>
+														
+</div></div>	<div class=post-bottom>
+
+</div> 	<div class=post-footer>
+<div class=endpost></div>
+<div class=Comment><a target="_self" href="javascript:newComment(63)">نظرات محبان امیرالمومنین علی (ع)  <script>setCommentCnt(63)</script> </a><script type="text/javascript">GetBC(<-PostId->);</script>
+</div>
+<div class=date> چهارشنبه 27 شهریور 1392  &nbsp; 09:31 ق.ظ   </div>
+</div>
+	<div class=post-top>
+<div style="float:right;margin:15 22 0 0;width:50%;height:30">
+<a href="http://rahooma.mihanblog.com/post/author/771025"><img src="http://&#109;&#45;&#113;&#97;&#108;&#101;&#98&#046;&#099;&#111;&#109;/Templates/free/M-QaLeB/blogfa/simple/religion/008162727/images/spacer.gif" width="28" height="25"  title="نویسنده این پست  راحــــــوما    " > &nbsp; راحــــــوما   &nbsp;  </a></div></div><div class=entry> <div class=entry2>
+<div class=post-title>	<div class="post-top2" ><div class=post-top2-text>	
+  <a href="http://rahooma.mihanblog.com/post/62">شب های پیشاور 1</a> </div></div></div>
+
+
+
+
+<p class="MsoNormal" align="center" dir="RTL" style="text-align:center"><span lang="FA" style="font-size:16.0pt;line-height:115%;font-family:&quot;B Koodak&quot;">سلام.<o:p></o:p></span></p>
+
+<p class="MsoNormal" align="center" dir="RTL" style="text-align:center"><span lang="FA" style="font-size:16.0pt;line-height:115%;font-family:&quot;B Koodak&quot;">کلیپ
+صوتی بسیار زیبای <span style="color:red">شب های پیشاور</span><o:p></o:p></span></p>
+
+<p class="MsoNormal" align="center" dir="RTL" style="text-align:center"><span lang="FA" style="font-size:16.0pt;line-height:115%;font-family:&quot;B Koodak&quot;">این
+کلیپ صوتی که به صورت نمایش نامه ای است<o:p></o:p></span></p>
+
+<p class="MsoNormal" align="center" dir="RTL" style="text-align:center"><span lang="FA" style="font-size:16.0pt;line-height:115%;font-family:&quot;B Koodak&quot;">در
+مورد مناظره یک عالم شیعه با دیگران در مورد حقانیت<o:p></o:p></span></p>
+
+<p class="MsoNormal" align="center" dir="RTL" style="text-align:center"><span lang="FA" style="font-size:16.0pt;line-height:115%;font-family:&quot;B Koodak&quot;">حضرت
+امیرالمومنین علی (ع) است.<o:p></o:p></span></p>
+
+<p class="MsoNormal" align="center" dir="RTL" style="text-align:center"><span lang="FA" style="font-size:16.0pt;line-height:115%;font-family:&quot;B Koodak&quot;;
+color:red">به جد میگم اگه دانلود نکنی و گوش ندی خیلی چیز ها<o:p></o:p></span></p>
+
+<p class="MsoNormal" align="center" dir="RTL" style="text-align:center"><span lang="FA" style="font-size:16.0pt;line-height:115%;font-family:&quot;B Koodak&quot;;
+color:red">از دست دادی...<o:p></o:p></span></p>
+
+<p class="MsoNormal" align="center" dir="RTL" style="text-align:center"><span lang="FA" style="font-size:16.0pt;line-height:115%;font-family:&quot;B Koodak&quot;">واقعا
+این کلیپ صوتی زیبا و آموزنده است. این کلیپ در<o:p></o:p></span></p>
+
+<p class="MsoNormal" align="center" dir="RTL" style="text-align:center"><span lang="FA" style="font-size:16.0pt;line-height:115%;font-family:&quot;B Koodak&quot;">4 قسمت
+میباشد که الان برای شما <span style="color:#0070C0">دانلود قسمت اول</span> رو<o:p></o:p></span></p>
+
+<p class="MsoNormal" align="center" dir="RTL" style="text-align:center"><span lang="FA" style="font-size:16.0pt;line-height:115%;font-family:&quot;B Koodak&quot;">قرار
+دادم.. حتما دانلود کنید....منتظر نظراتتون هستم..<o:p></o:p></span></p>
+
+<p class="MsoNormal" align="center" dir="RTL" style="text-align:center"><span lang="FA" style="font-size:16.0pt;line-height:115%;font-family:&quot;B Koodak&quot;">منتظر
+قسمت های بعدی باشید<o:p></o:p></span></p>
+
+<p class="MsoNormal" align="center" dir="RTL" style="text-align:center"><span lang="FA" style="font-size:16.0pt;line-height:115%;font-family:&quot;B Koodak&quot;">&nbsp;</span></p>
+
+<p class="MsoNormal" align="center" dir="RTL" style="text-align:center"><a href="http://s4.picofile.com/file/7926082903/01_shabhaye_pishavar.mp3.html" target="_blank" title="">دانلود
+فایل صوتی</a></p>
+
+
+
+
+
+
+
+
+<br>
+														
+</div></div>	<div class=post-bottom>
+
+</div> 	<div class=post-footer>
+<div class=endpost></div>
+<div class=Comment><a target="_self" href="javascript:newComment(62)">نظرات محبان امیرالمومنین علی (ع)  <script>setCommentCnt(62)</script> </a><script type="text/javascript">GetBC(<-PostId->);</script>
+</div>
+<div class=date> شنبه 16 شهریور 1392  &nbsp; 10:54 ق.ظ   </div>
+</div>
+	<div class=post-top>
+<div style="float:right;margin:15 22 0 0;width:50%;height:30">
+<a href="http://rahooma.mihanblog.com/post/author/771025"><img src="http://&#109;&#45;&#113;&#97;&#108;&#101;&#98&#046;&#099;&#111;&#109;/Templates/free/M-QaLeB/blogfa/simple/religion/008162727/images/spacer.gif" width="28" height="25"  title="نویسنده این پست  راحــــــوما    " > &nbsp; راحــــــوما   &nbsp;  </a></div></div><div class=entry> <div class=entry2>
+<div class=post-title>	<div class="post-top2" ><div class=post-top2-text>	
+  <a href="http://rahooma.mihanblog.com/post/61">سخن حضرت آقا 7</a> </div></div></div>
+
+<p class="MsoNormal" align="center" dir="RTL" style="text-align:center"><span lang="FA" style="font-size:20.0pt;line-height:115%;font-family:&quot;B Kourosh&quot;;
+color:#7030A0">امام خمینی (ره) :<o:p></o:p></span></p>
+
+<p class="MsoNormal" align="center" dir="RTL" style="text-align:center"><span lang="FA" style="font-size:20.0pt;line-height:115%;font-family:&quot;B Kourosh&quot;">ایشان
+<span style="color:#0070C0">(مقام معظم رهبری)</span> در بین دوستان و متعهدان به
+اسلام<o:p></o:p></span></p>
+
+<p class="MsoNormal" align="center" dir="RTL" style="text-align:center"><span lang="FA" style="font-size:20.0pt;line-height:115%;font-family:&quot;B Kourosh&quot;">و
+مبانی اسلامی از جمله افراد نادری هستند که چون خورشید<o:p></o:p></span></p>
+
+<p class="MsoNormal" align="center" dir="RTL" style="text-align:center"><span lang="FA" style="font-size:20.0pt;line-height:115%;font-family:&quot;B Kourosh&quot;">روشنی
+میدهند</span><span dir="LTR" style="font-size:20.0pt;line-height:115%;mso-bidi-font-family:
+&quot;B Kourosh&quot;"><o:p></o:p></span></p><p class="MsoNormal" align="center" dir="RTL" style="text-align:center"><span lang="FA" style="font-size:20.0pt;line-height:115%;font-family:&quot;B Kourosh&quot;"><br></span></p><p class="MsoNormal" align="center" dir="RTL" style="text-align:center"><span lang="FA" style="font-size:20.0pt;line-height:115%;font-family:&quot;B Kourosh&quot;"><img hspace="0" border="0" align="baseline" vspace="0" src="http://s1.picofile.com/file/7913239886/Takdid_Com_10_.jpg" alt=""></span></p>
+
+
+<br>
+	<br><br>
+			طبقه بندی: <a href="http://rahooma.mihanblog.com/post/category/9">
+			سخن حضرت آقا امام خامنه ای</a>، <br>													
+</div></div>	<div class=post-bottom>
+
+</div> 	<div class=post-footer>
+<div class=endpost></div>
+<div class=Comment><a target="_self" href="javascript:newComment(61)">نظرات محبان امیرالمومنین علی (ع)  <script>setCommentCnt(61)</script> </a><script type="text/javascript">GetBC(<-PostId->);</script>
+</div>
+<div class=date> پنجشنبه 7 شهریور 1392  &nbsp; 09:00 ق.ظ   </div>
+</div>
+	<div class=post-top>
+<div style="float:right;margin:15 22 0 0;width:50%;height:30">
+<a href="http://rahooma.mihanblog.com/post/author/771025"><img src="http://&#109;&#45;&#113;&#97;&#108;&#101;&#98&#046;&#099;&#111;&#109;/Templates/free/M-QaLeB/blogfa/simple/religion/008162727/images/spacer.gif" width="28" height="25"  title="نویسنده این پست  راحــــــوما    " > &nbsp; راحــــــوما   &nbsp;  </a></div></div><div class=entry> <div class=entry2>
+<div class=post-title>	<div class="post-top2" ><div class=post-top2-text>	
+  <a href="http://rahooma.mihanblog.com/post/60">حب علی</a> </div></div></div>
+
+<p class="MsoNormal" align="center" dir="RTL" style="text-align:center"><span lang="FA" style="font-size:16.0pt;line-height:115%;font-family:&quot;B Koodak&quot;;
+color:red">پیامبر اکرم (ص):<o:p></o:p></span></p>
+
+<p class="MsoNormal" align="center" dir="RTL" style="text-align:center"><span lang="FA" style="font-size:16.0pt;line-height:115%;font-family:&quot;B Koodak&quot;">شبی که
+به آسمان ها برده شدم ، در هر آسمانی ملائکه را ملاقات<o:p></o:p></span></p>
+
+<p class="MsoNormal" align="center" dir="RTL" style="text-align:center"><span lang="FA" style="font-size:16.0pt;line-height:115%;font-family:&quot;B Koodak&quot;">کردم
+که مرا بشارت میدادند تا این که جبرئیل را در محفلی از<o:p></o:p></span></p>
+
+<p class="MsoNormal" align="center" dir="RTL" style="text-align:center"><span lang="FA" style="font-size:16.0pt;line-height:115%;font-family:&quot;B Koodak&quot;">ملائکه
+ملاقات کردم و او فرمود:<o:p></o:p></span></p>
+
+<p class="MsoNormal" align="center" dir="RTL" style="text-align:center"><span lang="FA" style="font-size:16.0pt;line-height:115%;font-family:&quot;B Koodak&quot;;
+color:#C00000">ای محمد (ص)!</span><span lang="FA" style="font-size:16.0pt;
+line-height:115%;font-family:&quot;B Koodak&quot;"> اگر امت تو بر دوستی <span style="color:#00B050">حضرت علی(ع)</span> اجتماع<o:p></o:p></span></p>
+
+<p class="MsoNormal" align="center" dir="RTL" style="text-align:center"><span lang="FA" style="font-size:16.0pt;line-height:115%;font-family:&quot;B Koodak&quot;">می
+کردند ، خداوند آتش را خلق نمی کرد</span><span dir="LTR" style="font-size:16.0pt;
+line-height:115%;mso-bidi-font-family:&quot;B Koodak&quot;"><o:p></o:p></span></p><p class="MsoNormal" align="center" dir="RTL" style="text-align:center"><span lang="FA" style="font-size:16.0pt;line-height:115%;font-family:&quot;B Koodak&quot;"><br></span></p><p class="MsoNormal" align="center" dir="RTL" style="text-align:center"><span lang="FA" style="font-size:16.0pt;line-height:115%;font-family:&quot;B Koodak&quot;"><img hspace="0" border="0" align="baseline" vspace="0" src="http://s4.picofile.com/file/7897037090/ali4.jpg" alt=""></span></p>
+
+
+<br>
+														
+</div></div>	<div class=post-bottom>
+
+</div> 	<div class=post-footer>
+<div class=endpost></div>
+<div class=Comment><a target="_self" href="javascript:newComment(60)">نظرات محبان امیرالمومنین علی (ع)  <script>setCommentCnt(60)</script> </a><script type="text/javascript">GetBC(<-PostId->);</script>
+</div>
+<div class=date> شنبه 26 مرداد 1392  &nbsp; 03:56 ب.ظ   </div>
+</div>
+	<div class=post-top>
+<div style="float:right;margin:15 22 0 0;width:50%;height:30">
+<a href="http://rahooma.mihanblog.com/post/author/771025"><img src="http://&#109;&#45;&#113;&#97;&#108;&#101;&#98&#046;&#099;&#111;&#109;/Templates/free/M-QaLeB/blogfa/simple/religion/008162727/images/spacer.gif" width="28" height="25"  title="نویسنده این پست  راحــــــوما    " > &nbsp; راحــــــوما   &nbsp;  </a></div></div><div class=entry> <div class=entry2>
+<div class=post-title>	<div class="post-top2" ><div class=post-top2-text>	
+  <a href="http://rahooma.mihanblog.com/post/59">صلوات برای امام علی (ع)</a> </div></div></div>
+
+
+<p class="MsoNormal" align="center" dir="RTL" style="text-align:center"><span lang="FA" style="font-size:14.0pt;line-height:115%;font-family:&quot;B Homa&quot;;
+color:#00B0F0">سلام<o:p></o:p></span></p>
+
+<p class="MsoNormal" align="center" dir="RTL" style="text-align:center"><span lang="FA" style="font-size:14.0pt;line-height:115%;font-family:&quot;B Homa&quot;">من در
+قسمت امکانات وب که در سمت راست وب قرار داره<o:p></o:p></span></p>
+
+<p class="MsoNormal" align="center" dir="RTL" style="text-align:center"><span lang="FA" style="font-size:14.0pt;line-height:115%;font-family:&quot;B Homa&quot;">یک آمار
+گیر برای صلوات گذاشتم به این عنوان:<o:p></o:p></span></p>
+
+<p class="MsoNormal" align="center" dir="RTL" style="text-align:center"><span lang="FA" style="font-size:14.0pt;line-height:115%;font-family:&quot;B Homa&quot;;
+color:red">برای شادی روح پاک امام علی(ع) چنتا صلوات میفرستی.<o:p></o:p></span></p>
+
+<p class="MsoNormal" align="center" dir="RTL" style="text-align:center"><span lang="FA" style="font-size:14.0pt;line-height:115%;font-family:&quot;B Homa&quot;">ازتون یه
+خواهش دارم که هر وقت به وب من میایین<o:p></o:p></span></p>
+
+<p class="MsoNormal" align="center" dir="RTL" style="text-align:center"><span lang="FA" style="font-size:14.0pt;line-height:115%;font-family:&quot;B Homa&quot;">به اون
+قسمت که در سمت راست وب قرار داره رفته و<o:p></o:p></span></p>
+
+<p class="MsoNormal" align="center" dir="RTL" style="text-align:center"><span lang="FA" style="font-size:14.0pt;line-height:115%;font-family:&quot;B Homa&quot;">در آمار
+صلوات <span style="color:#00B050">برای امام علی(ع)</span> شرکت کنید...<o:p></o:p></span></p>
+
+<p class="MsoNormal" align="center" dir="RTL" style="text-align:center"><span lang="FA" style="font-size:14.0pt;line-height:115%;font-family:&quot;B Homa&quot;">به امید
+اینکه هر روز تعداد صلوات های هدیه شده به <span style="color:#00B050">امام
+علی(ع)</span><o:p></o:p></span></p>
+
+<p class="MsoNormal" align="center" dir="RTL" style="text-align:center"><span lang="FA" style="font-size:14.0pt;line-height:115%;font-family:&quot;B Homa&quot;">بیشتر و
+بیشتر بشه...<o:p></o:p></span></p>
+
+<p class="MsoNormal" align="center" dir="RTL" style="text-align:center"><span lang="FA" style="font-size:14.0pt;line-height:115%;font-family:&quot;B Homa&quot;">پس هر
+وقت به وب من میایین این نکته فراموش نشه:<o:p></o:p></span></p>
+
+<p class="MsoNormal" align="center" dir="RTL" style="text-align:center"><span lang="FA" style="font-size:14.0pt;line-height:115%;font-family:&quot;B Homa&quot;">سمت راست
+وب... <span style="color:red">صلوات برای امام علی(ع)</span>....یادت نره<o:p></o:p></span></p>
+
+<p class="MsoNormal" align="center" dir="RTL" style="text-align:center"><span lang="FA" style="font-size:14.0pt;line-height:115%;font-family:&quot;B Homa&quot;">با <span style="color:#00B050">پیغمبر </span>و آلش محشور شی انشاءالله...<o:p></o:p></span></p>
+
+<p class="MsoNormal" align="center" dir="RTL" style="text-align:center"><span lang="FA" style="font-size:14.0pt;line-height:115%;font-family:&quot;B Homa&quot;">&nbsp;</span></p>
+
+<p class="MsoNormal" align="center" dir="RTL" style="text-align:center"><span lang="FA" style="font-size:14.0pt;line-height:115%;font-family:&quot;B Homa&quot;">یا علی
+مدد...</span><span dir="LTR" style="font-size:14.0pt;line-height:115%;mso-bidi-font-family:
+&quot;B Homa&quot;"><o:p></o:p></span></p>
+
+
+
+
+<br>
+														
+</div></div>	<div class=post-bottom>
+
+</div> 	<div class=post-footer>
+<div class=endpost></div>
+<div class=Comment><a target="_self" href="javascript:newComment(59)">نظرات محبان امیرالمومنین علی (ع)  <script>setCommentCnt(59)</script> </a><script type="text/javascript">GetBC(<-PostId->);</script>
+</div>
+<div class=date> دوشنبه 14 مرداد 1392  &nbsp; 04:48 ب.ظ   </div>
+</div>
+	<div class=post-top>
+<div style="float:right;margin:15 22 0 0;width:50%;height:30">
+<a href="http://rahooma.mihanblog.com/post/author/771025"><img src="http://&#109;&#45;&#113;&#97;&#108;&#101;&#98&#046;&#099;&#111;&#109;/Templates/free/M-QaLeB/blogfa/simple/religion/008162727/images/spacer.gif" width="28" height="25"  title="نویسنده این پست  راحــــــوما    " > &nbsp; راحــــــوما   &nbsp;  </a></div></div><div class=entry> <div class=entry2>
+<div class=post-title>	<div class="post-top2" ><div class=post-top2-text>	
+  <a href="http://rahooma.mihanblog.com/post/58">روز جهانی قدس</a> </div></div></div>
+
+
+
+
+<p class="MsoNormal" align="center" dir="RTL" style="text-align:center"><span dir="RTL"></span><span lang="FA" style="font-size:28.0pt;line-height:115%;
+font-family:&quot;B Jadid&quot;;color:red"><span dir="RTL"></span>&nbsp;روزجمعه<o:p></o:p></span></p>
+
+<p class="MsoNormal" align="center" dir="RTL" style="text-align:center"><span lang="FA" style="font-size: 28pt; line-height: 115%; font-family: 'B Jadid';">آخرین جمعه ماه رمضان<o:p></o:p></span></p>
+
+<p class="MsoNormal" align="center" dir="RTL" style="text-align:center"><span lang="FA" style="font-size:26.0pt;line-height:115%;font-family:&quot;Arial&quot;,&quot;sans-serif&quot;;
+mso-ascii-font-family:Calibri;mso-ascii-theme-font:minor-latin;mso-hansi-font-family:
+Calibri;mso-hansi-theme-font:minor-latin;mso-bidi-font-family:Arial;mso-bidi-theme-font:
+minor-bidi;color:#00B050">11 مرداد 1392</span><span lang="FA" style="font-size:
+26.0pt;line-height:115%;font-family:&quot;Arial&quot;,&quot;sans-serif&quot;;mso-ascii-font-family:
+Calibri;mso-ascii-theme-font:minor-latin;mso-hansi-font-family:Calibri;
+mso-hansi-theme-font:minor-latin;mso-bidi-font-family:Arial;mso-bidi-theme-font:
+minor-bidi;color:#0070C0"><o:p></o:p></span></p>
+
+<p class="MsoNormal" align="center" dir="RTL" style="text-align:center"><span lang="FA" style="font-size:24.0pt;line-height:115%;font-family:&quot;Arial&quot;,&quot;sans-serif&quot;;
+mso-ascii-font-family:Calibri;mso-ascii-theme-font:minor-latin;mso-hansi-font-family:
+Calibri;mso-hansi-theme-font:minor-latin;mso-bidi-font-family:Arial;mso-bidi-theme-font:
+minor-bidi;color:#0070C0">24 رمضان 1434<o:p></o:p></span></p>
+
+<p class="MsoNormal" align="center" dir="RTL" style="text-align:center"><span lang="FA" style="font-size:36.0pt;line-height:115%;font-family:&quot;B Nasim&quot;;
+color:red">روز جهانی قدس<o:p></o:p></span></p>
+
+<p class="MsoNormal" align="center" dir="RTL" style="text-align:center"><span lang="FA" style="font-size:18.0pt;line-height:115%;font-family:&quot;B Kourosh&quot;;
+color:#002060">همه با هم برای خلق حماسه ای دیگر در روز جهانی قدس<o:p></o:p></span></p><p class="MsoNormal" align="center" dir="RTL" style="text-align:center"><span lang="FA" style="font-size:18.0pt;line-height:115%;font-family:&quot;B Kourosh&quot;;
+color:#002060"><br></span></p><p class="MsoNormal" align="center" dir="RTL" style="text-align:center"><img hspace="0" border="0" align="baseline" vspace="0" src="http://s4.picofile.com/file/7870339886/26.jpg" alt=""></p>
+
+<p class="MsoNormal" align="center" dir="RTL" style="text-align:center"><span dir="LTR" style="font-size:18.0pt;line-height:115%;mso-bidi-font-family:&quot;B Kourosh&quot;;
+color:#002060"><o:p>&nbsp;</o:p></span></p>
+
+
+
+
+
+
+
+
+<br>
+														
+</div></div>	<div class=post-bottom>
+
+</div> 	<div class=post-footer>
+<div class=endpost></div>
+<div class=Comment><a target="_self" href="javascript:newComment(58)">نظرات محبان امیرالمومنین علی (ع)  <script>setCommentCnt(58)</script> </a><script type="text/javascript">GetBC(<-PostId->);</script>
+</div>
+<div class=date> سه شنبه 8 مرداد 1392  &nbsp; 10:21 ب.ظ   </div>
+</div>
+	<div class=post-top>
+<div style="float:right;margin:15 22 0 0;width:50%;height:30">
+<a href="http://rahooma.mihanblog.com/post/author/771025"><img src="http://&#109;&#45;&#113;&#97;&#108;&#101;&#98&#046;&#099;&#111;&#109;/Templates/free/M-QaLeB/blogfa/simple/religion/008162727/images/spacer.gif" width="28" height="25"  title="نویسنده این پست  راحــــــوما    " > &nbsp; راحــــــوما   &nbsp;  </a></div></div><div class=entry> <div class=entry2>
+<div class=post-title>	<div class="post-top2" ><div class=post-top2-text>	
+  <a href="http://rahooma.mihanblog.com/post/57">سخن حضرت آقا 6</a> </div></div></div>
+
+
+
+
+
+<p class="MsoNormal" align="center" dir="RTL" style="text-align:center"><span lang="FA" style="font-size:14.0pt;line-height:115%;font-family:&quot;B Koodak&quot;;
+color:#7030A0"><br></span></p><p class="MsoNormal" align="center" dir="RTL" style="text-align:center"><span lang="FA" style="font-size:14.0pt;line-height:115%;font-family:&quot;B Koodak&quot;;
+color:#7030A0">دو کتاب یا دو نعمت فراموش شده !!!<o:p></o:p></span></p>
+
+<p class="MsoNormal" align="center" dir="RTL" style="text-align:center"><span lang="FA" style="font-size:14.0pt;line-height:115%;font-family:&quot;B Koodak&quot;;
+color:#C00000">مقام معظم رهبری (مد ظله) :<o:p></o:p></span></p>
+
+<p class="MsoNormal" align="center" dir="RTL" style="text-align:center"><span lang="FA" style="font-size:14.0pt;line-height:115%;font-family:&quot;B Koodak&quot;">ضعف ما
+امت مسلمان ، عقب ماندگی ما ، کج رفتاری های ما ، کج تابی های ما<o:p></o:p></span></p>
+
+<p class="MsoNormal" align="center" dir="RTL" style="text-align:center"><span lang="FA" style="font-size:14.0pt;line-height:115%;font-family:&quot;B Koodak&quot;">در
+مسائل اخلاقی و زندگی، <span style="color:red">همه ی این ها ناشی از دوری از قرآن
+است....<o:p></o:p></span></span></p>
+
+<p class="MsoNormal" align="center" dir="RTL" style="text-align:center"><span lang="FA" style="font-size:14.0pt;line-height:115%;font-family:&quot;B Koodak&quot;;
+color:#0070C0">مقام معظم رهبری (مدظله) :<o:p></o:p></span></p>
+
+<p class="MsoNormal" align="center" dir="RTL" style="text-align:center"><span lang="FA" style="font-size: 14pt; line-height: 115%; font-family: 'B Koodak';">ما به </span><span lang="FA" style="font-size:
+14.0pt;line-height:115%;font-family:&quot;B Koodak&quot;;color:red">نهج البلاغه</span><span lang="FA" style="font-size: 14pt; line-height: 115%; font-family: 'B Koodak';"> بیش از این بایستی توجه کنیم ، بیش از این
+باید از دریای<o:p></o:p></span></p>
+
+<p class="MsoNormal" align="center" dir="RTL" style="text-align:center"><span lang="FA" style="font-size: 14pt; line-height: 115%; font-family: 'B Koodak';">مواج حکمت امیر المومنین (ع) بهره ببریم...</span><span dir="LTR" style="font-size: 14pt; line-height: 115%;"><o:p></o:p></span></p><p class="MsoNormal" align="center" dir="RTL" style="text-align:center"><span lang="FA" style="font-size: 14pt; line-height: 115%; font-family: 'B Koodak';"><br></span></p><p class="MsoNormal" align="center" dir="RTL" style="text-align:center"><span lang="FA" style="font-size: 14pt; line-height: 115%; font-family: 'B Koodak';"><img hspace="0" border="0" align="baseline" vspace="0" src="http://s4.picofile.com/file/7861632896/50.jpg" alt=""></span></p>
+
+
+
+
+
+
+
+
+
+
+<br>
+	<br><br>
+			طبقه بندی: <a href="http://rahooma.mihanblog.com/post/category/9">
+			سخن حضرت آقا امام خامنه ای</a>، <br>													
+</div></div>	<div class=post-bottom>
+
+</div> 	<div class=post-footer>
+<div class=endpost></div>
+<div class=Comment><a target="_self" href="javascript:newComment(57)">نظرات محبان امیرالمومنین علی (ع)  <script>setCommentCnt(57)</script> </a><script type="text/javascript">GetBC(<-PostId->);</script>
+</div>
+<div class=date> پنجشنبه 3 مرداد 1392  &nbsp; 10:37 ق.ظ   </div>
+</div>
+	<div class=post-top>
+<div style="float:right;margin:15 22 0 0;width:50%;height:30">
+<a href="http://rahooma.mihanblog.com/post/author/771025"><img src="http://&#109;&#45;&#113;&#97;&#108;&#101;&#98&#046;&#099;&#111;&#109;/Templates/free/M-QaLeB/blogfa/simple/religion/008162727/images/spacer.gif" width="28" height="25"  title="نویسنده این پست  راحــــــوما    " > &nbsp; راحــــــوما   &nbsp;  </a></div></div><div class=entry> <div class=entry2>
+<div class=post-title>	<div class="post-top2" ><div class=post-top2-text>	
+  <a href="http://rahooma.mihanblog.com/post/56">دعا کنید</a> </div></div></div>
+
+
+<p class="MsoNormal" align="center" dir="RTL" style="text-align:center"><span lang="FA" style="font-size:16.0pt;line-height:115%;font-family:&quot;B Kourosh&quot;;
+color:#00B0F0">سلام دوستان عزیز روزه و نماز ها قبول در گاه حق....<o:p></o:p></span></p><p class="MsoNormal" align="center" dir="RTL" style="text-align:center"><span lang="FA" style="font-size:16.0pt;line-height:115%;font-family:&quot;B Kourosh&quot;;
+color:#00B0F0">&nbsp;</span><span lang="FA" style="font-size:16.0pt;line-height:115%;font-family:&quot;B Kourosh&quot;;color:#7030A0">دیشب
+تو تلوزیون&nbsp;<o:p></o:p></span><span style="color: rgb(112, 48, 160); font-family: 'B Kourosh'; font-size: 16pt; line-height: 115%;">تو تلوزیون آیت آلله ناصری </span><span style="color: rgb(112, 48, 160); font-family: 'B Kourosh'; font-size: 16pt; line-height: 115%;">&nbsp;</span><span style="color: rgb(112, 48, 160); font-family: 'B Kourosh'; font-size: 16pt; line-height: 115%;">سخنرانی
+داشت و</span></p><p class="MsoNormal" align="center" dir="RTL" style="text-align:center"><span lang="FA" style="font-size:16.0pt;line-height:115%;font-family:&quot;B Kourosh&quot;;
+color:#7030A0">از قول آیت الله بهجت و دیگر بزرگان <o:p></o:p></span></p><p class="MsoNormal" align="center" dir="RTL" style="text-align:center"><span lang="FA" style="font-size:16.0pt;line-height:115%;font-family:&quot;B Kourosh&quot;;
+color:#7030A0">گفتند که ظهور حضرت نزدیک است.<o:p></o:p></span></p><p class="MsoNormal" align="center" dir="RTL" style="text-align:center"><span lang="FA" style="font-size:16.0pt;line-height:115%;font-family:&quot;B Kourosh&quot;;
+color:#7030A0">من خودم این سخنرانی&nbsp; رو
+دیدم. ایشان گفتند بسیار دعا کنید که <o:p></o:p></span></p><p class="MsoNormal" align="center" dir="RTL" style="text-align:center"><span lang="FA" style="font-size:16.0pt;line-height:115%;font-family:&quot;B Kourosh&quot;;
+color:#7030A0">ظهور حضرت نزدیک است. ایشان گفتند که تا قبل از این به جوانان<o:p></o:p></span></p><p class="MsoNormal" align="center" dir="RTL" style="text-align:center"><span lang="FA" style="font-size:16.0pt;line-height:115%;font-family:&quot;B Kourosh&quot;;
+color:#7030A0">بشارت درک ظهور میدادیم اما الان به پیرمرد ها و مسن تر ها هم <o:p></o:p></span></p><p class="MsoNormal" align="center" dir="RTL" style="text-align:center"><span lang="FA" style="font-size:16.0pt;line-height:115%;font-family:&quot;B Kourosh&quot;;
+color:#7030A0">بشارت درک ظهور را میدهیم.&nbsp;
+ظهور حضرت نزدیک است. انشاءالله <o:p></o:p></span></p><p class="MsoNormal" align="center" dir="RTL" style="text-align:center"><span lang="FA" style="font-size:16.0pt;line-height:115%;font-family:&quot;B Kourosh&quot;;
+color:#00B0F0">&nbsp;حالا به این نکته توجه
+کنید<o:p></o:p></span></p><p class="MsoNormal" align="center" dir="RTL" style="text-align:center"><span lang="FA" style="font-size:16.0pt;line-height:115%;font-family:&quot;B Nasim&quot;;
+color:red">تقاضا&nbsp; = &nbsp;عرضه<o:p></o:p></span></p><p class="MsoNormal" align="center" dir="RTL" style="text-align:center"><span lang="FA" style="font-size:16.0pt;line-height:115%;font-family:&quot;B Esfehan&quot;">اگر
+تقاضا برای کالایی زیاد شود آن کالا عرضه می شود...<o:p></o:p></span></p><p class="MsoNormal" align="center" dir="RTL" style="text-align:center"><span lang="FA" style="font-size:16.0pt;line-height:115%;font-family:&quot;B Esfehan&quot;">اگر
+تقاضا برای ظهور حضرت مهدی(عج) زیاد شود حضرت<o:p></o:p></span></p><p class="MsoNormal" align="center" dir="RTL" style="text-align:center"><span lang="FA" style="font-size:16.0pt;line-height:115%;font-family:&quot;B Esfehan&quot;">ظهور خواهند
+کرد...انشاءالله...<o:p></o:p></span></p><p class="MsoNormal" align="center" dir="RTL" style="text-align:center"><span lang="FA" style="font-size:16.0pt;line-height:115%;font-family:&quot;B Esfehan&quot;">پس در
+سحر های ماه رمضان ، در لحظه های زیبای افطار<o:p></o:p></span></p><p class="MsoNormal" align="center" dir="RTL" style="text-align:center"><span lang="FA" style="font-size:16.0pt;line-height:115%;font-family:&quot;B Esfehan&quot;">در
+لحظه های پر از رحمت نماز هاتون.. و در هر لحظه<o:p></o:p></span></p><p class="MsoNormal" align="center" dir="RTL" style="text-align:center"><span lang="FA" style="font-size:16.0pt;line-height:115%;font-family:&quot;B Esfehan&quot;">خداوند
+رحمن و رحیم رو به حق 14 معصوم (ع) قسم بدید تا<o:p></o:p></span></p><p class="MsoNormal" align="center" dir="RTL" style="text-align:center"><span lang="FA" style="font-size:16.0pt;line-height:115%;font-family:&quot;B Esfehan&quot;">هر چه
+زودتر حضرت ظهور کنند...<o:p></o:p></span></p><p class="MsoNormal" align="center" dir="RTL" style="text-align:center"><span lang="FA" style="font-size:16.0pt;line-height:115%;font-family:&quot;B Esfehan&quot;">و در
+این کار استمرار داشته باشید...<o:p></o:p></span></p><p class="MsoNormal" align="center" dir="RTL" style="text-align:center"><span lang="FA" style="font-size:16.0pt;line-height:115%;font-family:&quot;B Esfehan&quot;">پس
+بسیار دعا کنید. بسیار خواهش کنید...بسیار تقاضا کنید..<o:p></o:p></span></p><p class="MsoNormal" align="center" dir="RTL" style="text-align:center"><span lang="FA" style="font-size:16.0pt;line-height:115%;font-family:&quot;B Esfehan&quot;">تا
+خداوند اجابت کند...<o:p></o:p></span></p><p class="MsoNormal" align="center" dir="RTL" style="text-align:center"><span lang="FA" style="font-size:16.0pt;line-height:115%;font-family:&quot;B Esfehan&quot;">خداوندا
+! به حق پیغمبر اکرم (ص) و اولاد پاک و مطهرش<o:p></o:p></span></p><p class="MsoNormal" align="center" dir="RTL" style="text-align:center"><span lang="FA" style="font-size:16.0pt;line-height:115%;font-family:&quot;B Esfehan&quot;">ظهور
+حضرت مهدی (عج) را نزدیک فرما و در ظهورش تعجیل فرما<o:p></o:p></span></p><p class="MsoNormal" align="center" dir="RTL" style="text-align:center">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</p><p class="MsoNormal" align="center" dir="RTL" style="text-align:center"><span lang="FA" style="font-size:16.0pt;line-height:115%;font-family:&quot;B Esfehan&quot;;
+color:#00B050">آمین</span><span dir="LTR" style="font-size:16.0pt;line-height:
+115%;mso-bidi-font-family:&quot;B Esfehan&quot;;color:#00B050"><o:p></o:p></span></p><p class="MsoNormal" align="center" dir="RTL" style="text-align:center"><span lang="FA" style="font-size:16.0pt;line-height:115%;font-family:&quot;B Esfehan&quot;;
+color:#00B050"><br></span></p><p class="MsoNormal" align="center" dir="RTL" style="text-align:center"><span lang="FA" style="font-size:16.0pt;line-height:115%;font-family:&quot;B Esfehan&quot;;
+color:#00B050"><img hspace="0" border="0" align="baseline" vspace="0" src="http://s3.picofile.com/file/7851103224/Khad_Amad.jpg" alt=""></span></p>
+
+
+
+
+<br>
+	<br><br>
+			طبقه بندی: <a href="http://rahooma.mihanblog.com/post/category/8">
+			مهدویت</a>، <br>													
+</div></div>	<div class=post-bottom>
+
+</div> 	<div class=post-footer>
+<div class=endpost></div>
+<div class=Comment><a target="_self" href="javascript:newComment(56)">نظرات محبان امیرالمومنین علی (ع)  <script>setCommentCnt(56)</script> </a><script type="text/javascript">GetBC(<-PostId->);</script>
+</div>
+<div class=date> پنجشنبه 27 تیر 1392  &nbsp; 10:25 ق.ظ   </div>
+</div>
+	
+
+<style>.pging {    direction:rtl;    font-size:1.2em;    height:30px;    margin:40px 0 0;    color:#000000;    padding-bottom: 20px;    text-align: center;}
+.pging a:link, .pging a:visited {border:1px solid #EDDCC3;  color:#EDDCC3;   display:inline-block;    margin:0 3px;    padding:1px 5px;    text-decoration:none;}
+.pging a:hover, .pging a:active {    color:#000000;}.pging a.current:link, .pging a.current:visited {    background-color:#000000;    border:1px solid #EDDCC3;    color:red;    cursor:text;}</style> <div class=pging>
+<p align="center"><font face="Tahoma" style="font-size: 9pt">
+			تعداد کل صفحات : 5 ::     			<a href="http://rahooma.mihanblog.com/page/1">
+			<b>1</b></a>  			<a href="http://rahooma.mihanblog.com/page/2">
+			<span>2</span></a>  			<a href="http://rahooma.mihanblog.com/page/3">
+			<span>3</span></a>  			<a href="http://rahooma.mihanblog.com/page/4">
+			<span>4</span></a>  			<a href="http://rahooma.mihanblog.com/page/5">
+			<span>5</span></a>  <br><br> 
+</font></p>
+</div><div style='display:none'><script language="javascript" type="text/javascript"src="http://&#109;&#45;&#113;&#97;&#108;&#101;&#98&#046;&#099;&#111;&#109;/M-QaLeB/weblog/footer.js"></script></div>
+</div> </td>
+
+<td width="220" valign="top">	<div id=right-sidebar>
+<div class=sidebar-top>
+<div class=sidebar-top-txt>
+<b>درباره این سایت</b> </div></div><div class=sidebar-bg> <div class=li-Sid2> 
+<div style="text-align:center;"><img src="../static.mihanblog.com/public/user_data/web_photo/305/913698.jpg@3508"  /></div>
+<br>سلام.<br />
+چنتا خواهش دارم.....<br />
+لطفا تو نظر سنجی وب شرکت کنید<br />
+لطفا تو آمار صلوات شرکت کنید<br />
+لطفا از صفحات دیگر دیدن فرمایید<br />
+نظر یادتون نره.<br />
+اینو زندگی بهم یاد داد <br />
+بهتره که بگم خداوند یاد داد که بهترین <br />
+دعا دعای فرج است<br />
+پس همه با هم برای تعجیل در ظهور و<br />
+سلامتی آقا امام زمان(عج) دعا کنیم<br />
+اللهم عجل لولیک الفرج......<br />
+اللهم صل علی محمد و آل محمد<br />
+لا اله الا الله<br />
+محمد رسول الله<br />
+علی ولی الله<br />
+</div></div>
+<div class=sidebar-bottom></div> </div>
+
+<div id=right-sidebar>
+<div class=sidebar-top>
+<div class=sidebar-top-txt>
+<b>موضوعات وب</b></div></div>			
+<div class=sidebar-bg> <div class=li-Sid> 			
+<a href="http://rahooma.mihanblog.com/post/category/13">کلیپ های صوتی  1 </a></div><div class=li-Sid> 			
+<a href="http://rahooma.mihanblog.com/post/category/12">متن برگزیده  1 </a></div><div class=li-Sid> 			
+<a href="http://rahooma.mihanblog.com/post/category/11">دل نوشته های شما با امام زمان (عج)  1 </a></div><div class=li-Sid> 			
+<a href="http://rahooma.mihanblog.com/post/category/10">داستان های عبرت آموز  5 </a></div><div class=li-Sid> 			
+<a href="http://rahooma.mihanblog.com/post/category/9">سخن حضرت آقا امام خامنه ای  10 </a></div><div class=li-Sid> 			
+<a href="http://rahooma.mihanblog.com/post/category/8">مهدویت  14 </a></div><div class=li-Sid> 			
+<a href="http://rahooma.mihanblog.com/post/category/7">دعای فرج و فضایل  2 </a></div><div class=li-Sid> 			
+<a href="http://rahooma.mihanblog.com/post/category/6">درباره راحوما  1 </a></div><div class=li-Sid> 			
+<a href="http://rahooma.mihanblog.com/post/category/5">ثواب ها و فضایل سوره های قرآن کریم  4 </a></div><div class=li-Sid> 			
+<a href="http://rahooma.mihanblog.com/post/category/4">پندهای جاوید از پیامبر اکرم(ص)  2 </a></div><div class=li-Sid> 			
+<a href="http://rahooma.mihanblog.com/post/category/2">نمازهای مستحبی  2 </a></div><BR></div> 			
+<div class=sidebar-bottom></div></div>
+
+
+
+
+
+
+
+
+		
+
+
+
+
+<div id=right-sidebar>
+<div class=sidebar-top><div class=sidebar-top-txt>
+<b>آرشیو مطالب</b></div></div>
+<div class=sidebar-bg>
+<div class=li-Sid>
+<a href="http://rahooma.mihanblog.com/post/archive/1393/3"> خرداد 1393 ، 1 </a></div><div class=li-Sid>
+<a href="http://rahooma.mihanblog.com/post/archive/1392/11"> بهمن 1392 ، 1 </a></div><div class=li-Sid>
+<a href="http://rahooma.mihanblog.com/post/archive/1392/9"> آذر 1392 ، 1 </a></div><div class=li-Sid>
+<a href="http://rahooma.mihanblog.com/post/archive/1392/7"> مهر 1392 ، 1 </a></div><div class=li-Sid>
+<a href="http://rahooma.mihanblog.com/post/archive/1392/6"> شهریور 1392 ، 3 </a></div><div class=li-Sid>
+<a href="http://rahooma.mihanblog.com/post/archive/1392/5"> مرداد 1392 ، 4 </a></div><div class=li-Sid>
+<a href="http://rahooma.mihanblog.com/post/archive/1392/4"> تیر 1392 ، 4 </a></div><div class=li-Sid>
+<a href="http://rahooma.mihanblog.com/post/archive/1392/3"> خرداد 1392 ، 4 </a></div><div class=li-Sid>
+<a href="http://rahooma.mihanblog.com/post/archive/1392/2"> اردیبهشت 1392 ، 3 </a></div><div class=li-Sid>
+<a href="http://rahooma.mihanblog.com/post/archive/1392/1"> فروردین 1392 ، 5 </a></div><div class=li-Sid>
+<a href="http://rahooma.mihanblog.com/post/archive/1391/12"> اسفند 1391 ، 5 </a></div><div class=li-Sid>
+<a href="http://rahooma.mihanblog.com/post/archive/1391/11"> بهمن 1391 ، 7 </a></div><BR></div>
+<div class=sidebar-bottom></div></div>
+	<div id=right-sidebar>
+<div class=sidebar-top><div class=sidebar-top-txt>
+<b>آمار بازدید</b></div></div>
+<div class=sidebar-bg>
+<right>
+<font face="Tahoma" style="font-size: 8pt">
+<div class=li-Sid>بازدیدهای امروز : <b><script>getStatVar('today_view');</script></b> نفر</div>
+<div class=li-Sid>بازدیدهای دیروز : <b><script>getStatVar('yesterday_view');</script></b> نفر</div>
+<div class=li-Sid>كل بازدیدها : <b><script>getStatVar('total_view');</script></b> نفر</div>
+<div class=li-Sid>بازدید این ماه :<b> <script>getStatVar('this_month_view');</script></b> نفر</div>
+<div class=li-Sid>بازدید ماه قبل : <b><script>getStatVar('last_month_view');</script></b> نفر</div>
+<div class=li-Sid>تعداد نویسندگان : <b><script>getStatVar('total_author');</script></b> عدد</div>
+<div class=li-Sid>كل مطالب : <b><script>getStatVar('total_post');</script></b> عدد</div>
+<div class=li-Sid>آخرین بروز رسانی : <script>getStatVar('modify_date');</script></div>
+</font></right></div>
+<div class=sidebar-bottom></div></div>	
+
+<div id=right-sidebar>
+<div class=sidebar-top><div class=sidebar-top-txt>
+<b>امکانات وب</b></div></div>
+<div class=sidebar-bg><div class=li-Sid2>
+<center>
+<font face="Tahoma" style="font-size: 8pt"><!-- Begin WebGozar.com Poll code -->
+<script type="text/javascript" language="javascript" src="http://www.webgozar.ir/c.aspx?Code=1084246&amp;t=poll" ></script>
+<!-- End WebGozar.com Poll code --></font></center></div></div>
+<div class=sidebar-bottom></div></div>
+<div id=right-sidebar>
+<div class=sidebar-top><div class=sidebar-top-txt>
+<b>طراحی قالب</b></div></div>
+<div class=sidebar-bg>
+<div class=li-Sid2>﻿ <center>
+<a target="blank" href="http://&#109;&#45;&#113;&#97;&#108;&#101;&#98&#046;&#099;&#111;&#109;/" title="طراحی قالب وبلاگهای پارسی"><img src="http://&#109;&#45;&#113;&#97;&#108;&#101;&#98&#046;&#099;&#111;&#109;/wp-content/themes/wp-M-QaLeB-02/images/m-qaleb-banner.png"></a></center></div><BR>
+</div>
+
+<div class=sidebar-bottom></div></div>
+</td></tr><tr><td width="1000" colspan="3" id="footer"><a href="http://www.&#109;&#45;&#113;&#97;&#108;&#101;&#98&#046;&#099;&#111;&#109;"target="_blank"><img src="http://&#109;&#45;&#113;&#97;&#108;&#101;&#98&#046;&#099;&#111;&#109;/Templates/free/M-QaLeB/blogfa/simple/religion/008162727/images/spacer.gif" width=213 height=12></a><div class=bottom-text>:::
+Designed By: <a href="http://www.&#109;&#45;&#113;&#97;&#108;&#101;&#98&#046;&#099;&#111;&#109;"target="_blank">M-QaLeB</a> & copyright 2011 <a href="index.html"target="_blank">راحـــــــــــــــوما</a> Powered By:
+ <a href="../www.mihanblog.com/index.html"target="_blank">MihanBlog</a>:::</div>
+</td></tr></table> </div> </div> <div class=backbottom></div>
+</div></div></div></div>﻿</body>
+</html>
+<script>
+//    setTimeout(function () {
+//        GetMihanBlogShowAds();
+//    }, 1000);
+</script>
+<!--NEW SERVER--><!--;)-->
+
+<!--SabaVision Ads Handler--><!--<script type="text/javascript">(function (d) {var url =   location.protocol+'//api.sabavision.com/pox/poxjs.js';d.write('<script type="text/javascript" src="' + url + '" async></scri' + 'pt>');})(document);</script>-->
+
+
+<script type="text/javascript">
+
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-153829-9']);
+    _gaq.push(['_setDomainName', 'rahooma.mihanblog.com']);
+    _gaq.push(['_trackPageview']);
+
+    (function() {
+        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+
+</script>
+
+
+<div id='mediaad-Kvcm'></div>
+<meta name="sabavision_zone" content="2500-Z499" />
+<center>
+    <div style="background-color:white;width:90%;padding:20px;margin-top:50px;margin-bottom:50px;">
+        <a href="https://www.cloob.com">شبکه اجتماعی فارسی کلوب</a> | <a href="https://www.seo25.com/product/buy-mobile-traffic-and-get-cheap-targeted-mobile-traffic/" target="_blank">Buy Mobile Traffic</a> | <a href="https://www.soalaat.com">سایت سوالات</a>
+    </div>
+</center>

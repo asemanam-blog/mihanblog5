@@ -1,0 +1,1207 @@
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" /><link rel="EditURI" type="application/rsd+xml" title="RSD" href="http://kod13.mihanblog.com/xmlrpc?rsd" />
+<script type="text/javascript" src="../static.mihanblog.com/public/scripts/run/g.other.v3.js"></script>
+<script>
+
+	function c_$(id){
+        return document.getElementById(id);
+    }
+    
+			//if (parent.frames.length) top.location.href= document.location;
+		
+	setTodayDate = function(){
+		document.write('یکشنبه 23 آذر 1399');
+		/*1696735*/	}
+
+</script>
+
+
+
+        <script type="text/javascript">
+            (function(){
+            var now = new Date();
+            var head = document.getElementsByTagName('head')[0];
+            var script = document.createElement('script');
+            script.async = true;
+            var script_address = 'https://cdn.yektanet.com/js/mihanblog.com/native-mihanblog.com-6531.js';
+            script.src = script_address + '?v=' + now.getFullYear().toString() + '0' + now.getMonth() + '0' + now.getDate() + '0' + now.getHours();
+            head.appendChild(script);
+            })();
+        </script>
+
+        <!--<script type="text/javascript">
+            var head = document.getElementsByTagName("head")[0];
+            var script = document.createElement("script");
+            script.type = "text/javascript";
+            script.async=1;
+            script.src = "https://s1.mediaad.org/serve/mihanblog.com/loader.js" ;
+            head.appendChild(script);
+        </script>-->
+        
+        <script>
+            var sabaVisionWebsiteID = "9bab9dac-041d-4bdb-b39a-1ed789f65eed"; var sabaVisionWebsitePage = "ALL"
+        </script>
+        <link rel="stylesheet" href="https://plus.sabavision.com/dox/dox.min.css">
+        <script src="https://plus.sabavision.com/dox/dox.min.js"></script>
+        
+        <script>
+	try{
+		var commentCnt = new Array();
+		commentCnt[1]='2065';commentCnt[6]='653';commentCnt[7]='827';commentCnt[8]='738';commentCnt[10]='696';commentCnt[12]='613';commentCnt[13]='19';commentCnt[14]='9';commentCnt[15]='4';commentCnt[16]='0';commentCnt[20]='0';commentCnt[21]='0';	} catch(e){}
+	
+	newComment = function(post_id){
+		try{
+			window.open('/post/comment/'+post_id,'comment','status=yes,scrollbars=yes,toolbar=no,menubar=no,location=no ,width=480px,height=540px');
+		} catch(e){}
+	}
+	setCommentCnt = function(post_id){
+		try{
+			if(commentCnt[post_id]){
+				document.write(commentCnt[post_id]);
+			} else {
+				document.write(0);
+			}
+		} catch(e){}
+	}
+</script><script>
+
+
+	mihanblogUpdateLike = function(postid,type){
+		var url = '/post/like/'+postid+'/'+type;
+		mihanblogGetAjax(url,function(){});
+	};
+	try{
+        mihanblogGetAjax = function (url,callback) {
+    		var req;
+			if (window.XMLHttpRequest)
+            {
+                // code for IE7+, Firefox, Chrome, Opera, Safari
+			  	req = new XMLHttpRequest();
+			}else{	// code for IE6, IE5
+			  	req = new ActiveXObject("Microsoft.XMLHTTP");
+		  	}
+		    req.open("GET", url, 1);
+		    req.onreadystatechange = function () {
+		        if (req.readyState == 4) {
+		            if (req.status == 200) {
+		            	var response = eval(req.responseText);
+		            	callback();
+		            }else{
+	            		return ;
+		            }
+		        }else{
+					return ;
+		        }
+		    }
+		    req.send(null);
+		}
+	}catch(e){}
+
+	try{
+		var mihanblogLikeArrCnt = new Array();
+		var mihanblogDisLikeArrCnt = new Array();
+
+		mihanblogLikeArrCnt[6]='0';
+mihanblogDisLikeArrCnt[6]='0';
+mihanblogLikeArrCnt[8]='0';
+mihanblogDisLikeArrCnt[8]='0';
+mihanblogLikeArrCnt[10]='0';
+mihanblogDisLikeArrCnt[10]='0';
+mihanblogLikeArrCnt[12]='0';
+mihanblogDisLikeArrCnt[12]='0';
+mihanblogLikeArrCnt[13]='0';
+mihanblogDisLikeArrCnt[13]='0';
+mihanblogLikeArrCnt[14]='0';
+mihanblogDisLikeArrCnt[14]='0';
+mihanblogLikeArrCnt[15]='0';
+mihanblogDisLikeArrCnt[15]='0';
+	} catch(e){}
+
+
+
+    mihanblogPostLike = function(post_id){
+
+        mihanblogLikeCnt = (mihanblogLikeArrCnt[post_id]? mihanblogLikeArrCnt[post_id] : 0);
+        mihanblogDisLikeCnt = (mihanblogDisLikeArrCnt[post_id]? mihanblogDisLikeArrCnt[post_id] : 0);
+        mihanblogLikeCnt = parseInt(mihanblogLikeCnt);
+        mihanblogDisLikeCnt = parseInt(mihanblogDisLikeCnt);
+
+        document.write(
+                '<div class="mihanblog_like_wrapper ">'+
+                       '<div id="dislikeBar_'+post_id+'" onclick="mihanblogUpdateLike('+post_id+',\'dislike\')"   class="mihanblog_like_bar mihanblog_like_dislikeBar mihanblog_like_show_help ">-<div class="mihanblog_like_Cnt" id="disLikeCnt_'+post_id+'">'+mihanblogDisLikeCnt+'</div>'+
+                            '<span  class="mihanblog_like_v2_help mihanblog_like_v2_help_dislike clearfix"> '+
+                                '<span class="mihanblog_like_help_arrow mihanblog_like_help_arrow_dislike clearfix"></span>'+
+                                '<span class="mihanblog_like_help_text">نمی پسندم</span>'+
+                            '</span>'+
+                        '</div>'+
+                       '<div id="Like_'+post_id+'" class="mihanblog_like_border"></div>'+
+                       '<div id="likeBar_'+post_id+'" onclick="mihanblogUpdateLike('+post_id+',\'like\')"  class="mihanblog_like_bar mihanblog_like_likeBar mihanblog_like_show_help" >+<div class="mihanblog_like_Cnt" id="likeCnt_'+post_id+'">'+mihanblogLikeCnt+'</div>'+
+                            '<span  class="mihanblog_like_v2_help mihanblog_like_v2_help_like clearfix"> '+
+                                '<span class="mihanblog_like_help_arrow mihanblog_like_help_arrow_like clearfix"></span>'+
+                                '<span class="mihanblog_like_help_text">می پسندم</span>'+
+                            '</span>'+
+                        '</div>'+
+
+                '</div>'
+        );
+
+
+
+        mihanblogDisplayeLike(post_id);
+    }
+
+
+    mihanblogDisplayeLike = function(post_id){
+
+        mihanblogLikeCnt = (mihanblogLikeArrCnt[post_id]? mihanblogLikeArrCnt[post_id] : 0);
+        mihanblogDisLikeCnt = (mihanblogDisLikeArrCnt[post_id]? mihanblogDisLikeArrCnt[post_id] : 0);
+        mihanblogLikeCnt = parseInt(mihanblogLikeCnt);
+        mihanblogDisLikeCnt = parseInt(mihanblogDisLikeCnt);
+
+
+
+        sum = mihanblogLikeCnt - mihanblogDisLikeCnt;
+        backgroundBorder =  document.getElementById('Like_'+post_id);
+        var likeObj = document.getElementById('likeCnt_'+post_id);
+        var disLikeObj = document.getElementById('disLikeCnt_'+post_id);
+
+
+
+
+
+        likeObj.innerHTML =  mihanblogLikeCnt ;
+        disLikeObj.innerHTML =  mihanblogDisLikeCnt;
+
+        if(sum == 0){
+            backgroundBorder.style.backgroundImage = "url('/public/public/images/icons/like_likedislike.png')";
+            document.getElementById('dislikeBar_'+post_id).style.width = '19px';
+            document.getElementById('likeBar_'+post_id).style.width = '19px';
+        }else{
+             if(sum > 0){
+                 backgroundBorder.style.backgroundImage = "url('/public/public/images/icons/like_like.png')";
+                 document.getElementById('likeBar_'+post_id).style.width = '23px';
+                 document.getElementById('dislikeBar_'+post_id).style.width = '15px';
+             }else{
+                 backgroundBorder.style.backgroundImage = "url('/public/public/images/icons/like_dislike.png')";
+                 document.getElementById('likeBar_'+post_id).style.width = '15px';
+                 document.getElementById('dislikeBar_'+post_id).style.width = '23px';
+             }
+        }
+
+    }
+
+
+
+
+</script>
+
+<style type="text/css">
+
+
+    .clearfix {display: inline-block;}
+    .clearfix:after {
+        content: ".";
+        display: block;
+        height: 0;
+        clear: both;
+        visibility: hidden;
+    }
+
+    .mihanblog_like_wrapper {
+        color: #ffffff;
+        direction: ltr;
+        position: relative;
+    }
+    .mihanblog_like_wrapper span{
+        display: none;
+    }
+    .mihanblog_like_bar {
+        color: #FFFFFF;
+        cursor: pointer;
+        float: left;
+        font-size: 10px;
+        height: 20px;
+        line-height: 19px;
+        margin: 5px 0;
+    }
+    .mihanblog_like_likeBar {
+        background-color: #88B131;
+        padding-right: 5px;
+        border-top-right-radius: 2px;
+        border-bottom-right-radius: 2px;
+        text-align: right;
+    }
+    .mihanblog_like_likeBar:hover{
+        background-color: #699017;
+    }
+    .mihanblog_like_border {
+        background-color: #666666;
+        border: 1px solid #666666;
+        float: left;
+        font-size: 12px;
+        height: 20px;
+        margin-top: 2px;
+        width: 25px;
+        padding: 3px 5px 2px 0;
+        text-align: center;
+        border-radius: 2px;
+        color: #ffffff;
+        direction: ltr;
+        background-repeat: no-repeat ;
+        background-position: 4px center;
+    }
+    .mihanblog_like_border img {
+        margin-left: 2px;
+        margin-top: 2px;
+        width: 22px;
+    }
+    .mihanblog_like_dislikeBar {
+        background-color: #FF6F31;
+        padding-left: 5px;
+        border-top-left-radius: 2px;
+        border-bottom-left-radius: 2px;
+        text-align:left ;
+    }
+    .mihanblog_like_dislikeBar:hover{
+        background-color: #D54B10;
+    }
+
+
+
+    .mihanblog_like_show_help {
+        position: relative;
+    }
+    .mihanblog_like_show_help:hover span {
+        display: block;
+    }
+    .mihanblog_like_help_text {
+        background-color: white;
+        border: 1px solid #555555;
+        border-radius: 3px 3px 3px 3px;
+        color: #303030;
+        float: left;
+        font-size: 11px;
+        font-weight: normal;
+        padding: 5px 10px;
+    }
+
+    .mihanblog_like_help_arrow_dislike {
+        background: url("http://kod13.mihanblog.com/public/public/images/icons/like_hover_top.png") no-repeat scroll 16px 0 transparent;
+        left: 0;
+        top: -4px;
+    }
+
+    .mihanblog_like_help_arrow_like {
+        background: url("http://kod13.mihanblog.com/public/public/images/icons/like_hover_top _2.png") no-repeat scroll 16px 0 transparent;
+        left: -10px;
+        top: 29px;
+    }
+
+    .mihanblog_like_help_arrow{
+        height: 6px;
+        position: absolute;
+        width: 100px;
+
+    }
+
+    .mihanblog_like_v2_help_dislike {
+        left: -15px;
+        top: 24px;
+    }
+    .mihanblog_like_v2_help_like {
+        left: 0;
+        top: -35px;
+
+    }
+    .mihanblog_like_v2_help{
+        display: none;
+        position: absolute;
+        white-space: nowrap;
+        z-index: 1;
+    }
+
+    .mihanblog_like_Cnt{
+        display: inline;
+        color: #ffffff;
+    }
+
+</style><script>
+
+	statInfo = new Array();
+	setStatVar = function(index,value){
+		statInfo[index] = value;
+	}
+	getStatVar = function(index){
+		if(statInfo[index]) document.write(statInfo[index]);
+	}
+	
+	setStatVar('total_post','12');
+	setStatVar('total_author','0');
+	setStatVar('modify_date','دوشنبه 24 دی 1397');
+	
+	setStatVar('today_view','0');
+	setStatVar('yesterday_view','0');
+	
+	setStatVar('this_month_view','78');
+	setStatVar('last_month_view','63');
+
+	setStatVar('total_view','26486');
+	setStatVar('last_view_date','شنبه 22 آذر 1399 (01:09)');
+
+
+
+    
+    function setStatFromClient()
+    {
+        var url = 'http://kod13.mihanblog.com/statupdate/?data[refereruri]=http://shayda-222.mihanblog.com/&data[postid]=&data[requesturi]=/&data[sdate]=1607827058&data[hash]=cbdf637d0b4dd4386f2e1d5e6cc39aaa&data[resolution]='+screen.width+' X '+screen.height;
+
+//        alert(url);
+//        var newjs = document.createElement("SCRIPT");
+//        newjs.type = 'text/javascript';
+//        newjs.src = url;
+//
+//        var newdiv = document.createElement("DIV");
+//        newdiv.setAttribute("style","display:none");
+
+        document.write(unescape('%3Cscript src="'+url+'" type="text/javascript"%3E%3C/script%3E'));
+//        newdiv.appendChild (newjs);
+//        document.write(newjs);
+//        document.write(appendChild (newdiv);
+
+    };
+    setStatFromClient();
+        
+</script><script>
+	messageForm = function(post_id){
+		try{
+			window.open('/message','message','status=yes,scrollbars=yes,toolbar=no,menubar=no,location=no ,width=480px,height=550px');
+		} catch(e){}
+	}
+</script><script>
+	linkdailyForm = function(){
+		try{
+			window.open('/linkdaily/new','linkdaily','status=yes,scrollbars=yes,toolbar=no,menubar=no,location=no ,width=500px,height=460px');
+		} catch(e){}
+	}
+</script><script>
+
+var MihanblogShopAdsArray = new Array();
+
+function GetMihanBlogShowAds(){
+	if(MihanblogShopAdsArray.length){
+		var adsTarget = 'MihanblogShopAds';
+		var containerWidth = document.getElementById(adsTarget).offsetWidth;
+		if(containerWidth>=200){
+			var adsCnt = parseInt(containerWidth / 200) ;
+			if(adsCnt>MihanblogShopAdsArray.length){
+				adsCnt = MihanblogShopAdsArray.length ; 
+			}
+//			var OneAdsWidth = parseInt(containerWidth / adsCnt) ;
+			var OneAdsWidth = containerWidth / adsCnt ;
+			if(OneAdsWidth>400){
+				OneAdsWidth = 400 ;
+			}
+			var OutHtml = '';
+			var img = '';
+			var link = '';
+			var title = '';
+			var description = '';
+			var imgWidth = 70;
+			if(OneAdsWidth>230){
+				imgWidth = 80;
+			}
+			if(OneAdsWidth>300){
+				imgWidth = 90;
+			}
+			for(adsOne=0;adsOne<adsCnt;adsOne++){
+				
+				img = MihanblogShopAdsArray[adsOne]['img'];
+				link = MihanblogShopAdsArray[adsOne]['link'];
+				title = MihanblogShopAdsArray[adsOne]['title'];
+				description = MihanblogShopAdsArray[adsOne]['description'];
+				
+				OutHtml += '<td style="background-color:#FFF;width: '+OneAdsWidth+'px;border:1px solid #f00;margin:0px 0px;font-size:11px;font-family:tahoma;padding:2px;margin:0px 0px;font-size:11px;border: 1px solid BurlyWood; padding: 1px; height: '+(imgWidth+25)+'px;">';
+
+				OutHtml += '	<a href="http://kod13.mihanblog.com/'+link+'" target="_blank" style="text-decoration:none">';
+
+				OutHtml += '			<div style="width: '+(OneAdsWidth-16)+'px;cursor:pointer;font-size:12px;padding: 4px 1px 4px 7px; white-space: nowrap; text-align: center; font-weight: bold; color: blue;white-space:nowrap;overflow:hidden">';
+				OutHtml += 					title;
+				OutHtml += '			</div>';
+				OutHtml += '			<div style="cursor:pointer;padding: 1px; display: block; float: right; width: '+imgWidth+'px;">';
+				OutHtml += '				<img src="'+img+'.html" style="border:0px;padding:0px;margin:0px;width:'+imgWidth+'px;height:'+imgWidth+'px;">';
+				OutHtml += '			</div>';
+				OutHtml += '			<div style="padding: 1px; display: block; float: right; width: '+(OneAdsWidth-13-imgWidth)+'px; text-align: right;overflow:hidden">';
+				OutHtml += '				<div style="overflow:hidden;cursor:pointer;padding: 2px 3px; line-height: 17px; height: '+(imgWidth-3)+'px; text-align: justify;color:#000;direction:rtl">';
+				OutHtml += 						description;
+				OutHtml += '				</div>';
+				OutHtml += '			</div>';
+
+				OutHtml += '	</a>';
+
+				OutHtml += '</td>';
+			}
+			
+			var Out = '<table align="center" cellpadding="0" cellspacing="2" style="width:'+(OneAdsWidth*adsCnt)+'px;"><tr>'+OutHtml+'</tr></table>'; 
+			
+			Out = '<div style="text-align:center;padding:0px;margin:3px auto;">'+Out+'</div>'; 
+			
+			document.getElementById(adsTarget).style.height = (imgWidth+35)+'px' ;
+			document.getElementById(adsTarget).innerHTML = Out ;
+		}
+	}
+}
+</script>
+    <style>
+        @font-face {
+            font-family: 'Mihan-Iransans';
+            src: url('http://kod13.mihanblog.com/public/public/fonts/Iransans.eot');
+            src: url('http://kod13.mihanblog.com/public/public/fonts/Iransans.eot?') format('embedded-opentype'),
+            url('http://kod13.mihanblog.com/public/public/fonts/Iransans.woff2') format('woff2'),
+            url('http://kod13.mihanblog.com/public/public/fonts/Iransans.woff') format('woff'),
+            url('http://kod13.mihanblog.com/public/public/fonts/Iransans.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+        @font-face {
+            font-family: 'Mihan-IransansBold';
+            src: url('http://kod13.mihanblog.com/public/public/fonts/Iransans-Black.eot');
+            src: url('http://kod13.mihanblog.com/public/public/fonts/Iransans-Black.eot?') format('embedded-opentype'),
+            url('http://kod13.mihanblog.com/public/public/fonts/Iransans-Black.woff2') format('woff2'),
+            url('http://kod13.mihanblog.com/public/public/fonts/Iransans-Black.woff') format('woff'),
+            url('http://kod13.mihanblog.com/public/public/fonts/Iransans-Black.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+        @font-face {
+            font-family: 'Mihan-IransansLight';
+            src: url('http://kod13.mihanblog.com/public/public/fonts/Iransans-UltraLight.eot');
+            src: url('http://kod13.mihanblog.com/public/public/fonts/Iransans-UltraLight.eot?') format('embedded-opentype'),
+            url('http://kod13.mihanblog.com/public/public/fonts/Iransans-UltraLight.woff2') format('woff2'),
+            url('http://kod13.mihanblog.com/public/public/fonts/Iransans-UltraLight.woff') format('woff'),
+            url('http://kod13.mihanblog.com/public/public/fonts/Iransans-UltraLight.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+        @font-face {
+            font-family: 'Mihan-Nassim';
+            src: url('http://kod13.mihanblog.com/public/public/fonts/Nassim.eot');
+            src: url('http://kod13.mihanblog.com/public/public/fonts/Nassim.eot?') format('embedded-opentype'),
+            url('http://kod13.mihanblog.com/public/public/fonts/Nassim.woff2') format('woff2'),
+            url('http://kod13.mihanblog.com/public/public/fonts/Nassim.woff') format('woff'),
+            url('http://kod13.mihanblog.com/public/public/fonts/Nassim.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+        @font-face {
+            font-family: 'Mihan-Koodak';
+            src: url('http://kod13.mihanblog.com/public/public/fonts/Koodak.eot');
+            src: url('http://kod13.mihanblog.com/public/public/fonts/Koodak.eot?') format('embedded-opentype'),
+            url('http://kod13.mihanblog.com/public/public/fonts/Koodak.woff2') format('woff2'),
+            url('http://kod13.mihanblog.com/public/public/fonts/Koodak.woff') format('woff'),
+            url('http://kod13.mihanblog.com/public/public/fonts/Koodak.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+        @font-face {
+            font-family: 'Mihan-Yekan';
+            src: url('http://kod13.mihanblog.com/public/public/fonts/Yekan.eot');
+            src: url('http://kod13.mihanblog.com/public/public/fonts/Yekan.eot?') format('embedded-opentype'),
+            url('http://kod13.mihanblog.com/public/public/fonts/Yekan.woff2') format('woff2'),
+            url('http://kod13.mihanblog.com/public/public/fonts/Yekan.woff') format('woff'),
+            url('http://kod13.mihanblog.com/public/public/fonts/Yekan.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+        @font-face {
+            font-family: 'FontAwesome';
+            src: url('http://kod13.mihanblog.com/public/public/fonts/fontawesome_webfont.eot');
+            src: url('http://kod13.mihanblog.com/public/public/fonts/fontawesome_webfont.eot?') format('embedded-opentype'),
+            url('http://kod13.mihanblog.com/public/public/fonts/fontawesome_webfont.woff2') format('woff2'),
+            url('http://kod13.mihanblog.com/public/public/fonts/fontawesome_webfont.woff') format('woff'),
+            url('http://kod13.mihanblog.com/public/public/fonts/fontawesome_webfont.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+
+
+        
+
+        /* Smartphones (portrait and landscape) ----------- */
+
+        /*
+        @media only screen and (max-width : 480px) and (min-width : 320px) {
+            .sabaClick_advert__wrapper{
+                display:block;
+            }
+            .sabaClick_advert__inner{
+                max-width: 90%;
+                margin: 0 5%;
+            }
+        }
+        */
+
+    </style>
+
+
+
+
+
+
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<META NAME="description" CONTENT="هپی لند - ">
+<META NAME="keywords" CONTENT="هپی لند,kod13, Blog, Weblog, Persian,Iran, Iranian, Farsi, Weblogs, Blogs">
+<META NAME="DesignerUrl" CONTENT="http://cod13.mihanblog.com/">
+<META NAME="Designer" CONTENT="cod13.mihanblog.com">
+<link rel="alternate" type="application/rss+xml" title="هپی لند" href="http://kod13.mihanblog.com/post/rss/" />
+<meta name="GENERATOR" content="Microsoft FrontPage 5.0">
+<title>هپی لند</title>
+<style>
+body 			{background-position: 
+               center; font-family:tahoma; font-size:12px; color:#000;text-shadow:0px 0px 0px #999; background-image:url('http://scontent.cdninstagram.com/t51.2885-15/e35/12568155_215829098758169_63109121_n.jpg?ig_cache_key=MTE2MjA2NDM3MjExODA4OTYzNQ%3D%3D.2'); background-repeat:repeat; background-attachment:fixed}
+#body {width:800px;}
+::-webkit-scrollbar 		{width:10px;}
+::-webkit-scrollbar-track 	{background:#FFF;-webkit-transition:1s;}
+::-webkit-scrollbar-thumb 	{background:#f97282;-webkit-transition:1s;}
+a, a:link {color:#000;text-decoration: none;}a:visited {color:#000;text-decoration: none}a:hover { color:#CC66FF;text-decoration: none}
+#Image	{background:#fff url('http://s6.picofile.com/file/8256447626/zcvbgtrfgtrfvgt5.png') no-repeat; background-size:100% 100%;height:370px; border:10px solid #E6B4B0}
+#BlogTitle	{color:#bd7076; font-size:17px; text-shadow:1px 2px 3px #bd7076; padding:5px; border-bottom:3px solid #bd7076;}
+#BlogDescription                            {color:#555; font-size:15px; text-shadow:1px 2px 3px #eee; padding:5px; border-bottom:3px solid #bd7076;}                      
+#BLOGFA   {border:10px solid #FF99CC;padding:10px;-webkit-transition:1s;background:#fff;box-shadow: 0px 0px 6px 4px #D38D95;margin-bottom:15px;  direction:rtl; width:495px; float:right;margin-right:28px;margin-top:75px;}
+.About{color:#818181;line-height:1.5em;text-align: justify;padding-Right:10px;padding-Left:10px}
+.About img{text-align: Center;Padding-Top:3px;}
+.bodypost{float: left;text-align: right;width:480px;margin:0px}
+.postTitle{height:30px;font-size: 9pt;font-family: Tahoma;font-weight:bold;color:#3c92a1;background:url('') no-repeat Top Right;margin-left:0px; margin-right:0px; margin-top:0px; margin-bottom:15px; padding-left:20px; padding-right:50px; padding-top:2px; padding-bottom:30px}
+.post{direction:rtl;padding:0px 10px 10px 10px;background:none;font-family:tahoma;border: 6px double #F4ACBF;overflow:hidden;margin-bottom: 15px;margin-top: 20px;background-color: #fff;}
+#postdesc{padding:0px 5px 0 0;text-align:right;direction: rtl;color:#808080;font-size:8pt;line-height:1.5em}
+.Distance	{height:10px; border-bottom:4px solid BROWN;}
+.Distance:hover              {border-bottom:4px solid #bd7076;}
+.sidebar{background-position: top center; float:right;font-family: Tahoma; font-size: 8pt;padding-top:0px;color:#3c92a1;line-height:1.5em;text-align:right;margin-left:0%;border: 6px solid #FF99CC;margin-right: 3%;overflow: hidden;background-color: #fff;box-shadow: 0px 0px 6px 4px #D38D95;
+direction:rtl; width:150px; padding:10px; margin-left:28px;margin-top:75px;}
+.sidebar  h1{margin-bottom:7px;font-family: Arial; font-size:9pt;font-weight:bold;text-align:Center;color:#474747;line-height:2em;}
+.Title  {Padding:5px;border:1px solid #CD5C5C;border-radius:7px;-moz-transition-duration: 1s;-webkit-transition-duration: 1s;}
+.Title:hover   {background:#FF99FF;-moz-transition-duration: 1s;-webkit-transition-duration: 1s}
+</Style>
+<script type="text/javascript" language="javascript">
+<!--
+	function GetBC(lngPostid) {
+	var intTimeZone="<-BlogTimeZone->", strBlogId="kod13", intCount=-1, strResult="";
+	try {
+	for (i=0;i<BlogComments.length;i+=2) {
+	if (BlogComments[i]==lngPostid)
+	intCount=BlogComments[i+1] ;}
+	} catch(e) {}
+	if (intCount == -1) strResult="ComMenT's";
+	if (intCount == 0)	strResult="ComMenT's";
+	if (intCount == 1)	strResult="1ComMenT";
+	if (intCount > 1)	strResult=intCount + "ComMenT";
+	var strUrl = "/comments/?blogid=" + strBlogId + "&postid=" + lngPostid + "&timezone=" + intTimeZone;
+	var strResult = "<a href=\"javascript:void(0)\" target=\"_self\" onclick=\"javascript:window.open('"+strUrl+"','blogfa_comments','status=yes,scrollbars=yes,toolbar=no,menubar=no,location=no,width=500px,height=500px')\" >"+strResult+"</a>" ;
+	document.write(strResult);}
+	function OpenLD {
+	window.open('/links','blogfa_ld','status=yes,scrollbars=yes,toolbar=no,menubar=no,location=no ,width=500px,height=500px');
+	return true; }
+// -->
+</script>
+</head><body><center><div id="body">
+<div id="BLOGFA"><div id="Image"></div><font align="right">
+  <div id="BlogDescription"><b><font size="2" face="Tahoma" color="#D38D95"> 
+هپی لند</font></b></h1><p><font size="2"></font></div></font>
+		<div id="MihanblogShopAds" style="display:block;height:0px;width:100%;border:0px"></div>
+		<div class="Content"><div class="PostTitle">
+  <p align="right"><a href="http://kod13.mihanblog.com/post/13"><font color="#D38D95">
+   خبر</font></a></p>
+  <center></h2>
+</div><div class="PostContent">
+    <p align="right"><font color="#000000"><div id="InPost_MihanblogShopAds" style="display:block;height:0px;width:100%;border:0px"></div>
+<div style="text-align: center;"><font size="6">این وبلاگ بسته شد به انجمن جدیدم بیاین</font></div><div style="text-align: center;">http://golzar.nasrblog.com/</div>
+
+
+
+
+ </font><font color="#"><font color="#000000"><br>
+</font>
+    ب<font color="#000000">رچسبـهـ ـا :
+</font>
+              </font> <font color="#FF66CC"> </font><font color="#FF66CC"></div><right>
+    <br>
+<div id='postdesc'><font color="#000"><p align="right"><font color="#D38D95">♥ دوشنبه 23 آذر 1394 ساعت 03:05 ب.ظ توسط لیدا ♡:
+<a target="_self" href="javascript:newComment(13)" > نظرات(<script>setCommentCnt(13)</script>)</a> <span dir="rtl" ></span>
+  </font></div></div><right><div class="Distance"></div>
+  </font>
+<div class="Content"><div class="PostTitle">
+  <p align="right"><a href="http://kod13.mihanblog.com/post/21"><font color="#D38D95">
+   Gh</font></a></p>
+  <center></h2>
+</div><div class="PostContent">
+    <p align="right"><font color="#000000">The Conrad Maldives Rangali Island has officially announced the opening of the world’s first underwater hotel residence, a ground-breaking, two-story villa submerged more than 16 feet below sea-level. Now urging guests to dive below the surface of the Indian Ocean, the deep-set dwelling is an ambitious display of architecture, design, and technology. The villa is named “The Muraka,” which translates to “coral” in the Maldives’ native language, Dhivehi, for the way that it rests along the ocean floor, peacefully observing the sea life that surrounds it. The sunken retreat embraces luxury, equipped with a private bar, butler’s quarters, gym, and infinity pool. The massive bed, shower, and bathtub have panoramic views of the ocean. The top floor, which rests above the water, comprises a sprawling relaxation deck for tanning and unwinding. The elaborate suite isn’t cheap. It costs an astounding $50,000 per night, although it is only available for a four-night, $200,000 vacation package, which includes a personal chef, private boat, and automatic upgrade to Hilton Diamond status. In addition to The Muraka, The Conrad is home to Ithaa, a five-star restaurant submerged below the sea.
+
+
+ </font><font color="#"><font color="#000000"><br>
+</font>
+    ب<font color="#000000">رچسبـهـ ـا :
+</font>
+              </font> <font color="#FF66CC"> </font><font color="#FF66CC"></div><right>
+    <br>
+<div id='postdesc'><font color="#000"><p align="right"><font color="#D38D95">♥ دوشنبه 24 دی 1397 ساعت 08:41 ب.ظ توسط لیدا ♡:
+<a target="_self" href="javascript:newComment(21)" > نظرات(<script>setCommentCnt(21)</script>)</a> <span dir="rtl" ></span>
+  </font></div></div><right><div class="Distance"></div>
+  </font>
+<div class="Content"><div class="PostTitle">
+  <p align="right"><a href="http://kod13.mihanblog.com/post/20"><font color="#D38D95">
+   کووک</font></a></p>
+  <center></h2>
+</div><div class="PostContent">
+    <p align="right"><font color="#000000"><div>M:</div><div>مهدیه در حال عکاسی از طراحی رایا هست که شکوه مهدیه را می بینه و بهش میگه:</div><div><span style="font-size: 11px;"><br></span></div><div>Sh: Hi what's your name</div><div><span style="font-size: 11px;"><br></span></div><div>M:hi lm krelina</div><div><span style="font-size: 11px;"><br></span></div><div>Sh:wait,are you from sari too?</div><div><span style="font-size: 11px;"><br></span></div><div>M:oh,no</div><div><span style="font-size: 11px;"><br></span></div><div>Sh:where are you from?</div><div><span style="font-size: 11px;"><br></span></div><div>M:i from moroco</div><div><span style="font-size: 11px;"><br></span></div><div>Sh:oh my god are you kidding?and what are you doing here?</div><div><span style="font-size: 11px;"><br></span></div><div>M:lm &nbsp;here because of my fathers job.my family and i moved here 5 years ago</div><div><span style="font-size: 11px;"><br></span></div><div>Sh: Are you skilled in photography?</div><div><span style="font-size: 11px;"><br></span></div><div>M: I am doing this for fun and I am interested in photography</div><div><span style="font-size: 11px;"><br></span></div><div>Sh:ok and can you speak parsian well?</div><div>M:at first no and i had a lot of problems but i practiced a lot and now i can talk</div><div><span style="font-size: 11px;"><br></span></div><div>Sh:so you can speak two languages parsian and morocan</div><div><span style="font-size: 11px;"><br></span></div><div>M:and english .i can speak english too</div><div><span style="font-size: 11px;"><br></span></div><div>Sh:so good. On which continent is Morocco?</div><div><span style="font-size: 11px;"><br></span></div><div>M:its in africa</div><div><span style="font-size: 11px;"><br></span></div><div>Sh: Which city are you from Morocco?</div><div><span style="font-size: 11px;"><br></span></div><div>M:Im from casablanka</div><div>Casablanca is more crowded than the Moroccan capital</div><div><span style="font-size: 11px;"><br></span></div><div>Sh:Can you explain more about your country?</div><div><span style="font-size: 11px;"><br></span></div><div>M:oh yes &nbsp;People say red.......</div><div><span style="font-size: 11px;"><br></span></div><div>Sh:thank you krelina &nbsp;nice to neet you</div><div><span style="font-size: 11px;"><br></span></div><div>M:nice to meet you to</div>
+
+
+ </font><font color="#"><font color="#000000"><br>
+</font>
+    ب<font color="#000000">رچسبـهـ ـا :
+</font>
+              </font> <font color="#FF66CC"> </font><font color="#FF66CC"></div><right>
+    <br>
+<div id='postdesc'><font color="#000"><p align="right"><font color="#D38D95">♥ جمعه 27 بهمن 1396 ساعت 06:52 ب.ظ توسط لیدا ♡:
+<a target="_self" href="javascript:newComment(20)" > نظرات(<script>setCommentCnt(20)</script>)</a> <span dir="rtl" ></span>
+  </font></div></div><right><div class="Distance"></div>
+  </font>
+<div class="Content"><div class="PostTitle">
+  <p align="right"><a href="http://kod13.mihanblog.com/post/16"><font color="#D38D95">
+   عع</font></a></p>
+  <center></h2>
+</div><div class="PostContent">
+    <p align="right"><font color="#000000">
+http://s9.picofile.com/file/8317222876/61faacfea880625d6f78706c9c43ecc5.jpg
+
+
+<div><br></div><div><br></div>
+
+ </font><font color="#"><font color="#000000"><br>
+</font>
+    ب<font color="#000000">رچسبـهـ ـا :
+</font>
+              </font> <font color="#FF66CC"> </font><font color="#FF66CC"></div><right>
+    <br>
+<div id='postdesc'><font color="#000"><p align="right"><font color="#D38D95">♥ شنبه 30 دی 1396 ساعت 06:10 ب.ظ توسط لیدا ♡:
+<a target="_self" href="javascript:newComment(16)" > نظرات(<script>setCommentCnt(16)</script>)</a> <span dir="rtl" ></span>
+  </font></div></div><right><div class="Distance"></div>
+  </font>
+<div class="Content"><div class="PostTitle">
+  <p align="right"><a href="http://kod13.mihanblog.com/post/15"><font color="#D38D95">
+   U</font></a></p>
+  <center></h2>
+</div><div class="PostContent">
+    <p align="right"><font color="#000000">http://etums.tums.ac.ir/Default.aspx?PageID=153<div><br></div><div><br></div><div>https://www.tebyan.net/newindex.aspx?pid=934&amp;articleID=757694</div><div><br></div><div><br></div><div><br></div><div><br></div><div><br></div><div>http://fa.wikishia.net/view/واقعه_کربلا</div><div><br></div><div><br></div><div><br></div><div><br></div><div><br></div><div>http://www.yjc.ir/fa/news/6289715/10-هدف-اصلی-امام-حسینع-برای-قیام</div><div><br></div> </font><font color="#"><font color="#000000"><br>
+</font>
+    ب<font color="#000000">رچسبـهـ ـا :
+</font>
+              </font> <font color="#FF66CC"> </font><font color="#FF66CC"></div><right>
+    <br>
+<div id='postdesc'><font color="#000"><p align="right"><font color="#D38D95">♥ جمعه 8 اردیبهشت 1396 ساعت 07:32 ب.ظ توسط لیدا ♡:
+<a target="_self" href="javascript:newComment(15)" > نظرات(<script>setCommentCnt(15)</script>)</a> <span dir="rtl" ></span>
+  </font></div></div><right><div class="Distance"></div>
+  </font>
+<div class="Content"><div class="PostTitle">
+  <p align="right"><a href="http://kod13.mihanblog.com/post/14"><font color="#D38D95">
+   یبیسلیفقثصسیبلفقث</font></a></p>
+  <center></h2>
+</div><div class="PostContent">
+    <p align="right"><font color="#000000">زبسقثصسطیزیسبقثصشسیثص </font><font color="#"><font color="#000000"><br>
+</font>
+    ب<font color="#000000">رچسبـهـ ـا :
+</font>
+              </font> <font color="#FF66CC"> </font><font color="#FF66CC"></div><right>
+    <br>
+<div id='postdesc'><font color="#000"><p align="right"><font color="#D38D95">♥ پنجشنبه 20 خرداد 1395 ساعت 04:12 ب.ظ توسط لیدا ♡:
+<a target="_self" href="javascript:newComment(14)" > نظرات(<script>setCommentCnt(14)</script>)</a> <span dir="rtl" ></span>
+  </font></div></div><right><div class="Distance"></div>
+  </font>
+<div class="Content"><div class="PostTitle">
+  <p align="right"><a href="http://kod13.mihanblog.com/post/12"><font color="#D38D95">
+   دخترانه</font></a></p>
+  <center></h2>
+</div><div class="PostContent">
+    <p align="right"><font color="#000000">
+
+
+
+
+<div style="text-align: center;"><font size="3"><b>سلام دوستان با توجه به رای هایی که دادید</b></font></div><div style="text-align: center;"><font size="3"><b><br></b></font></div><div style="text-align: center;"><font size="3"><b>آمار نفراتی که به دخترونه رای دادند بیش تر بود&nbsp;</b></font></div><div style="text-align: center;"><font size="3"><b><br></b></font></div><div style="text-align: center;"><font size="3"><b>بنابر این از دخترونه آپ میکنم به ادامه برید...</b></font></div><div style="text-align: center;"><br></div><div style="text-align: center;"> <p><img src="http://i61.tinypic.com/4qihzs.png" alt="" width="305" height="225"></p><br></div>
+
+
+
+
+
+
+
+
+
+
+
+
+ </font><font color="#"><font color="#000000"><br>
+</font>
+    ب<font color="#000000">رچسبـهـ ـا :
+</font>
+              </font> <font color="#FF66CC"> </font><font color="#FF66CC"><a href='http://kod13.mihanblog.com/post/12'>ادامه مطلب</a></div><right>
+    <br>
+<div id='postdesc'><font color="#000"><p align="right"><font color="#D38D95">♥ شنبه 9 آبان 1394 ساعت 08:26 ب.ظ توسط لیدا ♡:
+<a target="_self" href="javascript:newComment(12)" > نظرات(<script>setCommentCnt(12)</script>)</a> <span dir="rtl" ></span>
+  </font></div></div><right><div class="Distance"></div>
+  </font>
+<div class="Content"><div class="PostTitle">
+  <p align="right"><a href="http://kod13.mihanblog.com/post/10"><font color="#D38D95">
+   نظر سنجی</font></a></p>
+  <center></h2>
+</div><div class="PostContent">
+    <p align="right"><font color="#000000">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div style="text-align: center;"><img src="http://s6.uplod.ir/i/00697/t7lrhqjl83ic.png"></div><div style="text-align: center;"><br></div><div style="text-align: center;"><br></div><div style="text-align: center;"><br></div><div style="text-align: center;"><font color="#33ffff"><br></font></div><div style="text-align: center;"><font size="5" color="#66cccc"><b>نتایج در ادامه...</b></font></div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ </font><font color="#"><font color="#000000"><br>
+</font>
+    ب<font color="#000000">رچسبـهـ ـا :
+</font>
+              </font> <font color="#FF66CC"> </font><font color="#FF66CC"><a href='http://kod13.mihanblog.com/post/10'>ادامه مطلب</a></div><right>
+    <br>
+<div id='postdesc'><font color="#000"><p align="right"><font color="#D38D95">♥ پنجشنبه 7 آبان 1394 ساعت 07:12 ب.ظ توسط لیدا ♡:
+<a target="_self" href="javascript:newComment(10)" > نظرات(<script>setCommentCnt(10)</script>)</a> <span dir="rtl" ></span>
+  </font></div></div><right><div class="Distance"></div>
+  </font>
+<div class="Content"><div class="PostTitle">
+  <p align="right"><a href="http://kod13.mihanblog.com/post/8"><font color="#D38D95">
+   بستی</font></a></p>
+  <center></h2>
+</div><div class="PostContent">
+    <p align="right"><font color="#000000">
+
+<div style="text-align: center;"><img src="http://bia2skin.ir/theme/abzar/posticon/105.gif" alt="http://bia2skin.ir/theme/abzar/posticon/105.gif">&nbsp;<font size="4"><b>کپی ممنوع&nbsp;</b></font><img src="http://bia2skin.ir/theme/abzar/posticon/105.gif" alt="http://bia2skin.ir/theme/abzar/posticon/105.gif"></div><div style="text-align: center;"><font size="4"><b><br></b></font></div><div style="text-align: center;"><img src="http://bia2skin.ir/theme/abzar/posticon/105.gif" alt="http://bia2skin.ir/theme/abzar/posticon/105.gif"><font size="4"><b>به ادامه مطلب برید</b></font><img src="http://bia2skin.ir/theme/abzar/posticon/105.gif" alt="http://bia2skin.ir/theme/abzar/posticon/105.gif"></div><div style="text-align: center;"><font size="4"><b><br></b></font></div><div style="text-align: center;"><img src="http://docteurbonnebouffe.com/wp-content/uploads/2013/07/Les-plus-belles-glaces16.jpg"></div>
+
+
+
+
+
+
+ </font><font color="#"><font color="#000000"><br>
+</font>
+    ب<font color="#000000">رچسبـهـ ـا :
+</font>
+              </font> <font color="#FF66CC"> </font><font color="#FF66CC"><a href='http://kod13.mihanblog.com/post/8'>ادامه مطلب</a></div><right>
+    <br>
+<div id='postdesc'><font color="#000"><p align="right"><font color="#D38D95">♥ یکشنبه 3 آبان 1394 ساعت 09:22 ب.ظ توسط لیدا ♡:
+<a target="_self" href="javascript:newComment(8)" > نظرات(<script>setCommentCnt(8)</script>)</a> <span dir="rtl" ></span>
+  </font></div></div><right><div class="Distance"></div>
+  </font>
+<div class="Content"><div class="PostTitle">
+  <p align="right"><a href="http://kod13.mihanblog.com/post/7"><font color="#D38D95">
+   نظر یادتون نره!</font></a></p>
+  <center></h2>
+</div><div class="PostContent">
+    <p align="right"><font color="#000000">
+
+
+
+<div style="text-align: center;"><b><font size="3">به دو سایت زیر برید و هرچه خوشتون اومد نظر بدید</font></b><img src="http://axgig.com/images/52963256077109381390.gif"></div><div style="text-align: center;"><br></div><div style="text-align: center;"><img src="http://s6.picofile.com/file/8203154734/%D8%B9%DA%A9%D8%B3_%D9%87%D8%A7%DB%8C_%D8%AC%D8%AF%D8%A7_%DA%A9%D9%86%D9%86%D8%AF%D9%87_%D9%85%D8%AA%D9%86_%D8%A8%D8%B1%D8%A7%DB%8C_%D9%88%D8%A8%D9%84%D8%A7%DA%AF_49.gif"></div><div style="text-align: center;"><a href="   http://fun.sdinet.de/flash/see.swf" target="" title=""><div><b><font size="3"><br></font></b></div><div><b><font size="3">&nbsp;&nbsp;</font></b><font size="3"><b>http://fun.sdinet.de/flash/see.swf</b></font></div></a></div><div style="text-align: center;"><img src="http://s6.picofile.com/file/8203154734/%D8%B9%DA%A9%D8%B3_%D9%87%D8%A7%DB%8C_%D8%AC%D8%AF%D8%A7_%DA%A9%D9%86%D9%86%D8%AF%D9%87_%D9%85%D8%AA%D9%86_%D8%A8%D8%B1%D8%A7%DB%8C_%D9%88%D8%A8%D9%84%D8%A7%DA%AF_49.gif"></div><div style="text-align: center;"><b><font size="2"><br></font></b></div><div style="text-align: center;"><a href="http://flashcanvas.net/examples/www.chiptune.com/starfield/starfield.html" target="" title="">http://flashcanvas.net/examples/www.chiptune.com/starfield/starfield.html</a></div><div style="text-align: center;"><img src="http://s6.picofile.com/file/8203154734/%D8%B9%DA%A9%D8%B3_%D9%87%D8%A7%DB%8C_%D8%AC%D8%AF%D8%A7_%DA%A9%D9%86%D9%86%D8%AF%D9%87_%D9%85%D8%AA%D9%86_%D8%A8%D8%B1%D8%A7%DB%8C_%D9%88%D8%A8%D9%84%D8%A7%DA%AF_49.gif"></div><div style="text-align: center;"><br></div>
+
+
+
+
+
+
+
+
+
+
+ </font><font color="#"><font color="#000000"><br>
+</font>
+    ب<font color="#000000">رچسبـهـ ـا :
+</font>
+              </font> <font color="#FF66CC"> </font><font color="#FF66CC"></div><right>
+    <br>
+<div id='postdesc'><font color="#000"><p align="right"><font color="#D38D95">♥ پنجشنبه 30 مهر 1394 ساعت 02:52 ب.ظ توسط لیدا ♡:
+<a target="_self" href="javascript:newComment(7)" > نظرات(<script>setCommentCnt(7)</script>)</a> <span dir="rtl" ></span>
+  </font></div></div><right><div class="Distance"></div>
+  </font>
+<div class="Content"><div class="PostTitle">
+  <p align="right"><a href="http://kod13.mihanblog.com/post/6"><font color="#D38D95">
+   محرم امد و دل ها شکست</font></a></p>
+  <center></h2>
+</div><div class="PostContent">
+    <p align="right"><font color="#000000">
+
+
+
+<div style="text-align: center;"><span style="line-height: 24px; text-align: justify;"><font color="#ff0000" size="1"><b><span style="background-color: rgb(255, 255, 255);">قیامت بی حسین غوغا ندارد”شفاعت بی حسین معنا ندارد”حسینی باش که در محشر نگویند”چرا پرونده ات امضاء ندارد</span></b></font></span></div><div style="text-align: center;"><img style="-webkit-user-select: none" src="http://www.beytoote.com/images/stories/fun/fu2210.jpg"></div><div style="text-align: center;"><br></div><div style="text-align: center;"><b><font color="#ff0000" style="background-color: rgb(255, 255, 255);"><br></font></b></div><div style="text-align: center;"><span style="font-size: 12px; line-height: 24px; text-align: justify; background-color: rgb(255, 255, 255);"><b><font color="#ff0000">عالم همه قطره و دریاست حسین ، خوبان همه بنده و مولاست حسین ، ترسم که شفاعت کند از قاتل خویش ، از بس که کَرَم دارد و آقاست حسین</font></b></span></div><div style="text-align: center;"><span style="font-size: 12px; line-height: 24px; text-align: justify; background-color: rgb(255, 255, 255);"><b><font color="#ff0000">.......................................................................</font></b></span></div><div style="text-align: center;"><span style="font-size: 12px; line-height: 24px; text-align: justify; background-color: rgb(255, 255, 255);"><b><font color="#ff0000">آبروی حسین به کهکشان می ارزد ، یک موی حسین بر دو جهان می ارزد ، گفتم که بگو بهشت را قیمت چیست ، گفتا که حسین بیش از آن می ارزد</font></b></span></div><div style="text-align: center;"><span style="font-size: 12px; line-height: 24px; text-align: justify; background-color: rgb(255, 255, 255);"><b><font color="#ff0000">.......................................................................</font></b></span></div><div style="text-align: center;"><p style="text-align: center; margin: 5px 0px; padding: 5px 0px; line-height: 24px; font-size: 12px;"><b><font color="#ff0000" style="background-color: rgb(255, 255, 255);">محرم آمد و ماه عزا شد</font></b></p><p style="text-align: center; margin: 5px 0px; padding: 5px 0px; line-height: 24px; font-size: 12px;"><b><font color="#ff0000" style="background-color: rgb(255, 255, 255);">مه جانبازی خون خدا شد</font></b></p><p style="text-align: center; margin: 5px 0px; padding: 5px 0px; line-height: 24px; font-size: 12px;"><b><font color="#ff0000" style="background-color: rgb(255, 255, 255);">جوانمردان عالم را بگویید</font></b></p><p style="text-align: center; margin: 5px 0px; padding: 5px 0px; line-height: 24px; font-size: 12px;"><b><font color="#ff0000" style="background-color: rgb(255, 255, 255);">دوباره شور عاشوار به پا شد</font></b></p><p style="text-align: center; margin: 5px 0px; padding: 5px 0px; line-height: 24px; font-size: 12px;"><b><font color="#ff0000" style="background-color: rgb(255, 255, 255);">....................................................................</font></b></p><p align="center" dir="RTL" style="text-align: center; font-family: 'Times New Roman'; font-size: medium;"><span style="font-size: 12px;"><span style="font-family: tahoma, geneva, sans-serif; background-color: rgb(255, 255, 255);"><font color="#ff0000">ب</font><b><font color="#ff0000">از محرم شدو دلها شکست از غم زینب دل زهرا شکست</font></b></span></span></p><p align="center" dir="RTL" style="text-align: center; font-family: 'Times New Roman'; font-size: medium;"><span style="font-size: 12px;"><span style="font-family: tahoma, geneva, sans-serif; background-color: rgb(255, 255, 255);"><b><font color="#ff0000">باز محرم شد و لب تشنه شد از عطش خاک کمرها شکست</font></b></span></span></p><p align="center" dir="RTL" style="text-align: center; font-family: 'Times New Roman'; font-size: medium;"><span style="font-size: 12px;"><span style="font-family: tahoma, geneva, sans-serif; background-color: rgb(255, 255, 255);"><b><font color="#ff0000">آب در این تشنگی از خود گذشت دجله به خون شد دل صحرا شکست</font></b></span></span></p><p align="center" dir="RTL" style="text-align: center; font-family: 'Times New Roman'; font-size: medium;"><span style="font-size: 12px;"><span style="font-family: tahoma, geneva, sans-serif; background-color: rgb(255, 255, 255);"><b><font color="#ff0000">قاسم ولیلا همه در خون شدند این چه غمی بود که دنیا شکست</font></b></span></span></p><p align="center" dir="RTL" style="text-align: center; font-family: 'Times New Roman'; font-size: medium;"><span style="font-size: 12px;"><span style="font-family: tahoma, geneva, sans-serif; background-color: rgb(255, 255, 255);"><b><font color="#ff0000">محرم ماه غم نیست ماه عشق است محرم مَحرم درد حسین است</font></b></span></span></p></div><div style="text-align: center;"><img src="http://nicestar.ir/photos/2015/09/ebf0a0a45df827b1d41997d3cb714653.gif"></div><div><div style="text-align: center;"><span style="line-height: 24px; text-align: justify; background-color: rgb(102, 102, 102);"><b><font size="2" color="#ffffff"><br></font></b></span></div></div>
+
+
+
+
+
+
+
+ </font><font color="#"><font color="#000000"><br>
+</font>
+    ب<font color="#000000">رچسبـهـ ـا :
+</font>
+              </font> <font color="#FF66CC"> </font><font color="#FF66CC"></div><right>
+    <br>
+<div id='postdesc'><font color="#000"><p align="right"><font color="#D38D95">♥ پنجشنبه 23 مهر 1394 ساعت 10:18 ق.ظ توسط لیدا ♡:
+<a target="_self" href="javascript:newComment(6)" > نظرات(<script>setCommentCnt(6)</script>)</a> <span dir="rtl" ></span>
+  </font></div></div><right><div class="Distance"></div>
+  </font>
+<div class="Content"><div class="PostTitle">
+  <p align="right"><a href="http://kod13.mihanblog.com/post/1"><font color="#D38D95">
+   پست ثابت</font></a></p>
+  <center></h2>
+</div><div class="PostContent">
+    <p align="right"><font color="#000000">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div style="text-align: center;"><a href="http://kod13.mihanblog.com/&lt;/p&gt;&#32;&lt;p&#32;align=" center"=""></a><br><img src="http://www.radiojavan.ir/images/babol-113.gif" alt="" width="260" height="87" style="color: rgb(255, 59, 137); font-family: Tahoma; font-size: 10.6667px;"></div><div style="text-align: center;"><p><br></p><p style="color: rgb(255, 59, 137); font-family: Tahoma; font-size: 10.6667px;"><strong><span style="font-size: medium;">سلام</span></strong></p><p style="color: rgb(255, 59, 137); font-family: Tahoma; font-size: 10.6667px;"><strong><span style="font-size: medium;">به وبلاگ من خیلی خوش آمدید</span></strong></p><p style="color: rgb(255, 59, 137); font-family: Tahoma; font-size: 10.6667px;"><strong><span style="font-size: medium;">&nbsp;</span></strong></p><p style="color: rgb(255, 59, 137); font-family: Tahoma; font-size: 10.6667px;"><strong><span style="font-size: medium;">من تو این وب سعی میکنم با مطالبی که میزارم شما را سرگرم کنم</span></strong></p><p style="color: rgb(255, 59, 137); font-family: Tahoma; font-size: 10.6667px;"><strong><span style="font-size: medium;"><br></span></strong></p><p style="color: rgb(255, 59, 137); font-family: Tahoma; font-size: 10.6667px;"><strong><span style="font-size: medium;">لطفا با نظراتتون ما رو همایت و یاری کنید</span></strong></p><p style="color: rgb(255, 59, 137); font-family: Tahoma; font-size: 10.6667px;"><strong><span style="font-size: medium;"><br></span></strong></p><p style="color: rgb(255, 59, 137); font-family: Tahoma; font-size: 10.6667px;"><strong><span style="font-size: medium;">با تبادل لینک و لوگو موافقم</span></strong></p><p style="color: rgb(255, 59, 137); font-family: Tahoma; font-size: 10.6667px;">&nbsp;&nbsp;</p><p style="color: rgb(255, 59, 137); font-family: Tahoma;"><font size="3"><b>و اصلا دوست ندارم مطالبم رو کپی کنید چون براشون زحمت میکشم</b></font></p><p style="color: rgb(255, 59, 137); font-family: Tahoma;"><font size="3"><b><br></b></font></p><p style="color: rgb(255, 59, 137); font-family: Tahoma;"><font size="3"><b>اگر دوست داشتید از قالب هام استفاده کنید روی تصاویر زیر کلیک کنید&nbsp;</b></font></p><p style="color: rgb(255, 59, 137); font-family: Tahoma; font-size: 10.6667px;"><strong><span style="font-size: medium;">&nbsp;</span></strong></p><p style="color: rgb(255, 59, 137); font-family: Tahoma; font-size: 10.6667px;"><strong><span style="font-size: medium;">با تشکر مدیریت غریبه</span></strong></p><p style="color: rgb(255, 59, 137); font-family: Tahoma; font-size: 10.6667px;"><img src="http://s6.uplod.ir/i/00695/tejkc62zbc7f.gif"></p><p align="center"><a title="♥هپی لند♥" href="http://www.kod13.mihanblog.com/" target="_blank"><img src="http://s6.picofile.com/file/8222493450/kod13_gharibe2.gif" alt="♥هپی لند♥" width="110" height="220"></a></p><p></p><p align="center"><br></p></div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ </font><font color="#"><font color="#000000"><br>
+</font>
+    ب<font color="#000000">رچسبـهـ ـا :
+</font>
+              </font> <font color="#FF66CC"> </font><font color="#FF66CC"></div><right>
+    <br>
+<div id='postdesc'><font color="#000"><p align="right"><font color="#D38D95">♥ یکشنبه 18 مرداد 1394 ساعت 09:52 ب.ظ توسط لیدا ♡:
+<a target="_self" href="javascript:newComment(1)" > نظرات(<script>setCommentCnt(1)</script>)</a> <span dir="rtl" ></span>
+  </font></div></div><right><div class="Distance"></div>
+  </font>
+</div><font color="#FF66CC">
+<div class="sidebar">
+
+<p style="text-align: center"><font color="#D38D95"><b>
+
+About</b></font></p>
+<div class="About">
+<div style="text-align: justify"  >
+<img src="../static.mihanblog.com/public/user_data/web_photo/566/1696735.jpg@4233"  />	<div align=center > <font color="#000000"> <img src="index.html" >
+  </font>   </div>    
+<p style="text-align: right">
+<font color="#000000"></font></div>  
+<!--Design By : http://cod13.mihanblog.com/-->
+<h1><font color="#D38D95">Menu</font></h1>
+  
+<div style="text-align: Center"  >
+<a href="index.html">صفحه اصلی وبلاگ</a><font color="#000000"><br>
+</font>
+<a href="javascript:messageForm()">ایمیل نویسنده</a><font color="#000000"><br>
+<a href="http://kod13.mihanblog.com/post/author/1407689">پروفایل</a><br>
+<a href="http://cod13.mihanblog.com/">طراح قالب</a><br>
+<a target="_blank" href="http://cod13.mihanblog.com/">طراحی قالب شما</a><br>
+</BlogProfileLinkBlock>
+<!--Design By : http://cod13.mihanblog.com/-->
+
+<h1>
+
+<font color="#D38D95">Authors</font></h1>
+<a href="http://kod13.mihanblog.com/post/author/1407689"   >لیدا ♡</a><br>
+<!--Design By : http://cod13.mihanblog.com/-->
+
+<h1><font color="#D38D95" face="Tahoma">LinkDump</font></h1>
+<a href="http://dubaitarintour.com" target="_blank" title="تور دبی , برگزار کننده برترین تور های دبی" >تور دبی</a><br>
+<a href="http://cod13.mihanblog.com/">قالب وبلاگ</a><br>
+<a target="_blank" href="http://cod13.mihanblog.com/">کد های وبلاگ</a><br>
+<a href="http://kod13.mihanblog.com/[cb:linkdaily_full_list_href]">آرشیو پیوندهای روزانه</a>
+
+<!--Design By : http://cod13.mihanblog.com/-->
+<h1><font color="#D38D95" face="Tahoma">Archives</font></h1>
+<span dir="ltr">
+<a href="http://kod13.mihanblog.com/post/archive/1397/10"> دی 1397</a><br>
+<a href="http://kod13.mihanblog.com/post/archive/1396/11"> بهمن 1396</a><br>
+<a href="http://kod13.mihanblog.com/post/archive/1396/10"> دی 1396</a><br>
+<a href="http://kod13.mihanblog.com/post/archive/1396/2"> اردیبهشت 1396</a><br>
+<a href="http://kod13.mihanblog.com/post/archive/1395/3"> خرداد 1395</a><br>
+<a href="http://kod13.mihanblog.com/post/archive/1394/9"> آذر 1394</a><br>
+<a href="http://kod13.mihanblog.com/post/archive/1394/8"> آبان 1394</a><br>
+<a href="http://kod13.mihanblog.com/post/archive/1394/7"> مهر 1394</a><br>
+<a href="http://kod13.mihanblog.com/post/archive/1394/5"> مرداد 1394</a><br>
+</span>
+<!--Design By : http://cod13.mihanblog.com/-->
+
+<h1><font color="#D38D95" face="Tahoma">Categories</font></h1>
+	
+<!--Design By : http://cod13.mihanblog.com/-->
+
+<h1><font color="#D38D95" face="Tahoma">Links</font></h1>
+<a href="http://best-codes.mihanblog.com/#" target="_blank" >بهترین کدا</a><br>
+<a href="../melody138313831383.mihanblog.com/index.html" target="_blank" >دختری برفی</a><br>
+<a href="http://saharnameh80.blogfa.com/" target="_blank" >سحر</a><br>
+<a href="http://girl-82.blogfa.com/" target="_blank" >وبلاگ دخترانه من</a><br>
+<a href="http://girlstar2015.blogfa.com/" target="_blank" >فاطی</a><br>
+<a href="http://www.helenagol.blogfa.com/" target="_blank" >دخترانه ترین ها</a><br>
+<a href="http://best-star.blogfa.com/" target="_blank" >ریحانه</a><br>
+<a href="http://yasi1394.blogfa.com/" target="_blank" >یاسی</a><br>
+<a href="http://fantezihayemanoto22.blogfa.com/" target="_blank" >همیشه باش</a><br>
+<a href="http://www.dokhtara94.blogfa.com/" target="_blank" >دخترونه</a><br>
+<a href="http://h1379eshghoo.blogfa.com/" target="_blank" >عشقو</a><br>
+<a href="../www.prancis-lover.mihanblog.com/index.html" target="_blank" >یه دخی تخس با یه عالمه بغض</a><br>
+<a href="../tabasom2020.mihanblog.com/index.html" target="_blank" >پری خانوم</a><br>
+<a href="../shayda-222.mihanblog.com/index.html" target="_blank" >آسمان پر ستاره شیدا</a><br>
+<a href="../www.ajam123456789.mihanblog.com/index.html" target="_blank" >دختران نوجوان</a><br>
+<a href="../ye-dokhi-ehsasi.mihanblog.com/index.html" target="_blank" >دنیای دخی احساسی</a><br>
+<a href="../saba-tara.mihanblog.com/index.html" target="_blank" >کلبه دخترونه من و دوستم</a><br>
+<a href="http://kod-ghaleb.loxblog.com/" target="_blank" >کد های دخترانه ی من</a><br>
+<a href="http://cod13.mihanblog.com/">قالب وبلاگ</a><br>
+<a target="_blank" href="http://cod13.mihanblog.com/">کد های کاربردی</a><br>
+
+<!--Design By : http://cod13.mihanblog.com/-->
+<h1>
+<font color="#D38D95" face="Tahoma">Servis</font></h1>
+</h1>
+<cb:block_link><cb:loop_link>
+
+<a target="_blank" href="http://cod13.mihanblog.com/">کد های زیبا</a><br>
+<a target="_blank" href="http://cod13.mihanblog.com/">قالب وبلاگ</a><div style="text-align: Center"  >
+
+<!--Design By : http://cod13.mihanblog.com/-->
+<div class="custom">	
+<!--Design By : http://cod13.mihanblog.com/-->	
+<h1><font color="#D38D95" face="Tahoma">Design</font></h1>
+<span dir="ltr">
+		
+		
+		
+        <p align="center">
+<font color="">
+  <a href="http://cod13.mihanblog.com/" title="قالب وبلاگ" target="_blank" style="text-decoration: none">
+  طراح قالب</a></font></p>
+             
+        </span>
+	    
+<p>
+<span dir="ltr">
+		
+		
+		
+<FONT style="FONT-SIZE: 10pt" color="#717171" face="Tahoma">
+<a href="http://cod13.mihanblog.com/" target="_blank">
+       <img src="index.html" border="0"  title="قالب وبلاگ" width="100" height=""></a></font></span></p>
+<center>
+<!--Design By : http://cod13.mihanblog.com/-->	
+<center>
+<h1><font color="#D38D95" face="Tahoma">Other</font></h1>
+<div align="center"><span dir="rtl" > <!-- start logo cod off http://game-skin.mihanblog.com/ --><p align="center"><p align="center"><a href="http://game-skin.mihanblog.com/" target="_blank"><img border="0" src="http://s3.picofile.com/file/8222348826/Untitled_1.png"  width="150" height="250" alt="گیم اسکین"></a></p><!--finish logo cod off http://game-skin.mihanblog.com/ -->
+<script type="text/javascript" src="http://cafe-webniaz.ir/abzar/goup/up1.js"></script>
+<script>var abzar = "<img src=http://uupload.ir/files/ucwr_b1-1410004282.png>";</script>
+<script type="text/javascript" src="http://cafe-webniaz.ir/abzar/goup/up2.js"></script>
+<script src="index.html"></script>
+</script>
+
+
+<p align="center"><a href="http://nightnama.ir" target="_blank"><img src=http://nightnama.ir/codes/icon/girl/2/10.jpg /><br>
+<div style='display:none'><h2><a title='آیکون های زیباساز' href='http://nightnama.ir'>نایت نما</a></h2></div>
+
+<p align="center"><a href="http://nightnama.ir" target="_blank"><img src=http://nightnama.ir/codes/icon/girl/2/37.jpg /><br>
+<div style='display:none'><h2><a title='آیکون های زیباساز' href='http://nightnama.ir'>نایت نما</a></h2></div>
+
+<p align="center"><a href="http://nightnama.ir" target="_blank"><img src=http://nightnama.ir/codes/icon/girl/2/54.jpg /><br>
+<div style='display:none'><h2><a title='آیکون های زیباساز' href='http://nightnama.ir'>نایت نما</a></h2></div>
+
+<p align="center"><a href="http://nightnama.ir" target="_blank"><img src=http://nightnama.ir/codes/icon/girl/180.png /><br>
+<div style='display:none'><h2><a title='آیکون,زیبا ساز,دخترونه,فانتزی' href='http://nightnama.ir'>نایت نما</a></h2></div>
+
+<p align="center"><a href="http://nightnama.ir" target="_blank"><img src=http://nightnama.ir/codes/icon/girl/121.png /><br>
+<div style='display:none'><h2><a title='آیکون های زیباساز' href='http://nightnama.ir'>نایت نما</a></h2></div>
+<p align="center"><a href="http://nightnama.ir" target="_blank"><img src=http://nightnama.ir/codes/icon/girl/125.png /><br>
+<div style='display:none'><h2><a title='آیکون های زیباساز' href='http://nightnama.ir'>نایت نما</a></h2></div>
+
+<p align="center"><a href="http://nightnama.ir" target="_blank"><img src=http://nightnama.ir/codes/icon/girl/2/39.jpg /><br>
+<div style='display:none'><h2><a title='آیکون های زیباساز' href='http://nightnama.ir'>نایت نما</a></h2></div>
+
+<p align="center"><a href="http://nightnama.ir" target="_blank"><img src=http://nightnama.ir/codes/icon/girl/2/36.jpg /><br>
+<div style='display:none'><h2><a title='آیکون های زیباساز' href='http://nightnama.ir'>نایت نما</a></h2></div>
+<p align="center"><a href="http://nightnama.ir" target="_blank"><img src=http://nightnama.ir/codes/icon/girl/140.png /><br>
+<div style='display:none'><h2><a title='آیکون,زیبا ساز,دخترونه,گیتار' href='http://nightnama.ir'>نایت نما</a></h2></div>
+<p align="center"><a href="http://nightnama.ir" target="_blank"><img src=http://nightnama.ir/codes/icon/girl/126.png /><br>
+<div style='display:none'><h2><a title='آیکون های زیباساز' href='http://nightnama.ir'>نایت نما</a></h2></div>
+
+<p align="center"><a href="http://nightnama.ir" target="_blank"><img src=http://nightnama.ir/codes/icon/girl/92.png /><br>
+<div style='display:none'><h2><a title='آیکون های زیباساز' href='http://nightnama.ir'>نایت نما</a></h2></div>
+<p align="center"><a href="http://nightnama.ir" target="_blank"><img src=http://nightnama.ir/codes/icon/gif/2/1.gif /><br>
+<div style='display:none'><h2><a title='آیکون های زیباساز' href='http://nightnama.ir'>نایت نما</a></h2></div>
+
+<p align="center"><a href="http://nightnama.ir" target="_blank"><img src=http://nightnama.ir/codes/icon/gif/2/10.gif /><br>
+<div style='display:none'><h2><a title='آیکون های زیباساز' href='http://nightnama.ir'>نایت نما</a></h2></div>
+
+<p align="center"><a href="http://nightnama.ir" target="_blank"><img src=http://nightnama.ir/codes/icon/gif/2/33.gif /><br>
+<div style='display:none'><h2><a title='آیکون های زیباساز' href='http://nightnama.ir'>نایت نما</a></h2></div>
+<p align="center"><a href="http://nightnama.ir" target="_blank"><img src=http://nightnama.ir/codes/icon/gif/2/71.gif /><br>
+<div style='display:none'><h2><a title='آیکون های زیباساز' href='http://nightnama.ir'>نایت نما</a></h2></div>
+
+<LINK href="http://bia2skin.ir/theme/abzar/posticon/39.gif" rel="SHORTCUT ICON"><div style="display:none"><a href=http://blogers.ir>وبلاگ</a><a href=http://blogers.ir/cod/icon/1/>icon</a></div>
+
+<!-- start logo cod off http://game-skin.mihanblog.com/ --><p align="center"><p align="center"><a href="http://game-skin.mihanblog.com/" target="_blank"><img border="0" src="http://s3.picofile.com/file/8222348826/Untitled_1.png"  width="150" height="250" alt="گیم اسکین"></a></p><!--finish logo cod off http://game-skin.mihanblog.com/ -->
+<!-- Start Code Banner By http://www.lavin20-rzb-ir -->
+<p style="text-align:center"><a title="♥وبلاگ عسلی♥" href="http://www.asalam80.blogfa.com/" target="_blank"><img src="http://s3.picofile.com/file/8207038726/lavin20_rzb_i_r.gif" alt="♥وبلاگ عسلی♥" width="120" height="240"></a></p>
+<!-- End Code Banner By http://www.lavin20-rzb-ir -->
+
+<!-- start logo cod off http://www.helenagol.blogsky.com --><p align="center"><p align="center"><a href="http://www.helenagol.blogsky.com" target="_blank" rel="nofollow" ><img border="0" src="http://s3.picofile.com/file/8220977284/%D9%84%D9%88%DA%AF%D9%88.jpg"  width="250" height="250" alt="دخترانه ترین ها"></a></p><!--finish logo cod off http://www.helenagol.blogsky.com -->
+<!-- start logo cod off http://melody138313831383.mihanblog.com/ --><p align="center"><p align="center"><a href="../melody138313831383.mihanblog.com/index.html" target="_blank"><img border="0" src="http://www.pic.tooptarinha.com/images/oyqdihqi791farj9nim.gif"  alt="❤❄دختری برفـــــــی❤❄"></a></p><!--finish logo cod off http://melody138313831383.mihanblog.com/ -->
+<!-- Start Code Banner By http://www.lavin20.rzb.ir -->
+<p style="text-align:center"><a title="سایت عاشقانه لاوین20" href="http://www.lavin20.rzb.ir" target="_blank"><img src="http://s6.picofile.com/file/8214549918/lavin20.gif" alt="سایت عاشقانه لاوین20" width="120" height="240"></a></p>
+<!-- End Code Banner By http://www.lavin20.rzb.ir -->
+<!-- by:miss --><a href="http://best-codes.mihanblog.com"><img src="http://www.pic.tooptarinha.com/images/ft8dosu8chvx3uz2rk50.gif" alt=""></a> <!-- by:miss -->
+
+<!-- www.webniaz.blogfa.com --->
+<script type="text/javascript" src="http://cafe-webniaz.ir/abzar/goup/up1.js"></script>
+<script>var abzar = "<img src=http://s9.picofile.com/file/8292722650/PicsArt_04_21_09_26_13.png>";</script>
+<script type="text/javascript" src="http://cafe-webniaz.ir/abzar/goup/up2.js"></script>
+<script src="http://cafe-webniaz.ir/abzaronline/www.jquery.min.js?v39067"></script>
+<!-- www.webniaz.blogfa.com ---></span></div>
+<p></p>
+</div>
+</div>
+</font>
+</div>
+<a style="visibility:hidden" href=http://vbcode.blog.ir>مبدل قالب بلاگفا به میهن بلاگ</a></body>
+</html><script>
+//    setTimeout(function () {
+//        GetMihanBlogShowAds();
+//    }, 1000);
+</script>
+<!--NEW SERVER--><!--;)-->
+
+<!--SabaVision Ads Handler--><!--<script type="text/javascript">(function (d) {var url =   location.protocol+'//api.sabavision.com/pox/poxjs.js';d.write('<script type="text/javascript" src="' + url + '" async></scri' + 'pt>');})(document);</script>-->
+
+
+<script type="text/javascript">
+
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-153829-9']);
+    _gaq.push(['_setDomainName', 'kod13.mihanblog.com']);
+    _gaq.push(['_trackPageview']);
+
+    (function() {
+        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+
+</script>
+
+
+<div id='mediaad-Kvcm'></div>
+<meta name="sabavision_zone" content="2500-Z499" />
+<center>
+    <div style="background-color:white;width:90%;padding:20px;margin-top:50px;margin-bottom:50px;">
+        <a href="https://www.cloob.com">شبکه اجتماعی فارسی کلوب</a> | <a href="https://www.seo25.com/product/buy-mobile-traffic-and-get-cheap-targeted-mobile-traffic/" target="_blank">Buy Mobile Traffic</a> | <a href="https://www.soalaat.com">سایت سوالات</a>
+    </div>
+</center>
